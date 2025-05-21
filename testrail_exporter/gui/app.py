@@ -206,6 +206,9 @@ class Application(tk.Tk):
     
     def _update_projects_ui(self):
         """Update the projects dropdown after loading projects."""
+        # Sort projects alphabetically by name
+        self.projects.sort(key=lambda p: p.name.lower())
+        
         # Update projects dropdown
         project_names = [p.name for p in self.projects]
         self.project_combo['values'] = project_names
@@ -259,6 +262,10 @@ class Application(tk.Tk):
             # Get suites from API
             suites_data = self.client.get_suites(self.current_project.id)
             suites = [Suite(s) for s in suites_data]
+            
+            # Sort suites alphabetically by name
+            suites.sort(key=lambda s: s.name.lower())
+            
             self.current_project.suites = suites
             self._register_api_call()
             
@@ -270,6 +277,10 @@ class Application(tk.Tk):
             for suite in suites:
                 sections_data = self.client.get_sections(self.current_project.id, suite.id)
                 sections = [Section(s) for s in sections_data]
+                
+                # Sort sections alphabetically by name
+                sections.sort(key=lambda s: s.name.lower())
+                
                 suite.sections = sections
                 self._register_api_call()
             

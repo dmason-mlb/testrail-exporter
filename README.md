@@ -4,6 +4,8 @@
 
 A Python GUI application to export test cases from TestRail for later importing into X-ray.
 
+![TestRail Exporter - Exporting Test Cases](./docs/images/testrail-exporter-suites-selected.png)
+
 ## Features
 
 - Connect to TestRail instance with URL, username, and API key
@@ -115,6 +117,8 @@ Use the "Test Connection" button to verify your credentials before loading proje
    - Choose a filename and location in the save dialog
    - Wait for the export process to complete (progress is shown at the bottom)
    - A success message will appear when the export is finished
+
+![TestRail Exporter - Loading Progress](./docs/images/testrail-exporter-load-project-progress.png)
 
 ## Export Formats
 

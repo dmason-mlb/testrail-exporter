@@ -84,20 +84,29 @@ class CheckableTreeview(ttk.Treeview):
         if not item:
             return
         
+        # Get the column clicked
+        column = self.identify_column(event.x)
+        
         # Handle clicks based on region
-        if region == "image" or region == "tree":
-            # Toggle checkbox when clicked on icon/image
+        if region == "tree":
+            # This is the carat/expansion indicator region - let default behavior happen
+            # so the node expands/collapses as expected
+            return
+        
+        # Handle clicks in the icon column (column #0) which contains our checkboxes
+        if column == "#0":
+            # This is the checkbox image region - toggle checkbox
             self._toggle_check(item)
-            return "break"  # Prevent default behavior
-        elif region == "cell":
-            # For cell clicks, allow default behavior (selecting)
-            pass
-        else:
-            # For other areas like the row background, toggle checkbox
-            # but allow default action for the carat
-            self._toggle_check(item)
+            return "break"  # Prevent default behavior for checkbox clicks
             
-        # Allow tree expansion/collapse to work normally
+        if region == "cell":
+            # For cell clicks (on the text), toggle the checkbox 
+            self._toggle_check(item)
+            return "break"
+            
+        # For any other region clicks, toggle checkbox
+        self._toggle_check(item)
+        return "break"
         
     def _toggle_check(self, item):
         """
