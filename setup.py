@@ -10,7 +10,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "testrail-exporter=testrail-exporter.main:main",
+            "testrail-exporter=testrail_exporter.main:main",
         ],
     },
     author="MLB",

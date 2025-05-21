@@ -72,9 +72,13 @@ Use the "Test Connection" button to verify your credentials before loading proje
 
 ## Usage
 
-1. Run the application:
+1. Run the application using one of these methods:
    ```bash
-   python testrail-exporter/main.py
+   # Method 1: Run directly
+   python testrail_exporter/main.py
+   
+   # Method 2: If installed with pip install -e .
+   testrail-exporter
    ```
 
 2. Configure TestRail connection:
@@ -145,6 +149,9 @@ Example:
 3. **Export Errors**:
    - Check your network connection
    - Verify you have write permissions to the export directory
+
+4. **Installation Issues**:
+   - If you encounter module not found errors, make sure the package name in imports uses underscores (`testrail_exporter`) not hyphens
 
 ### Logging
 
