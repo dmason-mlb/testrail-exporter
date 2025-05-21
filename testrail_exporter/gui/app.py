@@ -136,7 +136,8 @@ class Application(tk.Tk):
             'projects': None,
             'suites': {},  # Project ID -> Suites
             'sections': {},  # Suite ID -> Sections
-            'cases': {}  # Suite ID+Section ID -> Cases
+            'cases': {},  # Suite ID+Section ID -> Cases
+            'loading_state': {}  # Track loading completion state for projects
         }
         
         # Create a reference to the load projects button
@@ -234,7 +235,8 @@ class Application(tk.Tk):
                     'projects': None,
                     'suites': {},
                     'sections': {},
-                    'cases': {}
+                    'cases': {},
+                    'loading_state': {}
                 }
             
             # Cancel any ongoing loading operations
@@ -249,6 +251,13 @@ class Application(tk.Tk):
     
     def _start_load_projects(self):
         """Start loading projects after ensuring previous operations are cancelled."""
+        # Check if there's still an active thread running
+        if (hasattr(self, 'active_thread') and self.active_thread and 
+            self.active_thread.is_alive()):
+            # Thread is still running, wait a bit more
+            self.after(50, lambda: self._start_load_projects())
+            return
+            
         # Reset cancellation flag
         self.loading_cancelled = False
         
@@ -344,6 +353,13 @@ class Application(tk.Tk):
     
     def _start_load_project(self, selected_index):
         """Start loading the selected project after cancellation of previous operations."""
+        # Check if there's still an active thread running
+        if (hasattr(self, 'active_thread') and self.active_thread and 
+            self.active_thread.is_alive()):
+            # Thread is still running, wait a bit more
+            self.after(50, lambda: self._start_load_project(selected_index))
+            return
+            
         # Reset cancellation flag
         self.loading_cancelled = False
         
@@ -356,13 +372,19 @@ class Application(tk.Tk):
         for item in self.tree.get_children():
             self.tree.delete(item)
         
-        # Check if we have cached suites for this project
-        if self.current_project.id in self.cache['suites']:
-            # Use cached data
+        # Check if we have fully loaded data for this project
+        project_loading_state = self.cache['loading_state'].get(self.current_project.id, 'not_started')
+        
+        if (self.current_project.id in self.cache['suites'] and 
+            project_loading_state == 'completed'):
+            # Use cached data only if loading was completed
             self.current_project.suites = self.cache['suites'][self.current_project.id]
             self._update_progress("Loading from cache...", reset=True)
             self.after(0, self._update_suites_ui)
             return
+        
+        # Mark project as loading
+        self.cache['loading_state'][self.current_project.id] = 'loading'
         
         # Reset and start progress tracking
         self._update_progress("Loading suites...", reset=True)
@@ -379,6 +401,9 @@ class Application(tk.Tk):
         try:
             # Check if operation has been cancelled
             if self.loading_cancelled:
+                # Mark as incomplete if cancelled
+                if hasattr(self, 'current_project') and self.current_project:
+                    self.cache['loading_state'][self.current_project.id] = 'incomplete'
                 return
                 
             # Get suites from API
@@ -386,6 +411,9 @@ class Application(tk.Tk):
             
             # Check if operation has been cancelled
             if self.loading_cancelled:
+                # Mark as incomplete if cancelled
+                if hasattr(self, 'current_project') and self.current_project:
+                    self.cache['loading_state'][self.current_project.id] = 'incomplete'
                 return
                 
             suites = [Suite(s) for s in suites_data]
@@ -409,6 +437,9 @@ class Application(tk.Tk):
             for suite in suites:
                 # Check if operation has been cancelled
                 if self.loading_cancelled:
+                    # Mark as incomplete if cancelled
+                    if hasattr(self, 'current_project') and self.current_project:
+                        self.cache['loading_state'][self.current_project.id] = 'incomplete'
                     return
                 
                 # Check if we have cached sections for this suite
@@ -420,6 +451,9 @@ class Application(tk.Tk):
                     
                     # Check if operation has been cancelled
                     if self.loading_cancelled:
+                        # Mark as incomplete if cancelled
+                        if hasattr(self, 'current_project') and self.current_project:
+                            self.cache['loading_state'][self.current_project.id] = 'incomplete'
                         return
                         
                     sections = [Section(s) for s in sections_data]
@@ -589,6 +623,10 @@ class Application(tk.Tk):
         # Add event handler for tree item open (expand) event
         self.tree.bind("<<TreeviewOpen>>", self._on_tree_item_expanded)
             
+        # Mark project loading as completed
+        if hasattr(self, 'current_project') and self.current_project:
+            self.cache['loading_state'][self.current_project.id] = 'completed'
+        
         self.status_var.set(f"Loaded {len(self.current_project.suites)} suites")
         self._update_progress("")
         
@@ -626,17 +664,41 @@ class Application(tk.Tk):
         # Reset cancellation flag
         self.loading_cancelled = False
         
+        # Validate that all checked items still exist in the tree
+        # This prevents TclError when switching projects
+        valid_checked_items = []
+        for item in checked_items:
+            try:
+                # Try to access the item to see if it still exists
+                self.tree.item(item, "values")
+                valid_checked_items.append(item)
+            except Exception:
+                # Item no longer exists, skip it
+                continue
+            
+        # If no valid items remain, show a warning and return
+        if not valid_checked_items:
+            messagebox.showwarning("Warning", "No valid items selected for export. Please select items again.")
+            self._update_progress("", reset=True)
+            return
+        
         # Calculate needed API calls for progress tracking
         # One call per suite and one per section that has been selected
-        suite_count = sum(1 for item in checked_items if not self.tree.parent(item))
-        section_count = sum(1 for item in checked_items if self.tree.parent(item))
+        try:
+            suite_count = sum(1 for item in valid_checked_items if not self.tree.parent(item))
+            section_count = sum(1 for item in valid_checked_items if self.tree.parent(item))
+        except Exception:
+            # If we can't determine parents, show warning and return
+            messagebox.showwarning("Warning", "Unable to process selected items. Please select items again.")
+            self._update_progress("", reset=True)
+            return
         
         # Reset and start progress tracking
         self._update_progress("Preparing export...", reset=True)
         self.api_calls_total = suite_count + section_count
         
         # Export in a separate thread
-        self.active_thread = threading.Thread(target=lambda: self._export_cases_thread(checked_items, format))
+        self.active_thread = threading.Thread(target=lambda: self._export_cases_thread(valid_checked_items, format))
         self.active_thread.start()
     
     def _export_cases_thread(self, checked_items, format='json'):
@@ -649,13 +711,78 @@ class Application(tk.Tk):
         """
         try:
             cases = []
+            processed_cases = set()  # Track processed case IDs to avoid duplicates
             
             # Check if operation has been cancelled
             if self.loading_cancelled:
                 return
-                
-            # Get cases for each checked suite and section
+            
+            # Separate suites and sections to avoid duplicates
+            # If a suite is checked, don't process its individual sections
+            suites_to_process = []
+            sections_to_process = []
+            
             for item_id in checked_items:
+                parent_id = self.tree.parent(item_id)
+                if not parent_id:
+                    # This is a suite
+                    suites_to_process.append(item_id)
+                else:
+                    # This is a section - only add if its parent suite is not also selected
+                    if parent_id not in checked_items:
+                        sections_to_process.append(item_id)
+                
+            # Process suites first
+            for item_id in suites_to_process:
+                # Check if operation has been cancelled
+                if self.loading_cancelled:
+                    return
+                    
+                item_values = self.tree.item(item_id, "values")
+                suite_display_name = item_values[0]
+                # Extract name without count
+                if " (" in suite_display_name:
+                    suite_name = suite_display_name.split(" (")[0]
+                else:
+                    suite_name = suite_display_name
+                    
+                suite = next((s for s in self.current_project.suites if s.name == suite_name), None)
+                if suite:
+                    # Update progress
+                    self._update_progress(f"Exporting suite: {suite_name}")
+                    
+                    # Check if operation has been cancelled
+                    if self.loading_cancelled:
+                        return
+                        
+                    # Check if we have cached cases for this suite
+                    cache_key = f"{self.current_project.id}_{suite.id}_None"
+                    if cache_key in self.cache['cases']:
+                        # Use cached data
+                        suite_cases = self.cache['cases'][cache_key]
+                    else:
+                        # Get cases for the entire suite from API
+                        cases_data = self.client.get_cases(self.current_project.id, suite.id)
+                        
+                        # Check if operation has been cancelled
+                        if self.loading_cancelled:
+                            return
+                        
+                        suite_cases = [Case(c) for c in cases_data]
+                        
+                        # Cache the cases
+                        self.cache['cases'][cache_key] = suite_cases
+                    
+                    # Add cases, avoiding duplicates
+                    for case in suite_cases:
+                        if case.id not in processed_cases:
+                            cases.append(case)
+                            processed_cases.add(case.id)
+                            
+                    self._register_api_call()
+            
+            # Process individual sections (only if their parent suite wasn't processed)
+            for item_id in sections_to_process:
                 # Check if operation has been cancelled
                 if self.loading_cancelled:
                     return
@@ -663,91 +790,56 @@ class Application(tk.Tk):
                 item_values = self.tree.item(item_id, "values")
                 parent_id = self.tree.parent(item_id)
                 
-                if not parent_id:
-                    # This is a suite
-                    suite_display_name = item_values[0]
-                    # Extract name without count
-                    if " (" in suite_display_name:
-                        suite_name = suite_display_name.split(" (")[0]
-                    else:
-                        suite_name = suite_display_name
-                        
-                    suite = next((s for s in self.current_project.suites if s.name == suite_name), None)
-                    if suite:
+                section_display_name = item_values[0]
+                # Extract section name without count
+                if " (" in section_display_name:
+                    section_name = section_display_name.split(" (")[0]
+                else:
+                    section_name = section_display_name
+                    
+                suite_display_name = self.tree.item(parent_id, "values")[0]
+                # Extract suite name without count
+                if " (" in suite_display_name:
+                    suite_name = suite_display_name.split(" (")[0]
+                else:
+                    suite_name = suite_display_name
+                    
+                suite = next((s for s in self.current_project.suites if s.name == suite_name), None)
+                if suite:
+                    section = next((s for s in suite.sections if s.name == section_name), None)
+                    if section:
                         # Update progress
-                        self._update_progress(f"Exporting suite: {suite_name}")
+                        self._update_progress(f"Exporting section: {section_name}")
                         
                         # Check if operation has been cancelled
                         if self.loading_cancelled:
                             return
                             
-                        # Check if we have cached cases for this suite
-                        cache_key = f"{self.current_project.id}_{suite.id}_None"
+                        # Check if we have cached cases for this section
+                        cache_key = f"{self.current_project.id}_{suite.id}_{section.id}"
                         if cache_key in self.cache['cases']:
                             # Use cached data
-                            cases.extend(self.cache['cases'][cache_key])
+                            section_cases = self.cache['cases'][cache_key]
                         else:
-                            # Get cases for the entire suite from API
-                            cases_data = self.client.get_cases(self.current_project.id, suite.id)
+                            # Get cases for the section from API
+                            cases_data = self.client.get_cases(self.current_project.id, suite.id, section.id)
                             
                             # Check if operation has been cancelled
                             if self.loading_cancelled:
                                 return
                             
-                            suite_cases = [Case(c) for c in cases_data]
-                            cases.extend(suite_cases)
+                            section_cases = [Case(c) for c in cases_data]
                             
                             # Cache the cases
-                            self.cache['cases'][cache_key] = suite_cases
-                            
+                            self.cache['cases'][cache_key] = section_cases
+                        
+                        # Add cases, avoiding duplicates
+                        for case in section_cases:
+                            if case.id not in processed_cases:
+                                cases.append(case)
+                                processed_cases.add(case.id)
+                                
                         self._register_api_call()
-                else:
-                    # This is a section
-                    section_display_name = item_values[0]
-                    # Extract section name without count
-                    if " (" in section_display_name:
-                        section_name = section_display_name.split(" (")[0]
-                    else:
-                        section_name = section_display_name
-                        
-                    suite_display_name = self.tree.item(parent_id, "values")[0]
-                    # Extract suite name without count
-                    if " (" in suite_display_name:
-                        suite_name = suite_display_name.split(" (")[0]
-                    else:
-                        suite_name = suite_display_name
-                        
-                    suite = next((s for s in self.current_project.suites if s.name == suite_name), None)
-                    if suite:
-                        section = next((s for s in suite.sections if s.name == section_name), None)
-                        if section:
-                            # Update progress
-                            self._update_progress(f"Exporting section: {section_name}")
-                            
-                            # Check if operation has been cancelled
-                            if self.loading_cancelled:
-                                return
-                                
-                            # Check if we have cached cases for this section
-                            cache_key = f"{self.current_project.id}_{suite.id}_{section.id}"
-                            if cache_key in self.cache['cases']:
-                                # Use cached data
-                                cases.extend(self.cache['cases'][cache_key])
-                            else:
-                                # Get cases for the section from API
-                                cases_data = self.client.get_cases(self.current_project.id, suite.id, section.id)
-                                
-                                # Check if operation has been cancelled
-                                if self.loading_cancelled:
-                                    return
-                                
-                                section_cases = [Case(c) for c in cases_data]
-                                cases.extend(section_cases)
-                                
-                                # Cache the cases
-                                self.cache['cases'][cache_key] = section_cases
-                                
-                            self._register_api_call()
             
             # Check if operation has been cancelled
             if self.loading_cancelled:
