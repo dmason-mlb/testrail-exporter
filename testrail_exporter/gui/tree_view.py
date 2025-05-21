@@ -73,40 +73,38 @@ class CheckableTreeview(ttk.Treeview):
     def _on_click(self, event):
         """
         Handle mouse clicks on the treeview.
+
+        We only want to toggle the checkbox when the actual checkbox image is
+        clicked.  Clicking on the item text should simply select the row, while
+        clicking on the expansion indicator should continue to expand/collapse
+        the node.
         
         Args:
             event: Click event
         """
-        # Get the item that was clicked
-        region = self.identify_region(event.x, event.y)
+        # Determine which item/element/column was clicked
         item = self.identify_row(event.y)
-        
         if not item:
-            return
-        
-        # Get the column clicked
+            return  # Click was outside any item
+
         column = self.identify_column(event.x)
-        
-        # Handle clicks based on region
-        if region == "tree":
-            # This is the carat/expansion indicator region - let default behavior happen
-            # so the node expands/collapses as expected
+        element = self.identify_element(event.x, event.y)
+
+        # If the user clicked on the expansion indicator, keep default behaviour
+        if element == "indicator":
             return
-        
-        # Handle clicks in the icon column (column #0) which contains our checkboxes
-        if column == "#0":
-            # This is the checkbox image region - toggle checkbox
+
+        # Only toggle when the click is on the checkbox image *in* column #0.
+        # The checkbox graphic is stored as the item's image, so the element
+        # will be reported as "image".
+        if column == "#0" and element == "image":
             self._toggle_check(item)
-            return "break"  # Prevent default behavior for checkbox clicks
-            
-        if region == "cell":
-            # For cell clicks (on the text), toggle the checkbox 
-            self._toggle_check(item)
-            return "break"
-            
-        # For any other region clicks, toggle checkbox
-        self._toggle_check(item)
-        return "break"
+            return "break"  # Prevent further handling so selection doesn't change
+
+        # For all other clicks (e.g., on text or in other columns) allow the
+        # default Treeview behaviour (row selection, editing, etc.) by doing
+        # nothing special here.
+        return
         
     def _toggle_check(self, item):
         """
