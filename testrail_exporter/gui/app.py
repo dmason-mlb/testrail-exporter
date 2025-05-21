@@ -29,10 +29,10 @@ class Application(tk.Tk):
         
         # Set window title and size
         self.title("TestRail Exporter")
-        window_width = self.config.get_setting('ui', 'window_width', 1000)
-        window_height = self.config.get_setting('ui', 'window_height', 700)
+        window_width = self.config.get_setting('ui', 'window_width', 1200)
+        window_height = self.config.get_setting('ui', 'window_height', 800)
         self.geometry(f"{window_width}x{window_height}")
-        self.minsize(800, 600)
+        self.minsize(1000, 700)
         
         # Save window size when closing the application
         self.protocol("WM_DELETE_WINDOW", self._on_close)
@@ -92,13 +92,13 @@ class Application(tk.Tk):
         
         # Progress bar and status
         status_frame = ttk.Frame(main_frame)
-        status_frame.pack(fill=tk.X, pady=10)
+        status_frame.pack(fill=tk.X, pady=15)
         
         self.status_var = tk.StringVar()
         ttk.Label(status_frame, textvariable=self.status_var).pack(side=tk.LEFT)
         
         self.progress_frame = ttk.Frame(status_frame)
-        self.progress_frame.pack(side=tk.RIGHT, fill=tk.X, expand=True, padx=(10, 0))
+        self.progress_frame.pack(side=tk.RIGHT, fill=tk.X, expand=True, padx=(20, 0))
         
         self.progress_var = tk.IntVar()
         self.progress = ttk.Progressbar(
@@ -110,8 +110,9 @@ class Application(tk.Tk):
         )
         self.progress.pack(fill=tk.X, expand=True)
         
-        self.progress_label = ttk.Label(self.progress_frame, text="")
-        self.progress_label.pack(pady=(2, 0))
+        # Add more padding and make the progress label larger
+        self.progress_label = ttk.Label(self.progress_frame, text="", font=("", 10))
+        self.progress_label.pack(pady=(5, 5))
         
         # Initialize instance variables
         self.client = None
@@ -156,7 +157,7 @@ class Application(tk.Tk):
         if self.api_calls_total > 0:
             progress_pct = int((self.api_calls_done / self.api_calls_total) * 100)
             self.progress_var.set(progress_pct)
-            progress_text = f"{step_text} ({self.api_calls_done}/{self.api_calls_total})"
+            progress_text = f"{step_text} [{progress_pct}%]"
         else:
             self.progress_var.set(0)
             progress_text = step_text

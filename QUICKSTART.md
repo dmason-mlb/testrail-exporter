@@ -20,6 +20,9 @@ This guide will help you get started with the TestRail Exporter application quic
    # Standard method
    python testrail_exporter/main.py
    
+   # If installed with pip install -e .
+   testrail-exporter
+   
    # For macOS users (recommended if you have Tcl/Tk issues)
    ./run_testrail_exporter.sh
    ```
@@ -46,14 +49,15 @@ This guide will help you get started with the TestRail Exporter application quic
    - Suites with sections display an expand arrow
 
 2. **Select Items to Export**:
-   - Check the boxes next to suites or sections you want to export
+   - Click on the checkboxes to select/deselect suites or sections
+   - Click on suite/section names to highlight them for easier reading
    - Use "Check All" or "Uncheck All" for quick selection
    - Use "Expand All" or "Collapse All" for easier navigation
 
 3. **Export**:
    - Click either "Export JSON" or "Export CSV" depending on your needs
    - Choose a location and filename in the save dialog
-   - Watch the progress indicator at the bottom of the window
+   - Watch the progress percentage indicator at the bottom of the window
    - Wait for the export to complete
 
 ## Understanding the Export Files

@@ -93,20 +93,15 @@ class CheckableTreeview(ttk.Treeview):
             # so the node expands/collapses as expected
             return
         
-        # Handle clicks in the icon column (column #0) which contains our checkboxes
-        if column == "#0":
-            # This is the checkbox image region - toggle checkbox
+        # If it's the checkbox column (#0) and an image area
+        if column == "#0" and region == "image":
+            # Toggle checkbox on clicks in the checkbox area
             self._toggle_check(item)
             return "break"  # Prevent default behavior for checkbox clicks
-            
-        if region == "cell":
-            # For cell clicks (on the text), toggle the checkbox 
-            self._toggle_check(item)
-            return "break"
-            
-        # For any other region clicks, toggle checkbox
-        self._toggle_check(item)
-        return "break"
+         
+        # For all other clicks (text cells, etc.), let the default behavior happen
+        # This allows for selecting rows when clicking on the text
+        return
         
     def _toggle_check(self, item):
         """
