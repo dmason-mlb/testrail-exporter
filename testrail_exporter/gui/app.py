@@ -218,12 +218,14 @@ class Application(tk.Tk):
         
         # Add suites and sections to the treeview
         for suite in self.current_project.suites:
-            suite_id = self.tree.insert("", "end", text="", values=(suite.name,), image="unchecked")
+            # Use the image object directly instead of a name
+            suite_id = self.tree.insert("", "end", text="", values=(suite.name,), image=self.tree.image_unchecked)
             
             # Add sections if any
             if suite.has_sections():
                 for section in suite.sections:
-                    section_id = self.tree.insert(suite_id, "end", text="", values=(section.name,), image="unchecked")
+                    # Use the image object directly instead of a name
+                    section_id = self.tree.insert(suite_id, "end", text="", values=(section.name,), image=self.tree.image_unchecked)
             
         self.status_var.set(f"Loaded {len(self.current_project.suites)} suites")
     
