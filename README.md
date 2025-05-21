@@ -15,6 +15,9 @@ A Python GUI application to export test cases from TestRail for later importing 
 - Configurable export directory
 - Persistent settings between sessions
 - Progress tracking during API operations
+- Auto-loading of projects on startup when settings are configured
+- Data caching for improved performance
+- Detailed export progress indicators
 
 ## Environment Setup
 
@@ -206,6 +209,46 @@ Additional documentation:
 - `TESTING.md`: Testing procedures
 - `ROADMAP.md`: Future development plans
 - `INSTALL_MACOS.md`: macOS-specific installation guide
+
+## Export Formats
+
+### JSON Format
+
+The exported JSON file contains:
+
+- Project information (id, name)
+- Test cases with:
+  - Standard fields (id, title, section_id, etc.)
+  - Custom fields (prefixed with `custom_`)
+
+Example:
+```json
+{
+  "project": {
+    "id": 123,
+    "name": "Example Project"
+  },
+  "cases": [
+    {
+      "id": 456,
+      "title": "Test Case Title",
+      "section_id": 789,
+      "suite_id": 101,
+      "custom_steps": "Step 1...",
+      "custom_expected": "Expected result..."
+    }
+  ]
+}
+```
+
+### CSV Format
+
+The exported CSV file contains all test case fields as columns:
+
+- Each test case is represented as a row
+- Standard fields (id, title, section_id, etc.) are included
+- Custom fields (prefixed with `custom_`) are included as separate columns
+- All fields found in any case are included in the CSV headers
 
 ## Future Enhancements
 

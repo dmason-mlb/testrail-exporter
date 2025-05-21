@@ -35,7 +35,9 @@ This guide will help you get started with the TestRail Exporter application quic
    - Click "Save Settings" to persist your settings
 
 2. **Load Projects**:
-   - Click "Load Projects" to retrieve available projects from TestRail
+   - Projects will automatically load if all settings fields are populated
+   - If not, click "Load Projects" to retrieve available projects from TestRail
+   - After initial load, the button changes to "Refresh Projects"
    - Select a project from the dropdown menu
 
 ## Exporting Test Cases
@@ -51,7 +53,9 @@ This guide will help you get started with the TestRail Exporter application quic
    - Use "Expand All" or "Collapse All" for easier navigation
 
 3. **Export**:
-   - Click either "Export JSON" or "Export CSV" depending on your needs
+   - Click one of the export options:
+     - "Export JSON" for standard JSON format
+     - "Export CSV" for standard CSV format
    - Choose a location and filename in the save dialog
    - Watch the progress indicator at the bottom of the window
    - Wait for the export to complete
@@ -70,15 +74,25 @@ The exported CSV file contains:
 - Columns for all standard and custom fields
 - Suitable for importing into other tools or opening in Excel
 
+
 ## Troubleshooting
 
 - **Connection issues**: Verify your URL, username, and API key
 - **No projects shown**: Confirm you have access to projects in TestRail
 - **Export errors**: Check your network connection and TestRail access
 
+## Performance Features
+
+- **Caching**: The application caches data to improve performance when:
+  - Selecting the same project multiple times
+  - Exporting from the same suites/sections repeatedly
+  - When refreshing the UI
+
+- **Auto-Loading**: Projects automatically load on startup if settings are complete
+
 ## Next Steps
 
-- Map TestRail fields to X-ray fields for import
+- X-ray compatible CSV export format
 - Filter test cases by additional criteria
 - Batch export multiple projects
-- Customize CSV formats for specific tool imports
+- Customize field mappings for specific requirements

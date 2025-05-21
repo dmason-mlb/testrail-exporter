@@ -173,3 +173,10 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 .DS_Store
+
+# Internal development docs
+implementation_plan.md
+PROGRESS.md
+SUMMARY.md
+TESTING.md
+ROADMAP.md
