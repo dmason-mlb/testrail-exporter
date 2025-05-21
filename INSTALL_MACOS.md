@@ -17,10 +17,28 @@ Python 3.12 is designed to work with Tcl/Tk 8.6.x, but macOS Homebrew now instal
 
 ```bash
 # Install Tcl/Tk 8.6
-brew install tcl-tk@8.6
+brew install tcl-tk@8
+```
 
-# See where it was installed
-brew --prefix tcl-tk@8.6
+After installing, you can use the provided run script which sets the necessary environment variables:
+
+```bash
+# Run the application using the provided script
+./run_testrail_exporter.sh
+```
+
+The run script sets the required environment variables to use Tcl/Tk 8.6 instead of 9.0.
+
+If you want to set these variables manually:
+
+```bash
+# Set environment variables to use Tcl/Tk 8.6
+export TCLLIBPATH="/opt/homebrew/opt/tcl-tk@8/lib"
+export DYLD_LIBRARY_PATH="/opt/homebrew/opt/tcl-tk@8/lib:$DYLD_LIBRARY_PATH"
+export DYLD_FRAMEWORK_PATH="/opt/homebrew/opt/tcl-tk@8/lib:$DYLD_FRAMEWORK_PATH"
+
+# Run the application
+python testrail_exporter/main.py
 ```
 
 ### Option 2: Reinstall Python with Tcl/Tk 8.6
@@ -28,11 +46,11 @@ brew --prefix tcl-tk@8.6
 If you're using pyenv, you need to set environment variables before installing Python:
 
 ```bash
-# Install tcl-tk 8.6
-brew install tcl-tk@8.6
+# Install tcl-tk 8
+brew install tcl-tk@8
 
 # Get the installation path
-TCL_TK_PATH=$(brew --prefix tcl-tk@8.6)
+TCL_TK_PATH=$(brew --prefix tcl-tk@8)
 
 # Set environment variables for pyenv to use tcl-tk 8.6
 export PYTHON_CONFIGURE_OPTS="--with-tcltk-includes='-I$TCL_TK_PATH/include' --with-tcltk-libs='-L$TCL_TK_PATH/lib -ltcl8.6 -ltk8.6'"
@@ -56,13 +74,16 @@ pip install -e .
 
 ## Running the Application
 
-After proper installation, you can run the application using either:
+After proper installation, you can run the application using any of these methods:
 
 ```bash
-# Method 1: Direct execution
+# Method 1: Use the provided run script (recommended on macOS)
+./run_testrail_exporter.sh
+
+# Method 2: Direct execution (after setting environment variables)
 python testrail_exporter/main.py
 
-# Method 2: Using the entry point (if installed with pip)
+# Method 3: Using the entry point (if installed with pip)
 testrail-exporter
 ```
 
