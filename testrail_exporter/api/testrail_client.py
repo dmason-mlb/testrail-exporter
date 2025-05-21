@@ -15,7 +15,12 @@ class TestRailClient:
             username (str): TestRail username
             api_key (str): TestRail API key
         """
+        # Ensure URL doesn't have trailing slash but has the correct format
         self.url = url.rstrip('/')
+        if not self.url.endswith('/index.php'):
+            # TestRail API requires index.php in the path
+            self.url = f"{self.url}/index.php"
+            
         self.auth = (username, api_key)
         self.headers = {'Content-Type': 'application/json'}
 
@@ -35,7 +40,8 @@ class TestRailClient:
         Raises:
             Exception: If the request fails
         """
-        url = urljoin(f"{self.url}/index.php?/api/v2/", endpoint)
+        # Construct the full URL properly
+        url = f"{self.url}?/api/v2/{endpoint}"
         
         try:
             response = requests.request(
@@ -46,19 +52,26 @@ class TestRailClient:
                 json=data,
                 params=params
             )
+            
+            # Add request details to error message for debugging
             response.raise_for_status()
             return response.json()
         except requests.exceptions.RequestException as e:
-            if hasattr(e.response, 'content'):
-                error_message = e.response.content.decode('utf-8')
-                try:
-                    error_data = json.loads(error_message)
-                    error_message = error_data.get('error', error_message)
-                except json.JSONDecodeError:
-                    pass
-                raise Exception(f"TestRail API error: {error_message}")
+            error_message = f"Failed URL: {url}\n"
+            
+            if hasattr(e, 'response') and e.response is not None:
+                error_message += f"Status code: {e.response.status_code}\n"
+                if hasattr(e.response, 'content'):
+                    content = e.response.content.decode('utf-8')
+                    try:
+                        error_data = json.loads(content)
+                        error_message += f"Error: {error_data.get('error', content)}"
+                    except json.JSONDecodeError:
+                        error_message += f"Response: {content}"
             else:
-                raise Exception(f"TestRail API request failed: {str(e)}")
+                error_message += f"Error: {str(e)}"
+                
+            raise Exception(error_message)
 
     def get_projects(self, is_completed=None):
         """
