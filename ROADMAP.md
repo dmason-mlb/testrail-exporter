@@ -2,19 +2,19 @@
 
 This document outlines the planned development roadmap for the TestRail Exporter application.
 
-## Version 0.1 (Current Implementation)
+## Version 0.1 (Initial Implementation)
 - Basic GUI with Tkinter
 - TestRail connection settings
 - Project, suite, and section browsing
 - Export to JSON format
 - Basic error handling
 
-## Version 0.2
-- Improved error handling and validation
-- Enhanced UI with better styling
-- Save and load connection settings
-- Filter test cases by criteria (status, priority, etc.)
-- Export to CSV format (basic)
+## Version 0.2 (Current Implementation)
+- Improved error handling and retry logic
+- Enhanced UI with custom checkboxes and styling
+- Persistent settings (saved in ~/.testrail_exporter/)
+- Progress tracking for API operations
+- Export to both JSON and CSV formats
 
 ## Version 0.3
 - X-ray specific CSV export format

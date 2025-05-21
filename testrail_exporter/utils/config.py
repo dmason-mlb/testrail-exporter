@@ -3,8 +3,8 @@ import os
 import logging
 from pathlib import Path
 
-# Setup logging
-logging.basicConfig(level=logging.INFO)
+# Setup logging - use WARNING level to reduce noise
+logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(__name__)
 
 class Config:
@@ -51,7 +51,7 @@ class Config:
                         return self._create_default_config()
                     return config
             else:
-                logger.info(f"Config file not found at {self.config_file}. Creating default config.")
+                logger.debug(f"Config file not found at {self.config_file}. Creating default config.")
                 return self._create_default_config()
         except json.JSONDecodeError as e:
             logger.error(f"Error parsing config file: {str(e)}")
@@ -100,7 +100,7 @@ class Config:
         try:
             with open(self.config_file, 'w') as f:
                 json.dump(self.config, f, indent=2)
-            logger.info(f"Config saved to {self.config_file}")
+            logger.debug(f"Config saved to {self.config_file}")
         except Exception as e:
             logger.error(f"Error saving config: {str(e)}")
     

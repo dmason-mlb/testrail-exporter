@@ -17,7 +17,11 @@ This guide will help you get started with the TestRail Exporter application quic
 
 3. **Run the application**:
    ```bash
-   python testrail-exporter/main.py
+   # Standard method
+   python testrail_exporter/main.py
+   
+   # For macOS users (recommended if you have Tcl/Tk issues)
+   ./run_testrail_exporter.sh
    ```
 
 ## First Time Setup
@@ -28,6 +32,7 @@ This guide will help you get started with the TestRail Exporter application quic
    - Enter your API key (found in TestRail under My Settings > API Keys)
    - Set your preferred export directory
    - Click "Test Connection" to verify
+   - Click "Save Settings" to persist your settings
 
 2. **Load Projects**:
    - Click "Load Projects" to retrieve available projects from TestRail
@@ -46,16 +51,24 @@ This guide will help you get started with the TestRail Exporter application quic
    - Use "Expand All" or "Collapse All" for easier navigation
 
 3. **Export**:
-   - Click the "Export" button
+   - Click either "Export JSON" or "Export CSV" depending on your needs
    - Choose a location and filename in the save dialog
+   - Watch the progress indicator at the bottom of the window
    - Wait for the export to complete
 
-## Understanding the Export File
+## Understanding the Export Files
 
+### JSON Format
 The exported JSON file contains:
 - Project information
 - Test cases from selected suites/sections
 - All standard and custom fields for each case
+
+### CSV Format
+The exported CSV file contains:
+- One row per test case
+- Columns for all standard and custom fields
+- Suitable for importing into other tools or opening in Excel
 
 ## Troubleshooting
 
@@ -65,6 +78,7 @@ The exported JSON file contains:
 
 ## Next Steps
 
-- Create CSV templates for X-ray import
-- Set up regular export schedules
-- Filter cases by criteria
+- Map TestRail fields to X-ray fields for import
+- Filter test cases by additional criteria
+- Batch export multiple projects
+- Customize CSV formats for specific tool imports

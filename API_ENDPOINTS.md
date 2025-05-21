@@ -87,14 +87,21 @@ The application processes API responses as follows:
 2. When a project is selected, suites for that project are retrieved
 3. For each suite, sections are retrieved and organized in the tree view
 4. When export is requested, cases are retrieved for all selected suites and sections
-5. Case data is processed and exported to a JSON file
+5. Case data is processed and exported to JSON or CSV format
 
 ## Error Handling
 
 API errors are captured and displayed to the user through:
 - Status messages in the UI
 - Error dialogs with detailed information
-- Progress indicators for long-running operations
+- Progress indicators for long-running operations with counts and percentages
+- Scrollable error messages that can be easily copied
+
+The application implements additional error handling mechanisms:
+- Automatic retry for connection failures (up to 3 times with exponential backoff)
+- Timeout handling to prevent hanging on slow responses
+- Detailed error messages with URLs and status codes
+- JSON parsing error handling
 
 ## Rate Limiting
 

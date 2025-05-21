@@ -34,8 +34,8 @@ class Application(tk.Tk):
         self.geometry(f"{window_width}x{window_height}")
         self.minsize(800, 600)
         
-        # Track window size changes
-        self.bind("<Configure>", self._on_window_configure)
+        # Save window size when closing the application
+        self.protocol("WM_DELETE_WINDOW", self._on_close)
         
         # Create main frame
         main_frame = ttk.Frame(self, padding=10)
@@ -120,14 +120,18 @@ class Application(tk.Tk):
         self.api_calls_total = 0
         self.api_calls_done = 0
     
-    def _on_window_configure(self, event):
-        """Save window size when it changes."""
-        # Only save if it's a window resize, not an internal widget change
-        if event.widget == self:
-            # Avoid saving during initial setup or minimized state
-            if event.width > 100 and event.height > 100:
-                self.config.set_setting('ui', 'window_width', event.width)
-                self.config.set_setting('ui', 'window_height', event.height)
+    def _on_close(self):
+        """Save settings and close the application."""
+        # Save current window size
+        width = self.winfo_width()
+        height = self.winfo_height()
+        
+        if width > 100 and height > 100:  # Avoid saving minimized size
+            self.config.set_setting('ui', 'window_width', width)
+            self.config.set_setting('ui', 'window_height', height)
+            
+        # Destroy the window
+        self.destroy()
     
     def _update_progress(self, step_text="", reset=False):
         """

@@ -15,7 +15,11 @@ Before testing, ensure you have:
 
 1. From the repository root directory, run:
    ```
-   python testrail-exporter/main.py
+   # Standard method
+   python testrail_exporter/main.py
+   
+   # For macOS users with Tcl/Tk compatibility issues
+   ./run_testrail_exporter.sh
    ```
 
 2. The application should launch with the settings panel visible.
@@ -32,6 +36,7 @@ Before testing, ensure you have:
    - Enter valid credentials and click "Test Connection"
    - Status should show successful connection with number of projects found
    - Try with invalid credentials and verify error message
+   - Test "Save Settings" button and verify settings are persisted when reopening the app
 
 ### Project Loading
 
@@ -56,25 +61,39 @@ Before testing, ensure you have:
 
 1. **Export Selection**:
    - Select several suites and sections by checking their checkboxes
-   - Click "Export" button
-   - Verify save dialog appears with default name
-   - Save to a location and verify JSON file is created
+   - Test both "Export JSON" and "Export CSV" buttons
+   - Verify save dialog appears with appropriate default name
+   - Save to a location and verify files are created
+   - Check progress indicators during export
 
-2. **Export Content**:
+2. **JSON Export Content**:
    - Open the exported JSON file
    - Verify project information is included
    - Verify selected suites and sections have their cases exported
    - Verify all case fields are present
+
+3. **CSV Export Content**:
+   - Open the exported CSV file
+   - Verify all test cases are included
+   - Verify columns for all fields are present
+   - Verify CSV can be opened in spreadsheet applications
 
 ### Error Handling
 
 1. **Network Interruption**:
    - Disconnect from the network during an operation
    - Verify appropriate error message is displayed
+   - Verify retry mechanism works when network is restored
 
 2. **Invalid Export Directory**:
    - Set an invalid export directory
    - Verify appropriate handling/error message
+   
+3. **Configuration File Testing**:
+   - Delete configuration file in ~/.testrail_exporter/
+   - Verify application creates a new default configuration
+   - Modify configuration file with invalid data
+   - Verify application handles corrupt configuration gracefully
 
 ## Reporting Issues
 
