@@ -119,9 +119,16 @@ class Application(tk.Tk):
         self.current_project = None
         self.api_calls_total = 0
         self.api_calls_done = 0
+        
+        # Thread control flag
+        self.loading_cancelled = False
+        self.active_thread = None
     
     def _on_close(self):
         """Save settings and close the application."""
+        # Cancel any ongoing operations
+        self.loading_cancelled = True
+        
         # Save current window size
         width = self.winfo_width()
         height = self.winfo_height()
@@ -178,31 +185,54 @@ class Application(tk.Tk):
         try:
             self._create_client()
             
-            # Reset and start progress tracking
-            self._update_progress("Loading projects...", reset=True)
+            # Cancel any ongoing loading operations
+            self.loading_cancelled = True
             
-            # We'll have at least 1 API call (for projects)
-            self.api_calls_total = 1
-            
-            # Load projects in a separate thread
-            threading.Thread(target=self._load_projects_thread).start()
+            # Wait a moment to ensure any running thread notices the cancellation flag
+            self.after(100, self._start_load_projects)
         except Exception as e:
             messagebox.showerror("Error", f"Failed to create client: {str(e)}")
             self._update_progress("", reset=True)
             self.status_var.set("")
     
+    def _start_load_projects(self):
+        """Start loading projects after ensuring previous operations are cancelled."""
+        # Reset cancellation flag
+        self.loading_cancelled = False
+        
+        # Reset and start progress tracking
+        self._update_progress("Loading projects...", reset=True)
+        
+        # We'll have at least 1 API call (for projects)
+        self.api_calls_total = 1
+        
+        # Load projects in a separate thread
+        self.active_thread = threading.Thread(target=self._load_projects_thread)
+        self.active_thread.start()
+    
     def _load_projects_thread(self):
         """Load projects in a background thread."""
         try:
+            # Check if operation has been cancelled
+            if self.loading_cancelled:
+                return
+                
             # Get projects from API
             project_data = self.client.get_projects()
+            
+            # Check if operation has been cancelled before processing
+            if self.loading_cancelled:
+                return
+                
             self.projects = [Project(p) for p in project_data]
             self._register_api_call()
             
             # Update UI in the main thread
-            self.after(0, self._update_projects_ui)
+            if not self.loading_cancelled:
+                self.after(0, self._update_projects_ui)
         except Exception as e:
-            self.after(0, lambda: self._show_error(f"Failed to load projects: {str(e)}"))
+            if not self.loading_cancelled:
+                self.after(0, lambda: self._show_error(f"Failed to load projects: {str(e)}"))
     
     def _update_projects_ui(self):
         """Update the projects dropdown after loading projects."""
@@ -238,6 +268,17 @@ class Application(tk.Tk):
         if selected_index == -1 or not self.projects:
             return
             
+        # Cancel any ongoing loading operations
+        self.loading_cancelled = True
+        
+        # Wait a moment to ensure any running thread notices the cancellation flag
+        self.after(100, lambda: self._start_load_project(selected_index))
+    
+    def _start_load_project(self, selected_index):
+        """Start loading the selected project after cancellation of previous operations."""
+        # Reset cancellation flag
+        self.loading_cancelled = False
+        
         self.current_project = self.projects[selected_index]
         
         # Save current project to config
@@ -254,13 +295,23 @@ class Application(tk.Tk):
             self.tree.delete(item)
         
         # Load suites in a separate thread
-        threading.Thread(target=self._load_suites_thread).start()
+        self.active_thread = threading.Thread(target=self._load_suites_thread)
+        self.active_thread.start()
     
     def _load_suites_thread(self):
         """Load suites for the selected project in a background thread."""
         try:
+            # Check if operation has been cancelled
+            if self.loading_cancelled:
+                return
+                
             # Get suites from API
             suites_data = self.client.get_suites(self.current_project.id)
+            
+            # Check if operation has been cancelled
+            if self.loading_cancelled:
+                return
+                
             suites = [Suite(s) for s in suites_data]
             
             # Sort suites alphabetically by name
@@ -275,7 +326,16 @@ class Application(tk.Tk):
             
             # Load sections for each suite
             for suite in suites:
+                # Check if operation has been cancelled
+                if self.loading_cancelled:
+                    return
+                    
                 sections_data = self.client.get_sections(self.current_project.id, suite.id)
+                
+                # Check if operation has been cancelled
+                if self.loading_cancelled:
+                    return
+                    
                 sections = [Section(s) for s in sections_data]
                 
                 # Sort sections alphabetically by name
@@ -285,9 +345,11 @@ class Application(tk.Tk):
                 self._register_api_call()
             
             # Update UI in the main thread
-            self.after(0, self._update_suites_ui)
+            if not self.loading_cancelled:
+                self.after(0, self._update_suites_ui)
         except Exception as e:
-            self.after(0, lambda: self._show_error(f"Failed to load suites: {str(e)}"))
+            if not self.loading_cancelled:
+                self.after(0, lambda: self._show_error(f"Failed to load suites: {str(e)}"))
     
     def _update_suites_ui(self):
         """Update the treeview after loading suites and sections."""
@@ -322,6 +384,17 @@ class Application(tk.Tk):
             messagebox.showwarning("Warning", "Please select at least one suite or section to export")
             return
         
+        # Cancel any ongoing operations
+        self.loading_cancelled = True
+        
+        # Wait a moment for cancellation to take effect
+        self.after(100, lambda: self._start_export(checked_items, format))
+        
+    def _start_export(self, checked_items, format):
+        """Start the export process after cancellation of any previous operations."""
+        # Reset cancellation flag
+        self.loading_cancelled = False
+        
         # Calculate needed API calls for progress tracking
         # One call per suite and one per section that has been selected
         suite_count = sum(1 for item in checked_items if not self.tree.parent(item))
@@ -332,7 +405,8 @@ class Application(tk.Tk):
         self.api_calls_total = suite_count + section_count
         
         # Export in a separate thread
-        threading.Thread(target=lambda: self._export_cases_thread(checked_items, format)).start()
+        self.active_thread = threading.Thread(target=lambda: self._export_cases_thread(checked_items, format))
+        self.active_thread.start()
     
     def _export_cases_thread(self, checked_items, format='json'):
         """
@@ -345,8 +419,16 @@ class Application(tk.Tk):
         try:
             cases = []
             
+            # Check if operation has been cancelled
+            if self.loading_cancelled:
+                return
+                
             # Get cases for each checked suite and section
             for item_id in checked_items:
+                # Check if operation has been cancelled
+                if self.loading_cancelled:
+                    return
+                    
                 item_values = self.tree.item(item_id, "values")
                 parent_id = self.tree.parent(item_id)
                 
@@ -358,8 +440,17 @@ class Application(tk.Tk):
                         # Update progress
                         self._update_progress(f"Exporting suite: {suite_name}")
                         
+                        # Check if operation has been cancelled
+                        if self.loading_cancelled:
+                            return
+                            
                         # Get cases for the entire suite
                         cases_data = self.client.get_cases(self.current_project.id, suite.id)
+                        
+                        # Check if operation has been cancelled
+                        if self.loading_cancelled:
+                            return
+                            
                         cases.extend([Case(c) for c in cases_data])
                         self._register_api_call()
                 else:
@@ -373,11 +464,24 @@ class Application(tk.Tk):
                             # Update progress
                             self._update_progress(f"Exporting section: {section_name}")
                             
+                            # Check if operation has been cancelled
+                            if self.loading_cancelled:
+                                return
+                                
                             # Get cases for the section
                             cases_data = self.client.get_cases(self.current_project.id, suite.id, section.id)
+                            
+                            # Check if operation has been cancelled
+                            if self.loading_cancelled:
+                                return
+                                
                             cases.extend([Case(c) for c in cases_data])
                             self._register_api_call()
             
+            # Check if operation has been cancelled
+            if self.loading_cancelled:
+                return
+                
             # Prepare export data
             export_data = {
                 'project': {
@@ -388,9 +492,11 @@ class Application(tk.Tk):
             }
             
             # Update UI in the main thread
-            self.after(0, lambda: self._save_export_file(export_data, format))
+            if not self.loading_cancelled:
+                self.after(0, lambda: self._save_export_file(export_data, format))
         except Exception as e:
-            self.after(0, lambda: self._show_error(f"Failed to export test cases: {str(e)}"))
+            if not self.loading_cancelled:
+                self.after(0, lambda: self._show_error(f"Failed to export test cases: {str(e)}"))
     
     def _save_export_file(self, export_data, format='json'):
         """
