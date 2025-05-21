@@ -131,14 +131,14 @@ class CheckableTreeview(ttk.Treeview):
             item: Item ID
             
         Returns:
-            str: Image name
+            PhotoImage: Image object
         """
         if item in self._checked:
-            return "checked"
+            return self.image_checked
         elif item in self._partial:
-            return "partial"
+            return self.image_partial
         else:
-            return "unchecked"
+            return self.image_unchecked
     
     def check_all(self):
         """Check all items in the treeview."""
@@ -191,8 +191,3 @@ class CheckableTreeview(ttk.Treeview):
         self.image_checked = checked_icon
         self.image_partial = partial_icon
         self.image_unchecked = unchecked_icon
-        
-        # Register images
-        self.image_create("checked", image=checked_icon)
-        self.image_create("partial", image=partial_icon)
-        self.image_create("unchecked", image=unchecked_icon)
