@@ -85,14 +85,11 @@ Use the "Test Connection" button to verify your credentials before loading proje
 
 1. Run the application using one of these methods:
    ```bash
-   # Method 1: Run directly from source
+   # Method 1: Run directly
    python testrail_exporter/main.py
    
    # Method 2: If installed with pip install -e .
    testrail-exporter
-   
-   # Method 3: For macOS users with Tcl/Tk issues
-   ./run_testrail_exporter.sh
    ```
 
 2. Configure TestRail connection:
@@ -109,8 +106,7 @@ Use the "Test Connection" button to verify your credentials before loading proje
 
 6. Browse and select test suites and sections:
    - Use the tree view to navigate the project structure
-   - Click on the checkboxes to select/deselect suites or sections
-   - Click on suite/section names to highlight them for easier reading
+   - Check the checkboxes next to suites or sections to select them
    - Parent checkboxes show a partial fill when some children are selected
    - Use "Expand All" and "Collapse All" to navigate more easily
    - Use "Check All" and "Uncheck All" for quick selection
@@ -119,7 +115,7 @@ Use the "Test Connection" button to verify your credentials before loading proje
    - Click "Export JSON" to export in JSON format
    - Click "Export CSV" to export in CSV format compatible with spreadsheet software
    - Choose a filename and location in the save dialog
-   - Wait for the export process to complete (progress percentage is shown at the bottom)
+   - Wait for the export process to complete (progress is shown at the bottom)
    - A success message will appear when the export is finished
 
 ![TestRail Exporter - Loading Progress](./docs/images/testrail-exporter-load-project-progress.png)
