@@ -18,6 +18,7 @@ A Python GUI application to export test cases from TestRail for later importing 
 - pip (Python package manager)
 - Access to a TestRail instance with API permissions
 - TestRail API key (generated in TestRail under My Settings > API Keys)
+- Tkinter and Tcl/Tk 8.6.x (Python's GUI toolkit)
 
 ### Environment Variables (Optional)
 
@@ -48,6 +49,10 @@ Note: While environment variables can be used for testing, the application itsel
    ```bash
    pip install -e .
    ```
+
+> **Note for macOS users**: 
+> If you're using pyenv or Homebrew Python on macOS, you might encounter Tcl/Tk compatibility issues.
+> Please see [INSTALL_MACOS.md](INSTALL_MACOS.md) for detailed instructions on resolving these issues.
 
 ## Application Configuration
 
@@ -152,6 +157,7 @@ Example:
 
 4. **Installation Issues**:
    - If you encounter module not found errors, make sure the package name in imports uses underscores (`testrail_exporter`) not hyphens
+   - If you encounter Tkinter/Tcl/Tk errors on macOS, refer to [INSTALL_MACOS.md](INSTALL_MACOS.md)
 
 ### Logging
 
@@ -173,6 +179,7 @@ Additional documentation:
 - `API_ENDPOINTS.md`: Details on TestRail API usage
 - `TESTING.md`: Testing procedures
 - `ROADMAP.md`: Future development plans
+- `INSTALL_MACOS.md`: macOS-specific installation guide
 
 ## Future Enhancements
 
