@@ -1,5 +1,7 @@
 # TestRail Exporter
 
+> **⚠️ DISCLAIMER: This application is currently under active development and may contain bugs. While it is partially functional, use with caution and please report any issues you encounter. This disclaimer will be removed once the application reaches a more stable state.**
+
 A Python GUI application to export test cases from TestRail for later importing into X-ray.
 
 ## Features
@@ -7,8 +9,10 @@ A Python GUI application to export test cases from TestRail for later importing 
 - Connect to TestRail instance with URL, username, and API key
 - Browse projects, test suites, and sections
 - Select test suites and sections to export
-- Export test cases to JSON format
+- Export test cases to JSON or CSV format
 - Configurable export directory
+- Persistent settings between sessions
+- Progress tracking during API operations
 
 ## Environment Setup
 
@@ -105,12 +109,16 @@ Use the "Test Connection" button to verify your credentials before loading proje
    - Use "Expand All" and "Collapse All" to navigate more easily
    - Use "Check All" and "Uncheck All" for quick selection
 
-7. Click "Export" to export the test cases from selected suites/sections
+7. Choose export format:
+   - Click "Export JSON" to export in JSON format
+   - Click "Export CSV" to export in CSV format compatible with spreadsheet software
    - Choose a filename and location in the save dialog
-   - Wait for the export process to complete
+   - Wait for the export process to complete (progress is shown at the bottom)
    - A success message will appear when the export is finished
 
-## Export Format
+## Export Formats
+
+### JSON Format
 
 The exported JSON file contains:
 
@@ -138,6 +146,20 @@ Example:
   ]
 }
 ```
+
+### CSV Format
+
+The exported CSV file contains all test case fields as columns:
+
+- Each test case is represented as a row
+- Standard fields (id, title, section_id, etc.) are included
+- Custom fields (prefixed with `custom_`) are included as separate columns
+- All fields found in any case are included in the CSV headers
+
+CSV files can be easily:
+- Opened in spreadsheet applications like Excel or Google Sheets
+- Imported into test management tools
+- Used for data analysis or reporting
 
 ## Troubleshooting
 
@@ -183,11 +205,13 @@ Additional documentation:
 
 ## Future Enhancements
 
-- Export to CSV format compatible with X-ray
+- Enhanced CSV export with X-ray-specific field mappings
 - Filter test cases by additional criteria
-- Save/load export configurations
+- Search functionality for finding specific suites/sections
 - Batch export multiple projects
-- Progress tracking for large exports
+- Test case attachment handling
+- Dark mode support
+- Keyboard shortcuts for common operations
 
 ## License
 

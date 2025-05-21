@@ -7,21 +7,29 @@ import sys
 class SettingsFrame(ttk.LabelFrame):
     """Frame for TestRail connection settings."""
 
-    def __init__(self, parent, *args, **kwargs):
+    def __init__(self, parent, config=None, **kwargs):
         """
         Initialize the settings frame.
         
         Args:
             parent: Parent widget
+            config: Configuration object
         """
-        super().__init__(parent, text="Settings", padding=10, *args, **kwargs)
+        super().__init__(parent, text="Settings", padding=10, **kwargs)
         self.parent = parent
+        self.config = config
         
-        # Default values
-        default_url = "https://testrail.testeng.mlbinfra.net"
-        default_username = os.environ.get("TESTRAIL_USER", "")
-        default_api_key = os.environ.get("TESTRAIL_KEY", "")
-        default_export_dir = os.path.expanduser("~/Documents")
+        # Default values or load from config
+        if config:
+            default_url = config.get_setting('testrail', 'url', "https://testrail.testeng.mlbinfra.net")
+            default_username = config.get_setting('testrail', 'username', os.environ.get("TESTRAIL_USER", ""))
+            default_api_key = config.get_setting('testrail', 'api_key', os.environ.get("TESTRAIL_KEY", ""))
+            default_export_dir = config.get_setting('export', 'directory', os.path.expanduser("~/Documents"))
+        else:
+            default_url = "https://testrail.testeng.mlbinfra.net"
+            default_username = os.environ.get("TESTRAIL_USER", "")
+            default_api_key = os.environ.get("TESTRAIL_KEY", "")
+            default_export_dir = os.path.expanduser("~/Documents")
         
         # URL
         ttk.Label(self, text="TestRail URL:").grid(row=0, column=0, sticky=tk.W, pady=5)
@@ -175,8 +183,17 @@ class SettingsFrame(ttk.LabelFrame):
     
     def _save_settings(self):
         """Save the current settings."""
-        # In a real application, you might save these to a config file
-        self._set_status_text("Settings saved!", is_error=False)
+        settings = self.get_settings()
+        
+        if self.config:
+            # Save settings to config file
+            self.config.set_setting('testrail', 'url', settings['url'])
+            self.config.set_setting('testrail', 'username', settings['username'])
+            self.config.set_setting('testrail', 'api_key', settings['api_key'])
+            self.config.set_setting('export', 'directory', settings['export_dir'])
+            self._set_status_text("Settings saved to config file!", is_error=False)
+        else:
+            self._set_status_text("Settings saved in memory only.", is_error=False)
         
     def get_settings(self):
         """

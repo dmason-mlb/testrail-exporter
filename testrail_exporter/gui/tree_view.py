@@ -1,5 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
+import os
+from PIL import Image, ImageTk, ImageDraw
 
 
 class CheckableTreeview(ttk.Treeview):
@@ -21,6 +23,53 @@ class CheckableTreeview(ttk.Treeview):
         # Bind events
         self.bind("<Button-1>", self._on_click)
         
+        # Create the checkbox images
+        self._create_checkbox_images()
+        
+    def _create_checkbox_images(self):
+        """Create better-looking checkbox images."""
+        size = 16
+        
+        # Checked icon - green checkmark
+        checked = Image.new('RGBA', (size, size), (0, 0, 0, 0))
+        draw = ImageDraw.Draw(checked)
+        
+        # Outer square
+        draw.rectangle([0, 0, size-1, size-1], outline='#BBBBBB', width=1)
+        
+        # Fill square with light green
+        draw.rectangle([1, 1, size-2, size-2], fill='#C0E8C0')
+        
+        # Draw checkmark
+        checkmark_coords = [(3, 8), (7, 12), (13, 4)]
+        draw.line(checkmark_coords, fill='#008800', width=2)
+        
+        self.image_checked = ImageTk.PhotoImage(checked)
+        
+        # Partial icon - blue square with dash
+        partial = Image.new('RGBA', (size, size), (0, 0, 0, 0))
+        draw = ImageDraw.Draw(partial)
+        
+        # Outer square
+        draw.rectangle([0, 0, size-1, size-1], outline='#BBBBBB', width=1)
+        
+        # Fill square with light blue
+        draw.rectangle([1, 1, size-2, size-2], fill='#C0D8E8')
+        
+        # Draw dash
+        draw.rectangle([3, 7, size-4, 9], fill='#0000AA')
+        
+        self.image_partial = ImageTk.PhotoImage(partial)
+        
+        # Unchecked icon - empty square
+        unchecked = Image.new('RGBA', (size, size), (0, 0, 0, 0))
+        draw = ImageDraw.Draw(unchecked)
+        
+        # Outer square with white fill
+        draw.rectangle([0, 0, size-1, size-1], outline='#BBBBBB', width=1, fill='#FFFFFF')
+        
+        self.image_unchecked = ImageTk.PhotoImage(unchecked)
+        
     def _on_click(self, event):
         """
         Handle mouse clicks on the treeview.
@@ -32,11 +81,24 @@ class CheckableTreeview(ttk.Treeview):
         region = self.identify_region(event.x, event.y)
         item = self.identify_row(event.y)
         
-        if region == "tree" and item:
-            # Toggle checkbox state
+        if not item:
+            return
+        
+        # Handle clicks based on region
+        if region == "image" or region == "tree":
+            # Toggle checkbox when clicked on icon/image
             self._toggle_check(item)
             return "break"  # Prevent default behavior
+        elif region == "cell":
+            # For cell clicks, allow default behavior (selecting)
+            pass
+        else:
+            # For other areas like the row background, toggle checkbox
+            # but allow default action for the carat
+            self._toggle_check(item)
             
+        # Allow tree expansion/collapse to work normally
+        
     def _toggle_check(self, item):
         """
         Toggle the check state of an item.
@@ -179,7 +241,7 @@ class CheckableTreeview(ttk.Treeview):
         """
         return list(self._checked)
         
-    def configure_icons(self, checked_icon, partial_icon, unchecked_icon):
+    def configure_icons(self, checked_icon=None, partial_icon=None, unchecked_icon=None):
         """
         Configure the check icons.
         
@@ -188,6 +250,9 @@ class CheckableTreeview(ttk.Treeview):
             partial_icon: Image for partial state
             unchecked_icon: Image for unchecked state
         """
-        self.image_checked = checked_icon
-        self.image_partial = partial_icon
-        self.image_unchecked = unchecked_icon
+        if checked_icon:
+            self.image_checked = checked_icon
+        if partial_icon:
+            self.image_partial = partial_icon
+        if unchecked_icon:
+            self.image_unchecked = unchecked_icon

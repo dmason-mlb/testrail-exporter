@@ -1,5 +1,6 @@
 import requests
 import json
+import time
 from urllib.parse import urljoin
 
 
@@ -43,35 +44,56 @@ class TestRailClient:
         # Construct the full URL properly
         url = f"{self.url}?/api/v2/{endpoint}"
         
-        try:
-            response = requests.request(
-                method=method,
-                url=url,
-                auth=self.auth,
-                headers=self.headers,
-                json=data,
-                params=params
-            )
-            
-            # Add request details to error message for debugging
-            response.raise_for_status()
-            return response.json()
-        except requests.exceptions.RequestException as e:
-            error_message = f"Failed URL: {url}\n"
-            
-            if hasattr(e, 'response') and e.response is not None:
-                error_message += f"Status code: {e.response.status_code}\n"
-                if hasattr(e.response, 'content'):
-                    content = e.response.content.decode('utf-8')
-                    try:
-                        error_data = json.loads(content)
-                        error_message += f"Error: {error_data.get('error', content)}"
-                    except json.JSONDecodeError:
-                        error_message += f"Response: {content}"
-            else:
-                error_message += f"Error: {str(e)}"
+        max_retries = 3
+        retry_count = 0
+        
+        while retry_count < max_retries:
+            try:
+                response = requests.request(
+                    method=method,
+                    url=url,
+                    auth=self.auth,
+                    headers=self.headers,
+                    json=data,
+                    params=params,
+                    timeout=30  # Add timeout to prevent hanging
+                )
                 
-            raise Exception(error_message)
+                # Add request details to error message for debugging
+                response.raise_for_status()
+                
+                try:
+                    return response.json()
+                except json.JSONDecodeError as je:
+                    raise Exception(f"Invalid JSON response: {response.text[:200]}...")
+                    
+            except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
+                # Retry on connection errors or timeouts
+                retry_count += 1
+                if retry_count >= max_retries:
+                    error_message = f"Failed after {max_retries} retries. URL: {url}\nError: {str(e)}"
+                    raise Exception(error_message)
+                
+                # Wait before retrying (exponential backoff)
+                time.sleep(1 * retry_count)
+                continue
+                
+            except requests.exceptions.RequestException as e:
+                error_message = f"Failed URL: {url}\n"
+                
+                if hasattr(e, 'response') and e.response is not None:
+                    error_message += f"Status code: {e.response.status_code}\n"
+                    if hasattr(e.response, 'content'):
+                        content = e.response.content.decode('utf-8')
+                        try:
+                            error_data = json.loads(content)
+                            error_message += f"Error: {error_data.get('error', content)}"
+                        except json.JSONDecodeError:
+                            error_message += f"Response: {content}"
+                else:
+                    error_message += f"Error: {str(e)}"
+                    
+                raise Exception(error_message)
 
     def get_projects(self, is_completed=None):
         """

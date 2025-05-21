@@ -3,7 +3,9 @@ from tkinter import ttk, messagebox, filedialog
 import threading
 import json
 import os
+import time
 from PIL import Image, ImageTk
+from testrail_exporter.utils.exporter import Exporter
 
 from testrail_exporter.gui.settings import SettingsFrame
 from testrail_exporter.gui.tree_view import CheckableTreeview
@@ -12,6 +14,7 @@ from testrail_exporter.models.project import Project
 from testrail_exporter.models.suite import Suite
 from testrail_exporter.models.section import Section
 from testrail_exporter.models.case import Case
+from testrail_exporter.utils.config import Config
 
 
 class Application(tk.Tk):
@@ -21,19 +24,25 @@ class Application(tk.Tk):
         """Initialize the application."""
         super().__init__()
         
+        # Load configuration
+        self.config = Config()
+        
+        # Set window title and size
         self.title("TestRail Exporter")
-        self.geometry("1000x700")
+        window_width = self.config.get_setting('ui', 'window_width', 1000)
+        window_height = self.config.get_setting('ui', 'window_height', 700)
+        self.geometry(f"{window_width}x{window_height}")
         self.minsize(800, 600)
         
-        # Load icons
-        self._load_icons()
+        # Track window size changes
+        self.bind("<Configure>", self._on_window_configure)
         
         # Create main frame
         main_frame = ttk.Frame(self, padding=10)
         main_frame.pack(fill=tk.BOTH, expand=True)
         
         # Settings frame
-        self.settings_frame = SettingsFrame(main_frame)
+        self.settings_frame = SettingsFrame(main_frame, config=self.config)
         self.settings_frame.pack(fill=tk.X, pady=10)
         
         # Project selection
@@ -55,7 +64,6 @@ class Application(tk.Tk):
         
         # Treeview for suites and sections
         self.tree = CheckableTreeview(tree_frame, columns=("name",), show="tree")
-        self.tree.configure_icons(self.checked_icon, self.partial_icon, self.unchecked_icon)
         self.tree.column("#0", width=50, minwidth=50, stretch=False)
         self.tree.column("name", width=200, minwidth=200)
         self.tree.heading("name", text="Suites and Sections")
@@ -75,8 +83,12 @@ class Application(tk.Tk):
         ttk.Button(button_frame, text="Check All", command=self.tree.check_all).pack(side=tk.LEFT, padx=5)
         ttk.Button(button_frame, text="Uncheck All", command=self.tree.uncheck_all).pack(side=tk.LEFT, padx=5)
         
-        # Export button
-        ttk.Button(button_frame, text="Export", command=self._export_cases).pack(side=tk.RIGHT, padx=5)
+        # Export buttons
+        export_frame = ttk.Frame(button_frame)
+        export_frame.pack(side=tk.RIGHT, padx=5)
+        
+        ttk.Button(export_frame, text="Export JSON", command=lambda: self._export_cases(format='json')).pack(side=tk.RIGHT, padx=2)
+        ttk.Button(export_frame, text="Export CSV", command=lambda: self._export_cases(format='csv')).pack(side=tk.RIGHT, padx=2)
         
         # Progress bar and status
         status_frame = ttk.Frame(main_frame)
@@ -85,47 +97,76 @@ class Application(tk.Tk):
         self.status_var = tk.StringVar()
         ttk.Label(status_frame, textvariable=self.status_var).pack(side=tk.LEFT)
         
-        self.progress = ttk.Progressbar(status_frame, orient=tk.HORIZONTAL, length=100, mode='indeterminate')
-        self.progress.pack(side=tk.RIGHT, fill=tk.X, expand=True, padx=(10, 0))
+        self.progress_frame = ttk.Frame(status_frame)
+        self.progress_frame.pack(side=tk.RIGHT, fill=tk.X, expand=True, padx=(10, 0))
+        
+        self.progress_var = tk.IntVar()
+        self.progress = ttk.Progressbar(
+            self.progress_frame, 
+            orient=tk.HORIZONTAL, 
+            length=100, 
+            mode='determinate',
+            variable=self.progress_var
+        )
+        self.progress.pack(fill=tk.X, expand=True)
+        
+        self.progress_label = ttk.Label(self.progress_frame, text="")
+        self.progress_label.pack(pady=(2, 0))
         
         # Initialize instance variables
         self.client = None
         self.projects = []
         self.current_project = None
+        self.api_calls_total = 0
+        self.api_calls_done = 0
+    
+    def _on_window_configure(self, event):
+        """Save window size when it changes."""
+        # Only save if it's a window resize, not an internal widget change
+        if event.widget == self:
+            # Avoid saving during initial setup or minimized state
+            if event.width > 100 and event.height > 100:
+                self.config.set_setting('ui', 'window_width', event.width)
+                self.config.set_setting('ui', 'window_height', event.height)
+    
+    def _update_progress(self, step_text="", reset=False):
+        """
+        Update the progress bar.
         
-    def _load_icons(self):
-        """Load checkbox icons."""
-        # Create simple icons since we don't have image files
-        size = 20
+        Args:
+            step_text (str): Text to display for current step
+            reset (bool): Whether to reset the progress counter
+        """
+        if reset:
+            self.api_calls_done = 0
+            self.api_calls_total = 0
+            self.progress_var.set(0)
         
-        # Checked icon (green checkmark)
-        checked = Image.new('RGBA', (size, size), (0, 0, 0, 0))
-        for i in range(size):
-            for j in range(size):
-                # Draw a checkmark
-                if (i == j and i > size/2) or (i + j == size - 1 and i < size/2):
-                    checked.putpixel((i, j), (0, 150, 0, 255))
-        self.checked_icon = ImageTk.PhotoImage(checked)
-        
-        # Partial icon (blue square)
-        partial = Image.new('RGBA', (size, size), (0, 0, 0, 0))
-        for i in range(size//4, 3*size//4):
-            for j in range(size//4, 3*size//4):
-                partial.putpixel((i, j), (0, 0, 150, 255))
-        self.partial_icon = ImageTk.PhotoImage(partial)
-        
-        # Unchecked icon (empty square)
-        unchecked = Image.new('RGBA', (size, size), (0, 0, 0, 0))
-        for i in range(size):
-            for j in range(size):
-                # Draw square border
-                if i == 0 or i == size-1 or j == 0 or j == size-1:
-                    unchecked.putpixel((i, j), (100, 100, 100, 255))
-        self.unchecked_icon = ImageTk.PhotoImage(unchecked)
+        if self.api_calls_total > 0:
+            progress_pct = int((self.api_calls_done / self.api_calls_total) * 100)
+            self.progress_var.set(progress_pct)
+            progress_text = f"{step_text} ({self.api_calls_done}/{self.api_calls_total})"
+        else:
+            self.progress_var.set(0)
+            progress_text = step_text
+            
+        self.progress_label.config(text=progress_text)
+        self.update_idletasks()
+    
+    def _register_api_call(self):
+        """Register that an API call has been completed."""
+        self.api_calls_done += 1
+        self._update_progress()
         
     def _create_client(self):
         """Create a TestRail API client from the current settings."""
         settings = self.settings_frame.get_settings()
+        
+        # Save credentials to config
+        self.config.set_setting('testrail', 'url', settings['url'])
+        self.config.set_setting('testrail', 'username', settings['username'])
+        self.config.set_setting('testrail', 'api_key', settings['api_key'])
+        
         self.client = TestRailClient(settings['url'], settings['username'], settings['api_key'])
     
     def _load_projects(self):
@@ -133,15 +174,17 @@ class Application(tk.Tk):
         try:
             self._create_client()
             
-            # Show progress
-            self.progress.start()
-            self.status_var.set("Loading projects...")
+            # Reset and start progress tracking
+            self._update_progress("Loading projects...", reset=True)
+            
+            # We'll have at least 1 API call (for projects)
+            self.api_calls_total = 1
             
             # Load projects in a separate thread
             threading.Thread(target=self._load_projects_thread).start()
         except Exception as e:
             messagebox.showerror("Error", f"Failed to create client: {str(e)}")
-            self.progress.stop()
+            self._update_progress("", reset=True)
             self.status_var.set("")
     
     def _load_projects_thread(self):
@@ -150,6 +193,7 @@ class Application(tk.Tk):
             # Get projects from API
             project_data = self.client.get_projects()
             self.projects = [Project(p) for p in project_data]
+            self._register_api_call()
             
             # Update UI in the main thread
             self.after(0, self._update_projects_ui)
@@ -158,20 +202,28 @@ class Application(tk.Tk):
     
     def _update_projects_ui(self):
         """Update the projects dropdown after loading projects."""
-        # Stop progress
-        self.progress.stop()
-        
         # Update projects dropdown
         project_names = [p.name for p in self.projects]
         self.project_combo['values'] = project_names
         
+        # Check if we should select a previously saved project
+        last_project = self.config.get_setting('ui', 'last_project')
+        
         if project_names:
-            self.project_combo.current(0)
+            if last_project and last_project in project_names:
+                index = project_names.index(last_project)
+                self.project_combo.current(index)
+            else:
+                self.project_combo.current(0)
+                
             self.status_var.set(f"Loaded {len(project_names)} projects")
+            self._update_progress("")
+            
             # Trigger project selection
             self._on_project_selected(None)
         else:
             self.status_var.set("No projects found")
+            self._update_progress("")
     
     def _on_project_selected(self, event):
         """Handle project selection changes."""
@@ -181,9 +233,14 @@ class Application(tk.Tk):
             
         self.current_project = self.projects[selected_index]
         
-        # Show progress
-        self.progress.start()
-        self.status_var.set(f"Loading suites for project {self.current_project.name}...")
+        # Save current project to config
+        self.config.set_setting('ui', 'last_project', self.current_project.name)
+        
+        # Reset and start progress tracking
+        self._update_progress("Loading suites...", reset=True)
+        
+        # Calculate API calls: 1 for suites + 1 for each suite's sections
+        self.api_calls_total = 1  # Start with 1 for the suites call
         
         # Clear treeview
         for item in self.tree.get_children():
@@ -199,12 +256,18 @@ class Application(tk.Tk):
             suites_data = self.client.get_suites(self.current_project.id)
             suites = [Suite(s) for s in suites_data]
             self.current_project.suites = suites
+            self._register_api_call()
+            
+            # Now we know how many suites we have, update total API calls
+            self.api_calls_total += len(suites)  # Add sections calls (1 per suite)
+            self._update_progress("Loading sections...")
             
             # Load sections for each suite
             for suite in suites:
                 sections_data = self.client.get_sections(self.current_project.id, suite.id)
                 sections = [Section(s) for s in sections_data]
                 suite.sections = sections
+                self._register_api_call()
             
             # Update UI in the main thread
             self.after(0, self._update_suites_ui)
@@ -213,24 +276,27 @@ class Application(tk.Tk):
     
     def _update_suites_ui(self):
         """Update the treeview after loading suites and sections."""
-        # Stop progress
-        self.progress.stop()
-        
         # Add suites and sections to the treeview
         for suite in self.current_project.suites:
-            # Use the image object directly instead of a name
+            # Add suite
             suite_id = self.tree.insert("", "end", text="", values=(suite.name,), image=self.tree.image_unchecked)
             
             # Add sections if any
             if suite.has_sections():
                 for section in suite.sections:
-                    # Use the image object directly instead of a name
+                    # Add section
                     section_id = self.tree.insert(suite_id, "end", text="", values=(section.name,), image=self.tree.image_unchecked)
             
         self.status_var.set(f"Loaded {len(self.current_project.suites)} suites")
+        self._update_progress("")
     
-    def _export_cases(self):
-        """Export selected test cases."""
+    def _export_cases(self, format='json'):
+        """
+        Export selected test cases.
+        
+        Args:
+            format (str): Export format ('json' or 'csv')
+        """
         if not self.current_project or not self.client:
             messagebox.showwarning("Warning", "Please select a project first")
             return
@@ -241,15 +307,26 @@ class Application(tk.Tk):
             messagebox.showwarning("Warning", "Please select at least one suite or section to export")
             return
         
-        # Show progress
-        self.progress.start()
-        self.status_var.set("Exporting test cases...")
+        # Calculate needed API calls for progress tracking
+        # One call per suite and one per section that has been selected
+        suite_count = sum(1 for item in checked_items if not self.tree.parent(item))
+        section_count = sum(1 for item in checked_items if self.tree.parent(item))
+        
+        # Reset and start progress tracking
+        self._update_progress("Preparing export...", reset=True)
+        self.api_calls_total = suite_count + section_count
         
         # Export in a separate thread
-        threading.Thread(target=lambda: self._export_cases_thread(checked_items)).start()
+        threading.Thread(target=lambda: self._export_cases_thread(checked_items, format)).start()
     
-    def _export_cases_thread(self, checked_items):
-        """Export test cases in a background thread."""
+    def _export_cases_thread(self, checked_items, format='json'):
+        """
+        Export test cases in a background thread.
+        
+        Args:
+            checked_items: List of checked tree items
+            format (str): Export format ('json' or 'csv')
+        """
         try:
             cases = []
             
@@ -263,9 +340,13 @@ class Application(tk.Tk):
                     suite_name = item_values[0]
                     suite = next((s for s in self.current_project.suites if s.name == suite_name), None)
                     if suite:
+                        # Update progress
+                        self._update_progress(f"Exporting suite: {suite_name}")
+                        
                         # Get cases for the entire suite
                         cases_data = self.client.get_cases(self.current_project.id, suite.id)
                         cases.extend([Case(c) for c in cases_data])
+                        self._register_api_call()
                 else:
                     # This is a section
                     section_name = item_values[0]
@@ -274,9 +355,13 @@ class Application(tk.Tk):
                     if suite:
                         section = next((s for s in suite.sections if s.name == section_name), None)
                         if section:
+                            # Update progress
+                            self._update_progress(f"Exporting section: {section_name}")
+                            
                             # Get cases for the section
                             cases_data = self.client.get_cases(self.current_project.id, suite.id, section.id)
                             cases.extend([Case(c) for c in cases_data])
+                            self._register_api_call()
             
             # Prepare export data
             export_data = {
@@ -288,46 +373,71 @@ class Application(tk.Tk):
             }
             
             # Update UI in the main thread
-            self.after(0, lambda: self._save_export_file(export_data))
+            self.after(0, lambda: self._save_export_file(export_data, format))
         except Exception as e:
             self.after(0, lambda: self._show_error(f"Failed to export test cases: {str(e)}"))
     
-    def _save_export_file(self, export_data):
-        """Prompt user to save export file."""
-        # Stop progress
-        self.progress.stop()
+    def _save_export_file(self, export_data, format='json'):
+        """
+        Prompt user to save export file.
         
+        Args:
+            export_data (dict): Data to export
+            format (str): Export format ('json' or 'csv')
+        """
         # Get export directory from settings
         settings = self.settings_frame.get_settings()
         export_dir = settings['export_dir']
         
-        # Default filename
-        default_filename = f"{self.current_project.name}_export.json"
+        # Save export directory to config
+        self.config.set_setting('export', 'directory', export_dir)
+        
+        # Set file extension and types based on format
+        if format == 'csv':
+            extension = ".csv"
+            file_types = [("CSV Files", "*.csv"), ("All Files", "*.*")]
+            default_filename = f"{self.current_project.name}_export.csv"
+        else:  # Default to json
+            extension = ".json"
+            file_types = [("JSON Files", "*.json"), ("All Files", "*.*")]
+            default_filename = f"{self.current_project.name}_export.json"
         
         # Prompt for save location
         filepath = filedialog.asksaveasfilename(
             initialdir=export_dir,
             initialfile=default_filename,
-            defaultextension=".json",
-            filetypes=[("JSON Files", "*.json"), ("All Files", "*.*")]
+            defaultextension=extension,
+            filetypes=file_types
         )
         
         if not filepath:
             self.status_var.set("Export cancelled")
+            self._update_progress("")
             return
             
         try:
+            # Update progress
+            self._update_progress("Saving export file...")
+            
             # Save the file
-            with open(filepath, 'w', encoding='utf-8') as f:
-                json.dump(export_data, f, indent=2)
+            success = False
+            if format == 'csv':
+                success = Exporter.export_to_csv(export_data, filepath)
+            else:  # Default to json
+                success = Exporter.export_to_json(export_data, filepath)
                 
-            self.status_var.set(f"Exported {len(export_data['cases'])} test cases to {os.path.basename(filepath)}")
-            messagebox.showinfo("Success", f"Successfully exported {len(export_data['cases'])} test cases")
+            if success:
+                self.status_var.set(f"Exported {len(export_data['cases'])} test cases to {os.path.basename(filepath)}")
+                messagebox.showinfo("Success", f"Successfully exported {len(export_data['cases'])} test cases to {format.upper()} format")
+            else:
+                self._show_error(f"Failed to export to {format.upper()}")
+                
+            self._update_progress("")
         except Exception as e:
             self._show_error(f"Failed to save export file: {str(e)}")
     
     def _show_error(self, message):
         """Show an error message and update the status."""
         messagebox.showerror("Error", message)
-        self.progress.stop()
         self.status_var.set("Error occurred")
+        self._update_progress("")
