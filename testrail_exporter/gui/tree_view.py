@@ -219,15 +219,48 @@ class CheckableTreeview(ttk.Treeview):
         for item in self.get_children():
             self._uncheck_item(item)
             
+    def count_all_items(self):
+        """
+        Count all items in the treeview.
+        
+        Returns:
+            int: Total number of items
+        """
+        count = 0
+        
+        def _count_items(item):
+            nonlocal count
+            count += 1
+            for child in self.get_children(item):
+                _count_items(child)
+        
+        for item in self.get_children():
+            _count_items(item)
+            
+        return count
+        
     def expand_all(self):
         """Expand all items in the treeview."""
         def _expand_all(item):
             self.item(item, open=True)
+            # Generate an event after each item is expanded
+            self.event_generate("<<TreeItemExpanded>>")
+            
+            # Process pending events to update UI
+            self.update()
+            
             for child in self.get_children(item):
                 _expand_all(child)
                 
+        # Signal start of expansion
+        self.event_generate("<<ExpandAllStarted>>")
+        
+        # Expand all items
         for item in self.get_children():
             _expand_all(item)
+            
+        # Signal completion
+        self.event_generate("<<ExpandAllCompleted>>")
             
     def collapse_all(self):
         """Collapse all items in the treeview."""
