@@ -4,8 +4,11 @@ import threading
 import json
 import os
 import time
+import tempfile
+from datetime import datetime
 from PIL import Image, ImageTk
 from testrail_exporter.utils.exporter import Exporter
+from testrail_exporter.utils.testrail2xray import convert_xml_to_xray_csv
 
 from testrail_exporter.gui.settings import SettingsFrame
 from testrail_exporter.gui.tree_view import CheckableTreeview
@@ -95,7 +98,7 @@ class Application(tk.Tk):
         
         ttk.Button(export_frame, text="Export JSON", command=lambda: self._export_cases(format='json')).pack(side=tk.RIGHT, padx=2)
         ttk.Button(export_frame, text="Export XML", command=lambda: self._export_cases(format='xml')).pack(side=tk.RIGHT, padx=2)
-        ttk.Button(export_frame, text="Export CSV", command=lambda: self._export_cases(format='csv')).pack(side=tk.RIGHT, padx=2)
+        ttk.Button(export_frame, text="Export to Xray CSV", command=lambda: self._export_cases(format='xray_csv'), width=16).pack(side=tk.RIGHT, padx=2)
         
         # Progress bar and status
         status_frame = ttk.Frame(main_frame)
@@ -964,11 +967,11 @@ class Application(tk.Tk):
     
     def _save_export_file(self, export_data, format='json'):
         """
-        Prompt user to save export file.
+        Automatically save export file with timestamped filename.
         
         Args:
             export_data (dict): Data to export
-            format (str): Export format ('json', 'csv', or 'xml')
+            format (str): Export format ('json', 'csv', 'xml', or 'xray_csv')
         """
         # Get export directory from settings
         settings = self.settings_frame.get_settings()
@@ -977,55 +980,103 @@ class Application(tk.Tk):
         # Save export directory to config
         self.config.set_setting('export', 'directory', export_dir)
         
-        # Set file extension and types based on format
-        if format == 'csv':
+        # Generate timestamp
+        timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+        
+        # Set file extension and base filename based on format
+        if format == 'xray_csv':
             extension = ".csv"
-            file_types = [("CSV Files", "*.csv"), ("All Files", "*.*")]
-            default_filename = f"{self.current_project.name}_export.csv"
+            base_filename = f"{self.current_project.name}_xray_export"
         elif format == 'xml':
             extension = ".xml"
-            file_types = [("XML Files", "*.xml"), ("All Files", "*.*")]
-            default_filename = f"{self.current_project.name}_export.xml"
+            base_filename = f"{self.current_project.name}_export"
         else:  # Default to json
             extension = ".json"
-            file_types = [("JSON Files", "*.json"), ("All Files", "*.*")]
-            default_filename = f"{self.current_project.name}_export.json"
+            base_filename = f"{self.current_project.name}_export"
         
-        # Prompt for save location
-        filepath = filedialog.asksaveasfilename(
-            initialdir=export_dir,
-            initialfile=default_filename,
-            defaultextension=extension,
-            filetypes=file_types
-        )
+        # Create timestamped filename
+        filename = f"{base_filename}_{timestamp}{extension}"
+        filepath = os.path.join(export_dir, filename)
         
-        if not filepath:
-            self.status_var.set("Export cancelled")
-            self._update_progress("")
-            return
-            
         try:
             # Update progress
             self._update_progress("Saving export file...")
             
             # Save the file
             success = False
-            if format == 'csv':
-                success = Exporter.export_to_csv(export_data, filepath)
+            if format == 'xray_csv':
+                result = self._export_to_xray_csv(export_data, filepath)
+                if isinstance(result, tuple) and len(result) == 3:
+                    success, xml_filename, csv_filename = result
+                else:
+                    success = result
+                    xml_filename, csv_filename = None, None
             elif format == 'xml':
                 success = Exporter.export_to_xml(export_data, filepath)
             else:  # Default to json
                 success = Exporter.export_to_json(export_data, filepath)
                 
             if success:
-                self.status_var.set(f"Exported {len(export_data['cases'])} test cases to {os.path.basename(filepath)}")
-                messagebox.showinfo("Success", f"Successfully exported {len(export_data['cases'])} test cases to {format.upper()} format")
+                if format == 'xray_csv' and xml_filename and csv_filename:
+                    self.status_var.set(f"Exported {len(export_data['cases'])} test cases to Xray format")
+                    messagebox.showinfo("Export Complete", 
+                        f"Successfully exported {len(export_data['cases'])} test cases!\n\n"
+                        f"Files created:\n"
+                        f"• XML: {xml_filename}\n"
+                        f"• Xray CSV: {csv_filename}\n\n"
+                        f"Use the CSV file for importing into Xray.\n"
+                        f"The XML file is provided for reference.")
+                else:
+                    self.status_var.set(f"Exported {len(export_data['cases'])} test cases to {filename}")
+                    messagebox.showinfo("Success", f"Successfully exported {len(export_data['cases'])} test cases to {format.upper()} format\n\nSaved as: {filename}")
             else:
-                self._show_error(f"Failed to export to {format.upper()}")
+                if format == 'xray_csv':
+                    self._show_error("Failed to export to Xray CSV")
+                else:
+                    self._show_error(f"Failed to export to {format.upper()}")
                 
             self._update_progress("")
         except Exception as e:
             self._show_error(f"Failed to save export file: {str(e)}")
+    
+    def _export_to_xray_csv(self, export_data, csv_filepath):
+        """
+        Export test cases to Xray CSV format by first creating XML then converting.
+        Also saves the XML file alongside the CSV for reference.
+        
+        Args:
+            export_data (dict): Data to export
+            csv_filepath (str): Path where the CSV file should be saved
+            
+        Returns:
+            tuple: (success: bool, xml_filename: str, csv_filename: str)
+        """
+        try:
+            # Create XML file path alongside the CSV file
+            base_path = os.path.splitext(csv_filepath)[0]
+            xml_filepath = f"{base_path}.xml"
+            
+            # First export to XML format (permanent file)
+            if not Exporter.export_to_xml(export_data, xml_filepath):
+                return False, None, None
+            
+            # Get TestRail endpoint from settings for link handling
+            settings = self.settings_frame.get_settings()
+            testrail_endpoint = settings.get('url', '')
+            
+            # Convert XML to Xray CSV format
+            success = convert_xml_to_xray_csv(xml_filepath, csv_filepath, testrail_endpoint)
+            
+            if success:
+                xml_filename = os.path.basename(xml_filepath)
+                csv_filename = os.path.basename(csv_filepath)
+                return True, xml_filename, csv_filename
+            else:
+                return False, None, None
+                
+        except Exception as e:
+            print(f"Error in _export_to_xray_csv: {str(e)}")
+            return False, None, None
     
     def _show_error(self, message):
         """Show an error message and update the status."""
