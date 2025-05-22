@@ -89,15 +89,43 @@ class Exporter:
             if not cases:
                 raise ValueError("No cases to export")
             
-            # Group cases by suite, preserving suite IDs
+            # Build complete suite hierarchy first, then populate with cases
             suites_dict = {}
+            
+            # Step 1: Build complete section hierarchy from suite data
+            suites_data = data.get('suites', [])
+            for suite in suites_data:
+                suite_key = f"{suite.name}_{suite.id}" if suite.id else suite.name
+                
+                # Initialize suite structure
+                suites_dict[suite_key] = {
+                    'name': suite.name,
+                    'id': suite.id,
+                    'sections': {}
+                }
+                
+                # Add all sections from the suite (including those without test cases)
+                if hasattr(suite, 'sections') and suite.sections:
+                    for section in suite.sections:
+                        suites_dict[suite_key]['sections'][section.id] = {
+                            'id': section.id,
+                            'name': section.name,
+                            'parent_id': section.parent_id,
+                            'depth': section.depth,
+                            'cases': [],
+                            'children': {}
+                        }
+            
+            # Step 2: Populate test cases into the appropriate sections
             for case in cases:
                 suite_name = case.get('suite_name', 'Unknown Suite')
-                suite_id = case.get('suite_id')  # Keep the original suite_id if available
+                suite_id = case.get('suite_id')
+                section_id = case.get('section_id')
                 
                 # Use a key that includes the suite ID if available
                 suite_key = f"{suite_name}_{suite_id}" if suite_id else suite_name
                 
+                # Create suite entry if it doesn't exist (fallback for missing suite data)
                 if suite_key not in suites_dict:
                     suites_dict[suite_key] = {
                         'name': suite_name,
@@ -105,11 +133,43 @@ class Exporter:
                         'sections': {}
                     }
                 
-                section_name = case.get('section_name', 'Test Cases')
-                if section_name not in suites_dict[suite_key]['sections']:
-                    suites_dict[suite_key]['sections'][section_name] = []
+                # Use a default section ID if none exists
+                if section_id is None:
+                    section_id = 'default'
                 
-                suites_dict[suite_key]['sections'][section_name].append(case)
+                # Create section entry if it doesn't exist (fallback for missing section data)
+                if section_id not in suites_dict[suite_key]['sections']:
+                    section_name = case.get('section_name', 'Test Cases')
+                    section_parent_id = case.get('section_parent_id')
+                    section_depth = case.get('section_depth', 0)
+                    
+                    suites_dict[suite_key]['sections'][section_id] = {
+                        'id': section_id,
+                        'name': section_name,
+                        'parent_id': section_parent_id,
+                        'depth': section_depth,
+                        'cases': [],
+                        'children': {}
+                    }
+                
+                # Add the test case to the section
+                suites_dict[suite_key]['sections'][section_id]['cases'].append(case)
+            
+            # Build hierarchical section structure for each suite
+            for suite_key, suite_info in suites_dict.items():
+                sections = suite_info['sections']
+                
+                # Build parent-child relationships
+                for section_id, section in sections.items():
+                    parent_id = section['parent_id']
+                    if parent_id and parent_id in sections:
+                        sections[parent_id]['children'][section_id] = section
+                
+                # Store root sections (sections with no parent or parent not in the export)
+                suite_info['root_sections'] = {
+                    sid: section for sid, section in sections.items() 
+                    if not section['parent_id'] or section['parent_id'] not in sections
+                }
             
             # Create XML structure - handle multiple suites
             if len(suites_dict) == 1:
@@ -123,7 +183,7 @@ class Exporter:
                 root = ET.Element("suites")
                 for suite_key, suite_info in suites_dict.items():
                     suite_elem = ET.SubElement(root, "suite")
-                    Exporter._add_suite_xml(suite_elem, suite_info, False)
+                    Exporter._add_suite_xml(suite_elem, suite_info, True)  # Always include suite metadata
             
             # Convert to pretty XML string using manual indentation
             def indent_xml(elem, level=0):
@@ -158,11 +218,11 @@ class Exporter:
     @staticmethod
     def _add_suite_xml(suite_elem, suite_info, add_metadata=True):
         """
-        Add suite information to XML element.
+        Add suite information to XML element with nested sections support.
         
         Args:
             suite_elem: XML element to add to
-            suite_info: Dictionary with suite name, id, and sections
+            suite_info: Dictionary with suite name, id, and root_sections
             add_metadata: Whether to add ID/name/description elements
         """
         if add_metadata:
@@ -178,21 +238,43 @@ class Exporter:
             
             desc_elem = ET.SubElement(suite_elem, "description")
         
-        # Add sections
+        # Add root sections
         sections_elem = ET.SubElement(suite_elem, "sections")
         
-        for section_name, cases in suite_info['sections'].items():
-            section_elem = ET.SubElement(sections_elem, "section")
-            
-            section_name_elem = ET.SubElement(section_elem, "name")
-            section_name_elem.text = section_name
-            
-            section_desc_elem = ET.SubElement(section_elem, "description")
-            
-            # Add cases
+        # Use root_sections from the hierarchical structure
+        root_sections = suite_info.get('root_sections', {})
+        for section_id, section in root_sections.items():
+            Exporter._add_section_xml(sections_elem, section)
+    
+    @staticmethod
+    def _add_section_xml(parent_elem, section):
+        """
+        Recursively add section and its nested children to XML.
+        
+        Args:
+            parent_elem: Parent XML element to add section to
+            section: Section dictionary with name, cases, and children
+        """
+        section_elem = ET.SubElement(parent_elem, "section")
+        
+        # Section name
+        section_name_elem = ET.SubElement(section_elem, "name")
+        section_name_elem.text = section['name']
+        
+        # Section description
+        section_desc_elem = ET.SubElement(section_elem, "description")
+        
+        # Add nested sections if any
+        if section['children']:
+            nested_sections_elem = ET.SubElement(section_elem, "sections")
+            for child_id, child_section in section['children'].items():
+                Exporter._add_section_xml(nested_sections_elem, child_section)
+        
+        # Add cases if any
+        if section['cases']:
             cases_elem = ET.SubElement(section_elem, "cases")
             
-            for case in cases:
+            for case in section['cases']:
                 case_elem = ET.SubElement(cases_elem, "case")
                 
                 # Case ID

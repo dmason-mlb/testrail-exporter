@@ -890,13 +890,23 @@ class Application(tk.Tk):
             if self.loading_cancelled:
                 return
                 
+            # Determine which suites are involved in the export
+            suite_ids_in_export = set()
+            for case in cases:
+                if case.suite_id:
+                    suite_ids_in_export.add(case.suite_id)
+            
+            # Only include suites that have test cases in the export
+            suites_for_export = [suite for suite in self.current_project.suites if suite.id in suite_ids_in_export]
+            
             # Prepare export data with names instead of IDs
             export_data = {
                 'project': {
                     'id': self.current_project.id,
                     'name': self.current_project.name
                 },
-                'cases': [self._convert_case_ids_to_names(case) for case in cases]
+                'cases': [self._convert_case_ids_to_names(case) for case in cases],
+                'suites': suites_for_export  # Include only suites with exported test cases
             }
             
             # Update UI in the main thread
@@ -925,13 +935,15 @@ class Application(tk.Tk):
                 case_dict['suite_name'] = suite.name
                 # Keep suite_id for XML export
         
-        # Convert section_id to section name (keep both for XML export)
+        # Convert section_id to section name and add hierarchy info (keep all for XML export)
         if case.section_id:
             suite = next((s for s in self.current_project.suites if s.id == case.suite_id), None)
             if suite:
                 section = next((sec for sec in suite.sections if sec.id == case.section_id), None)
                 if section:
                     case_dict['section_name'] = section.name
+                    case_dict['section_parent_id'] = section.parent_id
+                    case_dict['section_depth'] = section.depth
                     # Keep section_id for XML export
         
         # Convert priority_id to priority name (keep both for XML export)
