@@ -4,14 +4,14 @@
 
 A Python GUI application to export test cases from TestRail for later importing into X-ray.
 
-![TestRail Exporter - Exporting Test Cases](./docs/images/testrail-exporter-suites-selected.png)
+![TestRail Exporter - Exporting Test Cases](./docs/images/testrail-exporter-xray-export.png)
 
 ## Features
 
 - Connect to TestRail instance with URL, username, and API key
 - Browse projects, test suites, and sections
 - Select test suites and sections to export
-- Export test cases to JSON, CSV, or XML format
+- Export test cases to JSON, XML, or Xray-compatible CSV format
 - Configurable export directory
 - Persistent settings between sessions
 - Progress tracking during API operations
@@ -117,8 +117,8 @@ Use the "Test Connection" button to verify your credentials before loading proje
 7. Choose export format:
    - Click "Export JSON" to export in JSON format
    - Click "Export XML" to export in TestRail-compatible XML format
-   - Click "Export CSV" to export in CSV format compatible with spreadsheet software
-   - Choose a filename and location in the save dialog
+   - Click "Export to Xray CSV" to export both XML and Xray-compatible CSV files
+   - Files are automatically saved with timestamps to prevent conflicts
    - Wait for the export process to complete (progress is shown at the bottom)
    - A success message will appear when the export is finished
 
@@ -158,20 +158,23 @@ Example:
 }
 ```
 
-### CSV Format
+### Xray CSV Format
 
-The exported CSV file contains all test case fields as columns:
+The "Export to Xray CSV" function creates two files:
 
-- Each test case is represented as a row
-- Standard fields (id, title, suite_name, section_name, etc.) are included
-- Human-readable names used instead of IDs for better readability
-- Custom fields (prefixed with `custom_`) are included as separate columns
-- All fields found in any case are included in the CSV headers
+1. **XML file** (for reference): TestRail-compatible XML structure
+2. **CSV file** (for Xray import): Xray-compatible CSV format with the following structure:
+   - Issue ID, Issue Key, Test Type, Test Summary, Test Priority, Action, Data, Result, Test Repo, Labels
+   - Handles both single suite and multiple suite exports
+   - Converts TestRail test cases to Xray-compatible format
+   - Processes test steps and expected results appropriately
+   - Uses hierarchical test repository names for organization
 
-CSV files can be easily:
-- Opened in spreadsheet applications like Excel or Google Sheets
-- Imported into test management tools
-- Used for data analysis or reporting
+The CSV file is specifically formatted for importing into Atlassian Xray and includes:
+- Proper priority mapping (Critical=1, High=2, Medium=3, Low=4)
+- Test type conversion (Manual, Exploratory, Automated→Generic)
+- Section hierarchy reflected in Test Repo field
+- Clean HTML tag removal from test content
 
 ### XML Format
 
