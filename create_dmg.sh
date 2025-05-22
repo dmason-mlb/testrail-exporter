@@ -50,14 +50,14 @@ APP_BUNDLE="$DIST_DIR/${APP_NAME}.app"
 PYTHON_ENTRY="testrail_exporter/main.py"
 
 # DMG Customization Settings
-DMG_BACKGROUND_IMG_SRC="docs/images/dmg_background.png" # User should create this image (e.g., 600x400 with an arrow)
-DMG_WINDOW_WIDTH=600
-DMG_WINDOW_HEIGHT=400
-DMG_ICON_SIZE=96      # Icon size for items within the DMG
-DMG_APP_X_POS=150     # X position for the .app icon
-DMG_APP_Y_POS=190     # Y position for the .app icon (adjust for vertical centering)
-DMG_APPLICATIONS_LINK_X_POS=450 # X position for Applications link
-DMG_APPLICATIONS_LINK_Y_POS=190 # Y position for Applications link
+DMG_BACKGROUND_IMG_SRC="docs/images/dmg_background.png" # User should create this image (e.g., 500x320 with an arrow)
+DMG_WINDOW_WIDTH=500
+DMG_WINDOW_HEIGHT=320
+DMG_ICON_SIZE=128     # Icon size for items within the DMG (128 is standard for app icons)
+DMG_APP_X_POS=125     # X position for the .app icon (centered in left half)
+DMG_APP_Y_POS=160     # Y position for the .app icon (vertically centered)
+DMG_APPLICATIONS_LINK_X_POS=375 # X position for Applications link (centered in right half)
+DMG_APPLICATIONS_LINK_Y_POS=160 # Y position for Applications link (vertically centered)
 
 # ------------------------------- FUNCTIONS -----------------------------------
 function check_deps() {
@@ -181,7 +181,7 @@ function create_dmg() {
   DMG_APP_NAME_IN_DMG="${APP_NAME}.app" # Actual name of the .app bundle inside DMG
 
   # Clean up old DMGs
-  rm -f "$DMG_NAME" "$TEMP_DMG_RW"
+  rm -f "$BUILD_DIR/$DMG_NAME" "$TEMP_DMG_RW"
 
   # Create a new read/write DMG
   # Increased size just in case, can be tuned. fsargs are common for DMGs.
@@ -308,15 +308,16 @@ EOF
     # Proceeding to conversion might fail if still mounted, but worth a try.
   fi
   
-  # Convert to compressed read-only DMG
-  echo "  Converting to final compressed DMG: $DMG_NAME..."
-  hdiutil convert "$TEMP_DMG_RW" -format UDZO -imagekey zlib-level=9 -o "$DMG_NAME"
+  # Convert to compressed read-only DMG in build folder
+  FINAL_DMG_PATH="$BUILD_DIR/$DMG_NAME"
+  echo "  Converting to final compressed DMG: $FINAL_DMG_PATH..."
+  hdiutil convert "$TEMP_DMG_RW" -format UDZO -imagekey zlib-level=9 -o "$FINAL_DMG_PATH"
   if [ $? -ne 0 ]; then echo "Error: Failed to convert DMG to final format. Aborting."; rm -f "$TEMP_DMG_RW"; exit 1; fi
 
   # Clean up temporary read/write DMG
   rm -f "$TEMP_DMG_RW"
 
-  echo "Successfully created $DMG_NAME with custom appearance."
+  echo "Successfully created $FINAL_DMG_PATH with custom appearance."
 }
 
 # ------------------------------- MAIN ----------------------------------------
@@ -330,4 +331,4 @@ build_app
 sign_app
 create_dmg
 
-echo "\nDone! You can now distribute $DMG_NAME to other macOS users." 
+echo "\nDone! You can now distribute $BUILD_DIR/$DMG_NAME to other macOS users." 
