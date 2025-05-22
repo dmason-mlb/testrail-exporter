@@ -63,9 +63,13 @@ class Application(tk.Tk):
         tree_frame.pack(fill=tk.BOTH, expand=True, pady=10)
         
         # Treeview for suites and sections
-        self.tree = CheckableTreeview(tree_frame, columns=("name",), show="tree")
+        self.tree = CheckableTreeview(tree_frame, columns=("name", "suite_id", "section_id", "section_parent_id", "is_placeholder"), show="tree")
         self.tree.column("#0", width=50, minwidth=50, stretch=False)
         self.tree.column("name", width=200, minwidth=200)
+        self.tree.column("suite_id", width=0, minwidth=0, stretch=False)  # Hidden column for metadata
+        self.tree.column("section_id", width=0, minwidth=0, stretch=False)  # Hidden column for metadata
+        self.tree.column("section_parent_id", width=0, minwidth=0, stretch=False)  # Hidden column for metadata
+        self.tree.column("is_placeholder", width=0, minwidth=0, stretch=False)  # Hidden column for placeholder detection
         self.tree.heading("name", text="Suites and Sections")
         self.tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         
@@ -139,6 +143,7 @@ class Application(tk.Tk):
             'sections': {},  # Suite ID -> Sections
             'cases': {},  # Suite ID+Section ID -> Cases
             'loading_state': {},  # Track loading completion state for projects
+            'sections_loaded': set(),  # Track which suites have sections loaded
             'priorities': None,  # Cache priorities (not project-specific)
             'case_types': None  # Cache case types (not project-specific)
         }
@@ -240,6 +245,7 @@ class Application(tk.Tk):
                     'sections': {},
                     'cases': {},
                     'loading_state': {},
+                    'sections_loaded': set(),
                     'priorities': None,
                     'case_types': None
                 }
@@ -434,8 +440,8 @@ class Application(tk.Tk):
         # Reset and start progress tracking
         self._update_progress("Loading suites...", reset=True)
         
-        # Calculate API calls: 1 for suites + 1 for each suite's sections
-        self.api_calls_total = 1  # Start with 1 for the suites call
+        # Only need 1 API call for suites (sections will be loaded lazily)
+        self.api_calls_total = 1
         
         # Load suites in a separate thread
         self.active_thread = threading.Thread(target=self._load_suites_thread)
@@ -473,48 +479,7 @@ class Application(tk.Tk):
             
             self._register_api_call()
             
-            # Now we know how many suites we have, update total API calls
-            # We'll only need 1 API call per suite to get sections
-            self.api_calls_total += len(suites)
-            self._update_progress("Loading sections...")
-            
-            # Load sections for each suite
-            for suite in suites:
-                # Check if operation has been cancelled
-                if self.loading_cancelled:
-                    # Mark as incomplete if cancelled
-                    if hasattr(self, 'current_project') and self.current_project:
-                        self.cache['loading_state'][self.current_project.id] = 'incomplete'
-                    return
-                
-                # Check if we have cached sections for this suite
-                if suite.id in self.cache['sections']:
-                    suite.sections = self.cache['sections'][suite.id]
-                    self._register_api_call()
-                else:
-                    sections_data = self.client.get_sections(self.current_project.id, suite.id)
-                    
-                    # Check if operation has been cancelled
-                    if self.loading_cancelled:
-                        # Mark as incomplete if cancelled
-                        if hasattr(self, 'current_project') and self.current_project:
-                            self.cache['loading_state'][self.current_project.id] = 'incomplete'
-                        return
-                        
-                    sections = [Section(s) for s in sections_data]
-                    
-                    # Sort sections alphabetically by name
-                    sections.sort(key=lambda s: s.name.lower())
-                    
-                    suite.sections = sections
-                    
-                    # Cache the sections
-                    self.cache['sections'][suite.id] = sections
-                    
-                    self._register_api_call()
-                
-                # We'll no longer preload case counts during initial load to save time
-                # The caching will happen on-demand when exporting
+            # Don't load sections now - they'll be loaded lazily when needed
             
             # Update UI in the main thread
             if not self.loading_cancelled:
@@ -603,8 +568,96 @@ class Application(tk.Tk):
         # Reset cancellation flag
         self.loading_cancelled = False
         
-        # Start the expand all operation
-        self.tree.expand_all()
+        # First, we need to load sections for all suites that haven't been loaded yet
+        # then expand all items
+        self._expand_all_with_lazy_loading()
+        
+    def _expand_all_with_lazy_loading(self):
+        """Expand all items, loading sections as needed."""
+        if not self.current_project or not self.current_project.suites:
+            return
+            
+        # Count total suites that need loading for progress tracking
+        suites_to_load = []
+        for suite in self.current_project.suites:
+            if suite.id not in self.cache['sections_loaded']:
+                suites_to_load.append(suite)
+        
+        if suites_to_load:
+            # Reset progress tracking
+            self.api_calls_total = len(suites_to_load)
+            self.api_calls_done = 0
+            self._update_progress("Loading sections for expand all...", reset=True)
+            
+            # Load sections for all suites in a background thread
+            self.active_thread = threading.Thread(target=lambda: self._load_all_sections_then_expand(suites_to_load))
+            self.active_thread.start()
+        else:
+            # All sections already loaded, just expand
+            self._update_progress("Expanding all items...", reset=True)
+            self.tree.expand_all()
+            self._update_progress("")
+            
+    def _load_all_sections_then_expand(self, suites_to_load):
+        """Load sections for all suites then expand all items."""
+        try:
+            for suite in suites_to_load:
+                if self.loading_cancelled:
+                    return
+                    
+                # Load sections for this suite
+                if suite.id not in self.cache['sections_loaded']:
+                    try:
+                        sections_data = self.client.get_sections(self.current_project.id, suite.id)
+                        sections = [Section(s) for s in sections_data]
+                        self.cache['sections'][suite.id] = sections
+                        self.cache['sections_loaded'].add(suite.id)
+                        
+                        # Update suite object
+                        suite.sections = sections
+                        
+                    except Exception:
+                        # If we can't load, mark as loaded with empty sections to avoid retry
+                        self.cache['sections'][suite.id] = []
+                        self.cache['sections_loaded'].add(suite.id)
+                        suite.sections = []
+                
+                self._register_api_call()
+            
+            # Now expand all in the main thread
+            if not self.loading_cancelled:
+                self.after(0, self._finish_expand_all)
+                
+        except Exception as e:
+            if not self.loading_cancelled:
+                self.after(0, lambda: self._show_error(f"Failed to load sections for expand all: {str(e)}"))
+                
+    def _finish_expand_all(self):
+        """Finish the expand all operation by updating UI and expanding."""
+        try:
+            # Remove all placeholders and add real sections to tree
+            for suite_item_id in self.tree.get_children():
+                suite_id = self._get_suite_id_from_item(suite_item_id)
+                if suite_id and suite_id in self.cache['sections_loaded']:
+                    # Remove placeholder children
+                    children = self.tree.get_children(suite_item_id)
+                    for child in children:
+                        if self.tree.set(child, "is_placeholder") == "true":
+                            self.tree.delete(child)
+                    
+                    # Add real sections if any exist
+                    sections = self.cache['sections'].get(suite_id, [])
+                    if sections:
+                        self._add_sections_to_tree(sections, suite_item_id)
+            
+            # Now expand all items
+            self._update_progress("Expanding all items...")
+            self.tree.expand_all()
+            self._update_progress("")
+            self.status_var.set("Expanded all items")
+            
+        except Exception as e:
+            self._show_error(f"Failed to expand all: {str(e)}")
         
     def _on_expand_all_started(self, event):
         """Handle the start of an expand all operation."""
@@ -653,17 +706,20 @@ class Application(tk.Tk):
                     self.cache['cases'][cache_key] = []
     
     def _update_suites_ui(self):
-        """Update the treeview after loading suites and sections."""
-        # Add suites and sections to the treeview
+        """Update the treeview after loading suites."""
+        # Add suites to the treeview (sections will be loaded on demand)
         for suite in self.current_project.suites:
-            # Add suite without case count
-            suite_id = self.tree.insert("", "end", text="", values=(suite.name,), image=self.tree.image_unchecked)
+            # Add suite without loading sections yet
+            suite_item_id = self.tree.insert("", "end", text="", values=(suite.name,), image=self.tree.image_unchecked)
             
-            # Add sections if any
-            if suite.has_sections():
-                # Add all sections without case counts or filtering
-                for section in suite.sections:
-                    section_id = self.tree.insert(suite_id, "end", text="", values=(section.name,), image=self.tree.image_unchecked)
+            # Store suite ID in hidden column for later reference
+            self.tree.set(suite_item_id, "suite_id", str(suite.id))
+            print(f"DEBUG: Created suite item {suite_item_id} for suite '{suite.name}' (id: {suite.id})")
+            
+            # Add a placeholder child to show the expansion caret
+            # This will be replaced with actual sections when expanded
+            placeholder_id = self.tree.insert(suite_item_id, "end", text="", values=("Loading...",), image=self.tree.image_unchecked)
+            self.tree.set(placeholder_id, "is_placeholder", "true")
             
         # Add event handler for tree item open (expand) event
         self.tree.bind("<<TreeviewOpen>>", self._on_tree_item_expanded)
@@ -676,10 +732,75 @@ class Application(tk.Tk):
         self._update_progress("")
         
     def _on_tree_item_expanded(self, event):
-        """Handle when a tree item is expanded."""
-        # We're not updating the UI with case counts anymore,
-        # but we'll keep the event handler for future extensibility
-        pass
+        """Handle when a tree item is expanded - lazy load sections if needed."""
+        # Simple approach: check all open items and load sections if needed
+        self.after(50, self._check_all_expanded_items)
+    
+    def _check_all_expanded_items(self):
+        """Check all expanded items and load sections if needed."""
+        # Simple check: look for any open suites with placeholder children
+        for item_id in self.tree.get_children():
+            if self.tree.item(item_id, "open"):
+                # This suite is expanded, check if it needs sections loaded
+                children = self.tree.get_children(item_id)
+                if children and len(children) == 1:
+                    child_id = children[0]
+                    if self.tree.set(child_id, "is_placeholder") == "true":
+                        # This suite has a placeholder - load sections
+                        suite_id = self._get_suite_id_from_item(item_id)
+                        print(f"DEBUG: Got suite_id {suite_id} for item {item_id}")
+                        
+                        # Also get suite name for verification
+                        item_values = self.tree.item(item_id, "values")
+                        suite_name = item_values[0] if item_values else "Unknown"
+                        print(f"DEBUG: Suite name from tree: {suite_name}")
+                        
+                        if suite_id and suite_id not in self.cache['sections_loaded']:
+                            self._load_sections_sync(suite_id, item_id)
+    
+    def _load_sections_sync(self, suite_id, suite_item_id):
+        """Load sections synchronously and immediately update the tree."""
+        print(f"DEBUG: _load_sections_sync called for suite {suite_id}")
+        if not self.client or not self.current_project:
+            print("DEBUG: No client or project")
+            return
+            
+        try:
+            self.status_var.set("Loading sections...")
+            
+            # Load sections from API if not cached
+            if suite_id not in self.cache['sections']:
+                print(f"DEBUG: Loading sections from API for suite {suite_id}")
+                sections_data = self.client.get_sections(self.current_project.id, suite_id)
+                print(f"DEBUG: Got {len(sections_data)} sections from API")
+                sections = [Section(s) for s in sections_data]
+                for i, section in enumerate(sections):
+                    print(f"DEBUG: API Section {i}: {section.name} (id: {section.id}, parent: {section.parent_id})")
+                self.cache['sections'][suite_id] = sections
+            else:
+                print(f"DEBUG: Using cached sections for suite {suite_id}")
+                sections = self.cache['sections'][suite_id]
+            
+            # Mark as loaded
+            self.cache['sections_loaded'].add(suite_id)
+            
+            # Remove placeholder children
+            children = self.tree.get_children(suite_item_id)
+            print(f"DEBUG: Removing {len(children)} placeholder children")
+            for child in children:
+                self.tree.delete(child)
+            
+            if sections:
+                print(f"DEBUG: Adding {len(sections)} sections to tree")
+                # Add sections to tree with proper hierarchy
+                self._add_sections_to_tree(sections, suite_item_id)
+                self.status_var.set(f"Loaded {len(sections)} sections")
+            else:
+                print("DEBUG: No sections to add")
+                self.status_var.set("No sections returned")
+                
+        except Exception as e:
+            self._show_error(f"Failed to load sections: {str(e)}")
     
     def _export_cases(self, format='json'):
         """
@@ -783,22 +904,21 @@ class Application(tk.Tk):
                 if self.loading_cancelled:
                     return
                     
-                item_values = self.tree.item(item_id, "values")
-                suite_display_name = item_values[0]
-                # Extract name without count
-                if " (" in suite_display_name:
-                    suite_name = suite_display_name.split(" (")[0]
-                else:
-                    suite_name = suite_display_name
-                    
-                suite = next((s for s in self.current_project.suites if s.name == suite_name), None)
+                # Get suite ID from tree item
+                suite_id = self._get_suite_id_from_item(item_id)
+                suite = next((s for s in self.current_project.suites if s.id == suite_id), None) if suite_id else None
+                
                 if suite:
                     # Update progress
-                    self._update_progress(f"Exporting suite: {suite_name}")
+                    self._update_progress(f"Exporting suite: {suite.name}")
                     
                     # Check if operation has been cancelled
                     if self.loading_cancelled:
                         return
+                        
+                    # Make sure sections are loaded for this suite before exporting
+                    if suite.id not in self.cache['sections_loaded']:
+                        self._ensure_sections_loaded_for_export(suite.id)
                         
                     # Check if we have cached cases for this suite
                     cache_key = f"{self.current_project.id}_{suite.id}_None"
@@ -832,59 +952,48 @@ class Application(tk.Tk):
                 if self.loading_cancelled:
                     return
                     
-                item_values = self.tree.item(item_id, "values")
-                parent_id = self.tree.parent(item_id)
+                # Get section info from tree
+                section_id = self._get_section_id_from_item(item_id)
+                suite_id = self._get_suite_id_from_item(item_id)
                 
-                section_display_name = item_values[0]
-                # Extract section name without count
-                if " (" in section_display_name:
-                    section_name = section_display_name.split(" (")[0]
-                else:
-                    section_name = section_display_name
+                if not section_id or not suite_id:
+                    continue
                     
-                suite_display_name = self.tree.item(parent_id, "values")[0]
-                # Extract suite name without count
-                if " (" in suite_display_name:
-                    suite_name = suite_display_name.split(" (")[0]
-                else:
-                    suite_name = suite_display_name
+                item_values = self.tree.item(item_id, "values")
+                section_name = item_values[0] if item_values else "Unknown Section"
+                
+                # Update progress
+                self._update_progress(f"Exporting section: {section_name}")
+                
+                # Check if operation has been cancelled
+                if self.loading_cancelled:
+                    return
                     
-                suite = next((s for s in self.current_project.suites if s.name == suite_name), None)
-                if suite:
-                    section = next((s for s in suite.sections if s.name == section_name), None)
-                    if section:
-                        # Update progress
-                        self._update_progress(f"Exporting section: {section_name}")
+                # Check if we have cached cases for this section
+                cache_key = f"{self.current_project.id}_{suite_id}_{section_id}"
+                if cache_key in self.cache['cases']:
+                    # Use cached data
+                    section_cases = self.cache['cases'][cache_key]
+                else:
+                    # Get cases for the section from API
+                    cases_data = self.client.get_cases(self.current_project.id, suite_id, section_id)
+                    
+                    # Check if operation has been cancelled
+                    if self.loading_cancelled:
+                        return
+                    
+                    section_cases = [Case(c) for c in cases_data]
+                    
+                    # Cache the cases
+                    self.cache['cases'][cache_key] = section_cases
+                
+                # Add cases, avoiding duplicates
+                for case in section_cases:
+                    if case.id not in processed_cases:
+                        cases.append(case)
+                        processed_cases.add(case.id)
                         
-                        # Check if operation has been cancelled
-                        if self.loading_cancelled:
-                            return
-                            
-                        # Check if we have cached cases for this section
-                        cache_key = f"{self.current_project.id}_{suite.id}_{section.id}"
-                        if cache_key in self.cache['cases']:
-                            # Use cached data
-                            section_cases = self.cache['cases'][cache_key]
-                        else:
-                            # Get cases for the section from API
-                            cases_data = self.client.get_cases(self.current_project.id, suite.id, section.id)
-                            
-                            # Check if operation has been cancelled
-                            if self.loading_cancelled:
-                                return
-                            
-                            section_cases = [Case(c) for c in cases_data]
-                            
-                            # Cache the cases
-                            self.cache['cases'][cache_key] = section_cases
-                        
-                        # Add cases, avoiding duplicates
-                        for case in section_cases:
-                            if case.id not in processed_cases:
-                                cases.append(case)
-                                processed_cases.add(case.id)
-                                
-                        self._register_api_call()
+                self._register_api_call()
             
             # Check if operation has been cancelled
             if self.loading_cancelled:
@@ -1026,6 +1135,150 @@ class Application(tk.Tk):
             self._update_progress("")
         except Exception as e:
             self._show_error(f"Failed to save export file: {str(e)}")
+    
+    def _get_suite_id_from_item(self, item_id):
+        """Get suite ID from a tree item."""
+        print(f"DEBUG: _get_suite_id_from_item called for item {item_id}")
+        
+        # First try to get from stored column
+        try:
+            suite_id = self.tree.set(item_id, "suite_id")
+            print(f"DEBUG: suite_id from column: '{suite_id}'")
+            if suite_id and suite_id != "":
+                result = int(suite_id)
+                print(f"DEBUG: Converted to int: {result}")
+                return result
+        except (ValueError, tk.TclError) as e:
+            print(f"DEBUG: Error getting suite_id from column: {e}")
+            pass
+            
+        # If this is a section, get suite ID from its parent
+        parent_id = self.tree.parent(item_id)
+        print(f"DEBUG: parent_id: {parent_id}")
+        if parent_id:
+            return self._get_suite_id_from_item(parent_id)
+            
+        # Fallback: get from suite name
+        item_values = self.tree.item(item_id, "values")
+        print(f"DEBUG: item_values: {item_values}")
+        if item_values:
+            suite_name = item_values[0]
+            print(f"DEBUG: suite_name: {suite_name}")
+            suite = next((s for s in self.current_project.suites if s.name == suite_name), None)
+            if suite:
+                print(f"DEBUG: Found suite by name: {suite.name} (id: {suite.id})")
+                return suite.id
+            else:
+                print(f"DEBUG: No suite found with name '{suite_name}'")
+        print("DEBUG: Returning None")
+        return None
+        
+    
+    
+    
+            
+    def _add_sections_to_tree(self, sections, parent_item_id):
+        """Add sections to tree view with proper hierarchical nesting."""
+        print(f"DEBUG: Adding {len(sections)} sections to tree")
+        
+        # Create a mapping of parent_id -> children for hierarchy building
+        children_by_parent = {}
+        root_sections = []
+        
+        for section in sections:
+            print(f"DEBUG: Section {section.name} - parent_id: {section.parent_id}")
+            if section.parent_id is None:
+                root_sections.append(section)
+                print(f"DEBUG: Added as root section: {section.name}")
+            else:
+                if section.parent_id not in children_by_parent:
+                    children_by_parent[section.parent_id] = []
+                children_by_parent[section.parent_id].append(section)
+                print(f"DEBUG: Added as child of {section.parent_id}: {section.name}")
+        
+        # Sort root sections alphabetically
+        root_sections.sort(key=lambda s: s.name.lower())
+        
+        print(f"DEBUG: Found {len(root_sections)} root sections, {len(children_by_parent)} parent groups")
+        
+        # Add root sections and their children recursively
+        for section in root_sections:
+            print(f"DEBUG: Processing root section: {section.name}")
+            self._add_section_with_children(section, parent_item_id, children_by_parent)
+            
+    def _add_section_with_children(self, section, parent_item_id, children_by_parent):
+        """Recursively add a section and its children to the tree."""
+        print(f"DEBUG: Adding section {section.name} to tree under parent {parent_item_id}")
+        
+        # Add this section
+        section_item_id = self.tree.insert(
+            parent_item_id, "end", 
+            text="", 
+            values=(section.name,), 
+            image=self.tree.image_unchecked
+        )
+        
+        print(f"DEBUG: Created tree item {section_item_id} for section {section.name}")
+        
+        # Store section info in hidden columns for later reference
+        self.tree.set(section_item_id, "section_id", str(section.id))
+        self.tree.set(section_item_id, "section_parent_id", str(section.parent_id or ""))
+        
+        # Also store the suite_id for sections so we can find their parent suite
+        parent_suite_id = self._get_suite_id_from_item(parent_item_id)
+        if parent_suite_id:
+            self.tree.set(section_item_id, "suite_id", str(parent_suite_id))
+        
+        # Add children if any exist
+        if section.id in children_by_parent:
+            children = children_by_parent[section.id]
+            print(f"DEBUG: Section {section.name} has {len(children)} children")
+            # Sort children alphabetically
+            children.sort(key=lambda s: s.name.lower())
+            
+            for child_section in children:
+                print(f"DEBUG: Adding child {child_section.name} under {section.name}")
+                self._add_section_with_children(child_section, section_item_id, children_by_parent)
+        else:
+            print(f"DEBUG: Section {section.name} has no children")
+                
+    def _get_section_id_from_item(self, item_id):
+        """Get section ID from a tree item."""
+        try:
+            section_id = self.tree.set(item_id, "section_id")
+            if section_id and section_id != "":
+                return int(section_id)
+        except (ValueError, tk.TclError):
+            pass
+        return None
+        
+    def _ensure_sections_loaded_for_export(self, suite_id):
+        """Ensure sections are loaded for a suite before export."""
+        if suite_id not in self.cache['sections_loaded']:
+            try:
+                # Load sections from API if not cached
+                if suite_id not in self.cache['sections']:
+                    sections_data = self.client.get_sections(self.current_project.id, suite_id)
+                    sections = [Section(s) for s in sections_data]
+                    self.cache['sections'][suite_id] = sections
+                
+                # Update the suite object with loaded sections
+                suite = next((s for s in self.current_project.suites if s.id == suite_id), None)
+                if suite:
+                    suite.sections = self.cache['sections'][suite_id]
+                
+                # Mark as loaded
+                self.cache['sections_loaded'].add(suite_id)
+                
+            except Exception as e:
+                # If we can't load sections, continue with empty sections
+                pass
+                
+    def _lazy_load_child_sections(self, section_item_id):
+        """Check if a section should have children and load them if needed."""
+        # This method is for future extensibility if we need to load
+        # sections on demand at deeper levels
+        pass
     
     def _show_error(self, message):
         """Show an error message and update the status."""
