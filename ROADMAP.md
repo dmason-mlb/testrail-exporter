@@ -9,28 +9,36 @@ This document outlines the planned development roadmap for the TestRail Exporter
 - Export to JSON format
 - Basic error handling
 
-## Version 0.2 (Current Implementation)
+## Version 0.2 (Completed)
 - Improved error handling and retry logic
 - Enhanced UI with custom checkboxes and styling
 - Persistent settings (saved in ~/.testrail_exporter/)
 - Progress tracking for API operations
-- Export to both JSON and CSV formats
+- Export to JSON, CSV, and XML formats
 
-## Version 0.3
-- X-ray specific CSV export format
+## Version 0.3 (Current Implementation)
+- Human-readable names in exports instead of IDs
+- Priority and case type resolution
+- TestRail-compatible XML export format
+- Enhanced data caching for performance
+- Auto-loading of projects on startup
+- Advanced export progress indicators
+
+## Version 0.4
+- Enhanced integration with external test management tools
 - Support for custom fields mapping
 - Detailed export configuration
 - Export history tracking
 - Support for batch operations
 
-## Version 0.4
+## Version 0.5
 - Test case preview
 - Search functionality
 - Advanced filtering options
 - Multi-project export
 - Export templates
 
-## Version 0.5
+## Version 0.6
 - Automated scheduled exports
 - Command-line interface
 - Export comparison tools

@@ -55,6 +55,7 @@ This guide will help you get started with the TestRail Exporter application quic
 3. **Export**:
    - Click one of the export options:
      - "Export JSON" for standard JSON format
+     - "Export XML" for TestRail-compatible XML format
      - "Export CSV" for standard CSV format
    - Choose a location and filename in the save dialog
    - Watch the progress indicator at the bottom of the window
@@ -67,11 +68,20 @@ The exported JSON file contains:
 - Project information
 - Test cases from selected suites/sections
 - All standard and custom fields for each case
+- Human-readable names instead of IDs (suite_name, section_name, priority_name, type_name)
+
+### XML Format
+The exported XML file contains:
+- TestRail-compatible XML structure
+- Hierarchical organization of suites, sections, and cases
+- All test case metadata including custom fields
+- Human-readable names for types, priorities, and other fields
 
 ### CSV Format
 The exported CSV file contains:
 - One row per test case
 - Columns for all standard and custom fields
+- Human-readable names instead of IDs for better readability
 - Suitable for importing into other tools or opening in Excel
 
 
@@ -92,7 +102,8 @@ The exported CSV file contains:
 
 ## Next Steps
 
-- X-ray compatible CSV export format
+- Enhanced integration with external test management tools
 - Filter test cases by additional criteria
 - Batch export multiple projects
 - Customize field mappings for specific requirements
+- Advanced XML export options

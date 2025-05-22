@@ -61,8 +61,8 @@ Before testing, ensure you have:
 
 1. **Export Selection**:
    - Select several suites and sections by checking their checkboxes
-   - Test both "Export JSON" and "Export CSV" buttons
-   - Verify save dialog appears with appropriate default name
+   - Test all three export buttons: "Export JSON", "Export XML", and "Export CSV"
+   - Verify save dialog appears with appropriate default name and file extension
    - Save to a location and verify files are created
    - Check progress indicators during export
 
@@ -71,11 +71,20 @@ Before testing, ensure you have:
    - Verify project information is included
    - Verify selected suites and sections have their cases exported
    - Verify all case fields are present
+   - Verify human-readable names are used (suite_name, section_name, priority_name, type_name)
 
-3. **CSV Export Content**:
+3. **XML Export Content**:
+   - Open the exported XML file
+   - Verify XML structure matches TestRail format
+   - Verify suite, section, and case hierarchy
+   - Verify custom fields are properly included
+   - Verify human-readable names for types and priorities
+
+4. **CSV Export Content**:
    - Open the exported CSV file
    - Verify all test cases are included
    - Verify columns for all fields are present
+   - Verify human-readable names are used instead of IDs
    - Verify CSV can be opened in spreadsheet applications
 
 ### Error Handling

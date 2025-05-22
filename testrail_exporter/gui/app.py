@@ -94,6 +94,7 @@ class Application(tk.Tk):
         export_frame.pack(side=tk.RIGHT, padx=5)
         
         ttk.Button(export_frame, text="Export JSON", command=lambda: self._export_cases(format='json')).pack(side=tk.RIGHT, padx=2)
+        ttk.Button(export_frame, text="Export XML", command=lambda: self._export_cases(format='xml')).pack(side=tk.RIGHT, padx=2)
         ttk.Button(export_frame, text="Export CSV", command=lambda: self._export_cases(format='csv')).pack(side=tk.RIGHT, padx=2)
         
         # Progress bar and status
@@ -137,7 +138,9 @@ class Application(tk.Tk):
             'suites': {},  # Project ID -> Suites
             'sections': {},  # Suite ID -> Sections
             'cases': {},  # Suite ID+Section ID -> Cases
-            'loading_state': {}  # Track loading completion state for projects
+            'loading_state': {},  # Track loading completion state for projects
+            'priorities': None,  # Cache priorities (not project-specific)
+            'case_types': None  # Cache case types (not project-specific)
         }
         
         # Create a reference to the load projects button
@@ -236,7 +239,9 @@ class Application(tk.Tk):
                     'suites': {},
                     'sections': {},
                     'cases': {},
-                    'loading_state': {}
+                    'loading_state': {},
+                    'priorities': None,
+                    'case_types': None
                 }
             
             # Cancel any ongoing loading operations
@@ -272,8 +277,8 @@ class Application(tk.Tk):
             self.after(0, self._update_projects_ui)
             return
         
-        # We'll have at least 1 API call (for projects)
-        self.api_calls_total = 1
+        # We'll have 3 API calls (for projects, priorities, and case types)
+        self.api_calls_total = 3
         
         # Load projects in a separate thread
         self.active_thread = threading.Thread(target=self._load_projects_thread)
@@ -299,6 +304,46 @@ class Application(tk.Tk):
             self.cache['projects'] = self.projects
             
             self._register_api_call()
+            
+            # Load priorities if not cached yet
+            if self.cache['priorities'] is None:
+                # Check if operation has been cancelled before priorities call
+                if self.loading_cancelled:
+                    return
+                    
+                priorities_data = self.client.get_priorities()
+                
+                # Check if operation has been cancelled before processing
+                if self.loading_cancelled:
+                    return
+                    
+                # Cache the priorities
+                self.cache['priorities'] = priorities_data
+                
+                self._register_api_call()
+            else:
+                # Priorities already cached, skip API call
+                self._register_api_call()
+            
+            # Load case types if not cached yet
+            if self.cache['case_types'] is None:
+                # Check if operation has been cancelled before case types call
+                if self.loading_cancelled:
+                    return
+                    
+                case_types_data = self.client.get_case_types()
+                
+                # Check if operation has been cancelled before processing
+                if self.loading_cancelled:
+                    return
+                    
+                # Cache the case types
+                self.cache['case_types'] = case_types_data
+                
+                self._register_api_call()
+            else:
+                # Case types already cached, skip API call
+                self._register_api_call()
             
             # Update UI in the main thread
             if not self.loading_cancelled:
@@ -641,7 +686,7 @@ class Application(tk.Tk):
         Export selected test cases.
         
         Args:
-            format (str): Export format ('json' or 'csv')
+            format (str): Export format ('json', 'csv', or 'xml')
         """
         if not self.current_project or not self.client:
             messagebox.showwarning("Warning", "Please select a project first")
@@ -707,7 +752,7 @@ class Application(tk.Tk):
         
         Args:
             checked_items: List of checked tree items
-            format (str): Export format ('json' or 'csv')
+            format (str): Export format ('json', 'csv', or 'xml')
         """
         try:
             cases = []
@@ -845,13 +890,13 @@ class Application(tk.Tk):
             if self.loading_cancelled:
                 return
                 
-            # Prepare export data
+            # Prepare export data with names instead of IDs
             export_data = {
                 'project': {
                     'id': self.current_project.id,
                     'name': self.current_project.name
                 },
-                'cases': [case.to_dict() for case in cases]
+                'cases': [self._convert_case_ids_to_names(case) for case in cases]
             }
             
             # Update UI in the main thread
@@ -861,13 +906,57 @@ class Application(tk.Tk):
             if not self.loading_cancelled:
                 self.after(0, lambda: self._show_error(f"Failed to export test cases: {str(e)}"))
     
+    def _convert_case_ids_to_names(self, case):
+        """
+        Convert a test case's IDs to names for export.
+        
+        Args:
+            case (Case): Test case object
+            
+        Returns:
+            dict: Case dictionary with names instead of IDs where possible
+        """
+        case_dict = case.to_dict()
+        
+        # Convert suite_id to suite name (keep both for XML export)
+        if case.suite_id:
+            suite = next((s for s in self.current_project.suites if s.id == case.suite_id), None)
+            if suite:
+                case_dict['suite_name'] = suite.name
+                # Keep suite_id for XML export
+        
+        # Convert section_id to section name (keep both for XML export)
+        if case.section_id:
+            suite = next((s for s in self.current_project.suites if s.id == case.suite_id), None)
+            if suite:
+                section = next((sec for sec in suite.sections if sec.id == case.section_id), None)
+                if section:
+                    case_dict['section_name'] = section.name
+                    # Keep section_id for XML export
+        
+        # Convert priority_id to priority name (keep both for XML export)
+        if case.priority_id and self.cache['priorities']:
+            priority = next((p for p in self.cache['priorities'] if p['id'] == case.priority_id), None)
+            if priority:
+                case_dict['priority_name'] = priority['name']
+                # Keep priority_id for XML export
+        
+        # Convert type_id to type name (keep both for XML export)
+        if case.type_id and self.cache['case_types']:
+            case_type = next((t for t in self.cache['case_types'] if t['id'] == case.type_id), None)
+            if case_type:
+                case_dict['type_name'] = case_type['name']
+                # Keep type_id for XML export
+        
+        return case_dict
+    
     def _save_export_file(self, export_data, format='json'):
         """
         Prompt user to save export file.
         
         Args:
             export_data (dict): Data to export
-            format (str): Export format ('json' or 'csv')
+            format (str): Export format ('json', 'csv', or 'xml')
         """
         # Get export directory from settings
         settings = self.settings_frame.get_settings()
@@ -881,6 +970,10 @@ class Application(tk.Tk):
             extension = ".csv"
             file_types = [("CSV Files", "*.csv"), ("All Files", "*.*")]
             default_filename = f"{self.current_project.name}_export.csv"
+        elif format == 'xml':
+            extension = ".xml"
+            file_types = [("XML Files", "*.xml"), ("All Files", "*.*")]
+            default_filename = f"{self.current_project.name}_export.xml"
         else:  # Default to json
             extension = ".json"
             file_types = [("JSON Files", "*.json"), ("All Files", "*.*")]
@@ -907,6 +1000,8 @@ class Application(tk.Tk):
             success = False
             if format == 'csv':
                 success = Exporter.export_to_csv(export_data, filepath)
+            elif format == 'xml':
+                success = Exporter.export_to_xml(export_data, filepath)
             else:  # Default to json
                 success = Exporter.export_to_json(export_data, filepath)
                 

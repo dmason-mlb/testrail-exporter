@@ -195,3 +195,21 @@ class TestRailClient:
             dict: Case details
         """
         return self._send_request('GET', f'get_case/{case_id}')
+
+    def get_priorities(self):
+        """
+        Get all priorities from TestRail.
+
+        Returns:
+            list: List of priorities
+        """
+        return self._send_request('GET', 'get_priorities')
+
+    def get_case_types(self):
+        """
+        Get all case types from TestRail.
+
+        Returns:
+            list: List of case types
+        """
+        return self._send_request('GET', 'get_case_types')

@@ -79,15 +79,33 @@ The base URL for all API requests is: `https://<your-instance>/index.php?/api/v2
 - **Response**: Case object with all details
 - **Used In**: Getting additional case details when needed
 
+### Priorities
+
+#### `GET get_priorities`
+
+- **Purpose**: Retrieve all available test case priorities
+- **Parameters**: None
+- **Response**: List of priority objects with id, name, and other details
+- **Used In**: Converting priority IDs to human-readable names in exports
+
+### Case Types
+
+#### `GET get_case_types`
+
+- **Purpose**: Retrieve all available case types
+- **Parameters**: None
+- **Response**: List of case type objects with id, name, and other details
+- **Used In**: Converting type IDs to human-readable names in exports
+
 ## API Response Processing
 
 The application processes API responses as follows:
 
-1. Projects are loaded into the dropdown menu
+1. Projects, priorities, and case types are loaded on startup
 2. When a project is selected, suites for that project are retrieved
 3. For each suite, sections are retrieved and organized in the tree view
 4. When export is requested, cases are retrieved for all selected suites and sections
-5. Case data is processed and exported to JSON or CSV format
+5. Case data is processed with ID-to-name conversions and exported to JSON, CSV, or XML format
 
 ## Error Handling
 

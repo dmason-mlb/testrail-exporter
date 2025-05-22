@@ -11,7 +11,7 @@ A Python GUI application to export test cases from TestRail for later importing 
 - Connect to TestRail instance with URL, username, and API key
 - Browse projects, test suites, and sections
 - Select test suites and sections to export
-- Export test cases to JSON or CSV format
+- Export test cases to JSON, CSV, or XML format
 - Configurable export directory
 - Persistent settings between sessions
 - Progress tracking during API operations
@@ -116,6 +116,7 @@ Use the "Test Connection" button to verify your credentials before loading proje
 
 7. Choose export format:
    - Click "Export JSON" to export in JSON format
+   - Click "Export XML" to export in TestRail-compatible XML format
    - Click "Export CSV" to export in CSV format compatible with spreadsheet software
    - Choose a filename and location in the save dialog
    - Wait for the export process to complete (progress is shown at the bottom)
@@ -131,7 +132,8 @@ The exported JSON file contains:
 
 - Project information (id, name)
 - Test cases with:
-  - Standard fields (id, title, section_id, etc.)
+  - Standard fields (id, title, suite_name, section_name, etc.)
+  - Human-readable names instead of IDs (suite_name, section_name, priority_name, type_name)
   - Custom fields (prefixed with `custom_`)
 
 Example:
@@ -145,8 +147,10 @@ Example:
     {
       "id": 456,
       "title": "Test Case Title",
-      "section_id": 789,
-      "suite_id": 101,
+      "suite_name": "Test Suite Name",
+      "section_name": "Test Section Name",
+      "priority_name": "High",
+      "type_name": "Functional",
       "custom_steps": "Step 1...",
       "custom_expected": "Expected result..."
     }
@@ -159,7 +163,8 @@ Example:
 The exported CSV file contains all test case fields as columns:
 
 - Each test case is represented as a row
-- Standard fields (id, title, section_id, etc.) are included
+- Standard fields (id, title, suite_name, section_name, etc.) are included
+- Human-readable names used instead of IDs for better readability
 - Custom fields (prefixed with `custom_`) are included as separate columns
 - All fields found in any case are included in the CSV headers
 
@@ -167,6 +172,46 @@ CSV files can be easily:
 - Opened in spreadsheet applications like Excel or Google Sheets
 - Imported into test management tools
 - Used for data analysis or reporting
+
+### XML Format
+
+The exported XML file contains TestRail-compatible XML structure:
+
+- Hierarchical structure with suites, sections, and cases
+- Test cases with complete metadata including custom fields
+- Compatible with TestRail's XML import format
+- Human-readable names for types, priorities, and other fields
+
+Example structure:
+```xml
+<suite>
+  <id>S123</id>
+  <name>Test Suite</name>
+  <description/>
+  <sections>
+    <section>
+      <name>Test Cases</name>
+      <description/>
+      <cases>
+        <case>
+          <id>C456</id>
+          <title>Test Case Title</title>
+          <template>Test Case</template>
+          <type>Functional</type>
+          <priority>High</priority>
+          <estimate/>
+          <references/>
+          <custom>
+            <preconds>Preconditions...</preconds>
+            <steps>Test steps...</steps>
+            <expected>Expected result...</expected>
+          </custom>
+        </case>
+      </cases>
+    </section>
+  </sections>
+</suite>
+```
 
 ## Troubleshooting
 
@@ -210,55 +255,16 @@ Additional documentation:
 - `ROADMAP.md`: Future development plans
 - `INSTALL_MACOS.md`: macOS-specific installation guide
 
-## Export Formats
-
-### JSON Format
-
-The exported JSON file contains:
-
-- Project information (id, name)
-- Test cases with:
-  - Standard fields (id, title, section_id, etc.)
-  - Custom fields (prefixed with `custom_`)
-
-Example:
-```json
-{
-  "project": {
-    "id": 123,
-    "name": "Example Project"
-  },
-  "cases": [
-    {
-      "id": 456,
-      "title": "Test Case Title",
-      "section_id": 789,
-      "suite_id": 101,
-      "custom_steps": "Step 1...",
-      "custom_expected": "Expected result..."
-    }
-  ]
-}
-```
-
-### CSV Format
-
-The exported CSV file contains all test case fields as columns:
-
-- Each test case is represented as a row
-- Standard fields (id, title, section_id, etc.) are included
-- Custom fields (prefixed with `custom_`) are included as separate columns
-- All fields found in any case are included in the CSV headers
-
 ## Future Enhancements
 
-- Enhanced CSV export with X-ray-specific field mappings
-- Filter test cases by additional criteria
+- Enhanced integration with external test management tools
+- Filter test cases by additional criteria (status, priority, etc.)
 - Search functionality for finding specific suites/sections
 - Batch export multiple projects
 - Test case attachment handling
 - Dark mode support
 - Keyboard shortcuts for common operations
+- Advanced XML export options
 
 ## License
 
