@@ -37,6 +37,18 @@ class Application(tk.Tk):
         self.geometry(f"{window_width}x{window_height}")
         self.minsize(1000, 700)
         
+        # Set window icon
+        try:
+            icon_path = os.path.join(os.path.dirname(__file__), '..', '..', 'docs', 'images', 'icon.png')
+            if os.path.exists(icon_path):
+                icon_image = Image.open(icon_path)
+                # Convert to PhotoImage for tkinter
+                icon_photo = ImageTk.PhotoImage(icon_image)
+                self.iconphoto(True, icon_photo)
+        except Exception as e:
+            # If icon loading fails, just continue without it
+            print(f"Could not load icon: {e}")
+        
         # Save window size when closing the application
         self.protocol("WM_DELETE_WINDOW", self._on_close)
         

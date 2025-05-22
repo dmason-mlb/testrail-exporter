@@ -2,11 +2,16 @@ from setuptools import setup, find_packages
 
 setup(
     name="testrail-exporter",
-    version="0.1.0",
+    version="1.0.0",
     packages=find_packages(),
+    package_data={
+        "": ["*.png", "*.ico", "*.icns"],
+    },
+    include_package_data=True,
     install_requires=[
         "requests>=2.28.0",
         "Pillow>=9.2.0",
+        "pandas>=1.3.0",
     ],
     entry_points={
         "console_scripts": [
