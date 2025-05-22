@@ -35,7 +35,8 @@ fi
 
 APP_NAME="TestRail Exporter"
 VERSION="1.0"
-DMG_NAME="testrail_exporter.dmg"
+# Final DMG name includes the version
+DMG_NAME="testrail_exporter-${VERSION}.dmg"
 
 # Allow the user to override the icon source via CLI argument
 ICON_SRC_DEFAULT="testrail_exporter/icon.png"
@@ -193,6 +194,8 @@ function create_dmg() {
   # Capture all output, then parse. Grep everything starting with /Volumes/ to
   # the end of the line – this supports spaces in volume names.
   MOUNT_OUTPUT=$(hdiutil attach -readwrite -noverify -noautoopen "$TEMP_DMG_RW")
+  # device id is first field (e.g. /dev/disk4)
+  DEV_ID=$(echo "$MOUNT_OUTPUT" | head -n 1 | awk '{print $1}')
   MOUNT_PATH=$(echo "$MOUNT_OUTPUT" | grep -oE '/Volumes/.*' | head -n 1)
 
   if [ -z "$MOUNT_PATH" ] || [ ! -d "$MOUNT_PATH" ]; then
@@ -206,7 +209,7 @@ function create_dmg() {
   # Ensure APP_BUNDLE (e.g., dist/TestRail Exporter.app) exists
   if [ ! -d "$APP_BUNDLE" ]; then
     echo "Error: App bundle '$APP_BUNDLE' not found. Build the app first."
-    hdiutil detach "$MOUNT_PATH" >/dev/null 2>&1 || true
+    hdiutil detach "$DEV_ID" -force >/dev/null 2>&1 || true
     rm -f "$TEMP_DMG_RW"
     exit 1
   fi
@@ -252,17 +255,10 @@ EOF
         set position of item "$DMG_APP_NAME_IN_DMG" of container window to {$DMG_APP_X_POS, $DMG_APP_Y_POS}
         set position of item "Applications" of container window to {$DMG_APPLICATIONS_LINK_X_POS, $DMG_APPLICATIONS_LINK_Y_POS}
         update without registering applications
-        delay 1 -- Give Finder a moment
+        delay 1
         close
       end tell
-      -- Sync to ensure .DS_Store is written before detaching
-      -- sync
-      -- Using 'open' and 'close' on parent can sometimes help Finder "realize" changes
-      open ("$MOUNT_PATH" as POSIX file)
-      delay 0.5
-      close window "$DMG_WINDOW_TITLE"
-      delay 0.5
-    end tell
+      -- Window closed; Finder has saved .DS_Store at this point
 EOF
 )
   
@@ -298,7 +294,7 @@ EOF
   MAX_RETRIES=5
   DETACH_SUCCESS=false
   while [ $COUNT -lt $MAX_RETRIES ]; do
-    if hdiutil detach "$MOUNT_PATH" -force; then
+    if hdiutil detach "$DEV_ID" -force; then
       DETACH_SUCCESS=true
       break
     fi
@@ -308,7 +304,7 @@ EOF
   done
 
   if [ "$DETACH_SUCCESS" = false ]; then
-    echo "Error: Failed to detach DMG '$MOUNT_PATH' after $MAX_RETRIES retries. Please detach manually. Continuing to conversion."
+    echo "Error: Failed to detach DMG '$DEV_ID' after $MAX_RETRIES retries. Please detach manually. Continuing to conversion."
     # Proceeding to conversion might fail if still mounted, but worth a try.
   fi
   
