@@ -30,6 +30,8 @@ Download the latest release and drag TestRail Exporter to your Applications fold
 - Data caching for improved performance
 - Detailed export progress indicators
 
+![TestRail Exporter - Xray Export](./docs/images/testrail-exporter-xray-export.png)
+
 ## Environment Setup
 
 ### Prerequisites
