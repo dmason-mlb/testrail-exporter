@@ -25,10 +25,12 @@ Download the latest release and drag TestRail Exporter to your Applications fold
 - Export test cases to JSON, XML, or Xray-compatible CSV format
 - Configurable export directory
 - Persistent settings between sessions
-- Progress tracking during API operations
+- Progress tracking during API operations with percentage completion
+- Status messages showing current operation (e.g., "Exporting Suite Name", "Converting to CSV")
 - Auto-loading of projects on startup when settings are configured
 - Data caching for improved performance
-- Detailed export progress indicators
+- Toggle to control section loading for better performance
+- Export logs saved in dedicated logs directory
 
 ![TestRail Exporter - Xray Export](./docs/images/testrail-exporter-xray-export.png)
 
@@ -122,18 +124,23 @@ Use the "Test Connection" button to verify your credentials before loading proje
 
 6. Browse and select test suites and sections:
    - Use the tree view to navigate the project structure
+   - Toggle "Load Sections?" to control whether sections are loaded (improves performance for large projects)
    - Check the checkboxes next to suites or sections to select them
    - Parent checkboxes show a partial fill when some children are selected
-   - Use "Expand All" and "Collapse All" to navigate more easily
+   - Use "Expand All" and "Collapse All" to navigate more easily (available when sections are loaded)
    - Use "Check All" and "Uncheck All" for quick selection
+   - Progress bar shows percentage completion during API operations
+   - Status messages indicate current operation (e.g., "Loading Applause Regression Suite")
 
 7. Choose export format:
    - Click "Export JSON" to export in JSON format
    - Click "Export XML" to export in TestRail-compatible XML format
    - Click "Export to Xray CSV" to export both XML and Xray-compatible CSV files
    - Files are automatically saved with timestamps to prevent conflicts
-   - Wait for the export process to complete (progress is shown at the bottom)
-   - A success message will appear when the export is finished
+   - Export logs are saved in a "logs" subdirectory within your export directory
+   - Wait for the export process to complete (progress bar shows percentage completion)
+   - Status messages show current operation during export
+   - A success message will appear when the export is finished showing "100%" and "Tasks Complete"
 
 ![TestRail Exporter - Loading Progress](./docs/images/testrail-exporter-load-project-progress.png)
 
@@ -251,7 +258,10 @@ Example structure:
 
 ### Logging
 
-The application logs errors to the console during operation.
+- Export operations create detailed log files in a "logs" subdirectory within your export directory
+- Log files are timestamped for easy identification
+- Logs include all API operations, errors, and export progress
+- Console output shows real-time status during operations
 
 ## Development
 

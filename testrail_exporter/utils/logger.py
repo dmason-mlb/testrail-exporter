@@ -15,13 +15,16 @@ class ExportLogger:
         # Clear existing handlers to avoid duplicates
         self.logger.handlers.clear()
         
+        # Create logs subdirectory
+        logs_dir = os.path.join(export_dir, 'logs')
+        
         # Create log file with timestamp
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         log_filename = f'testrail_export_log_{timestamp}.txt'
-        self.log_file_path = os.path.join(export_dir, log_filename)
+        self.log_file_path = os.path.join(logs_dir, log_filename)
         
-        # Ensure export directory exists
-        Path(export_dir).mkdir(parents=True, exist_ok=True)
+        # Ensure logs directory exists
+        Path(logs_dir).mkdir(parents=True, exist_ok=True)
         
         # File handler for detailed logging
         file_handler = logging.FileHandler(self.log_file_path, mode='w')
