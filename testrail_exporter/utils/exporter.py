@@ -3,6 +3,7 @@ import csv
 import os
 import xml.etree.ElementTree as ET
 import xml.dom.minidom as minidom
+import re
 from .logger import ExportLogger
 
 
@@ -13,6 +14,59 @@ class ExportError(Exception):
 
 class Exporter:
     """Class for exporting TestRail data to various formats."""
+
+    @staticmethod
+    def _clean_xml_text(text):
+        """
+        Clean text for XML by removing or replacing invalid characters.
+        
+        Args:
+            text: Text to clean
+            
+        Returns:
+            Cleaned text safe for XML
+        """
+        if text is None:
+            return None
+            
+        # Convert to string if not already
+        text = str(text)
+        
+        # Remove invalid XML characters (including 0xFFFE)
+        # Valid XML chars are:
+        # #x9 | #xA | #xD | [#x20-#xD7FF] | [#xE000-#xFFFD] | [#x10000-#x10FFFF]
+        def is_valid_xml_char(c):
+            codepoint = ord(c)
+            return (
+                codepoint == 0x9 or
+                codepoint == 0xA or
+                codepoint == 0xD or
+                (0x20 <= codepoint <= 0xD7FF) or
+                (0xE000 <= codepoint <= 0xFFFD) or
+                (0x10000 <= codepoint <= 0x10FFFF)
+            )
+        
+        # Remove invalid characters
+        cleaned = ''.join(c if is_valid_xml_char(c) else '' for c in text)
+        
+        # Also handle common problematic characters by replacement
+        # Replace smart quotes and other problematic Unicode characters
+        replacements = {
+            '\u2018': "'",  # Left single quotation mark
+            '\u2019': "'",  # Right single quotation mark
+            '\u201C': '"',  # Left double quotation mark
+            '\u201D': '"',  # Right double quotation mark
+            '\u2013': '-',  # En dash
+            '\u2014': '--', # Em dash
+            '\u2026': '...', # Horizontal ellipsis
+            '\u2030': 'o/oo', # Per mille sign
+            '\u2031': 'o/ooo', # Per ten thousand sign
+        }
+        
+        for old, new in replacements.items():
+            cleaned = cleaned.replace(old, new)
+        
+        return cleaned
 
     @staticmethod
     def export_to_json(data, filepath, logger=None):
@@ -338,11 +392,11 @@ class Exporter:
                 id_elem.text = f"S{hash(suite_info['name']) % 1000000}"  # Fallback to hash
             
             name_elem = ET.SubElement(suite_elem, "name")
-            name_elem.text = suite_info['name']
+            name_elem.text = Exporter._clean_xml_text(suite_info['name'])
             
             desc_elem = ET.SubElement(suite_elem, "description")
             if suite_info.get('description'):
-                desc_elem.text = suite_info['description']
+                desc_elem.text = Exporter._clean_xml_text(suite_info['description'])
         
         # Add root sections
         sections_elem = ET.SubElement(suite_elem, "sections")
@@ -365,7 +419,7 @@ class Exporter:
         
         # Section name
         section_name_elem = ET.SubElement(section_elem, "name")
-        section_name_elem.text = section['name']
+        section_name_elem.text = Exporter._clean_xml_text(section['name'])
         
         # Section description
         section_desc_elem = ET.SubElement(section_elem, "description")
@@ -389,22 +443,22 @@ class Exporter:
                 
                 # Case title
                 title_elem = ET.SubElement(case_elem, "title")
-                title_elem.text = case.get('title', '')
+                title_elem.text = Exporter._clean_xml_text(case.get('title', ''))
                 
                 # Template
                 template_elem = ET.SubElement(case_elem, "template")
                 template_name = case.get('template_name', 'Test Case')  # Default to "Test Case" if no template
-                template_elem.text = template_name
+                template_elem.text = Exporter._clean_xml_text(template_name)
                 
                 # Type
                 type_elem = ET.SubElement(case_elem, "type")
                 type_name = case.get('type_name', 'Functional')
-                type_elem.text = type_name
+                type_elem.text = Exporter._clean_xml_text(type_name)
                 
                 # Priority
                 priority_elem = ET.SubElement(case_elem, "priority")
                 priority_name = case.get('priority_name', 'Medium')
-                priority_elem.text = priority_name
+                priority_elem.text = Exporter._clean_xml_text(priority_name)
                 
                 # Estimate
                 estimate_elem = ET.SubElement(case_elem, "estimate")
@@ -416,13 +470,13 @@ class Exporter:
                 milestone_elem = ET.SubElement(case_elem, "milestone")
                 milestone_name = case.get('milestone_name')
                 if milestone_name:
-                    milestone_elem.text = milestone_name
+                    milestone_elem.text = Exporter._clean_xml_text(milestone_name)
                 
                 # References
                 refs_elem = ET.SubElement(case_elem, "references")
                 refs_value = case.get('refs')
                 if refs_value:
-                    refs_elem.text = str(refs_value)
+                    refs_elem.text = Exporter._clean_xml_text(str(refs_value))
                 
                 # Custom fields
                 custom_elem = ET.SubElement(case_elem, "custom")
@@ -435,13 +489,13 @@ class Exporter:
                         # Handle specific custom fields based on TestRail naming
                         if field_name == 'preconds' and value:
                             preconds_elem = ET.SubElement(custom_elem, "preconds")
-                            preconds_elem.text = str(value)
+                            preconds_elem.text = Exporter._clean_xml_text(str(value))
                         elif field_name == 'steps' and value:
                             steps_elem = ET.SubElement(custom_elem, "steps")
-                            steps_elem.text = str(value)
+                            steps_elem.text = Exporter._clean_xml_text(str(value))
                         elif field_name == 'expected' and value:
                             expected_elem = ET.SubElement(custom_elem, "expected")
-                            expected_elem.text = str(value)
+                            expected_elem.text = Exporter._clean_xml_text(str(value))
                         elif field_name == 'steps_separated' and value and isinstance(value, list) and len(value) > 0:
                             # Only create steps_separated if there are actual steps
                             steps_sep_elem = ET.SubElement(custom_elem, "steps_separated")
@@ -452,7 +506,7 @@ class Exporter:
                                 index_elem.text = str(i)
                                 
                                 content_elem = ET.SubElement(step_elem, "content")
-                                content_elem.text = str(step_data.get('content', '')) if isinstance(step_data, dict) else str(step_data)
+                                content_elem.text = Exporter._clean_xml_text(str(step_data.get('content', '')) if isinstance(step_data, dict) else str(step_data))
                                 
                                 expected_elem = ET.SubElement(step_elem, "expected")
-                                expected_elem.text = str(step_data.get('expected', '')) if isinstance(step_data, dict) else ""
+                                expected_elem.text = Exporter._clean_xml_text(str(step_data.get('expected', '')) if isinstance(step_data, dict) else "")
