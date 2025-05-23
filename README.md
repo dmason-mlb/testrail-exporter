@@ -260,26 +260,6 @@ The project is structured as follows:
 - `models/`: Data models for TestRail entities
 - `utils/`: Utility functions including export functionality
 
-### Documentation
-
-Additional documentation:
-- `QUICKSTART.md`: Getting started guide
-- `API_ENDPOINTS.md`: Details on TestRail API usage
-- `TESTING.md`: Testing procedures
-- `ROADMAP.md`: Future development plans
-- `INSTALL_MACOS.md`: macOS-specific installation guide
-
-## Future Enhancements
-
-- Enhanced integration with external test management tools
-- Filter test cases by additional criteria (status, priority, etc.)
-- Search functionality for finding specific suites/sections
-- Batch export multiple projects
-- Test case attachment handling
-- Dark mode support
-- Keyboard shortcuts for common operations
-- Advanced XML export options
-
 ## License
 
 [MIT License](LICENSE)
