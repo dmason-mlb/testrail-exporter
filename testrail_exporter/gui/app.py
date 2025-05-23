@@ -61,6 +61,19 @@ class Application(tk.Tk):
         self.settings_frame = SettingsFrame(main_frame, config=self.config)
         self.settings_frame.pack(fill=tk.X, pady=10)
         
+        # Load sections checkbox
+        load_sections_frame = ttk.Frame(main_frame)
+        load_sections_frame.pack(fill=tk.X, pady=(5, 0))
+        
+        self.load_sections_var = tk.BooleanVar(value=False)  # Default to unchecked
+        self.load_sections_checkbox = ttk.Checkbutton(
+            load_sections_frame, 
+            text="Load Sections?", 
+            variable=self.load_sections_var,
+            command=self._on_load_sections_changed
+        )
+        self.load_sections_checkbox.pack(side=tk.LEFT)
+        
         # Project selection
         project_frame = ttk.Frame(main_frame)
         project_frame.pack(fill=tk.X, pady=10)
@@ -95,8 +108,10 @@ class Application(tk.Tk):
         button_frame.pack(fill=tk.X, pady=10)
         
         # Use our custom expand all method with progress tracking
-        ttk.Button(button_frame, text="Expand All", command=self._expand_all_with_progress).pack(side=tk.LEFT, padx=5)
-        ttk.Button(button_frame, text="Collapse All", command=self.tree.collapse_all).pack(side=tk.LEFT, padx=5)
+        self.expand_all_button = ttk.Button(button_frame, text="Expand All", command=self._expand_all_with_progress, state="disabled")
+        self.expand_all_button.pack(side=tk.LEFT, padx=5)
+        self.collapse_all_button = ttk.Button(button_frame, text="Collapse All", command=self.tree.collapse_all, state="disabled")
+        self.collapse_all_button.pack(side=tk.LEFT, padx=5)
         ttk.Button(button_frame, text="Check All", command=self.tree.check_all).pack(side=tk.LEFT, padx=5)
         ttk.Button(button_frame, text="Uncheck All", command=self.tree.uncheck_all).pack(side=tk.LEFT, padx=5)
         
@@ -172,6 +187,22 @@ class Application(tk.Tk):
         
         # Auto-load projects if settings are populated
         self.after(500, self._auto_load_projects)
+    
+    def _on_load_sections_changed(self):
+        """Handle when the Load Sections checkbox is toggled."""
+        # Update button states
+        if self.load_sections_var.get():
+            self.expand_all_button.config(state="normal")
+            self.collapse_all_button.config(state="normal")
+        else:
+            self.expand_all_button.config(state="disabled")
+            self.collapse_all_button.config(state="disabled")
+        
+        # Trigger a refresh if projects are already loaded
+        if self.projects and self.load_projects_button:
+            # Check if the button text is "Refresh Projects" (indicates projects are loaded)
+            if self.load_projects_button.cget('text') == "Refresh Projects":
+                self._load_projects()
     
     def _on_close(self):
         """Save settings and close the application."""
@@ -440,9 +471,15 @@ class Application(tk.Tk):
         # Check if we have fully loaded data for this project
         project_loading_state = self.cache['loading_state'].get(self.current_project.id, 'not_started')
         
+        # Check if we have cached suites and if the loading state matches the current checkbox state
+        cached_with_sections = project_loading_state == 'completed_with_sections'
+        cached_without_sections = project_loading_state == 'completed_without_sections'
+        current_wants_sections = self.load_sections_var.get()
+        
         if (self.current_project.id in self.cache['suites'] and 
-            project_loading_state == 'completed'):
-            # Use cached data only if loading was completed
+            ((cached_with_sections and current_wants_sections) or 
+             (cached_without_sections and not current_wants_sections))):
+            # Use cached data only if loading state matches current checkbox state
             self.current_project.suites = self.cache['suites'][self.current_project.id]
             self._update_progress("Loading from cache...", reset=True)
             self.after(0, self._update_suites_ui)
@@ -493,48 +530,54 @@ class Application(tk.Tk):
             
             self._register_api_call()
             
-            # Now we know how many suites we have, update total API calls
-            # We'll only need 1 API call per suite to get sections
-            self.api_calls_total += len(suites)
-            self._update_progress("Loading sections...")
-            
-            # Load sections for each suite
-            for suite in suites:
-                # Check if operation has been cancelled
-                if self.loading_cancelled:
-                    # Mark as incomplete if cancelled
-                    if hasattr(self, 'current_project') and self.current_project:
-                        self.cache['loading_state'][self.current_project.id] = 'incomplete'
-                    return
+            # Only load sections if the checkbox is checked
+            if self.load_sections_var.get():
+                # Now we know how many suites we have, update total API calls
+                # We'll only need 1 API call per suite to get sections
+                self.api_calls_total += len(suites)
+                self._update_progress("Loading sections...")
                 
-                # Check if we have cached sections for this suite
-                if suite.id in self.cache['sections']:
-                    suite.sections = self.cache['sections'][suite.id]
-                    self._register_api_call()
-                else:
-                    sections_data = self.client.get_sections(self.current_project.id, suite.id)
-                    
+                # Load sections for each suite
+                for suite in suites:
                     # Check if operation has been cancelled
                     if self.loading_cancelled:
                         # Mark as incomplete if cancelled
                         if hasattr(self, 'current_project') and self.current_project:
                             self.cache['loading_state'][self.current_project.id] = 'incomplete'
                         return
+                    
+                    # Check if we have cached sections for this suite
+                    if suite.id in self.cache['sections']:
+                        suite.sections = self.cache['sections'][suite.id]
+                        self._register_api_call()
+                    else:
+                        sections_data = self.client.get_sections(self.current_project.id, suite.id)
                         
-                    sections = [Section(s) for s in sections_data]
+                        # Check if operation has been cancelled
+                        if self.loading_cancelled:
+                            # Mark as incomplete if cancelled
+                            if hasattr(self, 'current_project') and self.current_project:
+                                self.cache['loading_state'][self.current_project.id] = 'incomplete'
+                            return
+                            
+                        sections = [Section(s) for s in sections_data]
+                        
+                        # Sort sections alphabetically by name
+                        sections.sort(key=lambda s: s.name.lower())
+                        
+                        suite.sections = sections
+                        
+                        # Cache the sections
+                        self.cache['sections'][suite.id] = sections
+                        
+                        self._register_api_call()
                     
-                    # Sort sections alphabetically by name
-                    sections.sort(key=lambda s: s.name.lower())
-                    
-                    suite.sections = sections
-                    
-                    # Cache the sections
-                    self.cache['sections'][suite.id] = sections
-                    
-                    self._register_api_call()
-                
-                # We'll no longer preload case counts during initial load to save time
-                # The caching will happen on-demand when exporting
+                    # We'll no longer preload case counts during initial load to save time
+                    # The caching will happen on-demand when exporting
+            else:
+                # When sections are not loaded upfront, initialize empty sections for each suite
+                for suite in suites:
+                    suite.sections = []
             
             # Update UI in the main thread
             if not self.loading_cancelled:
@@ -679,8 +722,8 @@ class Application(tk.Tk):
             # Add suite without case count
             suite_id = self.tree.insert("", "end", text="", values=(suite.name,), image=self.tree.image_unchecked)
             
-            # Add sections if any
-            if suite.has_sections():
+            # Add sections if any and if they were loaded
+            if self.load_sections_var.get() and suite.has_sections():
                 # Add all sections without case counts or filtering
                 for section in suite.sections:
                     section_id = self.tree.insert(suite_id, "end", text="", values=(section.name,), image=self.tree.image_unchecked)
@@ -688,11 +731,18 @@ class Application(tk.Tk):
         # Add event handler for tree item open (expand) event
         self.tree.bind("<<TreeviewOpen>>", self._on_tree_item_expanded)
             
-        # Mark project loading as completed
+        # Mark project loading as completed with appropriate state
         if hasattr(self, 'current_project') and self.current_project:
-            self.cache['loading_state'][self.current_project.id] = 'completed'
+            if self.load_sections_var.get():
+                self.cache['loading_state'][self.current_project.id] = 'completed_with_sections'
+            else:
+                self.cache['loading_state'][self.current_project.id] = 'completed_without_sections'
         
-        self.status_var.set(f"Loaded {len(self.current_project.suites)} suites")
+        # Update status message based on whether sections were loaded
+        if self.load_sections_var.get():
+            self.status_var.set(f"Loaded {len(self.current_project.suites)} suites with sections")
+        else:
+            self.status_var.set(f"Loaded {len(self.current_project.suites)} suites")
         self._update_progress("")
         
     def _on_tree_item_expanded(self, event):
@@ -917,7 +967,34 @@ class Application(tk.Tk):
                     suite_ids_in_export.add(case.suite_id)
             
             # Only include suites that have test cases in the export
-            suites_for_export = [suite for suite in self.current_project.suites if suite.id in suite_ids_in_export]
+            suites_for_export = []
+            for suite in self.current_project.suites:
+                if suite.id in suite_ids_in_export:
+                    # If sections were not loaded during initial load, load them now for export
+                    if not self.load_sections_var.get() and (not hasattr(suite, 'sections') or not suite.sections):
+                        # Check if we have cached sections for this suite
+                        if suite.id in self.cache['sections']:
+                            suite.sections = self.cache['sections'][suite.id]
+                        else:
+                            # Load sections for this suite
+                            try:
+                                self._update_progress(f"Loading sections for suite: {suite.name}")
+                                sections_data = self.client.get_sections(self.current_project.id, suite.id)
+                                sections = [Section(s) for s in sections_data]
+                                
+                                # Sort sections alphabetically by name
+                                sections.sort(key=lambda s: s.name.lower())
+                                
+                                suite.sections = sections
+                                
+                                # Cache the sections
+                                self.cache['sections'][suite.id] = sections
+                            except Exception as e:
+                                # If we fail to load sections, continue with empty sections
+                                print(f"Failed to load sections for suite {suite.name}: {e}")
+                                suite.sections = []
+                    
+                    suites_for_export.append(suite)
             
             # Prepare export data with names instead of IDs
             export_data = {
