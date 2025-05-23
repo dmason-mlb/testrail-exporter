@@ -7,8 +7,9 @@ import time
 import tempfile
 from datetime import datetime
 from PIL import Image, ImageTk
-from testrail_exporter.utils.exporter import Exporter
-from testrail_exporter.utils.testrail2xray import convert_xml_to_xray_csv
+from testrail_exporter.utils.exporter import Exporter, ExportError
+from testrail_exporter.utils.testrail2xray import convert_xml_to_xray_csv, XrayConversionError
+from testrail_exporter.utils.logger import ExportLogger
 
 from testrail_exporter.gui.settings import SettingsFrame
 from testrail_exporter.gui.tree_view import CheckableTreeview
@@ -1033,6 +1034,9 @@ class Application(tk.Tk):
         # Save export directory to config
         self.config.set_setting('export', 'directory', export_dir)
         
+        # Create logger instance
+        logger = ExportLogger(export_dir)
+        
         # Generate timestamp
         timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
         
@@ -1054,45 +1058,55 @@ class Application(tk.Tk):
         try:
             # Update progress
             self._update_progress("Saving export file...")
+            logger.info(f"Starting export to {format.upper()} format")
+            logger.info(f"Export directory: {export_dir}")
+            logger.info(f"Export filename: {filename}")
+            logger.info(f"Total test cases to export: {len(export_data.get('cases', []))}")
             
             # Save the file
-            success = False
             if format == 'xray_csv':
-                result = self._export_to_xray_csv(export_data, filepath)
+                result = self._export_to_xray_csv(export_data, filepath, logger)
                 if isinstance(result, tuple) and len(result) == 3:
                     success, xml_filename, csv_filename = result
+                    if success:
+                        self.status_var.set(f"Exported {len(export_data['cases'])} test cases to Xray format")
+                        messagebox.showinfo("Export Complete", 
+                            f"Successfully exported {len(export_data['cases'])} test cases!\n\n"
+                            f"Files created:\n"
+                            f"• XML: {xml_filename}\n"
+                            f"• Xray CSV: {csv_filename}\n\n"
+                            f"Use the CSV file for importing into Xray.\n"
+                            f"The XML file is provided for reference.")
                 else:
-                    success = result
-                    xml_filename, csv_filename = None, None
+                    raise ExportError("Failed to export to Xray CSV format")
             elif format == 'xml':
-                success = Exporter.export_to_xml(export_data, filepath)
+                Exporter.export_to_xml(export_data, filepath, logger)
+                self.status_var.set(f"Exported {len(export_data['cases'])} test cases to {filename}")
+                messagebox.showinfo("Success", f"Successfully exported {len(export_data['cases'])} test cases to XML format\n\nSaved as: {filename}")
             else:  # Default to json
-                success = Exporter.export_to_json(export_data, filepath)
-                
-            if success:
-                if format == 'xray_csv' and xml_filename and csv_filename:
-                    self.status_var.set(f"Exported {len(export_data['cases'])} test cases to Xray format")
-                    messagebox.showinfo("Export Complete", 
-                        f"Successfully exported {len(export_data['cases'])} test cases!\n\n"
-                        f"Files created:\n"
-                        f"• XML: {xml_filename}\n"
-                        f"• Xray CSV: {csv_filename}\n\n"
-                        f"Use the CSV file for importing into Xray.\n"
-                        f"The XML file is provided for reference.")
-                else:
-                    self.status_var.set(f"Exported {len(export_data['cases'])} test cases to {filename}")
-                    messagebox.showinfo("Success", f"Successfully exported {len(export_data['cases'])} test cases to {format.upper()} format\n\nSaved as: {filename}")
-            else:
-                if format == 'xray_csv':
-                    self._show_error("Failed to export to Xray CSV")
-                else:
-                    self._show_error(f"Failed to export to {format.upper()}")
+                Exporter.export_to_json(export_data, filepath, logger)
+                self.status_var.set(f"Exported {len(export_data['cases'])} test cases to {filename}")
+                messagebox.showinfo("Success", f"Successfully exported {len(export_data['cases'])} test cases to JSON format\n\nSaved as: {filename}")
                 
             self._update_progress("")
+            
+        except ExportError as e:
+            error_msg = str(e)
+            logger.error(f"Export failed: {error_msg}")
+            
+            # Show detailed error with log file reference
+            log_file = logger.get_log_file_path()
+            self._show_export_error(error_msg, log_file, format)
+            
         except Exception as e:
-            self._show_error(f"Failed to save export file: {str(e)}")
+            error_msg = f"Unexpected error during {format.upper()} export: {str(e)}"
+            logger.error(error_msg, exc_info=True)
+            
+            # Show detailed error with log file reference
+            log_file = logger.get_log_file_path()
+            self._show_export_error(error_msg, log_file, format)
     
-    def _export_to_xray_csv(self, export_data, csv_filepath):
+    def _export_to_xray_csv(self, export_data, csv_filepath, logger=None):
         """
         Export test cases to Xray CSV format by first creating XML then converting.
         Also saves the XML file alongside the CSV for reference.
@@ -1100,6 +1114,7 @@ class Application(tk.Tk):
         Args:
             export_data (dict): Data to export
             csv_filepath (str): Path where the CSV file should be saved
+            logger (ExportLogger): Optional logger instance
             
         Returns:
             tuple: (success: bool, xml_filename: str, csv_filename: str)
@@ -1109,30 +1124,57 @@ class Application(tk.Tk):
             base_path = os.path.splitext(csv_filepath)[0]
             xml_filepath = f"{base_path}.xml"
             
+            if logger:
+                logger.info(f"Creating XML file: {xml_filepath}")
+            
             # First export to XML format (permanent file)
-            if not Exporter.export_to_xml(export_data, xml_filepath):
-                return False, None, None
+            Exporter.export_to_xml(export_data, xml_filepath, logger)
             
             # Get TestRail endpoint from settings for link handling
             settings = self.settings_frame.get_settings()
             testrail_endpoint = settings.get('url', '')
             
+            if logger:
+                logger.info(f"Converting XML to Xray CSV format")
+                logger.debug(f"TestRail endpoint: {testrail_endpoint}")
+            
             # Convert XML to Xray CSV format
-            success = convert_xml_to_xray_csv(xml_filepath, csv_filepath, testrail_endpoint)
+            success = convert_xml_to_xray_csv(xml_filepath, csv_filepath, testrail_endpoint, logger)
             
             if success:
                 xml_filename = os.path.basename(xml_filepath)
                 csv_filename = os.path.basename(csv_filepath)
+                if logger:
+                    logger.info(f"Successfully created Xray CSV: {csv_filename}")
                 return True, xml_filename, csv_filename
             else:
-                return False, None, None
+                raise ExportError("Failed to convert XML to Xray CSV format")
                 
+        except (ExportError, XrayConversionError):
+            raise
         except Exception as e:
-            print(f"Error in _export_to_xray_csv: {str(e)}")
-            return False, None, None
+            error_msg = f"Error in Xray CSV export: {str(e)}"
+            if logger:
+                logger.error(error_msg, exc_info=True)
+            raise ExportError(error_msg) from e
     
     def _show_error(self, message):
         """Show an error message and update the status."""
         messagebox.showerror("Error", message)
         self.status_var.set("Error occurred")
+        self._update_progress("")
+    
+    def _show_export_error(self, error_message, log_file_path, format):
+        """Show a detailed export error message with log file information."""
+        # Create detailed error message
+        detail_msg = (
+            f"Failed to export to {format.upper()} format\n\n"
+            f"Error: {error_message}\n\n"
+            f"A detailed log file has been created at:\n"
+            f"{log_file_path}\n\n"
+            f"Please check the log file for more information."
+        )
+        
+        messagebox.showerror("Export Error", detail_msg)
+        self.status_var.set(f"Export failed - see log file")
         self._update_progress("")

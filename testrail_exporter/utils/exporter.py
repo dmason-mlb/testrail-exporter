@@ -3,50 +3,90 @@ import csv
 import os
 import xml.etree.ElementTree as ET
 import xml.dom.minidom as minidom
+from .logger import ExportLogger
+
+
+class ExportError(Exception):
+    """Custom exception for export-related errors."""
+    pass
 
 
 class Exporter:
     """Class for exporting TestRail data to various formats."""
 
     @staticmethod
-    def export_to_json(data, filepath):
+    def export_to_json(data, filepath, logger=None):
         """
         Export data to a JSON file.
         
         Args:
             data (dict): Data to export
             filepath (str): Path to save the file
+            logger (ExportLogger): Optional logger instance
             
-        Returns:
-            bool: True if export was successful, False otherwise
+        Raises:
+            ExportError: If export fails
         """
         try:
+            if logger:
+                logger.info(f"Starting JSON export to: {filepath}")
+                logger.debug(f"Exporting {len(data.get('cases', []))} test cases")
+            
+            # Validate data
+            if not data:
+                raise ExportError("No data provided for export")
+            
+            # Ensure directory exists
+            os.makedirs(os.path.dirname(filepath), exist_ok=True)
+            
             with open(filepath, 'w', encoding='utf-8') as f:
                 json.dump(data, f, indent=2)
-            return True
+            
+            if logger:
+                logger.info(f"Successfully exported JSON to: {filepath}")
+                
+        except PermissionError as e:
+            error_msg = f"Permission denied: Cannot write to {filepath}"
+            if logger:
+                logger.error(error_msg, exc_info=True)
+            raise ExportError(error_msg) from e
+        except OSError as e:
+            error_msg = f"File system error: {str(e)}"
+            if logger:
+                logger.error(error_msg, exc_info=True)
+            raise ExportError(error_msg) from e
         except Exception as e:
-            print(f"Error exporting to JSON: {str(e)}")
-            return False
+            error_msg = f"Unexpected error during JSON export: {str(e)}"
+            if logger:
+                logger.error(error_msg, exc_info=True)
+            raise ExportError(error_msg) from e
     
     @staticmethod
-    def export_to_csv(data, filepath):
+    def export_to_csv(data, filepath, logger=None):
         """
         Export test cases to a CSV file.
         
         Args:
             data (dict): Data to export (must have a 'cases' key)
             filepath (str): Path to save the file
+            logger (ExportLogger): Optional logger instance
             
-        Returns:
-            bool: True if export was successful, False otherwise
+        Raises:
+            ExportError: If export fails
         """
         try:
+            if logger:
+                logger.info(f"Starting CSV export to: {filepath}")
+                
             if 'cases' not in data:
-                raise ValueError("Data must contain a 'cases' key")
+                raise ExportError("Data must contain a 'cases' key")
                 
             cases = data['cases']
             if not cases:
-                raise ValueError("No cases to export")
+                raise ExportError("No test cases to export")
+            
+            if logger:
+                logger.debug(f"Exporting {len(cases)} test cases to CSV")
                 
             # Determine all possible fields from the first case
             first_case = cases[0]
@@ -58,36 +98,64 @@ class Exporter:
                     if field not in fields:
                         fields.append(field)
             
+            if logger:
+                logger.debug(f"CSV fields: {', '.join(fields)}")
+            
+            # Ensure directory exists
+            os.makedirs(os.path.dirname(filepath), exist_ok=True)
+            
             # Write to CSV
             with open(filepath, 'w', newline='', encoding='utf-8') as f:
                 writer = csv.DictWriter(f, fieldnames=fields)
                 writer.writeheader()
                 writer.writerows(cases)
+            
+            if logger:
+                logger.info(f"Successfully exported CSV to: {filepath}")
                 
-            return True
+        except PermissionError as e:
+            error_msg = f"Permission denied: Cannot write to {filepath}"
+            if logger:
+                logger.error(error_msg, exc_info=True)
+            raise ExportError(error_msg) from e
+        except OSError as e:
+            error_msg = f"File system error: {str(e)}"
+            if logger:
+                logger.error(error_msg, exc_info=True)
+            raise ExportError(error_msg) from e
         except Exception as e:
-            print(f"Error exporting to CSV: {str(e)}")
-            return False
+            error_msg = f"Unexpected error during CSV export: {str(e)}"
+            if logger:
+                logger.error(error_msg, exc_info=True)
+            raise ExportError(error_msg) from e
     
     @staticmethod
-    def export_to_xml(data, filepath):
+    def export_to_xml(data, filepath, logger=None):
         """
         Export test cases to a TestRail-compatible XML file.
         
         Args:
             data (dict): Data to export (must have a 'cases' key and project info)
             filepath (str): Path to save the file
+            logger (ExportLogger): Optional logger instance
             
-        Returns:
-            bool: True if export was successful, False otherwise
+        Raises:
+            ExportError: If export fails
         """
         try:
+            if logger:
+                logger.info(f"Starting XML export to: {filepath}")
+                
             if 'cases' not in data:
-                raise ValueError("Data must contain a 'cases' key")
+                raise ExportError("Data must contain a 'cases' key")
                 
             cases = data['cases']
             if not cases:
-                raise ValueError("No cases to export")
+                raise ExportError("No test cases to export")
+            
+            if logger:
+                logger.debug(f"Exporting {len(cases)} test cases to XML")
+                logger.debug(f"Building suite hierarchy from {len(data.get('suites', []))} suites")
             
             # Build complete suite hierarchy first, then populate with cases
             suites_dict = {}
@@ -96,6 +164,9 @@ class Exporter:
             suites_data = data.get('suites', [])
             for suite in suites_data:
                 suite_key = f"{suite.name}_{suite.id}" if suite.id else suite.name
+                
+                if logger:
+                    logger.debug(f"Processing suite: {suite.name} (ID: {suite.id})")
                 
                 # Initialize suite structure
                 suites_dict[suite_key] = {
@@ -128,6 +199,8 @@ class Exporter:
                 
                 # Create suite entry if it doesn't exist (fallback for missing suite data)
                 if suite_key not in suites_dict:
+                    if logger:
+                        logger.warning(f"Suite '{suite_name}' not found in suite data, creating fallback entry")
                     suites_dict[suite_key] = {
                         'name': suite_name,
                         'id': suite_id,
@@ -144,6 +217,9 @@ class Exporter:
                     section_name = case.get('section_name', 'Test Cases')
                     section_parent_id = case.get('section_parent_id')
                     section_depth = case.get('section_depth', 0)
+                    
+                    if logger:
+                        logger.warning(f"Section '{section_name}' not found in suite data, creating fallback entry")
                     
                     suites_dict[suite_key]['sections'][section_id] = {
                         'id': section_id,
@@ -172,6 +248,9 @@ class Exporter:
                     sid: section for sid, section in sections.items() 
                     if not section['parent_id'] or section['parent_id'] not in sections
                 }
+            
+            if logger:
+                logger.debug(f"Building XML structure for {len(suites_dict)} suite(s)")
             
             # Create XML structure - handle multiple suites
             if len(suites_dict) == 1:
@@ -208,14 +287,37 @@ class Exporter:
             
             # Fix ElementTree's weird behavior with 'name' tags getting truncated to 'n'
             pretty_xml = pretty_xml.replace("<n>", "<name>").replace("</n>", "</name>")
+            
+            # Ensure directory exists
+            os.makedirs(os.path.dirname(filepath), exist_ok=True)
+            
             # Write to file
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(pretty_xml)
+            
+            if logger:
+                logger.info(f"Successfully exported XML to: {filepath}")
                 
-            return True
+        except PermissionError as e:
+            error_msg = f"Permission denied: Cannot write to {filepath}"
+            if logger:
+                logger.error(error_msg, exc_info=True)
+            raise ExportError(error_msg) from e
+        except OSError as e:
+            error_msg = f"File system error: {str(e)}"
+            if logger:
+                logger.error(error_msg, exc_info=True)
+            raise ExportError(error_msg) from e
+        except ET.ParseError as e:
+            error_msg = f"XML generation error: {str(e)}"
+            if logger:
+                logger.error(error_msg, exc_info=True)
+            raise ExportError(error_msg) from e
         except Exception as e:
-            print(f"Error exporting to XML: {str(e)}")
-            return False
+            error_msg = f"Unexpected error during XML export: {str(e)}"
+            if logger:
+                logger.error(error_msg, exc_info=True)
+            raise ExportError(error_msg) from e
     
     @staticmethod
     def _add_suite_xml(suite_elem, suite_info, add_metadata=True):

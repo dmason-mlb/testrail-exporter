@@ -203,11 +203,11 @@ function create_dmg() {
   CREATE_DMG_CMD="create-dmg \
     --volname \"$APP_NAME\" \
     --window-pos 200 120 \
-    --window-size 600 400 \
+    --window-size 800 533 \
     --icon-size 128 \
-    --icon \"${APP_NAME}.app\" 150 200 \
+    --icon \"${APP_NAME}.app\" 200 267 \
     --hide-extension \"${APP_NAME}.app\" \
-    --app-drop-link 450 200"
+    --app-drop-link 600 267"
   
   # Add codesign if developer ID is available
   if [ -n "$DEVELOPER_ID" ]; then
@@ -235,11 +235,11 @@ function create_dmg() {
     FALLBACK_CMD="create-dmg \
       --volname \"$APP_NAME\" \
       --window-pos 200 120 \
-      --window-size 600 400 \
+      --window-size 800 533 \
       --icon-size 128 \
-      --icon \"${APP_NAME}.app\" 150 200 \
+      --icon \"${APP_NAME}.app\" 200 267 \
       --hide-extension \"${APP_NAME}.app\" \
-      --app-drop-link 450 200"
+      --app-drop-link 600 267"
     
     # Add codesign if developer ID is available
     if [ -n "$DEVELOPER_ID" ]; then
