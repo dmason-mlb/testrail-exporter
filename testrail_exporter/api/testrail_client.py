@@ -213,3 +213,27 @@ class TestRailClient:
             list: List of case types
         """
         return self._send_request('GET', 'get_case_types')
+    
+    def get_templates(self, project_id):
+        """
+        Get all templates for a project.
+
+        Args:
+            project_id (int): Project ID
+
+        Returns:
+            list: List of templates
+        """
+        return self._send_request('GET', f'get_templates/{project_id}')
+    
+    def get_milestones(self, project_id):
+        """
+        Get all milestones for a project.
+
+        Args:
+            project_id (int): Project ID
+
+        Returns:
+            dict: Response containing milestones array
+        """
+        return self._send_request('GET', f'get_milestones/{project_id}')

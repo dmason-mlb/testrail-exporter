@@ -155,7 +155,9 @@ class Application(tk.Tk):
             'cases': {},  # Suite ID+Section ID -> Cases
             'loading_state': {},  # Track loading completion state for projects
             'priorities': None,  # Cache priorities (not project-specific)
-            'case_types': None  # Cache case types (not project-specific)
+            'case_types': None,  # Cache case types (not project-specific)
+            'template': {},  # Project ID -> Templates
+            'milestone': {}  # Project ID -> Milestones
         }
         
         # Create a reference to the load projects button
@@ -256,7 +258,9 @@ class Application(tk.Tk):
                     'cases': {},
                     'loading_state': {},
                     'priorities': None,
-                    'case_types': None
+                    'case_types': None,
+                    'template': {},
+                    'milestone': {}
                 }
             
             # Cancel any ongoing loading operations
@@ -974,6 +978,43 @@ class Application(tk.Tk):
             if case_type:
                 case_dict['type_name'] = case_type['name']
                 # Keep type_id for XML export
+        
+        # Convert template_id to template name (keep both for XML export)
+        if hasattr(case, 'template_id') and case.template_id:
+            project_id = self.current_project.id
+            # Load templates for this project if not cached
+            if project_id not in self.cache['template']:
+                try:
+                    templates_data = self.client.get_templates(project_id)
+                    self.cache['template'][project_id] = templates_data
+                except Exception as e:
+                    print(f"Failed to load templates: {e}")
+                    self.cache['template'][project_id] = []
+            
+            # Find the template name
+            if project_id in self.cache['template']:
+                template = next((t for t in self.cache['template'][project_id] if t['id'] == case.template_id), None)
+                if template:
+                    case_dict['template_name'] = template['name']
+        
+        # Convert milestone_id to milestone name (keep both for XML export)
+        if hasattr(case, 'milestone_id') and case.milestone_id:
+            project_id = self.current_project.id
+            # Load milestones for this project if not cached
+            if project_id not in self.cache['milestone']:
+                try:
+                    milestones_response = self.client.get_milestones(project_id)
+                    # API returns a dict with 'milestones' array
+                    self.cache['milestone'][project_id] = milestones_response.get('milestone', [])
+                except Exception as e:
+                    print(f"Failed to load milestone: {e}")
+                    self.cache['milestone'][project_id] = []
+            
+            # Find the milestone name
+            if project_id in self.cache['milestone']:
+                milestone = next((m for m in self.cache['milestone'][project_id] if m['id'] == case.milestone_id), None)
+                if milestone:
+                    case_dict['milestone_name'] = milestone['name']
         
         return case_dict
     

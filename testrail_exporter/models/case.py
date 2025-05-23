@@ -17,6 +17,7 @@ class Case:
         self.type_id = case_data.get('type_id')
         self.milestone_id = case_data.get('milestone_id')
         self.refs = case_data.get('refs')
+        self.estimate = case_data.get('estimate')
         
         # Extract custom fields
         self.custom_fields = {}
@@ -43,7 +44,8 @@ class Case:
             'template_id': self.template_id,
             'type_id': self.type_id,
             'milestone_id': self.milestone_id,
-            'refs': self.refs
+            'refs': self.refs,
+            'estimate': self.estimate
         }
         
         # Add custom fields

@@ -1,0 +1,47 @@
+<svg width="500" height="320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for background -->
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#041E42;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#011B3F;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000020"/>
+    </filter>
+    
+    <!-- Arrow marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="10" refY="3.5" orient="auto">
+      <polygon points="0 1, 8 3.5, 0 6" fill="#007AFF" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="320" fill="url(#backgroundGradient)" />
+  
+  <!-- App icon placeholder (dashed circle) -->
+  <circle cx="125" cy="160" r="75" fill="none" stroke="#F0F0F0" stroke-width="2" 
+          stroke-dasharray="8,4" opacity="0.3" />
+  
+  <!-- Applications folder placeholder (dashed circle) -->
+  <circle cx="375" cy="160" r="75" fill="none" stroke="#F0F0F0" stroke-width="2" 
+          stroke-dasharray="8,4" opacity="0.3" />
+  
+  <!-- Straight blocky arrow from app to Applications -->
+  <polygon points="210,150 255,150 255,140 290,160 255,180 255,170 210,170" 
+           fill="#BF0D3E" filter="url(#dropShadow)" />
+  
+  <!-- Instructions text -->
+  <text x="245" y="50" text-anchor="middle" font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif" 
+        font-size="18" font-weight="500" fill="#BF0D3E">
+    Drag to Install
+  </text>
+  
+  <!-- Smaller instruction text -->
+  <text x="250" y="280" text-anchor="middle" font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif" 
+        font-size="13" fill="#86868b">
+    Drag TestRail Exporter to Applications folder
+  </text>
+</svg>

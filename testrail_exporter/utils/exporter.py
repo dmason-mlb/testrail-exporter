@@ -101,6 +101,7 @@ class Exporter:
                 suites_dict[suite_key] = {
                     'name': suite.name,
                     'id': suite.id,
+                    'description': suite.description,
                     'sections': {}
                 }
                 
@@ -130,6 +131,7 @@ class Exporter:
                     suites_dict[suite_key] = {
                         'name': suite_name,
                         'id': suite_id,
+                        'description': '',  # No description available in fallback case
                         'sections': {}
                     }
                 
@@ -237,6 +239,8 @@ class Exporter:
             name_elem.text = suite_info['name']
             
             desc_elem = ET.SubElement(suite_elem, "description")
+            if suite_info.get('description'):
+                desc_elem.text = suite_info['description']
         
         # Add root sections
         sections_elem = ET.SubElement(suite_elem, "sections")
@@ -287,7 +291,8 @@ class Exporter:
                 
                 # Template
                 template_elem = ET.SubElement(case_elem, "template")
-                template_elem.text = "Test Case"  # Default template
+                template_name = case.get('template_name', 'Test Case')  # Default to "Test Case" if no template
+                template_elem.text = template_name
                 
                 # Type
                 type_elem = ET.SubElement(case_elem, "type")
@@ -301,12 +306,21 @@ class Exporter:
                 
                 # Estimate
                 estimate_elem = ET.SubElement(case_elem, "estimate")
+                estimate_value = case.get('estimate')
+                if estimate_value:
+                    estimate_elem.text = str(estimate_value)
+                
+                # Milestone
+                milestone_elem = ET.SubElement(case_elem, "milestone")
+                milestone_name = case.get('milestone_name')
+                if milestone_name:
+                    milestone_elem.text = milestone_name
                 
                 # References
                 refs_elem = ET.SubElement(case_elem, "references")
-                refs_value = case.get('refs', '')
+                refs_value = case.get('refs')
                 if refs_value:
-                    refs_elem.text = refs_value
+                    refs_elem.text = str(refs_value)
                 
                 # Custom fields
                 custom_elem = ET.SubElement(case_elem, "custom")
