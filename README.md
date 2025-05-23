@@ -1,6 +1,10 @@
-# TestRail Exporter
-
-A Python GUI application to export test cases from TestRail for later importing into X-ray.
+<div align="center">
+  <img src="./docs/images/icon.png" alt="TestRail Exporter Logo" width="128" height="128">
+  
+  # TestRail Exporter
+  
+  A Python GUI application to export test cases from TestRail for later importing into X-ray.
+</div>
 
 ![TestRail Exporter - Exporting Test Cases](./docs/images/testrail-exporter-xray-export.png)
 

@@ -66,7 +66,7 @@ APP_BUNDLE="$DIST_DIR/${APP_NAME}.app"
 PYTHON_ENTRY="testrail_exporter/main.py"
 
 # DMG Customization Settings
-DMG_BACKGROUND_IMG="docs/images/dmg_background_72dpi.png"
+DMG_BACKGROUND_IMG="docs/images/dmg_background.png"
 
 # ------------------------------- FUNCTIONS -----------------------------------
 function check_deps() {
@@ -203,11 +203,11 @@ function create_dmg() {
   CREATE_DMG_CMD="create-dmg \
     --volname \"$APP_NAME\" \
     --window-pos 200 120 \
-    --window-size 500 320 \
+    --window-size 600 400 \
     --icon-size 128 \
-    --icon \"${APP_NAME}.app\" 125 160 \
+    --icon \"${APP_NAME}.app\" 150 200 \
     --hide-extension \"${APP_NAME}.app\" \
-    --app-drop-link 375 160"
+    --app-drop-link 450 200"
   
   # Add codesign if developer ID is available
   if [ -n "$DEVELOPER_ID" ]; then
@@ -236,10 +236,10 @@ function create_dmg() {
       --volname \"$APP_NAME\" \
       --window-pos 200 120 \
       --window-size 600 400 \
-      --icon-size 100 \
-      --icon \"${APP_NAME}.app\" 125 160 \
+      --icon-size 128 \
+      --icon \"${APP_NAME}.app\" 150 200 \
       --hide-extension \"${APP_NAME}.app\" \
-      --app-drop-link 375 160"
+      --app-drop-link 450 200"
     
     # Add codesign if developer ID is available
     if [ -n "$DEVELOPER_ID" ]; then
