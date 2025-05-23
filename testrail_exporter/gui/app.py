@@ -61,18 +61,22 @@ class Application(tk.Tk):
         self.settings_frame = SettingsFrame(main_frame, config=self.config)
         self.settings_frame.pack(fill=tk.X, pady=10)
         
-        # Load sections checkbox
+        # Load sections toggle
         load_sections_frame = ttk.Frame(main_frame)
         load_sections_frame.pack(fill=tk.X, pady=(5, 0))
         
-        self.load_sections_var = tk.BooleanVar(value=False)  # Default to unchecked
-        self.load_sections_checkbox = ttk.Checkbutton(
-            load_sections_frame, 
-            text="Load Sections?", 
-            variable=self.load_sections_var,
-            command=self._on_load_sections_changed
-        )
-        self.load_sections_checkbox.pack(side=tk.LEFT)
+        self.load_sections_var = tk.BooleanVar(value=False)  # Default to off
+        
+        # Create toggle switch frame
+        toggle_frame = ttk.Frame(load_sections_frame)
+        toggle_frame.pack(side=tk.LEFT)
+        
+        # Toggle label
+        toggle_label = ttk.Label(toggle_frame, text="Load Sections?")
+        toggle_label.pack(side=tk.LEFT, padx=(0, 10))
+        
+        # Create custom toggle switch
+        self._create_toggle_switch(toggle_frame, self.load_sections_var, self._on_load_sections_changed)
         
         # Project selection
         project_frame = ttk.Frame(main_frame)
@@ -158,6 +162,7 @@ class Application(tk.Tk):
         self.current_project = None
         self.api_calls_total = 0
         self.api_calls_done = 0
+        self.current_step_text = ""  # Track current operation for progress display
         
         # Thread control flag
         self.loading_cancelled = False
@@ -187,6 +192,58 @@ class Application(tk.Tk):
         
         # Auto-load projects if settings are populated
         self.after(500, self._auto_load_projects)
+    
+    def _create_toggle_switch(self, parent, variable, command):
+        """Create a custom toggle switch widget."""
+        # Create canvas for the toggle
+        canvas = tk.Canvas(parent, width=50, height=25, highlightthickness=0)
+        canvas.pack(side=tk.LEFT)
+        
+        # Colors
+        off_color = "#ccc"
+        on_color = "#4CAF50"
+        knob_color = "white"
+        
+        # Draw the toggle background
+        bg_rect = canvas.create_rectangle(5, 5, 45, 20, fill=off_color, outline="", width=0)
+        canvas.itemconfig(bg_rect, tags="background")
+        
+        # Draw the round edges
+        left_oval = canvas.create_oval(0, 5, 20, 20, fill=off_color, outline="", width=0)
+        right_oval = canvas.create_oval(30, 5, 50, 20, fill=off_color, outline="", width=0)
+        canvas.itemconfig(left_oval, tags="background")
+        canvas.itemconfig(right_oval, tags="background")
+        
+        # Draw the knob
+        knob = canvas.create_oval(3, 3, 23, 22, fill=knob_color, outline="", width=0)
+        
+        def update_toggle(*args):
+            """Update the toggle appearance based on the variable value."""
+            if variable.get():
+                # Move knob to right and change color to green
+                canvas.coords(knob, 27, 3, 47, 22)
+                canvas.itemconfig("background", fill=on_color)
+            else:
+                # Move knob to left and change color to gray
+                canvas.coords(knob, 3, 3, 23, 22)
+                canvas.itemconfig("background", fill=off_color)
+        
+        def toggle_click(event):
+            """Handle click on the toggle."""
+            variable.set(not variable.get())
+            if command:
+                command()
+        
+        # Bind click event
+        canvas.bind("<Button-1>", toggle_click)
+        
+        # Set initial state
+        update_toggle()
+        
+        # Watch for variable changes
+        variable.trace("w", update_toggle)
+        
+        return canvas
     
     def _on_load_sections_changed(self):
         """Handle when the Load Sections checkbox is toggled."""
@@ -232,22 +289,38 @@ class Application(tk.Tk):
             self.api_calls_done = 0
             self.api_calls_total = 0
             self.progress_var.set(0)
+            self.current_step_text = ""
+        
+        # Update current step text if provided
+        if step_text:
+            self.current_step_text = step_text
         
         if self.api_calls_total > 0:
             progress_pct = int((self.api_calls_done / self.api_calls_total) * 100)
             self.progress_var.set(progress_pct)
-            progress_text = f"{step_text} [{progress_pct}%]"
+            
+            # Check if tasks are complete
+            if progress_pct >= 100:
+                # Show 100% and Tasks Complete
+                self.progress_label.config(text="100%")
+                self.status_var.set("Tasks Complete")
+            else:
+                # Show percentage beneath progress bar
+                self.progress_label.config(text=f"{progress_pct}%")
+                # Show current operation in status label
+                self.status_var.set(self.current_step_text)
         else:
             self.progress_var.set(0)
-            progress_text = step_text
+            self.progress_label.config(text="")
+            if self.current_step_text:
+                self.status_var.set(self.current_step_text)
             
-        self.progress_label.config(text=progress_text)
         self.update_idletasks()
     
     def _register_api_call(self):
         """Register that an API call has been completed."""
         self.api_calls_done += 1
-        self._update_progress()
+        self._update_progress()  # This will use the stored current_step_text
         
     def _auto_load_projects(self):
         """Automatically load projects if settings are populated."""
@@ -1214,6 +1287,9 @@ class Application(tk.Tk):
             if logger:
                 logger.info(f"Converting XML to Xray CSV format")
                 logger.debug(f"TestRail endpoint: {testrail_endpoint}")
+            
+            # Update progress to show conversion
+            self._update_progress("Converting to CSV...")
             
             # Convert XML to Xray CSV format
             success = convert_xml_to_xray_csv(xml_filepath, csv_filepath, testrail_endpoint, logger)
