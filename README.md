@@ -6,7 +6,16 @@
   A Python GUI application to export test cases from TestRail for later importing into X-ray.
 </div>
 
-![TestRail Exporter - Exporting Test Cases](./docs/images/testrail-exporter-xray-export.png)
+## Quick Installation (macOS)
+
+Download the latest release and drag TestRail Exporter to your Applications folder:
+
+![TestRail Exporter DMG Installer](./docs/images/dmg_installer.png)
+
+1. Download the latest `.dmg` file from the [Releases](https://github.com/dmason-mlb/testrail-exporter/releases) page
+2. Open the downloaded DMG file
+3. Drag TestRail Exporter to your Applications folder
+4. Launch TestRail Exporter from your Applications folder
 
 ## Features
 
