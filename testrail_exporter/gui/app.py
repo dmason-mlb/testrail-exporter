@@ -835,6 +835,11 @@ class Application(tk.Tk):
             messagebox.showwarning("Warning", "Please select a project first")
             return
             
+        # Check if the project has loaded suites
+        if not hasattr(self.current_project, 'suites') or not self.current_project.suites:
+            messagebox.showwarning("Warning", "Project suites not loaded. Please refresh the project and try again.")
+            return
+            
         # Get checked items
         checked_items = self.tree.get_checked_items()
         if not checked_items:
@@ -928,11 +933,12 @@ class Application(tk.Tk):
                     
                 item_values = self.tree.item(item_id, "values")
                 suite_display_name = item_values[0]
-                # Extract name without count
-                if " (" in suite_display_name:
-                    suite_name = suite_display_name.split(" (")[0]
-                else:
-                    suite_name = suite_display_name
+                # Don't extract name - use the full display name since it should match exactly
+                suite_name = suite_display_name
+                    
+                # Debug logging
+                print(f"DEBUG: Looking for suite with display name: '{suite_display_name}'")
+                print(f"DEBUG: Using suite name: '{suite_name}'")
                     
                 suite = next((s for s in self.current_project.suites if s.name == suite_name), None)
                 if suite:
@@ -968,6 +974,10 @@ class Application(tk.Tk):
                             processed_cases.add(case.id)
                             
                     self._register_api_call()
+                else:
+                    # Suite not found - log for debugging
+                    print(f"DEBUG: Suite '{suite_name}' not found in current project")
+                    print(f"DEBUG: Available suites: {[s.name for s in self.current_project.suites]}")
             
             # Process individual sections (only if their parent suite wasn't processed)
             for item_id in sections_to_process:
@@ -979,18 +989,12 @@ class Application(tk.Tk):
                 parent_id = self.tree.parent(item_id)
                 
                 section_display_name = item_values[0]
-                # Extract section name without count
-                if " (" in section_display_name:
-                    section_name = section_display_name.split(" (")[0]
-                else:
-                    section_name = section_display_name
+                # Don't extract name - use the full display name
+                section_name = section_display_name
                     
                 suite_display_name = self.tree.item(parent_id, "values")[0]
-                # Extract suite name without count
-                if " (" in suite_display_name:
-                    suite_name = suite_display_name.split(" (")[0]
-                else:
-                    suite_name = suite_display_name
+                # Don't extract name - use the full display name
+                suite_name = suite_display_name
                     
                 suite = next((s for s in self.current_project.suites if s.name == suite_name), None)
                 if suite:
@@ -1068,6 +1072,22 @@ class Application(tk.Tk):
                                 suite.sections = []
                     
                     suites_for_export.append(suite)
+            
+            # Check if we found any test cases
+            if not cases:
+                # Show error in the main thread
+                if not self.loading_cancelled:
+                    self.after(0, lambda: messagebox.showwarning(
+                        "No Test Cases Found", 
+                        "No test cases were found in the selected suites/sections.\n\n"
+                        "Possible reasons:\n"
+                        "• The selected suite/section has no test cases\n"
+                        "• The suite/section was not loaded properly\n"
+                        "• There was an issue retrieving the test cases\n\n"
+                        "Please try refreshing the project and selecting again."
+                    ))
+                    self.after(0, lambda: self._update_progress("", reset=True))
+                return
             
             # Prepare export data with names instead of IDs
             export_data = {
@@ -1190,16 +1210,19 @@ class Application(tk.Tk):
         # Generate timestamp
         timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
         
+        # Sanitize project name for use in filename
+        sanitized_project_name = self._sanitize_filename(self.current_project.name)
+        
         # Set file extension and base filename based on format
         if format == 'xray_csv':
             extension = ".csv"
-            base_filename = f"{self.current_project.name}_xray_export"
+            base_filename = f"{sanitized_project_name}_xray_export"
         elif format == 'xml':
             extension = ".xml"
-            base_filename = f"{self.current_project.name}_export"
+            base_filename = f"{sanitized_project_name}_export"
         else:  # Default to json
             extension = ".json"
-            base_filename = f"{self.current_project.name}_export"
+            base_filename = f"{sanitized_project_name}_export"
         
         # Create timestamped filename
         filename = f"{base_filename}_{timestamp}{extension}"
@@ -1331,3 +1354,32 @@ class Application(tk.Tk):
         messagebox.showerror("Export Error", detail_msg)
         self.status_var.set(f"Export failed - see log file")
         self._update_progress("")
+    
+    def _sanitize_filename(self, filename):
+        """
+        Sanitize a filename by replacing problematic characters.
+        
+        Args:
+            filename (str): The filename to sanitize
+            
+        Returns:
+            str: Sanitized filename safe for filesystem use
+        """
+        # Replace slashes with dashes
+        filename = filename.replace('/', '-')
+        filename = filename.replace('\\', '-')
+        
+        # Replace other problematic characters
+        # These characters are generally problematic across different filesystems
+        problematic_chars = '<>:"|?*'
+        for char in problematic_chars:
+            filename = filename.replace(char, '_')
+        
+        # Remove any leading/trailing dots or spaces
+        filename = filename.strip('. ')
+        
+        # Ensure filename is not empty after sanitization
+        if not filename:
+            filename = 'unnamed_project'
+        
+        return filename

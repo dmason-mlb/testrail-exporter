@@ -74,19 +74,33 @@ def appendRows(issueID='', issueKey='', testType=None, testSummary=None, testPri
                 "Test Repo": testRepo if testRepo else '',
                 "Labels": labels.text if labels is not None else ''})
 
-def handleTestSections(root, issueID, outputfile, repoName, outputtestrailEndpoint, logger=None):
+def handleTestSections(root, issueID, outputfile, repoName, outputtestrailEndpoint, logger=None, suiteName=None):
     if root.tag == 'suite':
         testsections = root.findall('sections/section')
+        # Get suite name if not already provided
+        if suiteName is None:
+            suite_name_elem = root.find('name')
+            if suite_name_elem is not None and suite_name_elem.text:
+                suiteName = suite_name_elem.text
     else:
         testsections = root.findall('section')
 
-    baseRepoName= repoName
+    baseRepoName = repoName
     for testsection in testsections:
         testRepoName = testsection.find('name').text
         testRepoDescription = testsection.find('description')
 
+        # Build the test repo path
         if baseRepoName is not None and testRepoName is not None:
-            testRepoName = baseRepoName+'/'+testRepoName
+            # Check if baseRepoName already starts with suiteName to avoid duplication
+            if suiteName and not baseRepoName.startswith(suiteName + '/'):
+                testRepoName = baseRepoName + '/' + testRepoName
+            else:
+                testRepoName = baseRepoName + '/' + testRepoName
+        elif suiteName is not None and testRepoName is not None:
+            # This is a top-level section, prepend suite name
+            testRepoName = suiteName + '/' + testRepoName
+        # else: testRepoName stays as is
 
         cases = testsection.findall('cases/case')
         if logger:
@@ -141,7 +155,7 @@ def handleTestSections(root, issueID, outputfile, repoName, outputtestrailEndpoi
         
         innerSection = testsection.find('sections')
         if innerSection is not None:
-            issueID = handleTestSections(root=innerSection, issueID=issueID, outputfile=outputfile, repoName=testRepoName, outputtestrailEndpoint=outputtestrailEndpoint, logger=logger)
+            issueID = handleTestSections(root=innerSection, issueID=issueID, outputfile=outputfile, repoName=testRepoName, outputtestrailEndpoint=outputtestrailEndpoint, logger=logger, suiteName=suiteName)
 
     return issueID
 
@@ -178,12 +192,16 @@ def parseTestrail2XrayData(inputfile, outputfile, outputtestrailEndpoint='', log
             if logger:
                 logger.info(f"Processing multiple suites export ({len(root.findall('suite'))} suites)")
             for suite in root.findall('suite'):
-                issueID = handleTestSections(root=suite, issueID=issueID, outputfile=outputfile, repoName=None, outputtestrailEndpoint=outputtestrailEndpoint, logger=logger)
+                # Get suite name for multiple suites export
+                suite_name_elem = suite.find('name')
+                suite_name = suite_name_elem.text if suite_name_elem is not None and suite_name_elem.text else None
+                issueID = handleTestSections(root=suite, issueID=issueID, outputfile=outputfile, repoName=None, outputtestrailEndpoint=outputtestrailEndpoint, logger=logger, suiteName=suite_name)
         else:
             # Single suite export - process directly
             if logger:
                 logger.info("Processing single suite export")
-            issueID = handleTestSections(root=root, issueID=issueID, outputfile=outputfile, repoName=None, outputtestrailEndpoint=outputtestrailEndpoint, logger=logger)
+            # For single suite, the suite name will be extracted in handleTestSections
+            issueID = handleTestSections(root=root, issueID=issueID, outputfile=outputfile, repoName=None, outputtestrailEndpoint=outputtestrailEndpoint, logger=logger, suiteName=None)
         
         # Final CSV write after processing all suites
         if row:
