@@ -2,17 +2,19 @@
 # -----------------------------------------------------------------------------
 # create_dmg.sh
 #
-# Build script for TestRail Exporter macOS distribution (version 1.0)
+# Build script for TestRail Exporter macOS distribution
 # -----------------------------------------------------------------------------
 # This script will:
 #   1. Generate a macOS .icns icon from a source PNG
 #   2. Bundle the Python application into a standalone .app using PyInstaller
-#   3. Package the .app bundle into a compressed DMG named "testrail_exporter.dmg"
+#   3. Package the .app bundle into a compressed DMG using create-dmg tool
 #
 # Prerequisites (install once):
 #   brew install python  # if Python 3 is not installed
 #   pip install pyinstaller
-#   # "sips", "iconutil" and "hdiutil" are shipped with macOS
+#   brew install create-dmg
+#   brew install imagemagick  # for image conversion if needed
+#   # "sips" and "iconutil" are shipped with macOS
 #
 # Usage:
 #   ./create_dmg.sh [/full/path/to/source_icon.png]
@@ -34,7 +36,21 @@ if [ -f "$ENV_FILE" ]; then
 fi
 
 APP_NAME="TestRail Exporter"
-VERSION="1.0"
+
+# Extract version from setup.py
+VERSION=$(python3 -c "
+import re
+with open('setup.py', 'r') as f:
+    content = f.read()
+    match = re.search(r'version=[\"\'](.*?)[\"\']', content)
+    if match:
+        print(match.group(1))
+    else:
+        print('1.0.0')  # fallback version
+")
+
+echo "Detected version: $VERSION"
+
 # Final DMG name includes the version
 DMG_NAME="testrail_exporter-${VERSION}.dmg"
 
@@ -50,14 +66,7 @@ APP_BUNDLE="$DIST_DIR/${APP_NAME}.app"
 PYTHON_ENTRY="testrail_exporter/main.py"
 
 # DMG Customization Settings
-DMG_BACKGROUND_IMG_SRC="docs/images/dmg_background.png" # User should create this image (e.g., 500x320 with an arrow)
-DMG_WINDOW_WIDTH=500
-DMG_WINDOW_HEIGHT=320
-DMG_ICON_SIZE=128     # Icon size for items within the DMG (128 is standard for app icons)
-DMG_APP_X_POS=125     # X position for the .app icon (centered in left half)
-DMG_APP_Y_POS=160     # Y position for the .app icon (vertically centered)
-DMG_APPLICATIONS_LINK_X_POS=375 # X position for Applications link (centered in right half)
-DMG_APPLICATIONS_LINK_Y_POS=160 # Y position for Applications link (vertically centered)
+DMG_BACKGROUND_IMG="docs/images/dmg_background_72dpi.png"
 
 # ------------------------------- FUNCTIONS -----------------------------------
 function check_deps() {
@@ -65,7 +74,11 @@ function check_deps() {
     echo >&2 "PyInstaller is required but not installed. Install with: pip install pyinstaller";
     exit 1;
   }
-  for cmd in sips iconutil hdiutil; do
+  command -v create-dmg >/dev/null 2>&1 || {
+    echo >&2 "create-dmg is required but not installed. Install with: brew install create-dmg";
+    exit 1;
+  }
+  for cmd in sips iconutil; do
     command -v "$cmd" >/dev/null 2>&1 || {
       echo >&2 "macOS utility '$cmd' is required but was not found.";
       exit 1;
@@ -140,8 +153,6 @@ function sign_app() {
 
   DEVELOPER_ID="${DEVELOPER_ID_APP:-}"
 
-  echo "  Signing application with identity: $DEVELOPER_ID"
-
   # Check if a developer ID is set
   if [ -z "$DEVELOPER_ID" ]; then
     echo "  Skipping code signing: No DEVELOPER_ID configured in script."
@@ -171,153 +182,81 @@ function sign_app() {
 }
 
 function create_dmg() {
-  echo "[4/4] Packaging DMG ..."
-
-  # Temporary DMG name
-  TEMP_DMG_RW="$BUILD_DIR/${APP_NAME}_rw.dmg"
-
-  # DMG settings
-  DMG_WINDOW_TITLE="$APP_NAME" # Volume name and window title
-  DMG_APP_NAME_IN_DMG="${APP_NAME}.app" # Actual name of the .app bundle inside DMG
+  echo "[4/4] Packaging DMG using create-dmg tool ..."
 
   # Clean up old DMGs
-  rm -f "$BUILD_DIR/$DMG_NAME" "$TEMP_DMG_RW"
+  rm -f "$BUILD_DIR/$DMG_NAME"
 
-  # Create a new read/write DMG
-  # Increased size just in case, can be tuned. fsargs are common for DMGs.
-  echo "  Creating temporary Read/Write DMG..."
-  hdiutil create -o "$TEMP_DMG_RW" -size 350m -volname "$DMG_WINDOW_TITLE" -fs HFS+ -fsargs "-c c=64,a=16,e=16" -layout SPUD
-  if [ $? -ne 0 ]; then echo "Error: Failed to create temporary DMG. Aborting."; exit 1; fi
-
-  # Mount the DMG
-  echo "  Mounting DMG..."
-  # Capture all output, then parse. Grep everything starting with /Volumes/ to
-  # the end of the line – this supports spaces in volume names.
-  MOUNT_OUTPUT=$(hdiutil attach -readwrite -noverify -noautoopen "$TEMP_DMG_RW")
-  # device id is first field (e.g. /dev/disk4)
-  DEV_ID=$(echo "$MOUNT_OUTPUT" | head -n 1 | awk '{print $1}')
-  MOUNT_PATH=$(echo "$MOUNT_OUTPUT" | grep -oE '/Volumes/.*' | head -n 1)
-
-  if [ -z "$MOUNT_PATH" ] || [ ! -d "$MOUNT_PATH" ]; then
-    echo "Error: Failed to mount DMG at '$MOUNT_PATH'. Aborting."
-    echo "Attach output: $MOUNT_OUTPUT"
-    rm -f "$TEMP_DMG_RW"
-    exit 1
-  fi
-  echo "  Mounted at: $MOUNT_PATH"
-
-  # Ensure APP_BUNDLE (e.g., dist/TestRail Exporter.app) exists
-  if [ ! -d "$APP_BUNDLE" ]; then
-    echo "Error: App bundle '$APP_BUNDLE' not found. Build the app first."
-    hdiutil detach "$DEV_ID" -force >/dev/null 2>&1 || true
-    rm -f "$TEMP_DMG_RW"
-    exit 1
-  fi
-  
-  echo "  Copying .app bundle to DMG..."
-  cp -R "$APP_BUNDLE" "$MOUNT_PATH/"
-
-  echo "  Creating Applications symlink in DMG..."
-  ln -s /Applications "$MOUNT_PATH/Applications"
-
-  DMG_BACKGROUND_FILE_NAME_IN_DMG=""
-  if [ -f "$DMG_BACKGROUND_IMG_SRC" ]; then
-    echo "  Adding background image to DMG..."
-    mkdir "$MOUNT_PATH/.background"
-    # Get just the filename for AppleScript
-    DMG_BACKGROUND_FILE_NAME_IN_DMG=$(basename "$DMG_BACKGROUND_IMG_SRC")
-    cp "$DMG_BACKGROUND_IMG_SRC" "$MOUNT_PATH/.background/$DMG_BACKGROUND_FILE_NAME_IN_DMG"
+  # Check if background image exists
+  if [[ ! -f "$DMG_BACKGROUND_IMG" ]]; then
+    echo "Warning: Background image '$DMG_BACKGROUND_IMG' not found. Creating DMG without background."
+    DMG_BACKGROUND_ARG=""
   else
-    echo "  Warning: Background image '$DMG_BACKGROUND_IMG_SRC' not found. Skipping background."
+    DMG_BACKGROUND_ARG="--background \"$DMG_BACKGROUND_IMG\""
   fi
 
-  echo "  Customizing DMG appearance via AppleScript..."
-  # Use cat EOF for multiline AppleScript clarity
-  APPLESCRIPT_CODE=$(cat <<EOF
-    tell application "Finder"
-      tell disk "$DMG_WINDOW_TITLE"
-        open
-        set current view of container window to icon view
-        set toolbar visible of container window to false
-        set statusbar visible of container window to false
-        set the bounds of container window to {100, 100, 100 + $DMG_WINDOW_WIDTH, 100 + $DMG_WINDOW_HEIGHT}
-        set opts to the icon view options of container window
-        set arrangement of opts to not arranged
-        set icon size of opts to $DMG_ICON_SIZE
-EOF
-)
-
-  if [ -n "$DMG_BACKGROUND_FILE_NAME_IN_DMG" ]; then
-    APPLESCRIPT_CODE="${APPLESCRIPT_CODE}"$'\n'"    set background picture of opts to file \".background:$DMG_BACKGROUND_FILE_NAME_IN_DMG\""
-  fi
-
-  APPLESCRIPT_CODE="${APPLESCRIPT_CODE}"$'\n'$(cat <<EOF
-        set position of item "$DMG_APP_NAME_IN_DMG" of container window to {$DMG_APP_X_POS, $DMG_APP_Y_POS}
-        set position of item "Applications" of container window to {$DMG_APPLICATIONS_LINK_X_POS, $DMG_APPLICATIONS_LINK_Y_POS}
-        update without registering applications
-        delay 1
-        close
-      end tell
-      -- Window closed; Finder has saved .DS_Store at this point
-EOF
-)
+  # Create DMG using create-dmg tool
+  # The tool automatically handles the window size, icon positions, and other settings
+  echo "  Creating DMG with create-dmg..."
   
-  # echo "AppleScript to be executed:"
-  # echo "$APPLESCRIPT_CODE"
+  # Build the create-dmg command
+  CREATE_DMG_CMD="create-dmg \
+    --volname \"$APP_NAME\" \
+    --window-pos 200 120 \
+    --window-size 500 320 \
+    --icon-size 128 \
+    --icon \"${APP_NAME}.app\" 125 160 \
+    --hide-extension \"${APP_NAME}.app\" \
+    --app-drop-link 375 160"
   
-  if ! osascript -e "$APPLESCRIPT_CODE"; then
-     echo "Warning: AppleScript customization failed. The DMG will be functional but basic."
+  # Add codesign if developer ID is available
+  if [ -n "$DEVELOPER_ID" ]; then
+    CREATE_DMG_CMD="$CREATE_DMG_CMD --codesign \"$DEVELOPER_ID\""
   fi
   
-  # Ensure .DS_Store is written by making Finder aware
-  # touch "$MOUNT_PATH/.DS_Store" # May not be needed if AppleScript works
-  # Set volume icon (optional, if you have one for the mounted volume itself)
-  # cp YourVolumeIcon.icns "$MOUNT_PATH/.VolumeIcon.icns"
-  # SetFile -a C "$MOUNT_PATH"
-
-  #-------------------------------------------------------------
-  # Bless (auto-open) is not supported on Apple Silicon. Because
-  # `set -e` is enabled, a failing bless would abort the script
-  # before the read-write DMG is converted.  Skip it on arm64 or
-  # ignore failures so the build always completes.
-  #-------------------------------------------------------------
-  if [[ $(uname -m) != "arm64" ]]; then
-    echo "  Blessing DMG folder (auto-open on mount)…"
-    bless --folder "$MOUNT_PATH" --openfolder "$MOUNT_PATH" || echo "  Warning: bless failed, continuing."
+  # Add background if available
+  if [ -n "$DMG_BACKGROUND_ARG" ]; then
+    CREATE_DMG_CMD="$CREATE_DMG_CMD $DMG_BACKGROUND_ARG"
+  fi
+  
+  # Add output file and source
+  CREATE_DMG_CMD="$CREATE_DMG_CMD \
+    \"$BUILD_DIR/$DMG_NAME\" \
+    \"$APP_BUNDLE\""
+  
+  # Execute the command
+  if eval $CREATE_DMG_CMD; then
+    echo "Successfully created $BUILD_DIR/$DMG_NAME"
   else
-    echo "  Skipping bless step on Apple Silicon (not supported)."
-  fi
-
-  # Unmount the DMG
-  echo "  Unmounting DMG..."
-  COUNT=0
-  MAX_RETRIES=5
-  DETACH_SUCCESS=false
-  while [ $COUNT -lt $MAX_RETRIES ]; do
-    if hdiutil detach "$DEV_ID" -force; then
-      DETACH_SUCCESS=true
-      break
+    echo "Error: Failed to create DMG. The create-dmg tool may have encountered an issue."
+    echo "Trying alternative method without background..."
+    
+    # Fallback: Try without background
+    FALLBACK_CMD="create-dmg \
+      --volname \"$APP_NAME\" \
+      --window-pos 200 120 \
+      --window-size 600 400 \
+      --icon-size 100 \
+      --icon \"${APP_NAME}.app\" 125 160 \
+      --hide-extension \"${APP_NAME}.app\" \
+      --app-drop-link 375 160"
+    
+    # Add codesign if developer ID is available
+    if [ -n "$DEVELOPER_ID" ]; then
+      FALLBACK_CMD="$FALLBACK_CMD --codesign \"$DEVELOPER_ID\""
     fi
-    echo "  Detach attempt $(($COUNT + 1)) failed. Retrying..."
-    sleep 2
-    COUNT=$(($COUNT + 1))
-  done
-
-  if [ "$DETACH_SUCCESS" = false ]; then
-    echo "Error: Failed to detach DMG '$DEV_ID' after $MAX_RETRIES retries. Please detach manually. Continuing to conversion."
-    # Proceeding to conversion might fail if still mounted, but worth a try.
+    
+    # Add output and source
+    FALLBACK_CMD="$FALLBACK_CMD \"$BUILD_DIR/$DMG_NAME\" \"$APP_BUNDLE\""
+    
+    # Execute fallback command
+    if eval $FALLBACK_CMD; then
+      echo "Successfully created $BUILD_DIR/$DMG_NAME (without background)"
+    else
+      echo "Error: Failed to create DMG even without background. Please check the create-dmg installation."
+      exit 1
+    fi
   fi
-  
-  # Convert to compressed read-only DMG in build folder
-  FINAL_DMG_PATH="$BUILD_DIR/$DMG_NAME"
-  echo "  Converting to final compressed DMG: $FINAL_DMG_PATH..."
-  hdiutil convert "$TEMP_DMG_RW" -format UDZO -imagekey zlib-level=9 -o "$FINAL_DMG_PATH"
-  if [ $? -ne 0 ]; then echo "Error: Failed to convert DMG to final format. Aborting."; rm -f "$TEMP_DMG_RW"; exit 1; fi
-
-  # Clean up temporary read/write DMG
-  rm -f "$TEMP_DMG_RW"
-
-  echo "Successfully created $FINAL_DMG_PATH with custom appearance."
 }
 
 # ------------------------------- MAIN ----------------------------------------
@@ -331,4 +270,4 @@ build_app
 sign_app
 create_dmg
 
-echo "\nDone! You can now distribute $BUILD_DIR/$DMG_NAME to other macOS users." 
+echo -e "\nDone! You can now distribute $BUILD_DIR/$DMG_NAME to other macOS users."
