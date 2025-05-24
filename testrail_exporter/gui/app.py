@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
+import customtkinter as ctk
 import threading
 import json
 import os
@@ -21,7 +22,7 @@ from testrail_exporter.models.case import Case
 from testrail_exporter.utils.config import Config
 
 
-class Application(tk.Tk):
+class Application(ctk.CTk):
     """Main application window."""
 
     def __init__(self):
@@ -54,59 +55,79 @@ class Application(tk.Tk):
         self.protocol("WM_DELETE_WINDOW", self._on_close)
         
         # Create main frame
-        main_frame = ttk.Frame(self, padding=10)
-        main_frame.pack(fill=tk.BOTH, expand=True)
+        main_frame = ctk.CTkFrame(self)
+        main_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
         
         # Settings frame
         self.settings_frame = SettingsFrame(main_frame, config=self.config)
         self.settings_frame.pack(fill=tk.X, pady=10)
         
         # Toggles container frame
-        toggles_container = ttk.Frame(main_frame)
-        toggles_container.pack(fill=tk.X, pady=(5, 0))
+        toggles_container = ctk.CTkFrame(main_frame, fg_color="transparent")
+        toggles_container.pack(fill=tk.X, pady=(5, 0), padx=10)
         
         # Load sections toggle
-        load_sections_frame = ttk.Frame(toggles_container)
-        load_sections_frame.pack(fill=tk.X, pady=(0, 3))
+        load_sections_frame = ctk.CTkFrame(toggles_container, fg_color="transparent")
+        load_sections_frame.pack(fill=tk.X, pady=(0, 5))
         
         self.load_sections_var = tk.BooleanVar(value=False)  # Default to off
         
-        # Toggle label with fixed width for alignment
-        toggle_label = ttk.Label(load_sections_frame, text="Load Sections?", width=20, anchor="w")
-        toggle_label.pack(side=tk.LEFT, padx=(0, 10))
-        
-        # Create custom toggle switch
-        self._create_toggle_switch(load_sections_frame, self.load_sections_var, self._on_load_sections_changed)
+        # Create CTkSwitch for Load Sections
+        self.load_sections_switch = ctk.CTkSwitch(
+            load_sections_frame, 
+            text="Load Sections?", 
+            command=self._on_load_sections_changed,
+            variable=self.load_sections_var,
+            onvalue=True,
+            offvalue=False,
+            width=200
+        )
+        self.load_sections_switch.pack(side=tk.LEFT)
         
         # Multi-Project Selection toggle
-        multi_project_frame = ttk.Frame(toggles_container)
+        multi_project_frame = ctk.CTkFrame(toggles_container, fg_color="transparent")
         multi_project_frame.pack(fill=tk.X, pady=(0, 5))
         
         self.multi_project_var = tk.BooleanVar(value=False)  # Default to off
         
-        # Toggle label with fixed width for alignment
-        multi_toggle_label = ttk.Label(multi_project_frame, text="Multi-Project Selection", width=20, anchor="w")
-        multi_toggle_label.pack(side=tk.LEFT, padx=(0, 10))
-        
-        # Create custom toggle switch
-        self._create_toggle_switch(multi_project_frame, self.multi_project_var, self._on_multi_project_changed)
+        # Create CTkSwitch for Multi-Project Selection
+        self.multi_project_switch = ctk.CTkSwitch(
+            multi_project_frame,
+            text="Multi-Project Selection",
+            command=self._on_multi_project_changed,
+            variable=self.multi_project_var,
+            onvalue=True,
+            offvalue=False,
+            width=200
+        )
+        self.multi_project_switch.pack(side=tk.LEFT)
         
         # Add Refresh Projects button to the same line
-        self.load_projects_button = ttk.Button(multi_project_frame, text="Load Projects", command=self._load_projects)
+        self.load_projects_button = ctk.CTkButton(
+            multi_project_frame, 
+            text="Load Projects", 
+            command=self._load_projects,
+            width=120
+        )
         self.load_projects_button.pack(side=tk.LEFT, padx=(20, 0))
         
         # Project selection frame (for single project mode)
-        self.project_selection_frame = ttk.Frame(main_frame)
-        self.project_selection_frame.pack(fill=tk.X, pady=10)
+        self.project_selection_frame = ctk.CTkFrame(main_frame, fg_color="transparent")
+        self.project_selection_frame.pack(fill=tk.X, pady=10, padx=10)
         
         # Create project selection widgets
-        self.project_label = ttk.Label(self.project_selection_frame, text="Project:")
+        self.project_label = ctk.CTkLabel(self.project_selection_frame, text="Project:")
         self.project_label.pack(side=tk.LEFT, padx=(0, 10))
         
         self.project_var = tk.StringVar()
-        self.project_combo = ttk.Combobox(self.project_selection_frame, textvariable=self.project_var, state="readonly", width=50)
+        self.project_combo = ctk.CTkComboBox(
+            self.project_selection_frame, 
+            variable=self.project_var, 
+            state="readonly",
+            width=400,
+            command=self._on_project_selected
+        )
         self.project_combo.pack(side=tk.LEFT, fill=tk.X, expand=True)
-        self.project_combo.bind("<<ComboboxSelected>>", self._on_project_selected)
         
         # Create treeview frame with scrollbars
         tree_frame = ttk.Frame(main_frame)
@@ -125,16 +146,41 @@ class Application(tk.Tk):
         self.tree.configure(yscrollcommand=vsb.set)
         
         # Tree control buttons
-        button_frame = ttk.Frame(main_frame)
-        button_frame.pack(fill=tk.X, pady=10)
+        button_frame = ctk.CTkFrame(main_frame, fg_color="transparent")
+        button_frame.pack(fill=tk.X, pady=10, padx=10)
         
         # Use our custom expand all method with progress tracking
-        self.expand_all_button = ttk.Button(button_frame, text="Expand All", command=self._expand_all_with_progress, state="disabled")
+        self.expand_all_button = ctk.CTkButton(
+            button_frame, 
+            text="Expand All", 
+            command=self._expand_all_with_progress, 
+            state="disabled",
+            width=100
+        )
         self.expand_all_button.pack(side=tk.LEFT, padx=5)
-        self.collapse_all_button = ttk.Button(button_frame, text="Collapse All", command=self.tree.collapse_all, state="disabled")
+        
+        self.collapse_all_button = ctk.CTkButton(
+            button_frame, 
+            text="Collapse All", 
+            command=self.tree.collapse_all, 
+            state="disabled",
+            width=100
+        )
         self.collapse_all_button.pack(side=tk.LEFT, padx=5)
-        ttk.Button(button_frame, text="Check All", command=self.tree.check_all).pack(side=tk.LEFT, padx=5)
-        ttk.Button(button_frame, text="Uncheck All", command=self.tree.uncheck_all).pack(side=tk.LEFT, padx=5)
+        
+        ctk.CTkButton(
+            button_frame, 
+            text="Check All", 
+            command=self.tree.check_all,
+            width=100
+        ).pack(side=tk.LEFT, padx=5)
+        
+        ctk.CTkButton(
+            button_frame, 
+            text="Uncheck All", 
+            command=self.tree.uncheck_all,
+            width=100
+        ).pack(side=tk.LEFT, padx=5)
         
         # Bind tree events for progress tracking
         self.tree.bind("<<ExpandAllStarted>>", self._on_expand_all_started)
@@ -142,41 +188,58 @@ class Application(tk.Tk):
         self.tree.bind("<<ExpandAllCompleted>>", self._on_expand_all_completed)
         
         # Export buttons
-        export_frame = ttk.Frame(button_frame)
+        export_frame = ctk.CTkFrame(button_frame, fg_color="transparent")
         export_frame.pack(side=tk.RIGHT, padx=5)
         
-        ttk.Button(export_frame, text="Export JSON", command=lambda: self._export_cases(format='json')).pack(side=tk.RIGHT, padx=2)
-        ttk.Button(export_frame, text="Export XML", command=lambda: self._export_cases(format='xml')).pack(side=tk.RIGHT, padx=2)
-        ttk.Button(export_frame, text="Export to Xray CSV", command=lambda: self._export_cases(format='xray_csv'), width=16).pack(side=tk.RIGHT, padx=2)
+        ctk.CTkButton(
+            export_frame, 
+            text="Export JSON", 
+            command=lambda: self._export_cases(format='json'),
+            width=100
+        ).pack(side=tk.RIGHT, padx=2)
+        
+        ctk.CTkButton(
+            export_frame, 
+            text="Export XML", 
+            command=lambda: self._export_cases(format='xml'),
+            width=100
+        ).pack(side=tk.RIGHT, padx=2)
+        
+        ctk.CTkButton(
+            export_frame, 
+            text="Export to Xray CSV", 
+            command=lambda: self._export_cases(format='xray_csv'),
+            width=140
+        ).pack(side=tk.RIGHT, padx=2)
         
         # Progress bar and status
-        status_frame = ttk.Frame(main_frame)
-        status_frame.pack(fill=tk.X, pady=(10, 20))
+        status_frame = ctk.CTkFrame(main_frame, fg_color="transparent")
+        status_frame.pack(fill=tk.X, pady=(10, 20), padx=10)
         
         self.status_var = tk.StringVar()
-        ttk.Label(status_frame, textvariable=self.status_var).pack(side=tk.LEFT)
+        self.status_label = ctk.CTkLabel(status_frame, textvariable=self.status_var)
+        self.status_label.pack(side=tk.LEFT)
         
-        self.progress_frame = ttk.Frame(status_frame)
+        self.progress_frame = ctk.CTkFrame(status_frame, fg_color="transparent")
         self.progress_frame.pack(side=tk.RIGHT, fill=tk.X, expand=True, padx=(20, 0))
         
-        self.progress_var = tk.IntVar()
-        self.progress = ttk.Progressbar(
-            self.progress_frame, 
-            orient=tk.HORIZONTAL, 
-            length=100, 
-            mode='determinate',
-            variable=self.progress_var
+        self.progress_var = tk.DoubleVar()
+        self.progress = ctk.CTkProgressBar(
+            self.progress_frame,
+            variable=self.progress_var,
+            mode='determinate'
         )
         self.progress.pack(fill=tk.X, expand=True)
         
         # Add more padding and make the progress label larger
-        self.progress_label = ttk.Label(self.progress_frame, text="", font=("", 10))
+        self.progress_label = ctk.CTkLabel(self.progress_frame, text="", font=("", 12))
         self.progress_label.pack(pady=(5, 5))
         
         # Initialize instance variables
         self.client = None
         self.projects = []
         self.current_project = None
+        self.last_selected_project_name = None  # Store project name before MPS toggle
         self.api_calls_total = 0
         self.api_calls_done = 0
         self.current_step_text = ""  # Track current operation for progress display
@@ -202,105 +265,10 @@ class Application(tk.Tk):
         # Auto-load projects if settings are populated
         self.after(500, self._auto_load_projects)
     
-    def _create_toggle_switch(self, parent, variable, command):
-        """Create an Apple-style toggle switch widget."""
-        # Create canvas for the toggle - even smaller dimensions to match text height
-        width = 32
-        height = 16
-        canvas = tk.Canvas(parent, width=width, height=height, highlightthickness=0, bd=0)
-        canvas.pack(side=tk.LEFT)
-        
-        # Apple-style colors
-        off_color = "#E5E5E7"  # Light gray when off
-        on_color = "#34C759"   # Apple green when on
-        knob_color = "#FFFFFF"  # White knob
-        knob_shadow = "#F0F0F0"  # Very light gray for shadow
-        
-        # Dimensions
-        padding = 2
-        knob_size = height - (padding * 2)
-        track_height = height
-        
-        # Create the track (background)
-        # Left rounded end
-        left_arc = canvas.create_arc(0, 0, track_height, track_height, 
-                                    start=90, extent=180, fill=off_color, outline="", tags="track")
-        # Right rounded end  
-        right_arc = canvas.create_arc(width-track_height, 0, width, track_height,
-                                     start=270, extent=180, fill=off_color, outline="", tags="track")
-        # Center rectangle
-        center_rect = canvas.create_rectangle(track_height/2, 0, width-track_height/2, track_height,
-                                            fill=off_color, outline="", tags="track")
-        
-        # Create shadow for knob (subtle depth effect)
-        shadow = canvas.create_oval(padding+1, padding+1, padding+knob_size+1, padding+knob_size+1,
-                                   fill=knob_shadow, outline="")
-        
-        # Create the knob
-        knob = canvas.create_oval(padding, padding, padding+knob_size, padding+knob_size,
-                                 fill=knob_color, outline="")
-        
-        def animate_toggle(start_pos, end_pos, duration=0.1):
-            """Smoothly animate the toggle switch."""
-            steps = 6
-            step_duration = duration / steps
-            step_size = (end_pos - start_pos) / steps
-            
-            def move_step(step):
-                if step < steps:
-                    current_pos = start_pos + (step_size * step)
-                    canvas.coords(shadow, current_pos+1, padding+1, 
-                                 current_pos+knob_size+1, padding+knob_size+1)
-                    canvas.coords(knob, current_pos, padding, 
-                                 current_pos+knob_size, padding+knob_size)
-                    canvas.after(int(step_duration * 1000), lambda: move_step(step + 1))
-                else:
-                    # Final position
-                    canvas.coords(shadow, end_pos+1, padding+1, 
-                                 end_pos+knob_size+1, padding+knob_size+1)
-                    canvas.coords(knob, end_pos, padding, 
-                                 end_pos+knob_size, padding+knob_size)
-            
-            move_step(0)
-        
-        def update_toggle(*args):
-            """Update the toggle appearance based on the variable value."""
-            if variable.get():
-                # Animate knob to right and change color to green
-                end_pos = width - knob_size - padding
-                animate_toggle(padding, end_pos)
-                canvas.itemconfig("track", fill=on_color)
-            else:
-                # Animate knob to left and change color to gray
-                animate_toggle(width - knob_size - padding, padding)
-                canvas.itemconfig("track", fill=off_color)
-        
-        def toggle_click(event):
-            """Handle click on the toggle."""
-            variable.set(not variable.get())
-            if command:
-                command()
-        
-        # Bind click event
-        canvas.bind("<Button-1>", toggle_click)
-        
-        # Set initial state
-        update_toggle()
-        
-        # Watch for variable changes
-        variable.trace("w", update_toggle)
-        
-        return canvas
-    
     def _on_load_sections_changed(self):
         """Handle when the Load Sections checkbox is toggled."""
-        # Update button states
-        if self.load_sections_var.get():
-            self.expand_all_button.config(state="normal")
-            self.collapse_all_button.config(state="normal")
-        else:
-            self.expand_all_button.config(state="disabled")
-            self.collapse_all_button.config(state="disabled")
+        # Update button states based on Load Sections state
+        self._update_expand_collapse_buttons()
         
         # Trigger a refresh if projects are already loaded
         if self.projects and self.load_projects_button:
@@ -314,9 +282,19 @@ class Application(tk.Tk):
         self.loading_cancelled = True
         
         if self.multi_project_var.get():
+            # Store the current project selection before clearing
+            current_selection = self.project_var.get()
+            if current_selection:
+                self.last_selected_project_name = current_selection
+            
             # Multi-project mode: disable project selection dropdown (but keep it visible)
-            self.project_combo.config(state="disabled")
+            self.project_combo.configure(state="disabled")
             self.project_var.set("")  # Clear the selection
+            
+            # Automatically disable Load Sections when Multi-Project is enabled
+            if self.load_sections_var.get():
+                self.load_sections_var.set(False)
+            self.load_sections_switch.configure(state="disabled")
             
             # Clear the tree
             for item in self.tree.get_children():
@@ -336,7 +314,10 @@ class Application(tk.Tk):
                 self.status_var.set("No projects loaded. Click 'Load Projects' or 'Refresh Projects' to load.")
         else:
             # Single project mode: enable project selection dropdown
-            self.project_combo.config(state="readonly")
+            self.project_combo.configure(state="readonly")
+            
+            # Re-enable Load Sections switch
+            self.load_sections_switch.configure(state="normal")
             
             # Clear tree
             for item in self.tree.get_children():
@@ -344,6 +325,12 @@ class Application(tk.Tk):
             
             # Restore the tree heading for suites mode
             self.tree.heading("name", text="Suites and Sections")
+            
+            # Restore the previous project selection if available
+            if self.last_selected_project_name and self.projects:
+                project_names = [p.name for p in self.projects]
+                if self.last_selected_project_name in project_names:
+                    self.project_var.set(self.last_selected_project_name)
             
             # Trigger a refresh of projects when switching back to single-project mode
             if self.projects and self.load_projects_button:
@@ -356,7 +343,19 @@ class Application(tk.Tk):
                 self._update_suites_ui()
             else:
                 self.status_var.set("Select a project from the dropdown")
+        
+        # Update expand/collapse button states
+        self._update_expand_collapse_buttons()
     
+    def _update_expand_collapse_buttons(self):
+        """Update the state of expand/collapse buttons based on current settings."""
+        # Enable buttons only if Load Sections is ON and Multi-Project is OFF
+        if self.load_sections_var.get() and not self.multi_project_var.get():
+            self.expand_all_button.configure(state="normal")
+            self.collapse_all_button.configure(state="normal")
+        else:
+            self.expand_all_button.configure(state="disabled")
+            self.collapse_all_button.configure(state="disabled")
     
     def _show_projects_in_tree(self):
         """Show all projects in the tree view for multi-project selection."""
@@ -422,22 +421,23 @@ class Application(tk.Tk):
             self.current_step_text = step_text
         
         if self.api_calls_total > 0:
-            progress_pct = int((self.api_calls_done / self.api_calls_total) * 100)
-            self.progress_var.set(progress_pct)
+            progress_fraction = self.api_calls_done / self.api_calls_total
+            progress_pct = int(progress_fraction * 100)
+            self.progress_var.set(progress_fraction)  # CTkProgressBar expects 0.0 to 1.0
             
             # Check if tasks are complete
             if progress_pct >= 100:
                 # Show 100% and Tasks Complete
-                self.progress_label.config(text="100%")
+                self.progress_label.configure(text="100%")
                 self.status_var.set("Tasks Complete")
             else:
                 # Show percentage beneath progress bar
-                self.progress_label.config(text=f"{progress_pct}%")
+                self.progress_label.configure(text=f"{progress_pct}%")
                 # Show current operation in status label
                 self.status_var.set(self.current_step_text)
         else:
             self.progress_var.set(0)
-            self.progress_label.config(text="")
+            self.progress_label.configure(text="")
             if self.current_step_text:
                 self.status_var.set(self.current_step_text)
             
@@ -609,24 +609,32 @@ class Application(tk.Tk):
         
         # Update projects dropdown
         project_names = [p.name for p in self.projects]
-        self.project_combo['values'] = project_names
+        self.project_combo.configure(values=project_names)
         
         # Check if we should select a previously saved project
         last_project = self.config.get_setting('ui', 'last_project')
         
         if project_names:
-            if last_project and last_project in project_names:
-                index = project_names.index(last_project)
-                self.project_combo.current(index)
+            # Determine which project to select
+            project_to_select = None
+            
+            # Priority: last_selected_project_name > last_project > first project
+            if self.last_selected_project_name and self.last_selected_project_name in project_names:
+                project_to_select = self.last_selected_project_name
+            elif last_project and last_project in project_names:
+                project_to_select = last_project
             else:
-                self.project_combo.current(0)
+                project_to_select = project_names[0]
+            
+            # Set the project selection
+            self.project_combo.set(project_to_select)
                 
             self.status_var.set(f"Loaded {len(project_names)} projects")
             self._update_progress("")
             
             # Change the load button text to "Refresh Projects"
             if self.load_projects_button:
-                self.load_projects_button.config(text="Refresh Projects")
+                self.load_projects_button.configure(text="Refresh Projects")
             
             # Check if we're in multi-project mode
             if self.multi_project_var.get():
@@ -635,36 +643,42 @@ class Application(tk.Tk):
                 self.after(10, self._show_projects_in_tree)
             else:
                 # Trigger project selection for single project mode
-                self._on_project_selected(None)
+                # Pass the selected project name to ensure it gets loaded
+                if project_to_select:
+                    self._on_project_selected(project_to_select)
         else:
             self.status_var.set("No projects found")
             self._update_progress("")
     
-    def _on_project_selected(self, event):
+    def _on_project_selected(self, choice):
         """Handle project selection changes."""
-        selected_index = self.project_combo.current()
-        if selected_index == -1 or not self.projects:
+        if not choice or not self.projects:
+            return
+            
+        # Find the selected project by name
+        selected_project = next((p for p in self.projects if p.name == choice), None)
+        if not selected_project:
             return
             
         # Cancel any ongoing loading operations
         self.loading_cancelled = True
         
         # Wait a moment to ensure any running thread notices the cancellation flag
-        self.after(100, lambda: self._start_load_project(selected_index))
+        self.after(100, lambda: self._start_load_project(selected_project))
     
-    def _start_load_project(self, selected_index):
+    def _start_load_project(self, selected_project):
         """Start loading the selected project after cancellation of previous operations."""
         # Check if there's still an active thread running
         if (hasattr(self, 'active_thread') and self.active_thread and 
             self.active_thread.is_alive()):
             # Thread is still running, wait a bit more
-            self.after(50, lambda: self._start_load_project(selected_index))
+            self.after(50, lambda: self._start_load_project(selected_project))
             return
             
         # Reset cancellation flag
         self.loading_cancelled = False
         
-        self.current_project = self.projects[selected_index]
+        self.current_project = selected_project
         
         # Save current project to config
         self.config.set_setting('ui', 'last_project', self.current_project.name)

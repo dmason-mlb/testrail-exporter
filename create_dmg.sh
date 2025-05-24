@@ -38,7 +38,7 @@ fi
 APP_NAME="TestRail Exporter"
 
 # Extract version from setup.py
-VERSION=$(python3 -c "
+CURRENT_VERSION=$(python3 -c "
 import re
 with open('setup.py', 'r') as f:
     content = f.read()
@@ -49,7 +49,40 @@ with open('setup.py', 'r') as f:
         print('1.0.0')  # fallback version
 ")
 
-echo "Detected version: $VERSION"
+echo "Current version: $CURRENT_VERSION"
+
+# Auto-increment the last digit of the version
+NEW_VERSION=$(python3 -c "
+version = '$CURRENT_VERSION'
+parts = version.split('.')
+if len(parts) >= 3:
+    # Increment the patch version (last digit)
+    parts[-1] = str(int(parts[-1]) + 1)
+else:
+    # If version format is unexpected, append .1
+    parts.append('1')
+print('.'.join(parts))
+")
+
+echo "New version: $NEW_VERSION"
+
+# Update setup.py with the new version
+python3 -c "
+import re
+with open('setup.py', 'r') as f:
+    content = f.read()
+
+# Replace the version string
+new_content = re.sub(r'version=[\"\'](.*?)[\"\']', f'version=\"$NEW_VERSION\"', content)
+
+with open('setup.py', 'w') as f:
+    f.write(new_content)
+"
+
+echo "Updated setup.py with version $NEW_VERSION"
+
+# Use the new version for the DMG
+VERSION=$NEW_VERSION
 
 # Final DMG name includes the version
 DMG_NAME="testrail_exporter-${VERSION}.dmg"
