@@ -9,7 +9,7 @@ class XrayConversionError(Exception):
     pass
 
 
-column = ["Issue ID","Issue Key","Test Type","Test Summary", "Test Priority", "Action","Data","Result","Test Repo", "Labels"]
+column = ["Suite Name","Section Name","Issue ID","Test Type","Test Title", "Test Priority", "Preconditions","Action","Data","Result","Test Repo", "Labels"]
 row = []
 
 CLEANR = re.compile(r'<.*?>|&([a-z0-9]+|#[0-9]{1,6}|#x[0-9a-f]{1,6});')
@@ -41,15 +41,7 @@ def getPriorityValue(priorityName):
     return priority
 
 def getTestType(type):
-    testType = 'Manual'
-    validTypes = ['Manual', 'Exploratory', 'Automated']
-    if type is not None and type in validTypes:
-        if type == 'Automated':
-            testType = 'Generic'
-        else:
-            testType = type
-
-    return testType
+    return 'Manual'
 
 ENDPOINT = re.compile(r'(\!\[\]\(index.php)(.*?)(\))')
 def handleSteps(text, outputtestrailEndpoint):
@@ -62,19 +54,21 @@ def handleSteps(text, outputtestrailEndpoint):
         result = text
     return result
 
-def appendRows(issueID='', issueKey='', testType=None, testSummary=None, testPriority=None, action=None, data=None, result=None, testRepo=None, labels=None, outputtestrailEndpoint=None):
-    row.append({"Issue ID": issueID,
-                "Issue Key": '',
+def appendRows(suiteName='', sectionName='', issueID='', issueKey='', testType=None, testSummary=None, testPriority=None, preconditions=None, action=None, data=None, result=None, testRepo=None, labels=None, outputtestrailEndpoint=None):
+    row.append({"Suite Name": suiteName if suiteName else '',
+                "Section Name": sectionName if sectionName else '',
+                "Issue ID": issueID,
                 "Test Type": getTestType(testType),
-                "Test Summary": cleanTags(testSummary.text) if testSummary is not None else '',
+                "Test Title": cleanTags(testSummary.text) if testSummary is not None else '',
                 "Test Priority": getPriorityValue(testPriority.text) if testPriority is not None else '3',
+                "Preconditions": handleSteps(preconditions.text, outputtestrailEndpoint) if preconditions is not None else '',
                 "Action": handleSteps(action.text, outputtestrailEndpoint) if action is not None else '',
                 "Data": handleSteps(data.text, outputtestrailEndpoint) if data is not None else '',
                 "Result": handleSteps(result.text, outputtestrailEndpoint) if result is not None else '',
                 "Test Repo": testRepo if testRepo else '',
-                "Labels": labels.text if labels is not None else ''})
+                "Labels": testType if testType else ''})
 
-def handleTestSections(root, issueID, outputfile, repoName, outputtestrailEndpoint, logger=None, suiteName=None):
+def handleTestSections(root, issueID, outputfile, repoName, outputtestrailEndpoint, logger=None, suiteName=None, sectionPath=None):
     if root.tag == 'suite':
         testsections = root.findall('sections/section')
         # Get suite name if not already provided
@@ -86,21 +80,29 @@ def handleTestSections(root, issueID, outputfile, repoName, outputtestrailEndpoi
         testsections = root.findall('section')
 
     baseRepoName = repoName
+    baseSectionPath = sectionPath
     for testsection in testsections:
-        testRepoName = testsection.find('name').text
+        sectionName = testsection.find('name').text
         testRepoDescription = testsection.find('description')
 
-        # Build the test repo path
-        if baseRepoName is not None and testRepoName is not None:
+        # Build the section path (without suite name)
+        if baseSectionPath is not None and sectionName is not None:
+            currentSectionPath = baseSectionPath + '/' + sectionName
+        else:
+            currentSectionPath = sectionName
+
+        # Build the test repo path (with suite name)
+        if baseRepoName is not None and sectionName is not None:
             # Check if baseRepoName already starts with suiteName to avoid duplication
             if suiteName and not baseRepoName.startswith(suiteName + '/'):
-                testRepoName = baseRepoName + '/' + testRepoName
+                testRepoName = baseRepoName + '/' + sectionName
             else:
-                testRepoName = baseRepoName + '/' + testRepoName
-        elif suiteName is not None and testRepoName is not None:
+                testRepoName = baseRepoName + '/' + sectionName
+        elif suiteName is not None and sectionName is not None:
             # This is a top-level section, prepend suite name
-            testRepoName = suiteName + '/' + testRepoName
-        # else: testRepoName stays as is
+            testRepoName = suiteName + '/' + sectionName
+        else:
+            testRepoName = sectionName
 
         cases = testsection.findall('cases/case')
         if logger:
@@ -111,14 +113,24 @@ def handleTestSections(root, issueID, outputfile, repoName, outputtestrailEndpoi
             id = testcase.find('id')
             title = testcase.find('title')
             template = testcase.find('template')
-            labels = testcase.find('type')
+            type_element = testcase.find('type')
             priority = testcase.find('priority')
             estimate = testcase.find('estimate')
 
+            # Extract the test case type from the type element
+            actual_test_type = ''
+            if type_element is not None and type_element.text:
+                actual_test_type = type_element.text.strip()
+                if logger:
+                    logger.debug(f"Found test case type: '{actual_test_type}'")
+            
             custom = testcase.find('custom')
+            preconds = None  # Initialize preconditions
+            
             if custom is not None:
-                automation_type = custom.find('automation_type')
-                type = automation_type.find('value').text.strip() if automation_type is not None else 'Manual'
+                
+                # Extract preconditions
+                preconds = custom.find('preconds')
                                    
                 steps = custom.find('steps')
                 steps_separated = custom.find('steps_separated')
@@ -126,7 +138,7 @@ def handleTestSections(root, issueID, outputfile, repoName, outputtestrailEndpoi
                 if steps is not None:
                     # Text field with steps
                     expected = custom.find('expected')
-                    appendRows(issueID=issueID,testType=type,testSummary=title,testPriority=priority,action=steps,result=expected, testRepo=testRepoName, labels=labels, outputtestrailEndpoint=outputtestrailEndpoint)
+                    appendRows(suiteName=suiteName,sectionName=currentSectionPath,issueID=issueID,testType=actual_test_type,testSummary=title,testPriority=priority,preconditions=preconds,action=steps,result=expected, testRepo=testRepoName, outputtestrailEndpoint=outputtestrailEndpoint)
                     issueID = issueID+1  
                 elif steps_separated is not None:
                     # Steps in different cells
@@ -139,15 +151,16 @@ def handleTestSections(root, issueID, outputfile, repoName, outputtestrailEndpoi
                         additional_info = step.find('additional_info')
                         hasSteps = True
                         if first_step:
-                            appendRows(issueID=issueID,testType=type,testSummary=title,testPriority=priority,action=content,result=expected,testRepo=testRepoName, data=additional_info, labels=labels, outputtestrailEndpoint=outputtestrailEndpoint)
+                            appendRows(suiteName=suiteName,sectionName=currentSectionPath,issueID=issueID,testType=actual_test_type,testSummary=title,testPriority=priority,preconditions=preconds,action=content,result=expected,testRepo=testRepoName, data=additional_info, outputtestrailEndpoint=outputtestrailEndpoint)
                             first_step = False
                         else:
-                            appendRows(issueID=issueID,testType=type, action=content,result=expected, data=additional_info, outputtestrailEndpoint=outputtestrailEndpoint)
+                            appendRows(suiteName=suiteName,sectionName=currentSectionPath,issueID=issueID,testType=actual_test_type, action=content,result=expected, data=additional_info, outputtestrailEndpoint=outputtestrailEndpoint)
                     if not hasSteps:
-                        appendRows(issueID=issueID,testType=type,testSummary=title,testPriority=priority, testRepo=testRepoName, data=additional_info, outputtestrailEndpoint=outputtestrailEndpoint)
+                        appendRows(suiteName=suiteName,sectionName=currentSectionPath,issueID=issueID,testType=actual_test_type,testSummary=title,testPriority=priority,preconditions=preconds, testRepo=testRepoName, data=additional_info, outputtestrailEndpoint=outputtestrailEndpoint)
                     issueID = issueID+1  
-                elif type == 'Manual' or type == 'None':
-                    appendRows(issueID=issueID,testType=type,testSummary=title,testPriority=priority,action=None,result=None, testRepo=testRepoName, labels=labels, outputtestrailEndpoint=outputtestrailEndpoint)
+                else:
+                    # No steps - just add the test case info
+                    appendRows(suiteName=suiteName,sectionName=currentSectionPath,issueID=issueID,testType=actual_test_type,testSummary=title,testPriority=priority,preconditions=preconds,action=None,result=None, testRepo=testRepoName, outputtestrailEndpoint=outputtestrailEndpoint)
                     issueID = issueID+1
             else:
                 #ignore all other types
@@ -155,7 +168,7 @@ def handleTestSections(root, issueID, outputfile, repoName, outputtestrailEndpoi
         
         innerSection = testsection.find('sections')
         if innerSection is not None:
-            issueID = handleTestSections(root=innerSection, issueID=issueID, outputfile=outputfile, repoName=testRepoName, outputtestrailEndpoint=outputtestrailEndpoint, logger=logger, suiteName=suiteName)
+            issueID = handleTestSections(root=innerSection, issueID=issueID, outputfile=outputfile, repoName=testRepoName, outputtestrailEndpoint=outputtestrailEndpoint, logger=logger, suiteName=suiteName, sectionPath=currentSectionPath)
 
     return issueID
 
@@ -195,13 +208,13 @@ def parseTestrail2XrayData(inputfile, outputfile, outputtestrailEndpoint='', log
                 # Get suite name for multiple suites export
                 suite_name_elem = suite.find('name')
                 suite_name = suite_name_elem.text if suite_name_elem is not None and suite_name_elem.text else None
-                issueID = handleTestSections(root=suite, issueID=issueID, outputfile=outputfile, repoName=None, outputtestrailEndpoint=outputtestrailEndpoint, logger=logger, suiteName=suite_name)
+                issueID = handleTestSections(root=suite, issueID=issueID, outputfile=outputfile, repoName=None, outputtestrailEndpoint=outputtestrailEndpoint, logger=logger, suiteName=suite_name, sectionPath=None)
         else:
             # Single suite export - process directly
             if logger:
                 logger.info("Processing single suite export")
             # For single suite, the suite name will be extracted in handleTestSections
-            issueID = handleTestSections(root=root, issueID=issueID, outputfile=outputfile, repoName=None, outputtestrailEndpoint=outputtestrailEndpoint, logger=logger, suiteName=None)
+            issueID = handleTestSections(root=root, issueID=issueID, outputfile=outputfile, repoName=None, outputtestrailEndpoint=outputtestrailEndpoint, logger=logger, suiteName=None, sectionPath=None)
         
         # Final CSV write after processing all suites
         if row:

@@ -194,39 +194,77 @@ class Application(tk.Tk):
         self.after(500, self._auto_load_projects)
     
     def _create_toggle_switch(self, parent, variable, command):
-        """Create a custom toggle switch widget."""
-        # Create canvas for the toggle
-        canvas = tk.Canvas(parent, width=50, height=25, highlightthickness=0)
+        """Create an Apple-style toggle switch widget."""
+        # Create canvas for the toggle - smaller dimensions
+        width = 36
+        height = 20
+        canvas = tk.Canvas(parent, width=width, height=height, highlightthickness=0, bd=0)
         canvas.pack(side=tk.LEFT)
         
-        # Colors
-        off_color = "#ccc"
-        on_color = "#4CAF50"
-        knob_color = "white"
+        # Apple-style colors
+        off_color = "#E5E5E7"  # Light gray when off
+        on_color = "#34C759"   # Apple green when on
+        knob_color = "#FFFFFF"  # White knob
+        knob_shadow = "#F0F0F0"  # Very light gray for shadow
         
-        # Draw the toggle background
-        bg_rect = canvas.create_rectangle(5, 5, 45, 20, fill=off_color, outline="", width=0)
-        canvas.itemconfig(bg_rect, tags="background")
+        # Dimensions
+        padding = 2
+        knob_size = height - (padding * 2)
+        track_height = height
         
-        # Draw the round edges
-        left_oval = canvas.create_oval(0, 5, 20, 20, fill=off_color, outline="", width=0)
-        right_oval = canvas.create_oval(30, 5, 50, 20, fill=off_color, outline="", width=0)
-        canvas.itemconfig(left_oval, tags="background")
-        canvas.itemconfig(right_oval, tags="background")
+        # Create the track (background)
+        # Left rounded end
+        left_arc = canvas.create_arc(0, 0, track_height, track_height, 
+                                    start=90, extent=180, fill=off_color, outline="", tags="track")
+        # Right rounded end  
+        right_arc = canvas.create_arc(width-track_height, 0, width, track_height,
+                                     start=270, extent=180, fill=off_color, outline="", tags="track")
+        # Center rectangle
+        center_rect = canvas.create_rectangle(track_height/2, 0, width-track_height/2, track_height,
+                                            fill=off_color, outline="", tags="track")
         
-        # Draw the knob
-        knob = canvas.create_oval(3, 3, 23, 22, fill=knob_color, outline="", width=0)
+        # Create shadow for knob (subtle depth effect)
+        shadow = canvas.create_oval(padding+1, padding+1, padding+knob_size+1, padding+knob_size+1,
+                                   fill=knob_shadow, outline="")
+        
+        # Create the knob
+        knob = canvas.create_oval(padding, padding, padding+knob_size, padding+knob_size,
+                                 fill=knob_color, outline="")
+        
+        def animate_toggle(start_pos, end_pos, duration=0.15):
+            """Smoothly animate the toggle switch."""
+            steps = 8
+            step_duration = duration / steps
+            step_size = (end_pos - start_pos) / steps
+            
+            def move_step(step):
+                if step < steps:
+                    current_pos = start_pos + (step_size * step)
+                    canvas.coords(shadow, current_pos+1, padding+1, 
+                                 current_pos+knob_size+1, padding+knob_size+1)
+                    canvas.coords(knob, current_pos, padding, 
+                                 current_pos+knob_size, padding+knob_size)
+                    canvas.after(int(step_duration * 1000), lambda: move_step(step + 1))
+                else:
+                    # Final position
+                    canvas.coords(shadow, end_pos+1, padding+1, 
+                                 end_pos+knob_size+1, padding+knob_size+1)
+                    canvas.coords(knob, end_pos, padding, 
+                                 end_pos+knob_size, padding+knob_size)
+            
+            move_step(0)
         
         def update_toggle(*args):
             """Update the toggle appearance based on the variable value."""
             if variable.get():
-                # Move knob to right and change color to green
-                canvas.coords(knob, 27, 3, 47, 22)
-                canvas.itemconfig("background", fill=on_color)
+                # Animate knob to right and change color to green
+                end_pos = width - knob_size - padding
+                animate_toggle(padding, end_pos)
+                canvas.itemconfig("track", fill=on_color)
             else:
-                # Move knob to left and change color to gray
-                canvas.coords(knob, 3, 3, 23, 22)
-                canvas.itemconfig("background", fill=off_color)
+                # Animate knob to left and change color to gray
+                animate_toggle(width - knob_size - padding, padding)
+                canvas.itemconfig("track", fill=off_color)
         
         def toggle_click(event):
             """Handle click on the toggle."""

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="testrail-exporter",
-    version="1.0.6",
+    version="1.0.7",
     packages=find_packages(),
     package_data={
         "": ["*.png", "*.ico", "*.icns"],
