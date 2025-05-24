@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="testrail-exporter",
-    version="1.1.0",
+    version="1.1.2",
     packages=find_packages(),
     package_data={
         "": ["*.png", "*.ico", "*.icns"],
@@ -12,6 +12,7 @@ setup(
         "requests>=2.28.0",
         "Pillow>=9.2.0",
         "pandas>=1.3.0",
+        "customtkinter>=5.2.0",
     ],
     entry_points={
         "console_scripts": [
