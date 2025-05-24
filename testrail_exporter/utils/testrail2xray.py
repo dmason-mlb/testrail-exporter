@@ -173,6 +173,91 @@ def handleTestSections(root, issueID, outputfile, repoName, outputtestrailEndpoi
     return issueID
 
 
+def parseTestrail2XrayDataWithColumns(inputfile, outputfile, outputtestrailEndpoint='', logger=None, selected_columns=None):
+    """
+    Parse TestRail XML export and convert to Xray CSV format with selected columns only.
+    
+    Args:
+        inputfile: Path to input XML file
+        outputfile: Path to output CSV file  
+        outputtestrailEndpoint: Optional TestRail endpoint URL
+        logger: Optional ExportLogger instance
+        selected_columns: Optional list of column names to include
+        
+    Raises:
+        XrayConversionError: If conversion fails
+    """
+    # Clear any existing row data
+    global row
+    row = []
+    
+    # If no columns selected, use all columns
+    if not selected_columns:
+        selected_columns = column
+    
+    try:
+        if logger:
+            logger.info(f"Parsing XML file: {inputfile}")
+            logger.info(f"Selected columns: {selected_columns}")
+            
+        # Parsing XML file
+        xmlParse = ET.parse(inputfile)
+        root = xmlParse.getroot()
+        issueID = 1
+
+        if root.tag == 'suites':
+            # Multiple suites export - process each suite
+            if logger:
+                logger.info(f"Processing multiple suites export ({len(root.findall('suite'))} suites)")
+            for suite in root.findall('suite'):
+                # Get suite name for multiple suites export
+                suite_name_elem = suite.find('name')
+                suite_name = suite_name_elem.text if suite_name_elem is not None and suite_name_elem.text else None
+                issueID = handleTestSections(root=suite, issueID=issueID, outputfile=outputfile, repoName=None, outputtestrailEndpoint=outputtestrailEndpoint, logger=logger, suiteName=suite_name, sectionPath=None)
+        else:
+            # Single suite export - process directly
+            if logger:
+                logger.info("Processing single suite export")
+            # For single suite, the suite name will be extracted in handleTestSections
+            issueID = handleTestSections(root=root, issueID=issueID, outputfile=outputfile, repoName=None, outputtestrailEndpoint=outputtestrailEndpoint, logger=logger, suiteName=None, sectionPath=None)
+        
+        # Final CSV write after processing all suites
+        if row:
+            if logger:
+                logger.info(f"Writing {len(row)} test cases to CSV: {outputfile}")
+            
+            # Create DataFrame with all columns first
+            df = pd.DataFrame(row, columns=column)
+            
+            # Filter to only selected columns
+            df_filtered = df[selected_columns]
+            
+            # Set index if Issue ID is in selected columns
+            if "Issue ID" in selected_columns:
+                df_filtered.set_index("Issue ID", inplace=True)
+                
+            df_filtered.to_csv(outputfile)
+            if logger:
+                logger.info("CSV file created successfully with selected columns")
+        else:
+            raise XrayConversionError("No test cases found in XML file")
+            
+    except ET.ParseError as e:
+        error_msg = f"Failed to parse XML file: {str(e)}"
+        if logger:
+            logger.error(error_msg, exc_info=True)
+        raise XrayConversionError(error_msg) from e
+    except PermissionError as e:
+        error_msg = f"Permission denied: Cannot write to {outputfile}"
+        if logger:
+            logger.error(error_msg, exc_info=True)
+        raise XrayConversionError(error_msg) from e
+    except Exception as e:
+        error_msg = f"Unexpected error during Xray conversion: {str(e)}"
+        if logger:
+            logger.error(error_msg, exc_info=True)
+        raise XrayConversionError(error_msg) from e
+
 def parseTestrail2XrayData(inputfile, outputfile, outputtestrailEndpoint='', logger=None):
     """
     Parse TestRail XML export and convert to Xray CSV format.
@@ -259,6 +344,33 @@ def convert_xml_to_xray_csv(xml_filepath, csv_filepath, testrail_endpoint='', lo
     """
     try:
         parseTestrail2XrayData(xml_filepath, csv_filepath, testrail_endpoint, logger)
+        return True
+    except XrayConversionError:
+        # Re-raise XrayConversionError as it already has a good error message
+        raise
+    except Exception as e:
+        # Wrap any other unexpected errors
+        error_msg = f"Error converting XML to Xray CSV: {str(e)}"
+        if logger:
+            logger.error(error_msg, exc_info=True)
+        raise XrayConversionError(error_msg) from e
+
+def convert_xml_to_xray_csv_with_columns(xml_filepath, csv_filepath, testrail_endpoint='', logger=None, selected_columns=None):
+    """
+    Convert a TestRail XML export to Xray-compatible CSV format with selected columns only.
+    
+    Args:
+        xml_filepath (str): Path to the XML file to convert
+        csv_filepath (str): Path where the CSV file should be saved
+        testrail_endpoint (str): Optional TestRail endpoint URL for link handling
+        logger (ExportLogger): Optional logger instance
+        selected_columns (list): List of column names to include in the output
+        
+    Returns:
+        bool: True if conversion was successful, False otherwise
+    """
+    try:
+        parseTestrail2XrayDataWithColumns(xml_filepath, csv_filepath, testrail_endpoint, logger, selected_columns)
         return True
     except XrayConversionError:
         # Re-raise XrayConversionError as it already has a good error message

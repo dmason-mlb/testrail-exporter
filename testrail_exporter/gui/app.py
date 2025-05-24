@@ -61,44 +61,61 @@ class Application(tk.Tk):
         self.settings_frame = SettingsFrame(main_frame, config=self.config)
         self.settings_frame.pack(fill=tk.X, pady=10)
         
+        # Toggles container frame
+        toggles_container = ttk.Frame(main_frame)
+        toggles_container.pack(fill=tk.X, pady=(5, 0))
+        
         # Load sections toggle
-        load_sections_frame = ttk.Frame(main_frame)
-        load_sections_frame.pack(fill=tk.X, pady=(5, 0))
+        load_sections_frame = ttk.Frame(toggles_container)
+        load_sections_frame.pack(fill=tk.X, pady=(0, 3))
         
         self.load_sections_var = tk.BooleanVar(value=False)  # Default to off
         
-        # Create toggle switch frame
-        toggle_frame = ttk.Frame(load_sections_frame)
-        toggle_frame.pack(side=tk.LEFT)
-        
-        # Toggle label
-        toggle_label = ttk.Label(toggle_frame, text="Load Sections?")
+        # Toggle label with fixed width for alignment
+        toggle_label = ttk.Label(load_sections_frame, text="Load Sections?", width=20, anchor="w")
         toggle_label.pack(side=tk.LEFT, padx=(0, 10))
         
         # Create custom toggle switch
-        self._create_toggle_switch(toggle_frame, self.load_sections_var, self._on_load_sections_changed)
+        self._create_toggle_switch(load_sections_frame, self.load_sections_var, self._on_load_sections_changed)
         
-        # Project selection
-        project_frame = ttk.Frame(main_frame)
-        project_frame.pack(fill=tk.X, pady=10)
+        # Multi-Project Selection toggle
+        multi_project_frame = ttk.Frame(toggles_container)
+        multi_project_frame.pack(fill=tk.X, pady=(0, 5))
         
-        ttk.Label(project_frame, text="Project:").pack(side=tk.LEFT, padx=(0, 10))
+        self.multi_project_var = tk.BooleanVar(value=False)  # Default to off
+        
+        # Toggle label with fixed width for alignment
+        multi_toggle_label = ttk.Label(multi_project_frame, text="Multi-Project Selection", width=20, anchor="w")
+        multi_toggle_label.pack(side=tk.LEFT, padx=(0, 10))
+        
+        # Create custom toggle switch
+        self._create_toggle_switch(multi_project_frame, self.multi_project_var, self._on_multi_project_changed)
+        
+        # Add Refresh Projects button to the same line
+        self.load_projects_button = ttk.Button(multi_project_frame, text="Load Projects", command=self._load_projects)
+        self.load_projects_button.pack(side=tk.LEFT, padx=(20, 0))
+        
+        # Project selection frame (for single project mode)
+        self.project_selection_frame = ttk.Frame(main_frame)
+        self.project_selection_frame.pack(fill=tk.X, pady=10)
+        
+        # Create project selection widgets
+        self.project_label = ttk.Label(self.project_selection_frame, text="Project:")
+        self.project_label.pack(side=tk.LEFT, padx=(0, 10))
         
         self.project_var = tk.StringVar()
-        self.project_combo = ttk.Combobox(project_frame, textvariable=self.project_var, state="readonly", width=50)
+        self.project_combo = ttk.Combobox(self.project_selection_frame, textvariable=self.project_var, state="readonly", width=50)
         self.project_combo.pack(side=tk.LEFT, fill=tk.X, expand=True)
         self.project_combo.bind("<<ComboboxSelected>>", self._on_project_selected)
         
-        ttk.Button(project_frame, text="Load Projects", command=self._load_projects).pack(side=tk.LEFT, padx=(10, 0))
-        
         # Create treeview frame with scrollbars
         tree_frame = ttk.Frame(main_frame)
-        tree_frame.pack(fill=tk.BOTH, expand=True, pady=10)
+        tree_frame.pack(fill=tk.BOTH, expand=True, pady=(10, 0))
         
         # Treeview for suites and sections
-        self.tree = CheckableTreeview(tree_frame, columns=("name",), show="tree")
+        self.tree = CheckableTreeview(tree_frame, columns=("name",), show="tree headings")
         self.tree.column("#0", width=50, minwidth=50, stretch=False)
-        self.tree.column("name", width=200, minwidth=200)
+        self.tree.column("name", width=400, minwidth=200, stretch=True)
         self.tree.heading("name", text="Suites and Sections")
         self.tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         
@@ -134,7 +151,7 @@ class Application(tk.Tk):
         
         # Progress bar and status
         status_frame = ttk.Frame(main_frame)
-        status_frame.pack(fill=tk.X, pady=15)
+        status_frame.pack(fill=tk.X, pady=(10, 15))
         
         self.status_var = tk.StringVar()
         ttk.Label(status_frame, textvariable=self.status_var).pack(side=tk.LEFT)
@@ -181,23 +198,15 @@ class Application(tk.Tk):
             'milestone': {}  # Project ID -> Milestones
         }
         
-        # Create a reference to the load projects button
-        self.load_projects_button = None
-        
-        # Store project frame reference for updating UI
-        for child in project_frame.winfo_children():
-            if isinstance(child, ttk.Button) and child.cget('text') == "Load Projects":
-                self.load_projects_button = child
-                break
         
         # Auto-load projects if settings are populated
         self.after(500, self._auto_load_projects)
     
     def _create_toggle_switch(self, parent, variable, command):
         """Create an Apple-style toggle switch widget."""
-        # Create canvas for the toggle - smaller dimensions
-        width = 36
-        height = 20
+        # Create canvas for the toggle - even smaller dimensions to match text height
+        width = 32
+        height = 16
         canvas = tk.Canvas(parent, width=width, height=height, highlightthickness=0, bd=0)
         canvas.pack(side=tk.LEFT)
         
@@ -231,9 +240,9 @@ class Application(tk.Tk):
         knob = canvas.create_oval(padding, padding, padding+knob_size, padding+knob_size,
                                  fill=knob_color, outline="")
         
-        def animate_toggle(start_pos, end_pos, duration=0.15):
+        def animate_toggle(start_pos, end_pos, duration=0.1):
             """Smoothly animate the toggle switch."""
-            steps = 8
+            steps = 6
             step_duration = duration / steps
             step_size = (end_pos - start_pos) / steps
             
@@ -298,6 +307,78 @@ class Application(tk.Tk):
             # Check if the button text is "Refresh Projects" (indicates projects are loaded)
             if self.load_projects_button.cget('text') == "Refresh Projects":
                 self._load_projects()
+    
+    def _on_multi_project_changed(self):
+        """Handle when the Multi-Project Selection toggle is changed."""
+        # Cancel any ongoing loading operations
+        self.loading_cancelled = True
+        
+        if self.multi_project_var.get():
+            # Multi-project mode: hide project selection dropdown and show project list
+            self.project_selection_frame.pack_forget()
+            
+            # Clear the tree
+            for item in self.tree.get_children():
+                self.tree.delete(item)
+            
+            # Reset progress
+            self._update_progress("", reset=True)
+            
+            # Update tree heading for projects mode
+            self.tree.heading("name", text="Projects")
+            
+            # Show projects immediately if they're loaded
+            if self.projects:
+                # Use after to ensure UI is ready
+                self.after(10, self._show_projects_in_tree)
+            else:
+                self.status_var.set("No projects loaded. Click 'Load Projects' or 'Refresh Projects' to load.")
+        else:
+            # Single project mode: show project selection dropdown
+            self.project_selection_frame.pack(fill=tk.X, pady=10, before=self.tree.master)
+            
+            # Clear tree
+            for item in self.tree.get_children():
+                self.tree.delete(item)
+            
+            # Restore the tree heading for suites mode
+            self.tree.heading("name", text="Suites and Sections")
+            
+            # Reload current project if one is selected
+            if self.current_project and hasattr(self.current_project, 'suites'):
+                self._update_suites_ui()
+            else:
+                self.status_var.set("Select a project from the dropdown")
+    
+    
+    def _show_projects_in_tree(self):
+        """Show all projects in the tree view for multi-project selection."""
+        # Clear the tree first
+        for item in self.tree.get_children():
+            self.tree.delete(item)
+            
+        # Sort projects alphabetically
+        sorted_projects = sorted(self.projects, key=lambda p: p.name.lower())
+        
+        # Add all projects to the tree
+        for project in sorted_projects:
+            # Add project to tree with checkbox, using tags to store project ID
+            tree_item_id = self.tree.insert("", "end", text="", values=(project.name,), 
+                                          image=self.tree.image_unchecked, 
+                                          tags=(f"project_{project.id}",))
+            
+        # Update the tree heading for projects mode
+        self.tree.heading("name", text="Projects")
+        
+        # Update status
+        self.status_var.set(f"Showing {len(sorted_projects)} projects for selection")
+        
+        # Force the tree to refresh
+        self.tree.update()
+        self.update_idletasks()
+        
+        # Ensure scrollbar is updated
+        self.tree.yview_moveto(0)  # Scroll to top
     
     def _on_close(self):
         """Save settings and close the application."""
@@ -540,8 +621,14 @@ class Application(tk.Tk):
             if self.load_projects_button:
                 self.load_projects_button.config(text="Refresh Projects")
             
-            # Trigger project selection
-            self._on_project_selected(None)
+            # Check if we're in multi-project mode
+            if self.multi_project_var.get():
+                # Show projects in tree for multi-project selection  
+                # Use after to ensure UI is ready
+                self.after(10, self._show_projects_in_tree)
+            else:
+                # Trigger project selection for single project mode
+                self._on_project_selected(None)
         else:
             self.status_var.set("No projects found")
             self._update_progress("")
@@ -828,8 +915,16 @@ class Application(tk.Tk):
     
     def _update_suites_ui(self):
         """Update the treeview after loading suites and sections."""
+        # Check if we should stop due to mode change
+        if self.loading_cancelled or self.multi_project_var.get():
+            return
+            
         # Add suites and sections to the treeview
         for suite in self.current_project.suites:
+            # Check again before each suite
+            if self.loading_cancelled or self.multi_project_var.get():
+                return
+                
             # Add suite without case count
             suite_id = self.tree.insert("", "end", text="", values=(suite.name,), image=self.tree.image_unchecked)
             
@@ -869,28 +964,58 @@ class Application(tk.Tk):
         Args:
             format (str): Export format ('json', 'csv', or 'xml')
         """
-        if not self.current_project or not self.client:
-            messagebox.showwarning("Warning", "Please select a project first")
-            return
+        # Check if multi-project mode is enabled
+        if self.multi_project_var.get():
+            # Multi-project mode
+            if not self.projects or not self.client:
+                messagebox.showwarning("Warning", "Please load projects first")
+                return
+                
+            # Get checked items (projects)
+            checked_items = self.tree.get_checked_items()
+            if not checked_items:
+                messagebox.showwarning("Warning", "Please select at least one project to export")
+                return
+                
+            # For Xray CSV format, show column selection dialog first
+            if format == 'xray_csv':
+                self._show_column_selection_dialog(checked_items, format)
+                return
+                
+            # Cancel any ongoing operations
+            self.loading_cancelled = True
             
-        # Check if the project has loaded suites
-        if not hasattr(self.current_project, 'suites') or not self.current_project.suites:
-            messagebox.showwarning("Warning", "Project suites not loaded. Please refresh the project and try again.")
-            return
+            # Wait a moment for cancellation to take effect
+            self.after(100, lambda: self._start_multi_project_export(checked_items, format))
+        else:
+            # Single project mode (original behavior)
+            if not self.current_project or not self.client:
+                messagebox.showwarning("Warning", "Please select a project first")
+                return
+                
+            # Check if the project has loaded suites
+            if not hasattr(self.current_project, 'suites') or not self.current_project.suites:
+                messagebox.showwarning("Warning", "Project suites not loaded. Please refresh the project and try again.")
+                return
+                
+            # Get checked items
+            checked_items = self.tree.get_checked_items()
+            if not checked_items:
+                messagebox.showwarning("Warning", "Please select at least one suite or section to export")
+                return
             
-        # Get checked items
-        checked_items = self.tree.get_checked_items()
-        if not checked_items:
-            messagebox.showwarning("Warning", "Please select at least one suite or section to export")
-            return
+            # For Xray CSV format, show column selection dialog first
+            if format == 'xray_csv':
+                self._show_column_selection_dialog(checked_items, format)
+                return
+            
+            # Cancel any ongoing operations
+            self.loading_cancelled = True
+            
+            # Wait a moment for cancellation to take effect
+            self.after(100, lambda: self._start_export(checked_items, format))
         
-        # Cancel any ongoing operations
-        self.loading_cancelled = True
-        
-        # Wait a moment for cancellation to take effect
-        self.after(100, lambda: self._start_export(checked_items, format))
-        
-    def _start_export(self, checked_items, format):
+    def _start_export(self, checked_items, format, selected_columns=None):
         """Start the export process after cancellation of any previous operations."""
         # Reset cancellation flag
         self.loading_cancelled = False
@@ -929,10 +1054,10 @@ class Application(tk.Tk):
         self.api_calls_total = suite_count + section_count
         
         # Export in a separate thread
-        self.active_thread = threading.Thread(target=lambda: self._export_cases_thread(valid_checked_items, format))
+        self.active_thread = threading.Thread(target=lambda: self._export_cases_thread(valid_checked_items, format, selected_columns))
         self.active_thread.start()
     
-    def _export_cases_thread(self, checked_items, format='json'):
+    def _export_cases_thread(self, checked_items, format='json', selected_columns=None):
         """
         Export test cases in a background thread.
         
@@ -1139,10 +1264,32 @@ class Application(tk.Tk):
             
             # Update UI in the main thread
             if not self.loading_cancelled:
-                self.after(0, lambda: self._save_export_file(export_data, format))
+                self.after(0, lambda: self._save_export_file(export_data, format, selected_columns))
         except Exception as e:
             if not self.loading_cancelled:
                 self.after(0, lambda: self._show_error(f"Failed to export test cases: {str(e)}"))
+    
+    def _convert_case_ids_to_names_for_project(self, case, project):
+        """
+        Convert case IDs to human-readable names for a specific project.
+        
+        Args:
+            case (Case): Case object with IDs
+            project: The project object to use for lookups
+            
+        Returns:
+            dict: Case data with names instead of IDs
+        """
+        # Store old current project temporarily
+        old_project = self.current_project
+        self.current_project = project
+        
+        try:
+            # Call the original method
+            return self._convert_case_ids_to_names(case)
+        finally:
+            # Restore old current project
+            self.current_project = old_project
     
     def _convert_case_ids_to_names(self, case):
         """
@@ -1227,13 +1374,14 @@ class Application(tk.Tk):
         
         return case_dict
     
-    def _save_export_file(self, export_data, format='json'):
+    def _save_export_file(self, export_data, format='json', selected_columns=None):
         """
         Automatically save export file with timestamped filename.
         
         Args:
             export_data (dict): Data to export
             format (str): Export format ('json', 'csv', 'xml', or 'xray_csv')
+            selected_columns (list): Optional list of columns to include in CSV export
         """
         # Get export directory from settings
         settings = self.settings_frame.get_settings()
@@ -1276,7 +1424,7 @@ class Application(tk.Tk):
             
             # Save the file
             if format == 'xray_csv':
-                result = self._export_to_xray_csv(export_data, filepath, logger)
+                result = self._export_to_xray_csv(export_data, filepath, logger, selected_columns)
                 if isinstance(result, tuple) and len(result) == 3:
                     success, xml_filename, csv_filename = result
                     if success:
@@ -1317,7 +1465,7 @@ class Application(tk.Tk):
             log_file = logger.get_log_file_path()
             self._show_export_error(error_msg, log_file, format)
     
-    def _export_to_xray_csv(self, export_data, csv_filepath, logger=None):
+    def _export_to_xray_csv(self, export_data, csv_filepath, logger=None, selected_columns=None):
         """
         Export test cases to Xray CSV format by first creating XML then converting.
         Also saves the XML file alongside the CSV for reference.
@@ -1326,6 +1474,7 @@ class Application(tk.Tk):
             export_data (dict): Data to export
             csv_filepath (str): Path where the CSV file should be saved
             logger (ExportLogger): Optional logger instance
+            selected_columns (list): Optional list of columns to include in CSV
             
         Returns:
             tuple: (success: bool, xml_filename: str, csv_filename: str)
@@ -1353,7 +1502,13 @@ class Application(tk.Tk):
             self._update_progress("Converting to CSV...")
             
             # Convert XML to Xray CSV format
-            success = convert_xml_to_xray_csv(xml_filepath, csv_filepath, testrail_endpoint, logger)
+            if selected_columns:
+                # Use the version that supports column selection
+                from testrail_exporter.utils.testrail2xray import convert_xml_to_xray_csv_with_columns
+                success = convert_xml_to_xray_csv_with_columns(xml_filepath, csv_filepath, testrail_endpoint, logger, selected_columns)
+            else:
+                # Use standard conversion
+                success = convert_xml_to_xray_csv(xml_filepath, csv_filepath, testrail_endpoint, logger)
             
             if success:
                 xml_filename = os.path.basename(xml_filepath)
@@ -1371,6 +1526,317 @@ class Application(tk.Tk):
             if logger:
                 logger.error(error_msg, exc_info=True)
             raise ExportError(error_msg) from e
+    
+    def _show_column_selection_dialog(self, checked_items, format):
+        """Show dialog for selecting CSV columns to export."""
+        # Create dialog window
+        dialog = tk.Toplevel(self)
+        dialog.title("Select Columns for Export")
+        dialog.geometry("400x500")
+        dialog.transient(self)
+        dialog.grab_set()
+        
+        # Center the dialog
+        dialog.update_idletasks()
+        x = (dialog.winfo_screenwidth() // 2) - (dialog.winfo_width() // 2)
+        y = (dialog.winfo_screenheight() // 2) - (dialog.winfo_height() // 2)
+        dialog.geometry(f"+{x}+{y}")
+        
+        # Create main frame
+        main_frame = ttk.Frame(dialog, padding=10)
+        main_frame.pack(fill=tk.BOTH, expand=True)
+        
+        # Instructions
+        ttk.Label(main_frame, text="Select columns to include in the Xray CSV export:", 
+                 wraplength=350).pack(pady=(0, 10))
+        
+        # Column list frame with scrollbar
+        list_frame = ttk.Frame(main_frame)
+        list_frame.pack(fill=tk.BOTH, expand=True)
+        
+        # Scrollbar
+        scrollbar = ttk.Scrollbar(list_frame)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        
+        # Frame for checkboxes
+        checkbox_frame = ttk.Frame(list_frame)
+        checkbox_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        
+        # Available columns from testrail2xray.py
+        all_columns = ["Suite Name", "Section Name", "Issue ID", "Test Type", "Test Title", 
+                      "Test Priority", "Preconditions", "Action", "Data", "Result", 
+                      "Test Repo", "Labels"]
+        
+        # Mandatory columns that cannot be unchecked
+        mandatory_columns = ["Suite Name", "Section Name", "Issue ID", "Test Title"]
+        
+        # Store checkbox variables
+        column_vars = {}
+        
+        # Create checkboxes for each column
+        for i, column in enumerate(all_columns):
+            var = tk.BooleanVar(value=True)  # All checked by default
+            column_vars[column] = var
+            
+            # Create checkbox
+            if column in mandatory_columns:
+                # Mandatory column - disabled checkbox
+                cb = ttk.Checkbutton(checkbox_frame, text=column, variable=var, state='disabled')
+                cb.pack(anchor=tk.W, pady=2)
+            else:
+                # Optional column
+                cb = ttk.Checkbutton(checkbox_frame, text=column, variable=var)
+                cb.pack(anchor=tk.W, pady=2)
+        
+        # Button frame
+        button_frame = ttk.Frame(main_frame)
+        button_frame.pack(fill=tk.X, pady=(10, 0))
+        
+        # Result variable
+        dialog.result = None
+        
+        def on_export():
+            # Get selected columns
+            selected_columns = [col for col, var in column_vars.items() if var.get()]
+            dialog.result = selected_columns
+            dialog.destroy()
+            
+            # Continue with export
+            if self.multi_project_var.get():
+                self.loading_cancelled = True
+                self.after(100, lambda: self._start_multi_project_export(checked_items, format, selected_columns))
+            else:
+                self.loading_cancelled = True
+                self.after(100, lambda: self._start_export(checked_items, format, selected_columns))
+        
+        def on_cancel():
+            dialog.result = None
+            dialog.destroy()
+        
+        # Buttons
+        ttk.Button(button_frame, text="Export", command=on_export).pack(side=tk.RIGHT, padx=(5, 0))
+        ttk.Button(button_frame, text="Cancel", command=on_cancel).pack(side=tk.RIGHT)
+        
+        # Make dialog modal
+        dialog.wait_window()
+    
+    def _start_multi_project_export(self, checked_items, format, selected_columns=None):
+        """Start multi-project export process."""
+        # Reset cancellation flag
+        self.loading_cancelled = False
+        
+        # Get selected projects
+        selected_projects = []
+        for item in checked_items:
+            try:
+                # Get tags from tree item
+                tags = self.tree.item(item, 'tags')
+                
+                # Extract project ID from tag
+                project_id = None
+                for tag in tags:
+                    if tag.startswith('project_'):
+                        project_id = int(tag.replace('project_', ''))
+                        break
+                
+                if project_id:
+                    # Find project object
+                    project = next((p for p in self.projects if p.id == project_id), None)
+                    if project:
+                        selected_projects.append(project)
+            except Exception as e:
+                print(f"Error getting project from tree item: {e}")
+                continue
+        
+        if not selected_projects:
+            messagebox.showwarning("Warning", "No valid projects selected for export.")
+            self._update_progress("", reset=True)
+            return
+        
+        print(f"Starting export of {len(selected_projects)} projects")
+        
+        # Calculate total API calls for progress tracking
+        total_projects = len(selected_projects)
+        self._update_progress(f"Preparing to export {total_projects} projects...", reset=True)
+        
+        # Export in a separate thread
+        self.active_thread = threading.Thread(
+            target=lambda: self._export_multiple_projects_thread(selected_projects, format, selected_columns)
+        )
+        self.active_thread.start()
+    
+    def _export_multiple_projects_thread(self, projects, format, selected_columns=None):
+        """Export multiple projects in a background thread."""
+        try:
+            total_projects = len(projects)
+            completed_projects = 0
+            
+            # Calculate estimated total API calls
+            # For each project: 1 for suites + ~5 for sections + ~5 for cases
+            estimated_calls_per_project = 11
+            self.api_calls_total = total_projects * estimated_calls_per_project
+            self.api_calls_done = 0
+            
+            for project in projects:
+                # Check if operation has been cancelled
+                if self.loading_cancelled:
+                    return
+                
+                # Update progress in main thread
+                progress_text = f"Loading project {completed_projects + 1}/{total_projects}: {project.name}"
+                self.after(0, lambda pt=progress_text: self._update_progress(pt))
+                
+                # Load project data
+                try:
+                    # Get suites for project
+                    suites_data = self.client.get_suites(project.id)
+                    suites = [Suite(s) for s in suites_data]
+                    suites.sort(key=lambda s: s.name.lower())
+                    project.suites = suites
+                    self._register_api_call()
+                    
+                    # Load sections for each suite
+                    for suite in suites:
+                        if self.loading_cancelled:
+                            return
+                            
+                        sections_data = self.client.get_sections(project.id, suite.id)
+                        sections = [Section(s) for s in sections_data]
+                        sections.sort(key=lambda s: s.name.lower())
+                        suite.sections = sections
+                        self._register_api_call()
+                    
+                    # Load all test cases for the project
+                    all_cases = []
+                    for suite in suites:
+                        if self.loading_cancelled:
+                            return
+                            
+                        # Get all cases for the suite
+                        cases_data = self.client.get_cases(project.id, suite.id)
+                        cases = [Case(c) for c in cases_data]
+                        all_cases.extend(cases)
+                        self._register_api_call()
+                    
+                    # Prepare export data
+                    export_data = {
+                        'project': {
+                            'id': project.id,
+                            'name': project.name
+                        },
+                        'cases': [self._convert_case_ids_to_names_for_project(case, project) for case in all_cases],
+                        'suites': suites
+                    }
+                    
+                    # Export project data
+                    if not self.loading_cancelled:
+                        # Capture project name in closure
+                        project_name = project.name
+                        self.after(0, lambda ed=export_data, pn=project_name: self._save_project_export_file(
+                            ed, format, pn, selected_columns
+                        ))
+                    
+                    completed_projects += 1
+                    
+                    # Update status to show saving
+                    save_text = f"Saved {project.name} ({completed_projects}/{total_projects})"
+                    self.after(0, lambda st=save_text: self.status_var.set(st))
+                    
+                except Exception as e:
+                    error_msg = f"Failed to export project '{project.name}': {str(e)}"
+                    if not self.loading_cancelled:
+                        self.after(0, lambda msg=error_msg: messagebox.showerror("Export Error", msg))
+                    continue
+            
+            # Update final status
+            if not self.loading_cancelled:
+                self.after(0, lambda: self.status_var.set(f"Exported {completed_projects} projects"))
+                self.after(0, lambda: self._update_progress(""))
+                
+                # Show completion dialog
+                export_dir = self.settings_frame.get_settings()['export_dir']
+                self.after(0, lambda: self._show_multi_export_complete_dialog(completed_projects, total_projects, export_dir))
+                
+        except Exception as e:
+            if not self.loading_cancelled:
+                self.after(0, lambda: self._show_error(f"Failed to export projects: {str(e)}"))
+    
+    def _save_project_export_file(self, export_data, format, project_name, selected_columns=None):
+        """Save export file for a single project."""
+        # Get export directory from settings
+        settings = self.settings_frame.get_settings()
+        export_dir = settings['export_dir']
+        
+        # Create logger instance
+        logger = ExportLogger(export_dir)
+        
+        # Generate timestamp
+        timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+        
+        # Sanitize project name for use in filename
+        sanitized_project_name = self._sanitize_filename(project_name)
+        
+        # Set file extension and base filename based on format
+        if format == 'xray_csv':
+            extension = ".csv"
+            base_filename = f"{sanitized_project_name}_xray_export"
+        elif format == 'xml':
+            extension = ".xml"
+            base_filename = f"{sanitized_project_name}_export"
+        else:  # Default to json
+            extension = ".json"
+            base_filename = f"{sanitized_project_name}_export"
+        
+        # Create timestamped filename
+        filename = f"{base_filename}_{timestamp}{extension}"
+        filepath = os.path.join(export_dir, filename)
+        
+        try:
+            # Save the file
+            if format == 'xray_csv':
+                # For Xray CSV, we need to store selected columns for the conversion
+                self._export_to_xray_csv_with_columns(export_data, filepath, logger, selected_columns)
+            elif format == 'xml':
+                Exporter.export_to_xml(export_data, filepath, logger)
+            else:  # Default to json
+                Exporter.export_to_json(export_data, filepath, logger)
+                
+            logger.info(f"Successfully exported project '{project_name}' to {filename}")
+            
+        except Exception as e:
+            error_msg = f"Failed to save export for project '{project_name}': {str(e)}"
+            logger.error(error_msg, exc_info=True)
+            messagebox.showerror("Export Error", error_msg)
+    
+    def _export_to_xray_csv_with_columns(self, export_data, csv_filepath, logger, selected_columns):
+        """Export to Xray CSV with selected columns only."""
+        # First create the XML file
+        base_path = os.path.splitext(csv_filepath)[0]
+        xml_filepath = f"{base_path}.xml"
+        
+        # Export to XML first
+        Exporter.export_to_xml(export_data, xml_filepath, logger)
+        
+        # Get TestRail endpoint
+        settings = self.settings_frame.get_settings()
+        testrail_endpoint = settings.get('url', '')
+        
+        # Convert XML to CSV with selected columns
+        from testrail_exporter.utils.testrail2xray import convert_xml_to_xray_csv_with_columns
+        convert_xml_to_xray_csv_with_columns(
+            xml_filepath, csv_filepath, testrail_endpoint, logger, selected_columns
+        )
+    
+    def _show_multi_export_complete_dialog(self, completed_count, total_count, export_dir):
+        """Show completion dialog for multi-project export."""
+        if completed_count == total_count:
+            title = "Export Complete"
+            message = f"Successfully exported {completed_count} project{'s' if completed_count != 1 else ''} to:\n\n{export_dir}"
+        else:
+            title = "Export Partially Complete"
+            message = f"Exported {completed_count} of {total_count} projects to:\n\n{export_dir}\n\nCheck the log files for any errors."
+        
+        messagebox.showinfo(title, message)
     
     def _show_error(self, message):
         """Show an error message and update the status."""
