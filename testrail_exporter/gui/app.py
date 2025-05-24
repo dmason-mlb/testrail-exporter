@@ -34,9 +34,9 @@ class Application(tk.Tk):
         # Set window title and size
         self.title("TestRail Exporter")
         window_width = self.config.get_setting('ui', 'window_width', 1200)
-        window_height = self.config.get_setting('ui', 'window_height', 800)
+        window_height = self.config.get_setting('ui', 'window_height', 850)
         self.geometry(f"{window_width}x{window_height}")
-        self.minsize(1000, 700)
+        self.minsize(1000, 750)
         
         # Set window icon
         try:
@@ -151,7 +151,7 @@ class Application(tk.Tk):
         
         # Progress bar and status
         status_frame = ttk.Frame(main_frame)
-        status_frame.pack(fill=tk.X, pady=(10, 15))
+        status_frame.pack(fill=tk.X, pady=(10, 20))
         
         self.status_var = tk.StringVar()
         ttk.Label(status_frame, textvariable=self.status_var).pack(side=tk.LEFT)
@@ -314,8 +314,9 @@ class Application(tk.Tk):
         self.loading_cancelled = True
         
         if self.multi_project_var.get():
-            # Multi-project mode: hide project selection dropdown and show project list
-            self.project_selection_frame.pack_forget()
+            # Multi-project mode: disable project selection dropdown (but keep it visible)
+            self.project_combo.config(state="disabled")
+            self.project_var.set("")  # Clear the selection
             
             # Clear the tree
             for item in self.tree.get_children():
@@ -334,8 +335,8 @@ class Application(tk.Tk):
             else:
                 self.status_var.set("No projects loaded. Click 'Load Projects' or 'Refresh Projects' to load.")
         else:
-            # Single project mode: show project selection dropdown
-            self.project_selection_frame.pack(fill=tk.X, pady=10, before=self.tree.master)
+            # Single project mode: enable project selection dropdown
+            self.project_combo.config(state="readonly")
             
             # Clear tree
             for item in self.tree.get_children():
@@ -343,6 +344,12 @@ class Application(tk.Tk):
             
             # Restore the tree heading for suites mode
             self.tree.heading("name", text="Suites and Sections")
+            
+            # Trigger a refresh of projects when switching back to single-project mode
+            if self.projects and self.load_projects_button:
+                # Check if the button text is "Refresh Projects" (indicates projects are loaded)
+                if self.load_projects_button.cget('text') == "Refresh Projects":
+                    self._load_projects()
             
             # Reload current project if one is selected
             if self.current_project and hasattr(self.current_project, 'suites'):
