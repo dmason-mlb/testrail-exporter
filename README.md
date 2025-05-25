@@ -23,7 +23,7 @@ Download the latest release and drag TestRail Exporter to your Applications fold
 - Browse projects, test suites, and sections (single-project mode)
 - Select entire projects for export (multi-project mode)
 - Select specific test case fields to include in Xray CSV exports (column selection dialog)
-- Export test cases to JSON, XML, or Xray-compatible CSV format (direct CSV export, no XML intermediate required)
+- Export test cases to XML or Xray-compatible CSV format (direct CSV export, no XML intermediate required)
 - Multi-project export: export each selected project to its own file(s)
 - Configurable export directory
 - Persistent settings between sessions (window size, last project, export directory, credentials)
@@ -126,22 +126,14 @@ Use the "Test Connection" button to verify your credentials before loading proje
 
 7. Choose export format:
    - Click "Export to XML" for TestRail-compatible XML
-   - Click "Export to Xray CSV" for Xray-compatible CSV (a dialog will let you select columns)
+   - Click "Export to CSV" for Xray-compatible CSV (a dialog will let you select columns)
    - Click "Export Both" to export both formats
+
+   > **Note:** You can select which columns are included in the CSV export. The XML export includes all available fields and does not support customization of exported fields.
 
 8. Exported files are timestamped and saved in your export directory. Detailed logs are saved in a `logs` subdirectory.
 
 ## Export Formats
-
-### JSON Format
-
-The exported JSON file contains:
-
-- Project information (id, name)
-- Test cases with:
-  - Standard fields (id, title, suite_name, section_name, etc.)
-  - Human-readable names instead of IDs (suite_name, section_name, priority_name, type_name)
-  - Custom fields (prefixed with `custom_`)
 
 ### Xray CSV Format
 
@@ -156,12 +148,12 @@ The exported JSON file contains:
 
 ### XML Format
 
-The exported XML file contains TestRail-compatible XML structure:
-
+- The exported XML file contains TestRail-compatible XML structure:
 - Hierarchical structure with suites, sections, and cases
 - Test cases with complete metadata including custom fields
 - Compatible with TestRail's XML import format
 - Human-readable names for types, priorities, and other fields
+- **All available fields are included in the XML export; there is no customization of exported fields.**
 
 ## Troubleshooting
 
