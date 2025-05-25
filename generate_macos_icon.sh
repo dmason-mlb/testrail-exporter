@@ -65,49 +65,61 @@ for i in "${!SIZES[@]}"; do
     HALF_SIZE=$((SIZE / 2))
     if [ "$RADIUS_PX" -gt "$HALF_SIZE" ]; then RADIUS_PX=$HALF_SIZE; fi
 
+    # Define all temporary files for this iteration
     TEMP_RESIZED="temp_resized_${SIZE}_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_RESIZED")
     TEMP_ROUNDED_MASK="mask_${SIZE}_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_ROUNDED_MASK")
-    TEMP_ROUNDED="temp_rounded_${SIZE}_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_ROUNDED")
-    TEMP_GRADIENT_LAYER="temp_gradient_layer_${SIZE}_${RANDOM}.miff"; TEMP_FILES_TO_CLEAN+=("$TEMP_GRADIENT_LAYER")
-    TEMP_WITH_GLOSS="temp_gloss_${SIZE}_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_WITH_GLOSS")
-    TEMP_FINAL_EFFECTS="temp_final_effects_${SIZE}_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_FINAL_EFFECTS")
+    TEMP_GRADIENT_LAYER="temp_gradient_layer_${SIZE}_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_GRADIENT_LAYER") # DEFINITION ADDED/CORRECTED
+    TEMP_SQUARE_WITH_GLOSS="temp_square_gloss_${SIZE}_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_SQUARE_WITH_GLOSS")
+    TEMP_SQUARE_WITH_INNER_SHADOW="temp_square_inner_shadow_${SIZE}_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_SQUARE_WITH_INNER_SHADOW")
     
     TEMP_EDGE_MASK="temp_edge_mask_${SIZE}_${RANDOM}.miff"; TEMP_FILES_TO_CLEAN+=("$TEMP_EDGE_MASK")
-    TEMP_SHADOW_PART1="temp_shadow_part1_${SIZE}_${RANDOM}.miff"; TEMP_FILES_TO_CLEAN+=("$TEMP_SHADOW_PART1")
-    TEMP_SHADOW_LAYER="temp_shadow_layer_${SIZE}_${RANDOM}.miff"; TEMP_FILES_TO_CLEAN+=("$TEMP_SHADOW_LAYER")
+    TEMP_INNER_SHADOW_PART1="temp_inner_shadow_part1_${SIZE}_${RANDOM}.miff"; TEMP_FILES_TO_CLEAN+=("$TEMP_INNER_SHADOW_PART1")
+    TEMP_INNER_SHADOW_LAYER="temp_inner_shadow_layer_${SIZE}_${RANDOM}.miff"; TEMP_FILES_TO_CLEAN+=("$TEMP_INNER_SHADOW_LAYER")
     
+    TEMP_ROUNDED_FINAL_ICON="temp_rounded_final_icon_${SIZE}_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_ROUNDED_FINAL_ICON")
     TEMP_ALPHA_MASK_FOR_SHADOW="temp_alpha_mask_shadow_${SIZE}_${RANDOM}.miff"; TEMP_FILES_TO_CLEAN+=("$TEMP_ALPHA_MASK_FOR_SHADOW")
     TEMP_SHADOW_ONLY="temp_shadow_only_${SIZE}_${RANDOM}.miff"; TEMP_FILES_TO_CLEAN+=("$TEMP_SHADOW_ONLY")
 
-    # Step 1: Resize
+    # Step 1: Resize input to a square image
     magick "$INPUT_PNG" -filter LanczosSharp -resize "${SIZE}x${SIZE}!" "PNG32:$TEMP_RESIZED"
     
-    # Step 2: Rounded Corners
+    # Step 2: Create the Rounded Corner Mask
     SIZE_MINUS_1=$((SIZE - 1))
-    magick -size "${SIZE}x${SIZE}" xc:transparent -fill white \
+    magick -size "${SIZE}x${SIZE}" xc:none -fill white \
         -draw "roundrectangle 0,0,${SIZE_MINUS_1},${SIZE_MINUS_1},${RADIUS_PX},${RADIUS_PX}" \
         "PNG32:$TEMP_ROUNDED_MASK"
-    magick "$TEMP_RESIZED" "$TEMP_ROUNDED_MASK" -alpha off -compose CopyOpacity -composite "PNG32:$TEMP_ROUNDED"
     
-    # Step 3: Gradient Overlay (Top Gloss)
+    # Step 3: Gradient Overlay (Top Gloss) - applied to the square image
     GLOSS_HEIGHT=$(printf "%.0f" "$(echo "$SIZE * 0.40" | bc -l)")
     GLOSS_OPACITY_START="0.15"
+    # Part 3a: Generate the gradient layer
     magick -size "${SIZE}x${GLOSS_HEIGHT}" \
            gradient:"rgba(255,255,255,${GLOSS_OPACITY_START})"-"rgba(255,255,255,0.0)" \
            -gravity North -background None -extent "${SIZE}x${SIZE}" \
-           "PNG32:$TEMP_GRADIENT_LAYER"
-    magick "$TEMP_ROUNDED" "$TEMP_GRADIENT_LAYER" \
-           -compose Over -composite "PNG32:$TEMP_WITH_GLOSS"
+           "PNG32:$TEMP_GRADIENT_LAYER" # Removed redundant array append
+    # Part 3b: Composite the gradient layer onto the resized (still square) image
+    magick "$TEMP_RESIZED" "$TEMP_GRADIENT_LAYER" \
+           -compose Over -composite "PNG32:$TEMP_SQUARE_WITH_GLOSS"
         
-    # Step 4: Inner Shadow
+    # Step 4: Inner Shadow - applied to the square image with gloss
     INNER_SHADOW_COLOR="rgba(0,0,0,0.20)"
     INNER_SHADOW_BLUR="0x0.75"
-    magick "$TEMP_WITH_GLOSS" -alpha extract -morphology EdgeIn Diamond:1 "$TEMP_EDGE_MASK" 
-    magick "$TEMP_EDGE_MASK" -fill "$INNER_SHADOW_COLOR" -opaque white "$TEMP_SHADOW_PART1" 
-    magick "$TEMP_SHADOW_PART1" -fill transparent -opaque black -blur "$INNER_SHADOW_BLUR" "$TEMP_SHADOW_LAYER"
-    magick "$TEMP_WITH_GLOSS" "$TEMP_SHADOW_LAYER" -compose Atop -composite "PNG32:$TEMP_FINAL_EFFECTS"
+    # Create inner shadow based on the rounded mask, then composite onto the square glossed image
+    magick "$TEMP_ROUNDED_MASK" \
+           -morphology EdgeIn Diamond:1 \
+           -fill "$INNER_SHADOW_COLOR" -opaque white \
+           -fill transparent -opaque black \
+           -blur "$INNER_SHADOW_BLUR" \
+           "$TEMP_INNER_SHADOW_LAYER" # Output is the shaped, colored, blurred inner shadow layer
+    
+    magick "$TEMP_SQUARE_WITH_GLOSS" "$TEMP_INNER_SHADOW_LAYER" \
+           -compose Atop -composite "PNG32:$TEMP_SQUARE_WITH_INNER_SHADOW"
 
-    # Step 5: Drop Shadow & Final Write
+    # Step 5: Final Rounding and Drop Shadow
+    # First, apply the rounded corners to the fully styled square image
+    magick "$TEMP_SQUARE_WITH_INNER_SHADOW" "$TEMP_ROUNDED_MASK" \
+        -alpha off -compose CopyOpacity -composite "PNG32:$TEMP_ROUNDED_FINAL_ICON"
+
     if [ "$SIZE" -ge 128 ]; then
         SHADOW_OPACITY=35
         current_shadow_params=""
@@ -115,12 +127,12 @@ for i in "${!SIZES[@]}"; do
         elif [ "$SIZE" -ge 256 ]; then current_shadow_params="${SHADOW_OPACITY}x4+2+3";
         else current_shadow_params="${SHADOW_OPACITY}x3+2+2"; fi
         
-        # Part 5 - 1a: Extract alpha for shadow
-        magick "$TEMP_FINAL_EFFECTS" \
+        # Part 5a: Extract alpha from the *now rounded* final icon for shadow casting
+        magick "$TEMP_ROUNDED_FINAL_ICON" \
             -alpha extract \
             "$TEMP_ALPHA_MASK_FOR_SHADOW"
 
-        # Part 5 - 1b: Generate shadow from alpha mask
+        # Part 5b: Generate shadow from the rounded alpha mask
         magick "$TEMP_ALPHA_MASK_FOR_SHADOW" \
             -virtual-pixel transparent \
             -background black \
@@ -128,15 +140,24 @@ for i in "${!SIZES[@]}"; do
             +repage \
             "$TEMP_SHADOW_ONLY"
 
-        # Part 5 - 2: Composite Shadow and Icon, then crop
-        magick "$TEMP_SHADOW_ONLY" "$TEMP_FINAL_EFFECTS" \
-            -background none \
-            -layers merge \
-            +repage \
-            -crop "${SIZE}x${SIZE}+0+0" \
-            "PNG32:$OUTPUT_PNG_PATH"
+        # Part 5c: Composite Shadow and the rounded icon
+        magick -size "${SIZE}x${SIZE}" xc:none \
+               "$TEMP_ROUNDED_FINAL_ICON" -gravity center -compose Over -composite \
+               "$TEMP_SHADOW_ONLY" -gravity center -compose DstOver -composite \
+               "PNG32:$OUTPUT_PNG_PATH"
+
+        # Part 5d: Re-apply the rounded mask so that any shadow pixels that were
+        # laid down outside of the rounded rectangle (especially in the corner
+        # areas) are clipped out, preventing the appearance of sharp, semi-
+        # transparent corners while preserving the shadow elsewhere.
+        magick "$OUTPUT_PNG_PATH" "$TEMP_ROUNDED_MASK" \
+               -alpha off -compose CopyOpacity -composite \
+               "PNG32:$OUTPUT_PNG_PATH"
     else
-        magick "$TEMP_FINAL_EFFECTS" "PNG32:$OUTPUT_PNG_PATH"
+        # For smaller sizes, no drop shadow, just output the rounded final icon
+        # $TEMP_ROUNDED_FINAL_ICON is already created, so just copy or magick it
+        cp "$TEMP_ROUNDED_FINAL_ICON" "$OUTPUT_PNG_PATH" # cp is fine, or magick if paranoid
+        # magick "$TEMP_ROUNDED_FINAL_ICON" "PNG32:$OUTPUT_PNG_PATH" # Alternative
     fi
 
     # Verification
