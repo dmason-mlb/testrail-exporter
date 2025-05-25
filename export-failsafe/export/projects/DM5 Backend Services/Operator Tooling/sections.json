@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1778417,
+    "suite_id": 626619,
+    "name": "Log In",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1778418,
+    "suite_id": 626619,
+    "name": "Dev Tools",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1778419,
+    "suite_id": 626619,
+    "name": "Experience Overrides",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1778421,
+    "suite_id": 626619,
+    "name": "Logger",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1778423,
+    "suite_id": 626619,
+    "name": "Logger - schedule view",
+    "description": null,
+    "parent_id": 1778421,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 1778422,
+    "suite_id": 626619,
+    "name": "Navigation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  }
+]

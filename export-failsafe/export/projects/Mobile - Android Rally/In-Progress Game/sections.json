@@ -1,0 +1,65 @@
+[
+  {
+    "id": 305379,
+    "suite_id": 43410,
+    "name": "Strikezone",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 305380,
+    "suite_id": 43410,
+    "name": "Deck",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 305381,
+    "suite_id": 43410,
+    "name": "Resolve types",
+    "description": null,
+    "parent_id": 305380,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 305383,
+    "suite_id": 43410,
+    "name": "Active game flow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 305384,
+    "suite_id": 43410,
+    "name": "Deck Behavior",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 305385,
+    "suite_id": 43410,
+    "name": "Postponed/Delayed Games",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 305386,
+    "suite_id": 43410,
+    "name": "Carousel",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  }
+]

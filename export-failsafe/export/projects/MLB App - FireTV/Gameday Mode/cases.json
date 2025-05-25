@@ -1,0 +1,396 @@
+[
+  {
+    "id": 30075092,
+    "title": "Gameday mode- general behavior",
+    "section_id": 1634092,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1675718804,
+    "updated_by": 232,
+    "updated_on": 1696871940,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 589800,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user is watching a game in the mlbtv player\r\n\r\nNOTE:\r\nGameday will not appear in the app on the first launch after installation or after clearing data. It is turned on by a config that does not register the first time. To test Gameday, the app needs to be launched, closed (possibly force closed and possibly closed more than once) and then gameday will be available",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the controls are visible on the screen",
+        "expected": "THEN a \"Gameday\" quick actions button is present above the scrubber bar next to the \"CC\" button"
+      },
+      {
+        "content": "WHEN the user clicks the Gameday button",
+        "expected": "THEN the player will transition to Gameday mode"
+      },
+      {
+        "content": "WHEN the player is in Gameday mode",
+        "expected": "THEN the player controls are disabled"
+      },
+      {
+        "content": "WHEN the player is in Gameday mode\nAND the user hits the back button",
+        "expected": "THEN the player transitions back to playing the game in fullscreen mode"
+      }
+    ]
+  },
+  {
+    "id": 30463588,
+    "title": "Launch Gameday Loading UI",
+    "section_id": 1634092,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1681496283,
+    "updated_by": 232,
+    "updated_on": 1681496782,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 589800,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a user watching a game",
+    "custom_steps": "WHEN the user selects Gameday Mode",
+    "custom_expected": "THEN the screen will enter Gameday mode\r\nAND the loading UI includes Strikezone image\r\nAND the loading UI includes Pitch Number Circle\r\nAND the loading UI includes Count\r\nAND the loading UI includes MPH/Spin Rate/Break UI\r\nAND the loading UI includesEmpty Placeholder for the Pitch Feed section\r\n![](index.php?/attachments/get/13474365)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30463667,
+    "title": "Strike Zone",
+    "section_id": 1634092,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1681498820,
+    "updated_by": 232,
+    "updated_on": 1681498820,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 589800,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user watching a game in Gameday mode",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user observes the strikezone",
+        "expected": "THEN the strike zone based on the pitcher’s view"
+      },
+      {
+        "content": "WHEN a pitch occurs \nAND the pitch is a strike",
+        "expected": "THEN a strike renders as red in the strikezone using ball/strike coordinates"
+      },
+      {
+        "content": "WHEN an atbat is occurring ",
+        "expected": "THEN all pitches within the at bat should be rendered\nAND z-indexed as the latest pitch in front"
+      },
+      {
+        "content": "WHEN a pitch occurs \nAND the pitch is a ball",
+        "expected": "THEN the ball renders as green in the strikezone using ball/strike coordinates"
+      },
+      {
+        "content": "WHEN a pitch occurs \nAND the ball is hit into play",
+        "expected": "THEN pitch in play renders as blue in the strikezone using ball/strike coordinates"
+      },
+      {
+        "content": "WHEN a new at bat begins ",
+        "expected": "THEN then clear the previous at bat pitches"
+      }
+    ]
+  },
+  {
+    "id": 30475382,
+    "title": "Most Recent Pitch",
+    "section_id": 1634092,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1681833731,
+    "updated_by": 232,
+    "updated_on": 1681839140,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 589800,
+    "display_order": 4,
+    "custom_preconds": "GIVEN a user watching a game in Gameday mode\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the most recent pitch data is available\n",
+        "expected": "THEN the pitch data will be presented in the most recent pitch section\n![](index.php?/attachments/get/13475538)\n"
+      },
+      {
+        "content": "WHEN the most recent pitch data is available\n",
+        "expected": "THEN the pitch data will be presented\nAND  ball/strike/in play is included\nAND pitch type is included\nAND count is included\nAND pitch speed is included,\nAND rotation is included\nAND break is included"
+      },
+      {
+        "content": "WHEN the user observes the most recent pitch info\nAND the play is a STRIKE\n",
+        "expected": "THEN the pitch will be represented by a RED indicator"
+      },
+      {
+        "content": "WHEN the user observes the most recent pitch info\nAND the play is a BALL\n",
+        "expected": "THEN the pitch will be represented by a GREEN indicator"
+      },
+      {
+        "content": "WHEN the user observes the most recent pitch info\nAND the play is a IN PLAY\n",
+        "expected": "THEN the pitch will be represented by a BLUE indicator"
+      }
+    ]
+  },
+  {
+    "id": 30475383,
+    "title": "Most Recent Pitch-In Play",
+    "section_id": 1634092,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1681835417,
+    "updated_by": 232,
+    "updated_on": 1681835417,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 589800,
+    "display_order": 5,
+    "custom_preconds": "GIVEN a user watching a game in Gameday mode",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN there is a play result (strikeout, walk, in play)\nAND the play is over\n\n",
+        "expected": "THEN display the play result"
+      },
+      {
+        "content": "WHEN there is a play result (strikeout, walk, in play)\nAND the play is not over\n",
+        "expected": "THEN display the pitch description\n(EXAMPLE: the pitch is still displayed when homerun occurs until the play result is final so that the state is not spoiling the outcome of the play)"
+      }
+    ]
+  },
+  {
+    "id": 30475390,
+    "title": "Pitch Feed- Previous Pitches- Non-Play events",
+    "section_id": 1634092,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1681837574,
+    "updated_by": 232,
+    "updated_on": 1681837574,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 589800,
+    "display_order": 6,
+    "custom_preconds": "GIVEN a user is watching a game in Gameday mode",
+    "custom_steps": "WHEN previous pitch events are available\r\nAND the events are non-play events",
+    "custom_expected": "THEN pitch data is displayed for the pitch \r\nAND pitch number is displayed (Integer)\r\nAND pitch result is displayed by color (ball=green, strike=red, in-play=blue)\r\nAND pitch result is displayed (examples: Called strike, foul, etc.)\r\nAND pitch speed is displayed\r\nAND pitch type is displayed (examples: fastballm, four-seam fastball, slider, etc.)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30475391,
+    "title": "Pitch Feed- Previous pitches- Play events",
+    "section_id": 1634092,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1681838624,
+    "updated_by": 232,
+    "updated_on": 1681838624,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 589800,
+    "display_order": 7,
+    "custom_preconds": "GIVEN a user watching a game in Gameday mode",
+    "custom_steps": "WHEN previous pitch events are available\r\nAND the event is a play event ",
+    "custom_expected": "THEN the pitch card displays batter headshot with team primary color background\r\nAND the pitch card displays play result with font in play result color (examples: STRIKEOUT in red, GROUNDOUT in blue, HIT BY PITCH in green, etc.)\r\nAND the pitch card displays the play description  (Examples: \"Nick Senzel strikes out swinging\", \"TJ Friedl grounds out, second baseman Brandon Lowe to first baseman Yande Diaz\", \"Jonathan India hit by pitch\", etc.)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30475392,
+    "title": "Pitch Feed- actions as new pitch data becomes availble",
+    "section_id": 1634092,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1681838864,
+    "updated_by": 232,
+    "updated_on": 1681838864,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 589800,
+    "display_order": 8,
+    "custom_preconds": "GIVEN a user watching a game in Gameday mode",
+    "custom_steps": "WHEN pitch data is available for most recent pitch\r\nAND new data becomes available so that a new pitch is now most recent\r\n",
+    "custom_expected": "THEN the new pitch will occupy the most recent spot\r\nAND the previous pitch will display in the tile just to the right of the most recent pitch\r\nAND other previous pitches will also shift to the right, maintaining their order\r\n\r\n![](index.php?/attachments/get/13475539)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30475393,
+    "title": "Gameday button only shows for games with correct gamedayType",
+    "section_id": 1634092,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1681842497,
+    "updated_by": 232,
+    "updated_on": 1713926581,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 589800,
+    "display_order": 9,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a user plays a game with supported Gameday type (E, P) (This will be true for almost all regular season games)\nAND the controls are activated on the screen via the remote",
+        "expected": "THEN the Gameday button will be displayed as a quick action button next to the CC button\nAND selecting the button will enter the user into Gameday mode"
+      },
+      {
+        "content": "WHEN a user plays a game with un-supported Gameday type (Y,D,N,L,B,S) (Exhibition game NEU @ BOS on 2/23/2024 is one example)\nAND the controls are activated on the screen via the remote",
+        "expected": "THEN the Gameday button will not be displayed on the screen"
+      }
+    ]
+  },
+  {
+    "id": 30476003,
+    "title": "Show outs for In Play results",
+    "section_id": 1634092,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1681848233,
+    "updated_by": 232,
+    "updated_on": 1681848233,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 589800,
+    "display_order": 10,
+    "custom_preconds": "GIVEN a user is watching a game in Gameday mode",
+    "custom_steps": "WHEN the most recent play is IN PLAY (blue icon)\r\nAND the play results in an out",
+    "custom_expected": "THEN the out should display in blue once the play is final\r\nExample: In Play transitions to Groundout curveball after the out is made and the play is final\r\n\r\n![](index.php?/attachments/get/13475586)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30484717,
+    "title": "Pitcher Batter Matchup",
+    "section_id": 1634092,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1681920256,
+    "updated_by": 232,
+    "updated_on": 1681920256,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 589800,
+    "display_order": 11,
+    "custom_preconds": "GIVEN a user watching a game in Gameday mode",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN data becomes available for the current pitcher-batter matchup (NOTE: this is not expected to be 100% in line with real time as there is a delay with data)",
+        "expected": "THEN the pitcher's name, position, number, and picture should display\nAND the batter's name, position, number, and picture should display\n\n![](index.php?/attachments/get/13477455)\n"
+      },
+      {
+        "content": "WHEN data becomes available for the current pitcher-batter matchup\nAND the picture player fails to load\n(Mark this test step as blocked if this is not readily available)\n",
+        "expected": "THEN a generic image will display in place of the player picture\n\n![](index.php?/attachments/get/13477456)\n"
+      }
+    ]
+  },
+  {
+    "id": 30484718,
+    "title": "Pitcher Batter Matchups -Live Games",
+    "section_id": 1634092,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1681920870,
+    "updated_by": 232,
+    "updated_on": 1681920870,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 589800,
+    "display_order": 12,
+    "custom_preconds": "GIVEN user watching a LIVE game in Gameday mode",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN data becomes available for a pitcher batter matchup ",
+        "expected": "THEN the pitcher's name, position, number, and picture should display\nAND the batter's name, position, number, and picture should display"
+      },
+      {
+        "content": "WHEN the user watches live\nAND continues to watch into a subsequent inning",
+        "expected": "THEN the pitcher batter matchups will continue to display and match with the pitchers and batters in the inning"
+      }
+    ]
+  },
+  {
+    "id": 30492489,
+    "title": "Error handling",
+    "section_id": 1634092,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1682100822,
+    "updated_by": 232,
+    "updated_on": 1682100822,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 589800,
+    "display_order": 13,
+    "custom_preconds": "GIVEN a user watching a game in Gameday mode",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a player failure occurs \n\n",
+        "expected": "THEN exit gameday mode \nAND just show the video playback failure"
+      },
+      {
+        "content": "WHEN the Gameday response fails for 60 seconds :question_mark:\n",
+        "expected": "THEN render a failure to load message\nAND display an exit button"
+      }
+    ]
+  }
+]

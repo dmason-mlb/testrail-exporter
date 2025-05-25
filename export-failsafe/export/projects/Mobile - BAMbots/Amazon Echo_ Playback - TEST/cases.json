@@ -1,0 +1,2066 @@
+[
+  {
+    "id": 834731,
+    "title": "Audio Playback Intents to Request Live Games",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1485968570,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user requests a gameday audio feed of a team, nickname, or locale which is live with any of the intents listed below (test all):\r\n",
+    "custom_expected": "THEN Alexa will respond with: Playing the [team] [vs. or at] the [opponent on broadcast callsign]\r\nAND the gameday audio feed will begin playback",
+    "custom_steps_separated": [
+      {
+        "content": "(Team) radio\ni.e. Cubs radio",
+        "expected": ""
+      },
+      {
+        "content": "Listen to the (team)\ni.e. Listen to the Cubs",
+        "expected": ""
+      },
+      {
+        "content": "Listen to the (team) game\ni.e. Listen to the Cubs game",
+        "expected": ""
+      },
+      {
+        "content": "Play the (homeTeam) (awayTeam) game\ni.e Play the Cubs Cardinals game",
+        "expected": ""
+      },
+      {
+        "content": "Play the (team) broadcast\ni.e. Play the Cubs broadcast",
+        "expected": ""
+      },
+      {
+        "content": "Play the (nickname) game\ni.e. Play the Cubbies game",
+        "expected": ""
+      },
+      {
+        "content": "Play the (locale) game\ni.e. Play the Chicago game",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 877749,
+    "title": "Audio Request by Radio Station or Broadcaster not Supported",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1488401976,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user requests a gameday audio feed by radio station or broadcaster or station ID\r\n- Play (radio station), i.e. Play WGN\r\n- Listen to (radio station name / call letters), i.e Listen to WEEB",
+    "custom_expected": "THEN this is not supported and Alexa responds with:\r\nThe MLB Skill can play audio broadcasts for live Major League baseball games. While listening to games you can pause and resume live playback at any time. Try saying things like, \"Play the Mets game.\", \"I want to listen to the Royals.\", or \"Start the Cubs stream.\" What would you like to do?",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 833401,
+    "title": "Audio Playback",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1485886445,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user requests a gameday audio feed of a team, nickname, or locale which is available\r\n",
+    "custom_expected": "THEN Alexa will respond with: Playing the [team] [vs. or at] the [opponent on broadcast callsign]\r\nAND the gameday audio feed will begin playback",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 833411,
+    "title": "Continuous Audio Playback",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1485888413,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill and requested a game\r\nAND a live gameday audio feed is playing",
+    "custom_steps": "WHEN the user listens to the feed\r\nAND does not speak any intents (no interaction)",
+    "custom_expected": "THEN the gameday audio feed will continue playing w/o interruptions",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 871537,
+    "title": "Continuous Audio Playback during Commercial",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-203",
+    "created_by": 65,
+    "created_on": 1488234868,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill and requested a game\r\nAND a live gameday audio feed is playing",
+    "custom_steps": "WHEN the commercials starts playback\r\nAND user does not speak any intents (no interaction)",
+    "custom_expected": "THEN the commercials will play w/o interruptions \r\nAND the gameday audio will continue playing after the commercial break",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 834710,
+    "title": "Pause Audio Playback",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-135",
+    "created_by": 65,
+    "created_on": 1485964731,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill and requested a game\r\nAND a live gameday audio feed is playing",
+    "custom_steps": "WHEN the user requests a pause intent: i.e. \"Alexa, Pause\"",
+    "custom_expected": "THEN the gameday feed will suspend playback. \r\n\r\n*This does not hold the user's place; it merely suspends playback, it doesn't technically pause it where the user was.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 833404,
+    "title": "Resume Audio Playback",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-135",
+    "created_by": 65,
+    "created_on": 1485886845,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill and requested a game\r\nAND user has verbally paused a live gameday audio feed",
+    "custom_steps": "WHEN the user requests the intent to resume playing, i.e. \"Alexa, Resume\" ",
+    "custom_expected": "THEN the gameday feed will resume playback\r\n\r\n*Playback does not resume where the user left off, merely reopens broadcast at current position.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 834711,
+    "title": "Stop / Cancel Audio Playback",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1485964906,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 8,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill and requested a game\r\nAND a gameday audio feed is playing",
+    "custom_steps": "WHEN the user requests a stop intent: i.e. \"Alexa, Stop\" or \"Alexa, Cancel\"",
+    "custom_expected": "THEN the gameday feed will suspend playback\r\nAND no voice prompt should result",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 838960,
+    "title": "Volume Number for Audio Playback",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1486399798,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 9,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill and requested a game\r\nAND a gameday audio feed is playing",
+    "custom_steps": "WHEN the user requests an intent for volume number: i.e. \"Volume six\"\r\n(volume ranges from 0-10)",
+    "custom_expected": "THEN the gameday feed volume will increase / decrease accordingly",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 838961,
+    "title": "Volume for Audio Playback",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1486399946,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 10,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill and requested a game\r\nAND a gameday audio feed is playing",
+    "custom_steps": "WHEN the user requests a volume intent: i.e. \"Louder\" or \"Turn it down.\"",
+    "custom_expected": "THEN the gameday feed volume will increase / decrease accordingly",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 838962,
+    "title": "Mute for Audio Playback",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1486400121,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 11,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill and requested a game\r\nAND a gameday audio feed is playing",
+    "custom_steps": "WHEN the user requests an intent to mute",
+    "custom_expected": "THEN the gameday feed will be inaudible",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 838963,
+    "title": "Unmute for Audio Playback",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1486400244,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 12,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill and requested a game\r\nAND a gameday audio feed is playing\r\nAND the user invoked Alexa to mute the audio",
+    "custom_steps": "WHEN the user requests an intent to unmute",
+    "custom_expected": "THEN the gameday audio feed will be audible",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 834732,
+    "title": "Audio Playback Fails",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-135",
+    "created_by": 65,
+    "created_on": 1485969546,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 13,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill and requested a game",
+    "custom_steps": "WHEN the user experiences a system error: i.e. \r\n- AudioPlayer, Playback Failed AVS Request \r\n- System.ExceptionEncountered AVS Request\r\n- BAM Internal Failure",
+    "custom_expected": "THEN the Alexa will respond with:\r\n\"Sorry, there was a problem. Please try again later.\"",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 834722,
+    "title": "EDIT Resume Audio Playback Failed",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-135",
+    "created_by": 65,
+    "created_on": 1485966947,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 14,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill and requested a game\r\nAND user has verbally paused a live gameday audio feed",
+    "custom_steps": "WHEN the user waits until the gameday auidio broadcast is complete\r\nAND the user requests the intent to resume playing, i.e. \"Alexa, Resume\" \r\n*from spreadsheet*\r\n\r\nWHEN the user experiences an audio player system error: AudioPlayer, Playback Failed AVS Request\r\n*from https://wiki.mlbam.com/pages/viewpage.action?spaceKey=BAMbots&title=AVS+Voice+Interaction+Flows%3A+GDA+Skill+2016&preview=/77189701/78316618/alexa-flows-draft-160831-inplayback.png*",
+    "custom_expected": "???? https://jira.mlbam.com/browse/SDBB-135\r\n\r\nResumes playback live.\r\n\r\n?????https://wiki.mlbam.com/pages/viewpage.action?spaceKey=BAMbots&title=AVS+Voice+Interaction+Flows%3A+GDA+Skill+2016&preview=/77189701/78316618/alexa-flows-draft-160831-inplayback.png\r\n\r\nRetry playback\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 834733,
+    "title": "EDIT Audio Playback Fails_Retry Playback",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-135",
+    "created_by": 65,
+    "created_on": 1485969704,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 15,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill and requested a game",
+    "custom_steps": "WHEN the user experiences an audio player system error: AudioPlayer, Playback Failed AVS Request\r\n\r\n???? AND the user states an intent to retry: i.e. \"Alexa, retry playback\"\r\n",
+    "custom_expected": "THEN the Alexa will respond with:\r\n\"Sorry, there was a problem. Please try again later.\"",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 834712,
+    "title": "Audio Playback to Completion",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-135",
+    "created_by": 65,
+    "created_on": 1485965186,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 16,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill and requested a game",
+    "custom_steps": "WHEN the user playbacks a team's live audio broadcast to completion",
+    "custom_expected": "THEN the Alexa responds with:\r\n\"Thanks for listening on MLB.com!\"",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 834713,
+    "title": "Unsupported Playback Intents",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-135",
+    "created_by": 65,
+    "created_on": 1485965720,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 17,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill and requested a game\r\nAND live gameday audio feed is playing",
+    "custom_steps": "WHEN the user asks Alexa for the following intents listed below (test all):",
+    "custom_expected": "THEN the Alexa responds with:\r\n\"Sorry, I can't do that with live games.\"",
+    "custom_steps_separated": [
+      {
+        "content": "Alexa, Shuffle",
+        "expected": ""
+      },
+      {
+        "content": "Alexa, Next",
+        "expected": ""
+      },
+      {
+        "content": "Alexa, Queue",
+        "expected": ""
+      },
+      {
+        "content": "Alexa, Loop",
+        "expected": ""
+      },
+      {
+        "content": "Alexa, Start",
+        "expected": ""
+      },
+      {
+        "content": "Alexa, Repeat",
+        "expected": ""
+      },
+      {
+        "content": "Alexa, Previous",
+        "expected": ""
+      },
+      {
+        "content": "Alexa, Start Over",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 871586,
+    "title": "EDIT Session Timeout",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1488235363,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 18,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill and requested a game\r\nAND a live gameday audio feed is playing",
+    "custom_steps": "WHEN the user listens to the feed\r\nAND does not speak any intents (no interaction)",
+    "custom_expected": "THEN the gameday audio feed will continue playing w/o interruptions\r\n\r\n???? Session Times Out, see wiki\r\n\r\nhttps://wiki.mlbam.com/pages/viewpage.action?spaceKey=BAMbots&title=AVS+Voice+Interaction+Flows%3A+GDA+Skill+2016",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 833412,
+    "title": "DO NOT TEST____Broadcasts Listed",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1485889093,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 19,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill and requested a game\r\nAND a user is playing a gameday audio feed",
+    "custom_steps": "WHEN the user requests the intent to change the broadcast of the gameday audio feed",
+    "custom_expected": "THEN Alexa will state the broadcast list response",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 836563,
+    "title": "DO NOT TEST____Change Broadcast",
+    "section_id": 124540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1486139248,
+    "updated_by": 65,
+    "updated_on": 1496329505,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 20,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill\r\nAND a user is playing a gameday audio feed\r\nAND the user requests the intent to change the broadcast of the gameday audio feed\r\nAND Alexa will state the broadcast list response",
+    "custom_steps": "WHEN the user responds with a valid selection",
+    "custom_expected": "THEN Alexa will respond with: \"Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].\"\r\nAND the the playback selected broadcast begins",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 834735,
+    "title": "Los Angeles Angels of Anaheim",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485973154,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].\r\nAND Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "anaheim",
+        "expected": ""
+      },
+      {
+        "content": "angelinos",
+        "expected": ""
+      },
+      {
+        "content": "angels",
+        "expected": ""
+      },
+      {
+        "content": "halos",
+        "expected": ""
+      },
+      {
+        "content": "l.a.",
+        "expected": ""
+      },
+      {
+        "content": "l.a. angels",
+        "expected": ""
+      },
+      {
+        "content": "la",
+        "expected": ""
+      },
+      {
+        "content": "los angeles",
+        "expected": ""
+      },
+      {
+        "content": "los angeles angels",
+        "expected": ""
+      },
+      {
+        "content": "los angeles angels of anaheim",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834749,
+    "title": "Arizona Diamondbacks",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485978516,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "arizona",
+        "expected": ""
+      },
+      {
+        "content": "arizona diamondbacks",
+        "expected": ""
+      },
+      {
+        "content": "backs",
+        "expected": ""
+      },
+      {
+        "content": "d backs",
+        "expected": ""
+      },
+      {
+        "content": "d-backs",
+        "expected": ""
+      },
+      {
+        "content": "dbacks",
+        "expected": ""
+      },
+      {
+        "content": "dee backs",
+        "expected": ""
+      },
+      {
+        "content": "diamondback",
+        "expected": ""
+      },
+      {
+        "content": "diamondbacks",
+        "expected": ""
+      },
+      {
+        "content": "phoenix",
+        "expected": ""
+      },
+      {
+        "content": "snakes",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834750,
+    "title": "Baltimore Orioles",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485978699,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "baltimore",
+        "expected": ""
+      },
+      {
+        "content": "baltimore orioles",
+        "expected": ""
+      },
+      {
+        "content": "o's",
+        "expected": ""
+      },
+      {
+        "content": "orange birds",
+        "expected": ""
+      },
+      {
+        "content": "orioles",
+        "expected": ""
+      },
+      {
+        "content": "ose",
+        "expected": ""
+      },
+      {
+        "content": "owes",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834751,
+    "title": "Boston Red Sox",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485978825,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "bosox",
+        "expected": ""
+      },
+      {
+        "content": "boston",
+        "expected": ""
+      },
+      {
+        "content": "boston red socks",
+        "expected": ""
+      },
+      {
+        "content": "boston red sox",
+        "expected": ""
+      },
+      {
+        "content": "bow socks",
+        "expected": ""
+      },
+      {
+        "content": "crimson hose",
+        "expected": ""
+      },
+      {
+        "content": "red socks",
+        "expected": ""
+      },
+      {
+        "content": "red sox",
+        "expected": ""
+      },
+      {
+        "content": "red sox nation",
+        "expected": ""
+      },
+      {
+        "content": "socks",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834752,
+    "title": "Chicago Cubs",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485979026,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "chicago",
+        "expected": ""
+      },
+      {
+        "content": "chicago cubs",
+        "expected": ""
+      },
+      {
+        "content": "cubbies",
+        "expected": ""
+      },
+      {
+        "content": "cubs",
+        "expected": ""
+      },
+      {
+        "content": "north siders",
+        "expected": ""
+      },
+      {
+        "content": "northsiders",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834753,
+    "title": "Cincinnati Reds",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485979207,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "big red machine",
+        "expected": ""
+      },
+      {
+        "content": "cincinnati",
+        "expected": ""
+      },
+      {
+        "content": "cincinnati reds",
+        "expected": ""
+      },
+      {
+        "content": "cincy",
+        "expected": ""
+      },
+      {
+        "content": "red legs",
+        "expected": ""
+      },
+      {
+        "content": "red machine",
+        "expected": ""
+      },
+      {
+        "content": "reds",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834754,
+    "title": "Cleveland Indians",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485979290,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "cleveland",
+        "expected": ""
+      },
+      {
+        "content": "cleveland indians",
+        "expected": ""
+      },
+      {
+        "content": "indians",
+        "expected": ""
+      },
+      {
+        "content": "tribe",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834755,
+    "title": "Colorado Rockies",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485979377,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 8,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "colorado",
+        "expected": ""
+      },
+      {
+        "content": "colorado rockies",
+        "expected": ""
+      },
+      {
+        "content": "denver",
+        "expected": ""
+      },
+      {
+        "content": "rockies",
+        "expected": ""
+      },
+      {
+        "content": "rocks",
+        "expected": ""
+      },
+      {
+        "content": "rox",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834757,
+    "title": "Detroit Tigers",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485980045,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 9,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "detroit",
+        "expected": ""
+      },
+      {
+        "content": "detroit rock city",
+        "expected": ""
+      },
+      {
+        "content": "detroit tigers",
+        "expected": ""
+      },
+      {
+        "content": "kitties",
+        "expected": ""
+      },
+      {
+        "content": "motor city",
+        "expected": ""
+      },
+      {
+        "content": "tigers",
+        "expected": ""
+      },
+      {
+        "content": "tigres",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834758,
+    "title": "Houston Astros",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485980132,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 10,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "astros",
+        "expected": ""
+      },
+      {
+        "content": "houston",
+        "expected": ""
+      },
+      {
+        "content": "houston astros",
+        "expected": ""
+      },
+      {
+        "content": "spacemen",
+        "expected": ""
+      },
+      {
+        "content": "stars",
+        "expected": ""
+      },
+      {
+        "content": "stro's",
+        "expected": ""
+      },
+      {
+        "content": "strose",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834759,
+    "title": "Kansans City Royals",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485980259,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 11,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "casey",
+        "expected": ""
+      },
+      {
+        "content": "crowns",
+        "expected": ""
+      },
+      {
+        "content": "k.c.",
+        "expected": ""
+      },
+      {
+        "content": "kc",
+        "expected": ""
+      },
+      {
+        "content": "kansas city",
+        "expected": ""
+      },
+      {
+        "content": "kansas city royals",
+        "expected": ""
+      },
+      {
+        "content": "royals",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834760,
+    "title": "Los Angeles Dodgers",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485980414,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 12,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "azul",
+        "expected": ""
+      },
+      {
+        "content": "blue crew",
+        "expected": ""
+      },
+      {
+        "content": "los angeles dodgers",
+        "expected": ""
+      },
+      {
+        "content": "dodgers",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834761,
+    "title": "Washington Nationals",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485980635,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 13,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "d.c.",
+        "expected": ""
+      },
+      {
+        "content": "dc",
+        "expected": ""
+      },
+      {
+        "content": "dee see",
+        "expected": ""
+      },
+      {
+        "content": "nationals",
+        "expected": ""
+      },
+      {
+        "content": "nats",
+        "expected": ""
+      },
+      {
+        "content": "washington",
+        "expected": ""
+      },
+      {
+        "content": "washington d.c.",
+        "expected": ""
+      },
+      {
+        "content": "washington nationals",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834762,
+    "title": "New York Mets",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485980820,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 14,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "amazin' mets",
+        "expected": ""
+      },
+      {
+        "content": "amazins",
+        "expected": ""
+      },
+      {
+        "content": "miracle mets",
+        "expected": ""
+      },
+      {
+        "content": "metropolitans",
+        "expected": ""
+      },
+      {
+        "content": "mets",
+        "expected": ""
+      },
+      {
+        "content": "new york",
+        "expected": ""
+      },
+      {
+        "content": "new york mets",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834763,
+    "title": "Oakland Athletics",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485980897,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 15,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "a's",
+        "expected": ""
+      },
+      {
+        "content": "athletics",
+        "expected": ""
+      },
+      {
+        "content": "aze",
+        "expected": ""
+      },
+      {
+        "content": "o town",
+        "expected": ""
+      },
+      {
+        "content": "o-town",
+        "expected": ""
+      },
+      {
+        "content": "oak town",
+        "expected": ""
+      },
+      {
+        "content": "oakland",
+        "expected": ""
+      },
+      {
+        "content": "oakland athletics",
+        "expected": ""
+      },
+      {
+        "content": "oaktown",
+        "expected": ""
+      },
+      {
+        "content": "oh town",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834764,
+    "title": "Pittsburgh Pirates",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485981125,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 16,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "buccanneers",
+        "expected": ""
+      },
+      {
+        "content": "buccos",
+        "expected": ""
+      },
+      {
+        "content": "buckos",
+        "expected": ""
+      },
+      {
+        "content": "bucks",
+        "expected": ""
+      },
+      {
+        "content": "bucs",
+        "expected": ""
+      },
+      {
+        "content": "pirates",
+        "expected": ""
+      },
+      {
+        "content": "pitt",
+        "expected": ""
+      },
+      {
+        "content": "pittsburgh",
+        "expected": ""
+      },
+      {
+        "content": "pittsburgh pirtates",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834765,
+    "title": "San Diego Padres",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485981268,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 17,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "friars",
+        "expected": ""
+      },
+      {
+        "content": "padres",
+        "expected": ""
+      },
+      {
+        "content": "pads",
+        "expected": ""
+      },
+      {
+        "content": "pods",
+        "expected": ""
+      },
+      {
+        "content": "s.d.",
+        "expected": ""
+      },
+      {
+        "content": "sd",
+        "expected": ""
+      },
+      {
+        "content": "san diego",
+        "expected": ""
+      },
+      {
+        "content": "san diego padres",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834771,
+    "title": "Seattle Mariners",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485983037,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 18,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "ems",
+        "expected": ""
+      },
+      {
+        "content": "m's",
+        "expected": ""
+      },
+      {
+        "content": "mares",
+        "expected": ""
+      },
+      {
+        "content": "mariners",
+        "expected": ""
+      },
+      {
+        "content": "seattle",
+        "expected": ""
+      },
+      {
+        "content": "seattle mariners",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834772,
+    "title": "San Francisco Giants",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485983112,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 19,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "g men",
+        "expected": ""
+      },
+      {
+        "content": "g-men",
+        "expected": ""
+      },
+      {
+        "content": "gee men",
+        "expected": ""
+      },
+      {
+        "content": "giants",
+        "expected": ""
+      },
+      {
+        "content": "gigantes",
+        "expected": ""
+      },
+      {
+        "content": "gints",
+        "expected": ""
+      },
+      {
+        "content": "jints",
+        "expected": ""
+      },
+      {
+        "content": "orange giants",
+        "expected": ""
+      },
+      {
+        "content": "s.f.",
+        "expected": ""
+      },
+      {
+        "content": "sf",
+        "expected": ""
+      },
+      {
+        "content": "san francisco",
+        "expected": ""
+      },
+      {
+        "content": "san francisco giants",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834774,
+    "title": "St. Louis Cardinals",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485983265,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 20,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "birdnals",
+        "expected": ""
+      },
+      {
+        "content": "birdos",
+        "expected": ""
+      },
+      {
+        "content": "birds",
+        "expected": ""
+      },
+      {
+        "content": "card birds",
+        "expected": ""
+      },
+      {
+        "content": "cardinals",
+        "expected": ""
+      },
+      {
+        "content": "cards",
+        "expected": ""
+      },
+      {
+        "content": "redbirds",
+        "expected": ""
+      },
+      {
+        "content": "saint louis",
+        "expected": ""
+      },
+      {
+        "content": "saint louis cardinals",
+        "expected": ""
+      },
+      {
+        "content": "st. louis",
+        "expected": ""
+      },
+      {
+        "content": "st. louis cardinals",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834775,
+    "title": "Tampa Bay Rays",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485983903,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 21,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "rays",
+        "expected": ""
+      },
+      {
+        "content": "tampa",
+        "expected": ""
+      },
+      {
+        "content": "tampa bay",
+        "expected": ""
+      },
+      {
+        "content": "tampa bay rays",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834776,
+    "title": "Texas Rangers",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485984147,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 22,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "arlington",
+        "expected": ""
+      },
+      {
+        "content": "lone stars",
+        "expected": ""
+      },
+      {
+        "content": "rangers",
+        "expected": ""
+      },
+      {
+        "content": "texas",
+        "expected": ""
+      },
+      {
+        "content": "texas rangers",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834777,
+    "title": "Toronto Blue Jays",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485984448,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 23,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "blue birds",
+        "expected": ""
+      },
+      {
+        "content": "blue jays",
+        "expected": ""
+      },
+      {
+        "content": "bluebirds",
+        "expected": ""
+      },
+      {
+        "content": "jays",
+        "expected": ""
+      },
+      {
+        "content": "toronto",
+        "expected": ""
+      },
+      {
+        "content": "toronto blue jays",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834778,
+    "title": "Minnesota Twins",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485984535,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 24,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "minneapolis",
+        "expected": ""
+      },
+      {
+        "content": "minnesota",
+        "expected": ""
+      },
+      {
+        "content": "minnesota twins",
+        "expected": ""
+      },
+      {
+        "content": "twin cities",
+        "expected": ""
+      },
+      {
+        "content": "twins",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834779,
+    "title": "Philadelphia Phillies",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485984610,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 25,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "philadelphia",
+        "expected": ""
+      },
+      {
+        "content": "philadelphia phillies",
+        "expected": ""
+      },
+      {
+        "content": "phillies",
+        "expected": ""
+      },
+      {
+        "content": "philly",
+        "expected": ""
+      },
+      {
+        "content": "phils",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834780,
+    "title": "Atlanta Braves",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485984707,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 26,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "amercia's team",
+        "expected": ""
+      },
+      {
+        "content": "atlanta",
+        "expected": ""
+      },
+      {
+        "content": "atlanta braves",
+        "expected": ""
+      },
+      {
+        "content": "braves",
+        "expected": ""
+      },
+      {
+        "content": "bravos",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834781,
+    "title": "Chicago White Sox",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485984778,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 27,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "chai socks",
+        "expected": ""
+      },
+      {
+        "content": "chi sox",
+        "expected": ""
+      },
+      {
+        "content": "chicago white sox",
+        "expected": ""
+      },
+      {
+        "content": "chisox",
+        "expected": ""
+      },
+      {
+        "content": "pale hose",
+        "expected": ""
+      },
+      {
+        "content": "south side",
+        "expected": ""
+      },
+      {
+        "content": "south siders",
+        "expected": ""
+      },
+      {
+        "content": "southsiders",
+        "expected": ""
+      },
+      {
+        "content": "white socks",
+        "expected": ""
+      },
+      {
+        "content": "white sox",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834782,
+    "title": "Miami Marlins",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485985067,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 28,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "fins",
+        "expected": ""
+      },
+      {
+        "content": "fish",
+        "expected": ""
+      },
+      {
+        "content": "marlins",
+        "expected": ""
+      },
+      {
+        "content": "miami",
+        "expected": ""
+      },
+      {
+        "content": "miami marlins",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834783,
+    "title": "New York Yankees",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485985165,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 29,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "baby bombers",
+        "expected": ""
+      },
+      {
+        "content": "bombers",
+        "expected": ""
+      },
+      {
+        "content": "bronx",
+        "expected": ""
+      },
+      {
+        "content": "bronx bombers",
+        "expected": ""
+      },
+      {
+        "content": "new york yankees",
+        "expected": ""
+      },
+      {
+        "content": "pinstripers",
+        "expected": ""
+      },
+      {
+        "content": "pinstripes",
+        "expected": ""
+      },
+      {
+        "content": "yankees",
+        "expected": ""
+      },
+      {
+        "content": "yanks",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 834784,
+    "title": "Milwaukee Brewers",
+    "section_id": 124541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116",
+    "created_by": 65,
+    "created_on": 1485985285,
+    "updated_by": 65,
+    "updated_on": 1496329589,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18704,
+    "display_order": 30,
+    "custom_preconds": "GIVEN the user has signed into & setup the client app, Alexa\r\nAND user has enabled the MLB Skill\r\nAND account is linked to MLB.com account with At Bat premium paid subscription\r\nAND user has opened MLB Skill",
+    "custom_steps": "WHEN the user calls out to Alexa to (play broadcast) for the following team / team aliases:",
+    "custom_expected": "THEN\r\n\r\nif game is not scheduled for today, Alexa responds with: \r\n- There is no live [Team] broadcast right now. Tune in to their next game, [versus / at] the [Opponent], [Day of Week], [Month] [Date], at [First Pitch Time] [eastern / central / mountain / pacific].\r\n\r\nif game is in preview, Alexa responds with:\r\n- The [awayTeam] vs. [homeTeam] game starts at [gameTime].\r\n\r\nif game is live, Alexa responds with:\r\n- Playing the [team] [vs. or at] the [opponent] on [broadcast callsign].; then Game Audio Playback of live radio broadcast for the official English-language broadcaster of the team requested, usually the team's local broadcast\r\n\r\nif game is in final, then Alexa responds with:\r\n- The [teamName] game already ended. The [teamName] [gameResult] to the [opponentName], [gameScore] in [inningTotal] innings.",
+    "custom_steps_separated": [
+      {
+        "content": "brew crew",
+        "expected": ""
+      },
+      {
+        "content": "brew hahs",
+        "expected": ""
+      },
+      {
+        "content": "brewers",
+        "expected": ""
+      },
+      {
+        "content": "cerveceros",
+        "expected": ""
+      },
+      {
+        "content": "crew",
+        "expected": ""
+      },
+      {
+        "content": "milwaukee",
+        "expected": ""
+      },
+      {
+        "content": "milwaukee brewers",
+        "expected": ""
+      }
+    ]
+  }
+]

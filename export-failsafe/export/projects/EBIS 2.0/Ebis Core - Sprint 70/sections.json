@@ -1,0 +1,47 @@
+[
+  {
+    "id": 151547,
+    "suite_id": 20812,
+    "name": "MISC",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 151548,
+    "suite_id": 20812,
+    "name": "Employee Permission",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 151549,
+    "suite_id": 20812,
+    "name": "AMT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 151550,
+    "suite_id": 20812,
+    "name": "Permission",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 151552,
+    "suite_id": 20812,
+    "name": "Report",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

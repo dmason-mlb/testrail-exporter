@@ -1,0 +1,1136 @@
+[
+  {
+    "id": 1625636,
+    "suite_id": 585754,
+    "name": "registerDevice",
+    "description": "Register a device application session MLB.com JWT should be passed in as a header if the user is logged in",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1625637,
+    "suite_id": 585754,
+    "name": "registerReceiptDevice",
+    "description": "An receipt device is a user that has a valid receipt id, but does not have an mlb account If the user is simply not logged in, they should use the registerDeviceEndpoint",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1625638,
+    "suite_id": 585754,
+    "name": "refreshSession",
+    "description": "Refresh session is to be called if there a known change in user information Such as a drastic change in location",
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1625639,
+    "suite_id": 585754,
+    "name": "initPlaybackSession",
+    "description": "Given a valid session connected to a user, they can request playback of a media id",
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1678062,
+    "suite_id": 585754,
+    "name": "Blackout Tests",
+    "description": null,
+    "parent_id": 1625639,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 1682203,
+    "suite_id": 585754,
+    "name": "TV Scenarios",
+    "description": null,
+    "parent_id": 1678062,
+    "display_order": 12,
+    "depth": 2
+  },
+  {
+    "id": 1689244,
+    "suite_id": 585754,
+    "name": "International",
+    "description": null,
+    "parent_id": 1682203,
+    "display_order": 13,
+    "depth": 3
+  },
+  {
+    "id": 1724102,
+    "suite_id": 585754,
+    "name": "audio only",
+    "description": null,
+    "parent_id": 1625639,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 1841995,
+    "suite_id": 585754,
+    "name": "Ad Contributor Tests",
+    "description": null,
+    "parent_id": 1625639,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 1841997,
+    "suite_id": 585754,
+    "name": "AUDIO",
+    "description": null,
+    "parent_id": 1841995,
+    "display_order": 16,
+    "depth": 2
+  },
+  {
+    "id": 1842989,
+    "suite_id": 585754,
+    "name": "ARCHIVED",
+    "description": null,
+    "parent_id": 1841997,
+    "display_order": 17,
+    "depth": 3
+  },
+  {
+    "id": 1842990,
+    "suite_id": 585754,
+    "name": "LIVE",
+    "description": null,
+    "parent_id": 1841997,
+    "display_order": 18,
+    "depth": 3
+  },
+  {
+    "id": 1841996,
+    "suite_id": 585754,
+    "name": "VIDEO",
+    "description": null,
+    "parent_id": 1841995,
+    "display_order": 19,
+    "depth": 2
+  },
+  {
+    "id": 1842987,
+    "suite_id": 585754,
+    "name": "ARCHIVED",
+    "description": null,
+    "parent_id": 1841996,
+    "display_order": 20,
+    "depth": 3
+  },
+  {
+    "id": 1842988,
+    "suite_id": 585754,
+    "name": "LIVE",
+    "description": null,
+    "parent_id": 1841996,
+    "display_order": 21,
+    "depth": 3
+  },
+  {
+    "id": 1843413,
+    "suite_id": 585754,
+    "name": "FGOTD",
+    "description": null,
+    "parent_id": 1841995,
+    "display_order": 22,
+    "depth": 2
+  },
+  {
+    "id": 2032981,
+    "suite_id": 585754,
+    "name": "SNY",
+    "description": null,
+    "parent_id": 1625639,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 2033666,
+    "suite_id": 585754,
+    "name": "SNLA",
+    "description": null,
+    "parent_id": 1625639,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 1625640,
+    "suite_id": 585754,
+    "name": "heartbeatPlayback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 1625641,
+    "suite_id": 585754,
+    "name": "contentSearch",
+    "description": "The entry point to finding what types of content are available for playback",
+    "parent_id": null,
+    "display_order": 31,
+    "depth": 0
+  },
+  {
+    "id": 1673212,
+    "suite_id": 585754,
+    "name": "search by home team id",
+    "description": "example: HomeTeamId=\"147\"",
+    "parent_id": 1625641,
+    "display_order": 32,
+    "depth": 1
+  },
+  {
+    "id": 1673213,
+    "suite_id": 585754,
+    "name": "search by content type",
+    "description": "example: ContentType=\"HIGHLIGHT\"",
+    "parent_id": 1625641,
+    "display_order": 33,
+    "depth": 1
+  },
+  {
+    "id": 1673214,
+    "suite_id": 585754,
+    "name": "search by content restriction",
+    "description": "example: ContentRestriction=\"FREE\"",
+    "parent_id": 1625641,
+    "display_order": 34,
+    "depth": 1
+  },
+  {
+    "id": 1673215,
+    "suite_id": 585754,
+    "name": "search by feed type",
+    "description": "example: FeedType=\"AWAY\"",
+    "parent_id": 1625641,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 1673216,
+    "suite_id": 585754,
+    "name": "search by date",
+    "description": null,
+    "parent_id": 1625641,
+    "display_order": 36,
+    "depth": 1
+  },
+  {
+    "id": 1673217,
+    "suite_id": 585754,
+    "name": "search by media type",
+    "description": null,
+    "parent_id": 1625641,
+    "display_order": 37,
+    "depth": 1
+  },
+  {
+    "id": 1673218,
+    "suite_id": 585754,
+    "name": "search by content experience",
+    "description": null,
+    "parent_id": 1625641,
+    "display_order": 38,
+    "depth": 1
+  },
+  {
+    "id": 1673219,
+    "suite_id": 585754,
+    "name": "search by home team name",
+    "description": "example: HomeTeamName=\"New York Yankees\"",
+    "parent_id": 1625641,
+    "display_order": 39,
+    "depth": 1
+  },
+  {
+    "id": 1673220,
+    "suite_id": 585754,
+    "name": "search by away team id",
+    "description": "example: AwayTeamId=\"123\"",
+    "parent_id": 1625641,
+    "display_order": 40,
+    "depth": 1
+  },
+  {
+    "id": 1673221,
+    "suite_id": 585754,
+    "name": "search by away team name",
+    "description": "example: AwayTeamName=\"New York Mets\"",
+    "parent_id": 1625641,
+    "display_order": 41,
+    "depth": 1
+  },
+  {
+    "id": 1673222,
+    "suite_id": 585754,
+    "name": "search by media state",
+    "description": "example: MediaState=\"OFF\"",
+    "parent_id": 1625641,
+    "display_order": 42,
+    "depth": 1
+  },
+  {
+    "id": 1673223,
+    "suite_id": 585754,
+    "name": "search by team id",
+    "description": "example: TeamId=\"123\"",
+    "parent_id": 1625641,
+    "display_order": 43,
+    "depth": 1
+  },
+  {
+    "id": 1673303,
+    "suite_id": 585754,
+    "name": "search by home team division id",
+    "description": "example: HomeTeamDivisionId=201",
+    "parent_id": 1625641,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 1673304,
+    "suite_id": 585754,
+    "name": "search by away team division id",
+    "description": "example: AwayTeamDivisionId=201",
+    "parent_id": 1625641,
+    "display_order": 45,
+    "depth": 1
+  },
+  {
+    "id": 1674905,
+    "suite_id": 585754,
+    "name": "search by language",
+    "description": null,
+    "parent_id": 1625641,
+    "display_order": 46,
+    "depth": 1
+  },
+  {
+    "id": 1695209,
+    "suite_id": 585754,
+    "name": "search by additional auths required",
+    "description": null,
+    "parent_id": 1625641,
+    "display_order": 48,
+    "depth": 1
+  },
+  {
+    "id": 1694082,
+    "suite_id": 585754,
+    "name": "content restrictions",
+    "description": "Regional Blackout Game (Regular)\nMIA @ NYM - gamePk 1400000973",
+    "parent_id": 1625641,
+    "display_order": 49,
+    "depth": 1
+  },
+  {
+    "id": 1695217,
+    "suite_id": 585754,
+    "name": "Apple TV+",
+    "description": "contentRestrictionDetails = [{ code: \"appletv_blackout\" }]",
+    "parent_id": 1694082,
+    "display_order": 50,
+    "depth": 2
+  },
+  {
+    "id": 1695749,
+    "suite_id": 585754,
+    "name": "Roku",
+    "description": null,
+    "parent_id": 1694082,
+    "display_order": 51,
+    "depth": 2
+  },
+  {
+    "id": 1697214,
+    "suite_id": 585754,
+    "name": "FGOTD",
+    "description": "MLB.tv free game of the day\nMIL @ PIT - gamePk 1400000976",
+    "parent_id": 1694082,
+    "display_order": 52,
+    "depth": 2
+  },
+  {
+    "id": 1698883,
+    "suite_id": 585754,
+    "name": "regular season",
+    "description": null,
+    "parent_id": 1694082,
+    "display_order": 53,
+    "depth": 2
+  },
+  {
+    "id": 1698885,
+    "suite_id": 585754,
+    "name": "espn",
+    "description": null,
+    "parent_id": 1698883,
+    "display_order": 54,
+    "depth": 3
+  },
+  {
+    "id": 1697229,
+    "suite_id": 585754,
+    "name": "national blackout",
+    "description": "Regular Season ESPN Game\nCOL @ LAD - gamePk 1400000980",
+    "parent_id": 1698885,
+    "display_order": 55,
+    "depth": 4
+  },
+  {
+    "id": 1698886,
+    "suite_id": 585754,
+    "name": "tbs",
+    "description": null,
+    "parent_id": 1698883,
+    "display_order": 56,
+    "depth": 3
+  },
+  {
+    "id": 1697224,
+    "suite_id": 585754,
+    "name": "national blackout",
+    "description": "Regular Season TBS Game\nHOU @ LAA - gamePk 1400000983",
+    "parent_id": 1698886,
+    "display_order": 57,
+    "depth": 4
+  },
+  {
+    "id": 1698887,
+    "suite_id": 585754,
+    "name": "fox",
+    "description": null,
+    "parent_id": 1698883,
+    "display_order": 58,
+    "depth": 3
+  },
+  {
+    "id": 1697230,
+    "suite_id": 585754,
+    "name": "national blackout",
+    "description": "Regular Season FOX Game\nTEX @ ARI - gamePk 1400000981",
+    "parent_id": 1698887,
+    "display_order": 59,
+    "depth": 4
+  },
+  {
+    "id": 1698888,
+    "suite_id": 585754,
+    "name": "fs1",
+    "description": null,
+    "parent_id": 1698883,
+    "display_order": 60,
+    "depth": 3
+  },
+  {
+    "id": 1697232,
+    "suite_id": 585754,
+    "name": "national blackout",
+    "description": "Regular Season FS1 Game\nOAK @ SEA - gamePk 1400000982",
+    "parent_id": 1698888,
+    "display_order": 61,
+    "depth": 4
+  },
+  {
+    "id": 1698889,
+    "suite_id": 585754,
+    "name": "mlbn",
+    "description": null,
+    "parent_id": 1698883,
+    "display_order": 62,
+    "depth": 3
+  },
+  {
+    "id": 1697571,
+    "suite_id": 585754,
+    "name": "national blackout",
+    "description": "Regular Season MLBN Game\nKC @ MIN - gamePk 1400000984",
+    "parent_id": 1698889,
+    "display_order": 63,
+    "depth": 4
+  },
+  {
+    "id": 1698894,
+    "suite_id": 585754,
+    "name": "regional blackout",
+    "description": "Regional Blackout Game (Regular)\nMIA @ NYM - gamePk 1400000973",
+    "parent_id": 1698883,
+    "display_order": 64,
+    "depth": 3
+  },
+  {
+    "id": 1698884,
+    "suite_id": 585754,
+    "name": "post season",
+    "description": null,
+    "parent_id": 1694082,
+    "display_order": 66,
+    "depth": 2
+  },
+  {
+    "id": 1698890,
+    "suite_id": 585754,
+    "name": "tbs",
+    "description": null,
+    "parent_id": 1698884,
+    "display_order": 67,
+    "depth": 3
+  },
+  {
+    "id": 1698891,
+    "suite_id": 585754,
+    "name": "espn",
+    "description": null,
+    "parent_id": 1698884,
+    "display_order": 70,
+    "depth": 3
+  },
+  {
+    "id": 1698892,
+    "suite_id": 585754,
+    "name": "fox",
+    "description": null,
+    "parent_id": 1698884,
+    "display_order": 73,
+    "depth": 3
+  },
+  {
+    "id": 1782094,
+    "suite_id": 585754,
+    "name": "espn2",
+    "description": null,
+    "parent_id": 1698884,
+    "display_order": 78,
+    "depth": 3
+  },
+  {
+    "id": 1782095,
+    "suite_id": 585754,
+    "name": "abc",
+    "description": null,
+    "parent_id": 1698884,
+    "display_order": 81,
+    "depth": 3
+  },
+  {
+    "id": 1982581,
+    "suite_id": 585754,
+    "name": "tnt",
+    "description": null,
+    "parent_id": 1698884,
+    "display_order": 84,
+    "depth": 3
+  },
+  {
+    "id": 1698895,
+    "suite_id": 585754,
+    "name": "ASG",
+    "description": "All-Star Game (FOX)\nAL @ NL - gamePk 1400000977",
+    "parent_id": 1694082,
+    "display_order": 85,
+    "depth": 2
+  },
+  {
+    "id": 1698896,
+    "suite_id": 585754,
+    "name": "International Feed",
+    "description": null,
+    "parent_id": 1698895,
+    "display_order": 86,
+    "depth": 3
+  },
+  {
+    "id": 1754011,
+    "suite_id": 585754,
+    "name": "receipt users",
+    "description": null,
+    "parent_id": 1694082,
+    "display_order": 88,
+    "depth": 2
+  },
+  {
+    "id": 1702389,
+    "suite_id": 585754,
+    "name": "search by gamePk",
+    "description": null,
+    "parent_id": 1625641,
+    "display_order": 89,
+    "depth": 1
+  },
+  {
+    "id": 1743355,
+    "suite_id": 585754,
+    "name": "search by call sign",
+    "description": null,
+    "parent_id": 1625641,
+    "display_order": 90,
+    "depth": 1
+  },
+  {
+    "id": 1625642,
+    "suite_id": 585754,
+    "name": "mediaInfo",
+    "description": "Given a list of mediaIds, return back content information",
+    "parent_id": null,
+    "display_order": 91,
+    "depth": 0
+  },
+  {
+    "id": 1670464,
+    "suite_id": 585754,
+    "name": "contentFields",
+    "description": "A reference call to discover what fields are searchable in content search",
+    "parent_id": null,
+    "display_order": 93,
+    "depth": 0
+  },
+  {
+    "id": 1676219,
+    "suite_id": 585754,
+    "name": "contentBy",
+    "description": null,
+    "parent_id": null,
+    "display_order": 94,
+    "depth": 0
+  },
+  {
+    "id": 1676222,
+    "suite_id": 585754,
+    "name": "by date",
+    "description": null,
+    "parent_id": 1676219,
+    "display_order": 95,
+    "depth": 1
+  },
+  {
+    "id": 1676223,
+    "suite_id": 585754,
+    "name": "by gamePk",
+    "description": null,
+    "parent_id": 1676219,
+    "display_order": 96,
+    "depth": 1
+  },
+  {
+    "id": 1703968,
+    "suite_id": 585754,
+    "name": "content restrictions",
+    "description": "Regional Blackout Game (Regular)\nMIA @ NYM - gamePk 1400000973",
+    "parent_id": 1676219,
+    "display_order": 97,
+    "depth": 1
+  },
+  {
+    "id": 1703969,
+    "suite_id": 585754,
+    "name": "Apple TV+",
+    "description": "contentRestrictionDetails = [{ code: \"appletv_blackout\" }]",
+    "parent_id": 1703968,
+    "display_order": 98,
+    "depth": 2
+  },
+  {
+    "id": 1703970,
+    "suite_id": 585754,
+    "name": "Roku",
+    "description": null,
+    "parent_id": 1703968,
+    "display_order": 99,
+    "depth": 2
+  },
+  {
+    "id": 1703971,
+    "suite_id": 585754,
+    "name": "FGOTD",
+    "description": "MLB.tv free game of the day\nMIL @ PIT - gamePk 1400000976",
+    "parent_id": 1703968,
+    "display_order": 100,
+    "depth": 2
+  },
+  {
+    "id": 1703972,
+    "suite_id": 585754,
+    "name": "regular season",
+    "description": null,
+    "parent_id": 1703968,
+    "display_order": 101,
+    "depth": 2
+  },
+  {
+    "id": 1703973,
+    "suite_id": 585754,
+    "name": "espn",
+    "description": null,
+    "parent_id": 1703972,
+    "display_order": 102,
+    "depth": 3
+  },
+  {
+    "id": 1703974,
+    "suite_id": 585754,
+    "name": "national blackout",
+    "description": "Regular Season ESPN Game\nCOL @ LAD - gamePk 1400000980",
+    "parent_id": 1703973,
+    "display_order": 103,
+    "depth": 4
+  },
+  {
+    "id": 1703975,
+    "suite_id": 585754,
+    "name": "tbs",
+    "description": null,
+    "parent_id": 1703972,
+    "display_order": 104,
+    "depth": 3
+  },
+  {
+    "id": 1703976,
+    "suite_id": 585754,
+    "name": "national blackout",
+    "description": "Regular Season TBS Game\nHOU @ LAA - gamePk 1400000983",
+    "parent_id": 1703975,
+    "display_order": 105,
+    "depth": 4
+  },
+  {
+    "id": 1703977,
+    "suite_id": 585754,
+    "name": "fox",
+    "description": null,
+    "parent_id": 1703972,
+    "display_order": 106,
+    "depth": 3
+  },
+  {
+    "id": 1703978,
+    "suite_id": 585754,
+    "name": "national blackout",
+    "description": "Regular Season FOX Game\nTEX @ ARI - gamePk 1400000981",
+    "parent_id": 1703977,
+    "display_order": 107,
+    "depth": 4
+  },
+  {
+    "id": 1703979,
+    "suite_id": 585754,
+    "name": "fs1",
+    "description": null,
+    "parent_id": 1703972,
+    "display_order": 108,
+    "depth": 3
+  },
+  {
+    "id": 1703980,
+    "suite_id": 585754,
+    "name": "national blackout",
+    "description": "Regular Season FS1 Game\nOAK @ SEA - gamePk 1400000982",
+    "parent_id": 1703979,
+    "display_order": 109,
+    "depth": 4
+  },
+  {
+    "id": 1703981,
+    "suite_id": 585754,
+    "name": "mlbn",
+    "description": null,
+    "parent_id": 1703972,
+    "display_order": 110,
+    "depth": 3
+  },
+  {
+    "id": 1703982,
+    "suite_id": 585754,
+    "name": "national blackout",
+    "description": "Regular Season MLBN Game\nKC @ MIN - gamePk 1400000984",
+    "parent_id": 1703981,
+    "display_order": 111,
+    "depth": 4
+  },
+  {
+    "id": 1703983,
+    "suite_id": 585754,
+    "name": "regional blackout",
+    "description": "Regional Blackout Game (Regular)\nMIA @ NYM - gamePk 1400000973",
+    "parent_id": 1703972,
+    "display_order": 112,
+    "depth": 3
+  },
+  {
+    "id": 1703984,
+    "suite_id": 585754,
+    "name": "post season",
+    "description": null,
+    "parent_id": 1703968,
+    "display_order": 113,
+    "depth": 2
+  },
+  {
+    "id": 1703985,
+    "suite_id": 585754,
+    "name": "tbs",
+    "description": null,
+    "parent_id": 1703984,
+    "display_order": 114,
+    "depth": 3
+  },
+  {
+    "id": 1703986,
+    "suite_id": 585754,
+    "name": "US feed",
+    "description": "mediaId: 221c60ae-b2d7-4cc3-8461-1d0d93c56a46",
+    "parent_id": 1703985,
+    "display_order": 115,
+    "depth": 4
+  },
+  {
+    "id": 1703987,
+    "suite_id": 585754,
+    "name": "International feed",
+    "description": "mediaId: 917f81bb-a504-406f-8e68-bf6077c1a337",
+    "parent_id": 1703985,
+    "display_order": 116,
+    "depth": 4
+  },
+  {
+    "id": 1703988,
+    "suite_id": 585754,
+    "name": "espn",
+    "description": null,
+    "parent_id": 1703984,
+    "display_order": 117,
+    "depth": 3
+  },
+  {
+    "id": 1703989,
+    "suite_id": 585754,
+    "name": "US feed",
+    "description": "CLE @ DET - gamePk 1400000985\nmediaId: c5dd6dd2-5472-46f9-8c28-f7806d8984ee",
+    "parent_id": 1703988,
+    "display_order": 118,
+    "depth": 4
+  },
+  {
+    "id": 1782101,
+    "suite_id": 585754,
+    "name": "International feed",
+    "description": "mediaId: 917f81bb-a504-406f-8e68-bf6077c1a337",
+    "parent_id": 1703988,
+    "display_order": 119,
+    "depth": 4
+  },
+  {
+    "id": 1703990,
+    "suite_id": 585754,
+    "name": "fox",
+    "description": null,
+    "parent_id": 1703984,
+    "display_order": 120,
+    "depth": 3
+  },
+  {
+    "id": 1703992,
+    "suite_id": 585754,
+    "name": "US feed",
+    "description": "mediaId: 398c2f02-205d-4f73-b967-59a14dbfaf2c",
+    "parent_id": 1703990,
+    "display_order": 122,
+    "depth": 4
+  },
+  {
+    "id": 1703991,
+    "suite_id": 585754,
+    "name": "International feed",
+    "description": "mediaId: 3d238ab1-181e-4d1c-a4a6-6e54b8c0311b",
+    "parent_id": 1703990,
+    "display_order": 123,
+    "depth": 4
+  },
+  {
+    "id": 1782102,
+    "suite_id": 585754,
+    "name": "espn2",
+    "description": null,
+    "parent_id": 1703984,
+    "display_order": 125,
+    "depth": 3
+  },
+  {
+    "id": 1782103,
+    "suite_id": 585754,
+    "name": "US feed",
+    "description": "mediaId: 398c2f02-205d-4f73-b967-59a14dbfaf2c",
+    "parent_id": 1782102,
+    "display_order": 126,
+    "depth": 4
+  },
+  {
+    "id": 1782104,
+    "suite_id": 585754,
+    "name": "International feed",
+    "description": "mediaId: 3d238ab1-181e-4d1c-a4a6-6e54b8c0311b",
+    "parent_id": 1782102,
+    "display_order": 127,
+    "depth": 4
+  },
+  {
+    "id": 1782105,
+    "suite_id": 585754,
+    "name": "abc",
+    "description": null,
+    "parent_id": 1703984,
+    "display_order": 128,
+    "depth": 3
+  },
+  {
+    "id": 1782106,
+    "suite_id": 585754,
+    "name": "US feed",
+    "description": "mediaId: 221c60ae-b2d7-4cc3-8461-1d0d93c56a46",
+    "parent_id": 1782105,
+    "display_order": 129,
+    "depth": 4
+  },
+  {
+    "id": 1782107,
+    "suite_id": 585754,
+    "name": "International feed",
+    "description": "mediaId: 3d238ab1-181e-4d1c-a4a6-6e54b8c0311b",
+    "parent_id": 1782105,
+    "display_order": 130,
+    "depth": 4
+  },
+  {
+    "id": 1982580,
+    "suite_id": 585754,
+    "name": "tnt",
+    "description": null,
+    "parent_id": 1703984,
+    "display_order": 131,
+    "depth": 3
+  },
+  {
+    "id": 1703994,
+    "suite_id": 585754,
+    "name": "ASG",
+    "description": "All-Star Game (FOX)\nAL @ NL - gamePk 1400000977",
+    "parent_id": 1703968,
+    "display_order": 132,
+    "depth": 2
+  },
+  {
+    "id": 1703995,
+    "suite_id": 585754,
+    "name": "International Feed",
+    "description": null,
+    "parent_id": 1703994,
+    "display_order": 133,
+    "depth": 3
+  },
+  {
+    "id": 1678379,
+    "suite_id": 585754,
+    "name": "Error handling",
+    "description": null,
+    "parent_id": null,
+    "display_order": 194,
+    "depth": 0
+  },
+  {
+    "id": 1797213,
+    "suite_id": 585754,
+    "name": "initSession",
+    "description": null,
+    "parent_id": null,
+    "display_order": 195,
+    "depth": 0
+  },
+  {
+    "id": 1798209,
+    "suite_id": 585754,
+    "name": "receipt users",
+    "description": null,
+    "parent_id": 1797213,
+    "display_order": 196,
+    "depth": 1
+  },
+  {
+    "id": 1948533,
+    "suite_id": 585754,
+    "name": "tracking object tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 197,
+    "depth": 0
+  },
+  {
+    "id": 1980708,
+    "suite_id": 585754,
+    "name": "gameMedia",
+    "description": null,
+    "parent_id": null,
+    "display_order": 198,
+    "depth": 0
+  },
+  {
+    "id": 1980709,
+    "suite_id": 585754,
+    "name": "Apple TV+",
+    "description": "contentRestrictionDetails = [{ code: \"appletv_blackout\" }]",
+    "parent_id": 1980708,
+    "display_order": 199,
+    "depth": 1
+  },
+  {
+    "id": 1980710,
+    "suite_id": 585754,
+    "name": "Roku",
+    "description": null,
+    "parent_id": 1980708,
+    "display_order": 200,
+    "depth": 1
+  },
+  {
+    "id": 1980711,
+    "suite_id": 585754,
+    "name": "post season",
+    "description": null,
+    "parent_id": 1980708,
+    "display_order": 201,
+    "depth": 1
+  },
+  {
+    "id": 1980712,
+    "suite_id": 585754,
+    "name": "tbs",
+    "description": null,
+    "parent_id": 1980711,
+    "display_order": 202,
+    "depth": 2
+  },
+  {
+    "id": 1980715,
+    "suite_id": 585754,
+    "name": "espn",
+    "description": null,
+    "parent_id": 1980711,
+    "display_order": 205,
+    "depth": 2
+  },
+  {
+    "id": 1980718,
+    "suite_id": 585754,
+    "name": "fox",
+    "description": null,
+    "parent_id": 1980711,
+    "display_order": 208,
+    "depth": 2
+  },
+  {
+    "id": 1980721,
+    "suite_id": 585754,
+    "name": "espn2",
+    "description": null,
+    "parent_id": 1980711,
+    "display_order": 211,
+    "depth": 2
+  },
+  {
+    "id": 1980724,
+    "suite_id": 585754,
+    "name": "abc",
+    "description": null,
+    "parent_id": 1980711,
+    "display_order": 214,
+    "depth": 2
+  },
+  {
+    "id": 1982582,
+    "suite_id": 585754,
+    "name": "tnt",
+    "description": null,
+    "parent_id": 1980711,
+    "display_order": 215,
+    "depth": 2
+  },
+  {
+    "id": 1980729,
+    "suite_id": 585754,
+    "name": "regular season",
+    "description": null,
+    "parent_id": 1980708,
+    "display_order": 218,
+    "depth": 1
+  },
+  {
+    "id": 1980732,
+    "suite_id": 585754,
+    "name": "national blackout",
+    "description": null,
+    "parent_id": 1980729,
+    "display_order": 219,
+    "depth": 2
+  },
+  {
+    "id": 1980733,
+    "suite_id": 585754,
+    "name": "espn",
+    "description": null,
+    "parent_id": 1980732,
+    "display_order": 220,
+    "depth": 3
+  },
+  {
+    "id": 1980734,
+    "suite_id": 585754,
+    "name": "tbs",
+    "description": null,
+    "parent_id": 1980732,
+    "display_order": 221,
+    "depth": 3
+  },
+  {
+    "id": 1980735,
+    "suite_id": 585754,
+    "name": "regional blackout",
+    "description": null,
+    "parent_id": 1980729,
+    "display_order": 222,
+    "depth": 2
+  },
+  {
+    "id": 1981265,
+    "suite_id": 585754,
+    "name": "local blackout NYY vs NYM",
+    "description": "NOTE: we are passing NY zip code here",
+    "parent_id": 1980729,
+    "display_order": 223,
+    "depth": 2
+  },
+  {
+    "id": 2010563,
+    "suite_id": 585754,
+    "name": "recommendedMedia",
+    "description": null,
+    "parent_id": null,
+    "display_order": 224,
+    "depth": 0
+  },
+  {
+    "id": 2025271,
+    "suite_id": 585754,
+    "name": "contentCollections",
+    "description": null,
+    "parent_id": null,
+    "display_order": 225,
+    "depth": 0
+  }
+]

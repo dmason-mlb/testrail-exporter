@@ -1,0 +1,11 @@
+{
+  "id": 18705,
+  "name": "At Bat's Ask At Bat: Stats Leaders",
+  "description": "IAB-15657\r\nAs a user I would like to be able to ask At Bat to answer specific baseball stats queries such as:\r\nWho led the league in ERA in 1975?\r\nWho is the all time AL Steals Leader?\r\nWho holds the single season record for On Base percentage?\r\n\r\n- The user should press a microphone button which would open up a sheet with a \"capturing indicator\" like Siri (a waveform animation indicating that it is listening)\r\n- As the user speaks, we would show text to translation\r\n- The answer would be provided with a link to the correct view in Stats to get a deeper answer\r\n- Error handling would be provided if it doesn't understand the query\r\n\r\nIAB-16718\r\nAsk At Bat should be able to process any deep link returned by the bot service. While some custom work to handle stats deep links has been done to allow those links the be processed in a custom manner, we need to ensure any deep links returned by the service can be handled by Ask At Bat by directing the user to the page indicated in the link.\r\n\r\nWiki:\r\nhttps://wiki.mlbam.com/pages/viewpage.action?spaceKey=mobile&title=At+Bat+-+Question+Bot+-+Phase+1\r\nhttps://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders\r\nhttps://wiki.mlbam.com/pages/viewpage.action?pageId=55312411\r\nhttp://statsapi.mlb.com/api/v1/teams?sportId=1 (Team IDs)\r\n\r\nDesigns:\r\niOS - https://app.zeplin.io/project/59a72cd508f6e486f47ebd54\r\nAndroid - https://app.zeplin.io/project/59a72cba458184fde6e5c524",
+  "project_id": 150,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/18705"
+}

@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1955485,
+    "suite_id": 688867,
+    "name": "Article Content Carousel",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1957236,
+    "suite_id": 688867,
+    "name": "Insider Carousel",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1957291,
+    "suite_id": 688867,
+    "name": "Ticketing Module",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1957448,
+    "suite_id": 688867,
+    "name": "Text List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1957492,
+    "suite_id": 688867,
+    "name": "Navigation to Team Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1958046,
+    "suite_id": 688867,
+    "name": "Video Carousel",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1960915,
+    "suite_id": 688867,
+    "name": "MIG (Most Important Game)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1960916,
+    "suite_id": 688867,
+    "name": "Schedule Component",
+    "description": null,
+    "parent_id": 1960915,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 1960917,
+    "suite_id": 688867,
+    "name": "Matchup Component",
+    "description": null,
+    "parent_id": 1960915,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 1960918,
+    "suite_id": 688867,
+    "name": "Broadcast / Series string  Component",
+    "description": null,
+    "parent_id": 1960915,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 1960919,
+    "suite_id": 688867,
+    "name": "Product Links  Component",
+    "description": null,
+    "parent_id": 1960915,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 1960920,
+    "suite_id": 688867,
+    "name": "Players  Component",
+    "description": null,
+    "parent_id": 1960915,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 1960926,
+    "suite_id": 688867,
+    "name": "Analytics",
+    "description": null,
+    "parent_id": 1960915,
+    "display_order": 13,
+    "depth": 1
+  }
+]

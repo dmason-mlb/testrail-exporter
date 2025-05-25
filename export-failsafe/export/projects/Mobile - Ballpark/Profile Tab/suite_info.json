@@ -1,0 +1,11 @@
+{
+  "id": 695613,
+  "name": "Profile Tab",
+  "description": "**iOS**\r\nWIKIS:\r\n* [Gherkin Profile Tab](https://docs.google.com/document/d/1tSEibxLqKu2nxvNoiRIT9E1JMXwQNiP_MiIeBPzdjRk/edit )\r\n\r\nJIRAS:\r\n* EPIC: [BP-10936](https://baseball.atlassian.net/browse/BP-10936 )\r\n* [BP-10908](https://baseball.atlassian.net/browse/BP-10908 )\r\n* [BP-10968](https://baseball.atlassian.net/browse/BP-10968 )\r\n* [BP-10974](https://baseball.atlassian.net/browse/BP-10974 )\r\n\r\nDESIGN: [figma](https://www.figma.com/design/0oNryxBGauTBWja78zdQkX/Ballpark-Redesign-(DS)?node-id=1-368&node-type=canvas&t=6TtXVTDBAjNR5owj-0 )\r\n\r\n**ANDROID**\r\n\r\n* [Gherkin Profile Tab](https://docs.google.com/document/d/1tSEibxLqKu2nxvNoiRIT9E1JMXwQNiP_MiIeBPzdjRk/edit?tab=t.0)\r\n\r\nJIRAS: \r\n\r\n* EPIC: [BPA-7724](https://baseball.atlassian.net/browse/BPA-7724) \r\n* [BPA-7730](https://baseball.atlassian.net/browse/BPA-7730)\r\n* [VQA BPA-7827](https://baseball.atlassian.net/browse/BPA-7827)\r\n",
+  "project_id": 179,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/695613"
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 127878,
+    "suite_id": 18872,
+    "name": "ASG Scenarios",
+    "description": "ASG Accounts:\nhttps://wiki.mlbam.com/display/AAA/ASG+Activation+Flow+2017+-+Fox#ASGActivationFlow2017-Fox-2017MLBPremiumAccounts(QA&Prod)\n\nRegular 2017 Accounts:\nhttps://wiki.mlbam.com/display/CDANDMSFT/MLB.TV+-+2017+Connected+Devices+Test+Accounts",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 128603,
+    "suite_id": 18872,
+    "name": "ASG Archive Feeds",
+    "description": null,
+    "parent_id": 127878,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 128697,
+    "suite_id": 18872,
+    "name": "ASG Audio Feeds",
+    "description": null,
+    "parent_id": 127878,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 128602,
+    "suite_id": 18872,
+    "name": "International Feeds (On Devices that Support INT & NAT Feeds)",
+    "description": "Devices Known to Have This:\n- Apple TV / tvOS\n- Roku v4.0",
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

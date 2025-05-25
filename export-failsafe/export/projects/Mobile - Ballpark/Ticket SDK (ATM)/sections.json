@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1678524,
+    "suite_id": 609109,
+    "name": "Ticket scanview",
+    "description": "[BP-6943](https://baseball.atlassian.net/browse/BP-6943 )",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1678525,
+    "suite_id": 609109,
+    "name": "Rotating Barcode",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1678543,
+    "suite_id": 609109,
+    "name": "Screenshot Detection/Prevention",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1678527,
+    "suite_id": 609109,
+    "name": "iOS",
+    "description": "*iOS CANNOT prevent screenshots. Taking a screenshot does NOT prevent it from being stored in the gallery.  \n*iOS CAN detect screenshots and WILL notify the fan that screenshots will not work when entering the gate.",
+    "parent_id": 1678543,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 1678529,
+    "suite_id": 609109,
+    "name": "Android",
+    "description": "*Android notifies the fan when a screenshot is taken and prevent it from being stored in the local gallery. \n*Screenshot prevention is only enabled when there is a shared secret associated with a ticket.\n\nSome Android devices may allow screenshot to be taken, but image should be completely blacked out with barcode NOT visible.",
+    "parent_id": 1678543,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 1678530,
+    "suite_id": 609109,
+    "name": "Offline",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1679655,
+    "suite_id": 609109,
+    "name": "Barcode Scan [QR & PDF417]",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1678531,
+    "suite_id": 609109,
+    "name": "Ticket_Validations",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  }
+]

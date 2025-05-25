@@ -1,0 +1,11 @@
+{
+  "id": 704967,
+  "name": "[iOS][Beta-OS] Regression Suite for Releases",
+  "description": "Track when Apple and Android release Beta versions of their OS:\r\n* Apple: https://beta.apple.com\r\n* Android: https://www.google.com/android/beta",
+  "project_id": 179,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/704967"
+}

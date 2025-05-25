@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1648428,
+    "suite_id": 592690,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1641048,
+    "suite_id": 592690,
+    "name": "Prizes section on Profile page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1641049,
+    "suite_id": 592690,
+    "name": "Redeem Prize",
+    "description": null,
+    "parent_id": 1641048,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 1641050,
+    "suite_id": 592690,
+    "name": "Prizes modal",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1641046,
+    "suite_id": 592690,
+    "name": "Onboarding update",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1648429,
+    "suite_id": 592690,
+    "name": "Virtual Reward Packs for Badges",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1648430,
+    "suite_id": 592690,
+    "name": "Virtual Reward Packs for Users Ineligible for Badge Prizes",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  }
+]

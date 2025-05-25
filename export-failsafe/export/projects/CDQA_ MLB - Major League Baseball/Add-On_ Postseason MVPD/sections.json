@@ -1,0 +1,38 @@
+[
+  {
+    "id": 86963,
+    "suite_id": 14087,
+    "name": "Authorized Playback - Premium Entitled",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 86964,
+    "suite_id": 14087,
+    "name": "Unauthorized Playback Attempt",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 86965,
+    "suite_id": 14087,
+    "name": "Non Premium/Authorized Playback Attempt",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 128481,
+    "suite_id": 14087,
+    "name": "Xbox UWP - Postseason View",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

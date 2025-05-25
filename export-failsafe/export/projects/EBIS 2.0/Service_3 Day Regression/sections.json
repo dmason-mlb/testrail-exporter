@@ -1,0 +1,65 @@
+[
+  {
+    "id": 99812,
+    "suite_id": 15285,
+    "name": "Options - Outrights - DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 99813,
+    "suite_id": 15285,
+    "name": "Milestones",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 99814,
+    "suite_id": 15285,
+    "name": "Major League Service",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 99815,
+    "suite_id": 15285,
+    "name": "Minor League Service",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 99816,
+    "suite_id": 15285,
+    "name": "Basic Service Info",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 99817,
+    "suite_id": 15285,
+    "name": "Rookie Calculations",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 99818,
+    "suite_id": 15285,
+    "name": "Manual Adjustments",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  }
+]

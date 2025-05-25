@@ -1,0 +1,11 @@
+{
+  "id": 15359,
+  "name": "Amazon Echo: Onboarding - TEST",
+  "description": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=BAMbots&title=AVS+Voice+Interaction+Flows%3A+GDA+Skill+2016\r\n\r\nhttps://wiki.mlbam.com/display/BAMbots/Amazon+Echo+-+Gameday+Audio?preview=/68289044/77173696/intent-media.png\r\n\r\nhttps://jira.mlbam.com/browse/SDBB-135\r\n\r\nhttps://www.amazon.com/gp/help/customer/display.html/ref=hp_200127470_echo_img?nodeId=201399130",
+  "project_id": 150,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/15359"
+}

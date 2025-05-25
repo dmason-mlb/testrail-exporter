@@ -1,0 +1,56 @@
+[
+  {
+    "id": 303510,
+    "suite_id": 22150,
+    "name": "Drug Testing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 303511,
+    "suite_id": 22150,
+    "name": "Two Way Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 303512,
+    "suite_id": 22150,
+    "name": "DPL Updated Eligible Players Widget",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 303513,
+    "suite_id": 22150,
+    "name": "AMT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 303514,
+    "suite_id": 22150,
+    "name": "Reports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 303509,
+    "suite_id": 22150,
+    "name": "Misc",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  }
+]

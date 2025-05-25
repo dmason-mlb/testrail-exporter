@@ -1,0 +1,353 @@
+[
+  {
+    "id": 1645342,
+    "suite_id": 594606,
+    "name": "Ticketing Admin2 Home page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1726570,
+    "suite_id": 594606,
+    "name": "Admin",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1645373,
+    "suite_id": 594606,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 1726570,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 1645362,
+    "suite_id": 594606,
+    "name": "Permission Test Cases",
+    "description": null,
+    "parent_id": 1645373,
+    "display_order": 6,
+    "depth": 2
+  },
+  {
+    "id": 1645363,
+    "suite_id": 594606,
+    "name": "User Admin Permissions",
+    "description": null,
+    "parent_id": 1645373,
+    "display_order": 7,
+    "depth": 2
+  },
+  {
+    "id": 1645364,
+    "suite_id": 594606,
+    "name": "Event Config Permissions",
+    "description": null,
+    "parent_id": 1645373,
+    "display_order": 9,
+    "depth": 2
+  },
+  {
+    "id": 1645365,
+    "suite_id": 594606,
+    "name": "Ticket Holder Support Permissions",
+    "description": null,
+    "parent_id": 1645373,
+    "display_order": 10,
+    "depth": 2
+  },
+  {
+    "id": 1645366,
+    "suite_id": 594606,
+    "name": "BoxOffice Config Permissions",
+    "description": null,
+    "parent_id": 1645373,
+    "display_order": 11,
+    "depth": 2
+  },
+  {
+    "id": 1726571,
+    "suite_id": 594606,
+    "name": "Context Mapping Atlas",
+    "description": null,
+    "parent_id": 1726570,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 1726572,
+    "suite_id": 594606,
+    "name": "Ops",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 1645343,
+    "suite_id": 594606,
+    "name": "Ops section",
+    "description": null,
+    "parent_id": 1726572,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 1645367,
+    "suite_id": 594606,
+    "name": "Event Config",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 1645344,
+    "suite_id": 594606,
+    "name": "Team/Venue Selection",
+    "description": null,
+    "parent_id": 1645367,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 1645345,
+    "suite_id": 594606,
+    "name": "Event Search Field",
+    "description": null,
+    "parent_id": 1645367,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 1645346,
+    "suite_id": 594606,
+    "name": "Event Headers",
+    "description": null,
+    "parent_id": 1645367,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 1645347,
+    "suite_id": 594606,
+    "name": "Display Past Events",
+    "description": null,
+    "parent_id": 1645367,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 1645348,
+    "suite_id": 594606,
+    "name": "Display End Time",
+    "description": null,
+    "parent_id": 1645367,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 1645368,
+    "suite_id": 594606,
+    "name": "BoxOffice Config",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 1645349,
+    "suite_id": 594606,
+    "name": "Team/Venue Selection",
+    "description": null,
+    "parent_id": 1645368,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 1645350,
+    "suite_id": 594606,
+    "name": "Venue Config",
+    "description": null,
+    "parent_id": 1645368,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 1645351,
+    "suite_id": 594606,
+    "name": "Primary Ticket Settings",
+    "description": "![](index.php?/attachments/get/13379366)",
+    "parent_id": 1645368,
+    "display_order": 29,
+    "depth": 1
+  },
+  {
+    "id": 1645352,
+    "suite_id": 594606,
+    "name": "App Ticket Config",
+    "description": null,
+    "parent_id": 1645368,
+    "display_order": 30,
+    "depth": 1
+  },
+  {
+    "id": 1645353,
+    "suite_id": 594606,
+    "name": "Apple Wallet Config",
+    "description": null,
+    "parent_id": 1645368,
+    "display_order": 31,
+    "depth": 1
+  },
+  {
+    "id": 1645354,
+    "suite_id": 594606,
+    "name": "Overrides",
+    "description": null,
+    "parent_id": 1645368,
+    "display_order": 32,
+    "depth": 1
+  },
+  {
+    "id": 1645369,
+    "suite_id": 594606,
+    "name": "Ticket Holder Support",
+    "description": null,
+    "parent_id": null,
+    "display_order": 33,
+    "depth": 0
+  },
+  {
+    "id": 1645359,
+    "suite_id": 594606,
+    "name": "Ticketholder Search",
+    "description": null,
+    "parent_id": 1645369,
+    "display_order": 34,
+    "depth": 1
+  },
+  {
+    "id": 1645360,
+    "suite_id": 594606,
+    "name": "Ticketed Events",
+    "description": null,
+    "parent_id": 1645369,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 1645361,
+    "suite_id": 594606,
+    "name": "Profile",
+    "description": null,
+    "parent_id": 1645369,
+    "display_order": 36,
+    "depth": 1
+  },
+  {
+    "id": 1645357,
+    "suite_id": 594606,
+    "name": "Ticket Accounts",
+    "description": null,
+    "parent_id": 1645369,
+    "display_order": 37,
+    "depth": 1
+  },
+  {
+    "id": 1645355,
+    "suite_id": 594606,
+    "name": "Get forward History",
+    "description": null,
+    "parent_id": 1645369,
+    "display_order": 38,
+    "depth": 1
+  },
+  {
+    "id": 1645356,
+    "suite_id": 594606,
+    "name": "Find Ticket Holders",
+    "description": null,
+    "parent_id": 1645369,
+    "display_order": 40,
+    "depth": 1
+  },
+  {
+    "id": 1645358,
+    "suite_id": 594606,
+    "name": "Useful Links",
+    "description": null,
+    "parent_id": 1645369,
+    "display_order": 42,
+    "depth": 1
+  },
+  {
+    "id": 1726845,
+    "suite_id": 594606,
+    "name": "Ticket Resale Eligibility",
+    "description": null,
+    "parent_id": 1645369,
+    "display_order": 43,
+    "depth": 1
+  },
+  {
+    "id": 1726846,
+    "suite_id": 594606,
+    "name": "Feature Notification in the Ticket Holder Support tool",
+    "description": null,
+    "parent_id": 1645369,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 1726569,
+    "suite_id": 594606,
+    "name": "Home",
+    "description": null,
+    "parent_id": null,
+    "display_order": 83,
+    "depth": 0
+  },
+  {
+    "id": 1726573,
+    "suite_id": 594606,
+    "name": "THS",
+    "description": null,
+    "parent_id": null,
+    "display_order": 86,
+    "depth": 0
+  },
+  {
+    "id": 1645370,
+    "suite_id": 594606,
+    "name": "GET TICKET ACCOUNTS",
+    "description": null,
+    "parent_id": 1726573,
+    "display_order": 87,
+    "depth": 1
+  },
+  {
+    "id": 1645371,
+    "suite_id": 594606,
+    "name": "RESET",
+    "description": null,
+    "parent_id": 1726573,
+    "display_order": 88,
+    "depth": 1
+  },
+  {
+    "id": 1645372,
+    "suite_id": 594606,
+    "name": "SHOW JSON",
+    "description": null,
+    "parent_id": 1726573,
+    "display_order": 89,
+    "depth": 1
+  }
+]

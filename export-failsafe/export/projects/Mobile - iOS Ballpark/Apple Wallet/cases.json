@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1227832,
+    "title": "Apple Wallet",
+    "section_id": 148453,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1530564858,
+    "updated_by": 124,
+    "updated_on": 1530622212,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20480,
+    "display_order": 1,
+    "custom_preconds": "https://qa.boxoffice.mlb.com/api/v1/users/tickets",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user is Viewing the Scan View\nAND \"appleWalletEnabled\": true",
+        "expected": "There will be an \"Options\" button located in the bottom right corner of the scan view."
+      },
+      {
+        "content": "When the user is Viewing the Scan View\nAND \"appleWalletEnabled\": false",
+        "expected": "The \"options\" button will be hidden."
+      },
+      {
+        "content": "When the user is Viewing the Scan View\nAND the user Taps the \"Options\" button",
+        "expected": "There will be an \"Add to Wallet \" and \"Cancel\" button displayed at the bottom of the scan view"
+      },
+      {
+        "content": "When the user is Viewing the Scan View\nAND the user Taps the \"Options\" button\nAND Taps \"Cancel\"",
+        "expected": "The \"Add to Wallet\" and \"Cancel buttons are dismissed\nAnd the Ticket Scan View remains in view."
+      },
+      {
+        "content": "When the user is Viewing the Scan View\nAND the user Taps the \"Options\" button\nAND Taps \"Add to Wallet\"",
+        "expected": "The Pass Preview will be displayed\nAnd the user will have the option to either Add or Cancel the Ticket Add."
+      },
+      {
+        "content": "When the user is Viewing the Pass Preview\nAND taps the \"Cancel Button\"",
+        "expected": "The Pass Preview Slides down and dismissed\nAND the Ticket Scan View is displayed. "
+      },
+      {
+        "content": "When the user is Viewing the Pass Preview\n",
+        "expected": "There will be team matchup (away@home)\nAND to the left of the matchup will be a Cancel button\nAND to the right of the matchup there will be an Add button."
+      },
+      {
+        "content": "When the user is Viewing the Pass Preview",
+        "expected": ""
+      }
+    ]
+  }
+]

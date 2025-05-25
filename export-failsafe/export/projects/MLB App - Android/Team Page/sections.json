@@ -1,0 +1,83 @@
+[
+  {
+    "id": 686665,
+    "suite_id": 177980,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1948923,
+    "suite_id": 177980,
+    "name": "Section-Specific Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1949233,
+    "suite_id": 177980,
+    "name": "Performance & Stability Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1952440,
+    "suite_id": 177980,
+    "name": "Date Bar",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1952441,
+    "suite_id": 177980,
+    "name": "Matchup",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1952442,
+    "suite_id": 177980,
+    "name": "Product Links",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1952443,
+    "suite_id": 177980,
+    "name": "Analytics",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1952444,
+    "suite_id": 177980,
+    "name": "Postseason",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1965679,
+    "suite_id": 177980,
+    "name": "Integration with MLB App",
+    "description": "[HOME-213]Test cases related to 'Hide Scores' feature enabled at the Settings level in the app.",
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1052463,
+    "suite_id": 351493,
+    "name": "Update Player Headshot",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1052464,
+    "suite_id": 351493,
+    "name": "User Notification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1052465,
+    "suite_id": 351493,
+    "name": "Photo Management Configuration",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1052466,
+    "suite_id": 351493,
+    "name": "Player Image Management Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

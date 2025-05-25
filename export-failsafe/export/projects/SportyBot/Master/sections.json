@@ -1,0 +1,20 @@
+[
+  {
+    "id": 2037403,
+    "suite_id": 705128,
+    "name": "Sporty Gateway",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 2038058,
+    "suite_id": 705128,
+    "name": "Fastball Gateway",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

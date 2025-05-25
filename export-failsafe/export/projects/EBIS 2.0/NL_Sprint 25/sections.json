@@ -1,0 +1,29 @@
+[
+  {
+    "id": 106125,
+    "suite_id": 16236,
+    "name": "CBT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 106128,
+    "suite_id": 16236,
+    "name": "Global",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 106145,
+    "suite_id": 16236,
+    "name": "Investigation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "id": 57616,
+    "title": "Photo Upload/Edit",
+    "section_id": 8432,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 40,
+    "created_on": 1436988750,
+    "updated_by": 40,
+    "updated_on": 1460398491,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1102,
+    "display_order": 1,
+    "custom_preconds": "For this suite you can either add a photo from any ballpark guide page, POI, check-in flow, or event detail page. All of these starting points will take you through the photo upload/edit flow.\r\n\r\nhttps://wiki.mlbam.com/display/QAspace/Data+Points+and+Lookups",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user taps on add photo button",
+        "expected": "THEN the user will see an option to either take photo(Camera) or choose photo(Photo Library)"
+      },
+      {
+        "content": "When a user chooses take a photo to upload",
+        "expected": "THEN after the photo is taken the user will see the options 'Retake' or 'Use Photo' at the bottom of the screen"
+      },
+      {
+        "content": "When a user chooses to take a photo to upload\nAND the user taps on the 'retake' button",
+        "expected": "THEN the user will be brought back to the camera to retake the photo"
+      },
+      {
+        "content": "When a user chooses to take a photo to upload\nAND The user taps on the 'Use Photo' button \n",
+        "expected": "THEN the user will be brought to the photo edit page"
+      },
+      {
+        "content": "When a user chooses a photo to upload from their gallery",
+        "expected": "Then they will be taken to the edit photo page"
+      },
+      {
+        "content": "When a user chooses to upload a photo from their gallery\nAnd the user is brought to the edit photo page\nAND the user taps on 'Cancel'",
+        "expected": "THEN the user will be brought back to where they entered the upload photo flow"
+      },
+      {
+        "content": "When the user is on the edit photo page\nand the user taps on the 'Save' button located on the top right",
+        "expected": "Then the user will be brought to the 'Save Photo' page\nand there will be an 'Upload' button on the top right\nand the photo that was saved will be in the middle of the page\nand there will be a caption input box below the photo"
+      },
+      {
+        "content": "When the user is on the 'Save Photo' page\nand the user taps on the back button located on the top left",
+        "expected": "Then the user will be brought back to the 'Edit Photo' page"
+      },
+      {
+        "content": "When the user is on the Save Photo page\nand the user looks at the caption box below the photo",
+        "expected": "Then the user will see ghost text displaying 'Add a caption'\nand typing in that box will make the ghost text disappear\nand then deleting your text will make the ghost text reappear "
+      },
+      {
+        "content": "When the user is on the Save Photo page\nand the user types text into the caption box",
+        "expected": "Then the user will see the character limit value decrease from 140"
+      },
+      {
+        "content": "When the user is on the Save Journal page\nand the user taps on the 'Upload' button",
+        "expected": "Then the user will be brought to the uploading is in progress page\nand there will be a done button on the top right\nand there will be a share button under the upload message\nand below the share button will be the photo that you have uploaded"
+      },
+      {
+        "content": "When the user is on the upload in progress page\nand the user taps on the 'done' button on the top left\n",
+        "expected": "Then the user is brought back to the place where they had initiated the photo upload"
+      },
+      {
+        "content": "When a user has chosen a photo from their gallery to upload\n\n",
+        "expected": "Then the user is brought to the edit photo page"
+      },
+      {
+        "content": "When the user is on the Edit Photo page",
+        "expected": "THEN the user will see a section at the bottom that contains stickers"
+      },
+      {
+        "content": "When the user is on the Edit Photo page\nand the user looks at the stickers section",
+        "expected": "THEN the user will see an indicator(small white dot) below the sticker that is currently selected\n"
+      },
+      {
+        "content": "When the user is on the Edit Photo Page\nand the user taps on the different stickers",
+        "expected": "THEN the indicator will move to the next sticker as you tap on it\n"
+      },
+      {
+        "content": "When the user is on the Edit Photo page\nand the user taps on the different stickers",
+        "expected": "Then that sticker that the user taps on gets applied to photo\n*tap on all stickers to make sure they appear"
+      },
+      {
+        "content": "When the user is on the Edit Photo page\nand the user taps on the no sticker button",
+        "expected": "Then there will be no sticker applied to the photo"
+      },
+      {
+        "content": "When the user is on the Edit Photo page\nand the user selects a sticker",
+        "expected": "Then the sticker will appear on the photo"
+      },
+      {
+        "content": "When the user has finished editing the photo\nand the user adds a sticker\nand the user taps on the 'Save' button",
+        "expected": "THEN the user will be brought to the 'Save Photo' page\nand the user will see the sticker that was added to the photo"
+      },
+      {
+        "content": "When the user has added a sticker to a photo\nand the user has completed uploading that photo\nand the user looks at the photo from Journal photos page",
+        "expected": "Then the photo will have the sticker displaying on the photo"
+      },
+      {
+        "content": "When the user is on the Edit Photo page",
+        "expected": "Then the user will be able to zoom in the photo to crop it"
+      },
+      {
+        "content": "When the user is on the Edit Photo page\nand the user zooms in to crop the photo\nand the user taps on the Save button",
+        "expected": "Then the user will be brought to the save photo page\nand the photo will be cropped to the position that the user had set from the edit photo page"
+      },
+      {
+        "content": "When the user is on the edit photo page\nand the user zooms in to crop the photo\nand the user saves and uploads the photo\nand the user looks at the photo in the journal photos page",
+        "expected": "Then the photo will still be in the same cropped position that the user set from the edit photo page\n"
+      },
+      {
+        "content": "When the user is in the save photo view\nand the user looks at the caption text box located below the photo",
+        "expected": "Then the user will see prepopulatedg ghost text displaying \"Add a caption\"\nand tapping in the box will remove that text\nand removing your typed in text will again bring back the ghost text"
+      },
+      {
+        "content": "When the user is in the photo edit view\nand the user does not enter in any text",
+        "expected": "THEN the user will not see a caption when viewing the uploaded photo in Journal"
+      },
+      {
+        "content": "When a user is on the photo edit view\nand the user types in a caption\nand then the user uploads the photo",
+        "expected": "THEN when the user looks at the photo in Journal they will see the caption that was typed displayed in the photo underneath the photo\nand if there is a matchup then the the caption will appear below the matchup"
+      },
+      {
+        "content": "When a user adds a photo either by camera or device gallery",
+        "expected": "THEN when the user views the photo in the edit photo page the photo will be cropped to fit in the square"
+      },
+      {
+        "content": "When we edit a photo",
+        "expected": "THEN we will be able to zoom in and crop the photo\nand the photo will remain in the cropped state in the final version of the photo"
+      },
+      {
+        "content": "When we add a sticker to the photo",
+        "expected": "THEN the photo will be zoomed in once a sticker is added"
+      },
+      {
+        "content": "When we add a photo from the event detail page on either the ballpark guide page or a past game in Journal",
+        "expected": "THEN when looking at that photo we will see the game matchup appear at the bottom of the photo\nand that matchup will match the event it was uploaded for"
+      }
+    ]
+  },
+  {
+    "id": 58541,
+    "title": "Photo Sharing",
+    "section_id": 8432,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 40,
+    "created_on": 1437061816,
+    "updated_by": 40,
+    "updated_on": 1437580949,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1102,
+    "display_order": 2,
+    "custom_preconds": "The share option is on the last step of the upload process(photo uploading is in progress)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user is on the upload is in progress page\n",
+        "expected": "Then the user will see a share button below the progress message"
+      },
+      {
+        "content": "When the user taps on the 'Share' button",
+        "expected": "THEN the user will see the iOS standard social share sheets listed"
+      },
+      {
+        "content": "When the user has typed in a caption on the edit photo page\nand the user chooses either Twitter or Facebook to share the photo with",
+        "expected": "Then when the Twitter or Facebook share sheet appears the user will see the text that they typed in pre-populated"
+      },
+      {
+        "content": "When a user has completed sharing a photo to Facebook",
+        "expected": "THEN when the user looks at Facebook they will see the photo that they uploaded appear\nand the user will see the text that was typed in as the caption"
+      },
+      {
+        "content": "When a user has completed sharing a photo to Twitter",
+        "expected": "Then when the user looks at Twitter then the they will see the photo they uploaded appear\nand the user will see the text that was typed in as the caption"
+      },
+      {
+        "content": "When a user chooses to share the photo via text message",
+        "expected": "THEN the user will see the photo appear in the text message screen"
+      },
+      {
+        "content": "When a user chooses to share the photo via email",
+        "expected": "THEN the user will see the photo copied to the body of the email"
+      }
+    ]
+  }
+]

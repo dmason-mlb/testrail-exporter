@@ -1,0 +1,461 @@
+[
+  {
+    "id": 1415787,
+    "suite_id": 497381,
+    "name": "Home - Main Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1743352,
+    "suite_id": 497381,
+    "name": "MP - Analytics",
+    "description": null,
+    "parent_id": 1415787,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 1415766,
+    "suite_id": 497381,
+    "name": "Home - Content Carousel",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1415768,
+    "suite_id": 497381,
+    "name": "Home - Headline Stack",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1415767,
+    "suite_id": 497381,
+    "name": "Home - Mixed Feed",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1415788,
+    "suite_id": 497381,
+    "name": "Home - Ads",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 1415781,
+    "suite_id": 497381,
+    "name": "Videos",
+    "description": null,
+    "parent_id": 1415788,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 1415785,
+    "suite_id": 497381,
+    "name": "Home - Configurable Home Surface Common",
+    "description": null,
+    "parent_id": null,
+    "display_order": 44,
+    "depth": 0
+  },
+  {
+    "id": 1415786,
+    "suite_id": 497381,
+    "name": "Home - VSM and Short Content",
+    "description": null,
+    "parent_id": null,
+    "display_order": 45,
+    "depth": 0
+  },
+  {
+    "id": 1424856,
+    "suite_id": 497381,
+    "name": "Home - Surface Targeting",
+    "description": null,
+    "parent_id": null,
+    "display_order": 60,
+    "depth": 0
+  },
+  {
+    "id": 1534812,
+    "suite_id": 497381,
+    "name": "Home - Stories Module",
+    "description": null,
+    "parent_id": null,
+    "display_order": 63,
+    "depth": 0
+  },
+  {
+    "id": 1547291,
+    "suite_id": 497381,
+    "name": "Home - Standings Module",
+    "description": null,
+    "parent_id": null,
+    "display_order": 65,
+    "depth": 0
+  },
+  {
+    "id": 1610705,
+    "suite_id": 497381,
+    "name": "Home - Team Snapshot Module",
+    "description": null,
+    "parent_id": null,
+    "display_order": 66,
+    "depth": 0
+  },
+  {
+    "id": 1628052,
+    "suite_id": 497381,
+    "name": "Integration with MLB App",
+    "description": "[HOME-213]Test cases related to 'Hide Scores' feature enabled at the Settings level in the app.",
+    "parent_id": 1610705,
+    "display_order": 67,
+    "depth": 1
+  },
+  {
+    "id": 1614635,
+    "suite_id": 497381,
+    "name": "Language Support",
+    "description": null,
+    "parent_id": 1610705,
+    "display_order": 68,
+    "depth": 1
+  },
+  {
+    "id": 1614636,
+    "suite_id": 497381,
+    "name": "Date Bar",
+    "description": null,
+    "parent_id": 1610705,
+    "display_order": 69,
+    "depth": 1
+  },
+  {
+    "id": 1614637,
+    "suite_id": 497381,
+    "name": "Matchup",
+    "description": null,
+    "parent_id": 1610705,
+    "display_order": 70,
+    "depth": 1
+  },
+  {
+    "id": 1975556,
+    "suite_id": 497381,
+    "name": "Broadcaster Info",
+    "description": null,
+    "parent_id": 1610705,
+    "display_order": 71,
+    "depth": 1
+  },
+  {
+    "id": 1975557,
+    "suite_id": 497381,
+    "name": "Players",
+    "description": null,
+    "parent_id": 1610705,
+    "display_order": 72,
+    "depth": 1
+  },
+  {
+    "id": 1861358,
+    "suite_id": 497381,
+    "name": "Top Performers",
+    "description": null,
+    "parent_id": 1610705,
+    "display_order": 73,
+    "depth": 1
+  },
+  {
+    "id": 1623207,
+    "suite_id": 497381,
+    "name": "Product Links",
+    "description": null,
+    "parent_id": 1610705,
+    "display_order": 75,
+    "depth": 1
+  },
+  {
+    "id": 1614638,
+    "suite_id": 497381,
+    "name": "Game Links",
+    "description": null,
+    "parent_id": 1610705,
+    "display_order": 76,
+    "depth": 1
+  },
+  {
+    "id": 1628658,
+    "suite_id": 497381,
+    "name": "Analytics",
+    "description": null,
+    "parent_id": 1610705,
+    "display_order": 77,
+    "depth": 1
+  },
+  {
+    "id": 1698130,
+    "suite_id": 497381,
+    "name": "Home Run Derby",
+    "description": null,
+    "parent_id": 1610705,
+    "display_order": 82,
+    "depth": 1
+  },
+  {
+    "id": 1698131,
+    "suite_id": 497381,
+    "name": "iPad Scrollable Gamecard Layout",
+    "description": null,
+    "parent_id": 1610705,
+    "display_order": 83,
+    "depth": 1
+  },
+  {
+    "id": 1754120,
+    "suite_id": 497381,
+    "name": "Postseason",
+    "description": null,
+    "parent_id": 1610705,
+    "display_order": 84,
+    "depth": 1
+  },
+  {
+    "id": 1636467,
+    "suite_id": 497381,
+    "name": "Header only (single row) configuration",
+    "description": null,
+    "parent_id": 1754120,
+    "display_order": 85,
+    "depth": 2
+  },
+  {
+    "id": 1610706,
+    "suite_id": 497381,
+    "name": "Home - My Follows Carousel module",
+    "description": null,
+    "parent_id": null,
+    "display_order": 102,
+    "depth": 0
+  },
+  {
+    "id": 1634495,
+    "suite_id": 497381,
+    "name": "Home - Audio handling",
+    "description": null,
+    "parent_id": null,
+    "display_order": 109,
+    "depth": 0
+  },
+  {
+    "id": 1636964,
+    "suite_id": 497381,
+    "name": "Home - Accessibility",
+    "description": null,
+    "parent_id": null,
+    "display_order": 116,
+    "depth": 0
+  },
+  {
+    "id": 1633888,
+    "suite_id": 497381,
+    "name": "Accessibility - Team Snapshot iOS",
+    "description": null,
+    "parent_id": 1636964,
+    "display_order": 117,
+    "depth": 1
+  },
+  {
+    "id": 1630118,
+    "suite_id": 497381,
+    "name": "Accessibility - Team Snapshot Android",
+    "description": "Making snapshot accessible for all users.",
+    "parent_id": 1636964,
+    "display_order": 118,
+    "depth": 1
+  },
+  {
+    "id": 1636736,
+    "suite_id": 497381,
+    "name": "Accessibility - My Follows Android",
+    "description": null,
+    "parent_id": 1636964,
+    "display_order": 119,
+    "depth": 1
+  },
+  {
+    "id": 1682159,
+    "suite_id": 497381,
+    "name": "Accessibility - Mixed Feed iOS / Android",
+    "description": null,
+    "parent_id": 1636964,
+    "display_order": 120,
+    "depth": 1
+  },
+  {
+    "id": 1703638,
+    "suite_id": 497381,
+    "name": "Accessibility - Headings Announcement Android",
+    "description": null,
+    "parent_id": 1636964,
+    "display_order": 121,
+    "depth": 1
+  },
+  {
+    "id": 1716887,
+    "suite_id": 497381,
+    "name": "Accessibility - Content Carousel Android",
+    "description": null,
+    "parent_id": 1636964,
+    "display_order": 122,
+    "depth": 1
+  },
+  {
+    "id": 1666499,
+    "suite_id": 497381,
+    "name": "Home - Webview Module",
+    "description": null,
+    "parent_id": null,
+    "display_order": 127,
+    "depth": 0
+  },
+  {
+    "id": 1673312,
+    "suite_id": 497381,
+    "name": "Home - Suggested Follows Module",
+    "description": null,
+    "parent_id": null,
+    "display_order": 128,
+    "depth": 0
+  },
+  {
+    "id": 1690820,
+    "suite_id": 497381,
+    "name": "Home - Webview  Acceptance",
+    "description": "Suite to run against webview's developed specifically for the Home Surface webviewModule",
+    "parent_id": null,
+    "display_order": 129,
+    "depth": 0
+  },
+  {
+    "id": 1714556,
+    "suite_id": 497381,
+    "name": "Home - Video Autoplay",
+    "description": null,
+    "parent_id": null,
+    "display_order": 130,
+    "depth": 0
+  },
+  {
+    "id": 1734224,
+    "suite_id": 497381,
+    "name": "Home - Smart Module",
+    "description": null,
+    "parent_id": null,
+    "display_order": 131,
+    "depth": 0
+  },
+  {
+    "id": 1806421,
+    "suite_id": 497381,
+    "name": "Surface Builder - Editorial Feed Module",
+    "description": null,
+    "parent_id": null,
+    "display_order": 189,
+    "depth": 0
+  },
+  {
+    "id": 1806422,
+    "suite_id": 497381,
+    "name": "Surface Builder - Editorial Stories Module",
+    "description": null,
+    "parent_id": null,
+    "display_order": 190,
+    "depth": 0
+  },
+  {
+    "id": 1806424,
+    "suite_id": 497381,
+    "name": "Surface Builder - Editorial Carousel Module",
+    "description": "This cases are meant to cover the differences between the CarouselModule and the EditorialCarouselModule",
+    "parent_id": null,
+    "display_order": 191,
+    "depth": 0
+  },
+  {
+    "id": 1806425,
+    "suite_id": 497381,
+    "name": "Surface Builder - Gameday Mini Module",
+    "description": null,
+    "parent_id": null,
+    "display_order": 192,
+    "depth": 0
+  },
+  {
+    "id": 1851269,
+    "suite_id": 497381,
+    "name": "Surface Builder - Personalized Layouts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 193,
+    "depth": 0
+  },
+  {
+    "id": 1872814,
+    "suite_id": 497381,
+    "name": "Surface Builder - Analytics",
+    "description": null,
+    "parent_id": null,
+    "display_order": 194,
+    "depth": 0
+  },
+  {
+    "id": 1981960,
+    "suite_id": 497381,
+    "name": "Surface Builder - Live Mode - Deprecated",
+    "description": null,
+    "parent_id": null,
+    "display_order": 195,
+    "depth": 0
+  },
+  {
+    "id": 1992546,
+    "suite_id": 497381,
+    "name": "Surface Builder - MLBTVModule",
+    "description": null,
+    "parent_id": null,
+    "display_order": 196,
+    "depth": 0
+  },
+  {
+    "id": 2015395,
+    "suite_id": 497381,
+    "name": "Surface Builder - My Daily Story",
+    "description": null,
+    "parent_id": null,
+    "display_order": 197,
+    "depth": 0
+  },
+  {
+    "id": 2037345,
+    "suite_id": 497381,
+    "name": "Surface Builder - Japanese Support",
+    "description": null,
+    "parent_id": null,
+    "display_order": 198,
+    "depth": 0
+  }
+]

@@ -1,0 +1,462 @@
+[
+  {
+    "id": 32054235,
+    "title": "Fan List: Directing fan to F2F for listing from Ballpark App",
+    "section_id": 1800901,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1699903918,
+    "updated_by": 282,
+    "updated_on": 1709558959,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610059,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[ENTIX-206](https://baseball.atlassian.net/browse/ENTIX-206 )\r\n[ENTIX-110](https://baseball.atlassian.net/browse/ENTIX-110 )\r\n[ENTIX-111](https://baseball.atlassian.net/browse/ENTIX-111 )\r\n\r\nGIVEN User has successfully authenticated into BP app [Android: 12.11.0 or Greater, iOS 12.4.0 or greater]\r\nAND User has verified their account via MLB.com\r\nAND User has tickets that are eligible to be sold",
+    "custom_steps": "WHEN user wants to list a ticket to be resold\r\n\r\n",
+    "custom_expected": "THEN user should be notified they are being redirected to SeatGeek's ticket listing page\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is viewing Sell View from BP app\nWHEN user selects ticket to be resold\nAND user taps 'Sell Tickets' from BP app Sell View",
+        "expected": "THEN user should be notified (display consent text) they are being redirected to SeatGeek's ticket listing page\n\nPrompt Shown:\n**Header** \nSell your tickets on SeatGeek\n\n**Subheading**\n\"MLB will share your account & ticket details with SeatGeek for use per seatgeek.com/privacy. To manage your ticket, you must remove it from sale on SeatGeek.\"\n\nCTAs - Cancel, Sell Ticket"
+      },
+      {
+        "content": "GIVEN user is viewing Sell View from BP app\nWHEN user selects ticket to be resold\nAND user taps 'Sell Tickets' from BP app Sell View\nAND user taps 'Cancel' CTA from SG prompt",
+        "expected": "THEN user is returned back to Sell View in Ballpark App\nAND user's inventory is unchanged"
+      },
+      {
+        "content": "GIVEN user is viewing Sell View from BP app\nWHEN user selects ticket to be resold\nAND user taps 'Sell Tickets' from BP app Sell View\nAND user taps 'Sell Ticket' CTA from SG prompt",
+        "expected": "THEN Ballpark will open a webview and direct the fan to a specified URL \n\nURLs for reference: \n* QA / Staging/ non-production -> https://mlb2.tixcast.com/api/webhooks/dc/mlb/sell\nProduction ->   SG ticket listing page (possibly https://seatgeek.com/sell/mlb)"
+      }
+    ]
+  },
+  {
+    "id": 32052580,
+    "title": "Fan List: Ballpark App provides SG with ticket and Seller information",
+    "section_id": 1800901,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1699901461,
+    "updated_by": 282,
+    "updated_on": 1709558992,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610059,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[ENTIX-112](https://baseball.atlassian.net/browse/ENTIX-112 )\r\n\r\n\r\nGIVEN User has successfully authenticated into BP app [Android: 12.11.0 or Greater, iOS 12.4.0 or greater]\r\nAND User has verified their account via MLB.com\r\nAND User has tickets that are eligible to be sold",
+    "custom_steps": "WHEN user lists a ticket to be resold\r\nAND user selects “sell tickets” on the redirect modal\r\n\r\n",
+    "custom_expected": "THEN Ballpark will send ticket metadata via signed, encoded JWT token to SG",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is viewing Sell View from BP app\nWHEN user selects ticket to be resold\nAND user taps 'Sell Tickets' from BP app Sell View",
+        "expected": "THEN user should be notified (display consent text) they are being redirected to SeatGeek's ticket listing page\n\nPrompt Shown:\nHeader\nSell your tickets on SeatGeek\n\nSubheading\n\"MLB will share your account & ticket details with SeatGeek for use per seatgeek.com/privacy. To manage your ticket, you must remove it from sale on SeatGeek.\"\n\nCTAs - Cancel, Sell Ticket"
+      },
+      {
+        "content": "WHEN user taps 'Sell Ticket' CTA from SG prompt",
+        "expected": "THEN Ballpark will send ticket metadata via signed, encoded JWT token to SG\n\n[this can be confirmed w/ Proxy shows tesla_marketplace_query_param(eter) when directing to SG page]"
+      }
+    ]
+  },
+  {
+    "id": 32054239,
+    "title": "Fan List: List a ticket for Resale from Ballpark App",
+    "section_id": 1800901,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1699904360,
+    "updated_by": 282,
+    "updated_on": 1709559009,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610059,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[ENTIX-206](https://baseball.atlassian.net/browse/ENTIX-206 )\r\n[ENTIX-110](https://baseball.atlassian.net/browse/ENTIX-110 )\r\n[ENTIX-111](https://baseball.atlassian.net/browse/ENTIX-111 )\r\n[ENTIX-112](https://baseball.atlassian.net/browse/ENTIX-112 )\r\n\r\nGIVEN User has successfully authenticated into BP app [Android: 12.11.0 or Greater, iOS 12.4.0 or greater]\r\nAND User has verified their account via MLB.com\r\nAND User has tickets that are eligible to be sold",
+    "custom_steps": "WHEN user lists a ticket to be resold\r\nAND user is directed to SG page and completes out ticket listing\r\n\r\nAND WHEN user returns to Ballpark",
+    "custom_expected": "THEN Ballpark's Ticket ListView reflects the status of the ticket listed",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is viewing Sell View from BP app\nWHEN user selects ticket to be resold\nAND user taps 'Sell Tickets' from BP app Sell View",
+        "expected": "THEN user should be notified (display consent text) they are being redirected to SeatGeek's ticket listing page\n\nPrompt Shown:\nHeader\nSell your tickets on SeatGeek\n\nSubheading\n\"MLB will share your account & ticket details with SeatGeek for use per seatgeek.com/privacy. To manage your ticket, you must remove it from sale on SeatGeek.\"\n\nCTAs - Cancel, Sell Ticket"
+      },
+      {
+        "content": "WHEN user taps 'Sell Ticket' CTA from SG prompt",
+        "expected": "THEN user is now within SG flow\n\n(SG acct creation can be performed, if not prev created)"
+      },
+      {
+        "content": "WHEN user complete the ticket listing from within SG flow\nAND user returns to Ballpark",
+        "expected": "THEN Ballpark's Ticket ListView reflects the status of the ticket listed"
+      }
+    ]
+  },
+  {
+    "id": 32054242,
+    "title": "Fan Access: Ballpark App reflects Listing status change from MPV",
+    "section_id": 1801053,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1699904989,
+    "updated_by": 282,
+    "updated_on": 1722451486,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610059,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[ENTIX-99](https://baseball.atlassian.net/browse/ENTIX-99 )\r\n\r\nGIVEN User has successfully authenticated into MLB acct on MPV  (https://mpvsb.tickets.com/?agency=MLBM_MYTIXX&orgid=48650#/auth/login)\r\nAND user has tickets that are eligible to be sold\r\nAND user lists a ticket to be resold from within MPV\r\nAND user is directed to SG page AND completes out ticket listing\r\n\r\n\r\n\r\n\r\n[2024+QA+Test+Data](https://baseball.atlassian.net/wiki/spaces/ticketing/pages/3119907184/2024+QA+Test+Data )",
+    "custom_steps": "WHEN user views ticketed event w/in Ballpark",
+    "custom_expected": "THEN Ballpark's Ticket ListView reflects the status of the ticket listed from w/in MPV",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user access tickets from MPV (https://mpvsb.tickets.com/?agency=MLBM_MYTIXX&orgid=48650#/auth/login )\nAND user attempts listing a ticket from MPV (directing to SG)",
+        "expected": "THEN the selected ticket(s) is listed for resale"
+      },
+      {
+        "content": "WHEN user is viewing Ticket ListView from BP app",
+        "expected": "THEN Ballpark's Ticket ListView reflects the status of the ticket listed\n\n"
+      }
+    ]
+  },
+  {
+    "id": 32054245,
+    "title": "Fan Access: Ballpark App reflects Listing status change from SeatGeek",
+    "section_id": 1801053,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1699906016,
+    "updated_by": 288,
+    "updated_on": 1700171777,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610059,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[ENTIX-162](https://baseball.atlassian.net/browse/ENTIX-162 )\r\n\r\nGIVEN Uuer has successfully authenticated into SG/MLB acct on SeatGeek \r\nAND user has tickets that are eligible to be sold\r\nAND user lists a ticket to be resold from within SG",
+    "custom_steps": "WHEN user views ticketed event w/in Ballpark",
+    "custom_expected": "THEN Ballpark's Ticket ListView reflects the status of the ticket listed from w/in SG",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user access tickets from SG (QA env: https://mlb2.tixcast.com/account/tickets/6258016 )\nAND user attempts listing a ticket from SG",
+        "expected": "THEN the selected ticket(s) is listed for resale"
+      },
+      {
+        "content": "WHEN user is viewing Ticket ListView from BP app",
+        "expected": "THEN Ballpark's Ticket ListView reflects the status of the ticket listed"
+      }
+    ]
+  },
+  {
+    "id": 32054247,
+    "title": "Fan Access: Ballpark App reflects Cancelled Listing status change from SeatGeek",
+    "section_id": 1801053,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1699906878,
+    "updated_by": 288,
+    "updated_on": 1700171866,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610059,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[ENTIX-397](https://baseball.atlassian.net/browse/ENTIX-397 )\r\n\r\nGIVEN user has successfully authenticated into SG/MLB acct on SeatGeek \r\nAND user has tickets that are eligible to be sold\r\nAND user lists a ticket to be resold from within SG",
+    "custom_steps": "WHEN user cancels the listing within SG",
+    "custom_expected": "THEN the fan sees the updated status of the ticket in Ballpark",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user prev listed tickets from SG\nWHEN user cancels(de-list) the listing within SG\n",
+        "expected": "THEN the selected ticket(s) are no longer listed for resale"
+      },
+      {
+        "content": "WHEN user views ticketed event w/in Ballpark",
+        "expected": "THEN Ballpark's Ticket ListView reflects the status of the ticket listed (ticket is no longer listed)"
+      }
+    ]
+  },
+  {
+    "id": 32054246,
+    "title": "Fan Access: Listed ticket on SeatGeek prevents BallPark app from triggering Ticket Actions (Forward, Recall, De-list)",
+    "section_id": 1801053,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1699906447,
+    "updated_by": 288,
+    "updated_on": 1700499221,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610059,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[ENTIX-396](https://baseball.atlassian.net/browse/ENTIX-396 )\r\n\r\nGIVEN User has successfully authenticated into SG/MLB acct on SeatGeek \r\nAND user has tickets that are eligible to be sold\r\nAND user lists a ticket to be resold from within SG",
+    "custom_steps": "WHEN user views ticketed event w/in Ballpark",
+    "custom_expected": "THEN Ballpark's Ticket ListView reflects the status of the ticket listed from w/in SG\r\nAND Ballpark prevents user from performing ticket actions",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has a standard ticket (Not in forwarding state, Not in listed for resale state)\nWHEN user accesses the ticket",
+        "expected": "THEN user is able to view the barcode\nAND user is able to forward the ticket\nAND user is able to list the ticket for resale"
+      },
+      {
+        "content": "GIVEN user has a standard ticket (Not in forwarding state, Not in listed for resale state)\nWHEN user lists the ticket for resale",
+        "expected": "THEN user is able to view the barcode\nAND user is UNABLE to forward the ticket\nAND user is UNABLE to list the ticket for sale (again)\nAND user is UNABLE to de-list the ticket from within Ballpark"
+      }
+    ]
+  },
+  {
+    "id": 32054243,
+    "title": "Fan Access: Locked ProVenue account prevents Ballpark App from navigating to List ticket for Sale",
+    "section_id": 1801053,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1699905404,
+    "updated_by": 288,
+    "updated_on": 1700172177,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610059,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[ENTIX-221](https://baseball.atlassian.net/browse/ENTIX-221 )\r\n\r\nGIVEN a fan is the financial rights holder of a ticket \r\nAND that fan is viewing their ticket inventory on Ballpark \r\nAND that fan’s ProVenue account is locked\r\n\r\n[TODO: how to cause an account to be locked?]",
+    "custom_steps": "WHEN user views ticketed event w/in Ballpark\r\nAND user attempts to list the ticket for sale via SG flow",
+    "custom_expected": "Then the fan is prevented from navigating to SG ",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user's PV acct is locked\nWHEN user is viewing Ticket ListView from BP app\nAND user attempts to list a ticket for resale",
+        "expected": "THEN Ballpark app prevents the ticket listing\n\n*iOS and Android client may have slightly different UI presentations, but key aspect to validate is that the ticket cannot be listed via SG flow"
+      }
+    ]
+  },
+  {
+    "id": 32321138,
+    "title": "[Android] TESLA Analytics",
+    "section_id": 1823312,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://baseball.atlassian.net/browse/BPA-6823",
+    "created_by": 282,
+    "created_on": 1702306363,
+    "updated_by": 282,
+    "updated_on": 1702307603,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610059,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "**TESTING NOTES: THIS CASE REQUIRES TRACKING TO BE VERIFIED - MOST DIRECT WAY TO ACHIEVE THIS IS VIA A PROXY TOOL (.I.E. CharlesProxy)\r\nSetup: Connect to device to Charles to monitor the content passed.\r\n\r\nGIVEN the Ballpark application has the TESLA enabled\r\nAND the user downloaded the Ballpark app (iOS: 12.4.0 or greater, Android: 12.12 or greater)\r\nAND the user has tickets already added to the BP account  (TDC events)\r\nAND the Remote Config configuration for [tesla_marketplace_url is true)\r\nAND network traffic is monitored via Proxy tool (such as Charles/Proxyman)",
+    "custom_steps": "WHEN accessing/viewing Tickets events within BP app\r\n\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nAND User is on Wallet -> List View ",
+        "expected": "THEN user is directed into  webpage\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : List View\n\n** Shown: pageName=MLB Ballpark : Tickets : Wallet : List View"
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps “Open Tickets” for TDC club event from Wallet -> List View ",
+        "expected": "THEN user is directed into  webpage\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : List View : Open Click"
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps “Sell Tickets” for TDC club event from Wallet -> List View ",
+        "expected": "THEN user is directed into  webpage\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : List View : Sell Tickets Click"
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps “Forward Tickets” for TDC club event from Wallet -> List View ",
+        "expected": "THEN user is directed into  webpage\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : List View : Forward Tickets Click"
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps “Sell Tickets” for TDC club event from Wallet -> List View \nAND user has single or multiple tickets to select for Sell",
+        "expected": "THEN user is directed into  webpage\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : List View : Ticket Selection \n\n**pageName=MLB Ballpark : Tickets : Wallet : List View : Ticket Selection "
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps “Sell Tickets” for TDC club event from Wallet -> List View \nAND user has single or multiple tickets to select for Sell\nAND user select one of the ticket for Sell ",
+        "expected": "THEN user is directed into  webpage\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : List View : Ticket Selection Click\n"
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps “Sell Tickets” for TDC club event from Wallet -> List View \nAND user has single or multiple tickets to select for Sell\nAND user select one of the ticket for Sell \nAND tap on \"Sell Tickets\" CTA ",
+        "expected": "THEN user is directed into  webpage\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*action=MLB Ballpark : Tickets : Wallet : Ticket Selection : Sell Tickets Click"
+      },
+      {
+        "content": "Verification of below steps from the Sell Tickets Modal \n",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps “Sell Tickets” for TDC club event from Wallet -> List View \nAND user has single or multiple tickets to select for Sell\nAND user select one of the ticket for Sell \nAND tap on \"Sell Ticket\" CTA \nAND User choose Sell Tickets from Modal ",
+        "expected": "THEN user is directed into  webpage\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : List View : Ticket Selection : Sell Tickets : Module Click"
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps “Sell Tickets” for TDC club event from Wallet -> List View \nAND user has single or multiple tickets to select for Sell\nAND user select one of the ticket for Sell \nAND tap on \"Sell Tickets\" CTA \nAND User choose \"Cancel\" from Modal ",
+        "expected": "THEN user is directed into  webpage\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : List View : Ticket Selection : Sell Tickets : Cancel Module Click"
+      }
+    ]
+  },
+  {
+    "id": 33805279,
+    "title": "Ticket is actively listed on SeatGeek, ticket cannot be listed elsewhere or relisted on SeatGeek",
+    "section_id": 1951725,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1722451854,
+    "updated_by": 288,
+    "updated_on": 1723066719,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610059,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN User on Ballpark app (Android 13.4 & iOS 13.2.1 above) \r\n\r\nContext: Box Office is updating the flag needed to determine eligibility for listing tickets on SeatGeek. This replaces the current flag of “resellable”. \r\n\r\n\r\n\r\nFlag resellableOnExclusiveMarketplace: \r\n**\r\nNote**\r\nStatus of True = Ticket is eligible for listing \r\nStatus of False = Ticket is not eligible for listing \r\n\r\n\r\n",
+    "custom_steps": "GIVEN the user  ticket is actively listed on SeatGeek, ticket cannot be listed elsewhere or relisted on SeatGeek\r\nWHEN the user view listed ticket w/in Ballpark list view",
+    "custom_expected": "THEN Ballpark's Ticket ListView reflects the status of the ticket listed from w/in MPV\r\nAND user display with `Go to Secondary Market to manage selling this ticket` display for ticket listed by fan on ticket listed on SG\r\n![](index.php?/attachments/get/14305210)\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user select Sell Tickets CTA ",
+        "expected": "THEN the user taken to Sell Tickets page with list of ticket/tickets(This can be depend on user inventory) "
+      },
+      {
+        "content": "WHEN user is viewing Sell Tickets View from BP app\n",
+        "expected": "THEN the user should not see radio button for list/relist the ticket \nAND Sell Tickets CTA remain grayed out for ticket listed on SG (IF user has inventory eligible for listed that will shown with standard radio button unselected) [ANDROID ONLY - iOS does not gray out the ticket] \nAND that particular ticket listing is  prevented \nAND user display with `Go to Secondary Market to manage selling this ticket` display for ticket listed by fan on ticket listed on SG\n\n![](index.php?/attachments/get/14305211)\n![](index.php?/attachments/get/14305234)\n\niOS:\n![](index.php?/attachments/get/14312708)\n"
+      }
+    ]
+  },
+  {
+    "id": 33805280,
+    "title": "Ticket is actively listed on StubHub, ticket is eligible for listing on SeatGeek but not elsewhere",
+    "section_id": 1951725,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1722451879,
+    "updated_by": 288,
+    "updated_on": 1723066864,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610059,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN User on Ballpark app (Android 13.4 & iOS 13.2.1 above)\r\n\r\nContext: Box Office is updating the flag needed to determine eligibility for listing tickets on SeatGeek. This replaces the current flag of “resellable”.\r\n\r\nFlag resellableOnExclusiveMarketplace:\r\n**\r\nNote**\r\nStatus of True = Ticket is eligible for listing\r\nStatus of False = Ticket is not eligible for listing\r\n\r\nNote: Only validate with any one of the market places except SG",
+    "custom_steps": "GVIEN The user ticket is actively listed on StubHub(OR any other market place such as Ticket Evolution, Gametime), ticket is eligible for listing on SeatGeek but not elsewhere\r\nWHEN the user view the listed ticket w/in Ballpark list view ",
+    "custom_expected": "THEN Ballpark's Ticket ListView reflects the status of the ticket listed from w/in MPV\r\nAND user display with Go to Secondary Market to manage selling this ticket display for ticket listed by fan on ticket listed on SG\r\n![](index.php?/attachments/get/14305235)\r\n\r\niOS:\r\n![](index.php?/attachments/get/14312711)\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user select Sell Tickets CTA \n\n",
+        "expected": "THEN the user taken to Sell Tickets page with list of ticket/tickets(This can be depend on user inventory)"
+      },
+      {
+        "content": "WHEN user is viewing Sell Tickets View from BP app",
+        "expected": "THEN the user should see radio button for list/relist the ticket\nAND Sell Tickets CTA highlighted \nAND that particular ticket listing is eligible to list on SG\nAND user display with Go to Secondary Market to manage selling this ticket display for ticket listed by fan on ticket listed on SG\n\n"
+      },
+      {
+        "content": "WHEN the user select particular ticket listed on Stubhub \nAND taps on 'Sell Tickets' CTA from BP Sell View",
+        "expected": "THEN user should be notified (display consent text) they are being redirected to SeatGeek's ticket listing page\n\nPrompt Shown:\nHeader\nSell your tickets on SeatGeek\n\nSubheading\n\"MLB will share your account & ticket details with SeatGeek for use per seatgeek.com/privacy. To manage your ticket, you must remove it from sale on SeatGeek.\"\n\nCTAs - Cancel, Sell Ticket"
+      },
+      {
+        "content": "GIVEN user is viewing Sell View from BP app\nWHEN user selects ticket to be resold\nAND user taps 'Sell Tickets' from BP app Sell View\nAND user taps 'Cancel' CTA from SG prompt",
+        "expected": "THEN user is returned back to Sell View in Ballpark App\nAND user's inventory is unchanged"
+      },
+      {
+        "content": "GIVEN user is viewing Sell View from BP app\nWHEN user selects ticket to be resold\nAND user taps 'Sell Tickets' from BP app Sell View\nAND user taps 'Sell Ticket' CTA from SG prompt",
+        "expected": "THEN Ballpark will open a webview and direct the fan to a specified URL\n\nURLs for reference:\n* QA / Staging/ non-production -> https://mlb2.tixcast.com/api/webhooks/dc/mlb/sell\nProduction -> SG ticket listing page (possibly https://seatgeek.com/sell/mlb)"
+      }
+    ]
+  },
+  {
+    "id": 33805282,
+    "title": "Ticket is not actively listed",
+    "section_id": 1951725,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1722451907,
+    "updated_by": 282,
+    "updated_on": 1722470003,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610059,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN User has successfully authenticated into BP app \r\nAND User has verified their account via MLB.com\r\nAND User has tickets that are eligible to be sold",
+    "custom_steps": "WHEN user wants to list a ticket to be resold\r\n\r\n",
+    "custom_expected": "THEN user should be notified they are being redirected to SeatGeek's ticket listing page\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is viewing Sell View from BP app\nWHEN user selects ticket to be resold\nAND user taps 'Sell Tickets' from BP app Sell View",
+        "expected": "THEN user should be notified (display consent text) they are being redirected to SeatGeek's ticket listing page\n\nPrompt Shown:\nHeader\nSell your tickets on SeatGeek\n\nSubheading\n\"MLB will share your account & ticket details with SeatGeek for use per seatgeek.com/privacy. To manage your ticket, you must remove it from sale on SeatGeek.\"\n\nCTAs - Cancel, Sell Ticket\n\n"
+      },
+      {
+        "content": "GIVEN user is viewing Sell View from BP app\nWHEN user selects ticket to be resold\nAND user taps 'Sell Tickets' from BP app Sell View\nAND user taps 'Cancel' CTA from SG prompt",
+        "expected": "THEN user is returned back to Sell View in Ballpark App\nAND user's inventory is unchanged"
+      },
+      {
+        "content": "GIVEN user is viewing Sell View from BP app\nWHEN user selects ticket to be resold\nAND user taps 'Sell Tickets' from BP app Sell View\nAND user taps 'Sell Ticket' CTA from SG prompt",
+        "expected": "THEN Ballpark will open a webview and direct the fan to a specified URL\n\nURLs for reference:\n* QA / Staging/ non-production -> https://mlb2.tixcast.com/api/webhooks/dc/mlb/sell\nProduction -> SG ticket listing page (possibly https://seatgeek.com/sell/mlb)"
+      }
+    ]
+  }
+]

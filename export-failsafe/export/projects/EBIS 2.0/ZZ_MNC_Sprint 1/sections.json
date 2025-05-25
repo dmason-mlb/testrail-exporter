@@ -1,0 +1,92 @@
+[
+  {
+    "id": 9394,
+    "suite_id": 1184,
+    "name": "Club can view all players that need Add C's",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 9395,
+    "suite_id": 1184,
+    "name": "Club can view all existing Addendum C's for their org",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 9398,
+    "suite_id": 1184,
+    "name": "Club can create or edit prelim Add C in the Multi C Widget",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 9396,
+    "suite_id": 1184,
+    "name": "Club can save changes made to preliminary Add Cs in Multi C Widget",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 9397,
+    "suite_id": 1184,
+    "name": "Club can cancel all changes made to the data in a table since the last Save",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 9410,
+    "suite_id": 1184,
+    "name": "As a club I can select or deselect all rows in the Add C table",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 9411,
+    "suite_id": 1184,
+    "name": "As a club I want my location signed fields on Add C pre-populated",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 9419,
+    "suite_id": 1184,
+    "name": "Club can bulk select and tender Add Cs",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 9424,
+    "suite_id": 1184,
+    "name": "Club can use single salary value to populate addendum C's",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 9575,
+    "suite_id": 1184,
+    "name": "Club can see Add C Info that already exists",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  }
+]

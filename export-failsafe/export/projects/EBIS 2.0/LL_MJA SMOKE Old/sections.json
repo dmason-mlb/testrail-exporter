@@ -1,0 +1,137 @@
+[
+  {
+    "id": 16273,
+    "suite_id": 1868,
+    "name": "Select ML Roster Transaction",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 16290,
+    "suite_id": 1868,
+    "name": "Major/Minor Outright",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 16291,
+    "suite_id": 1868,
+    "name": "Optional Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 16292,
+    "suite_id": 1868,
+    "name": "Recall",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 16293,
+    "suite_id": 1868,
+    "name": "Transfer of option",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 16296,
+    "suite_id": 1868,
+    "name": "Designated for Release",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 16298,
+    "suite_id": 1868,
+    "name": "Elect Free Agency",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 22623,
+    "suite_id": 1868,
+    "name": "Elect Free Agency",
+    "description": null,
+    "parent_id": 16298,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 16300,
+    "suite_id": 1868,
+    "name": "Sign Free Agent",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 16302,
+    "suite_id": 1868,
+    "name": "Player Terminates Contract Under Paragraph 7(a)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 25444,
+    "suite_id": 1868,
+    "name": "Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 68056,
+    "suite_id": 1868,
+    "name": "Transfer a Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 68057,
+    "suite_id": 1868,
+    "name": "MJ/MN Outright",
+    "description": null,
+    "parent_id": null,
+    "display_order": 35,
+    "depth": 0
+  },
+  {
+    "id": 79393,
+    "suite_id": 1868,
+    "name": "Rule 6 Return Process",
+    "description": null,
+    "parent_id": null,
+    "display_order": 39,
+    "depth": 0
+  },
+  {
+    "id": 79394,
+    "suite_id": 1868,
+    "name": "Return of Rule 5 Selection",
+    "description": null,
+    "parent_id": null,
+    "display_order": 40,
+    "depth": 0
+  }
+]

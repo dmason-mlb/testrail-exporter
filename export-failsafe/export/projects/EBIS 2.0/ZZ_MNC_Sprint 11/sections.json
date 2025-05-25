@@ -1,0 +1,56 @@
+[
+  {
+    "id": 20753,
+    "suite_id": 2359,
+    "name": "Club - Print Contracts",
+    "description": "https://www.pivotaltracker.com/epic/show/2325205",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 21081,
+    "suite_id": 2359,
+    "name": "BOC - Contract Functions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 21642,
+    "suite_id": 2359,
+    "name": "Accept Terms",
+    "description": null,
+    "parent_id": 21081,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 21643,
+    "suite_id": 2359,
+    "name": "Pre-Approve",
+    "description": null,
+    "parent_id": 21081,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 21082,
+    "suite_id": 2359,
+    "name": "Club - Contract Functions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 23540,
+    "suite_id": 2359,
+    "name": "Global",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  }
+]

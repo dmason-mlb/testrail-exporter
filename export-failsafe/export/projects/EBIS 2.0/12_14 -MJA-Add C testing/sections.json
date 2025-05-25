@@ -1,0 +1,47 @@
+[
+  {
+    "id": 145672,
+    "suite_id": 20242,
+    "name": "Optional Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 145675,
+    "suite_id": 20242,
+    "name": "Return of 26th Man",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 145678,
+    "suite_id": 20242,
+    "name": "Transfer of Option",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 145682,
+    "suite_id": 20242,
+    "name": "Major/Minor Outright",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 145676,
+    "suite_id": 20242,
+    "name": "Rule 6 Return Process",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  }
+]

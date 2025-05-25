@@ -1,0 +1,110 @@
+[
+  {
+    "id": 137266,
+    "suite_id": 19719,
+    "name": "Loan",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 137267,
+    "suite_id": 19719,
+    "name": "Place on NES List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 137268,
+    "suite_id": 19719,
+    "name": "Return",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 137269,
+    "suite_id": 19719,
+    "name": "Appointment of 26th Man",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 137270,
+    "suite_id": 19719,
+    "name": "Return of 26th Man",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 137271,
+    "suite_id": 19719,
+    "name": "Designate for Release or Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 137272,
+    "suite_id": 19719,
+    "name": "Report Date",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 137273,
+    "suite_id": 19719,
+    "name": "Rule 6 Return Process",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 137274,
+    "suite_id": 19719,
+    "name": "Transfer of Option",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 137275,
+    "suite_id": 19719,
+    "name": "Accepted Qualifying Offer Under Article XX(B)(3)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 137276,
+    "suite_id": 19719,
+    "name": "Tendered Qualifying Offer Under Article XX(B)(3)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 137277,
+    "suite_id": 19719,
+    "name": "Player Terminates Contract under Paragraph 7(a)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  }
+]

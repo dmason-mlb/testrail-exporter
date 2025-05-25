@@ -1,0 +1,280 @@
+[
+  {
+    "id": 21028828,
+    "title": "Negative API tests- Block endpoints 2",
+    "section_id": 1037396,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1626105843,
+    "updated_by": 232,
+    "updated_on": 1738013310,
+    "estimate": null,
+    "estimate_forecast": "24m 28s",
+    "suite_id": 344792,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user\r\nNOTE: Import apiBlockList2.xml attached to this test to Charles Block List settings in order to execute these tests",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN calls to https://dai.google.com:443/*?* are blocked (these calls occur during initial playback of live and archived games as well as prior to commercial break)",
+        "expected": "THEN the app does not crash\nAND  an error is presented OR the feed plays but an error is presented when a commercial break is reached"
+      },
+      {
+        "content": "WHEN calls to https://mlb.sc.omtrdc.net:443/*?* are blocked (these calls occur regularly when navigating throughout the app)",
+        "expected": "THEN the app does not crash\nAND the app continues to function normally"
+      },
+      {
+        "content": "WHEN calls https://firebaselogging-pa.googleapis.com:443/*?* are blocked (these calls occur regularly when navigating throughout the app)",
+        "expected": "THEN the app does not crash\nAND the app continues to function normally"
+      }
+    ]
+  },
+  {
+    "id": 21028829,
+    "title": "Negative API tests- Block endpoints",
+    "section_id": 1037396,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1626106326,
+    "updated_by": 232,
+    "updated_on": 1665608041,
+    "estimate": null,
+    "estimate_forecast": "19m 41s",
+    "suite_id": 344792,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a user\r\nNOTE: Import attached blocklist to Charles Block List Settings to execute these tests",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN calls to https://ids.mlb.com:443/*?* are blocked (these calls will occur on login attempt)",
+        "expected": "THEN the app does not crash\n AND \"Failed to login\" message will be presented to the user"
+      },
+      {
+        "content": "WHEN calls to https://*.cms.mlbinfra.com are blocked (this includes dapi/forge calls for content on the homepage and games page)",
+        "expected": "THEN the app does not crash\n AND carousels on the homepage display \"There as an error fetching content.\" message\n"
+      }
+    ]
+  },
+  {
+    "id": 21271229,
+    "title": "Block endpoints mast...gamePk",
+    "section_id": 1037396,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1627072076,
+    "updated_by": 232,
+    "updated_on": 1644508978,
+    "estimate": null,
+    "estimate_forecast": "55s",
+    "suite_id": 344792,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN calls to https://mastapi.mobile.mlbinfra.com:443/api/image/v1/featured?gamePk=* are blocked",
+        "expected": "THEN the app does not crash\nAND user is able to navigate to and from homepage\nAND user is able to stream media"
+      }
+    ]
+  },
+  {
+    "id": 21480206,
+    "title": "Block Profile service on login",
+    "section_id": 1037396,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1627502072,
+    "updated_by": 232,
+    "updated_on": 1713908123,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 344792,
+    "display_order": 4,
+    "custom_preconds": "GIVEN a user that is not logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN  https://profile.mlb.com/api/v1/profile?* is blocked\nAND the user Logs in from the first onboarding login opportunity",
+        "expected": "THEN logs should show the following statemen (In MlbAccountUserPreference logs): Error fetching attributes from profile service, not caching OR\n Profile Service request failed - Unknown exception encountered\n(This can easily be viewed in a terminal using the command: adb -s <yourDeviceIdHere> logcat | grep -A 2 \"MlbAccountUserPreferenc\") "
+      }
+    ]
+  },
+  {
+    "id": 21480919,
+    "title": "Block Profile service- change favorite team",
+    "section_id": 1037396,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1627511736,
+    "updated_by": 232,
+    "updated_on": 1746818458,
+    "estimate": null,
+    "estimate_forecast": "4m 35s",
+    "suite_id": 344792,
+    "display_order": 6,
+    "custom_preconds": "Given a logged in user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN block https://profile.mlb.com/api/v1/profile is blocked\nAND user changes favorite team",
+        "expected": "THEN \"MlbAccountUserPreferencesRepository: Profile Service request failed - Unknown exception encountered\" should appear in logs OR \"Unable to send to Profile Service\" OR \"Cached user profile exists and is not expired\"\n\nNOTE: to see these logs use this command in the terminal while connected via adb to your AndriodTV/FireTV device (requires that you have adb installed on your computer):\n adb logcat | grep -A 2 \"MlbAccountUserPreferences\"\n\n"
+      }
+    ]
+  },
+  {
+    "id": 21499821,
+    "title": "Block entitlement service login & media playback",
+    "section_id": 1037396,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-11596",
+    "created_by": 232,
+    "created_on": 1627671479,
+    "updated_by": 232,
+    "updated_on": 1746818992,
+    "estimate": null,
+    "estimate_forecast": "4m 21s",
+    "suite_id": 344792,
+    "display_order": 7,
+    "custom_preconds": "GIVEN a user that is logged out",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN calls to https://mlbentitlementservices.mlb.com:443/entitlements?* are blocked\nAND user logs in with valid credentials",
+        "expected": "THEN the app should not crash\nAND the user should appear to be logged in (the username will appear on Settings page after \"Logged in as:\")\n"
+      },
+      {
+        "content": "WHEN a user is logged in as an entitled user\nAND calls to https://mlbentitlementservices.mlb.com:443/entitlements?* are blocked\nAND user attempts to play entitled media\n",
+        "expected": "THEN the media will stream"
+      },
+      {
+        "content": "WHEN entitlements call has failed\nAND the entitled user tries to play media again\nAND the call succeeds",
+        "expected": "THEN the media will stream"
+      },
+      {
+        "content": "WHEN a user is logged in as an un-entitled user\nAND calls to https://mlbentitlementservices.mlb.com:443/entitlements?* are blocked\nAND user attempts to play VOD media",
+        "expected": "THEN the media will stream"
+      },
+      {
+        "content": "WHEN a user is logged in as an un-entitled user\nAND calls to https://mlbentitlementservices.mlb.com:443/entitlements?* are blocked\nAND user attempts to play SVOD media",
+        "expected": "THEN a network error will be displayed"
+      }
+    ]
+  },
+  {
+    "id": 23124293,
+    "title": "Block tv-fst endpoint",
+    "section_id": 1037396,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1631821958,
+    "updated_by": 232,
+    "updated_on": 1721515341,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 344792,
+    "display_order": 8,
+    "custom_preconds": "Given and entitled user",
+    "custom_steps": "WHEN a game is played\r\nAND the endpoint https://tv-fst.mlb.com:443/* is blocked",
+    "custom_expected": "THEN \"There was an error playing this game, please try again later\" message is displayed",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 25687094,
+    "title": "Block dapi endpoints after carousels have loaded",
+    "section_id": 1037396,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1641404037,
+    "updated_by": 232,
+    "updated_on": 1728599331,
+    "estimate": null,
+    "estimate_forecast": "1m 32s",
+    "suite_id": 344792,
+    "display_order": 9,
+    "custom_preconds": "GIVEN a user on the homepage",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the carousels have already loaded\nAND the dapi(forge) endpoints associated with the videos in the carousels are blocked (https://*.cms.mlbinfra.com:443/*?*)\nAND the user selects a video in a carousel",
+        "expected": "THEN the app does not crash\nAND the stream plays"
+      },
+      {
+        "content": "WHEN the stream that was started with the endpoint block reaches the end of the clip\nAND the endpoint is still blocked",
+        "expected": "THEN the app will reroute to the homepage\n"
+      }
+    ]
+  },
+  {
+    "id": 29481125,
+    "title": "Block mast endpoints",
+    "section_id": 1037396,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1665608870,
+    "updated_by": 232,
+    "updated_on": 1722535703,
+    "estimate": null,
+    "estimate_forecast": "15m 16s",
+    "suite_id": 344792,
+    "display_order": 10,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN calls to https://mastapi.mobile.mlbinfra.com:443/api/video/v1/playlist are blocked (these calls will occur when landing on the homepage)",
+        "expected": "THEN the app does not crash\nAND games still display\nAND no carousels display below the games"
+      },
+      {
+        "content": "WHEN calls to https://mastapi.mobile.mlbinfra.com:443/api/epg/v3/search?* && calls to https://statsapi.mlb.com:443/api/v1/schedule?* are blocked (these calls will occur when landing on the homepage)",
+        "expected": "THEN the app does not crash \nAND \"Featured Content Not Available\" message is displayed at the top of the home page\nAND \"\"There has been an error. Please try again soon. If the problem persists, please contact customer support\" message is displayed\n"
+      },
+      {
+        "content": "WHEN all of the above endpoints are blocked together\nAND no featured content is cached",
+        "expected": "THEN the app does not crash\nAND \"Featured Content Not Available\" heading appears in hero with subheading \"There has been an error. Please try again soon. If the problem persists, please contact customer support.\"\n"
+      }
+    ]
+  }
+]

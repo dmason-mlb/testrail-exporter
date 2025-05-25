@@ -1,0 +1,38 @@
+[
+  {
+    "id": 5125,
+    "suite_id": 697,
+    "name": "Handset/7-inch Tablet",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 5126,
+    "suite_id": 697,
+    "name": "Sharing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 145933,
+    "suite_id": 697,
+    "name": "News Section_MIAN-662",
+    "description": "MIAN-662",
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 95070,
+    "suite_id": 697,
+    "name": "ARCHIVE",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

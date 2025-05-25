@@ -1,0 +1,92 @@
+[
+  {
+    "id": 29783,
+    "suite_id": 3290,
+    "name": "Service Assignments",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 29784,
+    "suite_id": 3290,
+    "name": "Transfer a Player",
+    "description": null,
+    "parent_id": 29783,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 29785,
+    "suite_id": 3290,
+    "name": "Loan a Player",
+    "description": null,
+    "parent_id": 29783,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 29786,
+    "suite_id": 3290,
+    "name": "Return Player from Loan",
+    "description": null,
+    "parent_id": 29783,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 29789,
+    "suite_id": 3290,
+    "name": "Optional Assignment",
+    "description": null,
+    "parent_id": 29783,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 29790,
+    "suite_id": 3290,
+    "name": "MJ/MN Outright",
+    "description": null,
+    "parent_id": 29783,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 29791,
+    "suite_id": 3290,
+    "name": "Transfer of Option",
+    "description": null,
+    "parent_id": 29783,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 29792,
+    "suite_id": 3290,
+    "name": "Return of 26th Man",
+    "description": null,
+    "parent_id": 29783,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 29793,
+    "suite_id": 3290,
+    "name": "Free Agency",
+    "description": null,
+    "parent_id": 29783,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 30273,
+    "suite_id": 3290,
+    "name": "Waivers",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  }
+]

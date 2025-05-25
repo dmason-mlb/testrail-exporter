@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1871792,
+    "suite_id": 665624,
+    "name": "General",
+    "description": "Design https://www.figma.com/file/Lpz3p0PmEXAI8DPjDBUmHX/F2P-on-MLB-Spec-(in-prog)?type=design&node-id=24-2844&mode=design&t=fkENFhUjvRerliJQ-0",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1871793,
+    "suite_id": 665624,
+    "name": "Gaming Launcher",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1871794,
+    "suite_id": 665624,
+    "name": "Accessibility",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1871795,
+    "suite_id": 665624,
+    "name": "Push Notification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1871797,
+    "suite_id": 665624,
+    "name": "Gaming Hub",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1871798,
+    "suite_id": 665624,
+    "name": "Browse Menu",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1871799,
+    "suite_id": 665624,
+    "name": "Game specific TC",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1880771,
+    "suite_id": 665624,
+    "name": "Sanity Test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  }
+]

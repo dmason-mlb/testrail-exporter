@@ -1,0 +1,29 @@
+[
+  {
+    "id": 101520,
+    "suite_id": 15495,
+    "name": "Player Stats",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 101521,
+    "suite_id": 15495,
+    "name": "Leader Stats",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 129888,
+    "suite_id": 15495,
+    "name": "Stat Questions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

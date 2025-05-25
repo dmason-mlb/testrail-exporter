@@ -1,0 +1,173 @@
+[
+  {
+    "id": 1683970,
+    "suite_id": 611337,
+    "name": "Navigation Map",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1683971,
+    "suite_id": 611337,
+    "name": "Seat Map- Standard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1683972,
+    "suite_id": 611337,
+    "name": "Seat Map- Hold Code view mode",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1683973,
+    "suite_id": 611337,
+    "name": "Seat Map - Zoom",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1683974,
+    "suite_id": 611337,
+    "name": "Seat Map - Package Options",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1683975,
+    "suite_id": 611337,
+    "name": "Seat Per Event",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1683976,
+    "suite_id": 611337,
+    "name": "Lock seat - Package- Composite",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1683977,
+    "suite_id": 611337,
+    "name": "Lock Seats Actions -Per event",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1683978,
+    "suite_id": 611337,
+    "name": "Patron Indicator",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1683979,
+    "suite_id": 611337,
+    "name": "Setting Hold Codes",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1683980,
+    "suite_id": 611337,
+    "name": "Flex/Variable Package",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 1683981,
+    "suite_id": 611337,
+    "name": "Seat Info Mode",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 1683982,
+    "suite_id": 611337,
+    "name": "Pkgs-Quota Validation in Map",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 1683983,
+    "suite_id": 611337,
+    "name": "BTQR",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 1683984,
+    "suite_id": 611337,
+    "name": "Min/ Max setting",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 1683985,
+    "suite_id": 611337,
+    "name": "Ticket Services to Map navigation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 1683986,
+    "suite_id": 611337,
+    "name": "Venue Admin changes to Map Display",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 1683987,
+    "suite_id": 611337,
+    "name": "Hold code management changes to reflect in Map",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 1683988,
+    "suite_id": 611337,
+    "name": "Exchanges via Map (Full Package and partial package)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  }
+]

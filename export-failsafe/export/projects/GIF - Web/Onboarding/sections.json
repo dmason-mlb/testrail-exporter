@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1512711,
+    "suite_id": 481572,
+    "name": "Splash Screen",
+    "description": "https://baseball.atlassian.net/browse/FTP-5020",
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1512712,
+    "suite_id": 481572,
+    "name": "Sign Up",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1512713,
+    "suite_id": 481572,
+    "name": "Log In",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1512714,
+    "suite_id": 481572,
+    "name": "Update and Log in flow",
+    "description": "https://baseball.atlassian.net/browse/FTP-3533",
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  }
+]

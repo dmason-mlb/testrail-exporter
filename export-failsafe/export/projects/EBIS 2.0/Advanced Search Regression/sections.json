@@ -1,0 +1,155 @@
+[
+  {
+    "id": 145973,
+    "suite_id": 20271,
+    "name": "AL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 145981,
+    "suite_id": 20271,
+    "name": "Minor Contracts",
+    "description": null,
+    "parent_id": 145973,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 145982,
+    "suite_id": 20271,
+    "name": "Addendum C",
+    "description": null,
+    "parent_id": 145973,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 145983,
+    "suite_id": 20271,
+    "name": "Addendum D",
+    "description": null,
+    "parent_id": 145973,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 145984,
+    "suite_id": 20271,
+    "name": "Outright Trade Considerations",
+    "description": null,
+    "parent_id": 145973,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 145974,
+    "suite_id": 20271,
+    "name": "NL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 145985,
+    "suite_id": 20271,
+    "name": "MJ Contract",
+    "description": null,
+    "parent_id": 145974,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 145986,
+    "suite_id": 20271,
+    "name": "Waiver",
+    "description": null,
+    "parent_id": 145974,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 145987,
+    "suite_id": 20271,
+    "name": "Winter League Requests",
+    "description": null,
+    "parent_id": 145974,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 145988,
+    "suite_id": 20271,
+    "name": "Investigation",
+    "description": null,
+    "parent_id": 145974,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 145992,
+    "suite_id": 20271,
+    "name": "Transaction(DL)",
+    "description": null,
+    "parent_id": 145974,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 145994,
+    "suite_id": 20271,
+    "name": "Transaction Type",
+    "description": null,
+    "parent_id": 145992,
+    "display_order": 17,
+    "depth": 2
+  },
+  {
+    "id": 145975,
+    "suite_id": 20271,
+    "name": "LL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 145976,
+    "suite_id": 20271,
+    "name": "Transactions",
+    "description": null,
+    "parent_id": 145975,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 145977,
+    "suite_id": 20271,
+    "name": "Pro Players",
+    "description": null,
+    "parent_id": 145975,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 145978,
+    "suite_id": 20271,
+    "name": "International Amateur Player",
+    "description": null,
+    "parent_id": 145975,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 145979,
+    "suite_id": 20271,
+    "name": "Domestic Amateur Player",
+    "description": null,
+    "parent_id": 145975,
+    "display_order": 23,
+    "depth": 1
+  }
+]

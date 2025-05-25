@@ -1,0 +1,218 @@
+[
+  {
+    "id": 114370,
+    "suite_id": 17465,
+    "name": "Request Entry",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 114371,
+    "suite_id": 17465,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 114370,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 114372,
+    "suite_id": 17465,
+    "name": "On Select",
+    "description": null,
+    "parent_id": 114370,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 114373,
+    "suite_id": 17465,
+    "name": "Screen Functionality",
+    "description": null,
+    "parent_id": 114370,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 114374,
+    "suite_id": 17465,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 114370,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 114376,
+    "suite_id": 17465,
+    "name": "Players with requested waivers",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 114377,
+    "suite_id": 17465,
+    "name": "Screen Functionality",
+    "description": null,
+    "parent_id": 114376,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 114378,
+    "suite_id": 17465,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 114376,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 114379,
+    "suite_id": 17465,
+    "name": "Results",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 114380,
+    "suite_id": 17465,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 114379,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 114381,
+    "suite_id": 17465,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 114379,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 114382,
+    "suite_id": 17465,
+    "name": "Waivers Screen Functionality",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 114384,
+    "suite_id": 17465,
+    "name": "Pro Player Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 114385,
+    "suite_id": 17465,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 114384,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 114386,
+    "suite_id": 17465,
+    "name": "Misc",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 114387,
+    "suite_id": 17465,
+    "name": "UAT Feedback",
+    "description": null,
+    "parent_id": 114386,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 114388,
+    "suite_id": 17465,
+    "name": "Batch",
+    "description": null,
+    "parent_id": 114386,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 114389,
+    "suite_id": 17465,
+    "name": "Email Utility",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 114390,
+    "suite_id": 17465,
+    "name": "Results",
+    "description": null,
+    "parent_id": 114389,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 114391,
+    "suite_id": 17465,
+    "name": "Players with Requested Waivers",
+    "description": null,
+    "parent_id": 114389,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 114393,
+    "suite_id": 17465,
+    "name": "Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 114394,
+    "suite_id": 17465,
+    "name": "Player Letters",
+    "description": null,
+    "parent_id": 114393,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 114395,
+    "suite_id": 17465,
+    "name": "Waiver Claim Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 147889,
+    "suite_id": 17465,
+    "name": "Waivers/Injured List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  }
+]

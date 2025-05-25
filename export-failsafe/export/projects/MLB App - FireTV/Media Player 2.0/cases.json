@@ -1,0 +1,847 @@
+[
+  {
+    "id": 26247625,
+    "title": "Play/Pause Flash icons",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1643906235,
+    "updated_by": 232,
+    "updated_on": 1648049778,
+    "estimate": null,
+    "estimate_forecast": "2m 47s",
+    "suite_id": 472621,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user is watching a game in the mlb.tv player",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user presses the Pause button",
+        "expected": "THEN the pause icon will appear in the middle of the screen then disappear after a few seconds\nAND the feed will pause"
+      },
+      {
+        "content": "WHEN the user presses the Play button",
+        "expected": "THEN the play icon will appear in the middle of the screen then disappear after a few seconds\nAND the feed will play"
+      },
+      {
+        "content": "WHEN the controls are present on bottom of the screen\nAND the scrubber is in focus\nAND the video is playing\nAND the user hits the center button",
+        "expected": "THEN the pause icon will appear in the middle of the screen then disappear after a few seconds\nAND the feed will pause"
+      },
+      {
+        "content": "WHEN the controls are present on bottom of the screen\nAND the scrubber is in focus\nAND the video is paused\nAND the user hits the center button",
+        "expected": "THEN the play icon will appear in the middle of the screen then disappear after a few seconds\nAND the feed will play"
+      }
+    ]
+  },
+  {
+    "id": 26251103,
+    "title": "Jump to Live Button",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1643928332,
+    "updated_by": 232,
+    "updated_on": 1648053045,
+    "estimate": null,
+    "estimate_forecast": "2m 53s",
+    "suite_id": 472621,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a user watching a live game",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the feed is not at the live point",
+        "expected": "THEN I should see a Jump to live quick action button (it should be to the left of the CC button and have a semicircular arrow icon)"
+      },
+      {
+        "content": "WHEN the cursor is on the Jump to Live icon",
+        "expected": "THEN I should see \"Jump to Live\" text above the icon"
+      },
+      {
+        "content": "WHEN the user clicks the Jump to Live icon",
+        "expected": "THEN the feed should advance to the live point"
+      },
+      {
+        "content": "WHEN the feed is at the live point",
+        "expected": "THEN the Jump to live icon is no longer visible\nAND the live indicator is red"
+      }
+    ]
+  },
+  {
+    "id": 26251106,
+    "title": "FF/RW Pill UI",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1643930069,
+    "updated_by": 232,
+    "updated_on": 1716228749,
+    "estimate": null,
+    "estimate_forecast": "3m 17s",
+    "suite_id": 472621,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user watching a game feed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user presses the RW/FF button on an archived game",
+        "expected": "THEN a pill should appear above the dot on the scrubber\nAND the team logos should appear in the pill \nAND the score should appear in the pill and update as the user moves through the scrubber\nAND the time will appear above the scrubber and update as the user moves through the scrubber\nAND innings outs will appear below the scrubber and update as the user moves through the scrubber\n"
+      },
+      {
+        "content": "WHEN the user presses the RW/FF button on a live game",
+        "expected": "THEN a pill should appear above the dot on the scrubber\nAND the team logos should appear in the pill \nAND the score should appear in the pill and update as the user moves through the scrubber\nAND the time will appear above the scrubber and update as the user moves through the scrubber\nAND innings outs will appear below the scrubber and update as the user moves through the scrubber\n"
+      },
+      {
+        "content": "WHEN the stream rewinds to the beginning of the feed",
+        "expected": "THEN the rewind will stop \nAND the regular scrubber ui will return"
+      },
+      {
+        "content": "WHEN the stream fast forwards to the end of the feed",
+        "expected": "THEN the fast forward will stop \nAND the regular scrubber ui will return"
+      }
+    ]
+  },
+  {
+    "id": 26391125,
+    "title": "Inning markers with Hide Spoilers ON",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "GSTREAM-203",
+    "created_by": 232,
+    "created_on": 1644613630,
+    "updated_by": 232,
+    "updated_on": 1644613630,
+    "estimate": null,
+    "estimate_forecast": "12m 39s",
+    "suite_id": 472621,
+    "display_order": 4,
+    "custom_preconds": "GIVEN an entitled user with Hide Spoilers set to ON",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user views an archived game started from the home page",
+        "expected": "THEN no inning milestones will display to the right of the scrubber bar location indicator (after the current point being viewed in the game)\nAND inning milestones will display to the left of the scrubber bar location indicator (for portions of the game which have already been viewed)"
+      },
+      {
+        "content": "WHEN the user views an archived game started from the games page",
+        "expected": "THEN no inning milestones will display to the right of the scrubber bar location indicator (after the current point being viewed in the game)\nAND inning milestones will display to the left of the scrubber bar location indicator (for portions of the game which have already been viewed)"
+      },
+      {
+        "content": "WHEN the user views a live game started from the home page",
+        "expected": "THEN no inning milestones will display to the right of the scrubber bar location indicator (after the current point being viewed in the game)\nAND inning milestones will display to the left of the scrubber bar location indicator (for portions of the game which have already been viewed)"
+      },
+      {
+        "content": "WHEN the user views a live game started from the games page",
+        "expected": "THEN no inning milestones will display to the right of the scrubber bar location indicator (after the current point being viewed in the game)\nAND inning milestones will display to the left of the scrubber bar location indicator (for portions of the game which have already been viewed)"
+      }
+    ]
+  },
+  {
+    "id": 26391382,
+    "title": "FF/RW archived game",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1644617343,
+    "updated_by": 232,
+    "updated_on": 1701378285,
+    "estimate": null,
+    "estimate_forecast": "7m 44s",
+    "suite_id": 472621,
+    "display_order": 5,
+    "custom_preconds": "GIVEN a user watching an archived game in the mlbtv player",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user hits the FF/RW (or left/right) button once",
+        "expected": "THEN the player skips forward/back 10 seconds\nAND the player plays at the new location after the button is released"
+      },
+      {
+        "content": "WHEN the user holds the FF/RW (or left/right) button",
+        "expected": "THEN the player continues to move forward/back\nAND for each second the user hold the button the speed increases\nAND the speed at which the player is FF/RWing is indicated by a number beside the double arrows below the scrubber\nAND the max speed indicator is 5"
+      },
+      {
+        "content": "WHEN the user holds the FF/RW (or left/right) button\nAND then releases the button",
+        "expected": "THEN the player plays at the new location after the button is released"
+      },
+      {
+        "content": "WHEN the user holds the RW (or left) button\nAND the scrubber returns all the way to the beginning of the feed",
+        "expected": "THEN the RW action will stop\nAND the player will resume playing"
+      },
+      {
+        "content": "WHEN the user holds the FF (or right) button\nAND the scrubber returns all the way to the end of the feed",
+        "expected": "THEN the FF action will stop\nAND the app will return to the location from which the game was launched OR the video will remain paused at then end of the feed\n"
+      }
+    ]
+  },
+  {
+    "id": 26410892,
+    "title": "FF/RW live game",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1644942544,
+    "updated_by": 232,
+    "updated_on": 1644942642,
+    "estimate": null,
+    "estimate_forecast": "21m 49s",
+    "suite_id": 472621,
+    "display_order": 6,
+    "custom_preconds": "GIVEN a user watching a live game in the mlbtv player",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user hits the FF/RW (or left/right) button once",
+        "expected": "THEN the player skips forward/back 10 seconds\nAND the player plays at the new location after the button is released"
+      },
+      {
+        "content": "WHEN the user holds the FF/RW (or left/right) button",
+        "expected": "THEN the player continues to move forward/back\nAND for each second the user hold the button the speed increases\nAND the speed at which the player is FF/RWing is indicated by a number beside the double arrows below the scrubber\nAND the max speed indicator is 5"
+      },
+      {
+        "content": "WHEN the user holds the FF/RW (or left/right) button\nAND then releases the button",
+        "expected": "THEN the player plays at the new location after the button is released"
+      },
+      {
+        "content": "WHEN the user holds the FF (or right) button\nAND the scrubber returns all the way to the live point in the game",
+        "expected": "THEN the FF action will stop\nAND the player will resume playing at the live point\n"
+      },
+      {
+        "content": "WHEN the user holds the RW (or left) button\nAND the scrubber returns all the way to the beginning of the feed",
+        "expected": "THEN the RW action will stop\nAND the player will resume playing"
+      }
+    ]
+  },
+  {
+    "id": 26423429,
+    "title": "Broadcast Options",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1645114465,
+    "updated_by": 232,
+    "updated_on": 1645139798,
+    "estimate": null,
+    "estimate_forecast": "2m 32s",
+    "suite_id": 472621,
+    "display_order": 7,
+    "custom_preconds": "GIVEN a user watching a feed in the MLB tv player\r\nAND the feed is playing",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user presses down to access the tab menu\nAND selects BROADCAST OPTIONS",
+        "expected": "THEN the available tv feeds will be displayed\nAND the current video and audio feeds will display as selected\nAND the audio feed options associated with the video that is playing will be displayed to the right of the video options"
+      },
+      {
+        "content": "WHEN the user navigates to specific feeds",
+        "expected": "THEN a white background color will indicate that the feed is in focus"
+      },
+      {
+        "content": "WHEN the user selects an alternate audio feeed",
+        "expected": "THEN the alternate audio will play without affecting video playback"
+      },
+      {
+        "content": "WHEN the user selects the alternate video feed",
+        "expected": "THEN the alternate video will play from the same point in the game with the associated audio"
+      },
+      {
+        "content": "WHEN the user has changed to the alternate video feed\nAND the user selects BROADCAST OPTIONS",
+        "expected": "THEN the audio feed options associated with the new video that is playing will be displayed to the right of the video options"
+      }
+    ]
+  },
+  {
+    "id": 26423431,
+    "title": "Video Options",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1645117024,
+    "updated_by": 232,
+    "updated_on": 1713036926,
+    "estimate": null,
+    "estimate_forecast": "7m 20s",
+    "suite_id": 472621,
+    "display_order": 8,
+    "custom_preconds": "GIVEN a user watching a game in the mlbtv player\r\nAND the user selects BROADCAST OPTIONS",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user observes the video options",
+        "expected": "THEN the user will see team logo, team short name, and broadcast name (eg. Logo PHI - NBCSP)"
+      },
+      {
+        "content": "WHEN the user observes the video options",
+        "expected": "THEN the home feed will be listed first, followed by the away feed"
+      },
+      {
+        "content": "WHEN the user observes the video options\nAND the feed is a national feed\nNOTE:Sample national feeds- \nHOU @ TEX April 7, 2024 ESPN game\n",
+        "expected": "THEN user will see the broadcast logo instead of the team logo"
+      }
+    ]
+  },
+  {
+    "id": 26424062,
+    "title": "Video Options- Unentitled",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1645127786,
+    "updated_by": 232,
+    "updated_on": 1696615190,
+    "estimate": null,
+    "estimate_forecast": "7m 8s",
+    "suite_id": 472621,
+    "display_order": 9,
+    "custom_preconds": "GIVEN a user watching an mlb tv feed in the player (a single team user would be easiest for testing purposes for this test case)\r\nAND the user select BROADCAST options\r\n\r\n",
+    "custom_steps": "WHEN the user is not entitled to the feed",
+    "custom_expected": "THEN The user will see the feed as normal in the broadcast options (or feed select modal) with a lock icon on the un-entitled feed, and the user will not be able to select it.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26425993,
+    "title": "Broadcast Options- Audio Options",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1645139698,
+    "updated_by": 232,
+    "updated_on": 1713923165,
+    "estimate": null,
+    "estimate_forecast": "5m 15s",
+    "suite_id": 472621,
+    "display_order": 10,
+    "custom_preconds": "GIVEN a user watching a game in the mlbtv player\r\nAND the user selects BROADCAST OPTIONS",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user observes the Audio Options",
+        "expected": "THEN the audio options should follow the format Team Logo - Broadcast name - Language (Eg. Logo NBCSP - Spanish (Language is only listed when Spanish))"
+      },
+      {
+        "content": "WHEN the user observes the Audio Options\nAND there are more than 2 audio options available",
+        "expected": "THEN the audio options appear in a grid with 2 options in each column"
+      },
+      {
+        "content": "WHEN the user observes the Audio Options\nAND the feed is a national feed\nNOTE:Sample national feeds- \nApril 7, 2024 HOU @ TEX",
+        "expected": "THEN a headphone icon should display instead of the Team logo"
+      }
+    ]
+  },
+  {
+    "id": 26911446,
+    "title": "Back press after switching feeds",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1648048493,
+    "updated_by": 232,
+    "updated_on": 1648048493,
+    "estimate": null,
+    "estimate_forecast": "53s",
+    "suite_id": 472621,
+    "display_order": 11,
+    "custom_preconds": "GIVEN a user watching a game with multiple feeds in the MLB app",
+    "custom_steps": "WHEN the use switches feeds\r\nAND then presses the back button",
+    "custom_expected": "THEN the app will redirect out of the player and back to the location from which the game was launched",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26911450,
+    "title": "Resume after backgrounding app",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1648049070,
+    "updated_by": 232,
+    "updated_on": 1648049070,
+    "estimate": null,
+    "estimate_forecast": "3m 19s",
+    "suite_id": 472621,
+    "display_order": 12,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": "WHEN the user is watching a game in the app\r\nAND the user backgrounds the app\r\nAND then the user reopens the app",
+    "custom_expected": "THEN the feed should resume\r\nAND the audio options should persist if changed from the default feed",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26911451,
+    "title": "Resume at start after game watched to completion",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1648049576,
+    "updated_by": 232,
+    "updated_on": 1711984726,
+    "estimate": null,
+    "estimate_forecast": "27s",
+    "suite_id": 472621,
+    "display_order": 13,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a game has been watched to completion\nAND the game is archived\nAND the user chooses to resume the game\n",
+        "expected": "THEN the game will start at the beginning"
+      }
+    ]
+  },
+  {
+    "id": 26911452,
+    "title": "Outside audio app stops when video plays",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1648049652,
+    "updated_by": 232,
+    "updated_on": 1648655617,
+    "estimate": null,
+    "estimate_forecast": "25s",
+    "suite_id": 472621,
+    "display_order": 14,
+    "custom_preconds": "GIVEN a user playing audio from an outside app (eg Spotify)\r\n\r\n",
+    "custom_steps": "WHEN they enter the MLB app\r\nAND play a video",
+    "custom_expected": "THEN the outside audio should stop\r\nAND the audio associated with the MLB app video should play",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26911453,
+    "title": "Closed Captions",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1648050373,
+    "updated_by": 232,
+    "updated_on": 1648050373,
+    "estimate": null,
+    "estimate_forecast": "2m 49s",
+    "suite_id": 472621,
+    "display_order": 15,
+    "custom_preconds": "GIVEN a user watching a game feed in the MLB app",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user hits a a navigation button on the control (ie up button)",
+        "expected": "THEN the player controls will be visible\nAND a CC button will be visible over the scrubber controls if CC is available for the given game"
+      },
+      {
+        "content": "WHEN the user navigates the focus to the CC button",
+        "expected": "THEN \"Turn CC On\" or \"Turn CC Off\" text will appear above the button (depending on what is saved in the user's profile service)\nAND the button will highlight white to indicate focus"
+      },
+      {
+        "content": "WHEN CC is off\nAND the user clicks the CC button while it is in focus",
+        "expected": "THEN the messaging above the button will change to \"Turn CC Off\"\nAND closed captioning will start displaying in the game feed shortly after"
+      },
+      {
+        "content": "WHEN CC is on\nAND the user clicks the CC button while it is in focus",
+        "expected": "THEN the messaging above the button will change to \"Turn CC On\"\nAND closed captioning will stop displaying in the game feed"
+      }
+    ]
+  },
+  {
+    "id": 26911454,
+    "title": "Resume a live game after exiting",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1648051333,
+    "updated_by": 232,
+    "updated_on": 1648051333,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 472621,
+    "display_order": 16,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a user selects a live feed",
+        "expected": "THEN the user will be shown options to \"Watch Live\" or \"Watch from The Beginning\""
+      },
+      {
+        "content": "WHEN the user selects the \"Watch Live\"options",
+        "expected": "THEN the feed will play from the live point"
+      },
+      {
+        "content": "WHEN the user clicks the back button to leave the feed",
+        "expected": "THEN the user will be returned to the part of the app from which they accessed the game"
+      },
+      {
+        "content": "WHEN the user selects the game again",
+        "expected": "THEN the user will be shown options to \"Resume\", \"Watch Live\", or \"Watch from the Beginning\""
+      },
+      {
+        "content": "WHEN the user selects the \"Resume\" option",
+        "expected": "THEN the user will be returned to the bookmarked position from when they left the game before (not the live point)"
+      }
+    ]
+  },
+  {
+    "id": 27194780,
+    "title": "Metadata display",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1649876147,
+    "updated_by": 232,
+    "updated_on": 1649876147,
+    "estimate": null,
+    "estimate_forecast": "2m",
+    "suite_id": 472621,
+    "display_order": 17,
+    "custom_preconds": "GIVEN a user watching an mlb.tv game in the player",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the controls/scrubber come up on the screen\nAND the submenu is NOT active",
+        "expected": "THEN metadata will appear in the top left of the screen\nAND metadata includes Team logos and  colors\nAND metadata includes team three letter abbreviation\nAND metadata includes start time\nAND metadata includes call letters of video feed\n"
+      },
+      {
+        "content": "WHEN the controls/scrubber come up on the screen\nAND the submenu is active",
+        "expected": "THEN the metadata will no longer be presented on the screen"
+      },
+      {
+        "content": "WHEN the controls/scrubber are dismissed",
+        "expected": "THEN the metadata will no longer be presented on the screen"
+      }
+    ]
+  },
+  {
+    "id": 28594030,
+    "title": "Quick actions not visible when user navigates to submenu",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1653425320,
+    "updated_by": 232,
+    "updated_on": 1653425320,
+    "estimate": null,
+    "estimate_forecast": "36s",
+    "suite_id": 472621,
+    "display_order": 18,
+    "custom_preconds": "GIVEN a user watching a game in the mlb tv player",
+    "custom_steps": "WHEN the user navigates to the submenu (Details/broadcasts section)",
+    "custom_expected": "THEN the quick actions buttons (CC, Watch Live, above the scrubber) are not visible",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 28627991,
+    "title": "Details/Linescore- Archived Game- Hide Spoilers On",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1654007112,
+    "updated_by": 232,
+    "updated_on": 1655415600,
+    "estimate": null,
+    "estimate_forecast": "2m 46s",
+    "suite_id": 472621,
+    "display_order": 19,
+    "custom_preconds": "GIVEN a user watching an archived game in the MLB TV player\r\nAND hide spoilers is set to ON",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates down to the details tab",
+        "expected": "THEN the space below will initially populate with 9 innings of a blank linescore\nAND a loading graphic displays for team icons\nAND a loading graphic displays for Now Batting\nAND a loading graphic displays for Pitching section"
+      },
+      {
+        "content": "WHEN the data loads",
+        "expected": "THEN inning data will populate the linescore up to the point to which the user has navigated within the feed\nAND the Pitcher and Now Batting icons will correspond with current players in those spots in the game\nAND Pitcher and Now Batting data will correspond with current players in those spots in the game"
+      },
+      {
+        "content": "WHEN the user navigates to a half inning\nAND the user selects it with a click",
+        "expected": "THEN the stream will navigate to the half inning selected\nAND play from that point"
+      }
+    ]
+  },
+  {
+    "id": 28627987,
+    "title": "Details/Linescore- Archived Game Hide Spoilers Off",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1654006677,
+    "updated_by": 232,
+    "updated_on": 1654006677,
+    "estimate": null,
+    "estimate_forecast": "4m 32s",
+    "suite_id": 472621,
+    "display_order": 20,
+    "custom_preconds": "GIVEN a user watching an archived game in the MLB TV player\r\nAND Hide Spoilers is off",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates down to the details tab",
+        "expected": "THEN the space below will initially populate with 9 innings of a blank linescore\nAND a loading graphic displays for team icons\nAND a loading graphic displays for Now Batting\nAND a loading graphic displays for Pitching section"
+      },
+      {
+        "content": "WHEN the data loads",
+        "expected": "THEN all inning data will populate the linescore\nAND the Pitcher and Now Batting icons will correspond with current players in those spots in the game\nAND Pitcher and Now Batting data will correspond with current players in those spots in the game"
+      },
+      {
+        "content": "WHEN the user navigates to a half inning\nAND the user selects it with a click",
+        "expected": "THEN the stream will navigate to the half inning selected\nAND play from that point"
+      }
+    ]
+  },
+  {
+    "id": 28627988,
+    "title": "Details/Linescore-  Error loading data",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1654006848,
+    "updated_by": 232,
+    "updated_on": 1695746163,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 472621,
+    "display_order": 21,
+    "custom_preconds": "GIVEN a user watching a game in the MLB TV player",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates down to the details tab",
+        "expected": "THEN the space below will initially populate with 9 innings of a blank linescore\nAND a loading graphic displays for team icons\nAND a loading graphic displays for Now Batting\nAND a loading graphic displays for Pitching section"
+      },
+      {
+        "content": "WHEN data fails to load\n(This can be simulated by blocking https://statsapi.mlb.com:443/*?* AFTER selecting the feed from the feed select modal but before the data is captured and then waiting for a bit for the details call to fail)",
+        "expected": "THEN the loading graphics will continue to display\nAND the video will remain playable"
+      }
+    ]
+  },
+  {
+    "id": 28627990,
+    "title": "Details/Linescore- Live Game- Hide Spoilers On",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1654007049,
+    "updated_by": 232,
+    "updated_on": 1655416058,
+    "estimate": null,
+    "estimate_forecast": "1m 41s",
+    "suite_id": 472621,
+    "display_order": 22,
+    "custom_preconds": "GIVEN a user watching a live game in the MLB TV player\r\nAND Hide Spoilers is set to Off",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates down to the details tab",
+        "expected": "THEN the space below will initially populate with 9 innings of a blank linescore\nAND a loading graphic displays for team icons\nAND a loading graphic displays for Now Batting\nAND a loading graphic displays for Pitching section"
+      },
+      {
+        "content": "WHEN the data loads",
+        "expected": "\t\nTHEN inning data will populate the linescore up to the point to which the user has navigated within the feed\nAND the Pitcher and Now Batting icons will correspond with current players in those spots in the game\nAND Pitcher and Now Batting data will correspond with current players in those spots in the game"
+      },
+      {
+        "content": "WHEN viewing a live game \nAND the user scrolls into the details tab\nAND the user navigates into the innings section\n",
+        "expected": "THEN the current inning being viewed should be highlighted"
+      },
+      {
+        "content": "WHEN the user navigates to a half inning\nAND the user selects it with a click",
+        "expected": "THEN the stream will navigate to the half inning selected\nAND play from that point"
+      }
+    ]
+  },
+  {
+    "id": 28726402,
+    "title": "Details/Linescore- Live Game- Hide Spoilers Off",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1655415611,
+    "updated_by": 232,
+    "updated_on": 1655415994,
+    "estimate": null,
+    "estimate_forecast": "39s",
+    "suite_id": 472621,
+    "display_order": 23,
+    "custom_preconds": "GIVEN a user watching a live game in the MLB TV player\r\nAND Hide Spoilers is set to Off",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates down to the details tab",
+        "expected": "THEN the space below will initially populate with 9 innings of a blank linescore\nAND a loading graphic displays for team icons\nAND a loading graphic displays for Now Batting\nAND a loading graphic displays for Pitching section"
+      },
+      {
+        "content": "WHEN the data loads",
+        "expected": "\t\nTHEN inning data will populate the linescore up to the live point\nAND the Pitcher and Now Batting icons will correspond with current players at the user's current position in the stream\nAND Pitcher and Now Batting data will correspond with current players in those spots in the game"
+      },
+      {
+        "content": "WHEN viewing a live game \nAND the user scrolls into the details tab\nAND the user navigates into the innings section\n",
+        "expected": "THEN the current inning being viewed should be highlighted"
+      },
+      {
+        "content": "WHEN the user navigates to a half inning\nAND the user selects it with a click",
+        "expected": "THEN the stream will navigate to the half inning selected\nAND play from that point"
+      }
+    ]
+  },
+  {
+    "id": 28628042,
+    "title": "Details/Linescore- Extra Innings",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1654011111,
+    "updated_by": 232,
+    "updated_on": 1655236009,
+    "estimate": null,
+    "estimate_forecast": "7m 2s",
+    "suite_id": 472621,
+    "display_order": 26,
+    "custom_preconds": "GIVEN a user watching a game in the MLB TV player\r\nAND the game includes extra innings",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates to the details section\n",
+        "expected": "THEN chevrons will appear in the linescore area to allow the user to see that extra innings exist"
+      },
+      {
+        "content": "WHEN the user navigates in the direction of the chevrons after reaching the end of available innings",
+        "expected": "THEN one inning at a time will be revealed in the direction chosen with each click"
+      },
+      {
+        "content": "WHEN the user selects a half inning",
+        "expected": "THEN the media will navigate to that inning and continue playing at that point"
+      }
+    ]
+  },
+  {
+    "id": 28717194,
+    "title": "Details/Linescore- 7 inning games",
+    "section_id": 1367112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1655242437,
+    "updated_by": 232,
+    "updated_on": 1713924228,
+    "estimate": null,
+    "estimate_forecast": "4m 29s",
+    "suite_id": 472621,
+    "display_order": 27,
+    "custom_preconds": "GIVEN a user is watching a game that was finished early (7 innings)\r\nExample games that can be used to test this use case- \r\nNEU @ BOS on 02/23/2024",
+    "custom_steps": "WHEN the user navigates to the Details tab",
+    "custom_expected": "THEN unplayed innings do not show scores (ie innings 8 & 9)\r\nAND the unplayed innings are not focusable or clickable",
+    "custom_steps_separated": null
+  }
+]

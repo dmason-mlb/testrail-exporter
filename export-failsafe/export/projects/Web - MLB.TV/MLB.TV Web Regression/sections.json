@@ -1,0 +1,542 @@
+[
+  {
+    "id": 729598,
+    "suite_id": 201801,
+    "name": "Welcome Center (.TV Home Page)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 742664,
+    "suite_id": 201801,
+    "name": ".TV Top Navigation",
+    "description": "https://baseball.atlassian.net/browse/COREMED-913?src=confmacro",
+    "parent_id": 729598,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 742654,
+    "suite_id": 201801,
+    "name": "Game Tiles",
+    "description": "https://app.zeplin.io/project/5ecfc65f721ad446afbaab09/screen/5f736d388104594a987a16f4",
+    "parent_id": 729598,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 729600,
+    "suite_id": 201801,
+    "name": "Featured Spot",
+    "description": "Designs\n\nhttps://app.zeplin.io/project/602d8b2f551d2c235b342753/screen/60eca57be07cc90fbbf42596",
+    "parent_id": 729598,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 1942331,
+    "suite_id": 201801,
+    "name": "Hero",
+    "description": null,
+    "parent_id": 729598,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 1942332,
+    "suite_id": 201801,
+    "name": "Game Content",
+    "description": null,
+    "parent_id": 1942331,
+    "display_order": 10,
+    "depth": 2
+  },
+  {
+    "id": 1942681,
+    "suite_id": 201801,
+    "name": "Non Game Content",
+    "description": null,
+    "parent_id": 1942331,
+    "display_order": 11,
+    "depth": 2
+  },
+  {
+    "id": 1942687,
+    "suite_id": 201801,
+    "name": "App Launch/Log in Landing",
+    "description": null,
+    "parent_id": 729598,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 1952459,
+    "suite_id": 201801,
+    "name": "UI",
+    "description": null,
+    "parent_id": 729598,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 1954936,
+    "suite_id": 201801,
+    "name": "HomePage",
+    "description": null,
+    "parent_id": 729598,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 1951723,
+    "suite_id": 201801,
+    "name": "Login",
+    "description": null,
+    "parent_id": 729598,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 1952339,
+    "suite_id": 201801,
+    "name": "LogOut",
+    "description": null,
+    "parent_id": 1951723,
+    "display_order": 26,
+    "depth": 2
+  },
+  {
+    "id": 1951781,
+    "suite_id": 201801,
+    "name": "Game Content",
+    "description": null,
+    "parent_id": 729598,
+    "display_order": 31,
+    "depth": 1
+  },
+  {
+    "id": 1951782,
+    "suite_id": 201801,
+    "name": "Non Game Content",
+    "description": null,
+    "parent_id": 729598,
+    "display_order": 32,
+    "depth": 1
+  },
+  {
+    "id": 1952458,
+    "suite_id": 201801,
+    "name": "Video Carousels",
+    "description": null,
+    "parent_id": 729598,
+    "display_order": 33,
+    "depth": 1
+  },
+  {
+    "id": 1951783,
+    "suite_id": 201801,
+    "name": "Game Carousel",
+    "description": null,
+    "parent_id": 729598,
+    "display_order": 34,
+    "depth": 1
+  },
+  {
+    "id": 1951785,
+    "suite_id": 201801,
+    "name": "Archived Game",
+    "description": null,
+    "parent_id": 1951783,
+    "display_order": 36,
+    "depth": 2
+  },
+  {
+    "id": 1952333,
+    "suite_id": 201801,
+    "name": "Live Game",
+    "description": null,
+    "parent_id": 1951783,
+    "display_order": 37,
+    "depth": 2
+  },
+  {
+    "id": 1165653,
+    "suite_id": 201801,
+    "name": "Media Center (Games Page)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 40,
+    "depth": 0
+  },
+  {
+    "id": 1580532,
+    "suite_id": 201801,
+    "name": "New  Shows Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 41,
+    "depth": 0
+  },
+  {
+    "id": 1165654,
+    "suite_id": 201801,
+    "name": "SVOD Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 42,
+    "depth": 0
+  },
+  {
+    "id": 1165656,
+    "suite_id": 201801,
+    "name": "MLB Network",
+    "description": null,
+    "parent_id": null,
+    "display_order": 44,
+    "depth": 0
+  },
+  {
+    "id": 1165655,
+    "suite_id": 201801,
+    "name": "MLB.TV Player Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 45,
+    "depth": 0
+  },
+  {
+    "id": 1271769,
+    "suite_id": 201801,
+    "name": "Playback Page Header",
+    "description": null,
+    "parent_id": 1165655,
+    "display_order": 46,
+    "depth": 1
+  },
+  {
+    "id": 730538,
+    "suite_id": 201801,
+    "name": "Player User Settings Panel",
+    "description": null,
+    "parent_id": 1165655,
+    "display_order": 48,
+    "depth": 1
+  },
+  {
+    "id": 733988,
+    "suite_id": 201801,
+    "name": "General tab",
+    "description": null,
+    "parent_id": 730538,
+    "display_order": 49,
+    "depth": 2
+  },
+  {
+    "id": 1165945,
+    "suite_id": 201801,
+    "name": "Team tab",
+    "description": null,
+    "parent_id": 730538,
+    "display_order": 51,
+    "depth": 2
+  },
+  {
+    "id": 1165935,
+    "suite_id": 201801,
+    "name": "Layout tab",
+    "description": null,
+    "parent_id": 730538,
+    "display_order": 53,
+    "depth": 2
+  },
+  {
+    "id": 730537,
+    "suite_id": 201801,
+    "name": "Scores/Game Selector",
+    "description": null,
+    "parent_id": 1165935,
+    "display_order": 54,
+    "depth": 3
+  },
+  {
+    "id": 739852,
+    "suite_id": 201801,
+    "name": "Multiview",
+    "description": null,
+    "parent_id": 1165935,
+    "display_order": 55,
+    "depth": 3
+  },
+  {
+    "id": 1272034,
+    "suite_id": 201801,
+    "name": "Limit bitrates in multi-view",
+    "description": "COREMED-1415",
+    "parent_id": 739852,
+    "display_order": 56,
+    "depth": 4
+  },
+  {
+    "id": 739853,
+    "suite_id": 201801,
+    "name": "Stats Panel",
+    "description": null,
+    "parent_id": 1165935,
+    "display_order": 57,
+    "depth": 3
+  },
+  {
+    "id": 739851,
+    "suite_id": 201801,
+    "name": "Game Matchup (Chyron)",
+    "description": null,
+    "parent_id": 1165935,
+    "display_order": 58,
+    "depth": 3
+  },
+  {
+    "id": 1166070,
+    "suite_id": 201801,
+    "name": "Theater Mode",
+    "description": null,
+    "parent_id": 1165935,
+    "display_order": 59,
+    "depth": 3
+  },
+  {
+    "id": 729607,
+    "suite_id": 201801,
+    "name": "Basic Player Controls",
+    "description": null,
+    "parent_id": 1165655,
+    "display_order": 60,
+    "depth": 1
+  },
+  {
+    "id": 729610,
+    "suite_id": 201801,
+    "name": "Play/Pause",
+    "description": null,
+    "parent_id": 729607,
+    "display_order": 61,
+    "depth": 2
+  },
+  {
+    "id": 729611,
+    "suite_id": 201801,
+    "name": "Fast Forward/Rewind",
+    "description": null,
+    "parent_id": 729607,
+    "display_order": 62,
+    "depth": 2
+  },
+  {
+    "id": 729608,
+    "suite_id": 201801,
+    "name": "Mute Toggle",
+    "description": null,
+    "parent_id": 729607,
+    "display_order": 63,
+    "depth": 2
+  },
+  {
+    "id": 729609,
+    "suite_id": 201801,
+    "name": "Volume Slider",
+    "description": null,
+    "parent_id": 729607,
+    "display_order": 64,
+    "depth": 2
+  },
+  {
+    "id": 731832,
+    "suite_id": 201801,
+    "name": "Feed Picker",
+    "description": null,
+    "parent_id": 729607,
+    "display_order": 68,
+    "depth": 2
+  },
+  {
+    "id": 733989,
+    "suite_id": 201801,
+    "name": "Quality & Captions Settings",
+    "description": null,
+    "parent_id": 729607,
+    "display_order": 69,
+    "depth": 2
+  },
+  {
+    "id": 729612,
+    "suite_id": 201801,
+    "name": "Fullscreen",
+    "description": null,
+    "parent_id": 729607,
+    "display_order": 70,
+    "depth": 2
+  },
+  {
+    "id": 730535,
+    "suite_id": 201801,
+    "name": "Archive Progress Bar",
+    "description": null,
+    "parent_id": 729607,
+    "display_order": 71,
+    "depth": 2
+  },
+  {
+    "id": 729613,
+    "suite_id": 201801,
+    "name": "Live Progress Bar/Live Button",
+    "description": null,
+    "parent_id": 729607,
+    "display_order": 72,
+    "depth": 2
+  },
+  {
+    "id": 729614,
+    "suite_id": 201801,
+    "name": "Live Media Scrubbable Range (BROADCAST_START_TIME)",
+    "description": null,
+    "parent_id": 729613,
+    "display_order": 73,
+    "depth": 3
+  },
+  {
+    "id": 730192,
+    "suite_id": 201801,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": 1165655,
+    "display_order": 76,
+    "depth": 1
+  },
+  {
+    "id": 730194,
+    "suite_id": 201801,
+    "name": "Audio",
+    "description": null,
+    "parent_id": 1165655,
+    "display_order": 77,
+    "depth": 1
+  },
+  {
+    "id": 1851270,
+    "suite_id": 201801,
+    "name": "Alt Audio",
+    "description": null,
+    "parent_id": 730194,
+    "display_order": 78,
+    "depth": 2
+  },
+  {
+    "id": 730195,
+    "suite_id": 201801,
+    "name": "Audio Only Player",
+    "description": null,
+    "parent_id": 730194,
+    "display_order": 79,
+    "depth": 2
+  },
+  {
+    "id": 730196,
+    "suite_id": 201801,
+    "name": "Audio Only Playback",
+    "description": null,
+    "parent_id": 730194,
+    "display_order": 80,
+    "depth": 2
+  },
+  {
+    "id": 1271922,
+    "suite_id": 201801,
+    "name": "PIP Mode",
+    "description": "COREMED-1819\n\nNOTE: We can also test the right-click context menu to enter PIP mode.",
+    "parent_id": 1165655,
+    "display_order": 84,
+    "depth": 1
+  },
+  {
+    "id": 730197,
+    "suite_id": 201801,
+    "name": "Entitlement Based Media Selection & Playback",
+    "description": "COREMED-1358",
+    "parent_id": 1165655,
+    "display_order": 86,
+    "depth": 1
+  },
+  {
+    "id": 742621,
+    "suite_id": 201801,
+    "name": "Ad integration",
+    "description": null,
+    "parent_id": 1165655,
+    "display_order": 87,
+    "depth": 1
+  },
+  {
+    "id": 1272306,
+    "suite_id": 201801,
+    "name": "CSAI",
+    "description": null,
+    "parent_id": 742621,
+    "display_order": 88,
+    "depth": 2
+  },
+  {
+    "id": 1272307,
+    "suite_id": 201801,
+    "name": "DAI",
+    "description": null,
+    "parent_id": 742621,
+    "display_order": 89,
+    "depth": 2
+  },
+  {
+    "id": 1272318,
+    "suite_id": 201801,
+    "name": "Volume Multiplier",
+    "description": "COREMED-1446",
+    "parent_id": 742621,
+    "display_order": 90,
+    "depth": 2
+  },
+  {
+    "id": 1272092,
+    "suite_id": 201801,
+    "name": "Messaging",
+    "description": "https://www.mlbstatic.com/mlb.com/video/config/mlbtv/messages.json\n\nDevtools > Console: window.mlb.__mlbtv.addNewMessage('application.[MESSAGE_NAME_HERE]');",
+    "parent_id": 1165655,
+    "display_order": 91,
+    "depth": 1
+  },
+  {
+    "id": 730193,
+    "suite_id": 201801,
+    "name": "Autoplay",
+    "description": null,
+    "parent_id": 1165655,
+    "display_order": 92,
+    "depth": 1
+  },
+  {
+    "id": 1272008,
+    "suite_id": 201801,
+    "name": "Game Share with Timecode",
+    "description": "COREMED-1721",
+    "parent_id": 1165655,
+    "display_order": 93,
+    "depth": 1
+  },
+  {
+    "id": 1577187,
+    "suite_id": 201801,
+    "name": "Boss Mode",
+    "description": null,
+    "parent_id": 1165655,
+    "display_order": 94,
+    "depth": 1
+  }
+]

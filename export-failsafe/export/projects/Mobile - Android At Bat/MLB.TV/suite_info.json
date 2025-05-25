@@ -1,0 +1,11 @@
+{
+  "id": 944,
+  "name": "MLB.TV",
+  "description": "Unless specified, cases should be run on both handsets and tablets.\r\n\r\nTerms:\r\n\r\nLite user:\r\n- User who has NOT purchased app\r\n- User who is NOT logged in\r\n- User who is NOT logged in with an account entitled with TV Premium or At Bat entitlement\r\n\r\nPaid user:\r\n- User who has purchased or restored in-app purchase\r\n- User who has logged in with an account entitled with TV Premium or At Bat entitlement\r\n\r\nEPG: Electronic Program Guide (List of available game feeds)",
+  "project_id": 3,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/944"
+}

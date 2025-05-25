@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1650198,
+    "suite_id": 596644,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1650199,
+    "suite_id": 596644,
+    "name": "Badges",
+    "description": "https://baseball.atlassian.net/browse/FTP-4897",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1650200,
+    "suite_id": 596644,
+    "name": "Contest results cards",
+    "description": "https://baseball.atlassian.net/browse/FTP-4898",
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

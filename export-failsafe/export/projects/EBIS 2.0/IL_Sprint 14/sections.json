@@ -1,0 +1,65 @@
+[
+  {
+    "id": 25766,
+    "suite_id": 2841,
+    "name": "Reinstate from Inactive List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 25767,
+    "suite_id": 2841,
+    "name": "MISC",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 25771,
+    "suite_id": 2841,
+    "name": "Elect Free Agency",
+    "description": null,
+    "parent_id": 25767,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 25772,
+    "suite_id": 2841,
+    "name": "Place Player on NES List",
+    "description": null,
+    "parent_id": 25767,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 25775,
+    "suite_id": 2841,
+    "name": "Place on Disqualified List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 25878,
+    "suite_id": 2841,
+    "name": "Place on Ineligible List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 25879,
+    "suite_id": 2841,
+    "name": "Reinstate From Inactive List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  }
+]

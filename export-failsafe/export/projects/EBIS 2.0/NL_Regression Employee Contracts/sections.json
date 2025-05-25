@@ -1,0 +1,47 @@
+[
+  {
+    "id": 143809,
+    "suite_id": 20166,
+    "name": "Employee Contracts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 143810,
+    "suite_id": 20166,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 143809,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 150296,
+    "suite_id": 20166,
+    "name": "Club Viewers",
+    "description": null,
+    "parent_id": 143810,
+    "display_order": 3,
+    "depth": 2
+  },
+  {
+    "id": 150297,
+    "suite_id": 20166,
+    "name": "Club Editors",
+    "description": null,
+    "parent_id": 143810,
+    "display_order": 5,
+    "depth": 2
+  },
+  {
+    "id": 150299,
+    "suite_id": 20166,
+    "name": "Club Creators",
+    "description": null,
+    "parent_id": 143810,
+    "display_order": 6,
+    "depth": 2
+  }
+]

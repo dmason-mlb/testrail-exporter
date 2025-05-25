@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1534813,
+    "suite_id": 544572,
+    "name": "Integration",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1534822,
+    "suite_id": 544572,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1534844,
+    "suite_id": 544572,
+    "name": "Game Card",
+    "description": "https://baseball.atlassian.net/browse/FTP-3681",
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1534845,
+    "suite_id": 544572,
+    "name": "Badges",
+    "description": "Home Run Derby Bracket Challenge https://baseball.atlassian.net/browse/FTP-4289",
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1535141,
+    "suite_id": 544572,
+    "name": "Brackets",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1535142,
+    "suite_id": 544572,
+    "name": "Live",
+    "description": null,
+    "parent_id": 1535141,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 1535143,
+    "suite_id": 544572,
+    "name": "Locked",
+    "description": null,
+    "parent_id": 1535141,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 1535144,
+    "suite_id": 544572,
+    "name": "Final",
+    "description": null,
+    "parent_id": 1535141,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 1701115,
+    "suite_id": 544572,
+    "name": "Scoring",
+    "description": "A HRD Bracket in Scoring phase. This section contains how a bracket is expected to behave after user picks for each round.",
+    "parent_id": 1535141,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 1706733,
+    "suite_id": 544572,
+    "name": "Adobe Analytics",
+    "description": "https://baseball.atlassian.net/browse/MLBWEB-316\nAdd `Adobe Analytics Debugger` extension to Chrome and watch the browser console while testing",
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  }
+]

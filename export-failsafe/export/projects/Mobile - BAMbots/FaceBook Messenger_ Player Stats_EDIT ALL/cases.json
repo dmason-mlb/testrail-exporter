@@ -1,0 +1,280 @@
+[
+  {
+    "id": 1130323,
+    "title": "Valid Player Stats Request",
+    "section_id": 135133,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1500478252,
+    "updated_by": 65,
+    "updated_on": 1500479257,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 19602,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is on the Facebook Messenger Bot",
+    "custom_steps": "WHEN the user makes a valid active player stat intent\r\n\r\ni.e.\r\n- judge\r\n- aaron judge\r\n- aaron judge home run\r\n- has aaron judge hit a hr?\r\n- how's aaron judge doing?",
+    "custom_expected": "THEN the user is presented with a player stats card according to the game state",
+    "custom_steps_separated": [
+      {
+        "content": "When the player is playing in a live game",
+        "expected": "THEN the user is presented with a live player stats card containing live stats"
+      },
+      {
+        "content": "When the player played in the last N days",
+        "expected": "THEN the user is presented with a player stats card"
+      }
+    ]
+  },
+  {
+    "id": 1130325,
+    "title": "Valid Player Stats Request not Recognized by Bot",
+    "section_id": 135133,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1500478819,
+    "updated_by": 65,
+    "updated_on": 1500479263,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 19602,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is on the Facebook Messenger Bot",
+    "custom_steps": "WHEN the user makes a valid active player stat intent\r\nBUT is not recognized by the bot\r\n\r\ni.e.\r\n- judge\r\n- aaron judge\r\n- aaron judge home run\r\n- has aaron judge hit a hr?\r\n- how's aaron judge doing?",
+    "custom_expected": "THEN the user is presented with an error message:\r\nSorry I don't recognize that. You can ask me about scores, schedules, and players.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1130324,
+    "title": "Invalid Player Stats Request",
+    "section_id": 135133,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1500478704,
+    "updated_by": 65,
+    "updated_on": 1500479269,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 19602,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user is on the Facebook Messenger Bot",
+    "custom_steps": "WHEN the user makes an invalid active player stat intent",
+    "custom_expected": "THEN the user is presented with an error message:\r\nI don't recognize that request. Try asking about a team.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1130326,
+    "title": "Multiple Players w/Same Name",
+    "section_id": 135133,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1500479124,
+    "updated_by": 65,
+    "updated_on": 1500653794,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 19602,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user is on the Facebook Messenger Bot",
+    "custom_steps": "WHEN the user makes a valid active player stat intent\r\nAND there are multiple players with the same name",
+    "custom_expected": "THEN the bot replies with:\r\nWhich PlayerName would you like to know about?",
+    "custom_steps_separated": [
+      {
+        "content": "When the user is presented with a quick action button for all matches",
+        "expected": "Then the user is able to tap on the desired player"
+      }
+    ]
+  },
+  {
+    "id": 1130327,
+    "title": "Player on DL (Disabled List)",
+    "section_id": 135133,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1500479243,
+    "updated_by": 65,
+    "updated_on": 1500481476,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 19602,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user is on the Facebook Messenger Bot",
+    "custom_steps": "WHEN the user makes a valid active player stat intent\r\nAND the player is on the DL (disabled list)",
+    "custom_expected": "?????\r\n\r\nTHEN the bot replies with:\r\nWhich PlayerName would you like to know about?",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1130339,
+    "title": "Player Stats Card - Live Game",
+    "section_id": 135134,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1500480031,
+    "updated_by": 65,
+    "updated_on": 1500480076,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 19602,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is on the Facebook Messenger Bot",
+    "custom_steps": "WHEN the user makes a valid active player stat intent\r\nAND the player is currently playing in a live game\r\n\r\ni.e.\r\n- judge\r\n- aaron judge\r\n- aaron judge home run\r\n- has aaron judge hit a hr?\r\n- how's aaron judge doing?",
+    "custom_expected": "THEN the user is presented with a live player stats card",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1130329,
+    "title": "Player Stats Card during Live Game Stats",
+    "section_id": 135134,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1500479524,
+    "updated_by": 65,
+    "updated_on": 1500480637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 19602,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user is on the Facebook Messenger Bot",
+    "custom_steps": "WHEN the user makes a valid active player stat intent\r\nAND the player is currently playing in a live game\r\n\r\ni.e.\r\n- judge\r\n- aaron judge\r\n- aaron judge home run\r\n- has aaron judge hit a hr?\r\n- how's aaron judge doing?",
+    "custom_expected": "THEN the user is presented with a live player stats card with the following:",
+    "custom_steps_separated": [
+      {
+        "content": "",
+        "expected": "i.e.\nAaron Judge is 2 for 3 today with on 2-run home run and one single"
+      },
+      {
+        "content": "",
+        "expected": "i.e.\nAaron Judge, NNY #22 1B"
+      },
+      {
+        "content": "",
+        "expected": "i.e.\n.262 AVG."
+      },
+      {
+        "content": "",
+        "expected": "i.e.\n.1.022 OPS"
+      },
+      {
+        "content": "",
+        "expected": "i.e.\nToday @ OAK: 3AB 2H 2R 3RBI 0BB 1K"
+      },
+      {
+        "content": "See Player Page",
+        "expected": "Then user is taken to ????"
+      },
+      {
+        "content": "View Game",
+        "expected": "Then user is taken to ??????"
+      },
+      {
+        "content": "Share",
+        "expected": "Then user is taken to ????"
+      }
+    ]
+  },
+  {
+    "id": 1130340,
+    "title": "Player Stats Card - Past Game",
+    "section_id": 135135,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1500480282,
+    "updated_by": 65,
+    "updated_on": 1500480396,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 19602,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is on the Facebook Messenger Bot",
+    "custom_steps": "WHEN the user makes a valid active player stat intent\r\nAND the player has played in a past game\r\n\r\ni.e.\r\n- judge\r\n- aaron judge\r\n- aaron judge home run\r\n- has aaron judge hit a hr?\r\n- how's aaron judge doing?",
+    "custom_expected": "THEN the user is presented with a past player stats card",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1130341,
+    "title": "Player Stats Card for Past Game Stats",
+    "section_id": 135135,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1500480282,
+    "updated_by": 65,
+    "updated_on": 1500480691,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 19602,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is on the Facebook Messenger Bot",
+    "custom_steps": "WHEN the user makes a valid active player stat intent\r\nAND the player has played in a past game\r\n\r\ni.e.\r\n- judge\r\n- aaron judge\r\n- aaron judge home run\r\n- has aaron judge hit a hr?\r\n- how's aaron judge doing?",
+    "custom_expected": "THEN the user is presented with a past player stats card with the following:",
+    "custom_steps_separated": [
+      {
+        "content": "",
+        "expected": "i.e.\nAaron Judge was 2 for 3 on July 18 with one 2-run home run and one single"
+      },
+      {
+        "content": "",
+        "expected": "i.e.\nAaron Judge, NNY #22 1B"
+      },
+      {
+        "content": "",
+        "expected": "i.e.\n.262 AVG."
+      },
+      {
+        "content": "",
+        "expected": "i.e.\n.1.022 OPS"
+      },
+      {
+        "content": "",
+        "expected": "i.e.\n3AB 2H 2R 3RBI 0BB 1K"
+      },
+      {
+        "content": "See Player Page",
+        "expected": "Then user is taken to ???"
+      },
+      {
+        "content": "View Game Page",
+        "expected": "Then user is taken to ????"
+      },
+      {
+        "content": "Share",
+        "expected": "Then user is taken to ???"
+      }
+    ]
+  }
+]

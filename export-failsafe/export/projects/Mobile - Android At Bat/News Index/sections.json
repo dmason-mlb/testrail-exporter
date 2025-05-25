@@ -1,0 +1,20 @@
+[
+  {
+    "id": 7030,
+    "suite_id": 925,
+    "name": "Handset/7-inch Tablet",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 7032,
+    "suite_id": 925,
+    "name": "larger than 7 inch tablet",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

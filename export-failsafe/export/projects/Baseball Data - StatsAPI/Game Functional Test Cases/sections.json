@@ -1,0 +1,92 @@
+[
+  {
+    "id": 156749,
+    "suite_id": 21185,
+    "name": "Gameday",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1585683,
+    "suite_id": 21185,
+    "name": "Language",
+    "description": null,
+    "parent_id": 156749,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 1591959,
+    "suite_id": 21185,
+    "name": "Timecodes",
+    "description": null,
+    "parent_id": 156749,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 156750,
+    "suite_id": 21185,
+    "name": "MLBTV",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 156751,
+    "suite_id": 21185,
+    "name": "Vod Game Video",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 156752,
+    "suite_id": 21185,
+    "name": "Live Game Video",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 156753,
+    "suite_id": 21185,
+    "name": "Game Linescore Data",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 156754,
+    "suite_id": 21185,
+    "name": "Game Boxscore Data",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 158109,
+    "suite_id": 21185,
+    "name": "Smoke Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 158110,
+    "suite_id": 21185,
+    "name": "Regression",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  }
+]

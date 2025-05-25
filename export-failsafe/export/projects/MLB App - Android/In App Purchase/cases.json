@@ -1,0 +1,734 @@
+[
+  {
+    "id": 7645419,
+    "title": "Google Variant",
+    "section_id": 395335,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1597268193,
+    "updated_by": 232,
+    "updated_on": 1597268193,
+    "estimate": null,
+    "estimate_forecast": "48s",
+    "suite_id": 84346,
+    "display_order": 2,
+    "custom_preconds": "GIVEN I am using the google variant AND the google play store is present on the device",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I click on \"Buy MLB\" in the drawer",
+        "expected": "THEN I should be directed to a purchase page that displays google play store options"
+      },
+      {
+        "content": "WHEN the correct store or alternative for the variant is available\n\nAND I click on \"Buy\" on the purchase page",
+        "expected": "THEN I should start the purchase process using the variant-specific store"
+      }
+    ]
+  },
+  {
+    "id": 16056924,
+    "title": "MLB Audio Paywall",
+    "section_id": 395335,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1613662732,
+    "updated_by": 232,
+    "updated_on": 1613662732,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 84346,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I am not entitled to audio content\nAND I launch the app and select the Audio link on the Scoreboard\n",
+        "expected": "THEN I will see a paywall with the options to buy MLB Audio"
+      },
+      {
+        "content": "WHEN I am not entitled to audio content\nAND I have a favorite team selected\nAND I launch the app and select the Audio link on the Scoreboard",
+        "expected": "THEN I will see a paywall with the options to buy MLB Audio\nAND I will see the favorite team’s background image"
+      },
+      {
+        "content": "WHEN I am an Un-Entitled user\nAND I am viewing the drawer\n",
+        "expected": "THEN I will see a “Subscribe to MLB Audio” as the first item in the menu (below drawer header)"
+      }
+    ]
+  },
+  {
+    "id": 16291160,
+    "title": "Anonymous user connect account",
+    "section_id": 395335,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10598",
+    "created_by": 232,
+    "created_on": 1615327221,
+    "updated_by": 232,
+    "updated_on": 1615327862,
+    "estimate": null,
+    "estimate_forecast": "1m 45s",
+    "suite_id": 84346,
+    "display_order": 4,
+    "custom_preconds": "GIVEN an anonymous user\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an in-app purchase has been made\n",
+        "expected": "THEN I should see the Connect Account page"
+      },
+      {
+        "content": "WHEN an anonymous user is on the connect page\nAND the “Sign In with MLB” button is tapped\n",
+        "expected": "THEN the user is redirected to the Login page"
+      },
+      {
+        "content": "WHEN an anonymous user is on the connect page\nAND the “Don’t have an account? Sign Up” button is tapped\n",
+        "expected": "THEN the user is redirected to the Sign Up page"
+      },
+      {
+        "content": "WHEN an anonymous user is on the connect page\nAND the “Skip” button is tapped\n",
+        "expected": "THEN the user is directed to the expected post-paywall page"
+      },
+      {
+        "content": "WHEN an anonymous user is on the connect page\nAND the “More Info” button is tapped\n",
+        "expected": "THEN the user is shown the Subscription Management FAQ"
+      },
+      {
+        "content": "WHEN an anonymous user is on the connect page",
+        "expected": "THEN the user should see the color mode (light/dark) as set in the app settings"
+      }
+    ]
+  },
+  {
+    "id": 16331586,
+    "title": "Sync IAP on Login",
+    "section_id": 395335,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1615580251,
+    "updated_by": 232,
+    "updated_on": 1615580251,
+    "estimate": null,
+    "estimate_forecast": "13m 42s",
+    "suite_id": 84346,
+    "display_order": 5,
+    "custom_preconds": "GIVEN a google user with a store purchase",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN logging in during On Boarding\n",
+        "expected": "THEN purchase is attached to the account"
+      },
+      {
+        "content": "WHEN creating a new account\n",
+        "expected": "THEN the new account has the purchase entitlements"
+      }
+    ]
+  },
+  {
+    "id": 24409435,
+    "title": "Check Subscription link",
+    "section_id": 395335,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1635867936,
+    "updated_by": 311,
+    "updated_on": 1636580089,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 84346,
+    "display_order": 6,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the Subscriptions (See your subscriptions) link in Settings is tapped",
+        "expected": "THEN the Subscriptions area of the Google Play Store opens (https://play.google.com/store/account/subscriptions)"
+      },
+      {
+        "content": "WHEN the Check Subscription link at the bottom of the Video Paywall is tapped",
+        "expected": "THEN the Subscriptions area of the Google Play Store opens (https://play.google.com/store/account/subscriptions)"
+      },
+      {
+        "content": "WHEN the Check Subscription link at the bottom of the Audio Paywall is tapped",
+        "expected": "THEN the Subscriptions area of the Google Play Store opens (https://play.google.com/store/account/subscriptions)"
+      }
+    ]
+  },
+  {
+    "id": 26093472,
+    "title": "Force Account Creation After Purchase",
+    "section_id": 395335,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "GSTREAM-240",
+    "created_by": 232,
+    "created_on": 1643035391,
+    "updated_by": 232,
+    "updated_on": 1643064028,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 84346,
+    "display_order": 7,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user has an existing anonymous subscription\nAND the user upgrades to version 10.6.0.8 or higher",
+        "expected": "THEN the user will be presented with a screen that forces them to create an account or login before proceeding in the app"
+      },
+      {
+        "content": "WHEN an anonymous user makes a purchase in the app",
+        "expected": "THEN the user will be presented with a screen that forces them to create an account or login before proceeding in the app"
+      },
+      {
+        "content": "WHEN an anonymous user makes a purchase in the app\nAND does not register or login\nAND the user closes the app",
+        "expected": "THEN the user will be presented with a screen that forces them to create an account or login before proceeding in the app when returning to the app"
+      },
+      {
+        "content": "WHEN an anonymous user is presented with the screen which forces them to create an account or login\nAND the user logs in or creates an account",
+        "expected": "THEN the user will be navigated back into the app\nAND the user will be granted proper entitlements(this can be checked in settings under username)\nAND the user will be able to play media to which they are entitled"
+      }
+    ]
+  },
+  {
+    "id": 16777699,
+    "title": "Initial Launch",
+    "section_id": 773907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1618859073,
+    "updated_by": 311,
+    "updated_on": 1630446459,
+    "estimate": null,
+    "estimate_forecast": "8m 18s",
+    "suite_id": 84346,
+    "display_order": 1,
+    "custom_preconds": "Test for both Google Play Store and Amazon App Store\r\nUser is using a Google Play device with a valid Google Play account, for cases involving the Play Store\r\n\r\nFirst launch - User has not yet launched the app or the user has cleared app data in device settings\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "On First Launch\nWhen the splash screen has finished loaded",
+        "expected": "Then the At Bat Pay Wall should load"
+      },
+      {
+        "content": "On First Launch\nWhen the Pay Wall loads",
+        "expected": "Then the user should see:\n\n\"At Bat\"\n\"The Best Way to Watch and Listen to Live Baseball\nSubscribe to At Bat Premium to follow your team live with audio, in-game highlights and more.\"\n\n-'Explore Features' button that will take the user to a view listing At Bat Premium features\n-Two 'Subscribe' buttons (Yearly, Monthly) with prices ($24.99, $2.99)\n-'Sign in with MLB.com Account' button\n-'skip' button\n-'Restore Purchases' link"
+      },
+      {
+        "content": "On First Launch\nWhen the user taps the \"skip\" button",
+        "expected": "Then the pay wall should dismiss\nAnd the user should be taken through the onboarding flow\n"
+      },
+      {
+        "content": "On First Launch\nWhen the user taps either one of the Purchase/Subscribe buttons",
+        "expected": "Then the Play Store In-App Purchase flow should appear where the user can purchase or subscribe to the Full Version of At Bat"
+      },
+      {
+        "content": "On First Launch\nWhen the user taps the 'Having trouble with purchase' link ",
+        "expected": "Then the user should be brought to an external web page where they can get more information and link to a web flow to purchase At Bat on the web"
+      }
+    ]
+  },
+  {
+    "id": 16777700,
+    "title": "Sign in with MLB Account",
+    "section_id": 773907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1618859073,
+    "updated_by": 311,
+    "updated_on": 1630447779,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 84346,
+    "display_order": 2,
+    "custom_preconds": "Given the user has launched the app for the first time",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user sees the At Bat paywall for the first time\nand the user taps the 'Sign in With MLB Account' button",
+        "expected": "Then the user should be taken to the Login Screen"
+      },
+      {
+        "content": "When the user is taken to the Login screen",
+        "expected": "Then the user should see the following:\n\n-field for Email\n-field for Password\n-Login button\n-link to the Privacy Policy\n-Forgot Password> link\n-Help button"
+      },
+      {
+        "content": "When the user logs in with an MLB.TV Subscribed account",
+        "expected": "THEN the user should have access to At Bat features and MLB.TV video streams"
+      },
+      {
+        "content": "When the user logs in with an MLB account with no purchases",
+        "expected": "Then the pay wall should dismiss\nAnd the user should be taken through the onboarding flow\nAnd the user should be able to access all 'Full At Bat' features\nAnd the user should NOT be able to access paid MLB.TV video streams"
+      },
+      {
+        "content": "When the user logs in with a Single Team Account",
+        "expected": "Then the pay wall should dismiss\nAnd the user should be able to access all 'Full At Bat' features\nAnd the user should NOT be able to access paid MLB.TV video streams, EXCEPT for their single team's TV feed"
+      }
+    ]
+  },
+  {
+    "id": 16777701,
+    "title": "Purchase Buttons & Play Store",
+    "section_id": 773907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1618859073,
+    "updated_by": 311,
+    "updated_on": 1630516317,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 84346,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": "When the user launches the app for the first time\r\nand is on the At Bat paywall",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user cannot access the Play Store\n(not logged in to valid Play store account)",
+        "expected": "Then the user should see an indication that there is a problem\n"
+      }
+    ]
+  },
+  {
+    "id": 16777710,
+    "title": "Free, not logged-in user",
+    "section_id": 773908,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1618859114,
+    "updated_by": 311,
+    "updated_on": 1630364272,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 84346,
+    "display_order": 1,
+    "custom_preconds": "Given user has already completed Initial Launch flow and has chosen to \"Skip\" from initial Pay Wall and is using app as a free, not logged-in user.\r\n\r\n(Watch/Games page with MLB.TV Streams, accessible by tapping Video button in top right corner of app)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "user taps game tile for **live** MLB.TV stream from Watch",
+        "expected": "the user should be presented with the MLB.tv Pay Wall"
+      },
+      {
+        "content": "user taps game tile for **archive** MLB.TV stream from Watch",
+        "expected": "the user is presented with the MLB.tv Pay Wall"
+      },
+      {
+        "content": "user taps game tile for **live** MLB.TV Free Game of the Day stream from Watch",
+        "expected": "the user should be presented with the message with 3 button selections below.\n\n'Free Game of the Day:\n\nThe MLB Free Game of the Day is available to all users with a valid MLB.com account. Log into your account for access to this broadcast, or register for a free MLB.com account.\n\nDISMISS              REGISTER LOGIN'  \n\n"
+      },
+      {
+        "content": "user taps **archive** MLB.TV Game of the Day from Watch",
+        "expected": "the user should be presented with the message with 3 button selections below.\n\n'Free Game of the Day:\n\nThe MLB Free Game of the Day is available to all users with a valid MLB.com account. Log into your account for access to this broadcast, or register for a free MLB.com account.\n\nDISMISS              REGISTER LOGIN'  \n\n"
+      },
+      {
+        "content": "user taps MLB.TV button in score module of expanded scoreboard for live game",
+        "expected": "the user is presented with the MLB.TV Pay Wall"
+      },
+      {
+        "content": "user taps MLB.TV button in score module of team page for live game",
+        "expected": "the user is presented with the MLB.TV Pay Wall"
+      },
+      {
+        "content": "LITE user taps Audio button in Action Bar then selects a live or archive feed",
+        "expected": "Then the user should be presented with the audio Pay Wall"
+      },
+      {
+        "content": "LITE user taps Audio button in score module of team page",
+        "expected": "Then the user should be presented with the audio Pay Wall"
+      },
+      {
+        "content": "user taps Gameday button for live game from an expanded game cell on the scoreboard",
+        "expected": "Then the user should be taken into Gameday"
+      },
+      {
+        "content": "user taps Gameday button in Team Page score module for live game\n",
+        "expected": "Then the user should be taken into Gameday"
+      },
+      {
+        "content": "user taps Gameday Button from List view of the Schedules/Results section of the team page",
+        "expected": "Then the user should be taken to the Live tab during a Live Game\nAnd the user should be taken to the Preview/Wrap tab when the game is not live"
+      },
+      {
+        "content": "LITE user taps Gameday Button from Month view of the Schedules/Results section of the team page",
+        "expected": "Then the user should be taken into Gameday\nAnd the user should be taken to the Preview/Wrap tab when the game is not live"
+      },
+      {
+        "content": "user taps Live Look In stream from Watch",
+        "expected": "Then the user should be prompted with the At Bat Pay Wall"
+      }
+    ]
+  },
+  {
+    "id": 16777711,
+    "title": "Free, logged-in user",
+    "section_id": 773908,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1618859114,
+    "updated_by": 311,
+    "updated_on": 1630364580,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 84346,
+    "display_order": 2,
+    "custom_preconds": "User logged in with an MLB account with no subscriptions",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "user taps game tile for **live** game from Watch",
+        "expected": "the user is presented with the Pay Wall"
+      },
+      {
+        "content": "user taps game tile for **archive** game from Watch",
+        "expected": "the user is presented with the Pay Wall"
+      },
+      {
+        "content": "user taps game tile for **live** Free Game of the Day stream from Watch",
+        "expected": "Then the stream should begin to play\nAnd the user should NOT be prompted with a Pay Wall"
+      },
+      {
+        "content": "user taps game tile for **archive** Free Game of the Day stream from Watch",
+        "expected": "Then the stream should begin to play\nAnd the user should NOT be prompted with a Pay Wall"
+      },
+      {
+        "content": "user taps MLB.TV link from live game in scoreboard expanded view",
+        "expected": "the user is presented with the MLB.TV Pay Wall"
+      },
+      {
+        "content": "user taps MLB.TV link from scores section of live game in team page",
+        "expected": "the user is presented with the MLB.TV Pay Wall"
+      },
+      {
+        "content": "user taps audio link from live game in scoreboard expanded view",
+        "expected": "the user is presented with the audio Pay Wall"
+      },
+      {
+        "content": "user taps audio link from scores section of live game in team page",
+        "expected": "the user is presented with the audio Pay Wall"
+      }
+    ]
+  },
+  {
+    "id": 16777712,
+    "title": "Accessing Full/Premium features",
+    "section_id": 773908,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1618859114,
+    "updated_by": 311,
+    "updated_on": 1630599905,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 84346,
+    "display_order": 3,
+    "custom_preconds": "Cases assume user has already completed Initial Launch flow and has chosen to \"Continue to Free App\" from initial Pay Wall and is using app as Lite User. \r\n\r\nLITE user - User who is not logged in with entitled account or who has not purchased or restored In App Purchase\r\nFULL user - User who is logged in with an MLB account\r\nMLB.TV user - User who is logged in with account entitled with At Bat access AND MLB.TV access. (MLB.TV premium contains At Bat entitlement)\r\n\r\nFull At Bat feature - Gated feature that is NOT MLB.TV live game or archive (eg. Gameday Audio, Pitch by Pitch Gameday)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the 'Explore Features' link on the At Bat Paywall",
+        "expected": "Then the user should see the MLB.TV feature screen describing subscribe, listen, access and follow"
+      },
+      {
+        "content": "User dismisses Pay Wall by tapping 'Up' button on Pay Wall or device Back button",
+        "expected": "Then the Pay Wall should dismiss\nAnd the user should remain in the Lite version of the app \n(Verify the user cannot access premium features) "
+      },
+      {
+        "content": "LITE user who has opened Pay Wall taps the 'Buy' or 'Subscribe' button",
+        "expected": "Then the Play Store flow should appear where the user can unlock the full version of the app"
+      },
+      {
+        "content": "When the user taps the 'Log In' link on the Pay Wall",
+        "expected": "Then the user should be prompted with a log in screen\nAnd there should be a field for Username\nAnd there should be a field for Password\nAnd there should be a Login button"
+      },
+      {
+        "content": "LITE user logs in with entitled MLB.TV account from At Bat Paywall",
+        "expected": "Then the pay wall should dismiss\nAnd the user should see a 'toast' message indicating to the user that they are signed in and have unlocked all At Bat features\nAnd the user should be brought into the full version of the app\nAnd the user should be able to access all Full At Bat features\nAnd the user should be able to access paid MLB.TV video streams"
+      },
+      {
+        "content": "LITE user logs in with entitled Single Team account from At Bat Paywall\nwhen trying to access Audio",
+        "expected": "Then the paywall should dismiss\nAnd the user should be brought to the Audio EPG\nAnd the user should be able to access their Single Team's audio feed\nAnd see a \"This feed is not included in your subscription\" message in the audio player when trying to access any other team's audio feed"
+      },
+      {
+        "content": "LITE user logs in with entitled Single Team account from At Bat Paywall\nwhen trying to launch the MLB.TV Game of the Day\nand their Single Team is one of the teams playing\nand the user taps that team's feed",
+        "expected": "Then the paywall should dismiss\nAnd the feed should begin to play"
+      },
+      {
+        "content": "LITE user logs in with a non entitled BAMNET account from At Bat Paywall",
+        "expected": "Then the user should receive a message indicating that this account is not entitled for At Bat access\nAnd the user should be brought back to the Pay Wall\nAnd the user should be signed in to their MLB account\nAnd the 'Sign In' button on the feature gate will now say \"Sign in with another MLB account\"\nAnd the user should not have access to At Bat"
+      },
+      {
+        "content": "LITE user logs in with entitled At Bat Premium account from At Bat Paywall",
+        "expected": "Then the Pay Wall should dismiss\nAnd the user should see a 'toast' message indicating to the user that they are signed in and have unlocked all At Bat features\nAnd the user should be brought into the full version of the app\nAnd the user should be able to access all Full At Bat features\nAnd the user should NOT be able to access MLB.tv paid feeds"
+      },
+      {
+        "content": "LITE user logs in with entitled Single Team + Android At Bat account from At Bat Paywall",
+        "expected": "Then the Pay Wall should dismiss\nAnd the user should see a 'toast' message indicating to the user that they are signed in and have unlocked all At Bat features\nAnd the user should be brought into the full version of the app\nAnd the user should be able to access all Full At Bat features\nAnd the user should NOT be able to access MLB.tv paid feeds\nEXCEPT for their Single Team's TV feed"
+      },
+      {
+        "content": "LITE user logs in with entitled MLB.TV account from MLB.TV paywall",
+        "expected": "Then the Pay Wall should dismiss\nAnd the user should see a 'toast' message indicating to the user that they are signed in and have unlocked all At Bat features\nAnd the user should be taken into the MLB.tv player where the video stream should begin playing"
+      },
+      {
+        "content": "LITE user purchases or subscribes to At Bat from Pay Wall",
+        "expected": "Then the Pay Wall should dismiss\nAnd the user should see a 'toast' message indicating to the user that they are signed in and have unlocked all At Bat features\nAnd the user should be taken into the feature they were attempting to access"
+      },
+      {
+        "content": "LITE user restores purchase from At Bat Pay Wall ",
+        "expected": "Then the Pay Wall should dismiss\nAnd the user should see a 'toast' message indicating to the user that they are signed in and have unlocked all At Bat features\nAnd the user should be taken into the feature they were attempting to access"
+      },
+      {
+        "content": "LITE user logs into entitled account via app settings page\n",
+        "expected": "Then the user should see a 'toast' message indicating to the user that they are signed in with an At Bat account \nAnd the user should be able to access At Bat features without issue\nAnd the user should NOT be able to access MLB.TV streams"
+      },
+      {
+        "content": "FULL user loses entitlement, attempts to access At Bat feature",
+        "expected": "Then user should be presented with the At Bat Pay Wall"
+      },
+      {
+        "content": "MLB.TV user watching live MLB.TV stream loses entitlement \n(Cancelled in Rodeo)",
+        "expected": "Then the user should not be removed from the live video stream\nAnd the next time the user attempts to launch an MLB.TV stream or other premium feature, they should be prompted with the pay wall"
+      },
+      {
+        "content": "FULL user viewing At Bat features (Gameday, Gameday Audio) loses entitlement\n(Cancelled in Rodeo)",
+        "expected": "Then the user should not be removed from the feature \nAnd the next time they attempt to launch an At Bat Feature, they should be brought to the pay wall"
+      },
+      {
+        "content": "When a user logged into a BAMNET account linked to an In App Purchase (BAMNET1)\nAnd the purchase is linked to a different BAMNET account (BAMNET2) ",
+        "expected": "Then the user logged in with the original BAMNET account (BAMNET1) should eventually be blocked from accessing At Bat features "
+      }
+    ]
+  },
+  {
+    "id": 16777702,
+    "title": "App searches for Purchase upon initial launch of the app",
+    "section_id": 773909,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1618859084,
+    "updated_by": 238,
+    "updated_on": 1618859084,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 84346,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user has initially launched the app\r\n",
+    "custom_steps": "WHEN the user passes the splash screen\r\n",
+    "custom_expected": "THEN the app with automatically search to restore any previous purchase the Google user has made",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16777703,
+    "title": "Purchase is restored automatically upon initial launch of app if google account has previous purchase",
+    "section_id": 773909,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1618859084,
+    "updated_by": 238,
+    "updated_on": 1618859084,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 84346,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user has previously made in app purchases\r\nAND the user has initially launches the app\r\n",
+    "custom_steps": "WHEN the app searches for previously purchases\r\n",
+    "custom_expected": "THEN the purchases are automatically restored",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16777704,
+    "title": "Purchase is not restored if user has not made any previous purchase",
+    "section_id": 773909,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1618859084,
+    "updated_by": 238,
+    "updated_on": 1618859084,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 84346,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user has NOT previously made in app purchases\r\nAND the user has initially launches the app\r\n",
+    "custom_steps": "WHEN the app searches for previously purchases\r\n",
+    "custom_expected": "THEN the not purchases are restored\r\nAND the user is presented with the paywall \r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16777705,
+    "title": "Purchase is linked if user has made a subscribe and install purchase directly from Google Play",
+    "section_id": 773909,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1618859084,
+    "updated_by": 238,
+    "updated_on": 1618859084,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 84346,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user has previously made the subscribe and install purchase directly from Google Play Store\r\nAND the user has initially launches the app\r\n",
+    "custom_steps": "WHEN the app searches for previously purchases\r\n",
+    "custom_expected": "THEN the purchases are automatically restored",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16777706,
+    "title": "Purchase is linked if user has made a purchase in Device A and launched app initially in device B",
+    "section_id": 773909,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1618859084,
+    "updated_by": 238,
+    "updated_on": 1618859084,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 84346,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user has previously made in app purchases in device A\r\nAND the user has initially launches the app on device B\r\n",
+    "custom_steps": "WHEN the app searches for previously purchases\r\n",
+    "custom_expected": "THEN the purchases are automatically restored",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16777707,
+    "title": "User who has previously made a purchase is NOT shown the paywall after auto linking occurs after initial launch",
+    "section_id": 773909,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1618859084,
+    "updated_by": 238,
+    "updated_on": 1618859084,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 84346,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user has previously made an At Bat/MLB.TV purchase\r\n",
+    "custom_steps": "WHEN the user initially launched the app\r\n",
+    "custom_expected": "THEN is taken directly to account linking screen and team picker after purchase is auto linked \r\nAND the user is not shown the paywall",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16777708,
+    "title": "User is shown a toast identifying that a subscription has been detected and features are now restored",
+    "section_id": 773909,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1618859084,
+    "updated_by": 238,
+    "updated_on": 1618859084,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 84346,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user has previously made an At Bat/MLB.TV purchase\r\nAND the user initially launched the app\r\n",
+    "custom_steps": "WHEN the purchase is automatically restored\r\n",
+    "custom_expected": "THEN the user is presented a toast message which indicate that subscription was detected and restored",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16777709,
+    "title": "Previously purchased features are available once user enters the app",
+    "section_id": 773909,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1618859084,
+    "updated_by": 238,
+    "updated_on": 1618859084,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 84346,
+    "display_order": 8,
+    "custom_preconds": "GIVEN the user has previously made an At Bat/MLB.TV purchase\r\nAND the user initially launched the app\r\n",
+    "custom_steps": "WHEN the auto restore is complete\r\nAND on boarding is complete\r\n",
+    "custom_expected": "THEN the features previously purchased are accessible ",
+    "custom_steps_separated": null
+  }
+]

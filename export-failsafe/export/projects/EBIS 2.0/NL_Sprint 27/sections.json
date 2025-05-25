@@ -1,0 +1,56 @@
+[
+  {
+    "id": 114066,
+    "suite_id": 17411,
+    "name": "MJC",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 114067,
+    "suite_id": 17411,
+    "name": "CBT/Payroll",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 114068,
+    "suite_id": 17411,
+    "name": "Investigations",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 114069,
+    "suite_id": 17411,
+    "name": "Winter League Requests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 114073,
+    "suite_id": 17411,
+    "name": "CBT/Payroll",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 116746,
+    "suite_id": 17411,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  }
+]

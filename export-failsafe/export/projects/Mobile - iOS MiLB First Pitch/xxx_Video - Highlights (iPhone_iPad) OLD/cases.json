@@ -1,0 +1,122 @@
+[
+  {
+    "id": 48708,
+    "title": "Media - Highlights 2",
+    "section_id": 6985,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 40,
+    "created_on": 1418917560,
+    "updated_by": 119,
+    "updated_on": 1463508946,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 897,
+    "display_order": 1,
+    "custom_preconds": "Given we have selected the Video menu",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN we have selected the Videos tab",
+        "expected": "THEN all videos listed under the Highlights tab will be accurate, readable & display the correct icon"
+      },
+      {
+        "content": "WHEN we scroll through the Videos list",
+        "expected": "THEN we will briefly see a placeholder icon for each video before it's thumbnail loads"
+      },
+      {
+        "content": "WHEN we have selected the Video tab",
+        "expected": "THEN the formatting of the text & thumbnails appears consistent"
+      },
+      {
+        "content": "When we tap on the Class picker\nAnd choose a particular class",
+        "expected": "THEN the videos will change the videos according the class that was chosen"
+      },
+      {
+        "content": "WHEN the user examines the contents of the video thumbnail",
+        "expected": "THEN the thumbnail will contain a title in white bolded font\nAND the time/date stamp will be below the the title\nAND a Share icon will be in the lower right-hand corner (if enabled)\nAND all text present will be clear and legible"
+      },
+      {
+        "content": "When we tap on the information button on the top right hand corner of video thumbnail\n",
+        "expected": "THEN a brief description of the video will appear on the thumbnail\nAND at the bottom the date of the video will appear"
+      },
+      {
+        "content": "WHEN the user attempts to scroll down\nAND the user attempts to scroll up",
+        "expected": "THEN the scrolling in either direction will be possible\nAND the inertial scrolling will be smooth"
+      },
+      {
+        "content": "WHEN a video thumbnail is tapped",
+        "expected": "THEN the video playback for the selected highlight will begin after pre-roll ad plays"
+      },
+      {
+        "content": "When a video thumbnail is tapped and user plays video and pre-roll ad appears and the user taps x",
+        "expected": "the user should be taken out of the video players"
+      },
+      {
+        "content": "WHEN we have tapped on the class selector\nAND we are examining the contents of the class index",
+        "expected": "THEN a cell for each of the classes will be present\nAND the classes will be listed in this order: Triple-A,Double-A,Class A Advanced,Class A, Class A Short Season, and Rookie"
+      },
+      {
+        "content": "WHEN a video is being played\nAND the user taps on these screen",
+        "expected": "THEN the video controller UI will appear onscreen\nAND all button/controllers will perform their specified functions correctly"
+      },
+      {
+        "content": "WHEN the user has tapped on the Videos tab\nAND Triple-A has been selected in the class selector",
+        "expected": "THEN only Triple-A Video Highlights will display\nTest for ALL classes"
+      },
+      {
+        "content": "WHEN the user is on another view\nAND the user presses the class selector on top center\nAND Chooses Triple A\nAND returns to the Video page",
+        "expected": "THEN the Double-A Video Highlights will no longer be present\nAND only Triple-A Video Highlights will display\nTest for ALL classes"
+      },
+      {
+        "content": "WHEN the value <keyword type=\"mmtax\" value=\"shareable\"/> of the following xml:\n\nProd: http://www.milb.com/gen/hb/video/mobile/${leagueOrClass}.xml\nQA: http://qa.milb.com/gen/hb/video/mobile/${leagueOrClass}.xml\n\nExample: http://www.milb.com/gen/hb/video/mobile/pacific-international.xml\nExample: http://www.milb.com/gen/hb/video/mobile/double_a.xml",
+        "expected": "THEN the video highlight share icon will be visible/not visible on a given highlight depending on the setting (both scenarios must be tested)"
+      },
+      {
+        "content": "WHEN the user taps on the share icon in the lower right corner of the thumbnail",
+        "expected": "THEN a menu will pop up\nAND will contain a Tweet button\nAND will contain a Post to Facebook button\nAND will contain an Email a Link Button\nAND will contain a Message button\nAND will contain a Cancel button"
+      },
+      {
+        "content": "WHEN Twitter account is not set on a device\nAND the Tweet button is tapped\n",
+        "expected": "THEN the following error message will appear:\n\nNo Twitter Account\nThere are no Twitter accounts configured. You can add or create a Twitter account in Settings.\n\nAND will contain an OK button that is tappable & will cause the error message to disappear when tapped"
+      },
+      {
+        "content": "WHEN the user taps on the share arrow\nAND Selects Tweet",
+        "expected": "THEN the tweet sheet should appear\nAND the format should display the title of the video followed by Sent with MiLB First Pitch\nAND the last line should be the actual link to the video, but it will only appear on the actual tweet, not the tweet sheet"
+      },
+      {
+        "content": "WHEN the device does not have a Facebook account setup\nAND the Share button is tapped on video",
+        "expected": "THEN the user will not be able to see the Facebook icon listed"
+      },
+      {
+        "content": "WHEN the Post to Facebook button is tapped",
+        "expected": "THEN the Post to Wall page will open"
+      },
+      {
+        "content": "WHEN the user taps on the share arrow\nAND then taps on Post to Facebook",
+        "expected": "THEN the Facebook Post to Wall page will appear\nAND the actual post will display the video thumbnail & caption followed by milb.com"
+      },
+      {
+        "content": "WHEN the Email a Link button is tapped",
+        "expected": "THEN device's native email client will open an email form"
+      },
+      {
+        "content": "WHEN the user taps on the share button for a Video\nAND selects the Email a Link button",
+        "expected": "THEN the email draft will appear\nAND be formatted with the video highlight title, the date & Sent with MiLB First Pitch"
+      },
+      {
+        "content": "WHEN the Message button is tapped",
+        "expected": "THEN the device message client will open"
+      },
+      {
+        "content": "WHEN the user taps on the share arrow on the video\nAND then taps on the Message button",
+        "expected": "THEN a New Message screen will appear\nAND once the message is sent it will be formatted with just a video link that will push on the wap site"
+      }
+    ],
+    "custom_feature_tag": null
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "id": 576600,
+    "name": "Media Upload Tool",
+    "description": null,
+    "project_id": 241,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/576600"
+  },
+  {
+    "id": 576601,
+    "name": "ERA",
+    "description": null,
+    "project_id": 241,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/576601"
+  },
+  {
+    "id": 576606,
+    "name": "Yes Network - Next",
+    "description": null,
+    "project_id": 241,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/576606"
+  },
+  {
+    "id": 576607,
+    "name": "WBC - World Baseball Classic",
+    "description": null,
+    "project_id": 241,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/576607"
+  },
+  {
+    "id": 585751,
+    "name": "USAB",
+    "description": null,
+    "project_id": 241,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/585751"
+  },
+  {
+    "id": 585752,
+    "name": "Other Project",
+    "description": null,
+    "project_id": 241,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/585752"
+  },
+  {
+    "id": 598547,
+    "name": "Appy League",
+    "description": "Appy League",
+    "project_id": 241,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/598547"
+  },
+  {
+    "id": 642350,
+    "name": "Pressbox",
+    "description": "New Pressbox features",
+    "project_id": 241,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/642350"
+  }
+]

@@ -1,0 +1,1117 @@
+[
+  {
+    "id": 29160043,
+    "title": "XP",
+    "section_id": 1557908,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544590,
+    "updated_by": 258,
+    "updated_on": 1663194174,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the PSBC game card",
+        "expected": "THEN user is displayed with 250 XP on the bottom left corner of the card"
+      },
+      {
+        "content": "WHEN user played the PSBC\nAND is final ",
+        "expected": "THEN user gets 250 XP"
+      },
+      {
+        "content": "WHEN user views the result feed",
+        "expected": "THEN user DO NOT see PSBC result card "
+      }
+    ]
+  },
+  {
+    "id": 29160044,
+    "title": "Token",
+    "section_id": 1557908,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544590,
+    "updated_by": 258,
+    "updated_on": 1663194287,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 2,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the PSBC game card",
+        "expected": "THEN user is displayed with 5 tokens on the bottom left corner of the card"
+      },
+      {
+        "content": "WHEN user made correct picks in Wild Card",
+        "expected": "THEN user receives 5 tokens for each correct pick (max: 20)\n"
+      },
+      {
+        "content": "WHEN user made correct picks in Division Series",
+        "expected": "THEN user receives 15 tokens for each correct pick (max: 60)"
+      },
+      {
+        "content": "WHEN user made correct picks in League Championship",
+        "expected": "THEN user receives 20 tokens for each correct pick (max: 40)"
+      },
+      {
+        "content": "WHEN user made correct picks in World Series",
+        "expected": "THEN user receives 40 tokens for each correct pick (max: 40)"
+      },
+      {
+        "content": "WHEN user correctly predicts all bracket ",
+        "expected": "THEN user received 200 tokens "
+      },
+      {
+        "content": "WHEN user views the result feed",
+        "expected": "THEN user DO NOT see HRD result card ???"
+      }
+    ]
+  },
+  {
+    "id": 29160045,
+    "title": "Reward Pack",
+    "section_id": 1557908,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544590,
+    "updated_by": 258,
+    "updated_on": 1663194318,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 3,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user plays the PSBC",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user submits their PSBC picks",
+        "expected": "THEN user received the rare Reward Pack after submission (1Rare, 2 Common)\nAND this is independent of any virtual rewards earned through Tokens.\nAND this is only for the first submission per unique user"
+      },
+      {
+        "content": "WHEN user views the reward Pack (in the feed)",
+        "expected": "THEN the copy for the Feed event should read: “You unlocked a Rewards Pack for your Postseason Bracket Challenge submission!”"
+      },
+      {
+        "content": "WHEN user updates their picks",
+        "expected": "THEN user does NOT receive another Reward Pack"
+      }
+    ]
+  },
+  {
+    "id": 29160046,
+    "title": "Country region",
+    "section_id": 1557908,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544590,
+    "updated_by": 258,
+    "updated_on": 1664209885,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user's region is set to US ",
+        "expected": "THEN user sees the PSBC game card for US "
+      },
+      {
+        "content": "WHEN user's region is set to any other region (besides Canada)",
+        "expected": "THEN user sees the PSBC game card for US "
+      },
+      {
+        "content": "WHEN user's region is set to Canada",
+        "expected": "THEN user sees the PSBC game card for Canada"
+      }
+    ]
+  },
+  {
+    "id": 29160021,
+    "title": "PSBC Game Card position - updated",
+    "section_id": 1557909,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-4106",
+    "created_by": 258,
+    "created_on": 1661544531,
+    "updated_by": 258,
+    "updated_on": 1663878635,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the Games tab on the PSBC launch date (October 5)",
+        "expected": "THEN the PSBC game card has the topmost position \nAND the game card is unlocked"
+      },
+      {
+        "content": "WHEN user views the PSBC card at the start of the first game (October 7)",
+        "expected": "THEN PSBC card is locked (not grayscale) \nAND the card is moved to position #"
+      },
+      {
+        "content": "WHEN user views the Games tab after World Series",
+        "expected": "THEN the PSBC game card is grayed out"
+      }
+    ]
+  },
+  {
+    "id": 29160022,
+    "title": "Game Card - unlocked state - updated",
+    "section_id": 1557909,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544531,
+    "updated_by": 258,
+    "updated_on": 1663193241,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 2,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in \r\nAND user is on the Game tab\r\nAND PSBC has unlocked state (scheduled)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the HRD card ",
+        "expected": "THEN user should be displayed with\n\n* Postseason Bracket Challenge logo in the center\n* 250 XP on the bottom left corner\n* 5 token on the bottom left corner next to XP\n* background image\n"
+      },
+      {
+        "content": "WHEN user clicks on the game card",
+        "expected": "THEN user is brought to the PSBC tutorial page or bracket (if played already)"
+      },
+      {
+        "content": "WHEN user submits their picks",
+        "expected": "THEN the PSBC game card has a check mark"
+      }
+    ]
+  },
+  {
+    "id": 29160023,
+    "title": "Game Card - locked state - updated",
+    "section_id": 1557909,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544531,
+    "updated_by": 258,
+    "updated_on": 1663193343,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 3,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is on the Game tab\r\nAND PSBC has a locked state (live or final)",
+    "custom_steps": null,
+    "custom_expected": "THEN user should display with PSBC game card",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the PSBC card ",
+        "expected": "THEN user should be displayed with\n\n* Postseason Bracket Challenge logo in the center\n* 250 XP on the bottom left corner\n* 5 token on the bottom left corner next to XP\n* background image\n* lock icon is displayed in the top right corner\n"
+      },
+      {
+        "content": "WHEN user clicks on the game card",
+        "expected": "THEN user is brought to the tutorial page (double check - could be bracket)"
+      }
+    ]
+  },
+  {
+    "id": 29283627,
+    "title": "Copy for correctly predicted matchup - updated",
+    "section_id": 1568025,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1663193329,
+    "updated_by": 258,
+    "updated_on": 1663193870,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played the PSBC\r\nAND user made a correct prediction",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user made a correct prediction on the Wild Card/Division Series",
+        "expected": "THEN user gets the user event: \nYou got a [Round Name] prediction correct! [Team name] won!\n\nExample: You got a Division Series prediction correct! The New York Yankees won!\n\nAND user receives 0 XP and # RP"
+      },
+      {
+        "content": "WHEN user made a correct prediction on the League Championship Series",
+        "expected": "THEN user gets the user event: \nYou correctly predicted the [ALCS/NLCS]! [Team name] won!\nAND user receives 0 XP and 20 RP"
+      },
+      {
+        "content": "WHEN user made a correct prediction on the World Series",
+        "expected": "THEN user gets the user event: \nYou correctly predicted the World Series! [Team name] won!\nAND user receives 250 XP and 40 RP"
+      }
+    ]
+  },
+  {
+    "id": 29283628,
+    "title": "Copy for incorrectly predicted matchup - updated",
+    "section_id": 1568025,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1663193619,
+    "updated_by": 258,
+    "updated_on": 1663193876,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 2,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played the PSBC\r\nAND user made an incorrect prediction",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user made a incorrect prediction on the Wild Card/Division Series",
+        "expected": "THEN user gets the user event: \nYou guessed a [Round Name] matchup incorrectly. You chose [User Team], but [Correct Team] won.\n\nAND user receives 0 XP and 0 RP"
+      },
+      {
+        "content": "WHEN user made a incorrect prediction on the League Championship Series",
+        "expected": "THEN user gets the user event: \nYou guessed the [ALCS/NLCS] incorrectly. You chose [User Team], but [Correct Team] won.\nAND user receives 0 XP and 0 RP"
+      },
+      {
+        "content": "WHEN user made a incorrect prediction on the World Series",
+        "expected": "THEN user gets the user event: \nYou guessed the World Series incorrectly. You chose [User Team], but [Correct Team] won.\nAND user receives 250 XP and # RP"
+      }
+    ]
+  },
+  {
+    "id": 29160039,
+    "title": "Season Champion: Postseason Bracket - updated",
+    "section_id": 1557910,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544579,
+    "updated_by": 258,
+    "updated_on": 1663192537,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played PSBC\r\nAND HRD is final\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": "All received badges should be displayed in Feed and user's profile page under Badges section",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user scores the maximum points in the Postseason Bracket Challenge",
+        "expected": "THEN user receives the Season Champion: Postseason Bracket badge\n\n"
+      },
+      {
+        "content": "WHEN user views the badge ",
+        "expected": "THEN the copy should say  'Score the maximum points in the Postseason Bracket Challenge (perfect game criteria AND correctly predicting the number of games played in the WS)'"
+      }
+    ]
+  },
+  {
+    "id": 29283624,
+    "title": "Perfect Game: Postseason Bracket - updated",
+    "section_id": 1557910,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1663192354,
+    "updated_by": 258,
+    "updated_on": 1663192543,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 2,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played PSBC\r\nAND HRD is final\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": "All received badges should be displayed in Feed and user's profile page under Badges section",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user correctly predicts every Postseason winner",
+        "expected": "THEN user receives the Perfect Game: Postseason Bracket\n\n"
+      },
+      {
+        "content": "WHEN user views the badge ",
+        "expected": "THEN the copy should say  'Correctly predict every Postseason winner'"
+      }
+    ]
+  },
+  {
+    "id": 29283625,
+    "title": "Matchup Master - updated",
+    "section_id": 1557910,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1663192545,
+    "updated_by": 258,
+    "updated_on": 1663192609,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 3,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played PSBC\r\nAND HRD is final\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": "All received badges should be displayed in Feed and user's profile page under Badges section",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user correctly predicts the winner of a Postseason series",
+        "expected": "THEN user receives the Matchup Master badge\n\n"
+      },
+      {
+        "content": "WHEN user views the badge ",
+        "expected": "THEN the copy should say  'Correctly predict the winner of a Postseason series'"
+      }
+    ]
+  },
+  {
+    "id": 29283626,
+    "title": "Know November - updated",
+    "section_id": 1557910,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1663192617,
+    "updated_by": 258,
+    "updated_on": 1663192663,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 4,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played PSBC\r\nAND HRD is final\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": "All received badges should be displayed in Feed and user's profile page under Badges section",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user correctly predicts the MLB World Series Winner",
+        "expected": "THEN user receives the Know November badge\n\n"
+      },
+      {
+        "content": "WHEN user views the badge ",
+        "expected": "THEN the copy should say  'Correctly predict the MLB World Series winner'"
+      }
+    ]
+  },
+  {
+    "id": 29160036,
+    "title": "Brackets UI - updated",
+    "section_id": 1557911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544571,
+    "updated_by": 258,
+    "updated_on": 1663865978,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is viewing brackets",
+        "expected": "THEN user is displayed with: \n\n* team name \n* team logo\n\nAND the correct team logos are displayed\nAND team name are displayed fully (no truncation)\n\n\n"
+      }
+    ]
+  },
+  {
+    "id": 29160024,
+    "title": "Making a pick flow - updated",
+    "section_id": 1557912,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544539,
+    "updated_by": 258,
+    "updated_on": 1664209966,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is playing Postseason Bracket Challenge",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user clicks on the PSBC card",
+        "expected": "THEN user is brought to the bracket tutorial page (webview) - separate tc"
+      },
+      {
+        "content": "WHEN user clicks 'Enter Bracket'",
+        "expected": "THEN user is displayed with a bracket\n"
+      },
+      {
+        "content": "WHEN user selects the team from the first matchup",
+        "expected": "THEN selected team changes the accent color to blue\nAND selected team moves to next round"
+      },
+      {
+        "content": "WHEN user selected team in the final matchup",
+        "expected": "THEN the team name, appears on the right side\nAND 'Submit My Picks' button gets enabled"
+      },
+      {
+        "content": "WHEN user clicks on 'Submit My Picks' button",
+        "expected": "THEN the tiebreaker page is displayed (separate TC)"
+      },
+      {
+        "content": "WHEN user answers the tiebreaker questions",
+        "expected": "THEN user can submit their picks"
+      },
+      {
+        "content": "WHEN user clicks on 'Submit My Picks' button",
+        "expected": "THEN user's picks are submitted \nAND user receives a submission email (separate tc)"
+      },
+      {
+        "content": "",
+        "expected": "AND user is awarded with rare Reward Pack "
+      },
+      {
+        "content": "WHEN user reopens the PSBC card after submitting picks",
+        "expected": "THEN the tutorial page is not displayed \nAND user can see their picks"
+      },
+      {
+        "content": "WHEN user submits their pick",
+        "expected": "THEN the PSBC game card has a check mark"
+      }
+    ]
+  },
+  {
+    "id": 29340877,
+    "title": "Submitting flow - user is logged in - updated",
+    "section_id": 1557912,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1663871317,
+    "updated_by": 258,
+    "updated_on": 1663872493,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 2,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is playing Postseason Bracket Challenge",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user submits their picks ",
+        "expected": "THEN user is not asked to log in"
+      }
+    ]
+  },
+  {
+    "id": 29340878,
+    "title": "Submitting flow - user is not logged in - updated",
+    "section_id": 1557912,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1663872499,
+    "updated_by": 258,
+    "updated_on": 1663872542,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 3,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is playing Postseason Bracket Challenge",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user submits their picks ",
+        "expected": "THEN user is asked to log in"
+      }
+    ]
+  },
+  {
+    "id": 29160025,
+    "title": "Tiebreaker page - updated",
+    "section_id": 1557912,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544539,
+    "updated_by": 258,
+    "updated_on": 1665687351,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 4,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is playing Postseason Bracket Challenge",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user made picks and clicked on 'Submit My Picks' button",
+        "expected": "THEN user is displayed with Tiebreaker page"
+      },
+      {
+        "content": "WHEN user views the Tiebreaker page",
+        "expected": "THEN user is displayed with:\n\n* 'Required Questions' section - required\n* 'Tiebreaker Questions' section - non required\n* DOB field (if user is not logged in) - separate TC\n* section with 2 check fields\n"
+      },
+      {
+        "content": "WHEN user enters input in the fields",
+        "expected": "THEN fields only accept numeric and letters and no special characters"
+      },
+      {
+        "content": "WHEN user enters valid input",
+        "expected": "THEN user is able to submit picks \nAND 'Submit My Picks' button is enabled"
+      },
+      {
+        "content": "WHEN required fields have no input",
+        "expected": "THEN user is not able to proceed and 'Submit My Picks' button is disabled\nAND 'Please answer all required questions*' pop up is displayed"
+      },
+      {
+        "content": "WHEN user views the first question",
+        "expected": "THEN it should only accepts values 1-7"
+      }
+    ]
+  },
+  {
+    "id": 29160026,
+    "title": "Tutorial page - to update!",
+    "section_id": 1557912,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544539,
+    "updated_by": 258,
+    "updated_on": 1664575075,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 5,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is playing HRD",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user opens the HRD bracket before submitting any picks",
+        "expected": "THEN the tutorial page is displayed"
+      },
+      {
+        "content": "WHEN user views the tutorial page",
+        "expected": "THEN user is displayed with\n* Home Run Derby image\n* title: Pick the perfect T-Mobile Home Run Derby® bracket and compete to win $100,000!\n* copy: \nYou can edit your selections until 5 minutes before the Home Run Derby begins on July 18. (with correct date!)\n* legal copy\n* 'Enter Bracket' button\n\nNote: no mlb.com link should be displayed\n\nMATCH with previous \n"
+      },
+      {
+        "content": "WHEN user clicks on Official Rules",
+        "expected": "THEN 2022 T-Mobile Home Run Derby Bracket Challenge webpage is open\nhttps://www.mlb.com/brackets/home-run-derby/rules"
+      },
+      {
+        "content": "WHEN user clicks on 'Enter Bracket' button",
+        "expected": "THEN user is displayed with bracket"
+      },
+      {
+        "content": "WHEN user clicks outside the 'Enter Bracket' button",
+        "expected": "THEN user stays on tutorial page (currently a bug)"
+      }
+    ]
+  },
+  {
+    "id": 29160027,
+    "title": "Submission email",
+    "section_id": 1557912,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544539,
+    "updated_by": 258,
+    "updated_on": 1665691451,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 6,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is playing PSBC",
+    "custom_steps": "s",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user submits the picks",
+        "expected": "THEN user receives an email\nAND submission email has correct dates and logo\nAND all links redirect to correct pages"
+      }
+    ]
+  },
+  {
+    "id": 29160028,
+    "title": "Changing picks flow - updated",
+    "section_id": 1557912,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544539,
+    "updated_by": 258,
+    "updated_on": 1664210839,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 7,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played PSBC\r\nAND all games are live (not locked)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user opens the PSBC bracket",
+        "expected": "THEN user sees the their picks"
+      },
+      {
+        "content": "WHEN user updated the pick",
+        "expected": "THEN the selected batter changes the accent color to blue\nAND selected batter is updated in the next round\nAND the next round selection is removed"
+      },
+      {
+        "content": "WHEN user made new picks ",
+        "expected": "THEN 'Submit My Picks' button is displayed"
+      },
+      {
+        "content": "WHEN user submits the picks",
+        "expected": "THEN user receives another submission email"
+      }
+    ]
+  },
+  {
+    "id": 29160029,
+    "title": "DOB field - logged in user - 18yo - updated",
+    "section_id": 1557912,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544539,
+    "updated_by": 258,
+    "updated_on": 1663871045,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 8,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is 18yo and onlder\r\nAND user is logged in\r\nAND user is playing PSBC\r\nAND user is on Tiebreaker page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN clicks submit button ",
+        "expected": "THEN user's picks are successfully submitted"
+      }
+    ]
+  },
+  {
+    "id": 29340876,
+    "title": "DOB field - logged in user - under 18yo - updated",
+    "section_id": 1557912,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1663871022,
+    "updated_by": 258,
+    "updated_on": 1663871359,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 9,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is under 18 yo\r\nAND user is logged in\r\nAND user is playing PSBC\r\nAND user is on Tiebreaker page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN clicks submit button ",
+        "expected": "THEN user is not able to submit their picks and 'Sorry! You are not eligible to play the brackets' pop up is displayed."
+      }
+    ]
+  },
+  {
+    "id": 29340875,
+    "title": "DOB field - user has no DOB in their account - updated",
+    "section_id": 1557912,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1663870878,
+    "updated_by": 258,
+    "updated_on": 1663871375,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 10,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is playing PSBC\r\nAND user is on Tiebreaker page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the submitting page",
+        "expected": "THEN user sees the DOB section\nAND DOB section is required"
+      },
+      {
+        "content": "WHEN user enters the  DOB which is >18",
+        "expected": "THEN user is able to submit their picks \nAND user's DOB is updated in mlb.com account"
+      },
+      {
+        "content": "WHEN user enters DOB which is under 18",
+        "expected": "THEN user is not able to submit their picks and 'Sorry! You are not eligible to play the brackets' pop up is displayed."
+      }
+    ]
+  },
+  {
+    "id": 29160034,
+    "title": "Bracket is locked - user played",
+    "section_id": 1557913,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-4400",
+    "created_by": 258,
+    "created_on": 1661544566,
+    "updated_by": 258,
+    "updated_on": 1665691197,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user made HRD picks",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the HRD game card",
+        "expected": "THEN the HRD card has a lock icon"
+      },
+      {
+        "content": "WHEN user clicks on HRD game card",
+        "expected": "THEN user is displayed with the bracket\nAND user can see their picks\nAND user is not able to update the picks\nAND 'Submit Picks' button is not there\nAND user is displayed with the modal 'The bracket contest is now locked. Check back soon to see the results!'\n"
+      }
+    ]
+  },
+  {
+    "id": 29160035,
+    "title": "Bracket is locked - user didn't play",
+    "section_id": 1557913,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-4400",
+    "created_by": 258,
+    "created_on": 1661544566,
+    "updated_by": 258,
+    "updated_on": 1664574119,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 2,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user didn't play",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the HRD game card",
+        "expected": "THEN the HRD game card has a lock icon"
+      },
+      {
+        "content": "WHEN user clicks on HRD game card",
+        "expected": "THEN user is displayed with the bracket\nAND bracket has no picks\nAND user is not able to make picks\nAND 'Submit Picks' button is not there\nAND user is displayed with the modal 'The bracket contest is now locked. Check back soon to see the results!'\n"
+      }
+    ]
+  },
+  {
+    "id": 29160030,
+    "title": "Matchup is final",
+    "section_id": 1557914,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544555,
+    "updated_by": 258,
+    "updated_on": 1661544555,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played HRD",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the matchup is final",
+        "expected": "THEN the scores are displayed"
+      },
+      {
+        "content": "WHEN user made correct pick",
+        "expected": "THEN the matchup card has a checkmark with green background (on the left)\nAND selected batters name is displayed in the the next matchup above position 1 or below position 2 and is not crossed (in green)"
+      },
+      {
+        "content": "WHEN user made incorrect pick",
+        "expected": "THEN the matchup card has a 'X' with red background (on the left)\nAND selected batters name is displayed in the the next matchup above position 1 or below position 2 and is crossed (in red)\nAND batters name who won the matchup is displayed in the next round"
+      }
+    ]
+  },
+  {
+    "id": 29160031,
+    "title": "Round is final",
+    "section_id": 1557914,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544555,
+    "updated_by": 258,
+    "updated_on": 1661544555,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 2,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played HRD",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the whole round is final",
+        "expected": "THEN all matchups have the final score\nAND the 'final' tag is displayed under the Round header"
+      }
+    ]
+  },
+  {
+    "id": 29160032,
+    "title": "All rounds are final - user played",
+    "section_id": 1557914,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544555,
+    "updated_by": 258,
+    "updated_on": 1661544555,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 3,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played HRD \r\nAND the game is final",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the bracket",
+        "expected": "THEN user sees\n\n* all matchups have scores\n* all rounds have 'final' title\n* the winner section displays the winner with the headshot, name and team name\n* no CTA button is displayed\n\nAND user is able to see their picks results (Matchup is final tc)"
+      }
+    ]
+  },
+  {
+    "id": 29160033,
+    "title": "All rounds are final - user didn't play",
+    "section_id": 1557914,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544555,
+    "updated_by": 258,
+    "updated_on": 1661544555,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 4,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user play didn't play HRD\r\nAND the game is final",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the b bracket",
+        "expected": "THEN user sees\n\n* all matchups have scores\n* all rounds have 'final' title\n* the winner section displays the winner with the headshot, name and team name\n* no CTA button is displayed\n"
+      }
+    ]
+  },
+  {
+    "id": 29160063,
+    "title": "Devices are in sync",
+    "section_id": 1557915,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544662,
+    "updated_by": 258,
+    "updated_on": 1661544662,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 1,
+    "custom_preconds": "GIVEN MLB Play app installed on device\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user played the game on mobile device\nAND then opens the HRD on web ",
+        "expected": "THEN user sees their previous submissions"
+      },
+      {
+        "content": "WHEN user played the game on web\nAND the opens the HRD on mobile",
+        "expected": "THEN user sees their previous submissions"
+      }
+    ]
+  },
+  {
+    "id": 29160064,
+    "title": "MLB Play and mlb.com integration",
+    "section_id": 1557915,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1661544662,
+    "updated_by": 258,
+    "updated_on": 1661544662,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 2,
+    "custom_preconds": "GIVEN MLB Play app installed on device\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user submits their pick ",
+        "expected": "THEN user can successfully submit their picks without asking to log in"
+      }
+    ]
+  },
+  {
+    "id": 29590989,
+    "title": "Account data integration",
+    "section_id": 1557915,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1667233632,
+    "updated_by": 258,
+    "updated_on": 1667234024,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 555140,
+    "display_order": 3,
+    "custom_preconds": "GIVEN MLB Play app installed on device\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is logged in\nAND user has no DOB on their mlb.com account\nAND user submits their pick ",
+        "expected": "THEN user is prompt with login page "
+      },
+      {
+        "content": "WHEN user enters their DOB ",
+        "expected": "THEN the DOB is saved in mlb.com"
+      },
+      {
+        "content": "WHEN user is logged in\nAND user enters bracket page for the first time\nAND user submits their pick ",
+        "expected": "THEN user is prompt is asked to enter DOB when submitting picks\n "
+      },
+      {
+        "content": "WHEN user enters DOB that doesn't match their info in the mlb.com account ",
+        "expected": "THEN new DOB is saved in mlb.com "
+      }
+    ]
+  }
+]

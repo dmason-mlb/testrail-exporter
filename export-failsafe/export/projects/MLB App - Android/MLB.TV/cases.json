@@ -1,0 +1,935 @@
+[
+  {
+    "id": 7509567,
+    "title": "Live Playback",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596221919,
+    "updated_by": 232,
+    "updated_on": 1596221919,
+    "estimate": null,
+    "estimate_forecast": "6m 3s",
+    "suite_id": 80464,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user with a valid MLB.TV entitlement",
+    "custom_steps": "WHEN I select to watch a game that is live ",
+    "custom_expected": "THEN I must be shown that specific MLB.TV stream for the stream that was selected ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7509568,
+    "title": "Live Playback Controls",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596222026,
+    "updated_by": 232,
+    "updated_on": 1690235765,
+    "estimate": null,
+    "estimate_forecast": "6m 27s",
+    "suite_id": 80464,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a user ",
+    "custom_steps": "WHEN I watch MLB.TV live content",
+    "custom_expected": "THEN I must have access to a scrubber, forward 10s/back 10s, closed captioning, chromecast, live, and feed selector buttons from the player\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7509569,
+    "title": "Archive Playback",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596222087,
+    "updated_by": 232,
+    "updated_on": 1596222087,
+    "estimate": null,
+    "estimate_forecast": "5m 30s",
+    "suite_id": 80464,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user with a valid MLB.TV entitlement",
+    "custom_steps": "WHEN I select to watch a game that has been completed previously and an archive feed is available",
+    "custom_expected": "THEN I must be shown the MLB.TV archive stream for that game",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7509570,
+    "title": "Archive Playback Controls",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596222135,
+    "updated_by": 232,
+    "updated_on": 1717798151,
+    "estimate": null,
+    "estimate_forecast": "5m 22s",
+    "suite_id": 80464,
+    "display_order": 4,
+    "custom_preconds": "GIVEN a user ",
+    "custom_steps": "WHEN I watch MLB.TV archive content",
+    "custom_expected": "THEN I must have access to a scrubber, forward 10s/back 10s, closed captioning, chromecast, fullscreen, and feed selector buttons from the player in both landscape and portrait mode\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7509571,
+    "title": "Volume Control",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596222185,
+    "updated_by": 232,
+    "updated_on": 1596222185,
+    "estimate": null,
+    "estimate_forecast": "5m 23s",
+    "suite_id": 80464,
+    "display_order": 5,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": "WHEN I watch MLB.TV content",
+    "custom_expected": "THEN I must be able to change the volume of the content using my device’s hardware buttons",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7509572,
+    "title": "Keep Device Display from Automatically Turning Off",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596222276,
+    "updated_by": 232,
+    "updated_on": 1596222276,
+    "estimate": null,
+    "estimate_forecast": "10m 43s",
+    "suite_id": 80464,
+    "display_order": 6,
+    "custom_preconds": "GIVEN a user ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN MLB.tv content is actively playing",
+        "expected": "THEN my device’s display must not turn off automatically"
+      },
+      {
+        "content": "WHEN MLB.tv content is paused",
+        "expected": "THEN my device’s display may turn off based on my device settings"
+      }
+    ]
+  },
+  {
+    "id": 7509573,
+    "title": "Device Display Manually Turned Off While Viewing",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596222363,
+    "updated_by": 442,
+    "updated_on": 1738013362,
+    "estimate": null,
+    "estimate_forecast": "8m 38s",
+    "suite_id": 80464,
+    "display_order": 7,
+    "custom_preconds": "GIVEN a user ",
+    "custom_steps": "WHEN MLB.tv content is actively playing\r\nAND I manually turn off my device’s display",
+    "custom_expected": "THEN the MLB.TV content will continue playing at the last viewed point once app is re-opened\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7509574,
+    "title": "Scrubber",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596222433,
+    "updated_by": 232,
+    "updated_on": 1596222433,
+    "estimate": null,
+    "estimate_forecast": "8m 16s",
+    "suite_id": 80464,
+    "display_order": 8,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I watch MLB.TV content\nAND I tap a specific point on the scrubber",
+        "expected": "THEN the video should begin playing the content from that point in time"
+      },
+      {
+        "content": "WHEN I watch MLB.TV content\nAND I tap and hold the active state indicator on the scrubber\nAND I scroll back in time",
+        "expected": "THEN the video should rewind as I scroll back"
+      }
+    ]
+  },
+  {
+    "id": 7509575,
+    "title": "Feed Picker",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596222546,
+    "updated_by": 232,
+    "updated_on": 1596222546,
+    "estimate": null,
+    "estimate_forecast": "8m 28s",
+    "suite_id": 80464,
+    "display_order": 9,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I watch MLB.TV content",
+        "expected": "THEN I must be able to change the video feed for the game I am watching"
+      },
+      {
+        "content": "WHEN I watch MLB.TV content\n\nAND I change the video feed using the feed picker",
+        "expected": "THEN the video must continue from the same point in time prior to when I switched "
+      }
+    ]
+  },
+  {
+    "id": 7509695,
+    "title": "Alt Audio",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596222641,
+    "updated_by": 232,
+    "updated_on": 1674775579,
+    "estimate": null,
+    "estimate_forecast": "11m 53s",
+    "suite_id": 80464,
+    "display_order": 10,
+    "custom_preconds": "GIVEN a user watching MLB.TV content",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I open the feed picker",
+        "expected": "THEN I must be presented with the available audio feed options"
+      },
+      {
+        "content": "WHEN I select a new audio feed",
+        "expected": "THEN the audio feed should be changed without impacting the video feed\n\nNOTE: Alternate radio feeds do not always start at the same time as the video feed, so it is possible that the alternate audio will be silent at the beginning of a video broadcast. As long as the alternate audio is available later in the feed, this should be considered to be working as expected."
+      },
+      {
+        "content": "WHEN I select a new video feed",
+        "expected": "THEN the audio feeds available to me in the feed picker should change"
+      }
+    ]
+  },
+  {
+    "id": 7509696,
+    "title": "Live: Live Button",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596222736,
+    "updated_by": 232,
+    "updated_on": 1596222736,
+    "estimate": null,
+    "estimate_forecast": "3m 24s",
+    "suite_id": 80464,
+    "display_order": 11,
+    "custom_preconds": "GIVEN a user watching a live MLB.TV broadcast",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I am not currently “caught up” to a live point in the broadcast\nAND I tap the Live Button",
+        "expected": "THEN I should be advanced to the “Live” point of the current broadcast"
+      },
+      {
+        "content": "WHEN I am currently “caught up” to a live point in the broadcast",
+        "expected": "THEN the Live button state should Indicate I am currently live"
+      }
+    ]
+  },
+  {
+    "id": 7509697,
+    "title": "Forward 10/Back 10",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596222837,
+    "updated_by": 232,
+    "updated_on": 1596222837,
+    "estimate": null,
+    "estimate_forecast": "1m 45s",
+    "suite_id": 80464,
+    "display_order": 12,
+    "custom_preconds": "GIVEN a user watching MLB.TV content",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I tap the forward 10s button\nAND I am not currently at a live point in the broadcast",
+        "expected": "THEN I should be taken 10 seconds forward"
+      },
+      {
+        "content": "WHEN I tap the forward 10s button\nAND I am fewer than 10s behind Live",
+        "expected": "THEN I should be taken to live"
+      },
+      {
+        "content": "WHEN I tap the backwards 10s button",
+        "expected": "THEN I should be taken 10 seconds backwards"
+      }
+    ]
+  },
+  {
+    "id": 7509698,
+    "title": "Play/Pause",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596222965,
+    "updated_by": 232,
+    "updated_on": 1598545386,
+    "estimate": null,
+    "estimate_forecast": "2m 8s",
+    "suite_id": 80464,
+    "display_order": 13,
+    "custom_preconds": "GIVEN a user watching MLB.TV content",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the content is currently playing",
+        "expected": "THEN the play/pause button should indicate “Pause”"
+      },
+      {
+        "content": "WHEN the content is currently paused",
+        "expected": "THEN the play/pause button should indicate “Play”"
+      },
+      {
+        "content": "WHEN I tap the Pause button",
+        "expected": "THEN the content should pause\nAND the paused video should remain visible on screen"
+      },
+      {
+        "content": "WHEN I tap the Play button",
+        "expected": "THEN the content should play"
+      }
+    ]
+  },
+  {
+    "id": 7509699,
+    "title": "Landscape/Portrait Rotation",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596223112,
+    "updated_by": 232,
+    "updated_on": 1597087922,
+    "estimate": null,
+    "estimate_forecast": "3m 22s",
+    "suite_id": 80464,
+    "display_order": 14,
+    "custom_preconds": "GIVEN a user watching MLB.TV content",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I am watching MLB.TV in Portrait\n\nAND I rotate my device to the left or right",
+        "expected": "THEN the video player should change to Landscape\n\n"
+      },
+      {
+        "content": "WHEN I am watching MLB.TV in Landscape\n\nAND I rotate my device to the left or right",
+        "expected": "THEN the video player should change to Portrait"
+      },
+      {
+        "content": "WHEN I am watching MLB.TV in Portrait\n\nAND I tap the full screen button",
+        "expected": "THEN the video player should change to Landscape"
+      },
+      {
+        "content": "WHEN I am watching MLB.TV in Landscape\n\nAND I tap the full screen button",
+        "expected": "THEN the video player should change to Portrait"
+      }
+    ]
+  },
+  {
+    "id": 7509700,
+    "title": "Landscape: Zoom In",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://baseball.atlassian.net/browse/ANDROID-10010",
+    "created_by": 232,
+    "created_on": 1596223275,
+    "updated_by": 226,
+    "updated_on": 1596752887,
+    "estimate": null,
+    "estimate_forecast": "4m 47s",
+    "suite_id": 80464,
+    "display_order": 15,
+    "custom_preconds": "GIVEN a user watching MLB.TV in Landscape mode",
+    "custom_steps": null,
+    "custom_expected": " I double tap the player",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I double tap the player",
+        "expected": "THEN the video should zoom in so that it fills the entire width of my device"
+      },
+      {
+        "content": "WHEN Landscape mode is zoomed in\n\nAND I double tap the player",
+        "expected": "THEN the video should zoom out to its original state"
+      },
+      {
+        "content": "WHEN Landscape mode is zoomed in\n\nAND  I rotate my device back to Portrait mode",
+        "expected": "THEN the video should zoom out to its original state"
+      }
+    ]
+  },
+  {
+    "id": 7509701,
+    "title": "Live - Display Video Time Info",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596223427,
+    "updated_by": 442,
+    "updated_on": 1737755347,
+    "estimate": null,
+    "estimate_forecast": "4m 37s",
+    "suite_id": 80464,
+    "display_order": 16,
+    "custom_preconds": "GIVEN a user watching live MLB.TV content",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I am watching live or MLB.TV content",
+        "expected": "THEN I should see an indicator on the left side of the scrubber telling me what timestamp in the broadcast I am currently viewing"
+      },
+      {
+        "content": "WHEN I am watching live MLB.TV content",
+        "expected": "THEN I should see a live indicator on the right side of the screen"
+      },
+      {
+        "content": "WHEN I am watching archive or live MLB.TV content",
+        "expected": "THEN I should see an indicator on the right side of the scrubber telling me the duration of the broadcast I am currently viewing."
+      }
+    ]
+  },
+  {
+    "id": 7509702,
+    "title": "Archive - Display Video Time Info",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596223536,
+    "updated_by": 232,
+    "updated_on": 1598626841,
+    "estimate": null,
+    "estimate_forecast": "4m 43s",
+    "suite_id": 80464,
+    "display_order": 17,
+    "custom_preconds": "GIVEN a user ",
+    "custom_steps": "WHEN I am watching archive MLB.TV content",
+    "custom_expected": "THEN I should see an indicator on the left side of the scrubber telling me how far from the start video I am currently viewing\r\nAND I should see an indicator on the right side of the screen telling me the complete time of the video",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7509703,
+    "title": "Control Availability",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596223944,
+    "updated_by": 232,
+    "updated_on": 1722007670,
+    "estimate": null,
+    "estimate_forecast": "4m 45s",
+    "suite_id": 80464,
+    "display_order": 18,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I have just opened the MLB.TV player",
+        "expected": "THEN I should NOT be shown the available controls"
+      },
+      {
+        "content": "WHEN the controls are actively being shown\n\nAND I am inactive for three seconds\n\nAND content is not actively paused",
+        "expected": "THEN the controls should disappear"
+      },
+      {
+        "content": "WHEN content is currently playing\nAND I tap the video player",
+        "expected": "THEN controls should appear"
+      },
+      {
+        "content": "WHEN content is currently paused or has ended",
+        "expected": "THEN controls should remain visible"
+      }
+    ]
+  },
+  {
+    "id": 7509704,
+    "title": "Closed Captioning",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596224145,
+    "updated_by": 312,
+    "updated_on": 1630385868,
+    "estimate": null,
+    "estimate_forecast": "6m 1s",
+    "suite_id": 80464,
+    "display_order": 19,
+    "custom_preconds": "GIVEN a user watching MLB.TV content",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN closed captions are available for the video feed I am listening to",
+        "expected": "THEN I should see a closed caption button"
+      },
+      {
+        "content": "WHEN closed captions are unavailable for the video feed I am listening to",
+        "expected": "THEN the CC Button will not be rendered"
+      },
+      {
+        "content": "WHEN closed captions are available\n\nAND I tap the closed caption button",
+        "expected": "THEN closed captions should appear  "
+      },
+      {
+        "content": "WHEN closed captions are available and captions are currently enabled\n\nAND I tap the closed caption button",
+        "expected": "THEN closed captions should disappear "
+      }
+    ]
+  },
+  {
+    "id": 7509705,
+    "title": "Portrait Display",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596224205,
+    "updated_by": 232,
+    "updated_on": 1596224205,
+    "estimate": null,
+    "estimate_forecast": "4m 48s",
+    "suite_id": 80464,
+    "display_order": 20,
+    "custom_preconds": "GIVEN a user watching MLB.TV",
+    "custom_steps": "WHEN I am in portrait mode",
+    "custom_expected": "THEN the player should be docked to the top of my device",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7509706,
+    "title": "Live - Portrait Scoreboard Tab",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596224372,
+    "updated_by": 232,
+    "updated_on": 1596224372,
+    "estimate": null,
+    "estimate_forecast": "9m 52s",
+    "suite_id": 80464,
+    "display_order": 21,
+    "custom_preconds": "GIVEN a user watching live MLB.TV content",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I am in portrait mode",
+        "expected": "THEN I should see a scoreboard tab beneath the video player"
+      },
+      {
+        "content": "WHEN I am watching live MLB.TV content in portrait mode\n\nAND  I tap the scoreboard tab beneath the video player",
+        "expected": "THEN I should see scores updating in real-time from any of today’s games"
+      },
+      {
+        "content": "WHEN I am watching live MLB.TV content in portrait mode\n\nAND the scoreboard tab is active\n\nAND I tap on a score of a game that is currently live",
+        "expected": "THEN I should be taken to the default live feed for that game"
+      }
+    ]
+  },
+  {
+    "id": 7510198,
+    "title": "Portrait Box Score Info",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596230436,
+    "updated_by": 232,
+    "updated_on": 1598549812,
+    "estimate": null,
+    "estimate_forecast": "4m 6s",
+    "suite_id": 80464,
+    "display_order": 22,
+    "custom_preconds": "GIVEN a user watching MLB.TV content",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I am in portrait mode",
+        "expected": "THEN I should see a box score tab beneath the video player"
+      },
+      {
+        "content": "WHEN I am in portrait mode\nAND  I tap the box score tab beneath the video player",
+        "expected": "THEN I should see box score information updating in real time for the game I am watching"
+      }
+    ]
+  },
+  {
+    "id": 7612386,
+    "title": "Portrait Box Score Loading",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://baseball.atlassian.net/browse/ANDROID-10018",
+    "created_by": 226,
+    "created_on": 1597094101,
+    "updated_by": 232,
+    "updated_on": 1717798637,
+    "estimate": null,
+    "estimate_forecast": "4m 50s",
+    "suite_id": 80464,
+    "display_order": 23,
+    "custom_preconds": "GIVEN a user has launched MLB.tv",
+    "custom_steps": "WHEN the synced data has not returned\r\n",
+    "custom_expected": "THEN the box score area remains unfilled while it is loading",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7629265,
+    "title": "Live Playback buffering",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1597186003,
+    "updated_by": 232,
+    "updated_on": 1597186003,
+    "estimate": null,
+    "estimate_forecast": "6m 10s",
+    "suite_id": 80464,
+    "display_order": 24,
+    "custom_preconds": "GIVEN a user has launched MLB.tv",
+    "custom_steps": "WHEN the video is Buffering before start",
+    "custom_expected": "THEN show a buffer spinner",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7645225,
+    "title": "Theme should always be dark theme",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1597266317,
+    "updated_by": 442,
+    "updated_on": 1717008197,
+    "estimate": null,
+    "estimate_forecast": "6m 4s",
+    "suite_id": 80464,
+    "display_order": 25,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": "WHEN I launch MLB.TV\r\n\r\nAND the current app theme is Light\r\n\r\nAND the user plays video content",
+    "custom_expected": "THEN show MLB.TV with the dark theme.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8240651,
+    "title": "Single Button Feed Selection Logic",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1601314049,
+    "updated_by": 232,
+    "updated_on": 1601314049,
+    "estimate": null,
+    "estimate_forecast": "7m 23s",
+    "suite_id": 80464,
+    "display_order": 26,
+    "custom_preconds": "GIVEN a user entitled to MLB TV content\r\n\r\n",
+    "custom_steps": "WHEN I tap on a TV button on a game that has an available media feed\r\n",
+    "custom_expected": "THEN the feed for that game should begin playing according to the feed selection logic, accounting for my favorite team, language, and home/away status\r\nAND the feed should begin playing from the appropriate point based on whether it is live or archive content \r\n\r\nFEED SELECTION LOGIC NOTE- Play the first TV feed available for the game I’ve selected, based on this hierarchical list:\r\n\r\nFavorite team’s feed in my device’s language\r\n\r\nHome team’s feed in my device’s language\r\n\r\nAway team’s feed in my device’s language\r\n\r\nFavorite team’s feed, regardless of language\r\n\r\nHome team’s feed, regardless of language\r\n\r\nAway team’s feed, regardless of language",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 17642802,
+    "title": "Concurrency Cap",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10987",
+    "created_by": 238,
+    "created_on": 1624433617,
+    "updated_by": 311,
+    "updated_on": 1636138307,
+    "estimate": null,
+    "estimate_forecast": "6m 11s",
+    "suite_id": 80464,
+    "display_order": 28,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN a user is in the app\r\nWHEN a user plays a stream on 5 different devices\r\nAND then attempts to play a stream on a 6th device after waiting 5 minutes\r\nTHEN the 5th device should display an error to the effect of there being too many concurrent streams on the account.",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 31057124,
+    "title": "Single Team user- broadcast optoins",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1690235704,
+    "updated_by": 232,
+    "updated_on": 1690235704,
+    "estimate": null,
+    "estimate_forecast": "11m 47s",
+    "suite_id": 80464,
+    "display_order": 29,
+    "custom_preconds": "GIEVN a single team entitled user",
+    "custom_steps": "WHEN the user plays a game to which they are entitled to view the feed for their single team\r\nAND another feed exists to which they are not entitled\r\nAND the user selects the broadcast options (TV icon)",
+    "custom_expected": "THEN the user does not have the option to change to the alternate video feed to which they are not entitled\r\nAND the user does have the option to choose alternate audio feeds for the video feed which they are already watching and to which they are entitled\r\n\r\nEXAMPLE:\r\nThis user is only entitled to the BAL feed and not the PHI feed\r\n![](index.php?/attachments/get/13637158)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 31057125,
+    "title": "Broadcast Options- entitled to all",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1690236052,
+    "updated_by": 232,
+    "updated_on": 1690236052,
+    "estimate": null,
+    "estimate_forecast": "10m 2s",
+    "suite_id": 80464,
+    "display_order": 30,
+    "custom_preconds": "GIVEN an entitled user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user selects a game \nAND playback begins\nAND the user selects the broadcast options (TV icon)",
+        "expected": "THEN alternate video feeds are available (except if it is a single national feed ie Apple TV+, Peacock, ESPN, etc.)\nAND alternate audio feeds are available"
+      },
+      {
+        "content": "WHEN the user selects an alternate audio feed",
+        "expected": "THEN alternate audio plays\nAND the video continues from the same point which the user was viewing"
+      },
+      {
+        "content": "WHEN the user selects an alternate video feed",
+        "expected": "THEN the other video feed plays from the same point which the user was viewing the game on the other feed\nAND new alternate audio is displayed which corresponds to the newly selected video"
+      }
+    ]
+  },
+  {
+    "id": 32661403,
+    "title": "Playback using Mobile Data with wifi turned off",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1705419363,
+    "updated_by": 232,
+    "updated_on": 1705419363,
+    "estimate": null,
+    "estimate_forecast": "15m 58s",
+    "suite_id": 80464,
+    "display_order": 31,
+    "custom_preconds": "GIVEN an entitled user with mobile data available\r\nAND wifi is turned off",
+    "custom_steps": "WHEN the user selects a game to play",
+    "custom_expected": "THEN the game should play back smoothly and without interruption",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 33013331,
+    "title": "Feed selection logic",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1711553149,
+    "updated_by": 232,
+    "updated_on": 1711553149,
+    "estimate": null,
+    "estimate_forecast": "16m 54s",
+    "suite_id": 80464,
+    "display_order": 32,
+    "custom_preconds": "GIVEN a an entitled user\r\n(NOTE: the feed selection logic is highly dependent on the user's choice of favorite and followed teams in the settings menu, and can also be effected by the device language settings. Please pay close attention to the requirements for each individual test case)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN  a user attempts to watch a game where one of the teams is their favorite team",
+        "expected": "THEN open the favorite team’s feed"
+      },
+      {
+        "content": "WHEN a user attempts to watch a game where one of the teams is a followed team \nAND the other team is not their favorite team",
+        "expected": "THEN open the followed team’s feed"
+      },
+      {
+        "content": "WHEN a user attempts to watch a game where they follow both teams",
+        "expected": "THEN open the feed of the higher priority team"
+      },
+      {
+        "content": "WHEN  a user attempts to watch a game where they don’t follow or favor either team",
+        "expected": "THEN open the feed for the home team \nOR \nIF no home team feed is available THEN open the away feed."
+      },
+      {
+        "content": "WHEN  the device language is Spanish \nAND a Spanish language feed is available ",
+        "expected": "THEN pick the Spanish feed with Spanish audio\nOtherwise default to English"
+      }
+    ]
+  },
+  {
+    "id": 33048820,
+    "title": "Game resume behaviors",
+    "section_id": 383549,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1712629251,
+    "updated_by": 232,
+    "updated_on": 1712629251,
+    "estimate": null,
+    "estimate_forecast": "17m 3s",
+    "suite_id": 80464,
+    "display_order": 33,
+    "custom_preconds": "GIVEN an entitled user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN starting a live game \nAND the user does not have hide spoilers active ",
+        "expected": "THEN start from the live point"
+      },
+      {
+        "content": "WHEN starting a live game \nAND the user has hide spoilers active ",
+        "expected": "THEN start the game from the broadcast start point (fallback to the beginning if the broadcast start point can’t be found)"
+      },
+      {
+        "content": "WHEN starting an archived game ",
+        "expected": "THEN start the game from the broadcast start point (fallback to the beginning if the broadcast start point can’t be found)"
+      },
+      {
+        "content": "WHEN a user resumes a game after backgrounding the app",
+        "expected": "THEN the game should resume from where the user was previously"
+      }
+    ]
+  }
+]

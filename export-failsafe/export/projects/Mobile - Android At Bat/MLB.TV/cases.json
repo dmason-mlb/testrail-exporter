@@ -1,0 +1,911 @@
+[
+  {
+    "id": 773837,
+    "title": "MLB.TV EPG",
+    "section_id": 7077,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1482184176,
+    "updated_by": 166,
+    "updated_on": 1548290086,
+    "estimate": null,
+    "estimate_forecast": "6m 43s",
+    "suite_id": 944,
+    "display_order": 1,
+    "custom_preconds": "Given a user has the app installed\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the MLB.TV EPG button on a handset",
+        "expected": "Then the user will see the list of all scheduled games for a given day with their game time"
+      },
+      {
+        "content": "When the user taps on the MLB.TV EPG button on a tablet",
+        "expected": "Then the EPG will pop up in the middle of the screen"
+      },
+      {
+        "content": "When there is a Free Game of the Day scheduled",
+        "expected": "Then the user will see the game labeled, \"MLB.TV Game of the Day\""
+      },
+      {
+        "content": "When a user taps on a game on the EPG with multiple feeds available",
+        "expected": "Then the menu will expand to show the available TV feeds\nand each feed will be a blue button with the team name's code and the TV feed's call letters"
+      },
+      {
+        "content": "When a user taps on a game with multiple feeds available\nthat has already been expanded",
+        "expected": "Then the menu will collapse\nand the available TV feeds will be hidden"
+      }
+    ]
+  },
+  {
+    "id": 1207202,
+    "title": "General",
+    "section_id": 7077,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508349834,
+    "updated_by": 232,
+    "updated_on": 1586359238,
+    "estimate": null,
+    "estimate_forecast": "15m 10s",
+    "suite_id": 944,
+    "display_order": 2,
+    "custom_preconds": "**Cases should be run on Handset and Tablet unless otherwise noted**\r\n\r\nCases specific to Handset are marked by **[H]**\r\nCases specific to Tablet are marked by **[T]**\r\n\r\nUser should be logged in with entitled MLB.TV account unless case requires user to be a LITE user or non-entitled user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "**[H]** User expands Scoreboard game cell and taps on the MLB.TV button for game that has an MLB.TV stream available\n",
+        "expected": "Then a blackout and BAMSDK check should occur\nAnd the stream should begin to play on the device"
+      },
+      {
+        "content": "**[H]** User taps on MLB.TV button in the score module of the team page for a game that has an MLB.TV stream available",
+        "expected": "Then a blackout and BAMSDK check should occur\nAnd the stream should begin to play on the device"
+      },
+      {
+        "content": "**[H]** User taps on MLB.TV stream in EPG for game that has an MLB.TV stream available",
+        "expected": "Then a blackout and BAMSDK check should occur\nAnd the stream should begin to play on the device"
+      },
+      {
+        "content": "**[T]** User taps on MLB.TV stream in EPG for game that has an MLB.TV stream available",
+        "expected": "Then a blackout and BAMSDK check should occur\nAnd the stream should begin to play on the device"
+      },
+      {
+        "content": "When a user is not entitled for MLB.TV attempts to launch an MLB.TV stream\nAnd taps the \"$24.99 Monthly\" button on the pay wall",
+        "expected": "Then the Play Store In-App Purchase flow should appear to purchase TV Premium"
+      },
+      {
+        "content": "When a user is not entitled for MLB.TV attempts to launch an MLB.TV stream\nAnd taps the 'Sign in with MLB.com account' button on the pay wall",
+        "expected": "Then the MLB.com login screen should load\n\nAnd there should be:\n\nboxes for 'Email' and 'Password'\na 'Login' button\nlinks for 'Privacy Policy' and 'Forgot Password?'\nand a 'View FAQ' button"
+      },
+      {
+        "content": "When the user has launched the MLB.com login screen\nAnd the user taps the 'Up' button in the app or the device back button",
+        "expected": "Then the MLB.TV login screen should close\nAnd the user should be taken back to the screen they were on when they attempted to launch the MLB.TV stream"
+      },
+      {
+        "content": "User taps 'View FAQ' button on MLB.com login screen",
+        "expected": "Then the user should be taken to an internal webview with the app FAQ for the Android MLB app platform"
+      }
+    ]
+  },
+  {
+    "id": 7150339,
+    "title": "Ads Play in Feed",
+    "section_id": 7077,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1593106500,
+    "updated_by": 232,
+    "updated_on": 1593106500,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 944,
+    "display_order": 3,
+    "custom_preconds": "GIVEN an entitled user is logged in",
+    "custom_steps": "WHEN a game with media is streamed",
+    "custom_expected": "THEN ads play during commercial breaks\r\nAND more than one ad break runs successfully",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7150506,
+    "title": "SVOD",
+    "section_id": 7077,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1593107341,
+    "updated_by": 232,
+    "updated_on": 1593107341,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 944,
+    "display_order": 4,
+    "custom_preconds": "GIVEN a user with SVOD entitlements is signed in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user accesses EPG (mobile app) or Videos Screen(TV app) ",
+        "expected": "THEN \"FEATURED\" Tab appears in EPG (mobile app) or Videos Screen (TV app) that is populated with SVOD Content thunmbnails"
+      },
+      {
+        "content": "WHEN user selects an SVOD content thumbnail",
+        "expected": "THEN the SVOD content should successfully stream"
+      }
+    ]
+  },
+  {
+    "id": 1207203,
+    "title": "Lite User",
+    "section_id": 144977,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508350607,
+    "updated_by": 166,
+    "updated_on": 1544482373,
+    "estimate": null,
+    "estimate_forecast": "11m 19s",
+    "suite_id": 944,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat is installed\r\nand user is Lite user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "LITE user attempts to launch MLB.TV stream\nAnd the user logs in with a TV account",
+        "expected": "Then the blackout and BAMSDK checks should occur\nAnd the stream should begin to play on the device"
+      },
+      {
+        "content": "LITE user attempts to launch MLB.TV stream\nAnd the user logs in with an At Bat Premium account\nAnd it is NOT the offseason",
+        "expected": "Then the user should NOT be able to access the MLB.TV stream \nAnd the user should be brought back to the MLB.TV Paywall where they should see an error message informing them that they are not entitled to access the stream"
+      },
+      {
+        "content": "LITE user attempts to launch MLB.TV stream\nAnd the user logs in with an At Bat Premium account\nAnd it IS the offseason",
+        "expected": "Then the user should NOT be able to access the MLB.TV stream \nAnd the user should be brought back to the MLB.TV Paywall where they should see an error message informing them that they are not entitled to access the stream"
+      },
+      {
+        "content": "LITE user attempts to launch MLB.TV stream\nAnd the user logs in with a non-entitled MLB.com account",
+        "expected": "Then the user should NOT be able to access the MLB.TV stream\nAnd the user should be brought back to the MLB.TV Paywall where they should see an error message informing them that they are not entitled to access the stream"
+      },
+      {
+        "content": "LITE user attempts to launch MLB.TV stream\nAnd the user logs in with an Executive account",
+        "expected": "Then the blackout check and BAMSDK check should occur\nAnd the stream should begin to play on the device\n\nVerify: User can watch stream they would normally be blacked out from viewing. (eg. Live Yankees or Mets game from within NY area)"
+      }
+    ]
+  },
+  {
+    "id": 1207204,
+    "title": "MLB Audio User",
+    "section_id": 144977,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508350611,
+    "updated_by": 232,
+    "updated_on": 1586352223,
+    "estimate": null,
+    "estimate_forecast": "4m 1s",
+    "suite_id": 944,
+    "display_order": 3,
+    "custom_preconds": "Given At Bat is installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User with MLB Audio access (but no MLB.TV entitlement) attempts to launch an MLB.TV stream",
+        "expected": "Then the user should see the MLB.TV Pay Wall\nAnd the user should not be able to access the stream\n"
+      },
+      {
+        "content": "At Bat In-App Purchase user attempts to launch MLB.TV stream",
+        "expected": "Then the user should NOT be able to access the MLB.TV stream\nAnd the user should be brought to the MLB.TV Paywall where they should see an error message informing them that they are not entitled to access the stream\n"
+      }
+    ]
+  },
+  {
+    "id": 1207209,
+    "title": "TV User",
+    "section_id": 144977,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508351960,
+    "updated_by": 84,
+    "updated_on": 1520976364,
+    "estimate": null,
+    "estimate_forecast": "39s",
+    "suite_id": 944,
+    "display_order": 4,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is logged in with a TV account",
+    "custom_steps": "When the user launches any MLB.TV stream",
+    "custom_expected": "Then the blackout and mediaframework checks should occur\r\nAnd the stream should begin to play on the device",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1207207,
+    "title": "Free Trial User",
+    "section_id": 144977,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508351055,
+    "updated_by": 84,
+    "updated_on": 1508351191,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 944,
+    "display_order": 6,
+    "custom_preconds": "Given At Bat is installed",
+    "custom_steps": "Verify Free Trial user has access to free MLB.TV Game of the Day",
+    "custom_expected": "User should be able to launch the Free game of the day and change feeds within stream without issue",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1207205,
+    "title": "General",
+    "section_id": 144977,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508350615,
+    "updated_by": 84,
+    "updated_on": 1508351728,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 944,
+    "display_order": 7,
+    "custom_preconds": "Given At Bat is installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Verify credentials are saved when the user has logged in with an entitled account and the user:\n\nExits the app\nForce stops the app from settings\nRestarts the device\n\nAnd subsequently attempts to access an MLB.TV stream",
+        "expected": "Then the MLB.TV stream should begin to play\nAnd the user should NOT be prompted to re-enter their credentials"
+      },
+      {
+        "content": "When the user has logged in with an entitled account\nAnd the user changes or resets their account password on the Web or through another device\nAnd the user attempts to start an MLB.TV stream",
+        "expected": "Then the user should not be allowed to start the MLB.TV stream\nAnd the user should be prompted to log in with an entitled accoun"
+      },
+      {
+        "content": "When the user attempts to launch 9 concurrent MLB.TV streams across different devices logged in with the same credentials",
+        "expected": "Then the user should receive a login error on the final and subsequent devices informing them that they have reached the maximum number of concurrent sessions"
+      }
+    ]
+  },
+  {
+    "id": 1220918,
+    "title": "Anonymous User (not logged-in)",
+    "section_id": 147186,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1520976325,
+    "updated_by": 84,
+    "updated_on": 1521556765,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 944,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat is installed\r\nand there is an MLB.TV Game of the Day scheduled",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user who is NOT logged in with an MLB.com account attempts to launch an MLB.TV Game of the Day feed",
+        "expected": "Then the user is taken to a Login screen\nwith messaging indicating that the user may access the Game of the Day with a free MLB.com account\n\n\"The MLB Free Game of the Day is available to all users with a valid MLB.com account. Login to your account for access to this broadcast, or register for a free MLB.com account by tapping \"Register\" below.\""
+      },
+      {
+        "content": "If the user's login attempt fails",
+        "expected": "Then there will be a message to inform the user of failed login"
+      },
+      {
+        "content": "If the user is on the login screen, but cancels without logging in",
+        "expected": "Then the user should be returned to the previously viewed screen"
+      },
+      {
+        "content": "If the user logs in successfully with an MLB.com account",
+        "expected": "Then the user will be taken to the MLB.TV Game of the Day feed\n(pending blackouts)"
+      },
+      {
+        "content": "If the user completes a successful account registration",
+        "expected": "Then the user will be taken to the MLB.TV Game of the Day feed\n(pending blackouts)"
+      },
+      {
+        "content": "When the non-entitled logged-in user attempts to launch any other feed (not Game of the Day)",
+        "expected": "Then the user will be prompted by the TV paywall\nwith messaging that they do not have TV access with that account"
+      }
+    ]
+  },
+  {
+    "id": 1220922,
+    "title": "Logged in with non-entitled account",
+    "section_id": 147186,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1520977126,
+    "updated_by": 84,
+    "updated_on": 1520977208,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 944,
+    "display_order": 3,
+    "custom_preconds": "Given At Bat is installed\r\nand there is an MLB.TV Game of the Day scheduled",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user logged in with a non-entitled MLB.com account attempts to launch a Game of the Day feed",
+        "expected": "Then the blackout & BAMSDK checks will occur\nand the user will be taken to the feed"
+      }
+    ]
+  },
+  {
+    "id": 1220920,
+    "title": "Paid & Single Team Users",
+    "section_id": 147186,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1520976338,
+    "updated_by": 84,
+    "updated_on": 1521556734,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 944,
+    "display_order": 6,
+    "custom_preconds": "Given At Bat is installed\r\nand there is an MLB.TV Game of the Day scheduled",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user logged in with an At Bat account attempts to launch a Game of the Day feed",
+        "expected": "Then the blackout & BAMSDK checks will occur\nand the user will be taken to the feed"
+      },
+      {
+        "content": "When a user logged in with a TV account attempts to launch a Game of the Day feed",
+        "expected": "Then the blackout & BAMSDK checks will occur\nand the user will be taken to the feed"
+      },
+      {
+        "content": "When a user logged in with a Single Team account attempts to launch a Game of the Day feed\nregardless of the teams playing",
+        "expected": "Then the blackout & BAMSDK checks will occur\nand the user will be taken to the feed"
+      }
+    ]
+  },
+  {
+    "id": 1207211,
+    "title": "Device Rotation",
+    "section_id": 144978,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508352313,
+    "updated_by": 84,
+    "updated_on": 1508352595,
+    "estimate": null,
+    "estimate_forecast": "1m 35s",
+    "suite_id": 944,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed\r\nand user is logged in with a TV Premium account",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user starts up an MLB.TV stream",
+        "expected": "Then the video should begin to play in whichever orientation the device was in when the user launched the stream\n(if in portrait, then portrait; if in landscape, then landscape)"
+      },
+      {
+        "content": "When the user is playing an MLB.TV feed\nAnd the user rotates the device 90 degrees or 180 degrees",
+        "expected": "Then the video orientation should rotate along with the device orientation\nAnd the video should NOT restart/relaunch"
+      }
+    ]
+  },
+  {
+    "id": 1207210,
+    "title": "Feed Selector",
+    "section_id": 144978,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508352308,
+    "updated_by": 84,
+    "updated_on": 1508352581,
+    "estimate": null,
+    "estimate_forecast": "2m 46s",
+    "suite_id": 944,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat is installed\r\nand user is logged in with TV Premium account",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the feed selector drop down in the top left corner",
+        "expected": "Then the Away team's feed should be on the top of the cell and the Home team's feed should be underneath"
+      },
+      {
+        "content": "When the user taps the feed selector drop down\nAnd selects the video feed that is not currently being played (opposing team's feed)",
+        "expected": "Then the video should switch to the other feed\nAnd the team icon associated with the new feed should appear in the top left corner of the player"
+      }
+    ]
+  },
+  {
+    "id": 1207212,
+    "title": "Player Controls",
+    "section_id": 144978,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508352322,
+    "updated_by": 232,
+    "updated_on": 1579825445,
+    "estimate": null,
+    "estimate_forecast": "4m 35s",
+    "suite_id": 944,
+    "display_order": 4,
+    "custom_preconds": "Given At Bat is installed\r\nand user is logged in with a TV Premium account\r\nand has launched an MLB.TV stream",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the 'Back' button on the device while playing MLB.TV",
+        "expected": "Then the MLB.TV player should close \nAnd the user should be taken to the page from which they launched the MLB.TV stream"
+      }
+    ]
+  },
+  {
+    "id": 1207213,
+    "title": "Closed Captions",
+    "section_id": 144978,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508352332,
+    "updated_by": 84,
+    "updated_on": 1508352727,
+    "estimate": null,
+    "estimate_forecast": "6m 24s",
+    "suite_id": 944,
+    "display_order": 5,
+    "custom_preconds": "Given At Bat is installed\r\nand user is logged in with a TV Premium account",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user starts an MLB.TV stream for the first time",
+        "expected": "Then the Closed Captions button in the player should be defaulted to \"Off\"\nAnd the closed captions should not appear while the video stream is playing"
+      },
+      {
+        "content": "When the user taps the \"CC\" button in the player",
+        "expected": "Then the CC button should appear selected\nAnd the closed captions should appear during the video\n\n(Toggle back and forth to verify this works over and over)"
+      },
+      {
+        "content": "When the user has turned on Closed Captions\nAnd the user stops one stream and restarts another stream\nAnd when the user closes the app (force stops the app in settings) and relaunches the app and restarts another stream",
+        "expected": "Then the closed caption setting the user had selected should be maintained between sessions.\n\n(ie. If the user had CC set to ON then CC should be on when the user starts another stream. If the user had CC set to OFF then they should remain off when the user starts another stream.)"
+      }
+    ]
+  },
+  {
+    "id": 1207214,
+    "title": "Streaming Tests",
+    "section_id": 144978,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508352347,
+    "updated_by": 166,
+    "updated_on": 1548291307,
+    "estimate": null,
+    "estimate_forecast": "30m 26s",
+    "suite_id": 944,
+    "display_order": 6,
+    "custom_preconds": "Given At Bat is installed\r\nand user is logged in with a TV Premium account",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user attempts to stream MLB.TV across a Wifi connection",
+        "expected": "Then the user should be able to play the stream without issue"
+      },
+      {
+        "content": "When the user attempts to stream MLB.TV across carrier connection",
+        "expected": "Then the user should be able to play the stream without issue"
+      },
+      {
+        "content": "When the user stops playing a stream for one game\nAnd the user begins playing a stream for another game",
+        "expected": "Then the user should be able to start the new stream\n(Try this over and over until confident that no performance issues may become apparent)"
+      },
+      {
+        "content": "When the user sends the app to the background while playing MLB.TV",
+        "expected": "Then the stream becomes PiP (go into smaller screen and keeps playing)"
+      },
+      {
+        "content": "When the user is playing MLB.TV\nand plugs earphones into the device",
+        "expected": "Then the MLB.TV stream continue playing\nand there should be no issue with playback or with audio"
+      },
+      {
+        "content": "When the user is playing MLB.TV\nAnd the user receives a phone call",
+        "expected": "Then the MLB.TV stream should be stopped to hear the phone call ring and prompt the user to answer or decline\nAnd when the phone call is answered the user should only hear the audio from the phone call and not audio from the MLB.TV stream\nAnd when the phone call is ended the user should be able to restart the MLB.TV stream without issue"
+      },
+      {
+        "content": "When the user is playing MLB.TV\nAnd the user ignores a phone call",
+        "expected": "Then the MLB.TV stream should be stopped to hear the phone call ring and prompt the user to answer or ignore\nAnd when the phone call is ignored the user should be able to restart the MLB.TV stream without issue"
+      },
+      {
+        "content": "Verify user can receive phone call while streaming MLB.TV over carrier connection",
+        "expected": "Then the MLB.TV stream should be stopped to hear the phone call ring and prompt the user to answer or decline\nAnd when the phone call is answered the user should only hear the audio from the phone call and not audio from the MLB.TV stream\nAnd when the phone call is ended the user should be able to restart the MLB.TV stream without issue"
+      },
+      {
+        "content": "When the user is playing MLB.TV\nAnd the user receives a text message",
+        "expected": "Then the MLB.TV stream should continue playing\nAnd the user should hear the notification tone alerting them that a new message has been received\nAnd the stream should continue to play"
+      },
+      {
+        "content": "Verify user can receive text message while streaming MLB.TV over carrier connection",
+        "expected": "Then the MLB.TV stream should continue playing\nAnd the user should hear the notification tone alerting them that a new message has been received\nAnd the stream should continue to play"
+      },
+      {
+        "content": "When the user is playing MLB.TV\nAnd the user receives an email or any other notification\n",
+        "expected": "Then the MLB.TV stream should continue playing\nAnd the user should hear the notification tone alerting them that a new alert has been received\nAnd the stream should continue to play"
+      },
+      {
+        "content": "When the user is playing MLB.TV\nAnd an alarm is set and goes off on the device",
+        "expected": "Then the MLB.TV stream should stop playing\nAnd the user should be prompted to dismiss or snooze the alarm\nAnd whichever the user chooses, they should be allowed to resume the stream when they return to the app"
+      }
+    ]
+  },
+  {
+    "id": 1207215,
+    "title": "Display Settings",
+    "section_id": 144978,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508352366,
+    "updated_by": 84,
+    "updated_on": 1508352657,
+    "estimate": null,
+    "estimate_forecast": "10m 7s",
+    "suite_id": 944,
+    "display_order": 7,
+    "custom_preconds": "Given At Bat is installed\r\nand user is logged in with a TV Premium account",
+    "custom_steps": "When the user has their device's display settings set to go to sleep after x minutes of inactivity\r\nand starts playing an MLB.TV stream\r\nand leaves the phone alone",
+    "custom_expected": "Then the device's display should never time out\r\nand the MLB.TV stream should continue to play, regardless of the display settings",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1207217,
+    "title": "Label",
+    "section_id": 144980,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508353435,
+    "updated_by": 84,
+    "updated_on": 1508353614,
+    "estimate": null,
+    "estimate_forecast": "3m 40s",
+    "suite_id": 944,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed\r\nand there are archived feeds available",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navigates to the MLB.TV EPG view\non a handset",
+        "expected": "Then the archive games should appear with an 'Archive' label on the right"
+      },
+      {
+        "content": "When the user opens the MLB.TV EPG drop down\non a tablet",
+        "expected": "Then the archive games should appear with an 'Archive' label on the right"
+      },
+      {
+        "content": "When the user navigates to a past date on the MLB.TV EPG",
+        "expected": "Then the user should see the archive games with an 'Archive' label on the right"
+      }
+    ]
+  },
+  {
+    "id": 1207218,
+    "title": "Entitlements",
+    "section_id": 144980,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508353447,
+    "updated_by": 84,
+    "updated_on": 1508353669,
+    "estimate": null,
+    "estimate_forecast": "1m 2s",
+    "suite_id": 944,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat is installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When an entitled user taps an Archived game stream on the MLB.TV EPG",
+        "expected": "Then the stream should launch\nAnd the stream should play without issue"
+      },
+      {
+        "content": "When a non-entitled user taps on an Archived game stream on the MLB.TV EPG",
+        "expected": "Then the user should be presented with the MLB.TV Pay Wall"
+      }
+    ]
+  },
+  {
+    "id": 1207219,
+    "title": "Game of the Day",
+    "section_id": 144980,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508353479,
+    "updated_by": 232,
+    "updated_on": 1579731094,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 944,
+    "display_order": 3,
+    "custom_preconds": "Given At Bat is installed\r\nand there are Game of the Day feeds archived",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Verify the archived MLB.TV Game of the Day is noted as such",
+        "expected": "The user should see clearly labeled lettering indicating which stream is the MLB.TV Game of the Day archive"
+      },
+      {
+        "content": "Verify archived MLB.TV Game of the Day requires only user to be logged in with MLB.com account",
+        "expected": "User logged in with ANY sort of MLB.com account (lite or paid) should be able to stream MLB.TV Game of the Day archived stream"
+      }
+    ]
+  },
+  {
+    "id": 1207220,
+    "title": "Blackouts",
+    "section_id": 144980,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508353484,
+    "updated_by": 84,
+    "updated_on": 1508353794,
+    "estimate": null,
+    "estimate_forecast": "12s",
+    "suite_id": 944,
+    "display_order": 4,
+    "custom_preconds": "Given At Bat is installed",
+    "custom_steps": "When a user in a blacked out area attempts to launch an archive stream (eg. User in New York attempting to launch Archive stream for Yankees Local Blackout game)",
+    "custom_expected": "Then the user should NOT be blacked out from the archive\r\nAnd the stream should play without issue",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1207221,
+    "title": "Player Controls",
+    "section_id": 144980,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508353493,
+    "updated_by": 232,
+    "updated_on": 1594689675,
+    "estimate": null,
+    "estimate_forecast": "4m 50s",
+    "suite_id": 944,
+    "display_order": 5,
+    "custom_preconds": "Given MLB app is installed\r\nand user is logged in with TV Premium account",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When user starts archive stream",
+        "expected": "Then the video playback should launch at the point that the game broadcast started\n(The user should not sit on the \"Game will begin shortly' slate for an unreasonable amount of time)"
+      },
+      {
+        "content": "When the user plays the archive stream",
+        "expected": "Then the video player should contain a seek bar so the user can navigate through the stream"
+      },
+      {
+        "content": "When the user is playing an archive stream\nAnd they attempt to seek forward or backward with the seek bar",
+        "expected": "Then the video playback should adjust to the selected point appropriately\nAnd the user should be able to navigate forward and backward in a stream without issue"
+      },
+      {
+        "content": "When the user taps the opposite feed button for Home vs. Away feeds in an archive stream\n(On TV, the alternate stream is listed on the scoreboard page)",
+        "expected": "Then the feed for the opposite team should begin without issue\nAnd the feed should jump to the beginning of the game broadcast"
+      },
+      {
+        "content": "When the user is playing an archive game feed there should not be a 'Stop' button in the player when the user brings up the player controls",
+        "expected": "Then they should see a Pause button that pauses and turns into a play button that then plays the stream when tapped"
+      }
+    ]
+  },
+  {
+    "id": 49048,
+    "title": "Blackouts",
+    "section_id": 144974,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1421436356,
+    "updated_by": 84,
+    "updated_on": 1520975868,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 944,
+    "display_order": 1,
+    "custom_preconds": "Local Blackout - User cannot stream game if they are geolocated within either the Away or Home Team's viewing areas\r\nNational Blackout - User cannot stream game if they are geolocated within the US or Canada\r\n\r\n(Note: Executive accounts are not subject to blackout restrictions)\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user attempts to access a game that is set up with a Local Blackout from a blacked out location with a TV Premium account",
+        "expected": "Then the blackout check and BAMSDK check should occur\nAnd the user should be taken to the blackout information page where they should see a map of their location along with Local Blackout information"
+      },
+      {
+        "content": "When the user attempts to access a game that is set up with a National Blackout from a blacked out location with a TV Premium account",
+        "expected": "Then the blackout check and BAMSDK check should occur\nAnd the user should be taken to the blackout information page where they should see a map of their location along with National Blackout information"
+      },
+      {
+        "content": "When the user taps the 'Help' button on the Blackout information page",
+        "expected": "Then the user should be taken to an internal webview with the app FAQ\nAnd the FAQ should contain information about blackout restrictions"
+      },
+      {
+        "content": "When the user attempts to access an MLB.TV Game of the Day with any entitled account and they are within a local blackout area",
+        "expected": "Then the blackout check and BAMSDK check should occur\nAnd the user should be taken to the blackout information page where they should see a map of their location along with Local Blackout information"
+      },
+      {
+        "content": "When a Lite user attempts to access a game that is set up with a Local Blackout from a blacked out location",
+        "expected": "Then the user will be gated by the TV paywall \nwhich will include a \"Check local blackouts\" webview link"
+      },
+      {
+        "content": "When the user attempts to access a game that is set up with a Local or National blackout with an Executive account",
+        "expected": "Then the blackout check and BAMSDK check should occur\nAnd the video should begin to play without issue\n(The user should NOT be blacked out) "
+      }
+    ]
+  },
+  {
+    "id": 1207197,
+    "title": "Location Permissions",
+    "section_id": 144974,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508345347,
+    "updated_by": 84,
+    "updated_on": 1520975685,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 944,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat is installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user turns off location services on an Android Handset or Tablet (non-Kindle device)\n(Settings -> Location Services)\nAnd the user attempts to launch an MLB.TV stream",
+        "expected": "Then the user should receive a message to enable a location service\nAnd tapping \"OK\" should bring them to the Location Services page in Settings"
+      },
+      {
+        "content": "When the user is a Lite user or is not logged in with an MLB.TV account\nAnd the user turns off location services on an Android Handset or Tablet (non-Kindle device)\n(Settings -> Location Services)\nAnd the user attempts to launch an MLB.TV stream",
+        "expected": "Then the user should see a message on the paywall stating that \"Location Services are disabled. To reliably check your blackout area, please enable a location service\"\nAnd after logging in with an MLB.tv entitled account the user should get another message to \"Please enable a location service\""
+      },
+      {
+        "content": "When the user turns off location services on an Amazon Kindle Fire tablet\n(Settings -> Wireless > Location Services)\nAnd the user attempts to launch an MLB.TV stream",
+        "expected": "Then the user should receive a message that At Bat is having trouble verifying location\nand to make sure location services are enabled"
+      }
+    ]
+  },
+  {
+    "id": 1207196,
+    "title": "Mock Locations",
+    "section_id": 144974,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508345341,
+    "updated_by": 84,
+    "updated_on": 1508345422,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 944,
+    "display_order": 3,
+    "custom_preconds": "Given At Bat is installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user turns on Mock Locations in device Settings\n(Settings=>Applications=>Development, or Settings=>Developer Options)\nAnd the user attempts to launch an MLB.TV stream",
+        "expected": "Then the user should receive a message stating \"At Bat is unable to reliably verify your location. Tap Help below for more information\"\nAnd the Help button should take the user to the FAQ page"
+      },
+      {
+        "content": "When the user turns Mock Locations off in settings\nAnd the user attempts to launch an MLB.TV stream",
+        "expected": "Then the app should check the user's location\nAnd launch the proper MLB.tv feed"
+      },
+      {
+        "content": "When the user turns on Mock locations without killing the app\n(Make sure app resumes and does not launch fresh)\nAnd the user attempts to launch an MLB.TV stream",
+        "expected": "Then the user should receive a message stating \"At Bat is unable to reliably verify your location. Tap Help below for more information\"\nAnd the Help button should take the user to the FAQ page"
+      }
+    ]
+  }
+]

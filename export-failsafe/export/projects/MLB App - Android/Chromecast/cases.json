@@ -1,0 +1,138 @@
+[
+  {
+    "id": 16562595,
+    "title": "Cast Highlight",
+    "section_id": 757427,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-8294",
+    "created_by": 232,
+    "created_on": 1617206884,
+    "updated_by": 232,
+    "updated_on": 1617206884,
+    "estimate": null,
+    "estimate_forecast": "16m 41s",
+    "suite_id": 215884,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the cast icon appears during video playback of Highlight on the Watch Tab\nAND the user presses the cast icon\nAND the user selects a castable device\n",
+        "expected": "THEN the video will resume playing on a castable device at same play back position as to when the user pressed cast"
+      },
+      {
+        "content": "WHEN the user is casting a highlight\nAND the user presses the cast icon\nAND the user presses the STOP CASTING button",
+        "expected": "THEN the casting session will stop"
+      }
+    ]
+  },
+  {
+    "id": 16562600,
+    "title": "Cast Highlight - Closed Captioning",
+    "section_id": 757427,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-9432",
+    "created_by": 232,
+    "created_on": 1617207444,
+    "updated_by": 232,
+    "updated_on": 1617207444,
+    "estimate": null,
+    "estimate_forecast": "15m 57s",
+    "suite_id": 215884,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a user on the Watch View / Highlights Tab / Watching a highlight on the device",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I select the Chromecast Icon in the upper rightAND the video has closed captioning available (over 1 minute)\n",
+        "expected": "THEN The Closed Captioning button will appear on the bottom row of the Cast Screen (Full Screen)\n"
+      },
+      {
+        "content": "WHEN the video has closed captioning available (over 1 minute) \nAND the user has enabled closed captioning",
+        "expected": "THEN Closed captioning will appear on the video feed"
+      }
+    ]
+  },
+  {
+    "id": 16583475,
+    "title": "Chromecast - MLB.TV Playback",
+    "section_id": 757427,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10932",
+    "created_by": 238,
+    "created_on": 1617290401,
+    "updated_by": 232,
+    "updated_on": 1692727856,
+    "estimate": null,
+    "estimate_forecast": "17m 40s",
+    "suite_id": 215884,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN a user\nAND a cast session is active\nWHEN attempting to stream an MLB.TV game",
+        "expected": "THEN the MLB.TV game plays on chromecast"
+      },
+      {
+        "content": "GIVEN a user\nAND an MLB.TV game is streaming\nWHEN tapping the chromecast icon",
+        "expected": "THEN the MLB.TV game plays on chromecast\nAND the position will match the current client position"
+      },
+      {
+        "content": "GIVEN a user\nWHEN an MLB.TV game is casting\nAND tapping the chromecast icon\nAND then tapping the Stop Casting button",
+        "expected": "THEN the casting will stop"
+      }
+    ]
+  },
+  {
+    "id": 16583978,
+    "title": "Chromecast - Phone Controller",
+    "section_id": 757427,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-9431",
+    "created_by": 238,
+    "created_on": 1617291009,
+    "updated_by": 232,
+    "updated_on": 1711482273,
+    "estimate": null,
+    "estimate_forecast": "15m 13s",
+    "suite_id": 215884,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN: A user is casting a video to a device.\nWHEN: User is viewing the Expanded Controller.",
+        "expected": "THEN: The MLB logo will be in the background of the expanded controller\n![](index.php?/attachments/get/14032654)\n"
+      },
+      {
+        "content": "GIVEN: A user is casting a video to a device.\nWHEN: The user taps the back button (or minimize icon, depending on device) from the Expanded Video Controller",
+        "expected": "THEN: The mathchup will display in the MiniController for Chromecast\n![](index.php?/attachments/get/14032665)\n"
+      },
+      {
+        "content": "GIVEN: A user is casting a video to a device.\nWHEN: The user pulls down the notification menu",
+        "expected": "THEN: A notification with controls for Chromecast will display (NOTE: notification display will vary by device type)\n![](index.php?/attachments/get/14032667)\n"
+      },
+      {
+        "content": "GIVEN: A user is casting a video to a device.\nWHEN: User locks the phone",
+        "expected": "THEN: Casting will continue to the Chromecast device"
+      }
+    ]
+  }
+]

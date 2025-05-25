@@ -1,0 +1,209 @@
+[
+  {
+    "id": 11599,
+    "suite_id": 1309,
+    "name": "As a club, I want to submit an Addendum C for e-signature",
+    "description": "https://www.pivotaltracker.com/n/projects/1402858/stories/104738076",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 11600,
+    "suite_id": 1309,
+    "name": "As a club, I want to see a confirmation message asking if I should proceed with E-sig",
+    "description": "https://www.pivotaltracker.com/n/projects/1402858/stories/108259842",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 11690,
+    "suite_id": 1309,
+    "name": "As a user, i want to be able to tender over 100 addendum Cs",
+    "description": "https://www.pivotaltracker.com/story/show/108652242",
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 11702,
+    "suite_id": 1309,
+    "name": "As club, I want to be warned if date signed field is already populated before e-signing Add C",
+    "description": "https://www.pivotaltracker.com/n/projects/1402858/stories/106504462",
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 11713,
+    "suite_id": 1309,
+    "name": "As a club, I want to be stopped if Authorized Signatory is not pre-populated before e-signing",
+    "description": "https://www.pivotaltracker.com/story/show/106504502",
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 11716,
+    "suite_id": 1309,
+    "name": "As a club, I want to be stopped if Location signed information is not pre-populated before e-signing",
+    "description": "https://www.pivotaltracker.com/story/show/106965342",
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 11720,
+    "suite_id": 1309,
+    "name": "As a club, I want to be warned if my Addendum C's have attachments when e-signing",
+    "description": "https://www.pivotaltracker.com/n/projects/1402858/stories/104738108",
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 11771,
+    "suite_id": 1309,
+    "name": "As a club, I want my Authorized signatory to be pre-populated on the generated PDF",
+    "description": "https://www.pivotaltracker.com/n/projects/1402858/stories/106052828",
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 11601,
+    "suite_id": 1309,
+    "name": "As a club I want to bring up a list of my Addendum C's that are waiting for an E-Signature",
+    "description": "https://www.pivotaltracker.com/n/projects/1402858/stories/106046936",
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 11691,
+    "suite_id": 1309,
+    "name": "As a club, I want to see a message that my forms are being sent to Adobe echo sign",
+    "description": "https://www.pivotaltracker.com/story/show/108259754",
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 11769,
+    "suite_id": 1309,
+    "name": "As a player, I want to e-sign my addendum C in person",
+    "description": "https://www.pivotaltracker.com/story/show/106047038",
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 11637,
+    "suite_id": 1309,
+    "name": "As club, I want to see list of Add C's that need club signature",
+    "description": "https://www.pivotaltracker.com/n/projects/1402858/stories/106047748",
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 11712,
+    "suite_id": 1309,
+    "name": "As a club, I want to see an indicator as to which of my C's are being currently e-signed",
+    "description": "https://www.pivotaltracker.com/story/show/104738146",
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 11906,
+    "suite_id": 1309,
+    "name": "As a club, I want any updates to an Addendum C that is currently being e-signed to invalidate my E-signatures",
+    "description": "https://www.pivotaltracker.com/story/show/106774796",
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 11789,
+    "suite_id": 1309,
+    "name": "As a player, I want the date I signed the PDF to be auto-populated",
+    "description": "https://www.pivotaltracker.com/story/show/108803904",
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 11909,
+    "suite_id": 1309,
+    "name": "As a club, I want an indicator that my form has been opened from the player e-sig widget",
+    "description": "https://www.pivotaltracker.com/story/show/108264076",
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  },
+  {
+    "id": 11790,
+    "suite_id": 1309,
+    "name": "As a player, I want to e-sign forms on a mobile device",
+    "description": "https://www.pivotaltracker.com/story/show/108810026",
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 11912,
+    "suite_id": 1309,
+    "name": "As a club, I want my Addendum C to be auto-submitted to BOC after e-signing",
+    "description": "https://www.pivotaltracker.com/story/show/106953694",
+    "parent_id": null,
+    "display_order": 31,
+    "depth": 0
+  },
+  {
+    "id": 11776,
+    "suite_id": 1309,
+    "name": "As club, I want the date signed field in ebis to be auto-populated with the date e-signed by the player",
+    "description": "https://www.pivotaltracker.com/story/show/106047634",
+    "parent_id": null,
+    "display_order": 32,
+    "depth": 0
+  },
+  {
+    "id": 11705,
+    "suite_id": 1309,
+    "name": "As a club, I want to stamp an Addendum C with the Authorized signatory's signature",
+    "description": "https://www.pivotaltracker.com/n/projects/1402858/stories/106052170",
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  },
+  {
+    "id": 11707,
+    "suite_id": 1309,
+    "name": "As a club, I want the date of my club e-signature to be automatically added to the PDF of the Add C",
+    "description": "https://www.pivotaltracker.com/n/projects/1402858/stories/108265284",
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 11913,
+    "suite_id": 1309,
+    "name": "As a club, I want to see the e-signed PDF attached to my Addendum C",
+    "description": "https://www.pivotaltracker.com/story/show/106052252",
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 11706,
+    "suite_id": 1309,
+    "name": "As a club, I want to stamp multiple Add C's with the Authorized Signatory's signature",
+    "description": "https://www.pivotaltracker.com/n/projects/1402858/stories/106052208",
+    "parent_id": null,
+    "display_order": 48,
+    "depth": 0
+  }
+]

@@ -1,0 +1,2013 @@
+[
+  {
+    "id": 45283,
+    "title": "Background Image - Add your Photo",
+    "section_id": 6338,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 124,
+    "updated_on": 1518316416,
+    "estimate": null,
+    "estimate_forecast": "7m 23s",
+    "suite_id": 814,
+    "display_order": 3,
+    "custom_preconds": "Given the user is in My Journal",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see an option to add a photo at the top of the page (pencil icon)",
+    "custom_steps_separated": [
+      {
+        "content": "When the content on the screen loads\nAnd the user taps on the pencil icon ",
+        "expected": "Then a Pop up will be displayed asking the user to allow pictures and recordings\nAnd the user will have the option to allow or deny\n"
+      },
+      {
+        "content": "When the content on the screen loads\nAnd the user taps on the pencil icon \n",
+        "expected": "Then the user will be given 3 options:\n- add photo from existing library\n- import from facebook\n- take Photo\nAnd the user will be able to add an image to the background"
+      }
+    ]
+  },
+  {
+    "id": 45285,
+    "title": "Changing My Journal background image",
+    "section_id": 6338,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 124,
+    "updated_on": 1496847706,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 5,
+    "custom_preconds": "Given the user is in My Journal\r\nAnd the user has previously set a background image",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be prompted to take a photo or select a photo from the gallery",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the pencil icon on the bottom right of the image",
+        "expected": "Then the user should be prompted to add existing, take new photo, or import from facebook"
+      },
+      {
+        "content": "When the user has completes changing the photo\n",
+        "expected": "Then the journal's background image should change immediately\n"
+      }
+    ]
+  },
+  {
+    "id": 45286,
+    "title": "No Check-Ins or Added Games",
+    "section_id": 6338,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1437411069,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 6,
+    "custom_preconds": "Given the user is on My Journal\r\nAnd the user hasn't made any Check-Ins\r\nor added any games\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see '0' under Ballparks stats\r\nAnd the user will see '0' under Teams stats",
+    "custom_steps_separated": [
+      {
+        "content": "When the content on the screen loads\n",
+        "expected": "Then the journal should not display any games checked in below"
+      }
+    ]
+  },
+  {
+    "id": 45287,
+    "title": "Most recently uploaded photos - the user has uploaded 0 photos",
+    "section_id": 6338,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 124,
+    "updated_on": 1496849839,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 7,
+    "custom_preconds": "Given the user is in My Journal\r\nAnd the user has not uploaded any photos\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see a photos section\r\nAnd there will be a camera icon with a message stating, 'You have not uploaded any photos yet'",
+    "custom_steps_separated": [
+      {
+        "content": "When the content on the screen loads",
+        "expected": "Then the photo button should remain the same \nAnd the photo gallery should be empty\nAnd the user should see the gallery page with a \"you have not uploaded any photos yet\" text"
+      }
+    ]
+  },
+  {
+    "id": 45288,
+    "title": "Message the user sees when they have no history",
+    "section_id": 6338,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 43,
+    "updated_on": 1467989461,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 8,
+    "custom_preconds": "Given the user is on My Journal\r\nAnd the user has no check-ins",
+    "custom_steps": null,
+    "custom_expected": "Then the user will not see any games in their journal history\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 55911,
+    "title": "offers",
+    "section_id": 6338,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 67,
+    "created_on": 1434564514,
+    "updated_by": 67,
+    "updated_on": 1437411069,
+    "estimate": null,
+    "estimate_forecast": "5m 43s",
+    "suite_id": 814,
+    "display_order": 9,
+    "custom_preconds": "Given the user is on the journal\r\nAnd the user wants to check offers are working correctly",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user checks the top right side of the header",
+        "expected": "Then the user will see the offer button\nAnd the user will see a price tag icon\n"
+      },
+      {
+        "content": "When the user taps on the offer button",
+        "expected": "Then the user will be directed to the offer page\nAnd the user will see the header with arrow back on the top left\nAnd the user will see his/her offers in cells"
+      },
+      {
+        "content": "When the user taps on any of the offers",
+        "expected": "Then the user will be brought to the offer detail webview\nAnd the user will see the header with arrow back on the top left\nAnd the user will see the details of the offer on the internal webview"
+      },
+      {
+        "content": "when the user taps on the back button on the device or header on the offer detail webview\n(test both cases)",
+        "expected": "Then the user will be brought to the offer page\nAnd the user will see all the offers he/she has collected"
+      },
+      {
+        "content": "when the user taps on the back button on the device or header on the offer page\n(test both cases)",
+        "expected": "Then the user will be brought to the journal"
+      },
+      {
+        "content": "When the user exits the journal\nAnd the user checks in to a ballpark\nAnd the ballpark has offers that are unlocked through check in",
+        "expected": "Then the user should have the offer unlocked\nAnd the user will see the offer when they go to the offer page"
+      },
+      {
+        "content": "When the offer has an expiration date\nAnd the user is on the offer page",
+        "expected": "Then the user will see the offer is removed from the offer page\nAnd the user should no longer be able to use the offer"
+      }
+    ]
+  },
+  {
+    "id": 55914,
+    "title": "map view",
+    "section_id": 6338,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315, https://jira.mlbam.com/browse/BPA-1313, https://jira.mlbam.com/browse/BPA-1601",
+    "created_by": 67,
+    "created_on": 1434571204,
+    "updated_by": 65,
+    "updated_on": 1527189534,
+    "estimate": null,
+    "estimate_forecast": "58m 20s",
+    "suite_id": 814,
+    "display_order": 10,
+    "custom_preconds": "Given the user wants to check out what ballparks he/she has visited over the many years of using the ballpark app",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user has no check-ins\n\n",
+        "expected": "Then the \"View on Map\" button will be hidden."
+      },
+      {
+        "content": "When the user has at least 1 check-in\nAnd the user taps on the map view\n",
+        "expected": "Then the user should see the following:\n- back button on the top left of the header\n- the header will have \"your check-ins\"\n- google map will load and the screen will be on USA on default\n- photo of either the ballpark or the photos attached to any check-in will appear on the map directly above where the ballpark is"
+      },
+      {
+        "content": "When the user has a check-in on one ballpark with no photos attached\nAnd a check-in on another ballpark with an image attached\nAnd multiple check-ins on another ballpark with no photos attached to any of them\nAnd multiple check-ins on another ballpark with several different photos attached to each check-in\n",
+        "expected": "Then the user will see the following:\n- the map view will display multiple frames\n- the ballpark with a check-in with no image will display the ballpark image on default\n- the ballpark with a check-in with image will display the latest image on the frame\n"
+      },
+      {
+        "content": "When the user taps on a frame in the map view",
+        "expected": "Then the user will see the check-in list appear\nAnd the use will see the following:\n- total check-ins listed at the top cell\n- the the ballpark the user tapped on\n- a close button on the left side of the top cell\n- a section with a list of all check-ins\n- a cell within the section that displays the check-in information\n( should display in this format\n18, june 2015 \nNYM 3, NYY 4)"
+      },
+      {
+        "content": "When the user taps on any of the check-in cells\n",
+        "expected": "Then the user will be brought to the event detail view\nAnd the event detail view should mirror the one thats in the journal(just check to see all elements are showing on the event detail view)"
+      },
+      {
+        "content": "When the user taps on the device back from the event detail view",
+        "expected": "Then the user should be brought back to the map view\nAnd the user should see the list of check-ins that the user was looking at last"
+      },
+      {
+        "content": "When the user taps and hold on the map with 2 fingers\nAnd spread them apart\n",
+        "expected": "Then the user will zoom in"
+      },
+      {
+        "content": "When the user taps and pinch on the map with 2 finger",
+        "expected": "Then the user will zoom out"
+      },
+      {
+        "content": "When the user double taps on the map view in quick succession",
+        "expected": "Then the user will zoom in"
+      },
+      {
+        "content": "When the user taps on any of the ballpark frames on the map view\nand the user taps on a different ballpark frame",
+        "expected": "Then the user will first see the check-in list for the first ballpark\nAnd after the second tap the check-in list will populate for the second ballpark"
+      },
+      {
+        "content": "when the user has check-ins from decommissioned ballparks\n- busch stadium 1 and 2\n- yankee stadium\n- RFK stadium\n- shea stadium\n- humphrey metrodome\nAnd the user checks the map view",
+        "expected": "Then the user will be able to find all the old ballparks in the map view\nAnd the GPS location will be correct on each of the old decommissioned ballparks"
+      },
+      {
+        "content": "When the user has check-ins to game/non-game events outside of the United States\n(https://en.wikipedia.org/wiki/List_of_Major_League_Baseball_games_played_outside_North_America)\n- Tokyo dome\n- SCG\n- Estadio de Béisbol Monterrey\nAnd the user is on the map view",
+        "expected": "Then the user should see the ballparks show up on the map in the correct GPS locations\nAnd the user should see the last image ever attached to the event on the thumbnail\nAnd the user should be able to tap on the thumbnail to reveal all events the user checked-in to for that ballpark\nAnd the user should be able to navigate to the event detail for each event"
+      },
+      {
+        "content": "When the user taps on the device back when the check-in list is open",
+        "expected": "Then the user will be brought back to the journal"
+      }
+    ]
+  },
+  {
+    "id": 56440,
+    "title": "Avatar",
+    "section_id": 6338,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 67,
+    "created_on": 1436149149,
+    "updated_by": 67,
+    "updated_on": 1437411069,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 11,
+    "custom_preconds": "Given user wants to add an avatar photo to his journal",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user first gets to the journal\nAnd the user taps on the small frame located on the bottom left side",
+        "expected": "Then the user will be prompted 3 choices:\n- import from facebook\n- choose from photo library\n- take photo"
+      },
+      {
+        "content": "When the user has an avatar photo on his/her facebook account\nAnd the user taps import from facebook",
+        "expected": "Then the user will be prompted to login to facebook if the user has not already done so\nAnd the user will load the facebook avatar on to the journal avatar"
+      },
+      {
+        "content": "When the user has an avatar photo\nAnd the user taps on the avatar photo\nAnd the user selects either the \"choose from photo library\" or \"take photo\"\nAnd the user uploads an image",
+        "expected": "Then the user's avatar will update and change"
+      }
+    ]
+  },
+  {
+    "id": 45319,
+    "title": "Links to Stats",
+    "section_id": 6339,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 65,
+    "updated_on": 1462400154,
+    "estimate": null,
+    "estimate_forecast": "47s",
+    "suite_id": 814,
+    "display_order": 1,
+    "custom_preconds": "Given the user is in My Journal\r\nand the content on the screen loads",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps 'Ballparks' Stats cell",
+        "expected": "Then the user will be taken to the Ballparks Stats page"
+      },
+      {
+        "content": "When the user taps 'Teams' Stats cell",
+        "expected": "Then the user will be taken to the Team Stats page"
+      }
+    ]
+  },
+  {
+    "id": 45320,
+    "title": "Total Visits when this number is greater than 0",
+    "section_id": 6339,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1434385170,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 2,
+    "custom_preconds": "Given the user is in My Journal\r\nAnd has checked in to at least 1 game",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see a 'Total Check-Ins' Cell \nAnd there will be a number within this cell\nAnd this number will be the total number of ballpark check-ins plus added historical games",
+    "custom_steps_separated": [
+      {
+        "content": "When the content on the screen loads",
+        "expected": "Then the user will see the ballpark total visit number show the correct amount of visits the user has made in total"
+      }
+    ]
+  },
+  {
+    "id": 45321,
+    "title": "Ballparks when this number is greater than 0",
+    "section_id": 6339,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1434385224,
+    "estimate": null,
+    "estimate_forecast": "50s",
+    "suite_id": 814,
+    "display_order": 3,
+    "custom_preconds": "Given the user is in My Journal\r\nAnd has checked in to at least 1 game\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see a cell titled 'Ballparks'\r\nAnd there will be a number in this cell\r\nAnd this number will be the total number of ballpark check-ins plus added historical games",
+    "custom_steps_separated": [
+      {
+        "content": "When the content on the screen loads",
+        "expected": "Then the journal page should display the correct number of ballparks the user has visited on the ballpark stats page button"
+      }
+    ]
+  },
+  {
+    "id": 45322,
+    "title": "Teams when this number is greater than 0",
+    "section_id": 6339,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1434385274,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 4,
+    "custom_preconds": "Given the user is in My Journal\r\nAnd has checked in to or added at least 1 game",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see a cell titled 'Teams'\nAnd there will be a number in this cell\nAnd this number will be the total number of teams seen for check-ins and added historical games",
+    "custom_steps_separated": [
+      {
+        "content": "When the content on the screen loads",
+        "expected": "Then the user should see the team stats page button show the correct number of teams that he/she has watched"
+      }
+    ]
+  },
+  {
+    "id": 45418,
+    "title": "The Stats Page",
+    "section_id": 12204,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146644,
+    "updated_by": 43,
+    "updated_on": 1453237557,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 1,
+    "custom_preconds": "Given the user navigates to Stats",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see a selector at the top for Ballparks and Teams (ballparks is default)\r\nAnd a count for Ballparks, Total Visits \r\nAnd a list of stadiums visited sorted most visited to least",
+    "custom_steps_separated": [
+      {
+        "content": "When the content loads",
+        "expected": "Then the user will see the stats page\nAnd the user will see the header with arrow back\nAnd the user will see either the team or ballpark stats"
+      }
+    ]
+  },
+  {
+    "id": 45419,
+    "title": "Ballparks Tab - Updating stats when adding or checking in",
+    "section_id": 12204,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146644,
+    "updated_by": 43,
+    "updated_on": 1453237557,
+    "estimate": null,
+    "estimate_forecast": "9m 11s",
+    "suite_id": 814,
+    "display_order": 2,
+    "custom_preconds": "Given the user is in Stats\r\nand the user has selected Ballparks",
+    "custom_steps": null,
+    "custom_expected": "Then the number next to Ballparks will increase by 1 (unless the user has already checked into or added a game at this same stadium)\r\nand the number next to Total Visits will increase by 1 (always)\r\nand the number next to the stadium's image and name will increase by 1 (always)",
+    "custom_steps_separated": [
+      {
+        "content": "When the user checks into a game\nor the user adds a game in History\n\n(check both cases)",
+        "expected": "Then the user will have the stats of ballpark and team information updated"
+      }
+    ]
+  },
+  {
+    "id": 45420,
+    "title": "Ballparks Tab - Updating stats when removing added games",
+    "section_id": 12204,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146644,
+    "updated_by": 43,
+    "updated_on": 1453237557,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 3,
+    "custom_preconds": "Given the user is in Stats\r\nand the user has selected Ballparks\r\nand the user has added a historical game",
+    "custom_steps": null,
+    "custom_expected": "Then the number next to Ballparks will decrease by 1 (unless the user has already checked into or added another game at this same stadium)\r\nand the number next to Total Visits will decrease by 1 (always)\r\nand the number next to the stadium's image and name will decrease by 1 (always)",
+    "custom_steps_separated": [
+      {
+        "content": "When the user removes a game from their History",
+        "expected": "Then the stats page for both ballpark and team will update accordingly"
+      }
+    ]
+  },
+  {
+    "id": 45421,
+    "title": "Ballparks Tab - Name, City, & State",
+    "section_id": 12204,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146644,
+    "updated_by": 43,
+    "updated_on": 1453237557,
+    "estimate": null,
+    "estimate_forecast": "1m 35s",
+    "suite_id": 814,
+    "display_order": 4,
+    "custom_preconds": "Given the user has added and/or checked into games\r\nand the user is in Stats\r\nand the user has selected Ballparks",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see an image of the stadium\r\nand the name of the stadium will be to the right of it\r\nand the city, state will be underneath the stadium name in lighter text",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks at the ballpark's visited list",
+        "expected": "Then the user will see the subnav under ballpark highlighted\nAnd the user will see all the ballparks visited\nAnd next to each ballparks it will number out the amount of times they visited said ballpark"
+      }
+    ]
+  },
+  {
+    "id": 45422,
+    "title": "Ballparks Tab - Specific ballpark visit totals",
+    "section_id": 12204,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146644,
+    "updated_by": 43,
+    "updated_on": 1453237557,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 5,
+    "custom_preconds": "Given the user is in Stats\r\nand the user has selected Ballparks",
+    "custom_steps": null,
+    "custom_expected": "Then the number to the right of the stadium in the stadium list will increase by 1",
+    "custom_steps_separated": [
+      {
+        "content": "When the user checks into a game\nor the user adds a game in History for a stadium\n\n(check both cases)",
+        "expected": "Then the user should see the ballpark total visit update accordingly"
+      }
+    ]
+  },
+  {
+    "id": 45423,
+    "title": "1_EDITED Ballparks Tab - Verify the Ballpark thumbnails",
+    "section_id": 12204,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146644,
+    "updated_by": 65,
+    "updated_on": 1462305936,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 6,
+    "custom_preconds": "Given the user is in Stats",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the correct thumbnail for each stadium\r\n(check for all teams)\r\n\r\n![](index.php?/attachments/get/2551)![](index.php?/attachments/get/2550)![](index.php?/attachments/get/2552)![](index.php?/attachments/get/2553)![](index.php?/attachments/get/2554)",
+    "custom_steps_separated": [
+      {
+        "content": "When the user views the list of visited ballparks",
+        "expected": "Then the user should see all the ballparks\nAnd the user should see the correct images for each of the ballparks"
+      }
+    ]
+  },
+  {
+    "id": 45424,
+    "title": "1_EDITED Ballparks Tab - Verify images for historical ballparks",
+    "section_id": 12204,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146644,
+    "updated_by": 65,
+    "updated_on": 1462307327,
+    "estimate": null,
+    "estimate_forecast": "2m 38s",
+    "suite_id": 814,
+    "display_order": 7,
+    "custom_preconds": "Given the user is logged in with oldstadiums@mlb.com / tester\r\nand the user is in Stats on the Ballparks tab\r\n\r\nThe stadium names in the stats list use the final name of the stadium before it was closed. The stadium names in the journal list use the stadium name at the time of the event. i.e Miami, that particular stadium changed names to Sun Life after 2005 and ended it's baseball status with that name. Marlins Park is not a stadium rename but a new venue entirely.",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the correct images for the historical ballparks:\r\n- Twins 2005 The Metrodome\r\n- Nationals 2005 RFK Stadium\r\n- Mets 2005 Shea Stadium\r\n- 2014 Sydney Cricket Ground (Australia)\r\n- 2012 Tokyo Dome (Japan)\r\n- Cardinals 2005 Old Busch Stadium\r\n- Yankees 2005 Old Yankee Stadium\r\n- Marlins 2005 Dolphins Stadium or 2004 Pro Player Stadium (please note you will see a Dolphin Stadium game (2005) or Pro Player Stadium game (2004) on \r\n   the Journal page, but it will show up in the Stat's Ballpark list as Sun Life Stadium because they share a venue id)\r\n\r\n\r\n![](index.php?/attachments/get/2559) ![](index.php?/attachments/get/2560)",
+    "custom_steps_separated": [
+      {
+        "content": "When the user scrolls through the ballpark list",
+        "expected": "Then the user will see all the old ballpark images"
+      }
+    ]
+  },
+  {
+    "id": 45425,
+    "title": "Teams Tab - Verify drop down menu to sort stats",
+    "section_id": 12204,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146644,
+    "updated_by": 43,
+    "updated_on": 1453237557,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 8,
+    "custom_preconds": "Given the user is in My Journal\r\nand the user has tapped on Stats\r\nand the user has then tapped on the Team tab",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see an option to sort by All Teams, Home Teams, or Away Teams.",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the All Teams drop down",
+        "expected": "then the user will see all teams listed out"
+      }
+    ]
+  },
+  {
+    "id": 45426,
+    "title": "Teams Tab - Verify each option is sorting correctly",
+    "section_id": 12204,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146644,
+    "updated_by": 43,
+    "updated_on": 1453237557,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 9,
+    "custom_preconds": "Given the user is in My Journal\r\nand the user has tapped on Stats\r\nand the user has then tapped on the Team tab",
+    "custom_steps": null,
+    "custom_expected": "Then the data will sort by the selected option \r\nand it will be in descending order based on amount of visits",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the All Teams drop down\nand the user selects each option",
+        "expected": "Then the stats page will filter out the teams correctly"
+      }
+    ]
+  },
+  {
+    "id": 45427,
+    "title": "Teams Tab - Verify logos and team names are correct",
+    "section_id": 12204,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146644,
+    "updated_by": 43,
+    "updated_on": 1453237557,
+    "estimate": null,
+    "estimate_forecast": "6m 42s",
+    "suite_id": 814,
+    "display_order": 10,
+    "custom_preconds": "Given the user is in My Journal\r\nand the user has tapped on Stats\r\nand the user has then tapped on the Team tab",
+    "custom_steps": null,
+    "custom_expected": "Then all team logos and team names are correct and up to date\r\n(check all teams)",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the All Teams from the drop down",
+        "expected": "Then the user will see all the team stats listed out\nAnd the user will see the correct logo/name for each team shown on the stats page"
+      }
+    ]
+  },
+  {
+    "id": 45428,
+    "title": "Teams Tab - Updating stats when adding or checking in",
+    "section_id": 12204,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146644,
+    "updated_by": 43,
+    "updated_on": 1453237557,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 11,
+    "custom_preconds": "Given the user is in Stats\r\nand the user has selected Teams",
+    "custom_steps": null,
+    "custom_expected": "Then the Overall Home Team Record will update correctly\r\nand the individual team record will update correctly",
+    "custom_steps_separated": [
+      {
+        "content": "When the user checks into a game\nor the user adds a game in History\n\n(check both cases)",
+        "expected": "Then the team stats should update accordingly\n"
+      }
+    ]
+  },
+  {
+    "id": 45429,
+    "title": "Teams Tab - Updating stats when removing added games",
+    "section_id": 12204,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146644,
+    "updated_by": 43,
+    "updated_on": 1453237557,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 12,
+    "custom_preconds": "Given the user is in Stats\r\nand the user has selected Teams\r\nand the user has added a historical game",
+    "custom_steps": null,
+    "custom_expected": "Then the Overall Home Team Record will update correctly\r\nand the individual team record will update correctly",
+    "custom_steps_separated": [
+      {
+        "content": "When the user removes the added game from their History",
+        "expected": "Then the users stats should update accordingly"
+      }
+    ]
+  },
+  {
+    "id": 45430,
+    "title": "Tapping the Journal (back) button",
+    "section_id": 12204,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146644,
+    "updated_by": 43,
+    "updated_on": 1453237557,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 13,
+    "custom_preconds": "Given the user is on the Journal\r\nand the user has tapped either \"Ballparks\" or \"Teams\"\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be brought back to My Journal",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the back button at the top left",
+        "expected": "Then the user should be returned back to the journal"
+      }
+    ]
+  },
+  {
+    "id": 45312,
+    "title": "Link to photo gallery when the user has uploaded at least 1 image",
+    "section_id": 6340,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1434385433,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 1,
+    "custom_preconds": "Given the user is in My Journal\r\nAnd the user has uploaded at least 1 image in the past",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be brought to the Photos page",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the photos button\n",
+        "expected": "Then the user will be brought to the photo gallery\nAnd the user will see all the image(s) he/she uploaded"
+      }
+    ]
+  },
+  {
+    "id": 45313,
+    "title": "Most recently uploaded photos - the user has uploaded at least 2",
+    "section_id": 6340,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1434385788,
+    "estimate": null,
+    "estimate_forecast": "1m 35s",
+    "suite_id": 814,
+    "display_order": 2,
+    "custom_preconds": "Given the user is in My Journal\r\nAnd the user has uploaded at least 2+ photos\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the 8 most recent photos from left to right\nAnd they will be scrollable\n\n",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the photo button on the journal",
+        "expected": "Then the user will be on the photo gallery\nAnd the user will see the latest image appear at the very top left side"
+      }
+    ]
+  },
+  {
+    "id": 45314,
+    "title": "Clicking on a Photo",
+    "section_id": 6340,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 65,
+    "updated_on": 1462400080,
+    "estimate": null,
+    "estimate_forecast": "1m 33s",
+    "suite_id": 814,
+    "display_order": 3,
+    "custom_preconds": "Given the user is in My Journal\r\nAnd the user has uploaded at least one photo ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on a thumbnail in Photo",
+        "expected": "Then the photo will open\n\n"
+      },
+      {
+        "content": "When the user swipes through the gallery",
+        "expected": "The user will be able to swipe through all their photos in the gallery smoothly\n"
+      },
+      {
+        "content": "When the user taps on the photo\n",
+        "expected": "Then this will bring up the option to delete the photo"
+      },
+      {
+        "content": "When the user taps on the back button on the top left",
+        "expected": "Then the user will be taken to the Photos page"
+      }
+    ]
+  },
+  {
+    "id": 45315,
+    "title": "Accessing the Gallery",
+    "section_id": 6340,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1434385874,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 4,
+    "custom_preconds": "Given the user is in My Journal\r\nAnd the user has uploaded at least 2 photos\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be brought to the Gallery\nAnd the photos will be sorted from latest to oldest",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the photo button",
+        "expected": "Then the user will be brought to the photo gallery\nAnd the user will see all the images he/she uploaded"
+      }
+    ]
+  },
+  {
+    "id": 45316,
+    "title": "Tapping Journal (Back) Button",
+    "section_id": 6340,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1434385900,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 5,
+    "custom_preconds": "Given the user is in Gallery",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be brought back to My Journal",
+    "custom_steps_separated": [
+      {
+        "content": "When the user clicks on the Photos back button",
+        "expected": "Then the user will be brought back to the previous page"
+      }
+    ]
+  },
+  {
+    "id": 45317,
+    "title": "Tapping Delete Button",
+    "section_id": 6340,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 65,
+    "updated_on": 1462400175,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 6,
+    "custom_preconds": "Given the user is in Gallery\r\nAnd the user has clicked on a Photo",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user clicks on the trash can icon on the bottom of the page",
+        "expected": "Then the user will be prompted with a confirmation window\nAnd the window will have a Confirm and Cancel button"
+      },
+      {
+        "content": "When the user taps on the Confirm button",
+        "expected": "Then this will remove the photo from the gallery\nAnd the user will be taken to the next photo in the gallery"
+      },
+      {
+        "content": "When the user taps on the Cancel button",
+        "expected": "Then this will dismiss the window"
+      }
+    ]
+  },
+  {
+    "id": 55913,
+    "title": "multiple photos on journal history",
+    "section_id": 6340,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1434568819,
+    "updated_by": 67,
+    "updated_on": 1434571118,
+    "estimate": null,
+    "estimate_forecast": "12m 8s",
+    "suite_id": 814,
+    "display_order": 7,
+    "custom_preconds": "Given the user is on the journal\r\nAnd the user has checked in to many games\r\nAnd the user has many photos added to many different events",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user scrolls down to a game with more than 1+ images\nAnd the user swipes on the image from right to left",
+        "expected": "Then the user will be able to flip through all images attached to that specific event"
+      },
+      {
+        "content": "When the user scrolls down to a game that has at least 1 image\nAnd the user taps on the image",
+        "expected": "Then the app will open an event specific gallery\nAnd the gallery will have an all black background\nAnd the header will have an arrow back as well as a counter(EG: 1 of 3) on the top left\nAnd the header will have a delete button(trash can icon) on the top right\nAnd the image will be displayed in full\n"
+      },
+      {
+        "content": "When the user scrolls down to a game that has at least 1 image\nAnd the user goes in to the event specific gallery\nAnd the user swipes from right to left and vise versa",
+        "expected": "Then the user will be able to flip through all the images"
+      },
+      {
+        "content": "When the user scrolls to the end of the event specific gallery\nAnd the user attempts to swipe from left to right\n",
+        "expected": "Then the gallery should not infinite scroll\nAnd the user should still be on the last image\n"
+      },
+      {
+        "content": "When the user arrow back or device back(test both cases) from the event specific gallery\n",
+        "expected": "Then the user should be brought back to the journal view"
+      },
+      {
+        "content": "when the user is on the event specific gallery\nAnd the user taps on the delete button",
+        "expected": "Then the user will see a confirmation prompt up about deleting that specific image\n"
+      },
+      {
+        "content": "when the user is on the event specific gallery\nAnd the user taps on the delete button\nAnd the user confirms he/she wants to delete the photo",
+        "expected": "Then the user should be back on the event specific gallery and the image should have been removed\nAnd the counter at the top for total image should decrease by 1"
+      },
+      {
+        "content": "When the user is on the journal\nAnd the user taps on any event cell on the journal history\nAnd the user taps on the \"see all\" photos button\nAnd the user taps on either the camera icon or film icon and adds multiple images\nAnd the user goes back to the journal history",
+        "expected": "Then the user should see the cell for that specific event with an image attached\nAnd the image should appear right below the event information\nAnd the user should be able to scroll through all images attached to the game"
+      }
+    ]
+  },
+  {
+    "id": 56443,
+    "title": "Photo detail view",
+    "section_id": 6340,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1436155350,
+    "updated_by": 67,
+    "updated_on": 1436156518,
+    "estimate": null,
+    "estimate_forecast": "1m 6s",
+    "suite_id": 814,
+    "display_order": 8,
+    "custom_preconds": "Given the user is on any gallery\r\nand the user wants to check out the photo's info",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on any photo",
+        "expected": "Then the user will be brought to the photo detail view\nAnd the user will see the following:\n- black background\n- a back button on the top left\n- a remove button on the top right\n- directly below the top will show the current photo user is on out of total photos he/she has\n(1 of 10 format)\n- The photo directly beneath the photo count\n- below the photo will display the uploaded date\nall information below will be optional\n- comments\n- match information(mets vs cubs E.G.) home team will always dy firstispla\n- ballpark the image was loaded from"
+      }
+    ]
+  },
+  {
+    "id": 57606,
+    "title": "uploading photo flow",
+    "section_id": 6340,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1436974060,
+    "updated_by": 124,
+    "updated_on": 1505851913,
+    "estimate": null,
+    "estimate_forecast": "29m 53s",
+    "suite_id": 814,
+    "display_order": 10,
+    "custom_preconds": "given the user wants to upload a generic photo\r\nAnd the user is on the photo gallery",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "when the user taps on the photo icon on the top right side of the page",
+        "expected": "Then the user will be prompted 2 options:\n- Choose photo\n- take a new photo\n"
+      },
+      {
+        "content": "When the user chooses to upload an existing photo\nAnd the user chooses a photo from the defaulted app\n",
+        "expected": "Then the user will be directed to the photo confirmation page\nAnd the user will see the following:\n- back button on the top left\n- upload and edit button on the top right\n- image at the center of the page(the image should fit within the page without losing resolution or getting blurry)"
+      },
+      {
+        "content": "when the user taps upload on the confirmation page",
+        "expected": "then the user will be directed back to the gallery\nAnd the user will see the recently uploaded photo represented in the small 1x1 photo thumbnail\nAnd the user will see the recently uploaded photo whited out with a blue progress bar at the bottom of the thumbnail"
+      },
+      {
+        "content": "when the user taps on that thumbnail to force pause the upload",
+        "expected": "Then the user will see the pause icon appear on the thumbnail\nAnd the progress bar will stop moving"
+      },
+      {
+        "content": "When the user taps on the same tile again to resume the upload",
+        "expected": "Then the user pause icon will be removed\nand the photo will continue to upload the image"
+      },
+      {
+        "content": "when the user force the upload to fail by dropping network connection or by making it time out with low bandwidth",
+        "expected": "Then the user will see a small notification informing the user the photo upload has failed\nAnd the user will see a refresh icon appear on the thumbnail\nAnd the user will be able to refresh the upload and start it up again"
+      },
+      {
+        "content": "When the user restarts the upload and it completes without a hitch",
+        "expected": "Then the white gradient should be removed from the thumbnail\nAnd the user should be able to tap on that same thumbnail to go in to photo detail view\n"
+      }
+    ]
+  },
+  {
+    "id": 58544,
+    "title": "Photo editing/uploading flow",
+    "section_id": 6340,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1437069190,
+    "updated_by": 65,
+    "updated_on": 1462398561,
+    "estimate": null,
+    "estimate_forecast": "44m 1s",
+    "suite_id": 814,
+    "display_order": 11,
+    "custom_preconds": "https://jira.mlbam.com/browse/BPA-796 \r\nhttps://jira.mlbam.com/browse/BPA-801 \r\nhttps://jira.mlbam.com/browse/BPA-804 \r\nhttps://jira.mlbam.com/browse/BPA-810\r\nhttps://jira.mlbam.com/browse/BPA-800\r\nhttps://jira.mlbam.com/browse/BPA-807\r\n\r\nGiven the user want to edit/upload a photo\r\n\r\nNOTE:\r\nThis is covering BPG,Event Detail, check-in,and photo Gallery edit/upload flow",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user is on the ballpark guide\nAnd the user taps the photo icon",
+        "expected": "Then the user will be prompted 2 choices\n- choose photo(from storage)\n- take photo(take new photo)"
+      },
+      {
+        "content": "When the user selects \"choose photo\"\nAnd the user selects an app to pull the photo from(if the app is not defaulted)\nAnd the user selected a photo to upload",
+        "expected": "Then the user will be brought to the photo preview\nAnd the user will see the following:\n- back button on the top left\n- upload and add frame on the top right\n- the preview image below the header"
+      },
+      {
+        "content": "When the user taps on the upload button\n",
+        "expected": "Then the user will be brought to the ballpark guide\nAnd the app will display a notification that informs the user upload is in progress\n"
+      },
+      {
+        "content": "When the upload is done",
+        "expected": "Then the user will see a notification that informs the user the upload was successful\nAnd the user will have the option to either:\n- 'View' (tapable on the notification)\n- dismiss the notification by swiping it away"
+      },
+      {
+        "content": "When the user taps on \"View\"\n",
+        "expected": "Then the user will be brought to the journal gallery\nAnd the user will see the most recent photo on the top left side of the gallery"
+      },
+      {
+        "content": "When the user taps on the back button\nAnd the user taps the photo button on the ballpark guide\nAnd the user taps the \"take photo\"\nAnd the user takes a brand new photo",
+        "expected": "Then the user will be brought to the photo preview"
+      },
+      {
+        "content": "When the user taps the add frame on the photo preview\n",
+        "expected": "Then the user will be brought to the crop photo view\nAnd the user will see the following:\n- back button and header on the top left\n- apply button on the top right\n- preview image below the header\n- thumbnail carousel"
+      },
+      {
+        "content": "When the user taps on any of the thumbnails in the carousel",
+        "expected": "Then the user will switch between stickers\nAnd the user will see the preview image switch between the sticker to show users what their images is going to look like"
+      },
+      {
+        "content": "When the user taps on the thumbnail that he/she likes and taps on apply on the top right",
+        "expected": "Then the user will be brought to the save & share view\nAnd the user will see the following:\n- back button with header on the top left\n- a check button on the top right\n- modified image right below the header\n- caption input field\n- sharing section"
+      },
+      {
+        "content": "When the user adds caption on the save & share view",
+        "expected": "Then the user will see the character count on the right side increment accordingly\nAnd the caption field will expand when the user either taps the return key or if the user type more than 57-58 characters(this might be different depending on device's resolution)"
+      },
+      {
+        "content": "When the user taps on any of the share options listed below the caption field(assuming the user has already linked the social media accounts)\nand the user taps the check button\n",
+        "expected": "Then the user will be brought to the ballpark guide page\nAnd the user will see the in progress notification\nAnd once the upload is complete then the user will see photo upload successful notification with the option to 'View'"
+      },
+      {
+        "content": "When the user taps View on the upload successful notification\nand the user navigates to the photo gallery in the journal",
+        "expected": "Then the user will see the modified photo display on the top left"
+      },
+      {
+        "content": "When the user taps on the photo\n",
+        "expected": "Then the user will be brought to the photo detail view\nAnd the user will be see the modified image along with the caption, date of photo upload, and the ballpark the image is associated with"
+      },
+      {
+        "content": "When the user goes to the event detail view of either any preview game or live game (both games that are within the window to check-in)",
+        "expected": "Then the user will see the photo section appear directly below the At Bat promo link"
+      },
+      {
+        "content": "When the user goes to the event detail view of a final game",
+        "expected": "Then the user will see the photo section appear\nAnd user should Not see an At Bat promo link"
+      },
+      {
+        "content": "When the user taps on the photo icon on the event detail view\n",
+        "expected": "Then the user will be prompted the 2 options\n- choose photo\n- take photo"
+      },
+      {
+        "content": "When the user picks one of those choices\nAnd the user enters the photo preview\nAnd the user taps on the add frame on the photo preview\n",
+        "expected": "Then the user will be brought to the crop view\nAnd the user will be able to sets how much he/she want to crop off the photo"
+      },
+      {
+        "content": "When the user taps on the any of the corners on the blue outline square box\nAnd the user drags their finger up/down left/right\n",
+        "expected": "Then the user will be able to adjust exactly how much they want to crop off\n"
+      },
+      {
+        "content": "When the user sets the amount he/she wants to crop\nand the user taps the next button",
+        "expected": "Then the user will be brought to the sticker view\nAnd the user will be able to tap on any of the thumbnails to preview what the stickers looks like on the cropped photo"
+      },
+      {
+        "content": "When the user selects a sticker and hits apply",
+        "expected": "Then the user will be moved to the save & share view\nand the user will be able to add captions and enable options to share to social media"
+      },
+      {
+        "content": "When the user adds no caption\nand the user does not enable any of the sharing options\nand the user taps the check button",
+        "expected": "Then the user will be brought to the event detail view\nand the user will see a small message that says \"uploading photo ....\"\nand the user will see the modified photo appear in the photo section on the event detail"
+      },
+      {
+        "content": "When the user taps on the thumnbnail of the recently uploaded photo\n",
+        "expected": "Then the user will be brought to the photo detail view\nAnd the user will see information on when the photo was uploaded, event matchup associated to the photo, and the ballpark that is associated to the event\n\nMatchup information should be Home @ Away in 1 line"
+      },
+      {
+        "content": "When the user exits the photo detail view\nAnd the user taps on the check-in button(assuming the user is on the event detail view for a game that is currently live, or within the 4 hour window)\nAnd the user navigates to the check-in form\nAnd the user taps on the photo icon",
+        "expected": "Then the user will go through the same photo selection flow"
+      },
+      {
+        "content": "When the user has gone through the photo selection flow\nand the user tapped on the add frame on the photo preview\nand the user cropped the photo to size on the crop view\nand the user added a sticker to the cropped photo\n",
+        "expected": "Then the user will be brought back to the check-in form instead of the save & share view\nAnd the user will be able to complete the check-in form as expected"
+      },
+      {
+        "content": "When the user taps on the check-in button",
+        "expected": "Then the user's modified check-in photo will appear in the user's gallery\nand the photo will have the upload date, event matchup, and the ballpark the event took place on the photo detail view"
+      },
+      {
+        "content": "When the user navigates to the photo gallery\nand the user taps on the top right photo icon",
+        "expected": "Then the user will go through the photo selection flow\n"
+      },
+      {
+        "content": "When the user has selected a photo\nAnd the user goes through the normal upload/edit flow the event detail or ballpark guide follows above\nAnd the user uploads a modified image",
+        "expected": "Then the will be brought back to the photo gallery\nAnd the user will see the photo thumbnail appear in white with a blue progress bar at the bottom"
+      },
+      {
+        "content": "When the photo has sucessfully uploaded the image",
+        "expected": "Then the user will see the modified photo\nAnd the user will see the date the photo was uploaded on the photo detail view"
+      }
+    ]
+  },
+  {
+    "id": 58546,
+    "title": "photo sharing",
+    "section_id": 6340,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-796, https://jira.mlbam.com/browse/BPA-801, https://jira.mlbam.com/browse/BPA-804, https://jira.mlbam.com/browse/BPA-810, https://jira.mlbam.com/browse/BPA-800, https://jira.mlbam.com/browse/BPA-807",
+    "created_by": 67,
+    "created_on": 1437069453,
+    "updated_by": 43,
+    "updated_on": 1453237734,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 12,
+    "custom_preconds": "given the user wants to share photos through social media",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "when the user goes to the ballpark guide\nand the user taps on the photo button\nand the user goes through the editing flow until they hit the save & share page\nand the user taps on any of the social sharing options",
+        "expected": "then the user will be prompted to login and link/grant access to the app\n"
+      },
+      {
+        "content": "when the user login and enable the sharing option\nand the user completes the photo uploading flow",
+        "expected": "Then the user will post the photo to all social media options enabled and the user's journal"
+      },
+      {
+        "content": "when the user goes to the event detail view\nand the user taps on the photo icon\nand the user goes through the normal editing flow until they hit the save & share page\nand the user taps on any of the social sharing options",
+        "expected": "then the social media icons will switch to an enabled state since since it was linked previously"
+      },
+      {
+        "content": "when the user completes the editing/uploading flow",
+        "expected": "Then the user will post the photo to all social media options enabled and the user's journal"
+      }
+    ]
+  },
+  {
+    "id": 45323,
+    "title": "Link to view history",
+    "section_id": 6341,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1437411069,
+    "estimate": null,
+    "estimate_forecast": "4m 36s",
+    "suite_id": 814,
+    "display_order": 1,
+    "custom_preconds": "Given the user is in My Journal\r\nAnd has added or checked into a game",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be brought to the History page",
+    "custom_steps_separated": [
+      {
+        "content": "When the user scrolls down to the History section\nAnd the user taps on any of the history cells",
+        "expected": "Then the user will be brought to the event detail view for that game\nAnd the user will be able to view all images attached to the game\nAnd the user will be able to view all the game hightlights\nAnd the user will be able to view the game wrap up"
+      }
+    ]
+  },
+  {
+    "id": 45324,
+    "title": "Most recent checked in or added games",
+    "section_id": 6341,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 124,
+    "updated_on": 1490798476,
+    "estimate": null,
+    "estimate_forecast": "2m 12s",
+    "suite_id": 814,
+    "display_order": 2,
+    "custom_preconds": "Given the user is in My Journal\r\nAnd the user has checked into or added games\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the games that they have checked in to or added\r\nAnd the games will be listed in descending order from most recent checked in to or added\r\nAnd tapping on any game will open the History page",
+    "custom_steps_separated": [
+      {
+        "content": "When the content on the screen loads\nAnd the user scrolls down to the History Section",
+        "expected": "Then the user should see the checked in/added game show up in order based on date from latest at the top to the oldest at the bottom"
+      }
+    ]
+  },
+  {
+    "id": 45325,
+    "title": "Tapping the add game button",
+    "section_id": 6341,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1437411069,
+    "estimate": null,
+    "estimate_forecast": "18s",
+    "suite_id": 814,
+    "display_order": 3,
+    "custom_preconds": "Given the user is in the journal view",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be brought to the Add Game search screen",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the add game button",
+        "expected": "Then the user will be brought to the search page"
+      }
+    ]
+  },
+  {
+    "id": 45326,
+    "title": "Back from Add Games screen",
+    "section_id": 6341,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 65,
+    "updated_on": 1462391982,
+    "estimate": null,
+    "estimate_forecast": "1m 14s",
+    "suite_id": 814,
+    "display_order": 4,
+    "custom_preconds": "Given the user is in journal\r\nAnd the user has clicked '+ Add Game'",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be brought back to the History Screen",
+    "custom_steps_separated": [
+      {
+        "content": "When the user clicks back button on the Add Games screen\nOr taps the device hardware back button",
+        "expected": "Then the user will be brought back to journal"
+      }
+    ]
+  },
+  {
+    "id": 45328,
+    "title": "Screen will scroll",
+    "section_id": 6341,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1437411069,
+    "estimate": null,
+    "estimate_forecast": "20s",
+    "suite_id": 814,
+    "display_order": 6,
+    "custom_preconds": "Given the user is on the journal\r\nAnd the user has added or checked into enough games to fill more than one page\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then this page will allow the user to scroll through all the games they've added/checked into",
+    "custom_steps_separated": [
+      {
+        "content": "When the user scrolls down\n",
+        "expected": "Then the app should scroll smoothly\nAnd the checked in or added games should appear in order of latest to oldest game"
+      }
+    ]
+  },
+  {
+    "id": 45329,
+    "title": "Clicking on a cell opens Event Detail: Added Game",
+    "section_id": 6341,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1437411069,
+    "estimate": null,
+    "estimate_forecast": "12m 3s",
+    "suite_id": 814,
+    "display_order": 7,
+    "custom_preconds": "Given the user is in the journal\r\nAnd the user scrolled down to the history section",
+    "custom_steps": null,
+    "custom_expected": "Then the Event Detail screen will open for that game",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on a game that they have added or checked into (check both)",
+        "expected": "Then the user will be brought to the event detail view"
+      }
+    ]
+  },
+  {
+    "id": 45289,
+    "title": "Photo was not uploaded",
+    "section_id": 6342,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1437411069,
+    "estimate": null,
+    "estimate_forecast": "49s",
+    "suite_id": 814,
+    "display_order": 1,
+    "custom_preconds": "Given the user is in the journal\r\nAnd the user has added or checked into at least one game\r\nAnd the user has not uploaded a photo to this game",
+    "custom_steps": null,
+    "custom_expected": "Then the user will not see a photo associated with this game",
+    "custom_steps_separated": [
+      {
+        "content": "When the content on the screen loads\nAnd the user scrolls to the game",
+        "expected": "Then the user should see the checked in/added game with no image attached on the game cell in the history section"
+      }
+    ]
+  },
+  {
+    "id": 45290,
+    "title": "Photo was uploaded",
+    "section_id": 6342,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1437411069,
+    "estimate": null,
+    "estimate_forecast": "40s",
+    "suite_id": 814,
+    "display_order": 2,
+    "custom_preconds": "Given the user is on the journal\r\nAnd has added or checked into at least one game\r\nAnd the user uploaded a photo to this game",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the photo they uploaded to this game\r\nAnd verify that this is the correct photo \r\nAnd the user will see the photo beneath the date\r\nAnd below the score",
+    "custom_steps_separated": [
+      {
+        "content": "When the content on the screen loads\nAnd the user scrolls to the game",
+        "expected": "Then the user should see the game cell with the first image attached to the cell"
+      }
+    ]
+  },
+  {
+    "id": 45291,
+    "title": "No option to remove game",
+    "section_id": 6342,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 43,
+    "updated_on": 1459198332,
+    "estimate": null,
+    "estimate_forecast": "2m 5s",
+    "suite_id": 814,
+    "display_order": 3,
+    "custom_preconds": "Given the user is on the journal\r\nAnd has checked into one or more games",
+    "custom_steps": null,
+    "custom_expected": "Then the user will not see an option to remove this game ",
+    "custom_steps_separated": [
+      {
+        "content": "When the journal page loads completely\nAnd the user taps on a game that they have checked in to live (GPS location on the date of the game, i.e. NOT historical check in)",
+        "expected": "Then the user should not see a remove button on the event detail view"
+      }
+    ]
+  },
+  {
+    "id": 45292,
+    "title": "Check-In Icon",
+    "section_id": 6342,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 43,
+    "updated_on": 1459199118,
+    "estimate": null,
+    "estimate_forecast": "3m 55s",
+    "suite_id": 814,
+    "display_order": 4,
+    "custom_preconds": "Given the user is on the journal\r\nAnd has checked into at least one game live on game date with GPS location (NOT historical checkin)",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the check-in icon on the bottom right of the cell",
+    "custom_steps_separated": [
+      {
+        "content": "When the scrolls down till he sees the checked in game\nAnd the user views the checked in game",
+        "expected": "Then the user should see a location icon at the bottom right side of the cell"
+      }
+    ]
+  },
+  {
+    "id": 56442,
+    "title": "check-in comment or message",
+    "section_id": 6342,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 67,
+    "created_on": 1436154775,
+    "updated_by": 67,
+    "updated_on": 1437411069,
+    "estimate": null,
+    "estimate_forecast": "13s",
+    "suite_id": 814,
+    "display_order": 5,
+    "custom_preconds": "Given the user wants to see the comment he made when checking in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user is on the check-in form\nAnd the user adds a comment while checking in\nAnd the user checks in\nAnd the user navigates back to the journal",
+        "expected": "Then the user will see all games checked in\nAnd the user will see the game he recently checked in to will display the comment right below the ballpark info"
+      }
+    ]
+  },
+  {
+    "id": 45301,
+    "title": "No Icon indicators",
+    "section_id": 6343,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1437411069,
+    "estimate": null,
+    "estimate_forecast": "1m 40s",
+    "suite_id": 814,
+    "display_order": 1,
+    "custom_preconds": "Given the user has added at least one historical game\r\nAnd the user has not checked in to any games\r\nAnd the user is on the journal",
+    "custom_steps": null,
+    "custom_expected": "Then the user will never see the checked in icon located at the bottom right of the cell\n",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks at the added game(s)",
+        "expected": "Then the user should not see the location icon appear on the game cell"
+      }
+    ]
+  },
+  {
+    "id": 45304,
+    "title": "Game Date",
+    "section_id": 6343,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1437411069,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 4,
+    "custom_preconds": "Given the user is on the journal\r\nAnd has added or checked into at least one game",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the date of the game at the top of the cell\r\nAnd the upper left corner will have the 'DD' of the game\r\nAnd one space over will have the 'Month'   \r\nAnd to the upper right corner will be the 'Year' of the game\r\nAnd the font of this text will be bolded and larger than the other font in the cell",
+    "custom_steps_separated": [
+      {
+        "content": "When the user scrolls down to the game that was added",
+        "expected": "Then the user will see the day and month of the game on the top left side\nAnd the year on the top right side"
+      }
+    ]
+  },
+  {
+    "id": 45305,
+    "title": "Game Score",
+    "section_id": 6343,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1437411069,
+    "estimate": null,
+    "estimate_forecast": "37s",
+    "suite_id": 814,
+    "display_order": 5,
+    "custom_preconds": "Given the user is on the journal\r\nAnd has added or checked into at least one game",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the score of the game\nAnd the score will be listed in the following matter [awayTeamName awayTeamScore , homeTeamName homeTeamScore]",
+    "custom_steps_separated": [
+      {
+        "content": "When the user scrolls to the game",
+        "expected": "Then the user should see the game score at the bottom of the cell\nAnd the score will be shown this format (away team 2,home team 3)"
+      }
+    ]
+  },
+  {
+    "id": 45306,
+    "title": "Game Stadium Location - Stadium Image",
+    "section_id": 6343,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1437411069,
+    "estimate": null,
+    "estimate_forecast": "2m 6s",
+    "suite_id": 814,
+    "display_order": 6,
+    "custom_preconds": "Given the user is on the journal\r\nAnd has added or checked into at least one game",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the name of the Ballpark in which this game took place \nAnd this will be located above the score\nAnd to the right of the stadium image",
+    "custom_steps_separated": [
+      {
+        "content": "When the user scrolls to the game",
+        "expected": "then the user should see the stadium/ballpark image on the left side of the cell\nAnd the user should see the the ballpark name, city, and state appear in grey right next to the image"
+      }
+    ]
+  },
+  {
+    "id": 45307,
+    "title": "Game Location",
+    "section_id": 6343,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1437411069,
+    "estimate": null,
+    "estimate_forecast": "1m 10s",
+    "suite_id": 814,
+    "display_order": 7,
+    "custom_preconds": "Given the user is on the journal\r\nAnd has added or checked into at least one game",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the location of the game\nAnd it will be City, State (abbreviated state)\nAnd it will be located to the right of the name of the ballpark",
+    "custom_steps_separated": [
+      {
+        "content": "When the user scrolls to the game",
+        "expected": "Then the user should see the ballpark the game was played in next to the stadium image"
+      }
+    ]
+  },
+  {
+    "id": 45308,
+    "title": "Remove Game Button Exists for added games only",
+    "section_id": 6343,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 67,
+    "updated_on": 1437411069,
+    "estimate": null,
+    "estimate_forecast": "3m 15s",
+    "suite_id": 814,
+    "display_order": 8,
+    "custom_preconds": "Given the user is on the journal\r\nAnd has added at least one game",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see a 'Remove' button at the top right of the Event Detail page for that game \nAnd this button will not appear for any Checked In games",
+    "custom_steps_separated": [
+      {
+        "content": "When the user scrolls down to the game they have added\nAnd the user taps on that game to bring up the Event Detail page",
+        "expected": "Then the user should see the remove button appear on added games only"
+      }
+    ]
+  },
+  {
+    "id": 45293,
+    "title": "Back Functionality",
+    "section_id": 6344,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 65,
+    "updated_on": 1462393889,
+    "estimate": null,
+    "estimate_forecast": "31s",
+    "suite_id": 814,
+    "display_order": 1,
+    "custom_preconds": "Given the user is on the journal\r\nAnd has added at least one game\r\nAnd the user has tapped on the game to be removed on the History page\r\nAnd the user taps on the 'Remove' button on the Event Detail page",
+    "custom_steps": null,
+    "custom_expected": "Then the user is returned to the History page",
+    "custom_steps_separated": [
+      {
+        "content": "When the user is prompted with a Delete Game\nAnd user taps on the back button\nOr the device hardware back button",
+        "expected": "Then the user will be brought back to the journal's history"
+      }
+    ]
+  },
+  {
+    "id": 45294,
+    "title": "Clicking the Remove Game Button",
+    "section_id": 6344,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 65,
+    "updated_on": 1462400205,
+    "estimate": null,
+    "estimate_forecast": "6s",
+    "suite_id": 814,
+    "display_order": 2,
+    "custom_preconds": "Given the user is on the journal\r\nAnd has added or checked into at least one game\r\nAnd the user has tapped on the game to be removed\r\nAnd the user taps on the 'Remove' button on the Event Detail page",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see 'Successfully Updated'\r\nAnd the user will notice the game is removed from their history section\r\n\r\nORIGINAL:\r\nThen the user will notice the game is removed from their history section",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the \"Delete Game\" button\n",
+        "expected": "Then the user will be brought to the deleted game page\nAnd the user will see a message that reads \"successfully updated\""
+      }
+    ]
+  },
+  {
+    "id": 45309,
+    "title": "Find Games Fields",
+    "section_id": 6345,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 65,
+    "updated_on": 1462394260,
+    "estimate": null,
+    "estimate_forecast": "1m 51s",
+    "suite_id": 814,
+    "display_order": 1,
+    "custom_preconds": "Given the user is on the journal\r\nAnd the user has clicked '+ add game' button",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the following search fields: Year, Home Team, Away Team, Month, and Day; \r\nAnd Year and Home Team will be marked as required fields",
+    "custom_steps_separated": [
+      {
+        "content": "When the content on the screen loads\n",
+        "expected": "Then the user will be on the add game page\nAnd the user will see search fields that will assist the user in finding games"
+      }
+    ]
+  },
+  {
+    "id": 45310,
+    "title": "Cannot select a date in the future / New: Cannot add a date in the future",
+    "section_id": 6345,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 65,
+    "updated_on": 1462400233,
+    "estimate": null,
+    "estimate_forecast": "1m 25s",
+    "suite_id": 814,
+    "display_order": 2,
+    "custom_preconds": "Given the user is in History\r\nAnd the user has clicked '+ Add Game'",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user attempts to add a future dated game\nAnd taps on the Search For Games button",
+        "expected": "Then the user will see games listed with a date greater than the current day."
+      },
+      {
+        "content": "When the user taps on a future dated game and taps on the Add game button",
+        "expected": "Then the user will get an alert stating \"You can only add games that have already been played.  Please search again.\""
+      }
+    ]
+  },
+  {
+    "id": 45311,
+    "title": "Query that returns 0 results",
+    "section_id": 6345,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 65,
+    "updated_on": 1462394823,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 3,
+    "custom_preconds": "Given the user is on the journal\r\nAnd the user has clicked '+ Add Game'\r\nAnd the user has filled in the required search fields\r\nAnd the user has tapped Search For Games",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the Add Games screen\r\nAnd there will be a message stating, 'No games found'",
+    "custom_steps_separated": [
+      {
+        "content": "When there are no games meeting the criteria searched for",
+        "expected": "Then the user will see a message that reads \"no games found\""
+      }
+    ]
+  },
+  {
+    "id": 45295,
+    "title": "Back Button",
+    "section_id": 6346,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 65,
+    "updated_on": 1462395083,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 1,
+    "custom_preconds": "Given the user is on the journal\r\nAnd the user has clicked on + Add Game\r\nAnd the user has entered in valid search criteria on the Add Games screen\r\nAnd the user has has clicked Search For Games",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be taken to the Add Games screen with the search criteria fields",
+    "custom_steps_separated": [
+      {
+        "content": "When the screen loads displaying the games that match the users query\nAnd the user clicks Back",
+        "expected": "Then the user will be brought back to the Add Game search page"
+      }
+    ]
+  },
+  {
+    "id": 45296,
+    "title": "Game Date and Teams",
+    "section_id": 6346,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 65,
+    "updated_on": 1462395322,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 2,
+    "custom_preconds": "Given the user is on the journal\r\nAnd the user has clicked on '+ Add Game'\r\nAnd the user has entered in valid search criteria on the Add Games Screen\r\nAnd the user has has tapped Search for Games",
+    "custom_steps": null,
+    "custom_expected": "Then the top of every game's cell shows the date of the game in the following format\r\nDAY, MONTH DATE, YEAR\r\nAnd the bottom of every game's cell shows the teams playing in the following format\r\nAWAY TEAM (nickname) vs. HOME TEAM (nickname)",
+    "custom_steps_separated": [
+      {
+        "content": "When the list of games on the screen loads",
+        "expected": "Then the user will see the date and time of each game displayed in this format\n*day of the week, month,day,year* EG: *Friday,  July 3, 2015*"
+      }
+    ]
+  },
+  {
+    "id": 45297,
+    "title": "Clicking the Add Button",
+    "section_id": 6346,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 65,
+    "updated_on": 1462395575,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 3,
+    "custom_preconds": "Given the user is on the journal\r\nAnd the user has clicked on '+ Add Game'\r\nAnd the user has entered in valid search criteria on the Add Games Screen\r\nAnd the user has has clicked Search for Games\r\nAnd has tapped on a game",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on \"Add game\"",
+        "expected": "Then the user will see a message that reads \"successfully updated\"\nAnd the user will see 2 options \"add another\" and \"done\"\n"
+      }
+    ]
+  },
+  {
+    "id": 45298,
+    "title": "Done Button",
+    "section_id": 6346,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 124,
+    "updated_on": 1498520990,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 4,
+    "custom_preconds": "Given the user is on the journal\r\nAnd the user has clicked on '+ Add Game'\r\nAnd the user has entered in valid search criteria on the Add Games Screen\r\nAnd the user has tapped Search for Games\r\nAnd the user has tapped on a game\r\nAnd the user has tapped Add Game",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the screen loads \nAnd the user taps \"Done\"",
+        "expected": "Then the user should be directed back to the Journal's History Screen\nAnd the user should be able to find the game in History by scrolling down"
+      }
+    ]
+  },
+  {
+    "id": 45299,
+    "title": "Adding more than one game",
+    "section_id": 6346,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 65,
+    "updated_on": 1462396133,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 5,
+    "custom_preconds": "Given the user is on the journal\r\nAnd the user has clicked on '+ Add Game'\r\nAnd the user has entered in valid search criteria on the Add Games Screen\r\nAnd the user has has clicked Search for Games\r\nAnd the user has tapped on the game to add\r\nAnd the user taps 'Add Game' on the confirmation page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user is brought back to the Add Games screen with results\nAnd the user taps on \"Add another\" button",
+        "expected": "Then the user will be brought back to the queryed games list\nAnd the user will see a green check mark next to the game that was already added"
+      }
+    ]
+  },
+  {
+    "id": 45300,
+    "title": "Disclaimer Text",
+    "section_id": 6346,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1316, https://jira.mlbam.com/browse/BPA-347, https://jira.mlbam.com/browse/BPA-1312, https://jira.mlbam.com/browse/BPA-1315",
+    "created_by": 27,
+    "created_on": 1394146302,
+    "updated_by": 65,
+    "updated_on": 1462396459,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 814,
+    "display_order": 6,
+    "custom_preconds": "Given the user is on the journal\r\nAnd the user has clicked on '+ Add Game'\r\nAnd the user has entered in valid search criteria\r\nAnd the user has has tapped Search for Games",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user clicks on any game to add",
+        "expected": "Then the user will see the disclaimer text appear beneath the game they want to add "
+      }
+    ]
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "id": 154489,
+    "suite_id": 21195,
+    "name": "Player Pages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 154490,
+    "suite_id": 21195,
+    "name": "Homepages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 154491,
+    "suite_id": 21195,
+    "name": "At Bat",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 154492,
+    "suite_id": 21195,
+    "name": "Stats Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 289752,
+    "suite_id": 21195,
+    "name": "Leaders",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 289753,
+    "suite_id": 21195,
+    "name": "AllTime - Single Season",
+    "description": null,
+    "parent_id": 289752,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 289754,
+    "suite_id": 21195,
+    "name": "All Time - Career",
+    "description": null,
+    "parent_id": 289752,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 289755,
+    "suite_id": 21195,
+    "name": "Statcast",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1580533,
+    "suite_id": 21195,
+    "name": "FanGraphs",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1580534,
+    "suite_id": 21195,
+    "name": "Sabermetrics",
+    "description": null,
+    "parent_id": 1580533,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 1580535,
+    "suite_id": 21195,
+    "name": "Projections",
+    "description": null,
+    "parent_id": 1580533,
+    "display_order": 11,
+    "depth": 1
+  }
+]

@@ -1,0 +1,416 @@
+[
+  {
+    "id": 23941773,
+    "title": "Respect Autoplay Feature Toggles",
+    "section_id": 1978601,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": 1889,
+    "refs": "FATTV-141",
+    "created_by": 232,
+    "created_on": 1634148522,
+    "updated_by": 442,
+    "updated_on": 1726861530,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 361942,
+    "display_order": 1,
+    "custom_preconds": "GIVEN an MLB user\r\n\r\nIf auto-playable content is not available in the hero space, proxy https://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search* with the attached mastapi json file to populate the hero with auto-playable content\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the global autoplay feature is on\nNOTE: Global autoplay feature should be on by default",
+        "expected": "AND the user autoplay setting is set to Off\nTHEN autoplay will not happen on the homepage for auto-playable content in the hero space"
+      },
+      {
+        "content": "WHEN the global autoplay feature is off\nNOTE: To turn the global autoplay feature off, proxy true\thttps://firebaseremoteconfig.googleapis.com:443/v1/projects/518717772311/namespaces/firebase:fetch\tand/or https://firebaseremoteconfig.googleapis.com:443/v1/projects/73121217114/namespaces/firebase:fetch\nwith the attached firebaseconfig.json\nTo return back to the on state, close the app, stop proxying, force stop the app, then restart the app again.\n",
+        "expected": "THEN autoplay will not happen on the homepage for auto-playable content in the hero space\nAND the autoplay option will not be available in settings"
+      }
+    ]
+  },
+  {
+    "id": 34115161,
+    "title": "Initiate Autoplay on Hero Space",
+    "section_id": 1978601,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 442,
+    "created_on": 1726861382,
+    "updated_by": 442,
+    "updated_on": 1726861465,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 361942,
+    "display_order": 2,
+    "custom_preconds": "GIVEN an MLB user is on the homepage",
+    "custom_steps": "WHEN the watch live button is highlighted \r\nAND the featured content is playable ",
+    "custom_expected": "THEN delay 5 seconds before the video autoplays",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 23941775,
+    "title": "Homepage: Featured Game Autoplay Navigation on Autoplay",
+    "section_id": 1978601,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FATTV-48",
+    "created_by": 232,
+    "created_on": 1634148952,
+    "updated_by": 442,
+    "updated_on": 1726861623,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 361942,
+    "display_order": 3,
+    "custom_preconds": "GIVEN an MLB user is on the homepage\r\nAND auto-playable content is in the featured space (hero)\r\nAND the \"Watch Live\" button in the hero space is highlighted\r\n\r\nNOTE: If auto-playable content is not in the featured space, first look to see if there is a live game on. If there is, you can choose one of the teams involved as your favorite team to move the game to the featured space. If no live games are available, proxy https://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search* with the attached json to populate that space with auto-playable content.\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN autoplay is playing\nAND the user scrolls down after the second carousel\n\n",
+        "expected": "THEN the video will stop\nAND the background will be the featured image"
+      },
+      {
+        "content": "WHEN the user has navigated down from the carousels\nAND they focus back onto the featured space\n",
+        "expected": "THEN autoplay will start"
+      }
+    ]
+  },
+  {
+    "id": 23941724,
+    "title": "Homepage featured space autoplay not interactive",
+    "section_id": 1978601,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1634147490,
+    "updated_by": 442,
+    "updated_on": 1726861601,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 361942,
+    "display_order": 4,
+    "custom_preconds": "GIVEN a user is on the homepage\r\nIf auto-playable content is not available in the hero space, proxy https://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search* with the attached mastapi json file to populate the hero with auto-playable content",
+    "custom_steps": "WHEN autoplay has started\r\n",
+    "custom_expected": "THEN the user cannot interact with the player until the player goes to fullscreen",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 23941774,
+    "title": "Featured Autoplay - Fullscreen after 15 seconds",
+    "section_id": 1978601,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": 1889,
+    "refs": "FATTV-143",
+    "created_by": 232,
+    "created_on": 1634148733,
+    "updated_by": 442,
+    "updated_on": 1726861465,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 361942,
+    "display_order": 5,
+    "custom_preconds": "GIVEN an MLB user is on the homepage\r\nAND the \"Watch Live\" button on the hero is highlighted\r\nIf auto-playable content is not available in the hero space, proxy https://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search* with the attached mastapi json file to populate the hero with auto-playable content",
+    "custom_steps": "WHEN autoplay is playing\r\nAND the user is idle for 15 seconds",
+    "custom_expected": "THEN the player will transition to full screen",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 24996507,
+    "title": "Featured Space Autoplay- Watch Live Seamless transition",
+    "section_id": 1978601,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1638213818,
+    "updated_by": 442,
+    "updated_on": 1726861588,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 361942,
+    "display_order": 6,
+    "custom_preconds": "GIVEN an entitled MLB user is in MLB.TV App\r\nIf auto-playable content is not available in the hero space, proxy https://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search* with the attached mastapi json file to populate the hero with auto-playable content\r\n\r\n",
+    "custom_steps": "WHEN the hero game is autoplaying the live game\r\nAND the user presses watch live\r\n",
+    "custom_expected": "THEN seamlessly transition to the full screen player ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 24028102,
+    "title": "Featured Space Autoplay- Entitled User",
+    "section_id": 1978601,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1634584867,
+    "updated_by": 442,
+    "updated_on": 1726866150,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 361942,
+    "display_order": 10,
+    "custom_preconds": "GIVEN an entitled user\r\nAND the \"Watch Live\" button on the hero space is highlighted\r\nIf the required content is not available in the hero space, proxy https://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search* with the attached mastapi json files to populate ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the featured space contains a live game\nNOTE: proxy with mastapi_live_game_simulated_in_hero.json file attached",
+        "expected": "THEN the video should autoplay"
+      },
+      {
+        "content": "WHEN the featured space contains an archived game\nNOTE: proxy with yesterdaysMastCall.json file attached",
+        "expected": "THEN the video should NOT autoplay"
+      },
+      {
+        "content": "WHEN the featured space contains an MLB Network show\nNOTE: Test on an account with MLBN credentials (Not currently available for international users)",
+        "expected": "THEN the video should autoplay"
+      },
+      {
+        "content": "WHEN the featured space contains SLIVE/FLIVE content\nNOTE: No proxy available. Mark this step as blocked if there is no subscriber live content in the hero",
+        "expected": "THEN the video should autoplay"
+      },
+      {
+        "content": "WHEN the featured space contains SVOD/FVOD content\nNOTE: No proxy available. Mark this step as blocked if there is no free live content in the hero.",
+        "expected": "THEN the video should autoplay"
+      },
+      {
+        "content": "WHEN the featured space contains SVOD/FVOD content\nAND they had previously watched content that is present in the hero\nNOTE: No proxy available. Mark this step as blocked if there is no free live content in the hero",
+        "expected": "THEN the clip should autoplay from the resume point"
+      },
+      {
+        "content": "WHEN the featured space contains AppleTV content\nNOTE: No proxy available. Mark this step as blocked if there is no subscriber live content in the hero",
+        "expected": "THEN the video should NOT autoplay"
+      }
+    ]
+  },
+  {
+    "id": 24028103,
+    "title": "Featured Space Autoplay- Un-entitled User",
+    "section_id": 1978601,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1634586655,
+    "updated_by": 442,
+    "updated_on": 1726866228,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 361942,
+    "display_order": 11,
+    "custom_preconds": "GIVEN a user that does not have streaming entitlements (logged out/ free/ or audio user)\r\nIf the required content is not available in the hero space, proxy https://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search* with the attached mastapi json files to populate ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the featured space contains a live game\nNOTE: proxy with mastapi_live_game_simulated_in_hero.json file attached",
+        "expected": "THEN the video should NOT autoplay\n\n"
+      },
+      {
+        "content": "WHEN the featured space contains an archived game\nNOTE: proxy with yesterdaysMastCall.json file attached\n\n",
+        "expected": "THEN the video should NOT autoplay\n\n"
+      },
+      {
+        "content": "WHEN the featured space contains an SLIVE/SVOD clip\nNOTE: No proxy available. Mark this step as blocked if there is no subscriber live content in the hero",
+        "expected": "THEN the video should NOT autoplay\n\n"
+      },
+      {
+        "content": "WHEN the featured space contains an FLIVE/FVOD clip\nNOTE: No proxy available. Mark this step as blocked if there is no free live content in the hero\n",
+        "expected": "THEN the video should autoplay\n\n"
+      },
+      {
+        "content": "WHEN the featured space contains FVOD content\nAND they had previously watched content that is present in the hero\nNOTE: No proxy available. Mark this step as blocked if there is no free live content in the hero",
+        "expected": "THEN the clip should autoplay from the resume point"
+      },
+      {
+        "content": "WHEN the featured space contains AppleTV content\nNOTE: No proxy available. Mark this step as blocked if there is no subscriber live content in the hero",
+        "expected": "THEN the video should NOT autoplay"
+      }
+    ]
+  },
+  {
+    "id": 34115163,
+    "title": "Backgrounding Autoplayed Content",
+    "section_id": 1978601,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 442,
+    "created_on": 1726863010,
+    "updated_by": 442,
+    "updated_on": 1726865928,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 361942,
+    "display_order": 12,
+    "custom_preconds": "GIVEN an MLB user is on the homepage\r\nAND the \"Watch Live\" button on the hero is highlighted",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the video is autoplaying\nAND a video is playing fullscreen from autoplay \nAND the user backgrounds",
+        "expected": "THEN migrate to the player when returning. (For testing, just make sure that playback resumes properly)"
+      },
+      {
+        "content": "WHEN video is autoplaying \nAND the user backgrounds the app \nAND the player is NOT fullscreen",
+        "expected": "THEN disable autoplay"
+      },
+      {
+        "content": "WHEN the user resumes the app after backgrounding \nAND the player was NOT fullscreen when they backgrounded",
+        "expected": "THEN enable autoplay"
+      }
+    ]
+  },
+  {
+    "id": 23941776,
+    "title": "Homepage Featured Space Autoplay when Hide Spoilers ON",
+    "section_id": 1978601,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": 1889,
+    "refs": "FATTV-84",
+    "created_by": 232,
+    "created_on": 1634149278,
+    "updated_by": 442,
+    "updated_on": 1733166740,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 361942,
+    "display_order": 14,
+    "custom_preconds": "GIVEN a user is on the home page\r\nAND there is non-archive content in the hero space\r\nAND the \"Watch Live\" button in the hero space is highlighted\r\n\r\nIf auto-playable content is not available in the hero space, proxy https://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search* with the attached mastapi json file to populate the hero with auto-playable game",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN hide spoilers is ON\nAND the featured content is a game\n",
+        "expected": "THEN autoplay from the start of the broadcast"
+      }
+    ]
+  },
+  {
+    "id": 21678880,
+    "title": "Autoplay next VOD/SVOD in carousel",
+    "section_id": 1978602,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1628176480,
+    "updated_by": 442,
+    "updated_on": 1726861515,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 361942,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user on the homepage",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I am entitled\nAND I select VOD or SVOD videos",
+        "expected": "THEN the media will play"
+      },
+      {
+        "content": "WHEN a VOD/SVOD video ends",
+        "expected": "THEN the next video from the playlist will play"
+      },
+      {
+        "content": "WHEN there is an error during video playback\n(This can be simulated by blocking https://mlb-cuts-diamond.mlb.com:443/*?* (for vod clips) and https://svod-fst.mlb.com:443/*?* (for svod clips) during playback.) ",
+        "expected": "THEN an error message will display"
+      },
+      {
+        "content": "WHEN there is an error retrieving the initially selected video\n(This can be simulated by blocking https://mlb-cuts-diamond.mlb.com:443/*?* (for vod clips) and https://svod-fst.mlb.com:443/*?* (for svod clips) after the carousels have loaded but before attempting playback.)",
+        "expected": "THEN display an error modal"
+      },
+      {
+        "content": "WHEN the last video in the carousel has completed playing ",
+        "expected": "THEN the app exits back to the homescreen"
+      },
+      {
+        "content": "WHEN multiple types of video are available in the carousel\n(This can be simulated in the most popular carousel by proxying https://dapi.cms.mlbinfra.com/v2/content/en-us/sel-mlb-video-list with the attached json file. The second clip (Stack'd: Jazz Chisholm) will be entitled content that will be skipped by free users)",
+        "expected": "THEN only media clips to which I am entitled are autoplayed"
+      }
+    ]
+  },
+  {
+    "id": 22985986,
+    "title": "Autoplay next SVOD & VOD click on thumbnails",
+    "section_id": 1978602,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1631555904,
+    "updated_by": 442,
+    "updated_on": 1726861515,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 361942,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a user\r\n\r\n\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is an entitled MLB user in MLB.TV App\nAND selecting SVOD videos to view\nAND the video is 10 seconds to the end",
+        "expected": "THEN I see an up next tile that we automatically play when the time expires"
+      },
+      {
+        "content": "WHEN user is a free user in MLB.TV App\nAND selecting VOD videos to watch\nAND the video is 10 seconds to the end\n",
+        "expected": "THEN I see an up next tile that we automatically play when the time expires"
+      },
+      {
+        "content": "WHEN selecting  VOD or SVOD videos to view\nAND the up next tile appears\n",
+        "expected": "THEN I can select it to jump straight to that video"
+      }
+    ]
+  },
+  {
+    "id": 23577780,
+    "title": "SVOD Resume point maintained when clip started via autoplay",
+    "section_id": 1978602,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1633111770,
+    "updated_by": 442,
+    "updated_on": 1726861515,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 361942,
+    "display_order": 3,
+    "custom_preconds": "GIVEN an entitled user",
+    "custom_steps": "WHEN an SVOD clip is started via autoplay (continued play after previous clip ends)\r\nAND the user leaves the video before it is complete by pressing the back button and returning to the homescreen\r\nAND the user selects the same SVOD video again",
+    "custom_expected": "THEN the SVOD video should resume from the same time the video had reached prior to exiting the video",
+    "custom_steps_separated": null
+  }
+]

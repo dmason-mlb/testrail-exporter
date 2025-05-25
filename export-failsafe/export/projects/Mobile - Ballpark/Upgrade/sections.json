@@ -1,0 +1,47 @@
+[
+  {
+    "id": 157164,
+    "suite_id": 21972,
+    "name": "Test Cases",
+    "description": "Upgrading an existing user w/ tickets (and prev saved info such as Fave team)",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1781847,
+    "suite_id": 21972,
+    "name": "Force Update",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1781849,
+    "suite_id": 21972,
+    "name": "iOS",
+    "description": "*iOS - Requires 12.4.0 version or later. Prior versions would not get the force update\n\nPrerequisite - Remote Config Setup: force_update_params\n1. Go to Firebase -> Remote Config (links below)\n2. Edit \"min_app_version\" within \"force_update_params\" as needed to force display. (One way is to set the minimum version to a value greater than current version of BP app installed.)\n3. Save changes.\n4. Publish changes.\n\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\n\nRemote Configs \n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobile-npd/config)\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\n(can have condition set up to differentiate desired behavior for different envs/platform)\n\nCONFIGURATION TROUBLESHOOTING NOTES:\n*Only change 'min_app_version' to validate Force Upgrade specifically (setting a higher version than current build)\n*Format of the version requires release number, major version, and minor version - ex: 12.4.0 (12.4 will not work)\n*Verify condition is what is expected (if using condition) - ex: verify 'iOS QA' isn't tied to a specific version of the app that may not apply to version being tested",
+    "parent_id": 1781847,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 1853705,
+    "suite_id": 21972,
+    "name": "Force Upgrade [Only for Android 12.12 or later]",
+    "description": "Force Upgrade - In-App Updates\n\nThe inability to force update users before the 2023 season lead to numerous issues with users on legacy versions. Following our epic envisioning conversation on force updating, the decision was made to utilize Google Play’s native feature to get users onto our desired version.",
+    "parent_id": 1781847,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 1955471,
+    "suite_id": 21972,
+    "name": "Flexible App Updates [Android Only]",
+    "description": "https://baseball.atlassian.net/browse/BPA-7590",
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

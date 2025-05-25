@@ -1,0 +1,34 @@
+[
+  {
+    "id": 956453,
+    "title": "Ads",
+    "section_id": 114075,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "MIAN-589",
+    "created_by": 65,
+    "created_on": 1492440142,
+    "updated_by": 65,
+    "updated_on": 1492442650,
+    "estimate": null,
+    "estimate_forecast": "6m 49s",
+    "suite_id": 17413,
+    "display_order": 1,
+    "custom_preconds": "Given the user is in the app",
+    "custom_steps": "When the user navigates within the app",
+    "custom_expected": "Then the user shall see ads as follows:",
+    "custom_steps_separated": [
+      {
+        "content": "Footer Ads\n",
+        "expected": "At the bottom of the following pages:\n- Scoreboard,\n- News,\n- Teams,\n- Stats,\n- About MiLB.com,\n- Privacy Policy"
+      },
+      {
+        "content": "Interstitial Ads",
+        "expected": "Two interstitial ads every 15 minutes"
+      }
+    ],
+    "custom_feature_tag": null
+  }
+]

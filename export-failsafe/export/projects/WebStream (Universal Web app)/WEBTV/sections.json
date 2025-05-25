@@ -1,0 +1,479 @@
+[
+  {
+    "id": 1942019,
+    "suite_id": 685340,
+    "name": "Top Nav",
+    "description": "https://baseball.atlassian.net/browse/COREMED-913?src=confmacro",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1948467,
+    "suite_id": 685340,
+    "name": "Smoke Testing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1993522,
+    "suite_id": 685340,
+    "name": "Welcome Center (Home page)",
+    "description": "https://baseball.atlassian.net/wiki/spaces/MLBTV/pages/537067539/Homepage",
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1997865,
+    "suite_id": 685340,
+    "name": "Hero",
+    "description": null,
+    "parent_id": 1993522,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 1997866,
+    "suite_id": 685340,
+    "name": "Games/ Today on MLB.TV Carousel",
+    "description": null,
+    "parent_id": 1993522,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 1999280,
+    "suite_id": 685340,
+    "name": "Non Game Carousels",
+    "description": null,
+    "parent_id": 1993522,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 1948475,
+    "suite_id": 685340,
+    "name": "Game Content",
+    "description": null,
+    "parent_id": 1993522,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 1948473,
+    "suite_id": 685340,
+    "name": "Media Center (Games Page)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 1952688,
+    "suite_id": 685340,
+    "name": "MLB.TV Player Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 1954239,
+    "suite_id": 685340,
+    "name": "Playback Page Header",
+    "description": null,
+    "parent_id": 1952688,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 2023395,
+    "suite_id": 685340,
+    "name": "Playback Page Header",
+    "description": null,
+    "parent_id": 1952688,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 2023396,
+    "suite_id": 685340,
+    "name": "General tab",
+    "description": null,
+    "parent_id": 1952688,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 2023397,
+    "suite_id": 685340,
+    "name": "Team tab",
+    "description": null,
+    "parent_id": 1952688,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 2023398,
+    "suite_id": 685340,
+    "name": "Scores/Game Selector",
+    "description": null,
+    "parent_id": 1952688,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 2023399,
+    "suite_id": 685340,
+    "name": "Multiview",
+    "description": null,
+    "parent_id": 1952688,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 2023400,
+    "suite_id": 685340,
+    "name": "Limit bitrates in multi-view",
+    "description": "COREMED-1415",
+    "parent_id": 2023399,
+    "display_order": 25,
+    "depth": 2
+  },
+  {
+    "id": 2023401,
+    "suite_id": 685340,
+    "name": "Stats Panel",
+    "description": null,
+    "parent_id": 1952688,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 2023402,
+    "suite_id": 685340,
+    "name": "Game Matchup (Chyron)",
+    "description": null,
+    "parent_id": 1952688,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 2023403,
+    "suite_id": 685340,
+    "name": "Basic Player Controls",
+    "description": null,
+    "parent_id": 1952688,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 2023404,
+    "suite_id": 685340,
+    "name": "Play/Pause",
+    "description": null,
+    "parent_id": 2023403,
+    "display_order": 29,
+    "depth": 2
+  },
+  {
+    "id": 2023405,
+    "suite_id": 685340,
+    "name": "Fast Forward/Rewind",
+    "description": null,
+    "parent_id": 2023403,
+    "display_order": 30,
+    "depth": 2
+  },
+  {
+    "id": 2023406,
+    "suite_id": 685340,
+    "name": "Mute Toggle",
+    "description": null,
+    "parent_id": 2023403,
+    "display_order": 31,
+    "depth": 2
+  },
+  {
+    "id": 2023407,
+    "suite_id": 685340,
+    "name": "Volume Slider",
+    "description": null,
+    "parent_id": 2023403,
+    "display_order": 32,
+    "depth": 2
+  },
+  {
+    "id": 2023408,
+    "suite_id": 685340,
+    "name": "Feed Picker",
+    "description": null,
+    "parent_id": 2023403,
+    "display_order": 33,
+    "depth": 2
+  },
+  {
+    "id": 2023409,
+    "suite_id": 685340,
+    "name": "Quality & Captions Settings",
+    "description": null,
+    "parent_id": 2023403,
+    "display_order": 34,
+    "depth": 2
+  },
+  {
+    "id": 2023410,
+    "suite_id": 685340,
+    "name": "Fullscreen",
+    "description": null,
+    "parent_id": 2023403,
+    "display_order": 35,
+    "depth": 2
+  },
+  {
+    "id": 2023411,
+    "suite_id": 685340,
+    "name": "Archive Progress Bar",
+    "description": null,
+    "parent_id": 2023403,
+    "display_order": 36,
+    "depth": 2
+  },
+  {
+    "id": 2023412,
+    "suite_id": 685340,
+    "name": "Live Progress Bar/Live Button",
+    "description": null,
+    "parent_id": 2023403,
+    "display_order": 37,
+    "depth": 2
+  },
+  {
+    "id": 2023413,
+    "suite_id": 685340,
+    "name": "Live Media Scrubbable Range (BROADCAST_START_TIME)",
+    "description": null,
+    "parent_id": 2023412,
+    "display_order": 38,
+    "depth": 3
+  },
+  {
+    "id": 2023414,
+    "suite_id": 685340,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": 1952688,
+    "display_order": 39,
+    "depth": 1
+  },
+  {
+    "id": 2023415,
+    "suite_id": 685340,
+    "name": "Alt Audio",
+    "description": null,
+    "parent_id": 1952688,
+    "display_order": 40,
+    "depth": 1
+  },
+  {
+    "id": 2023416,
+    "suite_id": 685340,
+    "name": "Audio Only Player",
+    "description": null,
+    "parent_id": 1952688,
+    "display_order": 41,
+    "depth": 1
+  },
+  {
+    "id": 2023417,
+    "suite_id": 685340,
+    "name": "Audio Only Playback",
+    "description": null,
+    "parent_id": 1952688,
+    "display_order": 42,
+    "depth": 1
+  },
+  {
+    "id": 2023418,
+    "suite_id": 685340,
+    "name": "PIP Mode",
+    "description": "COREMED-1819\n\nNOTE: We can also test the right-click context menu to enter PIP mode.",
+    "parent_id": 1952688,
+    "display_order": 43,
+    "depth": 1
+  },
+  {
+    "id": 2023419,
+    "suite_id": 685340,
+    "name": "Entitlement Based Media Selection & Playback",
+    "description": "COREMED-1358",
+    "parent_id": 1952688,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 2023420,
+    "suite_id": 685340,
+    "name": "Ad integration",
+    "description": null,
+    "parent_id": 1952688,
+    "display_order": 45,
+    "depth": 1
+  },
+  {
+    "id": 2023421,
+    "suite_id": 685340,
+    "name": "CSAI",
+    "description": null,
+    "parent_id": 2023420,
+    "display_order": 46,
+    "depth": 2
+  },
+  {
+    "id": 2023422,
+    "suite_id": 685340,
+    "name": "DAI",
+    "description": null,
+    "parent_id": 2023420,
+    "display_order": 47,
+    "depth": 2
+  },
+  {
+    "id": 2023423,
+    "suite_id": 685340,
+    "name": "Messaging",
+    "description": "https://www.mlbstatic.com/mlb.com/video/config/mlbtv/messages.json\n\nDevtools > Console: window.mlb.__mlbtv.addNewMessage('application.[MESSAGE_NAME_HERE]');",
+    "parent_id": 1952688,
+    "display_order": 48,
+    "depth": 1
+  },
+  {
+    "id": 2023424,
+    "suite_id": 685340,
+    "name": "Autoplay",
+    "description": null,
+    "parent_id": 1952688,
+    "display_order": 49,
+    "depth": 1
+  },
+  {
+    "id": 1952805,
+    "suite_id": 685340,
+    "name": "Player User Settings Panel",
+    "description": null,
+    "parent_id": null,
+    "display_order": 50,
+    "depth": 0
+  },
+  {
+    "id": 1954240,
+    "suite_id": 685340,
+    "name": "General Tab",
+    "description": null,
+    "parent_id": 1952805,
+    "display_order": 51,
+    "depth": 1
+  },
+  {
+    "id": 1954942,
+    "suite_id": 685340,
+    "name": "Teams Tab",
+    "description": null,
+    "parent_id": 1952805,
+    "display_order": 52,
+    "depth": 1
+  },
+  {
+    "id": 1952338,
+    "suite_id": 685340,
+    "name": "Shows Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 53,
+    "depth": 0
+  },
+  {
+    "id": 1952337,
+    "suite_id": 685340,
+    "name": "SVOD Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 54,
+    "depth": 0
+  },
+  {
+    "id": 1952445,
+    "suite_id": 685340,
+    "name": "App Launch | Login Landing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 55,
+    "depth": 0
+  },
+  {
+    "id": 1952461,
+    "suite_id": 685340,
+    "name": "Login",
+    "description": null,
+    "parent_id": 1952445,
+    "display_order": 56,
+    "depth": 1
+  },
+  {
+    "id": 1952462,
+    "suite_id": 685340,
+    "name": "LogOut",
+    "description": null,
+    "parent_id": 1952461,
+    "display_order": 57,
+    "depth": 2
+  },
+  {
+    "id": 1952467,
+    "suite_id": 685340,
+    "name": "MLB Network",
+    "description": null,
+    "parent_id": null,
+    "display_order": 77,
+    "depth": 0
+  },
+  {
+    "id": 1979420,
+    "suite_id": 685340,
+    "name": "Lightning Round Regression",
+    "description": null,
+    "parent_id": null,
+    "display_order": 84,
+    "depth": 0
+  },
+  {
+    "id": 2037668,
+    "suite_id": 685340,
+    "name": "RSN",
+    "description": null,
+    "parent_id": null,
+    "display_order": 85,
+    "depth": 0
+  },
+  {
+    "id": 2038939,
+    "suite_id": 685340,
+    "name": "Adobe",
+    "description": null,
+    "parent_id": null,
+    "display_order": 86,
+    "depth": 0
+  },
+  {
+    "id": 2038940,
+    "suite_id": 685340,
+    "name": "Conviva",
+    "description": null,
+    "parent_id": null,
+    "display_order": 87,
+    "depth": 0
+  }
+]

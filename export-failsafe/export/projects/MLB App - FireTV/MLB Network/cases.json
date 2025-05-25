@@ -1,0 +1,134 @@
+[
+  {
+    "id": 33747740,
+    "title": "Entitled User- Hero MLBN Content",
+    "section_id": 1946608,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1721516713,
+    "updated_by": 232,
+    "updated_on": 1721516783,
+    "estimate": null,
+    "estimate_forecast": "8m",
+    "suite_id": 686711,
+    "display_order": 1,
+    "custom_preconds": "GIVEN an MLBN entitled user",
+    "custom_steps": "WHEN there is MLBN content in the hero\r\nAND the user selects the content",
+    "custom_expected": "THEN the user is able to play back the content",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 33747741,
+    "title": "Entitled User- Games Carousel MLBN Content",
+    "section_id": 1946608,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1721516739,
+    "updated_by": 232,
+    "updated_on": 1721518122,
+    "estimate": null,
+    "estimate_forecast": "7m 58s",
+    "suite_id": 686711,
+    "display_order": 2,
+    "custom_preconds": "GIVEN an MLBN entitled user",
+    "custom_steps": "WHEN there is MLBN content in the games carousel\r\nAND the user selects the content",
+    "custom_expected": "THEN the user is able to play back the content",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 33747742,
+    "title": "Entitled User- MLBN Content in VOD/SVOD carousel",
+    "section_id": 1946608,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1721516748,
+    "updated_by": 232,
+    "updated_on": 1721518098,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 686711,
+    "display_order": 3,
+    "custom_preconds": "GIVEN an MLBN entitled user",
+    "custom_steps": "WHEN there is MLBN content in the VOD/SVOD carousel\r\nAND the user selects the content",
+    "custom_expected": "THEN the user is able to play back the content",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 33747743,
+    "title": "MLBN un-entitled user",
+    "section_id": 1946608,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1721518408,
+    "updated_by": 232,
+    "updated_on": 1721518408,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 686711,
+    "display_order": 4,
+    "custom_preconds": "GIVEN a user not entitled to MLBN content",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user lands on the Watch page",
+        "expected": "THEN MLBN content is not displayed in the hero or games carousel"
+      },
+      {
+        "content": "WHEN the user selects MLBN content from a VOD/SVOD carousel (note this is live MLBN content, not clips from MLBN shows)",
+        "expected": "THEN the user is presented with the Upgrade modal"
+      }
+    ]
+  },
+  {
+    "id": 33747744,
+    "title": "MLBN content appearance",
+    "section_id": 1946608,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1721518820,
+    "updated_by": 232,
+    "updated_on": 1721518820,
+    "estimate": null,
+    "estimate_forecast": "3s",
+    "suite_id": 686711,
+    "display_order": 5,
+    "custom_preconds": "GIVEN a user\r\nAND MLBN content is available",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is entitled to MLBN content",
+        "expected": "THEN no lock icon is displayed on MLBN content"
+      },
+      {
+        "content": "WHEN the user is un-entitled",
+        "expected": "THEN a lock icon is displayed"
+      },
+      {
+        "content": "WHEN the user observes the MLBN content",
+        "expected": "THEN a LIVE badge can be observed\nAND no duration (time signature) is present"
+      }
+    ]
+  }
+]

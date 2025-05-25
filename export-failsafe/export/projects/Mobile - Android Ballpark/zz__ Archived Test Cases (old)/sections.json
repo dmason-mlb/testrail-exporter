@@ -1,0 +1,83 @@
+[
+  {
+    "id": 6316,
+    "suite_id": 808,
+    "name": "My Profile - Check In",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 6317,
+    "suite_id": 808,
+    "name": "My Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 8511,
+    "suite_id": 808,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 8512,
+    "suite_id": 808,
+    "name": "Accounts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 8513,
+    "suite_id": 808,
+    "name": "Home Page Display Rules",
+    "description": null,
+    "parent_id": 8512,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 8514,
+    "suite_id": 808,
+    "name": "When Ballpark Guide becomes home",
+    "description": null,
+    "parent_id": 8513,
+    "display_order": 6,
+    "depth": 2
+  },
+  {
+    "id": 8515,
+    "suite_id": 808,
+    "name": "Ballparks",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 8516,
+    "suite_id": 808,
+    "name": "Journal",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 8517,
+    "suite_id": 808,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  }
+]

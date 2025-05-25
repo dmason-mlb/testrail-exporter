@@ -1,0 +1,11 @@
+{
+  "id": 658056,
+  "name": "Accessibility - GoAhead Entry Onboarding",
+  "description": "Ballpark App's GoAhead Entry allows for customers to onboard w/ a facial scan prior to game. On the day/night of the game, the customer can enter specific gates without having to scan their ticket. Here are the flows and relevant test cases for ADA audit.\r\n\r\nFlows:\r\n*GAE onboarding for customer w/ DOB over 18  [Acct to use: ballpark.applause@gmail.com / PW: BPapp123]\r\n*GAE onboarding for customer w/ DOB under 18 [Acct to use: ballpark.applause+under@gmail.com / PW: BPapp123]\r\n\r\nTo enter into the specific GAE pages desired for ADA audit. Use provided (debug) builds that have been configured w/ the entry point (Go-Ahead Entry) within More menu(after login).\r\n\r\n\r\nThe test cases are written with End to End customer flows in mind. \r\nBelow are a list of particular pages in the flows, for each platform. \r\nThe pages are included within each test case as the transitions occur. \r\nIncluded intentionally to be part of the audit, Error handling steps and validation on the pages within the onboarding GAE flows.\r\n\r\n\r\n|||:PageNum|:PageName\r\n|| ANDROID/IOS PAGE 1 | GAE - SignUp page, Carousel 1 \r\n|| ANDROID/IOS PAGE 2 | GAE - SignUp page, Carousel 2\r\n|| ANDROID/IOS PAGE 3 | GAE - SignUp page, Carousel 3\r\n|| ANDROID/IOS PAGE 4 | GAE - Learn More link (mlb.com page)\r\n|| ANDROID/IOS PAGE 5 | Device Prompt - Camera access (when DOB over 18)\r\n|| ANDROID/IOS PAGE 6 | GAE - Capture to generate MLB GAE ID (when DOB over 18)\r\n|| ANDROID/IOS PAGE 7 | GAE - Image capturing w/ recommendations below (when DOB over 18)\r\n|| ANDROID/IOS PAGE 8 | GAE - Generating GAE ID (when DOB over 18)\r\n|| ANDROID/IOS PAGE 9 | GAE - Success - All Set (when DOB over 18)\r\n|| ANDROID/IOS PAGE 10 | Device Prompt - DOB required (when DOB under 18)\r\n|| ANDROID/IOS PAGE 11 | Device Prompt - Calendar picker (when DOB under 18)\r\n|| ANDROID/IOS PAGE 12 | Device Prompt - Sorry, ineligible (when user enters DOB under 18)\r\n|| ANDROID/IOS PAGE 13 | My Profile - GAE ID [AUDIT NOT NEEDED FOR THIS CASE] ",
+  "project_id": 179,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/658056"
+}

@@ -1,0 +1,587 @@
+[
+  {
+    "id": 304599,
+    "suite_id": 43532,
+    "name": "Upgrade",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 304601,
+    "suite_id": 43532,
+    "name": "Onboarding / Reset Password",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1251435,
+    "suite_id": 43532,
+    "name": "Home Tab",
+    "description": "Purpose of this test suite is to ensure that there is HIGH level of confidence that the app will function properly in the HIGHEST priority areas of the app with a minimal sanity validation.",
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1251433,
+    "suite_id": 43532,
+    "name": "Navigation",
+    "description": null,
+    "parent_id": 1251435,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 1251434,
+    "suite_id": 43532,
+    "name": "Inbox",
+    "description": null,
+    "parent_id": 1251435,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 1965063,
+    "suite_id": 43532,
+    "name": "Next Ticketed Event Card (v1) [Android ONLY]",
+    "description": null,
+    "parent_id": 1251435,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 1965064,
+    "suite_id": 43532,
+    "name": "Next Ticketed Event Card (NTE)",
+    "description": null,
+    "parent_id": 1251435,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 304582,
+    "suite_id": 43532,
+    "name": "Home Tab",
+    "description": null,
+    "parent_id": 1251435,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 2034853,
+    "suite_id": 43532,
+    "name": "Location Prompt",
+    "description": "Test Cases particular to Home (rewrite).\n* Android - v14.3.0 (local feature flag enabled) - currently expected for default enablement on v14.4\n\nFigma: [Home v1](https://www.figma.com/design/0oNryxBGauTBWja78zdQkX/Ballpark-Redesign-(DS)?node-id=1-366&p=f&t=GSuvsSjweg8pWLkT-0)\nEpic: [Android Ballpark Home v1.0](https://baseball.atlassian.net/browse/BPA-7739)\n\nReference to Previous Home: [HomePage Legacy](https://testrail.testeng.mlbinfra.net/index.php?/suites/view/192824&group_by=cases:section_id&group_order=asc&group_id=1172205)",
+    "parent_id": 1251435,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 2034859,
+    "suite_id": 43532,
+    "name": "Context Cards",
+    "description": "Designs → [Ballpark Redesign (DS)](https://www.figma.com/design/0oNryxBGauTBWja78zdQkX/Ballpark-Redesign-(DS)?node-id=20475-43276 )\nGherkin → [Context Cards](https://docs.google.com/document/d/18AVO--XQ0iJV8-U5jhgTZfgq9w6m68iJ8HIESevQsHc/edit?tab=t.0 )",
+    "parent_id": 1251435,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 304588,
+    "suite_id": 43532,
+    "name": "Unverified Acct and Email Verification*",
+    "description": null,
+    "parent_id": null,
+    "display_order": 58,
+    "depth": 0
+  },
+  {
+    "id": 1251455,
+    "suite_id": 43532,
+    "name": "Tickets Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 60,
+    "depth": 0
+  },
+  {
+    "id": 304621,
+    "suite_id": 43532,
+    "name": "Buy Tickets Segment",
+    "description": null,
+    "parent_id": 1251455,
+    "display_order": 61,
+    "depth": 1
+  },
+  {
+    "id": 1251457,
+    "suite_id": 43532,
+    "name": "Ticket Refresh",
+    "description": null,
+    "parent_id": 1251455,
+    "display_order": 62,
+    "depth": 1
+  },
+  {
+    "id": 1251466,
+    "suite_id": 43532,
+    "name": "Wallet View *[requires tickets]",
+    "description": null,
+    "parent_id": 1251455,
+    "display_order": 64,
+    "depth": 1
+  },
+  {
+    "id": 1251458,
+    "suite_id": 43532,
+    "name": "View all ticketed events list",
+    "description": "https://jira.mlbam.com/browse/BP-6882",
+    "parent_id": 1251466,
+    "display_order": 66,
+    "depth": 2
+  },
+  {
+    "id": 1251459,
+    "suite_id": 43532,
+    "name": "Ticket list*",
+    "description": "https://jira.mlbam.com/browse/BP-6944",
+    "parent_id": 1251466,
+    "display_order": 67,
+    "depth": 2
+  },
+  {
+    "id": 1251460,
+    "suite_id": 43532,
+    "name": "Ticket scan view*",
+    "description": "https://jira.mlbam.com/browse/BP-6943",
+    "parent_id": 1251466,
+    "display_order": 68,
+    "depth": 2
+  },
+  {
+    "id": 1251461,
+    "suite_id": 43532,
+    "name": "Ticket list forwarding mode*",
+    "description": "https://jira.mlbam.com/browse/BP-6940\n\nDon't Auto Select\n[iOS](https://baseball.atlassian.net/browse/BP-9957)\n[ANDROID](https://baseball.atlassian.net/browse/BPA-6648)",
+    "parent_id": 1251466,
+    "display_order": 69,
+    "depth": 2
+  },
+  {
+    "id": 1251462,
+    "suite_id": 43532,
+    "name": "Ticket forward by email*",
+    "description": "https://jira.mlbam.com/browse/BP-6941",
+    "parent_id": 1251466,
+    "display_order": 70,
+    "depth": 2
+  },
+  {
+    "id": 1251463,
+    "suite_id": 43532,
+    "name": "Ticket forward by link*",
+    "description": "https://jira.mlbam.com/browse/BP-6942",
+    "parent_id": 1251466,
+    "display_order": 71,
+    "depth": 2
+  },
+  {
+    "id": 1421723,
+    "suite_id": 43532,
+    "name": "Ticket forward by contact*",
+    "description": null,
+    "parent_id": 1251466,
+    "display_order": 72,
+    "depth": 2
+  },
+  {
+    "id": 1646071,
+    "suite_id": 43532,
+    "name": "Embargoed Barcode*",
+    "description": "(requires an acct with embargoed tickets)",
+    "parent_id": 1251466,
+    "display_order": 76,
+    "depth": 2
+  },
+  {
+    "id": 304610,
+    "suite_id": 43532,
+    "name": "Ticket Forwarding History*",
+    "description": null,
+    "parent_id": 1251455,
+    "display_order": 78,
+    "depth": 1
+  },
+  {
+    "id": 428338,
+    "suite_id": 43532,
+    "name": "Ticket Offers*",
+    "description": null,
+    "parent_id": 1251455,
+    "display_order": 79,
+    "depth": 1
+  },
+  {
+    "id": 304584,
+    "suite_id": 43532,
+    "name": "Team Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 80,
+    "depth": 0
+  },
+  {
+    "id": 304594,
+    "suite_id": 43532,
+    "name": "Maps",
+    "description": null,
+    "parent_id": 304584,
+    "display_order": 81,
+    "depth": 1
+  },
+  {
+    "id": 1539832,
+    "suite_id": 43532,
+    "name": "Chatbot",
+    "description": "**Chatbot feature introduced w/ 11.4.0",
+    "parent_id": null,
+    "display_order": 83,
+    "depth": 0
+  },
+  {
+    "id": 731102,
+    "suite_id": 43532,
+    "name": "Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 84,
+    "depth": 0
+  },
+  {
+    "id": 2018346,
+    "suite_id": 43532,
+    "name": "Menu Options",
+    "description": null,
+    "parent_id": 731102,
+    "display_order": 85,
+    "depth": 1
+  },
+  {
+    "id": 1570536,
+    "suite_id": 43532,
+    "name": "Personalization",
+    "description": "GIVEN the user downloaded the Ballpark app (11.5.0 or greater for IOS / 12.0.0 or greater for Android)",
+    "parent_id": 731102,
+    "display_order": 91,
+    "depth": 1
+  },
+  {
+    "id": 2018343,
+    "suite_id": 43532,
+    "name": "Navigation",
+    "description": null,
+    "parent_id": 731102,
+    "display_order": 92,
+    "depth": 1
+  },
+  {
+    "id": 2034862,
+    "suite_id": 43532,
+    "name": "Profile Screen",
+    "description": null,
+    "parent_id": 731102,
+    "display_order": 98,
+    "depth": 1
+  },
+  {
+    "id": 304587,
+    "suite_id": 43532,
+    "name": "My History",
+    "description": null,
+    "parent_id": null,
+    "display_order": 99,
+    "depth": 0
+  },
+  {
+    "id": 1253721,
+    "suite_id": 43532,
+    "name": "Tappable Headers",
+    "description": null,
+    "parent_id": 304587,
+    "display_order": 100,
+    "depth": 1
+  },
+  {
+    "id": 1253725,
+    "suite_id": 43532,
+    "name": "Historic Check-in",
+    "description": null,
+    "parent_id": 304587,
+    "display_order": 101,
+    "depth": 1
+  },
+  {
+    "id": 1253722,
+    "suite_id": 43532,
+    "name": "Event Card Details View (via \"View Details\" link)",
+    "description": "This view shows more details about the a users specific check in. Additional content includes:\n*full score view or title view (NGE)\n*user inputted Notes, including Section Row Seat\n*user added photos in a larger size\n*add photos button\n*game wrap button if available\n*delete check-in button",
+    "parent_id": 304587,
+    "display_order": 102,
+    "depth": 1
+  },
+  {
+    "id": 1253723,
+    "suite_id": 43532,
+    "name": "Event Card - Add and Delete Photo Functionality",
+    "description": "Add a photo in the main view with a floating or static button. After selecting a photo, a full screen view pops up with the option to delete. Pinch to zoom also available on iOS.",
+    "parent_id": 1253722,
+    "display_order": 103,
+    "depth": 2
+  },
+  {
+    "id": 1253724,
+    "suite_id": 43532,
+    "name": "Event Card - Editing Check-Ins Text",
+    "description": "In the top right corner of the Detials view there is now an \"Edit\" button. A edit view appears giving the user the ability to edit their Section, Row, Seat, and User Message.",
+    "parent_id": 1253722,
+    "display_order": 104,
+    "depth": 2
+  },
+  {
+    "id": 304586,
+    "suite_id": 43532,
+    "name": "Check In*",
+    "description": null,
+    "parent_id": 304587,
+    "display_order": 105,
+    "depth": 1
+  },
+  {
+    "id": 1253727,
+    "suite_id": 43532,
+    "name": "Auto Check-in",
+    "description": "https://baseball.atlassian.net/browse/CLUBTOOLS-1486\n\nAs a fan attending an event who loves My History & free stuff from offers, I want the current game added to my history and all the offers unlocked when I’m in the ballpark\n\nNOTE: Auto Check-in feature is ticket agnostic, meaning that expected behavior should be verified both with AND without tickets",
+    "parent_id": 304586,
+    "display_order": 106,
+    "depth": 2
+  },
+  {
+    "id": 1253728,
+    "suite_id": 43532,
+    "name": "Manual Check-in (via Team page of venue)",
+    "description": null,
+    "parent_id": 304586,
+    "display_order": 107,
+    "depth": 2
+  },
+  {
+    "id": 367696,
+    "suite_id": 43532,
+    "name": "Deeplinking",
+    "description": null,
+    "parent_id": null,
+    "display_order": 124,
+    "depth": 0
+  },
+  {
+    "id": 1390814,
+    "suite_id": 43532,
+    "name": "Branch DeepLinks",
+    "description": "Branch.io is a deeplink provider service. Branch provides vanity URL's and analytics around deeplink clicks.\n\n\nFollowing are deeplinks obtained/verified in past (but are not guaranteed to be active):\n* https://bp.mlb.com/EiCrO00N15 (capital letter 'O' followed by 2 zeros '0' - directing to Mets TeamPage)\n* https://bp.mlb.com/OAK_Ordering_Pickup (may not be active)\n* https://bp.mlb.com/CIN_RedsPay_Email (may not be active)\n* https://bp.mlb.com/MIL_Ordering (may not be active)\n* https://bp.mlb.com/ATL_Ordering_Club (may not be active)\n* https://bp.mlb.com/ARI_Ordering  (may not be active)\n* https://bp.mlb.com/WAS-Ordering-Stands_Sec315 (may not be active)",
+    "parent_id": 367696,
+    "display_order": 125,
+    "depth": 1
+  },
+  {
+    "id": 1253730,
+    "suite_id": 43532,
+    "name": "Webview",
+    "description": "ballpark://webview?url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours",
+    "parent_id": 367696,
+    "display_order": 128,
+    "depth": 1
+  },
+  {
+    "id": 1253731,
+    "suite_id": 43532,
+    "name": "Wallet Segment",
+    "description": "ballpark://wallet",
+    "parent_id": 367696,
+    "display_order": 129,
+    "depth": 1
+  },
+  {
+    "id": 1253732,
+    "suite_id": 43532,
+    "name": "Buy Tickets Segment",
+    "description": "ballpark://buytickets\nballpark://buytickets?teamID=158",
+    "parent_id": 367696,
+    "display_order": 130,
+    "depth": 1
+  },
+  {
+    "id": 1253733,
+    "suite_id": 43532,
+    "name": "Wallet Ticket List View*",
+    "description": "ballpark://listview?eventID=65285&teamID=158",
+    "parent_id": 367696,
+    "display_order": 131,
+    "depth": 1
+  },
+  {
+    "id": 1253734,
+    "suite_id": 43532,
+    "name": "Wallet Ticket Scan View*",
+    "description": "ballpark://scanview?eventID=65285&teamID=158",
+    "parent_id": 367696,
+    "display_order": 132,
+    "depth": 1
+  },
+  {
+    "id": 1253735,
+    "suite_id": 43532,
+    "name": "My History Event Details*",
+    "description": "ballpark://myhistory\nballpark://myhistory?eventID=632826 (bparkdev@gmail in Staging)",
+    "parent_id": 367696,
+    "display_order": 133,
+    "depth": 1
+  },
+  {
+    "id": 1253737,
+    "suite_id": 43532,
+    "name": "Team Tab",
+    "description": "ballpark://venue?venueID=32",
+    "parent_id": 367696,
+    "display_order": 134,
+    "depth": 1
+  },
+  {
+    "id": 1253738,
+    "suite_id": 43532,
+    "name": "Outbound DeepLinks - Deeplinks from Ballpark Team Page *[requires specific team page module]",
+    "description": null,
+    "parent_id": 367696,
+    "display_order": 135,
+    "depth": 1
+  },
+  {
+    "id": 1259593,
+    "suite_id": 43532,
+    "name": "OneSignal*",
+    "description": "Verifies basic One Signal functionality\nThe One Signal dashboard can be found here: https://app.onesignal.com/\n\nANDROID NOTES - \n*[OneSig Ballpark QA App](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages) are tied to Debug builds (Prod Debug, Staging Debug, and QA Debug BP app builds )\n*[OneSig Ballpark App](https://app.onesignal.com/apps/6dfb24dd-9167-41c5-ba11-9da6fdbcaa5a/in_app_messages) are tied to Release builds (Prod Release, Staging Release, and QA Release BP app builds ) -- BE CAUTIOUS WITH UPDATING/CREATING ONE-SIG MESSAGES THAT COULD GO OUT TO PUBLIC",
+    "parent_id": null,
+    "display_order": 142,
+    "depth": 0
+  },
+  {
+    "id": 1259591,
+    "suite_id": 43532,
+    "name": "OneSignal - Push Notification",
+    "description": null,
+    "parent_id": 1259593,
+    "display_order": 143,
+    "depth": 1
+  },
+  {
+    "id": 1259592,
+    "suite_id": 43532,
+    "name": "OneSignal - In-App Msg",
+    "description": null,
+    "parent_id": 1259593,
+    "display_order": 144,
+    "depth": 1
+  },
+  {
+    "id": 304622,
+    "suite_id": 43532,
+    "name": "Network Outage*",
+    "description": null,
+    "parent_id": null,
+    "display_order": 148,
+    "depth": 0
+  },
+  {
+    "id": 367699,
+    "suite_id": 43532,
+    "name": "Analytics Tracking*",
+    "description": null,
+    "parent_id": null,
+    "display_order": 151,
+    "depth": 0
+  },
+  {
+    "id": 1259590,
+    "suite_id": 43532,
+    "name": "Data Dog*",
+    "description": null,
+    "parent_id": null,
+    "display_order": 152,
+    "depth": 0
+  },
+  {
+    "id": 1983588,
+    "suite_id": 43532,
+    "name": "Post Production Release",
+    "description": null,
+    "parent_id": null,
+    "display_order": 153,
+    "depth": 0
+  },
+  {
+    "id": 2018348,
+    "suite_id": 43532,
+    "name": "Fan List",
+    "description": "Android - https://baseball.atlassian.net/browse/BPA-7539 \niOS- https://baseball.atlassian.net/browse/BP-10858\n\nReference Doc: https://docs.google.com/document/d/1E1SuLwz9peIOmVY0MfEQbTm-uLnig4iUQigbSWypLwM/edit\n\n\nFor QA Env:\nTo test wer can use charles to switch the flag from 'true' to 'false' and verified that the resellable state went away\n\n\nFor Prod: \nReach out to Product",
+    "parent_id": null,
+    "display_order": 159,
+    "depth": 0
+  },
+  {
+    "id": 2034854,
+    "suite_id": 43532,
+    "name": "SSO",
+    "description": null,
+    "parent_id": null,
+    "display_order": 160,
+    "depth": 0
+  },
+  {
+    "id": 2034858,
+    "suite_id": 43532,
+    "name": "Go-Ahead Entry",
+    "description": null,
+    "parent_id": null,
+    "display_order": 161,
+    "depth": 0
+  },
+  {
+    "id": 2034856,
+    "suite_id": 43532,
+    "name": "Onboarding Flow",
+    "description": "As a Ballpark user, I want to know the information needed to enter the stadium by facial recognition so that I successfully enrolled in the GoAhead-Entry program.\n\nAndroid: [BPA-7052](https://baseball.atlassian.net/browse/BPA-7052 )\niOS: [BP-10293](https://baseball.atlassian.net/browse/BP-10293 )",
+    "parent_id": 2034858,
+    "display_order": 162,
+    "depth": 1
+  },
+  {
+    "id": 2034857,
+    "suite_id": 43532,
+    "name": "Profile",
+    "description": "Android: [BPA-7068](https://baseball.atlassian.net/browse/BPA-7068)\niOS: [BP-10319](https://baseball.atlassian.net/browse/BP-10319)\n\nFigma: [Go-Ahead Entry](https://www.figma.com/file/SzhNPC0PGqQzg9cHioqLt6/No-Wait-Entry?type=design&node-id=2259-70238&mode=design&t=KKnj7ELX1ew2eFyj-0)",
+    "parent_id": 2034858,
+    "display_order": 163,
+    "depth": 1
+  },
+  {
+    "id": 2034860,
+    "suite_id": 43532,
+    "name": "OKTA - IDK",
+    "description": "introduced w/ 13.2.0",
+    "parent_id": null,
+    "display_order": 164,
+    "depth": 0
+  }
+]

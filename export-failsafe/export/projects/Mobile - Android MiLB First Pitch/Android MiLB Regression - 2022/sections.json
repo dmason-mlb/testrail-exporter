@@ -1,0 +1,470 @@
+[
+  {
+    "id": 1388439,
+    "suite_id": 479023,
+    "name": "Upgrade",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1388406,
+    "suite_id": 479023,
+    "name": "Onboarding",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1939391,
+    "suite_id": 479023,
+    "name": "Log in screen",
+    "description": null,
+    "parent_id": 1388406,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 1983125,
+    "suite_id": 479023,
+    "name": "Enter Your Email",
+    "description": null,
+    "parent_id": 1939391,
+    "display_order": 10,
+    "depth": 2
+  },
+  {
+    "id": 1983126,
+    "suite_id": 479023,
+    "name": "Choose How To Verify",
+    "description": null,
+    "parent_id": 1983125,
+    "display_order": 13,
+    "depth": 3
+  },
+  {
+    "id": 1983122,
+    "suite_id": 479023,
+    "name": "Check Your Email - passwordless",
+    "description": null,
+    "parent_id": 1983126,
+    "display_order": 14,
+    "depth": 4
+  },
+  {
+    "id": 1939392,
+    "suite_id": 479023,
+    "name": "Check Your Email - Reset my password",
+    "description": null,
+    "parent_id": 1983126,
+    "display_order": 15,
+    "depth": 4
+  },
+  {
+    "id": 1939393,
+    "suite_id": 479023,
+    "name": "Sign up screen",
+    "description": null,
+    "parent_id": 1388406,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 1388410,
+    "suite_id": 479023,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 1388411,
+    "suite_id": 479023,
+    "name": "Schedulde section",
+    "description": null,
+    "parent_id": 1388410,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 1388412,
+    "suite_id": 479023,
+    "name": "Score section",
+    "description": null,
+    "parent_id": 1388410,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 1388413,
+    "suite_id": 479023,
+    "name": "Probables section",
+    "description": null,
+    "parent_id": 1388410,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 1388414,
+    "suite_id": 479023,
+    "name": "Product Buttons section",
+    "description": null,
+    "parent_id": 1388410,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 1389763,
+    "suite_id": 479023,
+    "name": "Game States",
+    "description": null,
+    "parent_id": 1388410,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 1388409,
+    "suite_id": 479023,
+    "name": "Upcoming Home Games",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 1984096,
+    "suite_id": 479023,
+    "name": "Promotion details screen",
+    "description": null,
+    "parent_id": 1388409,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 1388407,
+    "suite_id": 479023,
+    "name": "Tickets and Satisfy ChatBot section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  },
+  {
+    "id": 1388416,
+    "suite_id": 479023,
+    "name": "Team Info",
+    "description": null,
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 1388417,
+    "suite_id": 479023,
+    "name": "Team Insider",
+    "description": null,
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 1388418,
+    "suite_id": 479023,
+    "name": "Follow the <Team> (Social)",
+    "description": "Social media subsection",
+    "parent_id": null,
+    "display_order": 39,
+    "depth": 0
+  },
+  {
+    "id": 1388419,
+    "suite_id": 479023,
+    "name": "More",
+    "description": null,
+    "parent_id": null,
+    "display_order": 40,
+    "depth": 0
+  },
+  {
+    "id": 1388420,
+    "suite_id": 479023,
+    "name": "Other Team Affiliates",
+    "description": null,
+    "parent_id": null,
+    "display_order": 41,
+    "depth": 0
+  },
+  {
+    "id": 1388421,
+    "suite_id": 479023,
+    "name": "Ad Slot section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 42,
+    "depth": 0
+  },
+  {
+    "id": 1388422,
+    "suite_id": 479023,
+    "name": "Interstitials",
+    "description": null,
+    "parent_id": 1388421,
+    "display_order": 43,
+    "depth": 1
+  },
+  {
+    "id": 1388425,
+    "suite_id": 479023,
+    "name": "News tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 48,
+    "depth": 0
+  },
+  {
+    "id": 1388424,
+    "suite_id": 479023,
+    "name": "Scores Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 49,
+    "depth": 0
+  },
+  {
+    "id": 1388426,
+    "suite_id": 479023,
+    "name": "Standings Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 50,
+    "depth": 0
+  },
+  {
+    "id": 1388408,
+    "suite_id": 479023,
+    "name": "Stats tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 51,
+    "depth": 0
+  },
+  {
+    "id": 1388427,
+    "suite_id": 479023,
+    "name": "More tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 52,
+    "depth": 0
+  },
+  {
+    "id": 1388415,
+    "suite_id": 479023,
+    "name": "More links",
+    "description": null,
+    "parent_id": 1388427,
+    "display_order": 53,
+    "depth": 1
+  },
+  {
+    "id": 1388435,
+    "suite_id": 479023,
+    "name": "Quick Hits links",
+    "description": null,
+    "parent_id": 1388415,
+    "display_order": 54,
+    "depth": 2
+  },
+  {
+    "id": 1388436,
+    "suite_id": 479023,
+    "name": "Help Center links",
+    "description": null,
+    "parent_id": 1388415,
+    "display_order": 55,
+    "depth": 2
+  },
+  {
+    "id": 1388438,
+    "suite_id": 479023,
+    "name": "Apps links",
+    "description": null,
+    "parent_id": 1388415,
+    "display_order": 56,
+    "depth": 2
+  },
+  {
+    "id": 1388428,
+    "suite_id": 479023,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 1388427,
+    "display_order": 61,
+    "depth": 1
+  },
+  {
+    "id": 1388429,
+    "suite_id": 479023,
+    "name": "Log in screen",
+    "description": null,
+    "parent_id": 1388428,
+    "display_order": 62,
+    "depth": 2
+  },
+  {
+    "id": 1981896,
+    "suite_id": 479023,
+    "name": "Enter Your Email",
+    "description": null,
+    "parent_id": 1388429,
+    "display_order": 67,
+    "depth": 3
+  },
+  {
+    "id": 1388430,
+    "suite_id": 479023,
+    "name": "Choose How To Verify",
+    "description": null,
+    "parent_id": 1981896,
+    "display_order": 69,
+    "depth": 4
+  },
+  {
+    "id": 1981897,
+    "suite_id": 479023,
+    "name": "Check Your Email - passwordless",
+    "description": null,
+    "parent_id": 1388430,
+    "display_order": 70,
+    "depth": 5
+  },
+  {
+    "id": 1388423,
+    "suite_id": 479023,
+    "name": "Check Your Email - Reset my password",
+    "description": null,
+    "parent_id": 1388430,
+    "display_order": 71,
+    "depth": 5
+  },
+  {
+    "id": 1939402,
+    "suite_id": 479023,
+    "name": "Sign up screen",
+    "description": null,
+    "parent_id": 1388427,
+    "display_order": 91,
+    "depth": 1
+  },
+  {
+    "id": 1388431,
+    "suite_id": 479023,
+    "name": "Preferences",
+    "description": null,
+    "parent_id": 1388427,
+    "display_order": 92,
+    "depth": 1
+  },
+  {
+    "id": 1388433,
+    "suite_id": 479023,
+    "name": "Favorite Teams",
+    "description": null,
+    "parent_id": 1388431,
+    "display_order": 93,
+    "depth": 2
+  },
+  {
+    "id": 1854176,
+    "suite_id": 479023,
+    "name": "Notifications",
+    "description": null,
+    "parent_id": 1388431,
+    "display_order": 94,
+    "depth": 2
+  },
+  {
+    "id": 1388434,
+    "suite_id": 479023,
+    "name": "About First Pitch",
+    "description": null,
+    "parent_id": 1388431,
+    "display_order": 95,
+    "depth": 2
+  },
+  {
+    "id": 1388432,
+    "suite_id": 479023,
+    "name": "Push Notificaitons",
+    "description": "https://baseball.atlassian.net/wiki/spaces/mobile/pages/2781151233/MiLB+Push+Notifications",
+    "parent_id": null,
+    "display_order": 96,
+    "depth": 0
+  },
+  {
+    "id": 1388437,
+    "suite_id": 479023,
+    "name": "EPG",
+    "description": null,
+    "parent_id": null,
+    "display_order": 97,
+    "depth": 0
+  },
+  {
+    "id": 1992513,
+    "suite_id": 479023,
+    "name": "Log in screen",
+    "description": null,
+    "parent_id": 1388437,
+    "display_order": 98,
+    "depth": 1
+  },
+  {
+    "id": 1992514,
+    "suite_id": 479023,
+    "name": "Enter Your Email",
+    "description": null,
+    "parent_id": 1992513,
+    "display_order": 99,
+    "depth": 2
+  },
+  {
+    "id": 1992515,
+    "suite_id": 479023,
+    "name": "Choose How To Verify",
+    "description": null,
+    "parent_id": 1992514,
+    "display_order": 100,
+    "depth": 3
+  },
+  {
+    "id": 1992516,
+    "suite_id": 479023,
+    "name": "Check Your Email - passwordless",
+    "description": null,
+    "parent_id": 1992515,
+    "display_order": 101,
+    "depth": 4
+  },
+  {
+    "id": 1992517,
+    "suite_id": 479023,
+    "name": "Check Your Email - Reset my password",
+    "description": null,
+    "parent_id": 1992515,
+    "display_order": 102,
+    "depth": 4
+  },
+  {
+    "id": 1388441,
+    "suite_id": 479023,
+    "name": "General Test cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 105,
+    "depth": 0
+  }
+]

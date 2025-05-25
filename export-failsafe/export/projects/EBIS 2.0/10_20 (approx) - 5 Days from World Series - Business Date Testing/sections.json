@@ -1,0 +1,29 @@
+[
+  {
+    "id": 144195,
+    "suite_id": 20179,
+    "name": "LL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 144196,
+    "suite_id": 20179,
+    "name": "Last day to tender qualifying offers to XXB free agents",
+    "description": null,
+    "parent_id": 144195,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 144197,
+    "suite_id": 20179,
+    "name": "XXB Signing Period Open",
+    "description": null,
+    "parent_id": 144195,
+    "display_order": 3,
+    "depth": 1
+  }
+]

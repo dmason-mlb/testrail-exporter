@@ -1,0 +1,20 @@
+[
+  {
+    "id": 154827,
+    "suite_id": 20663,
+    "name": "Maps",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 304347,
+    "suite_id": 20663,
+    "name": "Point Of Interest (POI)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  }
+]

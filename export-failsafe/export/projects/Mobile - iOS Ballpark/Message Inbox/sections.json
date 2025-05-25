@@ -1,0 +1,38 @@
+[
+  {
+    "id": 11864,
+    "suite_id": 1340,
+    "name": "Message Inbox",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 144711,
+    "suite_id": 1340,
+    "name": "Message Inbox (New)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 144712,
+    "suite_id": 1340,
+    "name": "General",
+    "description": null,
+    "parent_id": 144711,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 144713,
+    "suite_id": 1340,
+    "name": "Message types and actions",
+    "description": null,
+    "parent_id": 144711,
+    "display_order": 4,
+    "depth": 1
+  }
+]

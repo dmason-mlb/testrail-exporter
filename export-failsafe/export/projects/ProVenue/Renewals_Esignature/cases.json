@@ -1,0 +1,572 @@
+[
+  {
+    "id": 31123632,
+    "title": "verify  SIG_AGMT_STS_TYPE_CODE column updated to CN when cancel the adobe sign",
+    "section_id": 1721441,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 391,
+    "created_on": 1690923132,
+    "updated_by": 391,
+    "updated_on": 1690925483,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 625111,
+    "display_order": 1,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Set async.signature.cancel.agreements.enabled property true\r\nA reservation transaction should be completed for a package which is associated to payment plan with Signature Template\r\n\r\n",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to My tickets with the patron",
+        "expected": "Login should be successful"
+      },
+      {
+        "content": "Click on \"MPV RENEWALS\" from the left hand menu Verify that the Renewal Group API is called",
+        "expected": "The \"MPV RENEWALS\" renew group page should be displayed and the Get Renewal Group API should be called The renew group page should be displayed"
+      },
+      {
+        "content": "Click on \"Renew\" button Verify that the Get Renewal Orders API is called",
+        "expected": "The cart page should be displayed"
+      },
+      {
+        "content": "Click on Continue to Checkout ",
+        "expected": "All the order details should be correct and the user should be navigated to renewal checkout page"
+      },
+      {
+        "content": "Enter the Payment method\nClick \"I AGREE TO THE FOLLOWING:\"\nClick Checkout\n\nverify Adobe Sign pop up displayed",
+        "expected": "Adobe Sign pop up should displayed"
+      },
+      {
+        "content": "Click Return to cart",
+        "expected": "Adobe sign pop up should closed & application should return to checkout page"
+      },
+      {
+        "content": " verify DB\nSIG_AGMT_STS_TYPE_CODE column in signature_agreement table",
+        "expected": "SIG_AGMT_STS_TYPE_CODE should display as CN"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31123722,
+    "title": "verify  SIG_AGMT_STS_TYPE_CODE column updated to NS after adobe sign checkout",
+    "section_id": 1721441,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 391,
+    "created_on": 1690925499,
+    "updated_by": 391,
+    "updated_on": 1690931139,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 625111,
+    "display_order": 2,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Set async.signature.cancel.agreements.enabled property true\r\nA reservation transaction should be completed for a package which is associated to payment plan with Signature Template\r\n\r\n",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to My tickets with the patron",
+        "expected": "Login should be successful"
+      },
+      {
+        "content": "Click on \"MPV RENEWALS\" from the left hand menu Verify that the Renewal Group API is called",
+        "expected": "The \"MPV RENEWALS\" renew group page should be displayed and the Get Renewal Group API should be called The renew group page should be displayed"
+      },
+      {
+        "content": "Click on \"Renew\" button Verify that the Get Renewal Orders API is called",
+        "expected": "The cart page should be displayed"
+      },
+      {
+        "content": "Click on Continue to Checkout ",
+        "expected": "All the order details should be correct and the user should be navigated to renewal checkout page"
+      },
+      {
+        "content": "Enter the Payment method\nClick \"I AGREE TO THE FOLLOWING:\"\nClick Checkout\n\nverify Adobe Sign pop up displayed",
+        "expected": "Adobe Sign pop up should displayed"
+      },
+      {
+        "content": " verify DB\nSIG_AGMT_STS_TYPE_CODE column in signature_agreement table",
+        "expected": "SIG_AGMT_STS_TYPE_CODE should display as NS for above order"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31123730,
+    "title": "verify  SIG_AGMT_STS_TYPE_CODE column updated to SN after adobe sign checkout",
+    "section_id": 1721441,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 391,
+    "created_on": 1690930985,
+    "updated_by": 391,
+    "updated_on": 1690930999,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 625111,
+    "display_order": 3,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Set async.signature.cancel.agreements.enabled property true\r\nA reservation transaction should be completed for a package which is associated to payment plan with Signature Template\r\n\r\n",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to My tickets with the patron",
+        "expected": "Login should be successful"
+      },
+      {
+        "content": "Click on \"MPV RENEWALS\" from the left hand menu Verify that the Renewal Group API is called",
+        "expected": "The \"MPV RENEWALS\" renew group page should be displayed and the Get Renewal Group API should be called The renew group page should be displayed"
+      },
+      {
+        "content": "Click on \"Renew\" button Verify that the Get Renewal Orders API is called",
+        "expected": "The cart page should be displayed"
+      },
+      {
+        "content": "Click on Continue to Checkout ",
+        "expected": "All the order details should be correct and the user should be navigated to renewal checkout page"
+      },
+      {
+        "content": "Enter the Payment method\nClick \"I AGREE TO THE FOLLOWING:\"\nClick Checkout\n\nverify Adobe Sign pop up displayed",
+        "expected": "Adobe Sign pop up should displayed"
+      },
+      {
+        "content": "Click continue to Adobe sign \n-sign the document & click \"Click to Sign\"\n",
+        "expected": "checkout should be successful and the confirmation page should be displayed"
+      },
+      {
+        "content": " verify DB\nSIG_AGMT_STS_TYPE_CODE column in signature_agreement table",
+        "expected": "SIG_AGMT_STS_TYPE_CODE should display as CN for above order"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31123723,
+    "title": "verify  SIG_AGMT_STS_TYPE_CODE column updated to CN when adobe sign got expired without sign",
+    "section_id": 1721441,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 391,
+    "created_on": 1690925770,
+    "updated_by": 391,
+    "updated_on": 1690926234,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 625111,
+    "display_order": 4,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Set async.signature.cancel.agreements.enabled property true\r\nA reservation transaction should be completed for a package which is associated to payment plan with Signature Template\r\n\r\n",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to My tickets with the patron",
+        "expected": "Login should be successful"
+      },
+      {
+        "content": "Click on \"MPV RENEWALS\" from the left hand menu Verify that the Renewal Group API is called",
+        "expected": "The \"MPV RENEWALS\" renew group page should be displayed and the Get Renewal Group API should be called The renew group page should be displayed"
+      },
+      {
+        "content": "Click on \"Renew\" button Verify that the Get Renewal Orders API is called",
+        "expected": "The cart page should be displayed"
+      },
+      {
+        "content": "Click on Continue to Checkout ",
+        "expected": "All the order details should be correct and the user should be navigated to renewal checkout page"
+      },
+      {
+        "content": "Enter the Payment method\nClick \"I AGREE TO THE FOLLOWING:\"\nClick Checkout\n\nverify Adobe Sign pop up displayed",
+        "expected": "Adobe Sign pop up should displayed"
+      },
+      {
+        "content": "Click continue to Adobe sign\n\nwait 30 minutes until the MPV cart get expired\n\nNote:Dont sign the doc",
+        "expected": " MPV cart should get expired"
+      },
+      {
+        "content": " verify DB\nSIG_AGMT_STS_TYPE_CODE column in signature_agreement table",
+        "expected": "SIG_AGMT_STS_TYPE_CODE should display as CN for the above order"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31123724,
+    "title": "verify  SIG_AGMT_STS_TYPE_CODE column updated to CN when MPV or PV application crash before user sign the adobe sign",
+    "section_id": 1721441,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 391,
+    "created_on": 1690926101,
+    "updated_by": 391,
+    "updated_on": 1690926316,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 625111,
+    "display_order": 7,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Set async.signature.cancel.agreements.enabled property true\r\nA reservation transaction should be completed for a package which is associated to payment plan with Signature Template\r\n\r\n",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to My tickets with the patron",
+        "expected": "Login should be successful"
+      },
+      {
+        "content": "Click on \"MPV RENEWALS\" from the left hand menu Verify that the Renewal Group API is called",
+        "expected": "The \"MPV RENEWALS\" renew group page should be displayed and the Get Renewal Group API should be called The renew group page should be displayed"
+      },
+      {
+        "content": "Click on \"Renew\" button Verify that the Get Renewal Orders API is called",
+        "expected": "The cart page should be displayed"
+      },
+      {
+        "content": "Click on Continue to Checkout ",
+        "expected": "All the order details should be correct and the user should be navigated to renewal checkout page"
+      },
+      {
+        "content": "Enter the Payment method\nClick \"I AGREE TO THE FOLLOWING:\"\nClick Checkout\n\nverify Adobe Sign pop up displayed",
+        "expected": "Adobe Sign pop up should displayed"
+      },
+      {
+        "content": "Click continue to Adobe sign\n-MPV application should crash or down\n\nNote:Dont sign the doc",
+        "expected": "MPV application should crash or down"
+      },
+      {
+        "content": " verify DB\nSIG_AGMT_STS_TYPE_CODE column in signature_agreement table",
+        "expected": "SIG_AGMT_STS_TYPE_CODE should display as CN for the above order"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31123727,
+    "title": "verify  SIG_AGMT_STS_TYPE_CODE column updated to SN after adobe sign checkout  where Consume Credit During Online Renewal \"Pre Apply\" & payment plan enabled \"Require Signature Even if Order Paid in Full\"",
+    "section_id": 1721441,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 391,
+    "created_on": 1690927398,
+    "updated_by": 391,
+    "updated_on": 1690927435,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 625111,
+    "display_order": 8,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Set async.signature.cancel.agreements.enabled property true\r\nCreate a package\r\nCreate a renewal group with  \"Pre Apply\" \r\nCreate a payment plan enabled \"Require Signature Even if Order Paid in Full\"\r\nA reservation transaction for above package \r\n",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to My tickets with the patron",
+        "expected": "Login should be successful"
+      },
+      {
+        "content": "Click on \"MPV RENEWALS\" from the left hand menu Verify that the Renewal Group API is called",
+        "expected": "The \"MPV RENEWALS\" renew group page should be displayed and the Get Renewal Group API should be called The renew group page should be displayed"
+      },
+      {
+        "content": "Click on \"Renew\" button Verify that the Get Renewal Orders API is called",
+        "expected": "The cart page should be displayed"
+      },
+      {
+        "content": "Click on Continue to Checkout ",
+        "expected": "All the order details should be correct and the user should be navigated to renewal checkout page"
+      },
+      {
+        "content": "Enter the Payment method\nClick \"I AGREE TO THE FOLLOWING:\"\nClick Checkout\n\nverify Adobe Sign pop up displayed",
+        "expected": "Adobe Sign pop up should displayed"
+      },
+      {
+        "content": "Click continue to Adobe sign \n-sign the document & click \"Click to Sign\"\n",
+        "expected": "checkout should be successful and the confirmation page should be displayed"
+      },
+      {
+        "content": " verify DB\nSIG_AGMT_STS_TYPE_CODE column in signature_agreement table",
+        "expected": "SIG_AGMT_STS_TYPE_CODE should display as SN for above order"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31123726,
+    "title": "verify  SIG_AGMT_STS_TYPE_CODE column updated to SN after adobe sign checkout  where Consume Credit During Online Renewal \"Full Auto\" & payment plan enabled \"Require Signature Even if Order Paid in Full\"",
+    "section_id": 1721441,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 391,
+    "created_on": 1690927111,
+    "updated_by": 391,
+    "updated_on": 1690930850,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 625111,
+    "display_order": 9,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Set async.signature.cancel.agreements.enabled property true\r\nCreate a package\r\nCreate a renewal group with  \"Full Auto\" \r\nCreate a payment plan enabled \"Require Signature Even if Order Paid in Full\"\r\nA reservation transaction for above package \r\n",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to My tickets with the patron",
+        "expected": "Login should be successful"
+      },
+      {
+        "content": "Click on \"MPV RENEWALS\" from the left hand menu Verify that the Renewal Group API is called",
+        "expected": "The \"MPV RENEWALS\" renew group page should be displayed and the Get Renewal Group API should be called The renew group page should be displayed"
+      },
+      {
+        "content": "Click on \"Renew\" button Verify that the Get Renewal Orders API is called",
+        "expected": "The cart page should be displayed"
+      },
+      {
+        "content": "Click on Continue to Checkout ",
+        "expected": "All the order details should be correct and the user should be navigated to renewal checkout page"
+      },
+      {
+        "content": "Enter the Payment method\nClick \"I AGREE TO THE FOLLOWING:\"\nClick Checkout\n\nverify Adobe Sign pop up displayed",
+        "expected": "Adobe Sign pop up should displayed"
+      },
+      {
+        "content": "Click continue to Adobe sign \n-sign the document & click \"Click to Sign\"\n",
+        "expected": "checkout should be successful and the confirmation page should be displayed"
+      },
+      {
+        "content": " verify DB\nSIG_AGMT_STS_TYPE_CODE column in signature_agreement table",
+        "expected": "SIG_AGMT_STS_TYPE_CODE should display as SN for above order"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31123729,
+    "title": "verify  SIG_AGMT_STS_TYPE_CODE column updated to SN after adobe sign checkout  where Consume Credit During Online Renewal \"Full Optional\" & payment plan enabled \"Require Signature Even if Order Paid in Full\"",
+    "section_id": 1721441,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 391,
+    "created_on": 1690930784,
+    "updated_by": 391,
+    "updated_on": 1690930900,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 625111,
+    "display_order": 10,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Set async.signature.cancel.agreements.enabled property true\r\nCreate a package\r\nCreate a renewal group with  \"Full Optional\" \r\nCreate a payment plan enabled \"Require Signature Even if Order Paid in Full\"\r\nA reservation transaction for above package \r\n",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to My tickets with the patron",
+        "expected": "Login should be successful"
+      },
+      {
+        "content": "Click on \"MPV RENEWALS\" from the left hand menu Verify that the Renewal Group API is called",
+        "expected": "The \"MPV RENEWALS\" renew group page should be displayed and the Get Renewal Group API should be called The renew group page should be displayed"
+      },
+      {
+        "content": "Click on \"Renew\" button Verify that the Get Renewal Orders API is called",
+        "expected": "The cart page should be displayed"
+      },
+      {
+        "content": "Click on Continue to Checkout ",
+        "expected": "All the order details should be correct and the user should be navigated to renewal checkout page"
+      },
+      {
+        "content": "Enter the Payment method\nClick \"I AGREE TO THE FOLLOWING:\"\nClick Checkout\n\nverify Adobe Sign pop up displayed",
+        "expected": "Adobe Sign pop up should displayed"
+      },
+      {
+        "content": "Click continue to Adobe sign \n-sign the document & click \"Click to Sign\"\n",
+        "expected": "checkout should be successful and the confirmation page should be displayed"
+      },
+      {
+        "content": " verify DB\nSIG_AGMT_STS_TYPE_CODE column in signature_agreement table",
+        "expected": "SIG_AGMT_STS_TYPE_CODE should display as SN for above order"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31123725,
+    "title": "verify  SIG_AGMT_STS_TYPE_CODE column updated to CN when adobe sign got expired without sign (Multiple Order)",
+    "section_id": 1721441,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 391,
+    "created_on": 1690926527,
+    "updated_by": 391,
+    "updated_on": 1690926724,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 625111,
+    "display_order": 11,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Set async.signature.cancel.agreements.enabled property true\r\nComplete multiple reservation transaction for a package which is associated to payment plan with Signature Template\r\n\r\n",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to My tickets with the patron",
+        "expected": "Login should be successful"
+      },
+      {
+        "content": "Click on \"MPV RENEWALS\" from the left hand menu Verify that the Renewal Group API is called",
+        "expected": "The \"MPV RENEWALS\" renew group page should be displayed and the Get Renewal Group API should be called The renew group page should be displayed"
+      },
+      {
+        "content": "Click on \"Renew\" button Verify that the Get Renewal Orders API is called",
+        "expected": "The cart page should be displayed"
+      },
+      {
+        "content": "Click on Continue to Checkout ",
+        "expected": "All the order details should be correct and the user should be navigated to renewal checkout page"
+      },
+      {
+        "content": "Enter the Payment method\nClick \"I AGREE TO THE FOLLOWING:\"\nClick Checkout\n\nverify Adobe Sign pop up displayed",
+        "expected": "Adobe Sign pop up should displayed"
+      },
+      {
+        "content": "Click continue to Adobe sign\n-sign the document & click \"Click to Sign\" ",
+        "expected": "Order1 document should get signed"
+      },
+      {
+        "content": "Order2 document should get displayed\n\nwait 30 minutes until the MPV cart get expired\n\nNote:Dont sign the doc",
+        "expected": " MPV cart should get expired"
+      },
+      {
+        "content": " verify DB\nSIG_AGMT_STS_TYPE_CODE column in signature_agreement table",
+        "expected": "SIG_AGMT_STS_TYPE_CODE should display as CN for the above order"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31123728,
+    "title": "verify  SIG_AGMT_STS_TYPE_CODE column updated to CN when MPV or PV application crash before user sign the adobe sign(Multiple order)",
+    "section_id": 1721441,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 391,
+    "created_on": 1690929663,
+    "updated_by": 391,
+    "updated_on": 1690929711,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 625111,
+    "display_order": 15,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Set async.signature.cancel.agreements.enabled property true\r\nComplete multiple reservation transaction for a package which is associated to payment plan with Signature Template\r\n\r\n",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to My tickets with the patron",
+        "expected": "Login should be successful"
+      },
+      {
+        "content": "Click on \"MPV RENEWALS\" from the left hand menu Verify that the Renewal Group API is called",
+        "expected": "The \"MPV RENEWALS\" renew group page should be displayed and the Get Renewal Group API should be called The renew group page should be displayed"
+      },
+      {
+        "content": "Click on \"Renew\" button Verify that the Get Renewal Orders API is called",
+        "expected": "The cart page should be displayed"
+      },
+      {
+        "content": "Click on Continue to Checkout ",
+        "expected": "All the order details should be correct and the user should be navigated to renewal checkout page"
+      },
+      {
+        "content": "Enter the Payment method\nClick \"I AGREE TO THE FOLLOWING:\"\nClick Checkout\n\nverify Adobe Sign pop up displayed",
+        "expected": "Adobe Sign pop up should displayed"
+      },
+      {
+        "content": "Click continue to Adobe sign\n-MPV application should crash or down\n\nNote:Dont sign the doc",
+        "expected": "MPV application should crash or down"
+      },
+      {
+        "content": " verify DB\nSIG_AGMT_STS_TYPE_CODE column in signature_agreement table",
+        "expected": "SIG_AGMT_STS_TYPE_CODE should display as CN for the above order"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  }
+]

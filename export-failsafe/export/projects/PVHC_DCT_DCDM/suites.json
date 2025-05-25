@@ -1,0 +1,79 @@
+[
+  {
+    "id": 610897,
+    "name": "PVHC",
+    "description": null,
+    "project_id": 251,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/610897"
+  },
+  {
+    "id": 611383,
+    "name": "DCT",
+    "description": null,
+    "project_id": 251,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/611383"
+  },
+  {
+    "id": 611384,
+    "name": "DCDM",
+    "description": null,
+    "project_id": 251,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/611384"
+  },
+  {
+    "id": 611385,
+    "name": "CrowdConnect",
+    "description": null,
+    "project_id": 251,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/611385"
+  },
+  {
+    "id": 611386,
+    "name": "PVForce",
+    "description": null,
+    "project_id": 251,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/611386"
+  },
+  {
+    "id": 686637,
+    "name": "PVHC2",
+    "description": null,
+    "project_id": 251,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/686637"
+  },
+  {
+    "id": 701438,
+    "name": "TDC Reports",
+    "description": "TDC Reports",
+    "project_id": 251,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/701438"
+  }
+]

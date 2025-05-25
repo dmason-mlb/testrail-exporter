@@ -1,0 +1,256 @@
+[
+  {
+    "id": 8895849,
+    "title": "Settings Page Items",
+    "section_id": 503067,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10572",
+    "created_by": 238,
+    "created_on": 1607706875,
+    "updated_by": 232,
+    "updated_on": 1699467257,
+    "estimate": null,
+    "estimate_forecast": "1m 33s",
+    "suite_id": 121946,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user is logged into MLB app on Fire TV",
+    "custom_steps": "WHEN user selects 'Settings' from the top nav",
+    "custom_expected": "THEN the settings page is displayed\r\nAND Login/Log Out\r\nAND Favorite Teams\r\nAND Following Teams\r\nAND Hide Spoilers\r\nAutoplay Featured Content (this may not show if the device is in an excluded audience like AFTT devices or may be feature toggled off so will not display)\r\nAND Get MLB.TV (Only for logged out users)\r\nAND Terms of Service\r\nAND Contact Support\r\nAND the app version should be displayed in the bottom right",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8895850,
+    "title": "Terms of Service",
+    "section_id": 503067,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10572",
+    "created_by": 238,
+    "created_on": 1607707197,
+    "updated_by": 232,
+    "updated_on": 1699467137,
+    "estimate": null,
+    "estimate_forecast": "58s",
+    "suite_id": 121946,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a user is on the settings page of the MLB app",
+    "custom_steps": "WHEN the user highlights \"Terms of Service\"",
+    "custom_expected": "THEN the following text is displayed on the left side of the screen\r\n\r\nFor Terms of Service, please visit mlb.com/tou\r\n\r\nFor Privacy Policy, please visit mlb.com/privacy\r\n\r\nPlease visit mlb.com/do-not-sell-or-share-my-personal-data to opt out of targeted advertising and tracking.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8895852,
+    "title": "Contact Support",
+    "section_id": 503067,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10572",
+    "created_by": 238,
+    "created_on": 1607707375,
+    "updated_by": 232,
+    "updated_on": 1646086242,
+    "estimate": null,
+    "estimate_forecast": "48s",
+    "suite_id": 121946,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user is on the settings page of the MLB app",
+    "custom_steps": "WHEN the user highlights \"Contact Support\"",
+    "custom_expected": "THEN the following text is displayed on the left side of the screen\r\n\r\nHave questions? For in-game support, please visit us on the web at mlb.tv/support",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 15947924,
+    "title": "Favorite Team Selector Navigation",
+    "section_id": 503067,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10041",
+    "created_by": 232,
+    "created_on": 1613057096,
+    "updated_by": 232,
+    "updated_on": 1699467366,
+    "estimate": null,
+    "estimate_forecast": "33s",
+    "suite_id": 121946,
+    "display_order": 4,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I am on the Settings Page\nAND I select the Favorite Teams Option\nAND I select a favorite team\nAND I click NEXT/Done",
+        "expected": "THEN I will be redirected to the Settings page"
+      },
+      {
+        "content": "WHEN I am on the Settings Page\nAND I select the Favorite Teams Option\nAND I click the back button",
+        "expected": "THEN I will be redirected back to the Settings page"
+      }
+    ]
+  },
+  {
+    "id": 15953232,
+    "title": "Hide Spoilers",
+    "section_id": 503067,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1613074483,
+    "updated_by": 232,
+    "updated_on": 1646086689,
+    "estimate": null,
+    "estimate_forecast": "1m 26s",
+    "suite_id": 121946,
+    "display_order": 5,
+    "custom_preconds": "GIVEN an MLB user is in MLB.TV App\r\n",
+    "custom_steps": "WHEN I turn Hide Spoilers ON\r\n",
+    "custom_expected": "THEN I can not see any scores or data that would give away an outcome of a game",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 23577779,
+    "title": "Following Team Selection",
+    "section_id": 503067,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1633111239,
+    "updated_by": 232,
+    "updated_on": 1646086850,
+    "estimate": null,
+    "estimate_forecast": "51s",
+    "suite_id": 121946,
+    "display_order": 6,
+    "custom_preconds": "GIVEN a MLB user is in MLB.TV App\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN they navigate to settings\nAND Select the following team picker\n",
+        "expected": "THEN they can choose one to many teams to follow"
+      },
+      {
+        "content": "WHEN a user has selected favorite and following teams",
+        "expected": "THEN the sort order of games presented on the homepage and the scores page presents favorite team first, then following teams, then the remaining games in time order"
+      }
+    ]
+  },
+  {
+    "id": 23635438,
+    "title": "Automated Team Selection Cases",
+    "section_id": 503067,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FATTV-65",
+    "created_by": 232,
+    "created_on": 1633357439,
+    "updated_by": 232,
+    "updated_on": 1633357475,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 121946,
+    "display_order": 7,
+    "custom_preconds": "GIVEN a user ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is is on the favorite teams page\nAND they select a team tile",
+        "expected": "THEN it will highlight the team tile to the dark team color AND And the cursor will focus on the activated “next” button"
+      },
+      {
+        "content": "WHEN the user is is on the favorite teams page\nAND they select a team tile \nAND they already have a favorite team selected",
+        "expected": "THEN the new favorite team tile will be dark and the former favorite team tile be be unselected And the cursor will focus on the activated “next” button"
+      },
+      {
+        "content": "WHEN the user is is on the following teams page",
+        "expected": "THEN they should see a list of unselected team tiles in order of division AND a center pane will appear"
+      },
+      {
+        "content": "WHEN the user is is on the following teams page\nAND they select a team tile",
+        "expected": "THEN it will highlight the team tile to the dark team color"
+      },
+      {
+        "content": "WHEN the user is is on the following teams page\nAND the user navigates from left to right or right to left across the info pane",
+        "expected": "THEN the cursor stays in the same row as it was before"
+      },
+      {
+        "content": "WHEN the user is is on the following teams page\nAND they focus on a team tile",
+        "expected": "THEN the center pane will show team details on focused team"
+      },
+      {
+        "content": "WHEN the user is is on the following teams page\n",
+        "expected": "THEN they can select many following teams"
+      }
+    ]
+  },
+  {
+    "id": 23941772,
+    "title": "Autoplay global setting",
+    "section_id": 503067,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1634148277,
+    "updated_by": 232,
+    "updated_on": 1642109094,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 121946,
+    "display_order": 8,
+    "custom_preconds": "GIVEN an MLB user is in MLB.TV App\r\nAND the featured space is occupied by media content that should autoplay (this requires entitled sign in, hide spoilers off)\r\nNOTE: If featured space is not occupied by content which can autoplay https://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search* with the attached json",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the global autoplay feature is on\n",
+        "expected": "THEN render the autoplay on/off setting"
+      },
+      {
+        "content": "WHEN the global autoplay feature is off\nNOTE: This can be achieved by proxying https://firebaseremoteconfig.googleapis.com:443/v1/projects/518717772311/namespaces/firebase:fetch AND/OR\thttps://firebaseremoteconfig.googleapis.com:443/v1/projects/73121217114/namespaces/firebase:fetch at app startup time with the variable \"enable_homepage_autoplay\" set to \"false\"\n",
+        "expected": "THEN the autoplay setting will not render"
+      }
+    ]
+  },
+  {
+    "id": 24334888,
+    "title": "Homepage Autoplay: setting preference default",
+    "section_id": 503067,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1635524219,
+    "updated_by": 232,
+    "updated_on": 1635524568,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 121946,
+    "display_order": 9,
+    "custom_preconds": "GIVEN global autoplay is turned on\r\n",
+    "custom_steps": "WHEN I visit the settings page\r\nAND the user has yet to select the autoplay setting\r\n",
+    "custom_expected": "THEN homepage autoplay is set to true by default",
+    "custom_steps_separated": null
+  }
+]

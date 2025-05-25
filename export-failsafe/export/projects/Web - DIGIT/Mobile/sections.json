@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1202887,
+    "suite_id": 408570,
+    "name": "New Section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1202888,
+    "suite_id": 408570,
+    "name": "Desktop",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1202889,
+    "suite_id": 408570,
+    "name": "Mobile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

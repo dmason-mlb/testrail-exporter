@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1626694,
+    "suite_id": 586463,
+    "name": "Live Activity",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1626695,
+    "suite_id": 586463,
+    "name": "Lock Screen layout / flow",
+    "description": null,
+    "parent_id": 1626694,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 1626696,
+    "suite_id": 586463,
+    "name": "Game is live LA functionality",
+    "description": null,
+    "parent_id": 1626694,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 1626697,
+    "suite_id": 586463,
+    "name": "Dynamic Island layout",
+    "description": null,
+    "parent_id": 1626694,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 1626698,
+    "suite_id": 586463,
+    "name": "Several Live Activities",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1626699,
+    "suite_id": 586463,
+    "name": "Spanish",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  }
+]

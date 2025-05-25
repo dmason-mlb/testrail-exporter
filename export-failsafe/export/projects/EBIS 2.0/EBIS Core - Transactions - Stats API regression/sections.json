@@ -1,0 +1,164 @@
+[
+  {
+    "id": 470443,
+    "suite_id": 108420,
+    "name": "Bereavement/Family Medical Emergency",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 470444,
+    "suite_id": 108420,
+    "name": "Paternity Leave",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 470445,
+    "suite_id": 108420,
+    "name": "Deceased List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 470446,
+    "suite_id": 108420,
+    "name": "Disqualified List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 470447,
+    "suite_id": 108420,
+    "name": "Military List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 470448,
+    "suite_id": 108420,
+    "name": "Voluntarily Retired List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 470449,
+    "suite_id": 108420,
+    "name": "Ineligible List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 470450,
+    "suite_id": 108420,
+    "name": "Strike List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 470451,
+    "suite_id": 108420,
+    "name": "Pending Suspension",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 470452,
+    "suite_id": 108420,
+    "name": "Suspended List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 470453,
+    "suite_id": 108420,
+    "name": "Restricted List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 470454,
+    "suite_id": 108420,
+    "name": "Temp Inactive List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 470540,
+    "suite_id": 108420,
+    "name": "MJ 7 Day Concussion IL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 470541,
+    "suite_id": 108420,
+    "name": "MJ 10 Day IL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 470542,
+    "suite_id": 108420,
+    "name": "MN-Place on 7-Day IL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 470544,
+    "suite_id": 108420,
+    "name": "MN-Place on 60-Day IL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 470545,
+    "suite_id": 108420,
+    "name": "MN-Reinstate from IL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 1144317,
+    "suite_id": 108420,
+    "name": "Stats Api",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  }
+]

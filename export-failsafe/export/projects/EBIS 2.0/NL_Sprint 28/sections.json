@@ -1,0 +1,47 @@
+[
+  {
+    "id": 120061,
+    "suite_id": 18316,
+    "name": "Reports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 120062,
+    "suite_id": 18316,
+    "name": "Arbitration",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 120119,
+    "suite_id": 18316,
+    "name": "MJC",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 121095,
+    "suite_id": 18316,
+    "name": "Global",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 121924,
+    "suite_id": 18316,
+    "name": "LARI",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  }
+]

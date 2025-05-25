@@ -1,0 +1,1450 @@
+[
+  {
+    "id": 16157521,
+    "title": "User without Prev Check-ins",
+    "section_id": 732675,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1614295429,
+    "updated_by": 288,
+    "updated_on": 1651530511,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has NO prev check-ins",
+    "custom_steps": "WHEN accessing My History on the Profile page via Home tab",
+    "custom_expected": "THEN My History page's display\r\nAND the below validation is expected",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user without any prev check-ins is on the My History Page",
+        "expected": "THEN user is shown 'My History' as title \nAND user is shown '+' on top right\nAND user is shown '- Check-ins', indicating no check-ins has occurred\nAND user is shown a dash('-') above 'Teams' and 'Ballparks', indicating teams and ballparks has no data"
+      },
+      {
+        "content": "",
+        "expected": "AND user is shown a scrollable section view without any event card shown\nAND a stadium image is shown \nAND 'No Games Added' shown bolded with subtext 'Be sure to check into games to add to your ballpark history.'"
+      },
+      {
+        "content": "WHEN user taps on dash above 'Teams'",
+        "expected": "THEN app does NOT respond as it is unable to open Teams page without data"
+      },
+      {
+        "content": "WHEN user taps on dash above 'Ballparks'",
+        "expected": "THEN app does NOT respond as it is unable to open Ballparks page without data"
+      },
+      {
+        "content": "WHEN user taps on '+' on top right",
+        "expected": "THEN user is shown the Add a Game page to allow addition of Past Games attended"
+      }
+    ]
+  },
+  {
+    "id": 22207729,
+    "title": "User with Prev Check-ins",
+    "section_id": 732675,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1629309815,
+    "updated_by": 288,
+    "updated_on": 1685484891,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has prev check-ins",
+    "custom_steps": "WHEN accessing My History on the Profile page via Home tab",
+    "custom_expected": "THEN My History page's display\r\nAND the below validation is expected",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user with prev check-ins is on the My History Page",
+        "expected": "THEN user is shown 'My History' as title \nAND user is shown '+' on top right\nAND user is shown a number prior to 'Check-ins', indicating the number of check-ins prev occurred\nAND user is shown a number above 'Teams', indicating the number of teams associated with the check-ins\nAND user is shown a number above 'Ballparks', indicating the number of ballparks associated with the check-ins"
+      },
+      {
+        "content": "",
+        "expected": "AND user is shown a scrollable section view of their prev check-ins (via individual event cards)\nAND the events are sequentially organized, most recent season and most recent game\nAND each event card shown at minimum has date, location, match-up (or title for NGE) and 'VIEW DETAILS' link\n(teams, logos and score are shown, if event is a ballgame)\n(notes and images are shown, if applicable)\n"
+      },
+      {
+        "content": "WHEN user taps on the number above 'Teams' \n(keeping note of number tapped)",
+        "expected": "THEN user is shown the Teams page with:\n* 'Teams' as title\n* same number prev shown on My History page above 'Teams Seen', indicating the number of teams associated with the check-ins\n* Win-Loss record and percentage above 'Home Team Record'\n* dropdown selection for Team Records (Overall/Home/Away) and pertinent team data"
+      },
+      {
+        "content": "WHEN user back navigates to My History",
+        "expected": "THEN user is shown 'My History' as title \nAND user is shown '+' on top right\nAND user is shown a number prior to 'Check-ins', indicating the number of check-ins prev occurred\nAND user is shown a number above 'Teams', indicating the number of teams associated with the check-ins\nAND user is shown a number above 'Ballparks', indicating the number of ballparks associated with the check-ins"
+      },
+      {
+        "content": "WHEN user taps on the number above 'Ballparks' \n(keeping note of number tapped, and number of Check-ins)",
+        "expected": "THEN user is shown the Ballparks page with:\n* 'Ballparks' as title\n* same number prev shown on My History page above 'Ballparks', indicating the number of ballparks associated with the check-ins\n* same number prev shown on My History page above 'Check-ins', indicating the number of prev check-ins\n* pertinent Ballpark data for each ballpark (venue image, name, loc and visits count) "
+      },
+      {
+        "content": "WHEN user back navigates to My History",
+        "expected": "THEN user is shown 'My History' as title \nAND user is shown '+' on top right\nAND user is shown a number prior to 'Check-ins', indicating the number of check-ins prev occurred\nAND user is shown a number above 'Teams', indicating the number of teams associated with the check-ins\nAND user is shown a number above 'Ballparks', indicating the number of ballparks associated with the check-ins"
+      },
+      {
+        "content": "WHEN user scrolls to bottom of page",
+        "expected": "THEN all expected cards are shown, with last event card fully visible"
+      },
+      {
+        "content": "WHEN user taps on '+' on top right",
+        "expected": "THEN user is shown the Add a Game page to allow addition of Past Games attended"
+      }
+    ]
+  },
+  {
+    "id": 16153713,
+    "title": "Teams",
+    "section_id": 155370,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1614276404,
+    "updated_by": 288,
+    "updated_on": 1651530438,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1 or greater)\r\nAND user is logged in with MLB account in Ballpark app\t\r\nAND user has prev check-ins\t",
+    "custom_steps": "WHEN accessing My History on the Profile page via Home tab",
+    "custom_expected": "THEN My History page's display\r\nAND the below validation is expected\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user with prev check-ins is on the My History Page\nAND taps on the number above 'Teams'\n(keeping note of number tapped)",
+        "expected": "THEN user is shown the Teams page with 'Teams' as header and back navigation arrow to the left."
+      },
+      {
+        "content": "",
+        "expected": "THEN the number of 'Teams Seen' is equal to the number shown on the My History Page\nAND the same amount of entries(teams) are shown in the list-view with the team logo, location, team name, record and percentage shown for each\n"
+      },
+      {
+        "content": "",
+        "expected": "THEN the Home Team Record shows the Won-Loss record with percentage"
+      },
+      {
+        "content": "",
+        "expected": "THEN dropdown selection shown for Team Records with 'Overall Team Records' shown as default"
+      },
+      {
+        "content": "WHEN user taps on 'Overall Team Records' expander ",
+        "expected": "THEN a bottom sheet modal appears with the three options:\n* Overall Team Records (with a check to the right, indicating current selection)\n* Home Team Records\n* Away Team Records"
+      },
+      {
+        "content": "WHEN user taps on 'Overall Team Records' within the bottom sheet",
+        "expected": "THEN the bottom sheet modal is dismissed and the Team page is shown without any updates, since previous selection was 'Overall Team Records'"
+      },
+      {
+        "content": "WHEN user taps on 'Overall Team Records' expander\nAND user taps on 'Home Team Records' within the bottom sheet",
+        "expected": "THEN the bottom sheet modal is dismissed and the Team page is shown without any changes to 'Teams Seen' and 'Home Team Record"
+      },
+      {
+        "content": "",
+        "expected": "THEN 'Home Team Records' is shown as selected option\nAND entries(teams) are shown in the list-view with the team logo, location, team name, record and percentage shown for each\n\n(note the amount of entries shown may or may not equate to the number shown for Teams seen)"
+      },
+      {
+        "content": "",
+        "expected": "THEN the user is able to scroll down to see all teams that are not shown in the current view"
+      },
+      {
+        "content": "WHEN user taps on 'Home Team Records' expander\n",
+        "expected": "THEN a bottom sheet modal appears with the three options:\n* Overall Team Records\n* Home Team Records (with a check to the right, indicating current selection)\n* Away Team Records"
+      },
+      {
+        "content": "WHEN user taps on 'Away Team Records' within the bottom sheet",
+        "expected": "THEN the bottom sheet modal is dismissed and the Team page is shown without any changes to 'Teams Seen' and 'Home Team Record'"
+      },
+      {
+        "content": "",
+        "expected": "THEN 'Away Team Records' is shown as selected option\nAND entries(teams) are shown in the list-view with the team logo, location, team name, record and percentage shown for each\n\n(note the amount of entries shown may or may not equate to the number shown for Teams seen)"
+      },
+      {
+        "content": "",
+        "expected": "THEN the user is able to scroll down to see all teams that are not shown in the current view"
+      },
+      {
+        "content": "WHEN user taps on 'Away Team Records' expander",
+        "expected": "THEN a bottom sheet modal appears with the three options:\n* Overall Team Records\n* Home Team Records\n* Away Team Records (with a check to the right, indicating current selection)"
+      },
+      {
+        "content": "WHEN user taps on 'X' within the bottom sheet",
+        "expected": "THEN the bottom sheet modal is dismissed and the Team page is shown without any changes to 'Teams Seen', 'Home Team Record', NOR team list-view"
+      }
+    ]
+  },
+  {
+    "id": 16153714,
+    "title": "Ballparks",
+    "section_id": 155370,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1614276404,
+    "updated_by": 288,
+    "updated_on": 1651529227,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has prev check-ins",
+    "custom_steps": "WHEN accessing My History on the Profile page via Home tab",
+    "custom_expected": "THEN My History page's display \r\nAND the below validation is expected",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user with prev check-ins is on the My History Page\nAND taps on the number above 'Ballparks'\n(keeping note of number tapped)",
+        "expected": "THEN user is shown the Ballparks page with 'Ballparks' as header and back navigation arrow to the left."
+      },
+      {
+        "content": "",
+        "expected": "THEN the number of 'Ballparks' is equal to the number shown on the My History Page\nAND the same amount of entries(Ballparks) are shown in the list-view with the ballpark image, ballpark name, location(city, state), and number of visits shown for each\nAND the entries(Ballparks) are ordered by most attended venue"
+      },
+      {
+        "content": "",
+        "expected": "THEN the user is able to scroll down to see all ballparks that are not shown in the current view"
+      }
+    ]
+  },
+  {
+    "id": 1284488,
+    "title": "Event Card Images",
+    "section_id": 155369,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1573017628,
+    "updated_by": 288,
+    "updated_on": 1634239495,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has prev check-ins",
+    "custom_steps": null,
+    "custom_expected": "THEN Checkin images are seen related to Team ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates to My History page (via Profile)",
+        "expected": "THEN MY History page displays all the check Ins"
+      },
+      {
+        "content": "WHEN the user views a previously check-in event card",
+        "expected": "THEN User sees all the images for related team with date, Venue and the Teams Logo in card list items"
+      }
+    ]
+  },
+  {
+    "id": 1284489,
+    "title": "Event Card Notes",
+    "section_id": 155369,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1573017801,
+    "updated_by": 288,
+    "updated_on": 1634239510,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has prev check-ins\r\n\r\nWIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225710/04+My+History+Tab",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates to My History page (via Profile)",
+        "expected": "THEN MY History page displays all the check Ins"
+      },
+      {
+        "content": "WHEN the user views a previously check-in event card WITHOUT notes ",
+        "expected": "THEN user had not added Notes \nAND the card shows this section collapsed"
+      },
+      {
+        "content": "WHEN the user views a previously check-in event card WITH Notes ",
+        "expected": "THEN the check-in event has Notes shown"
+      }
+    ]
+  },
+  {
+    "id": 1284490,
+    "title": "Event Card Check-In Indicator",
+    "section_id": 155369,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1573017864,
+    "updated_by": 288,
+    "updated_on": 1634925029,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has prev check-ins (LIVE and Historic)\r\n\r\nWIKI:https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225710/04+My+History+Tab",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates to My History page (via Profile)",
+        "expected": "THEN MY History page displays all the check Ins\n\n"
+      },
+      {
+        "content": "WHEN the user views a previously check-in event card that was added from a LIVE check-in \n(can occur with auto-checkin OR manual team tab checkin)",
+        "expected": "THEN event card displays an checkmark indicator next to the venue name signifying a LIVE check-in"
+      },
+      {
+        "content": "WHEN the user views a previously check-in event card that was added from a Historic check-in \n(can occur with '+' at top right)",
+        "expected": "THEN event card does NOT display an checkmark indicator next to the venue name signifying a LIVE check-in did NOT occur"
+      }
+    ]
+  },
+  {
+    "id": 1284491,
+    "title": "Event Card  Non-Game Event(NGE)",
+    "section_id": 155369,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1573017913,
+    "updated_by": 288,
+    "updated_on": 1634240359,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 6,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has prev check-ins for a Non-Game Event(NGE)\r\n\r\nWIKI : https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225710/04+My+History+Tab#id-04MyHistoryTab-MyHistory(mainscreen)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates to My History page (via Profile)",
+        "expected": "THEN MY History page displays all the check Ins"
+      },
+      {
+        "content": "WHEN the user views a previously check-in event card for a NonGame event",
+        "expected": "THEN event card displays event date (\"checkinDate\" adjusted by timezone from UTC)\nAND event card displays venue name (use string from service \"venueName\")\nAND event card displays event name in the area where matchup/score is typically shown for games  (only use 1 line if the text fits, can use two lines if text does not fit in 1)\nAND event card displays user's notes, if available (If user has not added comments, collapse this section)\nAND event card displays user's image, if available (If user has not added comments, collapse this section)"
+      }
+    ]
+  },
+  {
+    "id": 1284492,
+    "title": "Event Card  View Details",
+    "section_id": 155369,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1573017967,
+    "updated_by": 288,
+    "updated_on": 1634240690,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 7,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has prev check-ins\r\n\r\nWIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225710/04+My+History+Tab#id-04MyHistoryTab-MyHistory(mainscreen)",
+    "custom_steps": null,
+    "custom_expected": "\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates to My History page (via Profile)",
+        "expected": "THEN MY History page displays all the check Ins"
+      },
+      {
+        "content": "WHEN the user views a previously check-in event card",
+        "expected": "THEN \"View Details\" will be present on all check-in entries"
+      },
+      {
+        "content": "WHEN user taps \"View Details\" button OR anywhere within the event card",
+        "expected": "THEN user is shown the details page for that check-in.\n"
+      }
+    ]
+  },
+  {
+    "id": 1237065,
+    "title": "Game Event View Details",
+    "section_id": 155371,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1550613807,
+    "updated_by": 288,
+    "updated_on": 1635284631,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has prev check-ins for a game event\r\n\r\nWIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225710/04+My+History+Tab#id-04MyHistoryTab-MyHistory(mainscreen)",
+    "custom_steps": null,
+    "custom_expected": "![](index.php?/attachments/get/33235)                    ![](index.php?/attachments/get/33310)",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user has navigated to My History Page\nAND use taps on \"View Details\" for a game event",
+        "expected": "THEN the app will display the event date in the top header in the form of \"MMMM DD, YYYY\"(i.e. September 20, 2020)\nAND a \"Edit\" button to the right of it."
+      },
+      {
+        "content": "![](index.php?/attachments/get/33235)     ![](index.php?/attachments/get/33310)\n",
+        "expected": "AND the app will display a game score view in either the CURRENT or HISTORICAL form.\n*CURRENT displays the teams colors on each side in a trapezoid, and the scores in the center. The team logos and the team name should be on the right and left side, with the home team on the right.\n*HISTORICAL displays a white background with the historical logos and team name on each side and the score in the middle in the form of \"0 - 0\"\n\n\n(current is the check ins for the 2019 season and after; historical are for the 2018 season and prior)\n"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display event venue name and the venue location. \nAND a green checkmark on the right indicating if the check in is \"official\" or not (i.e. historic check ins are not official, only ones done with the check in view are official)"
+      },
+      {
+        "content": "![](index.php?/attachments/get/33238)    ![](index.php?/attachments/get/33246)     ![](index.php?/attachments/get/33249)",
+        "expected": "THEN the app will display user's section, row, and seat if available. Hidden if all are empty strings."
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display user's notes, if available (\"userCheckinText\")\n\n(section is collapsed if no the user notes added, as there is nothing to display)"
+      },
+      {
+        "content": "",
+        "expected": "AND each photo the user has associated with the check in is displayed. \n\n(section is collapsed if no the user photos added, as there is nothing to display)"
+      },
+      {
+        "content": "",
+        "expected": "AND a floating or static add photo button is present on the screen. \n\n(floating button shown, if multiple photos are already added)"
+      },
+      {
+        "content": "",
+        "expected": "AND a \"View Game Wrap\" button is displayed "
+      },
+      {
+        "content": "",
+        "expected": "AND a \"Delete Game\" button is displayed "
+      }
+    ]
+  },
+  {
+    "id": 1284498,
+    "title": "NonGame Event View Details",
+    "section_id": 155371,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1573019185,
+    "updated_by": 288,
+    "updated_on": 1634243197,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has prev check-ins for a Non-Game Event(NGE)",
+    "custom_steps": "This view is exactly the same as the [Game Event Details View](https://testrail.testeng.mlbinfra.net/index.php?/cases/view/1237065&group_by=cases:section_id&group_order=asc&group_id=155371) other than the \"Score\" display is only text for an NGE.",
+    "custom_expected": "[Sample NGE](https://drive.google.com/file/d/1heXd4EeRViyCzTFe-ZcBP0GztXAcSTz_/view?usp=sharing)",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user has navigated to My History Page\nAND use taps on \"View Details\" for a NonGame Event(NGE)",
+        "expected": "THEN the NGE details page is shown exactly like a Game Event entry except the step below."
+      },
+      {
+        "content": "",
+        "expected": "THEN the app will display a NGE \"Score\" view which only has a title in large text."
+      }
+    ]
+  },
+  {
+    "id": 1277400,
+    "title": "Event Card - Add Photo",
+    "section_id": 148955,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1569612275,
+    "updated_by": 282,
+    "updated_on": 1706280247,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has prev check-ins",
+    "custom_steps": null,
+    "custom_expected": "THEN Add photo button is shown ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user has navigated to My History Page\nAND use taps on \"View Details\" for a game event",
+        "expected": "THEN there should be an \"+ Add Photos Button\" just above the game wrap button"
+      },
+      {
+        "content": "WHEN a user taps the \"+ Add Photos\" button",
+        "expected": "THEN an selection dialog should be presented with options to use the camera or photo gallery"
+      },
+      {
+        "content": "WHEN a user selects the photo gallery button",
+        "expected": "THEN the native photo gallery should be presented with the option to select multiple images\n\n(Permissions may be presented and will need to be allowed)"
+      },
+      {
+        "content": "WHEN user selects photo(s) ",
+        "expected": "THEN the selected photos should be added to the event"
+      },
+      {
+        "content": "WHEN a user selects the camera button",
+        "expected": "THEN the camera app should be presented\n\n(Permissions may be presented and will need to be allowed)\n\nAndroid 14 forces the user to choose which photos in their gallery they wish to extend access to BALLPARK.\n\n![](index.php?/attachments/get/13899910)\n"
+      },
+      {
+        "content": "WHEN user takes a photo",
+        "expected": "THEN the captured photos should be added to the event"
+      }
+    ]
+  },
+  {
+    "id": 1278979,
+    "title": "Event card - Photo Placeholders",
+    "section_id": 148955,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1570034877,
+    "updated_by": 288,
+    "updated_on": 1634244839,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has prev check-ins with photos",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN you open up the my history details view for a game",
+        "expected": "THEN each photo should have a grey placeholder with an icon and loading indicator "
+      },
+      {
+        "content": "WHEN the photo download/upload fails",
+        "expected": "THEN a placeholder icon that indicates a failed download will take the place of the loading icon and the loading indicator will stop"
+      },
+      {
+        "content": "WHEN the photo download/upload is successful",
+        "expected": "THEN the photo will be displayed instead of the placeholder "
+      },
+      {
+        "content": "WHEN a photo is uploaded",
+        "expected": "THEN the same conditions for downloading photos above apply"
+      },
+      {
+        "content": "WHEN you return to the main history screen after uploading photos are completed",
+        "expected": "THEN you should see the newly uploaded photos in the game card"
+      }
+    ]
+  },
+  {
+    "id": 1282116,
+    "title": "Event Card - Show/Hide floating Upload Button",
+    "section_id": 148955,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1571674189,
+    "updated_by": 288,
+    "updated_on": 1634244939,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has prev check-ins with photos\r\nAND user has prev check-ins without photos",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the history details page is open, if the blue text button \"+ Add New Photos\" is OFF screen ",
+        "expected": "THEN the blue, white text, floating button should be displayed"
+      },
+      {
+        "content": "WHEN the history details page is open, if the blue text button \"+ Add New Photos\" is ON screen ",
+        "expected": "THEN the blue, white text, floating button should NOT be displayed"
+      },
+      {
+        "content": "WHEN scrolling on the details page, if the blue text button \"+ Add New Photos\" goes from being OFF screen to ON screen ",
+        "expected": "THEN the blue, white text, floating button should fade OUT"
+      },
+      {
+        "content": "WHEN scrolling on the details page, if the blue text button \"+ Add New Photos\" goes from being ON screen to OFF screen ",
+        "expected": "THEN the blue, white text, floating button should fade IN"
+      },
+      {
+        "content": "WHEN the floating upload button is tapped ",
+        "expected": "THEN the same upload photo flow should be started"
+      }
+    ]
+  },
+  {
+    "id": 1282691,
+    "title": "Full Screen Photo View - Delete Photo",
+    "section_id": 148955,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1571949004,
+    "updated_by": 282,
+    "updated_on": 1706289266,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN User has at least one game in history with photos",
+    "custom_steps": null,
+    "custom_expected": "THEN the photo should seen in his account with the game",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a user taps on a photo that is finished loading",
+        "expected": "THEN the full screen photo view should be displayed"
+      },
+      {
+        "content": "WHEN a user taps the garbage can icon in the full screen photo view",
+        "expected": "THEN the user will be prompted to delete the photo\n\nAndroid Modal:\n\nDelete Photo? \nThis photo will be permanently deleted. \n\nCANCEL DELETE CTA in Blue colot text  "
+      },
+      {
+        "content": "WHEN a tap on DELETE ",
+        "expected": "THEN they should be popped back to the event details screen and the photo should be removed"
+      },
+      {
+        "content": "WHEN a user confirms the photo deletion and the response is unsuccessful",
+        "expected": "THEN (on Android) a dialog box should appear saying that the deletion failed\nTHEN (on iOS) a dialog box should appear saying the delete failed with the option to retry or cancel.\n\nwithout Network on Android: \n\nNetwork Error \nThis photo was not deleted. \nOK CTA "
+      },
+      {
+        "content": "(iOS ONLY) WHEN a user clicks retry to delete a photo deletion",
+        "expected": "THEN the dialog box is dismissed and the photo is either deleted successfully or fails and is taken back to step 3 or 4."
+      }
+    ]
+  },
+  {
+    "id": 1289454,
+    "title": "Testing App Permissions for Photo Uploads",
+    "section_id": 148955,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 214,
+    "created_on": 1575411996,
+    "updated_by": 288,
+    "updated_on": 1634245048,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN user is able to load photo ",
+    "custom_steps": null,
+    "custom_expected": "THEN photo is successfully uploaded in his account",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN app is freshly installed, WHEN gallery/camera is selected for photo upload",
+        "expected": "THEN Permission for external read storage should be prompted"
+      },
+      {
+        "content": "WHEN permission is allowed for gallery/camera",
+        "expected": "THEN gallery/camera is shown and permissions will not be prompted on subsequent gallery/camera selections."
+      },
+      {
+        "content": "WHEN permission is denied for gallery/camera ",
+        "expected": "THEN an alert should be shown that explains why permissions is needed and option to go to settings is shown."
+      }
+    ]
+  },
+  {
+    "id": 1298901,
+    "title": "Full Screen Photo View - Pinch to Zoom (iOS)",
+    "section_id": 148955,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 223,
+    "created_on": 1582064176,
+    "updated_by": 288,
+    "updated_on": 1634245135,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 6,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN The user is logged in and has history with at least one photo uploaded. Navigate to the Full Screen Photo View in a details view of a check in.",
+    "custom_steps": null,
+    "custom_expected": "THEN the background is all black with a full screen view of the photo. Pinching the photo resizes it. Also should be able to scroll around the photo if it is larger than the screen.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6686850,
+    "title": "Edit Check In View",
+    "section_id": 305335,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": 1703,
+    "refs": "BPA-5605",
+    "created_by": 223,
+    "created_on": 1588107969,
+    "updated_by": 288,
+    "updated_on": 1635284790,
+    "estimate": "1m",
+    "estimate_forecast": "1m",
+    "suite_id": 20556,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "The user has navigated into a My History Check In Detail View and then tapped the \"Edit\" button in the top right corner. ",
+    "custom_steps": "Areas of test include cancel and done actions, typing in SRS text field and user message text view and UI.",
+    "custom_expected": "Empty text fields and text view:                    With text in each field:\r\n\r\n![](index.php?/attachments/get/33328)                ![](index.php?/attachments/get/33329)\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps into any text field or view",
+        "expected": "THEN the keyboard appears, the user can enter or delete their text for each field.. "
+      },
+      {
+        "content": "WHEN the user reaches the character limit for a text field or view",
+        "expected": "THEN the user cannot type any more characters and no errors are shown.\nMax Character Counts\nSection: 100\nRow: 5\nSeat: 5\nUser Message: 1000"
+      },
+      {
+        "content": "WHEN the user taps the \"Cancel\" button (Android: and back button, iOS: and swipes down modal view)",
+        "expected": "THEN the view is dismissed and the users changes are not saved."
+      },
+      {
+        "content": "WHEN the user taps the \"Done\" button",
+        "expected": "THEN a loading view appears that says \"Saving\""
+      },
+      {
+        "content": "WHEN the request to save the user data is succuessful",
+        "expected": "THEN the view is dismissed and the users changes are saved and represented on the Details View."
+      },
+      {
+        "content": "WHEN the request fails",
+        "expected": "THEN an alert is shown giving the user the option to retry or go back to the edit view.\n![](index.php?/attachments/get/34100)\n"
+      }
+    ]
+  },
+  {
+    "id": 6687136,
+    "title": "[iOS]Delete Button",
+    "section_id": 305412,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 223,
+    "created_on": 1588269034,
+    "updated_by": 288,
+    "updated_on": 1652378560,
+    "estimate": "1m",
+    "estimate_forecast": "1m",
+    "suite_id": 20556,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "Logged in as a user, navigate to My History -> Click on a Check In Card View -> Details View (may need to scroll down)\r\n\r\n![](index.php?/attachments/get/34097)          ![](index.php?/attachments/get/34098)\r\n",
+    "custom_steps": "Tap the delete button to prompt an alert view to display.\r\n\r\n![](index.php?/attachments/get/34099)\r\n",
+    "custom_expected": "Confirmation results in showing a loading view. Cancel dismisses alert view only.\r\nOn success, the view is dismissed and the check in is removed from the main history view (iOS: may take a couple seconds if the user has 100+, 200+ check ins)\r\nOn failure, a retry view is shown.\r\n![](index.php?/attachments/get/34101)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6687699,
+    "title": "[Android]Delete Button",
+    "section_id": 305412,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 214,
+    "created_on": 1588793937,
+    "updated_by": 288,
+    "updated_on": 1652378545,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "Logged in as a user, navigate to My History -> Click on a Check In Card View -> Details View (may need to scroll down)",
+    "custom_steps": "Tap the delete button to prompt an alert view to display.",
+    "custom_expected": "Confirmation results in dismissal back to the main history screen if the call to delete succeeds. Cancel dismisses alert view only.\r\n\r\nOn success, the view is dismissed and the check in is removed from the main history view",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16153715,
+    "title": "Historic check-in display",
+    "section_id": 304649,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1614276412,
+    "updated_by": 288,
+    "updated_on": 1651529274,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1 or greater)\r\nAND user is logged in with MLB account in Ballpark app",
+    "custom_steps": "WHEN accessing My History on the Profile page via Home tab",
+    "custom_expected": "THEN My History page's display \r\nAND the below validation is expected",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is on the My History Page\nAND taps on '+' shown on top right corner",
+        "expected": "THEN user is shown the Add a Game page to allow addition of Past Games attended"
+      },
+      {
+        "content": "",
+        "expected": "THEN user is shown the Add a Game page with 'My History | Add a Game' as header \nAND a dismiss 'X' to the left of the header\nAND a refresh icon to the right of the header"
+      },
+      {
+        "content": "",
+        "expected": "THEN 'Add Past Games' label is shown\nAND '* Required' label is shown\nAND 'Year*' dropdown is shown and highlighted for input\nAND 'Home Team *' dropdown is shown\nAND 'Away Team' dropdown is shown\nAND 'Month' dropdown is shown\nAND further down on the page the following text is shown: \"You will not be eligible to receive any offers or promotions related to past games. Check into live games to receive available offers and promotions.\"\nAND 'Find Your Game' button in blue color is shown at the button of the page, but disabled until the required fields have inputs\n "
+      },
+      {
+        "content": "WHEN user taps on 'Year*' dropdown",
+        "expected": "THEN a modal page is shown with 'Year*' at the top of the list with a selected radio button on the right \nAND there is an entry for each years from current year(2021) to 1900 as radio options in reverse sequential order\n"
+      },
+      {
+        "content": "",
+        "expected": "THEN the user is able to scroll down to see all years that are not shown in the current view"
+      },
+      {
+        "content": "WHEN user taps on 'Year*' radio option (already selected)",
+        "expected": "THEN the user is returned to the Add a Game page with 'Year* shown and 'Home Team*' highlighted for input"
+      },
+      {
+        "content": "WHEN user taps on 'Home Team*' dropdown",
+        "expected": "THEN a modal page is shown with 'Home Team*' at the top of the list with a selected radio button on the right \nAND there is an entry for each team (location and team name) as radio options in alphabetical order"
+      },
+      {
+        "content": "",
+        "expected": "THEN the user is able to scroll down to see all years that are not shown in the current view\nAND the user sees the last two entries of 'American League All-Stars' and 'National League All-Stars'"
+      },
+      {
+        "content": "WHEN user taps on 'Home Team*' radio option (already selected)",
+        "expected": "THEN the user is returned to the Add a Game page with 'Year* shown and 'Home Team*' highlighted for input"
+      },
+      {
+        "content": "WHEN user taps on 'Away Team' dropdown",
+        "expected": "THEN nothing is changed, as the dropdown is only enabled after making required selections"
+      },
+      {
+        "content": "WHEN user taps on 'Month' dropdown",
+        "expected": "THEN nothing is changed, as the dropdown is only enabled after making required selections"
+      }
+    ]
+  },
+  {
+    "id": 16175435,
+    "title": "Historic check-in to game in the Future",
+    "section_id": 304649,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1614369460,
+    "updated_by": 288,
+    "updated_on": 1651529310,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1 or greater)\r\nAND user is logged in with MLB account in Ballpark app",
+    "custom_steps": "WHEN accessing My History on the Profile page via Home tab",
+    "custom_expected": "THEN My History page's display \r\nAND the below validation is expected\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is on the My History Page\nAND taps on '+' shown on top right corner",
+        "expected": "THEN user is shown the Add a Game page"
+      },
+      {
+        "content": "WHEN user taps on 'Year*' dropdown and picks the current year\nAND user taps on 'Home Team*' dropdown and picks any team\nAND user taps on 'Month' dropdown and picks any month in the future\n",
+        "expected": "THEN 'Find Your Game' button is enabled"
+      },
+      {
+        "content": "WHEN user taps on 'Find Your Game' button",
+        "expected": "THEN user is shown the Add a Game page\nAND '< Back to Search' underneath the header \nAND 'No Games Found' with magnifying glass image in the middle of the page\nAND 'Go Back' button directly underneath"
+      },
+      {
+        "content": "WHEN user taps on '< Back to Search' button",
+        "expected": "THEN user is shown the Add a Game page with Add Past Games dropdowns"
+      },
+      {
+        "content": "WHEN user taps on 'Year*' dropdown and picks the current year\nAND user taps on 'Home Team*' dropdown and picks any team\nAND user taps on 'Month' dropdown and picks any month in the future",
+        "expected": "THEN user is shown the Add a Game page\nAND '< Back to Search' underneath the header \nAND 'No Games Found' with magnifying glass image in the middle of the page\nAND 'Go Back' button directly underneath"
+      },
+      {
+        "content": "WHEN user taps on 'Go Back' button",
+        "expected": "THEN user is shown the Add a Game page with Add Past Games dropdowns"
+      }
+    ]
+  },
+  {
+    "id": 16175436,
+    "title": "Historic check-in to game in the Past",
+    "section_id": 304649,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1614369480,
+    "updated_by": 288,
+    "updated_on": 1651529358,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1 or greater)\r\nAND user is logged in with MLB account in Ballpark app",
+    "custom_steps": "WHEN accessing My History on the Profile page via Home tab",
+    "custom_expected": "THEN My History page's display\r\nAND the below validation is expected\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is on the My History Page\nAND taps on '+' shown on top right corner",
+        "expected": "THEN user is shown the Add a Game page"
+      },
+      {
+        "content": "WHEN user taps on 'Year*' dropdown and picks the any previous year\nAND user taps on 'Home Team*' dropdown and picks any team\nAND user taps on 'Month' dropdown and picks any month\n(note: 2020 didn't have any games in April/May/June)\nAND taps on 'Find Your Game' button",
+        "expected": "THEN user is shown the Add a Game page\nAND '< Back to Search' underneath the header\nAND a label underneath with the month and year previously selected\nAND a list-view with all games meeting the criteria\nAND each entry has day of the week and date on the left, with the team names(i.e Marlins @ Braves) with team logos directly to left of the team name\nAnd a '+' on the right for any games user has not previously checked-in OR a badge for any games user has previously checked-in"
+      },
+      {
+        "content": "WHEN user taps on '+' on the game desired to be checked into",
+        "expected": "THEN user is shown the Add a Game page\nAND '< Back to Results' underneath the header\nAND the expected match up with team logos(visiting logo on left and home logo on the right) , team names(i.e Marlins @ Braves), date and ballpark\nAND 'What happened at the ballpark?' text as input field\nAND 'Where did you sit?' text followed by 'Section', 'Row', 'Seat' text as input fields\nAND a 'Save' button"
+      },
+      {
+        "content": "When user fills out details in 'What happened at the ballpark?' input field\nAND user fills out 'Section', 'Row', 'Seat' input fields\nAND taps 'Save' button",
+        "expected": "THEN user is shown the Add a Game page\nAND 'You have successfully added this game!' is shown\nAND 'Add Another Game' button with background blue color and white text is shown\nAND 'Or' is shown followed by 'Go Back to My History' button with background white color and blue text is shown"
+      },
+      {
+        "content": "WHEN user taps on 'Add Another Game' button",
+        "expected": "THEN user is shown the Add a Game page with Add Past Games dropdowns"
+      },
+      {
+        "content": "WHEN user inputs the desired parameters(Add Past Games dropdowns) for another search\nAND taps on 'Find Your Game' button",
+        "expected": "THEN user is shown the Add a Game page\nAND '< Back to Search' underneath the header\nAND a label underneath with the month and year previously selected\nAND a list-view with all games meeting the criteria\nAND each entry has day of the week and date on the left, with the team names(i.e Marlins @ Braves) with team logos directly to left of the team name\nAnd a '+' on the right for any games user has not previously checked-in OR a badge for any games user has previously checked-in"
+      },
+      {
+        "content": "WHEN user taps on '+' on the game desired to be checked into",
+        "expected": "THEN user is shown the Add a Game page\nAND '< Back to Results' underneath the header\nAND the expected match up with team logos(visiting logo on left and home logo on the right) , team names(i.e Marlins @ Braves), date and ballpark\nAND 'What happened at the ballpark?' text as input field\nAND 'Where did you sit?' text followed by 'Section', 'Row', 'Seat' text as input fields\nAND a 'Save' button"
+      },
+      {
+        "content": "When user fills out details in 'What happened at the ballpark?' input field\nAND user does NOT fill out 'Section', 'Row', 'Seat' input fields\nAND taps 'Save' button",
+        "expected": "THEN user is shown the Add a Game page\nAND 'You have successfully added this game!' is shown\nAND 'Add Another Game' button with background blue color and white text is shown\nAND 'Or' is shown followed by 'Go Back to My History' button with background white color and blue text is shown"
+      },
+      {
+        "content": "WHEN user taps on 'Add Another Game' button",
+        "expected": "THEN user is shown the Add a Game page with Add Past Games dropdowns"
+      },
+      {
+        "content": "WHEN user inputs the desired parameters(Add Past Games dropdowns) for another search\nAND taps on 'Find Your Game' button\n",
+        "expected": "THEN user is shown the Add a Game page\nAND '< Back to Search' underneath the header\nAND a label underneath with the month and year previously selected\nAND a list-view with all games meeting the criteria\nAND each entry has day of the week and date on the left, with the team names(i.e Marlins @ Braves) with team logos directly to left of the team name\nAnd a '+' on the right for any games user has not previously checked-in OR a badge for any games user has previously checked-in"
+      },
+      {
+        "content": "WHEN user taps on '+' on the game desired to be checked into",
+        "expected": "THEN user is shown the Add a Game page\nAND '< Back to Results' underneath the header\nAND the expected match up with team logos(visiting logo on left and home logo on the right) , team names(i.e Marlins @ Braves), date and ballpark\nAND 'What happened at the ballpark?' text as input field\nAND 'Where did you sit?' text followed by 'Section', 'Row', 'Seat' text as input fields\nAND a 'Save' button"
+      },
+      {
+        "content": "When user does NOT fill out details in 'What happened at the ballpark?' input field\nAND user fills out 'Section', 'Row', 'Seat' input fields\nAND taps 'Save' button",
+        "expected": "THEN user is shown the Add a Game page\nAND 'You have successfully added this game!' is shown\nAND 'Add Another Game' button with background blue color and white text is shown\nAND 'Or' is shown followed by 'Go Back to My History' button with background white color and blue text is shown"
+      },
+      {
+        "content": "WHEN user taps on 'Add Another Game' button",
+        "expected": "THEN user is shown the Add a Game page with Add Past Games dropdowns"
+      },
+      {
+        "content": "WHEN user inputs the desired parameters(Add Past Games dropdowns) for another search\nAND taps on 'Find Your Game' button\n",
+        "expected": "THEN user is shown the Add a Game page\nAND '< Back to Search' underneath the header\nAND a label underneath with the month and year previously selected\nAND a list-view with all games meeting the criteria\nAND each entry has day of the week and date on the left, with the team names(i.e Marlins @ Braves) with team logos directly to left of the team name\nAnd a '+' on the right for any games user has not previously checked-in OR a badge for any games user has previously checked-in"
+      },
+      {
+        "content": "WHEN user taps on '+' on the game desired to be checked into",
+        "expected": "THEN user is shown the Add a Game page\nAND '< Back to Results' underneath the header\nAND the expected match up with team logos(visiting logo on left and home logo on the right) , team names(i.e Marlins @ Braves), date and ballpark\nAND 'What happened at the ballpark?' text as input field\nAND 'Where did you sit?' text followed by 'Section', 'Row', 'Seat' text as input fields\nAND a 'Save' button"
+      },
+      {
+        "content": "When user does NOT fill out details in 'What happened at the ballpark?' input field\nAND user does NOT fill out 'Section', 'Row', 'Seat' input fields\nAND taps 'Save' button",
+        "expected": "THEN user is shown the Add a Game page\nAND 'You have successfully added this game!' is shown\nAND 'Add Another Game' button with background blue color and white text is shown\nAND 'Or' is shown followed by 'Go Back to My History' button with background white color and blue text is shown"
+      },
+      {
+        "content": "WHEN user taps on 'Go Back to My History' button",
+        "expected": "THEN user is taken back to My History page with 4 additional games that were just added\n* game with details and seat filled out\n* game with details filled out only\n* game with seat filled out only\n* game without details NOR seat filled out\n\n(this can be verified by seeing the inputted details underneath the scores for games that had filled out details, and tapping into VIEW DETAILS link to verify inputted seat info)"
+      },
+      {
+        "content": "",
+        "expected": "THEN the amount of Check-ins has been updated to have 4 additional\nAND the amount of Teams and Ballparks will increment if not previously part of the count\nAND tapping on the Teams OR Ballparks links will now include the additional data, if not previously included"
+      },
+      {
+        "content": "WHEN user is on the My History Page\nAND taps on '+' shown on top right corner\nAND performs a search for a previously checked in event",
+        "expected": "THEN user is shown the Add a Game page\nAND '< Back to Search' underneath the header\nAND a label underneath with the month and year previously selected\nAND a list-view with all games meeting the criteria\nAND each entry has day of the week and date on the left, with the team names(i.e Marlins @ Braves) with team logos directly to left of the team name\nAnd a '+' on the right for any games user has not previously checked-in OR a badge for any games user has previously checked-in"
+      },
+      {
+        "content": "WHEN user taps on badge on the right of the event previously checked in",
+        "expected": "THEN nothing occurs, preventing user from checking into a previously added event"
+      }
+    ]
+  },
+  {
+    "id": 6691967,
+    "title": "[IOS ONLY] Details - Swipe Back Support",
+    "section_id": 306182,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-8691",
+    "created_by": 238,
+    "created_on": 1590688084,
+    "updated_by": 238,
+    "updated_on": 1590705807,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user is on the My History tab\r\nAND has clicked on an event to view details",
+    "custom_steps": "WHEN the user swipes in from the right side of the screen",
+    "custom_expected": "THEN the user will be taken back to the My History tab",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 22208176,
+    "title": "[iOS] My History Deeplink",
+    "section_id": 1124418,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1629331592,
+    "updated_by": 288,
+    "updated_on": 1630354594,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5 or greater)",
+    "custom_steps": "WHEN user either taps on the CTA (deeplink) OR accesses deeplink to My History",
+    "custom_expected": "THEN user is taken to the top level of My History\r\nAND Back navigating from my history page should return to home tab",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is not open\nAND user is logged out\nAND user accesses ballpark://myhistory deeplink",
+        "expected": "THEN user is taken to login prompt"
+      },
+      {
+        "content": "WHEN user logs in",
+        "expected": "THEN user is taken to My History page"
+      },
+      {
+        "content": "WHEN user back navigates from the My History page by tapping 'Close'",
+        "expected": "THEN user is returned to Home Tab"
+      },
+      {
+        "content": "WHEN Ballpark app is not open\nAND user is logged in\nAND user accesses ballpark://myhistory deeplink",
+        "expected": "THEN user is taken to My History page"
+      },
+      {
+        "content": "WHEN user back navigates from the My History page by tapping 'Close'",
+        "expected": "THEN user is returned to Home Tab"
+      },
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged out\nAND user accesses ballpark://myhistory deeplink",
+        "expected": "THEN user is taken to login prompt"
+      },
+      {
+        "content": "WHEN user logs in",
+        "expected": "THEN user is taken to My History page"
+      },
+      {
+        "content": "WHEN user back navigates from the My History page by tapping 'Close'",
+        "expected": "THEN user is returned to Home Tab"
+      },
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://myhistory deeplink",
+        "expected": "THEN user is taken to My History page"
+      },
+      {
+        "content": "WHEN user back navigates from the My History page by tapping 'Close'",
+        "expected": "THEN user is returned to Home Tab (or whatever page user had prev open prior to accessing deeplink)"
+      }
+    ]
+  },
+  {
+    "id": 22207972,
+    "title": "[iOS] Event Details Deeplink",
+    "section_id": 1124418,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1629315988,
+    "updated_by": 288,
+    "updated_on": 1630357859,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "https://baseball.atlassian.net/browse/BP-9273\r\n\r\nAs a fan who loves My History, I want to able to conveniently add content to the event I logged today\r\n\r\n\r\nGIVEN the user downloaded the Ballpark app (10.5 or greater)\r\nAND the user has access to a CTA deeplink particular to a specific event previously checked-in on their account",
+    "custom_steps": "WHEN user either taps on the CTA (deeplink) OR accesses deeplink",
+    "custom_expected": "THEN user will be taken to My History top level view with the latest data from history service for the provided eventID\r\nAND Back navigating from the history details page should return to home tab\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is not open\nAND user is logged out\nAND user accesses deeplink with an eventID prev check-in on the acct\n\n*example: ballpark://myhistory?eventID=632826 (bparkdev@gmail in Staging)",
+        "expected": "THEN user is taken to login prompt"
+      },
+      {
+        "content": "WHEN user logs in",
+        "expected": "THEN user will be taken to My History Event details page of the provided eventID"
+      },
+      {
+        "content": "WHEN user back navigates from the My History Event page by tapping 'Close'",
+        "expected": "THEN user is returned to Home Tab"
+      },
+      {
+        "content": "WHEN Ballpark app is not open\nAND user is logged in\nAND user accesses deeplink with an eventID prev check-in on the acct",
+        "expected": "THEN user will be taken to My History Event details page of the provided eventID"
+      },
+      {
+        "content": "WHEN user back navigates from the My History Event page by tapping 'Close'",
+        "expected": "THEN user is returned to Home Tab"
+      },
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged out\nAND user accesses deeplink with an eventID prev check-in on the acct",
+        "expected": "THEN user is taken to login prompt"
+      },
+      {
+        "content": "WHEN user logs in",
+        "expected": "THEN user will be taken to My History Event details page of the provided eventID"
+      },
+      {
+        "content": "WHEN user back navigates from the My History Event page by tapping 'Close'",
+        "expected": "THEN user is returned to Home Tab"
+      },
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses deeplink with an eventID prev check-in on the acct",
+        "expected": "THEN user will be taken to My History Event details page of the provided eventID"
+      },
+      {
+        "content": "WHEN user back navigates from the My History Event page",
+        "expected": "THEN user is returned to Home Tab (or whatever page user had prev open prior to accessing deeplink)"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses deeplink with an eventID prev check-in on the acct (but not the latest check-in)",
+        "expected": "THEN user will be taken to My History top level view with the latest data from history service for the provided eventID\n\n(ensuring deeplink to non-latest event behaves)"
+      }
+    ]
+  },
+  {
+    "id": 22207973,
+    "title": "[iOS] Event Details Deeplink - invalid/missing eventID",
+    "section_id": 1124418,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1629316035,
+    "updated_by": 288,
+    "updated_on": 1634925036,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "https://baseball.atlassian.net/browse/BP-9273\r\nhttps://baseball.atlassian.net/browse/BPA-6133\r\n\r\nAs a fan who loves My History, I want to able to conveniently add content to the event I logged today\r\n\r\nGIVEN the user downloaded the Ballpark app (10.5 or greater)\r\n\r\n** TODO: VALIDATE THE BACK NAV FUNCTIONALITY FOR ANDROID",
+    "custom_steps": "WHEN the user has access to a CTA deeplink with an invalid/missing eventID",
+    "custom_expected": "THEN user is taken to the top level of My History\r\nAND Back navigating from my history page should return to home tab",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is not open\nAND user is logged out\nAND user accesses deeplink with an invalid eventID to any prev check-in on the acct\n\n*example: ballpark://myhistory?eventID=63282X (invalid eventID for bparkdev@gmail in Staging)",
+        "expected": "THEN user is taken to login prompt"
+      },
+      {
+        "content": "WHEN user logs in",
+        "expected": "THEN user is taken to the top level of My History"
+      },
+      {
+        "content": "WHEN user back navigates from the My History page\n\n*iOS - tapping 'Close'",
+        "expected": "THEN user is returned to Home Tab"
+      },
+      {
+        "content": "WHEN Ballpark app is not open\nAND user is logged in\nAND user accesses deeplink with an invalid eventID to any prev check-in on the acct",
+        "expected": "THEN user is taken to the top level of My History"
+      },
+      {
+        "content": "WHEN user back navigates from the My History page\n\n*iOS - tapping 'Close'",
+        "expected": "THEN user is returned to Home Tab"
+      },
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged out\nAND user accesses deeplink with an invalid eventID to any prev check-in on the acct",
+        "expected": "THEN user is taken to login prompt"
+      },
+      {
+        "content": "WHEN user logs in",
+        "expected": "THEN user is taken to the top level of My History"
+      },
+      {
+        "content": "WHEN user back navigates from the My History page\n\n*iOS - tapping 'Close'",
+        "expected": "THEN user is returned to Home Tab"
+      },
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses deeplink with an invalid eventID to any prev check-in on the acct",
+        "expected": "THEN user is taken to the top level of My History"
+      },
+      {
+        "content": "WHEN user back navigates from the My History page\n\n*iOS - tapping 'Close'",
+        "expected": "THEN user is returned to Home Tab (or whatever page user had prev open prior to accessing deeplink)"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "REPEAT ABOVE STEPS WITH MISSING EVENTID (instead of invalid eventID)\n\n*example: ballpark://myhistory?eventID=",
+        "expected": "THEN SAME EXPECTED BEHAVIOR LISTED SHOULD BE WITNESSED"
+      }
+    ]
+  },
+  {
+    "id": 22627169,
+    "title": "[Android] My History Deeplink",
+    "section_id": 1124418,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1630453997,
+    "updated_by": 282,
+    "updated_on": 1684770138,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 8,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater)",
+    "custom_steps": "WHEN use taps on the CTA (deeplink to My History)",
+    "custom_expected": "THEN user is taken to the top level of My History\r\nAND Back navigating from my history page should direct user to Home Page",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user has favorite team(s) set\nAND user accesses ballpark://myhistory deeplink",
+        "expected": "THEN user is taken to My History page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My History page",
+        "expected": "THEN user taken back to My Profile page \n"
+      },
+      {
+        "content": "WHEN user tap on back navigation on My Profile Page ",
+        "expected": "THEN user is taken back to Home tab"
+      }
+    ]
+  },
+  {
+    "id": 22627167,
+    "title": "[Android] Event Details Deeplink [internal - (HomePage context card)]",
+    "section_id": 1124418,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1630452154,
+    "updated_by": 282,
+    "updated_on": 1684774187,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 9,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "https://baseball.atlassian.net/browse/BPA-6133\r\n\r\nAs a fan who loves My History, I want to able to conveniently add content to the event I logged today\r\n\r\n\r\nGIVEN the user downloaded the Ballpark app (10.5 or greater)\r\nAND the user has access to a CTA deeplink particular to a specific event previously checked-in on their account (internal to BP app - such as a Context card on the HomePage)\r\n\r\nAcct: bparkdev@gmail.com\r\nDeeplink: ballpark://myhistory?eventID=632826",
+    "custom_steps": "WHEN user taps on the CTA (deeplink)",
+    "custom_expected": "THEN user will be taken to My History top level view with the latest data from history service for the provided eventID\r\nAND Back navigating from the history event details page should direct user to My History page (user will need to back nav again to return to Home page, bypassing My Profile page)\r\n\r\n(Noting: iOS directs user directly to home tab)\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses deeplink with an eventID prev check-in on the acct\n(ballpark://myhistory?eventID=632826)",
+        "expected": "THEN user will be taken to My History Event details page of the provided eventID"
+      },
+      {
+        "content": "WHEN user back navigates from the My History Event page (either via back arrow at the top of the page or via device arrow at the bottom)",
+        "expected": "THEN user is taken to My History page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My History page",
+        "expected": "THEN user is taken My Profile Page\nAND Home tab is highlighted in the bottom navigation bar\n\n"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses deeplink with an eventID prev check-in on the acct (but not the latest check-in)",
+        "expected": "THEN user will be taken to My History top level view with the latest data from history service for the provided eventID\n\n(ensuring deeplink to non-latest event behaves)"
+      }
+    ]
+  },
+  {
+    "id": 22627168,
+    "title": "[Android] Event Details Deeplink [internal - (HomePage context card)] - invalid/missing eventID",
+    "section_id": 1124418,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1630452154,
+    "updated_by": 282,
+    "updated_on": 1684774037,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20556,
+    "display_order": 10,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "https://baseball.atlassian.net/browse/BPA-6133\r\n\r\nAs a fan who loves My History, I want to able to conveniently add content to the event I logged today\r\n\r\nGIVEN the user downloaded the Ballpark app (10.5 or greater)\r\n\r\nACCT: bparkdev@gmail.com\r\nDeeplink: ballpark://myhistory?eventID=65285",
+    "custom_steps": "WHEN user taps on the CTA (deeplink) with an invalid/missing eventID",
+    "custom_expected": "THEN user is taken to the top level of My History\r\nAND Back navigating from my history page should direct user to Home page (user will NOT need to back nav from My Profile to Home page)",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses deeplink with an invalid eventID to any prev check-in on the acct\n(ballpark://myhistory?eventID=65285)",
+        "expected": "THEN user is taken to the top level of My History"
+      },
+      {
+        "content": "WHEN user back navigates from the My History page",
+        "expected": "THEN user is taken to MY PROFILE page \nAND Home tab is highlighted in the bottom navigation bar\n\n"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "REPEAT ABOVE STEPS WITH MISSING EVENTID (instead of invalid eventID)\n\n*example: ballpark://myhistory?eventID=",
+        "expected": "THEN SAME EXPECTED BEHAVIOR LISTED SHOULD BE WITNESSED"
+      }
+    ]
+  }
+]

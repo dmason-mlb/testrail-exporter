@@ -1,0 +1,520 @@
+[
+  {
+    "id": 30575426,
+    "title": "Pinto Configuration (Wallet Event Card Support)",
+    "section_id": 1679643,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1684169963,
+    "updated_by": 288,
+    "updated_on": 1684169963,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610057,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "[BP-10045](https://baseball.atlassian.net/browse/BP-10045 )\r\n[BPA-6710](https://baseball.atlassian.net/browse/BPA-6710 )\r\n\r\nPrerequisite - Remote Config Setup for: Pinto Configuration (Wallet Event Card Support)\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"enable_pinto\" as needed to force display.\r\n3. Save changes.\r\n4. Publish changes.\r\n\r\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\r\n\r\nRemote Configs \r\n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobile-npd/config)\r\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\r\n(can have condition set up to differentiate desired behavior for different envs/platform/target_audience)\r\n\r\nNOTE: Making changes to the configuration may take a few minutes to propagate and/or require a few app restarts\r\n\r\n\r\nGIVEN User has successfully authenticated into Ballpark (installed 12.1.0 or later)\r\nAND User has verified their account\r\nAND User has tickets to an upcoming game*",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the enable_pinto configuration has been updated and published to 'false'\nWHEN the user is on the Wallet Tab w/ ticketed events ",
+        "expected": "THEN the event information will contain The event date / time in the format (Ex. Sat, Jun 22 . 1:07 PM ET)\nAND beneath the date time will be the Matchup Info displayed as Away Team @ Home Team\nAND below the Matchup will be the Event's Venue\nAND user is shown Wallet event card(s) WITHOUT attached button options"
+      },
+      {
+        "content": "WHEN the user accesses the event card ",
+        "expected": "THEN the native listview for the event is shown*\n\n*For TDC clubs, if TM event then the TMSDK is presented"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN the enable_pinto configuration has been updated and published to 'true'\nWHEN the user is on the Wallet Tab w/ ticketed events ",
+        "expected": "THEN the event information will contain The event date / time in the format (Ex. Sat, Jun 22 . 1:07 PM ET)\nAND beneath the date time will be the Matchup Info displayed as Away Team @ Home Team\nAND below the Matchup will be the Event's Venue\nAND user is shown Wallet event card(s) WITH two attached button options\n*Button one to read “Sell Tickets”\n*Button two to read “Open Tickets”\n"
+      },
+      {
+        "content": "WHEN the user accesses the event card ",
+        "expected": "THEN the native listview for the event is shown*\n\n*For TDC clubs, if TM event then the TMSDK is presented"
+      },
+      {
+        "content": "",
+        "expected": "*further validation of the CTAs (OPEN and SELL) are covered within [Wallet Event Card support (Pinto)](https://testrail.testeng.mlbinfra.net/index.php?/suites/view/589798&group_by=cases:section_id&group_order=asc&group_id=1634091 )"
+      }
+    ]
+  },
+  {
+    "id": 30575421,
+    "title": "Sell Tickets CTA - TDC support",
+    "section_id": 1679644,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1684169950,
+    "updated_by": 288,
+    "updated_on": 1684169950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610057,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "As a Ballpark user, I want an easy & quick way to sell my baseball tickets through SeatGeek so that I can sell tickets to games I cannot attend\r\n\r\nGIVEN User has successfully authenticated into Ballpark (installed 12.1.0 or later)\r\nAND User has verified their account \r\nAND User has tickets to an upcoming game*\r\n\r\n\r\n*TDC Club",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user logs into BP app",
+        "expected": "THEN user is shown Home tab, where fans will only have the option to “Open Tickets”\n\n[NOTE: Next Ticketed Event card shows soonest event, if multiple ticketed events present on the acct]\n\n"
+      },
+      {
+        "content": "WHEN user navigates to Wallet View (via Tickets Tab)",
+        "expected": "THEN user is shown event card(s) with two button options \n*Button one to read “Sell Tickets” \n*Button two to read “Open Tickets”"
+      },
+      {
+        "content": "WHEN user taps 'Sell Tickets' for a particular Wallet event card",
+        "expected": "THEN BP app will deeplink user to TDC MyTickets webpage*\n\n*URL for TDC Clubs → [F2F Links](https://docs.google.com/spreadsheets/d/1ksOID6DNL-UFu1rfQjlt3th3h2aS1Nxtk7Q3rkL3fE4/edit#gid=0 )\n"
+      },
+      {
+        "content": "",
+        "expected": "AND user should be auto-logged in successfully (SSO), therefore not needing to re-enter credentials\n\n*note: if first time accessing the MPV site, then First and Last name prompt may show within webview"
+      }
+    ]
+  },
+  {
+    "id": 30575422,
+    "title": "Open Tickets CTA - TDC support",
+    "section_id": 1679644,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1684169950,
+    "updated_by": 288,
+    "updated_on": 1684169950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610057,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "As a Ballpark user, I want an easy & quick way to sell my baseball tickets through SeatGeek so that I can sell tickets to games I cannot attend\r\n\r\nGIVEN User has successfully authenticated into Ballpark (installed 12.1.0 or later)\r\nAND User has verified their account \r\nAND User has tickets to an upcoming game*\r\n\r\n\r\n*TDC Club",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user logs into BP app",
+        "expected": "THEN user is shown Home tab, where fans will only have the option to “Open Tickets”\n\n[NOTE: Next Ticketed Event card shows soonest event, if multiple ticketed events present on the acct]\n\n"
+      },
+      {
+        "content": "WHEN user navigates to Wallet View (via Tickets Tab)",
+        "expected": "THEN user is shown event card(s) with two button options \n*Button one to read “Sell Tickets” \n*Button two to read “Open Tickets”"
+      },
+      {
+        "content": "WHEN user taps 'Open Tickets' for a particular Wallet event card",
+        "expected": "THEN BP app will direct user to list view of their tickets "
+      },
+      {
+        "content": "WHEN user back navigates from the native ticket listview page",
+        "expected": "THEN user is returned to Wallet View within the Tickets Tab"
+      }
+    ]
+  },
+  {
+    "id": 30575423,
+    "title": "Sell Tickets CTA - TM support",
+    "section_id": 1679644,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1684169950,
+    "updated_by": 288,
+    "updated_on": 1684169950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610057,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "As a Ballpark user, I want an easy & quick way to sell my baseball tickets through SeatGeek so that I can sell tickets to games I cannot attend\r\n\r\nGIVEN User has successfully authenticated into Ballpark (installed 12.1.0 or later)\r\nAND User has verified their account\r\nAND User has tickets to an upcoming game*\r\n\r\n*TM Club\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user logs into BP app\n\n",
+        "expected": "THEN user is shown Home tab, where fans will only have the option to “Open Tickets”\n\n[NOTE: Next Ticketed Event card shows soonest event, if multiple ticketed events present on the acct]"
+      },
+      {
+        "content": "WHEN user navigates to Wallet View (via Tickets Tab)\n\n",
+        "expected": "THEN user is shown event card(s) with two button options\n*Button one to read “Sell Tickets”\n*Button two to read “Open Tickets”"
+      },
+      {
+        "content": "WHEN user taps 'Sell Tickets' for a particular Wallet event card",
+        "expected": "THEN BP app will deeplink user to Ticketmaster Account Manager webpage*\n\n*URL for TM Clubs → [F2F Links](https://docs.google.com/spreadsheets/d/1ksOID6DNL-UFu1rfQjlt3th3h2aS1Nxtk7Q3rkL3fE4/edit#gid=0 ) - i.e. https://am.ticketmaster.com/azdbacks/"
+      }
+    ]
+  },
+  {
+    "id": 30575424,
+    "title": "Open Tickets CTA - TM support",
+    "section_id": 1679644,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1684169950,
+    "updated_by": 288,
+    "updated_on": 1684169950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610057,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "As a Ballpark user, I want an easy & quick way to sell my baseball tickets through SeatGeek so that I can sell tickets to games I cannot attend\r\n\r\nGIVEN User has successfully authenticated into Ballpark (installed 12.1.0 or later)\r\nAND User has verified their account\r\nAND User has tickets to an upcoming game*\r\n\r\n*TM Club\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user logs into BP app\n\n",
+        "expected": "THEN user is shown Home tab, where fans will only have the option to “Open Tickets”\n\n[NOTE: Next Ticketed Event card shows soonest event, if multiple ticketed events present on the acct]"
+      },
+      {
+        "content": "WHEN user navigates to Wallet View (via Tickets Tab)\n\n",
+        "expected": "THEN user is shown event card(s) with two button options\n*Button one to read “Sell Tickets”\n*Button two to read “Open Tickets”"
+      },
+      {
+        "content": "WHEN user taps 'Open Tickets' for a particular Wallet event card",
+        "expected": "THEN BP app will direct user to TMSDK allowing the user to view their tickets within TM"
+      },
+      {
+        "content": "WHEN user back navigates from the TMSDK ticket listview page\n\n",
+        "expected": "THEN user is returned to Wallet View within the Tickets Tab"
+      }
+    ]
+  },
+  {
+    "id": 30575425,
+    "title": "NonGame Event - NOT supported for Sell (via Wallet Event Card)",
+    "section_id": 1679644,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1684169950,
+    "updated_by": 288,
+    "updated_on": 1684169950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610057,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-10267](https://baseball.atlassian.net/browse/BP-10267 )\r\n\r\n\r\nGIVEN User has successfully authenticated into Ballpark \r\nAND User has verified their account\r\nAND the user has NonGame event tickets already added to the BP account (TM and/or TDC events)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has NonGame event tickets already added to the BP account (TM and/or TDC events)\nWHEN user navigates to Wallet View (via Tickets Tab)",
+        "expected": "THEN user is shown event card(s) WITHOUT attached button options"
+      },
+      {
+        "content": "WHEN user taps on Wallet NonGame Event card\n\n",
+        "expected": "THEN user is directed to Listview of the event (if TDC event)\nOR\nTHEN user is directed into TMSDK webview (if TM event)"
+      }
+    ]
+  },
+  {
+    "id": 30575427,
+    "title": "Pinto - Analytics",
+    "section_id": 1679645,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BPA-6731",
+    "created_by": 288,
+    "created_on": 1684169965,
+    "updated_by": 288,
+    "updated_on": 1684169965,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610057,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "[BP-10060](https://baseball.atlassian.net/browse/BP-10060 ) / [BPA-6731](https://baseball.atlassian.net/browse/BPA-6731)\r\n\r\n**TESTING NOTES: THIS CASE REQUIRES TRACKING TO BE VERIFIED - MOST DIRECT WAY TO ACHIEVE THIS IS VIA A PROXY TOOL (.I.E. CharlesProxy)\r\nSetup: Connect to device to Charles to monitor the content passed.\r\n\r\nGIVEN the Ballpark application has the Pinto enabled\r\nAND the user downloaded the Ballpark app (12.1.0 or greater)\r\nAND the user has tickets already added to the BP account\r\nAND the Remote Config configuration for [enable_pinto is enabled is true)\r\nAND network traffic is monitored via Proxy tool (such as Charles/Proxyman)",
+    "custom_steps": "WHEN accessing/viewing Tickets events within BP app\r\n\r\n",
+    "custom_expected": "THEN tracking is monitored in Adobe\r\n\r\nOn clicks/taps of “sell tickets” fire a trackAction call with the following data:trackAction : MLB Ballpark : Tickets : Wallet : Sell Tickets Click\r\n\r\nOn clicks/taps of “open tickets” fire a trackAction call with the following data:trackAction : MLB Ballpark : Tickets : Wallet : Open Tickets Click\r\n\r\nOn clicks/taps of “event card” fire a trackAction call with the following data:trackAction : \"MLB Ballpark : Tickets : Wallet : Event Card Click",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user clicks/taps of “sell tickets”",
+        "expected": "THEN user is directed into Sell Tickets view \nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : Sell Tickets Click "
+      },
+      {
+        "content": "WHEN user clicks/taps of “open tickets”",
+        "expected": "THEN user is directed to Open Tickets view\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : Open Tickets Click"
+      },
+      {
+        "content": "WHEN user clicks/taps of “event card”",
+        "expected": "THEN the user is directed into the event card of particular club \nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : Event Card Click\"\n"
+      }
+    ]
+  },
+  {
+    "id": 30575428,
+    "title": "View All - Sell Tickets Button",
+    "section_id": 1679646,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1684169968,
+    "updated_by": 288,
+    "updated_on": 1684169968,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610057,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "[BP-10170](https://baseball.atlassian.net/browse/BP-10170 ) / [BPA-6844](https://baseball.atlassian.net/browse/BPA-6844 ) \r\n\r\nAs a Ballpark user, I want an easy & quick way to sell my baseball tickets through SeatGeek so that I can sell tickets to games I cannot attend\r\n\r\nGIVEN User has successfully authenticated into Ballpark (iOS: 12.1.6 or greater, Android: TBD[12.5.0?])\r\nAND User has verified their account\r\nAND the user has tickets already added to the BP account (TM and TDC events)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has navigated to View All within TicketsTab\nWHEN user taps 'Sell Tickets' for a particular entry (TDC event)",
+        "expected": "THEN BP app will deeplink user to TDC MyTickets webpage*\nAND user should be auto-logged in successfully (SSO), therefore not needing to re-enter credentials**\n\n*URL for TDC Clubs → [F2F Links](https://docs.google.com/spreadsheets/d/1ksOID6DNL-UFu1rfQjlt3th3h2aS1Nxtk7Q3rkL3fE4/edit#gid=0 )\n**note: if first time accessing the MPV site, then First and Last name prompt may show within webview"
+      },
+      {
+        "content": "GIVEN user has navigated to View All within TicketsTab\nWHEN user taps 'Sell Tickets' for a particular entry (TM event)",
+        "expected": "THEN BP app will deeplink user to Ticketmaster Account Manager webpage*\n\n*URL for TM Clubs → [F2F Links](https://docs.google.com/spreadsheets/d/1ksOID6DNL-UFu1rfQjlt3th3h2aS1Nxtk7Q3rkL3fE4/edit#gid=0 ) - i.e. https://am.ticketmaster.com/azdbacks/"
+      }
+    ]
+  },
+  {
+    "id": 30575429,
+    "title": "View All - Open Tickets Button",
+    "section_id": 1679646,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1684169968,
+    "updated_by": 288,
+    "updated_on": 1684169968,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610057,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "[BP-10170](https://baseball.atlassian.net/browse/BP-10170 ) / [BPA-6844](https://baseball.atlassian.net/browse/BPA-6844 ) \r\n\r\nGIVEN User has successfully authenticated into Ballpark (iOS: 12.1.6 or greater, Android: TBD[12.5.0?])\r\nAND User has verified their account\r\nAND the user has tickets already added to the BP account (TM and TDC events)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has navigated to View All within TicketsTab\nWHEN user taps 'Open Tickets' for a particular entry (TDC event)",
+        "expected": "THEN user is directed to Listview of the event"
+      },
+      {
+        "content": "GIVEN user has navigated to View All within TicketsTab\nWHEN user taps 'Open Tickets' for a particular entry (TM event)",
+        "expected": "THEN user is directed into TMSDK webview"
+      }
+    ]
+  },
+  {
+    "id": 30575430,
+    "title": "ListView - Sell Tickets Button",
+    "section_id": 1679646,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1684169968,
+    "updated_by": 288,
+    "updated_on": 1684169968,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610057,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "[BP-10173](https://baseball.atlassian.net/browse/BP-10173 ) / [BPA-6845](https://baseball.atlassian.net/browse/BPA-6845 ) \r\n\r\nAs a Ballpark user, I want an easy & quick way to sell my baseball tickets through SeatGeek so that I can sell tickets to games I cannot attend\r\n\r\nGIVEN User has successfully authenticated into Ballpark (iOS: 12.1.6 or greater, Android: TBD[12.5.0?])\r\nAND User has verified their account\r\nAND the user has tickets already added to the BP account (TDC event)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has tickets for TDC event\nAND user has navigated to Listview*\nWHEN user taps “Sell Tickets”\n\n*user can navigate to Listview many ways:\n**HomeTab > NTE Card\n**TicketsTab > Wallet Card\n**TicketsTab > View All entry",
+        "expected": "THEN BP app will deeplink user to TDC MyTickets webpage*\nAND user should be auto-logged in successfully (SSO), therefore not needing to re-enter credentials**\n\n*URL for TDC Clubs → [F2F Links](https://docs.google.com/spreadsheets/d/1ksOID6DNL-UFu1rfQjlt3th3h2aS1Nxtk7Q3rkL3fE4/edit#gid=0 )\n**note: if first time accessing the MPV site, then First and Last name prompt may show within webview"
+      }
+    ]
+  },
+  {
+    "id": 30575431,
+    "title": "ListView - Forward Tickets Button & View/Open Button",
+    "section_id": 1679646,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1684169968,
+    "updated_by": 288,
+    "updated_on": 1684169968,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610057,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "[BP-10173](https://baseball.atlassian.net/browse/BP-10173 ) / [BPA-6845](https://baseball.atlassian.net/browse/BPA-6845 ) \r\n\r\nAs a Ballpark user, I want an easy & quick way to sell my baseball tickets through SeatGeek so that I can sell tickets to games I cannot attend\r\n\r\nGIVEN User has successfully authenticated into Ballpark (iOS: 12.1.6 or greater, Android: TBD[12.5.0?])\r\nAND User has verified their account\r\nAND the user has tickets already added to the BP account (TDC event)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has tickets for TDC event\nAND user has navigated to Listview*\nWHEN user taps “Forward Tickets”\n\n*user can navigate to Listview many ways:\n**HomeTab > NTE Card\n**TicketsTab > Wallet Card\n**TicketsTab > View All entry",
+        "expected": "THEN user is directed into Forward Tickets view"
+      },
+      {
+        "content": "GIVEN user has tickets for TDC event\nAND user has navigated to Listview*\nWHEN user taps “View”/\"Open\"\n\n*user can navigate to Listview many ways:\n**HomeTab > NTE Card\n**TicketsTab > Wallet Card\n**TicketsTab > View All entry",
+        "expected": "THEN user is directed into Scanview of the tickets"
+      }
+    ]
+  },
+  {
+    "id": 30575432,
+    "title": "NonGame Event - NOT supported for Sell (via View All, Native Listview)",
+    "section_id": 1679646,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1684169968,
+    "updated_by": 288,
+    "updated_on": 1684169968,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610057,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-10267](https://baseball.atlassian.net/browse/BP-10267 )\r\n\r\n\r\nGIVEN User has successfully authenticated into Ballpark (iOS: 12.1.7 or greater, Android: 12.5.0)\r\nAND User has verified their account\r\nAND the user has NonGame event tickets already added to the BP account (TM and/or TDC events)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user has navigated to View All within TicketsTab \n",
+        "expected": "THEN for NonGame event(s), the user is NOT shown 'Sell Tickets' button BUT is shown 'Open Tickets' button\n\n(if other events are present)\nTHEN for Game event(s), the user is shown 'Sell Tickets' button AND is shown 'Open Tickets' button\n"
+      },
+      {
+        "content": "WHEN user taps on NonGame Event entry within View All page\nOR\nWHEN user taps on NonGame Event entry's 'Open Tickets' button \n\n*tapping on entry should behave the same as 'Open Tickets'",
+        "expected": "THEN user is directed to Listview of the event (if TDC event)\nOR\nTHEN user is directed into TMSDK webview (if TM event)"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN user has tickets for TDC NonGame event\nAND user has navigated to Listview*\n\n\n*user can navigate to Listview many ways:\n**HomeTab > NTE Card\n**TicketsTab > Wallet Card\n**TicketsTab > View All entry",
+        "expected": "THEN user is shown the Native listview \nAND user is NOT shown 'Sell Tickets' button (*Not supported for NGE) \nAND user is shown 'Forward Tickets' button "
+      },
+      {
+        "content": "WHEN user taps \"Open\" within the Listview",
+        "expected": "THEN user is directed into Scanview of the tickets"
+      },
+      {
+        "content": "WHEN user taps “Forward Tickets” within the Listview\n\n",
+        "expected": "THEN user is directed into Forward Tickets view"
+      }
+    ]
+  },
+  {
+    "id": 30575433,
+    "title": "Pinto+ - Analytics",
+    "section_id": 1679647,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BPA-6731",
+    "created_by": 288,
+    "created_on": 1684169981,
+    "updated_by": 288,
+    "updated_on": 1684169981,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610057,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "[BP-10170](https://baseball.atlassian.net/browse/BP-10170 ) / [BPA-6844](https://baseball.atlassian.net/browse/BPA-6844 ) \r\n[BP-10173](https://baseball.atlassian.net/browse/BP-10173 ) / [BPA-6845](https://baseball.atlassian.net/browse/BPA-6845 ) \r\n\r\n**TESTING NOTES: THIS CASE REQUIRES TRACKING TO BE VERIFIED - MOST DIRECT WAY TO ACHIEVE THIS IS VIA A PROXY TOOL (.I.E. CharlesProxy)\r\nSetup: Connect to device to Charles to monitor the content passed.\r\n\r\nGIVEN the Ballpark application has the Pinto enabled\r\nAND the user downloaded the Ballpark app (iOS: 12.1.6 or greater, Android: TBD[12.5.0?])\r\nAND the user has tickets already added to the BP account (TM and TDC events)\r\nAND the Remote Config configuration for [enable_pinto is enabled is true)\r\nAND network traffic is monitored via Proxy tool (such as Charles/Proxyman)",
+    "custom_steps": "WHEN accessing/viewing Tickets events within BP app\r\n\r\n",
+    "custom_expected": "THEN tracking is monitored in Adobe Analytics: \r\nOn tap of \"View All > Sell Tickets\" fire a trackAction call with the following data: \r\n*trackAction : MLB Ballpark : Tickets : Wallet : View All : Sell Tickets Click\r\nOn tap of \"View All > Open Tickets\" fire a trackAction call with the following data:\r\n*trackAction : MLB Ballpark : Tickets : Wallet : View All : Open Tickets Click\r\n\r\nOn tap of \"Listview > Sell Tickets\" fire a trackAction call with the following data: \r\n*trackAction : MLB Ballpark : Tickets : List View : Sell Tickets Click\r\nOn tap of \"Listview > Forward Tickets\" fire a trackAction call with the following data:\r\n*trackAction : MLB Ballpark : Tickets : List View : Forward Tickets Click",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has navigated to View All within TicketsTab\nWHEN user taps “Sell Tickets” for TDC club event",
+        "expected": "THEN user is directed into TDC MyTickets webpage\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : View All : Sell Tickets Click"
+      },
+      {
+        "content": "GIVEN user has navigated to View All within TicketsTab\nWHEN user taps “Open Tickets” for TDC club event",
+        "expected": "THEN user is directed to Listview of the event\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : View All : Open Tickets Click"
+      },
+      {
+        "content": "GIVEN user has navigated to View All within TicketsTab\nWHEN user taps “Sell Tickets” for TM club event",
+        "expected": "THEN user is directed into Ticketmaster Account Manager webpage\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : View All : Sell Tickets Click"
+      },
+      {
+        "content": "GIVEN user has navigated to View All within TicketsTab\nWHEN user taps “Open Tickets” for TM club event",
+        "expected": "THEN user is directed into TMSDK webview\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : View All : Open Tickets Click"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN user has tickets for TDC event\nAND user has navigated to Listview*\nWHEN user taps “Sell Tickets” for TDC club event\n\n\n*user can navigate to Listview many ways:\n**HomeTab > NTE Card\n**TicketsTab > Wallet Card\n**TicketsTab > View All entry",
+        "expected": "THEN user is directed into TDC MyTickets webpage\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : List View : Sell Tickets Click"
+      }
+    ]
+  }
+]

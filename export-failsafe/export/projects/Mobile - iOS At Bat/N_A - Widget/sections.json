@@ -1,0 +1,47 @@
+[
+  {
+    "id": 28180,
+    "suite_id": 3078,
+    "name": "Widget",
+    "description": "https://wiki.mlbam.com/display/mobile/iOS10+Today+Extension\n\nhttps://developer.apple.com/ios/human-interface-guidelines/extensions/widgets/\n\nYou'll need to use a Debug Build (not ENT) to test the Widget.",
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 28181,
+    "suite_id": 3078,
+    "name": "iPhone",
+    "description": null,
+    "parent_id": 28180,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 28286,
+    "suite_id": 3078,
+    "name": "Postseason/Offseason",
+    "description": null,
+    "parent_id": 28181,
+    "display_order": 7,
+    "depth": 2
+  },
+  {
+    "id": 28182,
+    "suite_id": 3078,
+    "name": "iPad",
+    "description": null,
+    "parent_id": 28180,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 28385,
+    "suite_id": 3078,
+    "name": "Postseason/Offseason",
+    "description": null,
+    "parent_id": 28182,
+    "display_order": 15,
+    "depth": 2
+  }
+]

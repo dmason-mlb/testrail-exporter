@@ -1,0 +1,61 @@
+[
+  {
+    "id": 51153,
+    "title": "Push Notifications(App News & Announcements/Ticket & Event Info)",
+    "section_id": 7434,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1427842346,
+    "updated_by": 40,
+    "updated_on": 1431716692,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1008,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": "Homebase Instructions\r\n\r\nTo send a General app & news Ballpark notifications from Homebase:\r\n1. Choose New-->Notification Ballpark from the item picker located at the bottom of the page\r\n2. Type an internal name\r\n3. Ensure that Ballpark Notification is selected from the Notification Type drop down\r\n4. Type in a Notification message\r\n5. Click on 'To Beta' or 'To Prod' *Not to prod will still send to qa. \r\n\r\nTo send team specific notifications from Homebase:\r\n1. Choose New-->Notification Ballpark from the item picker located at the bottom of the page\r\n2. Type an internal name\r\n3. Ensure that Ballpark Notification is selected from the Notification Type drop down\r\n4. Type in a Notification message\r\n5. Click on 'To Beta' or 'To Prod' *Not to prod will still send to qa.\r\n",
+    "custom_expected": "NA",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has logged into Ballpark for the first time\nAND the user has not chosen a favorite team",
+        "expected": "Then when the user gets to the Set Notification page during the onboard flow notifications, Sound, and App News & Announcements should be automatically enabled\nAND no teams should have notifications enabled"
+      },
+      {
+        "content": "When a user has logged into Ballpark for the first time\nAND the user has chosen a favorite team(s)",
+        "expected": "Then when the user gets to the Set Notification page during the onboard flow\nThen notifications, Sound, and App News & Announcements should be automatically enabled\nAND the favorite team(s) will be on top of the teams list \nAND notification will be enabled for that team(s)"
+      },
+      {
+        "content": "When a user is in the Ballpark app\nAND goes to Settings->Set Notifications page\nAND makes changes to the notifications settings and then backs out of the Set Notifications page\n",
+        "expected": "Then when the user goes back to Set Notifications page the changes previously made will have been retained"
+      },
+      {
+        "content": "When App News & Announcements notification setting is enabled\nAND from home base we send a general notification\n\n",
+        "expected": "Then we will receive the general notification\nAnd opening that notification will open Ballpark"
+      },
+      {
+        "content": "When you have a favorite team(s) selected\nAnd you have notifications enabled for that team(s)\nAnd from home base we send a team specific notification",
+        "expected": "Then we will receive the notification for only the team we subscribed to\nAnd tapping on the notification will bring you to the Tickets dashboard of that team"
+      },
+      {
+        "content": "When you have a favorite team(s) selected\nAnd you do NOT have notifications enabled for that team(s)\nAnd from home base we send a team specific notification",
+        "expected": "Then we will not receive any notifications for that team(s)"
+      },
+      {
+        "content": "When we go to Settings->Set Notifications page\nAND we enable notifications for any team that is not your favorite team\nAnd from home base we send a team specific notification for that team",
+        "expected": "Then we will receive the notification for that team we just enabled notifications for\nAnd tapping on the notification will bring you to the Tickets dashboard of that team"
+      },
+      {
+        "content": "When delete one of our favorite teams who also had notifications enabled for",
+        "expected": "Then when we look at that team in the Set Notifications page they will still have notifications enabled"
+      },
+      {
+        "content": "When the device is in stand by\nAND we receive a team or general notification\nAND we tap on the notification",
+        "expected": "THEN we will be taken to the team's ticket dashboard(if it was a team notification)\nOR we will be taken to the last view you were on(if it was a general notification)"
+      }
+    ]
+  }
+]

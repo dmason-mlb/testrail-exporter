@@ -1,0 +1,101 @@
+[
+  {
+    "id": 16017,
+    "suite_id": 1833,
+    "name": "Single C Workflow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 16018,
+    "suite_id": 1833,
+    "name": "Multi C Workflow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 16019,
+    "suite_id": 1833,
+    "name": "E-signature",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 24586,
+    "suite_id": 1833,
+    "name": "Widgets/Misc",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 24587,
+    "suite_id": 1833,
+    "name": "BOC - Contract Stateflow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 25459,
+    "suite_id": 1833,
+    "name": "Clipboard/MNC widget",
+    "description": null,
+    "parent_id": 24587,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 24588,
+    "suite_id": 1833,
+    "name": "Club -  Contract Stateflow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 28396,
+    "suite_id": 1833,
+    "name": "Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 28407,
+    "suite_id": 1833,
+    "name": "Non-first year",
+    "description": null,
+    "parent_id": 28396,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 28408,
+    "suite_id": 1833,
+    "name": "First-year Domestic",
+    "description": null,
+    "parent_id": 28396,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 28410,
+    "suite_id": 1833,
+    "name": "First-year International",
+    "description": null,
+    "parent_id": 28396,
+    "display_order": 23,
+    "depth": 1
+  }
+]

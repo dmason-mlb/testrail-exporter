@@ -1,0 +1,200 @@
+[
+  {
+    "id": 150213,
+    "suite_id": 20672,
+    "name": "International Amateur - Grandfathered Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 150214,
+    "suite_id": 20672,
+    "name": "International Amateur - Registration Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 150215,
+    "suite_id": 20672,
+    "name": "International Trainer/Agent",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 150216,
+    "suite_id": 20672,
+    "name": "International Amateur - Global",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 150217,
+    "suite_id": 20672,
+    "name": "Reg Admin widget",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 150218,
+    "suite_id": 20672,
+    "name": "Club Reg List widget",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 150219,
+    "suite_id": 20672,
+    "name": "International Amateur - Level 2 Registration",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 150220,
+    "suite_id": 20672,
+    "name": "International Amateur - Merge Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 150221,
+    "suite_id": 20672,
+    "name": "International Amateur - Reports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 150222,
+    "suite_id": 20672,
+    "name": "International Amateur - Contracts/Transactions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 150223,
+    "suite_id": 20672,
+    "name": "International Amateur - Profile Match",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 150224,
+    "suite_id": 20672,
+    "name": "Spreadsheet Upload",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 150225,
+    "suite_id": 20672,
+    "name": "International Amateur - Contracts/Transactions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 150226,
+    "suite_id": 20672,
+    "name": "International Prospect Report",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 150227,
+    "suite_id": 20672,
+    "name": "International Daily Report",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 150228,
+    "suite_id": 20672,
+    "name": "International Amateur - Scouting",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 150229,
+    "suite_id": 20672,
+    "name": "Scouting- Unregistered Profile",
+    "description": null,
+    "parent_id": 150228,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 150230,
+    "suite_id": 20672,
+    "name": "Scout Admin Clipboard",
+    "description": null,
+    "parent_id": 150228,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 150231,
+    "suite_id": 20672,
+    "name": "International Registration Reports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 150232,
+    "suite_id": 20672,
+    "name": "International Permission",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 150233,
+    "suite_id": 20672,
+    "name": "Registration Reviews widget",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 150234,
+    "suite_id": 20672,
+    "name": "International Video Log",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  }
+]

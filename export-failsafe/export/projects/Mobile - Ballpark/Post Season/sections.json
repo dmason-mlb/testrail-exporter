@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1567668,
+    "suite_id": 21240,
+    "name": "Non Game Event Postseason validation (NGE)",
+    "description": "Prior to the ticket remapping from a NonGame Event",
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 1748741,
+    "suite_id": 21240,
+    "name": "NGE Postseason Ticket Links",
+    "description": null,
+    "parent_id": 1567668,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 1567670,
+    "suite_id": 21240,
+    "name": "NGE Post Season Ticket Display",
+    "description": null,
+    "parent_id": 1567668,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 1567671,
+    "suite_id": 21240,
+    "name": "NGE Post Season Ticket Forwarding",
+    "description": "Ticket Forwarding works for Post Season Tickets",
+    "parent_id": 1567668,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 1567672,
+    "suite_id": 21240,
+    "name": "NGE Post Season Checkin",
+    "description": "Fans can check into postseason NGE events types and can unlock offers\n*Manual Checkin supported for NGE (if configured as part of the offer group)\n*Auto Checkin NOT supported for NGE (for V1)",
+    "parent_id": 1567668,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 154038,
+    "suite_id": 21240,
+    "name": "Post Season NGE remapped to Game Matchup",
+    "description": "As transition occurs to Game matchup from TBD/non-game event, BP app should update/display accordingly",
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 1567674,
+    "suite_id": 21240,
+    "name": "Post Season Ticket Forwarding",
+    "description": "Ticket Forwarding works for Post Season Tickets",
+    "parent_id": 154038,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 1567675,
+    "suite_id": 21240,
+    "name": "Post Season Checkin",
+    "description": "Fans can check into events of all postseason types and can unlock offers",
+    "parent_id": 154038,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 1567676,
+    "suite_id": 21240,
+    "name": "Post Season Upcoming Match-Ups",
+    "description": "Home Service provides an Upcoming Section and Card for tickets on sale\n*NGE NOT SUPPORTED WITH V1\n\nRequirements for Section/Cards shown (as of June 2021)\n* location enabled (passed from BP to Home Service)\n* available T-link for upcoming games (within 30 days)\n* stadium location is within 60 miles of device location\n* 90 mins after start time, the current day's upcoming matchup should no longer be shown AND the following upcoming matchup should be shown instead, if there is a following upcoming matchup for sale (T-Link available)",
+    "parent_id": 154038,
+    "display_order": 20,
+    "depth": 1
+  }
+]

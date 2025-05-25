@@ -1,0 +1,11 @@
+{
+  "id": 693,
+  "name": "Responsive Gameday",
+  "description": "If testing Gameday on QA use the QA Release build, if it's not available on that build then use the QA Internal build",
+  "project_id": 53,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/693"
+}

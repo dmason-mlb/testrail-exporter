@@ -1,0 +1,29 @@
+[
+  {
+    "id": 12226,
+    "suite_id": 1387,
+    "name": "Register Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 12227,
+    "suite_id": 1387,
+    "name": "Trainer/Agent",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 12228,
+    "suite_id": 1387,
+    "name": "Submissions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1641154,
+    "suite_id": 592735,
+    "name": "Force Upgrade",
+    "description": "[version_rules](https://gist.github.com/seancain/ddc95dd1c361ec9c604a9813061acb79#file-version_rules-js)\n\nCases intentionally ONLY validate Force Upgrade functionality.\n\nSuggested Upgrade functionality is no longer needed to message user, since we have integrated One Signal in-app messaging.\n\nNOTE: with iOS 11.0 Release, Logged Out User no longer witnesses the Force Upgrade message until after logging in. iOS has shifted to use OneSignal In-App Upgrade message which will prompt user whenever app is opened (regardless of state)\n\nNOTE: with Android 11.3 Release, Firebase Remote Config - Force Upgrade cases no longer showing the Force Upgrade prompt for neither a logged in user NOR a logged out user[BPA-6479](https://baseball.atlassian.net/browse/BPA-6479)",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  }
+]

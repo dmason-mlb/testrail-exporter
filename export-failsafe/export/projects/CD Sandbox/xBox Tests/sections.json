@@ -1,0 +1,47 @@
+[
+  {
+    "id": 795323,
+    "suite_id": 237931,
+    "name": "Authenticated",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 795324,
+    "suite_id": 237931,
+    "name": "Games",
+    "description": null,
+    "parent_id": 795323,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 795325,
+    "suite_id": 237931,
+    "name": "Unauthenticated",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 795326,
+    "suite_id": 237931,
+    "name": "Games",
+    "description": null,
+    "parent_id": 795325,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 802775,
+    "suite_id": 237931,
+    "name": "Standings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  }
+]

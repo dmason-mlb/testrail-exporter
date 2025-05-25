@@ -1,0 +1,191 @@
+[
+  {
+    "id": 2008354,
+    "suite_id": 702130,
+    "name": "Audio",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 2008355,
+    "suite_id": 702130,
+    "name": "Account (Automated)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 2008356,
+    "suite_id": 702130,
+    "name": "Accessibility",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 2008357,
+    "suite_id": 702130,
+    "name": "Chromecast",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 2008358,
+    "suite_id": 702130,
+    "name": "Watch Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 2008359,
+    "suite_id": 702130,
+    "name": "Games tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 2008360,
+    "suite_id": 702130,
+    "name": "PiP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 2008361,
+    "suite_id": 702130,
+    "name": "Onboarding",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 2008362,
+    "suite_id": 702130,
+    "name": "Push Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 2008363,
+    "suite_id": 702130,
+    "name": "Notification Types",
+    "description": "Curl commands and testing tools can be found here:\nhttps://wiki.mlbam.com/display/QAspace/Notification+Test+info\n\nTest all channel types using either the test tools. Can also pass test cases using actual alerts from production games and highlights but that is not feasible for spring training among other release timeframes.",
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 2008364,
+    "suite_id": 702130,
+    "name": "MLB.TV",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 2008365,
+    "suite_id": 702130,
+    "name": "Browse Menu",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 2008366,
+    "suite_id": 702130,
+    "name": "Passwordless Login (Automated)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 2034533,
+    "suite_id": 702130,
+    "name": "Team Pages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 2034534,
+    "suite_id": 702130,
+    "name": "Team Pages Section-Specific Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 2034536,
+    "suite_id": 702130,
+    "name": "Date Bar",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 2034537,
+    "suite_id": 702130,
+    "name": "Matchup",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 2034538,
+    "suite_id": 702130,
+    "name": "Product Links",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 2034539,
+    "suite_id": 702130,
+    "name": "Analytics",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 2034540,
+    "suite_id": 702130,
+    "name": "Postseason",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 2034541,
+    "suite_id": 702130,
+    "name": "Integration with MLB App",
+    "description": "[HOME-213]Test cases related to 'Hide Scores' feature enabled at the Settings level in the app.",
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  }
+]

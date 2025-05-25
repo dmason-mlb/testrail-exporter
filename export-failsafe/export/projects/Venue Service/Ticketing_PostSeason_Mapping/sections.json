@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1645386,
+    "suite_id": 594610,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1645387,
+    "suite_id": 594610,
+    "name": "Remap",
+    "description": null,
+    "parent_id": 1645386,
+    "display_order": 2,
+    "depth": 1
+  }
+]

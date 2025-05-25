@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1884,
+    "name": "Playstation 4.12 Release",
+    "description": null,
+    "start_on": null,
+    "started_on": 1632182400,
+    "is_started": true,
+    "due_on": 1632873600,
+    "is_completed": true,
+    "completed_on": 1633016046,
+    "project_id": 219,
+    "parent_id": null,
+    "refs": "PSTV-1363",
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/milestones/view/1884",
+    "milestones": []
+  },
+  {
+    "id": 1886,
+    "name": "Playstation 4.13 Release",
+    "description": "Follow on release addressing Auto-play bugs",
+    "start_on": null,
+    "started_on": 1633016126,
+    "is_started": true,
+    "due_on": null,
+    "is_completed": true,
+    "completed_on": 1634862735,
+    "project_id": 219,
+    "parent_id": null,
+    "refs": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/milestones/view/1886",
+    "milestones": []
+  },
+  {
+    "id": 1899,
+    "name": "Playstation 4.14 Release",
+    "description": null,
+    "start_on": null,
+    "started_on": 1636070400,
+    "is_started": true,
+    "due_on": 1636502400,
+    "is_completed": false,
+    "completed_on": null,
+    "project_id": 219,
+    "parent_id": null,
+    "refs": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/milestones/view/1899",
+    "milestones": []
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 135133,
+    "suite_id": 19602,
+    "name": "Stats Request",
+    "description": "![](index.php?/attachments/get/17215)\n![](index.php?/attachments/get/17235)",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 135134,
+    "suite_id": 19602,
+    "name": "Live Game",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 135135,
+    "suite_id": 19602,
+    "name": "Past Game",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

@@ -1,0 +1,343 @@
+[
+  {
+    "id": 48723,
+    "title": "Check-In Games",
+    "section_id": 7000,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1419023070,
+    "updated_by": 43,
+    "updated_on": 1505860398,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 910,
+    "display_order": 1,
+    "custom_preconds": "https://wiki.mlbam.com/display/QAspace/Stadium+Longitude-Latitude",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user is utilizing a QA Location Override build \nand navigates to a ballpark with a game inside the check in window\nand taps on the Check In button",
+        "expected": "Then they are able to complete the Check In flow successfully\n\nREPEAT for each Stadium"
+      },
+      {
+        "content": "When a user selects a Stadium with a game Scheduled\nand we are outside the 3 hour check in window\nand we look at the Check In button",
+        "expected": "Then the button will be greyed out\nand the button will be tappable\nand the user will receive an alert stating that check in opens 3 hours prior to game time"
+      },
+      {
+        "content": "When we have a Day / Night Doubleheader available at a Stadium \nand we have selected that Stadium that has a Day / Night Doubleheader\nand we Check In to a part of the Doubleheader\n\n*Note\nBefore testing do the following:\nRequest Schedules team to create day/night DH for current date\nCheck into first game\nString first game to final state\nVerify that game for the ballpark has changed to the night game\nCheck into night game\n\nJSON should show two different event ids.",
+        "expected": "Then we are able to successfully Checkin to the game \nand it has it's own unique ID for that particular Check In\n\nREPEAT for each part of the Doubleheader"
+      },
+      {
+        "content": "When there is a back to back doubleheader available\nand we have selected the Stadium where the back to back doubleheader is being played\nand attempts to Check In to the first game",
+        "expected": "Then they are able to Check In successfully\nAnd the user is also given credit for the second game of the doubleheader"
+      },
+      {
+        "content": "When a user is on a ballpark guide page\nand is within the Check In window\nand selects a Stadium that currently has a West Coast game in the state of in progress\nand the time is currently 12:01 AM EST and/or greater\nand taps the Check In button",
+        "expected": "Then the user is able to Check In successfully\n\n*test in prod using prod.master.location build"
+      },
+      {
+        "content": "When a user has checked into a game\nAND the user is looking at the Checked In! page",
+        "expected": "Then the user will see \"Your x check-in this season\" and below that \"This is your y check-in overall\n\nWhere x is the amount of check ins you have done at that stadium in that season year\nAnd y is the amount of check ins you have historically done at that stadium\nand the that number will be the same regardless of how many times you check into that particular game\n\n*compare numbers from journal stats"
+      },
+      {
+        "content": "When a user has checked into a game\nand looks in the xml for check in history",
+        "expected": "Then the user will see the check in with a game type of 'mlb'"
+      },
+      {
+        "content": "When a user selects a stadium\nAnd taps on the Check In button from the ballpark guide page",
+        "expected": "Then we are able to successfully Check In into that particular game"
+      },
+      {
+        "content": "When a user is on the Event Details\nand it is a game event inside the check in window\nand tap on the Check In button located in the below the matchup info",
+        "expected": "Then we are able to successfully perform a Check In"
+      },
+      {
+        "content": "When a user is on the Event Details page\nand it is game event outside of the check in window\n",
+        "expected": "Then the Check-In button will be disabled"
+      },
+      {
+        "content": "When the game pk has an Nth offer associated with it\nand the user checks into the game while meeting the Nth requirement\nand the user reaches the Checked In! page\n\n(Nth offers are unlocked when the 'Nth' person checks into a specific game)",
+        "expected": "Then the user will see the unlocked offer on the Checked In! page\nand tapping on that offer will bring up a description"
+      },
+      {
+        "content": "When a stadium has a Total Required Check In offer associated with it\nand the user has checked into a game & met that requirement\nand reaches the Checked In! page",
+        "expected": "Then the user will see the unlocked offer on the Checked In! page\nand tapping on that offer will bring up a description"
+      },
+      {
+        "content": "When a user has location services enabled \nand the user is located within 2km of ballpark or has mocked location\nand navigates to a ballpark page\nAnd taps the Check in button",
+        "expected": "Then the user should be taken to the Check in page\nand the Ballpark the user selected should appear as the selected location\nand the user should be able to check in successfully"
+      },
+      {
+        "content": "When a user has location services enabled \nAnd is NOT located within 2km of ballpark\nand navigates to a ballpark page\nAnd taps the Check in button",
+        "expected": "Then the user will be taken to the Maps screen (location error screen)\nand the user's location should be shown in relation to the Ballpark they are trying to check in to.\nand the user should see a message (see below) indicating that they don't appear to be At the Ballpark\nand there should be a 'refresh' button present on the screen.\n\nexample: \"Your device thinks you're not at Yankee Stadium. You must be at the ballpark to check in. Tap refresh to try again. If you continue to have problems, view the FAQ\""
+      },
+      {
+        "content": "When a user has location services DISABLED\nand navigates to a ballpark page with its check in window open\nand taps the Check in button",
+        "expected": "Then the user should be taken to the Maps screen\nand the user should see an error informing the user that they must enable location services to use At the Ballpark. \nand there should be a 'refresh' button present on the screen.\n\nMessage: \"Location services must be enabled to check in. Go to your Settings app to turn on location services for the Ballpark app.\""
+      },
+      {
+        "content": "When a user has location services enabled and is not near the ballpark\nor the user has location services NOT enabled\nand the user has navigated to a ballpark with its check in window open\nand the user has tapped on the Check In button\nand the user is brought to the Location error screen\nand taps the 'refresh' button",
+        "expected": "Then the user's location should attempt to be refreshed"
+      },
+      {
+        "content": "When a user is on the ballpark guide page\nand the Stadium has a game being played at it today\nand the current time is a maximum of 3 hours till game time\n",
+        "expected": "Then the Check In button will be visible for the user"
+      },
+      {
+        "content": "When a user selects a Stadium with a game inside of the Check In window\nand game state is set to a state of Delayed Start",
+        "expected": "Then the Check In button is still visible to the user\nand the user is able to perform a Check In"
+      },
+      {
+        "content": "When a user selects a Stadium with a game inside of the Check In window\nand the game state is set to Delay",
+        "expected": "Then the Check In button is still visible to the user\nand the user is able to perform a successful Check In"
+      },
+      {
+        "content": "When a user is on the Check In page\nand the content loads",
+        "expected": "Then the user will see 'Check In' in the header"
+      },
+      {
+        "content": "When a user is on the Check In page\nand taps the 'X' button in top left",
+        "expected": "Then the Check In page will close\nand the user will be returned to their previous page"
+      },
+      {
+        "content": "When a user is on the Check In page\nand the content loads\nand looks directly below the header",
+        "expected": "Then the user will see the date of the event (format: Sat, Sept 29)\nand the event start time will be to the right of the date (format: 12:05 p.m.)\nand there will be a dot in the middle of the date and time of game\nand the venue name will be below both"
+      },
+      {
+        "content": "When a user is on the Check In page\nand looks below the date / venue info",
+        "expected": "Then the user will see the game's matchup (format: away team vs. home team)"
+      },
+      {
+        "content": "When a user is on the check in page\nand the user enters in text in the caption box\nand the user checks into the game",
+        "expected": "Then when the user looks at the event in Journal they will see the caption they had entered in on the check in page"
+      },
+      {
+        "content": "When a user is on the Check In page\nand taps the camera button below the Event Information",
+        "expected": "Then the user will be taken to the Choose Image menu with options of Camera, Photo Library, and Cancel"
+      },
+      {
+        "content": "When a user is on the Check In page\nand taps on the camera button below the Event Information\nand either chooses to take photo or choose from gallery",
+        "expected": "THEN the user will be brought to the upload/edit flow \nand the image that was taken or chosen will display on the page viewer"
+      },
+      {
+        "content": "When a user has completed uploading a photo in the check in screen\nand the user closes the upload confirmation page",
+        "expected": "THEN the user will be brought back to the Check In page\nand the user will see their added photo on the page"
+      },
+      {
+        "content": "When a user is on the Check In Page\nAnd the user has added a photo",
+        "expected": "Then the user will see an x button on the top right of the photo"
+      },
+      {
+        "content": "When a user is on the Check In page\nand fills in data for the Section, Row, and Seat field\nand completes the Check In successfully",
+        "expected": "Then we are able to see the Section area stored on the server\nand we are able to see the Row area stored on the server\nand we are able to see the Seat area stored on the server\n\n(Verify via the check in history xml for the account that was used)"
+      },
+      {
+        "content": "When a user is on the Check In page\nand looks at the top right\nor looks at the bottom of the page",
+        "expected": "Then the user will see a Check In button\nand tapping this button will complete a Check In \nand the user will be brought to the Checked In! confirmation page"
+      },
+      {
+        "content": "When a user is on the Checked In! page\nand taps the 'X' button on the top left",
+        "expected": "Then the user will be returned to the where the check in was initiated"
+      },
+      {
+        "content": "When a user is on the Checked In! page\nand looks below the header",
+        "expected": "They will see a message stating 'Welcome To: '<Ballpark Name>'"
+      },
+      {
+        "content": "When a user is on the Checked In! page\nand looks below the welcome message\n",
+        "expected": "Then the user will see the matchup info (format: away vs. home)"
+      },
+      {
+        "content": "When a user is on the Checked In! page\nand has unlocked an offer(s)\nand looks below the matchup info",
+        "expected": "Then the user will see a messages stating 'You've unlocked offers'\nand below that will be a list of offers the user has unlocked\nand tapping one of those offers will bring the user to the offer page"
+      }
+    ]
+  },
+  {
+    "id": 1013116,
+    "title": "Check-In Sharing",
+    "section_id": 7000,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1494279514,
+    "updated_by": 43,
+    "updated_on": 1494280864,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 910,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user hasn't logged into Facebook inside of the application before\nand selects a Stadium our device believes we are at\nand the checkin button is enabled\nand taps the Checkin button\n",
+        "expected": "Then the user will see the permissions message box with two options:\n'Don't Allow' and 'OK'\nand an OK button to allow the app to post on the user's behalf"
+      },
+      {
+        "content": "When a user hasn't logged into Facebook inside of the application before\nand selects a Stadium our device believes we are at\nand the checkin button is enabled\nand taps the Checkin button\nand enabled the Facebook and Twitter switch\nand logged into Facebook and Twitter for the first time",
+        "expected": "Then the user will see the permissions message box with two options:\n'Don't Allow' and 'OK'\nAND tapping on 'Don't Allow' will disable Facebook and Twitter"
+      },
+      {
+        "content": "When a user hasn't logged into Facebook inside of the application before\nand selects a Stadium our device believes we are at\nand the checkin button is enabled\nand taps the Checkin button\nand enabled the Facebook and Twitter switch\nand logged into Facebook and Twitter for the first time\nand the user taps on 'Don't Allow'",
+        "expected": "Then the user will see the permissions message box with two options:\n'Don't Allow' and 'OK'\nAND the user taps on 'Don't Allow'\nTHEN the user will still be able to enable Facebook or Twitter"
+      },
+      {
+        "content": "When a user has just logged into Facebook for the first time\nand selects \"Allow\" on the permissions box\nand completes the Check In process\nand views that Facebook user's wall",
+        "expected": "Then we will see a post on Facebook for that particular check in"
+      },
+      {
+        "content": "When a user has previously logged into Facebook through the application\nand is on the Check In page\nand taps on the share icon for Facebook",
+        "expected": "Then the Facebook icon switches to enabled\nand no Facebook Login page appears"
+      },
+      {
+        "content": "When a user is on the Check In page\nand has enabled sharing via twitter or facebook\nand taps in the message cell underneath the event title\n",
+        "expected": "Then the the ghost text will disappear \nAND the user will be able to input their own message\nand this message will post to the enabled social media upon Check In"
+      },
+      {
+        "content": "When a user sets our device near a Stadium of a game we want to Checkin to\nand is on the ballpark guide page\nand there is game in that stadium on that day\nand attempts to Checkin\nand has enabled the Facebook switch\nand the user has typed in a message in the message box",
+        "expected": "Then the user is able to Checkin successfully\nand the Checkin posts to Facebook with and image of the ballpark they checked into and also with the message that the user typed"
+      },
+      {
+        "content": "When a user sets our device near a Stadium of a game we want to Checkin to\nand is on the ballpark guide page\nand there is game in that stadium on that day\nand attempts to Checkin\nand has enabled the Twitter switch\nAND the user inputs their own message in the message box",
+        "expected": "Then the user is able to Checkin successfully\nand the Checkin posts to Twitter with the message that they typed in"
+      },
+      {
+        "content": "When a user sets our device near a Stadium of a game we want to Checkin to\nand is on the ballpark guide page\nand there is game in that stadium on that day\nand attempts to Checkin\nand has enabled the Facebook switch\nand has enabled the Twitter switch",
+        "expected": "Then the user is able to Checkin successfully"
+      },
+      {
+        "content": "When a user sets our device near a Stadium of a game we want to Checkin to\nand is on the ballpark guide page\nand there is game in that stadium on that day\nand attempts to Checkin\nand has enabled the Twitter switch",
+        "expected": "Then the user is able to Checkin successfully"
+      },
+      {
+        "content": "When a user sets our device near a Stadium of a game we want to Checkin to\nand is on the ballpark guide page\nand there is game in that stadium on that day\nand attempts to Checkin\nand has enabled the Twitter switch\nAND the user inputs their own message in the message box",
+        "expected": "Then the user is able to Checkin successfully\nand the Checkin posts to Twitter with the message that they typed in"
+      }
+    ]
+  },
+  {
+    "id": 48728,
+    "title": "Non Game Events",
+    "section_id": 7000,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1419282003,
+    "updated_by": 43,
+    "updated_on": 1522004922,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 910,
+    "display_order": 3,
+    "custom_preconds": "URL: https://wiki.mlbam.com/display/mobile/Stadium+Longitude-Latitude",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user selects a Stadium with a non game event as next scheduled upcoming event\nand we are outside the 3 hour check in window\nand we look at the Check In button",
+        "expected": "Then the button will be tappable\nand the user will receive an alert stating that check in is currently disabled"
+      },
+      {
+        "content": "When a user is on the ballpark guide page with a Non Game Event scheduled next\nAnd the date changes (based on timezone of current stadium)\n",
+        "expected": "Then the user will see the event detail section flip to the next available home event for that particular stadium and the check in button will be disabled/greyed out"
+      },
+      {
+        "content": "When a user is on a ballpark guide page\nand there is a non game event scheduled for that stadium on that day\nand it is within the check in window\nand performs a stadium Check In\n",
+        "expected": "Then the user is able to successfully Check In multiple times\nThe message will say 'This is your x check in' where x is the total number of times you have checked into that stadium\nand the that number will be the same regardless of how many times you check into that particular game"
+      },
+      {
+        "content": "When a user selects a stadium\nand we tap on the Check In button from the ballpark guide page",
+        "expected": "Then we are able to successfully Check In into that particular non game event"
+      },
+      {
+        "content": "When a game pk has an Nth offer associated with it\nand the user checks into the game while meeting the Nth requirement (Nth offers are unlocked when the 'Nth' person checks into a specific game)\nand the user reaches the Checked In! page",
+        "expected": "Then the user will see the unlocked offer on the Checked In! page\nand tapping on that offer will bring up a description"
+      },
+      {
+        "content": "When a stadium has a Total Required Check In offer associated with it\nand checks into a non game & met that requirement\nand reaches the Checked In! page",
+        "expected": "Then the user will see the unlocked offer on the Checked In! page\n"
+      },
+      {
+        "content": "When a user has location services enabled \nand is located within 2km of ballpark or has mocked location\nand navigates to a ballpark page\nand taps the Check in button",
+        "expected": "Then the user should be taken to the Check in page\nand the Ballpark the user selected should appear as the selected location\nand should be able to check in successfully"
+      },
+      {
+        "content": "When a user has location services enabled \nand is NOT located within 2km of ballpark\nand navigates to a ballpark page\nand taps the Check in button",
+        "expected": "Then the user will be taken to the Maps screen (location error screen)\nand the user's location should be shown in relation to the Ballpark they are trying to check in to.\nand the user should see a message indicating that they don't appear to be at the Ballpark\nand there should be a 'refresh' button present on the screen.\n\nMessage: \"Your device thinks you're not at Yankee Stadium. You must be at the ballpark to check in. Tap refresh to try again. If you continue to have problems, view the Help\")"
+      },
+      {
+        "content": "When a user has location services DISABLED\nand navigates to a ballpark page with its check in window\nand taps the Check in button open",
+        "expected": "Then the user should be taken to the Maps screen\nand the user should see an error informing the user that they must enable location services to use At the Ballpark. \nand there should be a 'refresh' button present on the screen\n\nMessage: \"Location services must be enabled to check in. Go to your Settings app to turn on location services for the At the Ballpark app.\""
+      },
+      {
+        "content": "When a user has location services enabled and is not near the ballpark\nor the location services NOT enabled\nand navigates to a ballpark with its check in window open\nand taps on the Check In button\nand is brought to the Location error screen\nand taps the 'refresh' button",
+        "expected": "Then the user's location should attempt to be refreshed"
+      },
+      {
+        "content": "When a user is on the ballpark guide page\nand Stadium has non game event scheduled today\nand current time is a maximum of 3 hours till start time\nand the users location is not near the Stadium",
+        "expected": "Then the Check In button will be visible for the user"
+      },
+      {
+        "content": "When a user is on the Check In page\nand the content loads",
+        "expected": "Then the user will see 'Check In' in the header"
+      },
+      {
+        "content": "When a user is on the Check In page\nand taps the 'X' button in top left",
+        "expected": "Then the Check In page will close\nand the user will be returned to their previous page"
+      },
+      {
+        "content": "When a user is on the Check In page\nand the content loads\nand looks directly below the header",
+        "expected": "Then the user will see the date of the event (format: Saturday, Sept 29)\nand the event start time will be to the right of the date (format: 12:05 p.m.)\nand there will be a dot in the middle of the date and time of event\nand the venue name will be below both in larger bold text"
+      },
+      {
+        "content": "When a user is on the Check In page\nand has not enabled any social sharing\nand looks below the Event Information",
+        "expected": "Then the user will see a message field\nAND tapping in the field will allow the user to input a message"
+      },
+      {
+        "content": "When a user is on the Check In page\nand taps the camera button below the Event Information",
+        "expected": "Then the user will be taken to the Choose Image menu with options of Camera, Photo Library, and Cancel"
+      },
+      {
+        "content": "When a user is on the Check In page\nand looks below the optional free text field",
+        "expected": "Then the user will see the non game event title"
+      },
+      {
+        "content": "When a user is on the Check In page\nand fills in data for the Section, Row, and Seat field\nand completes the Check In successfully",
+        "expected": "Then we are able to see the Section area stored on the server\nAnd we are able to see the Row area stored on the server\nAnd we are able to see the Seat area stored on the server\n\n(Verify via the check in history xml for the account that was used)"
+      },
+      {
+        "content": "When a user is on the Check In page\nand looks at the top right\nor the user look at the bottom of the page",
+        "expected": "Then the user will see a Check In button\nand tapping this button will complete a Check In \nand the user will be brought to the Checked In! confirmation page"
+      },
+      {
+        "content": "When a user is on the Checked In! page\nand taps the 'X' button on the top right",
+        "expected": "Then the user will be returned to the where the check in was initiated"
+      },
+      {
+        "content": "When a user is on the Checked In! page\nand looks below the header",
+        "expected": "They will see a message stating 'Welcome To: '<Ballpark Name>'"
+      },
+      {
+        "content": "When a user is on the Checked In! page\nand looks below the welcome message",
+        "expected": "Then the user will see the non game event info"
+      },
+      {
+        "content": "When a user is on the Checked In! page\nand has unlocked an offer(s)\nand looks below the non game event info",
+        "expected": "Then the user will see a messages stating 'You've unlocked offers'\nand below that will be a list of offers the user has unlocked\nand tapping one of those offers will bring the user to the offer page"
+      }
+    ]
+  }
+]

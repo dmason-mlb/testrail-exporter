@@ -1,0 +1,119 @@
+[
+  {
+    "id": 155076,
+    "suite_id": 21488,
+    "name": "RULE VALIDATION",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 155077,
+    "suite_id": 21488,
+    "name": "PRE",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 155078,
+    "suite_id": 21488,
+    "name": "LIVE",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 155079,
+    "suite_id": 21488,
+    "name": "FINAL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 155080,
+    "suite_id": 21488,
+    "name": "VTP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 155081,
+    "suite_id": 21488,
+    "name": "PRE",
+    "description": null,
+    "parent_id": 155080,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 155082,
+    "suite_id": 21488,
+    "name": "LIVE",
+    "description": null,
+    "parent_id": 155080,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 155083,
+    "suite_id": 21488,
+    "name": "FINAL",
+    "description": null,
+    "parent_id": 155080,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 155084,
+    "suite_id": 21488,
+    "name": "Regular Play",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 155085,
+    "suite_id": 21488,
+    "name": "Swing-Off",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 155086,
+    "suite_id": 21488,
+    "name": "Navigation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 155087,
+    "suite_id": 21488,
+    "name": "HRD Related",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 155088,
+    "suite_id": 21488,
+    "name": "Home Run Derby Tracker on App",
+    "description": "Special features - Home Run Derby tracker is linked to in different places on app.",
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": 7660,
+    "suite_id": 1047,
+    "name": "Player Submission Rules",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 7661,
+    "suite_id": 1047,
+    "name": "Spreadsheet Upload",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 7663,
+    "suite_id": 1047,
+    "name": "Update Player Status",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 7664,
+    "suite_id": 1047,
+    "name": "Consent Forms/Misc",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 8527,
+    "suite_id": 1047,
+    "name": "BOC Functions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 8529,
+    "suite_id": 1047,
+    "name": "Player Merges",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 8741,
+    "suite_id": 1047,
+    "name": "MLSB Entries",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 8743,
+    "suite_id": 1047,
+    "name": "Club Entries (Via Create New)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 9003,
+    "suite_id": 1047,
+    "name": "Club Entries (Spreadsheet Upload)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 147884,
+    "suite_id": 1047,
+    "name": "*special test cases*",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 156833,
+    "suite_id": 21894,
+    "name": "Two Way Player (2020 Rule Change)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 156834,
+    "suite_id": 21894,
+    "name": "Rosters/Transactions (2020 Rule Change)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 156832,
+    "suite_id": 21894,
+    "name": "AMT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 156828,
+    "suite_id": 21894,
+    "name": "Misc",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

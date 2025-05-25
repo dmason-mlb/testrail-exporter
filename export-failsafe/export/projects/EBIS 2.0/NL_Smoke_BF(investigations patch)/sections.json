@@ -1,0 +1,65 @@
+[
+  {
+    "id": 122008,
+    "suite_id": 18584,
+    "name": "Investigation Request",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 122009,
+    "suite_id": 18584,
+    "name": "Investigation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 122010,
+    "suite_id": 18584,
+    "name": "Investigation Permissions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 122011,
+    "suite_id": 18584,
+    "name": "LARI-Investigations",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 122025,
+    "suite_id": 18584,
+    "name": "Waivers",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 122041,
+    "suite_id": 18584,
+    "name": "Disabled List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 122059,
+    "suite_id": 18584,
+    "name": "MJC/CBT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 52,
+    "depth": 0
+  }
+]

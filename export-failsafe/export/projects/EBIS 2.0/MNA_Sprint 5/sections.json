@@ -1,0 +1,47 @@
+[
+  {
+    "id": 13003,
+    "suite_id": 1483,
+    "name": "Create New/Player History",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 13004,
+    "suite_id": 1483,
+    "name": "Release",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 13005,
+    "suite_id": 1483,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 13006,
+    "suite_id": 1483,
+    "name": "Business Rules",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 13007,
+    "suite_id": 1483,
+    "name": "BOC Functions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

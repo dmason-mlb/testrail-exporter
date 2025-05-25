@@ -1,0 +1,244 @@
+[
+  {
+    "id": 34691278,
+    "title": "RSN entitled user",
+    "section_id": 2025270,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1739986252,
+    "updated_by": 442,
+    "updated_on": 1744388552,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 703729,
+    "display_order": 1,
+    "custom_preconds": "GIVEN user has an RSN Reseller entitlement (example: dm5tv4@gmail.com)\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the Top Menu bar is visible \n",
+        "expected": "THEN RSN Reseller should included in the tab bar "
+      },
+      {
+        "content": "WHEN the RSN Reseller Tab is selected \n",
+        "expected": "THEN the RSN Reseller content should be presented "
+      },
+      {
+        "content": "WHEN the RSN Reseller Tab is selected ",
+        "expected": "THEN the background image should update   "
+      },
+      {
+        "content": "WHEN the user has access to multiple RSN Resellers",
+        "expected": "THEN user should be able to toggle between the two RSN tabs without issue"
+      }
+    ]
+  },
+  {
+    "id": 34691279,
+    "title": "RSN non-Entitled",
+    "section_id": 2025270,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1739986329,
+    "updated_by": 232,
+    "updated_on": 1739986329,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 703729,
+    "display_order": 2,
+    "custom_preconds": "GIVEN user has no RSN Reseller entitlements (ex. dm5tv@gmail.com)\r\n",
+    "custom_steps": "WHEN the Top Menu bar is visible ",
+    "custom_expected": "THEN no RSN Reseller items should be included ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34691280,
+    "title": "Qualifying entitlements (proxy required)",
+    "section_id": 2025270,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1739986509,
+    "updated_by": 232,
+    "updated_on": 1739986509,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 703729,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a menu item’s Qualifying Entitlements is empty\n",
+        "expected": "THEN menu item should be visible \nRemoved the qualifying Entitlements via proxy and validated that the menu item shows, even for a logged out user"
+      },
+      {
+        "content": "WHEN a menu item has  Qualifying Entitlements ",
+        "expected": "THEN it should only be visible if the user has the matching entitlement \n"
+      }
+    ]
+  },
+  {
+    "id": 34753972,
+    "title": "Thumbnails",
+    "section_id": 2025270,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1741629992,
+    "updated_by": 232,
+    "updated_on": 1745941817,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 703729,
+    "display_order": 4,
+    "custom_preconds": "GIVEN TV RSN page is active",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN hero is visible \n",
+        "expected": "THEN thumbnail should be present and make visual sense within it’s context"
+      },
+      {
+        "content": "WHEN carousel tile is visible \n",
+        "expected": "THEN thumbnail should be present and make visual sense within it’s context"
+      },
+      {
+        "content": "WHEN thumbnail cannot be loaded \n",
+        "expected": "THEN replace all the thumbnails in the carousel with generic white background\n"
+      }
+    ]
+  },
+  {
+    "id": 34753977,
+    "title": "Hide Spoilers (Proxy required)",
+    "section_id": 2025270,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "GSTREAM-2474",
+    "created_by": 232,
+    "created_on": 1741633852,
+    "updated_by": 232,
+    "updated_on": 1741633852,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 703729,
+    "display_order": 5,
+    "custom_preconds": "GIVEN an RSN tab is present",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN hide spoilers is on \n\n",
+        "expected": "THEN send contentCollections.includeSpoilers = false"
+      },
+      {
+        "content": "WHEN hide spoilers is off ",
+        "expected": "THEN send contentCollections.includeSpoilers = true"
+      }
+    ]
+  },
+  {
+    "id": 34756021,
+    "title": "Hero image does not load (Proxy required)",
+    "section_id": 2025270,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1741732783,
+    "updated_by": 232,
+    "updated_on": 1741788421,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 703729,
+    "display_order": 6,
+    "custom_preconds": "GIVEN an RSN tab is present",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN there is no thumbnail for the hero \n\n",
+        "expected": "THEN display the autoplay error screen "
+      },
+      {
+        "content": "WHEN there is no thumbnail for the hero \nAND the user clicks on the hero thumbnail ",
+        "expected": "THEN they should navigate to the player"
+      }
+    ]
+  },
+  {
+    "id": 34756341,
+    "title": "Hero click behavior-autoplay off",
+    "section_id": 2025270,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1741788498,
+    "updated_by": 232,
+    "updated_on": 1741788498,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 703729,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the RSN tab is present\r\nAND autoplay of hero content is off",
+    "custom_steps": "WHEN the user clicks on the hero thumbnail \r\n",
+    "custom_expected": "THEN they should navigate to the player",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34756342,
+    "title": "Duration",
+    "section_id": 2025270,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1741789369,
+    "updated_by": 232,
+    "updated_on": 1741789369,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 703729,
+    "display_order": 8,
+    "custom_preconds": "GIVEN an RSN tab is present",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN thumbnail content is LIVE  \n\n",
+        "expected": "THEN don’t show duration"
+      },
+      {
+        "content": "WHEN thumbnail content is not LIVE",
+        "expected": " THEN show duration"
+      }
+    ]
+  }
+]

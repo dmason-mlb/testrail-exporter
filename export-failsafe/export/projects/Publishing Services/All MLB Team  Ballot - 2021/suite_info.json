@@ -1,0 +1,11 @@
+{
+  "id": 357213,
+  "name": "All MLB Team  Ballot - 2021",
+  "description": "https://baseball.atlassian.net/l/c/n7MhN2DN\r\n\r\nAllow fans to vote for the best players to represent the 2021 All-MLB First and Second Teams\r\n\r\nSupport voting in English and Spanish\r\n\r\nIntegration with Baseball Form Foundry to support collection of fan voting.\r\n\r\nSend an email to each fan after their first ballot submission to thank them for voting.\r\n\r\nAsk a fan to login to their mlb.com account (if it exists) or to register for a new one.",
+  "project_id": 211,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/357213"
+}

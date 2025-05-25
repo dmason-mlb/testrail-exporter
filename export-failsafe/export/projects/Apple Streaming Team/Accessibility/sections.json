@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1977817,
+    "suite_id": 694444,
+    "name": "iOS Mobile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1977819,
+    "suite_id": 694444,
+    "name": "Audio",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1977818,
+    "suite_id": 694444,
+    "name": "News",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 1977822,
+    "suite_id": 694444,
+    "name": "Navigation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 1977821,
+    "suite_id": 694444,
+    "name": "More Menu",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 1977820,
+    "suite_id": 694444,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  }
+]

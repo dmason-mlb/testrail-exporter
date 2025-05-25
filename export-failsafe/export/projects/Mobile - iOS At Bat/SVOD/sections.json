@@ -1,0 +1,38 @@
+[
+  {
+    "id": 304836,
+    "suite_id": 43578,
+    "name": "iPhone - Featured Tab",
+    "description": "https://baseball.atlassian.net/browse/IAB-22554\nhttps://baseball.atlassian.net/browse/IAB-22559",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 304837,
+    "suite_id": 43578,
+    "name": "iPhone - Entitlements",
+    "description": "https://baseball.atlassian.net/browse/IAB-22558",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 304839,
+    "suite_id": 43578,
+    "name": "iPad - Featured Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 304840,
+    "suite_id": 43578,
+    "name": "iPad - Entitlements",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

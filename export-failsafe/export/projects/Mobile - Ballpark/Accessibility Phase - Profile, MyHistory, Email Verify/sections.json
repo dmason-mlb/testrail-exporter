@@ -1,0 +1,191 @@
+[
+  {
+    "id": 1675822,
+    "suite_id": 608642,
+    "name": "Team Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1675823,
+    "suite_id": 608642,
+    "name": "Maps",
+    "description": null,
+    "parent_id": 1675822,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 1675824,
+    "suite_id": 608642,
+    "name": "My Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1675825,
+    "suite_id": 608642,
+    "name": "Personalization",
+    "description": "GIVEN the user downloaded the Ballpark app (11.5.0 or greater for IOS / 12.0.0 or greater for Android)",
+    "parent_id": 1675824,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 1675826,
+    "suite_id": 608642,
+    "name": "My History",
+    "description": "BP credentials (Prod/Staging env)\n*Acct: ballpark.applause+myhistory@gmail.com\n*PW: BPapp123",
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1675827,
+    "suite_id": 608642,
+    "name": "Tappable Headers",
+    "description": null,
+    "parent_id": 1675826,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 1675828,
+    "suite_id": 608642,
+    "name": "Event Card Details View (via \"View Details\" link)",
+    "description": "This view shows more details about the a users specific check in. Additional content includes:\n*full score view or title view (NGE)\n*user inputted Notes, including Section Row Seat\n*user added photos in a larger size\n*add photos button\n*game wrap button if available\n*delete check-in button",
+    "parent_id": 1675826,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 1675829,
+    "suite_id": 608642,
+    "name": "Event Card - Add and Delete Photo Functionality",
+    "description": "Add a photo in the main view with a floating or static button. After selecting a photo, a full screen view pops up with the option to delete. Pinch to zoom also available on iOS.",
+    "parent_id": 1675828,
+    "display_order": 8,
+    "depth": 2
+  },
+  {
+    "id": 1675830,
+    "suite_id": 608642,
+    "name": "Event Card - Editing Check-Ins Text",
+    "description": "In the top right corner of the Detials view there is now an \"Edit\" button. A edit view appears giving the user the ability to edit their Section, Row, Seat, and User Message.",
+    "parent_id": 1675828,
+    "display_order": 9,
+    "depth": 2
+  },
+  {
+    "id": 1675835,
+    "suite_id": 608642,
+    "name": "Event Card Details View (via \"View Details\" link)",
+    "description": "This view shows more details about the a users specific check in. Additional content includes:\n*full score view or title view (NGE)\n*user inputted Notes, including Section Row Seat\n*user added photos in a larger size\n*add photos button\n*game wrap button if available\n*delete check-in button",
+    "parent_id": 1675828,
+    "display_order": 10,
+    "depth": 2
+  },
+  {
+    "id": 1675836,
+    "suite_id": 608642,
+    "name": "Event Card - Add and Delete Photo Functionality",
+    "description": "Add a photo in the main view with a floating or static button. After selecting a photo, a full screen view pops up with the option to delete. Pinch to zoom also available on iOS.",
+    "parent_id": 1675835,
+    "display_order": 11,
+    "depth": 3
+  },
+  {
+    "id": 1675837,
+    "suite_id": 608642,
+    "name": "Event Card - Editing Check-Ins Text",
+    "description": "In the top right corner of the Detials view there is now an \"Edit\" button. A edit view appears giving the user the ability to edit their Section, Row, Seat, and User Message.",
+    "parent_id": 1675835,
+    "display_order": 12,
+    "depth": 3
+  },
+  {
+    "id": 1675838,
+    "suite_id": 608642,
+    "name": "Event Card - Deleting A Check-In",
+    "description": "At the very bottom of the table view in the details view, there will be a delete button.",
+    "parent_id": 1675835,
+    "display_order": 13,
+    "depth": 3
+  },
+  {
+    "id": 1675831,
+    "suite_id": 608642,
+    "name": "Historic Check-in",
+    "description": null,
+    "parent_id": 1675826,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 1675839,
+    "suite_id": 608642,
+    "name": "Historic Check-in",
+    "description": null,
+    "parent_id": 1675826,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 1675840,
+    "suite_id": 608642,
+    "name": "Navigation",
+    "description": null,
+    "parent_id": 1675826,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 1675832,
+    "suite_id": 608642,
+    "name": "Landing Page",
+    "description": null,
+    "parent_id": 1675826,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 1675834,
+    "suite_id": 608642,
+    "name": "Landing Page - Events Section",
+    "description": null,
+    "parent_id": 1675832,
+    "display_order": 18,
+    "depth": 2
+  },
+  {
+    "id": 1675833,
+    "suite_id": 608642,
+    "name": "Tappable Headers",
+    "description": null,
+    "parent_id": 1675826,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 1675841,
+    "suite_id": 608642,
+    "name": "Deeplinks",
+    "description": null,
+    "parent_id": 1675826,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 1724099,
+    "suite_id": 608642,
+    "name": "GoAheadEntry_Accessibility",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  }
+]

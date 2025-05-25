@@ -1,0 +1,38 @@
+[
+  {
+    "id": 677592,
+    "suite_id": 174686,
+    "name": "Status Checks",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 677593,
+    "suite_id": 174686,
+    "name": "Scorecard Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 743653,
+    "suite_id": 174686,
+    "name": "Multimedia Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 760972,
+    "suite_id": 174686,
+    "name": "Mini Scoreboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

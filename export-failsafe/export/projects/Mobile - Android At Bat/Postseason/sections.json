@@ -1,0 +1,236 @@
+[
+  {
+    "id": 6747,
+    "suite_id": 851,
+    "name": "Handset",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 6723,
+    "suite_id": 851,
+    "name": "Postseason Section",
+    "description": null,
+    "parent_id": 6747,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 6725,
+    "suite_id": 851,
+    "name": "Wild Card Round",
+    "description": null,
+    "parent_id": 6747,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 6726,
+    "suite_id": 851,
+    "name": "Division and League Championship Series Rounds",
+    "description": null,
+    "parent_id": 6747,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 6727,
+    "suite_id": 851,
+    "name": "World Series",
+    "description": null,
+    "parent_id": 6747,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 6728,
+    "suite_id": 851,
+    "name": "Postseason News",
+    "description": null,
+    "parent_id": 6747,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 28725,
+    "suite_id": 851,
+    "name": "Postseason Video",
+    "description": null,
+    "parent_id": 6747,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 6729,
+    "suite_id": 851,
+    "name": "Postseason Stats",
+    "description": null,
+    "parent_id": 6747,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 6730,
+    "suite_id": 851,
+    "name": "Postseason Scoreboard",
+    "description": null,
+    "parent_id": 6747,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 6732,
+    "suite_id": 851,
+    "name": "Non-Playoff Teams",
+    "description": null,
+    "parent_id": 6747,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 6733,
+    "suite_id": 851,
+    "name": "Playoff Teams",
+    "description": null,
+    "parent_id": 6747,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 6734,
+    "suite_id": 851,
+    "name": "Postseason TV",
+    "description": null,
+    "parent_id": 6747,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 149113,
+    "suite_id": 851,
+    "name": "Postseason MVPD",
+    "description": null,
+    "parent_id": 6734,
+    "display_order": 16,
+    "depth": 2
+  },
+  {
+    "id": 149115,
+    "suite_id": 851,
+    "name": "Postseason Audio",
+    "description": null,
+    "parent_id": 6747,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 6736,
+    "suite_id": 851,
+    "name": "Highlights",
+    "description": null,
+    "parent_id": 6747,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 6737,
+    "suite_id": 851,
+    "name": "Tune-in Banners",
+    "description": null,
+    "parent_id": 6747,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 6738,
+    "suite_id": 851,
+    "name": "Postseason Takedown",
+    "description": null,
+    "parent_id": 6747,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 6746,
+    "suite_id": 851,
+    "name": "Tablet",
+    "description": null,
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 6739,
+    "suite_id": 851,
+    "name": "Postseason section",
+    "description": null,
+    "parent_id": 6746,
+    "display_order": 39,
+    "depth": 1
+  },
+  {
+    "id": 6740,
+    "suite_id": 851,
+    "name": "Postseason News",
+    "description": null,
+    "parent_id": 6746,
+    "display_order": 40,
+    "depth": 1
+  },
+  {
+    "id": 28726,
+    "suite_id": 851,
+    "name": "Postseason Video",
+    "description": null,
+    "parent_id": 6746,
+    "display_order": 41,
+    "depth": 1
+  },
+  {
+    "id": 6741,
+    "suite_id": 851,
+    "name": "Postseason TV",
+    "description": null,
+    "parent_id": 6746,
+    "display_order": 42,
+    "depth": 1
+  },
+  {
+    "id": 153926,
+    "suite_id": 851,
+    "name": "Postseason MVPD",
+    "description": null,
+    "parent_id": 6741,
+    "display_order": 46,
+    "depth": 2
+  },
+  {
+    "id": 149116,
+    "suite_id": 851,
+    "name": "Postseason Audio",
+    "description": null,
+    "parent_id": 6746,
+    "display_order": 47,
+    "depth": 1
+  },
+  {
+    "id": 6744,
+    "suite_id": 851,
+    "name": "Highlights",
+    "description": null,
+    "parent_id": 6746,
+    "display_order": 48,
+    "depth": 1
+  },
+  {
+    "id": 6745,
+    "suite_id": 851,
+    "name": "Tune-in Banners",
+    "description": null,
+    "parent_id": 6746,
+    "display_order": 49,
+    "depth": 1
+  }
+]

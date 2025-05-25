@@ -1,0 +1,1514 @@
+[
+  {
+    "id": 34150931,
+    "title": "Ballpark Profile Tab Navigation",
+    "section_id": 1981626,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457617,
+    "updated_by": 288,
+    "updated_on": 1731007694,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "[Gherkins](https://docs.google.com/document/d/1tSEibxLqKu2nxvNoiRIT9E1JMXwQNiP_MiIeBPzdjRk/edit )\r\n\r\nGIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app",
+    "custom_steps": "WHEN the user is on the Ballpark Home Tab",
+    "custom_expected": "THEN the bottom navigation bar is visible\r\nAND the bottom navigation bar contains the \"Profile\" tab\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is on the Ballpark Home Tab ",
+        "expected": "THEN Home Tab is highlighted\nAND the \"Profile\" icon in the bottom navigation bar is in an inactive state\nAND the \"Profile\" icon is not highlighted\n"
+      },
+      {
+        "content": "WHEN the user is on the Ballpark Tickets Tab ",
+        "expected": "THEN Tickets Tab is highlighted\nAND the \"Profile\" icon in the bottom navigation bar is in an inactive state\nAND the \"Profile\" icon is not highlighted\n"
+      },
+      {
+        "content": "WHEN the user is on the Ballpark Team Tab ",
+        "expected": "THEN Team Tab is highlighted\nAND the \"Profile\" icon in the bottom navigation bar is in an inactive state\nAND the \"Profile\" icon is not highlighted\n"
+      },
+      {
+        "content": "WHEN the user is on the Ballpark Profile Tab",
+        "expected": "THEN the \"Profile\" icon in the bottom navigation bar is in an active state\nAND the \"Profile\" icon is highlighted to indicate it is the current page\n"
+      }
+    ]
+  },
+  {
+    "id": 34150895,
+    "title": "Back Navigation within  Profile tab",
+    "section_id": 1981626,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457373,
+    "updated_by": 282,
+    "updated_on": 1736861642,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app",
+    "custom_steps": "WHEN the user is on the Ballpark Profile Tab\r\nAND user taps on each feature\r\nAND user taps on back arrow",
+    "custom_expected": "THEN Profile page(tab) is displayed ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on the Profile icon from Navbar",
+        "expected": "THEN the user is shown Profile page with Profile icon(navbar) highlighted"
+      },
+      {
+        "content": "WHEN user taps on Edit link at top right",
+        "expected": "THEN the user is shown the Edit Profile page with a back navigation arrow in upper left corner"
+      },
+      {
+        "content": "WHEN user taps on back arrow",
+        "expected": "THEN the user is shown Profile page with Profile icon(navbar) highlighted"
+      },
+      {
+        "content": "WHEN user accesses 'My History' via tapping anywhere within \"My History\" summary section",
+        "expected": "THEN the user is shown History page with a back navigation arrow to the left of 'History' header\n\nAndroid: Shown 'My History' Header "
+      },
+      {
+        "content": "WHEN user taps on back arrow",
+        "expected": "THEN the user is shown Profile page with Profile icon(navbar) highlighted"
+      },
+      {
+        "content": "WHEN user taps on 'Favorite Teams'",
+        "expected": "THEN the user is shown the Favorite Teams page with a back navigation to the left of 'Favorite Teams' header\n\nAndroid: Shown 'My Teams' Header and 'EDIT' CTA for user have FT selected \n\nWHEN NO FT selected then 'EDIT' CTA won't show"
+      },
+      {
+        "content": "WHEN user taps on back arrow",
+        "expected": "THEN the user is shown Profile page with Profile icon(navbar) highlighted"
+      },
+      {
+        "content": "WHEN user taps on 'App Notifications'",
+        "expected": "THEN the user is shown the Notifications page with a back navigation to the left of 'App Notifications' header\n\nAndroid: Shown 'My Notifications' header"
+      },
+      {
+        "content": "**WHEN user enrolled to GAE THEN only STEP 10 expected or SKIP validation**",
+        "expected": ""
+      },
+      {
+        "content": "WHEN user taps on 'MLB GO-Ahead ID'",
+        "expected": "THEN the user is shown the MLB Go-Ahead ID page with a back navigation to the left of 'MLB Go-Ahead ID' header\n\n(Further validation can be done separately for Tap here link and Delete MLB Go-Ahead ID)"
+      },
+      {
+        "content": "WHEN user taps on back arrow",
+        "expected": "THEN the user is shown Profile page with Profile icon(navbar) highlighted"
+      },
+      {
+        "content": "WHEN user taps on 'MLB Account Emails'",
+        "expected": "THEN the user is shown the MLB Account page with a back navigation to the left of 'MLB Account Emails' header\n\nAndroid: Shown 'My MLB Account Emails' header "
+      },
+      {
+        "content": "WHEN user taps on back arrow",
+        "expected": "THEN the user is shown Profile page with Profile icon(navbar) highlighted"
+      },
+      {
+        "content": "WHEN user taps on 'Ticket Accounts'",
+        "expected": "THEN the user is shown the Ticket Account page with a back navigation to the left of 'Ticket Accounts' header\n\nAndroid: Shown 'My Ticket Accounts' "
+      },
+      {
+        "content": "WHEN user taps on back arrow",
+        "expected": "THEN the user is shown Profile page with Profile icon(navbar) highlighted"
+      },
+      {
+        "content": "WHEN user taps on 'About Ballpark'",
+        "expected": "THEN the user is shown the About Ballpark page with a back navigation to the left of 'About Ballpark' header"
+      },
+      {
+        "content": "WHEN user taps on back arrow",
+        "expected": "THEN the user is shown Profile page with Profile icon(navbar) highlighted"
+      },
+      {
+        "content": "WHEN user taps on 'Close MLB Account'",
+        "expected": "THEN the user is shown the Close MLB Account webview with a back navigation to the left of 'Close MLB Account' header\n\nAndroid: No header \nMLB ACCOUNT DELETION page shown with 'X' and 'refresh'(clockwise arrow) icon\n\n"
+      },
+      {
+        "content": "WHEN user taps on back arrow\n\nAndroid: Tap on 'X' close CTA ",
+        "expected": "THEN the user is shown Profile page with Profile icon(navbar) highlighted"
+      },
+      {
+        "content": "WHEN user taps on 'Customer Support'",
+        "expected": "THEN the user is directed externally to browser to Customer Support page (mlb.com)\n\nURL: https://support.mlb.com/contact-us"
+      },
+      {
+        "content": "WHEN user taps on 'Do Not Share or Sell My Data'",
+        "expected": "THEN the user is directed external browser to https://privacyportal.onetrust.com/webform"
+      }
+    ]
+  },
+  {
+    "id": 34150893,
+    "title": "Profile Page",
+    "section_id": 1981616,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457373,
+    "updated_by": 282,
+    "updated_on": 1736861722,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user navigates to My Profile page (via Profile Navbar)\r\n",
+    "custom_steps": "WHEN Accessing Profile page via Profile tab",
+    "custom_expected": "THEN Profile page display",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on the Profile icon from Navbar",
+        "expected": "THEN user is shown a generic profile avatar \nAND user is shown their full name displayed \nAND user is shown their favorite team logo (if acct has a fave team prev saved)\nAND user is shown their email address \nAND an \"Edit\" option is displayed in the top right corner\nAND \"My History\" section with relevant data and an actionable icon is shown\n\n"
+      },
+      {
+        "content": "",
+        "expected": "THEN the user is shown 'My History' card layered atop the profile card with the User's (check ins) from their My History data:\n* Total Check-Ins - dash('-') shown if no prev check-ins exist\n* Total Teams Seen - dash('-') shown if no prev check-ins exist \n* Total Ballparks Visited - dash('-') shown if no prev check-ins exist \n* 'View Details' blue text link navigating user to My History \n\nNOTE: If history data is unavailable display dashes for history counts. User is still able to navigate to My History"
+      },
+      {
+        "content": "",
+        "expected": "THEN the user is shown links to settings items with icons displayed next to each row\n* Favorite Teams\n* App Notifications\n* MLB Go-Ahead ID(Only shown when user enrolled for GAE) \n* MLB Account Emails\n* Ticket Accounts\n* About Ballpark\n* Close MLB Account\n* Customer Support\n* Do Not Share or Sell My Data (Does not override Apple's Do Not Track Settings)\n\n\nIF User enrolled to GAE then MLB Go-Ahead ID also display "
+      },
+      {
+        "content": "",
+        "expected": "THEN the user is shown 'Log Out' button below list items"
+      }
+    ]
+  },
+  {
+    "id": 34150894,
+    "title": "My History Summary Card on Profile Page",
+    "section_id": 1981616,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457373,
+    "updated_by": 288,
+    "updated_on": 1731009813,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user navigates to My Profile page (via Profile Navbar)\r\n\r\n",
+    "custom_steps": "WHEN accessing My History via Profile tab",
+    "custom_expected": "THEN My History page's display \r\nAND the user is able to see their top level ballpark visits on My Profile screen\r\nAND the below validation is expected for the different user states",
+    "custom_steps_separated": [
+      {
+        "content": "When user is on 'Profile' page\nAND user has prev check-ins associated with their MLB Account\n\n",
+        "expected": "THEN the user is shown 'My History' card layered atop the profile card with the User's (check-ins) from their My History data:\n* Teams Seen\n* Parks Visited\n* Check-Ins\n* '>' CTA navigating user to My History"
+      },
+      {
+        "content": "WHEN user taps anywhere within \"My History\" summary section\n",
+        "expected": "THEN user is shown the My History page with expected checked-in event information\nAND the summary values shown on My History page match what is shown on My Profile page\n* Check-Ins\n* Teams\n* Ballparks\n\n![](index.php?/attachments/get/8372327)"
+      },
+      {
+        "content": "When user is on 'Profile' page\nAND user has NO prev check-ins associated with their MLB Account\n\n* onboard a new acct guarantees no prev checkins",
+        "expected": "THEN the user is shown 'My History' card layered atop the profile card with the User's (check-ins) from their My History data:\n* Check-Ins shown as dash('--') since no prev check-ins exist\n* Teams Seen shown as dash('--') since no prev check-ins exist\n* Ballparks Visited shown as dash('--') since no prev check-ins exist\n* '>' CTA navigating user to My History"
+      },
+      {
+        "content": "WHEN user taps anywhere within \"My History\" summary section\n",
+        "expected": "THEN user is shown the My History page with 'No Games Added' view\n\n![](index.php?/attachments/get/8372325)"
+      }
+    ]
+  },
+  {
+    "id": 34150896,
+    "title": "Log Out",
+    "section_id": 1981616,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457373,
+    "updated_by": 288,
+    "updated_on": 1731009640,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user navigates to My Profile page (via Profile Navbar)",
+    "custom_steps": "WHEN Accessing Profile page via Profile tab\r\nAND user taps log out",
+    "custom_expected": "THEN the user is logged out",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on the Profile icon from Profile Tab",
+        "expected": "THEN user is shown a generic profile avatar\nAND user is shown their full name displayed\nAND user is shown their favorite team logo (if acct has a fave team prev saved)\nAND user is shown their email address\nAND an \"Edit\" option is displayed in the top right corner\nAND \"My History\" section with relevant data and an actionable icon is shown\nAND a button on the bottom screen labeled \"Log Out\" is shown  (after all menu options)"
+      },
+      {
+        "content": "WHEN user taps on the \"Log Out\" button",
+        "expected": "THEN the user will be successfully logged out, and the Log In screen will appear"
+      }
+    ]
+  },
+  {
+    "id": 34150887,
+    "title": "Profile - Display (Name / Email / Edit Profile button / Favorite Team logo)",
+    "section_id": 1981617,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457358,
+    "updated_by": 288,
+    "updated_on": 1731009832,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user in on Profile page\r\n\r\nRelevant links:\r\n* [BP-9750](https://baseball.atlassian.net/browse/BP-9750) / [BP-9823](https://baseball.atlassian.net/browse/BP-9823) / [BP-9890](https://baseball.atlassian.net/browse/BP-9890)\r\n* Mocks - [Figma](https://www.figma.com/file/M3vqmrFe2eJlofe392hAqY/Specs?node-id=1284%3A14013)",
+    "custom_steps": "WHEN user is on the Profile page",
+    "custom_expected": "THEN Profile page is shown with Avatar, Name, Email, Edit button as top section",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is on the Profile page with an account having a name AND a favorite team\n\n",
+        "expected": "THEN the user is shown a personalized profile card with the following:\n*Avatar - a placeholder avatar for users \n*Fan's name - Show users first and last name, wrap to additional lines if name doesn’t fit\n*Fan's email address\n*Fan's favorite team logo shown on bottom right of avatar \n*Edit button on top right"
+      },
+      {
+        "content": "WHEN user is on the Profile page with an account having a name BUT without a favorite team\n\n",
+        "expected": "THEN the user is shown a personalized profile card with the following:\n*Avatar - a placeholder avatar for users\n*Fan's name - Show users first and last name, wrap to additional lines if name doesn’t fit\n*Fan's email address\n*NO team logo is shown on bottom right of avatar (since no fave team is stored for acct)\n*Edit button on top right"
+      },
+      {
+        "content": "WHEN user is on the Profile page with an account NOT having a name AND a favorite team\n\nAcct with No Name (created acct from MLB.com) - maybe best to create a new acct with a fave team set from MLB.com onboarding\n* steve.ortiz.mlb+noname@gmail.com / MLBmlb123 / Staging\n\n\n",
+        "expected": "THEN the user is shown a personalized profile card with the following:\n*Avatar - a placeholder avatar for users\n*Fan's name - Since name fields are null/empty then name not shown\n*Fan's email address\n*Fan's favorite team logo shown on bottom right of avatar \n*Edit button on top right"
+      },
+      {
+        "content": "WHEN user is on the Profile page with an account NOT having a name NOR without a favorite team\n\nAcct with No Name (created acct from MLB.com) - maybe best to create a new acct without a fave team set from MLB.com onboarding\n* steve.ortiz.mlb+noname@gmail.com / MLBmlb123 / Staging",
+        "expected": "THEN the user is shown a personalized profile card with the following:\n*Avatar - a placeholder avatar for users\n*Fan's name - Since name fields are null/empty then name not shown\n*Fan's email address\n*NO team logo is shown on bottom right of avatar (since no fave team is stored for acct)\n*Edit button on top right"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN user is newly onboarded via Sign Up flow \nAND user navigates to My Profile",
+        "expected": "THEN the user is shown a personalized profile card with the following:\n*Avatar - a placeholder avatar for users \n*Fan's name - Show users first and last name, wrap to additional lines if name doesn’t fit\n*Fan's email address\n*NO team logo is shown on bottom right of avatar (since no fave team is stored for acct)\n*Edit button on top right"
+      }
+    ]
+  },
+  {
+    "id": 34150888,
+    "title": "Profile - Display (First/Last/Multiple/No Name)",
+    "section_id": 1981617,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457358,
+    "updated_by": 288,
+    "updated_on": 1731009821,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user in on Profile page\r\n\r\nRelevant links:\r\n* [BP-9750](https://baseball.atlassian.net/browse/BP-9750)\r\n* Mocks - [Figma](https://www.figma.com/file/M3vqmrFe2eJlofe392hAqY/Specs?node-id=1284%3A14013)",
+    "custom_steps": "WHEN accessing Profile via Profile tab in different User states",
+    "custom_expected": "THEN Profile page's display\r\nAND the below validation is expected for the different user states",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user has a name associated within MLB Account\n",
+        "expected": "THEN the name(first and last) is shown"
+      },
+      {
+        "content": "WHEN user has a long first name associated within MLB Account\n\nAcct with Long First Name - Wolfeschlegelsteinhausenbergerdorff TestLast\n* steve.ortiz.mlb+longfirst@gmail.com / MLBmlb123 / Staging",
+        "expected": "THEN the first name and last name are shown, on additional lines if needed"
+      },
+      {
+        "content": "WHEN user has a long last name associated within MLB Account\n\nAcct with Long Last Name - Wolfeschlegelsteinhausenbergerdorff TestLast\n* steve.ortiz.mlb+longlast@gmail.com / MLBmlb123 / Staging",
+        "expected": "THEN the first name and last name are shown, on additional lines if needed"
+      },
+      {
+        "content": "WHEN user has a long first name associated within MLB Account\nAND user has a long last name associated within MLB Account\n\nAcct with Long First and Long Last Name - FWolfeschlegelsteinhausenbergerdorff LWolfeschlegelsteinhausenbergerdorff\n* steve.ortiz.mlb+longnames@gmail.com / MLBmlb123 / Staging",
+        "expected": "THEN the first name and last name are shown, on additional lines if needed"
+      },
+      {
+        "content": "WHEN user has a name associated within MLB Account having multiple names and/or hyphenate, such as:\n*Vlad Guerrero Jr.\n*Michael Harris II\n*Byung-Hyun Kim\n*Isiah Kiner-Falefa\n\n[ONBOARD A NEW ACCT OR CHANGE THE NAME FOR A TEST ACCT THAT DOESNT REQUIRE TO BE LEFT IN THE DESIRED STATE - i.e noname,longnames,longlast,longfirst]",
+        "expected": "THEN the first name and last name are shown, on additional lines if needed"
+      },
+      {
+        "content": "WHEN user does NOT have a name associated within MLB Account\n\nAcct with No Name (created acct from MLB.com)\n* steve.ortiz.mlb+noname@gmail.com / MLBmlb123 / Staging",
+        "expected": "THEN just the email address is shown (without name)"
+      }
+    ]
+  },
+  {
+    "id": 34150889,
+    "title": "Profile - Edit Mode",
+    "section_id": 1981617,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457358,
+    "updated_by": 282,
+    "updated_on": 1743701479,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user in on Profile page\r\n\r\nRelevant links:\r\n*Mocks:[Figma](https://www.figma.com/file/M3vqmrFe2eJlofe392hAqY/Specs?node-id=1284%3A14013)\r\nEDIT MODE:\r\n*iOS:[BP-9188](https://baseball.atlassian.net/browse/BP-9188)\r\n",
+    "custom_steps": "WHEN user is on Profile view \r\nAND User tap on Edit button ",
+    "custom_expected": "THEN user will be taken to the First/ Last name edit form \r\n\r\nDesign: \r\nTitle: Edit Profile \r\nFirst Name field \r\nLast Name field \r\nSave Changes CTA (filled with black color and White text color) ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User is on edit form \nAND user removes all the characters the First name field\nAND user navigates to the Last name field  ",
+        "expected": "THEN user is shown the error text \"First Name is required\" \n"
+      },
+      {
+        "content": "WHEN User is on edit form \nAND user removes all the characters the Last name field\nAND user navigates to the First name field  ",
+        "expected": "THEN user is shown the error text \"Last Name is required\" "
+      },
+      {
+        "content": "WHEN User is on edit form \nAND user types more than 40 characters in the First name field\nAND user navigates to the Last name field  ",
+        "expected": "THEN user is shown the error text \"Invalid First Name entered\" "
+      },
+      {
+        "content": "WHEN User is on edit form \nAND user types more than 40 characters in the Last name field\nAND user navigates to the First name field  ",
+        "expected": "THEN user is shown the error text \"Invalid Last Name entered\" "
+      },
+      {
+        "content": "WHEN user enter valid First name and Last name \nAND user taps on Save Changes",
+        "expected": "THEN user will see the saving animation\nAND user will be taken back to Profile view\nAND user will be able to see my recently modified name updated"
+      },
+      {
+        "content": "WHEN user enter valid First name and Last name with multiple names (i.e Vlad Guerrero Jr., Michael Harris II, Isiah Kiner-Falefa)\nAND user taps on Save Changes",
+        "expected": "THEN user will see the saving animation\nAND user will be taken back to Profile view\nAND user will be able to see my recently modified name updated"
+      },
+      {
+        "content": "WHEN User is on edit form AND makes changes to the name fields \nBUT user taps on '<' without saving changes",
+        "expected": "THEN user will be taken back to Profile view\nAND User will be able to see the names NOT updated"
+      },
+      {
+        "content": "WHEN user enters valid and different First name and/or Last name \nAND user taps on Save Changes\nAND user quit the app, and restarts the app ",
+        "expected": "THEN user updated data for profile name should be maintained \n"
+      },
+      {
+        "content": "WHEN user enters valid and different First name and/or Last name \nAND user taps on Save Changes\nAND user log out of the app and log back in ",
+        "expected": "THEN user updated data for profile name should be maintained "
+      },
+      {
+        "content": "WHEN user have no network connection*\nAND user enters valid and different First name and/or Last name \nAND user taps on Save Changes\n\n\n*device set to airplane mode can be done to simulate",
+        "expected": "THEN user is shown the error text \"Profile update failed. Try again later.\"\n\n\nAndroid: \nUnable to Save \nSorry, check your network and try again.\nDismiss Retry CTA\n![](index.php?/attachments/get/14838834)\n\n"
+      }
+    ]
+  },
+  {
+    "id": 34150890,
+    "title": "Profile - Edit Mode [External-Proxy]*",
+    "section_id": 1981617,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457358,
+    "updated_by": 288,
+    "updated_on": 1731009858,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user in on Profile page\r\n\r\nRelevant links:\r\n*Mocks:[Figma](https://www.figma.com/file/M3vqmrFe2eJlofe392hAqY/Specs?node-id=1284%3A14013)\r\nEDIT MODE:\r\n*iOS:[BP-9188](https://baseball.atlassian.net/browse/BP-9188)\r\n",
+    "custom_steps": "WHEN user is on Profile view \r\nAND User tap on Edit button ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN profile service unavailable* \nAND user Taps on Save (Submit as it shows in design) \n\n*this can be simulated with proxy tool by adding a breakpoint to https://profile.mlb.com response",
+        "expected": "THEN user will see the saving animation\nBUT then user is eventually shown(after timeout) the error text 'Profile update failed. Try again later.'\nAND the user changes have NOT been updated (can be verified by returning to My Profile)\n\nANDROID: Network Error message"
+      },
+      {
+        "content": "WHEN user successfully changes to the First Name and Last Name within BP Profile > Edit",
+        "expected": "THEN user should be able to verify the changes by Logging into MLB.com* or through proxy**\n\n*https://www.mlb.com/account/general can be used to verify the acct name change occurs (FOR QA: https://qa-gcp.mlb.com/account/general )\n**proxy call would be https://profile.mlb.com/api/v1/profile"
+      },
+      {
+        "content": "(reversely)\nWHEN user makes a name change externally (i.e MLB.com) or through mocked proxy**",
+        "expected": "THEN user should be able to see updated profile name on BP app\n\nNOTE: The update will be reflected in BP, only after the Identity Token has been refreshed. W/ ProfileTab, the view may update to see the name change instantly (after navigating away and back to Profile) -- formerly, it can take up to 24hrs to occur organically, but can also be forced via logout/login. "
+      }
+    ]
+  },
+  {
+    "id": 34150891,
+    "title": "Profile - Edit Analytics [Proxy]*",
+    "section_id": 1981617,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457358,
+    "updated_by": 288,
+    "updated_on": 1728582236,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "iOS: [BP-9213](https://baseball.atlassian.net/browse/BP-9213)\r\n\r\n(requires access to a proxy tool to verify the tracking)\r\n\r\n*this can be captured with proxy tool by viewing https://mlb.sc.omtrdc.net/b/ss/ request",
+    "custom_steps": "WHEN App is started and \r\nUser is on Profile view ",
+    "custom_expected": "THEN tracking is monitored in Adobe ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Name click - tapping on top profile card selection to edit ",
+        "expected": "THEN User should see Analytics call in Proxy as \n\ntrackAction:@\"MLB Ballpark : Profile : Edit Click\"\n\n"
+      },
+      {
+        "content": "WHEN user Edit Profile page view ",
+        "expected": "THEN User should see Analytics call in Proxy as \n\ntrackState:@\"MLB Ballpark : Profile : Edit Profile\"\n"
+      },
+      {
+        "content": "WHEN user is on Edit profile  AND first name click - tap into first name text field ",
+        "expected": "THEN User should see Analytics call in Proxy a\n\ntrackAction:@\"MLB Ballpark : Profile : Edit Profile : First Name Click\"\n"
+      },
+      {
+        "content": "WHEN user is on Edit profile  AND last name click - tap into first name text field ",
+        "expected": "THEN User should see Analytics call in Proxy a\n\ntrackAction:@\"MLB Ballpark : Profile : Edit Profile : Last Name Click\"\n"
+      },
+      {
+        "content": "WHEN user tap on Save to commit changes ",
+        "expected": "THEN User should see Analytics call in Proxy a\n\ntrackAction:@\"MLB Ballpark : Profile : Edit Profile : Save Click\"\n\n"
+      }
+    ]
+  },
+  {
+    "id": 34150897,
+    "title": "Favorite Teams",
+    "section_id": 1981618,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457384,
+    "updated_by": 433,
+    "updated_on": 1727938781,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user navigates to ProfileTab > Favorite Teams",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a user selects a favorite team (and saves selection)\n\nNote: Iterate over the 30 teams to verify the team logo is shown correctly for each team.",
+        "expected": "THEN the selected team should be reflected with the team's logo shown on bottom right corner of Avatar on Profile page \n"
+      },
+      {
+        "content": "WHEN the user selects multiple favorite teams",
+        "expected": "THEN the tile should increment (1.2.3.4) as more teams are added\n"
+      },
+      {
+        "content": "",
+        "expected": "AND the 1st team should be reflected on Profile page with the team's logo shown on bottom right corner of Avatar"
+      },
+      {
+        "content": "WHEN the user selects and deselects favorite teams on Favorite Teams view",
+        "expected": "THEN the counter should decrement and the previous order should be retained"
+      },
+      {
+        "content": "WHEN the user returns to the Home Page",
+        "expected": "AND the Home Tab should show your #1 favorite team should be highlighted in the TeamSchedule context card\nAND the Home Tab should no longer show the FaveTeam context card (with selection prev made)\n\n[CONTEXT CARDS ARE REGULATED BY CARD CREATOR - Team Schedule & Fave Team context cards may not be shown, if not configured]"
+      }
+    ]
+  },
+  {
+    "id": 34150898,
+    "title": "Favorite Teams - Profile Service *[External-Proxy]",
+    "section_id": 1981618,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457384,
+    "updated_by": 288,
+    "updated_on": 1747772175,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-9781](https://baseball.atlassian.net/browse/BP-9781)\r\n[BP-9782](https://baseball.atlassian.net/browse/BP-9782)\r\n\r\nGIVEN the user downloaded the Ballpark app (14.0 or greater)\r\n\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is logged in with MLB account in Ballpark app\nWHEN user navigates to ProfileTab > Favorite Teams\nAND user successfully makes change to the primary favorite team",
+        "expected": "THEN the selected team should be reflected with the team's logo shown on bottom right corner of Avatar on Profile page"
+      },
+      {
+        "content": "",
+        "expected": "AND user should be able to verify the favorite team changes by Logging into MLB.com* or through proxy**\n\n*https://www.mlb.com/account/teams-players can be used to verify the favorite team name change occurs (for QA - https://qa-gcp.mlb.com/account/teams-players )\n**proxy call would be https://profile.mlb.com/api/v1/profile"
+      },
+      {
+        "content": "GIVEN user is logged in with MLB account in Ballpark app\nWHEN user navigates to ProfileTab > Favorite Teams\nAND the user selects multiple favorite teams",
+        "expected": "THEN the tile should increment (1.2.3.4) as more teams are added"
+      },
+      {
+        "content": "WHEN the user selects multiple favorite teams (and saves selection)",
+        "expected": "THEN user should be able to verify the favorite team changes by Logging into MLB.com* or through proxy**\n\n*https://www.mlb.com/account/teams-players can be used to verify the favorite team name change occurs\n**proxy call would be https://profile.mlb.com/api/v1/profile\n\n[ONLY PRIMARY TEAM IS SAVED WITHIN MLB.COM]"
+      },
+      {
+        "content": "WHEN the user selects and deselects favorite teams",
+        "expected": "THEN the counter should decrement and the previous order should be retained"
+      },
+      {
+        "content": "WHEN the user returns to the Home Page",
+        "expected": "AND the Home Tab should show your #1 favorite team should be highlighted in the TeamSchedule context card\nAND the Home Tab should no longer show the FaveTeam context card (with selection prev made)\n\n[CONTEXT CARDS ARE REGULATED BY CARD CREATOR - Team Schedule & Fave Team context cards may not be shown, if not configured]\n\n"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "(reversely)\nGIVEN user makes a fave team change externally (i.e MLB.com) or through mocked proxy**\nWHEN user logs in with MLB account in Ballpark app\n\n\n[BP-11016](https://baseball.atlassian.net/browse/BP-11016 ) Confirm logout/login is required for external change to be maintained within BPapp",
+        "expected": "THEN the MLB account favorite team is automatically applied as user's first favorite team \n\n\n[Testing notes, verifiable by confirming:\n*Team logo layered on the avatar on Profile page\n*Profile > Favorite Teams\n*Home tab api call request body via proxy (visually this can be validated with the “Take me out to the ballgame!” context card)\n*Team tab icon\n*Buy Tickets and Team tab default selected club]\n\n[BP-11222](https://baseball.atlassian.net/browse/BP-11222 ) could be cause if not seeing Profile update "
+      },
+      {
+        "content": "(reversely)\nGIVEN user does not have a fave team set on MLB Account (i.e MLB.com)\nWHEN user logs in with MLB account in Ballpark app",
+        "expected": "THEN the MLB account favorite team is defaulted without a favorite team \n\n\n[Testing notes, verifiable by confirming:\n*NO Team logo layered on the avatar on Profile page\n*Profile > Favorite Teams (no teams set)\n*Home tab api call request body via proxy (visually this can be validated with the “Take me out to the ballgame!” context card)\n*Team tab icon (MLB logo)\n*Buy Tickets and Team tab (unselected)]"
+      }
+    ]
+  },
+  {
+    "id": 34150899,
+    "title": "App Notifications  - Display",
+    "section_id": 1981618,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457384,
+    "updated_by": 282,
+    "updated_on": 1736863032,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user in on Profile page",
+    "custom_steps": "WHEN accessing App Notifications on the Profile page via Profile tab",
+    "custom_expected": "THEN App Notifications page's display \r\nAND the below validation is expected",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is on 'Profile' page",
+        "expected": "THEN user is shown 'App Notifications' as a menu option"
+      },
+      {
+        "content": "WHEN user taps on App Notifications option",
+        "expected": "THEN App Notifications page is shown with 'App Notifications' as title \nAndroid: Shown 'My App Notifications' as title\nAND the notification options are each presented with details and slider buttons(allowing enabling/disabling) "
+      }
+    ]
+  },
+  {
+    "id": 34150901,
+    "title": "MLB Account Emails - Display",
+    "section_id": 1981618,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457384,
+    "updated_by": 282,
+    "updated_on": 1736863078,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user in on Profile page",
+    "custom_steps": "WHEN accessing MLB Account Emails on the Profile page",
+    "custom_expected": "THEN MLB Account Emails page displayed ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is on 'My Profile' page",
+        "expected": "THEN user is shown 'MLB Account Emails' as a menu option"
+      },
+      {
+        "content": "WHEN user taps on the MLB Account Emails option",
+        "expected": "THEN MLB Account Emails page is shown with 'MLB Account Emails' as title\nAndroid: Shown 'My MLB Account Emails' as title\n\nAND the email currently used to log in is listed \nAND the user's other verified/unverified emails accounts are shown separated appropriately (if applicable)"
+      }
+    ]
+  },
+  {
+    "id": 34150900,
+    "title": "Ticket Accounts",
+    "section_id": 1981618,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457384,
+    "updated_by": 282,
+    "updated_on": 1736863167,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user in on Profile page",
+    "custom_steps": "WHEN accessing Ticket Accounts on the Profile page",
+    "custom_expected": "THEN Ticket Accounts page's displayed",
+    "custom_steps_separated": [
+      {
+        "content": "When user is on 'Profile' page",
+        "expected": "THEN user is shown 'Ticket Accounts' as a menu option"
+      },
+      {
+        "content": "WHEN user taps on the Ticket Accounts option with a verified email account\n\n\n\n",
+        "expected": "THEN user is shown the Ticket Accounts page with 'Ticket Accounts' as title\nAndroid: Shown 'Ticket Accounts' as title\n\nAND Ticket Accounts with pertinent details listed that are associated with the MLB Account"
+      },
+      {
+        "content": "WHEN user taps on the Ticket Accounts option with an unverified email account\n",
+        "expected": "THEN user is shown the Ticket Accounts page with 'Ticket Accounts' as title\nAndroid: Shown 'Ticket Accounts' as title\n\nAND 'No Ticket Accounts' page is shown\n"
+      }
+    ]
+  },
+  {
+    "id": 34155044,
+    "title": "About Ballpark",
+    "section_id": 1981618,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727821027,
+    "updated_by": 288,
+    "updated_on": 1731009430,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 6,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user navigates to My Profile page (via Profile Navbar)",
+    "custom_steps": "WHEN user taps on Profile bottom nav bar tab",
+    "custom_expected": "THEN 'About Ballpark' is shown with an icon as a menu option",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on 'About Ballpark'",
+        "expected": "THEN app displays a new page with 'About Ballpark' as title\nAND user is shown read-only device/acct information:\n*Application Version\n*Build Number\n*Operating System\n*Device ID\n*MLB Account\n\n\nAND user is shown additional drawer options (Terms of Use, Privacy Policy)\nAND user is shown 'Developer Tools' on Debug builds (non-Release Candidates)"
+      },
+      {
+        "content": "WHEN user taps 'Terms of Use' within About Ballpark page",
+        "expected": "THEN webview of Terms of Use is shown with back nav ('<')and refresh icon"
+      },
+      {
+        "content": "WHEN user taps on refresh icon",
+        "expected": "THEN Terms of Use page remains open and page is refreshed"
+      },
+      {
+        "content": "WHEN user taps back navigation",
+        "expected": "THEN user is returned to About Ballpark page"
+      },
+      {
+        "content": "WHEN user taps 'Privacy Policy' within About Ballpark page",
+        "expected": "THEN webview of Privacy Policy is shown with back nav ('<')and refresh icon"
+      },
+      {
+        "content": "WHEN user taps on refresh icon",
+        "expected": "THEN Privacy Policy page remains open and page is refreshed"
+      },
+      {
+        "content": "WHEN user taps back navigation",
+        "expected": "THEN user is returned to About Ballpark page"
+      },
+      {
+        "content": "WHEN user back navigates from 'About Ballpark' page",
+        "expected": "THEN user is taken back to 'Profile' page"
+      }
+    ]
+  },
+  {
+    "id": 34155045,
+    "title": "Close MLB Account",
+    "section_id": 1981618,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727821027,
+    "updated_by": 288,
+    "updated_on": 1731009605,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 7,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user navigates to My Profile page (via Profile Navbar)\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on Close MLB Account menu option on the Profile page\n\n",
+        "expected": "THEN Close MLB Account view is shown within the internal BP app  "
+      },
+      {
+        "content": "WHEN user Close on top left corner ",
+        "expected": "THEN Close MLB Account page is dismissed and user is show the Profile Page "
+      }
+    ]
+  },
+  {
+    "id": 34155042,
+    "title": "Customer Support",
+    "section_id": 1981618,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727821027,
+    "updated_by": 282,
+    "updated_on": 1736863254,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 8,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user navigates to My Profile page (via Profile Navbar)\r\nAND Customer Support menu option shown \r\n\r\n*external link (\"https://support.mlb.com/contact-us\")",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on Customer Support menu option on the Profile page",
+        "expected": "THEN Customer Support view is shown within the device browser (external to BP)"
+      },
+      {
+        "content": "WHEN user returns to BP app",
+        "expected": "THEN Customer Support page is dismissed and user is show the Profile page"
+      }
+    ]
+  },
+  {
+    "id": 34155043,
+    "title": "Do Not Share or Sell My Data",
+    "section_id": 1981618,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727821027,
+    "updated_by": 282,
+    "updated_on": 1736863336,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 10,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-10771](https://baseball.atlassian.net/browse/BP-10771 )\r\n\r\nGIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user navigates to My Profile page (via Profile Navbar)\r\n\r\n",
+    "custom_steps": "WHEN on the Profile page",
+    "custom_expected": "THEN 'Do Not Share or Sell My Data' w/ 'This does not override Apple's Do Not Track Settings' subtext shown below 'Do Not Share or Sell My Data'\r\n[BP-10771](https://baseball.atlassian.net/browse/BP-10771 )\r\n\r\nAndroid: Won't shown 'This does not override Apple's Do Not Track Settings' subtext below 'Do Not Share or Sell My Data'",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on 'Do Not Share or Sell My Data' menu option on the Profile page",
+        "expected": "THEN Privacy Portal page is shown in an external browser"
+      },
+      {
+        "content": "WHEN user returns to Ballpark App",
+        "expected": "THEN browser page is backgrounded\nAND user is returned to Profile page"
+      }
+    ]
+  },
+  {
+    "id": 34155046,
+    "title": "MLB Go-Ahead ID",
+    "section_id": 1981618,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://baseball.atlassian.net/browse/BP-10587",
+    "created_by": 288,
+    "created_on": 1727822458,
+    "updated_by": 288,
+    "updated_on": 1731009798,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 18,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "iOS: [BP-10587](https://baseball.atlassian.net/browse/BP-10587)\r\n\r\nGIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has already completed the successful enrollment in Go-Ahead Entry program (required for drawer option to be shown --  ballpark://go-ahead can be used to register to GAE)\r\nAND user navigates to My Profile page (via Profile Navbar)\r\n\r\n\r\n",
+    "custom_steps": "GIVEN User on Profile page ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User is on Profile page\nAND user has already completed the successful enrollment in Go-Ahead Entry program",
+        "expected": "THEN user should be display with drawer option \"MLB Go-Ahead ID\" on Profile page\n"
+      },
+      {
+        "content": "WHEN User is on Profile page\nAND user hasn't completed the successful enrollment in Go-Ahead Entry program",
+        "expected": "THEN user should not display with drawer option \"MLB Go-Ahead ID\" on Profile page\n"
+      },
+      {
+        "content": "WHEN User taps on the \"MLB Go-Ahead ID\"",
+        "expected": "THEN selection of \"MLB Go-Ahead ID\" leads user to new view "
+      },
+      {
+        "content": "",
+        "expected": "AND New view should displays user enrollment status [Enrolled (in blue background w/ white text) \n\nMLB Go-Ahead ID - Header/Title\n\n'<' on top left corner in same line as MLB Go-Ahead ID\n\nText Display: \nThe Go-Ahead Entry experience allows you to enter the stadium hands-free and is available at select ballparks. \nTap here for more information and a list of participating ballparks.\n\n\n'Delete MLB Go-Ahead ID' display in white within black pills button"
+      },
+      {
+        "content": "WHEN user taps 'Tap here' within the MLB Go-Ahead ID profile page",
+        "expected": "THEN user is directed to an external browser opened to an appropriate page* with more information on Go Ahead Entry\n\n*the webpage is configured as 'go_ahead_mlb_ballparks_url' in remote config"
+      },
+      {
+        "content": "WHEN user navigates back to BP app",
+        "expected": "THEN MLB Go-Ahead ID page is shown"
+      },
+      {
+        "content": "WHEN User taps on the \"MLB Go-Ahead ID\"\nAND user taps on \"Delete MLB Go-Ahead ID\" ",
+        "expected": "THEN user should display a Deletion prompt modal \n\nBody/Text: \n\nDelete MLB GO-Ahead ID \nDeleting your MLB Go-Ahead ID will remove your ID and require re-enrollment in the program. \n\nDelete Go-ahead ID - CTA\nCancel - CTA \n"
+      },
+      {
+        "content": "WHEN user select \"Delete Go-Ahead ID\" on the Deletion prompt modal",
+        "expected": "THEN user is removed from Go-Ahead entry program\nAND the user is returned to Profile page \nAND the Profile page no longer shows MLB Go-Ahead ID entry\n\n\n"
+      },
+      {
+        "content": "WHEN user successfully Unenrolled from MLB Go-Ahead ID ",
+        "expected": "THEN user should not display with MLB Go-Ahead Entry/ID drawer option on Profile page"
+      }
+    ]
+  },
+  {
+    "id": 34150873,
+    "title": "MLB Account Emails - Email Verification Status",
+    "section_id": 1981619,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BPA-5609, BP-8745",
+    "created_by": 288,
+    "created_on": 1727457321,
+    "updated_by": 282,
+    "updated_on": 1745344953,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app  (14.0 or greater)\r\nAND user in on Profile page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on the MLB Account Emails option",
+        "expected": "THEN a service call is made to retrieve list of emails and verification status associated with logged in user"
+      },
+      {
+        "content": "WHEN user taps on the MLB Account Emails option\nAND primary email status is successfully retrieved",
+        "expected": "THEN the Primary email address associated with logged in user is displayed and verification status that was retrieved is displayed"
+      },
+      {
+        "content": "WHEN user taps on the MLB Account Emails option\nAND primary status is not successfully retrieved & has never been successfully retrieved",
+        "expected": "THEN the Primary email address associated with logged in user is displayed but the verification status is blank"
+      },
+      {
+        "content": "WHEN user taps on the MLB Account Emails option\nAND the service call to get the list of emails and verification status associated with logged in user and the service call fails",
+        "expected": "THEN an error message is displayed to the user"
+      },
+      {
+        "content": "WHEN User’s primary email is not yet verified",
+        "expected": "THEN 'Resend' button is displayed\nAND message is displayed in red text 'This email is not verified for ticket access'"
+      },
+      {
+        "content": "WHEN: User’s primary email is verified",
+        "expected": "THEN: The email is listed under \"You're logged in with the following email\""
+      },
+      {
+        "content": "WHEN: User has no verified secondary emails",
+        "expected": "THEN: The verified section will not be displayed"
+      },
+      {
+        "content": "WHEN: User has no pending secondary emails",
+        "expected": "THEN: The pending section will not be displayed"
+      },
+      {
+        "content": "WHEN: User has verified secondary emails",
+        "expected": "THEN: The list of verified secondary emails are displayed along with a checkmark\nAND: Text \"Your MLB account can access tickets purchased using these emails\" is displayed below verified emails"
+      },
+      {
+        "content": "WHEN: User has pending secondary emails",
+        "expected": "THEN: The list of pending secondary emails are displayed along with a resend button"
+      },
+      {
+        "content": "WHEN: Email address is too long to fit in primary status area or in the verified & pending list items",
+        "expected": "THEN: The size of the font is reduced and ellipses added to prevent overlap with checkmark or resend button "
+      }
+    ]
+  },
+  {
+    "id": 34150874,
+    "title": "MLB Account Emails - Ticket Access Information Page",
+    "section_id": 1981619,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457321,
+    "updated_by": 282,
+    "updated_on": 1737995739,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user in on Profile page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on MLB Account Emails option",
+        "expected": "THEN MLB Account Emails page is shown with a section labeled \"Having trouble finding your tickets?\""
+      },
+      {
+        "content": "WHEN: The user selects the \"i\" on the \"Having trouble finding your tickets?\"",
+        "expected": "THEN: The user is shown a screen describing email verification. \n"
+      },
+      {
+        "content": "WHEN: Informational screen with text is displayed",
+        "expected": "Then: A screen with title \"Ticket Access\" is displayed with information for the users.\n\nAndroid: A screen with title \"My MLB Account Emails\" is displayed with information for the users. "
+      },
+      {
+        "content": "WHEN: User presses back button in top tool bar",
+        "expected": "THEN: User is returned back to My MLB Account Emails "
+      }
+    ]
+  },
+  {
+    "id": 34150875,
+    "title": "MLB Account Emails - Email Resend - Successful",
+    "section_id": 1981619,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457321,
+    "updated_by": 288,
+    "updated_on": 1731009717,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user has an account that has not accepted the email to verify an account.\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user in on MLB Account Emails page\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN: The user selected the \"RESEND\" button on the cell associated with their email address.",
+        "expected": "THEN: A service call is made to get the verification status of the displayed email \n"
+      },
+      {
+        "content": "WHEN: The service call is successful",
+        "expected": "THEN: An alert is presented to the user"
+      },
+      {
+        "content": "WHEN: The service call is successful",
+        "expected": "THEN: The “Resend” text is changed to “Sent” and the button is disabled. Button remains disabled until the user navigates away from My Account page"
+      },
+      {
+        "content": "WHEN: The service call is successful",
+        "expected": "THEN: Screen is scrolled as necessary so that resent item is visible on screen"
+      },
+      {
+        "content": "WHEN: The service call indicates that the user has already verified",
+        "expected": "THEN: The verified emails list is refreshed based on results of service call and the email status is updated to reflect that the primary email is now verified"
+      }
+    ]
+  },
+  {
+    "id": 34150876,
+    "title": "MLB Account Emails - Email Resend - Failure",
+    "section_id": 1981619,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457321,
+    "updated_by": 288,
+    "updated_on": 1731009700,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user in on MLB Account Emails page",
+    "custom_steps": "WHEN: The user selected the \"RESEND\" button on the cell associated with their email address.",
+    "custom_expected": "THEN: When the call fails they will get an alert \r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps the Resend button\nAND the service calls fails\n\n(this can be achieved by removing network connection)",
+        "expected": "THEN the account didn't accepted the email to verify the same account \nAND an error prompt with \"Verification Email Not Sent\" as title is presnted"
+      }
+    ]
+  },
+  {
+    "id": 34150877,
+    "title": "MLB Account Emails - Add Secondary Email - Valid Email",
+    "section_id": 1981619,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457321,
+    "updated_by": 282,
+    "updated_on": 1736864014,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user in on Profile page\r\nAND user in on MLB Account Emails page\r\nAND user taps the Add Another Email \r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN: The user submits a valid email address that has not yet been added \n",
+        "expected": "THEN:The user is presented with an alert \n\n![](index.php?/attachments/get/14476358)\n"
+      },
+      {
+        "content": "WHEN: User acknowledges displayed alert ",
+        "expected": "THEN: Page is refreshed and newly added email address is now in pending list"
+      }
+    ]
+  },
+  {
+    "id": 34150878,
+    "title": "MLB Account Emails - Add Secondary Email - Invalid Email",
+    "section_id": 1981619,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457321,
+    "updated_by": 282,
+    "updated_on": 1743597617,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 6,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user in on Profile page\r\nAND user in on MLB Account Emails page\r\nAND user taps the Add Another Email \r\n\r\n\r\nWIKI: [Add Secondary Email](https://baseball.atlassian.net/wiki/spaces/mobile/pages/19727697/Verify+Email#Add-Secondary-Email)",
+    "custom_steps": "WHEN: The user presses send with an invalid email address\r\n",
+    "custom_expected": "THEN: an alert is shown\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN The user presses send with an invalid email address",
+        "expected": "THEN the Add secondary email gives error message \"This must be a valid email Address.\""
+      }
+    ]
+  },
+  {
+    "id": 34150879,
+    "title": "MLB Account Emails - Add Secondary Email - Dismiss keyboard button",
+    "section_id": 1981619,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457321,
+    "updated_by": 288,
+    "updated_on": 1731009659,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 7,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user in on Profile page\r\nAND user in on MLB Account Emails page\r\nAND user taps the Add Another Email ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN selecting \"Add Another Email\"",
+        "expected": "THEN the cursor will start at the beginning of the line and \"Add Another Email\" text will still be displayed"
+      },
+      {
+        "content": "WHEN the user starts typing in an email address",
+        "expected": "THEN the \"Add Another Email\" text will disappear"
+      },
+      {
+        "content": "WHEN the user selects send after adding in the email",
+        "expected": "THEN the dialog is displayed & once its dismissed, the keyboard will be hidden"
+      },
+      {
+        "content": "WHEN the user selects \"Cancel\" on the keyboard ",
+        "expected": "THEN the Keyboard will be dismissed and the line will show the partially entered email address or \"Add Another Email\""
+      }
+    ]
+  },
+  {
+    "id": 34150880,
+    "title": "MLB Account Emails - Add Secondary Email - Already Verified",
+    "section_id": 1981619,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457321,
+    "updated_by": 282,
+    "updated_on": 1743598069,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 8,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user in on Profile page\r\nAND user in on MLB Account Emails page\r\nAND user taps the Add Another Email ",
+    "custom_steps": null,
+    "custom_expected": "WIKI: [Verify Email Add Secondary Email](https://baseball.atlassian.net/wiki/spaces/mobile/pages/19727697/Verify+Email#Add-Secondary-Email)",
+    "custom_steps_separated": [
+      {
+        "content": "The user submits a valid email address that has ALREADY been added\n",
+        "expected": "THEN \n[iOS]\nTitle: Verification Email Not Sent\nA verification email could not be sent to [email]\n![](index.php?/attachments/get/14593408)\n\n[Android]\nTitle: Verification Email Not Sent\nThe user is presented with an alert that says “Email address [email] is already verified with this account”\n\nOK \n![](index.php?/attachments/get/14593407)\n\n"
+      },
+      {
+        "content": "WHEN: User acknowledges the alert",
+        "expected": "THEN: A service call is made to refresh the email verification list"
+      }
+    ]
+  },
+  {
+    "id": 34150881,
+    "title": "MLB Account Emails - Remove Email",
+    "section_id": 1981619,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-8774, BPA-5637, BPA-5650",
+    "created_by": 288,
+    "created_on": 1727457321,
+    "updated_by": 282,
+    "updated_on": 1747399669,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 9,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user in on Profile page\r\nAND user in on MLB Account Emails page\r\nAND user taps the \"Remove\" option on \"Your Other Verified Accounts\"\r\n\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User presses on \"Remove\" option",
+        "expected": "THEN List of verified and pending emails items are updated with an option to click to signify \"remove\" this email from the list\nTHEN \"Remove\" option is changed to \"Done\""
+      },
+      {
+        "content": "WHEN User presses on remove icon for a list item in the verified email list",
+        "expected": "THEN a confirmation dialog is displayed to the user with option to cancel or remove\n\nExact Text: Message is displayed \"By removing, you will no longer be able to see tickets purchased using [SECONDARY EMAIL JUST SELECTED FOR REMOVAL] while logged into [PRIMARY CURRENTLY LOGGED IN MLB ACCOUNT EMAIL]\" "
+      },
+      {
+        "content": "WHEN User presses on remove icon for a list item in the pending email list",
+        "expected": "Header: Remove Email?\n\nBody: By removing, you will no longer be able to see ticket purchased using [CURRENTLY SELECTED FOR REMOVAL EMAIL ADDRESS] while logged into [Primary email]\nOptions: Cancel / Remove\n"
+      },
+      {
+        "content": "WHEN User confirms to remove the verified item",
+        "expected": "THEN service call is made to unverify the email address associated with the selected item.\nTHEN dialog is dismissed\nTHEN the list is updated and selected item is removed"
+      },
+      {
+        "content": "WHEN User selects cancel in dialog to remove the verified or pending item",
+        "expected": "THEN no service call is made and the item remains in the list"
+      },
+      {
+        "content": "WHEN User selects \"Done\" option",
+        "expected": "THEN list items are displayed in manner prior to remove mode = returns to resend, sent, or check mark"
+      },
+      {
+        "content": "WHEN User confirms to remove the verified or pending item and service call fails",
+        "expected": "THEN dialog with error message is displayed with OK option to dismiss"
+      },
+      {
+        "content": "WHEN User adds another email",
+        "expected": "THEN pending verification list is updated with new email"
+      },
+      {
+        "content": "WHEN User selects \"remove\"",
+        "expected": "THEN newly added email address show remove icon\nTHEN newly added email address can be removed "
+      }
+    ]
+  },
+  {
+    "id": 34150882,
+    "title": "Deeplink - Profile [ANDROID ONLY]",
+    "section_id": 1981620,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-11015",
+    "created_by": 288,
+    "created_on": 1727457344,
+    "updated_by": 288,
+    "updated_on": 1747771650,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "dependent on [BP-11015](https://baseball.atlassian.net/browse/BP-11015 )\r\n\r\nGIVEN the user downloaded the Ballpark app (14.x or greater)\r\n\r\nNote: Verify with Cold Start and Warm Start",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://profile deeplink",
+        "expected": "THEN user is taken to Profile page\nAND Home tab is highlighted in the bottom navigation bar\n\n**UPDATE NEED TO BE MAKE FOR THIS TEST**\n\nTHEN user is taken to Profile page\nAND Profile tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 34150883,
+    "title": "Deeplink - Favorite Teams",
+    "section_id": 1981620,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457344,
+    "updated_by": 282,
+    "updated_on": 1738585959,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.x or greater)* \r\n\r\n*ProfileTab feature enabled",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://favorite-teams deeplink",
+        "expected": "THEN user is taken to My Teams Modal with 'Done' link shown\nAND previously selected favorited teams maintained, if any"
+      },
+      {
+        "content": "WHEN user taps 'Done' on the My Team modal",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 34150884,
+    "title": "Deeplink - Notifications",
+    "section_id": 1981620,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 288,
+    "created_on": 1727457344,
+    "updated_by": 282,
+    "updated_on": 1738585964,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.x or greater)*\r\n\r\n*ProfileTab feature enabled\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://notifications deeplink",
+        "expected": "THEN user is taken to My Notifications modal"
+      },
+      {
+        "content": "WHEN user dismisses the My Notifications modal",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 34150885,
+    "title": "Deeplink - MLB Account",
+    "section_id": 1981620,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457344,
+    "updated_by": 282,
+    "updated_on": 1738585969,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.x or greater)*\r\n\r\n*ProfileTab feature enabled\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://mlb-account deeplink",
+        "expected": "THEN user is taken to My MLB Account Emails modal with 'Done' link shown"
+      },
+      {
+        "content": "WHEN user taps 'Done' on the My MLB Account Emails modal",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 34150886,
+    "title": "Deeplink - Ticket Accounts",
+    "section_id": 1981620,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1727457344,
+    "updated_by": 282,
+    "updated_on": 1738585975,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 695613,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.x or greater)*\r\n\r\n*ProfileTab feature enabled\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://ticket-accounts deeplink",
+        "expected": "THEN user is taken to My Ticket Accounts modal with 'Done' link shown"
+      },
+      {
+        "content": "WHEN user taps 'Done' on the My Ticket Accounts modal",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  }
+]

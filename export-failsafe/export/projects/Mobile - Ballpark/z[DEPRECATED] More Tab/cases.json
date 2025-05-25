@@ -1,0 +1,740 @@
+[
+  {
+    "id": 16059823,
+    "title": "Add More option",
+    "section_id": 717969,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1613675918,
+    "updated_by": 288,
+    "updated_on": 1637099052,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "Prerequisite - Remote Config Setup for: More Menu configuration\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"more_menu_config\" as needed to force display. \r\n3. Save changes.\r\n4. Publish changes.\r\n\r\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\r\n\r\nRemote Configs \r\n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobile-npd/config)\r\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\r\n(can have condition set up to differentiate desired behavior for different envs/platform/target_audience)\r\n\r\n\r\nGIVEN Ballpark app is installed",
+    "custom_steps": "WHEN adding menu configurations",
+    "custom_expected": "THEN newly added configurations should be displayed correctly in More tab",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the more_menu_config has added the below struct with config updated and published:\n {\n      \"title\": \"SteveO TestLink1\",\n      \"imageSvgUrl\": \"https://storage.googleapis.com/mlb-ballpark-app-831.appspot.com/app-assets/more-menu/IconAboutBallpark.svg\",\n      \"imagePngUrl\": \"https://storage.googleapis.com/mlb-ballpark-app-831.appspot.com/app-assets/more-menu/IconAboutBallpark.png\",\n      \"deepLinkUrl\": \"ballpark://mlb-account\"\n    },",
+        "expected": "THEN the user sees an additional option in the More menu with the the image icon of ballpark, the title of \"SteveO TestLink1\" and tapping the title takes the user to My MLB Account Emails. "
+      },
+      {
+        "content": "WHEN the more_menu_config has added the below struct with config updated and published:\n {\n      \"title\": \"SteveO TestLink2 - extended text ABCDEFGHIJKLMNOPQRSTUVWYXZ0123456789!@#$%^&*()\",\n      \"imageSvgUrl\": \"https://storage.googleapis.com/mlb-ballpark-app-831.appspot.com/app-assets/more-menu/IconAboutBallpark.svg\",\n      \"imagePngUrl\": \"https://storage.googleapis.com/mlb-ballpark-app-831.appspot.com/app-assets/more-menu/IconAboutBallpark.png\",\n      \"deepLinkUrl\": \"ballpark://mlb-account\"\n    },",
+        "expected": "THEN the user sees an additional option in the More menu with the the image icon of ballpark, the title of \"SteveO TestLink2 - extended text ABCDEFGHIJKLMNOPQRSTUVWYXZ0123456789!@#$%^&*()\" in its entirety spanning across multiple lines, and tapping the title takes the user to My MLB Account Emails. "
+      },
+      {
+        "content": "WHEN the more_menu_config has added the below struct with config updated and published:\n    {\n      \"title\": \"SteveO TestLink3 - empty imgIcon\",\n      \"imageSvgUrl\": \"\",\n      \"imagePngUrl\": \"\",\n      \"deepLinkUrl\": \"ballpark://mlb-account\"\n    },\n\nNOTES: \n* imageSvgUrl is an Android configuration / imagePngUrl is iOS configuration",
+        "expected": "THEN the user sees an additional option in the More menu with no image icon, the title of \"SteveO TestLink3 - empty imgIcon\" and tapping the title takes the user to My MLB Account Emails. "
+      },
+      {
+        "content": "WHEN the more_menu_config has added the below struct with config updated and published:\n    {\n      \"title\": \"SteveO TestLink4 - empty deeplink\",\n      \"imageSvgUrl\": \"https://storage.googleapis.com/mlb-ballpark-app-831.appspot.com/app-assets/more-menu/IconAboutBallpark.svg\",\n      \"imagePngUrl\": \"https://storage.googleapis.com/mlb-ballpark-app-831.appspot.com/app-assets/more-menu/IconAboutBallpark.png\",\n      \"deepLinkUrl\": \"\"\n    },",
+        "expected": "THEN the user sees an additional option in the More menu with the the image icon of ballpark, the title of \"SteveO TestLink4 - empty deeplink\" and tapping on the title does not have an effect. "
+      },
+      {
+        "content": "WHEN the more_menu_config has added the below struct with config updated and published:\n    {\n      \"title\": \"SteveO TestLink4a - outbound link\",\n      \"imageSvgUrl\": \"https://storage.googleapis.com/mlb-ballpark-app-831.appspot.com/app-assets/more-menu/IconAboutBallpark.svg\",\n      \"imagePngUrl\": \"https://storage.googleapis.com/mlb-ballpark-app-831.appspot.com/app-assets/more-menu/IconAboutBallpark.png\",\n      \"deepLinkUrl\": \"https://google.com\"\n    },",
+        "expected": "THEN the user sees an additional option in the More menu with the the image icon of ballpark, the title of \"SteveO TestLink4a - outbound link\" and tapping on the title opens a web browser to google.com"
+      },
+      {
+        "content": "(repeat below as many times necessary to cause additional links to not be shown on initial load and requires scrolling)\nWHEN the more_menu_config has added the below struct with config updated and published:\n    {\n      \"title\": \"SteveO TestLink5x\",\n      \"imageSvgUrl\": \"https://storage.googleapis.com/mlb-ballpark-app-831.appspot.com/app-assets/more-menu/IconAboutBallpark.svg\",\n      \"imagePngUrl\": \"https://storage.googleapis.com/mlb-ballpark-app-831.appspot.com/app-assets/more-menu/IconAboutBallpark.png\",\n     \"deepLinkUrl\": \"ballpark://mlb-account\"\n    },",
+        "expected": "THEN the user sees an additional option(s) in the More menu with the the image icon of ballpark, the title of \"SteveO TestLink5x\" and tapping the title of each takes the user to My MLB Account Emails. \n\nTHEN (depending on phone size) the user may not see all links upon load \nAND the user scrolls down/up to show additional options, without removing any prev established."
+      }
+    ]
+  },
+  {
+    "id": 16059824,
+    "title": "Update More option",
+    "section_id": 717969,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1613675929,
+    "updated_by": 288,
+    "updated_on": 1637090616,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "Prerequisite - Remote Config Setup for: More Menu configuration\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"more_menu_config\" as needed to force display. \r\n3. Save changes.\r\n4. Publish changes.\r\n\r\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\r\n\r\nRemote Configs \r\n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobile-npd/config)\r\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\r\n(can have condition set up to differentiate desired behavior for different envs/platform)\r\n\r\n\r\nGIVEN Ballpark app is installed",
+    "custom_steps": "WHEN updating existing menu configurations",
+    "custom_expected": "THEN newly updated configurations should be displayed correctly in More tab",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the more_menu_config has a menu option \"title\" updated to \"UPDATED more TITLE\"",
+        "expected": "THEN the user sees the updated menu option with the title \"UPDATED more TITLE\" in the More menu option\nAND the image icon remains the same and tapping the title takes the user to same location as previously set. "
+      },
+      {
+        "content": "(ANDROID) WHEN the more_menu_config has a menu option imageSvgUrl updated to  \"https://firebasestorage.googleapis.com/v0/b/mlb-ballpark-app-831.appspot.com/o/app-assets%2Fmore-menu%2FIconCamera.svg?alt=media&token=68c8cd12-f1ca-43b0-bc24-d16db9db59b4\"\n\n\n(iOS) WHEN the more_menu_config has a menu option imagePngUrl updated to \"https://storage.googleapis.com/mlb-ballpark-app-831.appspot.com/app-assets/more-menu/IconCamera%403x.png\",",
+        "expected": "THEN the user sees the updated menu option with the Camera icon image\nAND the title remains the same and tapping the title takes the user to same location as previously set. "
+      },
+      {
+        "content": "WHEN the more_menu_config has a menu option deepLinkUrl updated to \"https://www.mlb.com\"",
+        "expected": "THEN the user sees the same title and img icon \nBUT tapping the title takes the user to external site https://www.mlb.com. "
+      },
+      {
+        "content": "WHEN the more_menu_config has a menu option deepLinkUrl updated to \"ballpark://mlb-account\"",
+        "expected": "THEN the user sees the same title and img icon \nBUT tapping the title takes the user to My MLB Account Emails."
+      }
+    ]
+  },
+  {
+    "id": 16059825,
+    "title": "Remove More option",
+    "section_id": 717969,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1613675945,
+    "updated_by": 288,
+    "updated_on": 1637090108,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "Prerequisite - Remote Config Setup for: More Menu configuration\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"more_menu_config\" as needed to force display. \r\n3. Save changes.\r\n4. Publish changes.\r\n\r\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\r\n\r\nRemote Configs \r\n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobile-npd/config)\r\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\r\n(can have condition set up to differentiate desired behavior for different envs/platform)\r\n\r\n\r\nGIVEN Ballpark app is installed",
+    "custom_steps": "WHEN removing menu configurations",
+    "custom_expected": "THEN desired menu configurations should no longer be displayed in More tab",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the more_menu_config has a struct removed AND with config updated and published.\n",
+        "expected": "THEN the user no longer sees the removed option in the More menu with the the image icon and title no longer shown.\n"
+      },
+      {
+        "content": "WHEN the more_menu_config has a struct removed that was placed in between others(or first) AND with config updated and published.",
+        "expected": "THEN the user no longer sees the removed option in the More menu with the the image icon and title no longer shown.\nAND no gap is shown where the removed option was shown formerly\n"
+      }
+    ]
+  },
+  {
+    "id": 16246128,
+    "title": "Customer Support",
+    "section_id": 732681,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1614984187,
+    "updated_by": 288,
+    "updated_on": 1652211671,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND user is logged in with MLB account\r\nAND user taps on More bottom nav bar tab\r\nAND Customer Support menu option in remote config is external link type (\"https://www.mlb.com/live-stream-games/help-center/contact-us\")",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on Customer Support menu option on the More page",
+        "expected": "THEN Customer Support view is shown within the device browser (external to BP)"
+      },
+      {
+        "content": "WHEN user returns to More page in BP app",
+        "expected": "THEN Customer Support page is dismissed and user is show the More page"
+      }
+    ]
+  },
+  {
+    "id": 16246129,
+    "title": "FAQs",
+    "section_id": 732681,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1614984198,
+    "updated_by": 213,
+    "updated_on": 1616004731,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND user is logged in with MLB account\r\nAND user taps on More bottom nav bar tab\r\nAND FAQ menu option in remote config is \"ballpark://webview...\" type",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on FAQs menu option on the More page",
+        "expected": "THEN FAQs view is shown with Close/'X' and refresh icon"
+      },
+      {
+        "content": "WHEN user taps on refresh icon",
+        "expected": "THEN FAQs page remains open and page is refreshed"
+      },
+      {
+        "content": "WHEN user taps on Close/'X'",
+        "expected": "THEN FAQs page is closed\nAND user is returned to More page"
+      }
+    ]
+  },
+  {
+    "id": 16246130,
+    "title": "Take Our Survey[DEPRECATED]",
+    "section_id": 732681,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1614984204,
+    "updated_by": 282,
+    "updated_on": 1713899864,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 6,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND user is logged in with MLB account\r\nAND user taps on More bottom nav bar tab\r\nAND Take Our Survey menu option in remote config is \"ballpark://webview...\" type",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on Take Our Survey menu option on the More page",
+        "expected": "THEN Take Our Survey view is shown with refresh icon"
+      },
+      {
+        "content": "WHEN user taps on refresh icon",
+        "expected": "THEN Take Our Survey page remains open and page is refreshed"
+      },
+      {
+        "content": "WHEN user desires to return to Ballpark app \n[Android user] Utilizes the system back navigation\n[iOS user] Either closes the web browser or app switches",
+        "expected": "THEN user is returned to More page"
+      }
+    ]
+  },
+  {
+    "id": 33136582,
+    "title": "[iOS ONLY] Do Not Sell or Share My Data [Hard coded entry]",
+    "section_id": 732681,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1713830289,
+    "updated_by": 288,
+    "updated_on": 1713830673,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 7,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-10771](https://baseball.atlassian.net/browse/BP-10771 )\r\n\r\nGIVEN the user downloaded the Ballpark app (13.1.0 or greater)\r\nAND user is logged in with MLB account\r\nAND user taps on More bottom nav bar tab\r\n\r\n",
+    "custom_steps": "WHEN on the More Menu",
+    "custom_expected": "THEN 'Do Not Sell or Share My Data' w/ 'This does not override Apple's Do Not Track Settings' subtext shown below 'Do Not Sell or Share My Data'\r\n[BP-10771](https://baseball.atlassian.net/browse/BP-10771 )\r\nAND 'Do Not Sell' entry is above About Ballpark",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on 'Do Not Sell or Share My Data' menu option on the More page",
+        "expected": "THEN Privacy Portal page is shown in an external browser"
+      },
+      {
+        "content": "WHEN user returns to Ballpark App",
+        "expected": "THEN browser page is backgrounded\nAND user is returned to More page"
+      }
+    ]
+  },
+  {
+    "id": 16062850,
+    "title": "About Ballpark [Hard coded entry]",
+    "section_id": 732681,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1613686934,
+    "updated_by": 288,
+    "updated_on": 1713830249,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 8,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (13.1.0 or greater)\r\nAND user is logged in with MLB account\r\nAND user taps on More bottom nav bar tab",
+    "custom_steps": "WHEN user taps on More bottom nav bar tab",
+    "custom_expected": "THEN 'About Ballpark' is shown with an icon as a menu option",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on 'About Ballpark'",
+        "expected": "THEN app displays a new page with 'About' as title\nAND the Menu options (About Ballpark, Terms of Use, Privacy Policy, Do Not Sell or Share My Data*\n\nAND Android user is shown 'QA Tools' on Debug type builds\nOR iOS user is shown 'Developer Tools' menu option on Debug type builds\n\n*[iOS only] 'This does not override Apple's Do Not Track Settings' subtext shown below 'Do Not Sell or Share My Data [BP-10771](https://baseball.atlassian.net/browse/BP-10771 )\n"
+      },
+      {
+        "content": "WHEN user taps 'About Ballpark' within About menu",
+        "expected": "THEN the read-only items are shown such as version, device, build, network, email, and ID"
+      },
+      {
+        "content": "WHEN user taps back navigation",
+        "expected": "THEN user is returned to About page"
+      },
+      {
+        "content": "WHEN user taps 'Terms of Use' within About menu",
+        "expected": "THEN webview of Terms of Use is shown with Close/'X' and refresh icon"
+      },
+      {
+        "content": "WHEN user taps on refresh icon",
+        "expected": "THEN Terms of Use page remains open and page is refreshed"
+      },
+      {
+        "content": "WHEN user taps on Close/'X'",
+        "expected": "THEN Terms of Use page is closed\nAND user is returned to About page"
+      },
+      {
+        "content": "WHEN user taps 'Privacy Policy' within About menu",
+        "expected": "THEN webview of Privacy Policy is shown with Close/'X' and refresh icon"
+      },
+      {
+        "content": "WHEN user taps on refresh icon",
+        "expected": "THEN Privacy Policy page remains open and page is refreshed"
+      },
+      {
+        "content": "WHEN user taps on Close/'X'",
+        "expected": "THEN Privacy Policy page is closed\nAND user is returned to About page"
+      },
+      {
+        "content": "WHEN user taps 'Do Not Sell or Share My Data' within About menu\n\n*[iOS only] 'This does not override Apple's Do Not Track Settings' subtext shown below 'Do Not Sell or Share My Data [BP-10771](https://baseball.atlassian.net/browse/BP-10771 )",
+        "expected": "THEN webview of Do Not Sell My Data is shown"
+      },
+      {
+        "content": "WHEN user taps on refresh icon",
+        "expected": "THEN Do Not Sell My Data page remains open and page is refreshed"
+      },
+      {
+        "content": "WHEN user taps on Close/'X'",
+        "expected": "THEN Do Not Sell My Data page is closed\nAND user is returned to About page"
+      },
+      {
+        "content": "WHEN user back navigates from 'About' page",
+        "expected": "THEN user is taken back to 'More' page"
+      }
+    ]
+  },
+  {
+    "id": 16246126,
+    "title": "Photo Creator [DEPRECATED w/ 10.6.0]",
+    "section_id": 732681,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1614984170,
+    "updated_by": 288,
+    "updated_on": 1635366758,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 9,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND user is logged in with MLB account\r\nAND user taps on More bottom nav bar tab\r\n\r\nNOTE: When testing Android, do NOT user QA Env/Build.  QA builds will crash if user tries to access Camera.\r\n",
+    "custom_steps": "WHEN accessing Photo Creator on the More page \r\n\r\n",
+    "custom_expected": "THEN Camera view is opened allowing user to create photos/videos, including snapchat lenses (if applicable)",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on Photo Creator menu option on the More page",
+        "expected": "THEN camera view is opened"
+      },
+      {
+        "content": "WHEN user taps on 'X' to dismiss the camera view",
+        "expected": "THEN user is returned to More page"
+      }
+    ]
+  },
+  {
+    "id": 16246127,
+    "title": "Loyalty Programs [DEPRECATED w/ 11.1.0]",
+    "section_id": 732681,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1614984179,
+    "updated_by": 288,
+    "updated_on": 1651878440,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 10,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND user is logged in with MLB account\r\nAND user taps on More bottom nav bar tab",
+    "custom_steps": "WHEN accessing Loyalty Programs on the More page",
+    "custom_expected": "THEN Loyalty Programs page is displayed allowing user to select desired Club Loyalty Program",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on Loyalty Programs menu option on the More page",
+        "expected": "THEN Loyalty Programs page is displayed with available loyalty programs for the clubs listed"
+      },
+      {
+        "content": "(iOS) WHEN user taps on the the \"Done\" button in the top right corner",
+        "expected": "THEN user is returned to More page"
+      },
+      {
+        "content": "(Android) WHEN user taps on the back button",
+        "expected": "THEN user is returned to More page"
+      }
+    ]
+  },
+  {
+    "id": 33142173,
+    "title": "Close MLB Account",
+    "section_id": 732681,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1713899880,
+    "updated_by": 282,
+    "updated_on": 1713900079,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 11,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND user is logged in with MLB account\r\nAND user taps on More bottom nav bar tab\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on Close MLB Account menu option on the More page\n\n",
+        "expected": "THEN Close MLB Account view is shown within the internal BP app  "
+      },
+      {
+        "content": "WHEN user Close on top left corner ",
+        "expected": "THEN Close MLB Account page is dismissed and user is show the More Page "
+      }
+    ]
+  },
+  {
+    "id": 16260584,
+    "title": "[iOS] Deeplink - More > About > About Ballpark",
+    "section_id": 733941,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1615233251,
+    "updated_by": 288,
+    "updated_on": 1652211973,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user has favorite team(s) set\nAND user accesses ballpark://about deeplink",
+        "expected": "THEN user is taken to About Ballpark modal with 'Done' link shown"
+      },
+      {
+        "content": "WHEN user taps 'Done' on the About Ballpark modal",
+        "expected": "THEN user is taken to Home page\nAND the user's first selected fave team is shown on the TeamTab with Team logo/name\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 16260586,
+    "title": "[iOS] Deeplink - More > Loyalty Programs",
+    "section_id": 733941,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1615233251,
+    "updated_by": 288,
+    "updated_on": 1652212038,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user has favorite team(s) set\nAND user accesses ballpark://loyalty-program deeplink",
+        "expected": "THEN user is taken to Loyalty Programs modal with 'Done' link shown"
+      },
+      {
+        "content": "WHEN user taps 'Done' on the Loyalty Programs modal",
+        "expected": "THEN user is taken to Home page\nAND the user's first selected fave team is shown on the TeamTab with Team logo/name\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 16367838,
+    "title": "[Android] Deeplink - More > About",
+    "section_id": 733941,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1615926925,
+    "updated_by": 288,
+    "updated_on": 1644255385,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": "WHEN I access the deeplink for More>About page in the Ballpark app",
+    "custom_expected": "THEN I want to be taken to the desired page in the app.",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is not open\nAND user is logged in\nAND user accesses ballpark://about-menu deeplink",
+        "expected": "THEN user is taken to About page\nAND More tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on About page",
+        "expected": "THEN user is taken to More page\nAND More tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://about-menu deeplink",
+        "expected": "THEN user is taken to About page\nAND More tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on About page",
+        "expected": "THEN user is taken to More page\nAND More tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 16367840,
+    "title": "[Android] Deeplink - More > Loyalty Programs",
+    "section_id": 733941,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1615926925,
+    "updated_by": 288,
+    "updated_on": 1644255429,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 6,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": "WHEN I access the deeplink for More>Loyalty Programs in the Ballpark app",
+    "custom_expected": "THEN I want to be taken to the desired page in the app.",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is not open\nAND user is logged in\nAND user accesses ballpark://loyalty-program deeplink",
+        "expected": "THEN user is taken to Loyalty Programs page\nAND More tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on Loyalty Programs page",
+        "expected": "THEN user is taken to More page\nAND More tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://loyalty-program deeplink",
+        "expected": "THEN user is taken to Loyalty Programs page\nAND More tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on Loyalty Programs page",
+        "expected": "THEN user is taken to More page\nAND More tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 16260585,
+    "title": "[iOS] Deeplink - More > Photo Creator [DEPRECATED w/ 10.6.0]",
+    "section_id": 733941,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1615233251,
+    "updated_by": 288,
+    "updated_on": 1635366568,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 7,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": "WHEN I click a link outside the Ballpark app that is supposed to open More>Photo Creator in the Ballpark app",
+    "custom_expected": "THEN I want to be taken to the desired page in the app.",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is not open\nAND user is logged out\nAND user accesses ballpark://camera deeplink",
+        "expected": "THEN user is taken to login prompt"
+      },
+      {
+        "content": "WHEN user logs in",
+        "expected": "THEN user is taken to Camera page\nAND iOS prompt to 'Don't Allow / OK' Ballpark access to the camera (if initial time allowing)"
+      },
+      {
+        "content": "WHEN user taps 'X' to dismiss Camera\n",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN Ballpark app is not open\nAND user is logged in\nAND user accesses ballpark://camera deeplink",
+        "expected": "THEN user is taken to Camera page"
+      },
+      {
+        "content": "WHEN user taps 'X' to dismiss Camera\n",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged out\nAND user accesses ballpark://camera deeplink",
+        "expected": "THEN user is taken to login prompt"
+      },
+      {
+        "content": "WHEN user logs in",
+        "expected": "THEN user is taken to Camera page"
+      },
+      {
+        "content": "WHEN user taps 'X' to dismiss Camera",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user has favorite team(s) set\nAND user accesses ballpark://camera deeplink",
+        "expected": "THEN user is taken to Camera page"
+      },
+      {
+        "content": "WHEN user taps 'X' to dismiss Camera",
+        "expected": "THEN user is taken to Home page\nAND the user's first selected team card with Team logo, name, Park info button is shown on Home page\nAND 'You might be interested in ...' with upcoming games carousel is shown\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 16367839,
+    "title": "[Android] Deeplink - More > Photo Creator [DEPRECATED w/ 10.6.0]",
+    "section_id": 733941,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1615926925,
+    "updated_by": 288,
+    "updated_on": 1635366580,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192825,
+    "display_order": 8,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": "WHEN I click a link outside the Ballpark app that is supposed to open More>Photo Creator in the Ballpark app",
+    "custom_expected": "THEN I want to be taken to the desired page in the app.",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is not open\nAND user is logged out\nAND user accesses ballpark://camera deeplink",
+        "expected": "THEN user is taken to login prompt"
+      },
+      {
+        "content": "WHEN user logs in",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN Ballpark app is not open\nAND user is logged in\nAND user accesses ballpark://camera deeplink",
+        "expected": "THEN user is taken to Camera page\nAND system prompt to 'Cancel / Allow Access' for the camera (if initial time allowing)"
+      },
+      {
+        "content": "WHEN user taps 'X' to dismiss Camera (after allowing access, if presented prompts)",
+        "expected": "THEN user is taken to More page\nAND More tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged out\nAND user accesses ballpark://camera deeplink",
+        "expected": "THEN user is taken to login prompt"
+      },
+      {
+        "content": "WHEN user logs in",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://camera deeplink",
+        "expected": "THEN user is taken to Camera page"
+      },
+      {
+        "content": "WHEN user taps 'X' to dismiss Camera",
+        "expected": "THEN user is taken to More page\nAND More tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 124636,
+    "suite_id": 18711,
+    "name": "MJ Assignments",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 124639,
+    "suite_id": 18711,
+    "name": "Reporting",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 124640,
+    "suite_id": 18711,
+    "name": "Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 124641,
+    "suite_id": 18711,
+    "name": "Invoice",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 124643,
+    "suite_id": 18711,
+    "name": "Credit",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 124650,
+    "suite_id": 18711,
+    "name": "Global/UI",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  }
+]

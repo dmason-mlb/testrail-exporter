@@ -1,0 +1,65 @@
+[
+  {
+    "id": 48270,
+    "title": "Apple Pay",
+    "section_id": 6896,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 25,
+    "created_on": 1415032715,
+    "updated_by": 25,
+    "updated_on": 1415032715,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 878,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user attempts to purchase tickets with an iPhone 6 or iPhone 6 Plus \nAnd has Apply Pay enabled in the device's Settings",
+        "expected": "Then the user will see \"Apple Pay\" as a payment option"
+      },
+      {
+        "content": "When the user attempts to purchase tickets with an iPhone 6 or iPhone 6 Plus \nAnd has Apply Pay disabled in the device's Settings",
+        "expected": "Then \"Apple Pay\" will not appear as an option in the payment options drop-down menu"
+      },
+      {
+        "content": "When the user attempts to purchase tickets with an iPhone 5S or later model",
+        "expected": "Then \"Apple Pay\" will not appear as an option in the Payment Options drop-down menu"
+      },
+      {
+        "content": "When the user attempts to purchase tickets \nAnd has never made a purchase/added a card on the device",
+        "expected": "Then \"Apple Pay\" will be selected by default in the Payment Options drop-down menu"
+      },
+      {
+        "content": "When the user attempts to purchase tickets \nAnd has previously made a purchase/added a card on the device",
+        "expected": "Then \"Apple Pay will be first in the list of Payment Options"
+      },
+      {
+        "content": "When the user selects \"Apple Pay\" from the payment options",
+        "expected": "Then the user will be brought to the checkout screen\nAnd the user will see a \"Buy with Apple Pay\" button"
+      },
+      {
+        "content": "When the user selects \"Apple Pay\" from the payment options",
+        "expected": "Then text will display beneath the \"Buy with Apple Pay\" button that reads \"Tapping Buy with Apple Pay will charge your credit card.\""
+      },
+      {
+        "content": "When the user selects \"Apple Pay\" from the payment options",
+        "expected": "Then the card security field shall remain disabled"
+      },
+      {
+        "content": "When the user selects \"Apple Pay\" from the payment options\nAnd taps \"Buy with Apple Pay\"",
+        "expected": "Then the user will be presented with the checkout screen with their order information and delivery options"
+      },
+      {
+        "content": "When the user selects \"Apple Pay\" from the payment options\nAnd taps \"Buy with Apple Pay\"\nAnd the checkout screen is presented",
+        "expected": "Then the user can select a card and edit delivery options"
+      }
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 127869,
+    "suite_id": 18842,
+    "name": "Unmerged players",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 127868,
+    "suite_id": 18842,
+    "name": "Merged players",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 127904,
+    "suite_id": 18842,
+    "name": "Passed over players",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  }
+]

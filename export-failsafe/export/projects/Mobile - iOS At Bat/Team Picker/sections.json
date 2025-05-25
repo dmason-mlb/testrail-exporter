@@ -1,0 +1,47 @@
+[
+  {
+    "id": 446020,
+    "suite_id": 100781,
+    "name": "Onboarding",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 446021,
+    "suite_id": 100781,
+    "name": "Team Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 482274,
+    "suite_id": 100781,
+    "name": "News/Video",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 446022,
+    "suite_id": 100781,
+    "name": "More Menu",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 446023,
+    "suite_id": 100781,
+    "name": "Account Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

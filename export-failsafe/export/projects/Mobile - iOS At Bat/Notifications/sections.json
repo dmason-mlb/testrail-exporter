@@ -1,0 +1,101 @@
+[
+  {
+    "id": 28128,
+    "suite_id": 3076,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 306155,
+    "suite_id": 3076,
+    "name": "App Upgrade",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 28129,
+    "suite_id": 3076,
+    "name": "Notification Types",
+    "description": "Collapsed: Notification text when they come into the phone\n\nExpanded: Notification text when you long press a notification on iPhone that supports 3D Touch",
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 28130,
+    "suite_id": 3076,
+    "name": "iPhone",
+    "description": null,
+    "parent_id": 28129,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 28131,
+    "suite_id": 3076,
+    "name": "iPad",
+    "description": null,
+    "parent_id": 28129,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 1902763,
+    "suite_id": 3076,
+    "name": "Key Highlights",
+    "description": "This tests the Key Highlights Push notifications",
+    "parent_id": 28129,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 306157,
+    "suite_id": 3076,
+    "name": "App State When Launching Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 306158,
+    "suite_id": 3076,
+    "name": "App in Background",
+    "description": null,
+    "parent_id": 306157,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 306162,
+    "suite_id": 3076,
+    "name": "App Killed",
+    "description": null,
+    "parent_id": 306157,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 306163,
+    "suite_id": 3076,
+    "name": "In-App",
+    "description": null,
+    "parent_id": 306157,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 474466,
+    "suite_id": 3076,
+    "name": "Notification Center",
+    "description": null,
+    "parent_id": 306157,
+    "display_order": 21,
+    "depth": 1
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 105176,
+    "suite_id": 16087,
+    "name": "Updating from Previous Year's App",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 105177,
+    "suite_id": 16087,
+    "name": "Fresh Install",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

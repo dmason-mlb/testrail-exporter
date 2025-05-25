@@ -1,0 +1,502 @@
+[
+  {
+    "id": 31420504,
+    "title": "Ticket Verification ID Lookup in Seat History Search- UI validations",
+    "section_id": 1747871,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 396,
+    "created_on": 1694176871,
+    "updated_by": 396,
+    "updated_on": 1694176871,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 634076,
+    "display_order": 1,
+    "custom_is_automated": false,
+    "custom_pv_category": 27,
+    "custom_refs": null,
+    "custom_preconds": null,
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to Provenue",
+        "expected": "Login should be successfull"
+      },
+      {
+        "content": "Select the Ticket Services option from the Ticketing menu list at the top left corner in the Home page",
+        "expected": "The ticket services page should be displayed"
+      },
+      {
+        "content": "Click on the Seat History Search tab",
+        "expected": "The seat history search tab should get displayed"
+      },
+      {
+        "content": "Click on 'Search Using' drop- down list",
+        "expected": "'Ticket Verification ID' should be available below 'Event' in drop-down list"
+      },
+      {
+        "content": "Select 'Ticket Verification ID'",
+        "expected": "Ticket Verification ID should be selected"
+      },
+      {
+        "content": "Verify input field 'Ticket Verification ID'",
+        "expected": "Input field 'Ticket Verification ID' under Ticet barcode field should be editable and all other fields should be un editable"
+      },
+      {
+        "content": "Click on Find button without entering Ticket Verification ID",
+        "expected": "Error \"*Ticket Verification ID is required\" should be displayed"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31420505,
+    "title": "Verify Transaction Activity of Tickets by looking up Ticket Verification ID",
+    "section_id": 1747871,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 396,
+    "created_on": 1694176977,
+    "updated_by": 396,
+    "updated_on": 1694177532,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 634076,
+    "display_order": 2,
+    "custom_is_automated": false,
+    "custom_pv_category": 27,
+    "custom_refs": null,
+    "custom_preconds": null,
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to Provenue",
+        "expected": "Login should be successfull"
+      },
+      {
+        "content": "Lock and checkout seats by selecting appropriate delivery and Patron",
+        "expected": "Sale completed successfully"
+      },
+      {
+        "content": "Select the Ticket Services option from the Ticketing menu list at the top left corner in the Home page",
+        "expected": "The ticket services page should be displayed"
+      },
+      {
+        "content": "Click on the Seat History Search tab",
+        "expected": "The seat history search tab should get displayed"
+      },
+      {
+        "content": "Select 'Ticket Verification ID' in 'Search Using' drop- down list",
+        "expected": "'Ticket Verification ID' should be enabled to edit"
+      },
+      {
+        "content": "Enter Ticket Verification ID from the Order created above and Click on Find",
+        "expected": "Seat History Details Page should be displayed"
+      },
+      {
+        "content": "Select Transaction Activity in 'View Activity' drop-down",
+        "expected": "Only the Transaction Activity like Sale of the entered Ticket should be displayed"
+      },
+      {
+        "content": "Perform Return, Exchange, Reoffer, Upgrade on the above ticket and Refresh the Seat History search page above",
+        "expected": "All the performed Transaction Activities of the entered Ticket should be displayed correctly"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31420506,
+    "title": "Verify Delivery Activity of Tickets by looking up Ticket Verification ID",
+    "section_id": 1747871,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 396,
+    "created_on": 1694177581,
+    "updated_by": 396,
+    "updated_on": 1694177678,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 634076,
+    "display_order": 3,
+    "custom_is_automated": false,
+    "custom_pv_category": 27,
+    "custom_refs": null,
+    "custom_preconds": null,
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to Provenue",
+        "expected": "Login should be successfull"
+      },
+      {
+        "content": "Lock and checkout seats by selecting appropriate delivery and Patron",
+        "expected": "Sale completed successfully"
+      },
+      {
+        "content": "Select the Ticket Services option from the Ticketing menu list at the top left corner in the Home page",
+        "expected": "The ticket services page should be displayed"
+      },
+      {
+        "content": "Click on the Seat History Search tab",
+        "expected": "The seat history search tab should get displayed"
+      },
+      {
+        "content": "Select 'Ticket Verification ID' in 'Search Using' drop- down list",
+        "expected": "'Ticket Verification ID' should be enabled to edit"
+      },
+      {
+        "content": "Enter Ticket Verification ID from the Order created above and Click on Find",
+        "expected": "Seat History Details Page should be displayed"
+      },
+      {
+        "content": "Select Delivery Activity in 'View Activity' drop-down",
+        "expected": "Only the Delivery Activity with clickable Delivery ID, Transaction ID and Order ID of the entered Ticket should be displayed which directs the user to the appropriate delivery details page"
+      },
+      {
+        "content": "Perform Change Delivery on the above ticket and Refresh the Seat History search page above",
+        "expected": "All the performed Delivery Activities of the entered Ticket should be displayed correctly"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31420507,
+    "title": "Verify Ticket Printing Activity of Tickets by looking up Ticket Verification ID",
+    "section_id": 1747871,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 396,
+    "created_on": 1694177721,
+    "updated_by": 396,
+    "updated_on": 1694177867,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 634076,
+    "display_order": 4,
+    "custom_is_automated": false,
+    "custom_pv_category": 27,
+    "custom_refs": null,
+    "custom_preconds": null,
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to Provenue",
+        "expected": "Login should be successfull"
+      },
+      {
+        "content": "Lock and checkout seats by selecting appropriate delivery and Patron",
+        "expected": "Sale completed successfully"
+      },
+      {
+        "content": "Print the above tickets",
+        "expected": "Tickets Printed successfully"
+      },
+      {
+        "content": "Select the Ticket Services option from the Ticketing menu list at the top left corner in the Home page",
+        "expected": "The ticket services page should be displayed"
+      },
+      {
+        "content": "Click on the Seat History Search tab",
+        "expected": "The seat history search tab should get displayed"
+      },
+      {
+        "content": "Select 'Ticket Verification ID' in 'Search Using' drop- down list",
+        "expected": "'Ticket Verification ID' should be enabled to edit"
+      },
+      {
+        "content": "Enter Ticket Verification ID from the Order created above and Click on Find",
+        "expected": "Seat History Details Page should be displayed"
+      },
+      {
+        "content": "Select Ticket Printing Activity in 'View Activity' drop-down",
+        "expected": "Only the Ticket Printing Activity with all the print details like Job type, barcode of the entered Ticket should be displayed correctly"
+      },
+      {
+        "content": "Perform Reissue, Reprint, Reset operations on the above ticket (via Paper Ticket Print and Message a Ticket both) and Refresh the Seat History search page above",
+        "expected": "All the performed Ticket Printing Activities of the entered Ticket should be displayed correctly"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31420508,
+    "title": "Verify Ticket Scanning Activity of Tickets by looking up Ticket Verification ID",
+    "section_id": 1747871,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 396,
+    "created_on": 1694177886,
+    "updated_by": 396,
+    "updated_on": 1694177989,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 634076,
+    "display_order": 5,
+    "custom_is_automated": false,
+    "custom_pv_category": 27,
+    "custom_refs": null,
+    "custom_preconds": null,
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to Provenue",
+        "expected": "Login should be successfull"
+      },
+      {
+        "content": "Lock and checkout seats by selecting appropriate delivery and Patron",
+        "expected": "Sale completed successfully"
+      },
+      {
+        "content": "Print and scan the above tickets",
+        "expected": "Tickets Printed and scanned successfully"
+      },
+      {
+        "content": "Select the Ticket Services option from the Ticketing menu list at the top left corner in the Home page",
+        "expected": "The ticket services page should be displayed"
+      },
+      {
+        "content": "Click on the Seat History Search tab",
+        "expected": "The seat history search tab should get displayed"
+      },
+      {
+        "content": "Select 'Ticket Verification ID' in 'Search Using' drop- down list",
+        "expected": "'Ticket Verification ID' should be enabled to edit"
+      },
+      {
+        "content": "Enter Ticket Verification ID from the Order created above and Click on Find",
+        "expected": "Seat History Details Page should be displayed"
+      },
+      {
+        "content": "Select Ticket Scanning Activity in 'View Activity' drop-down",
+        "expected": "Only the Ticket Scanning Activity with all the scan details of the entered Ticket should be displayed correctly"
+      },
+      {
+        "content": "Perform Reset scan and other scan operations on the above ticket and Refresh the Seat History search page above",
+        "expected": "All the performed Ticket Scanning Activities of the entered Ticket should be displayed correctly"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31420509,
+    "title": "Verify Hold Code Activity of Tickets by looking up Ticket Verification ID",
+    "section_id": 1747871,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 396,
+    "created_on": 1694178002,
+    "updated_by": 396,
+    "updated_on": 1694178107,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 634076,
+    "display_order": 6,
+    "custom_is_automated": false,
+    "custom_pv_category": 27,
+    "custom_refs": null,
+    "custom_preconds": null,
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to Provenue",
+        "expected": "Login should be successfull"
+      },
+      {
+        "content": "Lock and checkout seats by selecting appropriate delivery and Patron",
+        "expected": "Sale completed successfully"
+      },
+      {
+        "content": "Select the Ticket Services option from the Ticketing menu list at the top left corner in the Home page",
+        "expected": "The ticket services page should be displayed"
+      },
+      {
+        "content": "Click on the Seat History Search tab",
+        "expected": "The seat history search tab should get displayed"
+      },
+      {
+        "content": "Select 'Ticket Verification ID' in 'Search Using' drop- down list",
+        "expected": "'Ticket Verification ID' should be enabled to edit"
+      },
+      {
+        "content": "Enter Ticket Verification ID from the Order created above and Click on Find",
+        "expected": "Seat History Details Page should be displayed"
+      },
+      {
+        "content": "Run Hold Code Assignment Utility to assign hold code",
+        "expected": "Hold Codes Assigned successfully"
+      },
+      {
+        "content": "Select Hold Code Activity in 'View Activity' drop-down",
+        "expected": "Only the Hold Code Activity of the entered Ticket should be displayed correctly"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31420510,
+    "title": "Verify Market Offer Activity of Tickets by looking up Ticket Verification ID",
+    "section_id": 1747871,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 396,
+    "created_on": 1694178127,
+    "updated_by": 396,
+    "updated_on": 1694178360,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 634076,
+    "display_order": 7,
+    "custom_is_automated": false,
+    "custom_pv_category": 27,
+    "custom_refs": null,
+    "custom_preconds": null,
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to Provenue",
+        "expected": "Login should be successfull"
+      },
+      {
+        "content": "Lock and checkout seats by selecting appropriate delivery and Patron",
+        "expected": "Sale completed successfully"
+      },
+      {
+        "content": "Perform a Legacy Market Offer Reale, Donation or Consign back on the above tickets",
+        "expected": "Legacy Market Offer created for the tickets"
+      },
+      {
+        "content": "Select the Ticket Services option from the Ticketing menu list at the top left corner in the Home page",
+        "expected": "The ticket services page should be displayed"
+      },
+      {
+        "content": "Click on the Seat History Search tab",
+        "expected": "The seat history search tab should get displayed"
+      },
+      {
+        "content": "Select 'Ticket Verification ID' in 'Search Using' drop- down list",
+        "expected": "'Ticket Verification ID' should be enabled to edit"
+      },
+      {
+        "content": "Enter Ticket Verification ID from the Order created above and Click on Find",
+        "expected": "Seat History Details Page should be displayed"
+      },
+      {
+        "content": "Select Market Offer Activity in 'View Activity' drop-down",
+        "expected": "Only the Market Activity with clickable SaleType and other Agency/User details of the entered Ticket should be displayed which directs the user to the appropriate Market Offer History details page"
+      },
+      {
+        "content": "Perform MMS Resale offer on the above ticket and Refresh the Seat History search page above",
+        "expected": "All the performed Market Offer Activities of the entered Ticket should be displayed correctly"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31420511,
+    "title": "Verify All Activity of Tickets by looking up Ticket Verification ID",
+    "section_id": 1747871,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 396,
+    "created_on": 1694178389,
+    "updated_by": 396,
+    "updated_on": 1694178542,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 634076,
+    "display_order": 8,
+    "custom_is_automated": false,
+    "custom_pv_category": 27,
+    "custom_refs": null,
+    "custom_preconds": null,
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Login to Provenue",
+        "expected": "Login should be successfull"
+      },
+      {
+        "content": "Lock and checkout seats by selecting appropriate delivery and Patron",
+        "expected": "Sale completed successfully"
+      },
+      {
+        "content": "Print and Scan the tickets above",
+        "expected": "Tickets printed and scanned successfully"
+      },
+      {
+        "content": "Perform a Legacy Market Offer Reale, Donation or Consign back on the above tickets",
+        "expected": "Legacy Market Offer created for the tickets"
+      },
+      {
+        "content": "Select the Ticket Services option from the Ticketing menu list at the top left corner in the Home page",
+        "expected": "The ticket services page should be displayed"
+      },
+      {
+        "content": "Click on the Seat History Search tab",
+        "expected": "The seat history search tab should get displayed"
+      },
+      {
+        "content": "Select 'Ticket Verification ID' in 'Search Using' drop- down list",
+        "expected": "'Ticket Verification ID' should be enabled to edit"
+      },
+      {
+        "content": "Enter Ticket Verification ID from the Order created above and Click on Find",
+        "expected": "Seat History Details Page should be displayed"
+      },
+      {
+        "content": "Select All in 'View Activity' drop-down",
+        "expected": "All the Activity of the entered Ticket should be displayed sequentially"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": 457816,
+    "name": "Base Contracts",
+    "description": "Base Contracts are some basic “Smoke-like” Contracts we can create that test bare bones API responses from all the endpoints.",
+    "project_id": 229,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/457816"
+  },
+  {
+    "id": 462719,
+    "name": "Test_withPactBroker",
+    "description": null,
+    "project_id": 229,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/462719"
+  },
+  {
+    "id": 479355,
+    "name": "ExampleTests",
+    "description": "Example Contracts tests. This example test is run from:\r\n\r\nMast_Pact_Base_SearchV3Example_Consumer: https://jenkins2.0.testeng.mlbinfra.net/job/TE_Infra_pub/job/Dev_Streaming_Contract_Automation-Pipeline/job/Mast_Pact_Base_SearchV3Example_Consumer/\r\n\r\nMast_Pact_Base_SearchV3Example_Provider: https://jenkins2.0.testeng.mlbinfra.net/job/TE_Infra_pub/job/Dev_Streaming_Contract_Automation-Pipeline/job/Mast_Pact_Base_SearchV3Example_Provider/",
+    "project_id": 229,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/479355"
+  },
+  {
+    "id": 496656,
+    "name": "Test_PactBroker",
+    "description": null,
+    "project_id": 229,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/496656"
+  },
+  {
+    "id": 496658,
+    "name": "test",
+    "description": null,
+    "project_id": 229,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/496658"
+  },
+  {
+    "id": 607208,
+    "name": "Dm5 Contract Test",
+    "description": null,
+    "project_id": 229,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/607208"
+  }
+]

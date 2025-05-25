@@ -1,0 +1,110 @@
+[
+  {
+    "id": 16376,
+    "suite_id": 1899,
+    "name": "Loan a Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 16382,
+    "suite_id": 1899,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 16376,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 16383,
+    "suite_id": 1899,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 16376,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 16386,
+    "suite_id": 1899,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 16376,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 16387,
+    "suite_id": 1899,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 16376,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 16378,
+    "suite_id": 1899,
+    "name": "Return Player from Loan",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 16388,
+    "suite_id": 1899,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 16378,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 16389,
+    "suite_id": 1899,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 16378,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 16390,
+    "suite_id": 1899,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 16378,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 16391,
+    "suite_id": 1899,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 16378,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 16380,
+    "suite_id": 1899,
+    "name": "Place Player on NES List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 16393,
+    "suite_id": 1899,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 16380,
+    "display_order": 13,
+    "depth": 1
+  }
+]

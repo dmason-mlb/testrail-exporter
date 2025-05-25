@@ -1,0 +1,626 @@
+[
+  {
+    "id": 657478,
+    "title": "Launcher Icon",
+    "section_id": 79843,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1479742063,
+    "updated_by": 65,
+    "updated_on": 1479742360,
+    "estimate": null,
+    "estimate_forecast": "1m 20s",
+    "suite_id": 2981,
+    "display_order": 2,
+    "custom_preconds": "Given the app has been installed\r\nAnd the user is located on the device home screen",
+    "custom_steps": "When the user looks at the launcher icon",
+    "custom_expected": "Then they see a batter image, red on the left and and blue on the right, three stars on the red side and one star on the blue side, and the MiLB logo below the batter image",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 657479,
+    "title": "Text Below Launcher Icon",
+    "section_id": 79843,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1479742071,
+    "updated_by": 65,
+    "updated_on": 1479742360,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2981,
+    "display_order": 3,
+    "custom_preconds": "Given the app has been installed\r\nAnd the user is located on the device home screen",
+    "custom_steps": "When the user views the text below launcher image",
+    "custom_expected": "Then the user verifies the text is clear and states 'First Pitch'",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 657480,
+    "title": "Tapping on Launcher Icon",
+    "section_id": 79843,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1479742088,
+    "updated_by": 65,
+    "updated_on": 1479742360,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2981,
+    "display_order": 4,
+    "custom_preconds": "Given the app has been installed\r\nAnd the user is located on the device home screen",
+    "custom_steps": "When the user taps on the launcher icon",
+    "custom_expected": "Then the user will view the splash screen",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 657481,
+    "title": "Splash Screen",
+    "section_id": 79843,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1479742102,
+    "updated_by": 65,
+    "updated_on": 1479742360,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2981,
+    "display_order": 5,
+    "custom_preconds": "Given the app has been installed\r\nAnd the user is located on the device home screen",
+    "custom_steps": "When the user views the splash screen",
+    "custom_expected": "Then the user will see the following:\r\nFirst Pitch text over MiLB.com text, superimposed over a baseball image",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 193558,
+    "title": "Teams",
+    "section_id": 26991,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1469198940,
+    "updated_by": 65,
+    "updated_on": 1469198962,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2981,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": "When the user taps the Team button from the slide out menu",
+    "custom_expected": "Then the teams will appear with the favorites on top and the remaining teams in alphabetical order",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 193559,
+    "title": "Triple-A & Double-A should appear with hyphen",
+    "section_id": 26991,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1469198991,
+    "updated_by": 65,
+    "updated_on": 1469199011,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2981,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": "When the user navigates within the app",
+    "custom_expected": "Then the user will verity that Triple-A & Double-A should appear with hyphen everywhere in app",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 877374,
+    "title": "Current Year Date Support",
+    "section_id": 26991,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "MIAN-338, MIAN-340",
+    "created_by": 65,
+    "created_on": 1488382603,
+    "updated_by": 65,
+    "updated_on": 1522083574,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2981,
+    "display_order": 6,
+    "custom_preconds": "Given the current year's Opening Day release is out on the scoreboard, calendar, schedule... and any other date UI\r\n",
+    "custom_steps": "When the user attempts to navigate the dates within the same calendar year (i.e 2018), check the following pages: Club Schedules, Leagues Scoreboard, and Standings\r\n",
+    "custom_expected": "The user will only be able to navigate the dates from April to September of the same calendar year (i.e. 2018)\r\n\r\nNOTE: Standings is a webview, so it should switch automatically to the current year (2018) once the season is considered \"started\" in the database",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1224376,
+    "title": "Class Dates for 2018",
+    "section_id": 26991,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "MIAN-708",
+    "created_by": 65,
+    "created_on": 1522083505,
+    "updated_by": 65,
+    "updated_on": 1522084276,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2981,
+    "display_order": 8,
+    "custom_preconds": "Given the current year's Opening Day release is out on the scoreboard, calendar, schedule... and any other date UI\r\n",
+    "custom_steps": "When the user views the following pages: Club Schedules, Leagues Scoreboard, and Standings",
+    "custom_expected": "Then the user will view the following start / end dates for the current year",
+    "custom_steps_separated": [
+      {
+        "content": "AAA (Triple A)\n",
+        "expected": "April 5, 2018 / Sept. 3, 2018"
+      },
+      {
+        "content": "AAX (Double A)",
+        "expected": "April 5, 2018 / Sept. 3, 2018"
+      },
+      {
+        "content": "AFA (Class A Advanced)\n",
+        "expected": "April 5, 2018 / Sept. 3, 2018"
+      },
+      {
+        "content": "AFX (Class A)",
+        "expected": "April 5, 2018 / Sept. 3, 2018"
+      },
+      {
+        "content": "ASX (Class A Short)",
+        "expected": "June 15, 2018 / Sept. 3, 2018"
+      },
+      {
+        "content": "ROK (Rookie)",
+        "expected": "June 15, 2018 / Sept. 6, 2018"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 193561,
+    "title": "Not Able to Navigate to Previous Year",
+    "section_id": 26991,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "MIAN-338, MIAN-340",
+    "created_by": 65,
+    "created_on": 1469199201,
+    "updated_by": 65,
+    "updated_on": 1488403716,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2981,
+    "display_order": 9,
+    "custom_preconds": "Given the current year's Opening Day release is out on the scoreboard, calendar, schedule... and any other date UI\r\n",
+    "custom_steps": "When the user attempt to navigate back to the previous year",
+    "custom_expected": "Then the user will not be able to navigate back to the previous year",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 658797,
+    "title": "Team IDs",
+    "section_id": 26991,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "MIAN-330, MIAN-335, MIAN-339",
+    "created_by": 65,
+    "created_on": 1479748423,
+    "updated_by": 65,
+    "updated_on": 1479748470,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2981,
+    "display_order": 10,
+    "custom_preconds": null,
+    "custom_steps": "When the user views the following teams and it's team IDs:\r\n- Columbia Fireflies (replace Savannah Sand Gnats); t3705\r\n- Hartford Yard Goats (replace New Britain Rock Cats); t538 (team ID is unchanged)",
+    "custom_expected": "Then the user will verify the new team name and corresponding team ID:\r\n- Columbia Fireflies (replace Savannah Sand Gnats); t3705\r\n- Hartford Yard Goats (replace New Britain Rock Cats); t538 (team ID is unchanged)",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 658799,
+    "title": "Team - Update 2016",
+    "section_id": 26991,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "MIAN-330, MIAN-335, MIAN-339",
+    "created_by": 65,
+    "created_on": 1479748505,
+    "updated_by": 65,
+    "updated_on": 1490131117,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2981,
+    "display_order": 11,
+    "custom_preconds": "Given the user is in the app",
+    "custom_steps": "When the user views the team logos below on the team page, team picker, scoreboard, gameday, setting's push notifications, etc:",
+    "custom_expected": "Then the user shall verify the updated team logos appear (new logos found on this ticket - https://jira.mlbam.com/browse/MIAN-330)",
+    "custom_steps_separated": [
+      {
+        "content": "Auburn (t458, asx)",
+        "expected": "![](index.php?/attachments/get/11760)\n"
+      },
+      {
+        "content": "Bowling Green (t2498, afx)",
+        "expected": "![](index.php?/attachments/get/11761)\n"
+      },
+      {
+        "content": "Chattanooga (t498, aax)",
+        "expected": "![](index.php?/attachments/get/11762)\n"
+      },
+      {
+        "content": "Columbia (t3705, afx)",
+        "expected": "![](index.php?/attachments/get/11763)\n"
+      },
+      {
+        "content": "Great Lakes (t456, afx)",
+        "expected": "![](index.php?/attachments/get/11764)\n"
+      },
+      {
+        "content": "Hartford (t538, aax)",
+        "expected": "![](index.php?/attachments/get/11765)\n"
+      },
+      {
+        "content": "Hickory (t448, afx)",
+        "expected": "![](index.php?/attachments/get/11766)\n"
+      },
+      {
+        "content": "Kane County (t446, afx)",
+        "expected": "![](index.php?/attachments/get/11767)\n"
+      },
+      {
+        "content": "Louisville (t416, aaa)",
+        "expected": "![](index.php?/attachments/get/11768)\n"
+      },
+      {
+        "content": "Norfolk (t568, aaa)",
+        "expected": "![](index.php?/attachments/get/11769)\n"
+      },
+      {
+        "content": "Ogden (t530, rok)",
+        "expected": "![](index.php?/attachments/get/11770)\n"
+      },
+      {
+        "content": "Syracuse (t552, aaa)",
+        "expected": "![](index.php?/attachments/get/11771)\n"
+      },
+      {
+        "content": "Mississippi (t430, aax)",
+        "expected": "![](index.php?/attachments/get/11772)\n"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 901628,
+    "title": "Teams - Update 2017",
+    "section_id": 26991,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "MIAN-517",
+    "created_by": 65,
+    "created_on": 1489681183,
+    "updated_by": 65,
+    "updated_on": 1515702444,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2981,
+    "display_order": 12,
+    "custom_preconds": "Given the user is in the app",
+    "custom_steps": "When the user views the team listed below on the team page, team picker, scoreboard, gameday, setting's push notifications, etc",
+    "custom_expected": "Then the user shall verify the updated/new team names, logos & IDs appear correctly",
+    "custom_steps_separated": [
+      {
+        "content": "Binghamton Rumble Ponies \n(t505)\nAAX\n",
+        "expected": "![](index.php?/attachments/get/11624)"
+      },
+      {
+        "content": "Jacksonville Jumbo Shrimp\n(t564)\nAAX",
+        "expected": "![](index.php?/attachments/get/11632)\n"
+      },
+      {
+        "content": "Florida Fire Frogs\n(t503)\nAFA",
+        "expected": "![](index.php?/attachments/get/11631)\n"
+      },
+      {
+        "content": "Lynchburg Hillcats \n(t481)\nAFA",
+        "expected": "![](index.php?/attachments/get/11630)\n"
+      },
+      {
+        "content": "Buies Creek Astros \n(t3712)\nAFA \n",
+        "expected": "![](index.php?/attachments/get/11758)\n"
+      },
+      {
+        "content": "New Orleans Baby Cakes\n(t588)\nAAA\n",
+        "expected": "![](index.php?/attachments/get/11633)\n"
+      },
+      {
+        "content": "Memphis Redbirds\n(t235)\nAAA",
+        "expected": "![](index.php?/attachments/get/11759)\n"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1216858,
+    "title": "Teams - Update 2018",
+    "section_id": 26991,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "MIAN-670",
+    "created_by": 65,
+    "created_on": 1516132227,
+    "updated_by": 65,
+    "updated_on": 1520527428,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2981,
+    "display_order": 13,
+    "custom_preconds": "Given the user is in the app",
+    "custom_steps": "When the user views the team listed below on the team page, team picker, scoreboard, gameday, setting's push notifications, etc",
+    "custom_expected": "Then the user shall verify the updated/new team names, logos, affiliations & IDs appear correctly",
+    "custom_steps_separated": [
+      {
+        "content": "Formerly Gwinnett Braves",
+        "expected": "(Triple-A, team 431)\nName change - Gwinnett Stripers \nLogo change\nNo Affiliation change\n![](index.php?/attachments/get/19656)\n"
+      },
+      {
+        "content": "Formerly Tampa Yankees",
+        "expected": "(Class A Advanced, team 587)\nName change - Tampa Tarpons \nLogo change \nNo Affiliation change\n![](index.php?/attachments/get/19657)\n"
+      },
+      {
+        "content": "Augusta GreenJackets",
+        "expected": "(Class A, team 478)\nNo Name change \nLogo change\nNo Affiliation change\n![](index.php?/attachments/get/19658)\n"
+      },
+      {
+        "content": "Hudson Valley Renegades",
+        "expected": "(Class A Short Season, team 537)\nNo Name Change \nLogo change\nNo affiliation change\n![](index.php?/attachments/get/19659)\n"
+      },
+      {
+        "content": "Formerly Greeneville Astros",
+        "expected": "(Rookie, team 413)\nName change - Greeneville Reds \nLogo change\nAffiliation change - Cincinnati Reds\n![](index.php?/attachments/get/19660)\n"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 658801,
+    "title": "Watermark Logo",
+    "section_id": 26991,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "MIAN-330, MIAN-335, MIAN-339",
+    "created_by": 65,
+    "created_on": 1479748582,
+    "updated_by": 65,
+    "updated_on": 1492442856,
+    "estimate": null,
+    "estimate_forecast": "12s",
+    "suite_id": 2981,
+    "display_order": 14,
+    "custom_preconds": "Given the user is in the app",
+    "custom_steps": "When the user views the new watermark logo for the DET Tigers everywhere on the app (i.e. team page, team picker, scoreboard, gameday, setting's push notifications, etc.)",
+    "custom_expected": "Then the new watermark logo shall be consistent throughout the app\r\n\r\n![](index.php?/attachments/get/13053)\r\n",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 956456,
+    "title": "Team Affiliations File Update",
+    "section_id": 26991,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "MIAN-499, MIAN-514",
+    "created_by": 65,
+    "created_on": 1492440820,
+    "updated_by": 65,
+    "updated_on": 1522867563,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2981,
+    "display_order": 15,
+    "custom_preconds": "Given iOS is updating the MiLB Teams XML to modify some teams' affiliations. So we would have to copy changes over to AWS.\r\n\r\nhttp://wapc.mlb.com/mvc/template/apps/milb/shared/MiLBTeams.xml\r\n",
+    "custom_steps": "WHEN the user views the file for the team affiliations in Charles Proxy",
+    "custom_expected": "THEN verify Android is pointing here\r\n\r\nQA: http://qa-appconfig.milb.com/android/x.x.x/MiLBTeams.xml\r\nPROD: http://appconfig.milb.com/android/x.x.x/MiLBTeams.xml\r\n\r\n(where x.x.x in the links above is the latest version, i.e. 3.2.1)",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1222798,
+    "title": "No Language Support",
+    "section_id": 26991,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1521644406,
+    "updated_by": 65,
+    "updated_on": 1521644429,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2981,
+    "display_order": 16,
+    "custom_preconds": null,
+    "custom_steps": "WHEN the user changes the device's language (i.e. Spanish)",
+    "custom_expected": "THEN the app does not have language support\r\n",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 193557,
+    "title": "Subsequent Launch",
+    "section_id": 79844,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1469198808,
+    "updated_by": 65,
+    "updated_on": 1479742381,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2981,
+    "display_order": 1,
+    "custom_preconds": "Given the app has been installed\r\nAnd the user is located on the device home screen",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks at the launcher icon",
+        "expected": "Then they see a batter image, red on the left and and blue on the right, three stars on the red side and one star on the blue side, and the MiLB logo below the batter image"
+      },
+      {
+        "content": "When the user views the text below launcher image",
+        "expected": "Then the user verifies the text is clear and states 'First Pitch'"
+      },
+      {
+        "content": "When the user taps on the launcher icon",
+        "expected": "Then the user will view the splash screen"
+      },
+      {
+        "content": "When the user views the splash screen",
+        "expected": "Then the user will see the following:\nFirst Pitch text over MiLB.com text, superimposed over a baseball image"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 193560,
+    "title": "Team Updates 2016",
+    "section_id": 79844,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/MIAN-330, https://jira.mlbam.com/browse/MIAN-335, https://jira.mlbam.com/browse/MIAN-339",
+    "created_by": 65,
+    "created_on": 1469199041,
+    "updated_by": 65,
+    "updated_on": 1479748410,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2981,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user views the following teams and it's team IDs:\n- Columbia Fireflies (replace Savannah Sand Gnats); t3705\n- Hartford Yard Goats (replace New Britain Rock Cats); t538 (team ID is unchanged)\n",
+        "expected": "Then the user will verify the new team name and corresponding team ID:\n- Columbia Fireflies (replace Savannah Sand Gnats); t3705\n- Hartford Yard Goats (replace New Britain Rock Cats); t538 (team ID is unchanged)"
+      },
+      {
+        "content": "When the user views the team logos below on the team page, team picker, scoreboard, gameday, setting's push notifications, etc:\n- Auburn\n- Bowling Green\n- Chattanooga\n- Columbia\n- Great Lakes\n- Hartford\n- Hickory\n- Kane County\n- Louisville\n- Norfolk\n- Ogden\n- Syracuse\n",
+        "expected": "Then the user shall verify the updated team logos appear (new logos found on this ticket - https://jira.mlbam.com/browse/MIAN-330)"
+      },
+      {
+        "content": "When the user views the new watermark logo for the DET Tigers everywhere on the app (i.e. team page, team picker, scoreboard, gameday, setting's push notifications, etc.)\n",
+        "expected": "Then the new watermark logo shall be consistent throughout the app\n\nto view the updated logo see https://jira.mlbam.com/browse/MIAN-339\n"
+      },
+      {
+        "content": "DO NOT TEST:\n\nMIAN-335\n\nWhen the user views the secondary and primary colors for the teams;\n\nthe information will be updated for all teams based on these three data files:\n\nhttp://www.milb.com/lookup/named.properties_team_info.bam?season=2015&season=2016&team_id=54\nhttp://www.milb.com/gen/sections-short/t543.xml\nhttp://www.milb.com/gen/clubs/t543/props.xml\n",
+        "expected": "Then the user will verify the new secondary and primary colors"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 877373,
+    "title": "Class Dates for 2017_MIAN-650",
+    "section_id": 79844,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "MIAN-529, MIAN-650",
+    "created_by": 65,
+    "created_on": 1488382059,
+    "updated_by": 65,
+    "updated_on": 1522083514,
+    "estimate": null,
+    "estimate_forecast": "10m 29s",
+    "suite_id": 2981,
+    "display_order": 3,
+    "custom_preconds": "Given the current year's Opening Day release is out on the scoreboard, calendar, schedule... and any other date UI\r\n",
+    "custom_steps": "When the user views the following pages: Club Schedules, Leagues Scoreboard, and Standings",
+    "custom_expected": "Then the user will view the following start / end dates for the current year",
+    "custom_steps_separated": [
+      {
+        "content": "AAA (Triple A)\n",
+        "expected": "April 6, 2017 / Sept. 19, 2017"
+      },
+      {
+        "content": "AAX (Double A)",
+        "expected": "April 6, 2017 / Sept. 17, 2017"
+      },
+      {
+        "content": "AFA (Class A Advanced)\n",
+        "expected": "April 6, 2017 / Sept. 17, 2017"
+      },
+      {
+        "content": "AFX (Class A)",
+        "expected": "April 6, 2017 / Sept. 17, 2017"
+      },
+      {
+        "content": "ASX (Class A Short)",
+        "expected": "June 15, 2017 / Sept. 17, 2017"
+      },
+      {
+        "content": "ROK (Rookie)",
+        "expected": "June 19, 2017 / Sept. 17, 2017"
+      }
+    ],
+    "custom_feature_tag": null
+  }
+]

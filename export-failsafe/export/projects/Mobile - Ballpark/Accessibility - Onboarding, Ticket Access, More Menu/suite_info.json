@@ -1,0 +1,11 @@
+{
+  "id": 540683,
+  "name": "Accessibility - Onboarding, Ticket Access, More Menu",
+  "description": "Critical Ballpark App flows and relevant test cases for ADA audit.\r\n\r\nInitial flows:\r\n*onboarding\r\n*logging in\r\n*forget password\r\n*ticket access\r\n*ticket forward (via email, suggested recipients, contacts, share link)\r\n*ticket recall\r\n*More / About BP (to assist with support)\r\n\r\n\r\nThe test cases are written with End to End customer flows in mind. \r\nBelow are a list of particular pages in the flows, for each platform. \r\nThe pages are included within each test case as the transitions occur. \r\nIncluded intentionally to be part of the audit, Error handling steps and validation on the pages within the onboarding/login flows.\r\n\r\n\r\n|||:ANDROID|:iOS|:PageName\r\n|| ANDROID PAGE 1 | IOS PAGE 1 | Welcome to Ballpark - Get Started \r\n|| ANDROID PAGE 2 |  | Sign UP\r\n|| | IOS PAGE 2 | Create Account Modal\r\n|| ANDROID PAGE 3 |  | Log In\r\n|| | IOS PAGE 3 | Welcome to Ballpark - Continue with MLB\r\n|| | IOS PAGE 4 | Log In Modal\r\n|| ANDROID PAGE 4 | IOS PAGE 5 | Reset Password (Modal for iOS)\r\n|| ANDROID PAGE 5 | IOS PAGE 6 | Home Page (NTE CARD/FORWARD CONTEXT CARD)\r\n|| ANDROID PAGE 6 | IOS PAGE 7 | ScanView\r\n|| ANDROID PAGE 7 | IOS PAGE 8 | ListView\r\n|| ANDROID PAGE 8 | IOS PAGE 9 | TicketsTab > Wallet Page\r\n|| ANDROID PAGE 9 | IOS PAGE 10 | TicketsTab > Wallet Page > View All\r\n|| ANDROID PAGE 10 | IOS PAGE 11 | ListView > ForwardTickets\r\n|| ANDROID PAGE 11 | IOS PAGE 12 | ListView > ForwardTickets > Delivery Method prompt\r\n|| ANDROID PAGE 12 | IOS PAGE 13 | Forward Via Email \r\n|| ANDROID PAGE 13 | IOS PAGE 14 | ListView > Cancel/Recall prompt\r\n|| ANDROID PAGE 14 | IOS PAGE 15 | ListView > ForwardTickets > Are you Sure prompt\r\n|| ANDROID PAGE 15 | IOS PAGE 16 | ScanView > Cancel/Recall prompt\r\n|| ANDROID PAGE 16 | IOS PAGE 17 | MoreTab\r\n|| ANDROID PAGE 17 | IOS PAGE 18 | MoreTab > About\r\n|| ANDROID PAGE 18 | IOS PAGE 19 | MoreTab > About > About Ballpark\r\n|| ANDROID PAGE 19 | IOS PAGE 20 | MoreTab > FAQ webview\r\n\r\n",
+  "project_id": 179,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/540683"
+}

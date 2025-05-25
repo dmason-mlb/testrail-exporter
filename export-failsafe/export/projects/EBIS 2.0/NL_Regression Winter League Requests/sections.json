@@ -1,0 +1,20 @@
+[
+  {
+    "id": 129578,
+    "suite_id": 18951,
+    "name": "Winter League Requests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 129580,
+    "suite_id": 18951,
+    "name": "Winter League Portal",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

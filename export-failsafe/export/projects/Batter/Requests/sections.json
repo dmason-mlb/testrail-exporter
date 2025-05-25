@@ -1,0 +1,29 @@
+[
+  {
+    "id": 2035042,
+    "suite_id": 704659,
+    "name": "Request related",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 2035044,
+    "suite_id": 704659,
+    "name": "Approval related",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 2039016,
+    "suite_id": 704659,
+    "name": "Proxy Requests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

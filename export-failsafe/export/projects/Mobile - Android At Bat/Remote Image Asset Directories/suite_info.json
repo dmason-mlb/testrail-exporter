@@ -1,0 +1,11 @@
+{
+  "id": 21470,
+  "name": "Remote Image Asset Directories",
+  "description": "Check that remote image asset directories content.mlb.com and qacontent.mlb.com were migrated over to clientcontent.mlb.com and qa-clientcontent.mlb.com\r\n\r\nhttps://baseball.atlassian.net/browse/ANDROID-9237",
+  "project_id": 3,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/21470"
+}

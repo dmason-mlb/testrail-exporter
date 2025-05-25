@@ -1,0 +1,90 @@
+[
+  {
+    "id": 283,
+    "name": "Asad Zaman",
+    "email": "asad.zaman@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 23,
+    "name": "Brett Reese",
+    "email": "Brett.Reese@mlb.com",
+    "is_active": 1,
+    "role_id": 5,
+    "role": "Administrator"
+  },
+  {
+    "id": 238,
+    "name": "douglas.mason@mlb.com",
+    "email": "Douglas.Mason@mlb.com",
+    "is_active": 1,
+    "role_id": 5,
+    "role": "Administrator"
+  },
+  {
+    "id": 192,
+    "name": "Madhu Nallam",
+    "email": "Madhu.Nallam@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 388,
+    "name": "Mlb-testeng-automation -svc-cicd",
+    "email": "Mlb-testeng-automation-svc-cicd@mlb.com",
+    "is_active": 1,
+    "role_id": 5,
+    "role": "Administrator"
+  },
+  {
+    "id": 45,
+    "name": "QAAutomation@mlb.com",
+    "email": "QAAutomation@mlb.com",
+    "is_active": 1,
+    "role_id": 5,
+    "role": "Administrator"
+  },
+  {
+    "id": 39,
+    "name": "Stephen Bence",
+    "email": "stephen.bence@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 250,
+    "name": "svc bservices",
+    "email": "svc_te_bservices@MLB.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 177,
+    "name": "Victor Tan",
+    "email": "victor.tan@mlb.com",
+    "is_active": 1,
+    "role_id": 5,
+    "role": "Administrator"
+  },
+  {
+    "id": 291,
+    "name": "Vikram Singhal",
+    "email": "vikram.singhal@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 295,
+    "name": "Yadirah Pathan",
+    "email": "yadirah.pathan@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  }
+]

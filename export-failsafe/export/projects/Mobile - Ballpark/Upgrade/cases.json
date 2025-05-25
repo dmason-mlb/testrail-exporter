@@ -1,0 +1,336 @@
+[
+  {
+    "id": 1293357,
+    "title": "Upgrade from previous version of app - App Closed",
+    "section_id": 157164,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1579718881,
+    "updated_by": 288,
+    "updated_on": 1634936264,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21972,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user installed a previous version of the Ballpark app \r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has selected a favorite team\r\nAND user has at least one ticketed event on their account\r\nAND user has navigated to team tab",
+    "custom_steps": "WHEN App is closed\r\nAND Ballpark app version is upgraded by installing a new version",
+    "custom_expected": "THEN User should be on latest version, should be logged in and all data retained. \r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Loading previous production version from AppStore or Google Play store.",
+        "expected": "THEN Previous version installs properly."
+      },
+      {
+        "content": "WHEN Log in with a user, preferably one with various tickets. ",
+        "expected": "THEN Login successful."
+      },
+      {
+        "content": "WHEN User goes to More > About Ballpark > About Ballpark",
+        "expected": "THEN previous app version is displayed"
+      },
+      {
+        "content": "WHEN User navigates to Profile -> My Teams AND user selects a favorite team\n\nWHEN User navigates to Tickets > Wallet AND views tickets, including barcodes within Scan view\n\nWHEN User navigates to Team Tab",
+        "expected": "THEN Everything should load with correct data."
+      },
+      {
+        "content": "WHEN the user closes/quits the app",
+        "expected": ""
+      },
+      {
+        "content": "WHEN Download the production version from Firebase App distro or TestFlight if the production version has been pushed to TestFlight. \nAND User opens the new version of the app",
+        "expected": "THEN App should replace and load properly form the previous build\n"
+      },
+      {
+        "content": "",
+        "expected": "AND User remains logged in. \n\nNOTE - This is the most important thing to verify - the DB/user's login data is preserved and then user doesn't have to login again."
+      },
+      {
+        "content": "HEN User goes to More > About Ballpark > About Ballpark",
+        "expected": "THEN Upgraded app version is displayed"
+      },
+      {
+        "content": "WHEN User goes to Profile -> My Teams",
+        "expected": "THEN User's prior favorite team is preserved"
+      },
+      {
+        "content": "WHEN User goes to Tickets > Wallet",
+        "expected": "THEN Users ticket is shown with correct data"
+      }
+    ]
+  },
+  {
+    "id": 24154779,
+    "title": "Upgrade from previous version of app - App Backgrounded",
+    "section_id": 157164,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634936221,
+    "updated_by": 288,
+    "updated_on": 1634936326,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21972,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user installed a previous version of the Ballpark app \r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has selected a favorite team\r\nAND user has at least one ticketed event on their account\r\nAND user has navigated to team tab",
+    "custom_steps": "WHEN Ballpark app is left in background\r\nAND Ballpark app version is upgraded by installing a new version",
+    "custom_expected": "THEN User should be on latest version, should be logged in and all data retained. \r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Loading previous production version from AppStore or Google Play store.",
+        "expected": "THEN Previous version installs properly."
+      },
+      {
+        "content": "WHEN Log in with a user, preferably one with various tickets. ",
+        "expected": "THEN Login successful."
+      },
+      {
+        "content": "WHEN User goes to More > About Ballpark > About Ballpark",
+        "expected": "THEN previous app version is displayed"
+      },
+      {
+        "content": "WHEN User navigates to Profile -> My Teams AND user selects a favorite team\n\nWHEN User navigates to Tickets > Wallet AND views tickets, including barcodes within Scan view\n\nWHEN User navigates to Team Tab",
+        "expected": "THEN Everything should load with correct data."
+      },
+      {
+        "content": "WHEN the user background the Ballpark app",
+        "expected": ""
+      },
+      {
+        "content": "WHEN Download the production version from Firebase App distro or TestFlight if the production version has been pushed to TestFlight. \nAND User opens the new version of the app",
+        "expected": "THEN App should replace and load properly form the previous build\n"
+      },
+      {
+        "content": "",
+        "expected": "AND User remains logged in. \n\nNOTE - This is the most important thing to verify - the DB/user's login data is preserved and then user doesn't have to login again."
+      },
+      {
+        "content": "HEN User goes to More > About Ballpark > About Ballpark",
+        "expected": "THEN Upgraded app version is displayed"
+      },
+      {
+        "content": "WHEN User goes to Profile -> My Teams",
+        "expected": "THEN User's prior favorite team is preserved"
+      },
+      {
+        "content": "WHEN User goes to Tickets > Wallet",
+        "expected": "THEN Users ticket is shown with correct data"
+      }
+    ]
+  },
+  {
+    "id": 31827162,
+    "title": "Force Update - Logged in User [iOS Only]",
+    "section_id": 1781849,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1697576660,
+    "updated_by": 288,
+    "updated_on": 1698694869,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21972,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-10399](https://baseball.atlassian.net/browse/BP-10399 ) / [BP-10464](https://baseball.atlassian.net/browse/BP-10464 )\r\n\r\nPrerequisite - Remote Config Setup: force_update_params\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"min_app_version\" within \"force_update_params\" as needed to force display. (One way is to set the minimum version to a value greater than current version of BP app installed.)\r\n3. Save changes.\r\n4. Publish changes.\r\n\r\n\r\nGIVEN Ballpark app installed with version prior to minimum version established in min_app_version within remote config",
+    "custom_steps": "WHEN User is logged in ",
+    "custom_expected": "THEN force update prompt appears on customer's current page",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User is logged in",
+        "expected": "THEN Force Dialog is presented without option to dismiss (forcing an update)\nAND the message shown is 'Update Available - A new version of the Ballpark App is available. Please update to the latest version now. Play Ball! *\nAND an Update button shown\n\n*the message shown is configurable within force_update_params [alertTitle, alertMessage, alertButtonText]\n\n**alert will not show up if other alerts exist, so clear out the network prompt and background/foreground the app if needed"
+      },
+      {
+        "content": "WHEN User taps on Update button",
+        "expected": "THEN app launches external to app store"
+      }
+    ]
+  },
+  {
+    "id": 31827163,
+    "title": "Force Update - Logged Out User [iOS Only]",
+    "section_id": 1781849,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "Android",
+    "created_by": 288,
+    "created_on": 1697576660,
+    "updated_by": 288,
+    "updated_on": 1698694881,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21972,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-10399](https://baseball.atlassian.net/browse/BP-10399 ) / [BP-10464](https://baseball.atlassian.net/browse/BP-10464 )\r\n\r\nPrerequisite - Remote Config Setup: force_update_params\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"min_app_version\" within \"force_update_params\" as needed to force display. (One way is to set the minimum version to a value greater than current version of BP app installed.)\r\n3. Save changes.\r\n4. Publish changes.\r\n\r\n\r\nGIVEN Ballpark app installed with version prior to minimum version established in min_app_version within remote config",
+    "custom_steps": "WHEN User is logged out ",
+    "custom_expected": "THEN force update prompt appears before onboarding on Get Started page",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User is logged out",
+        "expected": "THEN force update prompt appears before onboarding atop Get Started page\nAND the message shown is 'Update Available - A new version of the Ballpark App is available. Please update to the latest version now. Play Ball! *\nAND an Update button shown\n\n*the message shown is configurable within force_update_params [alertTitle, alertMessage, alertButtonText]\n\n\n**alert will not show up if other alerts exist, so clear out the network prompt and background/foreground the app if needed"
+      },
+      {
+        "content": "WHEN User taps on Update button",
+        "expected": "THEN app launches external to app store"
+      }
+    ]
+  },
+  {
+    "id": 32308443,
+    "title": "Force Upgrade- In App-Update[DEPRECATED]",
+    "section_id": 1853705,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://baseball.atlassian.net/browse/BPA-7291",
+    "created_by": 282,
+    "created_on": 1701966804,
+    "updated_by": 282,
+    "updated_on": 1723463592,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21972,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user installed a Ballpark Android app (12.12 or greater) \r\n\r\nNote: Utilize https://baseball.atlassian.net/browse/BPA-7291 for details steps for validation ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has ballpark Android 12.12 specific version downloaded \n",
+        "expected": "THEN user shown force upgrade prompt \n\n![](index.php?/attachments/get/13878947)\n\nAND there’s an update available and trigger the update flow\n\nAND user should  not be able to access the app until updated \n\n"
+      },
+      {
+        "content": "WHEN user tap on Update button ",
+        "expected": "THEN App update process starts \n\n"
+      },
+      {
+        "content": "",
+        "expected": "AND user should be able to download latest ballpark version"
+      },
+      {
+        "content": "WHEN user have the latest ballpark version downloaded ",
+        "expected": "THEN user able to access latest Ballpark app \nAND user **should not shown** a force upgrade prompt \nAND user should be able to utilize Ballpark in a normal cadence "
+      }
+    ]
+  },
+  {
+    "id": 33849922,
+    "title": "Flexible App Update",
+    "section_id": 1955471,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1723463672,
+    "updated_by": 282,
+    "updated_on": 1723547596,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21972,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "WHEN the User is logged in\r\n\r\nNote: Use the instruction given in https://baseball.atlassian.net/browse/BPA-7590",
+    "custom_steps": "THEN the flexible app update appears on customer's current(Home) page ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User is logged in\n\n",
+        "expected": "THEN Flexible App update dialog is presented with an option to dismiss \n\n\nAND the message shown is (standard Google Prompt) \n\nGoogle Play Store icon \n\"X\" top right corner to dismiss the dialog\n\nUpdate Available\nTo use this app, download the latest version. You can keep using this app while downloading the update.\" \n\nMLB Ballpark App icon with relevant info (Ratings/App Size etc) \n\nWhat's new\nLast Updated Month DD, YYYY and Dropdown arrow to read the relevant information \n\nLearn More and Update CTA\n![](index.php?/attachments/get/14314759)\n\n\n"
+      },
+      {
+        "content": "WHEN user taps on \"X\" button ",
+        "expected": "THEN the Flexible App Update dialog will dismiss \nAND the user remain on the same page"
+      },
+      {
+        "content": "WHEN user taps on \"Learn more\" button ",
+        "expected": "THEN the user is taken to Play Store \n\n(This is Standard Play Store page) \n\n![](index.php?/attachments/get/14314760)\n"
+      },
+      {
+        "content": "WHEN the user taps on \"Update\" button ",
+        "expected": "THEN the app update is happening in the background \nAND user will display with toast at the bottom after the update is done \nMLB Ballpark App just downloaded an update RELOAD CTA (in Blue Font)\n\n![](index.php?/attachments/get/14314761)\n\n\n"
+      },
+      {
+        "content": "(After an Update) \nWHEN the user taps on \"RELOAD\" button ",
+        "expected": "THEN the user is display with installing progress page (Standard google Page) \n![](index.php?/attachments/get/14314762)\n\nAND the user return on the same page where they get flexible app update \nAND user able to continue use the app "
+      }
+    ]
+  },
+  {
+    "id": 33849923,
+    "title": "Immediate App Update",
+    "section_id": 1955471,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1723463682,
+    "updated_by": 282,
+    "updated_on": 1723548256,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21972,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "WHEN the User is logged in\r\n\r\nNote: Use the instruction given in https://baseball.atlassian.net/browse/BPA-7590",
+    "custom_steps": "THEN the Immediate app update appears on the customer's current page\r\n\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User is logged in\n\n",
+        "expected": "THEN Immediate App update dialog is presented with an option to dismiss\n\nAND the message shown is (standard Google Prompt)\n\nGoogle Play Store icon\n\"X\" top right corner to dismiss the dialog\n\nUpdate Available\n\nTo use this app, download the latest version.\n\nMLB Ballpark App icon with relevant info (Ratings/App Size etc)\n\nWhat's new\nLast Updated Month DD, YYYY and Dropdown arrow to read the relevant information\n\nLearn More and Update CTA\n\n![](index.php?/attachments/get/14314763)\n"
+      },
+      {
+        "content": "WHEN user taps on \"X\" button\n\n",
+        "expected": "THEN the user able to dismiss the immediate app update page \nAND user able to use the app without an update action\n\n\n"
+      },
+      {
+        "content": "WHEN user taps on \"Learn more\" ",
+        "expected": "THEN the user is taken to Play Store\n\n(This is the Standard Play Store page)\n\n![](index.php?/attachments/get/14314826)\n\n"
+      },
+      {
+        "content": "WHEN user taps on \"Update\" ",
+        "expected": "THEN app will start installation for updating the latest version of the app \n\n"
+      },
+      {
+        "content": "WHEN user taps on \"Open\" or navigate back to the app ",
+        "expected": "THEN user able to use the latest app version \n\n(Version can be verified by noting down previous vs updated version - More > About Ballpark)"
+      }
+    ]
+  }
+]

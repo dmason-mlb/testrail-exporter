@@ -1,0 +1,329 @@
+[
+  {
+    "id": 48796,
+    "title": "General",
+    "section_id": 7033,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1421189181,
+    "updated_by": 166,
+    "updated_on": 1543273500,
+    "estimate": null,
+    "estimate_forecast": "20m 29s",
+    "suite_id": 926,
+    "display_order": 1,
+    "custom_preconds": "Data source for main video index is - http://mlb.mlb.com/mobile/data/highlights/atbat.xml \r\nData source for individual teams and postseason is query based, talk to developer to get correct query string.",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User opens Video section",
+        "expected": "User should see a list of 30 videos.\n\nShould be a Drop Down Spinner with all 30 teams and Postseason Videos when turned on. \n\nShould take user to main MLB Video index by default.\n\nThere should be a search button in the right side of the action bar in the Video section\nAnd the Audio/MLB.TV buttons should not appear in the action bar"
+      },
+      {
+        "content": "Verify video layout",
+        "expected": "Each video should have high resolution thumbnail\nEach video should have Title at bottom of cell\nEach video should show metadata (MM:SS) - MM/DD/YYYY\n\nEach Video should have Info Button in bottom left of cell if a big blurb is present\nEach Video should have share button in bottom right of cell if sharing is enabled for the video"
+      },
+      {
+        "content": "Verify video with no thumbnail in video index\nor while user is swiping through video index and thumbnails have yet to load",
+        "expected": "Cell should appear with placeholder thumbnail"
+      },
+      {
+        "content": "When the user taps in the info button",
+        "expected": "Then the video title should dim\nAnd the user should see a video description in paragraph form"
+      },
+      {
+        "content": "When the user taps on the info button to bring up the video description\nAnd the user then taps anywhere on the same video tile",
+        "expected": "Then the video description should disappear \nAnd the user should be able to launch the video by tapping on the tile. "
+      },
+      {
+        "content": "When a big blurb is not present for a video",
+        "expected": "Then the Info button will not appear"
+      },
+      {
+        "content": "When the user taps on a video in the video index",
+        "expected": "Then the video should be launched\nAnd the video should play through to completion without issue\nAnd the user should be able to seek through the video"
+      },
+      {
+        "content": "When the user taps on a video in the video index\n(video orientation)",
+        "expected": "Then the video will begin to play in whichever orientation the device was in when the user launched the stream\n(if in portrait, then portrait; if in landscape, then landscape)"
+      },
+      {
+        "content": "When the user is playing a video highlight\nAnd the user rotates the device 90 degrees or 180 degrees",
+        "expected": "Then the video orientation should rotate along with the device orientation\nAnd the video should NOT restart/relaunch"
+      },
+      {
+        "content": "When the user sends the app to the background while a video is playing",
+        "expected": "The video should continue playing and minimize in a smaller window with option to expand and close the window.\n"
+      },
+      {
+        "content": "Verify that app does not time out while video is playing\n(Set screen timeout to time lower than length of video)",
+        "expected": "Video should continue playing past normal screen off time"
+      },
+      {
+        "content": "When the user selects the drop down spinner\nAnd selects a team",
+        "expected": "Then the video index should be refreshed \nAnd the user should see videos specific to the team that was selected"
+      },
+      {
+        "content": "When the user has one or more favorite teams set in the app\nAnd the user taps the drop down spinner",
+        "expected": "Then their favorite team(s) will be listed first under a \"Teams\" category\nand this will be located under the \"MLB\" filter\nand above the \"Teams\" category"
+      }
+    ]
+  },
+  {
+    "id": 48797,
+    "title": "Sharing",
+    "section_id": 7033,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1421189395,
+    "updated_by": 232,
+    "updated_on": 1586533399,
+    "estimate": null,
+    "estimate_forecast": "18m 18s",
+    "suite_id": 926,
+    "display_order": 2,
+    "custom_preconds": "User has the Twitter for Android App installed (And valid Twitter testing account)\r\nUser has the Facebook for Android App installed (And valid Facebook testing account)\r\nUser has a Mail or Gmail account logged in",
+    "custom_steps": "When the user taps the Share Button on the Video page-\r\nNote: Share functionality is currently not enabled in the app.  This test case is being retained in this test suite for when this functionality is returned to the app. Mark as blocked and skip this test for now.",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the Twitter app in the Share menu",
+        "expected": "Then a Compose Tweet screen should appear with the Video URL pre-populated"
+      },
+      {
+        "content": "When the user taps the Twitter app in the Share menu\nAnd the user composes and posts the tweet",
+        "expected": "Then the Compose Tweet screen should close\nAnd the user should be returned to At Bat and left on the Video index containing the video they were viewing\nAnd the Tweet should be sent successfully (check on twitter and verify that the link in the tweet takes the user to the correct Video.)"
+      },
+      {
+        "content": "When the user begins to share with Twitter and has launched the Compose Tweet screen\nAnd the user taps the 'Cancel' button",
+        "expected": "Then the user is asked if they want to save or discard their draft"
+      },
+      {
+        "content": "When the user begins to share with Twitter and has launched the Compose Tweet screen\nAnd the user taps the device's back button twice",
+        "expected": "Then the user should be returned to At Bat and left on the Video index containing the Video they tried to share."
+      },
+      {
+        "content": "When the user taps the Facebook app in the Share menu",
+        "expected": "Then a Facebook Post screen should appear with the Video URL and Metadata pre-populated. (Note: Metadata may not appear with an Video shared from QA.) "
+      },
+      {
+        "content": "When the user taps the Facebook app in the Share menu\nAnd the user composes and posts the Video",
+        "expected": "Then the Facebook Post screen should close\nAnd the user should be returned to At Bat and left on the Video index containing the Video they tried to share. \n\nAnd the Post should be sent successfully (check on Facebook and verify that the link in the post takes the user to the correct Video.)"
+      },
+      {
+        "content": "When the user begins to share with Facebook and has launched the Facebook post screen\nAnd the user taps the 'Cancel' button",
+        "expected": "Then the Facebook Post screen should close\nAnd the user should be returned to At Bat and left on the Video index containing the Video they tried to share. "
+      },
+      {
+        "content": "When the user taps the Email app or Gmail in the Share menu\n",
+        "expected": "Then the subject of the email should be pre-populated with the Video Title\nAnd the URL of the Video should be pre-populated in the message body\n\n"
+      },
+      {
+        "content": "When the shares the Video through Email\nAnd sends the email",
+        "expected": "Then the Email app should close\nAnd the user should be returned to At Bat and left on the Video index containing the Video they tried to share. \n\nAnd the Email should be sent successfully (check on the recipient's end and verify that the link in the email takes the user to the correct Video.)"
+      }
+    ]
+  },
+  {
+    "id": 194233,
+    "title": "Layout (Handset & 7 inch tablet)",
+    "section_id": 7033,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1469218656,
+    "updated_by": 84,
+    "updated_on": 1469219201,
+    "estimate": null,
+    "estimate_forecast": "20s",
+    "suite_id": 926,
+    "display_order": 3,
+    "custom_preconds": "Handset & 7 inch tablet\r\n\r\nNexus 7\r\nKindle Fire HD 7",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "when a user is viewing the Video Index in portrait",
+        "expected": "Then the video will see one column of video cells displayed in the order they appear in the data"
+      },
+      {
+        "content": "when a user is viewing the Video Index in Landscape",
+        "expected": "Then the user will see two columns of video cells displayed in the order they appear in the data"
+      }
+    ]
+  },
+  {
+    "id": 194234,
+    "title": "Layout (larger than 7 inch tablet)",
+    "section_id": 7033,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1469218891,
+    "updated_by": 84,
+    "updated_on": 1469219287,
+    "estimate": null,
+    "estimate_forecast": "4m 1s",
+    "suite_id": 926,
+    "display_order": 4,
+    "custom_preconds": "Tablets larger than 7 inches",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "when a user is viewing the Video Index in portrait",
+        "expected": "Then the user will see two columns of video cells displayed in the order they appear in the data"
+      },
+      {
+        "content": "when a user is viewing the Video Index in landscape",
+        "expected": "Then the user will see three columns of video cells displayed in the order they appear in the data"
+      }
+    ]
+  },
+  {
+    "id": 194235,
+    "title": "Search",
+    "section_id": 7033,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1469219445,
+    "updated_by": 232,
+    "updated_on": 1586533539,
+    "estimate": null,
+    "estimate_forecast": "5m 17s",
+    "suite_id": 926,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": "Note: Search functionality is currently not enabled in the app.  This test case is being retained in this test suite for when this functionality returns to the app.  Mark as blocked and skip this test case for now.",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user searches using the search button on the action bar in the main MLB Video index",
+        "expected": "After 2 characters have been typed, results from the Videos Search will load over the Video Index content\nand the results header will display below the search: \"Search Results (X matches)\"\nand the Videos returned will display using the same UI/functionality as the Videos index"
+      },
+      {
+        "content": "When the user searches using the search button on the action bar in a team index",
+        "expected": "Then the user should see a video index with search results specific to the team index the user was searching in for the term the user chose.\n(eg. If the user searches for 'Jeter' in the Baltimore Orioles team index, the user should only see results from the Orioles index that pertain to Jeter. They should not see all Jeter videos.)"
+      },
+      {
+        "content": "When the user taps Close",
+        "expected": "Then the Search overlay will be removed and the user will be placed back in the Videos Index"
+      },
+      {
+        "content": "When the user has typed letters into the search bar\nand then taps the X ",
+        "expected": "Then the typed letters will be erased "
+      },
+      {
+        "content": "When the search functionality is being used",
+        "expected": "Then the drop down team index filter will be hidden"
+      }
+    ]
+  },
+  {
+    "id": 194237,
+    "title": "Pull to Refresh",
+    "section_id": 7033,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1469220076,
+    "updated_by": 84,
+    "updated_on": 1469220209,
+    "estimate": null,
+    "estimate_forecast": "1m 9s",
+    "suite_id": 926,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user pulls down on the Video Index screen",
+        "expected": "Then the data will be refreshed and any new data will load"
+      },
+      {
+        "content": "When a user has entered a search query and the search results have populated",
+        "expected": "Then the user should NOT be able to pull to refresh the search result data"
+      }
+    ]
+  },
+  {
+    "id": 194238,
+    "title": "Cache Bust",
+    "section_id": 7033,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4536",
+    "created_by": 84,
+    "created_on": 1469220236,
+    "updated_by": 84,
+    "updated_on": 1469220393,
+    "estimate": null,
+    "estimate_forecast": "2m 34s",
+    "suite_id": 926,
+    "display_order": 8,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user navigates to the Video Index",
+        "expected": "Then cache is ignored and fresh data will load"
+      },
+      {
+        "content": "When a user changes the team filter",
+        "expected": "Then cache is ignored and fresh data will load"
+      },
+      {
+        "content": "When the app is backgrounded, then foregrounded",
+        "expected": "Then cache will be used if available"
+      }
+    ]
+  },
+  {
+    "id": 194236,
+    "title": "Timeout Message",
+    "section_id": 7033,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4536",
+    "created_by": 84,
+    "created_on": 1469219886,
+    "updated_by": 84,
+    "updated_on": 1469220267,
+    "estimate": null,
+    "estimate_forecast": "4m 16s",
+    "suite_id": 926,
+    "display_order": 9,
+    "custom_preconds": null,
+    "custom_steps": "When the user has a less than optimal connection (Wifi or carrier)\r\nand the user taps the Videos tab\r\nand the request is taking a long time to load data",
+    "custom_expected": "Then Timeout will be 30 seconds\r\nand on timeout, last available data will be used and the following message will appear:\r\nMessage: Low Connectivity: using last available data\r\nButton: OK",
+    "custom_steps_separated": null
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": 786627,
+    "suite_id": 232802,
+    "name": "Access Restriction",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 786628,
+    "suite_id": 232802,
+    "name": "Award Bonus Packages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 786623,
+    "suite_id": 232802,
+    "name": "WLP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 786625,
+    "suite_id": 232802,
+    "name": "Email Blast",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 786629,
+    "suite_id": 232802,
+    "name": "Reports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 786630,
+    "suite_id": 232802,
+    "name": "Rule 4 Draft",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 786633,
+    "suite_id": 232802,
+    "name": "MNC/AddC",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 786634,
+    "suite_id": 232802,
+    "name": "Profiles/Transactions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 786635,
+    "suite_id": 232802,
+    "name": "AMT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 794163,
+    "suite_id": 232802,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  }
+]

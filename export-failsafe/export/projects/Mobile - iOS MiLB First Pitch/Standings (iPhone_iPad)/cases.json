@@ -1,0 +1,86 @@
+[
+  {
+    "id": 48726,
+    "title": "Standings",
+    "section_id": 7004,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": 567,
+    "refs": null,
+    "created_by": 40,
+    "created_on": 1419265783,
+    "updated_by": 65,
+    "updated_on": 1523037744,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 912,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user has not set a favorite team\nAnd the user taps the standings button",
+        "expected": "Then the user is brought to the standings page where they see two or three tabs depending on the mode the app is in.\nAnd if the app is in Triple-A mode they should see two tabs\nOR if the app is in Double-A mode they should see three tabs\nOR if the app is in Class A Advanced mode they should see three tabs\nOR if the app is in Class A mode they should see two tabs\nOR if the app is in Class A Short Season mode they should see two tabs\nOR if the app is in Class Rookie mode they should see two tabs"
+      },
+      {
+        "content": "When the user is in Triple-A mode\nAnd the user is in the Standings section\nAnd the user taps on the tabs for the different leagues",
+        "expected": "Then the respective views should open\nAnd the app should not crash"
+      },
+      {
+        "content": "When the user taps the standings button or taps one of the tabs at the top of the standings window",
+        "expected": "Then the loading spinner will appear while the pages are being loaded"
+      },
+      {
+        "content": "When the app is in Triple-A mode\nAnd the user taps the Standings button in tab bar",
+        "expected": "Then the user should be taken to the Standings section\nAnd the user should see tabs for: 'International', 'Pacific Coast' leagues."
+      },
+      {
+        "content": "When the app is in Double-A mode\nAnd the user taps the Standings button in tab bar",
+        "expected": "Then the user should be taken to the Standings section\nAnd the user should see tabs for: 'Eastern', 'Southern', 'Texas' leagues.\nAnd the Souther and Texas divisions will have a tab for 1st and 2nd half"
+      },
+      {
+        "content": "When the app is in Class A Advanced mode\nAnd the user taps the Standings button in tab bar",
+        "expected": "The the user should be taken to the Standings section\nAnd the user should see tabs for: 'California', 'Carolina', 'Florida State'\nAnd the user should see 1st Half and 2nd Half standings for all"
+      },
+      {
+        "content": "When the app is in Class A mode\nAnd the user navigates to the More section\nAnd the user taps the Standings cell",
+        "expected": "The the user should be taken to the Standings section\nAnd the user should see tabs for: 'Midwest', 'South Atlantic'\nAnd the user should see 1st Half and 2nd Half standings for both"
+      },
+      {
+        "content": "When the app is in Class A Short Season mode\nAnd the user navigates to the More section\nAnd the user taps the Standings cell",
+        "expected": "The the user should be taken to the Standings section\nAnd the user should see tabs for: 'New York-Penn', 'Northwest'"
+      },
+      {
+        "content": "When the app is in Rookie mode\nAnd the user navigates to the More section\nAnd the user taps the Standings cell",
+        "expected": "The the user should be taken to the Standings section\nAnd the user should see tabs for: 'Pioneer', 'Appalachian'\nAnd the user should see 1st Half and 2nd Half standings for only Pioneer"
+      },
+      {
+        "content": "When a user has a favorite team from Triple-A\nAnd the user is on the favorite teams' team page\nAnd the user taps on More->Standings",
+        "expected": "Then the class selector will say Triple-A \nAnd the standings will be the Triple-A standings\nAnd tapping the back button will bring you back to the More section\n*Repeat for ALL classes*"
+      },
+      {
+        "content": "When the user is in Triple-A mode\nAnd the user taps the Standings button\nAnd the 'International' tab is selected",
+        "expected": "Then the user should see the correct teams in the International league. (See link)\nhttp://wap.milb.com/standings\n*Repeat for ALL classes*"
+      },
+      {
+        "content": "When the user taps the Standings button\nAnd the \"International\" league tab is selected",
+        "expected": "Then the user can see the standings text with proper headings and layout \nAnd the headings and layout will be the same as the link below\nhttp://wap.milb.com/standings\n*Repeat for ALL classes and divisions*\n"
+      },
+      {
+        "content": "When the user taps the Standings button\n",
+        "expected": "Then the standings page should appear and the statistics should be: W, L, PCT, GB, L10, STRK for each team\n*Repeat for ALL classes*\n\nOn iPad there will also be records for HOME and AWAY"
+      },
+      {
+        "content": "When a team has clinched a division",
+        "expected": "Then the division winner[s] will be designated with symbol that is notated in the key at the bottom of the standings page\n*Check all Classes and their divisions*"
+      },
+      {
+        "content": "When a team has clinched a wild card spot\n",
+        "expected": "Then the wild card winner will be designated with symbol that is notated in the key at the bottom of the standings page\n*Check all Classes and their divisions*"
+      }
+    ],
+    "custom_feature_tag": null
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "id": 155053,
+    "suite_id": 21486,
+    "name": "Header",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 155054,
+    "suite_id": 21486,
+    "name": "Column Header (DONE)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 155055,
+    "suite_id": 21486,
+    "name": "Player Stats",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 155056,
+    "suite_id": 21486,
+    "name": "Stat Leaders (DONE)",
+    "description": null,
+    "parent_id": 155055,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 155057,
+    "suite_id": 21486,
+    "name": "Hitting - Players & Teams (DONE)",
+    "description": null,
+    "parent_id": 155055,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 155058,
+    "suite_id": 21486,
+    "name": "Pitching - Players & Teams (DONE)",
+    "description": null,
+    "parent_id": 155055,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 155059,
+    "suite_id": 21486,
+    "name": "Year dropdown",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 155060,
+    "suite_id": 21486,
+    "name": "League & Team toggle (DONE)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 155061,
+    "suite_id": 21486,
+    "name": "Season Selector (DONE)",
+    "description": "Season Dropdown will default to the current game type.  It will have an override available vis CMS.  In the offseason, default to regular season.",
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 155062,
+    "suite_id": 21486,
+    "name": "Timeframe - should this be part of Splits???",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 155063,
+    "suite_id": 21486,
+    "name": "More Players",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 155064,
+    "suite_id": 21486,
+    "name": "Splits (DONE)",
+    "description": "Can be used with Players/Teams & Hitting /Pitching",
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 155065,
+    "suite_id": 21486,
+    "name": "Standard/Advanced toggle (DONE)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 155066,
+    "suite_id": 21486,
+    "name": "Leader Row (DONE)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 155067,
+    "suite_id": 21486,
+    "name": "Leader Row Stats",
+    "description": null,
+    "parent_id": 155066,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 155068,
+    "suite_id": 21486,
+    "name": "Mobile - Header",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 155069,
+    "suite_id": 21486,
+    "name": "Mobile - Stats section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 155070,
+    "suite_id": 21486,
+    "name": "Mobile - Table",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 155071,
+    "suite_id": 21486,
+    "name": "Mobile - Modal bar",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 155072,
+    "suite_id": 21486,
+    "name": "SEO/URL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 155073,
+    "suite_id": 21486,
+    "name": "WEB & MOBILE",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  }
+]

@@ -1,0 +1,301 @@
+[
+  {
+    "id": 1225524,
+    "title": "Upgrading App (Retaining Feature Access/Settings)",
+    "section_id": 147913,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1524763818,
+    "updated_by": 65,
+    "updated_on": 1524763858,
+    "estimate": null,
+    "estimate_forecast": "3m 35s",
+    "suite_id": 20411,
+    "display_order": 1,
+    "custom_preconds": "Given the user has the current Store build version installed from HockeyApp\r\nAnd the user has logged in with an entitled account\r\nAnd the user has set Favorite Team(s)",
+    "custom_steps": "When the user overwrites the app with the latest Test Build\r\nAnd launches the app",
+    "custom_expected": "Then the user's login information will be retained\r\nAnd the user's feature access will be retained\r\nAnd the user's Favorite Teams will be retained",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1225526,
+    "title": "Video Launch Points",
+    "section_id": 147913,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1524763818,
+    "updated_by": 65,
+    "updated_on": 1524775969,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20411,
+    "display_order": 3,
+    "custom_preconds": "Given we have installed the app\r\nand navigate to the areas of the app where video highlights are available",
+    "custom_steps": "When the user attempts to play video from the following sections:",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Video section",
+        "expected": "Then the highlight opens in Full Screen mode\nAnd the highlight can be watched in it's entirety"
+      },
+      {
+        "content": "Team Page, Videos",
+        "expected": "Then the highlight opens in Full Screen mode\nAnd the highlight can be watched in it's entirety"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1225533,
+    "title": "News Launch Points",
+    "section_id": 147913,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1524765564,
+    "updated_by": 65,
+    "updated_on": 1524765834,
+    "estimate": null,
+    "estimate_forecast": "20m 57s",
+    "suite_id": 20411,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user has MiLB First Pitch installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN  the user access News from the Main Nav",
+        "expected": "THEN the News index loads\nand user is able to switch between classes and have the corresponding class news index load "
+      },
+      {
+        "content": "WHEN the user taps on an article from the class news index",
+        "expected": "THEN the corresponding article loads"
+      },
+      {
+        "content": "WHEN the user is on Teams Page\nand selects News link",
+        "expected": "THEN the News index loads for the corresponding team\nand user is able to to scroll on the page without issues"
+      },
+      {
+        "content": "WHEN the user taps on an article from the team news index",
+        "expected": "THEN the corresponding article loads\nand user is able to scroll on the page without issues"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1225527,
+    "title": "MiLB.tv",
+    "section_id": 147913,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1524763818,
+    "updated_by": 65,
+    "updated_on": 1525286299,
+    "estimate": null,
+    "estimate_forecast": "3m 55s",
+    "suite_id": 20411,
+    "display_order": 5,
+    "custom_preconds": "Given a user is on MiLB First Pitch\r\nand is logged in with MiLB.TV Premium user ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user attempts to watch a Live MiLB.tv feed",
+        "expected": "Then the user is granted access and can watch the feed successfully"
+      },
+      {
+        "content": "When the user attempts to watch an Archive MiLB.tv feed",
+        "expected": "Then the user is granted access and can watch the feed successfully"
+      },
+      {
+        "content": "When a user is watching an MiLB.TV feed and stops the feed\nAND from the EPG the user taps on another game feed",
+        "expected": "Then the Media Framework check appears\nand the user is let into the other feed"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1225528,
+    "title": "10 AM Scoreboard Flip",
+    "section_id": 147913,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1524763818,
+    "updated_by": 65,
+    "updated_on": 1524764089,
+    "estimate": null,
+    "estimate_forecast": "1m 32s",
+    "suite_id": 20411,
+    "display_order": 6,
+    "custom_preconds": "Given the user is on a device with First Pitch",
+    "custom_steps": "When the user opens First Pitch\r\nand taps on Scoreboard\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "when the device date is current date before 10am",
+        "expected": "Then the Scoreboard will show the previous day's games"
+      },
+      {
+        "content": "when the device date is current date after 10am",
+        "expected": "Then the Scoreboard will show the current day's games\n"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1225529,
+    "title": "Data Updates",
+    "section_id": 147913,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1524763818,
+    "updated_by": 65,
+    "updated_on": 1525358383,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20411,
+    "display_order": 7,
+    "custom_preconds": "Given a user has First Pitch installed",
+    "custom_steps": "When a user is observing a live game\r\nor a strung game in QA",
+    "custom_expected": "Then the data will update accordingly\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "on the Team Page",
+        "expected": "Inning, States, Linescore including RHE, Basepaths, Count, Outs\n\nBelow Linescore:\nPitcher stats [P]: ( , ERA) & Batter stats [AB]: ( , AVG)"
+      },
+      {
+        "content": "on the Scoreboard",
+        "expected": "On Game Cell:\nScore, Inning, States, Basepaths, Count, Outs\n\nBelow Game Cell:\nPitcher stats [P]: ( , ERA) & Batter stats [AB]: ( , AVG)"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1225530,
+    "title": "Gameday - Switching Games",
+    "section_id": 147913,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1524763818,
+    "updated_by": 65,
+    "updated_on": 1524765108,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20411,
+    "display_order": 8,
+    "custom_preconds": "Given a user is in Gameday\r\nand switches between games on the Scoreboard",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and switches between a game in preview and another game in preview",
+        "expected": "then the new game data loads in the Game Preview view and none of the previous games information is displayed"
+      },
+      {
+        "content": "and switches between a game in preview and another game in progress",
+        "expected": "then the new game data loads in the Live game view and none of the previous games information is displayed"
+      },
+      {
+        "content": "and switches between a game in preview and another game in final",
+        "expected": "then the new game data loads in the Wrap game view and none of the previous games information is displayed"
+      },
+      {
+        "content": "and switches between a live game and a game in preview",
+        "expected": "then the new game data loads in the Game Preview and none of the previous games information is displayed"
+      },
+      {
+        "content": "and switches between a live game and another live game",
+        "expected": "then the new game data loads in the Live game view and none of the previous games information is displayed"
+      },
+      {
+        "content": "and switches between a live game and game in final",
+        "expected": "then the new game data loads in the Wrap game view and none of the previous games information is displayed"
+      },
+      {
+        "content": "and switches between a final game and a game in preview",
+        "expected": "then the new game data loads in the Game Preview and none of the previous games information is displayed"
+      },
+      {
+        "content": "and switches between a final game and a game in progress",
+        "expected": "then the new game data loads in the Live game view and none of the previous games information is displayed"
+      },
+      {
+        "content": "and switches final game and a game in final",
+        "expected": "then the new game data loads in the Wrap game view and none of the previous games information is displayed"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1225531,
+    "title": "General App UX",
+    "section_id": 147913,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1524763818,
+    "updated_by": 65,
+    "updated_on": 1524766122,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20411,
+    "display_order": 9,
+    "custom_preconds": "Given a user has MiLB First Pitch is installed\r\n",
+    "custom_steps": "When a user has the app open",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "swiping between games on the Team Page Schedule/Scores module",
+        "expected": "is smooth and no blinking and all data loads"
+      },
+      {
+        "content": "swiping vertically on the Team Page",
+        "expected": "is smooth and no blinking and all data loads"
+      },
+      {
+        "content": "swiping between games on the Scoreboard",
+        "expected": "is smooth and no blinking and all data loads"
+      },
+      {
+        "content": "swiping vertically on the News index",
+        "expected": "is smooth and no blinking and all data loads"
+      },
+      {
+        "content": "swiping between News articles",
+        "expected": "is smooth and no blinking and all data loads"
+      }
+    ],
+    "custom_feature_tag": null
+  }
+]

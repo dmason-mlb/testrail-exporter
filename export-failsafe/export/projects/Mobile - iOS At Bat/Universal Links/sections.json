@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1043771,
+    "suite_id": 347681,
+    "name": "App Killed",
+    "description": "Useful tool for testing deep links:\nhttps://storage.cloud.google.com/mobile-utils/DeepLinks/index.html",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1411030,
+    "suite_id": 347681,
+    "name": "App Backgrounded",
+    "description": "Useful tool for testing deep links:\nhttps://storage.cloud.google.com/mobile-utils/DeepLinks/index.html",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

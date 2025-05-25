@@ -1,0 +1,737 @@
+[
+  {
+    "id": 16434056,
+    "title": "Profile display",
+    "section_id": 747284,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1616432272,
+    "updated_by": 225,
+    "updated_on": 1620741948,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user is in the app",
+    "custom_steps": "WHEN the user taps on the Profile tab\r\n\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User's profile display (top section of the page)",
+        "expected": "- 'Your Profile' header\n- background color is determined by the favorite team user has selected\n- section should contain the logo of user's favorite team\n- user's nickname\n- user's player level and prestige ranking\n- user's total XP, XP bar with current progress\n- user's level and how far they are from the next level \n- 'Season Trophies' section\n\n![](index.php?/attachments/get/8698508)\n"
+      },
+      {
+        "content": "Link layout ",
+        "expected": "The following links should be displayed and clickable:\n\n- \"Submit Feedback\" (not in App release) https://mlb.az1.qualtrics.com/jfe/form/SV_6r71KJ3tWMK4oIt\n\n- Your Friends\n\n- Favorite Team \n\n- Delay - cached (not in App release)\n\n- Notifications toggle \n\n- Vibrations toggle \n\n- How To Play \n\n- Account \n\n- More MLB Apps \n\n- More BetMGM apps\n\n- Privacy Policy\n\n- Do Not Sell My Data\n\n- Terms of Use \n\n- FAQ\n\n- Log Out \n\n- the Current Version\n\n![](index.php?/attachments/get/26586)\n"
+      }
+    ]
+  },
+  {
+    "id": 16434057,
+    "title": "Fireworks on Profile page",
+    "section_id": 747284,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1616433252,
+    "updated_by": 258,
+    "updated_on": 1616433527,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a user is in the app",
+    "custom_steps": "WHEN the user taps on the Profile tab",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When user tabs on the top section of profile page",
+        "expected": "The fireworks appear where the user tapped the screen\n\n![](index.php?/attachments/get/8698509)\n\n\n"
+      }
+    ]
+  },
+  {
+    "id": 16434058,
+    "title": "Season trophies section",
+    "section_id": 747284,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1616433578,
+    "updated_by": 258,
+    "updated_on": 1616434082,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user is in the app",
+    "custom_steps": "WHEN the user taps on the Profile tab",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Season trophies section display",
+        "expected": "3 season trophies/placeholders should be displayed"
+      },
+      {
+        "content": "If the user played Rally in 2020",
+        "expected": "* The user has a trophy for the previous year\n* Trophies years - 2020, 2021, 2022\n\n![](index.php?/attachments/get/8698511)\n"
+      },
+      {
+        "content": "If the user has 2020 trophy and user clicks on it",
+        "expected": "The 2020 trophy modal is displayed. The button should say 'Got it!' \n\n![](index.php?/attachments/get/8698510)\n"
+      },
+      {
+        "content": "If the user didn't play Rally in 2020",
+        "expected": "* The user has no trophy\n* Trophies years - 2021, 2022, 2023\n\n![](index.php?/attachments/get/8698512)\n"
+      },
+      {
+        "content": "If user clicks on 2021, 2022 or 2023 trophies",
+        "expected": "No modal is displayed"
+      }
+    ]
+  },
+  {
+    "id": 16434061,
+    "title": "Favorite Team",
+    "section_id": 747284,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1616435232,
+    "updated_by": 225,
+    "updated_on": 1620742032,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 7,
+    "custom_preconds": "GIVEN a user is on the profile page",
+    "custom_steps": "WHEN the user selects \"Favorite Team\"",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Original favorite team test case",
+        "expected": "**link**"
+      },
+      {
+        "content": "User is able to update the favorite team\n* click on - icon on the left side of previously selected team\nOR\n* click on 3 line icon on the right and drag the tem to followed section",
+        "expected": "Update button is disabled "
+      },
+      {
+        "content": "* Select another team\n* Click Update",
+        "expected": "* User is brought back to Profile page\n* The profile page background is updated and matches the selected favorite team color\n* Selected favorite team is displayed in the list below - Favorite Team: ...\n"
+      },
+      {
+        "content": "User is able to add/remove followed teams",
+        "expected": "When user goes back to Favorite Team page, updated favorite and followed teams are displayed\n\n![](index.php?/attachments/get/8698515)\n![](index.php?/attachments/get/8698516)\n**the button should say 'Update'**\n"
+      }
+    ]
+  },
+  {
+    "id": 16434074,
+    "title": "Notifications",
+    "section_id": 747284,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1616436462,
+    "updated_by": 258,
+    "updated_on": 1616438525,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 9,
+    "custom_preconds": "GIVEN a user is in the Profile tab",
+    "custom_steps": null,
+    "custom_expected": "Notifications toggle - should either turn blue or grey depending on if you are turning them on or off",
+    "custom_steps_separated": [
+      {
+        "content": "If user has notification toggle off and user clicks on it",
+        "expected": "'Notification are disabled' pop up is displayed. User can enable notifications in setting"
+      },
+      {
+        "content": "If user enabled notifications in settings and goes back to Rally",
+        "expected": "The notification toggle is on"
+      },
+      {
+        "content": "User is able to easily turn notifications on and off",
+        "expected": ""
+      },
+      {
+        "content": "If user's notification is on",
+        "expected": "User receives notifications"
+      },
+      {
+        "content": "If user's notification is off",
+        "expected": "User does not receive notifications"
+      },
+      {
+        "content": "* Turn the notification toggle on\n* Exit the app\n* Go back to the app",
+        "expected": "Notification toggle stays on"
+      },
+      {
+        "content": "* Turn the notification toggle off\n* Exit the app\n* Go back to the app",
+        "expected": "Notification toggle stays off"
+      }
+    ]
+  },
+  {
+    "id": 16434075,
+    "title": "Vibrations",
+    "section_id": 747284,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1616437248,
+    "updated_by": 258,
+    "updated_on": 1616438565,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 10,
+    "custom_preconds": "GIVEN a user is in the Profile tab",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User is able to easily turn vibrations on and off",
+        "expected": ""
+      },
+      {
+        "content": "If user's vibrations is on",
+        "expected": "User receives vibrations"
+      },
+      {
+        "content": "If user's vibrations is off",
+        "expected": "User does not receive vibrations"
+      },
+      {
+        "content": "* Turn the vibrations toggle on\n* Exit the app\n* Go back to the app",
+        "expected": "vibrations toggle stays on"
+      },
+      {
+        "content": "* Turn the vibrations toggle off\n* Exit the app\n* Go back to the app",
+        "expected": "vibrations toggle stays off"
+      }
+    ]
+  },
+  {
+    "id": 16434076,
+    "title": "How To Play",
+    "section_id": 747284,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2696",
+    "created_by": 258,
+    "created_on": 1616438361,
+    "updated_by": 258,
+    "updated_on": 1622585530,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 11,
+    "custom_preconds": "GIVEN a user is in the Profile tab",
+    "custom_steps": "WHEN the user taps on How To Play",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "First slide",
+        "expected": "* header 'How To PLay'\n* animated video \n* subheader 'View The Next Batters'\n* 'Batter cards will appear in your stack. \nSwipe up and down to view cards. New cards appear at the bottom of the screen.'\n\n![](index.php?/attachments/get/9799302)\n"
+      },
+      {
+        "content": "Second slide",
+        "expected": "* header 'How To PLay'\n* animated video\n* subheader 'Make Your Picks'\n* 'Tap a card to expand it and make your pick. Drag down to close.'\n\n![](index.php?/attachments/get/9799303)\n"
+      },
+      {
+        "content": "Third slide",
+        "expected": "* header 'How To PLay'\n* animated video\n* subheader 'Follow The Action'\n* 'Finish your pick before each batter starts. Earn points when you picked right.'\n\n![](index.php?/attachments/get/9799304)\n"
+      },
+      {
+        "content": "Fourth slide",
+        "expected": "* header 'How To PLay'\n* animated video\n* subheader 'Compete With Friends'\n* 'Tap the Rankings icon to view the leaderboards for your chosen game.'\n* 'Got It' button\n\n![](index.php?/attachments/get/9799305)\n\n"
+      },
+      {
+        "content": "When user clicks on 'Got It!' button",
+        "expected": "The user is brought up to profile tab"
+      }
+    ]
+  },
+  {
+    "id": 16434239,
+    "title": "Account",
+    "section_id": 747284,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1616445454,
+    "updated_by": 258,
+    "updated_on": 1616445859,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 12,
+    "custom_preconds": "GIVEN a user is on Profile page",
+    "custom_steps": "WHEN the user taps on Account",
+    "custom_expected": "User is presented with a webview to log into their mlb account\r\n\r\n![](index.php?/attachments/get/8698797)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16434240,
+    "title": "More MLB Apps",
+    "section_id": 747284,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1616445573,
+    "updated_by": 258,
+    "updated_on": 1616445810,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 13,
+    "custom_preconds": "GIVEN a user is on the Profile page",
+    "custom_steps": "WHEN the user taps on More MLB Apps",
+    "custom_expected": "Then the user is redirected to a \"MLB\" App screen with an array of Apps:\r\n**Latest Release** (sub head)\r\n-- MLB Rally with an \"Open\" button present (Open\r\nbecause the user is signed up)\r\n**Apps & Games** (sub head)\r\n-- MLB Rally with an \"Open\" button present\r\n-- Junior Giants with a \"Get\" button present\r\n-- RBI Baseball 20 with a $3.99 button present\r\n**iMessage** (sub head)\r\n-- MLB 2016 Sticker Pack with a \"Get\" button present\r\n**Apple Watch** (sub head)\r\n-- MLB with with an \"Open\" button present (If user has an Apple Watch)\r\n**Apple TV** (sub head)\r\n--MLB with an \"Open\" button present (If user has Apple TV)\r\n\r\n![](index.php?/attachments/get/8698796)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16434251,
+    "title": "More BetMGM Apps",
+    "section_id": 747284,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1616445899,
+    "updated_by": 258,
+    "updated_on": 1616446845,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 14,
+    "custom_preconds": "GIVEN a user is on the Profile page\r\n\r\n",
+    "custom_steps": "WHEN the user taps on More MLB Apps",
+    "custom_expected": "It takes the user to App Store where MGM apps will be displayed (link to be provided by Eric)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16434262,
+    "title": "Privacy Policy",
+    "section_id": 747284,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1616446925,
+    "updated_by": 258,
+    "updated_on": 1616447516,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 15,
+    "custom_preconds": "GIVEN a user is on the Profile page",
+    "custom_steps": "WHEN the user taps on Privacy Policy",
+    "custom_expected": "Takes user to MLB Privacy Policy page (webview)\r\n\r\n![](index.php?/attachments/get/8698798)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16434263,
+    "title": "Do Not Sell My Data",
+    "section_id": 747284,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1616447544,
+    "updated_by": 258,
+    "updated_on": 1616447775,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 16,
+    "custom_preconds": "GIVEN a user is on the Profile page",
+    "custom_steps": "WHEN the user taps on Do Not Sell My Data",
+    "custom_expected": "Then the user is redirected to the \"MLB Privacy\" screen\r\nAnd the screen shows a \"Sign In\" button\r\nAnd show a \"Proceed as Guest User\" link\r\n\r\n![](index.php?/attachments/get/8698799)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16434264,
+    "title": "Terms of Use",
+    "section_id": 747284,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1616447698,
+    "updated_by": 258,
+    "updated_on": 1616447869,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 17,
+    "custom_preconds": "GIVEN a user is on the Profile page",
+    "custom_steps": "WHEN the user taps on Terms of Use",
+    "custom_expected": "Then the user is redirected to the \"Terms of Use Agreement\" screen on the MLB App\r\nAnd the screen contains 15 sections\r\n\r\n![](index.php?/attachments/get/8698800)\r\n\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16434270,
+    "title": "Official Rules",
+    "section_id": 747284,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1616447894,
+    "updated_by": 258,
+    "updated_on": 1616447980,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 18,
+    "custom_preconds": "GIVEN a user is on the Profile page\r\n\r\n",
+    "custom_steps": "WHEN the user taps on Official Rules",
+    "custom_expected": "Then the user is redirected to the \"MLB Rally Official Rules\" screen on the MLB App\r\nAnd the screen contains 15 sections\r\n\r\n![](index.php?/attachments/get/8698801)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16434271,
+    "title": "FAQ",
+    "section_id": 747284,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1616448002,
+    "updated_by": 258,
+    "updated_on": 1616448092,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 19,
+    "custom_preconds": "GIVEN a user is on the Profile page",
+    "custom_steps": "WHEN the user taps on FAQ",
+    "custom_expected": "Then the user is redirected to \"MLB Rally Frequently Asked Questions' screen\r\nAnd the screen contains 16 Q/A's\r\n\r\n![](index.php?/attachments/get/8698802)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16434272,
+    "title": "Log Out",
+    "section_id": 747284,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1616448120,
+    "updated_by": 225,
+    "updated_on": 1620742390,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 20,
+    "custom_preconds": "GIVEN a user is on the Profile page\r\n\r\n",
+    "custom_steps": "WHEN the user taps on Log Out",
+    "custom_expected": "Then the user is redirected to the Sign Up/Log In screen",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16957609,
+    "title": "Your Friends",
+    "section_id": 795336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1619819289,
+    "updated_by": 258,
+    "updated_on": 1622051136,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If user has no friends",
+        "expected": "Things to display: \n\n* header 'Your Friends'\n* image\n* headline 'Now you can compete with friends.'\n* copy 'Invite friends to join you in Rally. Compete against them for 1st place during live games.'\n* 'Invite Friends' button \n\n![](index.php?/attachments/get/9359367)\n"
+      },
+      {
+        "content": "If user has friends ",
+        "expected": "Things to display: \n\n* header 'Your Friends'\n* copy 'Invite your friends to play Rally. Swipe left on a friend to manage your list.'\n* amount of friends and person icon\n* list of friends \n* friend's cell contains: avatar, nickname, XP Title (rookie, all-star, etc)\n* Avatar should be user's favorite team\n* 'Invite Friends' button\n\n![](index.php?/attachments/get/9490496)\n"
+      },
+      {
+        "content": "When the user has more than one friend, the list should display friends alphabetically (nickname).",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 16957976,
+    "title": "Adding Friends from profile page",
+    "section_id": 795336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1619820078,
+    "updated_by": 258,
+    "updated_on": 1621885705,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When user taps on 'Your Friends'",
+        "expected": "User sees 'Invite Friend' button"
+      },
+      {
+        "content": "When user taps on 'Invite Friends'",
+        "expected": "'Join me in MLB Rally' popup is displayed \n\n![](index.php?/attachments/get/9345856)"
+      },
+      {
+        "content": "When user selects the option",
+        "expected": "The share link is displayed"
+      },
+      {
+        "content": "If user selects messages option",
+        "expected": "When a user opens a share sheet to “Invite Friends”, the pre-filled message should include:\nMessage: Join me in MLB Rally\nImage: Rally logo\n\n![](index.php?/attachments/get/9345858)\n"
+      },
+      {
+        "content": "If user sends an invite",
+        "expected": "* User is brought back to 'Friends' tab. \n* The 'Friends' tab looks like its described in Step 1 until user's friend accepts the invitation"
+      },
+      {
+        "content": "After user's friend accepts the invitation",
+        "expected": "Friends are displayed in each other's friends list "
+      }
+    ]
+  },
+  {
+    "id": 16957977,
+    "title": "Removing friends from profile page",
+    "section_id": 795336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1619820097,
+    "updated_by": 258,
+    "updated_on": 1620325508,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "If user has friends and wants to remove some",
+    "custom_steps_separated": [
+      {
+        "content": "On 'Your Friends' page, swipe left on the friend you want to remove",
+        "expected": "* Friends's cell will be swiped to the left\n* The red square button will be displayed on the right side of the cell\n* The red square will contain an 'X' inside of it\n\n![](index.php?/attachments/get/9359368)\n"
+      },
+      {
+        "content": "Clicking on the red square",
+        "expected": "Will display the action popup\n\n* header 'Are You Sure?'\n* copy 'This friend will no longer appear on your leaderboard. You can always share a link to add them again.'\n* 'Cancel' button (gray background)\n* 'Remove' button (blue background)\n\n![](index.php?/attachments/get/9359369)\n"
+      },
+      {
+        "content": "If user taps Cancel",
+        "expected": "User is brought up to 'Your Friends' page"
+      },
+      {
+        "content": "If user taps Remove",
+        "expected": "Selected friend is removed from user's friends list"
+      },
+      {
+        "content": "Deleted friend does not get notified",
+        "expected": "Both users do not appear in each others friend's lists. "
+      }
+    ]
+  },
+  {
+    "id": 17028057,
+    "title": "Your Friend Code display",
+    "section_id": 795336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1620325306,
+    "updated_by": 258,
+    "updated_on": 1621886030,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When user navigates to 'Your Friend Code' page",
+        "expected": "Things to display:\n\n* Header 'Your Friend Code'\n* copy 'Share this code with a friend for them to add you to their list.'\n* user's unique code (in yellow)\n* copy 'Enter a friend’s code below to add that friend to your list.'\n* 'XXX XXX'\n* divider line\n* inactive 'Add a Friend' button\n\n![](index.php?/attachments/get/9684567)\n\n"
+      },
+      {
+        "content": "When user enters 6 digit code",
+        "expected": "Button gets active and turns blue"
+      }
+    ]
+  },
+  {
+    "id": 17028815,
+    "title": "Your Friend Code functionality",
+    "section_id": 795336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1620325666,
+    "updated_by": 258,
+    "updated_on": 1621623960,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Code requirements",
+        "expected": "* should be 6 digit long\n* should only alphanumeric\n* should be all caps"
+      },
+      {
+        "content": "Tapping and holding user's code",
+        "expected": "the copy functionality pops up"
+      },
+      {
+        "content": "User is able to copy and paste the code",
+        "expected": ""
+      },
+      {
+        "content": "User can paste the code in the friend's code field. Tapping and holding the friends's code field ",
+        "expected": "the pastye functionality pops up"
+      },
+      {
+        "content": "When user pastes the code",
+        "expected": "code is displayed fully"
+      }
+    ]
+  },
+  {
+    "id": 17029324,
+    "title": "Your Friend Code flow",
+    "section_id": 795336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2761",
+    "created_by": 258,
+    "created_on": 1620326441,
+    "updated_by": 258,
+    "updated_on": 1621886083,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 6,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If user types in 6 digit code and deletes one digit",
+        "expected": "The error message 'Please enter a 6-digit token' appears (in red) and divider line turns red as well."
+      },
+      {
+        "content": "If user types in correct code",
+        "expected": "After user taps 'Add a Friend' button, the message 'Success! $friendname$ added (in green)\n\n![](index.php?/attachments/get/9684569)\n"
+      },
+      {
+        "content": "WHen user goes to 'Your Friends' list",
+        "expected": "Newly added friend should be displayed there"
+      },
+      {
+        "content": "If user types in invalid code",
+        "expected": "After the user taps 'Add a Friend' button, the error message appears 'Invalid code. Please try again' (in red)\n\n![](index.php?/attachments/get/9684568)\n"
+      }
+    ]
+  },
+  {
+    "id": 17086158,
+    "title": "EC - avatar",
+    "section_id": 795336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1620752669,
+    "updated_by": 258,
+    "updated_on": 1620752687,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 210922,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "If the user doesn’t have a favorite team, display the fallback baseball image instead.",
+    "custom_steps_separated": null
+  }
+]

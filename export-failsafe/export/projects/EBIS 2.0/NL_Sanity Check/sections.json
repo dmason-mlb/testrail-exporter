@@ -1,0 +1,335 @@
+[
+  {
+    "id": 114113,
+    "suite_id": 17416,
+    "name": "MJC/CBT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 114119,
+    "suite_id": 17416,
+    "name": "Waivers",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 148589,
+    "suite_id": 17416,
+    "name": "Trade Deadline Checks",
+    "description": null,
+    "parent_id": 114119,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 114121,
+    "suite_id": 17416,
+    "name": "Disabled List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 126323,
+    "suite_id": 17416,
+    "name": "Investigation Request",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 126324,
+    "suite_id": 17416,
+    "name": "Investigation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 128654,
+    "suite_id": 17416,
+    "name": "Winter League Requests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 128655,
+    "suite_id": 17416,
+    "name": "Reports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 128656,
+    "suite_id": 17416,
+    "name": "Arbitration",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 145703,
+    "suite_id": 17416,
+    "name": "Affiliates",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 145704,
+    "suite_id": 17416,
+    "name": "Reaffiliation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 145705,
+    "suite_id": 17416,
+    "name": "Central Tender",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 146412,
+    "suite_id": 17416,
+    "name": "Employee Profiles",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 146413,
+    "suite_id": 17416,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 146412,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 145706,
+    "suite_id": 17416,
+    "name": "Employee Profiles Permissions",
+    "description": null,
+    "parent_id": 146412,
+    "display_order": 29,
+    "depth": 1
+  },
+  {
+    "id": 146414,
+    "suite_id": 17416,
+    "name": "Employee Roster Widget",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 146415,
+    "suite_id": 17416,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 146414,
+    "display_order": 31,
+    "depth": 1
+  },
+  {
+    "id": 146416,
+    "suite_id": 17416,
+    "name": "Employee Contracts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 32,
+    "depth": 0
+  },
+  {
+    "id": 148587,
+    "suite_id": 17416,
+    "name": "Employee Transactions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 33,
+    "depth": 0
+  },
+  {
+    "id": 146417,
+    "suite_id": 17416,
+    "name": "Assign as 7th Coach",
+    "description": null,
+    "parent_id": 148587,
+    "display_order": 34,
+    "depth": 1
+  },
+  {
+    "id": 146418,
+    "suite_id": 17416,
+    "name": "Remove as 7th Coach",
+    "description": null,
+    "parent_id": 148587,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 146419,
+    "suite_id": 17416,
+    "name": "Assign/Reassign Employee",
+    "description": null,
+    "parent_id": 148587,
+    "display_order": 36,
+    "depth": 1
+  },
+  {
+    "id": 146420,
+    "suite_id": 17416,
+    "name": "Remove Employee From Org",
+    "description": null,
+    "parent_id": 148587,
+    "display_order": 37,
+    "depth": 1
+  },
+  {
+    "id": 146421,
+    "suite_id": 17416,
+    "name": "Ineligible List",
+    "description": null,
+    "parent_id": 148587,
+    "display_order": 38,
+    "depth": 1
+  },
+  {
+    "id": 146422,
+    "suite_id": 17416,
+    "name": "Assign/Reassign Employee",
+    "description": null,
+    "parent_id": 148587,
+    "display_order": 39,
+    "depth": 1
+  },
+  {
+    "id": 146423,
+    "suite_id": 17416,
+    "name": "Temporarily Inactive List",
+    "description": null,
+    "parent_id": 148587,
+    "display_order": 40,
+    "depth": 1
+  },
+  {
+    "id": 148588,
+    "suite_id": 17416,
+    "name": "Reinstate from Inactive List",
+    "description": null,
+    "parent_id": 148587,
+    "display_order": 41,
+    "depth": 1
+  },
+  {
+    "id": 146424,
+    "suite_id": 17416,
+    "name": "Temp Inactive - Permissions",
+    "description": null,
+    "parent_id": 148587,
+    "display_order": 42,
+    "depth": 1
+  },
+  {
+    "id": 146425,
+    "suite_id": 17416,
+    "name": "Ineligible List",
+    "description": null,
+    "parent_id": 148587,
+    "display_order": 43,
+    "depth": 1
+  },
+  {
+    "id": 146426,
+    "suite_id": 17416,
+    "name": "Ineligible List - Perms",
+    "description": null,
+    "parent_id": 148587,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 146427,
+    "suite_id": 17416,
+    "name": "Deceased List",
+    "description": null,
+    "parent_id": 148587,
+    "display_order": 45,
+    "depth": 1
+  },
+  {
+    "id": 146428,
+    "suite_id": 17416,
+    "name": "Deceased List - Perms",
+    "description": null,
+    "parent_id": 148587,
+    "display_order": 46,
+    "depth": 1
+  },
+  {
+    "id": 146429,
+    "suite_id": 17416,
+    "name": "Suspended List",
+    "description": null,
+    "parent_id": 148587,
+    "display_order": 47,
+    "depth": 1
+  },
+  {
+    "id": 147916,
+    "suite_id": 17416,
+    "name": "EBISLink - Major Contracts API",
+    "description": null,
+    "parent_id": null,
+    "display_order": 64,
+    "depth": 0
+  },
+  {
+    "id": 149666,
+    "suite_id": 17416,
+    "name": "View Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 65,
+    "depth": 0
+  },
+  {
+    "id": 149667,
+    "suite_id": 17416,
+    "name": "Edit Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 66,
+    "depth": 0
+  },
+  {
+    "id": 149668,
+    "suite_id": 17416,
+    "name": "International Amateur - Grandfathered Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 67,
+    "depth": 0
+  }
+]

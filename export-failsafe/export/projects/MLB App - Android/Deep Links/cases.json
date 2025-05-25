@@ -1,0 +1,235 @@
+[
+  {
+    "id": 23955822,
+    "title": "Paywall Deep links",
+    "section_id": 1238278,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1634238933,
+    "updated_by": 311,
+    "updated_on": 1634310315,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 421556,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a USER\r\nAND access to the QA OneSignal instance (eg. https://app.onesignal.com/apps/4bf09b83-a999-479a-9b40-df05ad36d2a0/in_app_messages)\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an In-App message is created to display on app restart\nAND the Click URL is set to mlbatbat://paywall?featureType=mobile.tvAccess for the button\nAND the app is restarted\nAND the message displays\nAND the button is tapped",
+        "expected": "THEN the currently configured MLB.tv paywall will display"
+      },
+      {
+        "content": "WHEN an In-App message is created to display on app restart\nAND the Click URL is set to mlbatbat://paywall?featureType=mobile.atBatAccess for the button\nAND the app is restarted\nAND the message displays\nAND the button is tapped",
+        "expected": "THEN the currently configured MLB audio paywall will display"
+      }
+    ]
+  },
+  {
+    "id": 24089056,
+    "title": "SVOD, SLIVE Deep Links",
+    "section_id": 1238278,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1634657153,
+    "updated_by": 238,
+    "updated_on": 1643051063,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 421556,
+    "display_order": 2,
+    "custom_preconds": "Notes: The slug value set in the Deep Link must match the value set on the stream.  Eg. look at response to Forge api call (dapi.cms.mlbinfra.com) to get the slug for the stream and set that in the deep link url.  Use Custom environment to test.  Set all Production except OneSignal to QA.  If testing against Beta, use Charles to rewrite Forge api call to beta.  \r\n\r\nEx.:\r\nadb shell am start -d mlbatbat://svod?slug=hall-of-fame-breakdowns\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN a Free or Lite user\nWHEN a deeplink is followed for an asset that exists in the Featured index eg. \"mlbatbat://svod?slug=9-30pm-et-today-mlb-big-inning-3244&utm_source=onesignal&utm_medium=push&utm_campaign=2021-07-28-All-your-Wednes\"\n",
+        "expected": "THEN the Games tab displays (promotional deeplinks will not offer SVOD to free users)"
+      },
+      {
+        "content": "GIVEN an Entitled user\nWHEN a deeplink is followed for an asset that exists in the Featured index eg. \"mlbatbat://svod?slug=9-30pm-et-today-mlb-big-inning-3244&utm_source=onesignal&utm_medium=push&utm_campaign=2021-07-28-All-your-Wednes\"",
+        "expected": "THEN the Watchtv/Featured tab displays\nAND the SLIVE stream will start from the live point\nAND SVOD will start from the beginning"
+      },
+      {
+        "content": "GIVEN an Entitled user\nWHEN a deeplink is followed for an asset that does not exist in the Featured index eg. \"mlbatbat://svod?slug=slug=baseball-seasons-1995\"",
+        "expected": "THEN the Watchtv/Featured tab displays\nAND the SLIVE stream will start from the live point\nAND SVOD will start from the beginning"
+      }
+    ]
+  },
+  {
+    "id": 24313219,
+    "title": "Highlights tab deep links",
+    "section_id": 1238278,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1635362169,
+    "updated_by": 238,
+    "updated_on": 1643050907,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 421556,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a User",
+    "custom_steps": null,
+    "custom_expected": "Make sure you are putting a \\ before any & in the adb request\r\n\r\nEx.:\r\nadb shell am start -d \"mlbatbat://video?team_id=112\\&article=jon-lester-on-retirement\"",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a deep link to a video in the Highlights tab is followed\n(eg. mlbatbat://video?team_id=144&article=jorge-soler-homers-1-on-a-fly-ball-to-left-center-field-lzioqm)\nNote: replace the article above with one that is in the tab",
+        "expected": "THEN the the user will be taken to the Highlights tab\nAND the video will play"
+      },
+      {
+        "content": "WHEN a deep link to a video that exists but not in the Highlights tab is followed\n(eg. mlbatbat://video?team_id=144&article=jorge-soler-homers-1-on-a-fly-ball-to-left-center-field-lzioqm&team=tor)",
+        "expected": "THEN the the user will be taken to the Highlights tab\nAND the video will play"
+      },
+      {
+        "content": "WHEN the team is specified with the parameter &team_id=<teamId> (eg. &team_id=111)\nAND the link is followed",
+        "expected": "THEN the dropdown at the top of the page will be selected with that team"
+      },
+      {
+        "content": "WHEN the team is specified with the parameter &team=<teamAbbr> (eg. &team=tor)\nAND the link is followed",
+        "expected": "THEN the dropdown at the top of the page will be selected with that team"
+      }
+    ]
+  },
+  {
+    "id": 24313221,
+    "title": "Game tab deep links",
+    "section_id": 1238278,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1635362192,
+    "updated_by": 238,
+    "updated_on": 1643050966,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 421556,
+    "display_order": 4,
+    "custom_preconds": "Make sure you are putting a \\ before any & in the adb request\r\n\r\nEx.:\r\nadb shell am start -d \"mlbatbat://mlbtv?date=20211003\\&gamepk=632245\\&team=hou\"\r\nadb shell am start -d \"mlbatbat://mlbtv?date=20210901\\&gamepk=632689\\&team=min\"",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN an entitled USER\nWHEN a deep link to a game in the Watch/Games tab is followed\n(eg. mlbatbat://mlbtv?date=20211003&gamepk=632245&team=hou)",
+        "expected": "THEN the user will be taken to the Games tab\nAND the video will play"
+      },
+      {
+        "content": "GIVEN a Free or lite User\nWHEN a deep link to a game in the Watch/Games tab is followed\n(eg. mlbatbat://mlbtv?date=20211003&gamepk=632245&team=hou)\nAND it is not the Free game of the day",
+        "expected": "THEN the user will be taken to the Games tab\nAND the video paywall will display"
+      }
+    ]
+  },
+  {
+    "id": 25201436,
+    "title": "Onboarding deep link",
+    "section_id": 1238278,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1638896928,
+    "updated_by": 311,
+    "updated_on": 1639416153,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 421556,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN a free or entitled logged-in User\nWHEN the deeplink mlbatbat://onboard is configured in eg. In-app message in OneSignal\nAND the link displays\nAND the link is tapped",
+        "expected": "THEN the Onbording welcome screen opens that displays the current login and has a link to log in as a different user. \nAND as current, new or different user, or selecting skip, will then see Fav Team picker, then Push Settings, then the paywall for free user, then end on Team page if favorite selected, otherwise News"
+      },
+      {
+        "content": "GIVEN a Lite User (not logged in)\nWHEN the deeplink mlbatbat://onboard is configured in eg. In-app message in OneSignal\nAND the link displays\nAND the link is tapped ",
+        "expected": "THEN the Onbording welcome screen opens that displays the current login and has a link to log in as a different user. \nAND as current, new or different user, or selecting skip, will then see Fav Team picker, then Push Settings, then the paywall, then end on Team page if favorite selected, otherwise News"
+      }
+    ]
+  },
+  {
+    "id": 25201596,
+    "title": "Player/Athlete Webview deep link",
+    "section_id": 1238278,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1638901103,
+    "updated_by": 238,
+    "updated_on": 1642703446,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 421556,
+    "display_order": 6,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": "WHEN a player/athlete deeplink formatted mlbatbat://athlete?player_id=123456 is configured in eg. In-app message in OneSignal\r\nAND the link displays\r\nAND the link is tapped\r\n\r\nExample Player Deeplinks:\r\nadb shell am start -d mlbatbat://athlete?player_id=669211 (Keegan Akin, Baltimore Orioles)\r\nadb shell am start -d mlbatbat://athlete?player_id=521692 (Salvardor Perez, Kansas City Royals)",
+    "custom_expected": "THEN the player card webview opens for the corresponding the the player_id\r\nAND the following event will be posted: MLB At Bat : Android : Player : <playerId>",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34103771,
+    "title": "Deep Link -> TapStory",
+    "section_id": 1238278,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1726595853,
+    "updated_by": 336,
+    "updated_on": 1726595853,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 421556,
+    "display_order": 7,
+    "custom_preconds": "* user has app downloaded and is logged in",
+    "custom_steps": "Given user follows this link -> mlbatbat://tapstory\r\nWhen the user clicks the link",
+    "custom_expected": "Then the user will be brought to Tap Story for associated story",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34778720,
+    "title": "Deeplink Discrepancy-> Webview",
+    "section_id": 1238278,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1744041884,
+    "updated_by": 336,
+    "updated_on": 1744041884,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 421556,
+    "display_order": 8,
+    "custom_preconds": "* User is logged in and authenticated",
+    "custom_steps": "Given the user clicks this link -> mlbatbat://webview?url=https://mlb.com/tickets?authenticaate=true \r\nAnd is redirected",
+    "custom_expected": "The user will land on a webview of the tickets page ",
+    "custom_steps_separated": null
+  }
+]

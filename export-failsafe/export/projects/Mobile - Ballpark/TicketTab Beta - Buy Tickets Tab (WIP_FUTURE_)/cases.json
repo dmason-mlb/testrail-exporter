@@ -1,0 +1,635 @@
+[
+  {
+    "id": 31757791,
+    "title": "Buy Tickets Segments",
+    "section_id": 1775996,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1696939011,
+    "updated_by": 288,
+    "updated_on": 1698872077,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 640505,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "Given User has Ballpark app [iOS] & [Android] 13.0 or later installed\r\n\r\nPENDING 'No Upcoming Event's view/UI [BP-10482](https://baseball.atlassian.net/browse/BP-10482 )",
+    "custom_steps": "WHEN the user is on Buy Tickets Tab ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user has no favorite team selected\nAND navigates to the Tickets Tab\nAnd taps on the \"Buy Tickets\" Section",
+        "expected": "THEN No Games please change your filter to view tickets will be displayed in the center of the screen.\n\nHeader: Team Select\nCopy: Select a team to view their game schedule\n(TBD) \n\nIf no favorite team selected, display MLB logo "
+      },
+      {
+        "content": "WHEN the user selects the Buy tickets tab for the first time\n\n",
+        "expected": "THEN user is shown No Games page\nAND user is shown 'Select Team' button\nAND user is shown 'Home Games' button\n(TBD) \n\nIf no favorite team selected, display MLB logo "
+      },
+      {
+        "content": "WHEN the user select team from team dropdown \n\n",
+        "expected": "THEN the team picker will animate up over the view\nAND all Teams will be displayed\n"
+      },
+      {
+        "content": "",
+        "expected": "AND the team names will be displayed as follows: Location name(City/ or State), Team Name (Check all 30 teams i.e Braves for Atlanta)\n\n\n"
+      },
+      {
+        "content": "",
+        "expected": "AND the team picker will display all team names in alphabetical order.\n\n"
+      },
+      {
+        "content": "",
+        "expected": "AND User should see checkmark on the right side indicating team selection made"
+      },
+      {
+        "content": "WHEN the user selects a team from the Team Picker\nAND Apply Filter \n\n",
+        "expected": "THEN the selected team's schedule is displayed\n(TBD) \n"
+      }
+    ]
+  },
+  {
+    "id": 31757798,
+    "title": "View without Favorite Team",
+    "section_id": 1775999,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1696943418,
+    "updated_by": 288,
+    "updated_on": 1698872102,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 640505,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (13.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user does not have a favorite team established\r\nAND user navigates to Tickets tab -> Buy Tickets \r\n\r\n",
+    "custom_steps": "WHEN no team is selected on the filter\r\n\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user selects the Buy tickets tab for the first time\n\n",
+        "expected": "Note: TBD \nIf no favorite team selected, display MLB logo  "
+      }
+    ]
+  },
+  {
+    "id": 31757799,
+    "title": "View With Favorite Team",
+    "section_id": 1776001,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1696943678,
+    "updated_by": 282,
+    "updated_on": 1696963692,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 640505,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (13.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has a favorite team established\r\nAND user navigates to Tickets -> Buy Tickets",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the User taps the Buy Tickets tab\n\n",
+        "expected": "THEN the favorited team's events are returned\n\nNOTE: User's favorite team will always be selected by default.\n\n"
+      },
+      {
+        "content": "",
+        "expected": "AND User's favorite team will be starred and display at the top of the list\n\nNOTE: User's favorite team will always be selected by default.\n"
+      },
+      {
+        "content": "",
+        "expected": "AND Display day of week and date # in the left column (this font size should be fixed and NOT change based on device settings)"
+      },
+      {
+        "content": "WHEN the user views each scheduled event presented\n\n",
+        "expected": "THEN each event has Away team logo, away team name @ home team cap logo, home team name presented\nAND followed by the ticket amount (i.e $36+ in green color font) \nAND followed by Event time (Device/location local time)\nAND followed by Venue name (use venue string from data)\n"
+      }
+    ]
+  },
+  {
+    "id": 31757800,
+    "title": "List View",
+    "section_id": 1776002,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1696944812,
+    "updated_by": 288,
+    "updated_on": 1698775199,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 640505,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-10428](https://baseball.atlassian.net/browse/BP-10428 )\r\n\r\nGIVEN the user downloaded the Ballpark app (13.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user navigates to Tickets tab -> Buy Tickets\r\n\r\n",
+    "custom_steps": "When the user navs to Buy Tickets\r\n",
+    "custom_expected": "THEN List view is scrollable & displayed sequential order\r\nAND Component contains team name, logo, date, start time and home stadium\r\nAND Tap gesture of component leads to t-link URL as a webview in the navigation stack for specified date (if applicable) \r\nAND List view contains iconography for game promotion (if applicable) \r\nAND List view content is filterable \r\nAND List view content contains toggle between list & Cal\r\nAND Month is pinned while scrolling \r\nAND If t-link is not available for specific date/game, grey out display component ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on \"List\" in the segmented control",
+        "expected": "THEN User should display schedule in List View \nAND the List view is scrollable & displayed sequential order"
+      },
+      {
+        "content": "WHEN user reviews the entries in the list\n",
+        "expected": "THEN the entry contains the date\nAND the entry contains game information\n\n\n\n"
+      },
+      {
+        "content": "WHEN user reviews the date",
+        "expected": "THEN the date font remains consistent throughout the list displayed with the day of the week above the date of the event"
+      },
+      {
+        "content": "WHEN user reviews the game information\n\n\n\n",
+        "expected": "THEN the entry contains away team logo, away team name 'at' home team logo, home team name\nAND the entry contains start time and home venue\n\n"
+      },
+      {
+        "content": "WHEN user reviews the opponent info in the entry\n\n\n\n",
+        "expected": "THEN the opponent logos are displayed correctly in the entry\n\n"
+      },
+      {
+        "content": "WHEN user review the game start time and venue location",
+        "expected": "THEN the game time will properly reflect the user's time zone followed by the venue name\n"
+      },
+      {
+        "content": "WHEN user review the game start time and venue location\nAND game time is TBD",
+        "expected": "THEN \"TBD\" will be displayed instead of a game time\n\n"
+      },
+      {
+        "content": "WHEN the entry view contains game promotion(s)",
+        "expected": "THEN List view contains iconography for game promotion"
+      },
+      {
+        "content": "WHEN the user selects a different Home Team",
+        "expected": "THEN the List view is updated to the selected home team\nAND the view is scrollable & displayed sequential order"
+      },
+      {
+        "content": "WHEN the user scrolls through different months",
+        "expected": "THEN Month is pinned while scrolling"
+      },
+      {
+        "content": "WHEN user reviews an entry that DOES NOT have T-link available ",
+        "expected": "THEN the entry is displayed as greyed out (indicating no CTA)\n\n"
+      },
+      {
+        "content": "WHEN user reviews an entry that DOES have T-link available ",
+        "expected": "THEN the entry is displayed as white background (indicating CTA)"
+      },
+      {
+        "content": "WHEN user reviews an entry that DOES have T-link available\nAND user taps the entry",
+        "expected": "THEN user is directed to a webview with info on purchasing the ticketed event"
+      },
+      {
+        "content": "[TODO: CONFIRM IF/HOW PITCHING MATCHUP INFO IS DISPLAYED] \n\nWHEN user review the games in Preview \nAND probable pitchers info available ",
+        "expected": "THEN the the probable pitcher names will be displayed if available or TBD\n\n"
+      }
+    ]
+  },
+  {
+    "id": 31757801,
+    "title": "Calendar View",
+    "section_id": 1776002,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1696944819,
+    "updated_by": 282,
+    "updated_on": 1697457636,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 640505,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-10429](https://baseball.atlassian.net/browse/BP-10429 )\r\n\r\nGIVEN the user downloaded the Ballpark app (13.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user navigates to Tickets tab -> Buy Tickets\r\n",
+    "custom_steps": "WHEN the user navs to Buy Tickets\r\n\r\n",
+    "custom_expected": "THEN User display with List View and Calendar view toggle at bottom\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on \"Cal\" in the segmented control\n\n",
+        "expected": "THEN User should display schedule in Calendar View\n\n"
+      },
+      {
+        "content": "WHEN User is on review Calendar view in Calendar tile\nand attempts to scroll up on the Calendar\nand attempts to scroll down on the Calendar\n\n",
+        "expected": "THEN the Calendar correctly honors the season boundaries that have been set\n\n"
+      },
+      {
+        "content": "",
+        "expected": "AND Today will be marked with a blue outline (TBD)"
+      },
+      {
+        "content": "WHEN User reviews the colors of the Calendar days in Calendar tiles \n\n",
+        "expected": "THEN the colors are as follows:\nHome games are correctly using the selected team's primary color\nAway games are white\nSpring Training HOME games are dark grey (TBD) \nSpring Training AWAY games are light grey (TBD) \n\n"
+      },
+      {
+        "content": "WHEN User views games in Preview with game times",
+        "expected": "Then the game time will properly reflect the user's time zone\nand the device's 24 hour time setting\nand will be displayed underneath the opponent tricode\n\n"
+      },
+      {
+        "content": "WHEN User views a game in Preview whose game time is TBD\n\n",
+        "expected": "Then \"TBD\" will be displayed in the date cell underneath the opponent tricode\n\n"
+      },
+      {
+        "content": "WHEN the user display a date with no game scheduled\n\n",
+        "expected": "THEN the date cell will be empty\nand tapping on it will be unresponsive"
+      },
+      {
+        "content": "WHEN there is a double header scheduled",
+        "expected": "THEN \"2 gms\" should be displayed in the date cell underneath the opponent tricode(TBD)\n"
+      }
+    ]
+  },
+  {
+    "id": 31761321,
+    "title": "Switching Between List & Calendar Views",
+    "section_id": 1776002,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1696957709,
+    "updated_by": 282,
+    "updated_on": 1696957878,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 640505,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (13.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user does not have a favorite team established\r\nAND user navigates to Tickets tab -> Buy Tickets",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user switches between the Calendar and List views via the segmented controller\n\n",
+        "expected": "THEN the view changes without any issues\nThe month being viewed in each segment is retained when switching back and forth "
+      },
+      {
+        "content": "",
+        "expected": "AND Segment controller changes to black color background and white color font indicating user's view selection"
+      }
+    ]
+  },
+  {
+    "id": 31757802,
+    "title": "Empty States",
+    "section_id": 1776006,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1696946482,
+    "updated_by": 288,
+    "updated_on": 1698871167,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 640505,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the downloaded the Ballpark app [iOS]& [ANDROID] 13.0 or greater\r\nAND the user is on Tickets tab -> Buy Tickets\r\n\r\nPENDING 'No Upcoming Event's view/UI [BP-10482](https://baseball.atlassian.net/browse/BP-10482 )",
+    "custom_steps": "WHEN User view the Buy Tickets with an empty states ( THERE IS NO GAMES OR ELSE)",
+    "custom_expected": "THEN Use display with an empty state ",
+    "custom_steps_separated": [
+      {
+        "content": "",
+        "expected": "AND User should see Coming Soon (TBD) display center of the page "
+      }
+    ]
+  },
+  {
+    "id": 31766220,
+    "title": "More Filters",
+    "section_id": 1776837,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1697129899,
+    "updated_by": 288,
+    "updated_on": 1698871875,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 640505,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the downloaded the Ballpark app [iOS]& [ANDROID] 13.0 or greater\r\nAND the user is on Tickets tab -> Buy Tickets \r\n\r\n\r\nPENDING [BP-10431](https://baseball.atlassian.net/browse/BP-10431 )",
+    "custom_steps": "WHEN the user navs to Buy Tickets\r\n\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user has no favorite team selected\nAND navigates to the Tickets Tab\nAnd taps on the \"Buy Tickets\" Section",
+        "expected": "THEN No Games please change your filter to view tickets will be displayed in the center of the screen.\n\nHeader: Team Select\nCopy: Select a team to view their game schedule\n(TBD)\n\n\nPENDING 'No Upcoming Event's view/UI [BP-10482](https://baseball.atlassian.net/browse/BP-10482 )"
+      },
+      {
+        "content": "",
+        "expected": "**OPEN QUESTION for the Product/Design for behavior without Favorite Team**"
+      },
+      {
+        "content": "WHEN the user has favorite team selected\nAND navigates to the Tickets Tab\nAnd taps on the \"Buy Tickets\" Section",
+        "expected": "THEN User's Favorite Team's schedule  is displayed "
+      },
+      {
+        "content": "WHEN the user tap on More Filters ",
+        "expected": "THEN User display with master sheet of More Filters \n\n**Filters** - header shown in top middle of the page \nCancel or X - Top left corner (TBD) \nReset - top right corner (TBD) \n**TEAM**\nUser favorite Team or Selected team display with Star \nfollowed with > icon in same line to select team \n\n**OPPONENT**\nfollowed with MLB standard logo , Any and > icon  in same line to select team "
+      },
+      {
+        "content": "",
+        "expected": "AND User should also display with  \n\n\n**TYPE OF GAME**\nOptions: \nBoth, Home and Away\n\n**TIME OF DAY**\nOptions: \nAny, Day, Night \n\n\n**DAY OF THE WEEK** \nAny, Mon, Tue, Wed, Thu, Fri, Sat, Sun"
+      },
+      {
+        "content": "",
+        "expected": "AND user also display with **Clear All** and **Apply Filter** option at bottom of sheet "
+      },
+      {
+        "content": "WHEN the user taps on **Clear All** ",
+        "expected": "THEN the all selected filters reset to default state (TBD)"
+      }
+    ]
+  },
+  {
+    "id": 31766221,
+    "title": "Type of Game",
+    "section_id": 1776838,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1697129936,
+    "updated_by": 282,
+    "updated_on": 1697479345,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 640505,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the downloaded the Ballpark app [iOS]& [ANDROID] 13.0 or greater\r\nAND the user is on Tickets tab -> Buy Tickets",
+    "custom_steps": "WHEN the user tap on More Filters ",
+    "custom_expected": "THEN User display with master sheet of filters that gives control over the other filters type ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user view the **Type of Game** filter ",
+        "expected": "THEN User display with an options for Type Of Game filter \n\nHeader: **Type of Game**\nBody: Select which type of games you's like to see \n\nOptions display in pills:\nAny Home Away"
+      },
+      {
+        "content": "WHEN the user select Any  ",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user select Home",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user select Away ",
+        "expected": ""
+      },
+      {
+        "content": "WHEN  the user taps Apply Filter after making selection ",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user taps on **Clear All**",
+        "expected": "THEN the all selected filters reset to default state(TBD) \n"
+      }
+    ]
+  },
+  {
+    "id": 31766222,
+    "title": "Time of Day",
+    "section_id": 1776838,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1697129936,
+    "updated_by": 282,
+    "updated_on": 1697479359,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 640505,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the downloaded the Ballpark app [iOS]& [ANDROID] 13.0 or greater\r\nAND the user is on Tickets tab -> Buy Tickets",
+    "custom_steps": "WHEN the user tap on More Filters\r\n\r\n",
+    "custom_expected": "THEN User display with master sheet of filters that gives control over the other filters type\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN  the user view the **Time of Day** filter\n\n",
+        "expected": "THEN User display with an options for Type Of Game filter\n\nHeader: **Time of Day**\nBody: Select the time of day you're looking for\n\nOptions display in pills:\nAny Day Night\n\n"
+      },
+      {
+        "content": "WHEN the user select Any\n\n",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user select Day ",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user select Night ",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user tap on Apply Filter after making selection ",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user taps on **Clear All**\n\n",
+        "expected": "THEN the all selected filters reset to default state (TBD)"
+      }
+    ]
+  },
+  {
+    "id": 31766223,
+    "title": "Day of the Week",
+    "section_id": 1776838,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1697129936,
+    "updated_by": 282,
+    "updated_on": 1697479382,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 640505,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the downloaded the Ballpark app [iOS]& [ANDROID] 13.0 or greater\r\nAND the user is on Tickets tab -> Buy Tickets\r\n\r\n",
+    "custom_steps": "WHEN the user tap on More Filters\r\n\r\n",
+    "custom_expected": "THEN the user display with master sheet of filters that gives control over the other filters type\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user view the **Day of the Week** filter\n\n",
+        "expected": "HEN User display with an options for Day of the Week filter\n\nHeader: **Day of the Week**\nBody: Select specific day you're looking for\nOptions display in pills:\nAny Weekend Weekday"
+      },
+      {
+        "content": "WHEN the user select Any\n\n",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user select Weekend\n",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user select Weekday ",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user tap on Apply Filter after making selection ",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user taps on **Clear All**",
+        "expected": "THEN the all selected filters reset to default state"
+      }
+    ]
+  },
+  {
+    "id": 31773717,
+    "title": "By Default Filter Sheet",
+    "section_id": 1776838,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1697200247,
+    "updated_by": 282,
+    "updated_on": 1697461071,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 640505,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (13.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user navigates to Tickets tab -> Buy Tickets",
+    "custom_steps": "WHEN User tap on More Filters\r\n\r\n\r\n\r\n",
+    "custom_expected": "THEN User display with master sheet of filters that gives control over the other filters type\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 32376714,
+    "title": "Android - Analytics",
+    "section_id": 1827681,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://baseball.atlassian.net/browse/BPA-7297",
+    "created_by": 282,
+    "created_on": 1702403246,
+    "updated_by": 282,
+    "updated_on": 1702405583,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 640505,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "**TESTING NOTES: THIS CASE REQUIRES TRACKING TO BE VERIFIED - MOST DIRECT WAY TO ACHIEVE THIS IS VIA A PROXY TOOL (.I.E. CharlesProxy)\r\nSetup: Connect to device to Charles to monitor the content passed.\r\n\r\nGIVEN the Ballpark application has the BETA ticket (TTR) enabled \r\nAND the user downloaded the Ballpark app (iOS: 13.0 or greater, Android: TBD[12.12.0? or 13.0])\r\nAND the user is on Tickets tab \r\nAND network traffic is monitored via Proxy tool (such as Charles/Proxyman)\r\n\r\n",
+    "custom_steps": "WHEN accessing/viewing Ticket events within the BP app\r\n\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps is on Upcoming section ",
+        "expected": "THEN user display with list of event they have on their account \nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet\n\n\n**pageName: MLB Ballpark : Tickets : Wallet "
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps is on Upcoming section \nAND user tap on event card ",
+        "expected": "THEN user is directed to details of the event\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets: Wallet : Event Card Click"
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps is on Upcoming section \nAND user tap on \"View Tickets\" on event card ",
+        "expected": "THEN user is directed to details of the event\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets: Wallet : Event Card Club_code Click\n\ni.e.MLB Ballpark : Tickets : Wallet : Event Card 2856 Click"
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps is on Upcoming section \nAND user tap on \"Chatbot\" icon at top right corner ",
+        "expected": "TEHN user directed to Chatbot webview \nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n* MLB Ballpark : Tickets : Wallet : Chatbot Click\n"
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps is on Upcoming section \nAND user tap on \"Exit the testing program\" ",
+        "expected": "THEN user exited from BETA program and taken to Legacy flow \nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : Exit the Testing Program Click"
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps is on Upcoming section \nAND user tap on ellipsis from an event card\nAND user select \"View Tickets\"",
+        "expected": "THEN user directes to detail of the event \nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet :  Ellipsis : View Tickets"
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps is on Upcoming section \nAND user tap on ellipsis from an event card\nAND user select \"Ticket Info\"",
+        "expected": "THEN user directs to ticket info page \nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet :  Ellipsis : Ticket Info"
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps is on Upcoming section \nAND user tap on ellipsis from an event card\nAND user select \"Share Tickets\"",
+        "expected": "THEN user display with share sheet for sharing ticket \nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet :  Ellipsis : Share Tickets"
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps is on Upcoming section \nAND user tap on ellipsis from an event card\nAND user select \"Sell Tickets\"\n\n**This may apply only to TDC clubs and specific clubs ",
+        "expected": "THEN user directs to Sell Tickets (TBD) \nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet :  Ellipsis : Sell Tickets"
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nAND User is on Legacy flow \nAND user tap on \"Tired of refreshing? Try the Beta\" to enable the BETA Ticket program ",
+        "expected": "THEN user directs to beta ticket program \nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet :  Beta Enablement Click"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN user has navigated to TicketsTab\nWHEN user taps is on Upcoming section \nAND user navigates to \"Buy Tickets\" segment \n",
+        "expected": "THEN user direct to Buy Tickets page \nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Buy Tickets : Tab Click"
+      }
+    ]
+  }
+]

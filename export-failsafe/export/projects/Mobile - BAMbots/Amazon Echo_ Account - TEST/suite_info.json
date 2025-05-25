@@ -1,0 +1,11 @@
+{
+  "id": 15553,
+  "name": "Amazon Echo: Account - TEST",
+  "description": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201619510\r\n\r\nhttps://wiki.mlbam.com/display/BAMbots/AVS+Voice+Interaction+Flows%3A+GDA+Skill+2016\r\n\r\nhttps://wiki.mlbam.com/pages/viewpage.action?spaceKey=BAMbots&title=AVS+Voice+Interaction+Flows%3A+GDA+Skill+2016\r\n\r\nhttps://wiki.mlbam.com/display/BAMbots/Amazon+Echo+-+Gameday+Audio\r\n\r\nhttps://wiki.mlbam.com/display/BAMbots/AVS+Voice+UX+Design\r\n\r\nhttps://jira.mlbam.com/browse/SDBB-135",
+  "project_id": 150,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/15553"
+}

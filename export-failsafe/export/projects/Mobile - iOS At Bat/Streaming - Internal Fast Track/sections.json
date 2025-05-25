@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1981073,
+    "suite_id": 695382,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1981074,
+    "suite_id": 695382,
+    "name": "Audio Playback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1981075,
+    "suite_id": 695382,
+    "name": "Branding",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1981076,
+    "suite_id": 695382,
+    "name": "Copy",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1981077,
+    "suite_id": 695382,
+    "name": "Playback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1981078,
+    "suite_id": 695382,
+    "name": "Messaging",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1981079,
+    "suite_id": 695382,
+    "name": "MLB.tv Purchase",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1981080,
+    "suite_id": 695382,
+    "name": "MLB At Bat Purchase",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  }
+]

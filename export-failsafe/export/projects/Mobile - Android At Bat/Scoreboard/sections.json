@@ -1,0 +1,20 @@
+[
+  {
+    "id": 7025,
+    "suite_id": 922,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 145026,
+    "suite_id": 922,
+    "name": "Scoreboard Refresh",
+    "description": "Ensuring that the Scoreboard continues to refresh, regardless of app or device activity",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

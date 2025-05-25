@@ -1,0 +1,20 @@
+[
+  {
+    "id": 101153,
+    "suite_id": 15360,
+    "name": "Audio",
+    "description": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=BAMbots&title=AVS+Voice+Interaction+Flows%3A+GDA+Skill+2016\n\nhttps://wiki.mlbam.com/display/BAMbots/Amazon+Echo+-+Gameday+Audio\n\nhttps://wiki.mlbam.com/display/BAMbots/AVS+Voice+UX+Design\n\nhttps://jira.mlbam.com/browse/SDBB-135",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 101534,
+    "suite_id": 15360,
+    "name": "DO NOT TEST___Game Status",
+    "description": "https://wiki.mlbam.com/display/BAMbots/Amazon+Echo+-+Game+Status",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

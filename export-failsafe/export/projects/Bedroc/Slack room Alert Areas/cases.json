@@ -1,0 +1,24 @@
+[
+  {
+    "id": 28628033,
+    "title": "Slack Room Alerts",
+    "section_id": 1512706,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 106,
+    "created_on": 1654009035,
+    "updated_by": 106,
+    "updated_on": 1654009035,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 535450,
+    "display_order": 1,
+    "custom_preconds": "ADM must create and complete review.",
+    "custom_steps": "•\tCreate Review Button\r\n•\tRuling After Review\r\n•\tSupervisor Explanation\r\n",
+    "custom_expected": "•\tbedroc-test-bos, bedroc-test-nyy\r\n•\tbedrock-test-roc-media\r\n•\tbedrock-test-stat-roc\r\n",
+    "custom_steps_separated": null
+  }
+]

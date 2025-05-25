@@ -1,0 +1,20 @@
+[
+  {
+    "id": 6880,
+    "suite_id": 871,
+    "name": "iPhone and iPad",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1590535,
+    "suite_id": 871,
+    "name": "Configuring More Menu",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

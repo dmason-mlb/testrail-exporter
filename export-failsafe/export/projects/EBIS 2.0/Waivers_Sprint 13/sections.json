@@ -1,0 +1,38 @@
+[
+  {
+    "id": 24791,
+    "suite_id": 2740,
+    "name": "Request Entry",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 25012,
+    "suite_id": 2740,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 24791,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 25013,
+    "suite_id": 2740,
+    "name": "On Select",
+    "description": null,
+    "parent_id": 24791,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 25014,
+    "suite_id": 2740,
+    "name": "Screen Functionality",
+    "description": null,
+    "parent_id": 24791,
+    "display_order": 4,
+    "depth": 1
+  }
+]

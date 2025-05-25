@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1917771,
+    "suite_id": 679301,
+    "name": "Log out/Log in",
+    "description": "Functionality related to logging in and out from the Settings page",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1917772,
+    "suite_id": 679301,
+    "name": "Closed Captions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1917773,
+    "suite_id": 679301,
+    "name": "Favorite Team",
+    "description": "Functionality related to Favorite Team",
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1917774,
+    "suite_id": 679301,
+    "name": "Following Teams",
+    "description": "Functionality related to Following Teams",
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1917775,
+    "suite_id": 679301,
+    "name": "Hide Spoilers",
+    "description": "Functionality related to Hide Spoilers flag",
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1917776,
+    "suite_id": 679301,
+    "name": "Autoplay Featured Content - Currently N/A",
+    "description": "Functionality related to Autoplay Featured Content flag",
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1917777,
+    "suite_id": 679301,
+    "name": "Manage MLB Account - Currently N/A",
+    "description": "Functionality related to managing a users MLB account",
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1917778,
+    "suite_id": 679301,
+    "name": "ToS & PP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1917779,
+    "suite_id": 679301,
+    "name": "Contact Support",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1917780,
+    "suite_id": 679301,
+    "name": "UI Design",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1917781,
+    "suite_id": 679301,
+    "name": "Dev Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 2010657,
+    "suite_id": 679301,
+    "name": "App Exit",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "id": 992,
+  "name": "Settings",
+  "description": "All cases should be run on BOTH handset and tablet unless otherwise specified in test case preconditions\r\n\r\n**Use QA or PROD app RELEASE app but NOT Internal/tester build**",
+  "project_id": 3,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/992"
+}

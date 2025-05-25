@@ -1,0 +1,38 @@
+[
+  {
+    "id": 147420,
+    "suite_id": 20368,
+    "name": "MJ Free Agency",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 147421,
+    "suite_id": 20368,
+    "name": "MN Free Agency",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 446009,
+    "suite_id": 20368,
+    "name": "Elect Free Agency",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1171458,
+    "suite_id": 20368,
+    "name": "Accepted A Qualifying Offer Under Article xx(b)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

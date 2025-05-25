@@ -1,0 +1,1537 @@
+[
+  {
+    "id": 30128226,
+    "title": "Eligibility",
+    "section_id": 1638711,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676395520,
+    "updated_by": 258,
+    "updated_on": 1681923310,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 1,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": "AND user is eligible to receive prizes (user is from the USA or Canada but nor Quebec province)",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user has a country of Residence set to the USA ",
+        "expected": "THEN user is eligible for prizing\nAND user sees the Prize section on Profile page"
+      },
+      {
+        "content": "WHEN user has a country of Residence set to Canada - Quebec",
+        "expected": "THEN user is NOT eligible for prizing\nAND user DOES NOT see the Prize section on Profile page"
+      },
+      {
+        "content": "WHEN user has a country of Residence set to Canada - any other provinces besides Quebec",
+        "expected": "THEN user is eligible for prizing\nAND user sees the Prize section on Profile page"
+      },
+      {
+        "content": "WHEN user has a country of Residence set to any other country besides USA and Canada",
+        "expected": "THEN user is NOT eligible for prizing\nAND user DOES NOT see the Prize section on Profile page"
+      }
+    ]
+  },
+  {
+    "id": 30128074,
+    "title": "Prize assets",
+    "section_id": 1638711,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676395333,
+    "updated_by": 258,
+    "updated_on": 1678905019,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 2,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\nAND user is eligible to receive prizes (user is from the USA or Canada but nor Quebec province)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user receives a prize",
+        "expected": "THEN the prize assets can include for the following Prize types:\n\n* MLB.TV subscriptions\n* StubHub ticket vouchers/credit\n* MLB: The Show stubs (virtual currency)\n* MLB: The Show full game\n* MLB Shop gift certificates ($5, 10, 25, 50, 100, 250, 500)\n* MLB Shop merchandise (Jersey, Cap, T-shirt Jersey)\n* Autographed memorabilia (Bat, Ball, Jersey)\n* Topps Baseball Cards (Individual, Pack, Multiple Packs, or a Box)"
+      }
+    ]
+  },
+  {
+    "id": 30128232,
+    "title": "Receiving a prize",
+    "section_id": 1638711,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676396817,
+    "updated_by": 258,
+    "updated_on": 1678905022,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 3,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user receives a prize",
+        "expected": "THEN there should only be one Prize delivered at a time in this event\nAND the Prize should be delivered at the same time as a Legendary Reward Pack"
+      },
+      {
+        "content": "WHEN user receives a modal",
+        "expected": "THEN the header of the modal should read: “Your Tokens Unlocked a Prize!”"
+      },
+      {
+        "content": "WHEN user earns a Prize as part of multiple Celebration Modals",
+        "expected": "THEN the Prize should be after the Reward Pack it is associated with in the queue"
+      }
+    ]
+  },
+  {
+    "id": 30128233,
+    "title": "Badge Prize",
+    "section_id": 1638711,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676397088,
+    "updated_by": 258,
+    "updated_on": 1678905026,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 4,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user earns a Badge that is associated with Prizes",
+        "expected": "THEN user should be given a Reward Pack with a single asset (Prize) at the same time as the Badge"
+      },
+      {
+        "content": "WHEN user earns a Prize as part of multiple Celebration Modals",
+        "expected": "THEN the Prize should be after the Badge it is associated with in the queue"
+      },
+      {
+        "content": "WHEN user views the modal",
+        "expected": "THEN the header of the modal should read: “Your Badge Unlocked a Prize!”\nAND the rest of the modal should be exactly the same as Prize Detail Modal (Prize title, Prize copy, Prize CTA)"
+      }
+    ]
+  },
+  {
+    "id": 30128259,
+    "title": "App/Play Store Listings",
+    "section_id": 1638711,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676400188,
+    "updated_by": 258,
+    "updated_on": 1678905029,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": "WHEN user views MLB Play in App/Store Play",
+    "custom_expected": "THEN user sees up-to-date information on prizing in MLB Play on the store listing with the appropriate Rules and Disclaimers",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30390844,
+    "title": "Prize limit",
+    "section_id": 1638711,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1680204376,
+    "updated_by": 258,
+    "updated_on": 1680204530,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 8,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user has combined retail value of $599.00 ",
+        "expected": "THEN user is ineligible for prizes and should instead earn virtual rewards"
+      },
+      {
+        "content": "WHEN user has combined retail value of $598.00 ",
+        "expected": "THEN user is eligible for prizes \nAND the prize value should be no more than $1"
+      },
+      {
+        "content": "WHEN user already received all $1 value prizes",
+        "expected": "THEN user is ineligible for prizes and should instead earn virtual rewards"
+      }
+    ]
+  },
+  {
+    "id": 30075075,
+    "title": "Prizes section",
+    "section_id": 1634087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1675709120,
+    "updated_by": 258,
+    "updated_on": 1678905032,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 1,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\nADD user is on the profile page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user scrolls down",
+        "expected": "THEN user sees the prize section; below the friends section and above the reactions earned section\n"
+      },
+      {
+        "content": "WHEN user views the prizing section",
+        "expected": "THEN user is displayed with: \n* 'Prizes' title\n* number of prizes earned and number of available prizes in x/x format\n* 3 images of prizes or prizes placeholders\n* 'See All' link\n\nAND Prizes should be sorted in the following order:\n- First, prizes that the user has earned most recently\n- Then, prizes that more MLB Play users have earned (if the user has not earned 3 prizes)\nAND there should always be three prizes displayed, even if the user has not earned three"
+      },
+      {
+        "content": "WHEN user clicks on the prize or prize placeholders",
+        "expected": "THEN user is brought to My Prizes page (separate TC)"
+      },
+      {
+        "content": "WHEN user clicks on 'See All' ",
+        "expected": "THEN user is brought to Prizes page (separate TC)"
+      }
+    ]
+  },
+  {
+    "id": 30075073,
+    "title": "My Prizes page",
+    "section_id": 1634087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1675708886,
+    "updated_by": 258,
+    "updated_on": 1678905036,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 2,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\nADD user is on the profile page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views My Prizes page",
+        "expected": "THEN user is displayed with: \n* 'Prizes' title\n* back arrow on the top left corner\n* copy 'Earn prizes for completing tasks. Tap any prize to view its description and rarity. For more information visit Prize Legalese'\n* list of 5 prize categories: MLB Store, Seat Geek, MLB The Show, Topps, MLB.tv\n* 'View' cta next to each prize category"
+      },
+      {
+        "content": "WHEN user clicks on back arrow",
+        "expected": "THEN user is brought to the Profile page"
+      },
+      {
+        "content": "WHEN user clicks on here",
+        "expected": "THEN user is taken to ..."
+      },
+      {
+        "content": "WHEN user clicks on the view cta",
+        "expected": "THEN user is brought to the prize category page (sepatrate TC)"
+      }
+    ]
+  },
+  {
+    "id": 30075077,
+    "title": "Prizes Categories -> MLB Shop",
+    "section_id": 1634087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1675709316,
+    "updated_by": 258,
+    "updated_on": 1678905039,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 5,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\nADD user is on My Prizes page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user clicks on View cta next to MLB Store",
+        "expected": "THEN is brought to MLB Shop page\nAND user is displayed with: \n* 'MLB Shop' title\n* back arrow\n* MLB shop background in the header \n* list of prizes (earned and unearned) \n\n"
+      },
+      {
+        "content": "WHEN user clicks on the back arrow ",
+        "expected": "THEN user is brought back to My Prizes page "
+      },
+      {
+        "content": "WHEN user views the list of prizes",
+        "expected": "THEN user is displayed with: \n* image of the prize for earned prizes\n* lock icon for unearned prizes\n* name of the prize \n* right arrow\n"
+      },
+      {
+        "content": "WHEN user clicks on the arrow",
+        "expected": "THEN user is brought to Prize Details page (separate TC)"
+      }
+    ]
+  },
+  {
+    "id": 30134368,
+    "title": "Prizes Categories -> Seat Geek",
+    "section_id": 1634087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676494276,
+    "updated_by": 258,
+    "updated_on": 1678905043,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 6,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\nADD user is on My Prizes page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user clicks on View cta next to Seat Geek ",
+        "expected": "THEN is brought to Seat Geek page\nAND user is displayed with: \n* 'Seat Geek' title\n* back arrow\n* MLB shop background in the header \n* list of prizes (earned and unearned) \n\n"
+      },
+      {
+        "content": "WHEN user clicks on the back arrow ",
+        "expected": "THEN user is brought back to My Prizes page "
+      },
+      {
+        "content": "WHEN user views the list of prizes",
+        "expected": "THEN user is displayed with: \n* image of the prize for earned prizes\n* lock icon for unearned prizes\n* name of the prize \n* right arrow\n"
+      },
+      {
+        "content": "WHEN user clicks on the arrow",
+        "expected": "THEN user is brought to Prize Details page (separate TC)"
+      }
+    ]
+  },
+  {
+    "id": 30134369,
+    "title": "Prizes Categories -> MLB The Show",
+    "section_id": 1634087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676494628,
+    "updated_by": 258,
+    "updated_on": 1678905048,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 7,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\nADD user is on My Prizes page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user clicks on View cta next to MLB The Show",
+        "expected": "THEN is brought to MLB The Show page\nAND user is displayed with: \n* 'MLB The Show' title\n* back arrow\n* MLB shop background in the header \n* list of prizes (earned and unearned) \n\n"
+      },
+      {
+        "content": "WHEN user clicks on the back arrow ",
+        "expected": "THEN user is brought back to My Prizes page "
+      },
+      {
+        "content": "WHEN user views the list of prizes",
+        "expected": "THEN user is displayed with: \n* image of the prize for earned prizes\n* lock icon for unearned prizes\n* name of the prize \n* right arrow\n"
+      },
+      {
+        "content": "WHEN user clicks on the arrow",
+        "expected": "THEN user is brought to Prize Details page (separate TC)"
+      }
+    ]
+  },
+  {
+    "id": 30134371,
+    "title": "Prizes Categories -> Topps",
+    "section_id": 1634087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676495601,
+    "updated_by": 258,
+    "updated_on": 1678905051,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 8,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\nADD user is on My Prizes page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user clicks on View cta next to Topps",
+        "expected": "THEN is brought to Topps page\nAND user is displayed with: \n* 'Topps' title\n* back arrow\n* MLB shop background in the header \n* list of prizes (earned and unearned) \n\n"
+      },
+      {
+        "content": "WHEN user clicks on the back arrow ",
+        "expected": "THEN user is brought back to My Prizes page "
+      },
+      {
+        "content": "WHEN user views the list of prizes",
+        "expected": "THEN user is displayed with: \n* image of the prize for earned prizes\n* lock icon for unearned prizes\n* name of the prize \n* right arrow\n"
+      },
+      {
+        "content": "WHEN user clicks on the arrow",
+        "expected": "THEN user is brought to Prize Details page (separate TC)"
+      }
+    ]
+  },
+  {
+    "id": 30134372,
+    "title": "Prizes Categories -> MLB.tv",
+    "section_id": 1634087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676495641,
+    "updated_by": 258,
+    "updated_on": 1678905056,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 9,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\nADD user is on My Prizes page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user clicks on View cta next to MLB.tv",
+        "expected": "THEN is brought to MLB.tv\nAND user is displayed with: \n* 'MLB.tv' title\n* back arrow\n* MLB shop background in the header \n* list of prizes (earned and unearned) \n\n"
+      },
+      {
+        "content": "WHEN user clicks on the back arrow ",
+        "expected": "THEN user is brought back to My Prizes page "
+      },
+      {
+        "content": "WHEN user views the list of prizes",
+        "expected": "THEN user is displayed with: \n* image of the prize for earned prizes\n* lock icon for unearned prizes\n* name of the prize \n* right arrow\n"
+      },
+      {
+        "content": "WHEN user clicks on the arrow",
+        "expected": "THEN user is brought to Prize Details page (separate TC)"
+      }
+    ]
+  },
+  {
+    "id": 30075082,
+    "title": "Prize Details Modal - earned prize",
+    "section_id": 1634087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1675709618,
+    "updated_by": 258,
+    "updated_on": 1678905060,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 15,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\nADD user is on Prize Details page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views Prize Details page",
+        "expected": "THEN user is displayed with: \n\n* 'Prize' title\n* back arrow in the top left corner\n* Prize image \n* Prize name \n* prize description\n* Redeem Now' button\n"
+      },
+      {
+        "content": "WHEN user clicks on back arrow",
+        "expected": "THEN user is brought back to Prize category page"
+      },
+      {
+        "content": "WHEN user clicks on 'Redeem Now' button",
+        "expected": "THEN user is brought to Redeem page (separate TC)"
+      }
+    ]
+  },
+  {
+    "id": 30077028,
+    "title": "Prize Details Modal - unearned prize",
+    "section_id": 1634087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1675733099,
+    "updated_by": 258,
+    "updated_on": 1678905064,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 16,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\nADD user is on Prize Details page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views Prize Details page",
+        "expected": "THEN user is displayed with: \n\n* 'Prize' title\n* back arrow in the top left corner\n* Prize image \n* Unearned Prize Name \n* prize description. Example: The MLB.TV Month Prize could read: “You can earn this prize through the following badge challenges: Beat the Streak: 25 Streak; Diamond Derby: Perfect Game; Bingo: X”\n* 'Redeem Now' button is not displayed\n"
+      },
+      {
+        "content": "WHEN user clicks on back arrow",
+        "expected": "THEN user is brought back to Prize category page"
+      }
+    ]
+  },
+  {
+    "id": 30075084,
+    "title": "Redeem flow - email",
+    "section_id": 1634086,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1675709758,
+    "updated_by": 258,
+    "updated_on": 1678909141,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 1,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\nAMD user has an available prize",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user navigates to Profile -> Prizes Page -> Prize Category\nAND selects the redeemable prize",
+        "expected": "THEN user is brought to the Prize Detail page (Prize Details Modal - earned prize TC)"
+      },
+      {
+        "content": "WHEN user clicks on 'Redeem Now' CTA\n",
+        "expected": "THEN user is taking to Redeem Email page "
+      },
+      {
+        "content": "WHEN user views the page",
+        "expected": "THEN user is displayed with: \n\n* 'Request Prize' header\n* copy 'Please confirm your email address and press “Confirm,” then we’ll reach out to you with instructions on how to redeem this prize in the next 5 business days' - this copy is dynamic. This copy could not be present if it's empty in spanner for your uid\n* 'Instructions on how to redeem your prize will be sent to:' copy\n* User's Email Address (non clickable)\n* 'Confirm' button\n\n"
+      },
+      {
+        "content": "WHEN user clicks 'Confirm'",
+        "expected": "THEN 'Request Submitted' is displayed at the bottom\nAND 'Confirm' button is disabled"
+      },
+      {
+        "content": "WHEN clicks on the back arrow",
+        "expected": "THEN user is brought back to Prize page\nAND 'Request Submitted' text is displayed\nAND 'Need help? Contact customer service'\n"
+      },
+      {
+        "content": "WHEN user clicks on 'Contact customer service'",
+        "expected": "THEN user is displayed with options to email with play@mlb.com email address"
+      }
+    ]
+  },
+  {
+    "id": 30157150,
+    "title": "Redeem flow - code",
+    "section_id": 1634086,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1677011201,
+    "updated_by": 258,
+    "updated_on": 1678905072,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 2,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\nAMD user has an available prize",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user navigates to Profile -> Prizes Page -> Prize Category\nAND selects the redeemable prize",
+        "expected": "THEN user is brought to the Prize Detail page (Prize Details Modal - earned prize TC)"
+      },
+      {
+        "content": "WHEN user clicks on 'Redeem Now' CTA\n",
+        "expected": "THEN user is taking to Redeem Code page "
+      },
+      {
+        "content": "WHEN user views the page",
+        "expected": "THEN user is displayed with: \n\n* 'Get Code' header\n* redeem instruction\n* Code field\n* 'Tap to Copy Code' copy underneath the code\n* 'Done' cta\n"
+      },
+      {
+        "content": "WHEN user copies the code (by clicking on it)",
+        "expected": "THEN the code background changes to gray\nAND the copy underneath it is changed to 'Copied!'\nAND user is able to paste this code"
+      },
+      {
+        "content": "WHEN user clicks on 'Done'",
+        "expected": "THEN user is brought back to 'Prizes' page"
+      }
+    ]
+  },
+  {
+    "id": 30134370,
+    "title": "Prize Details Modal - after request is submitted",
+    "section_id": 1634086,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676495058,
+    "updated_by": 258,
+    "updated_on": 1678905075,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 4,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\nADD user is on Prize Details page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views Prize Details page",
+        "expected": "THEN user is displayed with: \n\n* 'Prize' title\n* back arrow in the top left corner\n* Prize image \n* Unearned Prize Name \n* prize description. Example: The MLB.TV Month Prize could read: “You can earn this prize through the following badge challenges: Beat the Streak: 25 Streak; Diamond Derby: Perfect Game; Bingo: X”\n* 'Redeem Now' button is not displayed\n"
+      },
+      {
+        "content": "WHEN user clicks on back arrow",
+        "expected": "THEN user is brought back to Prize category page"
+      }
+    ]
+  },
+  {
+    "id": 30075071,
+    "title": "Confirmation email",
+    "section_id": 1634086,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1675708624,
+    "updated_by": 258,
+    "updated_on": 1678905079,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 5,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user submitted the request for prizing",
+        "expected": "THEN user receives a confirmation email"
+      },
+      {
+        "content": "WHEN user views the confirmation email",
+        "expected": "THEN user is displayed with: \n\nSubject: Your MLB Play Prize Request Confirmation\n\nReply-to: play@mlb.com\n\nBody: Thank you for confirming your email with MLB Play. We’ll reach out in 5 business days regarding your Prize: [Prize name]."
+      }
+    ]
+  },
+  {
+    "id": 30128254,
+    "title": "EC - redeeming prize twice",
+    "section_id": 1634086,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676399635,
+    "updated_by": 258,
+    "updated_on": 1678905082,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 12,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user received a prize \nAND tried to redeem it again",
+        "expected": "THEN user is not able to  redeem it again"
+      }
+    ]
+  },
+  {
+    "id": 30128255,
+    "title": "EC - redeeming prize - incorrect email address",
+    "section_id": 1634086,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676399691,
+    "updated_by": 258,
+    "updated_on": 1678905086,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 13,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user received a prize \nAND user incorrectly submits their email address",
+        "expected": "THEN user is not able to  redeem it \nAND user can only rectify this by contacting Customer Support"
+      }
+    ]
+  },
+  {
+    "id": 30107879,
+    "title": "Prize Celebration modal",
+    "section_id": 1634088,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-4948",
+    "created_by": 258,
+    "created_on": 1676328519,
+    "updated_by": 258,
+    "updated_on": 1678905092,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 1,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user earns a Prize through a Badge",
+        "expected": "THEN the title should say 'Your Badge Unlocked a Prize!'"
+      },
+      {
+        "content": "WHEN user earns a Prize through a Reward Pack",
+        "expected": "THEN the title should say 'Your Tokens Unlocked a Prize!'"
+      },
+      {
+        "content": "WHEN user views the modal",
+        "expected": "THEN user should be displayed with: \n\n* Prize image\n* Prize name\n* Prize description\n* copy '“You can redeem this Prize by going to the Prizes screen on the Profile Tab.”'\n\nAND the modal is shown AFTER the relevant event’s celebration modal. For example, if the Prize is associated with the Beat the Streak 10 Streak badge, show the badge celebration modal and then show the Prize modal next."
+      }
+    ]
+  },
+  {
+    "id": 30107880,
+    "title": "New prize modal",
+    "section_id": 1634088,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676328528,
+    "updated_by": 258,
+    "updated_on": 1678905095,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 2,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN new prize is available",
+        "expected": "THEN user receives a new prize modal"
+      },
+      {
+        "content": "WHEN user views the new prize modal",
+        "expected": "THEN user is displayed with: \n\n* 'Prizes' title\n* exit icon in the top right corner\n* image\n* 'New Prizes' header\n* description\n* 'Okay' button"
+      },
+      {
+        "content": "WHEN user clicks on the exit icon",
+        "expected": "THEN modal is closed"
+      },
+      {
+        "content": "WHEN user clicks on 'OKAY' button",
+        "expected": "THEN modal is closed"
+      }
+    ]
+  },
+  {
+    "id": 30128256,
+    "title": "Prizing Feature Awareness Modal",
+    "section_id": 1634088,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676399841,
+    "updated_by": 258,
+    "updated_on": 1678905099,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 4,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN a current MLB Play user opening the app after the Prizing feature has been implemented",
+    "custom_expected": "THEN user receives a modal that details what Prizes are and how user can earn them so that user knows to make use of the feature.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30100207,
+    "title": "Sign Up",
+    "section_id": 1634089,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676068872,
+    "updated_by": 258,
+    "updated_on": 1678905104,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 1,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is going through the Sign Up flow\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is on the Sign Up page",
+        "expected": "THEN user is displayed with: \n* 'Sign Up' title\n* back arrow on the top left corner\n* copy \"Create an MLB account to play the games and get access to exclusive MLB content'\n* Email Address, Nickname, Password, Birthday MM/DD/YY and Country of Residence fields\n* Sign Up button (disabled)\n*'Have an account already? Log In' copy\n\nAND all fields are required and have asterisks next to them"
+      },
+      {
+        "content": "WHEN user clicks on the back arrow ",
+        "expected": "THEN user is brought to the Welcome page"
+      },
+      {
+        "content": "WHEN user clicks on 'Log In'",
+        "expected": "THEN user is brought to Log In page"
+      }
+    ]
+  },
+  {
+    "id": 30107658,
+    "title": "Sign Up - Country of Residence field",
+    "section_id": 1634089,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676308532,
+    "updated_by": 258,
+    "updated_on": 1678905107,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 4,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is going through the Sign Up flow",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the 'Country of Residence' field",
+        "expected": "THEN user sees 'Country of Residence' inside the field\nAND 'Country of Residence' is not pre-filled\nAND copy 'If your country is not listed, choose “Other”' is displayed underneath the text field"
+      },
+      {
+        "content": "WHEN user clicks on that field",
+        "expected": "THEN 'Country of Residence' moved to the top borderline\nAND drop down list appears"
+      },
+      {
+        "content": "WHEN user scrolls through the drop down list",
+        "expected": "THEN user is displayed with a drop-down list with the following countries in order:\n\nUnited States\nAustralia\nCanada\nChina\nColombia\nCuba\nDominican Republic\nFrance\nGermany\nIndia\nIsrael\nItaly\nJapan\nMexico\nNetherlands\nPanama\nPuerto Rico\nSouth Korea\nTaiwan\nUnited Kingdom\nVenezuela\nOther"
+      },
+      {
+        "content": "WHEN user selects Canada",
+        "expected": "THEN an additional drop-down field is displayed (separate TC)"
+      },
+      {
+        "content": "WHEN user selects any other country",
+        "expected": "THEN no additional drop-down field is displayed "
+      },
+      {
+        "content": "WHEN user selects Country of Residence",
+        "expected": "THEN Sign Up button gets active"
+      }
+    ]
+  },
+  {
+    "id": 30107693,
+    "title": "Sign Up - Province field",
+    "section_id": 1634089,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676311945,
+    "updated_by": 258,
+    "updated_on": 1678905111,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 5,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is going through the Sign Up flow\r\nAND user selected Canada as Residence",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user selects Canada",
+        "expected": "THEN an additional drop-down field is displayed asking them to declare their Province (listed in alphabetical order)\n\nAlberta\nBritish Columbia\nManitoba\nNew Brunswick\nNewfoundland and Labrador\nNorthwest Territories\nNova Scotia\nNunavut\nOntario\nPrince Edward Island\nQuebec\nSaskatchewan\nYukon\n"
+      },
+      {
+        "content": "WHEN user selects a province ",
+        "expected": "THEN Sign UP button gets active"
+      }
+    ]
+  },
+  {
+    "id": 30100208,
+    "title": "Log In - Update Your Account",
+    "section_id": 1634089,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676068899,
+    "updated_by": 258,
+    "updated_on": 1678905114,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 6,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user going through the Log In flow with existing account (created before 2023 season)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user Logs In",
+        "expected": "THEN user is taken to 'Update Your Account' page "
+      },
+      {
+        "content": "WHEN user is viewing 'Update Your Account' page ",
+        "expected": "THEN user is displayed with: \n\n* 'Update Your Account' title\n* back arrow in the top left corner\n* 'To complete your log in, update your MLB account by creating a nickname and providing your birthdate.' copy\n* Nickname, Birthdate, Country of Residence field\n* 'If your country is not listed, choose “Other”' copy underneath the Country of Residence field\n* 'Update & Log In' button\n* 'Don’t have an account? Sign Up' copy\n\nAND all fields are required and have asterisks"
+      },
+      {
+        "content": "WHEN user clicks on the back arrow",
+        "expected": "THEN user is brought to Log In page or Welcome page"
+      },
+      {
+        "content": "WHEN user clicks on Sign Up",
+        "expected": "THEN user is brought to Sign Up page"
+      },
+      {
+        "content": "WHEN user fills all 3 fields",
+        "expected": "THEN 'Update & Log In' button gets active"
+      }
+    ]
+  },
+  {
+    "id": 30107659,
+    "title": "Log In - new account",
+    "section_id": 1634089,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676308585,
+    "updated_by": 258,
+    "updated_on": 1678905117,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 7,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user created an account after the Onboarding flow was updated (Country of Residence was added)\r\nAND user is Logged Out",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user Logs back In",
+        "expected": "THEN user is able to proceed to the app successfully \nAND does not need to update an account \nAND 'Update Your Account' page is not displayed"
+      }
+    ]
+  },
+  {
+    "id": 30107885,
+    "title": "Update Your Account - Country of Residence field",
+    "section_id": 1634089,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676330032,
+    "updated_by": 258,
+    "updated_on": 1678905121,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 8,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is going through the Log In flow\r\nAND user is on the 'Update Your Account' page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the 'Country of Residence' field",
+        "expected": "THEN user sees 'Country of Residence' inside the field\nAND 'Country of Residence' is not pre-filled\nAND copy 'If your country is not listed, choose “Other”' is displayed underneath the text field"
+      },
+      {
+        "content": "WHEN user clicks on that field",
+        "expected": "THEN 'Country of Residence' moved to the top borderline\nAND drop down list appears"
+      },
+      {
+        "content": "WHEN user scrolls through the drop down list",
+        "expected": "THEN user is displayed with a drop-down list with the following countries in order:\n\nUnited States\nAustralia\nCanada\nChina\nColombia\nCuba\nDominican Republic\nFrance\nGermany\nIndia\nIsrael\nItaly\nJapan\nMexico\nNetherlands\nPanama\nPuerto Rico\nSouth Korea\nTaiwan\nUnited Kingdom\nVenezuela\nOther"
+      },
+      {
+        "content": "WHEN user selects Canada",
+        "expected": "THEN an additional drop-down field is displayed (separate TC)"
+      },
+      {
+        "content": "WHEN user selects any other country",
+        "expected": "THEN no additional drop-down field is displayed "
+      },
+      {
+        "content": "WHEN user selects Country of Residence",
+        "expected": "THEN Sign Up button gets active"
+      }
+    ]
+  },
+  {
+    "id": 30107886,
+    "title": "Update Your Account - Province field",
+    "section_id": 1634089,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676330032,
+    "updated_by": 258,
+    "updated_on": 1678905124,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 9,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is going through the Log In flow\r\nAND user is on the 'Update Your Account' page\r\nAND user selected Canada as Residence",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user selects Canada",
+        "expected": "THEN an additional drop-down field is displayed asking them to declare their Province (listed in alphabetical order)\n\nAlberta\nBritish Columbia\nManitoba\nNew Brunswick\nNewfoundland and Labrador\nNorthwest Territories\nNova Scotia\nNunavut\nOntario\nPrince Edward Island\nQuebec\nSaskatchewan\nYukon\n"
+      },
+      {
+        "content": "WHEN user selects a province ",
+        "expected": "THEN Sign UP button gets active"
+      },
+      {
+        "content": "WHEN user clicked on the Province drop down and doesn't make a pick",
+        "expected": "THEN the error message appears 'You must choose a province to continue'"
+      },
+      {
+        "content": "WHEN user selects the Province",
+        "expected": "THEN the error message disappears \nAND 'Sign Up' button gets enabled"
+      }
+    ]
+  },
+  {
+    "id": 30128244,
+    "title": "Virtual Reward Packs for Badges",
+    "section_id": 1638739,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676398399,
+    "updated_by": 258,
+    "updated_on": 1678905130,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 1,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user earned a Badge that is not associated with a Prize",
+        "expected": "THEN the Reward Pack is given with user's Badge so that user get something as a reward for their achievement, where appropriate"
+      }
+    ]
+  },
+  {
+    "id": 30128235,
+    "title": "Beat the Streak: Streak of 5",
+    "section_id": 1638739,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676397506,
+    "updated_by": 258,
+    "updated_on": 1678905134,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 2,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Streak of 5 in BTS",
+    "custom_expected": "THEN user receives an all-rare virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30128237,
+    "title": "Beat the Streak: Streak of 20",
+    "section_id": 1638739,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676397571,
+    "updated_by": 258,
+    "updated_on": 1678905137,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 5,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Streak of 20 in BTS",
+    "custom_expected": "THEN user receives an all-epic virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30128238,
+    "title": "Beat the Streak: Streak of 30",
+    "section_id": 1638739,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676397598,
+    "updated_by": 258,
+    "updated_on": 1678905140,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 6,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Streak of 30 in BTS",
+    "custom_expected": "THEN user receives an all-epic virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30128239,
+    "title": "Beat the Streak: Streak of 40",
+    "section_id": 1638739,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676397616,
+    "updated_by": 258,
+    "updated_on": 1678905147,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 7,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Streak of 40 in BTS",
+    "custom_expected": "THEN user receives an all-legendary virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30128240,
+    "title": "Beat the Streak: Streak of 50",
+    "section_id": 1638739,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676397765,
+    "updated_by": 258,
+    "updated_on": 1678905150,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 8,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Streak of 50 in BTS",
+    "custom_expected": "THEN user receives an all-legendary virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30128241,
+    "title": "Beat the Streak: Streak of 55",
+    "section_id": 1638739,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676397786,
+    "updated_by": 258,
+    "updated_on": 1678905154,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 9,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Streak of 55 in BTS",
+    "custom_expected": "THEN user receives an all-legendary virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30128242,
+    "title": "Base Chase: Stacked",
+    "section_id": 1638739,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676397811,
+    "updated_by": 258,
+    "updated_on": 1678905158,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 10,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Stacked badge for Base Chase",
+    "custom_expected": "THEN user receives an all-rare virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30128243,
+    "title": "Diamond Derby: Champion",
+    "section_id": 1638739,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676397865,
+    "updated_by": 258,
+    "updated_on": 1678905161,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 11,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Champion badge for Diamond Derby",
+    "custom_expected": "THEN user receives an all-epic virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30128234,
+    "title": "Virtual Reward Packs for Users Ineligible for Badge Prizes",
+    "section_id": 1638740,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676397258,
+    "updated_by": 258,
+    "updated_on": 1680200499,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 1,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an ineligible user earned a Badge that is not associated with a Prize",
+        "expected": "THEN the Reward Pack is given with user's Badge so that user get something as a reward for their achievement, where appropriate"
+      },
+      {
+        "content": "WHEN user views the Virtual Reward Pack",
+        "expected": "THEN the header of the modal/Feed event should read: “Your Badge Unlocked a Reward Pack!”"
+      }
+    ]
+  },
+  {
+    "id": 30128245,
+    "title": "Beat the Streak: Streak of 10",
+    "section_id": 1638740,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676398432,
+    "updated_by": 258,
+    "updated_on": 1678905171,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 2,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Streak of 10 in BTS",
+    "custom_expected": "THEN user receives an all-rare virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30128246,
+    "title": "Beat the Streak: Streak of 15",
+    "section_id": 1638740,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676398519,
+    "updated_by": 258,
+    "updated_on": 1678905174,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 3,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Streak of 15 in BTS",
+    "custom_expected": "THEN user receives an all-rare virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30128247,
+    "title": "Beat the Streak: Streak of 25",
+    "section_id": 1638740,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676398551,
+    "updated_by": 258,
+    "updated_on": 1678905178,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 4,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Streak of 25 in BTS",
+    "custom_expected": "THEN user receives an all-epic virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30128248,
+    "title": "Beat the Streak: Streak of 35",
+    "section_id": 1638740,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676398580,
+    "updated_by": 258,
+    "updated_on": 1678905182,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 5,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Streak of 35 in BTS",
+    "custom_expected": "THEN user receives an all-epic virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30128249,
+    "title": "Beat the Streak: Streak of 45",
+    "section_id": 1638740,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676398612,
+    "updated_by": 258,
+    "updated_on": 1678905185,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 6,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Streak of 45 in BTS",
+    "custom_expected": "THEN user receives an all-legendary virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30128250,
+    "title": "Base Chase: Champion: Stacked",
+    "section_id": 1638740,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676398650,
+    "updated_by": 258,
+    "updated_on": 1678905189,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 7,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Champion badge for Base Chase",
+    "custom_expected": "THEN user receives an all-legendary virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30128251,
+    "title": "Base Chase: Runner-Up",
+    "section_id": 1638740,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676398700,
+    "updated_by": 258,
+    "updated_on": 1678905192,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 8,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Runner-Up badge for Base Chase",
+    "custom_expected": "THEN user receives an all-epic virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30128252,
+    "title": "Base Chase: Podium",
+    "section_id": 1638740,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676398735,
+    "updated_by": 258,
+    "updated_on": 1678905196,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 9,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Podium badge for Base Chase",
+    "custom_expected": "THEN user receives an all-rare virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30128253,
+    "title": "Diamond Derby: Perfect Game",
+    "section_id": 1638740,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1676398771,
+    "updated_by": 258,
+    "updated_on": 1678905200,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584336,
+    "display_order": 10,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user gets Perfect Game badge for Diamond Derby",
+    "custom_expected": "THEN user receives an an all-rare virtual reward pack\r\nAND the header of the modal says “Your Badge Unlocked a Reward Pack!”\r\n",
+    "custom_steps_separated": null
+  }
+]

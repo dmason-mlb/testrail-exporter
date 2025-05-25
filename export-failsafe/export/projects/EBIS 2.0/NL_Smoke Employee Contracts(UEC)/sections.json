@@ -1,0 +1,20 @@
+[
+  {
+    "id": 146795,
+    "suite_id": 20333,
+    "name": "Employee Contracts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 146796,
+    "suite_id": 20333,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 146795,
+    "display_order": 2,
+    "depth": 1
+  }
+]

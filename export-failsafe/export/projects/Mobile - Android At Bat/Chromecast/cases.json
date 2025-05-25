@@ -1,0 +1,835 @@
+[
+  {
+    "id": 41032,
+    "title": "Chromecast Icon",
+    "section_id": 6474,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893202,
+    "updated_by": 84,
+    "updated_on": 1516807765,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 1,
+    "custom_preconds": "GIVEN AtBat has been installed\r\nAND the user is on the same network as a Google Chromecast device",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks at the section header (e.g. Scoreboard)",
+        "expected": "THEN the Google Cast icon will be present in the top right corner of the screen"
+      },
+      {
+        "content": "WHEN the user taps on the Google Cast icon located on the top right corner of the EPG",
+        "expected": "THEN an overlay will display\nAND all Chromecast devices found on the network will appear\nAND all device names will display correctly"
+      },
+      {
+        "content": "WHEN the user taps on the Google Cast icon\nAND the 'Cast to Device' overlay appears\nAND the user selects an available chromecast device",
+        "expected": "THEN the 'Cast to Device' overlay will dismiss"
+      },
+      {
+        "content": "WHEN the user chooses the Cast icon\nAND the user selects a device\nAND the device selection overlay dismisses",
+        "expected": "THEN the Google Cast icon will show as enabled\nAND it will now appear filled in with white"
+      },
+      {
+        "content": "WHEN the user selects the enabled Google Cast icon",
+        "expected": "THEN the user will see a Disconnect option (\"Stop Casting\")\nAND this will be selectable"
+      },
+      {
+        "content": "WHEN the user taps on the enabled Google Cast icon\nAND the user selects Disconnect\n ",
+        "expected": "THEN the device selection overlay will dismiss\nAND the Google Cast will be disabled\nAND the Cast icon will deactivate"
+      }
+    ]
+  },
+  {
+    "id": 41038,
+    "title": "Playing MLB.TV without connecting to Google Cast yet",
+    "section_id": 6474,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893202,
+    "updated_by": 84,
+    "updated_on": 1478730792,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the At Bat app has been installed\r\nAND the user is on the same network as a Google Chromecast device\r\nAND the user has navigated to the MLB.TV menu \r\n(Verify Chromecast button appears in header)",
+    "custom_steps": "When the user starts an MLB.TV stream",
+    "custom_expected": "Then the stream should start up without issue\r\nAnd the user should see a Chromecast button on the MLB.TV player UI",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 41039,
+    "title": "Playing MLB.TV while connected to Google Cast",
+    "section_id": 6474,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893202,
+    "updated_by": 84,
+    "updated_on": 1478730884,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the At Bat app has been installed\r\nAND the user is on the same network as a Google Chromecast device\r\nAND the user has navigated to the MLB.TV menu \r\nAND the user has connected their device to a Google Cast device\r\n(Verify Chromecast icon is highlighted white)",
+    "custom_steps": "When the user taps on an MLB.TV stream",
+    "custom_expected": "Then the stream should launch on the Chromecast device\r\nAnd the user should be taken to the video controller view on their handset",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 41040,
+    "title": "Casting MLB.TV from media player",
+    "section_id": 6474,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893202,
+    "updated_by": 84,
+    "updated_on": 1478804150,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the AtBat app has been installed\r\nAND the user is on the same network as a Google Chromecast device\r\nAND the user has started an MLB.TV stream",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on the Google Cast icon located on the MLB.TV player UI",
+        "expected": "THEN an overlay will display\nAND all Chromecast devices found on the network will appear\nAND all device names will display correctly"
+      },
+      {
+        "content": "WHEN the user taps on the Google Cast icon located on the MLB.TV player UI\nAND the user taps the device back button",
+        "expected": "THEN the chromecast selector overlay will disappear\nAND the stream will continue to play uninterrupted"
+      },
+      {
+        "content": "When the user taps the Chromecast button on the MLB.TV player UI\nAnd the user selects a Chromecast device from the selector",
+        "expected": "Then the MLB.TV stream should begin playing on the chromecast device\nAnd the user should be left on the video player controls on their handset"
+      }
+    ]
+  },
+  {
+    "id": 41075,
+    "title": "Splash screen on Chromecast device when connected",
+    "section_id": 6474,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893202,
+    "updated_by": 84,
+    "updated_on": 1478731339,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 9,
+    "custom_preconds": "Given the app has been installed\r\nAnd the user is on a network with a Chromecast device\r\nAnd the user is on the EPG",
+    "custom_steps": "When the user connects to the Chromecast device",
+    "custom_expected": "Then the MLB.com splash screen will appear on the connected display",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 41051,
+    "title": "Backgrounding & killing app while casting",
+    "section_id": 6474,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893202,
+    "updated_by": 84,
+    "updated_on": 1478804847,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 10,
+    "custom_preconds": "Given At Bat has been installed\r\nAnd the user is casting an MLB.TV stream to a chromecast device",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the 'Home' button on the handset",
+        "expected": "Then the user should be taken to their homescreen, and the stream should continue to play on their chromecast device\nAnd the user should be able to user their device normally while the stream continues to play"
+      },
+      {
+        "content": "When the user backgrounds and kills the At Bat app on the handset",
+        "expected": "Then the stream should continue to play on the Chromecast *as long as chromecast is still connected to a network*"
+      }
+    ]
+  },
+  {
+    "id": 42523,
+    "title": "Casting device disconnects from network",
+    "section_id": 6474,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893202,
+    "updated_by": 29,
+    "updated_on": 1395965629,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 12,
+    "custom_preconds": "Given At Bat has been installed\r\nAnd the user has started a casting an MLB.TV stream to a chromecast device\r\n",
+    "custom_steps": "When the user disconnects the handset from the network to which the Chromecast is connected\r\n",
+    "custom_expected": "Then the stream should continue to play on the Chromecast",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 41046,
+    "title": "Switching feeds while casting",
+    "section_id": 6475,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893202,
+    "updated_by": 84,
+    "updated_on": 1478804573,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat has been installed\r\nAnd the user is connected to a Chromecast device\r\nAnd the user is streaming an MLB.TV stream through Chromecast",
+    "custom_steps": "When the user changes feeds in the video control player",
+    "custom_expected": "Then the Stream should stop on the Chromecast device\r\nAnd a blackout check, entitlement check and mediaframework authorization will occur on the handset for the new stream. \r\nAnd when all of those succeed, the stream should begin playing on the Chromecast device",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 41050,
+    "title": "Backing out of cast controls screen",
+    "section_id": 6475,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893202,
+    "updated_by": 119,
+    "updated_on": 1477495540,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 5,
+    "custom_preconds": "Given At Bat has been installed\r\nAnd the user is casting an MLB.TV stream to a chromecast device\r\nAnd the user is on the MLB.TV screen",
+    "custom_steps": "When the user taps the back button on the device",
+    "custom_expected": "Then the stream should continue playing on the chromecast device\r\nAnd the user should be returned to the EPG on their handset\r\nAnd the user should remain connected to the chromecast device. (Chromecast icon should remain white on handset) ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 41052,
+    "title": "Returning to At Bat while casting",
+    "section_id": 6475,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893202,
+    "updated_by": 84,
+    "updated_on": 1478804409,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 7,
+    "custom_preconds": "Given At Bat has been installed\r\nAnd the user has started a chromecast stream\r\nAnd the user is on the Cast Controls screen\r\nAnd the user has navigated out of At Bat to their home screen or another app",
+    "custom_steps": "When the user returns to At Bat no matter how they launched it. (App switching, home screen icon, widget, notification etc)",
+    "custom_expected": "Then the user should be taken directly into the video player controls screen\r\nAnd the stream should continue playing on the chromecast device\r\nAnd the user should have full control of the streaming content on the Chromecast device",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 41053,
+    "title": "Disconnecting while casting",
+    "section_id": 6475,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893202,
+    "updated_by": 21,
+    "updated_on": 1395893202,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 8,
+    "custom_preconds": "Given At Bat has been installed\r\nAnd the user is streaming an MLB.TV stream on chromecast device\r\nAnd the user is on the video control screen",
+    "custom_steps": "When the user taps the Chromecast button on the player UI\r\nAnd the user taps the 'Disconnect' button on the overlay",
+    "custom_expected": "Then the stream will stop on the Chromecast device\r\nAnd the chromecast will be disconnected from the app",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 41072,
+    "title": "CC button",
+    "section_id": 6476,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893202,
+    "updated_by": 84,
+    "updated_on": 1478806317,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat has been installed\r\nAnd the user is connected to a Chromecast device\r\nAnd the user has started an MLB.TV stream on the chromecast device",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user enables the Closed Captioning setting on the player UI on the handset",
+        "expected": "Then the closed captions should be enabled on the chromecast stream"
+      },
+      {
+        "content": "When the user disables the Closed Captioning setting on the player UI on the handset",
+        "expected": "Then the closed captions should turn off on the chromecast stream"
+      }
+    ]
+  },
+  {
+    "id": 41074,
+    "title": "CC setting carries from handset to cast device",
+    "section_id": 6476,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893202,
+    "updated_by": 21,
+    "updated_on": 1395893202,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 3,
+    "custom_preconds": "Given the app has been installed\r\nAnd the user is streaming an MLB.TV stream on the handset\r\nAnd the user has Closed Captions turned on for that stream",
+    "custom_steps": "When the begins to cast that stream",
+    "custom_expected": "Then the stream should maintain the Closed Captioning setting being used and should carry over to the chromecast stream. (ie. If CC is turned on, the stream should have closed captions on the chromecast display) ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 645093,
+    "title": "Chromecast Icon",
+    "section_id": 6481,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1478804938,
+    "updated_by": 84,
+    "updated_on": 1478804938,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 1,
+    "custom_preconds": "GIVEN AtBat has been installed installed\r\nAND the user is on the same network as a Google Chromecast device",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks at the section header (e.g. Scoreboard)",
+        "expected": "THEN the Google Cast icon will be present in the top right corner of the screen"
+      },
+      {
+        "content": "WHEN the user taps on the Google Cast icon located on the top right corner of the EPG",
+        "expected": "THEN an overlay will display\nAND all Chromecast devices found on the network will appear\nAND all device names will display correctly"
+      },
+      {
+        "content": "WHEN the user taps on the Google Cast icon\nAND the 'Cast to Device' overlay appears\nAND the user selects an available chromecast device",
+        "expected": "THEN the 'Cast to Device' overlay will dismiss"
+      },
+      {
+        "content": "WHEN the user chooses the Cast icon\nAND the user selects a device\nAND the device selection overlay dismisses",
+        "expected": "THEN the Google Cast icon will show as enabled\nAND it will now appear filled in with white"
+      },
+      {
+        "content": "WHEN the user selects the enabled Google Cast icon",
+        "expected": "THEN the user will see a Disconnect option (\"Stop Casting\")\nAND this will be selectable"
+      },
+      {
+        "content": "WHEN the user taps on the enabled Google Cast icon\nAND the user selects Disconnect\n ",
+        "expected": "THEN the device selection overlay will dismiss\nAND the Google Cast will be disabled\nAND the Cast icon will deactivate"
+      }
+    ]
+  },
+  {
+    "id": 42560,
+    "title": "Playing MLB.TV without connecting to Google Cast yet",
+    "section_id": 6481,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893223,
+    "updated_by": 84,
+    "updated_on": 1478803965,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the At Bat app has been installed\r\nAND the user is on the same network as a Google Chromecast device\r\nAND the user has navigated to the MLB.TV menu ",
+    "custom_steps": "When the user starts an MLB.TV stream",
+    "custom_expected": "Then the stream should start up without issue",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 644025,
+    "title": "Playing MLB.TV while connected to Google Cast",
+    "section_id": 6481,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1478804213,
+    "updated_by": 84,
+    "updated_on": 1478804226,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the At Bat app has been installed\r\nAND the user is on the same network as a Google Chromecast device\r\nAND the user has navigated to the MLB.TV menu \r\nAND the user has connected their device to a Google Cast device\r\n(Verify Chromecast icon is highlighted white)",
+    "custom_steps": "When the user taps on an MLB.TV stream",
+    "custom_expected": "Then the stream should launch on the Chromecast device\r\nAnd the user should be taken to the video controller view on their tablet",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 42562,
+    "title": "Casting MLB.TV from media player",
+    "section_id": 6481,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893223,
+    "updated_by": 84,
+    "updated_on": 1478804158,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the At Bat app has been installed\r\nAND the user is on the same network as a Google Chromecast device\r\nAND the user has navigated to the MLB.TV menu\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user starts an MLB.TV stream",
+        "expected": "Then the stream should start up without issue\nAnd the user should see a Chromecast button on the MLB.TV player UI"
+      },
+      {
+        "content": "WHEN the user taps on the Google Cast icon located on the MLB.TV player UI",
+        "expected": "THEN an overlay will display\nAND all Chromecast devices found on the network will appear\nAND all device names will display correctly"
+      },
+      {
+        "content": "WHEN the user taps on the Google Cast icon located on the MLB.TV player UI\nAND the user taps the device back button",
+        "expected": "THEN the chromecast selector overlay will disappear\nAND the stream will continue to play uninterrupted"
+      },
+      {
+        "content": "When the user taps the Chromecast button on the MLB.TV player UI\nAnd the user selects a Chromecast device from the selector",
+        "expected": "Then the MLB.TV stream should begin playing on the chromecast device\nAnd the user should be left on the video player controls on their tablet"
+      }
+    ]
+  },
+  {
+    "id": 645094,
+    "title": "Splash screen on Chromecast device when connected",
+    "section_id": 6481,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1478804955,
+    "updated_by": 84,
+    "updated_on": 1478804955,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 5,
+    "custom_preconds": "Given the app has been installed\r\nAnd the user is on a network with a Chromecast device\r\nAnd the user is on the EPG",
+    "custom_steps": "When the user connects to the Chromecast device",
+    "custom_expected": "Then the MLB.com splash screen will appear on the connected display",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 42568,
+    "title": "Backgrounding and killing app while casting",
+    "section_id": 6481,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893223,
+    "updated_by": 84,
+    "updated_on": 1478804884,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 10,
+    "custom_preconds": "Given At Bat has been installed\r\nAnd the user has started a casting an MLB.TV stream to a chromecast device",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the 'Home' button on the handset",
+        "expected": "Then the user should be taken to their homescreen, and the stream should continue to play on their chromecast device\nAnd the user should be able to user their device normally while the stream continues to play"
+      },
+      {
+        "content": "When the user backgrounds and kills the At Bat app on the handset",
+        "expected": "Then the stream should continue to play on the Chromecast *as long as chromecast is still connected to a network*"
+      }
+    ]
+  },
+  {
+    "id": 42569,
+    "title": "Casting device disconnects from network",
+    "section_id": 6481,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893223,
+    "updated_by": 84,
+    "updated_on": 1478804322,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 11,
+    "custom_preconds": "Given At Bat has been installed\r\nAnd the user has started a casting an MLB.TV stream to a chromecast device\r\n",
+    "custom_steps": "When the user disconnects the tablet from the network to which the Chromecast is connected\r\n",
+    "custom_expected": "Then the stream should continue to play on the Chromecast for as long as the chromecast has a valid network connection or the stream ends.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 42570,
+    "title": "Switching feeds while casting",
+    "section_id": 6482,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893223,
+    "updated_by": 84,
+    "updated_on": 1478804534,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat has been installed\r\nAnd the user has started a chromecast stream\r\nAnd the game streaming has a Home and Away feed",
+    "custom_steps": "WHEN the user user switches feeds from Home to Away\r\nOR the user switches feeds from Away to Home",
+    "custom_expected": "Then the Stream should stop on the Chromecast device\r\nAnd a blackout check, entitlement check and mediaframework authorization will occur on the tablet for the new stream\r\nAnd when all of those succeed, the stream should begin playing on the Chromecast device",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 42574,
+    "title": "Backing out of cast controls screen",
+    "section_id": 6482,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893223,
+    "updated_by": 84,
+    "updated_on": 1478804584,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 5,
+    "custom_preconds": "Given At Bat has been installed\r\nAnd the user is casting an MLB.TV stream to a chromecast device",
+    "custom_steps": "When the user taps the back button on the device",
+    "custom_expected": "Then the stream should continue playing on the chromecast device\r\nAnd the user should be returned to the point of entry into MLB.TV",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 42576,
+    "title": "Returning to At Bat while casting",
+    "section_id": 6482,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893223,
+    "updated_by": 84,
+    "updated_on": 1478805008,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 7,
+    "custom_preconds": "Given At Bat has been installed\r\nAnd the user has started a chromecast stream\r\nAnd the user is on the Cast Controls screen\r\nAnd the user has navigated out of At Bat to their home screen or another app",
+    "custom_steps": "When the user returns to At Bat no matter how they launched it. (App switching, home screen icon, widget, notification etc)",
+    "custom_expected": "Then the user should be taken directly into the video player controls screen\r\nAnd the stream should continue playing on the chromecast device\r\nAnd the user should have full control of the streaming content on the Chromecast device. ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 42577,
+    "title": "Disconnecting while casting",
+    "section_id": 6482,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893223,
+    "updated_by": 84,
+    "updated_on": 1478805059,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 8,
+    "custom_preconds": "Given At Bat has been installed\r\nAnd the user is streaming an MLB.TV stream on chromecast device\r\nAnd the user is on the video control screen",
+    "custom_steps": "When the user taps the Chromecast button on the player UI\r\nAnd the user taps the 'Disconnect' button on the overlay",
+    "custom_expected": "Then the stream will stop on the Chromecast device\r\nAnd the chromecast will be disconnected from the app",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 645105,
+    "title": "CC button",
+    "section_id": 6483,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1478806333,
+    "updated_by": 84,
+    "updated_on": 1478806345,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat has been installed\r\nAnd the user is connected to a Chromecast device\r\nAnd the user has started an MLB.TV stream on the chromecast device",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user enables the Closed Captioning setting on the player UI on the tablet",
+        "expected": "Then the closed captions should be enabled on the chromecast stream"
+      },
+      {
+        "content": "When the user disables the Closed Captioning setting on the player UI on the tablet",
+        "expected": "Then the closed captions should turn off on the chromecast stream"
+      }
+    ]
+  },
+  {
+    "id": 42581,
+    "title": "CC setting carries from tablet to cast device",
+    "section_id": 6483,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893223,
+    "updated_by": 84,
+    "updated_on": 1478805446,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 4,
+    "custom_preconds": "Given the app has been installed\r\nAnd the user is streaming an MLB.TV stream on the tablet\r\nAnd the user has Closed Captions turned on for that stream",
+    "custom_steps": "When the user begins to cast the stream",
+    "custom_expected": "Then the stream should maintain the Closed Captioning setting being used and should carry over to the chromecast stream. (ie. If CC is turned on, the stream should have closed captions on the chromecast display) ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 41055,
+    "title": "Notification",
+    "section_id": 6477,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893202,
+    "updated_by": 84,
+    "updated_on": 1479761916,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat has been installed\r\nAnd the user is connected to a network with a chromecast device\r\nAnd the user begins streaming an MLB.TV stream to a Chromecast device",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user backgrounds the app",
+        "expected": "Then a notification should appear on their device's top status bar\nAnd this notification should have playback controls for the casting MLB.TV stream"
+      },
+      {
+        "content": "When the user expands the notification in the notification tray",
+        "expected": "Then the expanded notification cast controls should appear"
+      }
+    ]
+  },
+  {
+    "id": 41062,
+    "title": "Collapsed Notification View",
+    "section_id": 6477,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893202,
+    "updated_by": 84,
+    "updated_on": 1479761899,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 3,
+    "custom_preconds": "Given the app has been installed \r\nAnd the user is casting a game to a chromecast device",
+    "custom_steps": "When the notification is in a collapsed view",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Team Names",
+        "expected": "Then the team names should be accurate\nAnd the order should be [Away team] @ [Home team]"
+      },
+      {
+        "content": "Connected Cast Device",
+        "expected": "Then the device that is being casted to should appear correctly on the notification"
+      },
+      {
+        "content": "Cast Controls",
+        "expected": "Then the play/pause button should appear on the right side of the notification \nAnd there should be an \"X\" to the right of the play/pause button"
+      },
+      {
+        "content": "When the user taps the 'Pause' button",
+        "expected": "Then the stream should pause\nAnd the 'Pause' button should change into a 'Play' button"
+      },
+      {
+        "content": "When the user taps the 'Play' button",
+        "expected": "Then the stream should resume from the point from which is was paused"
+      },
+      {
+        "content": "When the user taps the 'X' button on the notification",
+        "expected": "Then the stream should stop on the chromecast device\nAnd if the user starts the At Bat app they should not be taken to the cast controls"
+      },
+      {
+        "content": "When the user taps the notification",
+        "expected": "Then the user should be taken into the At Bat app to the Cast Controls page\nAnd the MLB.TV stream should continue to play on the chromecast device"
+      }
+    ]
+  },
+  {
+    "id": 41056,
+    "title": "Expanded Notification View",
+    "section_id": 6477,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1395893202,
+    "updated_by": 84,
+    "updated_on": 1478728114,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 828,
+    "display_order": 4,
+    "custom_preconds": "Given the app has been installed \r\nAnd the user is casting a game to a chromecast device",
+    "custom_steps": "When the notification is in an expanded view",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Team Names",
+        "expected": "Then the team names should be accurate\nAnd the order should be [Away team] @ [Home team]"
+      },
+      {
+        "content": "Team Logos",
+        "expected": "Then the team logos should be accurate\nAnd the order should be [Away team] followed by [Home team]"
+      },
+      {
+        "content": "Connected Cast Device",
+        "expected": "Then the device that is being casted to should appear correctly on the notification"
+      },
+      {
+        "content": "Cast Controls",
+        "expected": "Then there should be a volume button\nAnd there should be a play/pause button\nAnd there should be an \"x\" button"
+      },
+      {
+        "content": "When the user taps the 'Mute' button",
+        "expected": "Then the stream audio should be muted on the chromecast device\nAnd the button on the notification should reflect that audio has been muted"
+      },
+      {
+        "content": "When the user taps the 'unMute' button",
+        "expected": "Then the stream audio should resume on the chromecast device\nAnd the button on the notification should reflect that audio has been unmuted"
+      },
+      {
+        "content": "When the user taps the 'Pause' button",
+        "expected": "Then the stream should pause\nAnd the 'Pause' button should change into a 'Play' button"
+      },
+      {
+        "content": "When the user taps the 'Play' button on the notification",
+        "expected": "Then the stream should resume from the point from which is was paused"
+      },
+      {
+        "content": "When the user taps the 'X' button on the notification",
+        "expected": "Then the stream should stop on the chromecast device\nAnd if the user starts the At Bat app they should not be taken to the cast controls"
+      },
+      {
+        "content": "When the user taps the notification",
+        "expected": "Then the user should be taken into the At Bat app to the Cast Controls page\nAnd the MLB.TV stream should continue to play on the chromecast device"
+      }
+    ]
+  }
+]

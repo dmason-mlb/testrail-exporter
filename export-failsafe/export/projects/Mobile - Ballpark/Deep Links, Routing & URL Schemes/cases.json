@@ -1,0 +1,2244 @@
+[
+  {
+    "id": 23964076,
+    "title": "Wallet - Cold Start (app closed)",
+    "section_id": 1238770,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634328105,
+    "updated_by": 288,
+    "updated_on": 1718657909,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND BP App is NOT open in the background (cold start)\r\nAND the user has BallPark account\r\nAND the user has been given a deeplink\r\n\r\nballpark://wallet",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nAND user accesses deeplink: ballpark://wallet",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the Wallet sub tab shown"
+      }
+    ]
+  },
+  {
+    "id": 33528084,
+    "title": "Wallet - Warm Start (app backgrounded)",
+    "section_id": 1238770,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718656687,
+    "updated_by": 288,
+    "updated_on": 1718656687,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND the user has BallPark account\r\nAND the user has been given a deeplink\r\n\r\nballpark://wallet",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is logged into BP app\nAND BP app is backgrounded\nAND user accesses deeplink: ballpark://wallet",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the Wallet sub tab shown"
+      }
+    ]
+  },
+  {
+    "id": 33518626,
+    "title": "Buy Tickets Deeplink - Cold Start (app closed)",
+    "section_id": 1238771,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718294320,
+    "updated_by": 288,
+    "updated_on": 1718294667,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND BP App is NOT open in the background (cold start)\r\nAND the user has BallPark account\r\nAND the user has been given a deeplink\r\n\r\nballpark://buytickets",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nAND user accesses deeplink: ballpark://buytickets",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the Buy Tickets sub tab shown"
+      },
+      {
+        "content": "WHEN user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nAND user accesses deeplink: ballpark://buytickets?teamID=158\n\n[Team IDs](https://baseball.atlassian.net/wiki/spaces/ticketing/pages/3947618/IDs+Team+IDs+Venue+IDs)\n*for highest confidence - each Team ID listed in the table should be verified",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the Buy Tickets sub tab shown\nAND the Milwaukee Brewers team os selected with scheduled events listed"
+      }
+    ]
+  },
+  {
+    "id": 33518627,
+    "title": "Buy Tickets Deeplink - Warm Start (app backgrounded)",
+    "section_id": 1238771,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718294320,
+    "updated_by": 288,
+    "updated_on": 1718656433,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND BP App is open in the background, minimized (warm start)\r\nAND the user has BallPark account\r\nAND the user has been given a deeplink\r\n\r\nballpark://buytickets",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is logged into BP app\nAND BP App is open in the background, minimized (warm start)\nAND user accesses deeplink: ballpark://buytickets",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the Buy Tickets sub tab shown"
+      },
+      {
+        "content": "WHEN user is logged into BP app\nAND BP App is open in the background, minimized (warm start)\nAND user accesses deeplink: ballpark://buytickets?teamID=158\n\n[Team IDs](https://baseball.atlassian.net/wiki/spaces/ticketing/pages/3947618/IDs+Team+IDs+Venue+IDs)\n*for highest confidence - each Team ID listed in the table should be verified",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the Buy Tickets sub tab shown\nAND the Milwaukee Brewers team os selected with scheduled events listed"
+      }
+    ]
+  },
+  {
+    "id": 30857169,
+    "title": "Listview Deeplink - Cold Start (app closed) *[requires TM/TDC tickets]",
+    "section_id": 1238772,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1686771767,
+    "updated_by": 282,
+    "updated_on": 1726754571,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[IDs+Team+IDs+Venue+IDs](https://baseball.atlassian.net/wiki/spaces/ticketing/pages/3947618/IDs+Team+IDs+Venue+IDs )\r\n\r\nGIVEN the user downloaded the Ballpark app (12 or greater)\r\nAND BP App is NOT open in the background (cold start)\r\nAND the user has BallPark account\r\nAND the user has been given a deeplink\r\n\r\n\r\nSample link -- REQUIRES acct to have the ticketed event shown in acct\r\nballpark://listview?eventID=65285&teamID=158&venueID=32\r\n\r\n*eventID is the associated event for the particular ticket [required]\r\n*teamID is the associated home team of the venue [required]\r\n*venueID is the associated venue for the event [optional]\r\n\r\n**the exact deeplink will not necessarily work for all accts with tickets\r\nTherefore, you may need to extract the values(teamID/eventID/venueID) specific to the ticketed event on the acct being verified - this can be determined many ways such as:\r\na) using specific oktaID, extracting from Next-Ticketed-Event context card on firestore doc([example](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/firestore/data/~2Fhometab~2F00untlr43sIH7NgMo357?utm_campaign=extensions&utm_medium=SLACK&utm_source=NEW_ISSUE ) )\r\nb) Connecting to a Proxy tool (i.e. CharlesProxy, Proxyman) and triggering the call from BP app\r\nc) via DataDog logs for the users session/trace calls",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has tickets to a TDC event (particular to deeplink)\nWHEN user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nAND user accesses deeplink\n\n\nsample deeplink -\nballpark://listview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the user is directed to listview of the tickets\n\nteamID=hometeam for the event, eventID is associated ticket event"
+      },
+      {
+        "content": "GIVEN user DOES NOT have tickets to a TDC event (particular to deeplink)\nWHEN user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nAND user accesses deeplink\n\nsample deeplink -\nballpark://listview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "[iOS] THEN the Ballpark app is opened\n\n[Android] THEN the Ballpark app is opened with a dialog box stating Ticket Details Unavailable"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN user has tickets to a TM event (particular to deeplink)\nWHEN user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nAND user accesses deeplink\n\n\nsample deeplink -\nballpark://listview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the user is directed to listview of the tickets\n\nteamID=hometeam for the event, eventID is associated ticket event\n\n\n[ANDROID]IF User in not Logged in to TM then display with TM Log In Page)"
+      },
+      {
+        "content": "GIVEN user DOES NOT have tickets to a TM event (particular to deeplink)\nWHEN user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nAND user accesses deeplink\n\nsample deeplink -\nballpark://listview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "THEN the Ballpark app is opened to TMSDK login page\n"
+      }
+    ]
+  },
+  {
+    "id": 33528085,
+    "title": "Listview Deeplink - Warm Start (app backgrounded) *[requires TM/TDC tickets]",
+    "section_id": 1238772,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718656703,
+    "updated_by": 282,
+    "updated_on": 1726754581,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[IDs+Team+IDs+Venue+IDs](https://baseball.atlassian.net/wiki/spaces/ticketing/pages/3947618/IDs+Team+IDs+Venue+IDs )\r\n\r\nGIVEN the user downloaded the Ballpark app (12 or greater)\r\nAND the user has BallPark account\r\nAND the user has been given a deeplink\r\n\r\n\r\nSample link -- REQUIRES acct to have the ticketed event shown in acct\r\nballpark://listview?eventID=65285&teamID=158&venueID=32\r\n\r\n*eventID is the associated event for the particular ticket [required]\r\n*teamID is the associated home team of the venue [required]\r\n*venueID is the associated venue for the event [optional]\r\n\r\n**the exact deeplink will not necessarily work for all accts with tickets\r\nTherefore, you may need to extract the values(teamID/eventID/venueID) specific to the ticketed event on the acct being verified - this can be determined many ways such as:\r\na) using specific oktaID, extracting from Next-Ticketed-Event context card on firestore doc([example](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/firestore/data/~2Fhometab~2F00untlr43sIH7NgMo357?utm_campaign=extensions&utm_medium=SLACK&utm_source=NEW_ISSUE ) )\r\nb) Connecting to a Proxy tool (i.e. CharlesProxy, Proxyman) and triggering the call from BP app\r\nc) via DataDog logs for the users session/trace calls",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has tickets to a TDC event (particular to deeplink)\nWHEN user is logged into BP app\nAND user accesses deeplink\n\n\nsample deeplink -\nballpark://listview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the user is directed to listview of the tickets\n\nteamID=hometeam for the event, eventID is associated ticket event"
+      },
+      {
+        "content": "GIVEN user DOES NOT have tickets to a TDC event (particular to deeplink)\nWHEN user is logged into BP app\nAND user accesses deeplink\n\nsample deeplink -\nballpark://listview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "[iOS] THEN the Ballpark app is opened\n\n[Android] THEN the Ballpark app is opened with a dialog box stating Ticket Details Unavailable"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN user has tickets to a TM event (particular to deeplink)\nWHEN user is logged into BP app\nAND user accesses deeplink\n\n\nsample deeplink -\nballpark://listview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the user is directed to listview of the tickets\n\nteamID=hometeam for the event, eventID is associated ticket event\n\n[ANDROID]IF User in not Logged in to TM then display with TM Log In Page)"
+      },
+      {
+        "content": "GIVEN user DOES NOT have tickets to a TM event (particular to deeplink)\nWHEN user is logged into BP app\nAND user accesses deeplink\n\nsample deeplink -\nballpark://listview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "THEN the Ballpark app is opened to TMSDK login page\n\n\n\n"
+      }
+    ]
+  },
+  {
+    "id": 23964082,
+    "title": "Listview Forward View - Cold Start (app closed) (optional)",
+    "section_id": 1238772,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634333173,
+    "updated_by": 288,
+    "updated_on": 1718657976,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND BP App is NOT open in the background (cold start)\r\nAND the user has BallPark account\r\nAND the user has been given a deeplink\r\n\r\n\r\nSample link -- REQUIRES acct to have the ticketed event shown in acct\r\nballpark://listview?eventID=65285&teamID=158&venueID=32&forward=true \r\n\r\n*teamID is the associated home team of the venue [required]\r\n*eventID is the associated event for the particular ticket [required]\r\n*venueID is optional parameter associated venue for the event [optional]\r\n*forward is optional parameter for automatically entering Forward mode with the first (non-parking ticket) forward-able ticket is selected (when “forward=true”) \r\n\r\n\r\n**the exact deeplink will not necessarily work for all accts with tickets\r\nTherefore, you may need to extract the values specific to the ticketed event on the acct being verified - this can be determined many ways such as:\r\na) via DataDog logs for the users session/trace calls,\r\nb) extracting from context card on firestore doc for specific oktaID,\r\nc) Proxy tool such as CharlesProxy, Proxyman \r\n",
+    "custom_steps": "WHEN the user has tickets to the event (particular to deeplink) ",
+    "custom_expected": "THEN the BP app directs user to the listview Forward Ticket mode for the tickets",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has tickets to the event (particular to deeplink)\nWHEN user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nAND user accesses deeplink*\n\nsample deeplink - \nballpark://listview?eventID=65285&teamID=158&venueID=32&forward=true [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]\n\n",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the user is directed to listview of the tickets with forward action sheet open\n"
+      },
+      {
+        "content": "",
+        "expected": "AND first forward-able ticket selected (if tickets are enabled to forward)\nOR \nAND no ticket should be selected and a message shown with reason unable to forward (if tickets are NOT enabled to forward)\n"
+      },
+      {
+        "content": "GIVEN user has tickets to the event (particular to deeplink)\nWHEN user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nAND user accesses deeplink*\n\nsample deeplink - \nballpark://listview?eventID=65285&teamID=158&venueID=32&forward=false [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]\n\n",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the user is directed to listview of the tickets with forward action sheet NOT open\nAND 'Forward Tickets' button shown\n"
+      }
+    ]
+  },
+  {
+    "id": 33528086,
+    "title": "Listview Forward View - Warm Start (app backgrounded) (optional)",
+    "section_id": 1238772,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718656711,
+    "updated_by": 288,
+    "updated_on": 1718656711,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND the user has BallPark account\r\nAND the user has been given a deeplink\r\n\r\n\r\nSample link -- REQUIRES acct to have the ticketed event shown in acct\r\nballpark://listview?eventID=65285&teamID=158&venueID=32&forward=true \r\n\r\n*teamID is the associated home team of the venue [required]\r\n*eventID is the associated event for the particular ticket [required]\r\n*venueID is optional parameter associated venue for the event [optional]\r\n*forward is optional parameter for automatically entering Forward mode with the first (non-parking ticket) forward-able ticket is selected (when “forward=true”) \r\n\r\n\r\n**the exact deeplink will not necessarily work for all accts with tickets\r\nTherefore, you may need to extract the values specific to the ticketed event on the acct being verified - this can be determined many ways such as:\r\na) via DataDog logs for the users session/trace calls,\r\nb) extracting from context card on firestore doc for specific oktaID,\r\nc) Proxy tool such as CharlesProxy, Proxyman \r\n",
+    "custom_steps": "WHEN the user has tickets to the event (particular to deeplink) ",
+    "custom_expected": "THEN the BP app directs user to the listview Forward Ticket mode for the tickets",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has tickets to the event (particular to deeplink)\nWHEN user is logged into BP app\nAND user accesses deeplink*\n\nsample deeplink - \nballpark://listview?eventID=65285&teamID=158&venueID=32&forward=true [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]\n\n",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the user is directed to listview of the tickets with forward action sheet open\n"
+      },
+      {
+        "content": "",
+        "expected": "AND first forward-able ticket selected (if tickets are enabled to forward)\nOR \nAND no ticket should be selected and a message shown with reason unable to forward (if tickets are NOT enabled to forward)\n"
+      },
+      {
+        "content": "GIVEN user has tickets to the event (particular to deeplink)\nWHEN user is logged into BP app\nAND user accesses deeplink*\n\nsample deeplink - \nballpark://listview?eventID=65285&teamID=158&venueID=32&forward=false [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]\n\n",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the user is directed to listview of the tickets with forward action sheet NOT open\nAND 'Forward Tickets' button shown\n"
+      }
+    ]
+  },
+  {
+    "id": 33518630,
+    "title": "Scanview Deeplink - Cold Start (app closed) *[requires TM/TDC tickets]",
+    "section_id": 1238773,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718294330,
+    "updated_by": 282,
+    "updated_on": 1726754703,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[IDs+Team+IDs+Venue+IDs](https://baseball.atlassian.net/wiki/spaces/ticketing/pages/3947618/IDs+Team+IDs+Venue+IDs )\r\n\r\nGIVEN the user downloaded the Ballpark app (12 or greater)\r\nAND BP App is NOT open in the background (cold start)\r\nAND the user has BallPark account\r\nAND the user has been given a deeplink\r\n\r\n\r\nSample link -- REQUIRES acct to have the ticketed event shown in acct\r\nballpark://scanview?eventID=65285&teamID=158&venueID=32\r\n\r\n*eventID is the associated event for the particular ticket [required]\r\n*teamID is the associated home team of the venue [required]\r\n*venueID is the associated venue for the event [optional]\r\n\r\n**the exact deeplink will not necessarily work for all accts with tickets\r\nTherefore, you may need to extract the values(teamID/eventID/venueID) specific to the ticketed event on the acct being verified - this can be determined many ways such as:\r\na) using specific oktaID, extracting from Next-Ticketed-Event context card on firestore doc([example](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/firestore/data/~2Fhometab~2F00untlr43sIH7NgMo357?utm_campaign=extensions&utm_medium=SLACK&utm_source=NEW_ISSUE ) )\r\nb) Connecting to a Proxy tool (i.e. CharlesProxy, Proxyman) and triggering the call from BP app\r\nc) via DataDog logs for the users session/trace calls",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has tickets to a TDC event (particular to deeplink)\nAND user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nWHEN user accesses deeplink\n\n\nsample deeplink -\nballpark://scanview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the user is directed to scanview of the tickets\n\nteamID=hometeam for the event, eventID is associated ticket event"
+      },
+      {
+        "content": "GIVEN user DOES NOT have tickets to a TDC event (particular to deeplink)\nAND user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nWHEN user accesses deeplink\n\nsample deeplink -\nballpark://scanview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "[iOS] THEN the Ballpark app is opened to Home page\n\n[Android] THEN the Ballpark app displays dialog box stating Ticket Details Unavailable\n\n"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN user has tickets to a TM event (particular to deeplink)\nAND user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nWHEN user accesses deeplink\n\n\nsample deeplink -\nballpark://scanview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the user is directed to listview of the tickets\n\nteamID=hometeam for the event, eventID is associated ticket event\n\n[Android] If user is not logged in to TM then TMSDK Login page display "
+      },
+      {
+        "content": "GIVEN user DOES NOT have tickets to a TM event (particular to deeplink)\nAND user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nWHEN user accesses deeplink\n\nsample deeplink -\nballpark://scanview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "[iOS]\nTHEN the Ballpark app is opened to TMSDK login page\n\n\n[Android] \nTHEN the Ballpark app displays dialog box stating Ticket Details Unavailable"
+      }
+    ]
+  },
+  {
+    "id": 33518631,
+    "title": "Scanview Deeplink - Warm Start (app backgrounded) *[requires TM/TDC tickets]",
+    "section_id": 1238773,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718294330,
+    "updated_by": 288,
+    "updated_on": 1718294585,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[IDs+Team+IDs+Venue+IDs](https://baseball.atlassian.net/wiki/spaces/ticketing/pages/3947618/IDs+Team+IDs+Venue+IDs )\r\n\r\nGIVEN the user downloaded the Ballpark app (12 or greater)\r\nAND BP App is open in the background, minimized (warm start)\r\nAND the user has BallPark account\r\nAND the user has been given a deeplink\r\n\r\n\r\nSample link -- REQUIRES acct to have the ticketed event shown in acct\r\nballpark://scanview?eventID=65285&teamID=158&venueID=32\r\n\r\n*eventID is the associated event for the particular ticket [required]\r\n*teamID is the associated home team of the venue [required]\r\n*venueID is the associated venue for the event [optional]\r\n\r\n**the exact deeplink will not necessarily work for all accts with tickets\r\nTherefore, you may need to extract the values(teamID/eventID/venueID) specific to the ticketed event on the acct being verified - this can be determined many ways such as:\r\na) using specific oktaID, extracting from Next-Ticketed-Event context card on firestore doc([example](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/firestore/data/~2Fhometab~2F00untlr43sIH7NgMo357?utm_campaign=extensions&utm_medium=SLACK&utm_source=NEW_ISSUE ) )\r\nb) Connecting to a Proxy tool (i.e. CharlesProxy, Proxyman) and triggering the call from BP app\r\nc) via DataDog logs for the users session/trace calls",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has tickets to a TDC event (particular to deeplink)\nAND user is logged into BP app\nAND BP App is open in the background, minimized (warm start)\nWHEN user accesses deeplink\n\n\nsample deeplink -\nballpark://scanview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the user is directed to scanview of the tickets\n\nteamID=hometeam for the event, eventID is associated ticket event"
+      },
+      {
+        "content": "GIVEN user DOES NOT have tickets to a TDC event (particular to deeplink)\nAND user is logged into BP app\nAND BP App is open in the background, minimized (warm start)\nWHEN user accesses deeplink\n\nsample deeplink -\nballpark://scanview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "[iOS] THEN the Ballpark app is opened to Home page\n\n[Android] THEN the Ballpark app displays dialog box stating Ticket Details Unavailable\n\n"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN user has tickets to a TM event (particular to deeplink)\nAND user is logged into BP app\nAND BP App is open in the background, minimized (warm start)\nWHEN user accesses deeplink\n\n\nsample deeplink -\nballpark://scanview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the user is directed to listview of the tickets\n\nteamID=hometeam for the event, eventID is associated ticket event"
+      },
+      {
+        "content": "GIVEN user DOES NOT have tickets to a TM event (particular to deeplink)\nAND user is logged into BP app\nAND BP App is open in the background, minimized (warm start)\nWHEN user accesses deeplink\n\nsample deeplink -\nballpark://scanview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "[iOS]\nTHEN the Ballpark app is opened to TMSDK login page\n\n\n[Android] \nTHEN the Ballpark app displays dialog box stating Ticket Details Unavailable"
+      }
+    ]
+  },
+  {
+    "id": 23964084,
+    "title": "[iOS] My Profile Deeplink - Cold Start (app closed)",
+    "section_id": 1238776,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634334460,
+    "updated_by": 288,
+    "updated_on": 1718657995,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND BP App is NOT open in the background (cold start)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is logged in\nAND BP App is NOT open in the background (cold start)\nAND user accesses ballpark://profile deeplink",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 33528087,
+    "title": "[iOS] My Profile Deeplink - Warm Start (app backgrounded)",
+    "section_id": 1238776,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718656723,
+    "updated_by": 288,
+    "updated_on": 1718656723,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://profile deeplink",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 23964085,
+    "title": "[iOS] My Teams Deeplink - Cold Start (app closed)",
+    "section_id": 1238776,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634334460,
+    "updated_by": 288,
+    "updated_on": 1718658012,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND BP App is NOT open in the background (cold start)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is logged in\nAND BP App is NOT open in the background (cold start)\nAND user accesses ballpark://favorite-teams deeplink",
+        "expected": "THEN user is taken to My Teams Modal with 'Done' link shown\nAND previously selected favorited teams maintained, if any"
+      },
+      {
+        "content": "WHEN user taps 'Done' on the My Team modal",
+        "expected": "THEN user is taken to Home page\nAND the Team Schedule Prompt card is shown on Home page with the user's first selected team's logo and name.\nAND the Team Schedule Prompt card CTA directs user to Tickets Tab > Buy Tickets with first favorite team pre-selected.\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 33528088,
+    "title": "[iOS] My Teams Deeplink - Warm Start (app backgrounded)",
+    "section_id": 1238776,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718656732,
+    "updated_by": 433,
+    "updated_on": 1730243008,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://favorite-teams deeplink",
+        "expected": "THEN user is taken to My Teams Modal with 'Done' link shown\nAND previously selected favorited teams maintained, if any"
+      },
+      {
+        "content": "WHEN user taps 'Done' on the My Team modal",
+        "expected": "THEN user is taken to Home page\nAND the Team Schedule Prompt card is shown on Home page with the user's first selected team's logo and name.\nAND the Team Schedule Prompt card CTA directs user to Tickets Tab > Buy Tickets with first favorite team pre-selected.\nAND Home tab is highlighted in the bottom navigation bar\n\n**UPDATE** OR if user is on any page other than HOME page\n**UPDATE** THEN the user should be taken to the page the app previously was on\n"
+      }
+    ]
+  },
+  {
+    "id": 23964086,
+    "title": "[iOS] My Notifications Deeplink - Cold Start (app closed)",
+    "section_id": 1238776,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634334460,
+    "updated_by": 288,
+    "updated_on": 1718658040,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND BP App is NOT open in the background (cold start)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is logged in\nAND BP App is NOT open in the background (cold start)\nAND user accesses ballpark://notifications deeplink",
+        "expected": "THEN user is taken to My Notifications modal"
+      },
+      {
+        "content": "WHEN user dismisses the My Notifications modal",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 33528089,
+    "title": "[iOS] My Notifications Deeplink - Warm Start (app backgrounded)",
+    "section_id": 1238776,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718656740,
+    "updated_by": 433,
+    "updated_on": 1730243025,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 6,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user is on the Home Tab\nAND user accesses ballpark://notifications deeplink",
+        "expected": "THEN user is taken to My Notifications modal"
+      },
+      {
+        "content": "WHEN user dismisses the My Notifications modal",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar\n\n**UPDATE** OR if user is on any page other than HOME page\n**UPDATE** THEN the user should be taken to the page the app previously was on\n"
+      }
+    ]
+  },
+  {
+    "id": 23964087,
+    "title": "[iOS] My MLB Account Emails Deeplink - Cold Start (app closed)",
+    "section_id": 1238776,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634334460,
+    "updated_by": 288,
+    "updated_on": 1718658062,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 7,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND BP App is NOT open in the background (cold start)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is logged in\nAND BP App is NOT open in the background (cold start)\nAND user accesses ballpark://mlb-account deeplink",
+        "expected": "THEN user is taken to My MLB Account Emails modal with 'Done' link shown"
+      },
+      {
+        "content": "WHEN user taps 'Done' on the My MLB Account Emails modal",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 33528090,
+    "title": "[iOS] My MLB Account Emails Deeplink - Warm Start (app backgrounded)",
+    "section_id": 1238776,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718656748,
+    "updated_by": 433,
+    "updated_on": 1730243038,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 8,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://mlb-account deeplink",
+        "expected": "THEN user is taken to My MLB Account Emails modal with 'Done' link shown"
+      },
+      {
+        "content": "WHEN user taps 'Done' on the My MLB Account Emails modal",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar\n\n**UPDATE** OR if user is on any page other than HOME page\n**UPDATE** THEN the user should be taken to the page the app previously was on\n"
+      }
+    ]
+  },
+  {
+    "id": 23964088,
+    "title": "[iOS] My Ticket Accounts Deeplink - Cold Start (app closed)",
+    "section_id": 1238776,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634334460,
+    "updated_by": 288,
+    "updated_on": 1718658077,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 9,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND BP App is NOT open in the background (cold start)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is logged in\nAND BP App is NOT open in the background (cold start)\nAND user accesses ballpark://ticket-accounts deeplink",
+        "expected": "THEN user is taken to My Ticket Accounts modal with 'Done' link shown"
+      },
+      {
+        "content": "WHEN user taps 'Done' on the My Ticket Accounts modal",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 33528091,
+    "title": "[iOS] My Ticket Accounts Deeplink - Warm Start (app backgrounded)",
+    "section_id": 1238776,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718656754,
+    "updated_by": 433,
+    "updated_on": 1730243051,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 10,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://ticket-accounts deeplink",
+        "expected": "THEN user is taken to My Ticket Accounts modal with 'Done' link shown"
+      },
+      {
+        "content": "WHEN user taps 'Done' on the My Ticket Accounts modal",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar\n\n**UPDATE** OR if user is on any page other than HOME page\n**UPDATE** THEN the user should be taken to the page the app previously was on\n"
+      }
+    ]
+  },
+  {
+    "id": 23964089,
+    "title": "[Android]My Profile Deeplink - Warm Start (app backgrounded)",
+    "section_id": 1238777,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634334460,
+    "updated_by": 282,
+    "updated_on": 1727697478,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": "WHEN I access deeplink to open My Profile  in the Ballpark app\r\n",
+    "custom_expected": "THEN I want to be taken to the desired page in the app.",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://profile deeplink",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 23964090,
+    "title": "[Android] My Teams Deeplink - Warm Start (app backgrounded)",
+    "section_id": 1238777,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634334460,
+    "updated_by": 282,
+    "updated_on": 1727697494,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": "WHEN I access deeplink to open My Teams in the Ballpark app",
+    "custom_expected": "THEN I want to be taken to the desired page in the app.",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user has NO team set as favorite team\nAND user accesses ballpark://favorite-teams deeplink",
+        "expected": "THEN user is taken to My Teams page\nAND 'Select your Favorite Team' is shown as title, under My Teams header\nAND no teams are shown as previously selected\nAND a 'SAVE' button is shown anchored above the bottom navigation bar\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user updates the team favorites\nAND user taps on 'SAVE'",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Profile page",
+        "expected": "THEN user is taken to Home page\nAND the user is shown a team schedule prompt context card with user's first selected team logo and team name, with 'Shop Tickets' link directing to the Buy Tickets tab with team schedule preselected\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user has favorite team(s) set\nAND user accesses ballpark://favorite-teams deeplink",
+        "expected": "THEN user is taken to My Teams page with 'EDIT' link in right corner\nAND 'Select your Favorite Team' is NOT shown as title, under My Teams header\nAND the previously favorited team(s) are shown as selected, and in correct order if multiple teams selected\nAND a 'SAVE' button is NOT shown anchored above the bottom navigation bar\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on 'EDIT' link on My Teams page\nAND user updates the team favorites\nAND user taps on 'SAVE'",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Profile page",
+        "expected": "THEN user is taken to Home page\nAND the user is shown a team schedule prompt context card with user's first selected team logo and team name, with 'Shop Tickets' link directing to the Buy Tickets tab with team schedule preselected\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 23964091,
+    "title": "[Android] My Notifications Deeplink - Warm Start (app backgrounded)",
+    "section_id": 1238777,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634334460,
+    "updated_by": 282,
+    "updated_on": 1727697512,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": "WHEN I access deeplink to open My Notifications in the Ballpark app",
+    "custom_expected": "THEN I want to be taken to the desired page in the app.",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user has favorite team(s) set\nAND user accesses ballpark://notifications deeplink",
+        "expected": "THEN user is taken to My Notifications page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Notifications page",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Profile page",
+        "expected": "THEN user is taken to Home page\nAND the user is shown a team schedule prompt context card with user's first selected team logo and team name, with 'Shop Tickets' link directing to the Buy Tickets tab with team schedule preselected\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 23964092,
+    "title": "[Android] My MLB Account Emails Deeplink - Warm Start (app backgrounded)",
+    "section_id": 1238777,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634334460,
+    "updated_by": 282,
+    "updated_on": 1727697527,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": "WHEN I access deeplink to open My MLB Account Emails in the Ballpark app",
+    "custom_expected": "THEN I want to be taken to the desired page in the app.",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user has favorite team(s) set\nAND user accesses ballpark://mlb-account deeplink",
+        "expected": "THEN user is taken to My MLB Account Emails page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My MLB Account Emails page",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Profile page",
+        "expected": "THEN user is taken to Home page\nAND the user is shown a team schedule prompt context card with user's first selected team logo and team name, with 'Shop Tickets' link directing to the Buy Tickets tab with team schedule preselected\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 23964093,
+    "title": "[Android] My Ticket Accounts Deeplink - Warm Start (app backgrounded)",
+    "section_id": 1238777,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634334460,
+    "updated_by": 282,
+    "updated_on": 1727697552,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": "WHEN I access deeplink to open My Ticket Accounts in the Ballpark app",
+    "custom_expected": "THEN I want to be taken to the desired page in the app.",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user has favorite team(s) set\nAND user accesses ballpark://ticket-accounts deeplink",
+        "expected": "THEN user is taken to My Ticket Accounts page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Ticket Accounts page",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Profile page",
+        "expected": "THEN user is taken to Home page\nAND the user is shown a team schedule prompt context card with user's first selected team logo and team name, with 'Shop Tickets' link directing to the Buy Tickets tab with team schedule preselected\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 34153782,
+    "title": "[Android] My Profile Deeplink - Cold Start (app closed)",
+    "section_id": 1238777,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1727697343,
+    "updated_by": 282,
+    "updated_on": 1727697638,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 6,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app \r\nAND BP App is NOT open in the background (cold start)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is logged in\nAND BP App is NOT open in the background (cold start)\nAND user accesses ballpark://profile deeplink",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 34153783,
+    "title": "[Android] My Teams Deeplink - Cold Start (app closed)",
+    "section_id": 1238777,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1727697371,
+    "updated_by": 282,
+    "updated_on": 1727698684,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 7,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app \r\nAND BP App is NOT open in the background (cold start)",
+    "custom_steps": "WHEN I access deeplink to open My Teams in the Ballpark app\r\n\r\n",
+    "custom_expected": "THEN I want to be taken to the desired page in the app.\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN BP App is NOT open in the background (cold start)\nAND user is logged in\nAND user has NO team set as favorite team\nAND user accesses ballpark://favorite-teams deeplink",
+        "expected": "THEN user is taken to My Teams page\nAND 'Select your Favorite Team' is shown as title, under My Teams header\nAND no teams are shown as previously selected\nAND a 'SAVE' button is shown anchored above the bottom navigation bar\nAND Home tab is highlighted in the bottom navigation bar\n\n"
+      },
+      {
+        "content": "WHEN user updates the team favorites\nAND user taps on 'SAVE'\n\n",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Profile page\n\n",
+        "expected": "THEN user is taken to Home page\nAND the user is shown a team schedule prompt context card with user's first selected team logo and team name, with 'Shop Tickets' link directing to the Buy Tickets tab with team schedule preselected\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user has favorite team(s) set\nAND user accesses ballpark://favorite-teams deeplink",
+        "expected": "THEN user is taken to My Teams page with 'EDIT' link in right corner\nAND 'Select your Favorite Team' is NOT shown as title, under My Teams header\nAND the previously favorited team(s) are shown as selected, and in correct order if multiple teams selected\nAND a 'SAVE' button is NOT shown anchored above the bottom navigation bar\nAND Home tab is highlighted in the bottom navigation b"
+      },
+      {
+        "content": "WHEN user taps on 'EDIT' link on My Teams page\nAND user updates the team favorites\nAND user taps on 'SAVE'",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Profile page\n\n",
+        "expected": "THEN user is taken to Home page\nAND the user is shown a team schedule prompt context card with user's first selected team logo and team name, with 'Shop Tickets' link directing to the Buy Tickets tab with team schedule preselected\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 34153784,
+    "title": "[Android] My Notifications Deeplink - Cold Start (app closed)",
+    "section_id": 1238777,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1727697391,
+    "updated_by": 282,
+    "updated_on": 1727698249,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 8,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app \r\nAND BP App is NOT open in the background (cold start)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is logged in\nAND BP App is NOT open in the background (cold start)\nAND user accesses ballpark://notifications deeplink",
+        "expected": "THEN user is taken to My Notifications modal\n\n"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Notifications page\n\n\n",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Profile page\n\n",
+        "expected": "THEN user is taken to Home page\nAND the user is shown a team schedule prompt context card with user's first selected team logo and team name, with 'Shop Tickets' link directing to the Buy Tickets tab with team schedule preselected\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 34153785,
+    "title": "[Android] My MLB Account Emails Deeplink - Cold Start (app closed)",
+    "section_id": 1238777,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1727697408,
+    "updated_by": 282,
+    "updated_on": 1727698319,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 9,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app \r\nAND BP App is NOT open in the background (cold start)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is logged in\nAND BP App is NOT open in the background (cold start)\nAND user accesses ballpark://mlb-account deeplink",
+        "expected": "THEN user is taken to My MLB Account Emails modal with 'Done' link shown\n\n"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My MLB Account Emails page\n\n",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Profile page\n\n",
+        "expected": "THEN user is taken to Home page\nAND the user is shown a team schedule prompt context card with user's first selected team logo and team name, with 'Shop Tickets' link directing to the Buy Tickets tab with team schedule preselected\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 34153786,
+    "title": "[Android] My Ticket Accounts Deeplink - Cold Start (app closed)",
+    "section_id": 1238777,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1727697434,
+    "updated_by": 282,
+    "updated_on": 1727698559,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 10,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\n\r\n",
+    "custom_steps": "WHEN I access deeplink to open My Ticket Accounts in the Ballpark app\r\n\r\n",
+    "custom_expected": "THEN I want to be taken to the desired page in the app.\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN BP App is NOT open in the background (cold start)\nAND user is logged in\nAND user has favorite team(s) set\nAND user accesses ballpark://ticket-accounts deeplink",
+        "expected": "THEN user is taken to My Ticket Accounts page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Ticket Accounts page\n\n",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Profile page\n\n",
+        "expected": "THEN user is taken to Home page\nAND the user is shown a team schedule prompt context card with user's first selected team logo and team name, with 'Shop Tickets' link directing to the Buy Tickets tab with team schedule preselected\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 23964095,
+    "title": "[iOS] Deeplink - More > Loyalty Programs",
+    "section_id": 1238778,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634334579,
+    "updated_by": 433,
+    "updated_on": 1730243091,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user has favorite team(s) set\nAND user accesses ballpark://loyalty-program deeplink",
+        "expected": "THEN user is taken to Loyalty Programs modal with 'Done' link shown"
+      },
+      {
+        "content": "WHEN user taps 'Done' on the Loyalty Programs modal",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar\n\n**UPDATE** OR if user is on any page other than HOME page\n**UPDATE** THEN the user should be taken to the page the app previously was on\n"
+      }
+    ]
+  },
+  {
+    "id": 23964094,
+    "title": "[iOS] Deeplink - More > About > About Ballpark",
+    "section_id": 1238778,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634334579,
+    "updated_by": 433,
+    "updated_on": 1730243100,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user has favorite team(s) set\nAND user accesses ballpark://about deeplink",
+        "expected": "THEN user is taken to About Ballpark modal with 'Done' link shown"
+      },
+      {
+        "content": "WHEN user taps 'Done' on the About Ballpark modal",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar\n\n**UPDATE** OR if user is on any page other than HOME page\n**UPDATE** THEN the user should be taken to the page the app previously was on\n"
+      }
+    ]
+  },
+  {
+    "id": 23964097,
+    "title": "[Android] Deeplink - More > Loyalty Programs",
+    "section_id": 1238779,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634334579,
+    "updated_by": 288,
+    "updated_on": 1646672769,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": "WHEN I access deeplink to open More> Loyalty Programs in the Ballpark app",
+    "custom_expected": "THEN I want to be taken to the desired page in the app.",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://loyalty-program deeplink",
+        "expected": "THEN user is taken to Loyalty Programs page\nAND More tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on Loyalty Programs page",
+        "expected": "THEN user is taken to More page\nAND More tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 23964096,
+    "title": "[Android] Deeplink - More > About",
+    "section_id": 1238779,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634334579,
+    "updated_by": 288,
+    "updated_on": 1646672748,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": "WHEN I access deeplink to open More>About in the Ballpark app",
+    "custom_expected": "THEN I want to be taken to the desired page in the app.",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://about-menu deeplink",
+        "expected": "THEN user is taken to About page\nAND More tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on About page",
+        "expected": "THEN user is taken to More page\nAND More tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 23964101,
+    "title": "[iOS] My History Deeplink - Cold Start (app closed)",
+    "section_id": 1238780,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634335053,
+    "updated_by": 288,
+    "updated_on": 1718658094,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5 or greater)\r\nAND BP App is NOT open in the background (cold start)",
+    "custom_steps": "WHEN user either taps on the CTA (deeplink) OR accesses deeplink to My History",
+    "custom_expected": "THEN user is taken to the top level of My History\r\nAND Back navigating from my history page should return to home tab",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is logged in\nAND BP App is NOT open in the background (cold start)\nWHEN user accesses ballpark://myhistory deeplink",
+        "expected": "THEN user is taken to My History page"
+      },
+      {
+        "content": "WHEN user back navigates from the My History page by tapping 'Close'",
+        "expected": "THEN user is returned to Home Tab (or whatever page user had prev open prior to accessing deeplink)"
+      }
+    ]
+  },
+  {
+    "id": 33528092,
+    "title": "[iOS] My History Deeplink - Warm Start (app backgrounded)",
+    "section_id": 1238780,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718656779,
+    "updated_by": 288,
+    "updated_on": 1718656779,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5 or greater)",
+    "custom_steps": "WHEN user either taps on the CTA (deeplink) OR accesses deeplink to My History",
+    "custom_expected": "THEN user is taken to the top level of My History\r\nAND Back navigating from my history page should return to home tab",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses ballpark://myhistory deeplink",
+        "expected": "THEN user is taken to My History page"
+      },
+      {
+        "content": "WHEN user back navigates from the My History page by tapping 'Close'",
+        "expected": "THEN user is returned to Home Tab (or whatever page user had prev open prior to accessing deeplink)"
+      }
+    ]
+  },
+  {
+    "id": 23964099,
+    "title": "[iOS] Event Details Deeplink - Cold Start (app closed)",
+    "section_id": 1238780,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634335053,
+    "updated_by": 288,
+    "updated_on": 1718658110,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "https://baseball.atlassian.net/browse/BP-9273\r\n\r\nAs a fan who loves My History, I want to able to conveniently add content to the event I logged today\r\n\r\n\r\nGIVEN the user downloaded the Ballpark app (10.5 or greater)\r\nAND BP App is NOT open in the background (cold start)\r\nAND the user has access to a CTA deeplink particular to a specific event previously checked-in on their account",
+    "custom_steps": "WHEN user either taps on the CTA (deeplink) OR accesses deeplink",
+    "custom_expected": "THEN user will be taken to My History top level view with the latest data from history service for the provided eventID\r\nAND Back navigating from the history details page should return to home tab\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is logged in\nAND BP App is NOT open in the background (cold start)\nWHEN user accesses deeplink with an eventID prev check-in on the acct",
+        "expected": "THEN user will be taken to My History Event details page of the provided eventID"
+      },
+      {
+        "content": "WHEN user back navigates from the My History Event page",
+        "expected": "THEN user is returned to Home Tab (or whatever page user had prev open prior to accessing deeplink)"
+      }
+    ]
+  },
+  {
+    "id": 33528093,
+    "title": "[iOS] Event Details Deeplink - Warm Start (app backgrounded)",
+    "section_id": 1238780,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718656789,
+    "updated_by": 288,
+    "updated_on": 1718656789,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "https://baseball.atlassian.net/browse/BP-9273\r\n\r\nAs a fan who loves My History, I want to able to conveniently add content to the event I logged today\r\n\r\n\r\nGIVEN the user downloaded the Ballpark app (10.5 or greater)\r\nAND the user has access to a CTA deeplink particular to a specific event previously checked-in on their account",
+    "custom_steps": "WHEN user either taps on the CTA (deeplink) OR accesses deeplink",
+    "custom_expected": "THEN user will be taken to My History top level view with the latest data from history service for the provided eventID\r\nAND Back navigating from the history details page should return to home tab\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses deeplink with an eventID prev check-in on the acct",
+        "expected": "THEN user will be taken to My History Event details page of the provided eventID"
+      },
+      {
+        "content": "WHEN user back navigates from the My History Event page",
+        "expected": "THEN user is returned to Home Tab (or whatever page user had prev open prior to accessing deeplink)"
+      }
+    ]
+  },
+  {
+    "id": 23964100,
+    "title": "[iOS] Event Details Deeplink - invalid/missing eventID - Cold Start (app closed)",
+    "section_id": 1238780,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634335053,
+    "updated_by": 288,
+    "updated_on": 1718658131,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "https://baseball.atlassian.net/browse/BP-9273\r\n\r\nAs a fan who loves My History, I want to able to conveniently add content to the event I logged today\r\n\r\nGIVEN the user downloaded the Ballpark app (10.5 or greater)\r\nAND BP App is NOT open in the background (cold start)",
+    "custom_steps": "WHEN the user has access to a CTA deeplink with an invalid/missing eventID",
+    "custom_expected": "THEN user is taken to the top level of My History\r\nAND Back navigating from my history page should return to home tab",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is logged in\nAND BP App is NOT open in the background (cold start)\nWHEN user accesses deeplink with an invalid eventID to any prev check-in on the acct",
+        "expected": "THEN user is taken to the top level of My History"
+      },
+      {
+        "content": "WHEN user back navigates from the My History page\n\n*iOS - tapping 'Close'",
+        "expected": "THEN user is returned to Home Tab (or whatever page user had prev open prior to accessing deeplink)"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "REPEAT ABOVE STEPS WITH MISSING EVENTID (instead of invalid eventID)\n\n*example: ballpark://myhistory?eventID=",
+        "expected": "THEN SAME EXPECTED BEHAVIOR LISTED SHOULD BE WITNESSED"
+      }
+    ]
+  },
+  {
+    "id": 33528094,
+    "title": "[iOS] Event Details Deeplink - invalid/missing eventID - Warm Start (app backgrounded)",
+    "section_id": 1238780,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718656796,
+    "updated_by": 288,
+    "updated_on": 1718656796,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 6,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "https://baseball.atlassian.net/browse/BP-9273\r\n\r\nAs a fan who loves My History, I want to able to conveniently add content to the event I logged today\r\n\r\nGIVEN the user downloaded the Ballpark app (10.5 or greater)",
+    "custom_steps": "WHEN the user has access to a CTA deeplink with an invalid/missing eventID",
+    "custom_expected": "THEN user is taken to the top level of My History\r\nAND Back navigating from my history page should return to home tab",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses deeplink with an invalid eventID to any prev check-in on the acct",
+        "expected": "THEN user is taken to the top level of My History"
+      },
+      {
+        "content": "WHEN user back navigates from the My History page\n\n*iOS - tapping 'Close'",
+        "expected": "THEN user is returned to Home Tab (or whatever page user had prev open prior to accessing deeplink)"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "REPEAT ABOVE STEPS WITH MISSING EVENTID (instead of invalid eventID)\n\n*example: ballpark://myhistory?eventID=",
+        "expected": "THEN SAME EXPECTED BEHAVIOR LISTED SHOULD BE WITNESSED"
+      }
+    ]
+  },
+  {
+    "id": 23964098,
+    "title": "[Android] My History Deeplink - Warm Start (app backgrounded)",
+    "section_id": 1238781,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634335053,
+    "updated_by": 282,
+    "updated_on": 1727698884,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": "WHEN I access deeplink to open My History in the Ballpark app",
+    "custom_expected": "THEN user is taken to the top level of My History\r\nAND Back navigating from my history page should direct user to My Profile \r\n\r\n(Noting: iOS directs user to home tab)",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user has favorite team(s) set\nAND user accesses ballpark://myhistory deeplink",
+        "expected": "THEN user is taken to My History page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My History page",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Profile page",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar\nAND the user is shown a team schedule prompt context card with user's first selected team logo and team name, with 'Shop Tickets' link directing to the Buy Tickets tab with team schedule preselected"
+      }
+    ]
+  },
+  {
+    "id": 23964102,
+    "title": "[Android] Event Details Deeplink - Warm Start (app backgrounded)",
+    "section_id": 1238781,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634335053,
+    "updated_by": 282,
+    "updated_on": 1727698901,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "https://baseball.atlassian.net/browse/BPA-6133\r\n\r\nAs a fan who loves My History, I want to able to conveniently add content to the event I logged today\r\n\r\n\r\nGIVEN the user downloaded the Ballpark app (10.5 or greater)\r\nAND the user has access to a deeplink particular to a specific event previously checked-in on THEIR account",
+    "custom_steps": "WHEN I access deeplink to open My History Event Details in the Ballpark app\r\n\r\n*example: ballpark://myhistory?eventID=632826 (bparkdev@gmail in Staging/Prod)",
+    "custom_expected": "THEN user will be taken to My History Event details page of the provided eventID\r\nAND Back navigating from the history details page should direct user to My History page (user will need to back nav to My Profile and then again to Home page)\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses deeplink with an eventID prev check-in on the acct",
+        "expected": "THEN user will be taken to My History Event details page of the provided eventID"
+      },
+      {
+        "content": "WHEN user back navigates from the My History Event page (either via back arrow at the top of the page or via device arrow at the bottom)",
+        "expected": "THEN user is taken to My History page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My History page",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Profile page",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 23964103,
+    "title": "[Android] Event Details Deeplink - invalid/missing eventID - Warm Start(app backgrounded)",
+    "section_id": 1238781,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634335053,
+    "updated_by": 282,
+    "updated_on": 1727698919,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "https://baseball.atlassian.net/browse/BPA-6133\r\n\r\nAs a fan who loves My History, I want to able to conveniently add content to the event I logged today\r\n\r\nGIVEN the user downloaded the Ballpark app (10.5 or greater)",
+    "custom_steps": "WHEN user accesses deeplink with an invalid/missing eventID from Ballpark App\r\n\r\n*example: ballpark://myhistory?eventID=63282X (invalid eventID for bparkdev@gmail in Staging)",
+    "custom_expected": "THEN user is taken to the top level of My History\r\nAND Back navigating from my history page should direct user to My Profile page (user will need to back nav from My Profile to Home page)\r\n\r\n(Noting: iOS directs user to home tab)",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app is open\nAND user is logged in\nAND user accesses deeplink with an invalid eventID to any prev check-in on the acct",
+        "expected": "THEN user is taken to the top level of My History"
+      },
+      {
+        "content": "WHEN user back navigates from the My History page",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar\n"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Profile page",
+        "expected": "THEN user is taken to Home page\nAND 'Select your Favorite Team' card is shown on Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "REPEAT ABOVE STEPS WITH MISSING EVENTID (instead of invalid eventID)\n\n*example: ballpark://myhistory?eventID=",
+        "expected": "THEN SAME EXPECTED BEHAVIOR LISTED SHOULD BE WITNESSED"
+      }
+    ]
+  },
+  {
+    "id": 34153787,
+    "title": "[Android] My History Deeplink - Cold Start (app closed)",
+    "section_id": 1238781,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1727698779,
+    "updated_by": 282,
+    "updated_on": 1727699077,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND BP App is NOT open in the background (cold start)\r\n\r\n",
+    "custom_steps": "WHEN user either taps on the CTA (deeplink) OR accesses deeplink to My History\r\n\r\n",
+    "custom_expected": "THEN user is taken to the top level of My History\r\nAND Back navigating from my history page should return to My Profile Tab",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is logged in\nAND BP App is NOT open in the background (cold start)\nAND user has favorite team(s) set\nWHEN user accesses ballpark://myhistory deeplink",
+        "expected": "THEN user is taken to My History page\nAND Home tab is highlighted in the bottom navigation bar\n\n"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My History page\n\n",
+        "expected": "\t\nTHEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Profile page\n\n",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar\nAND the user is shown a team schedule prompt context card with user's first selected team logo and team name, with 'Shop Tickets' link directing to the Buy Tickets tab with team schedule preselected"
+      }
+    ]
+  },
+  {
+    "id": 34153789,
+    "title": "[Android] Event Details Deeplink - Cold Start (app closed)",
+    "section_id": 1238781,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1727698822,
+    "updated_by": 282,
+    "updated_on": 1727699266,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND BP App is NOT open in the background (cold start)\r\n",
+    "custom_steps": "WHEN user either taps on the CTA (deeplink) OR accesses deeplink\r\n\r\n*example: ballpark://myhistory?eventID=632826 (bparkdev@gmail in Staging/Prod)\r\n\r\n",
+    "custom_expected": "THEN user will be taken to My History top level view with the latest data from history service for the provided eventID\r\nAND Back navigating from the history details page should direct user to My History page (user will need to back nav to My Profile and then again to Home page)\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app NOT open in the background(cold start)\nAND user is logged in\nAND user accesses deeplink with an eventID prev check-in on the acct",
+        "expected": "THEN user will be taken to My History Event details page of the provided eventID\n\n"
+      },
+      {
+        "content": "WHEN user back navigates from the My History Event page (either via back arrow at the top of the page or via device arrow at the bottom)\n\n",
+        "expected": "THEN user is taken to My History page\nAND Home tab is highlighted in the bottom navigation bar\n\n"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My History page\n\n",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Profile page\n\n",
+        "expected": "THEN user is taken to Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      }
+    ]
+  },
+  {
+    "id": 34153788,
+    "title": "[Android] Event Details Deeplink - invalid/missing eventID - Cold Start (app closed)",
+    "section_id": 1238781,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1727698796,
+    "updated_by": 282,
+    "updated_on": 1727699389,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 6,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND BP App is NOT open in the background (cold start)",
+    "custom_steps": "WHEN user either taps on the CTA (deeplink) OR accesses deeplink\r\n\r\n*example: ballpark://myhistory?eventID=63282X (invalid eventID for bparkdev@gmail in Staging)\r\n\r\n",
+    "custom_expected": "THEN user is taken to the top level of My History\r\nAND Back navigating from my history page should direct user to My Profile page (user will need to back nav from My Profile to Home page)\r\n\r\n(Noting: iOS directs user to home tab)\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Ballpark app NOT open in the background(cold start)\nAND user is logged in\nAND user accesses deeplink with an invalid eventID to any prev check-in on the acct",
+        "expected": "THEN user is taken to the top level of My History\n\n"
+      },
+      {
+        "content": "WHEN user back navigates from the My History page\n\n",
+        "expected": "THEN user is taken to My Profile page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "WHEN user taps on back navigation on My Profile page\n\n",
+        "expected": "THEN user is taken to Home page\nAND 'Select your Favorite Team' card is shown on Home page\nAND Home tab is highlighted in the bottom navigation bar"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "REPEAT ABOVE STEPS WITH MISSING EVENTID (instead of invalid eventID)\n\n*example: ballpark://myhistory?eventID=",
+        "expected": "THEN SAME EXPECTED BEHAVIOR LISTED SHOULD BE WITNESSED\n\n"
+      }
+    ]
+  },
+  {
+    "id": 33518628,
+    "title": "Venue Deeplink - Cold Start (app closed)",
+    "section_id": 1238766,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718294325,
+    "updated_by": 288,
+    "updated_on": 1718294431,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND BP App is NOT open in the background (cold start)\r\nAND the user has BallPark account\r\nAND the user has been given a deeplink\r\n\r\nballpark://venue?venueID=32",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nAND user accesses deeplink: ballpark://venue?venueID=32\n\n[Venue IDs](https://baseball.atlassian.net/wiki/spaces/ticketing/pages/3947618/IDs+Team+IDs+Venue+IDs)\n*for highest confidence - each VenueID(reg) listed in the table should be verified",
+        "expected": "THEN the Ballpark app is opened up to the Team tab\nAND the Brewers logo is shown on the navbar\nAND the Brewers Team Page is shown"
+      },
+      {
+        "content": "WHEN user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nAND user accesses deeplink: ballpark://venue?venueID=0",
+        "expected": "[IOS] THEN Ballpark should open to Home Page\n[ANDROID] THEN Ballpark should open team picker"
+      }
+    ]
+  },
+  {
+    "id": 33518629,
+    "title": "Venue Deeplink - Warm Start (app backgrounded)",
+    "section_id": 1238766,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718294325,
+    "updated_by": 288,
+    "updated_on": 1718294431,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND BP App is minimized in the background (warm start)\r\nAND the user has BallPark account\r\nAND the user has been given a deeplink\r\n\r\nballpark://venue?venueID=32",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is logged into BP app\nAND BP App is minimized in the background (warm start)\nAND user accesses deeplink: ballpark://venue?venueID=32\n\n[Venue IDs](https://baseball.atlassian.net/wiki/spaces/ticketing/pages/3947618/IDs+Team+IDs+Venue+IDs)\n*for highest confidence - each VenueID(reg) listed in the table should be verified",
+        "expected": "THEN the Ballpark app is opened up to the Team tab\nAND the Brewers logo is shown on the navbar\nAND the Brewers Team Page is shown"
+      },
+      {
+        "content": "WHEN user is logged into BP app\nAND BP App is minimized in the background (warm start)\nAND user accesses deeplink: ballpark://venue?venueID=0",
+        "expected": "[IOS] THEN Ballpark should open but stay in the state it was in when it was backgrounded.\n[ANDROID] THEN Ballpark should open team picker"
+      }
+    ]
+  },
+  {
+    "id": 7801364,
+    "title": "Topic/SubVenue Happy Path",
+    "section_id": 408311,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 215,
+    "created_on": 1598384202,
+    "updated_by": 215,
+    "updated_on": 1598385383,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the following deeplink: ballpark://venue?venueID=4705&topicID=5295&title=The%20Battery%20Atlanta\r\n\r\nNOTE: Android - Use Deeplink tester or Slack",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user selects the deeplink above ",
+        "expected": "THEN the team page should load the proper topic page with the proper title\n\nIE - The Battery Atlanta for the title & The Battery sub page should load "
+      },
+      {
+        "content": "WHEN the user selects the back button",
+        "expected": "THEN the user should navigate back to the primary team page (Braves in this case)"
+      }
+    ]
+  },
+  {
+    "id": 7801373,
+    "title": "[IOS] Valid TopicID without Title",
+    "section_id": 408311,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 215,
+    "created_on": 1598385342,
+    "updated_by": 288,
+    "updated_on": 1646435017,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the following deeplink: ballpark://venue?venueID=4705&topicID=5295",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user selects the deeplink above",
+        "expected": "THEN the team page should load the proper topic page with NO title\n\nIE - Title should be blank & The Battery sub page should load"
+      },
+      {
+        "content": "WHEN the user selects the back button",
+        "expected": "THEN the user should go back to the team page (Braves in this case)"
+      }
+    ]
+  },
+  {
+    "id": 6690659,
+    "title": "Validate VenueID DeepLink Selection",
+    "section_id": 305989,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-8845",
+    "created_by": 215,
+    "created_on": 1590001360,
+    "updated_by": 288,
+    "updated_on": 1679941620,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the URL in Branch.io is setup https://bp.mlb.com/EiCrO00N15\r\n(in the url, there is a capital O followed by 2 zeros)\r\n\r\nNOTE: Use Deep Link Tester app for Android & Contacts for iOS. Create a contact and embed the deeplinks for testing\r\n\r\n![](index.php?/attachments/get/34141)\r\n\r\n\r\nFollowing branch deeplinks may be used to verify expected behavior (branch deeplinks are not guaranteed to be maintained, and may not direct as expected)\r\n*https://bp.mlb.com/Wallet (this deeplink is desired to work solidly)\r\n*https://bp.mlb.com/OAK_Ordering_Pickup\r\n*https://bp.mlb.com/CIN_RedsPay_Email\r\n*https://bp.mlb.com/MIL_Ordering\r\n*https://bp.mlb.com/ATL_Ordering_Club\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN selecting the Deeplink and user has previously logged in",
+        "expected": "THEN the application should open to the Mets Team Page (or page desired from branch link accessed)"
+      },
+      {
+        "content": "WHEN selecting the Deeplink and user has not previously logged in",
+        "expected": "THEN the application should open to Get Started page "
+      },
+      {
+        "content": "WHEN selecting the Deeplink and user has previously logged in AND the app is not open in the background",
+        "expected": "THEN the application should open to the Mets Team Page (or page desired from branch link accessed)"
+      },
+      {
+        "content": "WHEN selecting the Deeplink and user has not previously logged in AND the app is not open in the background",
+        "expected": "THEN the application should open to Get Started page "
+      }
+    ]
+  },
+  {
+    "id": 6690660,
+    "title": "Deferred DeepLinks",
+    "section_id": 305989,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-8845",
+    "created_by": 215,
+    "created_on": 1590001711,
+    "updated_by": 288,
+    "updated_on": 1679941801,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN user does not have BP app installed previously (delete any/all instances from device)\r\nAND user has been given a branch deeplink to access the app\r\nAND user has an existing MLB account \r\n\r\nNOTE: Use Deep Link Tester app for Android & Contacts for iOS. Create a contact and embed the deeplinks for testing\r\n\r\n![](index.php?/attachments/get/34141)\r\n\r\nNOTE: Deferred deeplinks are not going to work every time, this is not a guaranteed service. What I noticed is the correct meta data is not always passed back to the client resulting in the client just opening the TodayTab. One way to check is to use Charles to see what metadata gets passed back from Branch. If there is no $deeplink_path, the app will NOT open up the team page. \r\n\r\n\r\n\r\nFollowing branch deeplinks can be used to verify expected behavior\r\n*https://bp.mlb.com/EiCrO00N15\r\n*https://bp.mlb.com/OAK_Ordering_Pickup\r\n*https://bp.mlb.com/CIN_RedsPay_Email\r\n*https://bp.mlb.com/MIL_Ordering\r\n*https://bp.mlb.com/ATL_Ordering_Club\r\n*https://bp.mlb.com/Wallet",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN selecting https://bp.mlb.com/EiCrO00N15 Branch deeplink",
+        "expected": "THEN the device should direct you to install Ballpark from the app store"
+      },
+      {
+        "content": "WHEN you install the app & Log in\n\nNOTE: Use the emulator to install if the app is not in a build\nNOTE: Use Firebase versions of the app if not in the production build",
+        "expected": "THEN the app should direct you to the Mets team page (or page desired from branch link accessed)"
+      }
+    ]
+  },
+  {
+    "id": 33518632,
+    "title": "Webview Deeplink - Cold Start (app closed)",
+    "section_id": 154831,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718294336,
+    "updated_by": 282,
+    "updated_on": 1727111822,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN BP App is NOT open in the background (cold start)\r\nAND user selects a webview Deeplink \r\n\r\nballpark://webview?url=https%3A%2F%2Fpwa.venuetize.com%2FPWA%2FTexrq12raz%2F19%2Finitiate%3Fmodule%3DinSeatOrdering%26provider%3Dappetize%26type%3Dfnb&venueID=5325&dataTier=3\r\n\r\n**As of 09/19/2024 - Above URL DEEPLINK seems to be outdated hence thrown an error on both iOS/Android.**\r\n\r\n9/23/2024 - TE sync \r\nballpark://webview?venueID=19&url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user has no favorite team selected in Ballpark\nAND user accesses deeplink: \"ballpark://webview?venueID=19&url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours\"",
+        "expected": "THEN a webview should appear to the proper webview, after app opened"
+      },
+      {
+        "content": "WHEN user taps back/Close button from the opened webview",
+        "expected": "[ANDROID]\nTHEN user is directed back into the teams teamtab specified in the VenueID (if deeplink was accessed externally of BP app)\nOR\nTHEN user is directed back to point of entry (if STEP 1 accessed the deeplink internally - such as a context card on home page)\n\n[IOS]\nTHEN user is returned back to point of entry (or Home page, if accessed externally)"
+      },
+      {
+        "content": "WHEN user has a favorite team selected in Ballpark (other than Redsox)\nAND user accesses deeplink: \"ballpark://webview?venueID=19&url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours\"",
+        "expected": "THEN a webview should appear to the proper webview, after app opened"
+      },
+      {
+        "content": "WHEN user taps back/Close button from the opened webview",
+        "expected": "[ANDROID]\nTHEN user is directed back into the teams teamtab specified in the VenueID (if deeplink was accessed externally of BP app)\nOR\nTHEN user is directed back to point of entry (if STEP 1 accessed the deeplink internally - such as a context card on home page)\n\n[IOS]\nTHEN user is returned back to point of entry (or Home page, if accessed externally)\nAND the TeamTab displays the logo and name of the user's fave team"
+      }
+    ]
+  },
+  {
+    "id": 33518633,
+    "title": "Webview Deeplink - Warm Start (app backgrounded)",
+    "section_id": 154831,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718294336,
+    "updated_by": 282,
+    "updated_on": 1727111865,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN BP App is open in the background, minimized (warm start)\r\nAND user selects a webview Deeplink \r\n\r\nballpark://webview?url=https%3A%2F%2Fpwa.venuetize.com%2FPWA%2FTexrq12raz%2F19%2Finitiate%3Fmodule%3DinSeatOrdering%26provider%3Dappetize%26type%3Dfnb&venueID=5325&dataTier=3\r\n**As of 09/19/2024 - This deeplink seems to be outdated hence thrown an error on both iOS/Android.**\r\n\r\n9/23/2024 - TE sync\r\nballpark://webview?venueID=19&url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user has no favorite team selected in Ballpark\nAND user accesses deeplink: \"ballpark://webview?venueID=19&url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours\"",
+        "expected": "THEN a webview should appear to the proper webview"
+      },
+      {
+        "content": "WHEN user taps back/Close button from the opened webview",
+        "expected": "[ANDROID]\nTHEN user is directed back into the teams teamtab specified in the VenueID (if deeplink was accessed externally of BP app)\nOR\nTHEN user is directed back to point of entry (if STEP 1 accessed the deeplink internally - such as a context card on home page)\n\n[IOS]\nTHEN user is returned back to point of entry (or Home page, if accessed externally)"
+      },
+      {
+        "content": "WHEN user has a favorite team selected in Ballpark (other than Redsox)\nAND user accesses deeplink: \"ballpark://webview?venueID=19&url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours\"",
+        "expected": "THEN a webview should appear to the proper webview"
+      },
+      {
+        "content": "WHEN user taps back/Close button from the opened webview",
+        "expected": "[ANDROID]\nTHEN user is directed back into the teams teamtab specified in the VenueID (if deeplink was accessed externally of BP app)\nOR\nTHEN user is directed back to point of entry (if STEP 1 accessed the deeplink internally - such as a context card on home page)\n\n[IOS]\nTHEN user is returned back to point of entry (or Home page, if accessed externally)"
+      }
+    ]
+  },
+  {
+    "id": 23964065,
+    "title": "Webview Deeplink - URL (required)",
+    "section_id": 154831,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634312572,
+    "updated_by": 282,
+    "updated_on": 1727111901,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN a user selects a webview Deeplink \r\n\r\nballpark://webview?url=https%3A%2F%2Fpwa.venuetize.com%2FPWA%2FTexrq12raz%2F19%2Finitiate%3Fmodule%3DinSeatOrdering%26provider%3Dappetize%26type%3Dfnb\r\n\r\n\r\n*URL is a required field\r\n\r\n**As of 09/19/2024 - This deeplink seems to be outdated hence thrown an error on both iOS/Android.**\r\n\r\n09/23/2024 - TE sync \r\nballpark://webview?venueID=19&url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is logged into BP app\nAND BP app is backgrounded\nAND user accesses deeplink: \"ballpark://webview?venueID=19&url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours\"",
+        "expected": "THEN a webview should appear to the proper webview"
+      },
+      {
+        "content": "WHEN user taps back/Close button from the opened webview",
+        "expected": "[ANDROID]\nTHEN user is directed back into the teams teamtab specified in the VenueID (if deeplink was accessed externally of BP app)\nOR\nTHEN user is directed back to point of entry (if STEP 1 accessed the deeplink internally - such as a context card on home page)\n\n[IOS]\nTHEN user is returned back to point of entry (or Home page, if accessed externally)"
+      }
+    ]
+  },
+  {
+    "id": 23964073,
+    "title": "Webview Deeplink - dataTier (optional)",
+    "section_id": 154831,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634313931,
+    "updated_by": 288,
+    "updated_on": 1730398720,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 6,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "As a Ballpark user, I want to be able to open a link that takes me directly to a web app or informational page so I can easily access Ballpark's exclusive content\r\n\r\nGIVEN a user selects a webview Deeplink \r\n\r\nballpark://webview?url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours\r\n",
+    "custom_steps": "WHEN a user selects a webview with dataTier passed within the deep link\r\n\r\n*dataTier is an optional field",
+    "custom_expected": "Wiki: [Data Tiers](https://baseball.atlassian.net/wiki/spaces/mobile/pages/1632206886/Data+Tiers)\r\n\r\nTHEN the user will visually witness same experience  \r\nAND the value passed as dataTier dictates what is shown for the header",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is logged into BP app\nAND BP app is backgrounded\nAND user accesses deeplink: \"ballpark://webview?url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours&dataTier=0\"\n\"",
+        "expected": "THEN a webview should appear to the proper webview"
+      },
+      {
+        "content": "WHEN user taps back/Close button from the opened webview",
+        "expected": "[iOS] THEN user is returned back to the BP page previously on\n[Android] THEN user is presented to the Team Tab previously set (OR user is presented the Team Picker, if no team prev established)"
+      },
+      {
+        "content": "REPEAT ABOVE STEPS(1,2) replacing 'dataTier=0' with \n*'dataTier=1'\n*'dataTier=2'\n*'dataTier=3'",
+        "expected": "THEN same validation expected, as user will not witness a difference"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN dataTier deeplinks are preconfigured on team page, with different module types (i.e small image icon, carousel images, large button images, list links, etc.)\n\n(QA env - Rockies Team page should have helpful links already setup - 2021)",
+        "expected": ""
+      },
+      {
+        "content": "WHEN user taps on each dataTier element across the different modules\n(in QA env - Rockies Team Tab page, scroll down to see data tiers 0-3)",
+        "expected": "THEN a page is shown with what is passed into the Request Headers"
+      },
+      {
+        "content": "for all data tiers:",
+        "expected": "AND x-mlbam-vid should always show the value of the venueID (Rockies = 19), regardless of dataTier value \n\n*x-mlbam-vid => Unique venue identifier. Indicates the club and location for which a WebView is launched."
+      },
+      {
+        "content": "",
+        "expected": "AND x-mlbam-cis should always show the value of the checked-in state (Y/N), regardless of dataTier value \n\n*x-mlbam-cis => Indicates whether the user is checked into the game.\n\nNOTE: this value is not supported for Auto or TicketScan check-in (as of 10.5.0)"
+      },
+      {
+        "content": "WHEN user taps on each dataTier element across the different modules for dataTier 0 through 2",
+        "expected": "AND x-mlbam-okta should always show the value of the OKTA string for the user, when dataTier value is 0, 1 or 2\nAND 'Authorization: Bearer' should NOT be a visible request header, when dataTier value is 0, 1 or 2\n\n*x-mlbam-okta => Unique user identifier, persistent across devices and sessions.\n"
+      },
+      {
+        "content": "",
+        "expected": "AND x-bp-uid should show the value of the OKTA string for the user, when dataTier value is 0, 1 or 2"
+      },
+      {
+        "content": "WHEN user taps on each dataTier element across the different modules for dataTier 3",
+        "expected": "AND x-mlbam-okta should NOT show the value of the OKTA string for the user (should NOT be visible), when dataTier value is 3\nAND 'Authorization: Bearer' should show a value of encoded value string for the user when dataTier value is 3\n\n*Authorization: Bearer => The Base64 encoded JWT, has OktaID and email among other things"
+      },
+      {
+        "content": "",
+        "expected": "AND x-bp-uid should show the value of the OKTA string for the user, when dataTier value is 3\n\n"
+      }
+    ]
+  },
+  {
+    "id": 33533736,
+    "title": "Webview Deeplink - external (optional)",
+    "section_id": 154831,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1719001130,
+    "updated_by": 288,
+    "updated_on": 1720728367,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 7,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-10190](https://baseball.atlassian.net/browse/BP-10190 ) / [BPA-6887](https://baseball.atlassian.net/browse/BPA-6887 )\r\n\r\nAs a Ballpark user, I want to be able to open a link that takes me directly to an external page so I can easily access Ballpark's exclusive content\r\n\r\nGIVEN a user selects a webview Deeplink \r\n\r\nballpark://webview?url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours&external=true\r\n\r\n\r\nANDROID: ballpark://webview?url=https://www.mlb.com/app/ballpark/redsox/ballpark/tours&external=true [TODO:CONFIRM]",
+    "custom_steps": "WHEN a user selects a webview with venue passed within the deep link\r\n\r\n*external is an optional field",
+    "custom_expected": "THEN the user will be prompted to open the deeplink external to BP app\r\nAND if user accepts, the URL provided in the deeplink will open within an external browswer\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user accesses deeplink: \"ballpark://webview?url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours&external=true\"\n\nANDROID: ballpark://webview?url=https://www.mlb.com/app/ballpark/redsox/ballpark/tours&external=true\n",
+        "expected": "THEN BP app opens a prompt from within internal webview: \n\"Leave Ballpark - Would you like to leave Ballpark and open this link in Safari?' \nAND 'No' and 'Yes' options are presented"
+      },
+      {
+        "content": "WHEN ‘No’ is chosen by the user",
+        "expected": "THEN the internal webview is dismissed"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN user accesses deeplink: \"ballpark://webview?url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours&external=true\"\n\nANDROID: ballpark://webview?url=https://www.mlb.com/app/ballpark/redsox/ballpark/tours&external=true\n",
+        "expected": "THEN a webview should appear to the proper webview\nAND the team shown on the navBar should match the corresponding venueID passed (venueID=19 is Rockies)\n\nTHEN BP app opens a prompt from within internal webview: \n\"Leave Ballpark - Would you like to leave Ballpark and open this link in Safari?' \nAND 'No' and 'Yes' options are presented"
+      },
+      {
+        "content": "WHEN ‘Yes’ is chosen by the user",
+        "expected": "THEN the user is directed to an external webview loading the webpage passed as URL"
+      }
+    ]
+  },
+  {
+    "id": 23964075,
+    "title": "Webview Deeplink - venueID (optional) [ANDROID ONLY]",
+    "section_id": 154831,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634323105,
+    "updated_by": 282,
+    "updated_on": 1727702494,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 8,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "As a Ballpark user, I want to be able to open a link that takes me directly to a web app or informational page so I can easily access Ballpark's exclusive content\r\n\r\nGIVEN a user selects a webview Deeplink \r\n\r\n\"ballpark://webview?url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours\"\r\n\r\n",
+    "custom_steps": "WHEN a user selects a webview with venue passed within the deep link\r\n\r\n*venueID is an optional field",
+    "custom_expected": "THEN the user will witness the team selected on team tab of the corresponding venueID\r\n\r\n[Team IDs & Venue IDs](https://baseball.atlassian.net/wiki/spaces/ticketing/pages/3947618/IDs+Team+IDs+Venue+IDs)\r\n*for highest confidence - each venueID (Reg) listed in the table should be verified ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is logged into BP app\nAND BP app is backgrounded\nAND user accesses deeplink: \"ballpark://webview?venueID=19&url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours\"",
+        "expected": "THEN a webview should appear to the proper webview\nAND the team shown on the navBar should match the corresponding venueID passed (venueID=19 is Rockies)"
+      },
+      {
+        "content": "WHEN user taps back/Close button from the opened webview",
+        "expected": "THEN user is presented to the Team Tab matching the corresponding venueID passed \n\n\n![](index.php?/attachments/get/14376520)\n"
+      }
+    ]
+  },
+  {
+    "id": 34753971,
+    "title": "Webview Deeplink - displayTitle (optional) [iOS ONLY]",
+    "section_id": 154831,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1741625167,
+    "updated_by": 288,
+    "updated_on": 1741625167,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21436,
+    "display_order": 9,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-11164](https://baseball.atlassian.net/browse/BP-11164 )\r\n\r\nAs a Ballpark user, I want to be able to open a link that takes me directly to an internal page w/ a specified Title\r\n\r\nGIVEN a user selects a webview Deeplink \r\n\r\n\"ballpark://webview?url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours&displayTitle=MLB-TOURS-RedSox\"",
+    "custom_steps": "WHEN a user selects a webview with title passed within the deep link\r\n\r\n*displayTitle is an optional field",
+    "custom_expected": "THEN the user will be prompted to open the deeplink internal to BP app with the value passed shown as the title\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user accesses deeplink: \"ballpark://webview?url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours&displayTitle=MLB-TOURS-RedSox\"\n\n",
+        "expected": "THEN the user is directed to an internal webview loading the webpage passed as URL, and the displayTitle as the Title"
+      }
+    ]
+  }
+]

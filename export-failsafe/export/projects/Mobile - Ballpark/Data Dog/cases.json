@@ -1,0 +1,120 @@
+[
+  {
+    "id": 17606180,
+    "title": "All Feature Flags are set to true",
+    "section_id": 846144,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 214,
+    "created_on": 1624308597,
+    "updated_by": 288,
+    "updated_on": 1744305590,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 268287,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN \r\nenable_datadog_sdk, enable_datadog_tracing, enable_datadog_logging, enable_datadog_rum are all set to true in the remote config console\r\n\r\nPrerequisite - Remote Config Setup for: 'DataDog' configuration\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"enable_datadog_sdk\" as true\r\n3. Edit \"enable_datadog_tracing\" as true\r\n4. Edit \"enable_datadog_logging\" as true\r\n5. Edit \"enable_datadog_rum\" as true\r\n6. Save changes.\r\n7. Publish changes.\r\n\r\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\r\n\r\nRemote Configs \r\n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobiletools-npd-d08e/config)\r\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\r\n(can have condition set up to differentiate desired behavior for different envs/platform/target_audience)",
+    "custom_steps": null,
+    "custom_expected": "[BP-10767](https://baseball.atlassian.net/browse/BP-10767 ) / [BPA-7493](https://baseball.atlassian.net/browse/BPA-7493 )\r\n*https://app.datadoghq.com used for BPapp versions 13.3.0 [Android]/ 13.1.3[iOS] AND after ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN viewing user sessions in https://app.datadoghq.com/rum/explorer\n\n\nhistorical info:\n*https://app.datadoghq.com used for BPapp versions 13.3.0 [Android]/ 13.1.3[iOS] AND after \n*https://us5.datadoghq.com used for BPapp versions 12.7.2 [Android]/ 12.2.1[iOS] until 13.2.0 [Android]/ 13.1.2[iOS] \n*https://app.datadoghq.eu used for BPapp versions 10.5.0 until 12.7.1 [Android]/ 12.2.0[iOS]\n*https://app.datadoghq.com used for BPapp versions prior to 10.5.0\n\n\n",
+        "expected": "THEN user sessions should be tracked and data should appear from the app"
+      },
+      {
+        "content": "WHEN viewing logs in https://app.datadoghq.com/logs\n\n\nhistorical info:\n*https://app.datadoghq.com used for BPapp versions 13.3.0 [Android]/ 13.1.3[iOS] AND after \n*https://us5.datadoghq.com used for BPapp versions 12.7.2 [Android]/ 12.2.1[iOS] until 13.2.0 [Android]/ 13.1.2[iOS] \n*https://app.datadoghq.eu used for BPapp versions 10.5.0 until 12.7.1 [Android]/ 12.2.0[iOS]\n*https://app.datadoghq.com used for BPapp versions prior to 10.5.0\n",
+        "expected": "THEN log data should start appearing from the app. The test log message uses the info level (1). If the log level is greater than info (1), the log message should not appear"
+      },
+      {
+        "content": "WHEN viewing traces in https://app.datadoghq.com/apm/traces\n\n\nhistorical info:\n*https://app.datadoghq.com used for BPapp versions 13.3.0 [Android]/ 13.1.3[iOS] AND after \n*https://us5.datadoghq.com used for BPapp versions 12.7.2 [Android]/ 12.2.1[iOS] until 13.2.0 [Android]/ 13.1.2[iOS] \n*https://app.datadoghq.eu used for BPapp versions 10.5.0 until 12.7.1 [Android]/ 12.2.0[iOS]\n*https://app.datadoghq.com used for BPapp versions prior to 10.5.0\n",
+        "expected": "THEN requests should be traced and seen updating in the data dog console"
+      }
+    ]
+  },
+  {
+    "id": 17606691,
+    "title": "Datadog is disabled",
+    "section_id": 846144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 214,
+    "created_on": 1624309209,
+    "updated_by": 288,
+    "updated_on": 1744305651,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 268287,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN enable_datadog_sdk is set to false in the firebase remote config console\r\n\r\nPrerequisite - Remote Config Setup for: 'DataDog' configuration\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"enable_datadog_sdk\" as false\r\n3. Save changes.\r\n4. Publish changes.\r\n\r\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\r\n\r\nRemote Configs \r\n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobiletools-npd-d08e/config)\r\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\r\n(can have condition set up to differentiate desired behavior for different envs/platform/target_audience)",
+    "custom_steps": "WHEN looking at the console pages in datadog: \r\n*https://app.datadoghq.com/logs \r\n*https://app.datadoghq.com/rum/explorer \r\n*https://app.datadoghq.com/apm/traces\r\n\r\n\r\n\r\nhistorical info:\r\n*https://app.datadoghq.com used for BPapp versions 13.3.0 [Android]/ 13.1.3[iOS] AND after \r\n*https://us5.datadoghq.com used for BPapp versions 12.7.2 [Android]/ 12.2.1[iOS] until 13.2.0 [Android]/ 13.1.2[iOS] \r\n*https://app.datadoghq.eu used for BPapp versions 10.5.0 until 12.7.1 [Android]/ 12.2.0[iOS]\r\n*https://app.datadoghq.com used for BPapp versions prior to 10.5.0",
+    "custom_expected": "THEN no data should be coming in, regardless of what other remote config flags are set, eg. even if enable_datadog_tracing, enable_datadog_logging, and/or enable_datadog_rum are set to true",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 17606694,
+    "title": "Log level",
+    "section_id": 846144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 214,
+    "created_on": 1624309506,
+    "updated_by": 288,
+    "updated_on": 1744305879,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 268287,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the log level value is set in the firebase remote config console (datadog_log_level) where:\r\n\r\n0 = debug, 1 = info, 2 = notice, 3 = warning, 4 = error, 5 = critical\r\n\r\nhttps://bit.ly/3cEvszY\r\n\r\n\r\nPrerequisite - Remote Config Setup for: 'DataDog' configuration\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"enable_datadog_sdk\" as true\r\n3. Edit \"enable_datadog_tracing\" as true\r\n4. Edit \"enable_datadog_logging\" as true\r\n5. Edit \"enable_datadog_rum\" as true\r\n6. Edit \"datadog_log_level\" as DESIRED VALUE \r\n7. Save changes.\r\n8. Publish changes.\r\n\r\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\r\n\r\nRemote Configs \r\n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobiletools-npd-d08e/config)\r\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\r\n(can have condition set up to differentiate desired behavior for different envs/platform/target_audience)",
+    "custom_steps": "WHEN looking at the logging data at *https://app.datadoghq.com/logs\r\n\r\nhistorical info:\r\n*https://app.datadoghq.com used for BPapp versions 13.3.0 [Android]/ 13.1.3[iOS] AND after\r\n*https://us5.datadoghq.com used for BPapp versions 12.7.2 [Android]/ 12.2.1[iOS] until 13.2.0 [Android]/ 13.1.2[iOS]\r\n*https://app.datadoghq.eu used for BPapp versions 10.5.0 until 12.7.1 [Android]/ 12.2.0[iOS]\r\n*https://app.datadoghq.com used for BPapp versions prior to 10.5.0\r\n\r\n",
+    "custom_expected": "THEN logs should only be collected for the log level at or greater than what is set in remote config. eg. the test log message uses the info level (1). If the log level is greater than info (1), the info log message should not appear\r\n\r\n\r\n*Level 0 - shows debug, info, notice, warning, error, critical\r\n*Level 1 - shows  info, notice, warning, error, critical\r\n*Level 2 - shows  notice, warning, error, critical\r\n*Level 3 - shows  warning, error, critical\r\n*Level 4 - shows  error, critical\r\n*Level 5 - shows  critical",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 17606695,
+    "title": "Individual tracking flags enabled",
+    "section_id": 846144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 214,
+    "created_on": 1624309784,
+    "updated_by": 288,
+    "updated_on": 1744305869,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 268287,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN enable_datadog_sdk is set to true in the firebase remote config console, but enable_datadog_tracing, enable_datadog_logging, enable_datadog_rum are set to false\r\n\r\nPrerequisite - Remote Config Setup for: 'DataDog' configuration\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"enable_datadog_sdk\" as true\r\n3. Edit \"enable_datadog_tracing\" as false\r\n4. Edit \"enable_datadog_logging\" as false\r\n5. Edit \"enable_datadog_rum\" as false\r\n6. Save changes.\r\n7. Publish changes.\r\n\r\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\r\n\r\nRemote Configs \r\n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobiletools-npd-d08e/config)\r\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\r\n(can have condition set up to differentiate desired behavior for different envs/platform/target_audience)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN one of the enable_datadog_tracing, enable_datadog_logging, or enable_datadog_rum flags are set to true",
+        "expected": "THEN data should be collected appropriately for only the individual tracing that has their flag set to true. Eg. if enable_datadog_tracing is set to true then data will start to be collected at https://app.datadoghq.com/apm/traces\n\nif enable_datadog_logging is set to true then data will start to be collected at https://app.datadoghq.com/logs\n\nif enable_datadog_rum is set to true then data will start to be collected at https://app.datadoghq.com/rum/explorer\n\n\n\nhistorical info:\n*https://app.datadoghq.com used for BPapp versions 13.3.0 [Android]/ 13.1.3[iOS] AND after\n*https://us5.datadoghq.com used for BPapp versions 12.7.2 [Android]/ 12.2.1[iOS] until 13.2.0 [Android]/ 13.1.2[iOS]\n*https://app.datadoghq.eu used for BPapp versions 10.5.0 until 12.7.1 [Android]/ 12.2.0[iOS]\n*https://app.datadoghq.com used for BPapp versions prior to 10.5.0\n\n"
+      }
+    ]
+  }
+]

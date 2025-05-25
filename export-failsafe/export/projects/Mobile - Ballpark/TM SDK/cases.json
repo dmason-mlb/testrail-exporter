@@ -1,0 +1,422 @@
+[
+  {
+    "id": 29722829,
+    "title": "TM Firebase Remote Config",
+    "section_id": 1604725,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1669670087,
+    "updated_by": 288,
+    "updated_on": 1744305993,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 576604,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-9885](https://baseball.atlassian.net/browse/BP-9885)\r\n[BPA-6580](https://baseball.atlassian.net/browse/BPA-6580)\r\n\r\nPrerequisite - \r\nRemote Config Setup for: Ticket Master configuration\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Verify \"ticketmaster_sdk_venues\" (within 'Ticketmaster SDK') is configure with desired values for consumerKey, teamName, venueName, venueID, \r\n & enabled.\r\n3. Save changes / Publish changes (as needed)\r\n\r\n\r\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\r\n\r\nRemote Configs \r\n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobiletools-npd-d08e/config)\r\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\r\n(can have condition set up to differentiate desired behavior for different envs/platform/target_audience)\r\n\r\n\r\n\r\nGIVEN the Ballpark application has the TicketMaster SDK embedded\r\nAND the user downloaded the Ballpark app (12.0 or greater)\r\nAND the user has TM tickets already added to the BP account",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN remote config for the specific club has the 'enabled' key set to 'true' \nWHEN user accesses the TM ticket for the specific club",
+        "expected": "THEN the TM SDK is presented to the user within a webview"
+      },
+      {
+        "content": "GIVEN remote config for the specific club has the 'enabled' key set to 'false' \nWHEN user accesses the TM ticket for the specific club",
+        "expected": "THEN the TM SDK is NOT presented to the user\nAND the native BP listview/scanview is displayed"
+      }
+    ]
+  },
+  {
+    "id": 29721091,
+    "title": "Deeplink to TM SDK from Home",
+    "section_id": 1604726,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1669667857,
+    "updated_by": 288,
+    "updated_on": 1744399727,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 576604,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-9887](https://baseball.atlassian.net/browse/BP-9887)\r\n[BPA-6581](https://baseball.atlassian.net/browse/BPA-6581)\r\n\r\nGIVEN the Ballpark application has the TicketMaster SDK embedded\r\nAND the user downloaded the Ballpark app (12.0 or greater)\r\nAND the user has TM tickets already added to the BP account\r\nAND the Remote Config configuration for [ticketmaster_sdk_venues is enabled  to true](https://testrail.testeng.mlbinfra.net/index.php?/cases/view/29722829&group_by=cases:section_id&group_order=asc&group_id=1604725 )\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has a ticket from the a TicketMaster venue (i.e Yankees, Braves, or Mariners)\nWHEN user is logged in with MLB account in Ballpark app\nAND user navigates to Home tab\n\n[TicketMaster Venues](https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226947/Ticketmaster+SDK#TicketmasterSDK-TicketmasterClubsandSDKStatus)",
+        "expected": "THEN user will be shown Next Ticketed Event Card"
+      },
+      {
+        "content": "WHEN user examines the Next Ticketed Event Card",
+        "expected": "THEN startTime/startTIimeLocalText is displayed as day of the week, date, and local time of event is shown within the Next Ticketed Event(NTE) card\n\nExample: 'Tue, Apr 20 - 7:00 PM ET'"
+      },
+      {
+        "content": "",
+        "expected": "AND title is shown of the game/non-game event within the NTE card\n\nExample: 'Nationals @ Orioles' / 'Red Hot Chili Peppers'"
+      },
+      {
+        "content": "",
+        "expected": "AND description is displayed within the NTE card (if description provided in service call)\n\nExample: '<Game Description>'"
+      },
+      {
+        "content": "",
+        "expected": "AND the background image of the NTE card is shown matching what is passed in the service call\n*Example: field/stadium image of the home team\n\n[OR the background color of the NTE card is the primary color of the Venue's Home Team \n*Example: Orange color for Orioles (Camden Yards)]\n"
+      },
+      {
+        "content": "",
+        "expected": "[ONLY IF GAME EVENT - will the home team logo is shown. SKIP VALIDATION IF NON-GAME EVENT]\n\nAND the home team logo is shown within the NTE card (if logoPngURL/logoSvgURL for specific OS provided in service call)\n\nExample: 'Orioles team logo'"
+      },
+      {
+        "content": "",
+        "expected": "AND 'Access Tickets' button is shown attached to NTE card\nAND the color of 'Access Tickets' text is the primary color of the Venue's Home Team"
+      },
+      {
+        "content": "WHEN user taps the NTE card (above 'Access Tickets' button)",
+        "expected": "THEN user is directed to the deeplink provided in the service call, typically the listview of the tickets (if TM club, then typically directs to TMSDK, but could also direct to EventHub(iOS) if enabled)\n\nExample deeplink: ballpark://scanview?eventID=12345&teamID=109&venueID=15 (where the eventID, teamID, and venueID match the appropriate event)"
+      },
+      {
+        "content": "",
+        "expected": "AND user is shown a webview of the TM venue page \n(a prompt stating Ballpark wants to use ticketmaster.com to Sign In could be shown, if not previously signed in)"
+      },
+      {
+        "content": "WHEN user dismisses the TM scanview of the tickets",
+        "expected": "THEN user is returned to the TM ticket listview of the ticketed events page\n"
+      },
+      {
+        "content": "WHEN user dismisses the TM listview of the ticketed events",
+        "expected": "THEN user is returned to Ballpark HomePage"
+      },
+      {
+        "content": "WHEN user taps 'Access Tickets' button",
+        "expected": "THEN user is directed to the deeplink provided in the service call, typically the scanview of the tickets (if TM club, then typically directs to TMSDK)\n\nExample deeplink: ballpark://scanview?eventID=12345&teamID=109&venueID=15 (where the eventID, teamID, and venueID match the appropriate event)"
+      },
+      {
+        "content": "",
+        "expected": "AND user is shown a webview of the TM venue page \n(a prompt stating Ballpark wants to use ticketmaster.com to Sign In could be shown, if not previously signed in)"
+      },
+      {
+        "content": "WHEN user analyzes the tickets shown in the scanview",
+        "expected": "THEN user can access tickets\nAND user has capability to forward or scan the tickets (configured via TM club)"
+      },
+      {
+        "content": "WHEN user dismisses the TM scanview of the tickets",
+        "expected": "THEN user is returned to the TM ticket listview of the ticketed events page"
+      },
+      {
+        "content": "WHEN user dismisses the TM listview of the ticketed events",
+        "expected": "THEN user is returned to Ballpark HomePage"
+      }
+    ]
+  },
+  {
+    "id": 29722311,
+    "title": "Launch TM SDK from Tickets Tab",
+    "section_id": 1604726,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1669668055,
+    "updated_by": 288,
+    "updated_on": 1669677521,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 576604,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "[BP-9886](https://baseball.atlassian.net/browse/BP-9886)\r\n[BPA-6579](https://baseball.atlassian.net/browse/BPA-6579)\r\n\r\nGIVEN the Ballpark application has the TicketMaster SDK embedded\r\nAND the user downloaded the Ballpark app (12.0 or greater)\r\nAND the user has TM tickets already added to the BP account\r\nAND the Remote Config configuration for [ticketmaster_sdk_venues is enabled  to true](https://testrail.testeng.mlbinfra.net/index.php?/cases/view/29722829&group_by=cases:section_id&group_order=asc&group_id=1604725 )\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has a ticket from the a TicketMaster venue (i.e Yankees, Braves, or Mariners)\nWHEN user is logged in with MLB account in Ballpark app\nAND user navigates to Tickets tab\n\n[TicketMaster Venues](https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226947/Ticketmaster+SDK#TicketmasterSDK-TicketmasterClubsandSDKStatus)",
+        "expected": "THEN user will be shown Ticketed Event Card on the WalletView*\n\n*(if event is within next 6 events on the account, otherwise user must tap 'View All' to have My Ticket list presented with event shown in the list)"
+      },
+      {
+        "content": "WHEN user taps the Event card (for the TicketMaster venue)",
+        "expected": "THEN user is shown a webview of the TM venue page\n(a prompt stating Ballpark wants to use ticketmaster.com to Sign In could be shown, if not previously signed in)"
+      },
+      {
+        "content": "WHEN user analyzes the tickets shown in the scanview",
+        "expected": "THEN user can access tickets \nAND user has capability to forward or scan the tickets (configured via TM club)"
+      },
+      {
+        "content": "WHEN user dismisses the TM scanview of the tickets",
+        "expected": "THEN user is returned to the TM ticket listview of the ticketed events page"
+      },
+      {
+        "content": "WHEN user dismisses the TM listview of the ticketed events",
+        "expected": "THEN user is returned to Wallet View within the Tickets Tab"
+      },
+      {
+        "content": "WHEN user taps 'View All' within WalletView on the Tickets Tab",
+        "expected": "THEN user is shown 'My Tickets' page with entries for each ticketed event associated with the account"
+      },
+      {
+        "content": "WHEN user taps the TM ticketed event",
+        "expected": "THEN user is shown a webview of the TM venue page"
+      },
+      {
+        "content": "WHEN user analyzes the tickets shown in the scanview",
+        "expected": "THEN user can access tickets \nAND user has capability to forward or scan the tickets (configured via TM club)"
+      },
+      {
+        "content": "WHEN user dismisses the TM scanview of the tickets\n\n",
+        "expected": "THEN user is returned to the TM ticket listview of the ticketed events page"
+      },
+      {
+        "content": "WHEN user dismisses the TM listview of the ticketed events",
+        "expected": "THEN user is returned to Wallet view within the Tickets Tab"
+      }
+    ]
+  },
+  {
+    "id": 29721093,
+    "title": "Update TM Branding to Match Team Primary Color",
+    "section_id": 1604732,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1669667980,
+    "updated_by": 288,
+    "updated_on": 1671052821,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 576604,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "[BP-9919](https://baseball.atlassian.net/browse/BP-9919)\r\n[BPA-6601](https://baseball.atlassian.net/browse/BPA-6601)\r\n\r\nGIVEN the Ballpark application has the TicketMaster SDK embedded\r\nAND the user downloaded the Ballpark app (12.0 or greater)\r\nAND the user has TM tickets already added to the BP account\r\nAND the Remote Config configuration for [ticketmaster_sdk_venues is enabled  to true](https://testrail.testeng.mlbinfra.net/index.php?/cases/view/29722829&group_by=cases:section_id&group_order=asc&group_id=1604725 )\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has a ticket from the a TicketMaster venue (i.e Yankees, Braves, or Mariners)\nWHEN user is logged in with MLB account in Ballpark app\nAND user navigates to TM SDK view (via Home tab or Tickets tab) for the TM event\n\n[TicketMaster Venues](https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226947/Ticketmaster+SDK#TicketmasterSDK-TicketmasterClubsandSDKStatus)",
+        "expected": "THEN user is shown a webview of the TM venue page\n(a prompt stating Ballpark wants to use ticketmaster.com to Sign In could be shown, if not previously signed in)"
+      },
+      {
+        "content": "WHEN user analyzes the tickets shown in the scanview",
+        "expected": "THEN user can access tickets \nAND user has capability to forward or scan the tickets (configured via TM club)"
+      },
+      {
+        "content": "",
+        "expected": "AND the ticket view shows the header, ticket headline, and Ticketmaster.verfied are displayed in each teams primary color \n\nPrimary color per club can be found here → [figma](https://www.figma.com/file/4GE8wfJ3qKgycreGaLn8cQ/Tickets-Tab?node-id=3120%3A68478&t=oHZmSQvoFtl92JPm-0 )"
+      }
+    ]
+  },
+  {
+    "id": 30857171,
+    "title": "[DEPRECATED] Sell with SeatGeek Marketplace CTA (w/in TMSDK)[iOS ONLY]",
+    "section_id": 1697935,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1686774259,
+    "updated_by": 288,
+    "updated_on": 1744400040,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 576604,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-10275](https://baseball.atlassian.net/browse/BP-10275 )\r\n\r\nGIVEN the Ballpark application has the TicketMaster SDK embedded ( TM-SDK 2.21 or greater)\r\nAND the user downloaded the Ballpark app (12.1.9 or greater)\r\nAND the user has TM tickets already added to the BP account (TM HOST TICKETS SPECIFICALLY)\r\nAND the Remote Config configuration for [ticketmaster_sdk_venues is enabled  to true](https://testrail.testeng.mlbinfra.net/index.php?/cases/view/29722829&group_by=cases:section_id&group_order=asc&group_id=1604725 )\r\n\r\n\r\n\r\n*TM Host ticket REQUIRED for 'SELL WITH SEATGEEK MARKETPLACE' CTA to be shown\r\nAdditional Info: \r\n**Host Ticket – Sold through TM.com or TM app. Typical type sales are single game/event ticket\r\n**Archtics Ticket – Purchase occurs through Account Manager or directly into Archtics.  Typical type sales are Season Tickets, Mini-Plans, Groups, Comps, and some single game/event tickets\r\n\r\n\r\nTo determine if ticket is a host ticket - Tap on 'Ticket Details' within TMSDK Scanview. \r\n**'Order Number' showing dash or string characters is HOST ticket.\r\n**'Order Number' NOT present, or present but showing digits (not containing dash nor string characters) is ARCHTICS ticket. \r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has a HOST ticket from the a TicketMaster venue (i.e Yankees, Braves, or Mariners)\nWHEN user is logged in with MLB account in Ballpark app\nAND user navigates to Tickets tab\n\n[TicketMaster Venues](https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226947/Ticketmaster+SDK#TicketmasterSDK-TicketmasterClubsandSDKStatus)",
+        "expected": "THEN user will be shown Ticketed Event Card on the WalletView*\n\n*(if event is within next 6 events on the account, otherwise user must tap 'View All' to have My Ticket list presented with event shown in the list)"
+      },
+      {
+        "content": "WHEN user taps the Event card (for the TicketMaster venue)\nOR user taps the on the TM event entry within View All ",
+        "expected": "THEN user is shown a webview of the TM venue page\n(a prompt stating Ballpark wants to use ticketmaster.com to Sign In could be shown, if not previously signed in)"
+      },
+      {
+        "content": "WHEN user analyzes the tickets shown in the scanview",
+        "expected": "THEN user can access tickets \nAND user has capability to forward and/or scan the tickets (configured via TM club)\nAND user has capability to list the tickets ('Sell with SeatGeek Marketplace' button)"
+      },
+      {
+        "content": "WHEN user taps 'Sell with SeatGeek Marketplace",
+        "expected": "THEN user is directed to SeatGeek flow, allowing customer to log into SG and list the ticket for sell"
+      },
+      {
+        "content": "WHEN user navigates back from SG page within BP webview",
+        "expected": "THEN user is returned to the TM ticket scanview within TMSDK webview"
+      },
+      {
+        "content": "WHEN user dismisses the TM scanview of the tickets",
+        "expected": "THEN user is returned to the TM ticket listview of the ticketed events page"
+      },
+      {
+        "content": "WHEN user dismisses the TM listview of the ticketed events",
+        "expected": "THEN user is returned to Wallet View (or View All page)* within the Tickets Tab \n\n*following back nav path that user performed to get to the TMSDK webview"
+      }
+    ]
+  },
+  {
+    "id": 33871813,
+    "title": "Sell CTA (w/in TMSDK)",
+    "section_id": 1697935,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1723551234,
+    "updated_by": 288,
+    "updated_on": 1744400050,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 576604,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "https://baseball.atlassian.net/browse/BPA-7602\r\nTMSDK V. 3.6.2 \r\nGIVEN the Ballpark application has the TicketMaster SDK embedded ( TM-SDK 2.21 or greater)\r\nAND the user downloaded the Ballpark app (12.5 or greater)\r\nAND the user has TM tickets already added to the BP account (TM HOST TICKETS SPECIFICALLY)\r\n\r\nas of 4/1/2025\r\nTM SDK V. 3.10 Patch\r\nhttps://baseball.atlassian.net/browse/BPA-7881\r\n\r\nGIVEN the Ballpark application has the TicketMaster SDK embedded ( TM-SDK 3.10 or greater)\r\nAND the user downloaded the Ballpark app (14.3 or greater)\r\nAND the user has TM tickets already added to the BP account (TM HOST TICKETS SPECIFICALLY)",
+    "custom_steps": "REACH OUT TO PATRICK FOR HOST TICKETS DATA SET ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has a HOST ticket from the a TicketMaster venue (i.e Yankees, Braves, or Mariners)\nWHEN user is logged in with MLB account in Ballpark app\nAND user navigates to Tickets tab\n\nTicketMaster Venues",
+        "expected": "THEN user will be shown Ticketed Event Card on the WalletView*\n\n*(if event is within next 6 events on the account, otherwise user must tap 'View All' to have My Ticket list presented with event shown in the list)"
+      },
+      {
+        "content": "WHEN user taps the Event card (for the TicketMaster venue)\nOR user taps the on the TM event entry within View All",
+        "expected": "THEN user is shown a webview of the TM venue page\n(a prompt stating Ballpark wants to use ticketmaster.com to Sign In could be shown, if not previously signed in)"
+      },
+      {
+        "content": "WHEN user analyzes the tickets shown in the scanview\n\n",
+        "expected": "THEN user can access tickets\nAND user has capability to forward(Transfer) and/or scan the tickets (configured via TM club)\nAND user has capability to list the tickets ('Sell' button)\n\n"
+      },
+      {
+        "content": "WHEN user taps 'Sell' CTA \n\n",
+        "expected": "THEN user is directed to SeatGeek flow, allowing customer to log into SG and list the ticket for sell\nAnd upon user tap gesture, I am directed to SeatGeek without a ticketing payload \n\n"
+      },
+      {
+        "content": "WHEN user navigates back from SG page within BP webview\n\n",
+        "expected": "THEN user is returned to the TM ticket scanview within TMSDK webview\n\n"
+      },
+      {
+        "content": "WHEN user dismisses the TM scanview of the tickets\n\n",
+        "expected": "THEN user is returned to the TM ticket listview of the ticketed events page\n\n"
+      },
+      {
+        "content": "WHEN user dismisses the TM listview of the ticketed events\n\n",
+        "expected": "\t\nTHEN user is returned to Wallet View (or View All page)* within the Tickets Tab\n\n*following back nav path that user performed to get to the TMSDK webview\n\n"
+      }
+    ]
+  },
+  {
+    "id": 34144083,
+    "title": "Delist within TM SDK",
+    "section_id": 1697935,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1727279927,
+    "updated_by": 282,
+    "updated_on": 1743518080,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 576604,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the Ballpark application has the TicketMaster SDK embedded ( TM-SDK 2.21 or greater)\r\nAND the user downloaded the Ballpark app (12.5 or greater)\r\nAND the user has TM tickets already added to the BP account (TM HOST TICKETS SPECIFICALLY)\r\nAND the user has listed ticket on SG \r\n\r\nas of 4/1/2025 \r\nTM SDK V. 3.10 Patch \r\n",
+    "custom_steps": "Before TM SDK 3.10 Patch\r\n![](index.php?/attachments/get/14374103)\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user delist (Cancel Listing action button) within TM SDK ",
+        "expected": "THEN user should be able to delist the ticket successfully "
+      },
+      {
+        "content": "**After TM SDK V. 3.10 Patch**",
+        "expected": ""
+      },
+      {
+        "content": "WHEN user taps on Manage Listings\n![](index.php?/attachments/get/14593232)\n\n\n(precondition- User have listed ticket)",
+        "expected": "THEN user taken to SeatGeek for completing the delisting flow \n\nUI of Delist prompt within SG \n![](index.php?/attachments/get/14593231)\n"
+      },
+      {
+        "content": "WHEN user completes delisting from SeatGeek ",
+        "expected": "THEN user display with Transfer and Sell CTA \n![](index.php?/attachments/get/14593233)\n"
+      }
+    ]
+  },
+  {
+    "id": 29722312,
+    "title": "Analytics for TM SDK from Tickets Tab  [Proxy]*",
+    "section_id": 1604836,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1669668101,
+    "updated_by": 288,
+    "updated_on": 1671654604,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 576604,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "[BP-9888](https://baseball.atlassian.net/browse/BP-9888)\r\n[BPA-6582](https://baseball.atlassian.net/browse/BPA-6582)\r\n\r\n**TESTING NOTES: THIS CASE REQUIRES TRACKING TO BE VERIFIED - MOST DIRECT WAY TO ACHIEVE THIS IS VIA A PROXY TOOL (.I.E. CharlesProxy)\r\nSetup: Connect to device to Charles to monitor the content passed.\r\n\r\nGIVEN the Ballpark application has the TicketMaster SDK embedded\r\nAND the user downloaded the Ballpark app (12.0 or greater)\r\nAND the user has TM tickets already added to the BP account\r\nAND the Remote Config configuration for [ticketmaster_sdk_venues is enabled  to true]\r\n(https://testrail.testeng.mlbinfra.net/index.php?/cases/view/29722829&group_by=cases:section_id&group_order=asc&group_id=1604725 )\r\nAND network traffic is monitored via Proxy tool (such as Charles/Proxyman)\r\n",
+    "custom_steps": "WHEN accessing/viewing TM events within BP app\r\n",
+    "custom_expected": "THEN tracking is monitored in Adobe\r\n\r\nAdobe analytics:\r\n*Trigger an Adobe tag when a fan views their ticket wallet with a TM event card present trackAction:@ \"MLB Ballpark : Tickets : Wallet : Ticketmaster Club_code Impression”\r\n*Track TM event impressions from “View All Tickets” trackAction:@ \"MLB Ballpark : Tickets : Wallet : All My Tickets : Ticketmaster Club_code Impression”\r\n*Trigger an Adobe tag when a fan initializes the TM SDK trackAction:@ \"MLB Ballpark : Tickets : Wallet : Ticketmaster Club_code Click”\r\n*Track clicks on TM events from the “View All Tickets” list trackAction:@ \"MLB Ballpark : Tickets : Wallet : All My Tickets : Ticketmaster Club_code Click”\r\n\r\nwhere 'Club_code' distinguishes the TM club event",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has a ticket from the a TicketMaster venue (i.e Yankees, Braves, or Mariners) in the Wallet View\nWHEN user is logged in with MLB account in Ballpark app\nAND user navigates to Tickets tab with a TM event in the Wallet View\n\n\n[TicketMaster Venues](https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226947/Ticketmaster+SDK#TicketmasterSDK-TicketmasterClubsandSDKStatus)",
+        "expected": "THEN Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : Ticketmaster Club_code Impression\n(where Club_code represents the specific TM club)"
+      },
+      {
+        "content": "WHEN user taps on the TM Wallet View event card",
+        "expected": "THEN the user is directed into the TMSDK webview of the particular club\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : Ticketmaster Club_code Click\n(where Club_code represents the specific TM club)"
+      },
+      {
+        "content": "WHEN user navigates to Tickets tab\nAND user taps on View All with a TM event listed as an entry\n",
+        "expected": "THEN the user is shown the View All page\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : All My Tickets : Ticketmaster Club_code Impression\n(where Club_code represents the specific TM club)"
+      },
+      {
+        "content": "WHEN user taps on the TM entry within View All page",
+        "expected": "THEN the user is directed into the TMSDK webview of the particular club\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified via proxy tool\n\n*MLB Ballpark : Tickets : Wallet : All My Tickets : Ticketmaster Club_code Click \n(where Club_code represents the specific TM club)"
+      }
+    ]
+  }
+]

@@ -1,0 +1,281 @@
+[
+  {
+    "id": 29488715,
+    "title": "XP",
+    "section_id": 1585127,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1665686949,
+    "updated_by": 258,
+    "updated_on": 1665686949,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 567277,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the PSBC game card",
+        "expected": "THEN user is displayed with 250 XP on the bottom left corner of the card"
+      },
+      {
+        "content": "WHEN user played the PSBC\nAND is final ",
+        "expected": "THEN user gets 250 XP"
+      },
+      {
+        "content": "WHEN user views the result feed",
+        "expected": "THEN user DO NOT see PSBC result card "
+      }
+    ]
+  },
+  {
+    "id": 29488716,
+    "title": "Token",
+    "section_id": 1585127,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1665686949,
+    "updated_by": 258,
+    "updated_on": 1665686949,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 567277,
+    "display_order": 2,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the PSBC game card",
+        "expected": "THEN user is displayed with 5 tokens on the bottom left corner of the card"
+      },
+      {
+        "content": "WHEN user made correct picks in Wild Card",
+        "expected": "THEN user receives 5 tokens for each correct pick (max: 20)\n"
+      },
+      {
+        "content": "WHEN user made correct picks in Division Series",
+        "expected": "THEN user receives 15 tokens for each correct pick (max: 60)"
+      },
+      {
+        "content": "WHEN user made correct picks in League Championship",
+        "expected": "THEN user receives 20 tokens for each correct pick (max: 40)"
+      },
+      {
+        "content": "WHEN user made correct picks in World Series",
+        "expected": "THEN user receives 40 tokens for each correct pick (max: 40)"
+      },
+      {
+        "content": "WHEN user correctly predicts all bracket ",
+        "expected": "THEN user received 200 tokens "
+      },
+      {
+        "content": "WHEN user views the result feed",
+        "expected": "THEN user DO NOT see HRD result card ???"
+      }
+    ]
+  },
+  {
+    "id": 29488717,
+    "title": "Reward Pack",
+    "section_id": 1585127,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1665686949,
+    "updated_by": 258,
+    "updated_on": 1665686949,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 567277,
+    "display_order": 3,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user plays the PSBC",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user submits their PSBC picks",
+        "expected": "THEN user received the rare Reward Pack after submission (1Rare, 2 Common)\nAND this is independent of any virtual rewards earned through Tokens.\nAND this is only for the first submission per unique user"
+      },
+      {
+        "content": "WHEN user views the reward Pack (in the feed)",
+        "expected": "THEN the copy for the Feed event should read: “You unlocked a Rewards Pack for your Postseason Bracket Challenge submission!”"
+      },
+      {
+        "content": "WHEN user updates their picks",
+        "expected": "THEN user does NOT receive another Reward Pack"
+      }
+    ]
+  },
+  {
+    "id": 29488718,
+    "title": "Country region",
+    "section_id": 1585127,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1665686949,
+    "updated_by": 258,
+    "updated_on": 1665686949,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 567277,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user's region is set to US ",
+        "expected": "THEN user sees the PSBC game card for US "
+      },
+      {
+        "content": "WHEN user's region is set to any other region (besides Canada)",
+        "expected": "THEN user sees the PSBC game card for US "
+      },
+      {
+        "content": "WHEN user's region is set to Canada",
+        "expected": "THEN user sees the PSBC game card for Canada"
+      }
+    ]
+  },
+  {
+    "id": 29488719,
+    "title": "Opening bracket after submission",
+    "section_id": 1585127,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-4663",
+    "created_by": 258,
+    "created_on": 1665687041,
+    "updated_by": 258,
+    "updated_on": 1665687222,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 567277,
+    "display_order": 5,
+    "custom_preconds": "GIVEN MLB Play app is installed on device\r\nAND user is logged in\r\nAND user submitted PSBC",
+    "custom_steps": "WHEN user clicks on the PSBC game card after submitting picks",
+    "custom_expected": "THEN user is able to see their picks \r\nAND user is not seeing a notification to login to view bracket selections when in scoring state.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 29488712,
+    "title": "PSBC Game Card position - updated",
+    "section_id": 1585128,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-4106",
+    "created_by": 258,
+    "created_on": 1665686943,
+    "updated_by": 258,
+    "updated_on": 1665686943,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 567277,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the Games tab on the PSBC launch date (October 5)",
+        "expected": "THEN the PSBC game card has the topmost position \nAND the game card is unlocked"
+      },
+      {
+        "content": "WHEN user views the PSBC card at the start of the first game (October 7)",
+        "expected": "THEN PSBC card is locked (not grayscale) \nAND the card is moved to position #"
+      },
+      {
+        "content": "WHEN user views the Games tab after World Series",
+        "expected": "THEN the PSBC game card is grayed out"
+      }
+    ]
+  },
+  {
+    "id": 29488713,
+    "title": "Game Card - unlocked state - updated",
+    "section_id": 1585128,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1665686943,
+    "updated_by": 258,
+    "updated_on": 1665686943,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 567277,
+    "display_order": 2,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in \r\nAND user is on the Game tab\r\nAND PSBC has unlocked state (scheduled)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the HRD card ",
+        "expected": "THEN user should be displayed with\n\n* Postseason Bracket Challenge logo in the center\n* 250 XP on the bottom left corner\n* 5 token on the bottom left corner next to XP\n* background image\n"
+      },
+      {
+        "content": "WHEN user clicks on the game card",
+        "expected": "THEN user is brought to the PSBC tutorial page or bracket (if played already)"
+      },
+      {
+        "content": "WHEN user submits their picks",
+        "expected": "THEN the PSBC game card has a check mark"
+      }
+    ]
+  },
+  {
+    "id": 29488714,
+    "title": "Game Card - locked state - updated",
+    "section_id": 1585128,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1665686943,
+    "updated_by": 258,
+    "updated_on": 1665686943,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 567277,
+    "display_order": 3,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is on the Game tab\r\nAND PSBC has a locked state (live or final)",
+    "custom_steps": null,
+    "custom_expected": "THEN user should display with PSBC game card",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the PSBC card ",
+        "expected": "THEN user should be displayed with\n\n* Postseason Bracket Challenge logo in the center\n* 250 XP on the bottom left corner\n* 5 token on the bottom left corner next to XP\n* background image\n* lock icon is displayed in the top right corner\n"
+      },
+      {
+        "content": "WHEN user clicks on the game card",
+        "expected": "THEN user is brought to the tutorial page (double check - could be bracket)"
+      }
+    ]
+  }
+]

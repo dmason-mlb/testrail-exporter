@@ -1,0 +1,758 @@
+[
+  {
+    "id": 1906125,
+    "suite_id": 79627,
+    "name": "Adobe & Conviva Tracking",
+    "description": "This suite details Adobe and Conviva Tracking behavior of the tvOS app.",
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 1878830,
+    "suite_id": 79627,
+    "name": "Adobe Analytics Validation",
+    "description": null,
+    "parent_id": 1906125,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 1887775,
+    "suite_id": 79627,
+    "name": "Conviva Validation",
+    "description": null,
+    "parent_id": 1906125,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 1948447,
+    "suite_id": 79627,
+    "name": "Playback Tags",
+    "description": null,
+    "parent_id": 1906125,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 1805678,
+    "suite_id": 79627,
+    "name": "App Navigation",
+    "description": "Utilizing the options featured at the top of the app",
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 1954316,
+    "suite_id": 79627,
+    "name": "Top Navigation",
+    "description": null,
+    "parent_id": 1805678,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 1938750,
+    "suite_id": 79627,
+    "name": "Home",
+    "description": null,
+    "parent_id": 1805678,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 1938751,
+    "suite_id": 79627,
+    "name": "Games",
+    "description": null,
+    "parent_id": 1805678,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 1954323,
+    "suite_id": 79627,
+    "name": "Section",
+    "description": null,
+    "parent_id": 1938751,
+    "display_order": 29,
+    "depth": 2
+  },
+  {
+    "id": 1938749,
+    "suite_id": 79627,
+    "name": "Feed Select",
+    "description": null,
+    "parent_id": null,
+    "display_order": 64,
+    "depth": 0
+  },
+  {
+    "id": 1651424,
+    "suite_id": 79627,
+    "name": "Gameday",
+    "description": "Gameday in the game's video player",
+    "parent_id": null,
+    "display_order": 70,
+    "depth": 0
+  },
+  {
+    "id": 1938748,
+    "suite_id": 79627,
+    "name": "Game Tiles",
+    "description": null,
+    "parent_id": null,
+    "display_order": 74,
+    "depth": 0
+  },
+  {
+    "id": 1960472,
+    "suite_id": 79627,
+    "name": "Live Mode",
+    "description": null,
+    "parent_id": null,
+    "display_order": 77,
+    "depth": 0
+  },
+  {
+    "id": 1374235,
+    "suite_id": 79627,
+    "name": "Mixed Content Carousel",
+    "description": "As a user, when I land on the homepage, I can see a carousel that has a mixture of VOD, SLIVE, SVOD and VOD so I can choose any of the content in the featured carousel.",
+    "parent_id": null,
+    "display_order": 182,
+    "depth": 0
+  },
+  {
+    "id": 1843208,
+    "suite_id": 79627,
+    "name": "All Contents",
+    "description": null,
+    "parent_id": 1374235,
+    "display_order": 183,
+    "depth": 1
+  },
+  {
+    "id": 1948864,
+    "suite_id": 79627,
+    "name": "MLB Network",
+    "description": null,
+    "parent_id": null,
+    "display_order": 184,
+    "depth": 0
+  },
+  {
+    "id": 1948865,
+    "suite_id": 79627,
+    "name": "Hero",
+    "description": null,
+    "parent_id": 1948864,
+    "display_order": 185,
+    "depth": 1
+  },
+  {
+    "id": 1948866,
+    "suite_id": 79627,
+    "name": "Today on MLB.TV Carousel",
+    "description": null,
+    "parent_id": 1948864,
+    "display_order": 186,
+    "depth": 1
+  },
+  {
+    "id": 1948867,
+    "suite_id": 79627,
+    "name": "Playback",
+    "description": null,
+    "parent_id": 1948864,
+    "display_order": 187,
+    "depth": 1
+  },
+  {
+    "id": 1948868,
+    "suite_id": 79627,
+    "name": "Icons",
+    "description": null,
+    "parent_id": 1948864,
+    "display_order": 188,
+    "depth": 1
+  },
+  {
+    "id": 1948869,
+    "suite_id": 79627,
+    "name": "Editorial",
+    "description": null,
+    "parent_id": 1948864,
+    "display_order": 189,
+    "depth": 1
+  },
+  {
+    "id": 1948870,
+    "suite_id": 79627,
+    "name": "Entitlements",
+    "description": null,
+    "parent_id": 1948864,
+    "display_order": 190,
+    "depth": 1
+  },
+  {
+    "id": 1800846,
+    "suite_id": 79627,
+    "name": "Multiview in 2024",
+    "description": null,
+    "parent_id": null,
+    "display_order": 191,
+    "depth": 0
+  },
+  {
+    "id": 1800847,
+    "suite_id": 79627,
+    "name": "Layout",
+    "description": null,
+    "parent_id": 1800846,
+    "display_order": 192,
+    "depth": 1
+  },
+  {
+    "id": 1805660,
+    "suite_id": 79627,
+    "name": "Swapping Behaviors",
+    "description": null,
+    "parent_id": 1800847,
+    "display_order": 193,
+    "depth": 2
+  },
+  {
+    "id": 1805661,
+    "suite_id": 79627,
+    "name": "Full-screen Transitions",
+    "description": null,
+    "parent_id": 1800847,
+    "display_order": 194,
+    "depth": 2
+  },
+  {
+    "id": 1805662,
+    "suite_id": 79627,
+    "name": "Audio Focus",
+    "description": null,
+    "parent_id": 1800847,
+    "display_order": 195,
+    "depth": 2
+  },
+  {
+    "id": 1805666,
+    "suite_id": 79627,
+    "name": "Video Resizing and Animation",
+    "description": null,
+    "parent_id": 1800847,
+    "display_order": 196,
+    "depth": 2
+  },
+  {
+    "id": 1800848,
+    "suite_id": 79627,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": 1800846,
+    "display_order": 197,
+    "depth": 1
+  },
+  {
+    "id": 1805667,
+    "suite_id": 79627,
+    "name": "Add Games and Enter Multiview",
+    "description": null,
+    "parent_id": 1800848,
+    "display_order": 198,
+    "depth": 2
+  },
+  {
+    "id": 1805671,
+    "suite_id": 79627,
+    "name": "In-Game Scoreboard Date",
+    "description": null,
+    "parent_id": 1800848,
+    "display_order": 199,
+    "depth": 2
+  },
+  {
+    "id": 1805673,
+    "suite_id": 79627,
+    "name": "Video Controls",
+    "description": null,
+    "parent_id": 1800846,
+    "display_order": 200,
+    "depth": 1
+  },
+  {
+    "id": 1805670,
+    "suite_id": 79627,
+    "name": "Disabled and Enabled Functionality",
+    "description": null,
+    "parent_id": 1805673,
+    "display_order": 201,
+    "depth": 2
+  },
+  {
+    "id": 1850938,
+    "suite_id": 79627,
+    "name": "Timer Behavior",
+    "description": null,
+    "parent_id": 1800846,
+    "display_order": 202,
+    "depth": 1
+  },
+  {
+    "id": 1851699,
+    "suite_id": 79627,
+    "name": "Chrome",
+    "description": null,
+    "parent_id": 1850938,
+    "display_order": 203,
+    "depth": 2
+  },
+  {
+    "id": 1851715,
+    "suite_id": 79627,
+    "name": "Dynamic Context Legend",
+    "description": null,
+    "parent_id": 1800846,
+    "display_order": 204,
+    "depth": 1
+  },
+  {
+    "id": 1851716,
+    "suite_id": 79627,
+    "name": "Focus States",
+    "description": null,
+    "parent_id": 1851715,
+    "display_order": 205,
+    "depth": 2
+  },
+  {
+    "id": 1851717,
+    "suite_id": 79627,
+    "name": "Secondary Non-Audio-Emitting Player",
+    "description": null,
+    "parent_id": 1851716,
+    "display_order": 206,
+    "depth": 3
+  },
+  {
+    "id": 1851718,
+    "suite_id": 79627,
+    "name": "Secondary Audio-Emitting Player",
+    "description": null,
+    "parent_id": 1851716,
+    "display_order": 207,
+    "depth": 3
+  },
+  {
+    "id": 1851719,
+    "suite_id": 79627,
+    "name": "Primary Non-Audio-Emitting Player",
+    "description": null,
+    "parent_id": 1851716,
+    "display_order": 208,
+    "depth": 3
+  },
+  {
+    "id": 1851720,
+    "suite_id": 79627,
+    "name": "Primary Audio-Emitting Player",
+    "description": null,
+    "parent_id": 1851716,
+    "display_order": 209,
+    "depth": 3
+  },
+  {
+    "id": 1852205,
+    "suite_id": 79627,
+    "name": "Removing Players",
+    "description": null,
+    "parent_id": 1800846,
+    "display_order": 210,
+    "depth": 1
+  },
+  {
+    "id": 1852206,
+    "suite_id": 79627,
+    "name": "Currently Watching",
+    "description": null,
+    "parent_id": 1852205,
+    "display_order": 211,
+    "depth": 2
+  },
+  {
+    "id": 1852207,
+    "suite_id": 79627,
+    "name": "Stream Ending",
+    "description": null,
+    "parent_id": 1852205,
+    "display_order": 212,
+    "depth": 2
+  },
+  {
+    "id": 1852208,
+    "suite_id": 79627,
+    "name": "Exiting Multiview",
+    "description": null,
+    "parent_id": 1800846,
+    "display_order": 213,
+    "depth": 1
+  },
+  {
+    "id": 1852209,
+    "suite_id": 79627,
+    "name": "One Player Remaining",
+    "description": null,
+    "parent_id": 1852208,
+    "display_order": 214,
+    "depth": 2
+  },
+  {
+    "id": 1852210,
+    "suite_id": 79627,
+    "name": "Scoreboard Not Visible",
+    "description": null,
+    "parent_id": 1852208,
+    "display_order": 215,
+    "depth": 2
+  },
+  {
+    "id": 1852211,
+    "suite_id": 79627,
+    "name": "Failed Playback Handling",
+    "description": null,
+    "parent_id": 1800846,
+    "display_order": 216,
+    "depth": 1
+  },
+  {
+    "id": 1852212,
+    "suite_id": 79627,
+    "name": "Failed Playback Modal",
+    "description": null,
+    "parent_id": 1852211,
+    "display_order": 217,
+    "depth": 2
+  },
+  {
+    "id": 1852215,
+    "suite_id": 79627,
+    "name": "tvOS Native Picture-in-Picture",
+    "description": null,
+    "parent_id": 1800846,
+    "display_order": 218,
+    "depth": 1
+  },
+  {
+    "id": 1852539,
+    "suite_id": 79627,
+    "name": "PiP and Multiview",
+    "description": null,
+    "parent_id": 1852215,
+    "display_order": 219,
+    "depth": 2
+  },
+  {
+    "id": 1805679,
+    "suite_id": 79627,
+    "name": "Onboarding Experience",
+    "description": "Fresh install and launch of the MLB app",
+    "parent_id": null,
+    "display_order": 220,
+    "depth": 0
+  },
+  {
+    "id": 1827512,
+    "suite_id": 79627,
+    "name": "First Launch",
+    "description": null,
+    "parent_id": 1805679,
+    "display_order": 221,
+    "depth": 1
+  },
+  {
+    "id": 1805688,
+    "suite_id": 79627,
+    "name": "Partners and Deeplinking",
+    "description": null,
+    "parent_id": null,
+    "display_order": 222,
+    "depth": 0
+  },
+  {
+    "id": 1957720,
+    "suite_id": 79627,
+    "name": "Where To Watch",
+    "description": null,
+    "parent_id": 1805688,
+    "display_order": 270,
+    "depth": 1
+  },
+  {
+    "id": 1957721,
+    "suite_id": 79627,
+    "name": "Deeplinking",
+    "description": null,
+    "parent_id": 1957720,
+    "display_order": 271,
+    "depth": 2
+  },
+  {
+    "id": 1957722,
+    "suite_id": 79627,
+    "name": "Modal Launch",
+    "description": null,
+    "parent_id": 1957721,
+    "display_order": 272,
+    "depth": 3
+  },
+  {
+    "id": 1957723,
+    "suite_id": 79627,
+    "name": "Successful Playback",
+    "description": null,
+    "parent_id": 1957721,
+    "display_order": 273,
+    "depth": 3
+  },
+  {
+    "id": 1957724,
+    "suite_id": 79627,
+    "name": "Partners",
+    "description": null,
+    "parent_id": 1957720,
+    "display_order": 275,
+    "depth": 2
+  },
+  {
+    "id": 1387779,
+    "suite_id": 79627,
+    "name": "Apple+ Streaming",
+    "description": null,
+    "parent_id": 1957724,
+    "display_order": 276,
+    "depth": 3
+  },
+  {
+    "id": 1957725,
+    "suite_id": 79627,
+    "name": "Game Tile Icons",
+    "description": null,
+    "parent_id": 1957724,
+    "display_order": 280,
+    "depth": 3
+  },
+  {
+    "id": 1805685,
+    "suite_id": 79627,
+    "name": "Paywall and IAP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 281,
+    "depth": 0
+  },
+  {
+    "id": 1878828,
+    "suite_id": 79627,
+    "name": "Paywall",
+    "description": null,
+    "parent_id": 1805685,
+    "display_order": 282,
+    "depth": 1
+  },
+  {
+    "id": 1860165,
+    "suite_id": 79627,
+    "name": "Paywall",
+    "description": null,
+    "parent_id": 1878828,
+    "display_order": 283,
+    "depth": 2
+  },
+  {
+    "id": 1886248,
+    "suite_id": 79627,
+    "name": "IAP",
+    "description": null,
+    "parent_id": 1805685,
+    "display_order": 298,
+    "depth": 1
+  },
+  {
+    "id": 1886249,
+    "suite_id": 79627,
+    "name": "IAP Validation",
+    "description": null,
+    "parent_id": 1886248,
+    "display_order": 300,
+    "depth": 2
+  },
+  {
+    "id": 1805680,
+    "suite_id": 79627,
+    "name": "Postseason MVPD",
+    "description": null,
+    "parent_id": null,
+    "display_order": 301,
+    "depth": 0
+  },
+  {
+    "id": 1842213,
+    "suite_id": 79627,
+    "name": "MVPD Pill",
+    "description": null,
+    "parent_id": 1805680,
+    "display_order": 302,
+    "depth": 1
+  },
+  {
+    "id": 1842214,
+    "suite_id": 79627,
+    "name": "MVPD Messaging",
+    "description": null,
+    "parent_id": 1805680,
+    "display_order": 303,
+    "depth": 1
+  },
+  {
+    "id": 1842215,
+    "suite_id": 79627,
+    "name": "Entitled Users",
+    "description": null,
+    "parent_id": 1805680,
+    "display_order": 304,
+    "depth": 1
+  },
+  {
+    "id": 1878833,
+    "suite_id": 79627,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 305,
+    "depth": 0
+  },
+  {
+    "id": 1805684,
+    "suite_id": 79627,
+    "name": "Game States",
+    "description": null,
+    "parent_id": 1878833,
+    "display_order": 306,
+    "depth": 1
+  },
+  {
+    "id": 1805687,
+    "suite_id": 79627,
+    "name": "Jewel Events",
+    "description": null,
+    "parent_id": 1878833,
+    "display_order": 307,
+    "depth": 1
+  },
+  {
+    "id": 1805674,
+    "suite_id": 79627,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 347,
+    "depth": 0
+  },
+  {
+    "id": 1357480,
+    "suite_id": 79627,
+    "name": "Apple Account Deletion",
+    "description": null,
+    "parent_id": 1805674,
+    "display_order": 348,
+    "depth": 1
+  },
+  {
+    "id": 1816946,
+    "suite_id": 79627,
+    "name": "Log In",
+    "description": null,
+    "parent_id": 1805674,
+    "display_order": 349,
+    "depth": 1
+  },
+  {
+    "id": 1816947,
+    "suite_id": 79627,
+    "name": "Favorite Team",
+    "description": null,
+    "parent_id": 1805674,
+    "display_order": 350,
+    "depth": 1
+  },
+  {
+    "id": 1816948,
+    "suite_id": 79627,
+    "name": "Hide Spoilers",
+    "description": null,
+    "parent_id": 1805674,
+    "display_order": 351,
+    "depth": 1
+  },
+  {
+    "id": 1816949,
+    "suite_id": 79627,
+    "name": "Get MLB.TV",
+    "description": null,
+    "parent_id": 1805674,
+    "display_order": 352,
+    "depth": 1
+  },
+  {
+    "id": 1816950,
+    "suite_id": 79627,
+    "name": "Restore Purchase",
+    "description": null,
+    "parent_id": 1805674,
+    "display_order": 354,
+    "depth": 1
+  },
+  {
+    "id": 1816951,
+    "suite_id": 79627,
+    "name": "Terms of Service",
+    "description": null,
+    "parent_id": 1805674,
+    "display_order": 355,
+    "depth": 1
+  },
+  {
+    "id": 1816952,
+    "suite_id": 79627,
+    "name": "Contact Support",
+    "description": null,
+    "parent_id": 1805674,
+    "display_order": 356,
+    "depth": 1
+  },
+  {
+    "id": 1805686,
+    "suite_id": 79627,
+    "name": "Environment Switching",
+    "description": null,
+    "parent_id": 1805674,
+    "display_order": 357,
+    "depth": 1
+  },
+  {
+    "id": 1659886,
+    "suite_id": 79627,
+    "name": "Time Zones",
+    "description": null,
+    "parent_id": null,
+    "display_order": 386,
+    "depth": 0
+  }
+]

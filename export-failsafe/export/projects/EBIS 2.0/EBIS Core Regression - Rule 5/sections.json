@@ -1,0 +1,218 @@
+[
+  {
+    "id": 151001,
+    "suite_id": 20779,
+    "name": "Rule 5 Reports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 151002,
+    "suite_id": 20779,
+    "name": "Pre-draft",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 151003,
+    "suite_id": 20779,
+    "name": "Rule 5 Batch",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 151004,
+    "suite_id": 20779,
+    "name": "During Draft",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 151005,
+    "suite_id": 20779,
+    "name": "Draft Admin",
+    "description": null,
+    "parent_id": 151004,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 151006,
+    "suite_id": 20779,
+    "name": "Selectable player",
+    "description": null,
+    "parent_id": 151004,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 151008,
+    "suite_id": 20779,
+    "name": "Voluntary Designation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 151009,
+    "suite_id": 20779,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 151008,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 151010,
+    "suite_id": 20779,
+    "name": "Pre-draft",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 151011,
+    "suite_id": 20779,
+    "name": "Draft Order",
+    "description": null,
+    "parent_id": 151010,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 151012,
+    "suite_id": 20779,
+    "name": "Reports",
+    "description": null,
+    "parent_id": 151010,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 151013,
+    "suite_id": 20779,
+    "name": "Selectable Players",
+    "description": null,
+    "parent_id": 151010,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 151014,
+    "suite_id": 20779,
+    "name": "Reserve Lists",
+    "description": null,
+    "parent_id": 151010,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 151015,
+    "suite_id": 20779,
+    "name": "Draft Admin",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 151016,
+    "suite_id": 20779,
+    "name": "Selectable players",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 151017,
+    "suite_id": 20779,
+    "name": "Draft History",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 151018,
+    "suite_id": 20779,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 151019,
+    "suite_id": 20779,
+    "name": "Reserve Lists",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 151020,
+    "suite_id": 20779,
+    "name": "Post Draft",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 151021,
+    "suite_id": 20779,
+    "name": "Batches",
+    "description": null,
+    "parent_id": 151020,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 151022,
+    "suite_id": 20779,
+    "name": "Reporting",
+    "description": null,
+    "parent_id": 151020,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 151023,
+    "suite_id": 20779,
+    "name": "Rule 5 Selection",
+    "description": null,
+    "parent_id": 151020,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 151024,
+    "suite_id": 20779,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 151023,
+    "display_order": 24,
+    "depth": 2
+  },
+  {
+    "id": 151025,
+    "suite_id": 20779,
+    "name": "Rule 5 Draft",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  }
+]

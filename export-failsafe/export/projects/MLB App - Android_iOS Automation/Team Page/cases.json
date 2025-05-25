@@ -1,0 +1,452 @@
+[
+  {
+    "id": 28918965,
+    "title": "Team View: Mashup",
+    "section_id": 1537085,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10605",
+    "created_by": 238,
+    "created_on": 1658351411,
+    "updated_by": 238,
+    "updated_on": 1658351411,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 545617,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user\r\n\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I set a specific OMS environment\nAND when access a team view\n",
+        "expected": "THEN I expect to see a config in Charles based on the environment configured"
+      },
+      {
+        "content": "WHEN I set my device to Spanish language\nAND I access a team view\n",
+        "expected": "THEN I expect to a config downloaded in Charles I expect to see a config in Charles based on my device’s language"
+      }
+    ]
+  },
+  {
+    "id": 28918966,
+    "title": "Team View: Team Selector",
+    "section_id": 1537085,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10607",
+    "created_by": 238,
+    "created_on": 1658351411,
+    "updated_by": 238,
+    "updated_on": 1658351411,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 545617,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN a user on the team view\r\nWHEN I tap the team name at the top of the view\r\nTHEN I should see a list of teams ordered by Favorite team\r\nAND THEN ordered by Followed teams\r\nAND THEN ordered by alphabetical city name\r\n\r\n \r\n\r\nGIVEN a user on the team view has selected a team\r\nWHEN I navigate to a different part of the app\r\nAND THEN I return to the teams view\r\nTHEN the previously selected team should be visible in the toolbar\r\nAND the team selector should not be open",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 28918967,
+    "title": "Team View: Snapshot Schedule",
+    "section_id": 1537085,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1658351411,
+    "updated_by": 238,
+    "updated_on": 1658351411,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 545617,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user on the team view\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the snapshot is enabled\n\n\n\n\n",
+        "expected": "THEN I should see four tabs providing me game information for the team I am currently viewing"
+      },
+      {
+        "content": "WHEN it is the first day of the season (the first day of Spring Training)\n\n\n",
+        "expected": "THEN tab 1 should be the first game and tab 2-4 are the next three games of the season"
+      },
+      {
+        "content": "WHEN it is a day between the first and last day of the season",
+        "expected": "THEN tab 1 should be yesterday's game(or the most recent game), tab 2 should be today's game (or the next upcoming game), and tabs 3-4 should be the games that follow the game in tab 2 on the schedule."
+      },
+      {
+        "content": "WHEN it is the last day of the season\n",
+        "expected": "THEN tab 4 should be the last game and tabs 1-3 are the previous three games of the season"
+      }
+    ]
+  },
+  {
+    "id": 28918968,
+    "title": "Team View: Snapshot Scoreboard",
+    "section_id": 1537085,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1658351411,
+    "updated_by": 238,
+    "updated_on": 1658351411,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 545617,
+    "display_order": 4,
+    "custom_preconds": "GIVEN a user on the team view\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a game in the snapshot is live\n",
+        "expected": "THEN I should see the live state version of the snapshot for that game"
+      },
+      {
+        "content": "WHEN a game in the snapshot is pregame\n",
+        "expected": "THEN I should see the pregame state version of the snapshot for that game"
+      },
+      {
+        "content": "WHEN a game in the snapshot is final\n",
+        "expected": "THEN I should see the final/archive state version of the snapshot for that game"
+      },
+      {
+        "content": "WHEN a game in the snapshot is postponed",
+        "expected": "THEN I should see the postponed state version of the snapshot for that game"
+      },
+      {
+        "content": "WHEN a game in the snapshot is cancelled",
+        "expected": "THEN I should see the cancelled state version of the snapshot for that game"
+      }
+    ]
+  },
+  {
+    "id": 28918969,
+    "title": "Team View: More From Section",
+    "section_id": 1537085,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1658351411,
+    "updated_by": 238,
+    "updated_on": 1658351411,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 545617,
+    "display_order": 5,
+    "custom_preconds": "GIVEN a user on the team view",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I scroll down the view\n",
+        "expected": "THEN I should see a list of More Info links that have been set in OMS"
+      },
+      {
+        "content": "\nWHEN I tap on an item in the More Info Section\n",
+        "expected": "THEN I should be taken to the corresponding webview"
+      }
+    ]
+  },
+  {
+    "id": 28918970,
+    "title": "Team View: Tickets Module",
+    "section_id": 1537085,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10613",
+    "created_by": 238,
+    "created_on": 1658351411,
+    "updated_by": 238,
+    "updated_on": 1658351411,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 545617,
+    "display_order": 6,
+    "custom_preconds": "GIVEN a user on the team view",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the Tickets module is enabled",
+        "expected": "THEN I should see a list of upcoming games and links to purchase tickets"
+      },
+      {
+        "content": "WHEN I tap on an item in the tickets module",
+        "expected": "THEN I should be taken to a chrome tab with ticket purchase flow for that game"
+      },
+      {
+        "content": "WHEN I tap “More” at the top of the tickets module",
+        "expected": "THEN I should be taken to a chrome tab with the ticket page for that team"
+      },
+      {
+        "content": "WHEN the tickets module is disabled via OMS\n(This can be simulated by using Charles to alter the response of team mashup endpoint (ie https://storage.mobile.mlbinfra.com/cms/search/atbat/en/android/phone/col.json for Colorado Rockies) so that \"hideTicketsGames\": 0 is instead \"hideTicketsGames\": 1)",
+        "expected": "THEN I should not see the tickets module"
+      }
+    ]
+  },
+  {
+    "id": 28918971,
+    "title": "Team View: News Module",
+    "section_id": 1537085,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10795",
+    "created_by": 238,
+    "created_on": 1658351411,
+    "updated_by": 238,
+    "updated_on": 1658351411,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 545617,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN a user on the team view\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I access the news module",
+        "expected": "THEN I should see a carousel with five recent news articles from the team I am viewing"
+      },
+      {
+        "content": "WHEN swiping the carousel\n",
+        "expected": "THEN the carousel swipes"
+      },
+      {
+        "content": "WHEN I tap on “See” next to the news carousel\n",
+        "expected": "THEN I should be taken to the News Index \nAND the index is filtered for that team"
+      },
+      {
+        "content": "WHEN I tap on a news article thumbnail\n",
+        "expected": "THEN the news article webview for that article should be displayed"
+      },
+      {
+        "content": "WHEN I tap on a Top Stories item of `short-content` type",
+        "expected": "THEN the item should be opened in a webview"
+      }
+    ]
+  },
+  {
+    "id": 28918972,
+    "title": "Team View: Videos",
+    "section_id": 1537085,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1658351411,
+    "updated_by": 238,
+    "updated_on": 1658351411,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 545617,
+    "display_order": 8,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": "\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I access the team view\n",
+        "expected": "THEN I should see a carousel with five recent videos about the team I am currently viewing"
+      },
+      {
+        "content": "WHEN I am on the team view\nAND I tap on a video thumbnail\n",
+        "expected": "THEN the corresponding video should begin playing "
+      },
+      {
+        "content": "WHEN I am on the team view\nAND I swipe left within the video carousel\n",
+        "expected": "THEN I should be advanced through the video carousel"
+      },
+      {
+        "content": "WHEN I am on the team view\nAND I tap on “More” above the video carousel\n",
+        "expected": "THEN I should be taken to the video list view for the given team"
+      }
+    ]
+  },
+  {
+    "id": 28918973,
+    "title": "Team View: set default snapshot tab as always second tab",
+    "section_id": 1537085,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-11146",
+    "created_by": 238,
+    "created_on": 1658351411,
+    "updated_by": 238,
+    "updated_on": 1658351411,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 545617,
+    "display_order": 9,
+    "custom_preconds": "GIVEN a user on the Team page",
+    "custom_steps": "WHEN the scoreboard snapshot loads",
+    "custom_expected": "THEN the second date tab is selected",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 28918974,
+    "title": "Hide Scores",
+    "section_id": 1537085,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-11337",
+    "created_by": 238,
+    "created_on": 1658351411,
+    "updated_by": 238,
+    "updated_on": 1658351411,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 545617,
+    "display_order": 10,
+    "custom_preconds": "GIVEN hide scores is ON",
+    "custom_steps": "WHEN viewing the Teams tab",
+    "custom_expected": "THEN results of final games are hidden on schedule tabs\r\nAND the scoreboard card inherits the same hide scores rules as seen on the Scores tab (except the highlights carousel, which is not shown on the teams page)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 28918975,
+    "title": "Links Section",
+    "section_id": 1537085,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1658351411,
+    "updated_by": 238,
+    "updated_on": 1658351411,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 545617,
+    "display_order": 11,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN a user is in the MLB app\r\nWHEN the user scrolls down on the team page\r\nTHEN the user should be presented with a two-part links section\r\nAND the first section should have the header \"[TEAM NAME] Info\" followed by links to Transactions, Roster, Coaches, Stats, their division standings, and their stadium\r\nAND the second section should have the header \"More from the [TEAM NAME]\" followed by links to Depth Chart, Top 30 Prospects, Trivia, Connect, and Auctions\r\n![](index.php?/attachments/get/10691636)\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a user selects the Stats link in the [team] Info section",
+        "expected": "THEN the user should be deep linked to the Stats tab AND the team should be filtered"
+      },
+      {
+        "content": "WHEN a user selects the Standings link in the [team] Info section",
+        "expected": "THEN the user should be deep linked to the Standings tab"
+      },
+      {
+        "content": "WHEN a user selects any of the remaining links in either section",
+        "expected": "THEN the user should be taken to the appropriate webview"
+      }
+    ]
+  },
+  {
+    "id": 28918976,
+    "title": "Native Calendar Feature flag",
+    "section_id": 1537085,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1658351411,
+    "updated_by": 238,
+    "updated_on": 1658351411,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 545617,
+    "display_order": 12,
+    "custom_preconds": "GIVEN the team page is selected\r\nAND access to the Firebase config (MLBApp Moblie/enable_native_calendar_view) is available \r\n(currently for Develop build, https://console.firebase.google.com/u/0/project/mlb-mobile-npd/config)\r\nAND it is not Postseason\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the Firebase config MLBApp Moblie/enable_native_calendar_view is set to true\nAND the Calendar icon at the top right of the page is tapped",
+        "expected": "THEN the native calendar page loads (currently native calendar not implemented so expected result is webview calendar, delete this note once implemented)"
+      },
+      {
+        "content": "WHEN the Firebase config MLBApp Moblie/enable_native_calendar_view is set to false\nAND the Calendar icon at the top right of the page is tapped",
+        "expected": "THEN a webview is opened similar to eg. https://www.mlb.com/app/atbat/whitesox/schedule/2021-10/list?parterId/mlbapp-android_webview"
+      }
+    ]
+  },
+  {
+    "id": 28918977,
+    "title": "Team View: Apple TV+ content",
+    "section_id": 1537085,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "HOMES-243",
+    "created_by": 238,
+    "created_on": 1658351411,
+    "updated_by": 238,
+    "updated_on": 1658351411,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 545617,
+    "display_order": 13,
+    "custom_preconds": "GIVEN a user is on the team page on the Android app\r\n\r\n",
+    "custom_steps": "WHEN there is a game being streamed on Apple TV",
+    "custom_expected": "THEN the user will see the Apple TV text/label on the tile\r\nAND be notified through an alert message that they can watch the game on Apple TV+ once that link is tapped on",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 28918978,
+    "title": "Team Page: preroll ads",
+    "section_id": 1537085,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1658351411,
+    "updated_by": 238,
+    "updated_on": 1658351411,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 545617,
+    "display_order": 14,
+    "custom_preconds": "GIVEN a user on the team page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the use is un-entitled\nAND the user selects a video from the Videos carousel",
+        "expected": "THEN a preroll ad will play\nAND the video will play after the preroll ad is complete"
+      },
+      {
+        "content": "WHEN the user is entitled\nAND the user selects a video from the Videos carousel",
+        "expected": "THEN the video will play without preroll ad"
+      }
+    ]
+  }
+]

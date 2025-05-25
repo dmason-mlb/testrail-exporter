@@ -1,0 +1,24 @@
+[
+  {
+    "id": 32106893,
+    "title": "Apple Watch App",
+    "section_id": 1805356,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1700139813,
+    "updated_by": 336,
+    "updated_on": 1700139813,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 648084,
+    "display_order": 1,
+    "custom_preconds": "Given user has an Apple watch that is synced to their iPhone",
+    "custom_steps": "When the user installs the MLB app on their iPhone\r\nand installs the MLB app on their watch",
+    "custom_expected": "Then the watch app should properly install\r\nand the user should be able to launch the watch app and view its tabs",
+    "custom_steps_separated": null
+  }
+]

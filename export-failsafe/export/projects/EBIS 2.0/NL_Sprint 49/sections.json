@@ -1,0 +1,110 @@
+[
+  {
+    "id": 148100,
+    "suite_id": 20425,
+    "name": "Global",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 148101,
+    "suite_id": 20425,
+    "name": "EBIS Link",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 148103,
+    "suite_id": 20425,
+    "name": "System Form Widget",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 148104,
+    "suite_id": 20425,
+    "name": "International Amateur - Contracts/Transactions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 148106,
+    "suite_id": 20425,
+    "name": "International Registration Reports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 148107,
+    "suite_id": 20425,
+    "name": "International Amateur - Tracking",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 148110,
+    "suite_id": 20425,
+    "name": "International Prospect Report",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 148111,
+    "suite_id": 20425,
+    "name": "International Daily Report",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 148113,
+    "suite_id": 20425,
+    "name": "International Workout Report",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 148114,
+    "suite_id": 20425,
+    "name": "Scouting Permissions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 148115,
+    "suite_id": 20425,
+    "name": "Scout Clipboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 148116,
+    "suite_id": 20425,
+    "name": "Scout Admin Clipboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  }
+]

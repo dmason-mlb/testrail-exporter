@@ -1,0 +1,874 @@
+[
+  {
+    "id": 6690270,
+    "title": "Display",
+    "section_id": 289924,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1589928134,
+    "updated_by": 258,
+    "updated_on": 1615417844,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "1. background image is black and white\r\n2. at the top there is flashing neon logo\r\n3. 'Log in with MLB' button\r\n4. 'Don't have an account? Sign Up' link\r\n\r\n![](index.php?/attachments/get/8520268)\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6690183,
+    "title": "BETMGM logo on Welcome page",
+    "section_id": 289924,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1589918072,
+    "updated_by": 258,
+    "updated_on": 1612556524,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "After user installs the app for the first time",
+        "expected": "The Welcome page should not have a BETMGM logo"
+      },
+      {
+        "content": "After user created an account and logs out - if user is under 21",
+        "expected": "The Welcome page should not have a BETMGM logo"
+      },
+      {
+        "content": "After user created an account and logs out - if user is 21 or older",
+        "expected": "The Welcome page should not have a BETMGM logo"
+      },
+      {
+        "content": "After user created an account and closes the app - if user is over 21",
+        "expected": "The Welcome page should not have a BETMGM logo"
+      },
+      {
+        "content": "**Update: MGM logo should not be displayed on Welcome page for any users**",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 6690269,
+    "title": "Display",
+    "section_id": 305387,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1589927345,
+    "updated_by": 258,
+    "updated_on": 1589927525,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "1. The words “Log In” should appear centered in the header\r\n2. And there should be a back arrow in the top left corner\r\n3. And there should be the words “Log in to your MLB.com account to play the game and get access to exclusive MLB content.” below the title\r\n4. And there should be an email text field with “john.doe@email.com” as default\r\n5. And there should be a password field with “*******” as default\r\n6. And there should be a forgot your password link\r\n7. And there should be a greyed out Login button\r\n8. And there should be a Sign Up link if you don’t have an account\r\n\r\n\r\n![](index.php?/attachments/get/34135)\r\n\r\n9. After user puts in all information, Log In button is enabled\r\n\r\n![](index.php?/attachments/get/34136)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6685264,
+    "title": "Error message for incorrect email/password",
+    "section_id": 305387,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1586534123,
+    "updated_by": 258,
+    "updated_on": 1593192295,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": "When user logs in with incorrect email/password",
+    "custom_expected": "'Please enter a valid email/password' error message is displayed.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6690662,
+    "title": "Forgot your password",
+    "section_id": 305387,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1590012073,
+    "updated_by": 258,
+    "updated_on": 1590012143,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": "WHEN user clicks 'Forgot Your Password'",
+    "custom_expected": "Then user should be presented with a webview to reset their password\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8498006,
+    "title": "MLB Account Password Reset",
+    "section_id": 305387,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1602878960,
+    "updated_by": 280,
+    "updated_on": 1602878986,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 5,
+    "custom_preconds": "Given: \"A password reset link has been sent to you via email\" message has displayed",
+    "custom_steps": "When the user navigates to his/her email inbox\r\nAnd opens the \"MLB Account Password\r\nReset\" email\r\nAnd taps the \"Reset Password\" button in the body of the email",
+    "custom_expected": "Then the \"Reset your password\" screen opens\r\nAnd a \"New password\" field displays\r\nAnd a \"Repeat password\" field is present",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8498055,
+    "title": "Enter new password",
+    "section_id": 305387,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1602879029,
+    "updated_by": 280,
+    "updated_on": 1602879053,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 6,
+    "custom_preconds": "Given: User has entered a valid password in the \"New password\" and \"Repeat password\" fields",
+    "custom_steps": "When the user taps the \"Save\" button",
+    "custom_expected": "Then the user is redirected to the MLB App",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6690268,
+    "title": "Display",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1589927233,
+    "updated_by": 258,
+    "updated_on": 1592245354,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "1. The words “Sign Up” should be centered in the header\r\n2. And there should be a back arrow in the top left corner\r\n3. And the words “Create an MLB.com account to play the game and get access to exclusive MLB content.” appears just beneath the header\r\n4. And there should be an email text field with “john.doe@email.com” as default\r\n5. And there should be a Nickname text field with “Baseballfan2020” as default\r\n6. And there should be a password field with “*******” as default\r\n7. And there should be a Birthdate text field with “MM/DD/YYYY” as default\r\n8. And there should be a greyed out sign up button\r\n9. And there should be a Log in link if you already have an account\r\n\r\n![](index.php?/attachments/get/34134)\r\n\r\n10. After entering the information in all the fields, the Sign Up button becomes blue and active\r\n\r\n\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6690267,
+    "title": "Email field",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1589926857,
+    "updated_by": 258,
+    "updated_on": 1615419678,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When user enters an Invalid email ",
+        "expected": "Then the line is turned red with the text “Please enter a valid email address”"
+      },
+      {
+        "content": "When user puts the space",
+        "expected": "The error message appears: 'The first character must be a letter or number'"
+      },
+      {
+        "content": "When user enters a valid email\n\nvalid emails include:\n\nuser@gmail.com\nuser+@gmail.com\nuser-@gmail.com\nuser?@gmail.com\nuser=/-+@gmail.com\nuser%20@gmail.com\nandi2019p@mlb.com",
+        "expected": "Then the field accepts the email and throws no error message"
+      },
+      {
+        "content": "When user enters an existing email and fills the rest of the fields and click sign up",
+        "expected": "Then user should be prompted with an error message saying “An account with that email already exists”"
+      }
+    ]
+  },
+  {
+    "id": 6690274,
+    "title": "Nickname field",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1589931010,
+    "updated_by": 258,
+    "updated_on": 1615403262,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "The nickname criteria are ",
+        "expected": "1. nicknames should not be unique\n2. must be 6-15 characters long\n3. must contain only letters and numbers \n4. can not contain spaces and special characters\n5. can not contain non-English characters \n6. can not be disruptive or offensive\n7. can not contain emoji"
+      },
+      {
+        "content": "If the nickname has <6 and >15 characters",
+        "expected": "the error message is displayed 'Nickname must be 6-15 characters long'"
+      },
+      {
+        "content": "If the nickname contains special characters",
+        "expected": "the error message is displayed 'Nickname must contain only letters and numbers'"
+      },
+      {
+        "content": "If the nickname disruptive or offensive",
+        "expected": "the error message is displayed: 'Please choose another nickname'"
+      }
+    ]
+  },
+  {
+    "id": 1299131,
+    "title": "Password field",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://baseball.atlassian.net/browse/FTP-758",
+    "created_by": 235,
+    "created_on": 1582234058,
+    "updated_by": 258,
+    "updated_on": 1590014773,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user is on the Sign Up Page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is creating a password",
+        "expected": "THEN the user will see the following password requirements and must make a password fitting the following password requirements:\n - No special characters\n - One number\n - One uppercase letter\n - One lowercase letter\n - 8-15 characters"
+      },
+      {
+        "content": "When user enters an invalid password ",
+        "expected": "Then the corresponding issues with the password should be red with an X in the requirements field\n\n![](index.php?/attachments/get/34150)\n"
+      },
+      {
+        "content": "When user enters a valid password",
+        "expected": "Then all the password requirements should have a check mark next to them"
+      },
+      {
+        "content": "When user clicks the eyeball after entering a password",
+        "expected": "Then the text in the password field should become visible"
+      }
+    ]
+  },
+  {
+    "id": 6690273,
+    "title": "Date of birth field",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1589929905,
+    "updated_by": 258,
+    "updated_on": 1615404950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "",
+        "expected": "DOB format should be mm/dd/yyyy"
+      },
+      {
+        "content": "When user enters a future birthdate",
+        "expected": "“Please enter a correct birthdate” message is displayed"
+      },
+      {
+        "content": "When user enters an invalid birthdate",
+        "expected": "“Please enter your birthday in the format mm/dd/yyyy” message is displayed"
+      },
+      {
+        "content": "When user enters a birthday which is under 21",
+        "expected": "This page pops up \n\n![](index.php?/attachments/get/8519354)\n"
+      },
+      {
+        "content": "When a user creates an account on their birthday",
+        "expected": "There should be a message stating \"Happy Birthday!\""
+      }
+    ]
+  },
+  {
+    "id": 1291263,
+    "title": "First time registration",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-832, FTP-7, FTP-546, FTP-652",
+    "created_by": 235,
+    "created_on": 1578326141,
+    "updated_by": 258,
+    "updated_on": 1615407524,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 6,
+    "custom_preconds": "App is installed and the user has not registered",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Open the app",
+        "expected": "1. the loading page is displayed\n2. Log in/Sign up page is displayed"
+      },
+      {
+        "content": "Tap Sign Up",
+        "expected": "Things are displayed: \n\n1. Text: \"Create an MLB.com account to play the game and get access to exclusive MLB content.\"\n2. Email, Nickname, Password, Birthday fields are displayed\n3. Sign Up button \n4. Text: \"Already have an account? Log In\"\n"
+      },
+      {
+        "content": "After filling all fields",
+        "expected": "Boilerplate agreement displayed at bottom, containing links to:\n- Official Rules\n- Terms of Use\n\nAnd the following privacy policies:\n- MLB\n- MGM Resorts\n- BetMGM"
+      },
+      {
+        "content": "Tap on all 5 links and navigate back to app",
+        "expected": "Each link navigate to the appropriate page"
+      },
+      {
+        "content": "Enter bad info into fields, i.e.:\n1. invalid email\n2. profanity in the nickname\n3. password does not include a caps letter or a number",
+        "expected": "in line errors are displayed\n"
+      },
+      {
+        "content": "Enter good info into fields",
+        "expected": "No errors are displayed"
+      },
+      {
+        "content": "Tap Log In ",
+        "expected": "Things are displayed: \n\n1. Text: \"Log in to your MLB.com account to play the game and get access to exclusive MLB content.\"\n2. Email and Password  fields are displayed\n3. \"Forgot Your Password?\"\n4. Log In button\n5. Text: \"Don't have an account? Sign Up\""
+      },
+      {
+        "content": "Tap the login link",
+        "expected": "Login page is displayed"
+      },
+      {
+        "content": "Tap sign up link",
+        "expected": "Sign up page is displayed. No previously entered info retains\n"
+      },
+      {
+        "content": "Tap sign up",
+        "expected": "Allow notifications dialogue is displayed"
+      },
+      {
+        "content": "Select allow",
+        "expected": "Favorite team selection page is displayed"
+      },
+      {
+        "content": "Select a team",
+        "expected": "Logos and team names are readable and are of uniform size and quality"
+      },
+      {
+        "content": "Tap next",
+        "expected": "Welcome page is displayed, with the same boilerplate agreement and links as listed in step 2."
+      },
+      {
+        "content": "Tap on all 5 links and navigate back to app",
+        "expected": "Each link navigates to the appropriate page"
+      },
+      {
+        "content": "Tap Play",
+        "expected": "Games list is displayed"
+      }
+    ]
+  },
+  {
+    "id": 6690093,
+    "title": "Sign up 13 y.o user",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1589904947,
+    "updated_by": 258,
+    "updated_on": 1590004205,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "13 - 21 y.o",
+        "expected": "User is able to play Rally, but not able to win cash prizes.\n"
+      },
+      {
+        "content": "under 13 y.o.",
+        "expected": "User is unable to proceed to the app. \n\n\"You are ineligible to play MLB Rally\" message is displayed (in red)\n\n![](index.php?/attachments/get/34128)\n\nThere is no option to go back. If user wants to sign up with another DOB, they need to reinstall the app. \n"
+      }
+    ]
+  },
+  {
+    "id": 1291272,
+    "title": "Sign Up <21 y.o user",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-528, FTP-518, FTP-519, FTP-520, FTP-621, FTP-526, FTP-527",
+    "created_by": 235,
+    "created_on": 1578335552,
+    "updated_by": 258,
+    "updated_on": 1593192828,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 8,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Open the app and tap on sign up",
+        "expected": "The sign up page is displayed"
+      },
+      {
+        "content": "Fill out the form. The user needs to be 20 years of age with a birthday of tomorrow",
+        "expected": "A message is displayed stating pay out is not available for users under the age of 21.\n\"You must be at least 21 years of age to be eligible for prizes. You can still play Rally with the prizing removed.\" message is displayed (in red)\n\n![](index.php?/attachments/get/34130)\n"
+      },
+      {
+        "content": "Sign Up page agreement",
+        "expected": "Agreement copy: \n\"By signing up, I acknowledge that I have read, understand and agree to be bound by the Official Rules, Terms of User, and MLB Privacy Policy.'\n"
+      },
+      {
+        "content": "Tap on all 3 links and navigate back to app",
+        "expected": "Each link navigate to the appropriate page"
+      },
+      {
+        "content": "Welcome page ",
+        "expected": "1. Welcome, {name}\n2. \"You must be at least 21 years of age to be eligible for prizes. You can still play Rally with the prizing removed.\" message is displayed (in red)\n3. \"I acknowledge that I have read, understand and agree to be bound by the Official Rules, Terms of User, and MLB Privacy Policy\" agreement is displayed\n4. Play button\n\n![](index.php?/attachments/get/34138)\n"
+      },
+      {
+        "content": "Play through a game.",
+        "expected": "1. The user is displayed in both leaderboards\n2. No indication of payout is shown"
+      },
+      {
+        "content": "Log back in the next day.",
+        "expected": "1. Payout indications are now shown for the user.\n2. betMGM branding is displayed"
+      }
+    ]
+  },
+  {
+    "id": 6690272,
+    "title": "Sign Up 21+ y.o user",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1589929463,
+    "updated_by": 258,
+    "updated_on": 1593192942,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 9,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Open the app and tap on sign up",
+        "expected": "The sign up page is displayed\n\n![](index.php?/attachments/get/34149)\n"
+      },
+      {
+        "content": "Fill all the information",
+        "expected": "Agreement copy is displayed:\n\n\"By signing up, I acknowledge that I have read, understand, and agree to be bound by the Official Rules, Terms of User, and  MLB, MGM Resorts, and BetMGM Privacy Policies. I acknowledge that my registration and game information will be shared with MGM Resorts INTL and its subsidiaries and affiliates, including ROAR Digital.\"\n\n![](index.php?/attachments/get/34148)\n"
+      },
+      {
+        "content": "Tap on all 5 links and navigate back to app",
+        "expected": "Each link navigates to the appropriate page"
+      },
+      {
+        "content": "Welcome page",
+        "expected": "1. Welcome, {name}\n2. Same agreement from step 2 is displayed \n3. Play button\n\n![](index.php?/attachments/get/34137)\n"
+      }
+    ]
+  },
+  {
+    "id": 6677435,
+    "title": "Swipe-to-Type Entry",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1583274996,
+    "updated_by": 258,
+    "updated_on": 1589928099,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 10,
+    "custom_preconds": "GIVEN a user has selected a text entry field",
+    "custom_steps": "WHEN a user alternately uses swiping and tapping to enter text",
+    "custom_expected": "THEN the app should enter the text as expected and should not crash",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6690185,
+    "title": "Onboarding notification page",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1589921778,
+    "updated_by": 280,
+    "updated_on": 1602877291,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 11,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If Rally’s notifications are enabled in device settings ",
+        "expected": "Things are displayed on Notification page: \n\n- word “Notifications” centered in the header\n- picture/icon in the middle of the screen\n- below the picture should be the message “Notifications are enabled. You’ll be notified of available games, game results, and your scores.”\n- clickable, blue continue button\n\n\n"
+      },
+      {
+        "content": "1. User enables the notifications during Sign Up\n2. User Logs In to Rally",
+        "expected": "![](index.php?/attachments/get/1709151)\n"
+      },
+      {
+        "content": "1. User skips 'Skip For Now' during Sign Up\n2. User Logs In to Rally\n",
+        "expected": "Things are displayed on Notification page: \n\n- word “Notifications” centered in the header\n- picture/icon in the middle of the screen\n- below the picture should be the message “Notifications are disabled.” in red and “Rally uses push notifications to notify you of available games, game results, and your scores.” \n- and there should be a clickable \"Enable In Settings\" and \"Skip For Now\" buttons\n\n![](index.php?/attachments/get/34133)\n\n"
+      }
+    ]
+  },
+  {
+    "id": 8497533,
+    "title": "Skip For Now link",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1602877388,
+    "updated_by": 280,
+    "updated_on": 1602877448,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 12,
+    "custom_preconds": "Given: User has signed up and is on the \"Notifications\" screen",
+    "custom_steps": "When the user taps the \"Skip For Now\" link",
+    "custom_expected": "Then the user is redirected to the \"Select Your Team\" screen",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8497534,
+    "title": "Enable Notifications dialogue",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1602877556,
+    "updated_by": 280,
+    "updated_on": 1602877651,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 13,
+    "custom_preconds": "Given: User is viewing the \"Notifications\" screen",
+    "custom_steps": "When the user taps the \"Enable Notifications\" button",
+    "custom_expected": "Then a dialogue box displays: \"MLB Rally\" Would Like to Send You Notifications\"",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8497535,
+    "title": "Allow Notifications",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1602877665,
+    "updated_by": 280,
+    "updated_on": 1602877705,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 14,
+    "custom_preconds": "Given: User has tapped \"Enable Notifications\"\r\nAnd is viewing the Notifications dialogue box\r\n\r\n",
+    "custom_steps": "When the user taps \"Allow\"",
+    "custom_expected": "Then the \"Select Your Team\" screen opens",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6685121,
+    "title": "Favorite team page",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1586384636,
+    "updated_by": 280,
+    "updated_on": 1602878244,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 15,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "1. Team color is the highlight color\r\n2. Selected team has a blue border\r\n3. All teams have logos\r\n4. Teams are displayed in 3 columns and 10 rows\r\n5. The \"Next\" button is disabled until a user chooses a favorite team\r\n\r\n![](index.php?/attachments/get/34145)\r\n![](index.php?/attachments/get/34146)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8497832,
+    "title": "Play button",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1602878454,
+    "updated_by": 280,
+    "updated_on": 1602878483,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 16,
+    "custom_preconds": "Given: User is on the Welcome screen\r\nAnd the \"Play\" button is present and enabled",
+    "custom_steps": "When the user taps \"Play\"",
+    "custom_expected": "Then a new screen opens with text: \"Welcome <Nickname> First Time? Tap here to learn how to play Rally.\"\r\nAnd the Rally logo displays at top of screen\r\nAnd today's date displays\r\nAnd an array of tiles (stack) display showing the\r\nmatch-ups of today's games",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8497864,
+    "title": "Lean how to play Rally",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1602878602,
+    "updated_by": 280,
+    "updated_on": 1602878629,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 17,
+    "custom_preconds": "Given: User is viewing the screen,\r\n\"Welcome <Nickname> First Time?\r\nTap here to learn how to play Rally.\"",
+    "custom_steps": "When the user taps the Welcome message",
+    "custom_expected": "Then the \"How To Play\" screen opens\r\nAnd \"Choose A Game\" header displays\r\nAnd \"Select any...\" text displays\r\nAnd five dots are visible at the bottom indicating the screen is the first in a carousel",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8497896,
+    "title": "Carousel exit",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1602878715,
+    "updated_by": 280,
+    "updated_on": 1602878743,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 19,
+    "custom_preconds": "Given: User is viewing the last screen of the \"How To Play\" carousel",
+    "custom_steps": "When the user taps the \"Got It\" button",
+    "custom_expected": "Then the user is redirected back to the \"Welcome <User Nickname> screen and a stack\r\nof today's cards is present under the 'Welcome' message and today's day/date",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8565838,
+    "title": "User with DOB 02/29",
+    "section_id": 305907,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2226",
+    "created_by": 280,
+    "created_on": 1603385039,
+    "updated_by": 258,
+    "updated_on": 1616090052,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 20,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "User is able to sign up with DOB 02/29 and no error message appears.",
+    "custom_steps_separated": [
+      {
+        "content": "1. Create Rally profile from MLB profile with DOB 02/29\n2. Attempt to login to Rally",
+        "expected": "Behavior should be the same as for any other user profile with no birth year."
+      },
+      {
+        "content": "1. Create Rally profile from MLB profile with DOB 02/29 for leap year\n2. Attempt to login to Rally",
+        "expected": "No error appears"
+      },
+      {
+        "content": "1. Create Rally profile from MLB profile with DOB 02/29 for common year\n2. Attempt to login to Rally",
+        "expected": "Error message appers. It takes user to 'Update' page."
+      },
+      {
+        "content": "Pe Eric and Andrew, its okay for app to accept DOB with 02/29 for common years",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 6690271,
+    "title": "Log In / Sign Up flow",
+    "section_id": 306002,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1589928602,
+    "updated_by": 258,
+    "updated_on": 1590013996,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "1. Welcome page with logo and Sign Up / Log In buttons\r\n2. Sign Up or Log In page\r\n3. Welcome page with agreement \r\n4. Notification page\r\n5. Select Your Team page\r\n6. Game tab opens\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6690738,
+    "title": "Switching between Log In /Sign Up",
+    "section_id": 306002,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1590014011,
+    "updated_by": 258,
+    "updated_on": 1590014284,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39509,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "1. User is on Sign Up page. \n2. User enters all information \n3. User taps 'Already have an account? Log In\"",
+        "expected": "Log In page is displayed. No previously entered info retains"
+      },
+      {
+        "content": "1. User is on Log In page. \n2. User enters all information \n3. User taps 'Don't have an account? Sign Up\"",
+        "expected": "Sign Up page is displayed. No previously entered info retains"
+      },
+      {
+        "content": "1. User is on Sign Up page. \n2. User enters all information \n3. User clicks back icon and clicks Sign Up again",
+        "expected": "Sign Up page is displayed. No previously entered info retains"
+      },
+      {
+        "content": "1. User is on Log In page. \n2. User enters all information \n3. User clicks back icon and clicks Log In again",
+        "expected": "Log In page is displayed. No previously entered info retains"
+      }
+    ]
+  }
+]

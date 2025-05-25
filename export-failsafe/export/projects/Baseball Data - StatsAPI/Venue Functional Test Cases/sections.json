@@ -1,0 +1,20 @@
+[
+  {
+    "id": 155214,
+    "suite_id": 21198,
+    "name": "Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 155215,
+    "suite_id": 21198,
+    "name": "Regression",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

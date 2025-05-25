@@ -1,0 +1,38 @@
+[
+  {
+    "id": 712787,
+    "suite_id": 192826,
+    "name": "Buy Tickets Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 732312,
+    "suite_id": 192826,
+    "name": "Search results on Buy Tickets Segment",
+    "description": "https://jira.mlbam.com/browse/BP-6814",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 712760,
+    "suite_id": 192826,
+    "name": "Filter - Team",
+    "description": "https://jira.mlbam.com/browse/BP-6815",
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 712761,
+    "suite_id": 192826,
+    "name": "Filter - Schedule (Home / Full)",
+    "description": "https://jira.mlbam.com/browse/BP-6885",
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  }
+]

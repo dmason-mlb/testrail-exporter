@@ -1,0 +1,29 @@
+[
+  {
+    "id": 138491,
+    "suite_id": 19777,
+    "name": "LL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 137910,
+    "suite_id": 19777,
+    "name": "NL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 138667,
+    "suite_id": 19777,
+    "name": "AL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  }
+]

@@ -1,0 +1,510 @@
+[
+  {
+    "id": 7170624,
+    "title": "Team Page Access",
+    "section_id": 355015,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1593453233,
+    "updated_by": 213,
+    "updated_on": 1594322961,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 71238,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is Team Tab with JSON configured for at least one module to have webViewUrl = \"ballpark://putmeinthepark\"",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User clicks the configured item for put me in the park ",
+        "expected": "THEN Put Me in Park landing page is displayed"
+      },
+      {
+        "content": "WHEN User clicks the back arrow in Toolbar and does not have a fav team",
+        "expected": "THEN Team Tab is displayed for team where PMITP link was clicked"
+      },
+      {
+        "content": "WHEN User clicks system back key and does not have a fav team",
+        "expected": "THEN Team Tab is displayed for team where PMITP link was clicked"
+      },
+      {
+        "content": "WHEN User clicks the back arrow in Toolbar and does have a fav team",
+        "expected": "THEN Team Tab is displayed for team where PMITP link was clicked"
+      },
+      {
+        "content": "WHEN User clicks system back key and have a fav team",
+        "expected": "THEN Team Tab is displayed for team where PMITP link was clicked"
+      }
+    ]
+  },
+  {
+    "id": 7170756,
+    "title": "Deep Link Access",
+    "section_id": 355015,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1593462817,
+    "updated_by": 213,
+    "updated_on": 1594218555,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 71238,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User has deep link which contains \"ballpark://putmeinthepark?venueID={venueId}&teamID={teamId}\" \r\n\r\nNOTE: Use a link where venue = 19 and team = 115 for Rockies in Slack Message or in Email on Phone\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user clicks on deep link and does not have a favorite team",
+        "expected": "THEN Put Me in Park landing page is displayed with proper venue and team (primary color and specific text is correct)"
+      },
+      {
+        "content": "WHEN user clicks on back button in upper tool bar",
+        "expected": "THEN Team Tab is displayed with team that was associated with deep link"
+      },
+      {
+        "content": "WHEN user clicks on system back button",
+        "expected": "THEN Team Tab is displayed with team that was associated with deep link"
+      },
+      {
+        "content": "WHEN user clicks on deep link and has a favorite team which is not the deep link team",
+        "expected": "THEN Put Me in Park landing page is displayed with proper venue and team (primary color and specific text is correct)"
+      },
+      {
+        "content": "WHEN user clicks on back button in upper tool bar",
+        "expected": "THEN Team Tab is displayed with team that was associated with deep link "
+      },
+      {
+        "content": "WHEN user clicks on system back button",
+        "expected": "THEN Team Tab is displayed with team that was associated with deep link"
+      }
+    ]
+  },
+  {
+    "id": 7170605,
+    "title": "Page Layout",
+    "section_id": 354974,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1593452510,
+    "updated_by": 213,
+    "updated_on": 1594322178,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 71238,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on Put Me In Park Page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN page is displayed",
+        "expected": "THEN Toolbar title will be the name of the venue"
+      },
+      {
+        "content": "WHEN page is displayed",
+        "expected": "THEN title will be 'Put Me in [venueName]' displayed in team's primary color"
+      },
+      {
+        "content": "WHEN page is displayed",
+        "expected": "THEN the following description text will be displayed below the title:\nTake me out the ballgame, put me into the crowd!\n\nTHEN the following text will be displayed below the title with proper club name and venue name:\n\"Select a photo of yourself and take a seat at [venueName]. So go ahead, put on your lucky hat or favorite jersey, send us a photo and support the [clubNickName] at all their games at [venueName].\"\n\n"
+      },
+      {
+        "content": "WHEN page is displayed",
+        "expected": "THEN there will be an animated gif below description text showing sample photos with cut out lines"
+      },
+      {
+        "content": "WHEN page is displayed",
+        "expected": "THEN there will be a header called \"Photo Tips\""
+      },
+      {
+        "content": "WHEN page is displayed",
+        "expected": "THEN there will be a bulleted list displayed below photo tips header as follows:\n\n* Make sure you have your whole body from the waist up in the frame.\n* For best results use the rear facing camera.\n* Solid dark backgrounds work best for the printing process."
+      },
+      {
+        "content": "WHEN page is displayed",
+        "expected": "THEN there will be an image displayed below bulleted list which show do's and don'ts"
+      },
+      {
+        "content": "WHEN page is displayed",
+        "expected": "THEN the user can scroll up and down to view entire page contents"
+      }
+    ]
+  },
+  {
+    "id": 7170606,
+    "title": "Floating Upload Button",
+    "section_id": 354974,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1593452533,
+    "updated_by": 213,
+    "updated_on": 1593454628,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 71238,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on Put Me In Park Page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN page is displayed",
+        "expected": "THEN there is a floating button which is always visible as user scrolls the page"
+      },
+      {
+        "content": "WHEN page is displayed which includes floating button",
+        "expected": "THEN floating button's background is displayed in team's primary color"
+      },
+      {
+        "content": "WHEN page is displayed which includes floating button",
+        "expected": "THEN Text displayed in floating button is \"Select a Photo\""
+      },
+      {
+        "content": "WHEN page is displayed",
+        "expected": "WHEN user clicks on floating button, a dialog to choose an image is displayed"
+      }
+    ]
+  },
+  {
+    "id": 7170743,
+    "title": "Choosing Image",
+    "section_id": 354979,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1593456798,
+    "updated_by": 213,
+    "updated_on": 1593457864,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 71238,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on Put In Park Page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User clicks add photo button",
+        "expected": "THEN a dialog is displayed which has options to either use camera or view photo library or cancel"
+      },
+      {
+        "content": "WHEN User selects camera option",
+        "expected": "THEN native camera is launched, able to take photo"
+      },
+      {
+        "content": "WHEN User selects photo library",
+        "expected": "THEN photo library displayed with photo picker with ability to select only one image"
+      },
+      {
+        "content": "WHEN User selects cancel",
+        "expected": "THEN dialog is dismissed and returned to landing page"
+      },
+      {
+        "content": "WHEN User hits back button",
+        "expected": "THEN dialog is dismissed and returned to landing page"
+      },
+      {
+        "content": "WHEN User selects image from photo library",
+        "expected": "THEN Photo is displayed in edit screen"
+      },
+      {
+        "content": "WHEN User takes photo using camera",
+        "expected": "THEN Photo is displayed in edit screen"
+      }
+    ]
+  },
+  {
+    "id": 7170744,
+    "title": "Photo Editing",
+    "section_id": 354981,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1593457511,
+    "updated_by": 213,
+    "updated_on": 1593460977,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 71238,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User has chose to use an photo from either photo library or taken picture with camera",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user completes photo selection",
+        "expected": "THEN Selected photo is displayed in edit mode screen"
+      },
+      {
+        "content": "WHEN Selected photo is displayed in edit mode screen",
+        "expected": "THEN text appears at top of screen that says \"Center yourself in outline\" along with a \"Redo\" button and a \"Submit Photo\" button at bottom of screen"
+      },
+      {
+        "content": "WHEN Selected photo is displayed in edit mode screen",
+        "expected": "THEN silhouette outline on photo is displayed"
+      },
+      {
+        "content": "WHEN Selected photo is displayed in edit mode screen",
+        "expected": "THEN User can pan to get proper fit"
+      },
+      {
+        "content": "WHEN Selected photo is displayed in edit mode screen",
+        "expected": "THEN User can zoom to get proper fit"
+      },
+      {
+        "content": "WHEN User hits back button in edit mode screen",
+        "expected": "THEN User is returned to landing page"
+      },
+      {
+        "content": "WHEN User clicks on redo button on edit screen for selected camera image",
+        "expected": "THEN user is returned to camera to take another photo"
+      },
+      {
+        "content": "WHEN User clicks redo button on edit screen for selected library image",
+        "expected": "THEN user is returned to library to select another photo"
+      },
+      {
+        "content": "WHEN User clicks on submit photo button",
+        "expected": "THEN Photo Submission Dialog is displayed"
+      }
+    ]
+  },
+  {
+    "id": 7170749,
+    "title": "Submitting Photo Dialog",
+    "section_id": 354982,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1593460508,
+    "updated_by": 213,
+    "updated_on": 1594324384,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 71238,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User has completed editing selected photo",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User clicks on submit button",
+        "expected": "THEN Dialog is displayed with title \"Submit Photo\", text \"This photo will be used for your cut-out upon submission.\""
+      },
+      {
+        "content": "WHEN User clicks on submit photo button",
+        "expected": "THEN Dialog is displayed with two options - \"Cancel\" or \"Submit\""
+      },
+      {
+        "content": "WHEN User selects cancel option from dialog",
+        "expected": "THEN User is returned to photo edit screen"
+      },
+      {
+        "content": "WHEN User selects submit option from dialog",
+        "expected": "THEN Submission of the photo is initiated and dialog is dismissed"
+      }
+    ]
+  },
+  {
+    "id": 7170750,
+    "title": "Photo Submission",
+    "section_id": 354982,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1593460840,
+    "updated_by": 213,
+    "updated_on": 1594398519,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 71238,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User has completed edits of selected image",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User clicks on submit in dialog",
+        "expected": "THEN Loading indicator is displayed"
+      },
+      {
+        "content": "WHEN User clicks on submit in dialog",
+        "expected": "THEN Upload of raw photo using services is initiated"
+      },
+      {
+        "content": "WHEN User clicks on submit in dialog",
+        "expected": "THEN Upload of cropped centered photo using services is initiated"
+      },
+      {
+        "content": "WHEN Upload of both images is successful",
+        "expected": "THEN User is navigated to a webview URL based on club selected team ID along with the required query parameters in the format shown in attached image![](index.php?/attachments/get/1842565)\n"
+      },
+      {
+        "content": "WHEN Upload of either image fails",
+        "expected": "THEN Dialog is displayed “Something went wrong uploading your photo. Please try again.” With option to “Retry”"
+      },
+      {
+        "content": "WHEN Upload of either image fails and retry option is selected",
+        "expected": "THEN Upload of both images using services is initiated"
+      }
+    ]
+  },
+  {
+    "id": 7170754,
+    "title": "Photo Upload Service",
+    "section_id": 354982,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1593461717,
+    "updated_by": 213,
+    "updated_on": 1593537823,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 71238,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User has edited an image",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User has requested image to be submitted",
+        "expected": "THEN POST service call is initiated in the following format:\nPOST: https://qa-upload.bam-forms.com/upload/{formId}/{fieldId}\nWhere the parameter values are as defined in remote config for the specific club"
+      },
+      {
+        "content": "WHEN User has requested image to be submitted and service call times out",
+        "expected": "THEN Error dialog is displayed"
+      },
+      {
+        "content": "WHEN User has requested image tobe submitted and service call fails",
+        "expected": "THEN Error dialog is displayed"
+      }
+    ]
+  },
+  {
+    "id": 7170759,
+    "title": "WebView Page Display",
+    "section_id": 354982,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1593463645,
+    "updated_by": 213,
+    "updated_on": 1594322683,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 71238,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User has successfully uploaded images ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Photos submission service call completes",
+        "expected": "THEN User is taken to webview URL where the URL is built using values returned from submission service call. The WebviewURL is built using format shown here:\n![](index.php?/attachments/get/1842566)\n"
+      },
+      {
+        "content": "WHEN user clicks on back button in upper tool bar after launching via deep link and does not have fav team",
+        "expected": "THEN Team Tab is displayed with team that was associated with deep link"
+      },
+      {
+        "content": "WHEN user clicks on system back button after launching via deep link and does not have fav team",
+        "expected": "THEN Team Tab is displayed with team that was associated with deep link"
+      },
+      {
+        "content": "WHEN user clicks on back button in upper tool bar after launching via deep link and has fav team",
+        "expected": "THEN Team Tab is displayed with team that was associated with deep link"
+      },
+      {
+        "content": "WHEN user clicks on system back button after launching via deep link and has fav team",
+        "expected": "THEN Team Tab is displayed with team that was associated with deep link"
+      },
+      {
+        "content": "WHEN user clicks on back button in upper tool bar after launching via team page and does not have fav team",
+        "expected": "THEN Team Tab with item that was clicked to initiate PMITP is displayed"
+      },
+      {
+        "content": "WHEN user clicks on system back button after launching via team page and does not have fav team",
+        "expected": "THEN Team Tab with item that was clicked to initiate PMITP is displayed"
+      },
+      {
+        "content": "WHEN user clicks on back button in upper tool bar after launching via team page and does not have fav team",
+        "expected": "THEN Team Tab with item that was clicked to initiate PMITP is displayed"
+      },
+      {
+        "content": "WHEN user clicks on system back button after launching via team page and does have fav team",
+        "expected": "THEN Team Tab with item that was clicked to initiate PMITP is displayed"
+      },
+      {
+        "content": "WHEN user clicks on back button in upper tool bar after launching via team page and does not have fav team",
+        "expected": "THEN Team Tab with item that was clicked to initiate PMITP is displayed"
+      }
+    ]
+  }
+]

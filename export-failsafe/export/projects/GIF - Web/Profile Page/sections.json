@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1489352,
+    "suite_id": 391222,
+    "name": "Top profile section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 1540654,
+    "suite_id": 391222,
+    "name": "Feed Event Reaction Display",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 1489353,
+    "suite_id": 391222,
+    "name": "Friends section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 1654095,
+    "suite_id": 391222,
+    "name": "Prizes section on Profile page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 1654096,
+    "suite_id": 391222,
+    "name": "Redeem Prize",
+    "description": null,
+    "parent_id": 1654095,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 1489370,
+    "suite_id": 391222,
+    "name": "Trophies section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 1489387,
+    "suite_id": 391222,
+    "name": "Badges section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 1489671,
+    "suite_id": 391222,
+    "name": "Profile -> Settings Menu",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 1489672,
+    "suite_id": 391222,
+    "name": "Friends Functionality via code",
+    "description": null,
+    "parent_id": 1489671,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 1489673,
+    "suite_id": 391222,
+    "name": "Footer",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  }
+]

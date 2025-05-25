@@ -1,0 +1,11 @@
+{
+  "id": 701209,
+  "name": "HomePage (New)",
+  "description": "Test Cases particular to Home (rewrite). \r\n* iOS - v14.0.1 (local feature flag enabled) - currently intended for default enablement on v14.1.0\r\n\r\nFigma: [link](https://www.figma.com/design/0oNryxBGauTBWja78zdQkX/Ballpark-Redesign-(DS)?node-id=1-366&node-type=canvas&t=o8zbCrShXtBYUTDU-0 )\r\nEpic: [BP-10981](https://baseball.atlassian.net/browse/BP-10981 )\r\n\r\n\r\nReference to Previous Home: [HomePage(Legacy)](https://testrail.testeng.mlbinfra.net/index.php?/suites/view/192824&group_by=cases:section_id&group_order=asc&group_id=1172205 )",
+  "project_id": 179,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/701209"
+}

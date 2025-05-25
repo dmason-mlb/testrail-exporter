@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1945878,
+    "suite_id": 1010,
+    "name": "MLBN 2024",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 685740,
+    "suite_id": 1010,
+    "name": "iPhone & Tablet",
+    "description": null,
+    "parent_id": 1945878,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 685741,
+    "suite_id": 1010,
+    "name": "Experience",
+    "description": null,
+    "parent_id": 685740,
+    "display_order": 10,
+    "depth": 2
+  },
+  {
+    "id": 685742,
+    "suite_id": 1010,
+    "name": "Playback",
+    "description": null,
+    "parent_id": 685740,
+    "display_order": 11,
+    "depth": 2
+  },
+  {
+    "id": 1945879,
+    "suite_id": 1010,
+    "name": "Entitlements",
+    "description": null,
+    "parent_id": 685740,
+    "display_order": 12,
+    "depth": 2
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "id": 306208,
+    "suite_id": 43701,
+    "name": "Integration Tests",
+    "description": "Tests using the integration framework",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 306477,
+    "suite_id": 43701,
+    "name": "Sanity Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 345345,
+    "suite_id": 43701,
+    "name": "Pub Sub Message",
+    "description": "Test cases oriented around the messages sent to the PUBSUB queues on GCP",
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 345346,
+    "suite_id": 43701,
+    "name": "Pre-game Proposition Tests",
+    "description": "Tests centered around pre-game propositions",
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 345347,
+    "suite_id": 43701,
+    "name": "At-Bat Propositions",
+    "description": "Tests centered around the current at-bat",
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 345348,
+    "suite_id": 43701,
+    "name": "On Deck Propositions",
+    "description": "Tests Centered around on-deck proposition states",
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 345349,
+    "suite_id": 43701,
+    "name": "In the hole Propositions",
+    "description": "Tests oriented around in-the-hole at bats",
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 399486,
+    "suite_id": 43701,
+    "name": "Suspended Games",
+    "description": "Tests specifically around suspended games",
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 402260,
+    "suite_id": 43701,
+    "name": "Specific Scenarios",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  }
+]

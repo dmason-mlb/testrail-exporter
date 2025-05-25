@@ -1,0 +1,345 @@
+[
+  {
+    "id": 7509562,
+    "title": "Core Function",
+    "section_id": 383548,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596220915,
+    "updated_by": 226,
+    "updated_on": 1596655947,
+    "estimate": null,
+    "estimate_forecast": "2m 43s",
+    "suite_id": 80463,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user with the app installed on the Android device",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I open the app",
+        "expected": "THEN I must see five tabs in the tab bar\n\nAND tapping on these tabs must allow me to navigate to additional content"
+      },
+      {
+        "content": "WHEN  the app is open and in the background\n\nAND I foreground the app",
+        "expected": "THEN I should resume my session on the same tab as where I left off (Refresh behavior for this content will be determined on a view-by-view basis)"
+      }
+    ]
+  },
+  {
+    "id": 7509563,
+    "title": "Localization",
+    "section_id": 383548,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 7,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596221028,
+    "updated_by": 232,
+    "updated_on": 1598460068,
+    "estimate": null,
+    "estimate_forecast": "1m 51s",
+    "suite_id": 80463,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a user with the app installed on an Android device",
+    "custom_steps": "WHEN I set my device set to any Spanish language setting",
+    "custom_expected": "THEN I will see Spanish labels in the tab bar\r\nNOTE: MLB Network is displayed the same in English and Spanish.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7509564,
+    "title": "Active/Inactive non team Icons",
+    "section_id": 383548,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596221140,
+    "updated_by": 232,
+    "updated_on": 1617729326,
+    "estimate": null,
+    "estimate_forecast": "1m 27s",
+    "suite_id": 80463,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user with the app installed on an Android device",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN my app or OS settings are set to Dark Mode",
+        "expected": "THEN I will see a dark mode version of the tab bar "
+      },
+      {
+        "content": "WHEN my device is set to dark mode\nAND I select any of the non-team icons",
+        "expected": "THEN the selected icon should fill in with the team's secondary color\nAND the unselected icons should be the uncolored grayscale icons\nAND all icons should be clearly visible"
+      },
+      {
+        "content": "WHEN my device is set to light mode\nAND I select any of the non-team icons",
+        "expected": "THEN the selected icon should fill in with the team's secondary color\nAND the unselected icons should be the uncolored grayscale icons\nAND all icons should be clearly visible"
+      }
+    ]
+  },
+  {
+    "id": 7509565,
+    "title": "MLB Configurable Tabs & Order",
+    "section_id": 383548,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596221454,
+    "updated_by": 232,
+    "updated_on": 1596221454,
+    "estimate": null,
+    "estimate_forecast": "7m 13s",
+    "suite_id": 80463,
+    "display_order": 4,
+    "custom_preconds": "GIVEN a user with the app installed on the Android device\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I foreground the app \n\nAND the tab bar order config has been adjusted",
+        "expected": "THEN I will see the new tab bar order\n\nAND I will remain on the view I was previously viewing if the view has not been disabled"
+      },
+      {
+        "content": "WHEN I foreground the app \n\nAND the tab bar order config has been adjusted",
+        "expected": "THEN I will see the new tab bar order\n\nAND I will be shown the default tab if the view I was previously viewing has been disabled"
+      },
+      {
+        "content": "WHEN a user has lost network connectivity\n\nAND a user foregrounds the app",
+        "expected": "THEN a user should see the last successfully fetched tab bar config"
+      },
+      {
+        "content": "WHEN a user has lost network connectivity\n\nAND a user has never fetched a new tab bar config\n\nAND a user foregrounds the app",
+        "expected": "THEN a user should see the default bundled tab bar order for that version"
+      }
+    ]
+  },
+  {
+    "id": 7509566,
+    "title": "User Setting: Default Tab",
+    "section_id": 383548,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1596221766,
+    "updated_by": 232,
+    "updated_on": 1596221766,
+    "estimate": null,
+    "estimate_forecast": "3m 30s",
+    "suite_id": 80463,
+    "display_order": 5,
+    "custom_preconds": "GIVEN a user with the app installed on an Android device",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I navigate to the Settings area",
+        "expected": "THEN I must be presented with an option to set my default tab from one of the pre-defined options"
+      },
+      {
+        "content": "WHEN a user who has navigated to the Default Tab Setting\nAND I select my default tab setting ",
+        "expected": "THEN the app must remember this setting for my device"
+      },
+      {
+        "content": "WHEN  a user who has not selected a default tab setting\n\nAND I start the app",
+        "expected": "THEN I should be shown the first tab of the app, known as the “MLB Default”"
+      },
+      {
+        "content": "WHEN a user who has selected a default tab setting\n\nAND the default tab setting I’ve selected is in another position in the tab bar\n\nAND Starting the app",
+        "expected": "THEN I should be shown my default tab"
+      },
+      {
+        "content": "WHEN a user who has selected a default tab setting\n\nAND the default tab setting I’ve selected is NOT currently found in the tab bar\n\nAND starting the app",
+        "expected": "THEN I should be shown the “MLB Default” tab"
+      }
+    ]
+  },
+  {
+    "id": 8402186,
+    "title": "Accessibility Talk Back",
+    "section_id": 383548,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1602263785,
+    "updated_by": 232,
+    "updated_on": 1602263785,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 80463,
+    "display_order": 6,
+    "custom_preconds": "GIVEN talkback is enabled\r\n\r\n",
+    "custom_steps": "WHEN selecting a menu item",
+    "custom_expected": "THEN talkback reads aloud “menu item [label]” (ENG and SP)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8402187,
+    "title": "Accessibility Text Size",
+    "section_id": 383548,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1602263928,
+    "updated_by": 232,
+    "updated_on": 1602263928,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 80463,
+    "display_order": 7,
+    "custom_preconds": "GIVEN a device with large text size\r\n\r\n",
+    "custom_steps": "WHEN a menu item is selected",
+    "custom_expected": "THEN the label text is rendered larger than usual",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16636380,
+    "title": "Team Page tab bar icon- active and inactive",
+    "section_id": 383548,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10949",
+    "created_by": 232,
+    "created_on": 1617725406,
+    "updated_by": 232,
+    "updated_on": 1617729093,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 80463,
+    "display_order": 8,
+    "custom_preconds": "GIVEN a user\r\n\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I select the teams page tab for any team\nAND the app theme is set to light mode",
+        "expected": "THEN the team icon in the tab bar should be the full color version of the icon"
+      },
+      {
+        "content": "WHEN I select a tab other than the teams page\nAND the app theme is set to light mode",
+        "expected": "THEN the team icon in the tab bar should be inactive greyscale version of the icon"
+      },
+      {
+        "content": "WHEN I select the teams page tab for any team\nAND the app theme is set to dark mode",
+        "expected": "THEN the team icon in the tab bar should be the full color version of the icon"
+      },
+      {
+        "content": "WHEN I select a tab other than the teams page\nAND the app theme is set to dark mode",
+        "expected": "THEN the team icon in the tab bar should be inactive greyscale version of the icon"
+      }
+    ]
+  },
+  {
+    "id": 23138142,
+    "title": "Postseason Schedule Tab",
+    "section_id": 383548,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1631906487,
+    "updated_by": 311,
+    "updated_on": 1631907105,
+    "estimate": "15m",
+    "estimate_forecast": "15m",
+    "suite_id": 80463,
+    "display_order": 9,
+    "custom_preconds": "GIVEN it is postseason or the attached file is locally mapped to eg. https://storage.mobile.mlbinfra.com:443/atbatconfig/appnavigation_en.json\t/Users/greg.caron/Mast/appnavigation_en.json using Charles",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the tab bar is viewed",
+        "expected": "THEN the Postseason tab is present with the postseason icon"
+      },
+      {
+        "content": "WHEN the Postseason tab is tapped",
+        "expected": "THEN the Postseason webview displays"
+      },
+      {
+        "content": "WHEN a different tab is tapped (eg. Team)",
+        "expected": "THEN that tab opens"
+      },
+      {
+        "content": "WHEN it is not Postseason and the attached file is not mapped in Charles",
+        "expected": "THEN the Postseason tab does not display"
+      }
+    ]
+  },
+  {
+    "id": 25404701,
+    "title": "Watch View Tab",
+    "section_id": 383548,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1639759121,
+    "updated_by": 311,
+    "updated_on": 1641919286,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 80463,
+    "display_order": 10,
+    "custom_preconds": "GIVEN a User",
+    "custom_steps": "Note: the attached files can be mapped to eg. https://storage.mobile.mlbinfra.com/atbatconfig/appnavigation_en.json to mock Mast tool configs",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the MAST config tool enables Watch in the first 5\n",
+        "expected": "THEN the Watch tab displays in the tab bar"
+      },
+      {
+        "content": "WHEN the MAST config tool disables Watch in the first 5",
+        "expected": "THEN the Watch tab does not display in the tab bar"
+      },
+      {
+        "content": "WHEN the tab bar is viewed",
+        "expected": "THEN the Watch tab will display\nAND it will have the 'tv' icon"
+      },
+      {
+        "content": "WHEN the Watch tab is tapped",
+        "expected": "THEN the Watch view opens"
+      },
+      {
+        "content": "WHEN the app is in light mode\nAND the Watch tab is tapped",
+        "expected": "THEN the Watch view will have the light theme (Note: the Film room tab is always in dark mode.)"
+      },
+      {
+        "content": "WHEN the app is in dark mode \nAND the Watch tab is tapped",
+        "expected": "THEN the Watch view will have the dark theme"
+      },
+      {
+        "content": "WHEN the MAST config tool enables Watch to display after the first 5 (eg. 6th)",
+        "expected": "THEN Watch will display in the drawer\nAND it will have the 'tv' icon"
+      }
+    ]
+  }
+]

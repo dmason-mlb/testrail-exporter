@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1865887,
+    "suite_id": 663158,
+    "name": "Access Control Validation API - Endpoint Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1866514,
+    "suite_id": 663158,
+    "name": "TICKET_PRINT_SCAN Record",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1866566,
+    "suite_id": 663158,
+    "name": "Event Access Control and Ticket Validation Scenarios",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1867087,
+    "suite_id": 663158,
+    "name": "Ticket Scanning and Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1869293,
+    "suite_id": 663158,
+    "name": "Patron Account Lock Details",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

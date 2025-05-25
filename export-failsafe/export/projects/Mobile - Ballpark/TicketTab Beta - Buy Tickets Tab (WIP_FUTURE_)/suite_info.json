@@ -1,0 +1,11 @@
+{
+  "id": 640505,
+  "name": "TicketTab Beta - Buy Tickets Tab (WIP/FUTURE?)",
+  "description": "Design: [Figma](https://www.figma.com/file/bm9fsrpzGgqmKbrWFNXz9H/Tickets_Tab_Redesign_JS?type=design&node-id=3215-97034&mode=design&t=cx4A9Wm0uYq6CnK4-0 )\r\nEpics:\r\n*Tickets Tab Redesign Foundations [iOS](https://baseball.atlassian.net/browse/BAT-83)/[Android](https://baseball.atlassian.net/browse/BPA-7236)\r\n*Buy Tickets - Ticket Tab Redesign [iOS](https://baseball.atlassian.net/browse/BP-10406)/[Android](https://baseball.atlassian.net/browse/BPA-7267)\r\n*Buy Tickets Schedule / Calendar [iOS](https://baseball.atlassian.net/browse/BAT-27)/[Android](https://baseball.atlassian.net/browse/BPA-7267)\r\n\r\n\r\nExisting TestRail Suites to reference that will have updated/new functionality with Ticket Tab Redesign\r\n*[Tickets Tab](https://testrail.testeng.mlbinfra.net/index.php?/suites/view/203046&group_by=cases:section_id&group_order=asc )\r\n*[Buy Tickets View](https://testrail.testeng.mlbinfra.net/index.php?/suites/view/192826&group_by=cases:section_id&group_order=asc )\r\n\r\n\r\nBuy Tix Coverage:\r\nTeam dropdown\r\nList View\r\nCalendar view\r\nFilters (new ones like week day/end)",
+  "project_id": 179,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/640505"
+}

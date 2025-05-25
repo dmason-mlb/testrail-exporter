@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1490618,
+    "suite_id": 493470,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1504970,
+    "suite_id": 493470,
+    "name": "Game Card",
+    "description": "https://baseball.atlassian.net/browse/FTP-3681",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1504974,
+    "suite_id": 493470,
+    "name": "Diamond Derby Leaderboard",
+    "description": "Note: Major leaderboard feature/functionality should be the same as other Games(BTS/QP) leaderboard such as You cell, scrolling up/down, XP Level name for the users, Border for the XP Level, ranking etc.",
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1504975,
+    "suite_id": 493470,
+    "name": "Friends Leaderboard",
+    "description": null,
+    "parent_id": 1504974,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 1504976,
+    "suite_id": 493470,
+    "name": "All Leaderboard",
+    "description": null,
+    "parent_id": 1504974,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 1504973,
+    "suite_id": 493470,
+    "name": "Results tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 1513059,
+    "suite_id": 493470,
+    "name": "Results Page-Diamond Derby",
+    "description": null,
+    "parent_id": null,
+    "display_order": 35,
+    "depth": 0
+  }
+]

@@ -1,0 +1,772 @@
+[
+  {
+    "id": 16672811,
+    "title": "Watch Tab Events",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-11109",
+    "created_by": 238,
+    "created_on": 1617988720,
+    "updated_by": 232,
+    "updated_on": 1683323055,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN a user is using the app\r\nWHEN the user navigates to specific sections of the Watch tab\r\nTHEN the following analytics events are recording for the corresponding action:\r\n\r\nMLB At Bat : Android : Watch : Watch Now\r\nMLB At Bat : Android : Watch : MLB.TV EPG\r\nMLB At Bat : Android : Watch : Film Room",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16672812,
+    "title": "Analytics URL",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-11104",
+    "created_by": 238,
+    "created_on": 1617989082,
+    "updated_by": 238,
+    "updated_on": 1617989160,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN a user is using the Android mobile app\r\nWHEN the user performs an action that has a corresponding analytics event\r\nTHEN the analytics event is sent to this URL: https://mlb.sc.omtrdc.net/b/ss/mlbat.bat.android/10/JAVA-1.2.4-1.5.4-AN/...",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16672813,
+    "title": "MLB.tv Playback",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-11102",
+    "created_by": 238,
+    "created_on": 1617989263,
+    "updated_by": 238,
+    "updated_on": 1617989263,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN a user is using the app\r\nWHEN the user begins playback of an MLB.tv stream\r\nTHEN the following events are sent at the appropriate times:\r\nMLB At Bat : Android : Video : Video Start\r\nMLB At Bat : Android : Video : Video Complete\r\n\r\nWhen switching feeds validate that the Video Dimensions are updated where applicable:\r\nvideo.contentId\r\nvideo.context - should have page that launched it { Scoreboard | EPG }\r\nvideo.fgui",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16672814,
+    "title": "Team Page Events",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-11058",
+    "created_by": 238,
+    "created_on": 1617989318,
+    "updated_by": 238,
+    "updated_on": 1617989375,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN a user is using the app\r\nWHEN the user navigates to a specific team's page\r\nTHEN the following events are sent at the appropriate times:\r\nMLB At Bat : Android : Team : <CLUB ABBREVIATION>",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16672815,
+    "title": "Scoreboard Page Events",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10847",
+    "created_by": 238,
+    "created_on": 1617989542,
+    "updated_by": 311,
+    "updated_on": 1635449857,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 5,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the Scoreboard is navigated to\nAND there are no current live games",
+        "expected": "THEN  trackState \"MLB At Bat : Android : Scoreboard\" is sent\n\neg. 10-28 13:13:31.006 21822 21822 I a       : Tracking State: MLB At Bat : Android : Scoreboard "
+      },
+      {
+        "content": "WHEN the scoreboard is changed to compact mode ",
+        "expected": "THEN trackAction @\"MLB At Bat : Android : Scoreboard : Toggle State Compact\" is sent\n\neg. 10-28 13:19:11.955 21822 21822 I a       : Tracking Action: MLB At Bat : Android : Scoreboard : Toggle State Compact "
+      },
+      {
+        "content": "WHEN the scoreboard is changed to card mode ",
+        "expected": "THEN trackAction @\"MLB At Bat : Android : Scoreboard : Toggle State Card\" is sent\neg. 10-28 13:22:44.634 21822 21822 I a       : Tracking Action: MLB At Bat : Android : Scoreboard : Toggle State Card "
+      },
+      {
+        "content": "WHEN the Scoreboard is navigated to and it is in Compact mode",
+        "expected": "THEN an event will fire with page.state=Compact\neg. 10-28 13:31:01.688 21822 21822 I a       :  Event Data {app.version=10.2.2.32, cell.wifi=WIFI, device.id=ANDROID_673a74f8-03d4-43de-894b-fb9d7112e032, features=, entitlements=, ipid.mlbam=, okta.id=, macaddress.1=, zip=80503, operating.system=11, status.settingslanguage=en, user.favoriteTeams=, time.stamp=1635449461688, settings.hideSpoilers=false, page.state=Compact}"
+      },
+      {
+        "content": "WHEN the Scoreboard is navigated to and it is in Card mode",
+        "expected": "THEN an event will fire with page.state=Card\neg. 10-28 13:35:13.980 21822 21822 I a       :  Event Data {app.version=10.2.2.32, cell.wifi=WIFI, device.id=ANDROID_673a74f8-03d4-43de-894b-fb9d7112e032, features=, entitlements=, ipid.mlbam=, okta.id=, macaddress.1=, zip=80503, operating.system=11, status.settingslanguage=en, user.favoriteTeams=, time.stamp=1635449713979, settings.hideSpoilers=false, page.state=Card}"
+      }
+    ]
+  },
+  {
+    "id": 16672816,
+    "title": "Onboarding Page Events",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10846",
+    "created_by": 238,
+    "created_on": 1617989673,
+    "updated_by": 238,
+    "updated_on": 1617989673,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 6,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN a user in onboarding\r\nWHEN the Welcome is shown\r\nTHEN  trackState \"MLB At Bat : Android : Get Started\"  is sent\r\n\r\nGIVEN a user in onboarding\r\nWHEN the Sign Up page is shown\r\nTHEN  trackState \"MLB At Bat : Android : Sign Up\"  is sent\r\n\r\nGIVEN a user in onboarding\r\nWHEN the Login page is shown\r\nTHEN  trackState \"MLB At Bat : Android : Log In\"  is sent\r\n\r\nGIVEN a user in onboarding\r\nWHEN the Favorite Teams selector is shown\r\nAND the location permission dialog is displayed\r\nTHEN  trackState \"MLB At Bat : Android : Settings : Location Services Modal\" is sent\r\n\r\nGIVEN a user in onboarding\r\nWHEN the Favorite Teams selector is shown\r\nTHEN  trackState \"MLB At Bat : Android : Settings : Favorite Teams\" is sent\r\n\r\nGIVEN a user in onboarding\r\nWHEN the Notification Preferences is shown\r\nTHEN  trackState \"MLB At Bat : Android : Settings : Notification\"  is sent",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16810762,
+    "title": "Standings Page Events",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10849",
+    "created_by": 238,
+    "created_on": 1619047057,
+    "updated_by": 238,
+    "updated_on": 1619047092,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN a user \r\nWHEN the Standings page is shown\r\nAND the Divisional tab is selected\r\nTHEN  trackState \"MLB At Bat : Android : Standings : Divisional\" is sent\r\n\r\nGIVEN a user \r\nWHEN the Standings page is shown\r\nAND the Wild Card tab is selected\r\nTHEN  trackState \"MLB At Bat : Android : Standings : Wild Card\" is sent",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16810763,
+    "title": "News Page Events",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10848",
+    "created_by": 238,
+    "created_on": 1619047510,
+    "updated_by": 238,
+    "updated_on": 1619047510,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 8,
+    "custom_preconds": null,
+    "custom_steps": "GIVE a user \r\nWHEN the News Page is shown\r\nTHEN  trackState \"MLB At Bat : Android : News : <MLB|Club Abbreviation>\" is sent\r\n\r\nGIVE a user \r\nWHEN the a news article is shown\r\nTHEN  trackState \"MLB At Bad : Android : News Article\" is sent\r\nAND *additional metadata is provided\r\n\r\n \r\n\r\nAdditional Meta Data:\r\n\r\narticle.contentid | Article - Content ID | the Content ID of the article being viewed | best-free-agents-by-position-2020\r\narticle.author | Article - Author | the Author of the article being viewed | Mark Feinsand\r\narticle.headline | Article - Headline | the current Headline of the article being viewed (localized) | Position by position: Top free agents available",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 17011006,
+    "title": "Scoreboard Live Page Events",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1620251283,
+    "updated_by": 232,
+    "updated_on": 1620251283,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 9,
+    "custom_preconds": "GIVE a user",
+    "custom_steps": "WHEN the Scoreboard is shown\r\nAND there are live games",
+    "custom_expected": "THEN  trackState \"MLB At Bat : Android : Scoreboard : Live\" is sent",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 21778370,
+    "title": "Crashlytics",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1628524259,
+    "updated_by": 238,
+    "updated_on": 1628524259,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 10,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN a user in the MLB app\r\nWHEN a crash is generated\r\nTHEN a log should be generated in Crashlytics",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 23224990,
+    "title": "DataDog Enable/Disable",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1632149520,
+    "updated_by": 311,
+    "updated_on": 1634075118,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 11,
+    "custom_preconds": "GIVEN that DataDog has been configured\r\nAND access to the DataDog tool is available\r\nAND the app is launched and being used\r\n\r\nNotes: The feature toggle is the enable_datadog param the in the Firebase config (eg. https://console.firebase.google.com/u/0/project/mlb-mobile-npd/config)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the DataDog tool is configured so 100% of device sessions will report \nAND the app is https-debug-proxied via Charles\nAND the user is navigating around in the app, playing video, etc",
+        "expected": "THEN regular posts containing data to: rum-http-intake.logs.datadoghq.eu/v1/input/ and mobile-http-intake.logs.datadoghq.eu/v1/input/ can be observed in Charles"
+      },
+      {
+        "content": "WHEN the Datadog tool is checked",
+        "expected": "THEN the events or event counts seen posted in Charles can be seen in the tool"
+      },
+      {
+        "content": "WHEN the enable_datadog setting is set to false in firebase\nAND the app is restarted twice",
+        "expected": "THEN the client will stop posting to DataDog"
+      },
+      {
+        "content": "WHEN the enable_datadog setting is set to true in firebase\nAND the app is restarted twice",
+        "expected": "THEN the client will resume posting to DataDog"
+      }
+    ]
+  },
+  {
+    "id": 23358467,
+    "title": "Tab Bar Events",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1632410330,
+    "updated_by": 311,
+    "updated_on": 1632434242,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 12,
+    "custom_preconds": "GIVEN the MLB app is launched\r\nAND device logs are being monitored with: adb logcat | grep -i 'Tracking Action'",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the Team tab is tapped",
+        "expected": "THEN a log entry similar to the below is seen.\n09-23 11:47:47.534 29734 29734 I a       : Tracking Action: MLB AtBat : Android : Navigation : Tab : Team Click"
+      },
+      {
+        "content": "WHEN the Scores tab is tapped ",
+        "expected": "THEN a log entry similar to the below is seen.\n09-23 11:47:47.534 29734 29734 I a       : Tracking Action: MLB AtBat : Android : Navigation : Tab : Scores Click"
+      },
+      {
+        "content": "WHEN the News tab is tapped",
+        "expected": "THEN a log entry similar to the below is seen.\n09-23 11:47:47.534 29734 29734 I a       : Tracking Action: MLB AtBat : Android : Navigation : Tab : News Click"
+      },
+      {
+        "content": "WHEN the Standings tab is tapped",
+        "expected": "THEN a log entry similar to the below is seen.\n09-23 11:47:47.534 29734 29734 I a       : Tracking Action: MLB AtBat : Android : Navigation : Tab : Standings Click"
+      },
+      {
+        "content": "WHEN the Stats tab is tapped",
+        "expected": "THEN a log entry similar to the below is seen.\n09-23 11:47:47.534 29734 29734 I a       : Tracking Action: MLB AtBat : Android : Navigation : Tab : Stats Click"
+      },
+      {
+        "content": "WHEN (\nthe attached file is mapped to eg. https://storage.mobile.mlbinfra.com/atbatconfig/appnavigation_en.json\nAND at least three minutes have elapsed\nAND the app is restarted \n     )\nOR it is Postseason\nAND the Postseason tab is tapped ",
+        "expected": "THEN a log entry similar to the below is seen.\n09-23 11:47:47.534 29734 29734 I a       : Tracking Action: MLB AtBat : Android : Navigation : Tab : Postseason Click"
+      }
+    ]
+  },
+  {
+    "id": 23733681,
+    "title": "Firebase  Analytics screen_view and video events",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1633560847,
+    "updated_by": 311,
+    "updated_on": 1633635250,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 13,
+    "custom_preconds": "Access to the Firebase Analytics console for the code under test (eg. currently mlb-mobile-npd for the Develop build)\r\nadb is installed on your machine and the following are run: (from https://firebase.google.com/docs/analytics/debugview)\r\nadb shell setprop debug.firebase.analytics.app com.bamnetworks.mobile.android.gameday.atbat\r\nadb shell setprop log.tag.FA VERBOSE\r\nadb shell setprop log.tag.FA-SVC VERBOSE\r\nadb logcat -v time -s FA FA-SVC \r\n\r\nYour device should then be selected in the debug view dropdown, eg.\r\nhttps://console.firebase.google.com/project/mlb-mobile-npd/analytics/app/android:com.bamnetworks.mobile.android.ballpark.qa/debugview/~2F%3Ft%3D1633554902530&fpn%3D518717772311&swu%3D1&sgu%3D1&sus%3Dnot_upgraded&params%3D_u..pageSize%253D100&cs%3Dapp.m.debugview.overview&g%3D1",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a 'page-level' navigation occurs, eg. tap on Teams, Sores, Stats, Postseason, Settings, About MLB, Watch, MLB.TV, MLB.Audio, Standings",
+        "expected": "THEN a screen_view event will be logged in Firebase Analytics with a firebase_name similar to the page name"
+      },
+      {
+        "content": "WHEN MLB.TV content is successfully streamed",
+        "expected": "THEN the events video_video_attempt_success and video_video_start are logged"
+      },
+      {
+        "content": "WHEN MLB.TV content is 25% complete (hint: use a short video for this and next 3 steps)",
+        "expected": "THEN the event video_video_25_complete is logged"
+      },
+      {
+        "content": "WHEN MLB.TV content is 50% complete",
+        "expected": "THEN the event video_video_50_complete is logged"
+      },
+      {
+        "content": "WHEN MLB.TV content is 75% complete",
+        "expected": "THEN the event video_video_75_complete is logged"
+      },
+      {
+        "content": "WHEN MLB.TV content has played to completion ",
+        "expected": "THEN the event video_video_complete is logged"
+      },
+      {
+        "content": "WHEN MLB.TV content is playing\nAND the view is toggled between landscape and portrait ",
+        "expected": "THEN the event video_video_player_changed_state is logged"
+      },
+      {
+        "content": "WHEN MLB.TV streaming is attempted and fails (eg. user needs to log in first so Paywall displays)",
+        "expected": "THEN a video_video_attempt_<reason> event is logged, eg. for Paywall video_video_attempt_paywall"
+      }
+    ]
+  },
+  {
+    "id": 23754211,
+    "title": "Qualtrics Survey",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1633642861,
+    "updated_by": 311,
+    "updated_on": 1639066757,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 14,
+    "custom_preconds": "GIVEN a USER\r\nAND an active qualtrics survey is configured for your app/environment\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the firebase config Qualtrics/enable_qualtrics_sdk is set to false\nAND the app has been restarted since the last display of the survey invite\nOR the app has otherwise just been started\nAND the user spends at least 60 seconds in the app\n",
+        "expected": "THEN the survey invite will not display"
+      },
+      {
+        "content": "WHEN the firebase config Qualtrics/enable_qualtrics_sdk is set to true\nAND the app has been restarted since the last display of the survey invite\nOR the app has otherwise just been started\nAND the user spends at least 60 seconds in the app\n(Note: you may have to clear app data depending on survey settings.)",
+        "expected": "THEN the survey invite will display"
+      },
+      {
+        "content": "WHEN the Qualtrics survey invite is displaying\nAND the Dismiss button is tapped",
+        "expected": "THEN the invite will dismiss\nAND it will not display again until the app is restarted"
+      },
+      {
+        "content": "WHEN the Qualtrics survey invite is displaying\nAND the Take Survey button is tapped\n",
+        "expected": "THEN the survey will open"
+      },
+      {
+        "content": "WHEN the survey is open\nAND the user taps the X to close it\nOR the user completes the survey ",
+        "expected": "THE the survey will dismiss\nAND the invite will not display again until the app is restarted"
+      }
+    ]
+  },
+  {
+    "id": 23762480,
+    "title": "MLB.tv Playback Attempts",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1633730137,
+    "updated_by": 311,
+    "updated_on": 1634058745,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 15,
+    "custom_preconds": "GIVEN a USER\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is successfully sent to MLB.tv",
+        "expected": "THEN the following page is logged:\nMLB At Bat : Android : Video : Video Attempt : Success"
+      },
+      {
+        "content": "WHEN the user must used the MVPD flow to authenticate",
+        "expected": "THEN the following page is logged:\nMLB At Bat : Android : Video : Video Attempt : Fail MVPD"
+      },
+      {
+        "content": "WHEN the user is directed to the Paywall",
+        "expected": "THEN the following page is logged:\nMLB At Bat : Android : Video : Video Attempt : Fail Paywall"
+      },
+      {
+        "content": "WHEN the user tries to stream the free game of the day and must login to continue\n",
+        "expected": "THEN the following page is logged:\nMLB At Bat : Android : Video : Video Attempt : Fail FGOTD"
+      },
+      {
+        "content": "WHEN the user’s location is mocked",
+        "expected": "THEN the following page is logged:\nMLB At Bat : Android : Video : Video Attempt : Fail Mocked"
+      },
+      {
+        "content": "WHEN an error occurs and the user is not directed to the MLB.TV fragment for unknown reasons",
+        "expected": "THEN the following page is logged:\nMLB At Bat : Android : Video : Video Attempt : Fail Unknown"
+      },
+      {
+        "content": "WHEN a user is blacked out",
+        "expected": "THEN the following page is logged:\nMLB At Bat : Android : Video : Video Attempt : Fail Blackout"
+      }
+    ]
+  },
+  {
+    "id": 23762481,
+    "title": "Gameday event",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1633731503,
+    "updated_by": 311,
+    "updated_on": 1633731644,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 16,
+    "custom_preconds": "GIVEN a USER",
+    "custom_steps": "WHEN a link to Gameday is tapped (eg. compact scoreboard tile)\r\n",
+    "custom_expected": "THEN the following page is logged:\r\nMLB At Bat : Android : Gameday",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 23762482,
+    "title": "View Video events",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1633731723,
+    "updated_by": 311,
+    "updated_on": 1633732004,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 17,
+    "custom_preconds": "GIVEN an entitled MLB.tv USER",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an archive game is successfully started",
+        "expected": "THEN then following page is logged:\nMLB At Bat : Android : View Archive Video"
+      },
+      {
+        "content": "WHEN a live game is successfully started",
+        "expected": "THEN then following page is logged:\nMLB At Bat : Android : View Live Video"
+      },
+      {
+        "content": "WHEN other video is started (eg. from the Team page)",
+        "expected": "THEN then following page is logged:\nMLB At Bat : Android : View Video"
+      }
+    ]
+  },
+  {
+    "id": 23895295,
+    "title": "DataDog MediaPlaybackException events",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1634075648,
+    "updated_by": 311,
+    "updated_on": 1634075648,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 18,
+    "custom_preconds": "GIVEN access to DataDog logs section eg.: https://app.datadoghq.eu/logs?cols=host%2Cservice&context_event=AQAAAXxXl7GFVQtwKAAAAABBWHhYbU1JT0FBQzAxbm9Od1J6Rl9RQUE&event&from_ts=1634072611120&index=&live=true&messageDisplay=inline&query=service%3Acom.bamnetworks.mobile.android.gameday.atbat+%40session_id%3A00000000-0000-0000-0000-000000000000+%40network.client.ip%3A75.71.64.114&stream_sort=desc&to_ts=1634073511120&viz=\r\nAND filtering on your external IP address\r\nAND filtering on the last 15 minutes\r\nAND Proxied via Charles ",
+    "custom_steps": "WHEN video is started\r\nAND a video error is generated (eg. the playback URL is added to the block list)",
+    "custom_expected": "THEN a media playback error will be logged in DataDog",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 23941788,
+    "title": "Crashlytics Video Player Events",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1634155216,
+    "updated_by": 311,
+    "updated_on": 1634156389,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 19,
+    "custom_preconds": "GIVEN access to the Crashlytics instance for the test version and environment (eg. https://console.firebase.google.com/u/0/project/mlb-mobile-npd/crashlytics/app/android:com.bamnetworks.mobile.android.gameday.atbat/issues?time=last-seven-days&type=all&state=open&tag=all)\r\nAND user has noted their Device UUID from About MLB",
+    "custom_steps": "WHEN a video player error (not just crash) occurs (eg. add playback URL to the block list)\r\nAND a couple hours have elapsed to wait for data to be polled\r\nAND the the Crashlytics dashboard is opened\r\nAND a appropriate timeframe is selected\r\nAND Search By User Id is selected\r\nAND the test devices UUID is entered",
+    "custom_expected": "THEN a detailed error from the video event will be seen\r\nAND can be selected\r\nAND can be seen logged in the Logs tab",
+    "custom_steps_separated": [
+      {
+        "content": "",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 24533401,
+    "title": "News Page Recommended and Related Events",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1636412428,
+    "updated_by": 311,
+    "updated_on": 1636412748,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 20,
+    "custom_preconds": "GIVEN a User",
+    "custom_steps": "WHEN the user navigates to the News tab\r\nAND a story is tapped\r\nAND a story in the Related or Recommended section is tapped",
+    "custom_expected": "THEN the following event is posted:\r\n MLB At Bat : Android : News Article",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 25010668,
+    "title": "Ad Impression Events",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1638305215,
+    "updated_by": 311,
+    "updated_on": 1638464308,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 21,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN a Free or Lite user\nWHEN an in-line banner ad is viewed on the Team page",
+        "expected": "THEN an ad impression event is sent\neg. AMACTION:MLB At Bat : Android : Display Ad Impression"
+      },
+      {
+        "content": "GIVEN a Free or Lite user\nWHEN each in-line banner ad is viewed on the Scoreboard page",
+        "expected": "THEN an ad impression event is sent\neg. AMACTION:MLB At Bat : Android : Display Ad Impression"
+      },
+      {
+        "content": "GIVEN a Free or Lite user\nWHEN each in-line banner ad is viewed on the News page",
+        "expected": "THEN an ad impression event is sent\neg. AMACTION:MLB At Bat : Android : Display Ad Impression"
+      },
+      {
+        "content": "GIVEN a user\nWHEN a game is streamed\nAND a DAI ad is viewed",
+        "expected": "THEN a video ad impression event is sent\neg. AMACTION:MLB At Bat : Android : Video Ad Impression"
+      }
+    ]
+  },
+  {
+    "id": 25354651,
+    "title": "DataDog and OKTA ID",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1639517881,
+    "updated_by": 311,
+    "updated_on": 1639520251,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 22,
+    "custom_preconds": "Notes:\r\n- DataDog Event explorer: https://app.datadoghq.eu/rum/explorer?query=%40application.id%3A853895a7-e52b-4f4e-a16d-1a180428e990&tab=session&from_ts=1639403391382&to_ts=1639406991382&live=true\r\n- filter on https://mlbentitlementservices.mlb.com/entitlements with Charles while logging in to get user's OKTA ID\r\n- warning: dataDog events may not get logged when proxying via Charles\r\n- set filter @usr.id:<OKTA ID> in DataDog to see only events for that user\r\n ",
+    "custom_steps": "GIVEN a Free or Entitled User using a device running DataDog\r\nWHEN navigating to any app fragments eg. pages, playing video, etc",
+    "custom_expected": "THEN a DataDog event will be logged containing a user id in the json attributes that is the user's OKTA ID",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26967772,
+    "title": "Preroll Ads Analytics Events",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1648677846,
+    "updated_by": 232,
+    "updated_on": 1648677846,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 23,
+    "custom_preconds": "GIVEN an un-entitled user",
+    "custom_steps": "WHEN the user views a video on the highlights tab of the Watch View or the Video Carousel of Team Page\r\nAND a preroll ad plays",
+    "custom_expected": "THEN logs will indicate a tracking event for \"MLB At Bat : Android : Video Ad Impression\"",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 28306604,
+    "title": "Apple TV+/Peacock modal state and tracking",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1651525633,
+    "updated_by": 232,
+    "updated_on": 1651526545,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 24,
+    "custom_preconds": "GIVEN an entitled user that is blacked out of Android TV+/Peacock games",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user clicks a live Apple TV+ game\n",
+        "expected": "THEN the app redirects to the player\nAND the user sees the Apple TV+ blackout modal\nAND Adobe Analytics tracking state includes \"Apple TV+ Modal\""
+      },
+      {
+        "content": "WHEN the user dismisses the Apple TV+ blackout modal",
+        "expected": "THEN Adobe Analytics tracking action includes \"Apple TV+ Modal : Dismiss Click\""
+      },
+      {
+        "content": "WHEN the user clicks a live Peacock game\n",
+        "expected": "THEN the app redirects to the player\nAND the user sees the Peacock blackout modal\nAND Adobe Analytics tracking state includes \"Peacock Modal\""
+      },
+      {
+        "content": "WHEN the user dismisses the Peacock blackout modal",
+        "expected": "THEN Adobe Analytics tracking action includes \"Peacock Modal : Dismiss Click\""
+      }
+    ]
+  },
+  {
+    "id": 29665722,
+    "title": "Analytics - Video Playback,  contentID and slug parameters",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "DEST-514",
+    "created_by": 311,
+    "created_on": 1668182175,
+    "updated_by": 311,
+    "updated_on": 1668182175,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 25,
+    "custom_preconds": "GIVEN a user of the MLB app",
+    "custom_steps": "WHEN video is played or autoplays from Team home, Scores tab, News/video tab or team video page (see all)",
+    "custom_expected": "THEN tracking calls will be made in the form:\r\ntrackAction: MLB At Bat : <Platform Name> : Video : Video <event type> \r\nAND the following params will be sent:\r\n\r\nvideo.slug - the last part of the video URL ex: \"jp-crawford-walk-off-home-run”\r\nvideo.contentId - ex: \"d26c91c0-aa942393-b2f4f861-csvm-diamondx64-asset” ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 29665721,
+    "title": "Analytics - Video Playback,  autoplay and context parameters",
+    "section_id": 765273,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "DEST-513",
+    "created_by": 311,
+    "created_on": 1668181053,
+    "updated_by": 311,
+    "updated_on": 1668201010,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 220630,
+    "display_order": 26,
+    "custom_preconds": "GIVEN a user of the MLB app",
+    "custom_steps": "WHEN video is played or autoplays from Team home, Scores tab, News/video tab or team video page (see all)",
+    "custom_expected": "THEN tracking calls will be made in the form:\r\ntrackAction: MLB At Bat : <Platform Name> : Video : Video <event type> \r\nAND the following params will be sent:\r\n\r\nvideo.autoplay : Video Autoplay Flag: true/false \r\nvideo.context : Video Context. Where the video is being played/accessed in the app - probably mostly from the video/news tab and the home page \r\n\r\nExpected Video Contexts for Team, Scoreboard, and News:\r\nTeam Home\r\nTeam Home : More Videos\r\nGameday Wrap\r\nGameday : Summary : Scoring\r\nGameday : Summary : All Plays\r\nGameday : Videos\r\nNews Videos",
+    "custom_steps_separated": null
+  }
+]

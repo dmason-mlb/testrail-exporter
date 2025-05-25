@@ -1,0 +1,20 @@
+[
+  {
+    "id": 144972,
+    "suite_id": 992,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 144973,
+    "suite_id": 992,
+    "name": "Account/Login",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

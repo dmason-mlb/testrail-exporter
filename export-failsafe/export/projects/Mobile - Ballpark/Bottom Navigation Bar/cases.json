@@ -1,0 +1,252 @@
+[
+  {
+    "id": 16242411,
+    "title": "Navigation Icons",
+    "section_id": 732309,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1614966013,
+    "updated_by": 288,
+    "updated_on": 1742934186,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 202977,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app ",
+    "custom_steps": "WHEN user is logged in with MLB account in Ballpark app",
+    "custom_expected": "THEN Bottom navigation is updated to display “Home”, “Tickets”, “Team” and “Profile” in correct state(selected/unselected)\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates to Home tab",
+        "expected": "THEN the Home tab is selected, indicated by showing the home plate icon in black"
+      },
+      {
+        "content": "WHEN the user navigates to other nav bar options (Tickets, Team, Profile)",
+        "expected": "THEN the Home tab is unselected, indicated by showing the home plate icon not-filled in (white)"
+      },
+      {
+        "content": "WHEN the user navigates to Profile tab",
+        "expected": "THEN the Profile tab is selected, indicated by showing the avatar icon in black"
+      },
+      {
+        "content": "WHEN the user navigates to other nav bar options (Home, Tickets, Team)",
+        "expected": "THEN the Profile tab is unselected, indicated by showing the avatar icon not-filled in (white)"
+      },
+      {
+        "content": "WHEN the user navigates to Tickets tab",
+        "expected": "THEN the Tickets tab is selected, indicated by showing the tickets icon in black"
+      },
+      {
+        "content": "WHEN the user navigates to other nav bar options (Home, Team, Profile)",
+        "expected": "THEN the Tickets tab is unselected, indicated by showing the tickets icon plate icon not-filled in (white)"
+      },
+      {
+        "content": "WHEN the user navigates to Team tab",
+        "expected": "THEN the Team tab is selected, indicated by showing the team logo icon in the team's branded color\n\nNOTE: If no team was previously favorited, then 'Select a Team' modal is presented to user to select. After team selection, validation is the same as listed above"
+      },
+      {
+        "content": "WHEN the user navigates to other nav bar options (Home, Tickets, Profile)",
+        "expected": "THEN the Team tab is unselected, indicated by showing the team logo icon in grey"
+      }
+    ]
+  },
+  {
+    "id": 16243655,
+    "title": "Home Menu Display",
+    "section_id": 732309,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1614972954,
+    "updated_by": 288,
+    "updated_on": 1742934365,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 202977,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app\r\nAND user is logged in with MLB account",
+    "custom_steps": "WHEN user launches app OR taps on Home bottom nav bar tab ",
+    "custom_expected": "THEN the user is shown Home page with most relevant information to the user\r\n* Inbox icon\r\n* Chat icon\r\n* Home page view",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user launches the app",
+        "expected": "THEN Home icon is highlighted in bottom nav bar"
+      },
+      {
+        "content": "",
+        "expected": "AND Inbox icon is shown "
+      },
+      {
+        "content": "",
+        "expected": "AND Chat icon is shown"
+      },
+      {
+        "content": "",
+        "expected": "AND Home page view is shown\n(* content is dependent on state - see below)"
+      },
+      {
+        "content": "WHEN the user launches the app and has no favorite team chosen",
+        "expected": "THEN user is shown setFavoriteTeam context card\nAND user is shown teamSchedulePrompt context card without a team logo (if account is w/out tickets)"
+      },
+      {
+        "content": "WHEN the user launches the app and has at least one favorite team chosen",
+        "expected": "THEN user is NOT shown setFavoriteTeam context card\nAND user is shown teamSchedulePrompt context card with a team logo (if account is w/out tickets)"
+      },
+      {
+        "content": "WHEN the user launches the app and has No tickets",
+        "expected": "THEN user is shown notSeeingYourTickets context card (subject shown as 'Not seeing your tickets?) "
+      },
+      {
+        "content": "GIVEN the user has tickets on their account\nWHEN the user launches the app\n\n(This behavior applies to any/all of the below scenarios:\n* No favorite team selected\n* Fave team matches the home location of ticket purchased\n* Fave team is different than the tickets home location)\n",
+        "expected": "THEN a Next Ticketed Event card is shown with the event details (event name/matchup, time, location, amount of tickets)\nAND NTE card tap directs user to ticket list view\nAND NTE card has scan list view button (shown as barcode image followed by 'Access Tickets' text)"
+      }
+    ]
+  },
+  {
+    "id": 16243654,
+    "title": "Ticket Menu Display",
+    "section_id": 732309,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1614972935,
+    "updated_by": 288,
+    "updated_on": 1629826119,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 202977,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND user is logged in with MLB account",
+    "custom_steps": "WHEN user taps on Ticket bottom nav bar tab.",
+    "custom_expected": "THEN the user is shown Tickets page with ticket information\r\n* My Offers icon (shown as price tag img)\r\n* Ticket Forward icon (shown as ticket with arrow coming out img)\r\n* Wallet View (default) / Buy Tickets tab",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN tapping on bottom NavBar 'Tickets' with tickets icon",
+        "expected": "THEN display a new page with 'Tickets' as title"
+      },
+      {
+        "content": "",
+        "expected": "AND display My Offers icon and Ticket Forward icon at the top right"
+      },
+      {
+        "content": "",
+        "expected": "AND Wallet(default) and Buy Tickets tabs are displayed"
+      },
+      {
+        "content": "",
+        "expected": "AND Wallet page view is shown\n(* content is dependent on state - see below)"
+      },
+      {
+        "content": "WHEN the user is on the Tickets tab without any tickets",
+        "expected": "THEN wallet view shows 'Cannot find any tickets' with ticket icon\nAND 'Please refresh your tickets or verify additional email addresses used to purchase tickets.' text is displayed \nAND 'Refresh My Tickets' button and 'Verify Email Address' buttons are shown *\n\n* If acct is verified, then 'Refresh ...' button is shown first. If acct is NOT verified, then 'Verify ...' button is shown first."
+      },
+      {
+        "content": "WHEN the user is on the Tickets tab with any tickets (today or in future)",
+        "expected": "THEN wallet view shows 'Tickets' title with 'View All' link\nAND individual cards for each of the account's ticketed event details (event date and time, name/matchup, location, amount of tickets, and home team logo if applicable, button with ticket amount, and venue background image)"
+      }
+    ]
+  },
+  {
+    "id": 15991906,
+    "title": "Team Menu Display",
+    "section_id": 732309,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1613170885,
+    "updated_by": 288,
+    "updated_on": 1614973059,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 202977,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)",
+    "custom_steps": "WHEN user is logged in with MLB account with different states of selection of My Team(s)\r\nDifferent States: \r\n* No Team\r\n* 1 Team selected as favorite\r\n* Multiple teams selected as favorites",
+    "custom_expected": "THEN Bottom navigation is updated to display “Team” icon and text according to the user's Teams selection",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user launches the app and has no favorite team chosen",
+        "expected": "THEN the app will display the MLB logo as the icon for the Team tab bottom nav item\n\n"
+      },
+      {
+        "content": "WHEN the user navigates to team tab without a favorite team chosen",
+        "expected": "THEN the Team picker will be launched\nAND the user must select a team to proceed. [iOS]\nAND the user can select a team to proceed OR tap 'X\" to dismiss and return to Home [Android]"
+      },
+      {
+        "content": "WHEN the user launches the app and has a favorite team chosen",
+        "expected": "THEN the app will display the favorite team logo as the icon for the Team tab bottom nav item\n\n"
+      },
+      {
+        "content": "WHEN the user navigates to Team Tab with favorite team chosen",
+        "expected": "THEN the app will display the favorite team as the selected club in the drop down in Team Tab Toolbar\nAND the team's primary venue park info is shown"
+      },
+      {
+        "content": "WHEN the user has more than one favorite team ",
+        "expected": "THEN the app will display the logo of the top ranked favorite team of the user in the navigation bar"
+      },
+      {
+        "content": "WHEN the user switches from another app to Ballpark (opening the app while it is still in memory)",
+        "expected": "THEN the app will display the last team chosen for the Team tab"
+      }
+    ]
+  },
+  {
+    "id": 16059520,
+    "title": "Profile Menu Display",
+    "section_id": 732309,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1613674637,
+    "updated_by": 288,
+    "updated_on": 1742934648,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 202977,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app \r\nAND user is logged in with MLB account",
+    "custom_steps": "WHEN user taps on Profile bottom nav bar tab.",
+    "custom_expected": "THEN the user is shown Profile page",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN tapping on bottom NavBar 'Profile' with avator icon ",
+        "expected": "THEN display a new page with avatar, name, and email at the top\nAND 'Edit' link in upper right corner"
+      },
+      {
+        "content": "",
+        "expected": "THEN display a new page with Profile options(fave teams, app notification, MLB acct emails, Ticket Accts, About Ballpark, Close MLB Acct, Customer Support, Do Not Sharer or Sell My Data) with appropriate icons aligned on the left.  "
+      }
+    ]
+  }
+]

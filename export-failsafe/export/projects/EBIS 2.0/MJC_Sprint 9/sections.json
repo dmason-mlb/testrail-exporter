@@ -1,0 +1,38 @@
+[
+  {
+    "id": 14003,
+    "suite_id": 1579,
+    "name": "Batch Screen",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 14004,
+    "suite_id": 1579,
+    "name": "Pro Player Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 14029,
+    "suite_id": 1579,
+    "name": "Major Contract",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 14806,
+    "suite_id": 1579,
+    "name": "Contracts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

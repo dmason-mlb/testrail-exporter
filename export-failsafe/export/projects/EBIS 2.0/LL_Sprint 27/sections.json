@@ -1,0 +1,56 @@
+[
+  {
+    "id": 113483,
+    "suite_id": 17296,
+    "name": "Summary",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 113484,
+    "suite_id": 17296,
+    "name": "Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 113485,
+    "suite_id": 17296,
+    "name": "Reports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 113486,
+    "suite_id": 17296,
+    "name": "Invoices",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 113494,
+    "suite_id": 17296,
+    "name": "Credit",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 113496,
+    "suite_id": 17296,
+    "name": "Global",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  }
+]

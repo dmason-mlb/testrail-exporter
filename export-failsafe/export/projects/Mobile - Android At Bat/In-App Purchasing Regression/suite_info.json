@@ -1,0 +1,11 @@
+{
+  "id": 21123,
+  "name": "In-App Purchasing Regression",
+  "description": "Fast Track Regression test cases for In-App Purchasing and Paywall Testing. \r\n*Must be tested in Google's Internal Beta / Amazon Live-App Testing (LAT)*",
+  "project_id": 3,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/21123"
+}

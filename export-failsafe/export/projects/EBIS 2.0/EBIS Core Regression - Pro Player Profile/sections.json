@@ -1,0 +1,65 @@
+[
+  {
+    "id": 103228,
+    "suite_id": 15805,
+    "name": "Pro Player Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 103241,
+    "suite_id": 15805,
+    "name": "Domestic Amateur",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 103242,
+    "suite_id": 15805,
+    "name": "Int'l Amateur Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1125103,
+    "suite_id": 15805,
+    "name": "Two Way Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1125104,
+    "suite_id": 15805,
+    "name": "Two Way Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1138790,
+    "suite_id": 15805,
+    "name": "Profiles/Transactions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1138798,
+    "suite_id": 15805,
+    "name": "Profiles/Transactions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  }
+]

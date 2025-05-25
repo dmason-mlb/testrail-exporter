@@ -1,0 +1,336 @@
+[
+  {
+    "id": 1238697,
+    "title": "Paywall Page UX/UI",
+    "section_id": 150306,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553272129,
+    "updated_by": 173,
+    "updated_on": 1553285462,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20689,
+    "display_order": 1,
+    "custom_preconds": "GIVEN that the user finished Select Favorite Teams and Notifications on-boarding or tapped on a video",
+    "custom_steps": "WHEN the user hits the Paywall",
+    "custom_expected": "THEN the app will display the following:\r\n\r\n* First Pitch logo and background\r\n* $49.99 Yearly button\r\n* $12.99 Monthly button\r\n* Subscriber Login button\r\n* 'Already Purchased? Restore Now' link\r\n* Close button\r\n\r\nTHEN the app will display the page complete and neat (no typographical errors, no overlapping and/or missing icons)\r\n\r\nTHEN the wait time for the page to load will not be longer than 5 secs\r\n\r\nTHEN the app will display the content of that tab in a scale to fit manner (the user will not be able to pinch in/out of the page)\r\n\r\nTHEN the users will be able to click on buttons/elements and these will work",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238698,
+    "title": "User Account Page UX/UI",
+    "section_id": 150306,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553272134,
+    "updated_by": 173,
+    "updated_on": 1553624759,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20689,
+    "display_order": 2,
+    "custom_preconds": "GIVEN that the user finished Select Favorite Teams and Notifications on-boarding or tapped on a video",
+    "custom_steps": "WHEN the user hits the User Account page",
+    "custom_expected": "THEN the app will display the 'Log In With Your MiLB.com Account' Form\r\n\r\nTHEN the app will display the page complete and neat (no typographical errors, no overlapping and/or missing icons)\r\n\r\nTHEN the wait time for the page to load will not be longer than 5 secs\r\n\r\nTHEN the app will display the content of that tab in a scale to fit manner (the user will not be able to pinch in/out of the page)\r\n\r\nTHEN the users will be able to click on buttons/elements and these will work",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238692,
+    "title": "Paywall Page - No Apple ID Logged In",
+    "section_id": 150307,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553271073,
+    "updated_by": 173,
+    "updated_on": 1554133038,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20689,
+    "display_order": 1,
+    "custom_preconds": "GIVEN that the app brought the user to the Paywall page\r\n\r\nGIVEN that the user has no Apple ID logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on $49.99 Yearly button",
+        "expected": "THEN the app will display the 'Sign-In Required' popup"
+      },
+      {
+        "content": "WHEN the user taps on $12.99 Yearly button",
+        "expected": "THEN the app will display the 'Sign-In Required' popup"
+      },
+      {
+        "content": "WHEN the user taps on Subscriber Login button",
+        "expected": "THEN the app will display the Log in With Your MiLB Account Page"
+      },
+      {
+        "content": "WHEN the user taps on 'Already Purchased? Restore Now' link",
+        "expected": "THEN the app will display the 'Sign In to iTunes Store' popup"
+      },
+      {
+        "content": "WHEN the user taps on Close button",
+        "expected": "THEN the app will dismiss the Paywall page"
+      }
+    ]
+  },
+  {
+    "id": 1238716,
+    "title": "Paywall Page - An Apple ID Logged In",
+    "section_id": 150307,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553717856,
+    "updated_by": 173,
+    "updated_on": 1554133125,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20689,
+    "display_order": 2,
+    "custom_preconds": "GIVEN that the app brought the user to the Paywall page\r\n\r\nGIVEN that the user has an Apple ID logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on $49.99 Yearly button",
+        "expected": "THEN the app will display the 'Confirm Purchase' popup"
+      },
+      {
+        "content": "WHEN the user taps on $12.99 Yearly button",
+        "expected": "THEN the app will display the 'Confirm Purchase' popup"
+      },
+      {
+        "content": "WHEN the user taps on Subscriber Login button",
+        "expected": "THEN the app will display the Log in With Your MiLB Account Page"
+      },
+      {
+        "content": "WHEN the user taps on 'Already Purchased? Restore Now' link",
+        "expected": "THEN the app will display the 'Purchase Restored Successfully' popup (account with entitlement)\n\nTHEN the app will display the 'Failed to restore purchase' popup (account without entitlement)"
+      },
+      {
+        "content": "WHEN the user taps on Close button",
+        "expected": "THEN the app will dismiss the Paywall page"
+      }
+    ]
+  },
+  {
+    "id": 1238695,
+    "title": "Purchase In Old App Then Download New App",
+    "section_id": 150307,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553271634,
+    "updated_by": 173,
+    "updated_on": 1553611627,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20689,
+    "display_order": 3,
+    "custom_preconds": "GIVEN that the user purchased a subscription in the old app\r\n\r\nGIVEN that the user downloaded a newer version of the app",
+    "custom_steps": "WHEN the user restore purchases from the old app and use it in the new app",
+    "custom_expected": "THEN the user will be able to restore purchases\r\n\r\nTHEN the user will have the same subscription from the old app\r\n\r\nTHEN the user will have access to MiLB.TV",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238696,
+    "title": "Purchase In Web Then Use In Mobile App",
+    "section_id": 150307,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553271664,
+    "updated_by": 173,
+    "updated_on": 1553611819,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20689,
+    "display_order": 4,
+    "custom_preconds": "GIVEN that the user purchased MiLB.TV in web",
+    "custom_steps": "WHEN the user logs in the account with entitlement/purchased subscription in the mobile app",
+    "custom_expected": "THEN the user will be able to use the entitled account in the app\r\n\r\nTHEN the user will be able to access MiLB.TV",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238703,
+    "title": "$49.99 Subscriber",
+    "section_id": 150307,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553547119,
+    "updated_by": 173,
+    "updated_on": 1553549748,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20689,
+    "display_order": 5,
+    "custom_preconds": "GIVEN that the user is currently subscribed to $49.99 subscription \r\n\r\nGIVEN that the app displayed the Paywall\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on '$49.99 Yearly'",
+        "expected": "THEN the app will display the 'You're currently subscribed to this.' popup\n\nTHEN the app will display the 'Manage' and 'OK' buttons"
+      },
+      {
+        "content": "WHEN the user taps on 'Manage' button",
+        "expected": "THEN the user will be brought to Apple Store and will allow the user to manage the current subscriptions "
+      },
+      {
+        "content": "WHEN the user taps on 'OK' button",
+        "expected": "THEN the app will dismiss the popup\n\nTHEN the app will not make any changes on the current subscription of the user"
+      },
+      {
+        "content": "WHEN the user taps on '$12.99 Monthly'",
+        "expected": "THEN the app will display the 'Confirm Purchase' popup\n\nTHEN the app will display the 'Cancel' and 'Continue' buttons"
+      },
+      {
+        "content": "WHEN the user taps on 'Continue'",
+        "expected": "THEN the app will display the 'You're all set.' popup\n\nTHEN the app will save the newly modified subscription preference"
+      },
+      {
+        "content": "WHEN the user taps on 'Cancel' button",
+        "expected": "THEN the app will dismiss the popup\n\nTHEN the app will not make any changes on the current subscription of the user"
+      }
+    ]
+  },
+  {
+    "id": 1238704,
+    "title": "$12.99 Subscriber",
+    "section_id": 150307,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553547126,
+    "updated_by": 173,
+    "updated_on": 1553549047,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20689,
+    "display_order": 6,
+    "custom_preconds": "GIVEN that the user is currently subscribed to $12.99 subscription\r\n\r\nGIVEN that the app displayed the Paywall",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on '$12.99 Monthly'",
+        "expected": "THEN the app will display the 'You're currently subscribed to this.' popup\n\nTHEN the app will display the 'Manage' and 'OK' buttons"
+      },
+      {
+        "content": "WHEN the user taps on 'Manage' button",
+        "expected": "THEN the user will be brought to Apple Store and will allow the user to manage the current subscriptions"
+      },
+      {
+        "content": "WHEN the user taps on 'OK' button",
+        "expected": "THEN the app will dismiss the popup\n\nTHEN the app will not make any changes on the current subscription of the user"
+      },
+      {
+        "content": "WHEN the user taps on '$49.99 Yearly'",
+        "expected": "HEN the app will display the 'Confirm Purchase' popup\n\nTHEN the app will display the 'Cancel' and 'Continue' buttons"
+      },
+      {
+        "content": "WHEN the user taps on 'Continue'",
+        "expected": "THEN the app will display the 'You're all set.' popup\n\nTHEN the app will save the newly modified subscription preference"
+      },
+      {
+        "content": "WHEN the user taps on 'Cancel' button",
+        "expected": "THEN the app will dismiss the popup\n\nTHEN the app will not make any changes on the current subscription of the user"
+      }
+    ]
+  },
+  {
+    "id": 1238717,
+    "title": "Subscriber Login (same with http://testrail.mlb.us-east-1.bamgrid.net/testrail/index.php?/cases/view/1238701)",
+    "section_id": 150307,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553719292,
+    "updated_by": 173,
+    "updated_on": 1554301665,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20689,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238705,
+    "title": "Restore Subscription",
+    "section_id": 150307,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553549659,
+    "updated_by": 173,
+    "updated_on": 1553611864,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20689,
+    "display_order": 8,
+    "custom_preconds": "GIVEN that the user is currently subscribed to any subscription\r\n\r\nGIVEN that the app displayed the Paywall",
+    "custom_steps": "WHEN the user taps on 'Already Purchased? Restore Now' link button",
+    "custom_expected": "THEN the app will display the 'Purchase Restored Successfully'\r\n\r\nTHEN the user will be able to access MiLB.TV",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238693,
+    "title": "User Account Page (same with http://testrail.mlb.us-east-1.bamgrid.net/testrail/index.php?/cases/view/1238708)",
+    "section_id": 150308,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553271109,
+    "updated_by": 173,
+    "updated_on": 1554301724,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20689,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  }
+]

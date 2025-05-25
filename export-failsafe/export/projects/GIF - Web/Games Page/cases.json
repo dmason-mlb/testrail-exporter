@@ -1,0 +1,117 @@
+[
+  {
+    "id": 28631910,
+    "title": "Games page top section",
+    "section_id": 1513061,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1654111976,
+    "updated_by": 258,
+    "updated_on": 1654112972,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 391223,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is on the Games tab",
+    "custom_steps": "WHEN user is on Games page ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user launch app and Navigate to Games Tab ",
+        "expected": "THEN user should display \n* MLB Play title\n* user's avatar. Avatar should have an outline based on user's rank\n* User's nickname\n* XP and bar. (white color, line has a shadow)\n* Tokens and bar (yellow color, line has a shadow)\n\n\n"
+      }
+    ]
+  },
+  {
+    "id": 28631911,
+    "title": "Day/Date on the Games tab",
+    "section_id": 1513061,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1654111976,
+    "updated_by": 258,
+    "updated_on": 1655144257,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 391223,
+    "display_order": 2,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is on the Games tab\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is on the Games tab ",
+        "expected": "THEN suer should be displayed with \n* The day and date should be displayed above the game list\n* Date should be in MM/DD format \n* There should be a line following after the date\n\n"
+      },
+      {
+        "content": "WHEN game time is TBD ",
+        "expected": "THEN user should the time as TBD "
+      },
+      {
+        "content": "WHEN there is no games for the day ",
+        "expected": "THEN User should be displayed with Yesterday game (confirm with design as design needed)"
+      },
+      {
+        "content": "WHEN the game time is earlier than 8 EDT",
+        "expected": "THEN user should be displayed with yesterday's day, date and games "
+      }
+    ]
+  },
+  {
+    "id": 28631912,
+    "title": "Game card",
+    "section_id": 1513061,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1654111976,
+    "updated_by": 258,
+    "updated_on": 1655144261,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 391223,
+    "display_order": 3,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is on the Games tab",
+    "custom_steps": "User launch the app\r\nUser navigate to Games tab",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the game cards\n",
+        "expected": "THEN user should be displayed with \n* List of games cards with game logos\n* Background image\nAll game cards should have the same size and a border-radius\n\nAND user should see the particular color to identify (still TBD)\n* BTS - green\n* QP - blue\n* DD -blue\n\nAND the order should be: \n* BTS\n* DD\n* QP"
+      }
+    ]
+  },
+  {
+    "id": 28631913,
+    "title": "MLB Play logo inside the gameloop",
+    "section_id": 1513061,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-3959",
+    "created_by": 258,
+    "created_on": 1654111976,
+    "updated_by": 258,
+    "updated_on": 1655144264,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 391223,
+    "display_order": 4,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\n",
+    "custom_steps": "WHEN user logged in and open any game loop ",
+    "custom_expected": "THEN user should display with MLB Play logo on the header\r\n\r\nhttps://www.figma.com/file/wRJwHRmrDIdN3rrWuNLRxJ/PG-Platform?node-id=2547%3A29773",
+    "custom_steps_separated": null
+  }
+]

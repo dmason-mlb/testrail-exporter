@@ -1,0 +1,499 @@
+[
+  {
+    "id": 1207158,
+    "title": "Settings Screen",
+    "section_id": 144972,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508341428,
+    "updated_by": 84,
+    "updated_on": 1508343117,
+    "estimate": null,
+    "estimate_forecast": "8m 56s",
+    "suite_id": 992,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user opens the Settings screen from the slide out menu",
+        "expected": "Then the user should see options for:\n\nMLB.com Account\nNotifications (Google Play devices only)\nHide Scores\nFavorite Teams\nHome Screen Selection\nHigh Quality Streaming\nLow Memory\nScoreboard Refresh Rate\nWidget Refresh Rate\nGameday Screen Awake\nRestore Purchases"
+      },
+      {
+        "content": "For each setting option",
+        "expected": "The default setting or explanation for each option should be listed \n(eg. Notifications - Get alerts for teams and game events)"
+      },
+      {
+        "content": "When the user accesses the settings screen on a fresh launch (Cleared data or fresh install)\nVerify settings defaults/explanation",
+        "expected": "MLB.com Account - Enter Credentials\nNotifications - Get alerts for team and game events\nHide Scores - Off\nFavorite teams - Select your favorite teams\nHome Screen Selection - Default\nStreaming Quality - Wi-Fi Only\nLow Memory Settings - Keep Playing\nScoreboard Refresh Rate - 15 Seconds\nWidget Refresh Rate - 15 Seconds\nGameday Screen Awake - Unchecked"
+      },
+      {
+        "content": "When the user makes changes to the settings\nAnd the user leaves the app and force stops the app (does not clear data)\nWhen the user returns to the app",
+        "expected": "Then the previously saved settings should be preserved"
+      }
+    ]
+  },
+  {
+    "id": 1207169,
+    "title": "Notifications",
+    "section_id": 144972,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508342839,
+    "updated_by": 84,
+    "updated_on": 1508343161,
+    "estimate": null,
+    "estimate_forecast": "26s",
+    "suite_id": 992,
+    "display_order": 3,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is on the Settings screen",
+    "custom_steps": "When the user taps the Notification setting",
+    "custom_expected": "Then the user should be taken to the notification screen\r\nAnd the notification options should be loaded",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1207170,
+    "title": "Hide Scores",
+    "section_id": 144972,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508342843,
+    "updated_by": 84,
+    "updated_on": 1508343183,
+    "estimate": null,
+    "estimate_forecast": "24s",
+    "suite_id": 992,
+    "display_order": 4,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is on the Settings screen",
+    "custom_steps": "When the user toggles the Hide Scores setting",
+    "custom_expected": "Then the user should be able to turn the setting on or off",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1207171,
+    "title": "Favorite Teams",
+    "section_id": 144972,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508342847,
+    "updated_by": 84,
+    "updated_on": 1508343286,
+    "estimate": null,
+    "estimate_forecast": "5m 53s",
+    "suite_id": 992,
+    "display_order": 5,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is on the Settings screen",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the Favorite team setting",
+        "expected": "Then the user should be taken into the Favorite team settings"
+      },
+      {
+        "content": "Verify user can add, remove and re-sort favorite teams",
+        "expected": "The app should not crash and the user should be able to add/remove as many favorite teams as they want"
+      }
+    ]
+  },
+  {
+    "id": 1207172,
+    "title": "Homescreen Default",
+    "section_id": 144972,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508342851,
+    "updated_by": 65,
+    "updated_on": 1528476999,
+    "estimate": null,
+    "estimate_forecast": "5m 17s",
+    "suite_id": 992,
+    "display_order": 6,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is on the Settings screen",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the Homescreen Selection setting (no favorite team(s) set)",
+        "expected": "Then the user should see a pop up with options for them to change their default launch screen to:\n\nDefault\nScoreboard\nNews"
+      },
+      {
+        "content": "When the user taps the Homescreen Selection setting (WITH favorite team(s) set)",
+        "expected": "Then the user should see a pop up with options for them to change their default launch screen to:\n\nDefault\nScoreboard\nNews\nFavorite Team"
+      },
+      {
+        "content": "When the user changes their default screen to Default\nAnd the user has not set any favorite teams in settings\nAnd the user launches the app from a stopped state",
+        "expected": "Then the user should be taken to the Scoreboard on launch"
+      },
+      {
+        "content": "When the user changes their default screen to Default\nAnd the user has set at least one favorite team in settings\nAnd the user launches the app from a stopped state",
+        "expected": "Then the user should be taken to their top favorite team page on first launch"
+      },
+      {
+        "content": "When the user changes their default screen to Scoreboard\nAnd the user has set at least one favorite team in settings\nAnd the user launches the app from a stopped state\n",
+        "expected": "Then the user should be taken to the Scoreboard on launch\nAnd the user should not be taken to their favorite team page"
+      },
+      {
+        "content": "When the user changes their default screen to Scoreboard\nAnd the user has not set any favorite teams in settings\nAnd the user launches the app from a stopped state\n",
+        "expected": "Then the user should be taken to the Scoreboard on launch"
+      },
+      {
+        "content": "When the user changes their default screen to News\nAnd the user has set at least one favorite team in settings\nAnd the user launches the app from a stopped state",
+        "expected": "Then the user should be taken to the News section on launch\nAnd the user should not be taken to their favorite team page"
+      },
+      {
+        "content": "When the user changes their default screen to News\nAnd the user has not set any favorite teams in settings\nAnd the user launches the app from a stopped state",
+        "expected": "Then the user should be taken to the News section on launch"
+      }
+    ]
+  },
+  {
+    "id": 1207173,
+    "title": "High Quality Streaming",
+    "section_id": 144972,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508342860,
+    "updated_by": 84,
+    "updated_on": 1508343452,
+    "estimate": null,
+    "estimate_forecast": "11s",
+    "suite_id": 992,
+    "display_order": 7,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is on the Settings screen",
+    "custom_steps": "When the user taps the High Quality Streaming setting",
+    "custom_expected": "Then the user should see a pop up with options for them to change their high quality settings to:\r\n\r\nAlways\r\nWi-Fi Only\r\nOff",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1207174,
+    "title": "Low Memory Settings",
+    "section_id": 144972,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508342866,
+    "updated_by": 84,
+    "updated_on": 1508343523,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 992,
+    "display_order": 8,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is on the Settings screen",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the Low Memory Settings setting",
+        "expected": "Then the user should see a pop up with two entries:\n\nStop Audio\nKeep Playing\n\nAnd Keep Playing should be selected by default"
+      },
+      {
+        "content": "Verify the user can select either option and still play audio\nWhen the user selects Keep Playing and attempts to play an audio stream\nAnd when the user selects Stop Audio and attempts to play an audio stream",
+        "expected": "Then the audio stream should play without issue"
+      },
+      {
+        "content": "Verify the low Memory setting works",
+        "expected": "Verify it does not crash the app when changed and that the user can play audio in either case\n(Tough to replicate scenario to see if it does anything but need to make sure it doesn't negatively affect anything.)"
+      }
+    ]
+  },
+  {
+    "id": 1207175,
+    "title": "Scoreboard Refresh Rate",
+    "section_id": 144972,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508342875,
+    "updated_by": 84,
+    "updated_on": 1508343654,
+    "estimate": null,
+    "estimate_forecast": "51s",
+    "suite_id": 992,
+    "display_order": 9,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is on the Settings screen",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the Scoreboard Refresh Rate setting",
+        "expected": "Then the user should see a popup with options for:\n\n15 Seconds\n30 Seconds\n1 Minute"
+      },
+      {
+        "content": "When the user chooses each of the refresh rates",
+        "expected": "Then the refresh rates should be reflected in the app on the settings screen\nAnd when the user checks on the scoreboard, the app should be updating according to the selected setting\n\n(check Charles for calls to scoreboard)"
+      }
+    ]
+  },
+  {
+    "id": 1207176,
+    "title": "Widget Refresh Rate",
+    "section_id": 144972,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508342880,
+    "updated_by": 84,
+    "updated_on": 1508343646,
+    "estimate": null,
+    "estimate_forecast": "18s",
+    "suite_id": 992,
+    "display_order": 10,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is on the Settings screen",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the Widget Refresh Rate setting",
+        "expected": "Then the user should see a popup with options for:\n\n15 Seconds\n30 Seconds\n1 Minute"
+      },
+      {
+        "content": "When the user chooses each of the refresh rates",
+        "expected": "Then the refresh rates should be reflected in the app on the settings screen\nAnd when the user checks on the widget, the app should be updating according to the selected setting\n\n(check Charles for calls to scoreboard)"
+      }
+    ]
+  },
+  {
+    "id": 1207177,
+    "title": "Gameday Screen Awake",
+    "section_id": 144972,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508342887,
+    "updated_by": 84,
+    "updated_on": 1508343734,
+    "estimate": null,
+    "estimate_forecast": "5m 50s",
+    "suite_id": 992,
+    "display_order": 11,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is on the Settings screen",
+    "custom_steps": "When the user enables the Gameday Screen Awake setting",
+    "custom_expected": "Then the device screen should remain awake while the user is in Gameday",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1207178,
+    "title": "Restore Purchases",
+    "section_id": 144972,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508342892,
+    "updated_by": 84,
+    "updated_on": 1524597593,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 992,
+    "display_order": 12,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is on the Settings screen",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a PAID user taps the Restore Purchases item in settings",
+        "expected": "Then the Pay Wall should appear\nAnd the user should see the \"Already Purchased\" link show a side to side bounce animation"
+      },
+      {
+        "content": "When a LITE user taps the Restore Purchases item in settings",
+        "expected": "Then the Pay Wall should appear\nAnd the user should see the \"Already Purchased\" link show a side to side bounce animation"
+      }
+    ]
+  },
+  {
+    "id": 50624,
+    "title": "Other",
+    "section_id": 144972,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1424296013,
+    "updated_by": 84,
+    "updated_on": 1508343802,
+    "estimate": null,
+    "estimate_forecast": "2m 1s",
+    "suite_id": 992,
+    "display_order": 13,
+    "custom_preconds": "Given At Bat is installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user views the app name and shortcut in the app drawer and on the homescreen",
+        "expected": "Then the app icon should appear (At Bat logo)\nAnd the name of the app should be \"At Bat\""
+      },
+      {
+        "content": "When the user views the app info in the manage application settings on the device",
+        "expected": "Then the name of the app should appear as \"At Bat\" and the At Bat logo should be correct"
+      }
+    ]
+  },
+  {
+    "id": 1207185,
+    "title": "MLB.com Account Setting",
+    "section_id": 144973,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508344195,
+    "updated_by": 84,
+    "updated_on": 1508344482,
+    "estimate": null,
+    "estimate_forecast": "11m 22s",
+    "suite_id": 992,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is on the Settings screen",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When MLB.com Account is tapped",
+        "expected": "Then a modal will appear with a label of MLB.com Account\nAnd it will contain a text field called Email\nAnd it will contain a text field called Password\nAnd it will contain a Forgot Password > link below the text fields\nAnd it will contain a \"Register\" button\nAnd it will contain an OK button\nAnd it will contain a Cancel button"
+      },
+      {
+        "content": "When an Email Address is entered into the Email text field\nAnd OK is tapped",
+        "expected": "Then it will state \"Invalid Email/Password\" underneath MLB.com Account"
+      },
+      {
+        "content": "When a Password is entered into the Password Text Field\nAnd there is no entry in the Email Address Field\n And OK is tapped",
+        "expected": "Then it will state \"Invalid Email/Password\" underneath MLB.com Account"
+      },
+      {
+        "content": "When a valid Email Address is entered\nAnd a valid Password Address is entered\nAnd the OK button is tapped",
+        "expected": "Then the account will be verified\nAnd the account will be stored in the MLB.com Account modal\nAnd email address will be visible under MLB.com Account in Settings"
+      },
+      {
+        "content": "When the user logs in with an entitled TV Premium account",
+        "expected": "Then the user should see a 'toast' message indicating to the user that they are signed in and have unlocked all At Bat Premium features\nAnd the credentials should be stored on the Settings page\nAnd the user should be able to access Premium features in the app\nAnd the user should be able to access MLB.TV streams without issue"
+      },
+      {
+        "content": "When the user logs in with an entitled At Bat account",
+        "expected": "Then the user should see a 'toast' message indicating to the user that they have successfully logged in with their At Bat account\nAnd the credentials should be stored on the Settings page\nAnd the user should be able to access At Bat Premium features in the app\nAnd the user should be able to access Game of the Day streams & Gameday Audio without issue"
+      },
+      {
+        "content": "When a valid user account has been stored in MLB.com Account\nAnd MLB.com Account has been tapped\nAnd the user taps the Clear Credentials button",
+        "expected": "Then the Email Address field will be cleared out\nAnd the Password field will be cleared out\nAnd the user will be taken back to the Settings menu\nAnd \"Enter Email and Password\" will appear below MLB.com Account"
+      }
+    ]
+  },
+  {
+    "id": 1207186,
+    "title": "Forgot Password",
+    "section_id": 144973,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508344198,
+    "updated_by": 84,
+    "updated_on": 1508344656,
+    "estimate": null,
+    "estimate_forecast": "5m 57s",
+    "suite_id": 992,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is on the MLB.com Account modal of the Settings screen",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the Forgot Password link",
+        "expected": "Then a screen will appear with the words \"Forgot Password\" in the top Navigation Bar\nAnd the screen will have in big text \"Send Password\" immediately under that\nAnd we will see the text of \"Please enter the email address associated with your MLB.com account, and we'll send you a new password.\"\nAnd a text box will be available with the default words of Email filled into it\nAnd there will be a Send button under the text box"
+      },
+      {
+        "content": "When the Forgot Password link is tapped\nAnd the Send Password link is on screen\nAnd the Email field is left blank\nAnd the Send button is tapped",
+        "expected": "Then the user will be prompted by an \"Enter Email address.\" message in red typeface above the Email field"
+      },
+      {
+        "content": "When no account credentials are currently stored\nAnd Forgot Password is tapped \nAnd the Send Password screen is up\nAnd the user enters a valid email address\nAnd taps the Send button",
+        "expected": "Then the user will be prompted by a \"New Password Sent\" message in red typeface above the Email field"
+      },
+      {
+        "content": "When the user has begun the Forgot Password flow in the Settings menu\nAnd has received the \"New Password Sent\" message\nAnd the mailbox for the associated Bamnet account is accessed",
+        "expected": "Then an email with the following text will be received:\n\n\"Your password has been reset. \nYour reset password is: xxxxxxxx (this is will be determined at the time of sending)\n\nThank You,\nMLB.com Customer Support"
+      },
+      {
+        "content": "When the user has successfully initiated the Forgot Password flow in the Settings menu\nAnd has retrieved the reset password from Email\nAnd Settings is accessed\nAnd MLB.com Account is tapped \nAnd the Email field is populated\nAnd the Password field is populated with the reset password contained in the email\nAnd the OK button is tapped",
+        "expected": "Then the account credentials will be successfully validated\nAnd the associated email address will be visible below MLB.com Account in the Settings menu"
+      }
+    ]
+  },
+  {
+    "id": 776788,
+    "title": "Changing Email Address",
+    "section_id": 144973,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1482353317,
+    "updated_by": 84,
+    "updated_on": 1508344687,
+    "estimate": null,
+    "estimate_forecast": "3m",
+    "suite_id": 992,
+    "display_order": 3,
+    "custom_preconds": "Given the user has a valid BAMNET account\r\nand the email address associated with the account is changed via MLB.com",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user clears their current credentials\nAnd the user attempts to enter their original credentials",
+        "expected": "Then the user will no longer be able to log in with the original credentials"
+      },
+      {
+        "content": "When the newly changed email address is used to log in via MLB.com Account in the Settings menu",
+        "expected": "Then the user will successfully log in\nAnd the account information will be stored in MLB.com Account"
+      }
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 137384,
+    "suite_id": 18666,
+    "name": "Standings Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 137385,
+    "suite_id": 18666,
+    "name": "Team Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 137830,
+    "suite_id": 18666,
+    "name": "Standings Configuration",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

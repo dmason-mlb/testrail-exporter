@@ -1,0 +1,20 @@
+[
+  {
+    "id": 303737,
+    "suite_id": 39507,
+    "name": "Screen Layout",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 718196,
+    "suite_id": 39507,
+    "name": "OLD test cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

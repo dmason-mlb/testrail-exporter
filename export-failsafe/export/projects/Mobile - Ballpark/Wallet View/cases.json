@@ -1,0 +1,2205 @@
+[
+  {
+    "id": 1236519,
+    "title": "Wallet Tab with Tickets *[requires tickets]",
+    "section_id": 148899,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1549048049,
+    "updated_by": 288,
+    "updated_on": 1706548273,
+    "estimate": null,
+    "estimate_forecast": "2h 4m 42s",
+    "suite_id": 20551,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN User's account has tickets available within their account\r\n\r\nAcct that typically as many ticketed events (as of July 2021) \r\n* Staging(or Prod) / justin.charschan@mlb.com / MLBmlb123",
+    "custom_steps": "WHEN the user navigates to the Wallet Tab",
+    "custom_expected": "THEN wallet tab displays the tickets on user account\r\n\r\nWIKI https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225634/03+Wallet+Tab#id-03WalletTab-1.1WithTickets\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates to the Wallet Tab",
+        "expected": "THEN the Event Cards will be displayed in the Wallet section"
+      },
+      {
+        "content": "WHEN the user has tickets to 6+ events",
+        "expected": "THEN the user sees the the next five upcoming events displayed with individual cards\nAND the events will be sorted by date, in ascending order"
+      },
+      {
+        "content": "WHEN the user views the wallet card\n\n",
+        "expected": "THEN the Wallet card background will be the image as specified in the video poster URL supplied in ticket summary.  \n* If video poster URL is null or an invalid URL, the card background will be the home team's default color."
+      },
+      {
+        "content": "",
+        "expected": "[if TICKET is GAME EVENT]\nAND The home team's logo will be displayed to the right of the event matchup \n\n[if TICKET is NON-GAME EVENT]\nAND The home team's logo will NOT be displayed to the right of the event matchup "
+      },
+      {
+        "content": "WHEN the user views the Wallet Card",
+        "expected": "THEN the event information will contain The event date / time in the format (Ex. Sat, Jun 22 . 1:07 PM ET)\nAND beneath the date time will be the Matchup Info displayed as Away Team @ Home Team **\nAND below the Matchup will be the Event's Venue\n\n**if non-game event, then matchup string is replaced with title of the NGE"
+      },
+      {
+        "content": "WHEN the user scrolls to the top of the Wallet View",
+        "expected": "THEN there will be a \"View All\" link\nAND there will be a \"Refresh\" link"
+      }
+    ]
+  },
+  {
+    "id": 1288346,
+    "title": "Wallet Display - Initial Load of Ticket Summaries  *[requires tickets]",
+    "section_id": 148899,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 215,
+    "created_on": 1574804419,
+    "updated_by": 288,
+    "updated_on": 1661808653,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 9,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN a user's account has at least one ticket available in inventory which has been cached\r\nAND the user does not have network available OR service is down",
+    "custom_steps": "WHEN the user starts the app to initiate initial load of tickets",
+    "custom_expected": "THEN the tickets should show up since they were cached",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates to the wallet tab",
+        "expected": "THEN the tickets should show up since they were cached\n"
+      },
+      {
+        "content": "WHEN the server response is not a 2xx (i.e 500)",
+        "expected": "THEN the snackbar should pop up asking to retry\nAND cached tickets should be displayed"
+      },
+      {
+        "content": "WHEN there is no Internet Connectivity",
+        "expected": "THEN the snackbar should display toast that there is no network connectivity\nAND cached tickets should be displayed"
+      }
+    ]
+  },
+  {
+    "id": 6682654,
+    "title": "Wallet Tab Deep Link",
+    "section_id": 148899,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 237,
+    "created_on": 1584995750,
+    "updated_by": 213,
+    "updated_on": 1595947306,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 10,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN As a Ballpark user, I want to be able to open a link that takes me directly to where all my upcoming tickets and offers are accessible so I can manage my upcoming tickets and redeem offers",
+    "custom_steps": "Open the link specified in https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226449/Linking+Deep+Linking+and+Routing",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User clicks on ballpark://wallet in Slack",
+        "expected": "THEN Ballpark App is launched and the Wallet Tab is displayed"
+      }
+    ]
+  },
+  {
+    "id": 17677986,
+    "title": "Tickets - Verified/Unverified Account *[requires tickets]",
+    "section_id": 859339,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1624653048,
+    "updated_by": 288,
+    "updated_on": 1661808699,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN user has tickets available within their account\r\n\r\n[BPA-6152](https://baseball.atlassian.net/browse/BPA-6152)\r\n[BP-9320](https://baseball.atlassian.net/browse/BP-9320)\r\n\r\n*Testing Notes:[How to test Ballpark Features with an Unverified Account with Tickets](https://baseball.atlassian.net/wiki/spaces/BET/pages/2587656220/How+to+test+Ballpark+Features+with+an+Unverified+Account+with+Tickets)",
+    "custom_steps": "WHEN user's account is verified OR unverified\r\nWHEN the user navigates to the Wallet Tab",
+    "custom_expected": "THEN I will see a CTA that indicates user can tap to refresh my tickets",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has tickets available within their account\nWHEN user's account is verified\nAND the user navigates to the Wallet Tab",
+        "expected": "THEN I will see Refresh link that indicates user can tap to refresh tickets"
+      },
+      {
+        "content": "WHEN the user taps on Refresh link on the Wallet Tab\n\n",
+        "expected": "THEN users triggers a search for tickets for all teams (refresh=true) \n(Using Charles, verify request has true value set for refresh)"
+      },
+      {
+        "content": "GIVEN user has tickets available within their account\nWHEN user's account is unverified\nAND the user navigates to the Wallet Tab",
+        "expected": "THEN user will see Refresh link that indicates user can tap to refresh tickets\nAND the unverified event card is shown on the Tickets page with a button directing 'Verify Email to Open Tickets'"
+      },
+      {
+        "content": "WHEN the user taps on Refresh link on the Wallet Tab\n",
+        "expected": "THEN users triggers a search for tickets for all teams (refresh=true) \n(Using Charles, verify request has true value set for refresh)"
+      }
+    ]
+  },
+  {
+    "id": 17768728,
+    "title": "No Tickets - Verified Account",
+    "section_id": 859339,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1625165537,
+    "updated_by": 288,
+    "updated_on": 1635201681,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN user has no tickets \r\nAND their primary IS verified (wallet notification: 'noTixForVerifiedEmails') \r\n\r\nhttps://baseball.atlassian.net/browse/BPA-6151\r\nhttps://baseball.atlassian.net/browse/BP-9319",
+    "custom_steps": "WHEN the user navigates to the Wallet Tab\r\n",
+    "custom_expected": "THEN user will see messaging about tickets not found\r\nAND user will be presented 2 CTAs, 'Refresh My Tickets' first followed by 'Verify Email Address'\r\n\r\n\r\nMock: https://app.zeplin.io/project/60084d562ce7d2bf44bf7902/screen/60d2157244707c1723a9c710",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates to the Wallet Tab",
+        "expected": "THEN user will see 'Cannot find any tickets' followed by subtext 'Please refresh your tickets or verify additional email addresses used to purchase tickets."
+      },
+      {
+        "content": "",
+        "expected": "AND user is shown first CTA - 'Refresh My Tickets' button with blue background and white text\nAND user is shown second CTA - 'Verify Email Address' button with white background and blue text"
+      },
+      {
+        "content": "WHEN the user taps on 'Refresh My Tickets' button on the Wallet Tab",
+        "expected": "THEN users triggers a search for tickets for all teams (refresh=true) \n(Using Charles, verify request has true value set for refresh)"
+      },
+      {
+        "content": "WHEN the user taps on 'Verify Email Address' button on the Wallet Tab",
+        "expected": "THEN user is shown the My MLB Account Emails page"
+      },
+      {
+        "content": "WHEN the user back navigates from the My MLB Account Emails page ",
+        "expected": "THEN user is returned to the Tickets tab"
+      }
+    ]
+  },
+  {
+    "id": 17768729,
+    "title": "No Tickets - Unverified Account",
+    "section_id": 859339,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1625165579,
+    "updated_by": 288,
+    "updated_on": 1635201687,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN user has no tickets\r\nAND their primary NOT verified (wallet notification: 'suggestCompleteEmailVerification') \r\n\r\nhttps://baseball.atlassian.net/browse/BPA-6151\r\nhttps://baseball.atlassian.net/browse/BP-9319",
+    "custom_steps": "WHEN the user navigates to the Wallet Tab",
+    "custom_expected": "THEN user will see messaging about tickets not found\r\nAND user will be presented 2 CTAs, 'Verify Email Address' first followed by 'Refresh My Tickets'\r\n\r\nMock: https://app.zeplin.io/project/60084d562ce7d2bf44bf7902/screen/60d215722b986310ab22e3ea",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a new user is onboarded\n\n(using a valid email to allow for verification of account)",
+        "expected": "THEN user is shown the Home page"
+      },
+      {
+        "content": "WHEN the user navigates to the Wallet Tab",
+        "expected": "THEN user will see 'Cannot find any tickets' followed by subtext 'Please verify your email address or refresh your tickets.'\nAND user is shown first CTA - 'Verify Email Address' button with blue background and white text\nAND user is shown second CTA - 'Refresh My Tickets' button with white background and blue text"
+      },
+      {
+        "content": "WHEN the user taps on 'Refresh My Tickets' button on the Wallet Tab",
+        "expected": "THEN users triggers a search for tickets for all teams (refresh=true)\n(Using Charles, verify request has true value set for refresh)"
+      },
+      {
+        "content": "WHEN the user taps on 'Verify Email Address' button on the Wallet Tab",
+        "expected": "THEN user is shown the My MLB Account Emails page with a message 'The email is not verified for ticket access'"
+      },
+      {
+        "content": "WHEN the user back navigates from the My MLB Account Emails page",
+        "expected": "THEN user is returned to the Tickets tab"
+      },
+      {
+        "content": "WHEN the user taps on 'Verify Email Address' button on the Wallet Tab\nAND the user taps 'Resend'",
+        "expected": "THEN user is shown prompt: \n'Verification Email Sent\nPlease check your inbox at <onboarded_email_acct>'"
+      },
+      {
+        "content": "WHEN the user opens their preferred email client\nAND confirms the verification of the account ",
+        "expected": "THEN user is shown 'Email Successfully Verified' page in browser"
+      },
+      {
+        "content": "WHEN the user back navigates from the My MLB Account Emails page",
+        "expected": "THEN user will see 'Cannot find any tickets' page **\n\nAndroid: \nAND user is shown first CTA - 'Refresh My Tickets' button with blue background and white text\nAND user is shown second CTA - 'Verify Email Address' button with white background and blue text\n\niOS: \nAND user is shown first CTA - 'Verify Email Address' button with blue background and white text\nAND user is shown second CTA - 'Refresh My Tickets' button with white background and blue text\n\n** NOTE: iOS may need to revisit My MLB Account page and then return to Tickets tab to reflect the change (order of buttons)"
+      },
+      {
+        "content": "WHEN the user taps on 'Refresh My Tickets' button on the Wallet Tab",
+        "expected": "THEN users triggers a search for tickets for all teams (refresh=true)\nAND user is maintained on the Tickets page"
+      }
+    ]
+  },
+  {
+    "id": 17768730,
+    "title": "Refresh CTA limitation *[requires tickets, proxy/configuration]",
+    "section_id": 859339,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1625165643,
+    "updated_by": 288,
+    "updated_on": 1661808778,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN user is on the wallet tab (w/ or w/o tickets)\r\n\r\n\r\nhttps://baseball.atlassian.net/browse/BPA-6153\r\nhttps://baseball.atlassian.net/browse/BP-9324\r\n\r\n",
+    "custom_steps": "WHEN user has just tapped on refresh cta or swipe refresh\r\n\r\n",
+    "custom_expected": "THEN user will be prevented from refreshing again for a remote configurable amount of time (i.e. do not make API call)\r\n\r\n'prevented' is a disabled and gray Refresh cta \r\n* with tickets: WALLET one ticket disabled - https://app.zeplin.io/project/602160fce3c37f64b50c8127/screen/60d4a7f6f120a6089c5cb1b0\r\n* no tickets: WALLET no tickets no verify disabled - https://app.zeplin.io/project/602160fce3c37f64b50c8127/screen/60d4a7fa47749bb1c9d12151\r\n\r\n'configurable amount of time' is controlled by 'ticket_refresh_timeout' within the remote config (https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\r\n** NOTE: updating the remote config may take some time to reflect within BP app (can be > 5mins)",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has tickets available within their account\nWHEN the user navigates to the Wallet Tab",
+        "expected": "THEN I will see Refresh link that indicates user can tap to refresh tickets"
+      },
+      {
+        "content": "WHEN the user taps on Refresh link on the Wallet Tab",
+        "expected": "THEN user triggers a search for tickets for all teams (refresh=true)\n(Using Charles, verify request has true value set for refresh)"
+      },
+      {
+        "content": "",
+        "expected": "AND user will be prevented from refreshing again for a remote configurable amount of time (i.e. do not make API call)\n"
+      },
+      {
+        "content": "WHEN an engineer update the ticket_refresh_timeout to a larger number than what is defaulted (i.e. 30)\nAND the user taps on Refresh link on the Wallet Tab",
+        "expected": "THEN user will be prevented from refreshing again for a remote configurable amount of time entered (i.e. do not make API call)"
+      },
+      {
+        "content": "WHEN an engineer update the ticket_refresh_timeout to 0\nAND the user taps on Refresh link on the Wallet Tab",
+        "expected": "THEN user should not be prevented from refreshing again, as the configurable amount of time entered is set to 0\n\n(button should not be disabled, after tapping)"
+      },
+      {
+        "content": "GIVEN an engineer update the ticket_refresh_timeout to default value (i.e. 5)\nGIVEN user has no tickets available within their account\nWHEN the user navigates to the Wallet Tab",
+        "expected": "THEN I will see Refresh button that indicates user can tap to refresh tickets"
+      },
+      {
+        "content": "WHEN the user taps on Refresh button on the Wallet Tab",
+        "expected": "THEN user triggers a search for tickets for all teams (refresh=true)\n(Using Charles, verify request has true value set for refresh)"
+      },
+      {
+        "content": "",
+        "expected": "AND user will be prevented from refreshing again for a remote configurable amount of time (i.e. do not make API call)"
+      },
+      {
+        "content": "WHEN an engineer update the ticket_refresh_timeout to a larger number than what is defaulted (i.e. 30)\nAND the user taps on Refresh button on the Wallet Tab",
+        "expected": "THEN user will be prevented from refreshing again for a remote configurable amount of time entered (i.e. do not make API call)"
+      },
+      {
+        "content": "WHEN an engineer update the ticket_refresh_timeout to 0\nAND the user taps on Refresh button on the Wallet Tab",
+        "expected": "THEN user should not be prevented from refreshing again, as the configurable amount of time entered is set to 0\n\n(button should not be disabled, after tapping)"
+      },
+      {
+        "content": "GIVEN an engineer update the ticket_refresh_timeout to default value (i.e. 5)\nAND the user taps on Refresh button on the Wallet Tab",
+        "expected": "THEN user triggers a search for tickets for all teams (refresh=true)\nAND user will be prevented from refreshing again for a remote configurable amount of time (i.e. do not make API call)"
+      }
+    ]
+  },
+  {
+    "id": 1237056,
+    "title": "'View All' Screen  *[requires tickets]",
+    "section_id": 148904,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1550605838,
+    "updated_by": 288,
+    "updated_on": 1670966947,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN that the user navigated to Wallet tab and has at least one ticket\r\n\r\nAcct that typically as many ticketed events (as of July 2021)\r\n* Staging(or Prod) / justin.charschan@mlb.com / MLBmlb123",
+    "custom_steps": null,
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225634/03+Wallet+Tab#id-03WalletTab-1.1.1MyTickets-Viewall",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on 'View All'",
+        "expected": "THEN the app will display all ticketed events as individual rows"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display each game row including away team at home team, event start time local, venue name, description (if available)"
+      },
+      {
+        "content": "WHEN the user has many ticketed events\nAND the user is on the Tickets Tab\nAND the user taps on 'View All'\nAND the user scrolls through the list",
+        "expected": "THEN the month and year will be \"sticky\" headers and the event day of week and day number will be displayed along in the left"
+      },
+      {
+        "content": "WHEN the user has at least one NGE ticketed events\nAND the user is on the Tickets Tab\nAND the user taps on 'View All'",
+        "expected": "THEN the app will display each NGE row including NGE description, event start time local, venue name"
+      },
+      {
+        "content": "When the user taps on \"View All\"\nAND the user taps anywhere on a item in the list",
+        "expected": "Then the app will display list of tickets for the tapped ticketed entry"
+      }
+    ]
+  },
+  {
+    "id": 1286873,
+    "title": "Display events with no display date under \"Other\" in ViewAll  *[requires tickets, proxy]",
+    "section_id": 148904,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-7693",
+    "created_by": 197,
+    "created_on": 1574283245,
+    "updated_by": 288,
+    "updated_on": 1661808836,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "When ticket items have no valid displaySummary date, they should be displayed as an other category at the end list\r\n\r\nGIVEN we use Charles to rewrite \"displaySummary\" for tickets in the wallet\r\n\r\n\t\t\t\"displaySummary\": {\r\n\t\t\t\t\"date\": \"\",\r\n\t\t\t\t\"time\": \"\",\r\n\t\t\t\t\"venue\": \"T-Mobile Park\",\r\n\t\t\t\t\"desc\": \"\"\r\n\t\t\t}\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user selects the wallet tab AND \"View All\" button",
+        "expected": "THEN the ticket with the missing or invalid date should be under \"Other\" heading in the ticket view list. "
+      }
+    ]
+  },
+  {
+    "id": 1292212,
+    "title": "Trigger Email Verification Success",
+    "section_id": 156911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 228,
+    "created_on": 1579043811,
+    "updated_by": 288,
+    "updated_on": 1658183459,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "Given an event that requires verification \r\n\r\n*Testing Notes:[How to test Ballpark Features with an Unverified Account with Tickets](https://baseball.atlassian.net/wiki/spaces/BET/pages/2587656220/How+to+test+Ballpark+Features+with+an+Unverified+Account+with+Tickets)\r\n\r\n![](index.php?/attachments/get/24185)\r\n",
+    "custom_steps": "When the user taps on the event",
+    "custom_expected": "Then the user gets an email and the app shows a message that an email was sent \r\n![](index.php?/attachments/get/24186)\r\n\r\nWIKI:[Verify Email Wallet - Email Successfully Sent](https://baseball.atlassian.net/wiki/spaces/mobile/pages/19727697/Verify+Email#Wallet---Email-Successfully-Sent)",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user with MLB account with unverified account having tickets",
+        "expected": "THEN user is successfully logged in with MLB account in Ballpark app"
+      },
+      {
+        "content": "WHEN the user taps the Tickets Tab\nAND the user taps on 'View All'",
+        "expected": "THEN user is shown My Tickets page with an entry with 'Verify' and exclamation icon, where ticket counts is usually shown. "
+      },
+      {
+        "content": "WHEN the user taps the 'Verify' button \nAND the user taps 'Verify Email to Open Tickets!\"",
+        "expected": "THEN the user is displayed a message that slides on the button of the Wallet page demonstrating successful email sent - \"An email has been sent to bparkdev@gmail.com\"\nAND 'Go To My Account' button below the text"
+      },
+      {
+        "content": "WHEN the user taps 'Go To My Account' button",
+        "expected": "THEN the user is directed to My MLB Accounts page\n\n![](index.php?/attachments/get/24184)"
+      },
+      {
+        "content": "WHEN the user taps on the back arrow from MY MLB Account Page",
+        "expected": "THEN the user is taken to Wallet Details list view"
+      }
+    ]
+  },
+  {
+    "id": 1292220,
+    "title": "Trigger Email Verification Failure",
+    "section_id": 156911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 228,
+    "created_on": 1579044164,
+    "updated_by": 288,
+    "updated_on": 1658183543,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "Given an event that requires verification\r\n\r\n*Testing Notes:[How to test Ballpark Features with an Unverified Account with Tickets](https://baseball.atlassian.net/wiki/spaces/BET/pages/2587656220/How+to+test+Ballpark+Features+with+an+Unverified+Account+with+Tickets)\r\n\r\n\r\n![](index.php?/attachments/get/24188)\r\n\r\n** Charles setup **\r\n\r\nBlock the URL similar to: https://profile.mlb.com/api/v1/verification/emails.\r\n",
+    "custom_steps": "When the user taps on the event, but the api call to the address verification service fails",
+    "custom_expected": "The app shows a dialog that informs the user there was an error with the ability to retry the api call\r\n![](index.php?/attachments/get/24187)\r\n\r\nWIKI:[Verify Email Wallet - View All Events - Unverified Primary Alert](https://baseball.atlassian.net/wiki/spaces/mobile/pages/19727697/Verify+Email#Wallet-View-All-Events----Unverified-primary---Alert)",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user with MLB account with unverified account having tickets",
+        "expected": "THEN the user is successfully logged in with MLB account in Ballpark app"
+      },
+      {
+        "content": "WHEN the user taps the Tickets Tab\nAND the user taps on 'View All'",
+        "expected": "THEN user is shown My Tickets page with an entry with 'Verify' and exclamation icon, where ticket counts is usually shown. "
+      },
+      {
+        "content": "WHEN the user taps the 'Verify' button \nBUT the api call to the address verification service fails (using Charles to prevent the response)",
+        "expected": "THEN the user is displayed a prompt with error message:\n\"Verification Email Not Sent\nDue to technical issues a verification email could not be sent\""
+      }
+    ]
+  },
+  {
+    "id": 1237057,
+    "title": "Ticket List Interface",
+    "section_id": 148905,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1550606225,
+    "updated_by": 288,
+    "updated_on": 1706558335,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN a user with tickets in their Acct is logged into BP\r\nAND user taps Ticket Tab",
+    "custom_steps": "WHEN the user taps on a matchup entry",
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225634/03+Wallet+Tab#id-03WalletTab-1.1.4TicketList-Forwardvia...\r\n\r\nTHEN Wallet displays with My tickets page with all tickets in the account",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on a matchups that does NOT have forwards completed",
+        "expected": "THEN the app will display Tickets in top header"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display the matchup data in sub header (cap logo away and home, away team @ home team, date and start time, venue name)\n\n** if NGE do not display logos and show NGE description instead of team name"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display headers for section, seat and row"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display each ticket as its own row with section, seat and row values"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display \"Open\" link button for each row"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display the \"Forward Tickets\" button at the bottom (above the Navbar)\n\n['Sell Tickets' button may also be shown]"
+      },
+      {
+        "content": "",
+        "expected": "AND everything on this view will scroll\nBUT the header & buttons at the bottom will not scroll"
+      },
+      {
+        "content": "WHEN the user taps on a matchups that has forwards completed",
+        "expected": "THEN the app will display Tickets in top header"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display the matchup data in sub header (cap logo away and home, away team @ home team, date and start time, venue name)\nAND the app will display headers for section, seat and row\nAND the app will display each ticket as its own row with section, seat and row values\n"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display \"Open\" link button for each row for ticket that has NOT been forwarded \nAND the app will display \"Recall\" link button for each row for ticket that has been forwarded"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display the \"Forward Tickets\" button at the bottom (above the Navbar)\n\n['Sell Tickets' button may also be shown]"
+      }
+    ]
+  },
+  {
+    "id": 6677430,
+    "title": "Ticket List Status Icons",
+    "section_id": 148905,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 214,
+    "created_on": 1583272165,
+    "updated_by": 288,
+    "updated_on": 1635201701,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User has clicked on a matchup in the wallet.",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN A ticket is pending a forward",
+        "expected": "THEN a yellow forward icon should be displayed to the left of the cell"
+      },
+      {
+        "content": "WHEN A ticket has completed a forward",
+        "expected": "THEN a green forward icon should be displayed to the left of the cell"
+      },
+      {
+        "content": "WHEN A ticket has been scanned \n(can use CharlesProxy with a breakpoint set and changing 'scanned' to true in the response to simulate a scanned ticket)",
+        "expected": "THEN a grey scanned icon should be displayed to the left of the cell"
+      },
+      {
+        "content": "WHEN A ticket is not in a forward state and has been unscanned",
+        "expected": "THEN no icon should be displayed"
+      }
+    ]
+  },
+  {
+    "id": 6677431,
+    "title": "Ticket List Status Text  *[requires tickets, proxy]",
+    "section_id": 148905,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 214,
+    "created_on": 1583272400,
+    "updated_by": 288,
+    "updated_on": 1661894587,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user is logged in\r\nAND the user has a ticket with associated status text given by 'displayStatusString' in ticket response\r\n\r\nTesting Notes:\r\n*Tickets in a forward state (pending, accepted, etc) will have 'displayStatusString' within the BoxOffice Tickets response (https://stage.boxoffice.mlb.com/api/v2/users/ )\r\n*CharlesProxy can be utilized to modify the response and add an entry for 'displayStatusString'",
+    "custom_steps": "WHEN user clicks on a matchup in the wallet",
+    "custom_expected": "THEN the text should appear just below the ticket. If that field is empty or does not exist, nothing should be displayed.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6677432,
+    "title": "Ticket List Inline Actions",
+    "section_id": 148905,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 214,
+    "created_on": 1583272556,
+    "updated_by": 288,
+    "updated_on": 1635201707,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN user has clicked on a matchup in the wallet",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the user has a pending forward ticket",
+        "expected": "THEN the ticket should have a Cancel button at the end of the cell."
+      },
+      {
+        "content": "GIVEN the user has a completed forward ticket",
+        "expected": "THEN the ticket should have a Recall button at the end of the cell."
+      },
+      {
+        "content": "GIVEN the user has a non forwarded ticket",
+        "expected": "THEN the ticket should have a Open button at the end of the cell that takes the user to the scan view."
+      },
+      {
+        "content": "GIVEN the user clicks Cancel/Recall",
+        "expected": "THEN an alert will be displayed asking the user to confirm the action (with corresponding text depending if its cancel/recall). "
+      },
+      {
+        "content": "GIVEN user selects NO on the cancel/recall alert",
+        "expected": "THEN alert is dismissed"
+      },
+      {
+        "content": "GIVEN user selects YES on the cancel/recall alert",
+        "expected": "A request will be made to cancel/recall the ticket. If it is successful the ticket list should refresh, otherwise an error alert will display asking the user to try again."
+      }
+    ]
+  },
+  {
+    "id": 6677434,
+    "title": "Ticket List Header",
+    "section_id": 148905,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 214,
+    "created_on": 1583273229,
+    "updated_by": 288,
+    "updated_on": 1670967170,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN user clicks on matchup in wallet",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has X tickets and none are in an accepted forward state",
+        "expected": "THEN header should say \"Tickets\""
+      },
+      {
+        "content": "GIVEN user has X tickets and Y forwards have been accepted",
+        "expected": "THEN header should say \"Tickets\""
+      }
+    ]
+  },
+  {
+    "id": 6683891,
+    "title": "Ticket List Click On Row",
+    "section_id": 148905,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 214,
+    "created_on": 1585848500,
+    "updated_by": 288,
+    "updated_on": 1635201719,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 7,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User has tickets that can be shown on scan view",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN clicking on row of ticket list",
+        "expected": "THEN Scan view should be opened"
+      }
+    ]
+  },
+  {
+    "id": 7229486,
+    "title": "Ticket Forward Recall  *[requires tickets, proxy/configuration]",
+    "section_id": 148905,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1594131636,
+    "updated_by": 288,
+    "updated_on": 1661808961,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 8,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "User has completed a ticket forward but the club does not allow recalls\r\nTo test this: Remap ticket details response with \"canRecall\" : false in the sentForwards object\r\nLoad ticket list",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User goes to ticket list view with at least one completed forward",
+        "expected": "THEN Ticket shows \"Recall\""
+      },
+      {
+        "content": "WHEN User taps on \"Recall\" row (but not the link)",
+        "expected": "THEN Scan View is presented but does not have \"Recall\" button"
+      }
+    ]
+  },
+  {
+    "id": 1280986,
+    "title": "Ticket Scan View",
+    "section_id": 148909,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1570556562,
+    "updated_by": 288,
+    "updated_on": 1635201724,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User has events on account with both single and multiple tickets\r\n",
+    "custom_steps": "WHEN the user opens the scan view\r\n",
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226270/00+Ticket+Scan+View#id-00TicketScanView-1.1TicketScanView\r\n\r\nTHEN the correct Scanview is shown without swiping capability and card does not move in ticket scan, if single ticket\r\nOR\r\nTHEN the correct Scanview is shown with swiping capability and peeking to additional, if multiple tickets\r\n\r\n\r\n\r\nOn tap of close X, scan view slides down.",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user has single ticketed event",
+        "expected": "THEN the ticket is centered without any additional tickets peeking, neither to right or left\nAND swiping has no effect"
+      },
+      {
+        "content": "WHEN the user has 2+ ticketed event\nAnd user opens the scan view ",
+        "expected": "THEN the 1st ticket is centered, 2nd ticket is peeking in from right"
+      },
+      {
+        "content": "WHEN the user swipes the to the left to view the additional tickets",
+        "expected": "THEN the 1st ticket is peeking out from the left\nAND the 2nd ticket is now centered\nAND additional ticket is peaking out from the right, if additional ticket exists\n\n** for last card, no card will peek from the right, only cards will peek from left."
+      }
+    ]
+  },
+  {
+    "id": 1280987,
+    "title": "Event Info",
+    "section_id": 148909,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1570556725,
+    "updated_by": 288,
+    "updated_on": 1635201729,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "WIKI : https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226270/00+Ticket+Scan+View#id-00TicketScanView-1.2EventInfo\r\n\r\nGIVEN As a user is logged in with multiple tickets for an event",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User opens the scan view of the tickets from Wallet Detail List",
+        "expected": "THEN the following information is displayed in the scan view header:\nDate, Time: \nMatch up: Away Team @ Home Team\nHome team logo\nVenue\nDescription (if available)\n\n"
+      },
+      {
+        "content": "WHEN User swipes through their tickets",
+        "expected": "THEN scan view header information remains displayed for each ticket"
+      }
+    ]
+  },
+  {
+    "id": 1281000,
+    "title": "Ticket Card - Ticket Backgrounds",
+    "section_id": 148909,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1570563535,
+    "updated_by": 288,
+    "updated_on": 1635201734,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the ticket scan view is displayed\r\n\r\n\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226270/00+Ticket+Scan+View#id-00TicketScanView-1.4.1TicketCard-TicketBackgrounds",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN viewing a ticket a valid backgroundVidPoster",
+        "expected": "THEN the background should be of the home teams ballpark"
+      },
+      {
+        "content": "WHEN viewing a ticket with no backgroundVidPoster (Use Charles to do this)",
+        "expected": "THEN the background should be the home teams primary color"
+      }
+    ]
+  },
+  {
+    "id": 1281004,
+    "title": "Ticket Back",
+    "section_id": 148909,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1570564013,
+    "updated_by": 288,
+    "updated_on": 1635201739,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 6,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN there are tickets in the wallet and displayed in Ticket Scan View",
+    "custom_steps": null,
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226270/00+Ticket+Scan+View#id-00TicketScanView-1.7TicketBack",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN tapping a tickets information button in scan view",
+        "expected": "THEN the screen will display the \"ticket back\" screen"
+      },
+      {
+        "content": "WHEN tapping Close from ticket back screen",
+        "expected": "THEN user is returned to front side of ticket in scan view"
+      }
+    ]
+  },
+  {
+    "id": 1281001,
+    "title": "Team Ad",
+    "section_id": 148909,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1570563669,
+    "updated_by": 288,
+    "updated_on": 1624582067,
+    "estimate": null,
+    "estimate_forecast": "2h 16m 17s",
+    "suite_id": 20551,
+    "display_order": 7,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN a team Ad is shown in the ticket scan view\r\n\r\n** IOS  Only **\r\nIf on a smaller device, apple wallet button will always display on top of the ad.\r\n\r\n** Android Only **\r\nThis appears to only work on older devices like Moto Droid",
+    "custom_steps": null,
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226270/00+Ticket+Scan+View#id-00TicketScanView-1.5TeamAd",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN selecting the ad",
+        "expected": "THEN open a webview to the advertisers website."
+      },
+      {
+        "content": "WHEN no ad is available (putting in Airplane mode will disable ad display)",
+        "expected": "THEN do not display anything"
+      }
+    ]
+  },
+  {
+    "id": 1281003,
+    "title": "Add to Apple Wallet",
+    "section_id": 148909,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-8795",
+    "created_by": 197,
+    "created_on": 1570563968,
+    "updated_by": 288,
+    "updated_on": 1649788018,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 8,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN Apple wallet displays on IOS ",
+    "custom_steps": null,
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226270/00+Ticket+Scan+View#id-00TicketScanView-1.6AddtoAppleWallet\r\n\r\nURLs for determining if a venue allows Apple Wallet (replace ‘112’ with team ID):\r\nhttp://content.mlb.com/mlb/en/config/v1/112/ballpark/boxoffice_config/web-v1.json (Prod)\r\nhttp://qacontent.mlb.com/mlb/en/config/v1/137/ballpark/boxoffice_config/web-v1.json (QA)\r\nhttp://betacontent.mlb.com/mlb/en/config/v1/136/ballpark/boxoffice_config/web-v1.json (Staging)",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is logged in with MLB account in Ballpark app",
+        "expected": "THEN the user is successfully logged in with MLB account in Ballpark app"
+      },
+      {
+        "content": "AND the user taps on a ticket to open in scan view",
+        "expected": "THEN the user is shown the ticket scan view"
+      },
+      {
+        "content": "IF the option to add to apple wallet is available",
+        "expected": "THEN add to apple wallet button is displayed"
+      },
+      {
+        "content": "WHEN the user taps on the add to apple wallet button",
+        "expected": "THEN system apple wallet prompt is displayed\nAND ticket can be added to user's apple wallet"
+      },
+      {
+        "content": "WHEN the user taps on the add to apple wallet button on another ticket",
+        "expected": "THEN system apple wallet prompt is displayed\nAND another ticket can be added to user's apple wallet"
+      },
+      {
+        "content": "IF the option to add to apple wallet is not available for that venue",
+        "expected": "THEN the Apple Wallet button is not displayed"
+      }
+    ]
+  },
+  {
+    "id": 6692325,
+    "title": "All Forwarded Tickets [iOS only]",
+    "section_id": 148909,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 223,
+    "created_on": 1591111542,
+    "updated_by": 288,
+    "updated_on": 1633111159,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 9,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "*** IOS Only Test ***\r\nAs a user, when all my tickets for an event are completed forwards (i.e. 0 Tickets, Plus x Forwarded), then all the tickets in the scan view should be present and shown as forwarded.",
+    "custom_steps": "WHEN the user navigates to the scan view for a game where all the tickets are completed forwards",
+    "custom_expected": "THEN all the tickets are present and show as a completed forward.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26198251,
+    "title": "Dynamic ScanView Ad",
+    "section_id": 148909,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1643222337,
+    "updated_by": 288,
+    "updated_on": 1652304778,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 10,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "NOTE: THIS CASE REQUIRES SETUP FROM ADS TEAM TO CONFIGURATION ADS PARTICULAR TICKETED EVENTS\r\n(this may only need to be validated on an annual basis at the start of the season)\r\n\r\n\r\nGIVEN User has events on account with multiple scan view ads configured\r\n\r\n\r\n[Ballpark] Dynamic Scan View Ad - [WIKI](https://baseball.atlassian.net/wiki/spaces/adopstrafficking/pages/2350088391/Ballpark+Dynamic+Scan+View+Ad)\r\n[BPA-6240](https://baseball.atlassian.net/browse/BPA-6240)\r\n[BP-9477](https://baseball.atlassian.net/browse/BP-9477)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user opens the scan view for a Game Event",
+        "expected": "THEN the correct Scan view is shown with an Ad particular to the event "
+      },
+      {
+        "content": "WHEN the user opens the scan view for an event with Parking",
+        "expected": "THEN the correct Scan view is shown with an Ad particular to the event "
+      },
+      {
+        "content": "WHEN the user opens the scan view for a Non-MLB event",
+        "expected": "THEN the correct Scan view is shown with an Ad particular to the Non-MLB event "
+      }
+    ]
+  },
+  {
+    "id": 28331939,
+    "title": "Ticket Scan View - Tracking [iOS only]",
+    "section_id": 148909,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 288,
+    "created_on": 1651680924,
+    "updated_by": 288,
+    "updated_on": 1651689086,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 11,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "[BP-9663](https://baseball.atlassian.net/browse/BP-9663):Scan View Analytics - Additional context data\r\n**TESTING NOTES: THIS CASE REQUIRES TRACKING TO BE VERIFIED - MOST DIRECT WAY TO ACHIEVE THIS IS VIA A PROXY TOOL (.I.E. CharlesProxy)\r\nSetup: Connect to device to Charles to monitor the content passed.\r\n\r\nGIVEN user downloaded the Ballpark app (11.2.0 or greater)*\r\nAND network traffic is monitored via Charles\r\nAND user's acct has valid tickets in BP\r\nAND the shared secret sent from ProVenue to BoxOffice for a particular ticketed event\r\nAND the shared secret NOT sent from ProVenue to BoxOffice for another particular ticketed event\r\n\r\n*Rotating Barcode feature introduced with 11.1.0 build. Additional scanview tracking introduced with 11.2.0\r\n\r\n(as of April 2022, the following satisfies shared secret being passed AND not being passed)\r\nEnv: QA\r\nAcct: bparkdev+tdc2@gmail.com / MLBmlb123\r\nTicketed Event w/ shared secret: Orioles @ Guardians, Sept 1 (Tickets: Sec-LB129, Row-37, Seats-9,10)\r\nTicketed Event w/out shared secret: Astros @ Orioles, Sept 24 (no tickets with rotating barcode)\r\n\r\nWIKI:[TicketScanView](https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226270/00+Ticket+Scan+View#id-00TicketScanView-1.1TicketScanView)\r\n\r\n------\r\nAs reference for other features\r\n*[Tracking - Screenshot detection [iOS]](https://testrail.testeng.mlbinfra.net/index.php?/cases/view/28071269)\r\n*[Add to Apple Wallet](https://testrail.testeng.mlbinfra.net/index.php?/cases/view/1281003)",
+    "custom_steps": "WHEN the user opens the scan view\r\n",
+    "custom_expected": "THEN the correct Scanview is shown \r\nAND the additional context are passed to analytics (for all scan view page views and actions)\r\n*Venue ID of the event venueID\r\n*Hometeam ID homeTeam\r\n*gamepk or event ID of the ticket eventID\r\n*Scan state boolean scanned\r\n\r\n**Actions for:\r\n*Add to Apple Wallet\r\n*Screenshot and Screenshot Foul Ball (for more detail BP-9640)\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the ticket scanview for a ticketed event NOT containing shared secret\n",
+        "expected": "THEN the scanview of the tickets are shown (with barcode NOT rotating)\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified in Charles\n\n*MLB Ballpark : Ticket Scan View \n**id.venue <num> (ex. 2 for Orioles)\n**id.homeTeam <num> (ex. 110 for Orioles)\n**id.event <num> (ex. 663258 for Sat, Sept 24 Astros @ Orioles)\n**ticket.hasScanned <true/false> \n\n[IDs+Team+IDs+Venue+IDs](https://baseball.atlassian.net/wiki/spaces/ticketing/pages/3947618/IDs+Team+IDs+Venue+IDs)"
+      },
+      {
+        "content": "WHEN user attempts to take a screenshot of the ticket scanview NOT containing shared secret",
+        "expected": "THEN the 'Foul Ball' device prompt is NOT shown\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified in Charles\n\n*MLB Ballpark : Ticket Scan View : Screenshot\n**id.venue <num> (ex. 2 for Orioles)\n**id.homeTeam <num> (ex. 110 for Orioles)\n**id.event <num> (ex. 663258 for Sat, Sept 24 Astros @ Orioles)\n**ticket.hasScanned <true/false> "
+      },
+      {
+        "content": "WHEN user attempts to add ticket to Apple Wallet (IF the option to add to apple wallet is available)",
+        "expected": "THEN system apple wallet prompt is displayed\nAND ticket can be added to user's apple wallet\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified in Charles\n\n*MLB Ballpark : Ticket Scan View : Add to Apple Wallet\n**id.venue <num> (ex. 2 for Orioles)\n**id.homeTeam <num> (ex. 110 for Orioles)\n**id.event <num> (ex. 663258 for Sat, Sept 24 Astros @ Orioles)\n**ticket.hasScanned <true/false> "
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN user views the ticket scanview for ticketed event containing shared secret\n",
+        "expected": "THEN the scanview of the tickets are shown (WITH barcode rotating)\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified in Charles\n\n*MLB Ballpark : Ticket Scan View \n**id.venue <num> (ex. 2 for Orioles)\n**id.homeTeam <num> (ex. 110 for Orioles)\n**id.event <num> (ex. 663258 for Sat, Sept 24 Astros @ Orioles)\n**ticket.hasScanned <true/false> "
+      },
+      {
+        "content": "WHEN user views the ticket scanview for ticketed event containing shared secret\nAND user attempts to take a screenshot of the ticket scanview containing shared secret",
+        "expected": "THEN a device prompt is shown with:\n*title: 'Foul Ball'\n*description: 'Screenshots of your ticket will not be accepted for entry. Please use the app for gate access or forwarding'\n*'OK' as only call-to-action\n\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified in Charles\n\n*MLB Ballpark : Ticket Scan View : Screenshot Foul Ball\n**id.venue <num> (ex. 2 for Orioles)\n**id.homeTeam <num> (ex. 110 for Orioles)\n**id.event <num> (ex. 663258 for Sat, Sept 24 Astros @ Orioles)\n**ticket.hasScanned <true/false> "
+      },
+      {
+        "content": "WHEN user attempts to add ticket to Apple Wallet (IF the option to add to apple wallet is available)",
+        "expected": "THEN system apple wallet prompt is displayed\nAND ticket can be added to user's apple wallet\nAND Tracking info is posted to https://mlb.sc.omtrdc.net verified in Charles\n\n*MLB Ballpark : Ticket Scan View : Add to Apple Wallet\n**id.venue <num> (ex. 2 for Orioles)\n**id.homeTeam <num> (ex. 110 for Orioles)\n**id.event <num> (ex. 663258 for Sat, Sept 24 Astros @ Orioles)\n**ticket.hasScanned <true/false> "
+      }
+    ]
+  },
+  {
+    "id": 1237062,
+    "title": "Forwarding Mode",
+    "section_id": 148910,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1550611041,
+    "updated_by": 288,
+    "updated_on": 1635201744,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN that the user purchased tickets\r\n\r\nAND the user navigated to Wallet tab\r\n\r\nAND the user tapped on one of the matchups",
+    "custom_steps": null,
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225634/03+Wallet+Tab#id-03WalletTab-1.1.3TicketList-TicketForwarding",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on 'Forward Tickets' button",
+        "expected": "THEN the app will display a selectable list with checkboxes appearing on every row with only the first ticket checked when putting the user in a \"Forward mode\" (checkboxes do NOT appear if the ticket is set to \"forward-able\": false in the data)"
+      },
+      {
+        "content": "WHEN the user taps an individual ticket row that is unselected",
+        "expected": "THEN the app will enable the user to select the checkbox"
+      },
+      {
+        "content": "WHEN the user taps an individual ticket row that is selected",
+        "expected": "THEN the app will enable the user to deselect the checkbox"
+      }
+    ]
+  },
+  {
+    "id": 6677433,
+    "title": "Unforwardable Text",
+    "section_id": 148910,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-8806",
+    "created_by": 214,
+    "created_on": 1583272919,
+    "updated_by": 288,
+    "updated_on": 1612998703,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN user clicks on matchup in wallet and enters forward mode",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the \"forwardEligibilityReason\" field exists in the ticket response",
+        "expected": "THEN the text passed with forwardEligibilityReason should be displayed using red text at the bottom of the ticket cell"
+      },
+      {
+        "content": "WHEN the \"forwardEligibilityReason\" field does NOT exist in the ticket response AND the \"displayStatusString\" field exists",
+        "expected": "THEN the text passed with displayStatusString should be displayed using grey text at the bottom of the ticket cell"
+      },
+      {
+        "content": "WHEN the \"forwardEligibilityReason\" field does NOT exist in the ticket response NOR the \"displayStatusString\" field",
+        "expected": "THEN no text should be displayed at the bottom of the ticket cell"
+      }
+    ]
+  },
+  {
+    "id": 6682653,
+    "title": "Wallet - Ticket List > Do not hide or disable Forward Tickets when all tickets are unforwardable",
+    "section_id": 148910,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 237,
+    "created_on": 1584995570,
+    "updated_by": 288,
+    "updated_on": 1670967247,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN Forward Ticket button should be seen to user",
+    "custom_steps": null,
+    "custom_expected": "THEN Forwarded ticket button is shown and active regardless of ticket state",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user log in to Ballpark with MLB account",
+        "expected": "THEN User is successfully Logged in with MLB account"
+      },
+      {
+        "content": "WHEN user click on Wallet Tab ",
+        "expected": "THEN Wallet Tab displays with tickets(if they have tickets on the account)"
+      },
+      {
+        "content": "WHEN the user click on each Tickets ",
+        "expected": "THEN header should say \"Tickets\"\nTHEN Team name with Date and Time with Team Logo\n"
+      },
+      {
+        "content": "WHEN the user scroll down on the same ticket",
+        "expected": "THEN Forward Tickets button is seen in the button of the screen"
+      },
+      {
+        "content": "WHEN the user Click on Forward tickets button",
+        "expected": "THEN Forward Tickets page display with Radio button to select the tickets which need to be forwarded and Forward Tickets button"
+      }
+    ]
+  },
+  {
+    "id": 1237063,
+    "title": "Forwarding via Email - Interface",
+    "section_id": 148911,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1550611655,
+    "updated_by": 288,
+    "updated_on": 1635201749,
+    "estimate": null,
+    "estimate_forecast": "1h 6m 23s",
+    "suite_id": 20551,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN that the user purchased tickets\r\n\r\nAND the user selected tickets to forward\r\n\r\nAND the user tapped on 'Forward Tickets' button\r\n",
+    "custom_steps": null,
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225634/03+Wallet+Tab#id-03WalletTab-1.1.6Ticketlist-ForwardviaEmail",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on 'Via Email'\n\n",
+        "expected": "THEN the app display the Ticket Forward email form"
+      },
+      {
+        "content": "WHEN the user enters the information in the fields provided",
+        "expected": "THEN the app will validate the information provided by the user (the app will the emails standards: some text, an at symbol followed by a domain)"
+      },
+      {
+        "content": "WHEN the user completes the form and taps on 'Send'",
+        "expected": "THEN the app will trigger the network call to send the selected tickets to the recipient email address entered by the user"
+      },
+      {
+        "content": "WHEN the user completes the form and taps on 'Send'",
+        "expected": "THEN the form will slide down and return the user to the list view no longer in \"Forward mode\"\n\nTHEN the app will display a success message"
+      }
+    ]
+  },
+  {
+    "id": 15760945,
+    "title": "Forwarding via Suggested Recipients",
+    "section_id": 148911,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 223,
+    "created_on": 1611699503,
+    "updated_by": 288,
+    "updated_on": 1650318022,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user is logged in, has tickets, has navigated to the Wallet -> Selected Event and click Forward Tickets -> Ticket Forwarding View\r\nAND the user has completed forwards via email in the past",
+    "custom_steps": "WHEN the user clicks on \"Forward\"",
+    "custom_expected": "![](index.php?/attachments/get/7870161)\r\nTHEN the user will see at least 1 email in the options list",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on an email",
+        "expected": "THEN a prompt is displayed that says \"Ticket will be immediately delivered to [SELECTED_EMAIL] and available in their MLB Ballpark app\" with the options Yes and No."
+      },
+      {
+        "content": "WHEN the user taps the \"Yes\" option",
+        "expected": "THEN the prompt and view is dismissed back to the Ticket List view and the forward is either completed successfully or fails and the user is notified."
+      },
+      {
+        "content": "WHEN the user taps the \"No\" option",
+        "expected": "THEN the prompt is dismissed and the Ticket Forwarding View is still shown."
+      }
+    ]
+  },
+  {
+    "id": 27219360,
+    "title": "Forwarding via Contact List",
+    "section_id": 148911,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-8112",
+    "created_by": 288,
+    "created_on": 1650317707,
+    "updated_by": 288,
+    "updated_on": 1650379682,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user is on the \"Forward Tickets\" screen\r\n\r\n*device requires Contacts present in different states\r\n**Just email address\r\n**Just phone number\r\n**Both phone number and email address\r\n**No phone number nor email address (empty)",
+    "custom_steps": null,
+    "custom_expected": "WIKI:[TicketList-ForwardviaLink](https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225634/03+Wallet+Tab#id-03WalletTab-1.1.5TicketList-ForwardviaLink)\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps 'Forward'/'Forward Tickets' button",
+        "expected": "THEN the list of options shown (below suggested recipients, if prev forwarded):\n\"Select from Contacts\"\n\"Via Email\"\n\"Share Link\""
+      },
+      {
+        "content": "WHEN the user taps \"Forward Tickets\" \nAND the user taps \"Select from Contacts\"",
+        "expected": "*A device permission prompt could be shown to allow access to contacts\n\nTHEN the operating systems contact picker appears displaying the email address and phone numbers\n\n"
+      },
+      {
+        "content": "WHEN the user taps \"Forward Tickets\" \nAND the user taps \"Select from Contacts\"\nAND the user taps a contact with JUST an email address associated with the device contact",
+        "expected": "THEN the app should navigate to the 'Ticket Forward Email'/'Forward Via Email' form with \"Email\" and \"Name\" fields populated from the contact"
+      },
+      {
+        "content": "WHEN the user completes the form and taps on 'Send'",
+        "expected": "THEN the app will trigger the network call to send the selected tickets to the recipient email address entered by the user\nAND the app will display a success message\n\nAND the form will slide down and return the user to the list view no longer in \"Forward mode\""
+      },
+      {
+        "content": "WHEN the user taps \"Forward Tickets\" \nAND the user taps \"Select from Contacts\"\nAND the user taps a contact with JUST a phone number associated with the device contact",
+        "expected": "THEN the app should generate a share link and open an OS SMS message draft for the number with a message body:\n\n[iOS] \n\"I just forwarded you tickets, follow the link to accept them in MLB Ballpark app.\" that contains a link to accept transferred ticket(s)\n\n[ANDROID] \nContains a link to accept transferred ticket(s) \n*NOTE: Android will not be supplying additional text in the text message when sharing a link to forward the ticket. It has been deemed acceptable to have just the ticket link provided. [BPA-5423](https://baseball.atlassian.net/browse/BPA-5423?focusedCommentId=2712555)"
+      },
+      {
+        "content": "WHEN the user sends the SMS message containing the ticket share link\nAND the user navigates back to BP app ",
+        "expected": "THEN the user is shown the list view, no longer in \"Forward mode\"\nAND the app will display the transferred ticket as 'Forward pending via link'"
+      },
+      {
+        "content": "WHEN the user taps \"Forward Tickets\" \nAND the user taps \"Select from Contacts\"\nAND the user taps a contact with BOTH an email address AND a phone number associated with the device contact",
+        "expected": "THEN the app should navigate to the \"Ticket Forward Email\" form with \"Email\" and \"Name\" fields populated from the contact"
+      },
+      {
+        "content": "WHEN the user completes the form and taps on 'Send'",
+        "expected": "THEN the app will trigger the network call to send the selected tickets to the recipient email address entered by the user\nAND the app will display a success message\n\nAND the form will slide down and return the user to the list view no longer in \"Forward mode\""
+      },
+      {
+        "content": "WHEN the user taps \"Forward Tickets\" \nAND the user taps \"Select from Contacts\"\nAND the user taps a contact without an email address NOR a phone number associated with the device contact",
+        "expected": "THEN the OS should appropriately handle a contact without a delivery method\n\n*typically an 'invalid recipient' message OR Null message without ticket link generated/shown"
+      }
+    ]
+  },
+  {
+    "id": 1237064,
+    "title": "Forwarding via Share Link",
+    "section_id": 148912,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1550612147,
+    "updated_by": 433,
+    "updated_on": 1727378856,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the sending user has forward-able tickets on their account\r\n\r\n\r\n\r\nTESTING NOTES:\r\n*This test case is best to be validated with 2 devices/accts to closer validate the true user experience. A single device can be used, but may be more difficult to verify.\r\n*This test case is best to be validated against Prod env. This will prevent testing friction within QA/Staging env, due to beta prompt and requiring credentials. [MLB Beta Login page requiring creds (Username: beta-user / Password – b3ta@mlb.com)]\r\n*In case you need to validate specifically in QA environment, take note that your device should be connected to the VPN to allow the share link to work. ",
+    "custom_steps": null,
+    "custom_expected": "WIKI:[TicketList-ForwardviaLink](https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225634/03+Wallet+Tab#id-03WalletTab-1.1.5TicketList-ForwardviaLink)\r\n\r\n[BP-9681](https://baseball.atlassian.net/browse/BP-9681)\r\n\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the sending user selected tickets to forward\nAND the user tapped on 'Forward Tickets' button \nAND the user taps on 'Share Link'",
+        "expected": "THEN the app will display the OS share sheet and make the API call to forward the ticket"
+      },
+      {
+        "content": "WHEN the user selects one of the sharing apps/options",
+        "expected": "THEN the app populate the user's device share option with the \"shareURL\" from the boxoffice service "
+      },
+      {
+        "content": "WHEN the user finishes selecting share option of the ticket",
+        "expected": "THEN the share flow will dismiss \nAND the user will no longer be in \"Forward mode\""
+      },
+      {
+        "content": "WHEN the sending user finishes forwarding",
+        "expected": "THEN the app will refresh the list and will indicate which tickets are now forwarding in progress (pending via link)"
+      },
+      {
+        "content": "*best to use a different device/acct\n\nWHEN the receiving user accesses the share link ",
+        "expected": "THEN the user will be shown 'Accepting Tickets' page via mlb.com with an 'Access Ticket' button"
+      },
+      {
+        "content": "WHEN the receiving user taps 'Access Ticket' button from within Accepting Tickets page",
+        "expected": "THEN the user will be presented 'Open in Ballpark?' prompt"
+      },
+      {
+        "content": "WHEN the receiving user taps 'Open' within 'Open in Ballpark?' prompt",
+        "expected": "THEN the ballpark app will be opened to the Tickets tab\nAND 'Ticket Accepted - You've received a ticket forward from <sending_user_email>.' with an 'OK' button\nAND the prompt is layered on top of the WalletView displaying the ticketed events* \n\n*this assumes no prev tickets were active on the acct where the newly accepted transfer's card is shown. If prev ticketed events are prev on the acct AND if the events occurs prior to the transfer, then the soonest events are displayed."
+      },
+      {
+        "content": "WHEN the receiving user navigates to view the recently accepted ticket",
+        "expected": "THEN the user is able to see the listview AND the scanview of the ticketed event\n\n*barcode should be shown, if prev shown from sending user ('Barcode Unavailable' can be shown initially to sending user, and therefore would be the same shown to the receiving user)"
+      },
+      {
+        "content": "WHEN the sending user navigates/refreshes the recently forward ticket",
+        "expected": "THEN the ticket entry should be updated from 'Forward pending via link' to ticket has been accepted by the receiving user"
+      }
+    ]
+  },
+  {
+    "id": 6683058,
+    "title": "Backing Out of Forward via Share Link",
+    "section_id": 148912,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 214,
+    "created_on": 1585241429,
+    "updated_by": 214,
+    "updated_on": 1585241717,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User has forwardable tickets, user has selected tickets to forward and then clicked on the forward button and chosen the share link option.",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user backs out of the share sheet (by clicking outside of it for example)",
+        "expected": "THEN the tickets that have been selected should revert to an unforwarded state."
+      }
+    ]
+  },
+  {
+    "id": 1280781,
+    "title": "No Network On App Relaunch Tests",
+    "section_id": 154812,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1570480965,
+    "updated_by": 288,
+    "updated_on": 1624638560,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the app has previously been loaded and has tickets loaded in the wallet ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the app is closed, not in memory AND the Internet is turned off",
+        "expected": "THEN the wallet will show proper card views in Wallet Tab with correct ticket count"
+      },
+      {
+        "content": "WHEN the app is closed, not in memory AND the Internet is turned off",
+        "expected": "THEN the wallet will show the ticket list when clicking on Wallet Tab card view"
+      },
+      {
+        "content": "WHEN the app is closed, not in memory AND the Internet is turned off",
+        "expected": "THEN the wallet ticket list will show when clicking on Wallet Tab card button"
+      }
+    ]
+  },
+  {
+    "id": 1280828,
+    "title": "Network Lost while in App Tests",
+    "section_id": 154812,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1570481306,
+    "updated_by": 288,
+    "updated_on": 1624638582,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the app has previously been loaded and has tickets loaded in the wallet",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the app is open AND the Internet is turned off",
+        "expected": "THEN the wallet will show proper card views in Wallet Tab with correct ticket count"
+      },
+      {
+        "content": "WHEN the app is open AND the Internet is turned off",
+        "expected": "THEN the wallet ticket list will show when clicking on Wallet Tab card button"
+      }
+    ]
+  },
+  {
+    "id": 1280829,
+    "title": "Account with No Tickets",
+    "section_id": 154812,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1570481378,
+    "updated_by": 288,
+    "updated_on": 1624638623,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the account has no tickets",
+    "custom_steps": null,
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225634/03+Wallet+Tab#id-03WalletTab-1.2.1Notickets-Linkticketaccount",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN app is launched with no tickets",
+        "expected": "THEN App displays with  no tickets"
+      },
+      {
+        "content": "WHEN app is relaunched",
+        "expected": "THEN App relaunched with no tickets"
+      }
+    ]
+  },
+  {
+    "id": 1296591,
+    "title": "App Relaunch Tests",
+    "section_id": 154812,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 215,
+    "created_on": 1581013465,
+    "updated_by": 288,
+    "updated_on": 1624638664,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 6,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the app has previously been loaded and has tickets loaded in the wallet",
+    "custom_steps": null,
+    "custom_expected": "THEN the app relaunches with  Ticket on the account ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the app is closed, not in memory",
+        "expected": "THEN the wallet will show proper card views in Wallet Tab with correct ticket count"
+      },
+      {
+        "content": "WHEN the app is closed, not in memory",
+        "expected": "THEN the wallet will show the ticket list when clicking on Wallet Tab card view"
+      },
+      {
+        "content": "WHEN the app is closed, not in memory",
+        "expected": "THEN the wallet ticket list will show when clicking on Wallet Tab card button"
+      }
+    ]
+  },
+  {
+    "id": 1284910,
+    "title": "Verify Wallet Badging",
+    "section_id": 155424,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 217,
+    "created_on": 1573847347,
+    "updated_by": 288,
+    "updated_on": 1624638709,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN a Ballpark user that has tickets for the future but has not verified my email address\r\n\r\n** Setup **\r\n\r\nusing the examples from Postman (https://414187bf-166d-4ebc-a1c4-46d8e343f56d.mock.pstmn.io/api/v2/users/ticketSummaries?startDate=2019-07-02&endDate=2021-07-02&refresh=false&ballpark_summary=true&includeTicketBack=true)\r\nchange the badgeWallet to true or false to show or hide the badge. ",
+    "custom_steps": null,
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226919/00+Check+In#id-00CheckIn-3.4UnlockedOffers-BadgeIndicator",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I view the wallet tab",
+        "expected": "THEN I should see a red dot indicating there is an action to take\n\nhttps://app.zeplin.io/project/5da5eea5f68ac72fba7bcaea/screen/5da5ef20aa6b4a238bd614c2"
+      }
+    ]
+  },
+  {
+    "id": 1292080,
+    "title": "Trigger Email Verification Success",
+    "section_id": 156884,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 228,
+    "created_on": 1578956096,
+    "updated_by": 288,
+    "updated_on": 1646253036,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "Given a Wallet event that requires verification![](index.php?/attachments/get/24177)\r\n\r\n**To simulate Peeking card state('Verify Email To Open Tickets'), using Proxy tool the ticketSummaries response can be updated to have 'ticketCount' to 0, 'forwardCompletedCount' to 0, and 'verified' to false",
+    "custom_steps": "When the user taps on the event",
+    "custom_expected": "Then the user gets an email and the app shows a message that an email was sent.  The toast text should say \"Go to your MLB Account\" ![](index.php?/attachments/get/24178)\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is in the Wallet Tab and click on \"Verify My open tickets!\" text ",
+        "expected": "THEN the user gets an email and the app shows a message that an email was sent.  The message should include button with text = \"Go to your MLB Account\" ! "
+      },
+      {
+        "content": "WHEN the user clicks on the Go to your MLB Account button",
+        "expected": "THEN the user is taken to My MLB Account Emails screen"
+      },
+      {
+        "content": "WHEN user back navigates from MLB Account Emails page",
+        "expected": "THEN the user is directed to Wallet Tab"
+      }
+    ]
+  },
+  {
+    "id": 1292081,
+    "title": "Trigger Email Verification Failure",
+    "section_id": 156884,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 228,
+    "created_on": 1578956425,
+    "updated_by": 288,
+    "updated_on": 1646253988,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "Given a Wallet event that requires verification \r\n![](index.php?/attachments/get/24177)\r\n\r\n**To simulate Peeking card state('Verify Email To Open Tickets'), using Proxy tool the ticketSummaries response can be updated to have 'ticketCount' to 0, 'forwardCompletedCount' to 0, and 'verified' to false\r\n\r\n**To simulate a failed response from email address verification, using Proxy tool add a breakpoint to the profile.mlb.com response and hold response from executing (or aborting response)\r\n",
+    "custom_steps": "When the user taps on the event, but the api call to the address verification service fails",
+    "custom_expected": "The app shows a dialog that informs the user there was an error with the ability to retry the api call \r\n![](index.php?/attachments/get/24181)\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is login to MLB account in Ballpark app ",
+        "expected": "THEN the user is successfully logged in with MLB account in Ballpark app"
+      },
+      {
+        "content": "When the user is on the Wallet tab and taps on the event, but the api call to the address verification service fails",
+        "expected": "THEN the app shows a dialog that the user was an error with the ability to retry the api call "
+      }
+    ]
+  },
+  {
+    "id": 1292155,
+    "title": "Open My Account from Trigger Email Verification Success",
+    "section_id": 156884,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://baseball.atlassian.net/browse/BP-8377",
+    "created_by": 228,
+    "created_on": 1579028204,
+    "updated_by": 288,
+    "updated_on": 1615401788,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN a successful email verification trigger \r\n![](index.php?/attachments/get/24178)\r\n",
+    "custom_steps": "WHEN the user taps \"Go to your MLB Account\"",
+    "custom_expected": "THEN the My Account view is opened \r\n![](index.php?/attachments/get/24184)\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is in the Wallet Tab \nAND the user taps on the email sent message which shows \"Go to My Account\"",
+        "expected": "THEN user is taken to My MLB Account Emails page"
+      },
+      {
+        "content": "WHEN user back navigates from MLB Account Emails page",
+        "expected": "THEN the user is directed to Wallet Tab"
+      }
+    ]
+  },
+  {
+    "id": 6677636,
+    "title": "Initial Load Successful",
+    "section_id": 303749,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1583340851,
+    "updated_by": 213,
+    "updated_on": 1584038769,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on the Wallet Tab and clicks on View All button",
+    "custom_steps": "WHEN Wallet Details list is displayed\r\n\r\n",
+    "custom_expected": "THEN loading indicator is displayed (Android only)\r\nTHEN a service call (verify using Charles) is made to box office service with refresh == false\r\nTHEN UI is updated and tickets are shown",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6677637,
+    "title": "Initial Load Error",
+    "section_id": 303749,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1583340851,
+    "updated_by": 213,
+    "updated_on": 1584039074,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on Wallet Tab and clicks on View All Button",
+    "custom_steps": "WHEN Wallet Details list is displayed",
+    "custom_expected": "THEN loading indicator is displayed (Android only)\r\nTHEN box office service is forced to failed (using Charles to overwrite return code)\r\nTHEN Retry message/option is displayed (Android only)\r\nTHEN no tickets are displayed because initial load and no tickets are cached",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6677638,
+    "title": "Initial Load No Network Error",
+    "section_id": 303749,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1583340851,
+    "updated_by": 213,
+    "updated_on": 1584109088,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on Wallet Tab and clicks on View All button and has no network connectivity",
+    "custom_steps": "WHEN User views Wallet Detail List for first time",
+    "custom_expected": "THEN loading indicator is displayed (Android only)\r\nTHEN displays message about no network connectivity (Android Only)\r\nTHEN no tickets are displayed on Wallet Tab since none where initially loaded",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6677633,
+    "title": "Manual Refresh Successful",
+    "section_id": 303748,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1583340488,
+    "updated_by": 213,
+    "updated_on": 1583340488,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on the Wallet Tab with tickets",
+    "custom_steps": "WHEN User pulls down to refresh",
+    "custom_expected": "THEN loading indicator is displayed\r\nTHEN a service call (verify using Charles) is made to box office service with refresh == true\r\nTHEN UI is updated and tickets are shown",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6677634,
+    "title": "Manual Refresh Error",
+    "section_id": 303748,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1583340488,
+    "updated_by": 213,
+    "updated_on": 1583340488,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on Wallet Tab with tickets and has network connectivity",
+    "custom_steps": "WHEN User pulls to refresh and using Charles return error code 500",
+    "custom_expected": "THEN loading indicator is displayed\r\nTHEN box office service is forced to failed (using Charles to overwrite return code)\r\nTHEN Retry message/option is displayed\r\nTHEN user tickets remain displayed on Wallet Tab",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6677635,
+    "title": "Manual Refresh No Network Error",
+    "section_id": 303748,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1583340488,
+    "updated_by": 215,
+    "updated_on": 1583351433,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on Wallet Tab with tickets and app is in airplane mode (no network connectivity)",
+    "custom_steps": "WHEN User pulls to refresh",
+    "custom_expected": "THEN loading indicator is displayed\r\nTHEN the snackbar is displayed with no network error and retry is available\r\nTHEN the tickets remain displayed",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6676668,
+    "title": "Auto Refresh Successful",
+    "section_id": 303657,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 215,
+    "created_on": 1582924696,
+    "updated_by": 213,
+    "updated_on": 1597874792,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on the Today Tab and has tickets for Today\r\n\r\n",
+    "custom_steps": "WHEN User navigates to the Wallet Tab",
+    "custom_expected": "THEN the loading indicator is not displayed\r\nTHEN tickets will be displayed\r\nTHEN a service call to the BoxOffice Service will be made with refresh == false (verify using Charles)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6676669,
+    "title": "Auto Refresh Error (No Network)",
+    "section_id": 303657,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 215,
+    "created_on": 1582924920,
+    "updated_by": 288,
+    "updated_on": 1646236272,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user loads the app from cold start (not background)\r\nAND is on the Home Page with cached tickets",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user opens the app with network enabled\nAND user views the tickets to have them cached\nAND user closes/quits BP app (not backgrounded)\nWHEN user disables the network\nAND user opens BP app \nAND user navigates to the wallet tab with no network ",
+        "expected": "[iOS] THEN the wallet tab should not display error message \n\n[Android] THEN the wallet tab displays an error message \n"
+      },
+      {
+        "content": "",
+        "expected": "THEN the wallet tab should continue to show cached tickets\nTHEN the wallet tab should not display a loading indication"
+      }
+    ]
+  },
+  {
+    "id": 6676670,
+    "title": "Auto Refresh Error (Network and No Network)",
+    "section_id": 303657,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 215,
+    "created_on": 1582925077,
+    "updated_by": 288,
+    "updated_on": 1646236640,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user has started the app and navigates to the wallet tab",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN you turn off the internet while in the wallet tab and navigate to the home tab and then back to the wallet tab",
+        "expected": "[iOS] THEN the wallet tab should not display error message\n\n[Android] THEN the wallet tab displays an error message\n"
+      },
+      {
+        "content": "",
+        "expected": "THEN tickets should still be available. \nTHEN no loading indicator is displayed."
+      }
+    ]
+  },
+  {
+    "id": 6677595,
+    "title": "Initial Load Successful",
+    "section_id": 303738,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1583282658,
+    "updated_by": 213,
+    "updated_on": 1583357054,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on the Wallet Tab and clicks on View All button",
+    "custom_steps": "WHEN Wallet Details list is displayed\r\n\r\n",
+    "custom_expected": "THEN loading indicator is displayed\r\nTHEN a service call (verify using Charles) is made to box office service with refresh == false\r\nTHEN UI is updated and tickets are shown",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6677596,
+    "title": "Initial Load Error with cached tickets",
+    "section_id": 303738,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1583282668,
+    "updated_by": 213,
+    "updated_on": 1583357243,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on Wallet Tab and clicks on View All Button",
+    "custom_steps": "WHEN Wallet Details list is displayed",
+    "custom_expected": "THEN loading indicator is displayed\r\nTHEN box office service is forced to failed (using Charles to overwrite return code)\r\nTHEN Retry message/option is displayed with something went wrong message\r\nTHEN user cached tickets remain displayed on Wallet Detail List",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6677597,
+    "title": "Initial Load No Network Error",
+    "section_id": 303738,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1583282681,
+    "updated_by": 213,
+    "updated_on": 1584109931,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on Wallet Tab and clicks on View All button and has no network connectivity",
+    "custom_steps": "WHEN User views Wallet Detail List for first time",
+    "custom_expected": "THEN loading indicator is displayed (Android only)\r\nTHEN Retry snackbar is displayed with message about no network connectivity (Android only)\r\nTHEN cached user tickets remain displayed on Wallet Detail List",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6677591,
+    "title": "Auto Refresh Successful",
+    "section_id": 303736,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1583282421,
+    "updated_by": 213,
+    "updated_on": 1583284823,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on the Wallet Tab and clicks \"View All\" button",
+    "custom_steps": "WHEN the Wallet Detail List is displayed",
+    "custom_expected": "THEN no loading indicator is displayed\r\nTHEN the wallet detail list is presented\r\nTHEN box service call is made to get ticket details",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6677600,
+    "title": "Manual Refresh Successful",
+    "section_id": 303740,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1583340081,
+    "updated_by": 213,
+    "updated_on": 1583340081,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on the Wallet Details List",
+    "custom_steps": "WHEN User pulls down to refresh",
+    "custom_expected": "THEN loading indicator is displayed\r\nTHEN a service call (verify using Charles) is made to box office service with refresh == true\r\nTHEN UI is updated and tickets are shown",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6677601,
+    "title": "Manual Refresh w/ Error",
+    "section_id": 303740,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1583340081,
+    "updated_by": 213,
+    "updated_on": 1583357016,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on Wallet Detail List and has network connectivity",
+    "custom_steps": "WHEN User pulls to refresh and using Charles return error code 500",
+    "custom_expected": "THEN loading indicator is displayed\r\nTHEN box office service is forced to failed (using Charles to overwrite return code) and refresh == true\r\nTHEN Retry message/option is displayed with something went wrong message\r\nTHEN user tickets remain displayed on Wallet Detail List",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6677602,
+    "title": "Manual Refresh No Network Error",
+    "section_id": 303740,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1583340081,
+    "updated_by": 237,
+    "updated_on": 1583856959,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User is on Wallet Detail List and has no network connectivity (airplane mode)",
+    "custom_steps": "WHEN User pulls to refresh\r\n\r\n",
+    "custom_expected": "THEN loading indicator is displayed\r\nTHEN Retry snack bar displays message \"Network Unavailable, please check your connection\"\r\nTHEN user tickets remain displayed on Wallet Detail List",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6691966,
+    "title": "[IOS ONLY] Swipe Back Support",
+    "section_id": 306181,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-8691",
+    "created_by": 238,
+    "created_on": 1590687981,
+    "updated_by": 238,
+    "updated_on": 1590705750,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20551,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user is inside the Wallet navigation tab\r\nAND is on a screen that contains a back button in the top-left corner",
+    "custom_steps": "WHEN the user swipes in from the right side of the screen",
+    "custom_expected": "THEN the user will be taken to the previous screen",
+    "custom_steps_separated": null
+  }
+]

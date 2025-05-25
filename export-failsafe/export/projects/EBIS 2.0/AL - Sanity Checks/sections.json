@@ -1,0 +1,137 @@
+[
+  {
+    "id": 114078,
+    "suite_id": 17415,
+    "name": "MNC",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 114079,
+    "suite_id": 17415,
+    "name": "Trades",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 114080,
+    "suite_id": 17415,
+    "name": "Service",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 114082,
+    "suite_id": 17415,
+    "name": "Intl SB",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 120059,
+    "suite_id": 17415,
+    "name": "R4 Signing Bonus",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 123788,
+    "suite_id": 17415,
+    "name": "Payment Tracker",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 140532,
+    "suite_id": 17415,
+    "name": "Add D/Add C",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 145699,
+    "suite_id": 17415,
+    "name": "Language Management",
+    "description": null,
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  },
+  {
+    "id": 145701,
+    "suite_id": 17415,
+    "name": "Print/Reports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 146449,
+    "suite_id": 17415,
+    "name": "MN Insurance",
+    "description": null,
+    "parent_id": null,
+    "display_order": 32,
+    "depth": 0
+  },
+  {
+    "id": 147480,
+    "suite_id": 17415,
+    "name": "Ebislink",
+    "description": null,
+    "parent_id": null,
+    "display_order": 35,
+    "depth": 0
+  },
+  {
+    "id": 148098,
+    "suite_id": 17415,
+    "name": "PIEF List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  },
+  {
+    "id": 148099,
+    "suite_id": 17415,
+    "name": "WLP/WLR",
+    "description": null,
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 148825,
+    "suite_id": 17415,
+    "name": "Fed Reg",
+    "description": null,
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 149199,
+    "suite_id": 17415,
+    "name": "Club Comms",
+    "description": null,
+    "parent_id": null,
+    "display_order": 39,
+    "depth": 0
+  }
+]

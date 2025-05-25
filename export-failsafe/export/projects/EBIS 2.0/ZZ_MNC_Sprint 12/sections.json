@@ -1,0 +1,65 @@
+[
+  {
+    "id": 23427,
+    "suite_id": 2606,
+    "name": "Club - Print Contracts",
+    "description": "https://www.pivotaltracker.com/epic/show/2325205",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 23428,
+    "suite_id": 2606,
+    "name": "BOC - Approve/Preapprove Contract",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 24246,
+    "suite_id": 2606,
+    "name": "BOC - Reject/Withdraw Contract",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 24238,
+    "suite_id": 2606,
+    "name": "Club - Contract Functions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 24241,
+    "suite_id": 2606,
+    "name": "Club - Add C's",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 24242,
+    "suite_id": 2606,
+    "name": "MNC Verification Widget",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 24240,
+    "suite_id": 2606,
+    "name": "Search/Misc",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  }
+]

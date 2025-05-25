@@ -1,0 +1,74 @@
+[
+  {
+    "id": 137807,
+    "suite_id": 19767,
+    "name": "General (Lockers)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 137808,
+    "suite_id": 19767,
+    "name": "Delivery Methods",
+    "description": null,
+    "parent_id": 137807,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 137809,
+    "suite_id": 19767,
+    "name": "Menu (Lockers)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 137810,
+    "suite_id": 19767,
+    "name": "Order Cards",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 137811,
+    "suite_id": 19767,
+    "name": "Order Confirmation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 140355,
+    "suite_id": 19767,
+    "name": "Search",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 140356,
+    "suite_id": 19767,
+    "name": "Cart",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 140423,
+    "suite_id": 19767,
+    "name": "Locker equipment workflow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  }
+]

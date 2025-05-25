@@ -1,0 +1,425 @@
+[
+  {
+    "id": 147354,
+    "suite_id": 20367,
+    "name": "MJ_Offseason Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 147355,
+    "suite_id": 20367,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 147354,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 150107,
+    "suite_id": 20367,
+    "name": "Appointment of 27th Man",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 150114,
+    "suite_id": 20367,
+    "name": "On create rule",
+    "description": null,
+    "parent_id": 150107,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 150115,
+    "suite_id": 20367,
+    "name": "On submit rule",
+    "description": null,
+    "parent_id": 150107,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 150116,
+    "suite_id": 20367,
+    "name": "Return of 27th man",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 150117,
+    "suite_id": 20367,
+    "name": "On create rule",
+    "description": null,
+    "parent_id": 150116,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 150118,
+    "suite_id": 20367,
+    "name": "On submit rule",
+    "description": null,
+    "parent_id": 150116,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 150119,
+    "suite_id": 20367,
+    "name": "On approve rule",
+    "description": null,
+    "parent_id": 150116,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 150140,
+    "suite_id": 20367,
+    "name": "Designated for Release",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 150141,
+    "suite_id": 20367,
+    "name": "Elect Free Agency",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 150149,
+    "suite_id": 20367,
+    "name": "Sign Free Agent",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 150150,
+    "suite_id": 20367,
+    "name": "Tender Qualifying Offer Under Article xx(b)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 150151,
+    "suite_id": 20367,
+    "name": "Player Terminates Contract Under Paragraph 7(a)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 150152,
+    "suite_id": 20367,
+    "name": "Accepted A Qualifying Offer Under Article xx(b)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 150153,
+    "suite_id": 20367,
+    "name": "Read Only Transactions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 150154,
+    "suite_id": 20367,
+    "name": "Rule 6 Return Process",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 150155,
+    "suite_id": 20367,
+    "name": "Return of Rule 5 Selection",
+    "description": null,
+    "parent_id": 150154,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 150156,
+    "suite_id": 20367,
+    "name": "Report Date",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 150157,
+    "suite_id": 20367,
+    "name": "Selection to ML Roster",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 150158,
+    "suite_id": 20367,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 150157,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 150159,
+    "suite_id": 20367,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 150157,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 150160,
+    "suite_id": 20367,
+    "name": "Flags",
+    "description": null,
+    "parent_id": 150157,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 150161,
+    "suite_id": 20367,
+    "name": "Print",
+    "description": null,
+    "parent_id": 150157,
+    "display_order": 29,
+    "depth": 1
+  },
+  {
+    "id": 150162,
+    "suite_id": 20367,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 150157,
+    "display_order": 30,
+    "depth": 1
+  },
+  {
+    "id": 150163,
+    "suite_id": 20367,
+    "name": "Major/Minor Outright",
+    "description": null,
+    "parent_id": null,
+    "display_order": 31,
+    "depth": 0
+  },
+  {
+    "id": 150164,
+    "suite_id": 20367,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 150163,
+    "display_order": 32,
+    "depth": 1
+  },
+  {
+    "id": 150165,
+    "suite_id": 20367,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 150163,
+    "display_order": 33,
+    "depth": 1
+  },
+  {
+    "id": 150166,
+    "suite_id": 20367,
+    "name": "Recall",
+    "description": null,
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 150167,
+    "suite_id": 20367,
+    "name": "On create rule",
+    "description": null,
+    "parent_id": 150166,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 150168,
+    "suite_id": 20367,
+    "name": "On submit rule",
+    "description": null,
+    "parent_id": 150166,
+    "display_order": 36,
+    "depth": 1
+  },
+  {
+    "id": 150169,
+    "suite_id": 20367,
+    "name": "On approved rule",
+    "description": null,
+    "parent_id": 150166,
+    "display_order": 37,
+    "depth": 1
+  },
+  {
+    "id": 150170,
+    "suite_id": 20367,
+    "name": "Transfer of option",
+    "description": null,
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 150171,
+    "suite_id": 20367,
+    "name": "On create rule",
+    "description": null,
+    "parent_id": 150170,
+    "display_order": 39,
+    "depth": 1
+  },
+  {
+    "id": 150172,
+    "suite_id": 20367,
+    "name": "On submit rule",
+    "description": null,
+    "parent_id": 150170,
+    "display_order": 40,
+    "depth": 1
+  },
+  {
+    "id": 150173,
+    "suite_id": 20367,
+    "name": "On approved rule",
+    "description": null,
+    "parent_id": 150170,
+    "display_order": 41,
+    "depth": 1
+  },
+  {
+    "id": 150175,
+    "suite_id": 20367,
+    "name": "Daily Transaction Bulletin",
+    "description": null,
+    "parent_id": null,
+    "display_order": 42,
+    "depth": 0
+  },
+  {
+    "id": 1137477,
+    "suite_id": 20367,
+    "name": "Mj/Mn Assignments",
+    "description": null,
+    "parent_id": null,
+    "display_order": 43,
+    "depth": 0
+  },
+  {
+    "id": 1138773,
+    "suite_id": 20367,
+    "name": "Replacement Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 44,
+    "depth": 0
+  },
+  {
+    "id": 1138774,
+    "suite_id": 20367,
+    "name": "Transaction Updates",
+    "description": null,
+    "parent_id": null,
+    "display_order": 45,
+    "depth": 0
+  },
+  {
+    "id": 1144323,
+    "suite_id": 20367,
+    "name": "Option Give-Back",
+    "description": null,
+    "parent_id": null,
+    "display_order": 46,
+    "depth": 0
+  },
+  {
+    "id": 1144327,
+    "suite_id": 20367,
+    "name": "TX/Misc",
+    "description": null,
+    "parent_id": null,
+    "display_order": 47,
+    "depth": 0
+  },
+  {
+    "id": 1144352,
+    "suite_id": 20367,
+    "name": "2020 Transaction Rule Changes",
+    "description": null,
+    "parent_id": null,
+    "display_order": 48,
+    "depth": 0
+  },
+  {
+    "id": 1196478,
+    "suite_id": 20367,
+    "name": "Optional Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 49,
+    "depth": 0
+  },
+  {
+    "id": 1196479,
+    "suite_id": 20367,
+    "name": "On create rule",
+    "description": null,
+    "parent_id": 1196478,
+    "display_order": 50,
+    "depth": 1
+  },
+  {
+    "id": 1196480,
+    "suite_id": 20367,
+    "name": "On submit rule",
+    "description": null,
+    "parent_id": 1196478,
+    "display_order": 51,
+    "depth": 1
+  },
+  {
+    "id": 1196481,
+    "suite_id": 20367,
+    "name": "On approve rule",
+    "description": null,
+    "parent_id": 1196478,
+    "display_order": 52,
+    "depth": 1
+  }
+]

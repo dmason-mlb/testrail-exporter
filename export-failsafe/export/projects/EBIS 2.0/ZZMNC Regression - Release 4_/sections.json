@@ -1,0 +1,29 @@
+[
+  {
+    "id": 8078,
+    "suite_id": 1076,
+    "name": "International Amateur Player Profile Integration",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 8076,
+    "suite_id": 1076,
+    "name": "Minor Contract Attachments",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 8077,
+    "suite_id": 1076,
+    "name": "Advanced Search - Org/Club Sub-filters",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  }
+]

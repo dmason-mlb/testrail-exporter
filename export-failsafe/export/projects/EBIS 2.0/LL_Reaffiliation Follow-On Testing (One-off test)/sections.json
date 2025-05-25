@@ -1,0 +1,47 @@
+[
+  {
+    "id": 144043,
+    "suite_id": 20171,
+    "name": "Major Assignments",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 144044,
+    "suite_id": 20171,
+    "name": "Minor Assignments",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 144045,
+    "suite_id": 20171,
+    "name": "Inactive List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 144046,
+    "suite_id": 20171,
+    "name": "CSP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 144047,
+    "suite_id": 20171,
+    "name": "Rule 5",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

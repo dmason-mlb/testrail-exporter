@@ -1,0 +1,694 @@
+[
+  {
+    "id": 8519809,
+    "title": "Display",
+    "section_id": 289911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1603144771,
+    "updated_by": 258,
+    "updated_on": 1615488512,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 1,
+    "custom_preconds": "Given: User is viewing the bottom navigation bar",
+    "custom_steps": "When the user taps the \"Rankings\" button",
+    "custom_expected": "Then the \"Daily Rankings\" screen opens\r\nAnd text displays: \"The top 3 Pro Play scores from any single game compete for:\"\r\nAnd the prizes display: 1st prize, $600; 2nd prize, $300; 3rd prize $100\r\nAnd 'No Purchase Necessary. 21+ to compete. Restrictions apply: see Official Rules.' copy is displayed\r\nAnd two date tabs are present and functional; yesterday's date and today's date (e.g. Fri 09/11)\r\nAnd a \"Live Scores\" label is visible (on today's list) with the number of players\r\nAnd a \"Final Scores\" label is visible (on yesterday's list with the number of players\r\nAnd a stack of tiles display\r\nAnd each tile shows the place (e.g. 1st Place)\r\nAnd each tile shows the <User Nickname>\r\nAnd each tile displays the user's rating (e.g. \"MVP,\" \"Superstar,\" \"Hall of Famer,\" etc,)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6677589,
+    "title": "Server Error",
+    "section_id": 289911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-1143",
+    "created_by": 187,
+    "created_on": 1583282102,
+    "updated_by": 258,
+    "updated_on": 1616017347,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user is on the daily leaderboard",
+    "custom_steps": "WHEN the server returns an error\r\n - Rewrite the query: https://gaming.mobileqa.mlbinfra.com/leaderboards/daily to respond with a 500 request in Charles\r\n![](index.php?/attachments/get/27582)\r\n",
+    "custom_expected": "THEN no data will load ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1291264,
+    "title": "User highlight behavior",
+    "section_id": 289911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-736",
+    "created_by": 235,
+    "created_on": 1578332617,
+    "updated_by": 258,
+    "updated_on": 1591217115,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 10,
+    "custom_preconds": "GIVEN the user is on the Rankings page",
+    "custom_steps": null,
+    "custom_expected": "THEN the user is shown as a blue bar AND the blue bar isn't flashing\r\nnote: the blue bar should show even when the user's ranking is below the rankings currently displayed",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN  the user is scrolled to a position that is less than the user’s current position",
+        "expected": "THEN the blue bar sticks at the bottom of the leaderboard"
+      },
+      {
+        "content": "WHEN the user first opens the leaderboard AND the user is in the first set of visible ranks",
+        "expected": "THEN the default view shows the top of the leaderboard (starting with position 1) AND the user’s position is highlighted blue"
+      },
+      {
+        "content": "WHEN the user taps on the blue bar",
+        "expected": "THEN the user is taken to their position in the leaderboard and position is centered on the page"
+      },
+      {
+        "content": "WHEN the user scrolls to the user’s position in the leaderboard",
+        "expected": "THEN the blue bar for the user will slot in to the correct position"
+      },
+      {
+        "content": "WHEN  the user is scrolled to a position that is greater than the user’s current position",
+        "expected": "THEN the blue bar sticks at the top of the leaderboard"
+      }
+    ]
+  },
+  {
+    "id": 1293376,
+    "title": "Simple leaderboard behavior",
+    "section_id": 289911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-475, FPT-634",
+    "created_by": 235,
+    "created_on": 1579734192,
+    "updated_by": 258,
+    "updated_on": 1591217354,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 11,
+    "custom_preconds": "GIVEN no games have been played that day",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user opens the daily leaderboard",
+        "expected": "THEN a message is displayed saying there are no rankings and to come back later"
+      },
+      {
+        "content": "WHEN user plays a couple games and make picks that resolve",
+        "expected": "THEN the contest leaderboard is populated throughout the game with each game having their own leaderboard AND daily leaderboard is populated and updates in relation to highest placement in contest leaderboards"
+      },
+      {
+        "content": "WHEN user logs back in the next day before any games have been played",
+        "expected": "Daily leaderboard is cleared out and the no rankings yet message is displayed"
+      },
+      {
+        "content": "WHEN user has long username (max 15 per requirements)",
+        "expected": "Username should not overlap the points value. \n(Note: check on small devices)"
+      }
+    ]
+  },
+  {
+    "id": 6674421,
+    "title": "Ranking",
+    "section_id": 289911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-511, FTP-775",
+    "created_by": 187,
+    "created_on": 1582750999,
+    "updated_by": 258,
+    "updated_on": 1589915948,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 12,
+    "custom_preconds": "GIVEN a user is on the Rankings Tab",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user enters game leaderboard",
+        "expected": "THEN the top of the leaderboard should be displayed (not scroll to you)"
+      },
+      {
+        "content": "WHEN the user enters game leaderboard",
+        "expected": "THEN Prestige/level ranking in the leaderboard should show user’s current value, not the historical value at the time the leaderboard was calculated."
+      }
+    ]
+  },
+  {
+    "id": 6675895,
+    "title": "Ranking Cells",
+    "section_id": 289911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-788",
+    "created_by": 187,
+    "created_on": 1582751070,
+    "updated_by": 258,
+    "updated_on": 1589915952,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 13,
+    "custom_preconds": "GIVEN a user is on the Rankings Tab",
+    "custom_steps": null,
+    "custom_expected": "THEN Ranking Cells should NOT be selectable",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6677437,
+    "title": "Cell Info",
+    "section_id": 289911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-825, FTP-456",
+    "created_by": 187,
+    "created_on": 1583276122,
+    "updated_by": 258,
+    "updated_on": 1589915955,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 14,
+    "custom_preconds": "GIVEN user has been placed on the daily leaderboard",
+    "custom_steps": "WHEN a user navigates to the daily leaderboard",
+    "custom_expected": "THEN the cell should display the following: \r\n- a ranked list of the usernames based on the highest scores accrued in any single game so far that day\r\n- which game the user scored those points in by showing [AWAY] @ [HOME] tricodes\r\n- place number for each user, with special treatment for the top N finishers",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6680843,
+    "title": "Underage Users",
+    "section_id": 289911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1583767201,
+    "updated_by": 258,
+    "updated_on": 1589915960,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 15,
+    "custom_preconds": "GIVEN a user under the age of 21",
+    "custom_steps": "WHEN this user make it into the top 3 scores of the day (after all games are final)",
+    "custom_expected": "THEN this user will be ranked appropriately\r\n    AND the user will not be highlighted green or have a money symbol next to their name\r\n    AND the next highest of-age user will be highlighted and have a money symbol indicating they are \"in the money\"\r\n\r\nThe user is displayed in Top Scores and not in Prize Winners even if the user made it to the top 3. ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6685208,
+    "title": "Sharing ranking and position",
+    "section_id": 289911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1586454732,
+    "updated_by": 258,
+    "updated_on": 1589915964,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 16,
+    "custom_preconds": null,
+    "custom_steps": "When 2 users (or more) get the same amount of points",
+    "custom_expected": "They share the same ranking and position on the leaderboards",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6691972,
+    "title": "Players number display",
+    "section_id": 289911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1590691516,
+    "updated_by": 258,
+    "updated_on": 1593105683,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 17,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Players number display in Daily and game rankings. ",
+    "custom_steps_separated": [
+      {
+        "content": "1-10.000 players ",
+        "expected": "full number display"
+      },
+      {
+        "content": "10.000 - 999.999",
+        "expected": "10K +, 100K +, 900.3K + and etc"
+      },
+      {
+        "content": "1.000.000 and above",
+        "expected": "1M +, 1.4M +, 10M +, 10.7M + and etc"
+      }
+    ]
+  },
+  {
+    "id": 6692049,
+    "title": "Multi-Page Leaderboards",
+    "section_id": 289911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1590697928,
+    "updated_by": 258,
+    "updated_on": 1593105740,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 18,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "1. The scroll should work smoothly in daily / game rankings page\r\n2. The previous page should adjust your scroll position and the load between pages should not take long\r\n3. User is able to scroll up and down across the daily / game rankings page\r\n4. If user is not on Page 1, and clicking on Final Scores line (top black bar), it take user to the Page 1\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6692424,
+    "title": "In The Money section",
+    "section_id": 289911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1591216734,
+    "updated_by": 258,
+    "updated_on": 1615488234,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 19,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When user is not on the 1st page of a leaderboard\n",
+        "expected": "'The Top Scores' section is not shown\n"
+      },
+      {
+        "content": "live and final games",
+        "expected": "Top winners have neon home plate icon\n1st place - gold neon home plate\n2nd place - silver neon home plate\n3rd place - bronze neon home plate"
+      }
+    ]
+  },
+  {
+    "id": 7083659,
+    "title": "User's winning position",
+    "section_id": 289911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1592346127,
+    "updated_by": 258,
+    "updated_on": 1592349625,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 20,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "If three or more users share 1st place, then the 2nd and 3rd place position should not be displayed on the leaderboard (example 1,1,1,4,5,6,7)\r\n\r\nIf two users share 1st place, then the next place displayed should be 3rd place (example 1,1,3,4,5,6,7)\r\n\r\nIf there is one 1st place user and two 2nd place users, then 3rd place should not be displayed (example 1,2,2,4,5,6,7)\r\n\r\nIf there is one 1st place user, one 2nd place user and two or more 3rd place users then leaderboard should be displayed as such (example 1,2,3,3,3,6,7,8)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 17169079,
+    "title": "Scores on Rankings tab",
+    "section_id": 289911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1621375123,
+    "updated_by": 258,
+    "updated_on": 1621375320,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 21,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Rally Pro score should be priority. Rally scores should not be displayed on rankings tab at all.",
+    "custom_steps_separated": [
+      {
+        "content": "1. Play Rally Pro game first. Make sure to have resolution and have scores\n2. Then play Rally. Make sure to have resolution and have scores",
+        "expected": "Rally Pro scores are displayed on the rankings tab"
+      },
+      {
+        "content": "1. Play Rally game first. Make sure to have resolution and have scores\n2. Then play Rally Pro game. Make sure to have resolution and have scores",
+        "expected": "Rally Pro scores are displayed as soon as the first played prop gets resolved"
+      },
+      {
+        "content": "Play Rally game only",
+        "expected": "No scores are displayed on the rankings tab"
+      }
+    ]
+  },
+  {
+    "id": 6685204,
+    "title": "Today tab - no game played yet",
+    "section_id": 305876,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1586453301,
+    "updated_by": 258,
+    "updated_on": 1589916777,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is logged into the app\r\nAND they are viewing the daily leaderboard\r\nAND No one played any game yet",
+    "custom_steps": null,
+    "custom_expected": "Text 'No scores are posted yet. Check back once players start earning scores for today's picks' is displayed.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6685209,
+    "title": "Today tab - no games",
+    "section_id": 305876,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1586454984,
+    "updated_by": 258,
+    "updated_on": 1589916846,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is logged into the app\r\nAND they are viewing the daily leaderboard\r\nAND there were no games played today",
+    "custom_steps": "THEN the leaderboard should show a blank leaderboard page with text 'No scores to show for this day’.",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6685622,
+    "title": "Today tab - all games are final",
+    "section_id": 305876,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1586984644,
+    "updated_by": 258,
+    "updated_on": 1615497417,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 3,
+    "custom_preconds": "All games are final",
+    "custom_steps": null,
+    "custom_expected": "THEN the leaderboard should show ranking info. 'Final Scores' banner should be displayed.\r\nTHEN total players should be displayed\r\nTHEN Daily Top Scores banner is displayed\r\n\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6685623,
+    "title": "Today tab - games in progress",
+    "section_id": 305876,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1586984691,
+    "updated_by": 258,
+    "updated_on": 1589916789,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "\"Top Scores\" and total players are displayed.\r\nPlayers are not highlighted in green and no $ sign is displayed",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1299129,
+    "title": "Yesterday tab - no games",
+    "section_id": 305878,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-844",
+    "created_by": 235,
+    "created_on": 1582233264,
+    "updated_by": 258,
+    "updated_on": 1589916813,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is logged into the app \r\nAND they are viewing the daily leaderboard \r\nAND there were no games played yesterday (as in, no baseball games, does not matter if the user played or not)",
+    "custom_steps": "WHEN the user selects the \"Yesterday\" tab",
+    "custom_expected": "THEN the leaderboard should show a blank leaderboard page with text on it that says “No scores to show for this day”.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6677436,
+    "title": "Yesterday tab - with games",
+    "section_id": 305878,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-844",
+    "created_by": 187,
+    "created_on": 1583275523,
+    "updated_by": 258,
+    "updated_on": 1615487862,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is logged into the app AND they are viewing the daily leaderboard AND there were games played yesterday",
+    "custom_steps": "WHEN the user selects the \"Yesterday\" tab",
+    "custom_expected": "THEN the leaderboard should show ranking info. 'Final Scores' banner should be displayed.\r\nTHEN total players should be displayed\r\nTHEN Daily Top Scores banner should be displayed which takes user to the separate page\r\n\r\n![](index.php?/attachments/get/8593646)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6677590,
+    "title": "Yesterday tab switch",
+    "section_id": 305878,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 187,
+    "created_on": 1583282296,
+    "updated_by": 258,
+    "updated_on": 1589916825,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the use is on the daily leaderboard",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Switch to YESTERDAY leaderboard",
+        "expected": "THEN yesterday's rankings will display"
+      },
+      {
+        "content": "Choose Profile, then go back to rankings",
+        "expected": "THEN yesterday's rankings will display, not today's data"
+      }
+    ]
+  },
+  {
+    "id": 7124033,
+    "title": "Daily Top Scores section display",
+    "section_id": 472400,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1592840513,
+    "updated_by": 258,
+    "updated_on": 1615497680,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When all games are final ",
+        "expected": "Daily Top Scores banner is shown in the leaderboard\n\n![](index.php?/attachments/get/1675306)\n"
+      },
+      {
+        "content": "When user clicks on the Daily Top Scores banner",
+        "expected": "Top Scores page is open: \n\nDisplay: \n- \"Prize Winners\" header\n- For $day $date \n- Daily Prize Pool\n- Text \"No Purchase Necessary. 21+ to compete. Restrictions apply: see Official Rules.'\n- Users highlighted in green and have dollar icon \n\n![](index.php?/attachments/get/1677070)\n\n\n"
+      },
+      {
+        "content": "Clicking on Official Rules",
+        "expected": "Takes user to MLB Rally Official Rules page"
+      },
+      {
+        "content": "",
+        "expected": "The scroll should work smoothly. User is able to scroll up and down across the page"
+      }
+    ]
+  },
+  {
+    "id": 8574854,
+    "title": "Prizes during the rounds",
+    "section_id": 472400,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1603479761,
+    "updated_by": 280,
+    "updated_on": 1603482392,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "The prizes will vary during the rounds \r\n\r\nWild Card, Devision Series, Championship Series and World Series. \r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1294556,
+    "title": "Leaderboards",
+    "section_id": 289939,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-1194",
+    "created_by": 235,
+    "created_on": 1580070634,
+    "updated_by": 258,
+    "updated_on": 1589916725,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 1,
+    "custom_preconds": "GIVEN user is participating in a game",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user navigates to a daily leaderboard",
+        "expected": "THEN: \n- Player is listed in the daily leaderboard within a minute of them appearing on the contest leaderboard\n- Player's level/rank is displayed next to their nickname\n- Level/rank changes if the player goes up"
+      }
+    ]
+  },
+  {
+    "id": 6685634,
+    "title": "XP amount for the final games",
+    "section_id": 289939,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1587057181,
+    "updated_by": 258,
+    "updated_on": 1593107173,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 39508,
+    "display_order": 2,
+    "custom_preconds": "User played the games and games are now final. ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "% on the Contest Leaderboard\t\n",
+        "expected": "Amount of XP Earned"
+      },
+      {
+        "content": "1\t",
+        "expected": "2400"
+      },
+      {
+        "content": "5\t",
+        "expected": "2000"
+      },
+      {
+        "content": "10\t",
+        "expected": "1600"
+      },
+      {
+        "content": "25\t",
+        "expected": "1200"
+      },
+      {
+        "content": "50\t",
+        "expected": "800"
+      },
+      {
+        "content": "100\t",
+        "expected": "400"
+      }
+    ]
+  }
+]

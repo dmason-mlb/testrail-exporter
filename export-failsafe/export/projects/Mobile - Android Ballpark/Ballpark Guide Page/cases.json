@@ -1,0 +1,2140 @@
+[
+  {
+    "id": 45117,
+    "title": "Next Game",
+    "section_id": 6318,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 124,
+    "updated_on": 1518021776,
+    "estimate": null,
+    "estimate_forecast": "3m 5s",
+    "suite_id": 809,
+    "display_order": 6,
+    "custom_preconds": "Given the user has navigated to any Ballpark Guide page\r\nAnd there is an upcoming game to be played at that ballpark",
+    "custom_steps": null,
+    "custom_expected": "The user will see buttons for:Schedule button, Check In, Photos, and Upgrade (if applicable), \r\nAND below that the user will see the upcoming game details (date, clubs and time).\r\n\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks below the stadium image\nAnd the subnav",
+        "expected": "Then the user will see the upcoming/current game section\nAnd the user will see the following items:\n- Today/next event section header (it should display the day,date of event in that order unless the game is today)\n- The schedule button should appear \n- A cell with the 2 teams that are playing on that ballpark\n- The cell will display the away team, then the home team\n- the correct team logos will be displayed at either end of the cell\n- the time will be displayed , and it will display the time based on the timezone the ballpark is located under"
+      }
+    ]
+  },
+  {
+    "id": 45116,
+    "title": "Native Schedule View",
+    "section_id": 6318,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 124,
+    "updated_on": 1505493263,
+    "estimate": null,
+    "estimate_forecast": "3m 16s",
+    "suite_id": 809,
+    "display_order": 7,
+    "custom_preconds": "Given the user is on the ballpark guide page\r\nAnd has tapped on the Schedule button below the stadium image",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see a Schedule page with tabs for the following views: Home, Full.\r\n(Do this for all 30 stadiums)\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "When the content loads (Check all 30 stadiums)",
+        "expected": "Then the user will be taken to the Native schedule view\nAnd there will be 2 tabs\n-Home Events\n-Full schedule\n"
+      }
+    ]
+  },
+  {
+    "id": 1205171,
+    "title": "Native Schedule Scrolling",
+    "section_id": 6318,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1508163427,
+    "updated_by": 124,
+    "updated_on": 1508163929,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 8,
+    "custom_preconds": "Given the user is on the ballpark guide page\r\nAnd has tapped on the Schedule button below the stadium image",
+    "custom_steps": "When users navigates away from the today's schedule",
+    "custom_expected": "A button is displayed that allows the user to jump back to today's date",
+    "custom_steps_separated": [
+      {
+        "content": "when user scrolls down to see future events",
+        "expected": "As the user stops scrolling, an UP arrow is displayed that allows the user to jump back to the current date\nAND the arrow will disappear when the user begins scrolling again"
+      },
+      {
+        "content": "When the user scrolls up to see past events\n",
+        "expected": "As the user stops scrolling, an DOWN arrow is displayed that allows the user to jump back to the current date\nAND the arrow will disappear when the user begins scrolling again"
+      }
+    ]
+  },
+  {
+    "id": 45118,
+    "title": "Next Game - Event Details",
+    "section_id": 6318,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 124,
+    "updated_on": 1505493362,
+    "estimate": null,
+    "estimate_forecast": "2m 29s",
+    "suite_id": 809,
+    "display_order": 11,
+    "custom_preconds": "Given the user has navigated to any Ballpark Guide page\r\nAnd there is an upcoming game to be played at that ballpark",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be brought to the Event Detail page",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the upcoming/current game cell",
+        "expected": "Then the user should be taken to the event detail page\nAnd the user should see the following:\n- a header for the event detail page\n- a back button on the left side of the header\n- a event information section (which teams are playing, at what date and time, and at which ballpark)\n- a checkin button(Greyed out unless check in-prerequisites are met)\n- promo for at bat(hard coded deeplink to either playstore or at bat)\n- an offer section\n- a Photos section\n"
+      }
+    ]
+  },
+  {
+    "id": 45121,
+    "title": "Access Video Page",
+    "section_id": 6318,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433779414,
+    "estimate": null,
+    "estimate_forecast": "2m 12s",
+    "suite_id": 809,
+    "display_order": 14,
+    "custom_preconds": "Given the user is on the Ballpark Guide page\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then the Videos page will open",
+    "custom_steps_separated": [
+      {
+        "content": "When the See All button is tapped in Videos",
+        "expected": "then the user will be brought to the teams videos page"
+      }
+    ]
+  },
+  {
+    "id": 45123,
+    "title": "Tapping on the Ballpark (Back) Button on all items",
+    "section_id": 6318,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433779600,
+    "estimate": null,
+    "estimate_forecast": "13m 50s",
+    "suite_id": 809,
+    "display_order": 16,
+    "custom_preconds": "Given the user tapped on an item within the Ballpark Guide page",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be brought back to the 'Ballpark Guide' page\r\n\r\n(Confirm this for all items within the page)",
+    "custom_steps_separated": [
+      {
+        "content": "When that specific page opens\nAnd the user taps on the Ballpark (back) button on the top left of the page\nOr the user has tapped on the device hardware back button",
+        "expected": "Then the user should be brought back to the ballpark guide page without fail"
+      }
+    ]
+  },
+  {
+    "id": 56429,
+    "title": "subnav items located directly below the ballpark image",
+    "section_id": 6318,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1435788764,
+    "updated_by": 67,
+    "updated_on": 1435789223,
+    "estimate": null,
+    "estimate_forecast": "1m 25s",
+    "suite_id": 809,
+    "display_order": 18,
+    "custom_preconds": "Given the user is on the ballpark guide page\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks directly below the ballpark image/ballpark name/team name",
+        "expected": "Then the user should see the subnav\nAnd it should have a minimum of 3 buttons\n- buy tickets\n- check in\n- photos\n\nIF the ballpark allows for it then\nUpgrades subnav item should also appear"
+      },
+      {
+        "content": "When the user examines said subnav items\n",
+        "expected": "Then the user will see an icon associated with each subnav item"
+      },
+      {
+        "content": "When the user taps on each item",
+        "expected": "Then the user will go through one of the following flows:\n- buy tickets will go to the ticket purchasing webview/flow\n- check-in will go through the check-in flow\n- upgrade will go through upgrading webview/flow\n- photo will go through photo upload flow"
+      }
+    ]
+  },
+  {
+    "id": 45152,
+    "title": "MLB.com Logo Placeholder for Videos With No Thumbnail",
+    "section_id": 6319,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433780238,
+    "estimate": null,
+    "estimate_forecast": "1m 26s",
+    "suite_id": 809,
+    "display_order": 2,
+    "custom_preconds": "Given the user has navigated to the Videos page\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then an MLB.com logo will appear as a placeholder for any/all video thumbnails before they fully load\r\nOr for any videos with no thumbnails",
+    "custom_steps_separated": [
+      {
+        "content": "When the Videos page opens successfully\nAnd the user scrolls down the list quickly",
+        "expected": "Then the placeholder image should appear before the actual image loads unless the image is missing.\n\nIf the image is missing then the placeholder should stay on that image"
+      }
+    ]
+  },
+  {
+    "id": 45153,
+    "title": "Video Index is Scrollable",
+    "section_id": 6319,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433780112,
+    "estimate": null,
+    "estimate_forecast": "49s",
+    "suite_id": 809,
+    "display_order": 3,
+    "custom_preconds": "Given the user has navigated to the Videos page",
+    "custom_steps": null,
+    "custom_expected": "The user will be able to so successfully\nAnd scrolling will be smooth",
+    "custom_steps_separated": [
+      {
+        "content": "When the user scroll up or down on the page",
+        "expected": "Then the user will see the video items being scrolled\n"
+      }
+    ]
+  },
+  {
+    "id": 45154,
+    "title": "Tap on Video to Begin Playback",
+    "section_id": 6319,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433780343,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 4,
+    "custom_preconds": "Given the user has navigated to the Videos page",
+    "custom_steps": null,
+    "custom_expected": "Then the video will begin to play",
+    "custom_steps_separated": [
+      {
+        "content": "WHen a user taps anywhere other than the information button on the video cell",
+        "expected": "Then the user should be directed to the video end level and the clip should start playing"
+      }
+    ]
+  },
+  {
+    "id": 45155,
+    "title": "Video Controller UI",
+    "section_id": 6319,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433780579,
+    "estimate": null,
+    "estimate_forecast": "14s",
+    "suite_id": 809,
+    "display_order": 5,
+    "custom_preconds": "Given the user has begun video playback",
+    "custom_steps": null,
+    "custom_expected": "The the controller UI will appear/disappear depending on the state prior to being tapped",
+    "custom_steps_separated": [
+      {
+        "content": "When the user single taps on the video item",
+        "expected": "Then the user should see the Video player controls\n"
+      },
+      {
+        "content": "when the user taps again right after the single tap",
+        "expected": "then the player controls should disappear"
+      }
+    ]
+  },
+  {
+    "id": 45156,
+    "title": "Video Controller - Play/Pause Button",
+    "section_id": 6319,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433780656,
+    "estimate": null,
+    "estimate_forecast": "1m 6s",
+    "suite_id": 809,
+    "display_order": 6,
+    "custom_preconds": "Given a video is currently playing\r\nAnd the user has tapped on the screen to bring up the controller UI",
+    "custom_steps": null,
+    "custom_expected": "The the video will stop/start depending on the state video is in prior to the tap",
+    "custom_steps_separated": [
+      {
+        "content": "When the Play/Pause icon is tapped",
+        "expected": "Then the video will pause"
+      },
+      {
+        "content": "when the user taps the play/pause icon again when the video is in a paused state\n",
+        "expected": "Then the video should resume playing"
+      }
+    ]
+  },
+  {
+    "id": 45157,
+    "title": "Volume",
+    "section_id": 6319,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433780698,
+    "estimate": null,
+    "estimate_forecast": "38s",
+    "suite_id": 809,
+    "display_order": 7,
+    "custom_preconds": "Given a video is playing\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then the volume will either be raised or lowered\r\nAnd there will be a pop up volume scrubber that increases or decreases (depending on what the user is doing)",
+    "custom_steps_separated": [
+      {
+        "content": "When the user increases or decreases the volume",
+        "expected": "Then The video's volume should adjust accordingly"
+      }
+    ]
+  },
+  {
+    "id": 45158,
+    "title": "Back/Forward Scrubber",
+    "section_id": 6319,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433780856,
+    "estimate": null,
+    "estimate_forecast": "1m 2s",
+    "suite_id": 809,
+    "display_order": 8,
+    "custom_preconds": "Given video playback is in progress",
+    "custom_steps": null,
+    "custom_expected": "Then the video will either be fast-forwarded(left) or rewound(right)",
+    "custom_steps_separated": [
+      {
+        "content": "When the FF/RW scrubber's position is dragged left or right",
+        "expected": "Then the video will resume playing at the desired point the user moved the scrubber"
+      },
+      {
+        "content": "When the user taps on the duration bar ahead or before the scrubber",
+        "expected": "Then the video will resume playing at the desired point"
+      }
+    ]
+  },
+  {
+    "id": 45160,
+    "title": "Back Button within Video",
+    "section_id": 6319,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433781017,
+    "estimate": null,
+    "estimate_forecast": "2m 6s",
+    "suite_id": 809,
+    "display_order": 10,
+    "custom_preconds": "Given the user is on either the ballpark guide page, videos page, or game highlights page\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be taken back to the Videos page",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the device hardware back button",
+        "expected": "then the user will be take back to the page they navigated from"
+      }
+    ]
+  },
+  {
+    "id": 45161,
+    "title": "Playing Video Over Carrier Connection",
+    "section_id": 6319,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433781055,
+    "estimate": null,
+    "estimate_forecast": "2m 22s",
+    "suite_id": 809,
+    "display_order": 11,
+    "custom_preconds": "Given the device has a carrier connection (WiFi Off)\r\nAnd the user is in the Videos page",
+    "custom_steps": null,
+    "custom_expected": "Then the video will play without issue",
+    "custom_steps_separated": [
+      {
+        "content": "When video playback is started",
+        "expected": "Then the video should play start to finish with little to no quality drop"
+      }
+    ]
+  },
+  {
+    "id": 45162,
+    "title": "Playing Video Over Wi-Fi Connection",
+    "section_id": 6319,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433781140,
+    "estimate": null,
+    "estimate_forecast": "1m 13s",
+    "suite_id": 809,
+    "display_order": 12,
+    "custom_preconds": "Given the device is utilizing a WiFi connection\r\nAnd the user is in the Videos page",
+    "custom_steps": null,
+    "custom_expected": "Then confirm video(s) will play without issue",
+    "custom_steps_separated": [
+      {
+        "content": "When video playback is started",
+        "expected": "then the video should play with little to no drop in quality"
+      }
+    ]
+  },
+  {
+    "id": 45163,
+    "title": "Title in Video Cell is Correctly Associated with Video",
+    "section_id": 6319,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433781244,
+    "estimate": null,
+    "estimate_forecast": "2m 25s",
+    "suite_id": 809,
+    "display_order": 13,
+    "custom_preconds": "Given the user has navigated to the Videos page",
+    "custom_steps": null,
+    "custom_expected": "Then the title will be correctly associated with the video played",
+    "custom_steps_separated": [
+      {
+        "content": "When reviewing the video titles for each video",
+        "expected": "Then it should fit the videos title"
+      }
+    ]
+  },
+  {
+    "id": 45166,
+    "title": "Ensure That Backgrounding/Foregrounding App During Video Playback Performs Correctly",
+    "section_id": 6319,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433781349,
+    "estimate": null,
+    "estimate_forecast": "2m 3s",
+    "suite_id": 809,
+    "display_order": 16,
+    "custom_preconds": "Given that video playback has been started\r\nAnd the app is backgrounded during playback",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be brought back to the videos page",
+    "custom_steps_separated": [
+      {
+        "content": "When the app is foregrounded",
+        "expected": "then the user will be directed back to the page they found the video"
+      }
+    ]
+  },
+  {
+    "id": 45167,
+    "title": "Ensure That Locking/Unlocking Device During Video Playback Performs Correctly",
+    "section_id": 6319,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433781425,
+    "estimate": null,
+    "estimate_forecast": "4m 15s",
+    "suite_id": 809,
+    "display_order": 17,
+    "custom_preconds": "Given that video playback has been started\r\nAnd the device is locked during playback",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be brought back to the videos page",
+    "custom_steps_separated": [
+      {
+        "content": "When the device is unlocked",
+        "expected": "then the user will be back on the page they navigated from"
+      }
+    ]
+  },
+  {
+    "id": 45142,
+    "title": "Tap on a song in the player music list",
+    "section_id": 6320,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1435787132,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 1,
+    "custom_preconds": "Given the user has navigated to the Music page",
+    "custom_steps": "NOTE:\r\nCurrently this is expected to fail since all songs are linked to itunes music store only.\r\n",
+    "custom_expected": "Then the user will notice that nothing happens",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on a song in the player music list",
+        "expected": "Then the user should be brought to the play store to that song item"
+      },
+      {
+        "content": "When the user is on the SF ballpark guide\nAnd the user tapped on the music menu item on the team insider",
+        "expected": "Then The user will be brought to the RDIO webview\nAnd the user should be able to listen to the songs the players/stadium chose"
+      }
+    ]
+  },
+  {
+    "id": 58765,
+    "title": "Header check",
+    "section_id": 8537,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1438613156,
+    "updated_by": 67,
+    "updated_on": 1441035124,
+    "estimate": null,
+    "estimate_forecast": "10m 21s",
+    "suite_id": 809,
+    "display_order": 1,
+    "custom_preconds": "Given the user taps on the Map & Directory menu item\r\nAnd the user is on the Map & Directory page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user checks the header\n",
+        "expected": "Then the user will see the following:\n- back button(top left side)\n- search bar(center)\n- search icon button(left aligned inside the search bar)\n- default \"search\" text within the search bar(left aligned to the search icon button)\n- level indicator/selector\nAnd the header will be in the team's color and all elements listed above will appear within the header"
+      },
+      {
+        "content": "When the user taps on the search bar",
+        "expected": "Then the user will see the initial search view\nAnd the user will see the following:\n- the cursor on the search bar\n- the amenities category list\n- device keyboard\n"
+      },
+      {
+        "content": "When the user initiates search\nAnd the user types in a couple of characters\n",
+        "expected": "Then the user will see the characters appear in the search bar\nAnd an \"X\" button will appear to the far right side of the header\n"
+      },
+      {
+        "content": "When the user taps on the \"X\" button in the header\n",
+        "expected": "Then the \"X\" button will be removed\nAnd the characters that was typed will be removed"
+      },
+      {
+        "content": "When the user has characters typed in the search bar\nAnd the user hits the enter/search button on the keyboard\n",
+        "expected": "Then the user should see the text he/she typed is still there\nAnd the user should see the \"x\" button"
+      },
+      {
+        "content": "When the user has searched for something previously\nAnd the user taps on the search bar",
+        "expected": "Then the user will see the \"X\" button reappear\nAnd the cursor should automatically be at the end of the word/character last typed\nAnd the user should be able to add new word/characters to the previous search"
+      },
+      {
+        "content": "When the user has selected something from the full directory list\n",
+        "expected": "Then the user should see the search bar populate with the name of the selected amenity"
+      }
+    ]
+  },
+  {
+    "id": 58766,
+    "title": "search",
+    "section_id": 8537,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1438613164,
+    "updated_by": 67,
+    "updated_on": 1442255714,
+    "estimate": null,
+    "estimate_forecast": "42m 15s",
+    "suite_id": 809,
+    "display_order": 2,
+    "custom_preconds": "Given the user wants to search for a amenity that is offered at a specific ballpark\r\nAnd the user is on the Map & Directory page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the search bar\nAnd the user types \"b\"\nAnd the user does nothing else(don't hit enter)",
+        "expected": "Then the user should see a list of concessions with the letter b in its name displayed directly below the header\nAnd the user should also see the keyboard still open\nAnd the user should be able to scroll through the list of items"
+      },
+      {
+        "content": "when the cursor/keyboard is still active\nAnd the user types the letter \"e\"",
+        "expected": "Then the search results should dynamically show results with \"be\" in the name\nAnd the user should be able to scroll the list of results"
+      },
+      {
+        "content": "When the user searches for multiple words\n",
+        "expected": "Then the search result should return a list of concessions with those 2 words"
+      },
+      {
+        "content": "when the user searches with CAPS on",
+        "expected": "Then the search should ignore the case sensitivity\nAnd it should return a list of results with the word/s the user searched for\n"
+      },
+      {
+        "content": "When the user searches for \"beer\"\nAnd the user taps on one of the search results\n",
+        "expected": "Then the search phrase entered should be replaced with the search result that was selected\nAnd the user should see the following:\n- the ballpark map(the level the item is on)\n- the icon for that concession\n- the location information at the bottom of the page(should be listed if there is more than 1)\n- the search bar should populate with the title of the tapped amenity"
+      },
+      {
+        "content": "When the user taps on the search bar\nAnd the user already has a string in the search bar",
+        "expected": "Then the user should not see the initial search view\nAnd the user should see the previous search results\n"
+      },
+      {
+        "content": "When the user searches for something generic like \"beer\" or \"food\"\nAnd the user taps on anything specific\nAnd the user changes the level he/she is on",
+        "expected": "Then the user should see search results for that level\nAnd the user should see the icon/location information for all concessions for that search result"
+      },
+      {
+        "content": "When the user taps on the search bar\nAnd the user starts typing characters in to the search bar \n",
+        "expected": "Then the user should see search \"suggestions\" appear as each character is typed"
+      },
+      {
+        "content": "When the user taps on the search bar\nAnd the user searches for common keyword\n(check the JSON file for common keywords - http://gd.qa.mlb.com/components/game/mlb/mobile/ballpark/iphone/config/cle_map.json)\n",
+        "expected": "Then the user should see a list of amenities\nAnd the amenities listed should have the keyword/character on the JSON file"
+      }
+    ]
+  },
+  {
+    "id": 58767,
+    "title": "initial search view and full directory list",
+    "section_id": 8537,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1438613195,
+    "updated_by": 67,
+    "updated_on": 1442264049,
+    "estimate": null,
+    "estimate_forecast": "40m 20s",
+    "suite_id": 809,
+    "display_order": 3,
+    "custom_preconds": "Given the user is on the map & directory page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the search bar for the very first time",
+        "expected": "Then the user will be displayed the initial search view\nAnd the user will see the full directory item at the top of the list\nAnd the user should the main categories listed directly below the full directory\nAnd the user should be able to scroll and select any item listed"
+      },
+      {
+        "content": "When the user taps on any of the categories listed in the initial search view",
+        "expected": "Then the should be brought to the map view\nAnd the user should be on the level he/she was on previously(default should be the middle level)\nAnd the user should see icons of the selected category scattered all over the ballpark map\nAnd the user should see the info pane display \"x location for ****\" at the bottom of the view"
+      },
+      {
+        "content": "When the user taps on the level selector\nAnd the user changes the level\n",
+        "expected": "Then the user will change the level he/she is on\nAnd the user should see the map populate with icons from the category he/she searched for previously(if the user did not search for anything it should be blank)"
+      },
+      {
+        "content": "When the user taps on the search button\nAnd the user clears the search bar (X button)\nAnd the user taps on a different category",
+        "expected": "Then the user should see location/icon of that amenities on the map view for that level\nAnd the user should be able to tap on the icon for more information\nAnd the user should also be able to tap on the info pane to see all available location and the user should be able to select from this list"
+      },
+      {
+        "content": "When the user taps on the search bar\nAnd the user clears the search bar\nAnd the user tap on the full directory item",
+        "expected": "Then the user will be displayed a full list view of all the amenities offered by that ballpark\nAnd the user will see the list will sort the amenities in alphabetical order as default\nAnd the user will see directly below the header, an option to switch from alphabetical to types\nAnd the user will be able to scroll through the entire list"
+      },
+      {
+        "content": "When the user has the list sorted alphabetically\nAnd the user scrolls through the list",
+        "expected": "Then user should see the list sectioned off by letter\nAnd the section header should persist until the user scrolls past that section"
+      },
+      {
+        "content": "When the user switches from the alphabetical to type\n",
+        "expected": "Then the list should display the items by type\nAnd the items should be sectioned off by type\nAnd the section header should persist until the user scrolls past that section"
+      },
+      {
+        "content": "When the user is on the full directory list(can be alphabetical or type)\nAnd the user taps on any amenity(it can have multiple locations or just one)",
+        "expected": "Then the user should be brought to the map\nAnd the user should be on the level user was on previously if the amenity has multiple locations\nAnd the user should be on the level the amenity is located if the amenity have only one location\nAnd the user should see the search bar populated with the name of the item selected\nAnd the user should see the icon/s for that concession display on the map\nAnd the user should see the info pane at the bottom of the page\n"
+      },
+      {
+        "content": "When the user selects an amenity with multiple locations\nAnd the user checks the info pane",
+        "expected": "Then the user should see the info pane display \"# locations for ######\"\n"
+      },
+      {
+        "content": "When the user selects an amenity with a unique location\nAnd the user checks the info pane",
+        "expected": "Then the user should see the info pane display \"### level, #### section\"\n"
+      },
+      {
+        "content": "When the user just navigated to the Map & Directory\nAnd the user taps on the search bar\nAnd the user taps on full directory list\nAnd the user taps on an amenity\nAnd the user taps the back button\n",
+        "expected": "Then the user should see the search clear\nAnd the user should see the full directory list open"
+      },
+      {
+        "content": "When the user just navigated to the Map & Directory\nAnd the user taps on the search bar\nAnd the user taps on a category\nAnd the user taps the back button\n",
+        "expected": "Then the user should be brought back to the initial search view\nAnd the user should see the full category list"
+      },
+      {
+        "content": "When the user just navigated to the Map & Directory\nAnd the user taps on the search bar\nAnd the user searched for beer\nAnd the user selects one of the amenities listed below\nAnd the user taps the back button\n",
+        "expected": "Then the user should see the previous item she searched for"
+      }
+    ]
+  },
+  {
+    "id": 58768,
+    "title": "level/ballpark image check",
+    "section_id": 8537,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1438613224,
+    "updated_by": 67,
+    "updated_on": 1438635121,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 4,
+    "custom_preconds": "Given the user want to check to see if the maps accurate on the apps\r\nAnd the user is on the Map & Directory view",
+    "custom_steps": "Note:\r\nTester should most likely have the amenities map open for the ballpark they are testing against.\r\nTester Should also try to test as many ballparks as possible to make sure the app is functioning correctly.\r\n\r\nE.G.\r\nhttp://sanfrancisco.giants.mlb.com/ballparks/stadium_maps.jsp?c_id=sf",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user compares the ballpark's levels (app vs the web)\n",
+        "expected": "Then the user should see they both match level for level"
+      }
+    ]
+  },
+  {
+    "id": 58885,
+    "title": "amenities verification",
+    "section_id": 8537,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1438632185,
+    "updated_by": 67,
+    "updated_on": 1438635560,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 5,
+    "custom_preconds": "Given the user wants to check to see the amenities he/she is seeing on ballpark is correct\r\n",
+    "custom_steps": "MUST READ!\r\nThe apps will hit the feed listed below to pull info for all amenities for specific ballparks, so compare against those URLs when going through this test case.\r\nhttp://gdx.mlb.com/components/game/mlb/mobile/ballpark/iphone/config/[teamcode]_map.json\r\n\r\nE.G.\r\nhttp://gdx.mlb.com/components/game/mlb/mobile/ballpark/iphone/config/min_map.json\r\nhttp://gdx.mlb.com/components/game/mlb/mobile/ballpark/iphone/config/nym_map.json\r\n\r\nMake sure when you run this test you go through as many ballparks as timely possible\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user wants to check the amenities listed in the app is correct\nAnd the user parsed the URL for that ballpark(read the note listed above)\nAnd the user is on the list view of the app\nAnd the user compares whats on the JSON vs whats showing on the front end",
+        "expected": "Then the user should see the list of amenities match on both the JSON file and the app"
+      },
+      {
+        "content": "When the user compares the location of the amenities on the app vs what is on the JSON file",
+        "expected": "Then the user will see that it matches word for word\n(make sure you check multiple locations)"
+      },
+      {
+        "content": "When the user is on the Map & Directory view\nAnd the user is scrolling through the full directory list",
+        "expected": "Then the user will see an icon for each item in the list\n(make sure the icon makes sense for that item)"
+      }
+    ]
+  },
+  {
+    "id": 58886,
+    "title": "info pane, location info, and menu/descriptions",
+    "section_id": 8537,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1616",
+    "created_by": 67,
+    "created_on": 1438635663,
+    "updated_by": 67,
+    "updated_on": 1441039930,
+    "estimate": null,
+    "estimate_forecast": "18m 50s",
+    "suite_id": 809,
+    "display_order": 6,
+    "custom_preconds": "Given the user is on the Map & Directory page\r\nAnd the user wants to check location/information regarding a specific amenity",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user is on the Map & Directory page\nAnd the user taps on the search bar\nAnd the user either taps on the full directory, category, or searches for something\nAnd the user taps on any of the amenities listed in the results\n",
+        "expected": "Then the user will see the map populated with Icon/s\nAnd the user will see the info pane displayed at the bottom of the page"
+      },
+      {
+        "content": "When the user taps on the search bar\nAnd the user either taps on the full directory, category, or searches for something\nAnd the user taps on an amenity with 1 location",
+        "expected": "Then the user will see the info pane display \"### level, ### section\" for that amenity"
+      },
+      {
+        "content": "When the user taps or slides up on the info pane for amenities with 1 location",
+        "expected": "Then the user should see the info pane open\nAnd the open pane should have either a menu, description, or nothing depending on what was set in the feed for that amenity\n- http://gdx.mlb.com/components/game/mlb/mobile/ballpark/iphone/config/[teamcode]_map.json"
+      },
+      {
+        "content": "When the user taps on the search bar\nAnd the user either taps on the full directory, category, or searches for something\nAnd the user taps on an amenity with multiple locations",
+        "expected": "Then the user will see the info pane display \"# locations for ###\" for amenities with multiple locations"
+      },
+      {
+        "content": "When the user taps or slides up on the info pane for amenities with multiple locations",
+        "expected": "Then the user should see the info pane open\nAnd the open pane should have a list of location (level,section)"
+      },
+      {
+        "content": "When the user taps on any of the locations listed in the open pane",
+        "expected": "Then the user be redirected to that specific location\nAnd the user should see the info pane display \"### level, ### section\"\nAnd upon opening the info pane the user should see a menu, description, or nothing depending on what was set in the feed for that amenity\n- http://gdx.mlb.com/components/game/mlb/mobile/ballpark/iphone/config/[teamcode]_map.json"
+      },
+      {
+        "content": "When the user taps on an amenity with a long location name\nhttps://jira.mlbam.com/browse/BPA-1616",
+        "expected": "Then the user should see location information fit the info pane properly without overlap, elipses, text crop"
+      }
+    ]
+  },
+  {
+    "id": 58887,
+    "title": "level button",
+    "section_id": 8537,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1438635685,
+    "updated_by": 67,
+    "updated_on": 1441040353,
+    "estimate": null,
+    "estimate_forecast": "6m",
+    "suite_id": 809,
+    "display_order": 7,
+    "custom_preconds": "Given the user is on the map & directory\r\nAnd the user wants to switch levels",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user is on the Map & Directory page\nAnd the user looks directly below the header",
+        "expected": "Then the user will see the level name(aligned left)\nAnd the user will see a dropdown carrot(align right)"
+      },
+      {
+        "content": "When the user taps on the level selector cell",
+        "expected": "Then the user should see a list of all levels dropdown\nAnd the user should see the current level he is on bolded in the list\nAnd the user should be able to tap on any of those cells to switch levels\nAnd the user should be able to tap on the very top cell to close the level list"
+      },
+      {
+        "content": "When the user taps on a different level",
+        "expected": "Then the user's map should reset\nAnd the map should be displayed centered"
+      }
+    ]
+  },
+  {
+    "id": 58888,
+    "title": "zoom in/out",
+    "section_id": 8537,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1438637517,
+    "updated_by": 67,
+    "updated_on": 1438698694,
+    "estimate": null,
+    "estimate_forecast": "37s",
+    "suite_id": 809,
+    "display_order": 8,
+    "custom_preconds": "Given the user is on the Map & Directory page\r\nAnd the user wants to zoom in on the ballpark map to see where the concession is located",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user pinch the map with 2 finger touch",
+        "expected": "Then the user will zoom in on the map\nAnd the user will be able to freely navigate around the map"
+      },
+      {
+        "content": "When the user does pinch out with 2 finger touch",
+        "expected": "Then the user will zoom out on the map"
+      }
+    ]
+  },
+  {
+    "id": 59843,
+    "title": "icons",
+    "section_id": 8537,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1441040379,
+    "updated_by": 67,
+    "updated_on": 1441041887,
+    "estimate": null,
+    "estimate_forecast": "16m 56s",
+    "suite_id": 809,
+    "display_order": 9,
+    "custom_preconds": "Given user is on the M&D",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user selects an amenity with multiple locations from a search result or full directory list\n\nOR\n\nWhen the user selects a category from the category list",
+        "expected": "Then the user will be brought to the map view on the level user is currently on\nAnd the user will see a bunch of icons related to the search/category all over the map\nAnd the icons will match the category or type the amenity is related to"
+      },
+      {
+        "content": "When the user taps on any of the icons displayed on the map",
+        "expected": "Then the user will see the info pane displayed at the bottom of the page\nAnd the user should see \"### level, ### section\"\nAnd the user should see the name of that amenity on the search bar\nAnd the user should see the other icons persist on the page(subject to change)\nAnd the icons will match the category or type the amenity is related to"
+      },
+      {
+        "content": "When the user switches levels",
+        "expected": "Then the user should see the icons related to the search/category appear for that level\nAnd the icons will match the category or type the amenity is related to"
+      },
+      {
+        "content": "when the user taps on the search bar\nAnd the user clears search\nAnd the user taps on a different category/search result",
+        "expected": "Then the user should see the icon change accordingly\nAnd the location for each icon change accordingly\nAnd the icons will match the category or type the amenity is related to"
+      }
+    ]
+  },
+  {
+    "id": 59847,
+    "title": "bandwidth test with maps",
+    "section_id": 8537,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1614",
+    "created_by": 67,
+    "created_on": 1441042057,
+    "updated_by": 67,
+    "updated_on": 1441042399,
+    "estimate": null,
+    "estimate_forecast": "7m 12s",
+    "suite_id": 809,
+    "display_order": 10,
+    "custom_preconds": "Given the user is checking the M&D on low bandwidth",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user clears all cache from the ballpark app\nAnd the user is on wifi( most optimum case )\nAnd the user navigates to the M&D view",
+        "expected": "Then the user should be able to load the map with no problems"
+      },
+      {
+        "content": "When the user clears all cache from the ballpark app\nAnd the user is on carrier 4g( 2nd most optimum case )\nAnd the user navigates to the M&D view",
+        "expected": "Then the user should be able to load the map with no problems"
+      },
+      {
+        "content": "When the user clears all cache from the ballpark app\nAnd the user is on carrier 3g( semi worst case )\nAnd the user navigates to the M&D view",
+        "expected": "Then the user should be able to load the map with no problems"
+      },
+      {
+        "content": "When the user clears all cache from the ballpark app\nAnd the user is on carrier 3g, but at 56kbps down and up speed( worst case )\nAnd the user navigates to the M&D view",
+        "expected": "Then the map will either load(but take forever) or it will timeout and throw \"unable to load data\" page"
+      }
+    ]
+  },
+  {
+    "id": 58891,
+    "title": "single game scenario",
+    "section_id": 8552,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1438709386,
+    "updated_by": 67,
+    "updated_on": 1438721125,
+    "estimate": null,
+    "estimate_forecast": "22m 19s",
+    "suite_id": 809,
+    "display_order": 1,
+    "custom_preconds": "Given the user is on the ballpark guide\r\nAnd the user wants to go through each scenario a game can experience\r\nAnd the user wants to see what it looks like on the next/today's event cell\r\n\r\nNOTE:\r\nFor these cases the ballpark should have a game scheduled on the current day\r\nBallparks that have a future game will always display Next Event\r\n\r\nEvent Module: This is found under the stadium image in the Ballpark Guide Page\r\nTicket Dashboard: This is the Tickets tab found next to the Ballpark tab\r\n\r\nAfter a game is final there is a 1 hour buffer where 'Today's Event' will change to 'Next Event' in the event module and ticket dashboard. This is the 1 hour buffer referred to in these cases\r\n\r\nEveryday at 9am the event status will change from 'Next Event' to 'Today's event' in the event module and ticket dashboard this is the 9am game flip time referred to in these cases",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a game is still in preview state\nAND the user looks at the game details in the event module and ticket dashboard",
+        "expected": "THEN the user will see the game time in both event module and ticket dashboard"
+      },
+      {
+        "content": "When a game is scheduled at a ballpark on that current day\nAND the game is still in a preview state\nAND we have not yet reached the 9am game flip time",
+        "expected": "THEN the user will see 'Next Event' displayed above the event module and in the ticket dashboard"
+      },
+      {
+        "content": "When we have passed the 9am game flip time\nAND there is a game scheduled that day",
+        "expected": "THEN the user will see 'Today's Event' displayed above the event module and in the Ticket Dashboard"
+      },
+      {
+        "content": "When a game has entered into a live state(warmup, in progress, delayed, challenge etc.)\nAND the user looks at the game details in the event module and ticket dashboard",
+        "expected": "THEN the user will see 'Today's Event' displayed above the event module and ticket dashboard \nAND they both will be displaying 'Live' in place of the time\n*test all live scenarios(challenge, delayed, in progress etc.)"
+      },
+      {
+        "content": "When a game has entered into a final state\nAND we have not passed the 1 hour buffer \nAND the user looks at the event module and ticket dashboard",
+        "expected": "THEN the user will see 'Today's Event' displayed above the event module and ticket dashboard \nAND they both will be displaying 'Final' in place of the time\n*Test complete games and completed early games"
+      },
+      {
+        "content": "When a game is in 'Final' state \nAND we pass the 1 hour buffer to flip to next event",
+        "expected": "THEN the user will see 'Next Event' displayed above the event module and also in the Ticket Dashboard\nAND the game details will be for the next game scheduled at that ballpark"
+      },
+      {
+        "content": "When a game is in a 'Suspended' state\nAND we are within the 1 hour flip buffer time",
+        "expected": "THEN when the Event Module on the ballpark guide page will display 'Suspended'\nAND the Tickets Dashboard event cell will also display 'Suspended'"
+      },
+      {
+        "content": "When a game is in a 'Suspended' state\nAND we have passed the 1 hour buffer flip time",
+        "expected": "THEN the event module on the ballpark guid page will display 'Next Event' and show the details of the next game\nAND the tickets dashboard event cell will display 'Next Event' and will show the details of the next game"
+      }
+    ]
+  },
+  {
+    "id": 58892,
+    "title": "Double header back to back scenario",
+    "section_id": 8552,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1438709409,
+    "updated_by": 67,
+    "updated_on": 1438721294,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 2,
+    "custom_preconds": "Back to Back doubleheaders are counted as one ticket so the 1 hour buffer is not enforced between game 1 and game 2\r\n\r\nFor these cases the ballpark should have a game scheduled on the current day\r\nBallparks that have a future game will always display Next Event\r\n\r\nEvent Module: This is found under the stadium image in the Ballpark Guide page\r\nTicket Dashboard: This is the Tickets tab found next to the Ballpark tab\r\n\r\nAfter a game is final there is a 1 hour buffer where 'Today's Event' will change to 'Next Event' in the event module and ticket dashboard. This is the 1 hour buffer referred to in these cases\r\n\r\nEveryday at 9am the event status will change from 'Next Event' to 'Today's event' in the event module and ticket dashboard this is the 9am game flip time referred to in these cases",
+    "custom_steps": "This is best to test with live games\r\nIf testing in QA you will have to wait for the 1 hour buffer to complete to see status change\r\nIf needed you can ask developers to change buffer time to a smaller window.",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When there is a back to back doubleheader scheduled at a ballpark\nAND we have not reached the 9am next event flip\nAND we look at the event module and ticket dashboard",
+        "expected": "THEN we will see 'Next Event' displayed above the Event Module and in the Ticket Dashboard\nAND we will see the game details including the time"
+      },
+      {
+        "content": "When there is a back to back doubleheader scheduled at a ballpark\nAND we are past the 9am next event flip time\nAND we look at the event module",
+        "expected": "THEN we will see 'Today's Event(Game 1)' displayed above the event module \nAND the Tickets Dashboard even will say 'Today's Event'\nAND we will see the game details including the time"
+      },
+      {
+        "content": "When there is a back to back doubleheader scheduled \nAND game 1 is in progress(warmup or in progress)\nAND we look at the event module and ticket dashboard",
+        "expected": "THEN we will see 'Today's Event(Game 1) displayed above the event module \nAND both event module and tickets dashboard event will display 'Live' in place of the time"
+      },
+      {
+        "content": "When there is a back to back doubleheader scheduled \nAND game 1 is in a final state\nAND we look at the event module and ticket dashboard",
+        "expected": "THEN we will see 'Today's Event(Game 1) displayed above the event module \nAND both event module and tickets dashboard will display 'Final'"
+      },
+      {
+        "content": "When there is a back to back double header scheduled\nAND game 2 has started(warmup or in progress)\nAND we look at the event module and ticket dashboard",
+        "expected": "THEN we will see 'Today's Event(Game 2) displayed above the event module\nAND both the tickets dashboard and event module will both display 'Live'"
+      },
+      {
+        "content": "When there is a back to back doubleheader scheduled \nAND game 2 is in a final state\nAND we look at the event module and ticket dashboard",
+        "expected": "THEN we will see 'Today's Event(Game 2) displayed above the event module\nAND both the tickets dashboard and event module will display 'Final'\n"
+      },
+      {
+        "content": "When game 2 of a back to back doubleheader has been set to final\nAND we have not yet reached the 1 hour game flip buffer\nAND we look at the event module ticket dashboard",
+        "expected": "THEN we will see 'Today's Event(Game 2) displayed above the event module\nAND both the tickets dashboard and event module will still be displaying 'Final'"
+      },
+      {
+        "content": "When game 2 of a back to back doubleheader has been set to final\nAND we have reached the 1 hour game flip buffer\nAND we look at the event module and ticket dashboard",
+        "expected": "Then we will see 'Next Event' above the event module and in the ticket dashboard\nAND they will both display the matchup for the next game and the time of that game"
+      }
+    ]
+  },
+  {
+    "id": 58893,
+    "title": "Double header split scenario",
+    "section_id": 8552,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1438709422,
+    "updated_by": 67,
+    "updated_on": 1438721472,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 3,
+    "custom_preconds": "For these cases the ballpark should have a game scheduled on the current day\r\nBallparks that have a future game will always display Next Event\r\n\r\nEvent Module: This is found under the stadium image in the Ballpark Guide page\r\nTickets Dashboard: This is the Tickets tab found next to the Ballpark tab\r\n\r\nAfter a game is final there is a 1 hour buffer where 'Today's Event' will change to 'Next Event' in the event module and ticket dashboard. This is the 1 hour buffer referred to in these cases\r\n\r\nEveryday at 9am the event status will change from 'Next Event' to 'Today's event' in the event module and ticket dashboard this is the 9am game flip time referred to in these cases\r\n",
+    "custom_steps": "This is best to test with live games\r\nIf testing in QA you will have to wait for the 1 hour buffer to complete to see status change\r\nIf needed you can ask developers to change buffer time to a smaller window.",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When there is a split doubleheader scheduled at a ballpark\nAND we have not yet reached the 9am flip time\nAND we look at the event module and ticket dashboard",
+        "expected": "THEN we will see 'Next Event' displayed above the event module and in the ticket dashboard\nAND they will both be displaying the matchup and the time of game"
+      },
+      {
+        "content": "When there is a split doubleheader scheduled at a ballpark\nAND we are passed the 9am flip time\nAND we look at the event module and ticket dashboard",
+        "expected": "THEN we will see 'Today's Event(Game 1)' displayed above the event module\nAND both the event module and tickets dashboard will be displaying the matchup and the time of the game"
+      },
+      {
+        "content": "When there is a split doubleheader scheduled at a ballpark\nAND game 1 is in progress(warmup or in progress)\nAND we look at the event module and ticket dashboard",
+        "expected": "THEN we will see 'Today's Event(Game 1)' displayed above the event module\nAND both the event module and tickets dashboard will be displaying 'Live' in place of the time"
+      },
+      {
+        "content": "When there is a split doubleheader scheduled at a ballpark\nAND game 1 is in a final state\nAND we look at the event module and ticket dashboard",
+        "expected": "THEN we will see 'Today's Event(Game 1)' displayed above the event module\nAND both the tickets dashboard and event module will be displaying 'Final' in place of the time"
+      },
+      {
+        "content": "When there is a split double header schedule at a ballpark\nAND game 1 is in a final state\nAND we have not yet reached the 1 hour game flip buffer\nAND we look at the event module and ticket dashboard",
+        "expected": "THEN we will still see 'Today's Event(Game 1)' displayed above the event module\nAND both the tickets dashboard and event module will be still be displaying 'Final' in place of the time"
+      },
+      {
+        "content": "When there is a split double header schedule at a ballpark\nAND game 1 is in a final state\nAND we have passed the 1 hour game flip buffer\nAND we look at the event module and ticket dashboard",
+        "expected": "THEN we will see 'Today's Event(Game 2)' displayed above the event module\nAND both the tickets dashboard and event module will display the matchup and the game time"
+      },
+      {
+        "content": "When there is a split doubleheader scheduled at a ballpark\nAND game 2 is in progress(warmup or in progress)\nAND we look at the event module and ticket dashboard",
+        "expected": "THEN we will see 'Today's Event(Game 2) displayed above the event module\nAND both the tickets dashboard and event module will be displaying 'Live' in place of the time\n*test all live states(delayed, mgr challenge, ump challenge, etc.)"
+      },
+      {
+        "content": "When there is a split doubleheader scheduled at a ballpark\nAND game 2 is in a final state\nAND we look at the event module and ticket dashboard",
+        "expected": "THEN we will see 'Today's Event(Game 2) displayed above the event module\nAND both tickets dashboard and event module will be displaying 'Final' in place of the time"
+      },
+      {
+        "content": "When there is a split doubleheader scheduled at a ballpark\nAND game 2 is in a final state\nAND we have not yet reached the 1 hour game flip buffer\nAND we look at the event module and ticket dashboard",
+        "expected": "THEN we will still see 'Today's Event(Game 2) displayed above the event module\nAND both tickets dashboard and event module will be displaying 'Final' in place of the time"
+      },
+      {
+        "content": "When there is a split doubleheader scheduled at a ballpark\nAND game 2 is in a final state\nAND we have passed the 1 hour game flip buffer\nAND we look at the event module and ticket dashboard",
+        "expected": "THEN we will see 'Next Event' above the event module and in the ticket dashboard\nAND they both will display the matchup and time of the next game scheduled at that ballpark"
+      }
+    ]
+  },
+  {
+    "id": 45139,
+    "title": "Tapping on Offers & Promotions button",
+    "section_id": 6321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433783054,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 2,
+    "custom_preconds": "Given the user has navigated to any 'Ballpark Guide' page\r\nAnd has tapped on the \"Offers & Promotions\" button",
+    "custom_steps": null,
+    "custom_expected": "Then then the user will see all available offers\r\nAnd all available promotions for that particular game\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "When the content on the page loads",
+        "expected": "Then the user should see a webview that is similar to schedule webview\nAnd it will list all upcoming promotions for the month that was selected"
+      }
+    ]
+  },
+  {
+    "id": 45140,
+    "title": "Tapping on the Map & Directory button",
+    "section_id": 6321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433785094,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 3,
+    "custom_preconds": "Given the user has tapped on the Ballpark Map & Directory button",
+    "custom_steps": null,
+    "custom_expected": "Then the app will open the corresponding team's ballpark map & directory\r\nBut will only display if content is available",
+    "custom_steps_separated": [
+      {
+        "content": "When the map and directory page loads",
+        "expected": "Then the user should see the ballpark directory page\nAnd the user will be able to view all the stores, restrooms, and etc that is available on the ballpark"
+      }
+    ]
+  },
+  {
+    "id": 45141,
+    "title": "Tapping on the About the Ballpark button",
+    "section_id": 6321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433785744,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 4,
+    "custom_preconds": "Given the user is on the Ballpark Guide",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be taken to a webview\r\nAnd this webview will team specific",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on 'About the Ballpark' on the 2x2 grid",
+        "expected": "Then the ballpark information page will open up\nAnd the user will be able to tap on all links listed on the page"
+      }
+    ]
+  },
+  {
+    "id": 51314,
+    "title": "2_NEW Tapping on the Food Ordering button",
+    "section_id": 6321,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1429036109,
+    "updated_by": 67,
+    "updated_on": 1433785802,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 5,
+    "custom_preconds": "Given the user has tapped on the Food Ordering button",
+    "custom_steps": null,
+    "custom_expected": "Then the app will open the Food Ordering page",
+    "custom_steps_separated": [
+      {
+        "content": "When the content loads",
+        "expected": "Then the user will be brought to the food ordering webview\nAnd the user will be able to make an order through this webview"
+      }
+    ]
+  },
+  {
+    "id": 45135,
+    "title": "Mobile Food Ordering (MOO)",
+    "section_id": 6323,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 124,
+    "updated_on": 1505774956,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 1,
+    "custom_preconds": "Given the user has navigated to any 'Ballpark Guide' page\r\nAnd taps on the Mobile Food Ordering menu grid item\r\nAND in (https://qa-ballparkappconfig.mlb.com/android/6.1.0/bpextras.json)\r\n(\"food_ordering_enabled\": true)\r\n\r\n* Note WAS and CIN are the only teams with MOO enabled\r\n\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then the Food Ordering web view will open\r\n\r\n*To confirm that the correct bundle has been implemented, first verify with the mobile web team & services team which bundle is being used. Then after accessing this specific webview navigate to the bottom of that page and you will see a bundle denomination (ex. \"1.1.4\")*",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the Mobile Food Ordering Grid item",
+        "expected": "The MOO application will be launched."
+      },
+      {
+        "content": "When the user taps the Mobile Food Ordering Grid item\nAND the MOO application is launched\nAND the user taps the device's back button",
+        "expected": "The user will be returned the the team's Ballpark guide Page."
+      },
+      {
+        "content": "When the user taps the Mobile Food Ordering Grid item\nAND the MOO application is launched\nAND the user taps the back button on the header",
+        "expected": "The user will be returned the the team's Ballpark guide Page."
+      }
+    ]
+  },
+  {
+    "id": 45128,
+    "title": "Menu Item - Check-in Gating",
+    "section_id": 6324,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433797013,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 5,
+    "custom_preconds": "Given we have a set up a Menu Item in QA Homebase for a stadium\r\nAnd that menu item has the \"CheckedIn Only\" flag checked\r\nAnd we have performed a Stadium Check-in to the stadium in which the menu item is configured",
+    "custom_steps": null,
+    "custom_expected": "Then we should be able to tap on the menu item\nAnd it should launch the Link URL of that menu item",
+    "custom_steps_separated": [
+      {
+        "content": "When we navigate to that stadium's Ballpark Guide\nAnd tap on the configured menu item",
+        "expected": "Then the user will have access to the menu item\nAnd the proper trigger will occur"
+      }
+    ]
+  },
+  {
+    "id": 45129,
+    "title": "Menu Item - Check-in Gating - User hasn't Checked In",
+    "section_id": 6324,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433797726,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 6,
+    "custom_preconds": "Given we have a set up a Menu Item in QA Homebase for a stadium\r\nAnd that menu item has the \"CheckedIn Only\" flag checked\r\nAnd the user has NOT performed a Stadium Check-in for the game at that stadium",
+    "custom_steps": null,
+    "custom_expected": "Then the user will get a message stating \"Check-in required\"\nAnd will NOT be taken to the Link URL of that menu item",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the menu item configured",
+        "expected": "then the item will open a small overlay that informs users to checkin to gain access"
+      }
+    ]
+  },
+  {
+    "id": 45132,
+    "title": "Menu Item - iOS Only",
+    "section_id": 6324,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146148,
+    "updated_by": 67,
+    "updated_on": 1433798063,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 9,
+    "custom_preconds": "Given we have a set up a Menu Item in QA Homebase for a stadium\r\nAnd that menu item has been tagged as \"iOS only\"",
+    "custom_steps": null,
+    "custom_expected": "Then the menu item will NOT be displayed on Android devices\nAnd will be displayed on iOS devices",
+    "custom_steps_separated": [
+      {
+        "content": "When we navigate to that stadium's Ballpark Guide",
+        "expected": "Then the menu item will not appear on Android devices"
+      }
+    ]
+  },
+  {
+    "id": 1184524,
+    "title": "AR capture mode is available in camera",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user launches the camera\r\n\r\n",
+    "custom_steps": "WHEN the user views the Camera Options\r\n\r\n\r\n",
+    "custom_expected": "THEN the ‘AR’ option will be available\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184525,
+    "title": "AR experience is triggered by recognizing elements on the TV screen",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user launches the camera AR capture mode\r\n\r\n\r\n",
+    "custom_steps": "WHEN the user scans a recognizable element on the TV\r\n\r\n\r\n",
+    "custom_expected": "THEN the interactive experience is triggered in Augmented Reality\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184526,
+    "title": "AR experience is triggered by recognizing physical objects",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user launches the camera AR capture mode\r\n\r\n",
+    "custom_steps": "WHEN the user scans a recognizable physical Object\r\n\r\n",
+    "custom_expected": "THEN the interactive augmented reality experience is triggered",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184527,
+    "title": "AR experience can be triggered by scanning physical baseball",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user launches the camera AR capture mode\r\n\r\n",
+    "custom_steps": "WHEN the user scans a physical baseball\r\n\r\n",
+    "custom_expected": "THEN the interactive augmented reality experience is triggered",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184528,
+    "title": "AR experience can be triggered by scanning physical stadium signage",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user launches the camera AR capture mode\r\n\r\n",
+    "custom_steps": "WHEN the user scans a physical stadium signage\r\n\r\n",
+    "custom_expected": "THEN the interactive augmented reality experience is triggered",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184529,
+    "title": "AR experience can be triggered by scanning physical plaques",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user launches the camera AR capture mode\r\n\r\n",
+    "custom_steps": "WHEN the user scans a physical plaque\r\n\r\n\r\n",
+    "custom_expected": "THEN the interactive augmented reality experience is triggered\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184530,
+    "title": "3D AR- As a user I want to see an interactive 3D model in the AR space when pointing at the trigger image",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user has the AR camera enabled\r\n\r\n",
+    "custom_steps": "AND the user is in 3D AR mode\r\n\r\n",
+    "custom_expected": "WHEN the user points the AR camera toward an image \r\nTHEN the interactive 3D model displays",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184531,
+    "title": "Video in AR-  Play a video in the AR space overlaid on the camera",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 8,
+    "custom_preconds": "GIVEN the user is on the AR camera\r\n\r\n",
+    "custom_steps": "WHEN the user points to play a video\r\n\r\n",
+    "custom_expected": "THEN the video players on top of the AR camera in the AR space",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184532,
+    "title": "Link to Webview available in AR",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 9,
+    "custom_preconds": "GIVEN the user is in the AR camera interface\r\nAND the user is viewing a content in AR\r\nAND that content has a webview button\r\n\r\n",
+    "custom_steps": "WHEN the user taps this button\r\n\r\n",
+    "custom_expected": "THEN the webview launches\r\nAND content associated with given content becomes available to the user \r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184533,
+    "title": "Video full screen button is available in AR",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 10,
+    "custom_preconds": "GIVEN the user is in the AR interface\r\nAND the user is viewing a video which overlaps the AR interface camera\r\n\r\n",
+    "custom_steps": "WHEN the user views the video controls\r\n\r\n",
+    "custom_expected": "THEN a full screen button will be available",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184534,
+    "title": "User is transitioned to Video full screen is available in AR",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 11,
+    "custom_preconds": "GIVEN the user is in the AR interface\r\nAND the user is viewing a video which overlaps the AR interface camera\r\nAND the user views the video controls\r\n\r\n",
+    "custom_steps": "WHEN the user taps the full screen video button\r\n",
+    "custom_expected": "THEN the video will transition to full screen ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184535,
+    "title": "User is transitioned back to normal Video screen in AR",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 12,
+    "custom_preconds": "GIVEN the user is in the AR interface\r\nAND the user is viewing a video which overlaps the AR interface camera\r\nAND the user is viewing this video in full screen\r\n\r\n",
+    "custom_steps": "WHEN the user taps the shrink video screen video button\r\n\r\n",
+    "custom_expected": "THEN the video will transition back to normal size overlapping the AR camera \r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184536,
+    "title": "Native ticket purchase flow option available in AR interface",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 13,
+    "custom_preconds": "GIVEN the user is in the AR camera interface\r\n\r\n",
+    "custom_steps": "WHEN the users is viewing the available buttons\r\n\r\n",
+    "custom_expected": "THEN there will be a ‘Native ticket Purchase’ flow button available",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184537,
+    "title": "Tapping native ticket purchase flow transitions user to native ticket purchase flow",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 14,
+    "custom_preconds": "GIVEN the user is in the AR camera interface\r\n\r\n",
+    "custom_steps": "WHEN the users is viewing the available buttons\r\nAND the user taps the ‘Native ticket Purchase’ flow button\r\n\r\n\r\n",
+    "custom_expected": "THEN the user will be transitioned to the native ticket purchase flow\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184538,
+    "title": "Record scanned tags",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 15,
+    "custom_preconds": "GIVEN the user has previously unlocked interactive elements by scanning AR tags\r\n\r\n",
+    "custom_steps": "WHEN the user is in the AR interface\r\n\r\n",
+    "custom_expected": "THEN the user can access the recorded scanned tags which are saved",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184539,
+    "title": "Record Scan in Ballpark Inbox",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 16,
+    "custom_preconds": "GIVEN the user has unlocked an offer\r\n\r\n",
+    "custom_steps": "WHEN the user navigates to their ballpark inbox\r\n\r\n",
+    "custom_expected": "THEN there will be a message available indicating that an offer has been unlocked",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184540,
+    "title": "Record Scan in Email",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1505947752,
+    "updated_by": 74,
+    "updated_on": 1505947752,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 17,
+    "custom_preconds": "GIVEN the user is scanning an item\r\n\r\n",
+    "custom_steps": "WHEN the user unlocks an offer during scanning\r\n\r\n\r\n",
+    "custom_expected": "THEN a message is sent to the users inbox indicating that an offer has been unlocked\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1195675,
+    "title": "AR Camera launches when tapping AR/ Augmented Reality from Ballpark page",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1506966291,
+    "updated_by": 74,
+    "updated_on": 1507142561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 18,
+    "custom_preconds": "GIVEN the user is on a ballpark team page for a team which supports AR\r\n",
+    "custom_steps": "WHEN the user views the grid elements\r\n",
+    "custom_expected": "THEN ‘AR’ or ‘Augmented Reality’ will be available for the given team ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1195676,
+    "title": "‘x’ button is available while in AR Camera",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1506966297,
+    "updated_by": 74,
+    "updated_on": 1507142561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 19,
+    "custom_preconds": "GIVEN the user taps AR for a team\r\n",
+    "custom_steps": "WHEN the user is navigated to the AR camera\r\n",
+    "custom_expected": "THEN the ‘x’ button will be available \r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1195677,
+    "title": "Tapping ‘x’ closes out the AR camera",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1506966302,
+    "updated_by": 74,
+    "updated_on": 1507142561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 20,
+    "custom_preconds": "GIVEN the user taps AR for a team\r\nAND the user is navigated to the AR camera\r\n",
+    "custom_steps": "WHEN the user taps the ‘x’ button on the top corner\r\n",
+    "custom_expected": "THEN the AR camera will close\r\nAND the user will be navigated to the previous screen (point of AR entry)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1195678,
+    "title": "‘Center image in the frame’ instruction displays before AR is scanned",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1506966307,
+    "updated_by": 74,
+    "updated_on": 1507142561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 21,
+    "custom_preconds": "GIVEN the user launches the AR camera\r\n",
+    "custom_steps": "WHEN the user views the camera \r\n",
+    "custom_expected": "THEN the user will see the instruction on the screen to ‘center image in the frame'",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1195679,
+    "title": "‘Center image in the frame’ instruction does not display after AR scan begins",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1506966312,
+    "updated_by": 74,
+    "updated_on": 1507142561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 22,
+    "custom_preconds": "GIVEN the user is in the AR camera\r\n",
+    "custom_steps": "WHEN the user begins scanning a recognized image\r\n",
+    "custom_expected": "THEN the ‘Center image in the frame’ instruction will not display ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1195680,
+    "title": "4 points display in the camera to guide user to center image within the boundary",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1506966316,
+    "updated_by": 74,
+    "updated_on": 1507142561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 23,
+    "custom_preconds": "GIVEN the user launches the AR camera\r\n",
+    "custom_steps": "WHEN the user views the camera \r\n",
+    "custom_expected": "THEN the user will see the instruction on the screen with a box which has 4 points and acts as the image center boundary \r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1195681,
+    "title": "Spinner spins while AR scan is occuring",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1506966321,
+    "updated_by": 74,
+    "updated_on": 1507142561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 24,
+    "custom_preconds": "GIVEN the user is in the AR camera\r\n",
+    "custom_steps": "WHEN the user begins scanning a recognized image\r\n",
+    "custom_expected": "THEN the spinner will spin indicating to the user that a scan is occuring ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1195682,
+    "title": "AR Video begins after AR image is scanned and recognized",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1506966327,
+    "updated_by": 74,
+    "updated_on": 1507142561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 25,
+    "custom_preconds": "GIVEN the user is in the AR camera\r\nAND the user begins scanning a recognized image\r\n",
+    "custom_steps": "WHEN the scan completes \r\n",
+    "custom_expected": "THEN the AR video will begin on top of the image",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1195683,
+    "title": "Web view button associated with AR image/video becomes available when AR video begins",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1506966335,
+    "updated_by": 74,
+    "updated_on": 1507142561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 26,
+    "custom_preconds": "GIVEN the user is in the AR camera\r\nAND the user begins scanning a recognized image\r\n",
+    "custom_steps": "WHEN the scan completes \r\n",
+    "custom_expected": "THEN a web view link will be available \r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1195684,
+    "title": "Text associated with AR image/video becomes available when AR video begins",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1506966339,
+    "updated_by": 74,
+    "updated_on": 1507142561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 27,
+    "custom_preconds": "GIVEN the user is in the AR camera\r\nAND the user begins scanning a recognized image\r\n",
+    "custom_steps": "WHEN the scan completes \r\n",
+    "custom_expected": "THEN the description related to the AR video will display\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1195685,
+    "title": "Tapping web view button navigates user to the web view  url associated with AR image/video",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1506966349,
+    "updated_by": 74,
+    "updated_on": 1507142561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 28,
+    "custom_preconds": "GIVEN the user has scanned a recognized object with the AR camera\r\n\r\n",
+    "custom_steps": "WHEN the scan is complete\r\nAND the user tap the web view button\r\n",
+    "custom_expected": "THEN the user will be navigated to the correct web view url ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1195686,
+    "title": "‘Rescan’ button becomes available after user scans AR image and video begins or completes",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1506966356,
+    "updated_by": 74,
+    "updated_on": 1507142561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 29,
+    "custom_preconds": "GIVEN the user has scanned a recognized object with the AR camera\r\n",
+    "custom_steps": "WHEN the scan is completes\r\n",
+    "custom_expected": "THEN the ‘rescan’ button becomes available to the user",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1195687,
+    "title": "Tapping ‘Rescan’ begins rescan of target image",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1506966361,
+    "updated_by": 74,
+    "updated_on": 1507142561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 30,
+    "custom_preconds": "GIVEN the user has scanned a recognized object with the AR camera\r\nAND the scan is complete\r\n",
+    "custom_steps": "WHEN the user taps ‘rescan’\r\n",
+    "custom_expected": "THEN the AR camera begins to rescan ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1195688,
+    "title": "‘Dismiss’ button is available after user scans AR image and video begins or completes",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1506966367,
+    "updated_by": 74,
+    "updated_on": 1507142561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 31,
+    "custom_preconds": "GIVEN the user is in the AR camera\r\nAND the user begins scanning a recognized image\r\n\r\n",
+    "custom_steps": "WHEN the scan completes \r\n",
+    "custom_expected": "THEN the ‘dismiss’ button becomes available for the description area\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1195689,
+    "title": "Tapping ‘dismiss’ dismisses metadata associated with the AR image/video",
+    "section_id": 142081,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1506966375,
+    "updated_by": 74,
+    "updated_on": 1507142561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 809,
+    "display_order": 32,
+    "custom_preconds": "GIVEN the user is in the AR camera\r\nAND the user begins scanning a recognized image\r\n",
+    "custom_steps": "WHEN the scan completes \r\nAND the user taps the ‘dismiss’ button for the description area\r\n",
+    "custom_expected": "THEN the corresponding metadata will be dismissed \r\n",
+    "custom_steps_separated": null
+  }
+]

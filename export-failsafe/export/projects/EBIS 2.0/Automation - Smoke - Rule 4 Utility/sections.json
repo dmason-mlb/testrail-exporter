@@ -1,0 +1,110 @@
+[
+  {
+    "id": 145754,
+    "suite_id": 20254,
+    "name": "Club can view players that were drafted in recent rule 4 draft",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 145759,
+    "suite_id": 20254,
+    "name": "Club can view signing bonuses of players they have signed",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 145760,
+    "suite_id": 20254,
+    "name": "BOC can set players as Not Subject to Deadline",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 145761,
+    "suite_id": 20254,
+    "name": "Club can view final signing bonus pool",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 145762,
+    "suite_id": 20254,
+    "name": "Club can view Total Signing Bonus Pool",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 145763,
+    "suite_id": 20254,
+    "name": "Club can view maximum signing bonus pool",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 145764,
+    "suite_id": 20254,
+    "name": "User can view any domestic amateur passed over players signed in this period",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 145775,
+    "suite_id": 20254,
+    "name": "Club can view amount towards total signing bonus for picks",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 145776,
+    "suite_id": 20254,
+    "name": "Club can view how much they are over/under on a signed player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 145777,
+    "suite_id": 20254,
+    "name": "Club can view any penalties they have incurred from exceeding the pool",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 145778,
+    "suite_id": 20254,
+    "name": "Club cannot delete preliminary minor contracts created from the draft",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 145779,
+    "suite_id": 20254,
+    "name": "Club can keep track of all draft contracts in one place",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  }
+]

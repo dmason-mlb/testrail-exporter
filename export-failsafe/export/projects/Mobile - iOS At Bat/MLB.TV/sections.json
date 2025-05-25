@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1960525,
+    "suite_id": 883,
+    "name": "MLB.TV",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 1960526,
+    "suite_id": 883,
+    "name": "iOS Mobile",
+    "description": null,
+    "parent_id": 1960525,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 1259597,
+    "suite_id": 883,
+    "name": "Alternate Audio",
+    "description": null,
+    "parent_id": 1960526,
+    "display_order": 17,
+    "depth": 2
+  },
+  {
+    "id": 1260271,
+    "suite_id": 883,
+    "name": "Blackouts",
+    "description": null,
+    "parent_id": 1960526,
+    "display_order": 18,
+    "depth": 2
+  },
+  {
+    "id": 1260273,
+    "suite_id": 883,
+    "name": "Entitlements",
+    "description": null,
+    "parent_id": 1960526,
+    "display_order": 19,
+    "depth": 2
+  },
+  {
+    "id": 1960527,
+    "suite_id": 883,
+    "name": "Playback",
+    "description": null,
+    "parent_id": 1960526,
+    "display_order": 20,
+    "depth": 2
+  },
+  {
+    "id": 1259594,
+    "suite_id": 883,
+    "name": "Phone",
+    "description": null,
+    "parent_id": 1960527,
+    "display_order": 21,
+    "depth": 3
+  },
+  {
+    "id": 1259595,
+    "suite_id": 883,
+    "name": "Tablet",
+    "description": null,
+    "parent_id": 1960527,
+    "display_order": 22,
+    "depth": 3
+  },
+  {
+    "id": 1960528,
+    "suite_id": 883,
+    "name": "Navigation",
+    "description": null,
+    "parent_id": 1960526,
+    "display_order": 23,
+    "depth": 2
+  }
+]

@@ -1,0 +1,915 @@
+[
+  {
+    "id": 195958,
+    "title": "Lite User - No Favorite Team - Top Stories",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469799761,
+    "updated_by": 84,
+    "updated_on": 1546879290,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 1,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand does not have a favorite team set ",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Top Stories",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to MLB News"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to MLB News"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to MLB News"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to MLB News"
+      }
+    ]
+  },
+  {
+    "id": 195959,
+    "title": "Lite User - No Favorite Team - Videos",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469799770,
+    "updated_by": 84,
+    "updated_on": 1546879304,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 2,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand does not have a favorite team set",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Videos",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to MLB Videos"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to MLB Videos"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to MLB Videos"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to MLB Videos"
+      }
+    ]
+  },
+  {
+    "id": 195960,
+    "title": "Lite User - No Favorite Team - Standings",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469799781,
+    "updated_by": 84,
+    "updated_on": 1546879317,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 3,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand does not have a favorite team set",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Standings",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to Standings"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to Standings"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to Standings"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to Standings"
+      }
+    ]
+  },
+  {
+    "id": 1235269,
+    "title": "Lite User - No Favorite Team - Stats",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1546879486,
+    "updated_by": 84,
+    "updated_on": 1546879569,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 5,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand does not have a favorite team set",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Stats",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to MLB Player Stats"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to MLB Player Stats"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to MLB Player Stats"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to MLB Player Stats"
+      }
+    ]
+  },
+  {
+    "id": 195961,
+    "title": "Lite User - No Favorite Team - Ask At Bat",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469799790,
+    "updated_by": 84,
+    "updated_on": 1546879511,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 6,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand does not have a favorite team set",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Ask At Bat",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to the Ask At Bat view in the app"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to the Ask At Bat view in the app"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to the Ask At Bat view in the app"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to the Ask At Bat view in the app"
+      }
+    ]
+  },
+  {
+    "id": 612371,
+    "title": "Lite User - No Favorite Team - Offseason",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1477314901,
+    "updated_by": 84,
+    "updated_on": 1546879417,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 7,
+    "custom_preconds": "Given it is during the offseason\r\n\r\n(\"isOffSeason\" : 1 is set in the iPhoneConfig.json)",
+    "custom_steps": "When a Lite user has no Favorite Team\r\nand the user long presses the At Bat icon",
+    "custom_expected": "Then the user will see:\r\nNews\r\nVideos\r\nStandings\r\nAsk At Bat",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 195962,
+    "title": "Lite User - Favorite Team - Scoreboard",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469799807,
+    "updated_by": 84,
+    "updated_on": 1546879432,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 8,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand has a favorite team set",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Scoreboard",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to Scoreboard"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to Scoreboard"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to Scoreboard"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to Scoreboard"
+      }
+    ]
+  },
+  {
+    "id": 195977,
+    "title": "Lite User - Favorite Team - Live Gameday",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469802571,
+    "updated_by": 84,
+    "updated_on": 1572881648,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 9,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand has a favorite team set",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on <Team> Gameday",
+    "custom_expected": "Then the user will not see a Gameday entry interstitial ad ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 195963,
+    "title": "Lite User - Favorite Team - Gameday",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469799819,
+    "updated_by": 84,
+    "updated_on": 1546879454,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 10,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand has a favorite team set",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on <Team> Gameday",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to Gameday for their team's game"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to Gameday for their team's game"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to Gameday for their team's game"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to Gameday for their team's game"
+      }
+    ]
+  },
+  {
+    "id": 195964,
+    "title": "Lite User - Favorite Team - Schedule",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469799828,
+    "updated_by": 84,
+    "updated_on": 1546879463,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 12,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand has a favorite team set",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on <Team> Schedule",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to Favorite Team's Schedule "
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to Favorite Team's Schedule "
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to Favorite Team's Schedule "
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to Favorite Team's Schedule "
+      }
+    ]
+  },
+  {
+    "id": 195965,
+    "title": "Lite User - Favorite Team - Stats",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469799834,
+    "updated_by": 84,
+    "updated_on": 1546879474,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 13,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand has a favorite team set",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on <Team> Stats",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to their Favorite Team's Player Stats"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to their Favorite Team's Player Stats"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to their Favorite Team's Player Stats"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to their Favorite Team's Player Stats"
+      }
+    ]
+  },
+  {
+    "id": 1235270,
+    "title": "Lite User - Favorite Team - Ask At Bat",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1546879500,
+    "updated_by": 84,
+    "updated_on": 1546879596,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 14,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand has a favorite team set",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Ask At Bat",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to the Ask At Bat view in the app"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to the Ask At Bat view in the app"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to the Ask At Bat view in the app"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to the Ask At Bat view in the app"
+      }
+    ]
+  },
+  {
+    "id": 612370,
+    "title": "Lite User - Favorite Team - Offseason",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1477314893,
+    "updated_by": 84,
+    "updated_on": 1546879617,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 15,
+    "custom_preconds": "Given it is the offseason\r\n\r\n(\"isOffSeason\" : 1 is set in the iPhoneConfig.json)",
+    "custom_steps": "When a Lite user has a Favorite Team\r\nand the user long presses the At Bat icon\r\n",
+    "custom_expected": "Then the user will see:\r\n<Team> News (team logo)\r\nTop Stories\r\nAsk At Bat",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 195968,
+    "title": "Paid User - No Favorite Team - Top Stories",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469799922,
+    "updated_by": 84,
+    "updated_on": 1546879699,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 16,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand does not have a favorite team set\r\nand has logged in with a paid account",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Top Stories",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to MLB News"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to MLB News"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to MLB News"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to MLB News"
+      }
+    ]
+  },
+  {
+    "id": 195969,
+    "title": "Paid User - No Favorite Team - Videos",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469799929,
+    "updated_by": 84,
+    "updated_on": 1546879710,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 17,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand does not have a favorite team set\r\nand has logged in with a paid account",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Videos\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to MLB Videos"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to MLB Videos"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to MLB Videos"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to MLB Videos"
+      }
+    ]
+  },
+  {
+    "id": 195970,
+    "title": "Paid User - No Favorite Team - Standings",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469799937,
+    "updated_by": 84,
+    "updated_on": 1546879722,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 18,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand does not have a favorite team set\r\nand has logged in with a paid account",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Standings",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to Standings"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to Standings"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to Standings"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to Standings"
+      }
+    ]
+  },
+  {
+    "id": 195971,
+    "title": "Paid User - No Favorite Team - Listen Live",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-13884",
+    "created_by": 39,
+    "created_on": 1469799946,
+    "updated_by": 84,
+    "updated_on": 1546879744,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 19,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand does not have a favorite team set\r\nand has logged in with a paid account\r\nand Show Audio is enabled (IAB-13884)",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Listen Live",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to Gameday Audio modal\nand no feed selected"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to Gameday Audio modal\nand no feed selected"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to Gameday Audio modal\nand no feed selected"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to Gameday Audio modal\nand no feed selected"
+      }
+    ]
+  },
+  {
+    "id": 612369,
+    "title": "Paid User - No Favorite Team - Offseason",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1477314881,
+    "updated_by": 84,
+    "updated_on": 1546880010,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 20,
+    "custom_preconds": "Given \"isOffSeason\": 1 is set in the iPhoneConfig.json\r\nand \"shouldShowAudioLink\" is set to false in iphoneConfigExtras and iphoneConfigExtrasLite",
+    "custom_steps": "When a Paid user has no Favorite Team\r\nand the user long presses the At Bat icon",
+    "custom_expected": "Then the user will see:\r\nNews\r\nVideos\r\nStandings\r\nAsk At Bat",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 195972,
+    "title": "Paid User - Favorite Team - Scoreboard",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469800095,
+    "updated_by": 84,
+    "updated_on": 1546880032,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 21,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand has a favorite team set\r\nand has logged in with a paid account",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Scoreboard",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to Scoreboard"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to Scoreboard"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to Scoreboard"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to Scoreboard"
+      }
+    ]
+  },
+  {
+    "id": 195973,
+    "title": "Paid User - Favorite Team - Listen Live (active feed)",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469800102,
+    "updated_by": 84,
+    "updated_on": 1546880049,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 22,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand has a favorite team set\r\nand has logged in with a paid account\r\n",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Listen to the <Team> Live",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to Gameday Audio modal\nand the Favorite Team's audio feeds begins to play"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to Gameday Audio modal\nand the Favorite Team's audio feeds begins to play"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to Gameday Audio modal\nand the Favorite Team's audio feeds begins to play"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to Gameday Audio modal\nand the Favorite Team's audio feeds begins to play"
+      }
+    ]
+  },
+  {
+    "id": 195976,
+    "title": "Paid User - Favorite Team - Listen Live (non active feed)",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469802200,
+    "updated_by": 84,
+    "updated_on": 1546880062,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 23,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand has a favorite team set\r\nand has logged in with a paid account",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Listen to the <Team> Live",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to Gameday Audio modal\nand no feed selected"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to Gameday Audio modal\nand no feed selected"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to Gameday Audio modal\nand no feed selected"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to Gameday Audio modal\nand no feed selected"
+      }
+    ]
+  },
+  {
+    "id": 195974,
+    "title": "Paid User - Favorite Team - Gameday",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469800108,
+    "updated_by": 84,
+    "updated_on": 1546880073,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 24,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand has a favorite team set\r\nand has logged in with a paid account",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Listen to the <Team> Gameday",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to Gameday for their team's game"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to Gameday for their team's game"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to Gameday for their team's game"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to Gameday for their team's game"
+      }
+    ]
+  },
+  {
+    "id": 195975,
+    "title": "Paid User - Favorite Team - Schedule",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469800115,
+    "updated_by": 84,
+    "updated_on": 1546880080,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 25,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\nand has a favorite team set\r\nand has logged in with a paid account",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Listen to the <Team> Schedule",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with the app not running in the background",
+        "expected": "then the user is taken to their Favorite Team's schedule"
+      },
+      {
+        "content": "with the app running in the background",
+        "expected": "then the user is taken to their Favorite Team's schedule"
+      },
+      {
+        "content": "with the app backgrounded on a modal (News articles, GDA Page)",
+        "expected": "then the user is taken to their Favorite Team's schedule"
+      },
+      {
+        "content": "with the app backgrounded on Gameday",
+        "expected": "then the user is taken to their Favorite Team's schedule"
+      }
+    ]
+  },
+  {
+    "id": 612368,
+    "title": "Paid User - Favorite Team - Offseason",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1477314873,
+    "updated_by": 84,
+    "updated_on": 1574280014,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 26,
+    "custom_preconds": "Given the user is on a device which supports 3D Touch\r\nand it is the offseason\r\nand \"isOffSeason\" : 1 is set in the iPhoneConfig.json",
+    "custom_steps": "When a Paid user has a Favorite Team\r\nand the user long presses the At Bat icon",
+    "custom_expected": "Then the user will see:\r\n<Team> News (team logo)\r\nTop Stories\r\nAsk At Bat",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 195978,
+    "title": "Scoreboard 10am Flip",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469802689,
+    "updated_by": 39,
+    "updated_on": 1469802774,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 27,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on Scoreboard",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "prior to 10am",
+        "expected": "then see the previous day's Scoreboard"
+      },
+      {
+        "content": "after 10am",
+        "expected": "then see the current day's Scoreboard"
+      }
+    ]
+  },
+  {
+    "id": 195979,
+    "title": "Gameday 10am Flip",
+    "section_id": 27321,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469802770,
+    "updated_by": 39,
+    "updated_on": 1469802839,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 3008,
+    "display_order": 28,
+    "custom_preconds": "Given a user is on 3D Touch supported device\r\nand has iOS At Bat installed\r\nand has already went through on boarding\r\n",
+    "custom_steps": "When a user long presses the At Bat icon\r\nand taps on <Team> Gameday",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "prior to 10am",
+        "expected": "then the user is taken to previous day's game (Wrap)"
+      },
+      {
+        "content": "after 10am",
+        "expected": "then the user is taken to the current day's game"
+      }
+    ]
+  }
+]

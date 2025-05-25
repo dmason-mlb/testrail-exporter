@@ -1,0 +1,101 @@
+[
+  {
+    "id": 145936,
+    "suite_id": 1009,
+    "name": "By MLB Team Affiliates",
+    "description": "MIAN-666",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 111750,
+    "suite_id": 1009,
+    "name": "Onboarding",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 114478,
+    "suite_id": 1009,
+    "name": "Enabled",
+    "description": null,
+    "parent_id": 111750,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 114479,
+    "suite_id": 1009,
+    "name": "Disabled",
+    "description": null,
+    "parent_id": 111750,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 111751,
+    "suite_id": 1009,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 114484,
+    "suite_id": 1009,
+    "name": "Enabled",
+    "description": null,
+    "parent_id": 111751,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 114485,
+    "suite_id": 1009,
+    "name": "Disabled",
+    "description": null,
+    "parent_id": 111751,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 7442,
+    "suite_id": 1009,
+    "name": "Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 135428,
+    "suite_id": 1009,
+    "name": "Player Notifications_MIAN-642",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 71160,
+    "suite_id": 1009,
+    "name": "Test Util",
+    "description": "A device with an Android QA build with Push Notifications enabled is needed.\n\nPush Notification prompt upon initial install or through Settings > Push Notification\n\nPlease e-Mail Mobile QA if you don't have this page for a copy of HTML document 'push notifications test util.html'\n\nSettings for alert_push_test.html:\ncampaignCode=milb\ncampaignName=MiLB Push\napiKey: 3833a1f0-f702-11e3-93c5-a820661b986c\nKeyword for News alert: milb.news:editorial\n\nKeyword for gameday game.start: milb.team_idxxx:game.start\nKeyword for gameday game.end: milb.team_idxxx:game.end\nKeyword for game.leadchange: milb.team_idxxx:game.pushleadchange\nKeyword for game.pushscorechange: milb.team_idxxx:game.pushscorechange",
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 71167,
+    "suite_id": 1009,
+    "name": "ARCHIVE",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "id": 8646797,
+    "title": "User Login",
+    "section_id": 479654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10435",
+    "created_by": 232,
+    "created_on": 1604523872,
+    "updated_by": 232,
+    "updated_on": 1618945954,
+    "estimate": null,
+    "estimate_forecast": "12m 47s",
+    "suite_id": 112224,
+    "display_order": 1,
+    "custom_preconds": "GIVEN user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the Drawer is opened\nAND the Settings is opened\nAND \"Login\" button clicked",
+        "expected": "THEN show the native login page"
+      },
+      {
+        "content": "WHEN the username is populated\nAND the password is populated",
+        "expected": "THEN enable the login button"
+      },
+      {
+        "content": "WHEN the login button is pressed\nAND the username and password are correct",
+        "expected": "THEN the user is logged in \nAND redirected to the Settings page"
+      }
+    ]
+  },
+  {
+    "id": 8725229,
+    "title": "User Registration",
+    "section_id": 479654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10437",
+    "created_by": 238,
+    "created_on": 1605720110,
+    "updated_by": 232,
+    "updated_on": 1643236777,
+    "estimate": null,
+    "estimate_forecast": "9m 59s",
+    "suite_id": 112224,
+    "display_order": 2,
+    "custom_preconds": "QA Notes:\r\n\r\nIgnore the confirm password field in the designs, we just need username, password and DOB.\r\n\r\nDev Notes: \r\n\r\nExpectation is the user will be logged in after successful registration.\r\n\r\nInclude field validation from Rally: https://github.mlbam.net/causal-gaming/rally-android/blob/86a86fec511d97e8e1daa49bdd60ea43d1d8c979/app/src/main/res/layout/sign_up_fragment.xml",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN non logged in user\nAND the Settings is visible\n",
+        "expected": "THEN display an option to \"Create MLB Account\""
+      },
+      {
+        "content": "GIVEN non logged in user\nAND the Settings is visible\nWHEN \"Create MLB Account\" is tapped\n",
+        "expected": "THEN show the registration page"
+      },
+      {
+        "content": "GIVEN a user on the registration page\nWHEN all fields have been entered\n",
+        "expected": "THEN enable the \"Sign Up\" button"
+      },
+      {
+        "content": "GIVEN a user on the registration page\nWHEN a user registration fails\n",
+        "expected": "THEN display the okta error to the user "
+      },
+      {
+        "content": "GIVEN a user on the registration page\nWHEN the Sing Up button is tapped\n",
+        "expected": "THEN register the user with okta"
+      },
+      {
+        "content": "GIVEN a user on the registration page\nWHEN a user is successfully registered \n\n",
+        "expected": "THEN display success screen"
+      },
+      {
+        "content": "GIVEN a user on the success screen\nWHEN the user taps the continue button OR clicks the back",
+        "expected": "THEN the user reenters the app logged in"
+      }
+    ]
+  },
+  {
+    "id": 8927778,
+    "title": "Login - invalid credentials",
+    "section_id": 479654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1608154718,
+    "updated_by": 232,
+    "updated_on": 1721425036,
+    "estimate": null,
+    "estimate_forecast": "13m 28s",
+    "suite_id": 112224,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user on the login view\r\n\r\n",
+    "custom_steps": "WHEN I enter my credentials\r\nAND tap login\r\nAND my credentials are invalid",
+    "custom_expected": "THEN I should be shown an error message ",
+    "custom_steps_separated": null
+  }
+]

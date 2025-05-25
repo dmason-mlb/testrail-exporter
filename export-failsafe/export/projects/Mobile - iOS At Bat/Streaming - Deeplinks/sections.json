@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1982738,
+    "suite_id": 695381,
+    "name": "Deeplinking into Video Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1983592,
+    "suite_id": 695381,
+    "name": "Games",
+    "description": null,
+    "parent_id": 1982738,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 1982740,
+    "suite_id": 695381,
+    "name": "SVOD, SLIVE, FLIVE, VOD",
+    "description": null,
+    "parent_id": 1982738,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 1983591,
+    "suite_id": 695381,
+    "name": "MLB Network",
+    "description": null,
+    "parent_id": 1982738,
+    "display_order": 6,
+    "depth": 1
+  }
+]

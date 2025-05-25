@@ -1,0 +1,151 @@
+[
+  {
+    "id": 49499,
+    "title": "Location Permission ON Flow",
+    "section_id": 6999,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 25,
+    "created_on": 1422998945,
+    "updated_by": 25,
+    "updated_on": 1427320051,
+    "estimate": null,
+    "estimate_forecast": "9m 41s",
+    "suite_id": 909,
+    "display_order": 2,
+    "custom_preconds": "https://jira.mlbam.com/browse/BP-2275\r\n\r\nuser has location permissions turned on\r\n\r\nnearby = < 25 miles\r\n\r\nsort order:\r\nnearby - distance\r\ntickets - distance\r\nfavorite - distance\r\nAll Teams list - alpha",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user has a favorite team set\nAnd the user has NO tickets for any team",
+        "expected": "Then the Team Picker will display in order:\n1. Nearby Ballpark(s) \n2. Favorite Team ballpark \n3. All Other Ballparks \n"
+      },
+      {
+        "content": "When the user has a favorite team set\nAnd the user has tickets for any team",
+        "expected": "Then the Team Picker will display in order:\n1. Nearby Ballpark(s) \n2. Ballparks with tickets \n3. Favorite Team ballpark\n4. All Other Ballparks\n"
+      },
+      {
+        "content": "When the user has NO favorite team\nAnd the user has tickets for any team",
+        "expected": "Then the Team Picker will display in order:\n1. Nearby Ballpark(s)\n2. Ballparks with tickets\n3. All Other Ballparks"
+      },
+      {
+        "content": "When the user has NO favorite team\nAnd the user has NO tickets for any team",
+        "expected": "Then the Team Picker will display in order:\n1. Nearby Ballpark(s)\n2. All Other Ballparks"
+      },
+      {
+        "content": "When location services are on\nBut the location service fails",
+        "expected": "Then the Team Picker will display a 'Can't get location.' message in place of nearby ballparks at the top of the list\nAnd there will be a refresh button\nAnd tapping that refresh will attempt to determine location again"
+      },
+      {
+        "content": "When location services are on\nBut the location service fails\nAnd the user taps on the refresh",
+        "expected": "Then the app will attempt to determine location again\nAnd if successful re-order the ballparks using the logic in steps 1-4"
+      }
+    ]
+  },
+  {
+    "id": 49502,
+    "title": "Location Permission OFF",
+    "section_id": 6999,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 25,
+    "created_on": 1423006851,
+    "updated_by": 40,
+    "updated_on": 1457546461,
+    "estimate": null,
+    "estimate_forecast": "7m 52s",
+    "suite_id": 909,
+    "display_order": 3,
+    "custom_preconds": "https://jira.mlbam.com/browse/BP-2275\r\n\r\nuser has location permissions turned off\r\n\r\nsort order:\r\ntickets - distance\r\nfavorite - distance\r\nAll Teams list - alpha",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user has a favorite team set\nAnd the user has NO tickets for any team",
+        "expected": "Then the Team Picker will display in order:\n1. 'Turn Location Setting On' message\n2. Favorite Team ballpark \n3. All Other Ballparks"
+      },
+      {
+        "content": "When the user has a favorite team set\nAnd the user has tickets for any team",
+        "expected": "Then the Team Picker will display in order:\n1. 'Turn Location Setting On' message \n2. Ballparks with tickets \n3. Favorite Team ballpark\n4. All Other Ballparks"
+      },
+      {
+        "content": "When the user has NO favorite team\nAnd the user has tickets for any team",
+        "expected": "Then the Team Picker will display in order:\n1. 'Turn Location Setting On' message\n2. Ballparks with tickets\n3. All Other Ballparks"
+      },
+      {
+        "content": "When the user has NO favorite team\nAnd the user has NO tickets for any team",
+        "expected": "Then the Team Picker will display in order:\n1. 'Turn Location Setting On' message\n2. All Other Ballparks\n"
+      },
+      {
+        "content": "When the user taps the 'Turn Location Setting On' message\nAnd the users is on iOS 8",
+        "expected": "Then the user will be taken to the Location Services Setting View"
+      }
+    ]
+  },
+  {
+    "id": 48722,
+    "title": "Team Picker",
+    "section_id": 6999,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1419016434,
+    "updated_by": 43,
+    "updated_on": 1498079837,
+    "estimate": null,
+    "estimate_forecast": "20m 53s",
+    "suite_id": 909,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user has navigated to the Team Picker\nAnd they have nearby ballpark(s) ",
+        "expected": "Then the ballpark(s) will only appear in suggested list, no special icon will appear related to location"
+      },
+      {
+        "content": "When the user has navigated to the Team Picker\nAnd they have a favorite ballpark  ",
+        "expected": "Then the ballpark will have a star icon on the right side of the row"
+      },
+      {
+        "content": "When the user has navigated to the Team Picker\nAnd they have tickets to a ballpark(s) ",
+        "expected": "Then the ballpark(s) will have a ticket icon on the right side of the row"
+      },
+      {
+        "content": "When the user has navigated to the Team Picker\nAnd they have a combination of tickets, favorite team, and are nearby to a ballpark(s)",
+        "expected": "Then the ballpark(s) will display the correct icons next to each other"
+      },
+      {
+        "content": "When a user has navigated to the Team Picker\nand taps on any of the cells in the list",
+        "expected": "Then the associated Team View for that cell will open\n\nRepeat for each ballpark"
+      },
+      {
+        "content": "When a user has navigated to the Team Picker\nand performs a pull to refresh",
+        "expected": "Then the app will relocate the user\nand if needed, reorganize the Teams based on the new location"
+      },
+      {
+        "content": "When a user has navigated to the Team Picker\nand the teams are displayed in the list",
+        "expected": "Then all teams will correctly display the associated team logo to the left of their name\nand they will all be completely visible against the background"
+      },
+      {
+        "content": "When a user has navigated to the Team Picker\nand the teams are displayed in the list",
+        "expected": "Then the team name will be displayed in bold and predominate\nAnd the stadium name will be below it\nAnd the user's distance in miles will be displayed on the far right of the cell"
+      },
+      {
+        "content": "When the user taps the 'Done' button in the top right corner",
+        "expected": "Then the user will be returned to the page they entered the team picker from"
+      }
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "id": 20212,
+  "name": "Dynamic Attributes",
+  "description": "For additional information on dynamic attributes, please refer to BP-5381. (https://jira.mlbam.com/browse/BP-5381)\r\nThe most efficient way to test dynamic attributes is to use Charles remap the event data responses from ticketing-client (Ballpark Tab) and boxoffice (Ticket Tab). Locate the section in the json \"dynamicAttribute\": and replace the values as needed. Refresh the view in Ballpark to confirm the app is correctly using the new values over the default ones.",
+  "project_id": 54,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20212"
+}

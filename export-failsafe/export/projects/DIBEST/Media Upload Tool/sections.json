@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1604557,
+    "suite_id": 576600,
+    "name": "Phase 1 (DIBEST-157)",
+    "description": "Phase 1 (epic ticket) (DIBEST-157) - Build MVP of new that can be passed along to the users for UAT",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1604558,
+    "suite_id": 576600,
+    "name": "Phase 2 (DIBEST-203)",
+    "description": "Phase 2 (DIBEST-203) - Integrate MUT with MLB Pressbox",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1608210,
+    "suite_id": 576600,
+    "name": "Phase 3 (DIBEST-204)",
+    "description": "Phase 3 (DIBEST-204) - (Remove Aspera form MLB Pressbox, replace with MUT and PROD roll out)",
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1608213,
+    "suite_id": 576600,
+    "name": "Phase 4 (DIBEST-130)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1626242,
+    "suite_id": 576600,
+    "name": "Phase 6 (DIBEST  381)",
+    "description": null,
+    "parent_id": 1608213,
+    "display_order": 5,
+    "depth": 1
+  }
+]

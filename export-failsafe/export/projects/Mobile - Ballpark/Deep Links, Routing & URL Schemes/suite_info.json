@@ -1,0 +1,11 @@
+{
+  "id": 21436,
+  "name": "Deep Links, Routing & URL Schemes",
+  "description": "Support for inbound deep links to Ballpark (triggered by external or internal link)\r\nSupport for outbound deep links to system apps and 3rd party apps.\r\n\r\nWIKI: [Linking (Deep Linking and Routing)](https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226449/Linking+Deep+Linking+and+Routing)",
+  "project_id": 179,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/21436"
+}

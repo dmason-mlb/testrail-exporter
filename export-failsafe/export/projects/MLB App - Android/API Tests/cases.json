@@ -1,0 +1,231 @@
+[
+  {
+    "id": 22326426,
+    "title": "Negative API tests- Block endpoints 2",
+    "section_id": 1133736,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1629748857,
+    "updated_by": 311,
+    "updated_on": 1630098410,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 379087,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user\r\nNOTE: Import apiBlockList2.xml attached to this test to Charles Block List settings in order to execute these tests",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN calls to https://dai.google.com:443/*?* are blocked (these calls occur during initial playback of live and archived games as well as prior to commercial break)",
+        "expected": "THEN the app does not crash\nAND the stream plays successfully\nAND when commercial break comes an error is presented (this is the current behavior. A bug is logged because ideally user would see slate and playback would continue)"
+      },
+      {
+        "content": "WHEN calls to https://mlb.sc.omtrdc.net:443/*?* are blocked (these calls occur regularly when navigating throughout the app)",
+        "expected": "THEN the app does not crash\nAND the app continues to function normally"
+      }
+    ]
+  },
+  {
+    "id": 22326427,
+    "title": "Negative API tests- Block endpoints",
+    "section_id": 1133736,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1629748857,
+    "updated_by": 311,
+    "updated_on": 1630436397,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 379087,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a user\r\nNOTE: Import attached blocklist to Charles Block List Settings to execute these tests",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN calls to dapi.cms.mlbinfra.com:443/v2/* are blocked",
+        "expected": "THEN the app does not crash and free content still plays\n"
+      },
+      {
+        "content": "WHEN calls to https://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search?* are blocked (these calls will occur when landing on the homepage)",
+        "expected": "THEN the app does not crash \n"
+      },
+      {
+        "content": "WHEN calls to https://ids.mlb.com:443/*?* are blocked (these calls will occur on login attempt)",
+        "expected": "THEN the app does not crash\n AND \"Failed to login\" message will be presented to the user after about 20s"
+      }
+    ]
+  },
+  {
+    "id": 22326429,
+    "title": "Block Profile service on login",
+    "section_id": 1133736,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1629748857,
+    "updated_by": 311,
+    "updated_on": 1630434683,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 379087,
+    "display_order": 4,
+    "custom_preconds": "GIVEN a user that is not logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN  https://profile.mlb.com/api/v1/profile?attributes=primaryFavorite,followedTeams is blocked\nAND user signs in",
+        "expected": "THEN the app does not crash"
+      }
+    ]
+  },
+  {
+    "id": 22326430,
+    "title": "Expired token block entitlement service",
+    "section_id": 1133736,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1629748857,
+    "updated_by": 311,
+    "updated_on": 1631818712,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 379087,
+    "display_order": 5,
+    "custom_preconds": "GIVEN a logged in user\r\nAND an expired token",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN  https://mlbentitlementservices.mlb.com/entitlements is blocked \nAND the user tries to play SVOD",
+        "expected": "THEN the app does not crash\nAND 'Error Fetching game stream' is presented to the user"
+      },
+      {
+        "content": "WHEN  https://mlbentitlementservices.mlb.com/entitlements is blocked \nAND the user tries to play an Audio stream",
+        "expected": "THEN the app does not crash"
+      }
+    ]
+  },
+  {
+    "id": 22326431,
+    "title": "Block Profile service- change favorite team",
+    "section_id": 1133736,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1629748857,
+    "updated_by": 311,
+    "updated_on": 1630437156,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 379087,
+    "display_order": 6,
+    "custom_preconds": "Given a logged in user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN block https://profile.mlb.com/api/v1/profile is blocked\nAND user changes favorite team\nAND soft closes the app and relaunches",
+        "expected": "THEN previous favorite team should persist"
+      }
+    ]
+  },
+  {
+    "id": 22326433,
+    "title": "Slow Connection",
+    "section_id": 1133736,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1629749418,
+    "updated_by": 311,
+    "updated_on": 1630096284,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 379087,
+    "display_order": 9,
+    "custom_preconds": "GIVEN the internal or QA version of the app is being tested\r\nAND Charles is installed on a laptop\r\nAND Proxy to the laptop is enabled on the device\r\nAND Proxy Throttling is enabled and set to 512K\r\nAND the user is logged in as a subscribed video user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the app is launched",
+        "expected": "THEN the app loads completely\nAND without error"
+      },
+      {
+        "content": "WHEN the Team, Scores, News, Standing and Stats tabs are tapped",
+        "expected": "THEN the pages load completely\nAND without error"
+      },
+      {
+        "content": "WHEN the user navigates to MLB audio\nAND selects a game to listen to",
+        "expected": "THEN the page will load without error\nAND the audio streams without interruption"
+      },
+      {
+        "content": "WHEN the user goes to Watch\nAND taps the various tabs",
+        "expected": "THEN the app functions without error\nNote: The content of the tabs loads in the background and may not be present immediately"
+      },
+      {
+        "content": "WHEN the user selects a live or archive gave to watch",
+        "expected": "THEN the game shall stream.  \nNote: The video quality will be poor but it should stream smoothly"
+      }
+    ]
+  },
+  {
+    "id": 34780308,
+    "title": "Dai fallback",
+    "section_id": 1133736,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1744320188,
+    "updated_by": 232,
+    "updated_on": 1744320188,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 379087,
+    "display_order": 10,
+    "custom_preconds": "GIVEN an entitled user\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN loading a FOS OR MGW stream\nAND the DAI session fails when being created \n",
+        "expected": "THEN fallback to the mlb url"
+      },
+      {
+        "content": "WHEN loading a FOS OR MGW stream\nAND the DAI session returns an empty url ",
+        "expected": "THEN fallback to the mlb url "
+      },
+      {
+        "content": "WHEN a fallback scenario is triggered\nAND a stream request is sent",
+        "expected": "THEN CDN Token should be omitted"
+      }
+    ]
+  }
+]

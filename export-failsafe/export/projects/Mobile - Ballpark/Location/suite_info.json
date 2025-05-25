@@ -1,0 +1,11 @@
+{
+  "id": 263349,
+  "name": "Location",
+  "description": "As a fan I want to be able to see local context if my location is allowed on Ballpark app\r\n\r\nAC:\r\n* Pass through lat/long to home service if available (i.e. fan has previously allowed location permission to Ballpark)\r\n* Pass through accuracy level (e.g. precise, approx)\r\n* Pass through timestamp of when the location was last retrieved successfully\r\n\r\n\r\nhttps://baseball.atlassian.net/browse/BP-9286 / https://baseball.atlassian.net/browse/BPA-6115",
+  "project_id": 179,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/263349"
+}

@@ -1,0 +1,292 @@
+[
+  {
+    "id": 1238438,
+    "title": "Newly Downloaded App",
+    "section_id": 150237,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552919541,
+    "updated_by": 173,
+    "updated_on": 1552919558,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20673,
+    "display_order": 1,
+    "custom_preconds": "GIVEN that the user just downloaded the app\r\n\r\nGIVEN that the user just deleted the storage for that app (clearing storage)",
+    "custom_steps": "WHEN the user opens the app",
+    "custom_expected": "THEN the app will start on a clean slate\r\n\r\nTHEN the user will be able to on-board",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238269,
+    "title": "App Name + Icon",
+    "section_id": 150237,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552424918,
+    "updated_by": 173,
+    "updated_on": 1553013591,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20673,
+    "display_order": 2,
+    "custom_preconds": "GIVEN that the user downloaded First Pitch app",
+    "custom_steps": "WHEN the user sees the app in the app screen/home screen of the device",
+    "custom_expected": "THEN the First Pitch app icon will be present\r\n\r\nTHEN the app will have the name \"First Pitch\"\r\n\r\nTHEN the First Pitch app will not have a name that contains dash in the middle (\"First-Pitch\"), QA, Debug, etc.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238187,
+    "title": "Splash Screen",
+    "section_id": 150237,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1551889627,
+    "updated_by": 173,
+    "updated_on": 1551889627,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20673,
+    "display_order": 3,
+    "custom_preconds": "GIVEN that the user downloaded the app",
+    "custom_steps": "WHEN the user opens the app",
+    "custom_expected": "THEN the app will display the splash screen",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238188,
+    "title": "Enable Location //REMOVED-will be on next releases//",
+    "section_id": 150237,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1551889643,
+    "updated_by": 173,
+    "updated_on": 1553610154,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20673,
+    "display_order": 4,
+    "custom_preconds": "GIVEN that the user downloaded the app",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the app displays the splash screen",
+        "expected": "THEN the app will display the Enable Location screen next"
+      },
+      {
+        "content": "WHEN the user taps on \"Skip\" for iOS\n\nWHEN the user taps on \"Not Now\" for Android ",
+        "expected": "THEN the app will display the Select Favorite Team page"
+      },
+      {
+        "content": "WHEN the user taps on \"Enable Location\"",
+        "expected": "THEN the Enable Location modal will appear"
+      },
+      {
+        "content": "WHEN the user taps on \"Allow\"",
+        "expected": "THEN the app will use the location of the user to find nearby MiLB Teams "
+      },
+      {
+        "content": "WHEN the user taps on \"Don't Allow\"",
+        "expected": "THEN the app will not use the location of the user"
+      }
+    ]
+  },
+  {
+    "id": 1238189,
+    "title": "Select Your Favorite Teams",
+    "section_id": 150237,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1551890040,
+    "updated_by": 173,
+    "updated_on": 1555354058,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20673,
+    "display_order": 5,
+    "custom_preconds": "GIVEN that the user opened the app",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user finishes setting up the Enable Location preferences",
+        "expected": "THEN the app will display the Select Your Favorite Teams page"
+      },
+      {
+        "content": "WHEN the user taps on \"Next\" without selecting any favorite team",
+        "expected": "THEN the app will save the user's preferences\n\nTHEN the app will display the Scores page "
+      },
+      {
+        "content": "WHEN the user filters the teams by league/affiliate ",
+        "expected": "THEN the app will only display the teams in the selected league/affiliate "
+      },
+      {
+        "content": "WHEN the user scrolls through the teams",
+        "expected": "THEN the app will display the current team name, team logo, and will display the teams on their correct league"
+      },
+      {
+        "content": "WHEN the user taps on an affiliate/a team",
+        "expected": "THEN the user will be able to see a light blue background in the selected team to indicate selection"
+      },
+      {
+        "content": "WHEN the user swaps a team from the Favorite Team and Selected Teams and vice versa",
+        "expected": "THEN the app will reflect the changes made by the user\n\nTHEN the app will not crash"
+      },
+      {
+        "content": "WHEN the user taps on team(s) and the user hits \"Next\"\n\nWHEN the user goes back to the \"Select Favorite Team\" page",
+        "expected": "THEN the app will keep the team selections"
+      },
+      {
+        "content": "WHEN the user taps on \"Next\"",
+        "expected": "THEN the app will save the user's preferences\n\nTHEN the app will display the Paywall/User Account page"
+      },
+      {
+        "content": "WHEN the app displays the My Teams page",
+        "expected": "THEN the user will see all of the selected teams\n\nTHEN the user will be able to set the favorite team\n\nTHEN the user will be able to rearrange the teams using the button on the right-hand side end of the team's row (iOS and Android)\n\nTHEN the user will be able to delete teams using the delete button on the left-hand side end of the team's row (iOS only)\n\nTHEN the user will be able to a delete team by swiping to the left (Android only)\n\nTHEN the user will be able to a set favorite team by swiping to the right (Android only)"
+      },
+      {
+        "content": "WHEN the user taps on \"Save\"",
+        "expected": "THEN the app will save the user's preferences\n\nTHEN the app will display the Notifications page"
+      }
+    ]
+  },
+  {
+    "id": 1238190,
+    "title": "Notifications",
+    "section_id": 150237,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1551890746,
+    "updated_by": 173,
+    "updated_on": 1555438486,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20673,
+    "display_order": 6,
+    "custom_preconds": "GIVEN that the user finished the selecting favorite teams",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on \"Save\"",
+        "expected": "THEN the app will display the Notifications page\n\nTHEN the app will display the Notifications modal (iOS only)\n\n"
+      },
+      {
+        "content": "WHEN the user taps \"Allow\" the Notifications modal (iOS only)",
+        "expected": "THEN the app will display the favorite teams selected\n\nTHEN the app will allow the user to toggle the News radio buttons for MLB \n\nTHEN the app will allow the user to toggle for following radio buttons for selected favorite teams:\n\n* Game Start\n* Game End\n* News\n* Pitching Change (Android) / Lead Change (iOS)\n* Score Change\n"
+      },
+      {
+        "content": "WHEN the user taps \"Don't Allow\" the Notifications modal (iOS only)",
+        "expected": "THEN the app will display the Paywall/User Account page"
+      },
+      {
+        "content": "WHEN the user taps on radio button(s) for notifications",
+        "expected": "THEN the user will receive notifications depending on the teams/affiliates the user turned the radio button on"
+      },
+      {
+        "content": "WHEN the user does not turn on any radio buttons for notifications",
+        "expected": "THEN the user will not receive any notifications"
+      }
+    ]
+  },
+  {
+    "id": 1238691,
+    "title": "Paywall/User Account Page",
+    "section_id": 150237,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553269753,
+    "updated_by": 173,
+    "updated_on": 1554301795,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20673,
+    "display_order": 7,
+    "custom_preconds": "GIVEN that the user finished Select Favorite Teams and Notifications on-boarding",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the iOS user hits the Paywall page",
+        "expected": "THEN the app will display the following:\n\n* First Pitch logo and background\n* $49.99 Yearly button\n* $12.99 Monthly button\n* Subscriber Login button\n* 'Already Purchased? Restore Now' link\n* Close button\n"
+      },
+      {
+        "content": "WHEN the Android user hits the User Account page",
+        "expected": "THEN the app will display the following:\n\n* Email field\n* Password field\n* Login button\n* Skip For Now link button"
+      }
+    ]
+  },
+  {
+    "id": 1238264,
+    "title": "Persistent",
+    "section_id": 150237,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552423155,
+    "updated_by": 173,
+    "updated_on": 1552594469,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20673,
+    "display_order": 11,
+    "custom_preconds": "GIVEN that the user did not finish on-boarding (user stopped in: 1-Enable Location, 2-Select Favorite Teams, 3-Notifications)",
+    "custom_steps": "WHEN the user goes back to the app",
+    "custom_expected": "THEN the app will display the page where the user left off\r\n\r\nTHEN the app will not allow the user to onboard multiple times (on-boarding is done once on every download of the app)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238265,
+    "title": "\"Back\" Button (Android only)",
+    "section_id": 150237,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552423614,
+    "updated_by": 173,
+    "updated_on": 1552508683,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20673,
+    "display_order": 12,
+    "custom_preconds": "GIVEN that the user finished on-boarding",
+    "custom_steps": "WHEN navigates to different pages and the user hits the \"Back\" button",
+    "custom_expected": "THEN the app will bring the user to the farthest page (Team page)\r\n\r\nTHEN the app will not bring back the user to on-boarding",
+    "custom_steps_separated": null
+  }
+]

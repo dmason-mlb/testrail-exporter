@@ -1,0 +1,443 @@
+[
+  {
+    "id": 22671,
+    "suite_id": 2567,
+    "name": "MJ-Approvals Clipboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 23369,
+    "suite_id": 2567,
+    "name": "MJ-Place on 7-Day Concussion DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 23380,
+    "suite_id": 2567,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 23369,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 23381,
+    "suite_id": 2567,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 23369,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 23370,
+    "suite_id": 2567,
+    "name": "MJ-Place on 15-Day DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 23382,
+    "suite_id": 2567,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 23370,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 23383,
+    "suite_id": 2567,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 23370,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 22675,
+    "suite_id": 2567,
+    "name": "MJ-Place on 60-Day DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 22676,
+    "suite_id": 2567,
+    "name": "Nightly Notification",
+    "description": null,
+    "parent_id": 22675,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 23384,
+    "suite_id": 2567,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 22675,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 23385,
+    "suite_id": 2567,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 22675,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 22677,
+    "suite_id": 2567,
+    "name": "MJ-Transfer of Rehab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 22678,
+    "suite_id": 2567,
+    "name": "Nightly Notification",
+    "description": null,
+    "parent_id": 22677,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 23376,
+    "suite_id": 2567,
+    "name": "MN-Place on 7-Day DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 23390,
+    "suite_id": 2567,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 23376,
+    "display_order": 32,
+    "depth": 1
+  },
+  {
+    "id": 23391,
+    "suite_id": 2567,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 23376,
+    "display_order": 33,
+    "depth": 1
+  },
+  {
+    "id": 23392,
+    "suite_id": 2567,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 23376,
+    "display_order": 34,
+    "depth": 1
+  },
+  {
+    "id": 23455,
+    "suite_id": 2567,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 23376,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 23377,
+    "suite_id": 2567,
+    "name": "MN-Place on 60-Day DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  },
+  {
+    "id": 23461,
+    "suite_id": 2567,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 23377,
+    "display_order": 42,
+    "depth": 1
+  },
+  {
+    "id": 23462,
+    "suite_id": 2567,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 23377,
+    "display_order": 43,
+    "depth": 1
+  },
+  {
+    "id": 23463,
+    "suite_id": 2567,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 23377,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 23464,
+    "suite_id": 2567,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 23377,
+    "display_order": 45,
+    "depth": 1
+  },
+  {
+    "id": 23378,
+    "suite_id": 2567,
+    "name": "MN-Reinstate from DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 46,
+    "depth": 0
+  },
+  {
+    "id": 23752,
+    "suite_id": 2567,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 23378,
+    "display_order": 52,
+    "depth": 1
+  },
+  {
+    "id": 23753,
+    "suite_id": 2567,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 23378,
+    "display_order": 53,
+    "depth": 1
+  },
+  {
+    "id": 23754,
+    "suite_id": 2567,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 23378,
+    "display_order": 54,
+    "depth": 1
+  },
+  {
+    "id": 23755,
+    "suite_id": 2567,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 23378,
+    "display_order": 55,
+    "depth": 1
+  },
+  {
+    "id": 23379,
+    "suite_id": 2567,
+    "name": "MN-Rehab Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 56,
+    "depth": 0
+  },
+  {
+    "id": 23761,
+    "suite_id": 2567,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 23379,
+    "display_order": 62,
+    "depth": 1
+  },
+  {
+    "id": 23762,
+    "suite_id": 2567,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 23379,
+    "display_order": 63,
+    "depth": 1
+  },
+  {
+    "id": 23763,
+    "suite_id": 2567,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 23379,
+    "display_order": 64,
+    "depth": 1
+  },
+  {
+    "id": 23764,
+    "suite_id": 2567,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 23379,
+    "display_order": 65,
+    "depth": 1
+  },
+  {
+    "id": 24592,
+    "suite_id": 2567,
+    "name": "MN-Return from Rehab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 66,
+    "depth": 0
+  },
+  {
+    "id": 24609,
+    "suite_id": 2567,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 24592,
+    "display_order": 72,
+    "depth": 1
+  },
+  {
+    "id": 24613,
+    "suite_id": 2567,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 24592,
+    "display_order": 73,
+    "depth": 1
+  },
+  {
+    "id": 24616,
+    "suite_id": 2567,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 24592,
+    "display_order": 74,
+    "depth": 1
+  },
+  {
+    "id": 24617,
+    "suite_id": 2567,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 24592,
+    "display_order": 75,
+    "depth": 1
+  },
+  {
+    "id": 24634,
+    "suite_id": 2567,
+    "name": "MN-Transfer of Rehab Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 76,
+    "depth": 0
+  },
+  {
+    "id": 24635,
+    "suite_id": 2567,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 24634,
+    "display_order": 77,
+    "depth": 1
+  },
+  {
+    "id": 24636,
+    "suite_id": 2567,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 24634,
+    "display_order": 78,
+    "depth": 1
+  },
+  {
+    "id": 24637,
+    "suite_id": 2567,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 24634,
+    "display_order": 79,
+    "depth": 1
+  },
+  {
+    "id": 24638,
+    "suite_id": 2567,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 24634,
+    "display_order": 80,
+    "depth": 1
+  },
+  {
+    "id": 24914,
+    "suite_id": 2567,
+    "name": "MN-Transfer to 60 Day DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 81,
+    "depth": 0
+  },
+  {
+    "id": 24915,
+    "suite_id": 2567,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 24914,
+    "display_order": 82,
+    "depth": 1
+  },
+  {
+    "id": 24916,
+    "suite_id": 2567,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 24914,
+    "display_order": 83,
+    "depth": 1
+  },
+  {
+    "id": 24917,
+    "suite_id": 2567,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 24914,
+    "display_order": 85,
+    "depth": 1
+  },
+  {
+    "id": 24918,
+    "suite_id": 2567,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 24914,
+    "display_order": 86,
+    "depth": 1
+  },
+  {
+    "id": 24920,
+    "suite_id": 2567,
+    "name": "On Save",
+    "description": null,
+    "parent_id": 24914,
+    "display_order": 87,
+    "depth": 1
+  }
+]

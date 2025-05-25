@@ -1,0 +1,157 @@
+[
+  {
+    "id": 48732,
+    "title": "Fortress",
+    "section_id": 7010,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1419352280,
+    "updated_by": 43,
+    "updated_on": 1490882892,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 918,
+    "display_order": 1,
+    "custom_preconds": "https://wiki.mlbam.com/display/mobile/Fortress+Information+and+Logins\r\nhttps://wiki.mlbam.com/display/mobile/Program+Services+Test+User+Accounts\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user is on the ballpark guide\nand has not already added the program for that ballpark\nand taps on the 'Club Members' button in the grid",
+        "expected": "Then the user will be taken to the onboarding process for programs"
+      },
+      {
+        "content": "When an account we are logged into is part of a program\nand the account has an amount of eCash added to it\nand we look on the program view\nand we look on the scan view",
+        "expected": "Then we will see the balance displayed correctly"
+      },
+      {
+        "content": "When an account we are logged into is part of a program\nand the account has 0 eCash\nand we look on the program view\nand we look on the scan view",
+        "expected": "Then we will see the 0 balance displayed correctly ($0.00)\n\nAccount: wasfortress2@mlb.com baseball"
+      },
+      {
+        "content": "When an account we are logged into is part of a program\nand the account has an amount of loyalty added to it\nand we look on the program view\nand we look on the scan view",
+        "expected": "Then we will see the balance displayed correctly"
+      },
+      {
+        "content": "When an account we are logged into is part of a program\nand the account has 0 loyalty (Account: wasfortress1@mlb.com)\nand we look on the program view\nand we look on the scan view",
+        "expected": "Then we will see the 0 balance displayed correctly"
+      },
+      {
+        "content": "When a user has navigated to their program page\nand content loads",
+        "expected": "Then the user will see there personal information at the top\nand the Event Information for the next event available or current active event will be below that\nand below that there will be a link saying 'View home team Park Guide' \nand there will be a section with the user's cards available for entry today\nand there will be a section for other cards in your account that are not applicable to today's event\nand there will be a Services section with different options (Options under services vary with different clubs)"
+      },
+      {
+        "content": "When a user is on the UniPass program page\nand taps on an available card",
+        "expected": "Then a modal will open\nand the modal will contain Event Information\nand the barcode for the seat\nand the user's membership information\nand there will be an 'X' to close the modal in the top left corner\nand the user will see a page indicator at the bottom if multiple cards are present"
+      },
+      {
+        "content": "When a user is on their UniPass Program View\nand has multiple cards\nand has tapped on a card (seat)\nand the UniPass Scan modal has opened\nand the user swipes to the left or right",
+        "expected": "Then the modal will switch between cards\nand the page indicator at the bottom will update accordingly"
+      },
+      {
+        "content": "When a user is on the program view\nor the user is on the scan view\nand the user looks at the event information",
+        "expected": "Then the time will be localized to match the timezone of the event stadium's timezone\n\n(i.e. Washington=EST, BOS=EST, SD=PST)"
+      },
+      {
+        "content": "When a user is on the Program View\nand taps on a \"card\"",
+        "expected": "Then the scan view modal will open\nand the device's brightness will automatically be boosted to full"
+      },
+      {
+        "content": "When a user has passes in their Program View that are listed in the 'Other passes in your account' section\nand taps on one of these passes",
+        "expected": "Then the user will be taken to the Scan View\nand the user will see an icon with a ticket and circle around the ticket with a diagonal line going through it. Next to that icon you will a message stating 'Not valid for entry'"
+      },
+      {
+        "content": "When a user is on the Program View\nor the user is on the Scan View\nand looks at the seating info",
+        "expected": "Then the data will be displayed correctly\nand the data will match in both views"
+      },
+      {
+        "content": "When a user is on a Multi/UniPass Program View\nand taps on the Manage Seats button in the Services section\n\n*Note: Manage Seats is available for WAS and SD",
+        "expected": "Then the user will be taken to the Manage Seats webview"
+      },
+      {
+        "content": "When a user is on a Multi/UniPass Program View\nand taps on the Manage eCash button in the Services section",
+        "expected": "Then the user will be taken to the eCash webview"
+      },
+      {
+        "content": "When a user is on a Multi/UniPass Program View\nand taps on the Rewards button in the Services section",
+        "expected": "Then the user will be taken to the Rewards webview"
+      },
+      {
+        "content": "When a user is on a Multi/UniPass Program View\nand taps on the Help button in the Services section",
+        "expected": "Then the user will be taken to the Help Webview"
+      },
+      {
+        "content": "When a user is on a Multi/UniPass Program View\nand taps on the Privacy Policy button in the Services section",
+        "expected": "Then the user will be taken to the Privacy Policy webview"
+      },
+      {
+        "content": "When a user is on their Program View\nand has > 20 passes linked to their account\nand scrolls down on the Program View",
+        "expected": "Then the user will see messaging after the first 20 passes are displayed\nand the messaging will read:\n\n'First twenty passes displayed; only twenty passes supported per account.'"
+      },
+      {
+        "content": "When a user has navigated to their program page\nand clicks on the 'View hometeam Park Guide link located below the Event section",
+        "expected": "Then the ballpark guide of the hometeam stadium will come in from top to bottom"
+      },
+      {
+        "content": "When a user has navigated to their program page\nand scrolls down to the Services section and taps on one of the services\n\n*Do this for each service button",
+        "expected": "A modal for that service will open from down to up to the correct web view with the title of that service on top of the page \nand clicking 'Done' will take you back to the program page."
+      },
+      {
+        "content": "When a user is on the program view\nor the user is on the scan view\nand looks at the event information",
+        "expected": "Then the time will be localized to match the timezone of the STADIUM\n\n(check for all US timezones)"
+      },
+      {
+        "content": "When an account we are logged into is part of a program\nand the account has 0 loyalty (Account: wasfortress1@mlb.com)\nand we look on the program view\nand we look on the scan view",
+        "expected": "Then we will see the 0 balance displayed correctly"
+      },
+      {
+        "content": "When an account we are logged into is part of a program\nand the account has an amount of loyalty added to it\nand we look on the program view\nand we look on the scan view",
+        "expected": "Then we will see the balance displayed correctly"
+      },
+      {
+        "content": "When an account we are logged into is part of a program\nand the account has an amount of eCash added to it\nand we look on the program view\nand we look on the scan view",
+        "expected": "Then we will see the balance displayed correctly"
+      },
+      {
+        "content": "When an account we are logged into is part of a program\nand the account has 0 eCash\nand we look on the program view\nand we look on the scan view",
+        "expected": "Then we will see the 0 balance displayed correctly\n\nAccount: wasfortress2@mlb.com baseball"
+      },
+      {
+        "content": "When a user has navigated to their program page\nand the content loads",
+        "expected": "Then the user will see their plan information at the top\nand the user will be able to tap their information to display their barcode\nand below will be the Event Information\nand there will be a Check In button if the game is in a pre/live state\nand there will be a section containing the users seat information\nand there will be a Services section with different options (manage seats, manage eCash, Loyalty rewards, help, and privacy policy)"
+      },
+      {
+        "content": "When a user is on the MultiPass program page\nand user taps on their membership information at the top",
+        "expected": "Then a modal will open\nand the modal will contain Event Information\nand the barcode for the pass\nand the user's membership information\nand there will be an 'X' to close the modal in the top left corner"
+      },
+      {
+        "content": "When a user is on the Program View\nand taps on a \"card\"",
+        "expected": "Then the scan view modal will open\nand the device's brightness will automatically be boosted to full"
+      },
+      {
+        "content": "When a user is on the Program View\nand looks at the seating info",
+        "expected": "Then the data will be displayed correctly"
+      },
+      {
+        "content": "When a user is on a Multi/UniPass Program View\nand taps on the Manage Seats button in the Services section",
+        "expected": "Then the user will be taken to the Manage Seats webview"
+      },
+      {
+        "content": "When a user is on a Multi/UniPass Program View\nand taps on the Program Help button in the Services section",
+        "expected": "Then the user will be taken to the Program Help webview"
+      },
+      {
+        "content": "When a user is on a Multi/UniPass Program View\nand taps on the T&C button in the Services section",
+        "expected": "Then the user will be taken to the T&C webview"
+      },
+      {
+        "content": "When a user is on a Multi/UniPass Program View\nand taps on the Privacy Policy button in the Services section",
+        "expected": "Then the user will be taken to the Privacy Policy webview"
+      }
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 13489,
+    "suite_id": 1520,
+    "name": "Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 13502,
+    "suite_id": 1520,
+    "name": "Contracts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 13592,
+    "suite_id": 1520,
+    "name": "Options",
+    "description": null,
+    "parent_id": 13502,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 13593,
+    "suite_id": 1520,
+    "name": "Payments",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 13594,
+    "suite_id": 1520,
+    "name": "Player Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

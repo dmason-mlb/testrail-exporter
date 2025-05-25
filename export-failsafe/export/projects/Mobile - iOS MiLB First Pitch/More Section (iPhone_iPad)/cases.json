@@ -1,0 +1,418 @@
+[
+  {
+    "id": 1224917,
+    "title": "More (iPhone)",
+    "section_id": 6966,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1522941534,
+    "updated_by": 65,
+    "updated_on": 1522943446,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 888,
+    "display_order": 2,
+    "custom_preconds": "Given the app has been installed\r\nAnd is not a fresh install or first run",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user launches the app",
+        "expected": "Then the user will see the 'More' tab in the bottom rightmost location"
+      },
+      {
+        "content": "When the user taps the More tab \nand the user is signed into a MiLB.com account",
+        "expected": "Then they will be taken to the More page which will have a list of table cells that are as follows: \n\nSections\n-Stats\n-Teams\n-Player Search\n-Gameday Audio\n-MiLB.com Podcast\n-MiLBStore.com\n-MiLB Auctions\n-Prospect Watch\n-PlayBall.org\n\nHelp\n-First Pitch FAQ\n-Subscription Management\n-Contact Us\n\nAbout\n-About MiLB.com\n-Blackout Restrictions\n-Privacy Policy\n-Terms and Conditions\n\nApps & Games\n-MLB At Bat\n-MLB Ballpark\n-Franchise MVP"
+      },
+      {
+        "content": "When the user taps the More tab \nand the user is not signed into a MiLB.com account",
+        "expected": "Then they will be taken to the More page which will have a list of table cells that are as follows: \n\nSubscribe to MiLB.TV\n\nSections\n-Stats\n-Teams\n-Player Search\n-Gameday Audio\n-MiLB.com Podcast\n-MiLBStore.com\n-MiLB Auctions\n-Prospect Watch\n-PlayBall.org\n\nHelp\n-First Pitch FAQ\n-Subscription Management\n-Contact Us\n\nAbout\n-About MiLB.com\n-Blackout Restrictions\n-Privacy Policy\n-Terms and Conditions\n\nApps & Games\n-MLB At Bat\n-MLB Ballpark\n-Franchise MVP"
+      },
+      {
+        "content": "When selecting \"Subscribe to MiLB.TV\" at the top of the menu",
+        "expected": "User is brought to paywall where user can sign up for \"Yearly\" or \"Monthly\" and Login to a user's pre-existing account. "
+      },
+      {
+        "content": "When selecting \"Subscribe to MiLB.TV\" at the top of the menu and then selecting Login",
+        "expected": "User can properly sign into their accounts"
+      },
+      {
+        "content": "When selecting \"Subscribe to MiLB.TV\" at the top of the menu and then selecting \"Restore Now\"",
+        "expected": "Apple Id prompt will appear and then the user will be able to restore their own account"
+      },
+      {
+        "content": "When the user taps the Teams button",
+        "expected": "The user is taken to the list of teams separated by affiliate, class and option to view all MiLB teams"
+      },
+      {
+        "content": "When we select the Gameday Audio",
+        "expected": "Then 'Gameday Audio' will open in an internal webview\nAnd will listed all the available team feeds"
+      },
+      {
+        "content": "When the user taps the 'About MiLB.com' button found under the ABOUT section",
+        "expected": "Then they are taken to the 'About MiLB.com' page"
+      },
+      {
+        "content": "When the user taps any of the links under Help",
+        "expected": "Then their respective pages should open\n- First Pitch FAQ (internal webview)\n- Subscription Management (internal webview)\n- Contact Us (external webview)\n"
+      },
+      {
+        "content": "When the user taps any of the links under About",
+        "expected": "Then their respective pages should open in an internal webview\n- About MiLB.com\n- Blackout Restrictions, \n- Privacy Policy, \n- Terms and Conditions"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 48688,
+    "title": "Settings (iPhone)",
+    "section_id": 6966,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "MILBATBAT-1670",
+    "created_by": 40,
+    "created_on": 1418674972,
+    "updated_by": 65,
+    "updated_on": 1523043078,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 888,
+    "display_order": 3,
+    "custom_preconds": "Given the app has been installed\r\nAnd is not a fresh install or first run",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "when the user launches the app",
+        "expected": "Then the user will see the 'More' tab in the bottom rightmost location"
+      },
+      {
+        "content": "When the user taps Settings located in the upper right hand corner",
+        "expected": "Then they will be taken to the Settings page which contains:\n- MiLB.com Account\n- Set Home Screen Icon\n- Notifications\n- Connect Purchase to MiLB.com\n- About First Pitch\n- Screen Auto-Lock"
+      },
+      {
+        "content": "When the user taps on MiLB.com Account",
+        "expected": "Then the user is taken to the MiLB.com Account which contains:\n- < Settings\n- Email\n- Password\n- Privacy Policy\n- Forgot Password?\n"
+      },
+      {
+        "content": "When the user taps on Home Screen Icon",
+        "expected": "Then the user is taken to the Home Screen Icon which contains:\n- < Settings\n- Option to select a team icon\n- Reset to MiLB icon\n- Favorite Team (if applicable)\n- List of teams by League"
+      },
+      {
+        "content": "When the user taps on Notifications",
+        "expected": "Then the user is taken to Notifications page which contains the following:\n- Notifications toggle\n- New toggle\n- Favorite team (if applicable)\n- List of teams in alphabetical order"
+      },
+      {
+        "content": "When the user taps on Connect Purchase to MiLB.com",
+        "expected": "????"
+      },
+      {
+        "content": "When the user taps About First Pitch",
+        "expected": "Then they are taken to the About First Pitch which contains:\n- Application version\n- Build Number\n- Device\n- Model\n- iOS Version\n- Network\n- Carrier\n- Email\n- ID1, ID2, ID3, etc.\n- pt\n- Email Logs"
+      },
+      {
+        "content": "When the user taps About First Pitch\nAnd taps on the Email Logs\nAnd user does not have e-mail installed on the device",
+        "expected": "Then the user is taken to At Bat 11.1 FAQ webview"
+      },
+      {
+        "content": "When the user changes the Screen Auto-Lock setting to On\nAnd lets the device sit for the amount of time set in the device settings for Auto-Lock",
+        "expected": "Then the device will auto-lock after the amount of time set for Auto-Lock in the device settings"
+      },
+      {
+        "content": "When the user changes the Auto-Lock setting to Off\nAnd lets the device sit for the amount of time set in the device settings for Auto-Lock",
+        "expected": "Then the device will NOT Auto-Lock after the amount of time set for Auto-Lock in the device settings"
+      },
+      {
+        "content": "When the user makes a change to a setting\nAnd backgrounds, then kills the application\nWhen the user relaunches the app\nAnd navigates back to the settings page",
+        "expected": "The settings the user changed should be preserved"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1225002,
+    "title": "More (iPad)",
+    "section_id": 25774,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1523036000,
+    "updated_by": 65,
+    "updated_on": 1523036008,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 888,
+    "display_order": 1,
+    "custom_preconds": "Given the app has been installed\r\nAnd is not a fresh install or first run",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user launches the app",
+        "expected": "Then the user will see the 'More' tab in the bottom rightmost location"
+      },
+      {
+        "content": "When the user taps the More tab \nand the user is signed into a MiLB.com account",
+        "expected": "Then they will be taken to the More page which will have a list of table cells that are as follows: \n\nSections\n-Stats\n-Teams\n-Player Search\n-Gameday Audio\n-MiLB.com Podcast\n-MiLBStore.com\n-MiLB Auctions\n-Prospect Watch\n-PlayBall.org\n\nHelp\n-First Pitch FAQ\n-Subscription Management\n-Contact Us\n\nAbout\n-About MiLB.com\n-Blackout Restrictions\n-Privacy Policy\n-Terms and Conditions\n\nApps & Games\n-MLB At Bat\n-MLB Ballpark\n-Franchise MVP"
+      },
+      {
+        "content": "When the user taps the More tab \nand the user is not signed into a MiLB.com account",
+        "expected": "Then they will be taken to the More page which will have a list of table cells that are as follows: \n\nSubscribe to MiLB.TV\n\nSections\n-Stats\n-Teams\n-Player Search\n-Gameday Audio\n-MiLB.com Podcast\n-MiLBStore.com\n-MiLB Auctions\n-Prospect Watch\n-PlayBall.org\n\nHelp\n-First Pitch FAQ\n-Subscription Management\n-Contact Us\n\nAbout\n-About MiLB.com\n-Blackout Restrictions\n-Privacy Policy\n-Terms and Conditions\n\nApps & Games\n-MLB At Bat\n-MLB Ballpark\n-Franchise MVP"
+      },
+      {
+        "content": "When selecting \"Subscribe to MiLB.TV\" at the top of the menu",
+        "expected": "User is brought to paywall where user can sign up for \"Yearly\" or \"Monthly\" and Login to a user's pre-existing account. "
+      },
+      {
+        "content": "When selecting \"Subscribe to MiLB.TV\" at the top of the menu and then selecting Login",
+        "expected": "User can properly sign into their accounts"
+      },
+      {
+        "content": "When selecting \"Subscribe to MiLB.TV\" at the top of the menu and then selecting \"Restore Now\"",
+        "expected": "Apple Id prompt will appear and then the user will be able to restore their own account"
+      },
+      {
+        "content": "When the user taps the Teams button",
+        "expected": "The user is taken to the list of teams separated by affiliate, class and option to view all MiLB teams"
+      },
+      {
+        "content": "When we select the Gameday Audio",
+        "expected": "Then 'Gameday Audio' will open in an internal webview\nAnd will listed all the available team feeds"
+      },
+      {
+        "content": "When the user taps the 'About MiLB.com' button found under the ABOUT section",
+        "expected": "Then they are taken to the 'About MiLB.com' page"
+      },
+      {
+        "content": "When the user taps any of the links under Help",
+        "expected": "Then their respective pages should open\n- First Pitch FAQ (internal webview)\n- Subscription Management (internal webview)\n- Contact Us (external webview)\n"
+      },
+      {
+        "content": "When the user taps any of the links under About",
+        "expected": "Then their respective pages should open in an internal webview\n- About MiLB.com\n- Blackout Restrictions, \n- Privacy Policy, \n- Terms and Conditions"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1225003,
+    "title": "Settings (iPad)",
+    "section_id": 25774,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "MILBATBAT-1670",
+    "created_by": 65,
+    "created_on": 1523036000,
+    "updated_by": 65,
+    "updated_on": 1523043059,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 888,
+    "display_order": 2,
+    "custom_preconds": "Given the app has been installed\r\nAnd is not a fresh install or first run",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "when the user launches the app",
+        "expected": "Then the user will see the 'More' tab in the bottom rightmost location"
+      },
+      {
+        "content": "When the user taps Settings located in the upper right hand corner",
+        "expected": "Then they will be taken to the Settings page which contains:\n- MiLB.com Account\n- Set Home Screen Icon\n- Notifications\n- Connect Purchase to MiLB.com\n- About First Pitch\n- Screen Auto-Lock"
+      },
+      {
+        "content": "When the user taps on MiLB.com Account",
+        "expected": "Then the user is taken to the MiLB.com Account which contains:\n- < Settings\n- Email\n- Password\n- Privacy Policy\n- Forgot Password?\n"
+      },
+      {
+        "content": "When the user taps on Home Screen Icon",
+        "expected": "Then the user is taken to the Home Screen Icon which contains:\n- < Settings\n- Option to select a team icon\n- Reset to MiLB icon\n- Favorite Team (if applicable)\n- List of teams by League"
+      },
+      {
+        "content": "When the user taps on Notifications",
+        "expected": "Then the user is taken to Notifications page which contains the following:\n- Notifications toggle\n- New toggle\n- Favorite team (if applicable)\n- List of teams in alphabetical order"
+      },
+      {
+        "content": "When the user taps on Connect Purchase to MiLB.com",
+        "expected": "????"
+      },
+      {
+        "content": "When the user taps About First Pitch",
+        "expected": "Then they are taken to the About First Pitch which contains:\n- Application version\n- Build Number\n- Device\n- Model\n- iOS Version\n- Network\n- Carrier\n- Email\n- ID1, ID2, ID3, etc.\n- pt\n- Email Logs"
+      },
+      {
+        "content": "When the user taps About First Pitch\nAnd taps on the Email Logs\nAnd user does not have e-mail installed on the device\n",
+        "expected": "Then the user is taken to At Bat 11.1 FAQ webview"
+      },
+      {
+        "content": "When the user changes the Screen Auto-Lock setting to On\nAnd lets the device sit for the amount of time set in the device settings for Auto-Lock",
+        "expected": "Then the device will auto-lock after the amount of time set for Auto-Lock in the device settings"
+      },
+      {
+        "content": "When the user changes the Auto-Lock setting to Off\nAnd lets the device sit for the amount of time set in the device settings for Auto-Lock",
+        "expected": "Then the device will NOT Auto-Lock after the amount of time set for Auto-Lock in the device settings"
+      },
+      {
+        "content": "When the user makes a change to a setting\nAnd backgrounds, then kills the application\nWhen the user relaunches the app\nAnd navigates back to the settings page",
+        "expected": "The settings the user changed should be preserved"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 185124,
+    "title": "More Section (iPad)",
+    "section_id": 147833,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": 567,
+    "refs": null,
+    "created_by": 119,
+    "created_on": 1468507839,
+    "updated_by": 65,
+    "updated_on": 1523035991,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 888,
+    "display_order": 1,
+    "custom_preconds": "Given the app has been installed\r\nAnd is not a fresh install or first run",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "when the user launches the app",
+        "expected": "Then the user will see the 'More' tab on the bottom right of the screen"
+      },
+      {
+        "content": "When the user taps the 'More' tab on the bottom right of the screen",
+        "expected": "MiLB More Menu will be launched which will have a list of table cells that are tappable including: \n-Subscribe to MiLB.TV(Lite user only)\n-Scoreboard\n-News\n-Videos\n-Standings\n-Team Schedules\n-Players\n-Stats\n-Gameday Audio\n-MiLB.com Podcast\nHelp\n-Contact Us\nAbout\n-MiLB.com\n-MiLB.com FAQ\n-Blackout Restrictions\n-Privacy Policy\n-Terms and Conditions\nApps & Games"
+      },
+      {
+        "content": "When the user taps on the settings link in the top right of the more menu page",
+        "expected": "Settings page wil launch"
+      },
+      {
+        "content": "When the user makes a change to a setting\nAnd backgrounds, then kills the application\nWhen the user relaunches the app\nAnd navigates back to the settings page",
+        "expected": "The settings the user changed should be preserved"
+      },
+      {
+        "content": "When the user changes the Auto-Lock setting to On\nAnd lets the device sit for the amount of time set in the device settings for Auto-Lock",
+        "expected": "Then the device will auto-lock after the amount of time set for Auto-Lock in the device settings"
+      },
+      {
+        "content": "When the user changes the Auto-Lock setting to Off\nAnd lets the device sit for the amount of time set in the device settings for Auto-Lock",
+        "expected": "Then the device will NOT Auto-Lock after the amount of time set for Auto-Lock in the device settings"
+      },
+      {
+        "content": "When the user taps the 'About MiLB.com' button found under the ABOUT section",
+        "expected": "Then they are taken to the 'About MiLB.com' page"
+      },
+      {
+        "content": "When the user taps any of the links under Help and About",
+        "expected": "Then their respective pages should open either in a new window or within the app. (Test Contact Info, Blackout Restrictions, MiLB.com FAQ, About MiLB.com, Privacy Policy, Terms and Conditions)"
+      },
+      {
+        "content": "WHEN we select Gameday Audio\nAND we have tapped on Yes for the Leave First Pitch dialog box",
+        "expected": "Then the MiLB Gameday Audio page will open"
+      },
+      {
+        "content": "when selecting \"Subscribe to MiLB.TV\" at the top of the menu",
+        "expected": "User is brought to paywall where user can sign up for \"Yearly\" or \"Monthly\" and Login to a user's pre-existing account. "
+      },
+      {
+        "content": "when selecting \"Subscribe to MiLB.TV\" at the top of the menu and then selecting Login",
+        "expected": "User can properly sign into their accounts"
+      },
+      {
+        "content": "when selecting \"Subscribe to MiLB.TV\" at the top of the menu and then selecting \"Restore Now\"",
+        "expected": "Apple Id prompt will appear and then the user will be able to restore their own account"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1224918,
+    "title": "Settings (iPad)",
+    "section_id": 147833,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": 567,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1522941550,
+    "updated_by": 65,
+    "updated_on": 1523035991,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 888,
+    "display_order": 2,
+    "custom_preconds": "Given the app has been installed\r\nAnd is not a fresh install or first run",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "when the user launches the app",
+        "expected": "Then the user will see the 'More' tab on the bottom right of the screen"
+      },
+      {
+        "content": "When the user taps the 'More' tab on the bottom right of the screen",
+        "expected": "MiLB More Menu will be launched which will have a list of table cells that are tappable including: \n-Subscribe to MiLB.TV(Lite user only)\n-Scoreboard\n-News\n-Videos\n-Standings\n-Team Schedules\n-Players\n-Stats\n-Gameday Audio\n-MiLB.com Podcast\nHelp\n-Contact Us\nAbout\n-MiLB.com\n-MiLB.com FAQ\n-Blackout Restrictions\n-Privacy Policy\n-Terms and Conditions\nApps & Games"
+      },
+      {
+        "content": "When the user taps on the settings link in the top right of the more menu page",
+        "expected": "Settings page wil launch"
+      },
+      {
+        "content": "When the user makes a change to a setting\nAnd backgrounds, then kills the application\nWhen the user relaunches the app\nAnd navigates back to the settings page",
+        "expected": "The settings the user changed should be preserved"
+      },
+      {
+        "content": "When the user changes the Auto-Lock setting to On\nAnd lets the device sit for the amount of time set in the device settings for Auto-Lock",
+        "expected": "Then the device will auto-lock after the amount of time set for Auto-Lock in the device settings"
+      },
+      {
+        "content": "When the user changes the Auto-Lock setting to Off\nAnd lets the device sit for the amount of time set in the device settings for Auto-Lock",
+        "expected": "Then the device will NOT Auto-Lock after the amount of time set for Auto-Lock in the device settings"
+      },
+      {
+        "content": "When the user taps the 'About MiLB.com' button found under the ABOUT section",
+        "expected": "Then they are taken to the 'About MiLB.com' page"
+      },
+      {
+        "content": "When the user taps any of the links under Help and About",
+        "expected": "Then their respective pages should open either in a new window or within the app. (Test Contact Info, Blackout Restrictions, MiLB.com FAQ, About MiLB.com, Privacy Policy, Terms and Conditions)"
+      },
+      {
+        "content": "WHEN we select Gameday Audio\nAND we have tapped on Yes for the Leave First Pitch dialog box",
+        "expected": "Then the MiLB Gameday Audio page will open"
+      },
+      {
+        "content": "when selecting \"Subscribe to MiLB.TV\" at the top of the menu",
+        "expected": "User is brought to paywall where user can sign up for \"Yearly\" or \"Monthly\" and Login to a user's pre-existing account. "
+      },
+      {
+        "content": "when selecting \"Subscribe to MiLB.TV\" at the top of the menu and then selecting Login",
+        "expected": "User can properly sign into their accounts"
+      },
+      {
+        "content": "when selecting \"Subscribe to MiLB.TV\" at the top of the menu and then selecting \"Restore Now\"",
+        "expected": "Apple Id prompt will appear and then the user will be able to restore their own account"
+      }
+    ],
+    "custom_feature_tag": null
+  }
+]

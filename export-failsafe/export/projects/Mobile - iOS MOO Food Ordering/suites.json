@@ -1,0 +1,112 @@
+[
+  {
+    "id": 18637,
+    "name": "Home Screen",
+    "description": null,
+    "project_id": 162,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/18637"
+  },
+  {
+    "id": 18639,
+    "name": "Search (Browse Concessions)",
+    "description": null,
+    "project_id": 162,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/18639"
+  },
+  {
+    "id": 18640,
+    "name": "Order History",
+    "description": null,
+    "project_id": 162,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/18640"
+  },
+  {
+    "id": 18641,
+    "name": "Payments",
+    "description": null,
+    "project_id": 162,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/18641"
+  },
+  {
+    "id": 18643,
+    "name": "Order Confirmation (Barcode screens)",
+    "description": null,
+    "project_id": 162,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/18643"
+  },
+  {
+    "id": 18644,
+    "name": "Menu",
+    "description": null,
+    "project_id": 162,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/18644"
+  },
+  {
+    "id": 18700,
+    "name": "Cart",
+    "description": null,
+    "project_id": 162,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/18700"
+  },
+  {
+    "id": 18701,
+    "name": "Error Messaging",
+    "description": null,
+    "project_id": 162,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/18701"
+  },
+  {
+    "id": 18945,
+    "name": "Terminal",
+    "description": null,
+    "project_id": 162,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/18945"
+  },
+  {
+    "id": 19591,
+    "name": "Cincinnati Reds (Lockers)",
+    "description": null,
+    "project_id": 162,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/19591"
+  }
+]

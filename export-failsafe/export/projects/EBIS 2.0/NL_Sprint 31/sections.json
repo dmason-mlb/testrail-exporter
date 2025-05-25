@@ -1,0 +1,47 @@
+[
+  {
+    "id": 134888,
+    "suite_id": 19595,
+    "name": "MJC/CBT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 134895,
+    "suite_id": 19595,
+    "name": "API",
+    "description": null,
+    "parent_id": 134888,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 134889,
+    "suite_id": 19595,
+    "name": "Arbitration",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 134890,
+    "suite_id": 19595,
+    "name": "Affiliates",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 134891,
+    "suite_id": 19595,
+    "name": "Reaffiliation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

@@ -1,0 +1,1244 @@
+[
+  {
+    "id": 28778265,
+    "title": "Account Creation flow (including error handling)",
+    "section_id": 1525294,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "Android",
+    "created_by": 288,
+    "created_on": 1656356283,
+    "updated_by": 288,
+    "updated_on": 1656698905,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN users are loading the app\r\nAND the BP app version is 11.3.0, at minimum*\r\n\r\n*11.3.0 introduces Rapid Onboarding (removing FaveTeam and Location pages)\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user launches Ballpark for the first time after installation\nOR the user launches Ballpark for the first time after upgraded installation",
+        "expected": "[ANDROID PAGE 1: Welcome to Ballpark - Get Started]\n\nTHEN the Ballpark branded splash screen will be displayed\n\n[SplashScreen_NoKeychain](https://drive.google.com/file/d/1lZh4PsfuJBRlROVLDBhHdoM5JSbaPHXv/view)*\n\n*may need to update with Android specific image"
+      },
+      {
+        "content": "",
+        "expected": "THEN the app loads Get Started page\nAND the header text shown is \"Welcome to Ballpark. Everything you need for your ballpark visit.\"\nAND 'Get Started' button shown\nAND 'Have a MLB account? Log In' text beneath the Get Started button\nAND 'Log in' text is blue and is a link\nAND a welcome video playing in the background\n\nNote: If loading is taking a long time, display default spinner, near bottom of screen"
+      },
+      {
+        "content": "WHEN the user taps on Get Started button",
+        "expected": "[ANDROID PAGE 2: Sign Up]\n\nTHEN 'Create an MLB account to access your digital tickets and exclusive MLB content.' Sign Up page is shown\nAND Email Address, Password, First Name, Last Name, Birthdate fields are presented\nAND a radio(or check) button is enabled by default under the text fields with 'I would like to receive newsletters and promotions from MLB.com and its partners.'\nAND 'Sign Up' button is shown below the opt-in button\nAND 'Have an account? Log In' link is shown below Sign Up button\nAND 'By signing up, you agree to MLB's Terms of Use and Privacy Policy.' text is shown \nAND 'Terms of Use' and 'Privacy Policy' are links within the text"
+      },
+      {
+        "content": "GIVEN the user does NOT enter data for all fields\nWHEN the user taps on 'Sign Up' button on the Create Acct page ",
+        "expected": "THEN 'First and Last Name are required.' will be displayed with red text under the First Name and Last Name fields\nAND 'Passwords must contain 8 - 15 character, one uppercase letter, one lowercase letter, and one number. No special characters allowed.' will be displayed with red text below the Password field\nAND 'Please enter a valid birthdate.' will be displayed with red text under the Date Of Birth fields\nAND 'There is an error with your email. Please try again' will be displayed with red text below the Email field\n\n\nAND the account creation is prevented with user unable to proceed"
+      },
+      {
+        "content": "WHEN the user enters a valid birthdate in proper format 00/00/0000,\nBUT user provides a date of birth that is less than 13 years from the current date\nAND the user enters valid data for all other required fields",
+        "expected": "THEN 'Sign Up Error' message prompt is shown with 'You are ineligible to complete registration' text\nAND the message prompt displays 'OK' link\n\nAND the create account will be prevented"
+      },
+      {
+        "content": "GIVEN the network is down (*can be simulated by placing device in Airplane mode)\nWHEN the user enters an Email address that has NOT previously been created\nAND the user enters valid data for all other required fields",
+        "expected": "THEN 'Sign Up Error' message prompt is shown with 'Please check your network connection and try again' text\nAND the message prompt displays 'OK' link\n\nAND the create account will be prevented"
+      },
+      {
+        "content": "WHEN the user enters valid data* for all fields\nAND the email entered HAS a previous MLB account\nAND the user taps Sign Up button\n\n\nvalid data:\n*First Name is populated (required)\n*Last Name is populated (required)\n*Email address conforms to standard email rules [i.e '@' symbol, domain(i.e '.com')]\n*Password containing at least 1 number, at least 1 uppercase letter, at least 1 lowercase letter, no special characters AND within 8-15 characters in length\n*Birthdate within proper amount of digits MM DD YYYY, BUT ALSO a date that is 13 years+ in past from the current date",
+        "expected": "THEN 'Sign Up Error' message prompt is shown with 'An account with this email already exists' text\nAND the message prompt displays 'OK' link\n\n\nAND the create account will be prevented"
+      },
+      {
+        "content": "GIVEN the network is enabled\nWHEN the user enters valid data* for all fields\nAND the email entered does not have a previous MLB account\nAND the user taps Sign Up button\n\n\nvalid data:\n*First Name is populated (required)\n*Last Name is populated (required)\n*Email address conforms to standard email rules [i.e '@' symbol, domain(i.e '.com')]\n*Password containing at least 1 number, at least 1 uppercase letter, at least 1 lowercase letter, no special characters AND within 8-15 characters in length\n*Birthdate within proper amount of digits MM DD YYYY, BUT ALSO a date that is 13 years+ in past from the current date",
+        "expected": "THEN the account is created successfully\nAND the user is shown the Home Page"
+      }
+    ]
+  },
+  {
+    "id": 28778252,
+    "title": "Account Creation: Fresh Installation (without keychain) - including error handling",
+    "section_id": 1525291,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 288,
+    "created_on": 1656350325,
+    "updated_by": 288,
+    "updated_on": 1668636227,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN user is loading the app for the very first time on their mobile device after installation\r\n\r\n\r\nIOS Note: To simulate a fresh install without keychain, navigate to More > About BP > Dev tools provides option to delete the acct stored in keychain *requires debug build",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user launches Ballpark for the first time after installation (without keychain stored)",
+        "expected": "[iOS PAGE 1: Welcome to Ballpark - Get Started]\n\nTHEN the Ballpark branded splash screen will be displayed\n\n[SplashScreen_NoKeychain](https://drive.google.com/file/d/1lZh4PsfuJBRlROVLDBhHdoM5JSbaPHXv/view)"
+      },
+      {
+        "content": "",
+        "expected": "THEN the app loads Get Started page\nAND the header text shown is \"Welcome to Ballpark. Everything you need for your ballpark visit.\"\nAND 'Get Started' button shown\nAND 'Have a MLB account? Log In' text beneath the Get Started button\nAND 'Log in' text is blue and is a link\nAND a welcome video playing in the background\n\nNote: If loading is taking a long time, display default spinner, near bottom of screen"
+      },
+      {
+        "content": "WHEN the user taps on Get Started button",
+        "expected": "[iOS PAGE 2: Create Account Modal]\n\nTHEN 'Create an MLB account to access your digital tickets.' modal is shown\nAND Email Address, Password, First Name, Last Name, Birthdate fields are presented\nAND a radio button is enabled by default under the text fields with 'I would like to receive newsletters and promotions from MLB.com and its partners.'\nAND 'Sign Up' button is shown below the radio button\nAND 'By creating an account, you agree to MLB.com's Terms of Use and Privacy Policy.' text is shown below the Sign Up button\nAND 'Terms of Use' and 'Privacy Policy' are links within the text"
+      },
+      {
+        "content": "WHEN the user enters a First name with 40+ characters\nAND taps to another field (OR taps 'return' within keyboard)",
+        "expected": "THEN 'Character limit of 40 reached.' error is displayed in Red Font underneath the First Name field\nAND the account creation is prevented"
+      },
+      {
+        "content": "WHEN the user enters a Last name with 40+ characters\nAND taps to another field (OR taps 'return' within keyboard)",
+        "expected": "THEN 'Character limit of 40 reached.' error is displayed in Red Font underneath the Last Name field\nAND the account creation is prevented"
+      },
+      {
+        "content": "WHEN the user enters an Email address that does not conform to standard email rules (i.e @ symbol missing, domain missing)\nAND taps to another field (OR taps 'return' within keyboard)",
+        "expected": "THEN 'Please enter a valid email.' error is displayed in Red Font underneath the Email Address field\nAND the account creation is prevented"
+      },
+      {
+        "content": "WHEN the user enters an Email address with 40+ characters that conforms to standard email rules (i.e @ symbol missing, domain missing)\nAND taps to another field (OR taps 'return' within keyboard)",
+        "expected": "THEN 'Character limit of 40 reached.' error is displayed in Red Font underneath the Email Address field\nAND the account creation is prevented"
+      },
+      {
+        "content": "WHEN the user taps into Password text field",
+        "expected": "THEN the device keyboard is presented\nAND the password rules are show in grey text with each check box empty"
+      },
+      {
+        "content": "WHEN the user enters a special character in the password field",
+        "expected": "THEN 'No special characters' is displayed in red, with the associated circle marked with an X\n\n(if other password requirements are NOT met, they will be red, with the circle marked with an X)"
+      },
+      {
+        "content": "WHEN the user enters a number in the password field",
+        "expected": "THEN '1 number' is displayed in green, with the associated circle marked with a check\n\n(if other password requirements are NOT met, they will be red, with the circle marked with an X)\n"
+      },
+      {
+        "content": "WHEN the user enters a lowercase letter in the password field",
+        "expected": "THEN '1 lowercase' is displayed in green, with the associated circle marked with a check\n\n(if other password requirements are NOT met, they will be red, with the circle marked with an X)\n"
+      },
+      {
+        "content": "WHEN the user enters an uppercase letter in the password field\n\n\n",
+        "expected": "THEN '1 uppercase' is displayed in green, with the associated circle marked with a check\n\n(if other password requirements are NOT met, they will be red, with the circle marked with an X)\n"
+      },
+      {
+        "content": "WHEN the user enters less than 8 characters in the password field\nOR \t\nWHEN the user enters more than 15 characters",
+        "expected": "THEN '8-15 characters' is displayed in red, with the associated circle marked with an X\n\n(if other password requirements are NOT met, they will be red, with the circle marked with an X)"
+      },
+      {
+        "content": "WHEN the user enters between than 8 characters and 15 characters, inclusively",
+        "expected": "THEN '8-15 characters' is displayed in green, with the associated circle marked with a check\n\n(if other password requirements are NOT met, they will be red, with the circle marked with an X"
+      },
+      {
+        "content": "WHEN the user taps into Birthdate field",
+        "expected": "THEN the device numeric pad is presented"
+      },
+      {
+        "content": "WHEN the user enters an invalid birthdate of 00/00/0000",
+        "expected": "THEN 'Please enter a valid birthdate.' will be displayed with red text under the field\nAND the account creation is prevented"
+      },
+      {
+        "content": "WHEN the user enters a valid birthdate in proper format 00/00/0000,\nBUT user provides a date of birth that is less than 13 years from the current date",
+        "expected": "THEN 'You are ineligible to complete registration' will be displayed with red text above the Sign Up button"
+      },
+      {
+        "content": "WHEN the user enters an Email address for an account that has previously been created\nAND the user enters valid data for all other required fields",
+        "expected": "There will be an error displayed \"An account with this email already exists.\"\nAND the message will be in Red Font\nAND the create account will be prevented"
+      },
+      {
+        "content": "GIVEN the network is down (*can be simulated by placing device in Airplane mode)\nWHEN the user enters an Email address that has NOT previously been created\nAND the user enters valid data for all other required fields",
+        "expected": "THEN 'Sorry, check your network and try again.' is shown with red font text\n\nAND the create account will be prevented"
+      },
+      {
+        "content": "GIVEN the network is enabled\nWHEN the user enters valid data* for all fields\nAND the email entered does not have a previous MLB account\nAND the user taps Sign Up button\n\nvalid data:\n*Email address with less than 40 characters that conforms to standard email rules [i.e '@' symbol, domain(i.e '.com')]\n*Password containing at least 1 number, at least 1 uppercase letter, at least 1 lowercase letter, no special characters AND within 8-15 characters in length\n*First Name is within character limit of 40\n*Last Name is within character limit of 40\n*Birthdate within proper amount of digits 00/00/0000, BUT ALSO a date that is 13 years+ in past from the current date",
+        "expected": "THEN the account is created successfully\nAND the user is shown the Home Page\n\nNote: A prompt may be shown to allow Ballpark to track activities\nNote: A prompt may also be shown to allow Notifications"
+      }
+    ]
+  },
+  {
+    "id": 28778258,
+    "title": "Account Creation: Upgraded installation (with keychain)",
+    "section_id": 1525291,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 288,
+    "created_on": 1656351918,
+    "updated_by": 288,
+    "updated_on": 1656702013,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN user loads the app for the very first time on their mobile device after upgrading from a previous version (and prev logged in)\r\n\r\n\r\nIOS Note: If prev logged in user creds are stored and is automatically logged in you will be shown Home page - PLEASE LOG OUT. *To logout, navigate to Home > My Profile > Log out button\r\nIOS Note: If 'Welcome Page - Get Started' is shown instead of the desired 'Welcome Page - Continue With MLB'. PLEASE LOG IN WITH EXISTING ACCOUNT (OR ONBOARD A NEW ACCT) TO STORE CREDENTIALS. THEN PLEASE LOG OUT  *To logout, navigate to Home > My Profile > Log out button",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user launches Ballpark for the first time after installation (with keychain stored)",
+        "expected": "[iOS PAGE 3: Welcome to Ballpark - Continue with MLB]\n\nTHEN the Ballpark branded splash screen will be displayed\n\n[SplashScreen_KeychainSaved](https://drive.google.com/file/d/18BQM3Md2oi1kCVJgBcs8JAoVz8qdZR93/view)"
+      },
+      {
+        "content": "",
+        "expected": "AND the header text shown is \"Welcome to Ballpark. Everything you need for your ballpark visit.\"\nAND 'Continue with MLB' button shown with the acct prev logged in shown above the button\nAND 'Log in with another MLB account' text beneath continue with MLB button\nAND 'Log in' text is blue and is a link\nAND 'Don't have an account? Sign Up' text beneath the log in text\nAND 'Sign Up' text is blue and is a link\nAND a welcome video playing in the background\n\nNote: If loading is taking a long time, display default spinner, near bottom of screen"
+      },
+      {
+        "content": "WHEN the user taps the 'Sign Up' link within 'Don't have an account? Sign Up' text",
+        "expected": "[iOS PAGE 2: Create Account Modal]\n\t\nTHEN 'Create an MLB account to access your digital tickets.' modal is shown\nAND Email Address, Password, First Name, Last Name, Birthdate fields are presented\nAND a radio button is enabled by default under the text fields with 'I would like to receive newsletters and promotions from MLB.com and its partners.'\nAND 'Sign Up' button is shown below the radio button\nAND 'By creating an account, you agree to MLB's Terms of Use and Privacy Policy.' text is shown below the Sign Up button\nAND 'Terms of Use' and 'Privacy Policy' are links within the text"
+      },
+      {
+        "content": "[VALIDATION STEPS AND RESULTS FOR CLIENT-SIDE VALIDATION OF THE ACCOUNT CREATION FIELDS, INCLUDING DOWN NETWORK AND/OR DUPLICATE ACCT CREATION IS COVERED WITHIN [Account Creation: Fresh Installation (without keychain) - including error handling](https://testrail.testeng.mlbinfra.net/index.php?/cases/view/28778252)]\n",
+        "expected": "WITH ERROR HANDLING OF SIGNUP PAGE COVERED - NO NEED TO PERFORM WITHIN THIS CASE, SINCE THE PAGE IS REUSED AND WOULD BE IDENTICAL FROM ACCESSIBILITY PERSPECTIVE"
+      },
+      {
+        "content": "WHEN the user enters valid data* for all fields\nAND the email entered does not have a previous MLB account\nAND the user taps Sign Up button\n\nvalid data:\n*Email address with less than 40 characters that conforms to standard email rules [i.e '@' symbol, domain(i.e '.com')]\n*Password containing at least 1 number, at least 1 uppercase letter, at least 1 lowercase letter, no special characters AND within 8-15 characters in length\n*First Name is within character limit of 40\n*Last Name is within character limit of 40\n*Birthdate within proper amount of digits 00/00/0000, BUT ALSO a date that is 13 years+ in past from the current date",
+        "expected": "THEN the account is created successfully\nAND the user is shown the Home Page\n\nNote: A prompt may be shown to allow Ballpark to track activities\nNote: A prompt may also be shown to allow Notifications"
+      }
+    ]
+  },
+  {
+    "id": 28778266,
+    "title": "Log In flow (including error handling)",
+    "section_id": 1525295,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "Android",
+    "created_by": 288,
+    "created_on": 1656357398,
+    "updated_by": 288,
+    "updated_on": 1656697147,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN users are loading the app\r\nAND the BP app version is 11.3.0, at minimum*\r\nAND the user has existing account\r\n\r\n*11.3.0 introduces Welcome Screen",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user launches Ballpark for the first time after installation\nOR the user launches Ballpark for the first time after upgraded installation",
+        "expected": "[ANDROID PAGE 1: Welcome to Ballpark - Get Started]\n\nTHEN the Ballpark branded splash screen will be displayed\n\n[SplashScreen_NoKeychain](https://drive.google.com/file/d/1lZh4PsfuJBRlROVLDBhHdoM5JSbaPHXv/view)*\n\n*may need to update with Android specific image"
+      },
+      {
+        "content": "",
+        "expected": "THEN the app loads Get Started page\nAND the header text shown is \"Welcome to Ballpark. Everything you need for your ballpark visit.\"\nAND 'Get Started' button shown\nAND 'Have a MLB account? Log In' text beneath the Get Started button\nAND 'Log in' text is blue and is a link\nAND a welcome video playing in the background\n\nNote: If loading is taking a long time, display default spinner, near bottom of screen"
+      },
+      {
+        "content": "WHEN the user taps on Log in link beneath the Get Started button",
+        "expected": "[ANDROID PAGE 3: Log In]\n\nTHEN 'Log In with your MLB account to access your digital tickets and exclusive MLB content.' page is shown\nAND Email Address and Password fields are presented\nAND 'Log In' button is shown below the text fields\nAND 'Don't have an account? Sign Up' text is shown below Log In button\nAND 'Sign Up' is a link within the text\nAND 'Forgot Password?' link is shown below \nAND 'By signing up, you agree to MLB's Terms of Use and Privacy Policy.' text is shown below\nAND 'Terms of Use' and 'Privacy Policy' are links within the text"
+      },
+      {
+        "content": "WHEN the user does NOT enter data for any fields\nAND the user taps on 'Log In' button on the Log In page",
+        "expected": "THEN 'There is an error with your email. Please try again' will be displayed with red text below the Email field\nAND 'Please enter a password' will be displayed with red text below the Password field\n\nAND the log in of the account will be prevented"
+      },
+      {
+        "content": "WHEN the user enters a valid email\nAND the user enters an invalid password\nAND the user taps on 'Log In' button on the Log In page",
+        "expected": "THEN 'Login Failed' message prompt is shown with 'Invalid email and password' text\nAND the message prompt displays 'OK' link\n\nAND the log in of the account will be prevented"
+      },
+      {
+        "content": "GIVEN the network is down (*can be simulated by placing device in Airplane mode)\nWHEN the user views the Log In page\nAND the user enters an Email address that has previously been created\nAND the user enters valid password for the email address",
+        "expected": "THEN 'Login Failed' message prompt is shown with 'Please check your network connection and try again' text\nAND the message prompt displays 'OK' link\n\nAND the log in of the account will be prevented"
+      },
+      {
+        "content": "GIVEN the network is enabled\nWHEN the user enters valid credentials(email and password) for an existing MLB Account\nAND the user taps Log In button",
+        "expected": "THEN the account is logged in successfully\nAND the user is shown the Home Page\n"
+      }
+    ]
+  },
+  {
+    "id": 28778261,
+    "title": "Continue With MLB Page (with keychain): Log In with previous logged in account (Continue with MLB) - including down network",
+    "section_id": 1525292,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 288,
+    "created_on": 1656353262,
+    "updated_by": 288,
+    "updated_on": 1668634497,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN a user has prev logged into BP app (but is currently logged out)\r\nAND user is viewing the Welcome Screen with Continue with MLB button\r\n\r\n\r\nIOS Note: If prev logged in user creds are stored and is automatically logged in you will be shown Home page - PLEASE LOG OUT. *To logout, navigate to Home > My Profile > Log out button\r\nIOS Note: If 'Welcome Page - Get Started' is shown instead of the desired 'Welcome Page - Continue With MLB'. PLEASE LOG IN WITH EXISTING ACCOUNT (OR ONBOARD A NEW ACCT) TO STORE CREDENTIALS. THEN PLEASE LOG OUT *To logout, navigate to Home > My Profile > Log out button",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user views the Welcome Screen for a previously logged in user (with keychain stored)",
+        "expected": "[iOS PAGE 3: Welcome to Ballpark - Continue with MLB]\n\nTHEN the Ballpark branded splash screen will be displayed\n\n[SplashScreen_KeychainSaved](https://drive.google.com/file/d/18BQM3Md2oi1kCVJgBcs8JAoVz8qdZR93/view)"
+      },
+      {
+        "content": "",
+        "expected": "AND the header text shown is \"Welcome to Ballpark. Everything you need for your ballpark visit.\"\nAND 'Continue with MLB' button shown with the acct prev logged in shown above the button\nAND 'Log in with another MLB account' text beneath continue with MLB button\nAND 'Log in' text is blue and is a link\nAND 'Don't have an account? Sign Up' text beneath the log in text\nAND 'Sign Up' text is blue and is a link\nAND a welcome video playing in the background\n\nNote: If loading is taking a long time, display default spinner, near bottom of screen"
+      },
+      {
+        "content": "GIVEN the network is down (*can be simulated by placing device in Airplane mode)\nWHEN the user taps the 'Continue with MLB' button",
+        "expected": "There will be an error displayed \"Sorry, something went wrong. Please try to Log In.\" below the 'Continue with MLB' button\nAND the log in for the account will be prevented"
+      },
+      {
+        "content": "GIVEN the network is enabled\nWHEN the user notes the acct prev logged in above the 'Continue with MLB' button\nAND the user taps the 'Continue with MLB' button",
+        "expected": "THEN the account is logged in successfully\nAND the user is shown the Home Page\n\nNote: A prompt may be shown to allow Ballpark to track activities\nNote: A prompt may also be shown to allow Notifications"
+      }
+    ]
+  },
+  {
+    "id": 28778260,
+    "title": "Continue With MLB Page (with keychain): Log In with another MLB account - including error handling",
+    "section_id": 1525292,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 288,
+    "created_on": 1656352604,
+    "updated_by": 288,
+    "updated_on": 1668634742,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN a user has prev logged into BP app (but is currently logged out)\r\nAND user is viewing the Welcome Screen with Continue with MLB button\r\n\r\n\r\nIOS Note: If prev logged in user creds are stored and is automatically logged in you will be shown Home page - PLEASE LOG OUT. *To logout, navigate to Home > My Profile > Log out button\r\nIOS Note: If 'Welcome Page - Get Started' is shown instead of the desired 'Welcome Page - Continue With MLB'. PLEASE LOG IN WITH EXISTING ACCOUNT (OR ONBOARD A NEW ACCT) TO STORE CREDENTIALS. THEN PLEASE LOG OUT *To logout, navigate to Home > My Profile > Log out button\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user views the Welcome Screen for a previously logged in user (with keychain stored)",
+        "expected": "[iOS PAGE 3: Welcome to Ballpark - Continue with MLB]\n\nTHEN the Ballpark branded splash screen will be displayed\n\n[SplashScreen_KeychainSaved](https://drive.google.com/file/d/18BQM3Md2oi1kCVJgBcs8JAoVz8qdZR93/view)"
+      },
+      {
+        "content": "",
+        "expected": "AND the header text shown is \"Welcome to Ballpark. Everything you need for your ballpark visit.\"\nAND 'Continue with MLB' button shown with the acct prev logged in shown above the button\nAND 'Log in with another MLB account' text beneath continue with MLB button\nAND 'Log in' text is blue and is a link\nAND 'Don't have an account? Sign Up' text beneath the log in text\nAND 'Sign Up' text is blue and is a link\nAND a welcome video playing in the background\n\nNote: If loading is taking a long time, display default spinner, near bottom of screen"
+      },
+      {
+        "content": "WHEN the user taps the 'Log In' link within 'Log In with another MLB account' text",
+        "expected": "[iOS PAGE 4: Log In Modal]\n\nTHEN 'Log in with your MLB account to access your digital tickets.' modal is shown\nAND Email Address and Password fields are presented\nAND 'Log In' button is shown below the text fields\nAND 'Forgot Password?' link is shown below the Log In button\nAND 'Don't have an account? Sign Up' text is shown near the bottom\nAND 'Sign Up' is a link within the text\nAND 'By logging in, you agree to MLB's Terms of Use and Privacy Policy.' text is shown below\nAND 'Terms of Use' and 'Privacy Policy' are links within the text"
+      },
+      {
+        "content": "WHEN the user enters an Email address that does not conform to standard email rules (i.e @ symbol missing, domain missing)\nAND taps to another field (OR taps 'return' within keyboard)",
+        "expected": "THEN 'Please enter a valid email.' error is displayed in Red Font underneath the Email Address field\nAND log in of the account will be prevented"
+      },
+      {
+        "content": "WHEN the user taps into Password text field\nAND the user enters at least one character\nAND the user removes all the characters",
+        "expected": "THEN 'Please enter a password.' is shown below password field highlighted in red.\nAND log in of the account will be prevented"
+      },
+      {
+        "content": "GIVEN the network is down (*can be simulated by placing device in Airplane mode)\nWHEN the user views the Log In page\nAND the user enters an Email address that has previously been created\nAND the user enters valid password for the email address",
+        "expected": "THEN there will be an error displayed \"Sorry, check your network and try again.\"\nAND the error message will be in Red Font\nAND log in of the account will be prevented"
+      },
+      {
+        "content": "GIVEN the network is enabled\nWHEN the user enters valid credentials(email and password) for an existing MLB Account\nAND the user taps Log In button",
+        "expected": "THEN the account is logged in successfully\nAND the user is shown the Home Page\n\nNote: A prompt may be shown to allow Ballpark to track activities\nNote: A prompt may also be shown to allow Notifications"
+      }
+    ]
+  },
+  {
+    "id": 28778262,
+    "title": "Get Started Page (without keychain): Log In with MLB account",
+    "section_id": 1525292,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 288,
+    "created_on": 1656353304,
+    "updated_by": 288,
+    "updated_on": 1656703116,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN user is loading the app for the very first time on their mobile device after installation\r\n\r\nIOS Note: To simulate a fresh install without keychain, navigate to More > About BP > Dev tools provides option to delete the acct stored in keychain AND then logging out *requires debug build",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user launches Ballpark for the first time after installation (without keychain stored)",
+        "expected": "[iOS PAGE 1: Welcome to Ballpark - Get Started]\n\nTHEN the Ballpark branded splash screen will be displayed\n\n[SplashScreen_NoKeychain](https://drive.google.com/file/d/1lZh4PsfuJBRlROVLDBhHdoM5JSbaPHXv/view)"
+      },
+      {
+        "content": "",
+        "expected": "THEN the app loads Get Started page\nAND the header text shown is \"Welcome to Ballpark. Everything you need for your ballpark visit.\"\nAND 'Get Started' button shown\nAND 'Have a MLB account? Log In' text beneath the Get Started button\nAND 'Log in' text is blue and is a link\nAND a welcome video playing in the background\n\nNote: If loading is taking a long time, display default spinner, near bottom of screen"
+      },
+      {
+        "content": "WHEN the user taps on Log in link beneath the Get Started button",
+        "expected": "[iOS PAGE 4: Log In Modal]\n\nTHEN 'Log in with your MLB account to access your digital tickets.' modal is shown\nAND Email Address and Password fields are presented\nAND 'Log In' button is shown below the text fields\nAND 'Forgot Password?' link is shown below the Log In button\nAND 'Don't have an account? Sign Up' text is shown near the bottom\nAND 'Sign Up' is a link within the text\nAND 'By logging in, you agree to MLB's Terms of Use and Privacy Policy.' text is shown below\nAND 'Terms of Use' and 'Privacy Policy' are links within the text"
+      },
+      {
+        "content": "[VALIDATION STEPS AND RESULTS FOR CLIENT-SIDE VALIDATION OF THE LOGIN FIELDS, INCLUDING DOWN NETWORK IS COVERED WITHIN [Continue With MLB Page (with keychain): Log In with another MLB account - including error handling](https://testrail.testeng.mlbinfra.net/index.php?/cases/view/28778260)]\n\n",
+        "expected": "WITH ERROR HANDLING OF LOGIN PAGE COVERED - NO NEED TO PERFORM WITHIN THIS CASE, SINCE THE PAGE IS REUSED AND WOULD BE IDENTICAL FROM ACCESSIBILITY PERSPECTIVE"
+      },
+      {
+        "content": "WHEN the user enters valid credentials(email and password) for an existing MLB Account\nAND the user taps Log In button",
+        "expected": "THEN the account is logged in successfully\nAND the user is shown the Home Page\n\nNote: A prompt may be shown to allow Ballpark to track activities\nNote: A prompt may also be shown to allow Notifications"
+      }
+    ]
+  },
+  {
+    "id": 28778268,
+    "title": "Forget Password? flow (including error handling)",
+    "section_id": 1525296,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "Android",
+    "created_by": 288,
+    "created_on": 1656360818,
+    "updated_by": 288,
+    "updated_on": 1656699080,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN users are loading the app\r\nAND the BP app version is 11.3.0, at minimum*\r\nAND the user has existing account\r\n\r\n*11.3.0 introduces Welcome Screen\r\n\r\n[THIS CASE REQUIRES A PASSWORD CHANGE TO OCCUR - IT IS BEST TO ONBOARD A NEW ACCT WITH A VALID EMAIL ADDRESS, TO PREVENT CHANGING PW ON SHARED TEST ACCOUNTS]",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user launches Ballpark for the first time after installation\nOR the user launches Ballpark for the first time after upgraded installation",
+        "expected": "[ANDROID PAGE 1: Welcome to Ballpark - Get Started]\n\nTHEN the Ballpark branded splash screen will be displayed\n\n[SplashScreen_NoKeychain](https://drive.google.com/file/d/1lZh4PsfuJBRlROVLDBhHdoM5JSbaPHXv/view)*\n\n*may need to update with Android specific image"
+      },
+      {
+        "content": "",
+        "expected": "THEN the app loads Get Started page\nAND the header text shown is \"Welcome to Ballpark. Everything you need for your ballpark visit.\"\nAND 'Get Started' button shown\nAND 'Have a MLB account? Log In' text beneath the Get Started button\nAND 'Log in' text is blue and is a link\nAND a welcome video playing in the background\n\nNote: If loading is taking a long time, display default spinner, near bottom of screen"
+      },
+      {
+        "content": "WHEN the user taps on Log in link beneath the Get Started button",
+        "expected": "[ANDROID PAGE 3: Log In]\n\nTHEN 'Log In with your MLB account to access your digital tickets and exclusive MLB content.' page is shown\nAND Email Address and Password fields are presented\nAND 'Log In' button is shown below the text fields\nAND 'Don't have an account? Sign Up' text is shown below Log In button\nAND 'Sign Up' is a link within the text\nAND 'Forgot Password?' link is shown below\nAND 'By signing up, you agree to MLB's Terms of Use and Privacy Policy.' text is shown below\nAND 'Terms of Use' and 'Privacy Policy' are links within the text"
+      },
+      {
+        "content": "WHEN the user taps 'Forgot Password?' link",
+        "expected": "[ANDROID PAGE 4: Reset Password]\n\nTHEN Reset Password will be shown as the title with a back navigation arrow\nAND beneath the header there is text to instruct the user to reset password: \"Please enter your MLB account email address. We'll send you an email with a link to reset your password.\"\nAND an email field is shown above 'SUBMIT' button"
+      },
+      {
+        "content": "[POTENTIALLY COULD PROVIDE VALIDATION STEPS AND RESULTS FOR CLIENT-SIDE VALIDATION OF THE PW RESET FLOW, INCLUDING DOWN NETWORK AND/OR INVALID EMAIL]",
+        "expected": ""
+      },
+      {
+        "content": "WHEN email address input field is unpopulated\nand the \"SUBMIT\" button is tapped",
+        "expected": "THEN 'Reset Password Failed' message prompt is shown with 'Please enter a valid email address.' text\nAND the message prompt displays 'OK' link\n\nAND the reset password of the account will be prevented"
+      },
+      {
+        "content": "GIVEN the network is down (*can be simulated by placing device in Airplane mode)\nWHEN the user views the Reset Password page\nAND the user enters an Email address that has previously been created\nAND the user taps Submit button\n\n",
+        "expected": "THEN 'Reset Password Failed' message prompt is shown with 'Password recovery failed' text\nAND the message prompt displays 'OK' link\n\nAND the reset password of the account will be prevented"
+      },
+      {
+        "content": "GIVEN the network is enabled\nWHEN the user enters an Email address that conforms to standard email rules (i.e example@example.com)\nAND the user taps Submit button",
+        "expected": "THEN Reset Password page is shown as the title with a back navigation arrow\nAND the email field and submit button are no longer shown, INSTEAD is shown \"Reset password instructions have been sent to your email.\""
+      },
+      {
+        "content": "WHEN user accesses their email containing a Reset Password link (external to Ballpark App)\nAND user completes needed actions provided in email to successfully reset the password\nAND user returns to BP app (Reset Password page, if prev minimized)\nAND user logs in with new password",
+        "expected": "THEN user is logged in successfully with newly reset password"
+      }
+    ]
+  },
+  {
+    "id": 28778263,
+    "title": "Forget Password? flow  [via Log In with another MLB account on Get Started Page] - including error handling",
+    "section_id": 1525293,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 288,
+    "created_on": 1656354298,
+    "updated_by": 282,
+    "updated_on": 1660059151,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN user is loading the app for the very first time on their mobile device after installation\r\n\r\nIOS Note: To simulate a fresh install without keychain, navigate to More > About BP > Dev tools provides option to delete the acct stored in keychain AND then logging out *requires debug build\r\n\r\n\r\n[THIS CASE REQUIRES A PASSWORD CHANGE TO OCCUR - IT IS BEST TO ONBOARD A NEW ACCT WITH A VALID EMAIL ADDRESS, TO PREVENT CHANGING PW ON SHARED TEST ACCOUNTS]",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user launches Ballpark for the first time after installation (without keychain stored)",
+        "expected": "[iOS PAGE 1: Welcome to Ballpark - Get Started]\n\nTHEN the Ballpark branded splash screen will be displayed\n\n[SplashScreen_NoKeychain](https://drive.google.com/file/d/1lZh4PsfuJBRlROVLDBhHdoM5JSbaPHXv/view)"
+      },
+      {
+        "content": "",
+        "expected": "THEN the app loads Get Started page\nAND the header text shown is \"Welcome to Ballpark. Everything you need for your ballpark visit.\"\nAND 'Get Started' button shown\nAND 'Have a MLB account? Log In' text beneath the Get Started button\nAND 'Log in' text is blue and is a link\nAND a welcome video playing in the background\n\nNote: If loading is taking a long time, display default spinner, near bottom of screen"
+      },
+      {
+        "content": "WHEN the user taps on Log in link beneath the Get Started button",
+        "expected": "[iOS PAGE 4: Log In Modal]\n\nTHEN 'Log in with your MLB account to access your digital tickets.' modal is shown\nAND Email Address and Password fields are presented\nAND 'Log In' button is shown below the text fields\nAND 'Forgot Password?' link is shown below the Log In button\nAND 'Don't have an account? Sign Up' text is shown near the bottom\nAND 'Sign Up' is a link within the text\nAND 'By logging in, you agree to MLB's Terms of Use and Privacy Policy.' text is shown below\nAND 'Terms of Use' and 'Privacy Policy' are links within the text"
+      },
+      {
+        "content": "WHEN the user taps 'Forgot Password?' link",
+        "expected": "[iOS PAGE 5: Reset Password Modal]\n\nTHEN 'Reset Password' modal is shown\nAND 'X' is shown at the top right corner to dismiss the view\nAND 'Please enter your MLB account email address. We'll send you an email with a link to reset your password.' text is shown\nAND email field is shown beneath the instructive text\nAND email field is unpopulated\nAnd 'Submit' button is shown, but disabled\nAND as the user enters the Password Reset page via Log In page, then an additional back nav arrow is shown at the top left"
+      },
+      {
+        "content": "WHEN the user enters an Email address that does not conform to standard email rules (i.e @ symbol missing, domain missing)\nAND taps 'return' within the device keyboard",
+        "expected": "THEN user won't be able to submit the request \n\nAND the reset password for the account will be prevented"
+      },
+      {
+        "content": "GIVEN the network is down (*can be simulated by placing device in Airplane mode)\nWHEN the user enters an Email address that does confirm to standard email rules (i.e example@example.com)\nAND the user taps Submit button",
+        "expected": "There will be an error displayed \"Sorry, check your network and try again.\"\nAND the message will be in Red Font\nAND the password reset will be prevented"
+      },
+      {
+        "content": "GIVEN the network is enabled\nWHEN the user enters an Email address that conforms to standard email rules (i.e example@example.com)\nAND the user taps Submit button",
+        "expected": "THEN Reset Password page is shown as the title with a back navigation arrow\nAND the email field and submit button are no longer shown, INSTEAD is shown \"Reset password instructions have been sent to your email.\""
+      },
+      {
+        "content": "WHEN user accesses their email containing a Reset Password link (external to Ballpark App)\nAND user completes needed actions provided in email to successfully reset the password\nAND user returns to BP app (Reset Password page, if prev minimized)\nAND user logs in with new password",
+        "expected": "THEN user is logged in successfully with newly reset password."
+      }
+    ]
+  },
+  {
+    "id": 28778264,
+    "title": "Forget Password? flow [via Log In with another MLB account on Continue With MLB Page]",
+    "section_id": 1525293,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 288,
+    "created_on": 1656354298,
+    "updated_by": 288,
+    "updated_on": 1656704043,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN a user has prev logged into BP app (but is currently logged out)\r\nAND user is viewing the Welcome Screen\r\n\r\n\r\nIOS Note: If prev logged in user creds are stored and is automatically logged in you will be shown Home page - PLEASE LOG OUT. *To logout, navigate to Home > My Profile > Log out button\r\nIOS Note: If 'Welcome Page - Get Started' is shown instead of the desired 'Welcome Page - Continue With MLB'. PLEASE LOG IN WITH EXISTING ACCOUNT (OR ONBOARD A NEW ACCT) TO STORE CREDENTIALS. THEN PLEASE LOG OUT *To logout, navigate to Home > My Profile > Log out button\r\n\r\n\r\n[THIS CASE REQUIRES A PASSWORD CHANGE TO OCCUR - IT IS BEST TO ONBOARD A NEW ACCT WITH A VALID EMAIL ADDRESS, TO PREVENT CHANGING PW ON SHARED TEST ACCOUNTS]",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user views the Welcome Screen for a previously logged in user (with keychain stored)",
+        "expected": "[iOS PAGE 3: Welcome to Ballpark - Continue with MLB]\n\nTHEN the Ballpark branded splash screen will be displayed\n\n[SplashScreen_KeychainSaved](https://drive.google.com/file/d/18BQM3Md2oi1kCVJgBcs8JAoVz8qdZR93/view)"
+      },
+      {
+        "content": "",
+        "expected": "AND the header text shown is \"Welcome to Ballpark. Everything you need for your ballpark visit.\"\nAND 'Continue with MLB' button shown with the acct prev logged in shown above the button\nAND 'Log in with another MLB account' text beneath continue with MLB button\nAND 'Log in' text is blue and is a link\nAND 'Don't have an account? Sign Up' text beneath the log in text\nAND 'Sign Up' text is blue and is a link\nAND a welcome video playing in the background\n\nNote: If loading is taking a long time, display default spinner, near bottom of screen"
+      },
+      {
+        "content": "WHEN the user taps the 'Log In' link within 'Log In with another MLB account' text",
+        "expected": "[iOS PAGE 4: Log In Modal]\n\nTHEN 'Log in with your MLB account to access your digital tickets.' modal is shown\nAND Email Address and Password fields are presented\nAND 'Log In' button is shown below the text fields\nAND 'Forgot Password?' link is shown below the Log In button\nAND 'Don't have an account? Sign Up' text is shown near the bottom\nAND 'Sign Up' is a link within the text\nAND 'By logging in, you agree to MLB's Terms of Use and Privacy Policy.' text is shown below\nAND 'Terms of Use' and 'Privacy Policy' are links within the text"
+      },
+      {
+        "content": "WHEN the user taps 'Forgot Password?' link",
+        "expected": "[iOS PAGE 5: Reset Password Modal]\n\nTHEN 'Reset Password' modal is shown\nAND 'X' is shown at the top right corner to dismiss the view\nAND 'Please enter your MLB account email address. We'll send you an email with a link to reset your password.' text is shown\nAND email field is shown beneath the instructive text\nAND email field is unpopulated\nAnd 'Submit' button is shown, but disabled\nAND as the user enters the Password Reset page via Log In page, then an additional back nav arrow is shown at the top left"
+      },
+      {
+        "content": "[VALIDATION STEPS AND RESULTS FOR CLIENT-SIDE VALIDATION OF THE PW RESET FLOW, INCLUDING DOWN NETWORK IS COVERED WITHIN [Forget Password? flow [via Log In with another MLB account on Get Started Page] - including error handling](https://testrail.testeng.mlbinfra.net/index.php?/cases/view/28778263)]\n\n",
+        "expected": "WITH ERROR HANDLING OF RESET PASSWORD PAGE COVERED - NO NEED TO PERFORM WITHIN THIS CASE, SINCE THE PAGE IS REUSED AND WOULD BE IDENTICAL FROM ACCESSIBILITY PERSPECTIVE"
+      },
+      {
+        "content": "WHEN the user enters an Email address that conforms to standard email rules (i.e example@example.com)\nAND the user taps Submit button",
+        "expected": "THEN Reset Password page is shown as the title with a back navigation arrow\nAND the email field and submit button are no longer shown, INSTEAD is shown \"Reset password instructions have been sent to your email.\"\n"
+      },
+      {
+        "content": "WHEN user accesses their email containing a Reset Password link (external to Ballpark App)\nAND user completes needed actions provided in email to successfully reset the password\nAND user returns to BP app (Reset Password page, if prev minimized)\nAND user logs in with new password",
+        "expected": "THEN user is logged in successfully with newly reset password."
+      }
+    ]
+  },
+  {
+    "id": 28778269,
+    "title": "Ticket Access via Home Tab (Next Ticketed Event card)",
+    "section_id": 1525287,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1656361435,
+    "updated_by": 288,
+    "updated_on": 1670956190,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.2.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the Primary email for the account is verified\r\nAND a game event is returned from box office ticketing service upcoming API\r\n\r\n\r\n\r\n\r\nAccounts w/ Tickets\r\niOS Verified Acct:\r\n*BP Acct: ballpark.applause+ios.tix@gmail.com \r\n*BP PW: BPapp123 \r\n*Env/OKTA: Prod / 00ujnwjrkf2AADYXu357\r\n\r\nAndroid Verified Acct:\r\n*BP Acct: ballpark.applause+android.tix@gmail.com \r\n*BP PW: BPapp123 \r\n*Env/OKTA: Prod / 00ujnwo4pwLxM5G9j357\r\n\r\nCOMMON PARENT EMAIL INFO FOR BOTH ABOVE MLB ACCOUNTS(created a gmail acct for this BP acct with same PW to allow view/access of emails, as needed)\r\n*Email Creds: ballpark.applause@gmail.com / BPapp123",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the primary email for the account is verified\nAND a ticketed event exists on the account\nAND user on the home tab",
+        "expected": "[ANDROID PAGE 5: Home Page (NTE CARD) / iOS PAGE 6: Home Page (NTE CARD)]\n\nTHEN user will be shown Next Ticketed Event Card\nAND user is able to access tickets for forwarding or scanning"
+      },
+      {
+        "content": "WHEN user examines the Next Ticketed Event Card",
+        "expected": "THEN startTime/startTIimeLocalText is displayed as day of the week, date, and local time of event is shown within the Next Ticketed Event(NTE) card *[Example: 'Tue, Apr 20 - 7:00 PM ET']\n\nAND title is shown of the game event within the NTE card *[Example: 'Nationals @ Orioles']\n\nAND venueName is displayed within the NTE card *[Example: 'Oriole Park']\n\nAND description is displayed within the NTE card (if description provided in service call) *[Example: '<Game Description>']\n\n\nAND the background color of the NTE card is the primary color of the Home Team *[Example: Orange color for Orioles] \nOR the background image of the NTE card is shown matching what is passed in the service call *[Example: field/stadium image of the home team]\n\n \nAND the home team logo is shown within the NTE card (if logoPngURL/logoSvgURL for specific OS provided in service call) *[Example: 'Orioles team logo']\n\nAND 'Open Tickets' button is shown attached to NTE card\nAND the color of 'Open Tickets' text is the primary color of the Home Team"
+      },
+      {
+        "content": "WHEN user taps 'Open Tickets' button",
+        "expected": "THEN user is directed to scanview of the tickets"
+      },
+      {
+        "content": "WHEN user analyzes the tickets shown in the scanview",
+        "expected": "[ANDROID PAGE 6: ScanView / iOS PAGE 7: ScanView]\n\nTHEN user can access tickets\nAND user is shown the event Information (Date/Time, Matchup, VenueName, And Team Logo) at the top\nAND user has capability to scan the tickets (barcode shown, if available)\nAND user is shown the Sec/Row/Seat info"
+      },
+      {
+        "content": "WHEN user dismisses the scanview of the tickets",
+        "expected": "THEN user is returned to Home page"
+      },
+      {
+        "content": "WHEN user taps the NTE card (above 'Open Tickets' button)",
+        "expected": "[ANDROID PAGE 7: ListView / iOS PAGE 8: ListView]\n\nTHEN user is directed the listview of the tickets\n"
+      },
+      {
+        "content": "",
+        "expected": "AND the ticketlist view will display 'Tickets' in top header \nAND the view will display the matchup data in sub header (cap logo away and home, away team @ home team, date and start time, venue name)\n\nAND the view will display headers for section, seat and row\nAND the view will display each ticket as its own row with section, seat and row values\n\nAND the view will display \"Open\" link button for each row for each/any ticket that has NOT been forwarded\nAND the view will display \"Recall\"/\"Cancel\" link button for each row for each/any ticket that has been forwarded\n\nAND the view will display the \"Forward Tickets\" button centered at the bottom (above the Navbar)"
+      },
+      {
+        "content": "WHEN user taps back nav on listview of the tickets",
+        "expected": "THEN user is returned to the Home page"
+      }
+    ]
+  },
+  {
+    "id": 28778272,
+    "title": "Ticket Access via Tickets Tab (Ticketed Event card)",
+    "section_id": 1525287,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1656362786,
+    "updated_by": 288,
+    "updated_on": 1670956308,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.2.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the Primary email for the account is verified\r\nAND a game event is returned from box office ticketing service upcoming API\r\n\r\nAccounts w/ Tickets\r\niOS Verified Acct:\r\n*BP Acct: ballpark.applause+ios.tix@gmail.com \r\n*BP PW: BPapp123 \r\n*Env/OKTA: Prod / 00ujnwjrkf2AADYXu357\r\n\r\nAndroid Verified Acct:\r\n*BP Acct: ballpark.applause+android.tix@gmail.com \r\n*BP PW: BPapp123 \r\n*Env/OKTA: Prod / 00ujnwo4pwLxM5G9j357\r\n\r\nCOMMON PARENT EMAIL INFO FOR BOTH ABOVE MLB ACCOUNTS(created a gmail acct for this BP acct with same PW to allow view/access of emails, as needed)\r\n*Email Creds: ballpark.applause@gmail.com / BPapp123",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the primary email for the account is verified\nAND a ticketed event exists on the account\nWHEN User taps on Tickets Icon in bottom navigation bar",
+        "expected": "[ANDROID PAGE 8: TicketsTab > Wallet Page / iOS PAGE 9: TicketsTab > Wallet Page]\n\nTHEN Tickets Tab screen is presented\nAND two segmented tabs - Wallet and Buy Tickets are presented, with Wallet segmented tab is presented as default\nAND the Event Cards will be displayed in the Wallet section"
+      },
+      {
+        "content": "WHEN the user views the wallet card",
+        "expected": "THEN the Wallet card background will be the image as specified in the video poster URL supplied in ticket summary. * If video poster URL is null or an invalid URL, the card background will be the home team's default color.\n\n\nAND the event information will contain event date / time in the format (Ex. Sat, Jun 22 . 1:07 PM ET)\nAND beneath the date time will be the Matchup Info displayed as Away Team @ Home Team\nAND below the Matchup will be the Event's Venue\nAND the home team's logo will be displayed to the right of the event matchup"
+      },
+      {
+        "content": "[ANDROID ONLY - IOS DOES NOT HAVE THIS FUNCTIONALITY AND CAN BE SKIPPED TO STEP 6]\nWHEN user taps '<Num> Tickets' button",
+        "expected": "THEN user is directed to the scanview of the tickets\n"
+      },
+      {
+        "content": "WHEN user analyzes the tickets shown in the scanview",
+        "expected": "[ANDROID PAGE 6: ScanView]\n\nTHEN user can access tickets\nAND user is shown the event Information (Date/Time, Matchup, VenueName, And Team Logo) at the top\nAND user has capability to scan the tickets (barcode shown, if available)\nAND user is shown the Sec/Row/Seat info"
+      },
+      {
+        "content": "WHEN user dismisses the scanview of the tickets",
+        "expected": "THEN user is returned to Tickets page, Wallet Tab"
+      },
+      {
+        "content": "WHEN user taps the Event card (anywhere other than the 'Tickets' button)",
+        "expected": "THEN user is directed to the listview of the tickets"
+      },
+      {
+        "content": "",
+        "expected": "[ANDROID PAGE 7: ListView / iOS PAGE 8: ListView]\n\nAND the ticketlist view will display 'Tickets' in top header\n\nAND the view will display the matchup data in sub header (cap logo away and home, away team @ home team, date and start time, venue name)\n\nAND the view will display headers for section, seat and row\nAND the view will display each ticket as its own row with section, seat and row values\n\nAND the view will display \"Open\" link button for each row for each/any ticket that has NOT been forwarded\nAND the view will display \"Recall\"/\"Cancel\" link button for each row for each/any ticket that has been forwarded\n\nAND the view will display the \"Forward Tickets\" button centered at the bottom (above the Navbar)"
+      },
+      {
+        "content": "WHEN user taps back nav on listview of the tickets",
+        "expected": "THEN user is returned to Tickets page, Wallet Tab"
+      }
+    ]
+  },
+  {
+    "id": 28778882,
+    "title": "Ticket Access via Tickets Tab (View All > My Tickets)",
+    "section_id": 1525287,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1656365486,
+    "updated_by": 288,
+    "updated_on": 1670956382,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.2.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the Primary email for the account is verified\r\nAND a game event is returned from box office ticketing service upcoming API\r\n\r\nAccounts w/ Tickets\r\niOS Verified Acct:\r\n*BP Acct: ballpark.applause+ios.tix@gmail.com \r\n*BP PW: BPapp123 \r\n*Env/OKTA: Prod / 00ujnwjrkf2AADYXu357\r\n\r\nAndroid Verified Acct:\r\n*BP Acct: ballpark.applause+android.tix@gmail.com \r\n*BP PW: BPapp123 \r\n*Env/OKTA: Prod / 00ujnwo4pwLxM5G9j357\r\n\r\nCOMMON PARENT EMAIL INFO FOR BOTH ABOVE MLB ACCOUNTS(created a gmail acct for this BP acct with same PW to allow view/access of emails, as needed)\r\n*Email Creds: ballpark.applause@gmail.com / BPapp123",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the primary email for the account is verified\nAND a ticketed event exists on the account\nWHEN User taps on Tickets Icon in bottom navigation bar",
+        "expected": "[ANDROID PAGE 8: TicketsTab > Wallet Page / iOS PAGE 9: TicketsTab > Wallet Page]\n\nTHEN Tickets Tab screen is presented\nAND two segmented tabs - Wallet and Buy Tickets are presented, with Wallet segmented tab is presented as default\nAND the Event Cards will be displayed in the Wallet section\nAND 'View All' link is shown within the Wallet tab, above the event card"
+      },
+      {
+        "content": "WHEN the user taps on 'View All'",
+        "expected": "[ANDROID PAGE 9: TicketsTab > Wallet Page > View All / iOS PAGE 10: TicketsTab > Wallet Page > View All]\n\nTHEN the view will display all ticketed events as individual rows\nAND the view will display (ordered by soonest date) each game row including away team at home team, event start time local, venue name, description (if available)"
+      },
+      {
+        "content": "WHEN user taps the Event entry within My Tickets view",
+        "expected": "THEN user is directed to the listview of the tickets"
+      },
+      {
+        "content": "",
+        "expected": "[ANDROID PAGE 7: ListView / iOS PAGE 8: ListView]\n\nAND the ticketlist view will display 'Tickets' in top header\n\nAND the view will display the matchup data in sub header (cap logo away and home, away team @ home team, date and start time, venue name)\n\nAND the view will display headers for section, seat and row\nAND the view will display each ticket as its own row with section, seat and row values\n\nAND the view will display \"Open\" link button for each row for each/any ticket that has NOT been forwarded\nAND the view will display \"Recall\"/\"Cancel\" link button for each row for each/any ticket that has been forwarded\n\nAND the view will display the \"Forward Tickets\" button centered at the bottom (above the Navbar)"
+      },
+      {
+        "content": "WHEN user taps a specific entry (ticketed seat) within the listview of the event",
+        "expected": "[ANDROID PAGE 6: ScanView / iOS PAGE 7: ScanView]\n\nTHEN user is directed to the scanview of the tickets\nAND user is shown the event Information (Date/Time, Matchup, VenueName, And Team Logo) at the top\nAND user has capability to scan the tickets (barcode shown, if available)\nAND user is shown the Sec/Row/Seat info"
+      },
+      {
+        "content": "WHEN user dismisses the scanview of the tickets",
+        "expected": "THEN user is returned to ticketlist view of the ticketed event (Tickets Tab)"
+      },
+      {
+        "content": "WHEN user taps back nav from listview of the tickets",
+        "expected": "THEN user is returned to My Tickets view "
+      },
+      {
+        "content": "WHEN user back nav from My Tickets view",
+        "expected": "THEN user is returned to Tickets page, Wallet Tab"
+      }
+    ]
+  },
+  {
+    "id": 28778890,
+    "title": "Forward Mode via Home (Next Ticketed Event card)",
+    "section_id": 1525349,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1656367002,
+    "updated_by": 288,
+    "updated_on": 1670956434,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.3.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the Primary email for the account is verified\r\nAND a game event is returned from box office ticketing service upcoming API\r\n\r\n\r\n\r\nAccounts w/ Tickets\r\niOS Verified Acct:\r\n*BP Acct: ballpark.applause+ios.tix@gmail.com \r\n*BP PW: BPapp123 \r\n*Env/OKTA: Prod / 00ujnwjrkf2AADYXu357\r\n\r\nAndroid Verified Acct:\r\n*BP Acct: ballpark.applause+android.tix@gmail.com \r\n*BP PW: BPapp123 \r\n*Env/OKTA: Prod / 00ujnwo4pwLxM5G9j357\r\n\r\nCOMMON PARENT EMAIL INFO FOR BOTH ABOVE MLB ACCOUNTS(created a gmail acct for this BP acct with same PW to allow view/access of emails, as needed)\r\n*Email Creds: ballpark.applause@gmail.com / BPapp123",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the primary email for the account is verified\nAND a ticketed event exists on the account\nAND user on the home tab",
+        "expected": "[ANDROID PAGE 5: Home Page (NTE CARD) / iOS PAGE 6: Home Page (NTE CARD)]\n\nTHEN user will be shown Next Ticketed Event Card\nAND user is able to access tickets for forwarding or scanning"
+      },
+      {
+        "content": "WHEN user taps the NTE card (above 'Open Tickets' button)",
+        "expected": "[ANDROID PAGE 7: ListView / iOS PAGE 8: ListView]\n\nTHEN user is directed the listview of the tickets\nAND the ticketlist view will display 'Tickets' in top header\nAND the view will display the matchup data in sub header (cap logo away and home, away team @ home team, date and start time, venue name)\nAND the view will display headers for section, seat and row\nAND the view will display each ticket as its own row with section, seat and row values\nAND the view will display \"Open\" link button for each row for each/any ticket that has NOT been forwarded\nAND the view will display \"Recall\"/\"Cancel\" link button for each row for each/any ticket that has been forwarded\n\nAND the view will display the \"Forward Tickets\" button centered at the bottom (above the Navbar)"
+      },
+      {
+        "content": "WHEN the user taps on 'Forward Tickets' button on the listview",
+        "expected": "[ANDROID PAGE 10: ListView > ForwardTickets / iOS PAGE 11: ListView > ForwardTickets]\n\n\nTHEN the app will display a selectable list with checkboxes appearing on every row with only the first (non-parking) ticket checked when putting the user in a \"Forward mode\" "
+      }
+    ]
+  },
+  {
+    "id": 28778891,
+    "title": "Forward Mode via Home (Forward Context card)",
+    "section_id": 1525349,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1656367019,
+    "updated_by": 288,
+    "updated_on": 1657130043,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.3.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the Primary email for the account is verified\r\nAND user has at least 2 forward-able tickets scheduled more than 60 hours before startTime\r\n\r\n\r\n\r\nAccounts w/ Tickets\r\niOS Verified Acct:\r\n*BP Acct: ballpark.applause+ios.tix@gmail.com \r\n*BP PW: BPapp123 \r\n*Env/OKTA: Prod / 00ujnwjrkf2AADYXu357\r\n\r\nAndroid Verified Acct:\r\n*BP Acct: ballpark.applause+android.tix@gmail.com \r\n*BP PW: BPapp123 \r\n*Env/OKTA: Prod / 00ujnwo4pwLxM5G9j357\r\n\r\nCOMMON PARENT EMAIL INFO FOR BOTH ABOVE MLB ACCOUNTS(created a gmail acct for this BP acct with same PW to allow view/access of emails, as needed)\r\n*Email Creds: ballpark.applause@gmail.com / BPapp123",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user has 2 forward-able tickets scheduled more than 60 hours from startTime\nAND user is on the home tab",
+        "expected": "[ANDROID PAGE 5: Home Page (FORWARD CONTEXT CARD) / iOS PAGE 6: Home Page (FORWARD CONTEXT CARD)]\n\nTHEN user is shown forwardPrompt context card directly under the Next Ticketed Event card \nAND the context card's Subject is displayed as \"Going with friends?\"\nAND the context card's Body is displayed as \"Send them tickets to get into the park.\"\nAND the context card's Image is shown as Ticket Forward icon OR a configured Side Image\nAND the context card's has a button with text 'Forward Tickets'"
+      },
+      {
+        "content": "WHEN user taps 'Forward Tickets' button within context card\n\n",
+        "expected": "[ANDROID PAGE 10: ListView > ForwardTickets / iOS PAGE 11: ListView > ForwardTickets]\n\nTHEN the app will display a selectable list with checkboxes appearing on every row with only the first (non-parking) ticket checked when putting the user in a \"Forward mode\""
+      }
+    ]
+  },
+  {
+    "id": 28778892,
+    "title": "Forward Mode via Tickets Tab (Event Card)",
+    "section_id": 1525349,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1656367062,
+    "updated_by": 288,
+    "updated_on": 1670956535,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.3.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the Primary email for the account is verified\r\nAND a game event is returned from box office ticketing service upcoming API\r\n\r\n\r\n\r\nAccounts w/ Tickets\r\niOS Verified Acct:\r\n*BP Acct: ballpark.applause+ios.tix@gmail.com \r\n*BP PW: BPapp123 \r\n*Env/OKTA: Prod / 00ujnwjrkf2AADYXu357\r\n\r\nAndroid Verified Acct:\r\n*BP Acct: ballpark.applause+android.tix@gmail.com \r\n*BP PW: BPapp123 \r\n*Env/OKTA: Prod / 00ujnwo4pwLxM5G9j357\r\n\r\nCOMMON PARENT EMAIL INFO FOR BOTH ABOVE MLB ACCOUNTS(created a gmail acct for this BP acct with same PW to allow view/access of emails, as needed)\r\n*Email Creds: ballpark.applause@gmail.com / BPapp123",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the primary email for the account is verified\nAND a ticketed event exists on the account\nWHEN User taps on Tickets Icon in bottom navigation bar",
+        "expected": "[ANDROID PAGE 8: TicketsTab > Wallet Page / iOS PAGE 9: TicketsTab > Wallet Page]\n\nTHEN Tickets Tab screen is presented\nAND two segmented tabs - Wallet and Buy Tickets are presented, with Wallet segmented tab is presented as default\nAND the Event Cards will be displayed in the Wallet section"
+      },
+      {
+        "content": "WHEN user taps the Event card (anywhere other than the 'Tickets' button)",
+        "expected": "THEN user is directed to the listview of the tickets\n \n\n[ANDROID PAGE 7: ListView / iOS PAGE 8: ListView]\n\nAND the ticketlist view will display 'Tickets' in top header\nAND the view will display the matchup data in sub header (cap logo away and home, away team @ home team, date and start time, venue name)\nAND the view will display headers for section, seat and row\nAND the view will display each ticket as its own row with section, seat and row values\nAND the view will display \"Open\" link button for each row for each/any ticket that has NOT been forwarded\nAND the view will display \"Recall\"/\"Cancel\" link button for each row for each/any ticket that has been forwarded\nAND the view will display the \"Forward Tickets\" button centered at the bottom (above the Navbar)"
+      },
+      {
+        "content": "WHEN the user taps on 'Forward Tickets' button on the listview",
+        "expected": "[ANDROID PAGE 10: ListView > ForwardTickets / iOS PAGE 11: ListView > ForwardTickets]\n\nTHEN the app will display a selectable list with checkboxes appearing on every row with only the first (non-parking) ticket checked when putting the user in a \"Forward mode\""
+      }
+    ]
+  },
+  {
+    "id": 28778893,
+    "title": "Forward Mode via Tickets Tab (View All > My Tickets)",
+    "section_id": 1525349,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1656367105,
+    "updated_by": 288,
+    "updated_on": 1670956592,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.3.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the Primary email for the account is verified\r\nAND a game event is returned from box office ticketing service upcoming API\r\n\r\n\r\n\r\nAccounts w/ Tickets\r\niOS Verified Acct:\r\n*BP Acct: ballpark.applause+ios.tix@gmail.com \r\n*BP PW: BPapp123 \r\n*Env/OKTA: Prod / 00ujnwjrkf2AADYXu357\r\n\r\nAndroid Verified Acct:\r\n*BP Acct: ballpark.applause+android.tix@gmail.com \r\n*BP PW: BPapp123 \r\n*Env/OKTA: Prod / 00ujnwo4pwLxM5G9j357\r\n\r\nCOMMON PARENT EMAIL INFO FOR BOTH ABOVE MLB ACCOUNTS(created a gmail acct for this BP acct with same PW to allow view/access of emails, as needed)\r\n*Email Creds: ballpark.applause@gmail.com / BPapp123",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the primary email for the account is verified\nAND a ticketed event exists on the account\nWHEN User taps on Tickets Icon in bottom navigation bar",
+        "expected": "[ANDROID PAGE 8: TicketsTab > Wallet Page / iOS PAGE 9: TicketsTab > Wallet Page]\n\nTHEN Tickets Tab screen is presented\nAND two segmented tabs - Wallet and Buy Tickets are presented, with Wallet segmented tab is presented as default\nAND the Event Cards will be displayed in the Wallet section\nAND 'View All' link is shown within the Wallet tab, above the event card(s)"
+      },
+      {
+        "content": "WHEN the user taps on 'View All'",
+        "expected": "[ANDROID PAGE 9: TicketsTab > Wallet Page > View All / iOS PAGE 10: TicketsTab > Wallet Page > View All]\n\nTHEN the view will display all ticketed events as individual rows\nAND the view will display (ordered by soonest date) each game row including away team at home team, event start time local, venue name, description (if available)"
+      },
+      {
+        "content": "WHEN user taps the Event entry within My Tickets view",
+        "expected": "THEN user is directed to the listview of the tickets\n\n\n[ANDROID PAGE 7: ListView / iOS PAGE 8: ListView]\n\nAND the ticketlist view will display 'Tickets' in top header\nAND the view will display the matchup data in sub header (cap logo away and home, away team @ home team, date and start time, venue name)\nAND the view will display headers for section, seat and row\nAND the view will display each ticket as its own row with section, seat and row values\nAND the view will display \"Open\" link button for each row for each/any ticket that has NOT been forwarded\nAND the view will display \"Recall\"/\"Cancel\" link button for each row for each/any ticket that has been forwarded\nAND the view will display the \"Forward Tickets\" button centered at the bottom (above the Navbar)"
+      },
+      {
+        "content": "WHEN the user taps on 'Forward Tickets' button on the listview",
+        "expected": "[ANDROID PAGE 10: ListView > ForwardTickets / iOS PAGE 11: ListView > ForwardTickets]\n\nTHEN the app will display a selectable list with checkboxes appearing on every row with only the first (non-parking) ticket checked when putting the user in a \"Forward mode\""
+      }
+    ]
+  },
+  {
+    "id": 28778886,
+    "title": "Ticket Forward method - Select from Contacts",
+    "section_id": 1525350,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1656366584,
+    "updated_by": 288,
+    "updated_on": 1657048040,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.3.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the Primary email for the account is verified\r\nAND a game event is returned from box office ticketing service upcoming API\r\n\r\nGIVEN the user is on the \"Forward Tickets\" screen\r\n\r\n*device requires Contacts present in different states \r\n**Just email address\r\n**Just phone number",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the user is on the \"Forward Tickets\" screen* \n\n*(via any means of [Navigating to Ticket Forwarding Mode](https://testrail.testeng.mlbinfra.net/index.php?/suites/view/540683&group_by=cases:section_id&group_order=asc&group_id=1525349)) \n\n",
+        "expected": "[ANDROID PAGE 10: ListView > ForwardTickets / iOS PAGE 11: ListView > ForwardTickets]\n\nTHEN the app will display a selectable list with checkboxes appearing on every row with only the first (non-parking) ticket checked when putting the user in a \"Forward mode\""
+      },
+      {
+        "content": "WHEN the user taps 'Forward'/'Forward Tickets' button within the Forward Tickets page\n\n",
+        "expected": "[ANDROID PAGE 11: ListView > ForwardTickets > Delivery Method prompt / iOS PAGE 12: ListView > ForwardTickets > Delivery Method prompt]\n\nTHEN the list of options shown (below suggested recipients, if forward(s) had prev been completed):\n\"Select from Contacts\"\n\"Via Email\"\n\"Share Link\""
+      },
+      {
+        "content": "WHEN the user taps \"Select from Contacts\" within the ListView > Delivery Method prompt",
+        "expected": "*A device permission prompt could be shown to allow access to contacts\n\nTHEN the operating systems contact picker appears displaying the list of contacts established prev established on the device"
+      },
+      {
+        "content": "WHEN the user taps a contact with an email address associated with the device contact (iOS may need to select the contact's email)",
+        "expected": "[ANDROID PAGE 12: Forward Via Email / iOS PAGE 13: Forward Via Email]\n\nTHEN the app should navigate to the 'Ticket Forward Email'/'Forward Via Email' form \nAND the form should have the \"Email\" and \"Name\" fields populated from the contact selected "
+      },
+      {
+        "content": "WHEN the user taps on 'Send' on the Forward Via Email page\n\n",
+        "expected": "THEN the app will send the selected tickets to the recipient email address entered by the user\nAND the form will slide down and return the user to the list view no longer in \"Forward mode\"\nAND the app will display a success message\n\n[ANDROID PAGE 7: ListView / iOS PAGE 8: ListView]\n\nAND the forwarded ticket will be indicated in the listview"
+      },
+      {
+        "content": "[WILL NEED EITHER ADDITIONAL TICKETS TO FORWARD FOR REMAINING STEPS \nOR CAN [RECALL](https://testrail.testeng.mlbinfra.net/index.php?/cases/view/28778894) AND REUSE THE SAME TICKETS]",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN the user is on the \"Forward Tickets\" screen\nAND the user taps 'Forward'/'Forward Tickets' button within the Forward Tickets page\nAND the user taps \"Select from Contacts\" within the ListView > Delivery Method prompt\n\nWHEN the user taps a contact with just a phone number associated with the device contact (iOS may need to select the contact's phone)",
+        "expected": "THEN the app should generate a share link and open an OS SMS message draft for the number with a message body:\n\n[iOS]\n\"I just forwarded you tickets, follow the link to accept them in MLB Ballpark app.\" that contains a link to accept transferred ticket(s)\n\n[ANDROID]\nContains a link to accept transferred ticket(s)\n*NOTE: Android will not be supplying additional text in the text message when sharing a link to forward the ticket. It has been deemed acceptable to have just the ticket link provided. BPA-5423"
+      },
+      {
+        "content": "WHEN the user sends the SMS message containing the ticket share link\nAND the user navigates back to BP app",
+        "expected": "[ANDROID PAGE 7: ListView / iOS PAGE 8: ListView]\n\nTHEN the user is shown the list view, no longer in \"Forward mode\"\nAND the app will display the transferred ticket as 'Forward pending via link'"
+      }
+    ]
+  },
+  {
+    "id": 28778887,
+    "title": "Ticket Forward method - via Email",
+    "section_id": 1525350,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1656366593,
+    "updated_by": 288,
+    "updated_on": 1657048903,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.3.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the Primary email for the account is verified\r\nAND a game event is returned from box office ticketing service upcoming API\r\n\r\nGIVEN the user is on the \"Forward Tickets\" screen",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the user is on the \"Forward Tickets\" screen* \n\n*(via any means of [Navigating to Ticket Forwarding Mode](https://testrail.testeng.mlbinfra.net/index.php?/suites/view/540683&group_by=cases:section_id&group_order=asc&group_id=1525349)) \n\n",
+        "expected": "[ANDROID PAGE 10: ListView > ForwardTickets / iOS PAGE 11: ListView > ForwardTickets]\n\nTHEN the app will display a selectable list with checkboxes appearing on every row with only the first (non-parking) ticket checked when putting the user in a \"Forward mode\""
+      },
+      {
+        "content": "WHEN the user taps 'Forward'/'Forward Tickets' button within the Forward Tickets page",
+        "expected": "[ANDROID PAGE 11: ListView > ForwardTickets > Delivery Method prompt / iOS PAGE 12: ListView > ForwardTickets > Delivery Method prompt]\n\nTHEN the list of options shown (below suggested recipients, if forward(s) had prev been completed):\n\"Select from Contacts\"\n\"Via Email\"\n\"Share Link\""
+      },
+      {
+        "content": "WHEN the user taps \"Via Email\" within the ListView > Delivery Method prompt",
+        "expected": "[ANDROID PAGE 12: Forward Via Email / iOS PAGE 13: Forward Via Email]\n\nTHEN the app should navigate to the 'Ticket Forward Email'/'Forward Via Email' form \nAND the form should have the \"Email\" and \"Name\" fields empty"
+      },
+      {
+        "content": "WHEN the user enters the information in the fields provided (email is required)\nAND the user completes the form and taps on 'Send'",
+        "expected": "THEN the app will validate the information provided by the user (the app will the emails standards: some text, an at symbol followed by a domain)\nAND the app will trigger the network call to send the selected tickets to the recipient email address entered by the user\nAND the form will slide down and return the user to the list view no longer in \"Forward mode\"\nAND the app will display a success message\n\n[ANDROID PAGE 7: ListView / iOS PAGE 8: ListView]\n\nAND the forwarded ticket will be indicated in the listview"
+      }
+    ]
+  },
+  {
+    "id": 28778889,
+    "title": "Ticket Forward method - Suggested Recipients",
+    "section_id": 1525350,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1656366628,
+    "updated_by": 288,
+    "updated_on": 1657049503,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.3.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the Primary email for the account is verified\r\nAND a game event is returned from box office ticketing service upcoming API\r\nAND the user has completed forwards via email in the past\r\n\r\nGIVEN the user is on the \"Forward Tickets\" screen",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the user is on the \"Forward Tickets\" screen* \nAND the user has completed forwards via email in the past\n\n*(via any means of [Navigating to Ticket Forwarding Mode](https://testrail.testeng.mlbinfra.net/index.php?/suites/view/540683&group_by=cases:section_id&group_order=asc&group_id=1525349)) \n\n",
+        "expected": "[ANDROID PAGE 10: ListView > ForwardTickets / iOS PAGE 11: ListView > ForwardTickets]\n\nTHEN the app will display a selectable list with checkboxes appearing on every row with only the first (non-parking) ticket checked when putting the user in a \"Forward mode\""
+      },
+      {
+        "content": "WHEN the user taps 'Forward'/'Forward Tickets' button within the Forward Tickets page",
+        "expected": "[ANDROID PAGE 11: ListView > ForwardTickets > Delivery Method prompt / iOS PAGE 12: ListView > ForwardTickets > Delivery Method prompt]\n\nTHEN the list of options shown (below suggested recipients, if forward(s) had prev been completed):\n\"Select from Contacts\"\n\"Via Email\"\n\"Share Link\""
+      },
+      {
+        "content": "WHEN the user taps on any email option atop of 'Select From Contacts' option within the ListView > Delivery Method prompt",
+        "expected": "[ANDROID PAGE 14: ListView > ForwardTickets > Are you Sure prompt / iOS PAGE 15: ListView > ForwardTickets > Are you Sure prompt]\n\nTHEN a 'Are you sure you want to forward your ticket?' prompt is displayed that says \"Ticket will be immediately delivered to [SELECTED_EMAIL] and available in their MLB Ballpark app\" with the options (Cancel/OK or NO/YES)"
+      },
+      {
+        "content": "WHEN the user taps the 'Yes'/'OK' option\n\n",
+        "expected": "THEN the prompt and view is dismissed back to the Ticket List view and the forward is either completed successfully or fails and the user is notified.\n\n[ANDROID PAGE 7: ListView / iOS PAGE 8: ListView]\n\nAND the forwarded ticket will be indicated in the listview"
+      }
+    ]
+  },
+  {
+    "id": 28778888,
+    "title": "Ticket Forward method - Share Link",
+    "section_id": 1525350,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1656366603,
+    "updated_by": 288,
+    "updated_on": 1657050731,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.3.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the Primary email for the account is verified\r\nAND a game event is returned from box office ticketing service upcoming API\r\n\r\nGIVEN the user is on the \"Forward Tickets\" screen",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the user is on the \"Forward Tickets\" screen* \n\n*(via any means of [Navigating to Ticket Forwarding Mode](https://testrail.testeng.mlbinfra.net/index.php?/suites/view/540683&group_by=cases:section_id&group_order=asc&group_id=1525349)) \n\n",
+        "expected": "[ANDROID PAGE 10: ListView > ForwardTickets / iOS PAGE 11: ListView > ForwardTickets]\n\nTHEN the app will display a selectable list with checkboxes appearing on every row with only the first (non-parking) ticket checked when putting the user in a \"Forward mode\""
+      },
+      {
+        "content": "WHEN the user taps 'Forward'/'Forward Tickets' button within the Forward Tickets page\n\n",
+        "expected": "[ANDROID PAGE 11: ListView > ForwardTickets > Delivery Method prompt / iOS PAGE 12: ListView > ForwardTickets > Delivery Method prompt]\n\nTHEN the list of options shown (below suggested recipients, if forward(s) had prev been completed):\n\"Select from Contacts\"\n\"Via Email\"\n\"Share Link\""
+      },
+      {
+        "content": "WHEN the user taps \"Share Link\" within the ListView > Delivery Method prompt",
+        "expected": "THEN the app will display the OS share sheet and make the API call to forward the ticket"
+      },
+      {
+        "content": "WHEN the user selects one of the sharing apps/options",
+        "expected": "THEN the app should generate a share link and send an OS message containing a link to accept transferred ticket(s)"
+      },
+      {
+        "content": "WHEN the user finishes selecting share option of the ticket\nAND the sending user finishes forwarding",
+        "expected": "[ANDROID PAGE 7: ListView / iOS PAGE 8: ListView]\n\nTHEN the share flow will dismiss\nAND the user will no longer be in \"Forward mode\"\nAND the app will refresh the list and will indicate which tickets are now forwarding in progress (Forward pending via link)"
+      }
+    ]
+  },
+  {
+    "id": 28778894,
+    "title": "Recalling Ticket via listview",
+    "section_id": 1525289,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1656367235,
+    "updated_by": 288,
+    "updated_on": 1670956648,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.3.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the Primary email for the account is verified\r\nAND a game event is returned from box office ticketing service upcoming API\r\nAND the event has previously forwarded tickets \r\n\r\nGIVEN the user is on the ticket listview screen",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the user is on the ticket listview screen\nAND the event has previously forwarded tickets ",
+        "expected": "[ANDROID PAGE 7: ListView / iOS PAGE 8: ListView]\n\nTHEN the ticketlist view will display 'Tickets' in top header\nAND the view will display the matchup data in sub header (cap logo away and home, away team @ home team, date and start time, venue name)\nAND the view will display headers for section, seat and row\nAND the view will display each ticket as its own row with section, seat and row values\nAND the view will display \"Open\" link button for each row for each/any ticket that has NOT been forwarded\nAND the view will display \"Recall\"/\"Cancel\" link button for each row for each/any ticket that has been forwarded\nAND the view will display the \"Forward Tickets\" button centered at the bottom (above the Navbar)"
+      },
+      {
+        "content": "WHEN the user taps on \"Recall\"/\"Cancel\" link button on the listview",
+        "expected": "[ANDROID PAGE 13: ListView > Cancel/Recall prompt / iOS PAGE 14: ListView > Cancel/Recall prompt]\n\nTHEN 'Cancel Forward' prompt is shown with 'The intended recipient will no longer be able to complete this transaction and receive this ticket.' with No and Yes options\n\nOR \n\nTHEN 'Recall Ticket' prompt is shown with 'This ticket will be returned to your account the the recipient will be notified that they no longer have access to it in their account.' with No and Yes options\n"
+      },
+      {
+        "content": "WHEN the user taps on 'Yes' option on the \"Recall\"/\"Cancel\" prompt",
+        "expected": "[ANDROID PAGE 7: ListView / iOS PAGE 8: ListView]\n\nTHEN the ticketlist view will display 'Tickets' in top header\n\nAND the view will display the matchup data in sub header (cap logo away and home, away team @ home team, date and start time, venue name)\n\nAND the view will display headers for section, seat and row\nAND the view will display each ticket as its own row with section, seat and row values\n\nAND the view will display \"Open\" link button for each row for each/any ticket that has NOT been forwarded\nAND the view will display \"Recall\"/\"Cancel\" link button for each row for each/any ticket that has been forwarded\n\nAND the view will display the \"Forward Tickets\" button centered at the bottom (above the Navbar)"
+      }
+    ]
+  },
+  {
+    "id": 28778895,
+    "title": "Recalling Ticket via scanview",
+    "section_id": 1525289,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1656367245,
+    "updated_by": 288,
+    "updated_on": 1657050170,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.3.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the Primary email for the account is verified\r\nAND a game event is returned from box office ticketing service upcoming API\r\nAND the event has previously forwarded tickets\r\n\r\nGIVEN the user is on the ticket listview screen",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the user is on the ticket scanview screen\nAND the event has previously forwarded tickets",
+        "expected": "[ANDROID PAGE 6: ScanView / iOS PAGE 7: ScanView]\n\nTHEN user can access tickets\nAND user is shown the event Information (Date/Time, Matchup, VenueName, And Team Logo) at the top\nAND user is shown the Sec/Row/Seat info\nAND the view will display \"Recall Forward\" button for each/any ticket that has been forwarded with 'Ticket Forwarded - Forward accepted by [EMAIL] \n"
+      },
+      {
+        "content": "WHEN user taps the 'Recall Forward' button for the particular ticket on the scanview",
+        "expected": "[ANDROID PAGE 15: ScanView > Cancel/Recall prompt / iOS PAGE 16: ScanView > Cancel/Recall prompt]\n\nTHEN 'Cancel Ticket Forward' prompt is shown with 'Are you sure you want to cancel this forwarded ticket.' with No and Yes options\n\nOR\n\nTHEN 'Recall Ticket' prompt is shown with 'This ticket will be returned to your account the the recipient will be notified that they no longer have access to it in their account.' with No and Yes options"
+      },
+      {
+        "content": "WHEN the user taps on 'Yes' option on the \"Recall\"/\"Cancel\" prompt",
+        "expected": "[ANDROID PAGE 6: ScanView / iOS PAGE 7: ScanView]\n\nTHEN the ticket scanview will UPDATE the view removing 'Ticketed Forwarded' and 'Recall Forward' button"
+      }
+    ]
+  },
+  {
+    "id": 28778897,
+    "title": "More - About Ballpark",
+    "section_id": 1525290,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1656367783,
+    "updated_by": 288,
+    "updated_on": 1657051607,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.3.0 or greater)\r\nAND user is logged in with MLB account\r\nAND user taps on More bottom nav bar tab",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on bottom NavBar 'More' with 3 dots icon\n\n",
+        "expected": "[ANDROID PAGE 16: MoreTab / iOS PAGE 17: MoreTab]\n\nTHEN app displays a new page with 'More' as title\nAND the Menu options are shown listed with appropriate icons aligned on the left"
+      },
+      {
+        "content": "WHEN user taps on 'About Ballpark' from within MoreTab page\n\n",
+        "expected": "[ANDROID PAGE 17: MoreTab > About / iOS PAGE 18: MoreTab > About]\n\nTHEN app displays a new page with 'About' as title\nAND the Menu options are shown (About Ballpark, Terms of Use, Privacy Policy, Do Not Sell My Data)"
+      },
+      {
+        "content": "WHEN user taps 'About Ballpark' within About menu",
+        "expected": "[ANDROID PAGE 18: MoreTab > About > About Ballpark / iOS PAGE 19: MoreTab > About > About Ballpark]\n\nTHEN the read-only items are shown such as version, device, build, network, email, and ID\n\n*iOS has additional information"
+      }
+    ]
+  },
+  {
+    "id": 28778899,
+    "title": "More - FAQs",
+    "section_id": 1525290,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1656367807,
+    "updated_by": 288,
+    "updated_on": 1657051587,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 540683,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.3.0 or greater)\r\nAND user is logged in with MLB account\r\nAND user taps on More bottom nav bar tab",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on bottom NavBar 'More' with 3 dots icon\n\n",
+        "expected": "[ANDROID PAGE 16: MoreTab / iOS PAGE 17: MoreTab]\n\nTHEN app displays a new page with 'More' as title\nAND the Menu options are shown listed with appropriate icons aligned on the left"
+      },
+      {
+        "content": "WHEN user taps on 'FAQs' from within MoreTab page",
+        "expected": "[ANDROID PAGE 19: MoreTab > FAQ webview / iOS PAGE 20: MoreTab > FAQ webview]\n\nTHEN FAQs view is shown with Close/'X' and refresh icon"
+      }
+    ]
+  }
+]

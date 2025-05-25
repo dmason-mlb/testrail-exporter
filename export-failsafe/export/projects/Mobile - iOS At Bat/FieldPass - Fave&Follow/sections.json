@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1518156,
+    "suite_id": 537891,
+    "name": "Follow Players",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1520899,
+    "suite_id": 537891,
+    "name": "Error Crashing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1520908,
+    "suite_id": 537891,
+    "name": "Follow&Unfollow Teams",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1523012,
+    "suite_id": 537891,
+    "name": "Search",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

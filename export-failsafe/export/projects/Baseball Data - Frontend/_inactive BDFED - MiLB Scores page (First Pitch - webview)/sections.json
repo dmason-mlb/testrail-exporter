@@ -1,0 +1,47 @@
+[
+  {
+    "id": 155022,
+    "suite_id": 21481,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 155023,
+    "suite_id": 21481,
+    "name": "Pregame",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 155024,
+    "suite_id": 21481,
+    "name": "Live",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 155025,
+    "suite_id": 21481,
+    "name": "Postgame",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 155026,
+    "suite_id": 21481,
+    "name": "Scoreboard Edge Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

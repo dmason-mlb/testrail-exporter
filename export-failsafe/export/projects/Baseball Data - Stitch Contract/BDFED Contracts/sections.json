@@ -1,0 +1,38 @@
+[
+  {
+    "id": 733904,
+    "suite_id": 203845,
+    "name": "Common",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 733905,
+    "suite_id": 203845,
+    "name": "Product",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 733906,
+    "suite_id": 203845,
+    "name": "Utility",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 768869,
+    "suite_id": 203845,
+    "name": "Spotlight",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

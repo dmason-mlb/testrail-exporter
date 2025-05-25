@@ -1,0 +1,92 @@
+[
+  {
+    "id": 69437,
+    "suite_id": 12013,
+    "name": "Approve Trades",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 71883,
+    "suite_id": 12013,
+    "name": "State Changes",
+    "description": null,
+    "parent_id": 69437,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 71888,
+    "suite_id": 12013,
+    "name": "Submit Trade",
+    "description": null,
+    "parent_id": 71883,
+    "display_order": 6,
+    "depth": 2
+  },
+  {
+    "id": 71889,
+    "suite_id": 12013,
+    "name": "Rule Checks",
+    "description": null,
+    "parent_id": 71883,
+    "display_order": 8,
+    "depth": 2
+  },
+  {
+    "id": 71890,
+    "suite_id": 12013,
+    "name": "Approval Updates",
+    "description": null,
+    "parent_id": 71883,
+    "display_order": 11,
+    "depth": 2
+  },
+  {
+    "id": 71886,
+    "suite_id": 12013,
+    "name": "BOC - Global",
+    "description": null,
+    "parent_id": 69437,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 69441,
+    "suite_id": 12013,
+    "name": "UAT Feedback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 69442,
+    "suite_id": 12013,
+    "name": "Create Outright Trade",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 102040,
+    "suite_id": 12013,
+    "name": "create outright trade, qa-approved, qa-point3, tc-complete, ux-approved",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 102041,
+    "suite_id": 12013,
+    "name": "approve trades, qa-approved, qa-point5, ux-approval-na",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  }
+]

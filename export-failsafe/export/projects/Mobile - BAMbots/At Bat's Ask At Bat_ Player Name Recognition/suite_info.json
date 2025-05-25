@@ -1,0 +1,11 @@
+{
+  "id": 20154,
+  "name": "At Bat's Ask At Bat: Player Name Recognition",
+  "description": "SDBB-446\r\n\r\nAs an end user I would like to ask [bot client name] about a baseball player and get information back.\r\n\r\nDESCRIPTION\r\nThe purpose of this feature is to support player name recognition for BAMBots, enabling users to send voice or text queries about player stats, bios, starting appearances (pitchers), and DL statuses.\r\n\r\nThis feature can be addressed in two phases, with the initial implementation intended for At Bat.\r\n\r\nDeep link\r\n- Successfully recognized queries will be returned a player card webview deeplink for Ask At Bat. This is the minimum acceptable experience, with all player queries returning the same result.",
+  "project_id": 150,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20154"
+}

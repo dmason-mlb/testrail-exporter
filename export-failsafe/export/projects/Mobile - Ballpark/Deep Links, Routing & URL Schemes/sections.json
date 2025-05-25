@@ -1,0 +1,173 @@
+[
+  {
+    "id": 1238767,
+    "suite_id": 21436,
+    "name": "Tickets Tab",
+    "description": "when User has Legacy flow enabled, the deeplinks directs user appropriately to the Legacy views. Comparably, when user has Beta flow enabled, the deeplinks directs user appropriately to the Beta views.",
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 1238770,
+    "suite_id": 21436,
+    "name": "Wallet Segment",
+    "description": "ballpark://wallet",
+    "parent_id": 1238767,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 1238771,
+    "suite_id": 21436,
+    "name": "Buy Tickets Segment",
+    "description": "ballpark://buytickets\nballpark://buytickets?teamID=158\n\n||| :Parameter | :Req| :Type\n|| teamID | N | string",
+    "parent_id": 1238767,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 1238772,
+    "suite_id": 21436,
+    "name": "Wallet Ticket List View",
+    "description": "ballpark://listview?eventID=65285&teamID=158 \n\n||| :Parameter | :Req| :Type\n|| eventID | Y | string\n|| teamID | Y | string\n|| venueID | N | string\n|| forward | N | bool\n\n'teamID' / 'eventID' are both required strings, where teamID is the associated home team of the venue\n'forward' is optional parameter for automatically entering Forward mode with the first (non-parking ticket) selected “forward=true”",
+    "parent_id": 1238767,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 1238773,
+    "suite_id": 21436,
+    "name": "Wallet Ticket Scan View",
+    "description": "ballpark://scanview?eventID=65285&teamID=158 \n\n||| :Parameter | :Req| :Type\n|| eventID | Y | string\n|| teamID | Y | string\n|| venueID | N | string\n\n'teamID' / 'eventID' are both required strings, where teamID is the associated home team of the venue",
+    "parent_id": 1238767,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 1238768,
+    "suite_id": 21436,
+    "name": "My Profile & More",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 1238774,
+    "suite_id": 21436,
+    "name": "My Profile Deeplinks",
+    "description": "Deeplink relevant to My Profile\n\n*ballpark://profile - Goes to My Profile view\n*ballpark://mlb-account - Goes to My MLB Account Emails (formerly MLB Account)\n*ballpark://ticket-accounts - Goes to My Ticket Accounts (formerly Ticket Accounts\n*ballpark://favorite-teams - Goes to the “settings version” of Favorite team select (not the onboarding version with “Next” button)\n*ballpark://notifications - Goes to My Notifications (formerly Notifications)",
+    "parent_id": 1238768,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 1238776,
+    "suite_id": 21436,
+    "name": "iOS",
+    "description": null,
+    "parent_id": 1238774,
+    "display_order": 21,
+    "depth": 2
+  },
+  {
+    "id": 1238777,
+    "suite_id": 21436,
+    "name": "Android",
+    "description": null,
+    "parent_id": 1238774,
+    "display_order": 22,
+    "depth": 2
+  },
+  {
+    "id": 1238775,
+    "suite_id": 21436,
+    "name": "More Tab Deeplinks",
+    "description": "Deeplink relevant to More menu\n\n*ballpark://loyalty-program - Goes to Loyalty Program",
+    "parent_id": 1238768,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 1238778,
+    "suite_id": 21436,
+    "name": "iOS",
+    "description": null,
+    "parent_id": 1238775,
+    "display_order": 24,
+    "depth": 2
+  },
+  {
+    "id": 1238779,
+    "suite_id": 21436,
+    "name": "Android",
+    "description": null,
+    "parent_id": 1238775,
+    "display_order": 25,
+    "depth": 2
+  },
+  {
+    "id": 1238769,
+    "suite_id": 21436,
+    "name": "My History",
+    "description": "ballpark://myhistory - Goes directly to My History (no back stack)\nballpark://myhistory?eventID=632826 - Goes directly to My History Details view if fan has that game in their My History, if not goes to My History\n\n||| :Parameter | :Req| :Type\n|| eventID | N | string",
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 1238780,
+    "suite_id": 21436,
+    "name": "iOS",
+    "description": null,
+    "parent_id": 1238769,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 1238781,
+    "suite_id": 21436,
+    "name": "Android",
+    "description": null,
+    "parent_id": 1238769,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 1238766,
+    "suite_id": 21436,
+    "name": "Team Tab",
+    "description": "ballpark://venue?venueID=32\n\n||| :Parameter | :Req| :Type\n|| venueID | Y | string\n|| topicID | N | string\n|| title | N | string",
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 408311,
+    "suite_id": 21436,
+    "name": "Topic (SubVenue)",
+    "description": "Deeplinks to TeamPage Topics/SubVenue pages\n\nballpark://venue?venueID=4705&topicID=5295&title=The%20Battery%20Atlanta\n\n||| :Parameter | :Req| :Type | :note\n|| venueID | Y | string | \n|| topicID | Y | string | \n|| title | N | string | needs to be encoded, if present",
+    "parent_id": 1238766,
+    "display_order": 30,
+    "depth": 1
+  },
+  {
+    "id": 305989,
+    "suite_id": 21436,
+    "name": "Branch DeepLinks",
+    "description": "Branch.io is a deeplink provider service. Branch provides vanity URL's and analytics around deeplink clicks.\n\nhttps://bp.mlb.com/EiCrO00N15",
+    "parent_id": null,
+    "display_order": 31,
+    "depth": 0
+  },
+  {
+    "id": 154831,
+    "suite_id": 21436,
+    "name": "Webview",
+    "description": null,
+    "parent_id": null,
+    "display_order": 32,
+    "depth": 0
+  }
+]

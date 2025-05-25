@@ -1,0 +1,266 @@
+[
+  {
+    "id": 946127,
+    "title": "Enhanced Game of the Day - No Access for Lite Users",
+    "section_id": 113047,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "AB-11914",
+    "created_by": 39,
+    "created_on": 1492021630,
+    "updated_by": 39,
+    "updated_on": 1492021630,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17232,
+    "display_order": 1,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is a Lite user\r\nand taps on the MLB.TV button\r\nand taps to expand MLB PLUS Game of the Day\r\n\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "taps the away feed on iPad",
+        "expected": "Then the user will be see the At Bat Premium Paywall"
+      },
+      {
+        "content": "taps the home feed on iPad",
+        "expected": "Then the user will be see the At Bat Premium Paywall"
+      },
+      {
+        "content": "taps the MLB Plus feed on iPad",
+        "expected": "Then the user will be see the At Bat Premium Paywall"
+      },
+      {
+        "content": "taps the away feed on iPhone",
+        "expected": "Then the user will be see the At Bat Premium Paywall"
+      },
+      {
+        "content": "taps the home feed on iPhone",
+        "expected": "Then the user will be see the At Bat Premium Paywall"
+      },
+      {
+        "content": "taps the MLB Plus feed on iPhone",
+        "expected": "Then the user will be see the At Bat Premium Paywall"
+      }
+    ]
+  },
+  {
+    "id": 946128,
+    "title": "Enhanced Game of the Day - No Access for Single Team Users",
+    "section_id": 113047,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "AB-11914",
+    "created_by": 39,
+    "created_on": 1492021630,
+    "updated_by": 39,
+    "updated_on": 1492021630,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17232,
+    "display_order": 2,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is a single team account\r\nand taps on the MLB.TV button\r\nand taps to expand MLB PLUS Game of the Day\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "on an iPad",
+        "expected": "Then the user will be see the At Bat Premium Paywall"
+      },
+      {
+        "content": "on an iPhone",
+        "expected": "Then the user will be see the At Bat Premium Paywall"
+      }
+    ]
+  },
+  {
+    "id": 946129,
+    "title": "Enhanced Game of the Day - Access for Premium Users",
+    "section_id": 113047,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "AB-11914",
+    "created_by": 39,
+    "created_on": 1492021630,
+    "updated_by": 39,
+    "updated_on": 1492021630,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17232,
+    "display_order": 3,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is logged in with an At Bat account\r\nand attempts to access the Enhanced Game of the Day\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "on an iPad",
+        "expected": "and the Enhanced Game of the Day feed will begin"
+      },
+      {
+        "content": "on an iPhone",
+        "expected": "and the Enhanced Game of the Day feed will begin"
+      }
+    ]
+  },
+  {
+    "id": 946130,
+    "title": "Enhanced Game of the Day - Configurable Message on Scoreboard",
+    "section_id": 113047,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "AB-11914",
+    "created_by": 39,
+    "created_on": 1492021630,
+    "updated_by": 39,
+    "updated_on": 1492021630,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17232,
+    "display_order": 4,
+    "custom_preconds": "Given the user is on an iOS device",
+    "custom_steps": "When a user is on the Scoreboard\r\nand the Enhanced Game of the Day feed is available on that day",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "on an iPad",
+        "expected": "Then the Enhanced Game of the Day text is displayed as the same as existing FGoD"
+      },
+      {
+        "content": "on an iPhone",
+        "expected": "Then the Enhanced Game of the Day text is displayed as the same as existing FGoD"
+      }
+    ]
+  },
+  {
+    "id": 946131,
+    "title": "Enhanced Game of the Day - Configurable Message on MLB.TV EPG",
+    "section_id": 113047,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "AB-11914",
+    "created_by": 39,
+    "created_on": 1492021630,
+    "updated_by": 39,
+    "updated_on": 1492021630,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17232,
+    "display_order": 5,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is on the MLB.TV EPG\r\nand an Enhanced Game of the Day is available",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "on an iPad",
+        "expected": "Then the Enhanced Game of the Day text is displayed as the same as existing FGoD"
+      },
+      {
+        "content": "on an iPhone",
+        "expected": "Then the Enhanced Game of the Day text is displayed as the same as existing FGoD"
+      }
+    ]
+  },
+  {
+    "id": 946132,
+    "title": "Enhanced Game of the Day - MLB.TV EPG Button",
+    "section_id": 113047,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "AB-11914",
+    "created_by": 39,
+    "created_on": 1492021630,
+    "updated_by": 39,
+    "updated_on": 1492021630,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17232,
+    "display_order": 6,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is on the MLB.TV EPG\r\nand taps on the game that is the Enhanced Game of the Day\r\nand the game feeds are available",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "on an iPad",
+        "expected": "Then the button should not display the TV call signs\nand it should display Enhanced"
+      },
+      {
+        "content": "on an iPhone",
+        "expected": "Then the button should not display the TV call signs\nand it should display Enhanced"
+      }
+    ]
+  },
+  {
+    "id": 946133,
+    "title": "Enhanced Game of the Day - Local (In-market) Blackout",
+    "section_id": 113047,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "AB-11914",
+    "created_by": 39,
+    "created_on": 1492021630,
+    "updated_by": 39,
+    "updated_on": 1492021630,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17232,
+    "display_order": 7,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When an At Bat user taps on the Enhanced Game of the Day feed button\r\nand the feed is a local (in-market) team ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "on an iPad",
+        "expected": "Then the user will received a Blackout Message"
+      },
+      {
+        "content": "on an iPhone",
+        "expected": "Then the user will received a Blackout Message"
+      }
+    ]
+  },
+  {
+    "id": 946134,
+    "title": "Enhanced Game of the Day - Executive Account",
+    "section_id": 113047,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "AB-11914",
+    "created_by": 39,
+    "created_on": 1492021630,
+    "updated_by": 39,
+    "updated_on": 1492021630,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17232,
+    "display_order": 8,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is logged in with an executive account\r\nand the user taps on the Enhanced Feed of the Day feed button\r\nand the game feed is local (in-market) team\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "on an iPad",
+        "expected": "then the feed will launch\nand no Blackout message"
+      },
+      {
+        "content": "on an iPhone",
+        "expected": "then the feed will launch\nand no Blackout message"
+      }
+    ]
+  }
+]

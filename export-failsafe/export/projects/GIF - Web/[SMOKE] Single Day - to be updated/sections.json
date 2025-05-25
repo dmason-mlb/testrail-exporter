@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1420031,
+    "suite_id": 499419,
+    "name": "Onboarding",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1420032,
+    "suite_id": 499419,
+    "name": "Reset Password",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1420033,
+    "suite_id": 499419,
+    "name": "Top Navigation Bar",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1420034,
+    "suite_id": 499419,
+    "name": "Games Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1420035,
+    "suite_id": 499419,
+    "name": "Results Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1420036,
+    "suite_id": 499419,
+    "name": "Profile Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1420037,
+    "suite_id": 499419,
+    "name": "Profile -> Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1420038,
+    "suite_id": 499419,
+    "name": "User events (via PM)",
+    "description": "We should use 1 specific new account set up and use it for for once and all user events",
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1420039,
+    "suite_id": 499419,
+    "name": "Invite Friends",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1420040,
+    "suite_id": 499419,
+    "name": "Game Card Status",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  }
+]

@@ -1,0 +1,1608 @@
+[
+  {
+    "id": 1184521,
+    "title": "iOS Handheld",
+    "section_id": 142079,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1505935882,
+    "updated_by": 65,
+    "updated_on": 1505935949,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nand accesses the questions interface of Ask At Bat",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is on a iOS device of iOS 9.x or below\n",
+        "expected": "THEN the user is taken to the text entry interface immediately after going through the onboarding screen."
+      },
+      {
+        "content": "WHEN the user is on a iOS device of iOS 9.x or below\nAND attempts to tap on the microphone icon",
+        "expected": "THEN the user is shown a message indicating that voice queries are only supported in iOS 10 or higher, but that the user is still able to ask questions using their keyboard\n\niOS 9 Message\nAsking questions by voice requires Speech Recognition access, which is only available in iOS 10 or higher. Please upgrade your iOS version or enter questions using your keyboard.\n[BUTTON]Got it[/BUTTON]\n"
+      },
+      {
+        "content": "WHEN the user is on a iOS device of iOS 9.x or below, taps on the microphone icon, gets a message that it is not supported,\nAND the user clicks that they understand",
+        "expected": "THEN the user is taken back to the text entry interface"
+      },
+      {
+        "content": "WHEN the user is on a iOS device of iOS 10.x or above",
+        "expected": "THEN the user is able to access Ask At Bat questions interface\nAND have access to the microphone & speech recognition"
+      }
+    ]
+  },
+  {
+    "id": 1184518,
+    "title": "Android Handheld",
+    "section_id": 142079,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-6614, https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1505932292,
+    "updated_by": 65,
+    "updated_on": 1509382625,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nand accesses the questions interface of Ask At Bat",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is on an Android device of OS 5.x or below",
+        "expected": "THEN the user isn't prompted for mic access.  The user is taken straight to the mic interface and the mic automatically begins recording. Users should be able to access both question interfaces."
+      },
+      {
+        "content": "WHEN the user is on an Android device of OS 6.x or above",
+        "expected": "THEN the user is able to access Ask At Bat questions interface\nAND have access to the microphone"
+      }
+    ]
+  },
+  {
+    "id": 1184519,
+    "title": "iPad",
+    "section_id": 142079,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-16527, https://app.zeplin.io/project/59a72cd508f6e486f47ebd54/dashboard?tag=iPad",
+    "created_by": 65,
+    "created_on": 1505933257,
+    "updated_by": 65,
+    "updated_on": 1508872670,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user is on At Bat",
+    "custom_steps": "WHEN the user accesses the questions feature Ask At Bat from an iPad",
+    "custom_expected": "THEN the question bot interface should appear with full screen version currently in place is acceptable for the initial feature launch",
+    "custom_steps_separated": [
+      {
+        "content": "For future release:\n\nWHEN the user accesses the questions feature from an iPad",
+        "expected": "THEN the question bot interface should appear within a modal window, operating similarly to the EPG"
+      }
+    ]
+  },
+  {
+    "id": 1184520,
+    "title": "Android Tablet",
+    "section_id": 142079,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://app.zeplin.io/project/59a72cd508f6e486f47ebd54/dashboard?tag=iPad",
+    "created_by": 65,
+    "created_on": 1505935722,
+    "updated_by": 65,
+    "updated_on": 1508872710,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user is on At Bat\r\n",
+    "custom_steps": "WHEN the user accesses the questions feature Ask At Bat from an Android Tablet",
+    "custom_expected": "THEN the tablet will not be supported in Phase 1",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182564,
+    "title": "Team Update, Valid BamBot command",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-185, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1505922357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user makes a valid team intent: i.e.\r\n\r\n- TEAM\r\n- How is (the) TEAM doing?\r\n- What is up with (the) TEAM?\r\n- How did (the) TEAM do?\r\n\r\ninclude the ones below??????????\r\nex:\r\n- TEAM game\r\n- Did the TEAM win?\r\n- TEAM A  TEAM B game\r\n- How did the TEAM do?\r\n- How are the TEAM doing?\r\n- TEAM score\r\n- What is the score of the TEAM game?\r\n- Are the TEAM winning?\r\n- Are the TEAM losing?",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182565,
+    "title": "Team Update, User Follows Up for Valid BamBot Response",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-185, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1505922357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat\r\nAND the user makes a valid request",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the Bot provides a valid in-season or off-season response\nAND the user wanted a specific item within the stack",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team\nAND the user is able to ask for that info as a follow-up question"
+      },
+      {
+        "content": "WHEN the Bot provides a valid in-season or off-season response\nAND the user wanted a specific game, news event, or video",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team\nAND the user is able to ask for that info as a follow-up question"
+      }
+    ]
+  },
+  {
+    "id": 1182566,
+    "title": "Team Update, Team Name misinterpreted",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-185, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1505922357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat\r\nAND the user makes a valid request",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user makes a team update request",
+        "expected": "THEN the team name should not be misinterpreted by the bot and should respond with the correct team info\nAND the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team\n\ni.e. User requests \"Red Sox\" so Bot should respond with \"Red Sox\" response, not \"White Sox\" response"
+      },
+      {
+        "content": "WHEN the user makes a team update request with phatic info (in this instance phatic means anything unrelated to baseball)\nAND the team name is misinterpreted by the bot\n\ni.e. Tiggers (instead of Tigers)",
+        "expected": "THEN if product decides to treat \"Tiggers\" as \"phatic\"* speech, then the bot is expected to respond to \"Tiggers\" by saying \"Bouncing is what they do best\", or \"huh?\"\n\nHowever, our bot will likely spell-check Tiggers -> Tigers, and treat it as a request for the Tigers team\nAND the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      }
+    ]
+  },
+  {
+    "id": 1182567,
+    "title": "Game Info by Day of the Week, Preview or Future Game",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-187, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1508873222,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user makes an valid intent for a team's future game based on the day of week\r\nAND there is an available game in the future\r\n\r\ni.e.\r\nWhere MODIFIER is next, etc.\r\n\r\n- TEAM (MODIFIER) DAYOFWEEK\r\n- TEAM game ( on ) (MODIFIER) DAYOFWEEK\r\n- When is the TEAM game ( on ) (MODIFIER) DAYOFWEEK?\r\n- When do the TEAM play ( on ) (MODIFIER) DAYOFWEEK?\r\n- When does the TEAM game ( on ) (MODIFIER) DAYOFWEEK?\r\n- When do they play ( on ) (MODIFIER) DAYOFWEEK?\r\n- When is the game ( on ) (MODIFIER) DAYOFWEEK?\r\n- When does (MODIFIER) DAYOFWEEK 's game start?\r\n- When does (MODIFIER) DAYOFWEEK 's game begin?\r\n- When is (MODIFIER) DAYOFWEEK 's game?\r\n- What time do they play ( on ) (MODIFIER) DAYOFWEEK?\r\n- What time is the game ( on ) (MODIFIER) DAYOFWEEK?\r\n- What time does (MODIFIER) DAYOFWEEK 's game start?\r\n- What time does (MODIFIER) DAYOFWEEK 's game begin?\r\n- What time is (MODIFIER) DAYOFWEEK 's game?",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": [
+      {
+        "content": "When the user make a requests using a day of the week in the future\nAND the game is in preview\n\n1. monday, mon\n2. tuesday, tues, tue\n3. wednesday, weds, wed\n4. thursday, thurs, thus, thu\n5. friday, fri\n6. saturday, sat\n7. sunday, sun",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user makes a request using one of the following proximate day indicators (If the user explicitly refers to today)\nAND the game is in preview:\n\n- today",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user makes a request using one of the following proximate day indicators (If the user provided a future tense cue)\nAND the game is in preivew:\n\n- tomorrow",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user makes a request and includes a modifier to indicate interest in a day of the week in a next calendar week\nAND the game is in preview\n\n- next",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user makes a request and includes a modifier to indicate interest in a day of the week in a next calendar week\nAND there is currently a live game\n\ni.e. \n- When will the TEAM play NEXT?",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user includes a tense cue that will influence what day we select (user provided a future tense cue)\nAND the game is in preview:\n\n- do / will / etc.\n- Any future tense value",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user doesn't provide a tense cue\nAND the game is in preview\n\ni.e.\n- If the user says \"Friday\" on a Tuesday",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user obtains the preview or future game results\n",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user meant next scheduled game and responds with something to the effect of \"no, I meant next scheduled game\"",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 1182568,
+    "title": "Game Info by Day of the Week, Live Game",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-187, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1508873288,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user makes an valid intent for a team's live game based on the day of week\r\nAND there is an available game that is live\r\n\r\ni.e.\r\nWhere MODIFIER is next, etc.\r\n\r\n- TEAM (MODIFIER) DAYOFWEEK\r\n- TEAM game ( on ) (MODIFIER) DAYOFWEEK\r\n- When is the TEAM game ( on ) (MODIFIER) DAYOFWEEK?\r\n- When do the TEAM play ( on ) (MODIFIER) DAYOFWEEK?\r\n- When does the TEAM game ( on ) (MODIFIER) DAYOFWEEK?\r\n- When do they play ( on ) (MODIFIER) DAYOFWEEK?\r\n- When is the game ( on ) (MODIFIER) DAYOFWEEK?\r\n- When does (MODIFIER) DAYOFWEEK 's game start?\r\n- When does (MODIFIER) DAYOFWEEK 's game begin?\r\n- When is (MODIFIER) DAYOFWEEK 's game?\r\n- What time do they play ( on ) (MODIFIER) DAYOFWEEK?\r\n- What time is the game ( on ) (MODIFIER) DAYOFWEEK?\r\n- What time does (MODIFIER) DAYOFWEEK 's game start?\r\n- What time does (MODIFIER) DAYOFWEEK 's game begin?\r\n- What time is (MODIFIER) DAYOFWEEK 's game?\r\n- What time do the TEAM play on DAYOFWEEK?\r\n- What time do the TEAM play again?\r\n- What time do the TEAM play today?\r\n- What time do the TEAM play again?\r\n- When time do the TEAM play",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": [
+      {
+        "content": "When the user make a requests using a day of the week and the game is live\n\n1. monday, mon\n2. tuesday, tues, tue\n3. wednesday, weds, wed\n4. thursday, thurs, thus, thu\n5. friday, fri\n6. saturday, sat\n7. sunday, sun",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user makes a request using one of the following proximate day indicators (If the user explicitly refers to today)\nAND the game is in live:\n\n- today\n\ni.e. What time do the TEAM play today?",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user doesn't provide a tense cue\nAND the game is live",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user makes a request and there is a live game",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 1182569,
+    "title": "Game Info by Day of the Week, Completed or Past Game",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-187, SDBB-302, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1506454070,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user makes an valid intent for a team's past game based on the day of week\r\nAND there is an available completed game\r\n\r\ni.e.\r\nWhere MODIFIER is last, previous, etc.\r\n\r\n- TEAM (MODIFIER) DAYOFWEEK\r\n- TEAM game ( on ) (MODIFIER) DAYOFWEEK\r\n- When is the TEAM game ( on ) (MODIFIER) DAYOFWEEK?\r\n- When do the TEAM play ( on ) (MODIFIER) DAYOFWEEK?\r\n- When does the TEAM game ( on ) (MODIFIER) DAYOFWEEK?\r\n- When do they play ( on ) (MODIFIER) DAYOFWEEK?\r\n- When is the game ( on ) (MODIFIER) DAYOFWEEK?\r\n- When does (MODIFIER) DAYOFWEEK 's game start?\r\n- When does (MODIFIER) DAYOFWEEK 's game begin?\r\n- When is (MODIFIER) DAYOFWEEK 's game?\r\n- What time do they play ( on ) (MODIFIER) DAYOFWEEK?\r\n- What time is the game ( on ) (MODIFIER) DAYOFWEEK?\r\n- What time does (MODIFIER) DAYOFWEEK 's game start?\r\n- What time does (MODIFIER) DAYOFWEEK 's game begin?\r\n- What time is (MODIFIER) DAYOFWEEK 's game?",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": [
+      {
+        "content": "When the user make a requests using a day of the week\nAND the game is completed\n\n1. monday, mon\n2. tuesday, tues, tue\n3. wednesday, weds, wed\n4. thursday, thurs, thus, thu\n5. friday, fri\n6. saturday, sat\n7. sunday, sun",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user makes a request using one of the following proximate day indicators (If the user explicitly refers to today or yesterday)\nAND the game is completed:\n\n1. yesterday\n2. last night\n3. today\n",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user makes a request and includes a modifier to indicate interest in a day of the week in a prior calendar week\nAND the game is completed (regardless if there is a live game currently playing or a completed game that day):\n\n1. last (DAY OF THE WEEK)\n2. previous (DAY OF THE WEEK)",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user includes a tense cue that will influence what day we select (user provided a past tense cue)\nAND the game is completed:\n\n1. did / etc.\n2. Any past tense value",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user doesn't provide a tense cue\nAND the game is completed\n\ni.e\n- If the user says \"Monday\" on a Tuesday\n\nNEW SDBB-302\nBot adjusting forwards or backwards within a Monday to Sunday week. So:\nGiven today is monday the 10th, When the user utters \"sunday\"\n",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user requests a past or completed game",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 1182570,
+    "title": "Game Info by Day of the Week, No Game Scheduled",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-187, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1508873357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user makes an valid intent for a team game based on the day of week or date\r\nAND there is no scheduled game on that day or date\r\n\r\ni.e.\r\nWhere MODIFIER is next, last, previous, etc.\r\n\r\n- TEAM (MODIFIER) DAYOFWEEK\r\n- TEAM game ( on ) (MODIFIER) DAYOFWEEK\r\n- When is the TEAM game ( on ) (MODIFIER) DAYOFWEEK?\r\n- When do the TEAM play ( on ) (MODIFIER) DAYOFWEEK?\r\n- When does the TEAM game ( on ) (MODIFIER) DAYOFWEEK?\r\n- When do they play ( on ) (MODIFIER) DAYOFWEEK?\r\n- When is the game ( on ) (MODIFIER) DAYOFWEEK?\r\n- When does (MODIFIER) DAYOFWEEK 's game start?\r\n- When does (MODIFIER) DAYOFWEEK 's game begin?\r\n- When is (MODIFIER) DAYOFWEEK 's game?\r\n- What time do they play ( on ) (MODIFIER) DAYOFWEEK?\r\n- What time is the game ( on ) (MODIFIER) DAYOFWEEK?\r\n- What time does (MODIFIER) DAYOFWEEK 's game start?\r\n- What time does (MODIFIER) DAYOFWEEK 's game begin?\r\n- What time is (MODIFIER) DAYOFWEEK 's game?",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": [
+      {
+        "content": "When the date is in the past (yesterday)",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the date is in the past (yesterday + n)",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the date is in the future (tomorrow)",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the date is in the future (tomorrow + n)",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "FOR FUTURE??? https://jira.mlbam.com/browse/SDBB-267",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 1182571,
+    "title": "Game Info by Day of the Week, Not User's Original Intent",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-187, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1505922357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 8,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user meant the next scheduled game\r\nAND states an intent for the next scheduled game\r\n\r\ni.e.\r\n\r\n\"No, I meant next scheduled game.\"",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182572,
+    "title": "Game Info, Live Game",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-189, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1505922357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 9,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user makes an valid intent\r\nAND there is a corresponding live game\r\n\r\ni.e.\r\n\r\n- TEAM score\r\n- Score TEAM\r\n- TEAM game\r\n- What is (the) TEAM score?\r\n- What is (the) TEAM - OPPOSING TEAM score?\r\n- What's (the) TEAM score?\r\n- What's (the) TEAM - OPPOSING TEAM score?\r\n- Who is winning the TEAM game?\r\n- Who's winning the TEAM game?\r\n- Who is leading the TEAM game?\r\n- Who's leading the TEAM game?\r\n- Are the TEAM winning?\r\n- Are the TEAM losing?\r\n- Is the TEAM winning?\r\n- Is the TEAM losing?\r\n- When are the TEAM playing?\r\n- When will the TEAM play?\r\n- Live score?\r\n- Live game?\r\n- What is the score?\r\n- What’s the score?\r\n- Who is winning the game?\r\n- Who’s winning the game?\r\n- Who is leading the game?\r\n- Who’s leading the game?\r\n- Are they winning?\r\n- Are they losing?\r\n- Is they winning?\r\n- Is they losing?",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182573,
+    "title": "Game Info, No Live Game",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-189, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1505922357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 10,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user makes an valid intent\r\nAND there is No live game\r\n\r\ni.e.\r\n\r\n- TEAM score\r\n- Score TEAM\r\n- TEAM game\r\n- What is (the) TEAM score?\r\n- What is (the) TEAM - OPPOSING TEAM score?\r\n- What's (the) TEAM score?\r\n- What's (the) TEAM - OPPOSING TEAM score?\r\n- Who is winning the TEAM game?\r\n- Who's winning the TEAM game?\r\n- Who is leading the TEAM game?\r\n- Who's leading the TEAM game?\r\n- Are the TEAM winning?\r\n- Are the TEAM losing?\r\n- Is the TEAM winning?\r\n- When are the TEAM playing?\r\n- When will the TEAM play?\r\n- Live score?\r\n- Live game?\r\n- What is the score?\r\n- What’s the score?\r\n- Who is winning the game?\r\n- Who’s winning the game?\r\n- Who is leading the game?\r\n- Who’s leading the game?\r\n- Are they winning?\r\n- Are they losing?\r\n- Is they winning?\r\n- Is they losing?",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": [
+      {
+        "content": "FOR FUTURE\n\nTHEN \n\n1. The TEAM aren't playing right now, but here's some info on their upcoming games.\nor\n2. The TEAM don't have a live game now, but here's some info on their upcoming schedule.\n\nCard: Preview card for next scheduled game. Do we want >1 scheduled game returned here?\n\nFB Response: No Live Game / Next Scheduled https://jira.mlbam.com/browse/SDBB-202",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 1182574,
+    "title": "Game Info, Intent not recognized",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-189, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1506455399,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 11,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user:\r\nmakes an invalid intent for a team's live game\r\nOR\r\nuser fails to provide a valid team\r\n\r\ni.e.\r\nHow are the messed doing?",
+    "custom_expected": "THEN the bot returns a response asking for user to rephrase / re-ask question\r\n\r\ni.e. \r\n- Sorry, I didn't understand that. Can you try asking me differently?\r\n- I didn't quite catch that. Try asking a different question.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182575,
+    "title": "Game Info, Team Playing",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-305, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1505922357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 12,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user makes a request as to whether or not a team is playing\r\n\r\ni.e.\r\n- When are the TEAM playing?",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN there is a live game\n",
+        "expected": "THEN the bot return a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "WHEN there is no live game",
+        "expected": "THEN the bot return a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 1182576,
+    "title": "Team Alias & By Locale",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-116, SDBB-147, SDBB-409, SDBB-387, http://statsapi.mlb.com/api/v1/teams?sportId=1",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1508873625,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 13,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat\r\n\r\nTeam Ids:\r\nhttp://statsapi.mlb.com/api/v1/teams?sportId=1",
+    "custom_steps": "WHEN the user makes an intent using any of the team aliases or locales listed below (test all)",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": [
+      {
+        "content": "anaheim\nangelinos\nangels\nangels of anaheim\nhalos\nlos angeles angels\nlos angeles angels of anaheim\nl.a. angels\n\nBy city:\nl.a.\nla\nlos angeles",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Los Angeles Angels of Anaheim\n\nThis is not supported for Phase 1:\nBy City:\nThen the bot provides a quick reply for user to select a team: Dodgers or Angels"
+      },
+      {
+        "content": "arizona\narizona diamondbacks\nbacks\nd backs\nd-backs\ndbacks\ndee backs\ndiamondback\ndiamondbacks\ndiamond back\nphoenix\nsnakes",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Arizona Diamondbacks"
+      },
+      {
+        "content": "baltimore\nbaltimore orioles\no's\norange birds\norioles",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Baltimore Orioles"
+      },
+      {
+        "content": "bosox\nboston\nboston red socks\nboston red sox\nbow socks\ncrimson hose\nred socks\nred sox\nred sox nation\n\nBy partial team name:\nsocks\nsox",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Boston Red Sox\n\nThis is not supported for Phase 1:\nBy partial team name:\nThen the bot provides a quick reply for user to select a team: White Sox or Red Sox"
+      },
+      {
+        "content": "chicago cubs\ncubbies\ncubs\nnorth siders\nnorthsiders\n\nBy city:\nchicago",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Chicago Cubs\n\nThis is not supported for Phase 1:\nBy City:\nThen the bot provides a quick reply for user to select a team: White Sox or Cubs\n"
+      },
+      {
+        "content": "big red machine\ncincinnati\ncincinnati reds\ncincy\nred legs\nred machine\nreds",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Cincinnati Reds"
+      },
+      {
+        "content": "cleveland\ncleveland indians\nindians\ntribe",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Cleveland Indians"
+      },
+      {
+        "content": "colorado\ncolorado rockies\ndenver\nrockies\nrocks\nrox",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Colorado Rockies"
+      },
+      {
+        "content": "detroit\ndetroit rock city\ndetroit tigers\nkitties\nmotor city\ntigers\ntigres",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Detroit Tigers"
+      },
+      {
+        "content": "astros\nhouston\nhouston astros\nspacemen\nstars\nstro's\nstrose",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Houston Astros"
+      },
+      {
+        "content": "crowns\nk.c.\nkc\nkansas\nkansas city\nkansas city royals\nroyals",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Kansas City Royals"
+      },
+      {
+        "content": "azul\nblue crew\nlos angeles dodgers\ndodgers\n\nBy City:\nlos angeles\nla\nl.a.",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Los Angeles Dodgers\n\nThis is not supported for Phase 1:\nBy City:\nThen the bot provides a quick reply for user to select a team: Dodgers or Angels"
+      },
+      {
+        "content": "d.c.\ndc\ndee see\nnationals\nnats\nwashington\nwashington d.c.\nwashington nationals",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Washington Nationals"
+      },
+      {
+        "content": "amazin' mets\namazins\nmiracle mets\nmetropolitans\nmets\nnew york mets\n\nBy city:\nnew york\nny\nn.y.",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the New York Mets\n\nThis is not supported for Phase 1:\nBy city:\nThen the bot provides a quick reply for user to select a team: Mets or Yankees"
+      },
+      {
+        "content": "a's\nathletics\naze\no town\no-town\noak town\noakland\noakland athletics\noaktown",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Oakland Athletics"
+      },
+      {
+        "content": "buccaneers\nbuccos\nbuckos\nbucks\nbucs\npirates\npitt\npittsburgh\npittsburgh pirates",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Pittsburgh Pirates"
+      },
+      {
+        "content": "friars\npadres\npads\npods\ns.d.\nsd\nsan diego\nsan diego padres",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the San Diego Padres"
+      },
+      {
+        "content": "m's\nmares\nmariners\nseattle\nseattle mariners",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Seattle Mariners"
+      },
+      {
+        "content": "g men\ng-men\ngiants\ngigantes\ngints\njints\norange giants\ns.f.\nsf\nsan francisco\nsan francisco giants",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the San Francisco Giants"
+      },
+      {
+        "content": "birdnals\nbirdos\nbirds\ncard birds\ncardinals\ncards\nredbirds\nsaint louis\nsaint louis cardinals\nst. louis\nst. louis cardinals",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the St. Louis Cardinals"
+      },
+      {
+        "content": "rays\ntampa\ntampa bay\ntampa bay rays",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Tampa Bay Rays"
+      },
+      {
+        "content": "arlington\nlone stars\nrangers\ntexas\ntexas rangers",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Texas Rangers"
+      },
+      {
+        "content": "blue birds\nblue jays\nbluebirds\njays\ntoronto\ntoronto blue jays",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Toronto Blue Jays"
+      },
+      {
+        "content": "minneapolis\nminnesota\nminnesota twins\ntwin cities\ntwins",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Minnesota Twins"
+      },
+      {
+        "content": "philadelphia\nphiladelphia phillies\nphillies\nphilly\nphils",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Philadelphia Phillies"
+      },
+      {
+        "content": "america's team\natlanta\natlanta braves\nbraves\nbravos",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Atlanta Braves"
+      },
+      {
+        "content": "chi sox\nchicago white sox\nchisox\nchai socks\npale hose\nsouth side\nsouth siders\nsouthsiders\nwhite socks\nwhite sox\n\nBy partial team name:\nsocks\nsox\n\nBy city:\nchicago",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Chicago White Sox\n\nThis is not supported for Phase 1:\nBy partial team name:\nThen the bot provides a quick reply for user to select a team: White Sox or Red Sox\n\nThis is not supported for Phase 1:\nBy city:\nThen the bot provides a quick reply for user to select a team: White Sox or Cubs\n"
+      },
+      {
+        "content": "fish\nmarlins\nmiami\nmiami marlins",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Miami Marlins"
+      },
+      {
+        "content": "baby bombers\nbombers\nbronx\nbronx bombers\nnew york yankees\npinstripers\npinstripes\nyankees\nyanks\n\nBy city:\nnew york\nn.y.\nny",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the New York Yankees\n\nBy city:\nThen the bot provides a quick reply for user to select a team: Mets or Yankees"
+      },
+      {
+        "content": "brew crew\nbrew hahs\nbrewers\ncerveceros\ncrew\nmilwaukee\nmilwaukee brewers",
+        "expected": "THEN the bot returns a team page deep link\nAND the user should be taken to the team page for the Milwaukee Brewers"
+      }
+    ]
+  },
+  {
+    "id": 1182577,
+    "title": "Team Context Retention",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-128, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1505922357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 14,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": null,
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user makes a request about a team\nAND the bot responds\nAND the user makes subsequent requests",
+        "expected": "THEN the bot will assume subsequent requests in that conversation refer to that team\nAND the bot returns a team page deep link\nAND the user is taken to the team page in At Bat of the requested team)\nAND the session will time out after 20 minutes????\n\ni.e.\nUser: Did the Mets win?\nBot: deeplink\nUser: When is their next game?\nBot: deeplink\nUser: score\nBot: deeplink"
+      },
+      {
+        "content": "WHEN the user makes a request about a team\nAND the bot responds\nAND the user makes subsequent request regarding another team\n\n",
+        "expected": "THEN the bot will assume subsequent requests in that conversation refer to that team\nAND the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team, until a new team is invoked\nAND the session will time out after 20 minutes????\n\ni.e. \nUser: Did the Mets win?\nBot: deeplink\nUser: When is their next game?\nBot: deeplink\nUser: score\nBot: deeplink\nUser: What's the Braves score?\nBot: deeplink"
+      }
+    ]
+  },
+  {
+    "id": 1182578,
+    "title": "Team Context Rention, based on who won or lost",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-259, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1505922357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 15,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user makes a request game info for a past game\nAND asks a follow up question asking who won\n\ni.e. \nUser: What was Orioles scores on June 22nd?\nBot: deeplink\nUser: Who won?",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "When the user makes a request game info for a past game\nAND asks a follow up question asking who lost\n\ni.e. \nUser: What was Orioles scores on June 22nd?\nBot: deeplink \nUser: Who lost?",
+        "expected": "THEN the bot returns a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 1182579,
+    "title": "Bot Returns Correct Response",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-88, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1505922357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 16,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user makes a request to play a game's audio broadcast",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182580,
+    "title": "Unsupported Requests_fb conversation examples",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-185, SDBB-194, SDBB-241, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1508875119,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 17,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user makes any of the following unsupported requests:",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Unsupported Request\n\ni.e.\nWhat was the Mets' team average for April of 1986?",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      },
+      {
+        "content": "Curse at Bot\n\ni.e. \nF**k you\nEat some s**t\n",
+        "expected": "THEN the user will get a message:\nSorry, I missed that. Would you try asking another way?"
+      },
+      {
+        "content": "FUTURE??\nUnsupported MLB-Related Request?\n\ni.e.\n",
+        "expected": "???"
+      }
+    ]
+  },
+  {
+    "id": 1182581,
+    "title": "Iterate Through Schedule",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-199, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1506462564,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 18,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user who is already talking about a game / date with the bot asks about other games in proximity to the original game on the schedule:\r\n- Conversation must have a specific team and game context\r\n- Bot must infer a \"previous\" or \"next\" context from the user utterance",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user requests:\n- (the) next (game)\n- how about (the) next (game)\n- what about (the) next (game)\n",
+        "expected": "THEN the bot return a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "WHEN the user requests:\n- (the) previous (game)\n- how about (the) previous (game)\n- what about (the) previous (game)",
+        "expected": "THEN the bot return a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "WHEN user responds / follows up with a request",
+        "expected": "THEN the bot return a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "WHEN the user requests a given date\n\ni.e.\n\n<it's Thursday>\nUser: Previous \nBot: deeplink\nUser: Next\nBot: deeplink \nUser: Next\nBot: deeplink \nUser: Previous \nBot: deeplink \nUser: next game after Friday",
+        "expected": "THEN the bot return a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "WHEN the user asks for games by day of the following week (Friday June 30; Friday July 7)\n\ni.e.\nUser: Yankees game Friday\nBot: deeplink\nUser: Yankees game next Friday",
+        "expected": "THEN the bot return a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "WHEN the user asks for games by day of the following week and the week after (Friday June 30; Friday July 7; Friday July 14 etc.)\n\ni.e.\nUser: Yankees game Friday\nBot: deeplink\nUser: Yankees game next Friday\nBot: deeplink\nUser: Yankees game next Friday after that",
+        "expected": "THEN the bot return a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      },
+      {
+        "content": "WHEN there are no previous or next games",
+        "expected": "THEN the bot return a team page deep link\nAND the user is taken to the requested Team page in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 1182582,
+    "title": "Get Missing Team Context",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-120, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1505922357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 19,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "When the user provides an invalid intent with missing or non-mathcing team or team local\r\nAnd the bot does not recognize the intent\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user keeps providing an invalid intent that bot still does not recognize",
+        "expected": "Then the bot's response is:\n1. Which $CITYNAME team?\n2. Sorry, which $CITYNAME team did you want?\n3. Which team in $CITYNAME?"
+      },
+      {
+        "content": "When the user provides an invalid intent 3x in a row",
+        "expected": "Then the bot drops the conversational context; such that on a user's next utterance / request, the Bot ignores the user's previous query"
+      },
+      {
+        "content": "When the user provides a valid intent with valid team or team local",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      },
+      {
+        "content": "When the user does not respond",
+        "expected": "Then the bot will not do anything"
+      },
+      {
+        "content": "When the user switches to another valid intent",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      }
+    ]
+  },
+  {
+    "id": 1182583,
+    "title": "Requests phrased different provides same response",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-252, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1505922357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 20,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "When the user makes the same intent phrased differently\r\n\r\ni.e.\r\nRequest 1: \"what was last Friday's nats score?\"\r\nRequest 2: \"what was the nats score last Friday?\"",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182584,
+    "title": "All-Stars Game Request",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-272, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1506464250,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 21,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "When the user makes the request for the All-Stars game using any of the following entries:\r\n\r\n- All-Star Game\r\n- All Star Game\r\n- ASG\r\n- National League\r\n- NL\r\n- N.L.\r\n- American League\r\n- AL\r\n- A.L.",
+    "custom_expected": "THEN the user should get an error copy message",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182585,
+    "title": "Team vs. Team",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-298, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1505922357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 22,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user requests to get information about the next time a team plays an opponent.\r\n\r\ni.e.\r\n\r\n- yankees mariners\r\n- yankees mariners series\r\n- when do the yankees and mariners play?\r\n- when is the yankees mariners?\r\n- when is the next yankees mariners series?\r\n- when do the yankees and mariners play next?\r\n- when did the yankees and mariners last play?",
+    "custom_expected": "THEN the bot returns a team page deep link for the first team\r\nAND the user is taken to the team page in At Bat of the first requested team",
+    "custom_steps_separated": [
+      {
+        "content": "When the two teams requested have not yet played during the regular season\n",
+        "expected": "THEN the bot returns a team page deep link for the first team\nAND the user is taken to the team page in At Bat of the first requested team"
+      },
+      {
+        "content": "When the request is for a future matchup of two teams that don't play again during the regular season\nAND there is No Tie.",
+        "expected": "THEN the bot returns a team page deep link for the first team\nAND the user is taken to the team page in At Bat of the first requested team"
+      },
+      {
+        "content": "When the request is for a future matchup of two teams that don't play again during the regular season\nAND there is a Tie.",
+        "expected": "THEN the bot returns a team page deep link for the first team\nAND the user is taken to the team page in At Bat of the first requested team"
+      }
+    ]
+  },
+  {
+    "id": 1182586,
+    "title": "Last Month's Game",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-120, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1505922357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 23,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "When the user provides an valid intent requesting last month's / previous month's game\r\ni.e.\r\nCurrent date is July 27. User requests: \"TEAM game last month\"\r\n",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182587,
+    "title": "Doubleheader, Game(s) in Preview",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-317, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1506524013,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 24,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "When the user provides a valid intent requesting a team with doubleheader games scheduled\r\nAND both games are in preview state\r\n\r\nAug 21, 2017\r\nTwins\tWhite Sox\t - 5:10 PM\t\t\r\nTwins\tWhite Sox\t - Game 2",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182588,
+    "title": "Doubleheader, Game(s) in Final/Completed",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-317, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505854363,
+    "updated_by": 65,
+    "updated_on": 1506524120,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 25,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "When the user provides a valid intent requesting a team with doubleheader games scheduled\r\n\r\ni.e. \r\n- white sox may 26, 2017\r\n- did the white sox win on may 26, 2017",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": [
+      {
+        "content": "When both games are in final/completed state\n\nMay 26\n\nGame 1: \nTigers - 3,  White Sox - 2\n\nGame 2:\nTigers - 1,  White Sox - 4",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      },
+      {
+        "content": "When game 1 is not played because it was postponed, suspended, or cancelled\nAND game 2 is in final/completed state\n\nMay 26\n\nGame 1: (Postponed)\nTigers,  White Sox\n\nGame 2:\nTigers - 2,  White Sox - 3",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      },
+      {
+        "content": "When game 1 is in final/completed state \nAND game 2 is not played because it was postponed, suspended, or cancelled\n\nMay 26\n\nGame 1: \nTigers - 3,  White Sox - 2\n\nGame 2: (Postponed)\nTigers,  White Sox",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      }
+    ]
+  },
+  {
+    "id": 1204832,
+    "title": "Stats with the word 'Score'",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-317, SDBB-409",
+    "created_by": 65,
+    "created_on": 1507920510,
+    "updated_by": 65,
+    "updated_on": 1507920665,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 26,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user asks a stats query with the word 'score'\r\n\r\ni.e. \"how many runs did the Yankees score in 1937\"",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1207156,
+    "title": "World Series Query",
+    "section_id": 141775,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-490",
+    "created_by": 65,
+    "created_on": 1508341256,
+    "updated_by": 65,
+    "updated_on": 1508344413,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 27,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an utterance contains the words \"world series\" or \"fall classic\" AND a year (i.e., 2011)",
+        "expected": "THEN bot returns a webview deep link to a page with data about that series\nhttp://m.mlb.com/atbat/postseason/history/[YEAR]/world-series/\n\ni.e. http://m.mlb.com/atbat/postseason/history/2011/world-series/"
+      },
+      {
+        "content": "WHEN the utterance contains only \"World Series\"",
+        "expected": "THEN bot returns a webview deep link to a page with data about last year's series\nhttp://m.mlb.com/atbat/postseason/history/[LastYear]/world-series/\n\ni.e. http://m.mlb.com/atbat/postseason/history/2016/world-series/"
+      }
+    ]
+  },
+  {
+    "id": 1184445,
+    "title": "Live Game Info",
+    "section_id": 142070,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-193, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505922553,
+    "updated_by": 65,
+    "updated_on": 1505923034,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN there is a live game for the team requested",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184447,
+    "title": "No Live Game / Next Scheduled Info",
+    "section_id": 142070,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-202, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505922553,
+    "updated_by": 65,
+    "updated_on": 1505923034,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user requests a team score\r\nAND there is no live game for the team requested\r\n\r\ni.e.\r\n- Are the Mets' winning?\r\n- What is the Mets' score right now?\r\n- Are the Mets' winning?\r\n- What is the Mets' score?\r\n- Are the Mets winning right now?",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "When the user requests a game and the next game is  tomorrow",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      },
+      {
+        "content": "When the user requests a game and the next game is tomorrow + inifinity",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      }
+    ]
+  },
+  {
+    "id": 1184448,
+    "title": "Past Game Results",
+    "section_id": 142070,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-197, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505922553,
+    "updated_by": 65,
+    "updated_on": 1505923034,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user requests the results of a past game in the regular season in the current year",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN 9 innings",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      },
+      {
+        "content": "WHEN < or > 9 innings",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      }
+    ]
+  },
+  {
+    "id": 1184449,
+    "title": "Postponed Games",
+    "section_id": 142070,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-251, SDBB-313, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505922553,
+    "updated_by": 65,
+    "updated_on": 1505923034,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user requests a team score\r\nAND the game is postponed\r\n\r\ni.e.\r\n- Are the Mets' winning?\r\n- What is the Mets' score right now?\r\n- Are the Mets' winning?\r\n- What is the Mets' score?\r\n- Are the Mets winning right now?",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "When the game is postponed today",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      },
+      {
+        "content": "When the game was postponed yesterday",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      },
+      {
+        "content": "When the game was postponed another date",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      },
+      {
+        "content": "https://jira.mlbam.com/browse/SDBB-313\n\nWhen there is a doubleheader\nAND one of the games has been postponed",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      }
+    ]
+  },
+  {
+    "id": 1184450,
+    "title": "Canceled Games",
+    "section_id": 142070,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-251, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505922553,
+    "updated_by": 65,
+    "updated_on": 1508875473,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user requests a team score\r\nAND the game is canceled\r\n\r\ni.e.\r\n- Are the Mets' winning?\r\n- What is the Mets' score right now?\r\n- Are the Mets' winning?\r\n- What is the Mets' score?\r\n- Are the Mets winning right now?",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "When the game is cancelled today",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      },
+      {
+        "content": "When the game was cancelled yesterday",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      },
+      {
+        "content": "When the game was cancelled another date",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      }
+    ]
+  },
+  {
+    "id": 1184451,
+    "title": "Suspended Games",
+    "section_id": 142070,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-251, SDBB-409",
+    "created_by": 65,
+    "created_on": 1505922553,
+    "updated_by": 65,
+    "updated_on": 1508875504,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user requests a team score\r\nAND the game is suspended\r\n\r\ni.e.\r\n- Are the Mets' winning?\r\n- What is the Mets' score right now?\r\n- Are the Mets' winning?\r\n- What is the Mets' score?\r\n- Are the Mets winning right now?",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "When the game is suspended today",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      },
+      {
+        "content": "When the game was suspended yesterday",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      },
+      {
+        "content": "When the game was suspended another date",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      }
+    ]
+  },
+  {
+    "id": 1184446,
+    "title": "In Season Team Update Info",
+    "section_id": 142070,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-409, SDBB-194",
+    "created_by": 65,
+    "created_on": 1505922553,
+    "updated_by": 65,
+    "updated_on": 1506028329,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 8,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user asks a question regarding a team update for the current season",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1185203,
+    "title": "Response contains Deeplink",
+    "section_id": 142070,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1506027987,
+    "updated_by": 65,
+    "updated_on": 1506028139,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 9,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the Questions interface",
+    "custom_steps": "WHEN the user asks a valid game state question\r\nAND the response contains a deeplink",
+    "custom_expected": "THEN the bot direct the user to the deeplink\r\nAND is taken to the team page requested",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1185202,
+    "title": "Response does Not contain Deeplink",
+    "section_id": 142070,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1506027504,
+    "updated_by": 65,
+    "updated_on": 1507049296,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 10,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the Questions interface",
+    "custom_steps": "WHEN the user asks a game state question\r\nAND the response does not contain a deeplink\r\n\r\ni.e. who makes the best hamburgers?\r\n",
+    "custom_expected": "THEN the bot should return error language, which is included in the copy field of the payload [the bot prints the copy in the copy field provided in the response from the service.]",
+    "custom_steps_separated": [
+      {
+        "content": "The Scenario below, multi-city teams, will not be supported for Phase 1\n\nQuestion: What's the score for LA",
+        "expected": "The Scenario below, multi-city teams, will not be supported for Phase 1\n\nQuestion: What's the score for LA\nResponse: Which Los Angeles team?"
+      }
+    ]
+  },
+  {
+    "id": 1185211,
+    "title": "Response does Not contain Deeplink nor Copy",
+    "section_id": 142070,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1506029743,
+    "updated_by": 65,
+    "updated_on": 1506029795,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 11,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the Questions interface",
+    "custom_steps": "WHEN the user asks a valid game state question\r\nAND the response does not contain a deeplink nor copy\r\n\r\ni.e. \r\n- gibberish is entered/spoken\r\n- question misunderstood by bot",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "i.e. \n- gibberish is entered/spoken\n- question misunderstood by bot",
+        "expected": "THEN the bot must print \"Sorry, I missed that. Would you try asking another way?\""
+      },
+      {
+        "content": "i.e. The user does not speak when microphone is activated",
+        "expected": "THEN the bot must print \"Sorry, please try again.\""
+      }
+    ]
+  },
+  {
+    "id": 1182555,
+    "title": "Valid BamBot command, intent not recognized",
+    "section_id": 141774,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-185",
+    "created_by": 65,
+    "created_on": 1505854250,
+    "updated_by": 65,
+    "updated_on": 1505921105,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user makes an valid team intent but the intent is not recognized",
+    "custom_expected": "THEN Alexa responds with:\r\nI don't recognize that request. Try asking about a team.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182556,
+    "title": "Invalid BamBot command, intent not recognized",
+    "section_id": 141774,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1505854250,
+    "updated_by": 65,
+    "updated_on": 1505921125,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user makes an invalid intent\r\ni.e.\r\n- yo\r\n- lol\r\n- hey\r\n- wat\r\n",
+    "custom_expected": "THEN Alexa responds with any of the following:\r\n- I didn't quite get that. Try again?\r\n- Not sure I follow. Type that again?\r\n- Sorry, I didn't get that. Try asking me about an MLB team.\r\n- I'm not sure what you wanted there.\r\nAND the user is able to make another intent",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182557,
+    "title": "EDIT_Invalid BamBot command, intent not recognized, user makes another intent",
+    "section_id": 141774,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-111",
+    "created_by": 65,
+    "created_on": 1505854250,
+    "updated_by": 65,
+    "updated_on": 1506527836,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user makes an invalid utterance (i.e. yo, lol, hey, wat, etc.)\r\nAND the bot will response with clever and useful repsonses, \r\ni.e.\r\n\"I didn't quite get that. Try again?\"\r\n\"Not sure I follow. Type that again?\"\r\n\"Sorry, I didn't get that. Tray asking me about an MLB team.\"\r\n\"I'm not sure what you wanted there.\"\r\nAND the user is able to make another of the following intents\r\n",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user repeats their invalid intent",
+        "expected": "THEN the user reply with one of the responses mentioned above in the steps"
+      },
+      {
+        "content": "WHEN the user resorts to cursing",
+        "expected": "THEN the user reply with one of the responses mentioned above in the steps"
+      },
+      {
+        "content": "WHEN the user makes a valid intent",
+        "expected": "THEN the response will be fulfilled with a valid response"
+      }
+    ]
+  },
+  {
+    "id": 1182558,
+    "title": "Multi-Team Locale",
+    "section_id": 141774,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-118",
+    "created_by": 65,
+    "created_on": 1505854250,
+    "updated_by": 65,
+    "updated_on": 1505921161,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user utters a locale with multiple teams\ni.e.\n- Chicago\n- Los Angeles, LA or L.A.\n- New York or NY",
+        "expected": "THEN the bot responds with either of the following:\n- Which [Team_Locale] Team?\n- Sorry, which [Team_Locale] Team?\n- Which team in [Team_Local]?"
+      },
+      {
+        "content": "WHEN the user is able to provide a team context\ni.e.\n- Cubs\n- Dodger\n- Mets",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      }
+    ]
+  },
+  {
+    "id": 1182559,
+    "title": "Multi-Team Locale, User Response",
+    "section_id": 141774,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-118",
+    "created_by": 65,
+    "created_on": 1505854250,
+    "updated_by": 65,
+    "updated_on": 1505921211,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user supplies a team name via either of the following methods",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is presented with a quick reply prompt\ni.e.\n- Chicago \"Cubs\" or \"White Sox\"\n- Los Angeles \"Dodgers\" or \"Angels\"\n- New York \"Mets\" or \"Yankees\"\nAND the user taps on a quick reply option",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      },
+      {
+        "content": "WHEN the user enters or speaks valid text containing the team name in the text field\n",
+        "expected": "THEN the bot returns a team page deep link for the requested team\nAND the user is taken to the team page in At Bat of the requested team"
+      }
+    ]
+  },
+  {
+    "id": 1182560,
+    "title": "Multi-Team Locale Ambiguous, User Repeats Ambiguous Response",
+    "section_id": 141774,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-118",
+    "created_by": 65,
+    "created_on": 1505854250,
+    "updated_by": 65,
+    "updated_on": 1505921255,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user utters an ambiguous locale with multiple teams (i.e. Chicago, Los Angeles, New York, etc.)\r\nAND the bot responds with either of the following:\r\n- Which [Team_Locale] Team?\r\n- Sorry, which [Team_Locale] Team?\r\n- Which team in [Team_Local]?\r\nAND the user repeats the same ambiguous team name",
+    "custom_expected": "THEN the bot responds with either of the following:\r\n- Which [Team_Locale] Team?\r\n- Sorry, which [Team_Locale] Team?\r\n- Which team in [Team_Local]?",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182561,
+    "title": "EDIT_Multi-Team Locale Invalid, User Response",
+    "section_id": 141774,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-118",
+    "created_by": 65,
+    "created_on": 1505854250,
+    "updated_by": 65,
+    "updated_on": 1505921286,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user utters an invalid locale with multiple teams (i.e. Chicago, Los Angeles, New York, etc.)\r\nAND the bot responds with either of the following:\r\n- Which [Team_Locale] Team?\r\n- Sorry, which [Team_Locale] Team?\r\n- Which team in [Team_Local]?\r\nAND the user provides an invalid team name",
+    "custom_expected": "THEN the user will get missing team context (link TBA).",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182562,
+    "title": "Multi-Team Locale, No User Response",
+    "section_id": 141774,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-118",
+    "created_by": 65,
+    "created_on": 1505854250,
+    "updated_by": 65,
+    "updated_on": 1505921311,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 8,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user utters an invalid locale with multiple teams (i.e. Chicago, Los Angeles, New York, etc.)\r\nAND the bot responds with either of the following:\r\n- Which [Team_Locale] Team?\r\n- Sorry, which [Team_Locale] Team?\r\n- Which team in [Team_Local]?\r\nAND the user does not provide a response",
+    "custom_expected": "THEN nothing will occur",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182563,
+    "title": "EDIT_Top Videos for a Team",
+    "section_id": 141774,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-132",
+    "created_by": 65,
+    "created_on": 1505854250,
+    "updated_by": 65,
+    "updated_on": 1505918297,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20032,
+    "display_order": 9,
+    "custom_preconds": "GIVEN the user is in At Bat app\r\nAND is in the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user makes the intent to ask for the top videos for a team\r\ni.e.\r\n[teamName] video\r\n[teamName] videos\r\n[teamName] top video\r\n[teamName] top videos",
+    "custom_expected": "THEN the bot returns a team page deep link for the requested team\r\nAND the user is taken to the team page in At Bat of the requested team",
+    "custom_steps_separated": null
+  }
+]

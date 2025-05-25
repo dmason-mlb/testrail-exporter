@@ -1,0 +1,169 @@
+[
+  {
+    "id": 585808,
+    "title": "Changing Between Main Navigation Tabs (Lite User)",
+    "section_id": 71219,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1476294494,
+    "updated_by": 84,
+    "updated_on": 1487203514,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 12165,
+    "display_order": 1,
+    "custom_preconds": "Given the app has been installed\r\nand the user is not logged in with a paid account\r\n(test for Lite and Single Team users)",
+    "custom_steps": "When the user launches the app\r\nand is left on their landing page",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on another tab from the slide out menu",
+        "expected": "Then the user will see an ad interstitial served by DFP"
+      },
+      {
+        "content": "on handset",
+        "expected": "320x480"
+      },
+      {
+        "content": "on 7 inch tablets\nin Portrait mode",
+        "expected": "320x480"
+      },
+      {
+        "content": "on 7 inch tablets\nin Landscape mode",
+        "expected": "480x320"
+      },
+      {
+        "content": "on tablets larger than 7 inches\nin Portrait mode",
+        "expected": "768x1024"
+      },
+      {
+        "content": "on tablets larger than 7 inches\nin Landscape mode",
+        "expected": "1024x768"
+      },
+      {
+        "content": "When the user continues to switch tabs",
+        "expected": "Then they should not see any more ad interstitials"
+      }
+    ]
+  },
+  {
+    "id": 585812,
+    "title": "Changing Between Main Navigation Tabs (Paid User)",
+    "section_id": 71219,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1476296489,
+    "updated_by": 84,
+    "updated_on": 1487203732,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 12165,
+    "display_order": 2,
+    "custom_preconds": "Given the app has been installed\r\nand the user is logged in with a paid account\r\n(At Bat Premium; TV Premium; Single Team+At Bat)",
+    "custom_steps": "When the user launches the app\r\nand is left on their landing page",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on another tab from the slide out menu",
+        "expected": "Then the user will NOT see an ad interstitial"
+      }
+    ]
+  },
+  {
+    "id": 585809,
+    "title": "Interstitial Blackout",
+    "section_id": 71219,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1476294557,
+    "updated_by": 84,
+    "updated_on": 1476304300,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 12165,
+    "display_order": 3,
+    "custom_preconds": "Given the app has been installed\r\nand the user is not logged in with a paid account",
+    "custom_steps": "When the user launches At Bat",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 585810,
+    "title": "Limit with Gameday Interstitial",
+    "section_id": 71219,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1476294566,
+    "updated_by": 84,
+    "updated_on": 1476298481,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 12165,
+    "display_order": 4,
+    "custom_preconds": "Given the app has been installed\r\nand the user is a LITE or Single Team user",
+    "custom_steps": "When the user launches the app",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If the user sees an app entry interstitial\nand then enters Gameday (for the first time in 12 hours)",
+        "expected": "Then the user should NOT see a Gameday entry interstitial\n(User should see only one of the two entry ads per user session)"
+      },
+      {
+        "content": "If the user does NOT see an app entry interstitial\nand then enters Gameday (for the first time in 12 hours)",
+        "expected": "Then the user should see a Gameday entry interstitial\n(User should see only one of the two entry ads per user session)"
+      }
+    ]
+  },
+  {
+    "id": 585811,
+    "title": "Exceptions",
+    "section_id": 71219,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1476294574,
+    "updated_by": 84,
+    "updated_on": 1476298594,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 12165,
+    "display_order": 5,
+    "custom_preconds": "Given the app has been installed\r\nand the user is a LITE or Single Team user",
+    "custom_steps": "When the user enters At Bat via a deep link",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "via a deep link from http://wapqa.mlb.com/test/android/atbat-links.html",
+        "expected": "Then the user should NOT see an app entry interstitial"
+      },
+      {
+        "content": "via a Google app indexing deep link",
+        "expected": "Then the user should NOT see an app entry interstitial"
+      }
+    ]
+  }
+]

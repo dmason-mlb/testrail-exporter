@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1420020,
+    "suite_id": 499418,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1420021,
+    "suite_id": 499418,
+    "name": "Onboarding",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1516343,
+    "suite_id": 499418,
+    "name": "Sign Up",
+    "description": null,
+    "parent_id": 1420021,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 1516347,
+    "suite_id": 499418,
+    "name": "Log In",
+    "description": null,
+    "parent_id": 1420021,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 1516356,
+    "suite_id": 499418,
+    "name": "Update and Log in flow",
+    "description": "https://baseball.atlassian.net/browse/FTP-3533",
+    "parent_id": 1516347,
+    "display_order": 7,
+    "depth": 2
+  },
+  {
+    "id": 1420024,
+    "suite_id": 499418,
+    "name": "Games Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1420025,
+    "suite_id": 499418,
+    "name": "Results Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 1516345,
+    "suite_id": 499418,
+    "name": "Beat the Streak",
+    "description": null,
+    "parent_id": 1420025,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 1516346,
+    "suite_id": 499418,
+    "name": "Quick Pick",
+    "description": null,
+    "parent_id": 1420025,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 1516344,
+    "suite_id": 499418,
+    "name": "Diamond Derby",
+    "description": null,
+    "parent_id": 1420025,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 1420026,
+    "suite_id": 499418,
+    "name": "Profile Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 1420029,
+    "suite_id": 499418,
+    "name": "Invite Friends",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 1516357,
+    "suite_id": 499418,
+    "name": "Playing game flow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 1516701,
+    "suite_id": 499418,
+    "name": "Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  }
+]

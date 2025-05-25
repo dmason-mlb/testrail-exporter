@@ -1,0 +1,250 @@
+[
+  {
+    "id": 30256973,
+    "title": "XP and RP",
+    "section_id": 1650198,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1678220496,
+    "updated_by": 258,
+    "updated_on": 1678220600,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 596644,
+    "display_order": 1,
+    "custom_preconds": "GIVEN app installed on Device\r\nAND user us playing Bingo",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user played the Bingo",
+        "expected": "THEN user receives 50 XP just for playing \nAND 2 RP for correct tile including free tile\nAND max RP should be 50"
+      }
+    ]
+  },
+  {
+    "id": 30256974,
+    "title": "Single Bingo",
+    "section_id": 1650199,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1678220499,
+    "updated_by": 258,
+    "updated_on": 1678220604,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 596644,
+    "display_order": 1,
+    "custom_preconds": "GIVEN app installed on Device\r\nAND User logged in \r\n",
+    "custom_steps": "WHEN user played the Bingo contest \r\nAND got awarded badges ",
+    "custom_expected": "THEN user should see all the badges on Profile -> Badges section \r\nAND the badges should also display in the Feed page\r\nAND user should receive a badge modal",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user got Single Bingo \n",
+        "expected": "THEN user should be receive a Single Bingo badge\nAND the copy should say 'Single Bingo: Bingo - Be the first fan to get five in a row on your Bingo card and call Bingo'"
+      },
+      {
+        "content": "",
+        "expected": "Note: there is only one person receiving this badge"
+      }
+    ]
+  },
+  {
+    "id": 30256975,
+    "title": "Single Runner-Up",
+    "section_id": 1650199,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1678220499,
+    "updated_by": 258,
+    "updated_on": 1678220608,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 596644,
+    "display_order": 2,
+    "custom_preconds": "GIVEN app installed on Device\r\nAND User logged in \r\n",
+    "custom_steps": "WHEN user played the Bingo contest \r\nAND user got the Single Bingo after the first person who gets Single Bingo\r\nAND got awarded badges ",
+    "custom_expected": "THEN user should see all the badges on Profile -> Badges section \r\nAND the badges should also display in the Feed page\r\nAND user should receive a badge modal",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user got Single Runner-Up\n",
+        "expected": "THEN user should receive a Single Runner-Up badge\nAND the copy should say 'Single Runner-Up: Bingo - Get five in a row on your Bingo card and call Bingo'"
+      },
+      {
+        "content": "",
+        "expected": "AND all people who get bingo after the first person who gets bingo should receive this badge\nAND these badges are not associated with any prize"
+      }
+    ]
+  },
+  {
+    "id": 30256976,
+    "title": "Diamond Bingo",
+    "section_id": 1650199,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1678220499,
+    "updated_by": 258,
+    "updated_on": 1678220613,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 596644,
+    "display_order": 3,
+    "custom_preconds": "GIVEN app installed on Device\r\nAND User logged in \r\n",
+    "custom_steps": "WHEN user played the Bingo contest \r\nAND user got diamond bingo\r\nAND got awarded badges ",
+    "custom_expected": "THEN user should see all the badges on Profile -> Badges section \r\nAND the badges should also display in the Feed page\r\nAND user should receive a badge modal",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user got Diamond Bingo \n",
+        "expected": "THEN user should be receive a Diamond Bingo badge\nAND the copy should say 'Diamond: Bingo - Be the first fan to get a diamond on your Bingo card and call Diamond'"
+      },
+      {
+        "content": "",
+        "expected": "Note: there is only one person receiving this badge"
+      }
+    ]
+  },
+  {
+    "id": 30256977,
+    "title": "Diamond Runner-up",
+    "section_id": 1650199,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1678220499,
+    "updated_by": 258,
+    "updated_on": 1678220618,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 596644,
+    "display_order": 4,
+    "custom_preconds": "GIVEN app installed on Device\r\nAND User logged in \r\n",
+    "custom_steps": "WHEN user played the Bingo contest \r\nAND user got the Diamond Bingo after the first person who gets Diamond Bingo\r\nAND got awarded badges ",
+    "custom_expected": "THEN user should see all the badges on Profile -> Badges section \r\nAND the badges should also display in the Feed page\r\nAND user should receive a badge modal",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user got Diamond Runner-Up\n",
+        "expected": "THEN user should receive a Diamond Runner-Up badge\nAND the copy should say 'Diamond Runner-up: Bingo - Get a diamond on your Bingo card and call Diamond'"
+      },
+      {
+        "content": "",
+        "expected": "AND all people who get bingo after the first person who gets bingo should receive this badge\nAND these badges are not associated with any prize"
+      }
+    ]
+  },
+  {
+    "id": 30256978,
+    "title": "Blackout Bingo",
+    "section_id": 1650199,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1678220499,
+    "updated_by": 258,
+    "updated_on": 1678220622,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 596644,
+    "display_order": 5,
+    "custom_preconds": "GIVEN app installed on Device\r\nAND User logged in \r\n",
+    "custom_steps": "WHEN user played the Bingo contest \r\nAND user got blackout bingo\r\nAND got awarded badges ",
+    "custom_expected": "THEN user should see all the badges on Profile -> Badges section \r\nAND the badges should also display in the Feed page\r\nAND user should receive a badge modal",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user got Blackout Bingo \n",
+        "expected": "THEN user should be receive a Blackout Bingo badge\nAND the copy should say 'Blackout: Bingo - Be the first fan to get every tile (blackout) on your Bingo card and call Blackout'"
+      },
+      {
+        "content": "",
+        "expected": "Note: there is only one person receiving this badge"
+      }
+    ]
+  },
+  {
+    "id": 30256979,
+    "title": "Blackout Runner-up",
+    "section_id": 1650199,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1678220499,
+    "updated_by": 258,
+    "updated_on": 1678220627,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 596644,
+    "display_order": 6,
+    "custom_preconds": "GIVEN app installed on Device\r\nAND User logged in \r\n",
+    "custom_steps": "WHEN user played the Bingo contest \r\nAND user got the Blackout Bingo after the first person who gets Diamond Bingo\r\nAND got awarded badges ",
+    "custom_expected": "THEN user should see all the badges on Profile -> Badges section \r\nAND the badges should also display in the Feed page\r\nAND user should receive a badge modal",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user got Blackout Runner-Up\n",
+        "expected": "THEN user should receive a Blackout Runner-Up badge\nAND the copy should say 'Blackout Runner-up: Bingo - Get every tile (blackout) on your Bingo card and call Blackout'"
+      },
+      {
+        "content": "",
+        "expected": "AND all people who get bingo after the first person who gets bingo should receive this badge\nAND these badges are not associated with any prize"
+      }
+    ]
+  },
+  {
+    "id": 30256980,
+    "title": "Bingo - Contest Results card",
+    "section_id": 1650200,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-4037",
+    "created_by": 258,
+    "created_on": 1678220513,
+    "updated_by": 258,
+    "updated_on": 1678220634,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 596644,
+    "display_order": 1,
+    "custom_preconds": "GIVEN app installed on Device\r\nAND user is logged in\r\nAND user played Bingo\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the results of Bingo in the Results Feed",
+        "expected": "THEN user is displayed with: \n\n* user's avatar\n* 'You' bubble or user's name\n* date \n* result copy 'Your Bingo card had # correct tiles'\n* 'Bingo' logo\n* amount of XP and tokens user earned\n\n"
+      },
+      {
+        "content": "WHEN Bingo card had only one correct tile",
+        "expected": "THEN the copy should read: Your Bingo card had 1 correct tile"
+      },
+      {
+        "content": "WHEN user got Single Bingo, Diamond, or Blackout",
+        "expected": "THEN the copy should be 'Your Bingo card had # correct tiles and you got [Single Bingo/Diamond/Blackout].'\nAND the copy should select the highest achievement of three that the user earned. (Single rule only)"
+      }
+    ]
+  }
+]

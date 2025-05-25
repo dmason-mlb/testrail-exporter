@@ -1,0 +1,20 @@
+[
+  {
+    "id": 146968,
+    "suite_id": 20347,
+    "name": "International Amateur - Global",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 146967,
+    "suite_id": 20347,
+    "name": "International Trainer/Agent",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

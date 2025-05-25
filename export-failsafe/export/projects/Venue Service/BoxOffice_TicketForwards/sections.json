@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1503870,
+    "suite_id": 531230,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1503871,
+    "suite_id": 531230,
+    "name": "ManualAcceptance",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1503872,
+    "suite_id": 531230,
+    "name": "AutoAcceptance",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1505921,
+    "suite_id": 531230,
+    "name": "ForwardRetry",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

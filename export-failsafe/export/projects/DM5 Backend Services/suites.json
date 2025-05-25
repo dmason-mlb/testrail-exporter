@@ -1,0 +1,167 @@
+[
+  {
+    "id": 585754,
+    "name": "Media-Gateway",
+    "description": null,
+    "project_id": 243,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/585754"
+  },
+  {
+    "id": 585755,
+    "name": "Device/Session Service",
+    "description": null,
+    "project_id": 243,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/585755"
+  },
+  {
+    "id": 585756,
+    "name": "Playback Session Service",
+    "description": null,
+    "project_id": 243,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/585756"
+  },
+  {
+    "id": 585758,
+    "name": "Traffic Splitting Service",
+    "description": null,
+    "project_id": 243,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/585758"
+  },
+  {
+    "id": 585759,
+    "name": "Playback Service",
+    "description": null,
+    "project_id": 243,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/585759"
+  },
+  {
+    "id": 606166,
+    "name": "End to End Tests",
+    "description": null,
+    "project_id": 243,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/606166"
+  },
+  {
+    "id": 614798,
+    "name": "Content Registry",
+    "description": null,
+    "project_id": 243,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/614798"
+  },
+  {
+    "id": 616120,
+    "name": "Traffic Splitting Override Service",
+    "description": null,
+    "project_id": 243,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/616120"
+  },
+  {
+    "id": 622128,
+    "name": "Operator-Gateway",
+    "description": null,
+    "project_id": 243,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/622128"
+  },
+  {
+    "id": 623556,
+    "name": "ESNI Service",
+    "description": null,
+    "project_id": 243,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/623556"
+  },
+  {
+    "id": 626619,
+    "name": "Operator Tooling",
+    "description": null,
+    "project_id": 243,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/626619"
+  },
+  {
+    "id": 645672,
+    "name": "Audit Service",
+    "description": "A service to track actions taken by operators in other services.\r\n\r\n",
+    "project_id": 243,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/645672"
+  },
+  {
+    "id": 647951,
+    "name": "Saberstaff v3",
+    "description": null,
+    "project_id": 243,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/647951"
+  },
+  {
+    "id": 660859,
+    "name": "EPG DM5 experience Tests",
+    "description": null,
+    "project_id": 243,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/660859"
+  },
+  {
+    "id": 705781,
+    "name": "Media-Gateway 2",
+    "description": null,
+    "project_id": 243,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/705781"
+  }
+]

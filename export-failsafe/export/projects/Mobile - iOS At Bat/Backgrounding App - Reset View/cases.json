@@ -1,0 +1,479 @@
+[
+  {
+    "id": 958551,
+    "title": "Default Reset Time",
+    "section_id": 114322,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-15337",
+    "created_by": 39,
+    "created_on": 1492523144,
+    "updated_by": 39,
+    "updated_on": 1492523809,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17463,
+    "display_order": 1,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When the default reset time is set\r\nand the user backgrounds the app",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "for less than 6 hours",
+        "expected": "when they foreground the app, the user should be left on the same view"
+      },
+      {
+        "content": "for 6 or more hours",
+        "expected": "when they foreground the app, the user should be reset to the default view"
+      }
+    ]
+  },
+  {
+    "id": 958552,
+    "title": "Favorite Team",
+    "section_id": 114322,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-15337",
+    "created_by": 39,
+    "created_on": 1492523176,
+    "updated_by": 39,
+    "updated_on": 1492523923,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17463,
+    "display_order": 2,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user has a Favorite Team\r\nand no Default View set (in Settings)\r\nand the user backgrounds the app on another view\r\nand the background time is 6 hours",
+    "custom_expected": "Then the user should be taken to the Team Page",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 958553,
+    "title": "No Favorite Team",
+    "section_id": 114322,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-15337",
+    "created_by": 39,
+    "created_on": 1492523178,
+    "updated_by": 39,
+    "updated_on": 1492523976,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17463,
+    "display_order": 3,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user does not have a Favorite Team\r\nand no Default View set (in Settings)\r\nand the user backgrounds the app on another view\r\nand the background time is 6 hours",
+    "custom_expected": "Then the user should be taken to the Scoreboard",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 958555,
+    "title": "Default View Set",
+    "section_id": 114322,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-15337",
+    "created_by": 39,
+    "created_on": 1492523192,
+    "updated_by": 39,
+    "updated_on": 1492524160,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17463,
+    "display_order": 5,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user has a Favorite Team\r\nand the user backgrounds the app on another view\r\nand the background time is 6 hours",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and Default view in Settings is set to Favorite Team",
+        "expected": "then the user should be taken to the Team Page"
+      },
+      {
+        "content": "and Default view in Settings is set to Scores",
+        "expected": "then the user should be taken to the Scoreboard"
+      },
+      {
+        "content": "and Default view in Settings is set to News",
+        "expected": "then the user should be taken to the News"
+      }
+    ]
+  },
+  {
+    "id": 958556,
+    "title": "Team Page",
+    "section_id": 114322,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-15337",
+    "created_by": 39,
+    "created_on": 1492523205,
+    "updated_by": 39,
+    "updated_on": 1492524713,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17463,
+    "display_order": 6,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When the user backgrounds the app on the Team Page\r\nand the background time is 6 hours",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and no Default view set\nand the user has a Favorite Team",
+        "expected": "then the user should be taken to the Favorite Team when the app is foregrounded"
+      },
+      {
+        "content": "and no Default view set\nand the user has no Favorite Team",
+        "expected": "then the user should be taken to the Scoreboard when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to Favorite Team\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the Favorite Team when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to Scores\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the Scores when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to News\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the News when the app is foregrounded"
+      }
+    ]
+  },
+  {
+    "id": 958557,
+    "title": "News",
+    "section_id": 114322,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-15337",
+    "created_by": 39,
+    "created_on": 1492523206,
+    "updated_by": 39,
+    "updated_on": 1492524727,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17463,
+    "display_order": 7,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When the user backgrounds the app on the News\r\nand the background time is 6 hours",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and no Default view set\nand the user has a Favorite Team",
+        "expected": "then the user should be taken to the Team Page when the app is foregrounded"
+      },
+      {
+        "content": "and no Default view set\nand the user has no Favorite Team",
+        "expected": "then the user should be taken to the Scoreboard when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to Favorite Team\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the Favorite Team when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to Scores\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the Scores when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to News\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the News when the app is foregrounded"
+      }
+    ]
+  },
+  {
+    "id": 958561,
+    "title": "Videos",
+    "section_id": 114322,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-15337",
+    "created_by": 39,
+    "created_on": 1492524961,
+    "updated_by": 39,
+    "updated_on": 1492524989,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17463,
+    "display_order": 8,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When the user backgrounds the app on the News\r\nand the background time is 6 hours",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and no Default view set\nand the user has a Favorite Team",
+        "expected": "then the user should be taken to the Team Page when the app is foregrounded"
+      },
+      {
+        "content": "and no Default view set\nand the user has no Favorite Team",
+        "expected": "then the user should be taken to the Scoreboard when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to Favorite Team\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the Favorite Team when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to Scores\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the Scores when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to News\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the News when the app is foregrounded"
+      }
+    ]
+  },
+  {
+    "id": 958562,
+    "title": "Gameday",
+    "section_id": 114322,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-15337",
+    "created_by": 39,
+    "created_on": 1492524964,
+    "updated_by": 39,
+    "updated_on": 1492525057,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17463,
+    "display_order": 10,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When the user backgrounds the app on the Gameday\r\nand the background time is 6 hours",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and no Default view set\nand the user has a Favorite Team",
+        "expected": "then the user should be taken to the Team Page when the app is foregrounded"
+      },
+      {
+        "content": "and no Default view set\nand the user has no Favorite Team",
+        "expected": "then the user should be taken to the Scoreboard when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to Favorite Team\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the Favorite Team when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to Scores\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the Scores when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to News\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the News when the app is foregrounded"
+      }
+    ]
+  },
+  {
+    "id": 958564,
+    "title": "Modal",
+    "section_id": 114322,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-15337",
+    "created_by": 39,
+    "created_on": 1492525017,
+    "updated_by": 39,
+    "updated_on": 1492525293,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17463,
+    "display_order": 11,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When the user backgrounds the app on a modal\r\nand the background time is 6 hours\r\n\r\niPhone - Player Card, Gameday Audio EPG, MLB.TV EPG\r\niPad - Gameday Recap Article",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and no Default view set\nand the user has a Favorite Team",
+        "expected": "then the user should be taken to the Team Page when the app is foregrounded"
+      },
+      {
+        "content": "and no Default view set\nand the user has no Favorite Team",
+        "expected": "then the user should be taken to the Scoreboard when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to Favorite Team\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the Favorite Team when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to Scores\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the Scores when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to News\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the News when the app is foregrounded"
+      }
+    ]
+  },
+  {
+    "id": 958566,
+    "title": "Gameday and Modal",
+    "section_id": 114322,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-15337",
+    "created_by": 39,
+    "created_on": 1492525320,
+    "updated_by": 39,
+    "updated_on": 1492525393,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17463,
+    "display_order": 12,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user opens a game in Gameday\r\nand taps on a modal (Player Card or Recap Article)\r\nand the background time is 6 hours\r\n\r\niPhone - Player Card, Recap Article\r\niPad - Gameday Recap Article",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and no Default view set\nand the user has a Favorite Team",
+        "expected": "then the user should be taken to the Team Page when the app is foregrounded"
+      },
+      {
+        "content": "and no Default view set\nand the user has no Favorite Team",
+        "expected": "then the user should be taken to the Scoreboard when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to Favorite Team\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the Favorite Team when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to Scores\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the Scores when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to News\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the News when the app is foregrounded"
+      }
+    ]
+  },
+  {
+    "id": 958565,
+    "title": "MLB Network",
+    "section_id": 114322,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-15337",
+    "created_by": 39,
+    "created_on": 1492525022,
+    "updated_by": 39,
+    "updated_on": 1492525306,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17463,
+    "display_order": 13,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When the user backgrounds the app on the MLB Network view\r\nand the background time is 6 hours",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and no Default view set\nand the user has a Favorite Team",
+        "expected": "then the user should be taken to the Team Page when the app is foregrounded"
+      },
+      {
+        "content": "and no Default view set\nand the user has no Favorite Team",
+        "expected": "then the user should be taken to the Scoreboard when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to Favorite Team\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the Favorite Team when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to Scores\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the Scores when the app is foregrounded"
+      },
+      {
+        "content": "and Default view set to News\nand the user has Favorite Team",
+        "expected": "then the user should be taken to the News when the app is foregrounded"
+      }
+    ]
+  },
+  {
+    "id": 29902088,
+    "title": "Default View Set -> Set to Favorite Team",
+    "section_id": 114322,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1672166471,
+    "updated_by": 336,
+    "updated_on": 1672166471,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17463,
+    "display_order": 14,
+    "custom_preconds": "* App installed\r\n* Favorite Team is set\r\n* User has backgrounded app 6 or more hours ",
+    "custom_steps": "Given user has Favorite Team has been set in settings ",
+    "custom_expected": "Then the user should be taken to the Team Page",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 29902089,
+    "title": "Default View Set -> Scoreboard",
+    "section_id": 114322,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1672166785,
+    "updated_by": 336,
+    "updated_on": 1672166785,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17463,
+    "display_order": 15,
+    "custom_preconds": "* App installed\r\n* Favorite Team is set\r\n* User has backgrounded app 6 or more hours ",
+    "custom_steps": "Given Default view in Settings is set to Scores",
+    "custom_expected": "Then the user should be taken to the Scoreboard",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 29902090,
+    "title": "Default View Set -> News",
+    "section_id": 114322,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1672166893,
+    "updated_by": 336,
+    "updated_on": 1672166893,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 17463,
+    "display_order": 16,
+    "custom_preconds": "* App installed\r\n* Favorite Team is set\r\n* User has backgrounded app 6 or more hours ",
+    "custom_steps": "Given Default view in Settings is set to News",
+    "custom_expected": "Then the user should be taken to the News",
+    "custom_steps_separated": null
+  }
+]

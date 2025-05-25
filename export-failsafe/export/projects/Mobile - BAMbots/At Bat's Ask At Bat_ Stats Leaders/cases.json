@@ -1,0 +1,3108 @@
+[
+  {
+    "id": 1186534,
+    "title": "iOS Handheld",
+    "section_id": 142324,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1506538923,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is on a iOS device of iOS 9.x or below\n",
+        "expected": "THEN the user is taken to the text entry interface immediately after going through the onboarding screen."
+      },
+      {
+        "content": "WHEN the user is on a iOS device of iOS 9.x or below\nAND attempts to tap on the microphone icon",
+        "expected": "THEN the user is shown a message indicating that voice queries are only supported in iOS 10 or higher, but that the user is still able to ask questions using their keyboard\n\niOS 9 Message\nAsking questions by voice requires Speech Recognition access, which is only available in iOS 10 or higher. Please upgrade your iOS version or enter questions using your keyboard.\n[BUTTON]Got it[/BUTTON]\n"
+      },
+      {
+        "content": "WHEN the user is on a iOS device of iOS 9.x or below, taps on the microphone icon, gets a message that it is not supported,\nAND the user clicks that they understand",
+        "expected": "THEN the user is taken back to the text entry interface"
+      },
+      {
+        "content": "WHEN the user is on a iOS device of iOS 10.x or above",
+        "expected": "THEN the user is able to access Ask At Bat questions interface\nAND have access to the microphone & speech recognition"
+      }
+    ]
+  },
+  {
+    "id": 1186535,
+    "title": "Android Handheld",
+    "section_id": 142324,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "ANDROID-6614, https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1506538923,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is on an Android device of OS 5.x or below",
+        "expected": "THEN the user is able to access Ask At Bat questions interface\nAND will only have access to the text questions interface"
+      },
+      {
+        "content": "WHEN the user is on an Android device of OS 6.x or above",
+        "expected": "THEN the user is able to access Ask At Bat questions interface\nAND have access to the microphone"
+      }
+    ]
+  },
+  {
+    "id": 1186536,
+    "title": "iPad",
+    "section_id": 142324,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "IAB-16527, https://app.zeplin.io/project/59a72cd508f6e486f47ebd54/dashboard?tag=iPad",
+    "created_by": 65,
+    "created_on": 1506538923,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user is on At Bat on an iPad",
+    "custom_steps": "WHEN the user accesses the questions feature of Ask At Bat from an iPad",
+    "custom_expected": "THEN the question bot interface should appear with full screen version currently in place is acceptable for the initial feature launch",
+    "custom_steps_separated": [
+      {
+        "content": "For future release:\n\nWHEN the user accesses the questions feature from an iPad",
+        "expected": "THEN the question bot interface should appear within a modal window, operating similarly to the EPG"
+      }
+    ]
+  },
+  {
+    "id": 1186537,
+    "title": "Android Tablet",
+    "section_id": 142324,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://app.zeplin.io/project/59a72cd508f6e486f47ebd54/dashboard?tag=iPad",
+    "created_by": 65,
+    "created_on": 1506538923,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user is on At Bat\r\n",
+    "custom_steps": "WHEN the user accesses the questions feature of Ask At Bat from an Android Tablet",
+    "custom_expected": "THEN the tablet will not be supported in Phase 1",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1168759,
+    "title": "Access Points on iOS",
+    "section_id": 139990,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503330864,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": "2m 50s",
+    "suite_id": 18705,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is on At Bat installed on iOS",
+    "custom_steps": "WHEN the user accesses the questions feature Ask At Bat via the following entry points on an iOS device:",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "3D Touch on At Bat Homescreen Icon:\nFrom within the quick menu found by long-pressing the 3D Touch on At Bat icon on the homescreen",
+        "expected": "THEN the user is taken to the Questions interface"
+      },
+      {
+        "content": "Menu (iPhone views Only):\nFrom within the More Menu, \"Ask At Bat\" as it's own segment\n\n",
+        "expected": "THEN the user is taken to the Questions interface"
+      },
+      {
+        "content": "Mic Button:\nBy tapping the mic button found within the Team view, Scoreboard view, News view, Postseason view, or Stats view (test all)",
+        "expected": "THEN the user is taken to the Questions interface"
+      },
+      {
+        "content": "WHEN the device is set to Spanish",
+        "expected": "THEN none of these access points should appear to Spanish Language users in Phase 1"
+      }
+    ]
+  },
+  {
+    "id": 1197068,
+    "title": "Access Points on Android",
+    "section_id": 139990,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1507052389,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is on At Bat",
+    "custom_steps": "WHEN the user accesses the questions feature Ask At Bat via the following entry point:",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user accesses the top of the flyout menu and taps on a microphone icon next to the At Bat logo",
+        "expected": "THEN the user is taken to the Questions interface"
+      },
+      {
+        "content": "WHEN the device is set to Spanish",
+        "expected": "THEN the access point should NOT appear to Spanish Language users in Phase 1"
+      }
+    ]
+  },
+  {
+    "id": 1168771,
+    "title": "On-boarding Screen",
+    "section_id": 139990,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503331139,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 8,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND the user has completed the initial on-boarding process\r\nAND is the first time load",
+    "custom_steps": "WHEN the user accesses the questions interface Ask At Bat for the first time",
+    "custom_expected": "THEN user must be presented with an on-boarding explanatory screen that explains the questions feature prior to asking the first question",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1168914,
+    "title": "Explanatory Screen for First Time Users",
+    "section_id": 139990,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503414809,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 9,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat for the first time\r\n\r\n",
+    "custom_steps": "WHEN the user accesses the questions feature's onboarding sceen",
+    "custom_expected": "THEN first time users are presented with an on-boarding explanatory screen prior to their first use of the questions feature. Initial Onboarding Screen Modal:\r\n\r\nWelcome to Ask At Bat\r\n---------------------\r\nAsk At Bat is a quick new way to ask your baseball questions.\r\nWe can currently answer general questions about stats and are working hard to add support for additional types of questions and player names.\r\n[BUTTON] Got it [/BUTTON]",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182553,
+    "title": "Microphone Access Prompt for First Time User",
+    "section_id": 139990,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://app.zeplin.io/project/59a72cd508f6e486f47ebd54/screen/59a81e08f919b91d4d01dec0, https://app.zeplin.io/project/59a72cba458184fde6e5c524/screen/59baa01cddeedb9aa32d19d5",
+    "created_by": 65,
+    "created_on": 1505846442,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 10,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions feature Ask At Bat for the first time",
+    "custom_steps": "WHEN the user views the initial on-boarding message\r\nAND selects to get started",
+    "custom_expected": "THEN the user must be presented with a clear request to access the microphone\r\nAND the user elects whether or not to provide microphone access to the app",
+    "custom_steps_separated": [
+      {
+        "content": "Microphone Access Prompt for iOS (for iOS 10.x or above)",
+        "expected": "At Bat would like to access the microphone\nAt Bat requires access to the microphone so you can use your voice to search for baseball stats, schedules, standings, and more\n"
+      },
+      {
+        "content": "Microphone Access Prompt for Android (for OS 6.x or above)\n",
+        "expected": "Allow At Bat to access your microphone"
+      }
+    ]
+  },
+  {
+    "id": 1168773,
+    "title": "Microphone Access Accepted for First Time User",
+    "section_id": 139990,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://app.zeplin.io/project/59a72cd508f6e486f47ebd54/screen/59a81e08f919b91d4d01dec0, https://app.zeplin.io/project/59a72cba458184fde6e5c524/screen/59baa01cddeedb9aa32d19d5",
+    "created_by": 65,
+    "created_on": 1503332882,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": "9s",
+    "suite_id": 18705,
+    "display_order": 12,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions feature Ask At Bat for the first time",
+    "custom_steps": "WHEN the user views the initial on-boarding message\r\nAND selects to get started",
+    "custom_expected": "THEN the user must be presented with a clear request to access the microphone\r\nAND the user elects to provide microphone access to the app",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user accepts microphone access (on iOS)",
+        "expected": "THEN the user is taken to the Speech Recognition Access request"
+      },
+      {
+        "content": "WHEN the user accepts microphone access (on Android)",
+        "expected": "THEN the user is taken to ????? Record Audio prompt ??????"
+      }
+    ]
+  },
+  {
+    "id": 1182552,
+    "title": "Microphone Access Declined for First Time User",
+    "section_id": 139990,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://app.zeplin.io/project/59a72cd508f6e486f47ebd54/screen/59a81e08f919b91d4d01dec0, https://app.zeplin.io/project/59a72cba458184fde6e5c524/screen/59baa01cddeedb9aa32d19d5",
+    "created_by": 65,
+    "created_on": 1505846318,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 13,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions feature Ask At Bat for the first time",
+    "custom_steps": "WHEN the user views the initial on-boarding message\r\nAND selects to get started",
+    "custom_expected": "THEN the user must be presented with a clear request to access the microphone\r\nAND the user elects not to provide microphone access to the app",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user declines microphone access (on iOS)",
+        "expected": "THEN the user should not be asked to provide speech recognition access\nAND should instead proceed directly to the keyboard interface"
+      },
+      {
+        "content": "WHEN the user declines microphone access (on Android)",
+        "expected": "???? THEN user should not be asked to record audio access ?????\n\nAND the user should instead proceed directly to the keyboard interface"
+      }
+    ]
+  },
+  {
+    "id": 1182554,
+    "title": "Microphone Access Granted for First Time Users",
+    "section_id": 139990,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1505846957,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 14,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions feature Ask At Bat for the first time",
+    "custom_steps": "WHEN the user views the initial on-boarding message, selects to get started\r\nAND has agreed to provide access to their microphone",
+    "custom_expected": "THEN the user must be presented with a clear request to process speech recognition",
+    "custom_steps_separated": [
+      {
+        "content": "iOS Speech Recognition Prompt",
+        "expected": "At Bat would like to Access Speech Recognition\nSpeech data from this app will be sent to Apple to process your requests. This will also help Apple improve it's speech recognition technology. \n"
+      },
+      {
+        "content": "???? Android Record Audio or Speech Recognition Prompt ?????",
+        "expected": "??????"
+      }
+    ]
+  },
+  {
+    "id": 1181260,
+    "title": "Speech Recognition Access Accepted for First Time Users",
+    "section_id": 139990,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1505493950,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 15,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions feature Ask At Bat for the first time",
+    "custom_steps": "WHEN the user views the initial on-boarding message, selects to get started,\r\nAND has agreed to provide access to their microphone",
+    "custom_expected": "THEN the user must be presented with a clear request to process speech recognition",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user accepts access to speech recognition (iOS)",
+        "expected": "THEN the user is presented with the Questions Interface and be able to ask questions"
+      },
+      {
+        "content": "???? WHEN the user accepts access to speech recognition/record audio (Android) ????",
+        "expected": "??? THEN the user is presented with the Questions Interface and be able to ask questions ???"
+      }
+    ]
+  },
+  {
+    "id": 1182551,
+    "title": "Speech Recognition Declined Access for First Time Users",
+    "section_id": 139990,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1505846180,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 17,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions feature Ask At Bat for the first time",
+    "custom_steps": "WHEN the user views the initial on-boarding message, selects to get started\r\nAND has agreed to provide access to their microphone",
+    "custom_expected": "THEN the user must be presented with a clear request to process speech recognition",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user declines access to speech recognition (iOS)",
+        "expected": "THEN the user should instead proceed directly to the keyboard interface"
+      },
+      {
+        "content": "WHEN the user declines access to speech recognition / record audio (Android)",
+        "expected": "??? THEN the user should instead proceed directly to the keyboard interface ???"
+      }
+    ]
+  },
+  {
+    "id": 1181256,
+    "title": "Feature Launch",
+    "section_id": 139990,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://app.zeplin.io/project/59a72cd508f6e486f47ebd54/screen/59a81e052e142aa75209dc33",
+    "created_by": 65,
+    "created_on": 1505493122,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 18,
+    "custom_preconds": "GIVEN the user is on At Bat\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a user accesses the Team Page\nAND the user has been in the app before",
+        "expected": "THEN the user will see a speech bubble pointing to the microphone icon explaining the new feature is available\n\nOnboarding tooltip:\nTap this icon to Ask At Bat"
+      },
+      {
+        "content": "WHEN a user accesses the Team Page\nAND and the user accesses the Team Page after a fresh install",
+        "expected": "THEN the user will not see the speech bubble "
+      },
+      {
+        "content": "WHEN a user accesses the Team Page\nAND and the user access the Team Page a second time after a fresh install",
+        "expected": "THEN the user will see a speech bubble pointing to the microphone icon explaining the new feature is available\n\nOnboarding tooltip:\nTap this icon to Ask At Bat"
+      }
+    ]
+  },
+  {
+    "id": 1168772,
+    "title": "On-boarding Screen Config Changes",
+    "section_id": 139990,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "IAB-16528",
+    "created_by": 65,
+    "created_on": 1503331945,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 28,
+    "custom_preconds": "GIVEN the product owner accesses the Questions feature Ask At Bat config file",
+    "custom_steps": "WHEN the product owner attempts to do the following via the config:",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Change the text included within the on-boarding explanatory screen via a config supporting HTML",
+        "expected": "THEN the user will see the text included within the on-boarding screen has changed"
+      },
+      {
+        "content": "Set a config value that forces all users to view the on-boarding explanatory screen on their next load of the Questions feature by resetting everyone to \"first-time user\" status.",
+        "expected": "THEN the user will see the on-boarding screen on their next load of the Questions feature\nAND this config should not reset the team view onboarding bubble."
+      }
+    ]
+  },
+  {
+    "id": 1168862,
+    "title": "Sample Queries on Questions Interface",
+    "section_id": 139997,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503350689,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user views the screen on each access",
+    "custom_expected": "THEN the question interface will display one random sample query (from an array of sample queries provided via a config.) to help guide the user towards successful questions\r\n\r\ni.e.\r\nTry: \"Who led the AL in ERA in 2016?\"\r\nTry: \"Who had the most strikeouts in last year's World Series?\"\r\nTry: \"Who is the all-time home run King?\r\nTry: \"Who has played in the most games all-time?\"\r\nTry: \"What is the record for doubles in a single season?\"\r\nTry: \"Which team has the most steals this season?\"\r\nTry: \"Who hit the most home runs in 1999?\"\r\nTry: \"Who led the league in WHIP in 1995?\"\r\nTry: \"Which team had the lowest ERA in 2015?\"\r\nTry: \"Which team scored the most runs in 1931?\"",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is an admin",
+        "expected": "THEN the user must be able to modify the sample questions in this config file at any time. For simplicity's sake, assume there will always be exactly 10 sample queries provided."
+      }
+    ]
+  },
+  {
+    "id": 1182546,
+    "title": "Listening Mode upon Entry",
+    "section_id": 139997,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1505842091,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user is on At Bat\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user accesses the questions feature Ask At Bat for the first time\nAND is in onboarding process",
+        "expected": "THEN user must go through onboarding, and listening should begin immediately following the completion of onboarding"
+      },
+      {
+        "content": "WHEN the user accesses the questions feature Ask At Bat after subsequent use",
+        "expected": "THEN listening mode should begin automatically when the user enters the feature"
+      }
+    ]
+  },
+  {
+    "id": 1181262,
+    "title": "Subsequent User",
+    "section_id": 139997,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1505494855,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND has accessed the questions feature Ask At Bat features previously\r\n\r\n",
+    "custom_steps": "WHEN the user accesses the questions feature Ask At Bat again\r\n",
+    "custom_expected": "THEN question interface will be the first screen displayed to the user\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181680,
+    "title": "Accessing Questions Interface with Microphone Access",
+    "section_id": 139997,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1505498778,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND has accessed the questions feature Ask At Bat previously\r\nAND had granted access to the microphone\r\n",
+    "custom_steps": "WHEN the user accesses the questions feature Ask At Bat again\r\n",
+    "custom_expected": "THEN question interface will be the first screen displayed to the user\r\nAND the entry interface displayed to the user should be the same as the last entry method used to enter a query\r\nAND this default method shall be retained",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1168849,
+    "title": "Valid Questions",
+    "section_id": 139997,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503348494,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 8,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user asks a valid question",
+    "custom_expected": "THEN the user must be taken to a specific stats deep-linked page within the stats view that contains the answer to the question",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1168876,
+    "title": "Show/Hide Menu & Stats Access Points",
+    "section_id": 139997,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "IAB-16560",
+    "created_by": 65,
+    "created_on": 1503412446,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 12,
+    "custom_preconds": "*This is being tested by Kyle Western (Analytics team) in https://jira.mlbam.com/browse/IAB-16560. You can sync up with him to see if you can help. That is done through Adobe Test and Target tool.\r\n\r\n\r\nGIVEN the user is on At Bat\r\nAND the product owner does the following",
+    "custom_steps": "WHEN the entrance points is handled by Adobe test and target to give the product owner the ability to show/hide to certain users, i.e.\r\n1. turning off for everyone\r\n2. targeting to people with mlb.com email address\r\n\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "From within the 3D touch menu found by hard pressing the At Bat icon on my homescreen (iOS Only)",
+        "expected": "THEN the menu entrance point is either hidden/displayed depending on the settings"
+      },
+      {
+        "content": "From within the more menu as it's own segment (iPhone views Only)",
+        "expected": "THEN the menu entrance point is either hidden/displayed depending on the settings"
+      },
+      {
+        "content": "By tapping the mic button found within the Team view, Scoreboard view, News view, Postseason view, or Stats view (test all)",
+        "expected": "THEN the menu entrance point is either hidden/displayed depending on the settings"
+      },
+      {
+        "content": "By tapping the \"Ask At Bat\" option at the bottom of the flyout menu (Android Only)",
+        "expected": "THEN the menu entrance point is either hidden/displayed depending on the settings"
+      }
+    ]
+  },
+  {
+    "id": 1168869,
+    "title": "Returning Back to Point of Entry",
+    "section_id": 139997,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503352971,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 13,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user is on the Questions Interface\r\nAND taps on the 'back'",
+    "custom_expected": "THEN the user is taken to the page in the app where the user entered the questions interface from",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1168848,
+    "title": "Accessing Questions Interface w/o Microphone Access",
+    "section_id": 139997,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://app.zeplin.io/project/59a72cd508f6e486f47ebd54/screen/59a81e0aced423c35bab1715",
+    "created_by": 65,
+    "created_on": 1503346985,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 14,
+    "custom_preconds": "* When using Slack app: If user wishes to change from microphone off to on, they must enable microphone access in their settings, iOS: Settings, General, Keyboards, Enable Dictation=ON\r\n\r\nGIVEN the user is on At Bat\r\nAND the user did not to provide access to microphone during on-boarding or after subsequent access to questions feature Ask at Bat",
+    "custom_steps": "WHEN the user attempts to access the Questions feature Ask At Bat",
+    "custom_expected": "THEN user must be taken directly to the text entry interface/keyboard",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN if at any time user taps the microphone interface",
+        "expected": "THEN the user must be shown an error message on the question interface any time the user accesses this feature, without enabling microphone access \nAND the message explains the limitations of the feature without microphone & speech access (user is unable to ask questions by voice)\nAND presents a link to enable access/permissions\n\nMissing Permissions\n----------\nTo ask questions using your voice, you must provide At Bat with both microphone and speech recognition access. You may still ask questions with your keyboard if you choose not to provide these permissions.\n[BUTTON]Manage Permissions[/BUTTON]\n[BUTTON]Use Keyboard[/BUTTON]"
+      },
+      {
+        "content": "WHEN user selects 'not now'",
+        "expected": "THEN user should be returned to the text entry interface\nAND user is able to enter a text-based question using the on-screen keyboard"
+      }
+    ]
+  },
+  {
+    "id": 1168853,
+    "title": "Returning Back to Questions Interface",
+    "section_id": 139997,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503349254,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 29,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN a user has asked a valid question\r\nAND and has been taken to view the answer in the stats view\r\nAND taps \"Done\" or \"Back\"",
+    "custom_expected": "THEN the user is returned to the question interface",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1185207,
+    "title": "Response contains Deeplink",
+    "section_id": 139997,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1506028493,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 30,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user asks a valid stats question\r\nAND the response contains a deeplink",
+    "custom_expected": "THEN the bot direct the user to the deeplink\r\nAND is taken to the corresponding stats page",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1185208,
+    "title": "Response does Not contain Deeplink",
+    "section_id": 139997,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1506028493,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 31,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user asks an invalid stats question\r\nAND the response does not contain a deeplink\r\n\r\ni.e. Who makes the best hamburger?",
+    "custom_expected": "THEN the bot returns error language, which is included in the copy field of the payload [the bot prints the copy in the copy field provided in the response from the service].\r\n\r\ni.e. Sorry, I didn't understand that. Can you try asking me differently?\r\n\r\n\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1185209,
+    "title": "Response does Not contain Deeplink nor Copy",
+    "section_id": 139997,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1506028493,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 32,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user asks a stats question like the ones below\r\nAND the response does not contain a deeplink nor copy\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "i.e. \n- gibberish is entered/spoken\n- question misunderstood by bot",
+        "expected": "THEN the bot must print \"Sorry, I missed that. Would you try asking another way?\""
+      },
+      {
+        "content": "i.e. The user does not speak when microphone is activated",
+        "expected": "THEN the bot must print \"Sorry, please try again.\""
+      }
+    ]
+  },
+  {
+    "id": 1168802,
+    "title": "Asking Question via Text",
+    "section_id": 140002,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503335205,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user is in the question interface\r\nAND the keyboard is present",
+    "custom_expected": "THEN the user is able to enter a text-based question using the on-screen keyboard",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1168866,
+    "title": "User Finished Typing Question",
+    "section_id": 140002,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503351490,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user is in the question interface\r\nAND the user finishes typing up their question",
+    "custom_expected": "THEN the user selects \"Done\" to indicate their question has been entered",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1168867,
+    "title": "Text Question Being Processed",
+    "section_id": 140002,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503352109,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND the user is in the question asking process",
+    "custom_steps": "WHEN the user finishes typing their question\r\nAND taps on 'Done'",
+    "custom_expected": "THEN a spinner should indicate the text question is being processed",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1168815,
+    "title": "Asking Question via Voice",
+    "section_id": 140003,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503336513,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND provided At Bat access to my microphone\r\nAND has provided speech recognition access\r\nAND the user is in the question asking process",
+    "custom_steps": "WHEN the user begins speaking to ask a question",
+    "custom_expected": "THEN the microphone icon must move to reflect that the user is actively dictating and the interface is listening",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1168824,
+    "title": "Verbal Question appears as Text",
+    "section_id": 140003,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503337497,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND the user is in the question asking process",
+    "custom_steps": "WHEN the user is speaking to ask a question",
+    "custom_expected": "THEN the question the user is dictating should appear on the screen as text",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1168832,
+    "title": "User Finished Speaking Question",
+    "section_id": 140003,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503338124,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND the user is in the question asking process",
+    "custom_steps": "WHEN the user finishes speaking",
+    "custom_expected": "THEN the microphone icon must stop moving to reflect that the user has finished speaking. This should occur three seconds after user has completed speaking.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1168834,
+    "title": "Voice Question Being Processed",
+    "section_id": 140003,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503339241,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND the user is in the question asking process",
+    "custom_steps": "WHEN the user finishes speaking their question",
+    "custom_expected": "THEN a spinner should indicate their verbal question is being processed",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1154610,
+    "title": "Individual Stats",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1502380684,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user requests a query",
+    "custom_expected": "THEN the bot assumes the query is for individual unless the word 'team' is explicitly used in the query",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1154611,
+    "title": "Team Stats",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1502380803,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user requests a query\r\nAND explicitly uses the word 'team'\r\n\r\ni.e. What TEAM had the most Doubles in the National League in 2015",
+    "custom_expected": "THEN the bot assumes the query is for a team and user gets the corresponding team results",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1171816,
+    "title": "Team vs Individual Stats",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-340",
+    "created_by": 65,
+    "created_on": 1503511847,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND the bot needs to be able to discern better between team and individual when discussing teams",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is asking for the stat leaders on a given team\n\ni.e. \n1. Who on the Yankees has the most home runs?\n2. What Yankee has the most home runs?",
+        "expected": "THEN the response is grouped by Individual\nAND player image is displayed\n\ni.e. \n1. Deeplink: mlbatbat://stats?stat_type=hitting&stat=hr&team_id=147\n2. Deeplink: mlbatbat://stats?stat_type=hitting&stat=hr&team_id=147"
+      },
+      {
+        "content": "WHEN the user is asking for the team's aggregate numbers for a stat\n\ni.e. How many home runs do the Yankees have",
+        "expected": "THEN the response is grouped by Team\n\ni.e. Deeplink: mlbatbat://stats?stat_type=hitting&stat=hr&section=team"
+      }
+    ]
+  },
+  {
+    "id": 1160782,
+    "title": "Default Stat Type",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1502826497,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user navigates to the stats \r\nAND no stat type (batting/pitching/fielding) is specified",
+    "custom_expected": "THEN At Bat will default to batting stats",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1154595,
+    "title": "Unable to Find Stats Name",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1502377557,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 8,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND the user is on the batting stats",
+    "custom_steps": "WHEN the user enters a query for a stat that is not found in that stats category\r\n\r\ni.e. \r\n- Batter with most ERA (ERA is only a pitching stat category)\r\n- Pitcher with the most RBIs (RBI is only a hitting stat category)",
+    "custom_expected": "THEN the bot will drop users on the default stats category page\r\n\r\ni.e. \r\n- Batter with most ERA || mlbatbat://stats?stat_type=hitting&stat=era (user is taken to hitting stats tab)\r\n- Pitcher with the most RBIs || mlbatbat://stats?stat_type=pitching&stat=rbi (user is taken to pitching stats tab)\r\n\r\n\r\nAs such BAMbot needs to use in the deep link for all non-batting stats, even when that stat is specific only to a kind of stat\r\n- stat_type=pitching (i.e. mlbatbat://stats?stat_type=pitching&stat=so)\r\n- stat_type=hitting (i.e. mlbatbat://stats?stat_type=hitting&stat=hr&league_code=nl&section=team)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1150046,
+    "title": "Non-Supported Stats",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-331, SDBB-332, SDBB-333, SDBB-387, https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1502125644,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 14,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user requests the following non-supported stats",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "spring training before 2006",
+        "expected": "THEN the user will see the following\n- on Android, taken to stats page with message 'No stats are available for this category.\n- on iOS, taken to stats page with message 'No Qualifiers...'"
+      },
+      {
+        "content": "individual round in the playoffs, ALDS Team A. vs. Team B\n\ni.e. \nYankees vs. Tigers in the ALDS",
+        "expected": "THEN the user is taken to the team page of the first team in the request\n\ni.e.\nYankees team page"
+      },
+      {
+        "content": "individual round in the playoffs, ALDS Team A. vs. Team B\nAND if the user provides a league\n\ni.e. \nYankees vs. Tigers in the ALDS",
+        "expected": "THEN the user is taken to the team page of the first team in the request\n\ni.e.\nYankees team page\n\nFOR FUTURE RELEASE:\nTHEN that can be included in the response and would cover all AL or NL teams that played in the round\n\ni.e.\n4 teams in the ALDS, 2 teams in the ALCS"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "THIS IS CURRENTLY SUPPORTED\n\nnon-regular season career (single season or all time)",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 1156966,
+    "title": "Utterance - Group By",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1502390911,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 19,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "When the user utters variables of the parameter for 'group by'\r\n",
+    "custom_expected": "THEN the bot replies with the requested stat for each variable\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "- What team has the most hits?\n- What organization has the most hits?",
+        "expected": "THEN the bot replies with the requested team stat"
+      }
+    ]
+  },
+  {
+    "id": 1156967,
+    "title": "EDIT_Utterance - Game Type",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1502391007,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 20,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "When the user utters variables of the parameter for 'Game Type'\r\n",
+    "custom_expected": "THEN the bot replies with the requested stat for each variable\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "- Who has the most hits in the regular season?\n- Who has the most hits this season?",
+        "expected": "THEN the bot replies with the requested regular season stat"
+      },
+      {
+        "content": "- Who has the most hits in the postseason?\n- Who has the most hits in the playoffs?",
+        "expected": "THEN the bot replies with the requested postseason stat"
+      },
+      {
+        "content": "- Who has the most hits in the wild card game?\n- Who has the most hits in the wild card?",
+        "expected": "THEN the bot replies with the requested F , AL, or NL stat\n\nNOTE: \nAt Bat does not support stats by individual matchup in the playoffs (i.e., ALDS Team A. vs. Team B). If the user provides a league, that can be included in the response and would cover all AL or NL teams that played in the round (i.e., 4 teams in the ALDS, 2 teams in the ALCS)."
+      },
+      {
+        "content": "- Who has the most hits in the division series?\n- Who has the most hits in the ds?\n- Who has the most hits in the alds?\n- Who has the most hits in the nlds?\n",
+        "expected": "THEN the bot replies with the requested D , AL, or NL stat\n\nNOTE: \nAt Bat does not support stats by individual matchup in the playoffs (i.e., ALDS Team A. vs. Team B). If the user provides a league, that can be included in the response and would cover all AL or NL teams that played in the round (i.e., 4 teams in the ALDS, 2 teams in the ALCS)."
+      },
+      {
+        "content": "- Who has the most hits in the championship series?\n- Who has the most hits in the cs?\n- Who has the most hits in the alcs?\n- Who has the most hits in the nlcs?\n\n",
+        "expected": "THEN the bot replies with the requested L , AL, or NL stat\n\nNOTE:\nAt Bat does not support stats by individual matchup in the playoffs (i.e., ALDS Team A. vs. Team B). If the user provides a league, that can be included in the response and would cover all AL or NL teams that played in the round (i.e., 4 teams in the ALDS, 2 teams in the ALCS)."
+      },
+      {
+        "content": "- Who has the most hits in the world series?\n- Who has the most hits in the fall classic?",
+        "expected": "THEN the bot replies with the requested world series stat\n\nNOTE: No need to define AL or NL here. MLB (the default) is assumed."
+      }
+    ]
+  },
+  {
+    "id": 1157018,
+    "title": "EDIT_Utterance - Time Frame",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1502393075,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 21,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "When the user utters variables of the parameter for 'Time Frame'\r\n",
+    "custom_expected": "THEN the bot replies with the requested stat for each variable\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "- Who has the most career RBIs?\n- Who has the most all time RBIs?\n- Who has the most all-time RBIs?\n- Who has the most ever RBIs?\n- Who has the most in history RBIs?",
+        "expected": "THEN the bot replies with the requested career stat"
+      },
+      {
+        "content": "- Who has the most RBIs in a single season?\n- Who has the most RBIs in a season?\n- Who has the most RBIs in a year?",
+        "expected": "THEN the bot replies with the requested single season stat"
+      },
+      {
+        "content": "- Who has the most RBI's this season?\n- Who has the most RBI's this year?",
+        "expected": "THEN the bot replies with the requested current year stat"
+      },
+      {
+        "content": "- Who had the most RBIs in 2010?",
+        "expected": "THEN the bot replies with the requested year stat"
+      }
+    ]
+  },
+  {
+    "id": 1157019,
+    "title": "Utterance - Organization",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1502393090,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": "8m 29s",
+    "suite_id": 18705,
+    "display_order": 22,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "When the user utters variables of the parameter for 'Organization'\r\n",
+    "custom_expected": "THEN the bot replies with the requested stat for each variable\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "- Who has the most home runs in baseball?\n- Who has the most home runs in the league?",
+        "expected": "THEN the bot replies with the requested mlb stat"
+      },
+      {
+        "content": "- Who has the most home runs in the AL?\n- Who has the most home runs in the American?\n- Who has the most home runs in the American League?",
+        "expected": "THEN the bot replies with the requested AL stat"
+      },
+      {
+        "content": "- Who has the most home runs in the NL?\n- Who has the most home runs in the National?\n- Who has the most home runs in the National League?",
+        "expected": "THEN the bot replies with the requested NL stat"
+      },
+      {
+        "content": "- Who has the most home runs on the Athletics?\n\nNOTE: Test all team names and nick names; singular versions as well (i.e. Athletic)",
+        "expected": "THEN the bot replies with the requested team/nick name stat"
+      }
+    ]
+  },
+  {
+    "id": 1166914,
+    "title": "Follow Up Questions",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503070503,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 23,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user asks follow up questions\r\n\r\ni.e.\r\nWho has the most hits?\r\nWhat about batters?\r\n\r\n",
+    "custom_expected": "THEN the bot should respond accordingly with the correct follow up stats\r\n\r\ni.e.\r\nWho has the most hits? - mlbatbat://stats?stat_type=pitching&stat=h\r\nWhat about batters? - mlbatbat://stats?stat_type=hitting&stat=h\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1166918,
+    "title": "Singular Version of Team Name",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503078530,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": "4s",
+    "suite_id": 18705,
+    "display_order": 25,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND the bot supports singular versions of team names so that users can ask questions about individual performances on specific teams",
+    "custom_steps": "WHEN the user requests a singular version of a team name\r\n\r\ni.e. \r\nWhat Yankee has the most career home runs?\r\n\r\n",
+    "custom_expected": "THEN the users can ask questions about individual performances on specific team",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1177625,
+    "title": "Offline",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1505253081,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 27,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND the user is in Offline mode",
+    "custom_steps": "WHEN the user requests a query",
+    "custom_expected": "THEN the user is shown a message indicating the feature is not available while in offline mode and returned to the previous screen\r\n\r\nOffline\r\n-----------\r\nAsk At Bat requires an active Internet connection. Please connect to the Internet and try again. ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1184517,
+    "title": "Android Handheld Device Support",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1505932003,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 28,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nand accesses the questions interface of Ask At Bat",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is on an Android device of OS 5.x or below",
+        "expected": "THEN the user is able to access Ask At Bat questions interface\nAND will only have access to text questions interface"
+      },
+      {
+        "content": "WHEN the user is on an Android device of OS 6.x or above",
+        "expected": "THEN the user is able to access Ask At Bat questions interface\nAND app will ask user for access to the microphone"
+      }
+    ]
+  },
+  {
+    "id": 1177626,
+    "title": "iOS Device Support",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1505253205,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 29,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions feature of Ask At Bat",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user first accesses the feature\nAND the user is on a device with iOS 9 or below",
+        "expected": "THEN the user is taken to the text entry interface immediately after going through the onboarding screen."
+      },
+      {
+        "content": "WHEN the user attempts to tap on the microphone icon\nAND the user is on a device with iOS 9 or below",
+        "expected": "THEN the user is shown a message indicating that voice queries are only supported in iOS 10 or higher, but that the user is still able to ask questions using their keyboard\n\niOS 9 Message\nAsking questions by voice requires Speech Recognition access, which is only available in iOS 10 or higher. Please upgrade your iOS version or enter questions using your keyboard.\n[BUTTON]Got it[/BUTTON]"
+      },
+      {
+        "content": "WHEN the user clicks that they understand\nAND the user is on a device with iOS 9 or below",
+        "expected": "THEN the user is taken back to the text entry interface\n"
+      },
+      {
+        "content": "WHEN the user is on a iOS device of iOS 10.x or above",
+        "expected": "THEN the user is able to access Ask At Bat questions interface\nAND have access to the microphone & speech recognition\n"
+      }
+    ]
+  },
+  {
+    "id": 1181249,
+    "title": "iPad",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1505492917,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 30,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user accesses the questions feature from an iPad",
+    "custom_expected": "THEN the question bot interface should appear with full screen version currently in place is acceptable for the initial feature launch\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "FOR FUTURE RELEASE:\n\nWHEN the user accesses the questions feature from an iPad",
+        "expected": "THEN the question bot interface should appear within a modal window, operating similarly to the EPG"
+      }
+    ]
+  },
+  {
+    "id": 1184522,
+    "title": "Android Tablet",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1505936107,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 31,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\n\r\n",
+    "custom_steps": "WHEN the user accesses the questions feature from an Android Tablet",
+    "custom_expected": "THEN the tablet will not be supported in Phase 1",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181266,
+    "title": "Deeplinking",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "created_by": 65,
+    "created_on": 1505496039,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 32,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\n",
+    "custom_steps": "WHEN the user is an editor",
+    "custom_expected": "THEN the user must be able to link to the \"Ask At Bat\" feature via a deeplink mlbatbat://askatbat",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1199742,
+    "title": "City w/Multi-Team or Same Team Name",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-387, SDBB-471",
+    "created_by": 65,
+    "created_on": 1507307280,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 34,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\n\r\n",
+    "custom_steps": "WHEN the user requests a query for a team with multiple cities or same team\r\n\r\ni.e.\r\n- Who has the most hits this year in Los Angeles?\r\n- Who has played the most games this year on the sox?\r\n- Most ops in Los Angeles\r\n",
+    "custom_expected": "THEN for launch At Bat will not support the ability to select a specific team (i.e., Angels or Dodgers). If the utterance has a city with multiple teams (Chicago, NY, Los Angeles), ignore the team param altogether.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1217334,
+    "title": "Seasons Boundary, Season has not started",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-471, SDBB-528",
+    "created_by": 65,
+    "created_on": 1516726489,
+    "updated_by": 65,
+    "updated_on": 1516726798,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 35,
+    "custom_preconds": "GIVEN that as a user I want to see last year's baseball stats when asking BAMbot statistics questions if the upcoming season has not started yet",
+    "custom_steps": "WHEN a user wants to see last year's baseball stats and asks BAMbot statistics questions\r\nAND the upcoming season has not started yet (from Jan 1 to Spring Training????)",
+    "custom_expected": "THEN the bot responds with stats from last year",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1200251,
+    "title": "Stats Default Config Changed (for Season)",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-387, SDBB-471",
+    "created_by": 65,
+    "created_on": 1507315493,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 36,
+    "custom_preconds": "GIVEN the config file in At Bat has been changed \r\nAND the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\n\r\n(i.e. At Bat config file changed for the Stats view to take user to 'Postseason' [game_type=P] stats instead of default 'Regular Season' [game_type=R] stats)\r\n\r\nThe current deep link rules are set to establish the default for game_type to whatever the current view is set to in the app\r\ngame_type=R (Regular Season, default unless otherwise changed in config)\r\ngame_type=S (Spring)\r\ngame_type=P (Postseason, all)\r\ngame_type=D (Division Series)\r\ngame_type=L (League Championship Series)\r\ngame_type=W (World Series)\r\ngame_type=F (Wild Card)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user requests a query without specifying a season",
+        "expected": "Then the user is taken to the stats of the season set to in the config file."
+      },
+      {
+        "content": "WHEN the requests a query\nAND specifies a specific season (i.e mentions 'Postseaon' in query)",
+        "expected": "Then the user is taken to the stats of the season requested regardless of which is the default season set in the config file"
+      }
+    ]
+  },
+  {
+    "id": 1166921,
+    "title": "DO NOT TEST_Keyword 'Against' used in a request",
+    "section_id": 124542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503082075,
+    "updated_by": 65,
+    "updated_on": 1524841577,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 37,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user makes a requesting using the key word 'against'\r\n\r\ni.e. Who had the most stolen bases against in the NL?\r\nThis query takes user to Batting stat instead of Fielding\r\n",
+    "custom_expected": "THEN this is indicating the query is about fielding\r\n\r\ni.e. Since default for Stolen Bases stat is Batting, must use fielder reference in query to obtain Fielding Stat, in this case using the word 'against'\r\nThis query takes user to Batting stat instead of Fielding\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1146652,
+    "title": "Batting Stat Type Categories",
+    "section_id": 139746,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-331",
+    "created_by": 65,
+    "created_on": 1501877104,
+    "updated_by": 65,
+    "updated_on": 1521768097,
+    "estimate": null,
+    "estimate_forecast": "1h 58m 17s",
+    "suite_id": 18705,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND the user is on an iOS device",
+    "custom_steps": "WHEN the user requests the following batting stats (test all the name variants for each stat)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Batting Average (AVG)\naverage\nbatting leader\n\ni.e. Who leads the league in Batting Average?",
+        "expected": "THEN the user will be provided with the batting's batting average (AVG) stat\n\ni.e. The user will be provided with the individual Batting Average for the current year in the regular season in mlb\n"
+      },
+      {
+        "content": "Home Runs (HR)\nhomers\ndingers\nbombs\nlong balls\n\ni.e. \n- Who are the All Time Home Run Leaders?\n- What team has the most home runs in the 2016 postseason",
+        "expected": "THEN the user will be provided with the batting's home runs (HR) stat\n\ni.e.\n- The user is provided with the individual home runs for his career in the regular season in mlb\n- The user is provided with the team's home runs for the requested year in the postseason in mlb"
+      },
+      {
+        "content": "Runs Batted In (RBI)\nribbies\nR B Is\n\ni.e. \n- Who has the most Career RBIs in the NL?\n- Who has the most RBIs",
+        "expected": "THEN the user will be provided with the batting's runs batted in (RBI) stat\n\ni.e.\n- The user is provided with the individual runs batted in for his career in the regular season in the requested league\n- The user is provided with the batter's runs batted in for the current year in the regular season"
+      },
+      {
+        "content": "Stolen Bases (SB)\nsteals\n\ni.e. \n\n- What Athletic has the most Stolen Bases in a Single Season?\n- Who has the most stolen bases?",
+        "expected": "THEN the user will be provided with the batting's stolen bases (SB) stat\n\ni.e. The user will be provided with the individual stolen bases for the single season in the regular season for the requested team"
+      },
+      {
+        "content": "Runs (R)\n\ni.e. Who had the most Runs in 2016?",
+        "expected": "THEN the user will be provided with the batting's runs (R) stat\n\ni.e. The user is provided with the individual runs for the requested year in the regular season in mlb"
+      },
+      {
+        "content": "On-Base Percentage (OBP)\non-base\non-base %\nNOTE: obp is not abbreviated\n\ni.e. Who had the best On-Base Percentages of all time?",
+        "expected": "THEN the user will be provided with the batting's on-base percentage (OBP) stat\n\ni.e. The user will be provided with the individual on-base percentage for his career in the regular season in mlb"
+      },
+      {
+        "content": "Slugging Percentage (SLG)\nslugging\n\ni.e. Who had the best Slugging Percentage in the 2016 World Series?",
+        "expected": "THEN the user will be provided with the batting's slugging percentage (SLG) stat\n\ni.e. The user will be provided with the individual slugging percentage in the requested year in the world series in mlb\n"
+      },
+      {
+        "content": "On-Base + Slugging (OPS)\non base plus slugging\nO P S\n\ni.e. Who has the best Single Season OPS?",
+        "expected": "THEN the user will be provided with the batting's on-base + slugging (OPS) stat\n\ni.e. The user will be provided with the individual on-base + slugging in the single season in the regular season in mlb"
+      },
+      {
+        "content": "Hits (H)\nbase hits\n\ni.e. Who leads the league in Hits?",
+        "expected": "THEN the user will be provided with the batting's hits (H) stat\n\ni.e. The user will be provided with the individual hits in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Doubles (2B)\n\ni.e. What team had the most doubles in the National League in 2015?",
+        "expected": "THEN the user will be provided with the batting's doubles (2B) stat\n\ni.e. The user will be provided with the team's doubles for the requested year in the regular season for the requested league\n\n"
+      },
+      {
+        "content": "Triples (3B)\ntrips\n\ni.e. Who has the most career triples on the Athletics?",
+        "expected": "THEN the user will be provided with the batting's triples (3B) stat\n\ni.e. The user will be provided with the individual triples in his career in the regular season for the requested team"
+      },
+      {
+        "content": "Walks (BB)\nfree bases\nfree passes\n\ni.e. Who has the most walks in a single season?",
+        "expected": "THEN the user will be provided with the batting's walks (BB) stat\n\ni.e. The user is provided with the individual walks in a single season in the regular season in mlb"
+      },
+      {
+        "content": "Strikeouts (SO)\nKs\n\ni.e. What batter has the most career strikeouts?\n\nNote: Since default stat is Pitching, must use batter reference in query to obtain Batting Stat",
+        "expected": "THEN the user will be provided with the batting's strikeouts (SO) stat\n\ni.e. The user will be provided with the individual strikeouts in his career in the regular season in mlb"
+      },
+      {
+        "content": "Caught Stealing (CS)\n\ni.e. Who has been caught stealing the most this season on the Red Sox?\n\nNOTE: in Batting refers to batter",
+        "expected": "THEN the user will be provided with the batting's caught stealing (CS) stat\n\ni.e. The user will be provided with the individual caught stealing in the current year in the regular season for the requested team"
+      },
+      {
+        "content": "Games Played (G)\n\ni.e. Who has played the most games this year on the Red Sox?",
+        "expected": "THEN the user will be provided with the batting's games (G) stat \n\ni.e. The user will be provided with the individual games in the current year in the regular season for the requested team"
+      },
+      {
+        "content": "At Bats (AB)\n\ni.e. Who had the most at bats in the AL in the 2016 postseason",
+        "expected": "THEN the user will be provided with the batting's at bats (AB) stat\n\ni.e. The user will be provided with the team's at bat for the requested year in the postseason for the requested league"
+      }
+    ]
+  },
+  {
+    "id": 1146653,
+    "title": "Pitching Stat Type Categories",
+    "section_id": 139746,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-332, SDBB-363",
+    "created_by": 65,
+    "created_on": 1501877139,
+    "updated_by": 65,
+    "updated_on": 1521768040,
+    "estimate": null,
+    "estimate_forecast": "42m 14s",
+    "suite_id": 18705,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND the user is on an iOS device",
+    "custom_steps": "WHEN the user request the following pitching stats (test all the name variant for each stat)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Earned Run Average (ERA)\nera\n\ni.e. What team has the best ERA?",
+        "expected": "THEN the user will be provided with the pitching's earned run average (ERA) stat\n\ni.e. The user will be provided with the team's earned run average in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Wins (W)\n\ni.e. \n- Who has the most Wins in 2010?\n- Most wins a pitcher has received in a year?",
+        "expected": "THEN the user will be provided with the pitching's wins (W) stat\n\ni.e. \n- The user will be provided with the individual win in the requested year in the regular season in mlb\n- The user will be provided with the individual win in the single season in mlb"
+      },
+      {
+        "content": "Strikeouts (SO)\nKs\n\ni.e. Who has the most strikeouts?",
+        "expected": "THEN the user will be provided with the pitching's strikeouts (SO) stat\n\ni.e. The user will be provided with the individual strikeouts in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Saves (SV)\n\ni.e. Who led the American League in Saves in the 2016 Division Series?",
+        "expected": "THEN the user will be provided with the pitching's saves (SV) stat\n\ni.e. The user will be provided with the individual saves in the current year in the division series in the requested league"
+      },
+      {
+        "content": "Walks + Hits Per Inning Pitched (WHIP)\nwhip\n\ni.e. What AL team had the best WHIP in the 2015 postseason?",
+        "expected": "THEN the user will be provided with the pitching's walks + hits per inning pitched (WHIP) stat\n\ni.e. The user will be provided with the team's walks + hits per inning pitched in the requested year in the postseason in the requested league"
+      },
+      {
+        "content": "Batting Average Against (BAA)\n\ni.e. Who has the best Batting Average Against?",
+        "expected": "THEN the user will be provided with the pitching's batting average against (BAA) stat\n\ni.e. The user will be provided with the individual batting average against in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Innings Pitched (IP)\n\ni.e. Who threw the most innings last year?",
+        "expected": "THEN the user will be provided with the pitching's innings pitched (IP) stat\n\ni.e. The user will be provided with the individual innings pitched in the requested year in the regular season in mlb"
+      },
+      {
+        "content": "Complete Games (CG)\n\ni.e. Who had the most complete games last season?",
+        "expected": "THEN the user will be provided with the pitching's completed games (CG) stat\n\ni.e. The user will be provided with the individual completed games in the requested year in the regular season in mlb"
+      },
+      {
+        "content": "Games Played (G)\n\ni.e. Who has pitched the most games this season?\n\nNote: Since default stat is Batting, must use pitcher reference in query to obtain Pitching Stat",
+        "expected": "THEN the user will be provided with the pitching's games (G) stat\n\ni.e. The user will be provided with the individual games in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Games Started (GS)\nstarts\n\ni.e. Who has started the most games this year?",
+        "expected": "THEN the user will be provided with the pitching's games started (GS) stat\n\ni.e. The user will be provided with the individual games stated in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Losses (L)\n\ni.e. What pitcher has the most Losses in the AL?",
+        "expected": "THEN the user will be provided with the pitching's losses (L) stat\n\ni.e. The user will be provided with the individual losses in the current year in the regular season in the requested league"
+      },
+      {
+        "content": "Save Opportunities (SVO)\nsave chances\n\ni.e. Who had the most save opportunities in a single season?",
+        "expected": "THEN the user will be provided with the pitching's save opportunities (SVO) stat\n\ni.e. The user will be provided with the individual save opportunities in the single season in the regular season in mlb"
+      },
+      {
+        "content": "Earned Runs (ER)\n\ni.e. Who has the most earned runs?",
+        "expected": "THEN the user will be provided with the pitching's earned runs (ER) stat\n\ni.e. The user will be provided with the individual earned runs in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Runs (R)\n\ni.e. \n- What pitcher has given up the most Runs\n- Who has allowed the most Runs\n\nNote: Since default stat is Batting, must use pitcher reference in query to obtain Pitching Stat",
+        "expected": "THEN the user will be provided with the pitching's runs (R) stat\n\ni.e. \n- The user will be provided with the individual's runs given up in the current year in the regular season in mlb\n- The user will be provided with the individual's allowed runs in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Hits (H)\n\ni.e. Which pitcher gave up the most hits this year?\n\n*** NOTE: Must mention pitcher in query?",
+        "expected": "THEN the user will be provided with the pitching's hits (H) stat\n\ni.e. The user will be provided with the individual hits in the current year for the requested team"
+      },
+      {
+        "content": "Home Runs (HR)\nhomers\ndingers\nbombs\nlong balls\n\ni.e. What pitcher gave up the most home runs in the NL in 2014?\n\nNote: Since default stat is Batting, must use pitcher reference in query to obtain Pitching Stat",
+        "expected": "THEN the user will be provided with the pitching's home run (HR) stat\n\ni.e. The user will be provided with the individual home runs in the requested year in the regular season in the requested league\n\nNote: Since default stat is Batting, must use pitching reference in query to obtain Pitching Stat"
+      },
+      {
+        "content": "Walks (BB)\nfree bases\nfree passes\n\ni.e. What team's pitching staff leads the league in Walks?\n\nNote: Since default stat is Batting, must use pitcher reference in query to obtain Pitching Stat",
+        "expected": "THEN the user will be provided with the pitching's walks (BB) stat\n\ni.e. The user will be provided with the team's walks in the current year in the regular postseason in mlb"
+      },
+      {
+        "content": "Stolen Bases (SB)\n\ni.e. \n\n- What pitcher has been stolen on the most?\n- What pitcher has allowed the most stolen bases?\n\nNote: Since default stat is Batting, must use pitching reference in query to obtain Fielding Stat",
+        "expected": "THEN the user will be provided with the pitching's stolen bases (SB) stat\n\ni.e. The user will be provided with the pitcher's stolen bases in the current year in the regular season in mlb"
+      }
+    ]
+  },
+  {
+    "id": 1146654,
+    "title": "Fielding Stat Type Categories",
+    "section_id": 139746,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-333",
+    "created_by": 65,
+    "created_on": 1501877168,
+    "updated_by": 65,
+    "updated_on": 1521767776,
+    "estimate": null,
+    "estimate_forecast": "6m 47s",
+    "suite_id": 18705,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND the user is on an iOS device",
+    "custom_steps": "WHEN the user request the following fielding stats",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Games Played (G)\n\ni.e. What fielder has played the most games?\n\nNote: Since default stat is Batting, must use fielder reference in query to obtain Fielding Stat",
+        "expected": "THEN the user will be provided with the fielding's games (G) stat\n\ni.e. The user will be provided with the fielding's individual games in the current year in the regular season in mlb\n"
+      },
+      {
+        "content": "Games Started (GS)\n\ni.e. What fielder has started the most games?\n\nNote: Since default stat is Pitching, must use fielder reference in query to obtain Fielding Stat",
+        "expected": "THEN the user will be provided with the fielding's games started (GS) stat\n\ni.e. The user will be provided with the fielding's individual games started in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Innings (INN)\n\ni.e. Who played the most innings?",
+        "expected": "THEN the user will be provided with the fielding's inning (INN) stat\n\ni.e. The user will be provided with the fielding's individual innings in the current year in the regular season in mlb\n"
+      },
+      {
+        "content": "Total Chances (TC)\n\ni.e. In 2015 has had the most Total Chances",
+        "expected": "THEN the user will be provided with the fielding's total chances (TC) stat\n\ni.e. The user will be provided with the fielding's individual total chances in the requested year in the regular season in the requested league"
+      },
+      {
+        "content": "Putouts (PO)\n\ni.e. What team has the most putouts in the American League?",
+        "expected": "THEN the user will be provided with the fielding's putouts (PO) stat\n\ni.e. The user will be provided with the fielding's team putouts in the in the regular season in the requested league"
+      },
+      {
+        "content": "Assists (A)\n\ni.e. Who had the most assists last year?",
+        "expected": "THEN the user will be provided with the fielding's assists (A) stat\n\ni.e. The user will be provided with the fielding's individual assists in the requested year in the regular season in mlb"
+      },
+      {
+        "content": "Errors (E)\n\ni.e. Who had the most errors last year?\n\n",
+        "expected": "THEN the user will be provided with the fielding's errors (E) stat\n\ni.e. The user will be provided with the fielding's individual errors in the requested year in the regular season in mlb"
+      },
+      {
+        "content": "Double Plays (DP)\n\ni.e. Who fielded the most double plays?",
+        "expected": "THEN the user will be provided with the fielding's double plays (DP) stat\n\ni.e. The user will be provided with the fielding's individual double plays in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Stolen Base On (SB)\n\ni.e. \n\n- Who has been stolen on the most?\n- Who has allowed the most Stolen Bases?\n\nNote: Since default stat is Batting, must use fielder reference in query to obtain Fielding Stat",
+        "expected": "THEN the user will be provided with the fielding's stolen base on (SB) stat\n\ni.e. The user will be provided with the fielding's individual stolen base on in the current year in the regular season in the requested league"
+      },
+      {
+        "content": "Caught Stealing On (CS)\n\ni.e. What fielder has the most caught stealing on in 2001?\n\nNOTE: In Fielding use this in reference to Catcher",
+        "expected": "THEN the user will be provided with the fielding's caught stealing on (CS) stat\n\ni.e. The user will be provided with the fielding's individual caught stealing on in the requested year in the regular season in mlb"
+      },
+      {
+        "content": "Stolen Base Percentage On (SBPCT)\n\ni.e. What team had the best Stolen Base Percentage On in the American League?",
+        "expected": "THEN the user will be provided with the fielding's stolen base percentage on (SBPCT) stat\n\ni.e. The user will be provided with the fielding's team stolen base percentage on in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Pass Balls (PB)\n\ni.e. What catcher has the most Passed Balls?\n\n\n",
+        "expected": "THEN the user will be provided with the fielding's passed balls (PB) stat\n\ni.e. The user will be provided with the fielding's individual passed balls in the regular season in mlb"
+      },
+      {
+        "content": "Wild Pitches while Catching (C_WP)\n\ni.e. Most wild pitches while catching",
+        "expected": "THEN the user will be provided with the fielding's wild pitches while catching (C_WP) stat"
+      },
+      {
+        "content": "Fielding Percentage (FPCT)",
+        "expected": "THEN the user will be provided with the fielding's fielding percentage (FPCT) stat"
+      },
+      {
+        "content": "Range Factor (RF)",
+        "expected": "THEN the user will be provided with the fielding's range factor (RF) stat"
+      }
+    ]
+  },
+  {
+    "id": 1200577,
+    "title": "Batting Stat Type Categories",
+    "section_id": 144050,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-331, ANDROID-6779",
+    "created_by": 65,
+    "created_on": 1507571629,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND the user is on an Android device",
+    "custom_steps": "WHEN the user requests the following batting stats (test all the name variants for each stat)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Batting Average (AVG)\naverage\nbatting leader\n\ni.e. Who leads the league in Batting Average?",
+        "expected": "THEN the user will be provided with the batting's batting average (AVG) stat\n\ni.e. The user will be provided with the individual Batting Average for the current year in the regular season in mlb\n"
+      },
+      {
+        "content": "Home Runs (HR)\nhomers\ndingers\nbombs\nlong balls\n\ni.e. \n- Who are the All Time Home Run Leaders?\n- What team has the most home runs in the 2016 postseason",
+        "expected": "THEN the user will be provided with the batting's home runs (HR) stat\n\ni.e.\n- The user is provided with the individual home runs for his career in the regular season in mlb\n- The user is provided with the team's home runs for the requested year in the postseason in mlb"
+      },
+      {
+        "content": "Runs Batted In (RBI)\nribbies\nR B Is\n\ni.e. \n- Who has the most Career RBIs in the NL?\n- Who has the most RBIs",
+        "expected": "THEN the user will be provided with the batting's runs batted in (RBI) stat\n\ni.e.\n- The user is provided with the individual runs batted in for his career in the regular season in the requested league\n- The user is provided with the batter's runs batted in for the current year in the regular season"
+      },
+      {
+        "content": "Stolen Bases (SB)\nsteals\n\ni.e. What Athletic has the most Stolen Bases in a Single Season?",
+        "expected": "THEN the user will be provided with the batting's stolen bases (SB) stat\n\ni.e. The user will be provided with the individual stolen bases for the single season in the regular season for the requested team"
+      },
+      {
+        "content": "Runs (R)\n\ni.e. Who had the most Runs in 2016?",
+        "expected": "THEN the user will be provided with the batting's runs (R) stat\n\ni.e. The user is provided with the individual runs for the requested year in the regular season in mlb"
+      },
+      {
+        "content": "On-Base Percentage (OBP)\non-base\non-base %\nNOTE: obp is not abbreviated\n\ni.e. Who had the best On-Base Percentages of all time?",
+        "expected": "THEN the user will be provided with the batting's on-base percentage (OBP) stat\n\ni.e. The user will be provided with the individual on-base percentage for his career in the regular season in mlb"
+      },
+      {
+        "content": "On-Base + Slugging (OPS)\non base plus slugging\nO P S\n\ni.e. Who has the best Single Season OPS?",
+        "expected": "THEN the user will be provided with the batting's on-base + slugging (OPS) stat\n\ni.e. The user will be provided with the individual on-base + slugging in the single season in the regular season in mlb"
+      },
+      {
+        "content": "Slugging Percentage (SLG)\nslugging\n\ni.e. Who had the best Slugging Percentage in the 2016 World Series?",
+        "expected": "THEN the user will be provided with the batting's slugging percentage (SLG) stat\n\ni.e. The user will be provided with the individual slugging percentage in the requested year in the world series in mlb\n"
+      },
+      {
+        "content": "Hits (H)\nbase hits\n\ni.e. Who leads the league in Hits?",
+        "expected": "THEN the user will be provided with the batting's hits (H) stat\n\ni.e. The user will be provided with the individual hits in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Doubles (2B)\n\ni.e. What team had the most doubles in the National League in 2015?",
+        "expected": "THEN the user will be provided with the batting's doubles (2B) stat\n\ni.e. The user will be provided with the team's doubles for the requested year in the regular season for the requested league\n\n"
+      },
+      {
+        "content": "Triples (3B)\ntrips\n\ni.e. Who has the most career triples on the Athletics?",
+        "expected": "THEN the user will be provided with the batting's triples (3B) stat\n\ni.e. The user will be provided with the individual triples in his career in the regular season for the requested team"
+      },
+      {
+        "content": "Walks (BB)\nfree bases\nfree passes\n\ni.e. Who has the most walks in a single season?",
+        "expected": "THEN the user will be provided with the batting's walks (BB) stat\n\ni.e. The user is provided with the individual walks in a single season in the regular season in mlb"
+      },
+      {
+        "content": "Strikeouts (SO)\nKs\n\ni.e. What batter has the most career strikeouts?\n\nNote: Since default stat is Pitching, must use batter reference in query to obtain Batting Stat",
+        "expected": "THEN the user will be provided with the batting's strikeouts (SO) stat\n\ni.e. The user will be provided with the individual strikeouts in his career in the regular season in mlb"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "NOT supported, TBD if supported in v6.6\n\nCaught Stealing (CS)\n\ni.e. Who has been caught stealing the most this season on the Red Sox?\n\nNOTE: in Batting refers to batter",
+        "expected": "THEN the user will be provided with the batting's caught stealing (CS) stat\n\ni.e. The user will be provided with the individual caught stealing in the current year in the regular season for the requested team"
+      },
+      {
+        "content": "NOT supported, TBD if supported in v6.6\n\nGames Played (G)\n\ni.e. Who has played the most games this year on the Red Sox?",
+        "expected": "THEN the user will be provided with the batting's games (G) stat \n\ni.e. The user will be provided with the individual games in the current year in the regular season for the requested team"
+      },
+      {
+        "content": "NOT supported, TBD if supported in v6.6\n\nAt Bats (AB)\n\ni.e. Who had the most at bats in the AL in the 2016 postseason",
+        "expected": "THEN the user will be provided with the batting's at bats (AB) stat\n\ni.e. The user will be provided with the team's at bat for the requested year in the postseason for the requested league"
+      }
+    ]
+  },
+  {
+    "id": 1200578,
+    "title": "Pitching Stat Type Categories",
+    "section_id": 144050,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-332, ANDROID-6779, SDBB-474",
+    "created_by": 65,
+    "created_on": 1507571629,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND the user is on an Android device",
+    "custom_steps": "WHEN the user request the following pitching stats (test all the name variant for each stat)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Earned Run Average (ERA)\nera\n\ni.e. What team has the best ERA?",
+        "expected": "THEN the user will be provided with the pitching's earned run average (ERA) stat\n\ni.e. The user will be provided with the team's earned run average in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Wins (W)\n\ni.e. \n- Who has the most Wins in 2010?\n- Most wins a pitcher has received in a year?",
+        "expected": "THEN the user will be provided with the pitching's wins (W) stat\n\ni.e. \n- The user will be provided with the individual win in the requested year in the regular season in mlb\n- The user will be provided with the individual win in the single season in mlb"
+      },
+      {
+        "content": "Strikeouts (SO)\nKs\n\ni.e. Who has the most strikeouts?",
+        "expected": "THEN the user will be provided with the pitching's strikeouts (SO) stat\n\ni.e. The user will be provided with the individual strikeouts in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Saves (SV)\n\ni.e. Who led the American League in Saves in the 2016 Division Series?",
+        "expected": "THEN the user will be provided with the pitching's saves (SV) stat\n\ni.e. The user will be provided with the individual saves in the current year in the division series in the requested league"
+      },
+      {
+        "content": "Walks + Hits Per Inning Pitched (WHIP)\nwhip\n\ni.e. What AL team had the best WHIP in the 2015 postseason?",
+        "expected": "THEN the user will be provided with the pitching's walks + hits per inning pitched (WHIP) stat\n\ni.e. The user will be provided with the team's walks + hits per inning pitched in the requested year in the postseason in the requested league"
+      },
+      {
+        "content": "Batting Average Against (BAA)\n\ni.e. Who has the best Batting Average Against?",
+        "expected": "THEN the user will be provided with the pitching's batting average against (BAA) stat\n\ni.e. The user will be provided with the individual batting average against in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Innings Pitched (IP)\n\ni.e. Who threw the most innings last year?",
+        "expected": "THEN the user will be provided with the pitching's innings pitched (IP) stat\n\ni.e. The user will be provided with the individual innings pitched in the requested year in the regular season in mlb"
+      },
+      {
+        "content": "Complete Games (CG)\n\ni.e. Who had the most complete games last season?",
+        "expected": "THEN the user will be provided with the pitching's completed games (CG) stat\n\ni.e. The user will be provided with the individual completed games in the requested year in the regular season in mlb"
+      },
+      {
+        "content": "Runs (R)\n\ni.e. \n- What pitcher has given up the most Runs\n- Who has allowed the most Runs\n\nNote: Since default stat is Batting, must use pitcher reference in query to obtain Pitching Stat",
+        "expected": "THEN the user will be provided with the pitching's runs (R) stat\n\ni.e. \n- The user will be provided with the individual's runs given up in the current year in the regular season in mlb\n- The user will be provided with the individual's allowed runs in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Hits (H)\n\ni.e. Which pitcher gave up the most hits this year?\n\n*** NOTE: Must mention pitcher in query?",
+        "expected": "THEN the user will be provided with the pitching's hits (H) stat\n\ni.e. The user will be provided with the individual hits in the current year for the requested team"
+      },
+      {
+        "content": "Home Runs (HR)\nhomers\ndingers\nbombs\nlong balls\n\ni.e. What pitcher gave up the most home runs in the NL in 2014?\n\nNote: Since default stat is Batting, must use pitcher reference in query to obtain Pitching Stat",
+        "expected": "THEN the user will be provided with the pitching's home run (HR) stat\n\ni.e. The user will be provided with the individual home runs in the requested year in the regular season in the requested league\n\nNote: Since default stat is Batting, must use pitching reference in query to obtain Pitching Stat"
+      },
+      {
+        "content": "Games Played (G)\n\ni.e. Who has pitched the most games this season?\n\nNote: Since default stat is Batting, must use pitcher reference in query to obtain Pitching Stat",
+        "expected": "THEN the user will be provided with the pitching's games (G) stat\n\ni.e. The user will be provided with the individual games in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Games Started (GS)\nstarts\n\ni.e. Who has started the most games this year?",
+        "expected": "THEN the user will be provided with the pitching's games started (GS) stat\n\ni.e. The user will be provided with the individual games stated in the current year in the regular season in mlb"
+      },
+      {
+        "content": "Losses (L)\n\ni.e. What pitcher has the most Losses in the AL?",
+        "expected": "THEN the user will be provided with the pitching's losses (L) stat\n\ni.e. The user will be provided with the individual losses in the current year in the regular season in the requested league"
+      },
+      {
+        "content": "Save Opportunities (SVO)\nsave chances\n\ni.e. Who had the most save opportunities in a single season?",
+        "expected": "THEN the user will be provided with the pitching's save opportunities (SVO) stat\n\ni.e. The user will be provided with the individual save opportunities in the single season in the regular season in mlb"
+      },
+      {
+        "content": "Earned Runs (ER)\n\ni.e. Who has the most earned runs?",
+        "expected": "THEN the user will be provided with the pitching's earned runs (ER) stat\n\ni.e. The user will be provided with the individual earned runs in the current year in the regular season in mlb"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "NOT supported in v6.6\n\nWalks (BB)\nfree bases\nfree passes\n\ni.e. What team's pitching staff leads the league in Walks?\n\nNote: Since default stat is Batting, must use pitcher reference in query to obtain Pitching Stat",
+        "expected": "THEN the user will get the following message: \"This feature does not currently support this specific stat. Please ask another question.\"\n"
+      }
+    ]
+  },
+  {
+    "id": 1200579,
+    "title": "Fielding Stat Type Categories Not Supported",
+    "section_id": 144050,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "ANDROID-6779",
+    "created_by": 65,
+    "created_on": 1507571853,
+    "updated_by": 65,
+    "updated_on": 1514999559,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND the user is on Android device",
+    "custom_steps": "When the user types or speaks a query for any fielding stats:\r\n\r\n•\tA: Assists\r\n•\tC_WP: Wild Pitches While Catching\r\n•\tDP: Double Plays\r\n•\tE: Errors\r\n•\tFPCT: Fielding Percentage\r\n•\tINN: Innings Played\r\n•\tPB: Pass Balls\r\n•\tPO: Put Outs\r\n•\tRF: Range Factor\r\n•\tSBPCT: Stolen Base Percentage\r\n•\tTC: Total Chances",
+    "custom_expected": "THEN the Fielding stats are not supported and user will see the following message:\r\n\r\nFielding stats are not currently supported. Please ask another question.\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1170687,
+    "title": "Deeplink Content",
+    "section_id": 139542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503432673,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user accesses stats\n\ni.e. Opens Stats view to current stats defaults",
+        "expected": "THEN the user is taken to the Stats View\nAND deeplink format is as follows: \n- mlbatbat://stats\n"
+      },
+      {
+        "content": "WHEN the user accesses team stats\n\ni.e. Opens Stats filtered by team",
+        "expected": "THEN the user is taken to the Stats View\nAND deeplink format is as follows: \n- mlbatbat://stats?team_id=111"
+      },
+      {
+        "content": "WHEN the user accesses year stats\n\ni.e. Opens Stats set to season by year",
+        "expected": "THEN the user is taken to the Stats View\nAND deeplink format is as follows: \n- mlbatbat://stats?season=2016 (current season is default)"
+      },
+      {
+        "content": "WHEN the user accesses single season stats\n\ni.e. Opens Stats set to single season leaders (with optional active only switch)",
+        "expected": "THEN the user is taken to the Stats View\nAND deeplink format is as follows: \n- mlbatbat://stats?season_type=single \n\n- mlbatbat://stats?season_type=single&active_sw=y (this is not in app so far, will it be in the future??????)"
+      },
+      {
+        "content": "WHEN the user accesses single season stats\n\ni.e. Opens Stats set to all_time leaders (with optional active only switch)",
+        "expected": "THEN the user is taken to the Stats View\nAND deeplink format is as follows: \n- mlbatbat://stats?season_type=alltime   \n\n- mlbatbat://stats?season_type=alltime&active_sw=y (this is not in app so far, will it be in the future??????)"
+      },
+      {
+        "content": "WHEN the user accesses game type stats\n\ni.e. Open Stats filtered by game_type",
+        "expected": "THEN the user is taken to the Stats View\nAND deeplink format is as follows: \n- mlbatbat://stats?game_type=R (Regular Season, current mode is default)  \n- mlbatbat://stats?game_type=S (Spring)\n- mlbatbat://stats?game_type=P (Postseason, all)\n- mlbatbat://stats?game_type=D (Division Series)\n- mlbatbat://stats?game_type=L (League Championship Series)\n- mlbatbat://stats?game_type=W (World Series)\n- mlbatbat://stats?game_type=F  (Wild Card)"
+      },
+      {
+        "content": "WHEN the user accesses leagues stats\n\ni.e. Open Stats filtered by league",
+        "expected": "THEN the user is taken to the Stats View\nAND deeplink format is as follows: \n- mlbatbat://stats?league_code=mlb (MLB)  (default)  \n- mlbatbat://stats?league_code=al (American League)  \n- mlbatbat://stats?league_code=nl (National League)\n\nNote: Team and League Code are mutually exclusive.  "
+      },
+      {
+        "content": "WHEN the user accesses type stats\n\ni.e. Open Stats filtered by StatType",
+        "expected": "THEN the user is taken to the Stats View\nAND deeplink format is as follows: \n- mlbatbat://stats?stat_type=hitting (default)  \n- mlbatbat://stats?stat_type=pitching \n- mlbatbat://stats?stat_type=fielding  \n"
+      },
+      {
+        "content": "WHEN the user accesses specific stats\n\ni.e. Open to specific Stats",
+        "expected": "THEN the user is taken to the Stats Category View\nAND deeplink format is as follows: \n- mlbatbat://stats?stat=avg\n\nBatting:\nAVG, HR, RBI, SB, R, OBP, SLG, OPS, H, 2B, 3B, BB, SO, CS, G, AB\nPitching:\nERA, W, SO, SV, WHIP, BAA, IP, CG, G, GS, L, SVO, ER, R, H, HR, BB\nFielding:\nG, GS, INN, TC, PO, A, E, DP, SB, CS, SBPCT, PB, C_WP, FPCT, RF"
+      },
+      {
+        "content": "WHEN the user accesses multi-param stats\n\ni.e. Stats multi-param queries",
+        "expected": "THEN the user is taken to the Stats\nAND deeplink format is as follows: \n- mlbatbat://stats?game_type=P&season=2016&league_code=al&stat_type=pitching\n- mlbatbat://stats?game_type=P&season=2016&team_id=111&stat_type=pitching\n\n(team and league should not be used together)\n(stat_type and stat should not be used together)"
+      },
+      {
+        "content": "WHEN the user accesses multi-param category stats\n\ni.e. Stats multi-param category queries",
+        "expected": "THEN the user is taken to the Stats Category View\nAND deeplink format is as follows: \n- mlbatbat://stats?game_type=P&season=2016&league_code=al&stat=avg\n- mlbatbat://stats?game_type=P&season=2016&team_id=111&stat=avg\n\n(team and league should not be used together)\n(stat_type and stat should not be used together)"
+      },
+      {
+        "content": "WHEN the user accesses team stats\n\ni.e. Stats filtered by Teams instead of players",
+        "expected": "THEN the user is taken to the Team Stats\nAND deeplink format is as follows: \n- mlbatbat://stats?game_type=P&season=2016&league_code=al&stat_type=pitching&section=team\n- mlbatbat://stats?game_type=P&season=2016&league_code=al&stat=avg&section=team\n\nNote: Add param section=team to above stats calls with exceptions:\nsection=team is mutually exclusive with:\n- team_id=[club_id]\n- season_type=[single,all-time]\n\n- season_type=[single,all-time]&active_sw=Y (this is not in app so far, will it be in the future??????)"
+      }
+    ]
+  },
+  {
+    "id": 1150091,
+    "title": "Deeplinks for Batting Stat Type by Categories",
+    "section_id": 139542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-331, SDBB-332, SDBB-333",
+    "created_by": 65,
+    "created_on": 1502140361,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user requests the following batting stats:",
+    "custom_expected": "THEN the default page is Batting/Hitting\r\nAND the deeplink format is: mlbatbat://stats?stat_type=hitting&stat=xx",
+    "custom_steps_separated": [
+      {
+        "content": "Home Runs (HR)",
+        "expected": "THEN the default page is Batting\nAND the deeplink is: mlbatbat://stats?stat_type=hitting&stat=hr"
+      },
+      {
+        "content": "Runs (R)",
+        "expected": "THEN the default page is Batting\nAND the deeplink: mlbatbat://stats?stat_type=hitting&stat=r"
+      },
+      {
+        "content": "Games (G)",
+        "expected": "THEN the default page is Batting\nAND the deeplink is: mlbatbat://stats?stat_type=hitting&stat=g"
+      },
+      {
+        "content": "Stolen Bases (SB)",
+        "expected": "THEN the default page is Batting\nAND the deeplink: mlbatbat://stats?stat_type=hitting&stat=sb"
+      },
+      {
+        "content": "Walks (BB)",
+        "expected": "THEN the default page is Batting\nAND the deeplink is: mlbatbat://stats?stat_type=hitting&stat=bb"
+      }
+    ]
+  },
+  {
+    "id": 1156942,
+    "title": "Deeplinks for Pitching Stat Type by Categories",
+    "section_id": 139542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-331, SDBB-332, SDBB-333",
+    "created_by": 65,
+    "created_on": 1502390492,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": "WHEN the user requests the following pitching stats\r\nAND the deeplink is:",
+    "custom_expected": "THEN the default page is Pitching\r\nAND the deeplink format is: ",
+    "custom_steps_separated": [
+      {
+        "content": "Strikeouts (SO)",
+        "expected": "THEN the default page is Pitching\nAND the deeplink is: mlbatbat://stats?stat_type=pitching&stat=so"
+      },
+      {
+        "content": "Games Started (GS)",
+        "expected": "THEN the default page is Pitching\nAND the deeplink is: mlbatbat://stats?stat_type=pitching&stat=gs"
+      }
+    ]
+  },
+  {
+    "id": 1166911,
+    "title": "Batting Average (AVG) Stats",
+    "section_id": 139699,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503068772,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": "11m 31s",
+    "suite_id": 18705,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user requests Batting Average (AVG) stats:",
+    "custom_expected": "THEN the user is taken to the corresponding deeplink",
+    "custom_steps_separated": [
+      {
+        "content": "Which yankee player leads the batting average?",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=avg&team_id=147"
+      },
+      {
+        "content": "Who leads in battling average on the yankees?",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=avg&team_id=147"
+      },
+      {
+        "content": "Who is the best in batting average in american league?",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=avg&league_code=al"
+      },
+      {
+        "content": "2015 batting average leader",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=avg&season=2015"
+      },
+      {
+        "content": "Which team is the best in the batting average",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=avg&section=team"
+      },
+      {
+        "content": "cubs batting average 2014",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=avg&team_id=112&season=2014"
+      },
+      {
+        "content": "best batting average 2015",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=avg&season=2015"
+      },
+      {
+        "content": "world series batting average leader",
+        "expected": "mlbatbat://stats?stat_type=hitting&game_type=W&stat=avg"
+      },
+      {
+        "content": "Which team had the highest batting average in postseason?",
+        "expected": "mlbatbat://stats?stat_type=hitting&game_type=P&stat=avg&section=team"
+      },
+      {
+        "content": "nationals battling leader last year",
+        "expected": "mlbatbat://stats?stat_type=hitting&game_type=P&stat=avg&team_id=120&season=2016"
+      },
+      {
+        "content": "highest average marlins last year",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=avg&team_id=146&season=2016"
+      },
+      {
+        "content": "this season averages angels leader",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=avg&team_id=108&season=2017"
+      },
+      {
+        "content": "division series batting leader",
+        "expected": "mlbatbat://stats?stat_type=hitting&game_type=D&stat=avg"
+      },
+      {
+        "content": "Who has highest average in career this season?",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=avg&season_type=alltime&season=2017"
+      }
+    ]
+  },
+  {
+    "id": 1166912,
+    "title": "Home Runs (HR) Stats",
+    "section_id": 139699,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503069421,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": "3m 16s",
+    "suite_id": 18705,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user requests Home Runs (HR) stats:",
+    "custom_expected": "THEN the user is taken to the corresponding deeplink",
+    "custom_steps_separated": [
+      {
+        "content": "player with career highest bombs count on yankees team",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=hr&team_id=147&season_type=alltime"
+      },
+      {
+        "content": "Who had the most homeruns last season?",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=hr&season=2016"
+      },
+      {
+        "content": "nl team with most home runs this season",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=hr&league_code=nl&season=2017"
+      },
+      {
+        "content": "dodgers home runs",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=hr&team_id=119"
+      },
+      {
+        "content": "al player with most homeruns current year",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=hr&league_code=al&season=2017"
+      }
+    ]
+  },
+  {
+    "id": 1166913,
+    "title": "Runs Batted In (RBI) Stats",
+    "section_id": 139699,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503069630,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": "1m 18s",
+    "suite_id": 18705,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user requests Runs Batted In (RBI) stats:",
+    "custom_expected": "THEN the user is taken to the corresponding deeplink",
+    "custom_steps_separated": [
+      {
+        "content": "team leading in rbis this season",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=rbi&section=team&season=2017"
+      },
+      {
+        "content": "rbis this season leader",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=rbi&season=2017"
+      },
+      {
+        "content": "Who all time leader in rbis on the nationals?",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=rbi&team_id=120&season_type=alltime"
+      }
+    ]
+  },
+  {
+    "id": 1166916,
+    "title": "Hitting Request",
+    "section_id": 139747,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-555",
+    "created_by": 65,
+    "created_on": 1503072679,
+    "updated_by": 65,
+    "updated_on": 1521768717,
+    "estimate": null,
+    "estimate_forecast": "8m 27s",
+    "suite_id": 18705,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user requests Hitting stats:\r\n\r\n\r\n",
+    "custom_expected": "THEN the user is taken to the corresponding deeplink",
+    "custom_steps_separated": [
+      {
+        "content": "What national league team had the most home runs in 2014?",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=hr&league_code=nl&season=2014"
+      },
+      {
+        "content": "this season averages angels leader",
+        "expected": "mlbatbat://stats?stat_type=hitting&stat=avg&team_id=108&season=2017"
+      },
+      {
+        "content": "division series batting leader",
+        "expected": "mlbatbat://stats?stat_type=hitting&game_type=D&stat=avg"
+      },
+      {
+        "content": "Cubs batting average in 2014",
+        "expected": "mlbatbat://stats?stat_type=hitting&game_type=R&stat=avg&section=team&season=2014"
+      },
+      {
+        "content": "Who had the highest average on the marlins last year",
+        "expected": "mlbatbat://stats?stat_type=hitting&game_type=R&stat=avg&team_id=146&season=2017"
+      },
+      {
+        "content": "Who had the highest average on the Angels last season?",
+        "expected": "see answer on SDBB-555 when posted"
+      }
+    ]
+  },
+  {
+    "id": 1166919,
+    "title": "Pitching Request",
+    "section_id": 139747,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1503080766,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": "2m 51s",
+    "suite_id": 18705,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat",
+    "custom_steps": "WHEN the user requests Pitching stats:\r\n\r\n\r\n",
+    "custom_expected": "THEN the user is taken to the corresponding deeplink",
+    "custom_steps_separated": [
+      {
+        "content": "Who has the most strikeouts?",
+        "expected": "mlbatbat://stats?stat_type=pitching&stat=so"
+      },
+      {
+        "content": "Which royal made the most hits?",
+        "expected": "mlbatbat://stats?stat_type=pitching&stat=h&team_id=118"
+      }
+    ]
+  },
+  {
+    "id": 1150090,
+    "title": "Home Run (HR) Shared Stats Name",
+    "section_id": 139543,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-331, SDBB-332, SDBB-333, SDBB-363, https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders#StatsLeaders-Rules",
+    "created_by": 65,
+    "created_on": 1502135101,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": "12m 15s",
+    "suite_id": 18705,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND given that some stat names are shared\r\nAND user is on an iOS device",
+    "custom_steps": "WHEN the user requests a stat for Home Runs (HR)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Home Runs (HR) in reference to hitting stats",
+        "expected": "THEN by default At Bat defaults to Hitting stats"
+      },
+      {
+        "content": "Home Runs (HR) in reference to pitching stats\n\ni.e. \n- Who has given up the most Home Runs?\n- What pitcher has given up the most Home Runs?\n- Who has allowed the most Home Runs?",
+        "expected": "THEN At Bat takes user to Pitching stats"
+      }
+    ]
+  },
+  {
+    "id": 1165070,
+    "title": "Run (R) Shared Stats Name",
+    "section_id": 139543,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-331, SDBB-332, SDBB-333, https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders#StatsLeaders-Rules",
+    "created_by": 65,
+    "created_on": 1502915255,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": "3m 34s",
+    "suite_id": 18705,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND given that some stat names are shared\r\nAND user is on an iOS device",
+    "custom_steps": "WHEN the user requests a stat for Runs (R)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Runs (R) in reference to hitting stats\n\ni.e. Who had the most Runs in 2016?",
+        "expected": "THEN by default At Bat defaults to Hitting stats"
+      },
+      {
+        "content": "Runs (R) in reference to pitching stats\n\ni.e. \n- What pitcher has given up the most Runs?\n- Who has allowed the most Runs?",
+        "expected": "THEN At Bat takes user to Pitching stats"
+      }
+    ]
+  },
+  {
+    "id": 1165071,
+    "title": "Strikeouts (SO) Shared Stats Name",
+    "section_id": 139543,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-331, SDBB-332, SDBB-333, https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders#StatsLeaders-Rules",
+    "created_by": 65,
+    "created_on": 1502915434,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": "3m 43s",
+    "suite_id": 18705,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND given that some stat names are shared\r\nAND user is on an iOS device",
+    "custom_steps": "WHEN the user requests a stat for Strikeouts (SO)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Strikeouts (SO) in reference to pitching stats\n\ni.e. Who has the most strikeouts?",
+        "expected": "THEN by default At Bat defaults to Pitching stats"
+      },
+      {
+        "content": "Strikeouts (SO) in reference to hitting stats\n\ni.e.\n- What batter has the most Strikeouts?\n- Who has struck out the most?\n- What hitter has the most Strikeouts?\n- What position player has the most Strikeouts?",
+        "expected": "THEN At Bat takes user to Hitting stats"
+      }
+    ]
+  },
+  {
+    "id": 1165072,
+    "title": "Games Played (G) Shared Stats Name",
+    "section_id": 139543,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-331, SDBB-332, SDBB-333, https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders#StatsLeaders-Rules",
+    "created_by": 65,
+    "created_on": 1502915743,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": "3m 34s",
+    "suite_id": 18705,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND given that some stat names are shared\r\nAND user is on an iOS device",
+    "custom_steps": "WHEN the user requests a stat for Games (G)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Games Played (G) in reference to hitting stats\n\ni.e. Who has played the most games this year",
+        "expected": "THEN by default At Bat defaults to Hitting stats"
+      },
+      {
+        "content": "Games Played (G) in reference to pitching stats\n\ni.e.\n- What pitcher has played the most Games?\n- What pitcher has thrown in the most Games?",
+        "expected": "THEN At Bat takes user to Pitching stats"
+      },
+      {
+        "content": "Games Played (G) in reference to fielding stats\n\ni.e.\n- What position player has played the most Games?\n- What fielder has played the most Games?",
+        "expected": "THEN At Bat takes user to Fielding stats"
+      }
+    ]
+  },
+  {
+    "id": 1165073,
+    "title": "Games Started (GS) Shared Stats Name",
+    "section_id": 139543,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-331, SDBB-332, SDBB-333, https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders#StatsLeaders-Rules",
+    "created_by": 65,
+    "created_on": 1502915983,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": "3m 58s",
+    "suite_id": 18705,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND given that some stat names are shared\r\nAND user is on an iOS device",
+    "custom_steps": "WHEN the user requests a stat for Games Started (GS)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Games Started (GS) in reference to pitching stats\n\ni.e. Who has started the most games this year?",
+        "expected": "THEN by default At Bat defaults to Pitching stats"
+      },
+      {
+        "content": "Games Started (GS) in reference to fielding stats\n\ni.e.\n- What position player has Started the most Games?\n- What fielder has Started the most Games?",
+        "expected": "THEN At Bat takes user to Fielding stats"
+      }
+    ]
+  },
+  {
+    "id": 1165074,
+    "title": "Stolen Bases (SB) Shared Stats Name",
+    "section_id": 139543,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-331, SDBB-332, SDBB-333, SDBB-559, https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders#StatsLeaders-Rules",
+    "created_by": 65,
+    "created_on": 1502916209,
+    "updated_by": 65,
+    "updated_on": 1521768325,
+    "estimate": null,
+    "estimate_forecast": "4m 44s",
+    "suite_id": 18705,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND given that some stat names are shared\r\nAND user is on an iOS device",
+    "custom_steps": "WHEN the user requests a stat for Stolen Bases (SB)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Stolen Bases (SB) in reference to hitting stats\n\ni.e. \n\n- What Athletic has the most Stolen Bases in a Single Season?\n- Who has the most stolen bases\n",
+        "expected": "THEN by default At Bat defaults to Hitting stats"
+      },
+      {
+        "content": "Stolen Bases (SB) in reference to pitching stats\n\ni.e \n\n- What pitcher has been stolen on the most?\n- What pitcher has allowed the most stolen bases?",
+        "expected": "THEN At Bat takes user to Pitching stats"
+      },
+      {
+        "content": "Stolen Bases (SB) in reference to fielding stats\n\ni.e.\n\n- Who has been stolen on the most?\n- What catcher has been stolen on the most?\n- Who has allowed the most Stolen Bases?\n- What catcher has allowed the most Stolen Bases?",
+        "expected": "THEN At Bat takes user to Fielding stats"
+      }
+    ]
+  },
+  {
+    "id": 1165075,
+    "title": "Walks (BB) Shared Stats Name",
+    "section_id": 139543,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-331, SDBB-332, SDBB-333, https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders#StatsLeaders-Rules",
+    "created_by": 65,
+    "created_on": 1502916456,
+    "updated_by": 65,
+    "updated_on": 1518664074,
+    "estimate": null,
+    "estimate_forecast": "14m 18s",
+    "suite_id": 18705,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND given that some stat names are shared\r\nAND user is on an iOS device",
+    "custom_steps": "WHEN the user requests a stat for Walks (BB)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Walks (BB) in reference to hitting stats\n\ni.e. Who has the most walks in a single season?",
+        "expected": "THEN by default At Bat defaults to Hitting stats"
+      },
+      {
+        "content": "Walks (BB) in reference to pitching stats\n\ni.e.\n- Who has given up the most Walks?\n- What pitcher has given up the most Walks?\n- Who has allowed the most Walks?\n- What pitcher has allowed the most Walks?\n- Who has thrown the most Walks?",
+        "expected": "THEN At Bat takes user to Pitching stats"
+      }
+    ]
+  },
+  {
+    "id": 1172479,
+    "title": "EDIT_Caught Stealing (CS) Shared Stats Name??????",
+    "section_id": 139543,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-348",
+    "created_by": 65,
+    "created_on": 1503685680,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 8,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND given that some stat names are shared\r\nAND user is on an iOS device",
+    "custom_steps": "WHEN the user requests a stat for Caught Stealing (CS)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Caught Stealing (CS) in reference to hitting stats",
+        "expected": "THEN by default At Bat takes user to Hitting stats"
+      },
+      {
+        "content": "Caught Stealing (CS) in reference to fielding stats",
+        "expected": "THEN At Bat takes user to Fielding stats"
+      }
+    ]
+  },
+  {
+    "id": 1166915,
+    "title": "Hits (H) Stats_CONFIRM THIS",
+    "section_id": 139543,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "SDBB-362",
+    "created_by": 65,
+    "created_on": 1503071598,
+    "updated_by": 65,
+    "updated_on": 1508872950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 9,
+    "custom_preconds": "GIVEN the user is on At Bat\r\nAND accesses the questions interface of Ask At Bat\r\nAND given that some stat names are shared\r\nAND user is on an iOS device",
+    "custom_steps": "WHEN the user requests a stat for Hits (H)\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Hits in reference to Hitting Stats\n\ni.e. Who has the most hits?\n",
+        "expected": "THEN by default At Bat defaults to Hitting stats????????????\n\ni.e. mlbatbat://stats?stat_type=hitting&stat=h"
+      },
+      {
+        "content": "Hits in reference to Pitching Stats\n\ni.e. Which pitcher has given up the most hits this year on the Red Sox?",
+        "expected": "THEN At Bat takes user to Pitching stats\n\ni.e. mlbatbat://stats?stat_type=pitching&stat=h&team_id=111&season=2017"
+      }
+    ]
+  },
+  {
+    "id": 1229537,
+    "title": "One Leader - BA, OBP, OPS, SLG, ERA, BAA, WHIP",
+    "section_id": 148805,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533669091,
+    "updated_by": 65,
+    "updated_on": 1533672039,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 1,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: BA, OBP, OPS, SLG, ERA, BAA, WHIP\r\nAND it's in the current season\r\nAND there is only one leader\r\n\r\ni.e.\r\n- Who has the best BA, OBP, OPS, SLG, ERA, BAA, WHIP in the league?\r\n- Which pitcher has the best ERA, BAA, WHIP on the teamName this year?\r\n- Who has the best BA, OBP, OPS, SLG?\r\n- Which position the best BA, OBP, OPS, SLG this year?",
+    "custom_expected": "THEN the bot responds with the individual leader in the current season for the stat specified\r\n\r\ni.e.\r\n- Max Scherzer currently leads the Washington Nationals with an ERA of 2.51.\r\n- Jose Altuve of the Houston Astros currently leads Major League Baseball with a batting average of .346.\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229539,
+    "title": "One Leader - AB, 2B, H (batting), HR (batting), R (batting), RBI, SB (batting), 3B, BB (batting), CG, SV, SVO, SO (pitching), IP, W",
+    "section_id": 148805,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533669613,
+    "updated_by": 65,
+    "updated_on": 1533673839,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 2,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: AB, 2B, H (batting), HR (batting), R (batting), RBI, SB (batting), 3B, BB (batting), CG, SV, SVO, SO (pitching), IP, W\r\nAND it's in the current season\r\nAND there is only one leader\r\n\r\ni.e.\r\n- Who has the most AB, 2B, H (batting), HR (batting), R (batting), RBI, SB (batting), 3B, BB (batting), CG, SV, SVO, SO (pitching), IP, W this year?\r\n- Which player has the most AB, 2B, H (batting), HR (batting), R (batting), RBI, SB (batting), 3B, BB (batting), CG, SV, SVO, SO (pitching), IP, W on the teamName?\r\n- Who leads the league/teamName in AB, 2B, H (batting), HR (batting), R (batting), RBI, SB (batting), 3B, BB (batting), CG, SV, SVO, SO (pitching), IP, W so far this year?",
+    "custom_expected": "THEN the bot responds with the individual leader in the current season for the stat specified\r\n\r\ni.e.\r\n- Bryce Harper currently leads the Washington Nationals with 59 home runs.\r\n- Giancarlo Stanton of the Miami Marlins currently leads Major League Baseball with 59 home runs.\r\n- Bryce Harper currently leads the Washington Nationals' Right Fielders with 59 home runs.\r\n- Bryce Harper currently leads National League Right Fielders with 59 home runs.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229541,
+    "title": "One Leader - CS",
+    "section_id": 148805,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533670269,
+    "updated_by": 65,
+    "updated_on": 1533672151,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 3,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: CS\r\nAND it's in the current season\r\nAND there is only one leader\r\n\r\ni.e.\r\n- Who has been caught stealing the most this year?\r\n- Which player has been caught stealing the most on the teamName this year?\r\n- Which player has been caught stealing the most in the league this year?",
+    "custom_expected": "THEN the bot responds with the individual leader in the current season for the stat specified\r\n\r\ni.e.\r\n- Andrew Benintendi has been caught stealing 5 times this season, the most on the Boston Red Sox.\r\n- Andrew Benintendi has been caught stealing 5 times this season, the most in the American League.\r\n- Andrew Benintendi has been caught stealing 5 times this season, the most of any Left Fielder in the American League.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229543,
+    "title": "One Leader - SO (Batting)",
+    "section_id": 148805,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533670459,
+    "updated_by": 65,
+    "updated_on": 1533672213,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 4,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: SO (Batting)\r\nAND it's in the current season\r\nAND there is only one leader\r\n\r\ni.e.\r\n- Who has struck out the most this season?\r\n- Which batter has struck out the most on the teamName?\r\n- Which batter has struck out the most in the league this year?\r\n- What hitter has the most strikeouts this year?",
+    "custom_expected": "THEN the bot responds with the individual leader in the current season for the stat specified\r\n\r\ni.e.\r\n- Aaron Judge currently has more strikeouts than any other batter on the New York Yankees this year with 87.\r\n- Aaron Judge currently has more strikeouts than any other batter in the American League this year with 87.\r\n- Aaron Judge currently has more strikeouts than any other Right Fielder in the American League this year with 87.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229545,
+    "title": "One Leader - G (Batting) & G (Pitching)",
+    "section_id": 148805,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533670692,
+    "updated_by": 65,
+    "updated_on": 1533672310,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 5,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: G (Batting) & G (Pitching)\r\nAND it's in the current season\r\nAND there is only one leader\r\n\r\ni.e.\r\n",
+    "custom_expected": "THEN the bot responds with the individual leader in the current season for the stat specified\r\n\r\ni.e.\r\n- Mookie Betts has played 153 games this year, the most on the Boston Red Sox.\r\n- Mookie Betts has played 153 games this year, the most in the American League.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229547,
+    "title": "One Leader - GS (Pitching)",
+    "section_id": 148805,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533670957,
+    "updated_by": 65,
+    "updated_on": 1533672407,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 6,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: GS (Pitching)\r\nAND it's in the current season\r\nAND there is only one leader\r\n\r\ni.e.\r\n- Which pitcher has started the most games this year?\r\n- Which pitcher has started the most games for the teamName this year?",
+    "custom_expected": "THEN the bot responds with the individual leader in the current season for the stat specified\r\n\r\ni.e.\r\n- Max Scherzer has started 15 games this year, the most on the Washington Nationals.\r\n- Max Scherzer has started 15 games this year, the most in the National League.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229549,
+    "title": "One Leader - L (Pitching)",
+    "section_id": 148805,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533671162,
+    "updated_by": 65,
+    "updated_on": 1533672497,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 7,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: L (Pitching)\r\nAND it's in the current season\r\nAND there is only one leader\r\n\r\ni.e.\r\n- Who has lost the most games this year?\r\n- Which pitcher has lost the most games in the league this year?\r\n- Who has the most losses on the teamName this year?",
+    "custom_expected": "THEN the bot responds with the individual leader in the current season for the stat specified\r\n\r\ni.e.\r\n- Max Scherzer has lost 15 games this year, the most on the Washington Nationals.\r\n- Max Scherzer has lost 15 games this year, the most in the National League.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229552,
+    "title": "One Leader - BB (Pitching)",
+    "section_id": 148805,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533671327,
+    "updated_by": 65,
+    "updated_on": 1533672798,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 8,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: BB (Pitching)\r\nAND it's in the current season\r\nAND there is only one leader\r\n\r\ni.e.\r\n- Who has walked the most batters?\r\n- Which pitcher has walked the most batters on the teamName?\r\n- Which pitcher has walked the most batters in the league this year?",
+    "custom_expected": "THEN the bot responds with the individual leader in the current season for the stat specified\r\n\r\ni.e.\r\n- Max Scherzer has walked 28 batters this year, the most on the Washington Nationals.\r\n- Max Scherzer has walked 28 batters this year, the most in the National League.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229555,
+    "title": "One Leader - ER (pitching), H (pitching), HR (pitching)",
+    "section_id": 148805,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533671514,
+    "updated_by": 65,
+    "updated_on": 1533672871,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 9,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: ER (pitching), H (pitching), HR (pitching)\r\nAND it's in the current season\r\nAND there is only one leader\r\n\r\ni.e.\r\n- Who has given up the most earned runs / hits / home runs?\r\n- Which pitcher has given up the most earned runs / hits / home runs on the teamName this year?\r\n- Who has given up the most earned runs / hits / home runs in the league?",
+    "custom_expected": "THEN the bot responds with the individual leader in the current season for the stat specified\r\n\r\ni.e.\r\n- Matt Harvey has given up 153 hits this year, the most on the New York Mets.\r\n- Matt Harvey has given up 153 earned runs this year, the most in the National League.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229538,
+    "title": "Multi Player Tie - BA, OBP, OPS, SLG, ERA, BAA, WHIP",
+    "section_id": 148806,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533669444,
+    "updated_by": 65,
+    "updated_on": 1533673001,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 1,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: BA, OBP, OPS, SLG, ERA, BAA, WHIP\r\nAND it's in the current season\r\nAND there is a multi player tie\r\n\r\ni.e.\r\n- Who has the best BA, OBP, OPS, SLG, ERA, BAA, WHIP in the league?\r\n- Which pitcher has the best ERA, BAA, WHIP on the teamName this year?\r\n- Who has the best BA, OBP, OPS, SLG?\r\n- Which position the best BA, OBP, OPS, SLG this year?",
+    "custom_expected": "THEN the bot responds with the multi player tie leaders in the current season for the stat specified\r\n\r\ni.e.\r\n- Jose Altuve, Charlie Blackmon, and Avisail Garcia currently lead the Boston Red Sox with a batting average of .346.\r\n- Jose Altuve, Charlie Blackmon, and Avisail Garcia currently lead Major League Baseball with a batting average of .346.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229540,
+    "title": "Multi Player Tie - AB, 2B, H (batting), HR (batting), R (batting), RBI, SB (batting), 3B, BB (batting), CG, SV, SVO, SO (pitching), IP, W",
+    "section_id": 148806,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533670107,
+    "updated_by": 65,
+    "updated_on": 1533673876,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 2,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: AB, 2B, H (batting), HR (batting), R (batting), RBI, SB (batting), 3B, BB (batting), CG, SV, SVO, SO (pitching), IP, W\r\nAND it's in the current season\r\nAND there is a multi player tie\r\n\r\ni.e.\r\n- Who has the most AB, 2B, H (batting), HR (batting), R (batting), RBI, SB (batting), 3B, BB (batting), CG, SV, SVO, SO (pitching), IP, W this year?\r\n- Which player has the most AB, 2B, H (batting), HR (batting), R (batting), RBI, SB (batting), 3B, BB (batting), CG, SV, SVO, SO (pitching), IP, W on the teamName?\r\n- Who leads the league/teamName in AB, 2B, H (batting), HR (batting), R (batting), RBI, SB (batting), 3B, BB (batting), CG, SV, SVO, SO (pitching), IP, W so far this year?",
+    "custom_expected": "THEN the bot responds with the multi player tie leaders in the current season for the stat specified\r\n\r\ni.e.\r\n- Giancarlo Stanton and Aaron Judge currently lead the New York Yankees with 59 home runs.\r\n- Giancarlo Stanton and Aaron Judge currently lead Major League Baseball with 59 home runs.\r\n- Giancarlo Stanton and Aaron Judge currently lead Major League Baseball Left Fielders with 59 home runs.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229542,
+    "title": "Multi Player Tie - CS",
+    "section_id": 148806,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533670361,
+    "updated_by": 65,
+    "updated_on": 1533673433,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 3,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: CS\r\nAND it's in the current season\r\nAND there is a multi player tie\r\n\r\ni.e.\r\n- Who has been caught stealing the most this year?\r\n- Which player has been caught stealing the most on the teamName this year?\r\n- Which player has been caught stealing the most in the league this year?",
+    "custom_expected": "THEN the bot responds with the multi player tie leaders in the current season for the stat specified\r\n\r\ni.e.\r\n- Andrew Benintendi, David Ortiz, and Mookie Betts have been caught stealing 5 times this season, the most on the Boston Red Sox.\r\n- Andrew Benintendi, David Ortiz, and Mookie Betts have been caught stealing 5 times this season, the most in the American League.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229544,
+    "title": "Multi Player Tie - SO (Batting)",
+    "section_id": 148806,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533670571,
+    "updated_by": 65,
+    "updated_on": 1533673450,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 4,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: SO (Batting)\r\nAND it's in the current season\r\nAND there is a multi player tie\r\n\r\ni.e.\r\n- Who has struck out the most this season?\r\n- Which batter has struck out the most on the teamName?\r\n- Which batter has struck out the most in the league this year?\r\n- What hitter has the most strikeouts this year?",
+    "custom_expected": "THEN the bot responds with the multi player tie leaders in the current season for the stat specified\r\n\r\ni.e.\r\n- Aaron Judge and Giancarlo Stanton currently have more strikeouts than any other batter on the New York Yankees this year with 87.\r\n- Aaron Judge and Giancarlo Stanton currently have more strikeouts than any other batter in the American League this year with 87.\r\n- Aaron Judge and Giancarlo Stanton currently have more strikeouts than any other Right Fielders in the American League this year with 87.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229546,
+    "title": "Multi Player Tie - G (Batting) & G (Pitching)",
+    "section_id": 148806,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533670789,
+    "updated_by": 65,
+    "updated_on": 1533673485,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 5,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: G (Batting) & G (Pitching)\r\nAND it's in the current season\r\nAND there is a multi player tie\r\n\r\ni.e.\r\n",
+    "custom_expected": "THEN the bot responds with the multi player tie leaders in the current season for the stat specified\r\n\r\ni.e.\r\n- Mookie Betts and Andrew Benintendi have played 153 games this year, the most on the Boston Red Sox.\r\n- Mookie Betts and Andrew Benintendi have played 153 games this year, the most in Major League Baseball.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229548,
+    "title": "Multi Player Tie - GS (Pitching)",
+    "section_id": 148806,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533671030,
+    "updated_by": 65,
+    "updated_on": 1533673502,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 6,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: GS (Pitching)\r\nAND it's in the current season\r\nAND there is a multi player tie\r\n\r\ni.e.\r\n- Which pitcher has started the most games this year?\r\n- Which pitcher has started the most games for the teamName this year?",
+    "custom_expected": "THEN the bot responds with the multi player tie leaders in the current season for the stat specified\r\n\r\ni.e.\r\n- Stephen Strasburg and Max Scherzer have started 15 games this year, the most on the Washington Nationals.\r\n- Stephen Strasburg and Max Scherzer have started 15 games this year, the most in Major League Baseball.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229550,
+    "title": "Multi Player Tie - L (Pitching)",
+    "section_id": 148806,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533671222,
+    "updated_by": 65,
+    "updated_on": 1533673517,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 7,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: L (Pitching)\r\nAND it's in the current season\r\nAND there is a multi player tie\r\n\r\ni.e.\r\n- Who has lost the most games this year?\r\n- Which pitcher has lost the most games in the league this year?\r\n- Who has the most losses on the teamName this year?",
+    "custom_expected": "THEN the bot responds with the multi player tie leaders in the current season for the stat specified\r\n\r\ni.e.\r\n- Stephen Strasburg and Max Scherzer have lost 15 games this year, the most on the Washington Nationals.\r\n- Stephen Strasburg and Max Scherzer have lost 15 games this year, the most in Major League Baseball.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229553,
+    "title": "Multi Player Tie - BB (Pitching)",
+    "section_id": 148806,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533671386,
+    "updated_by": 65,
+    "updated_on": 1533673542,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 8,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: BB (Pitching)\r\nAND it's in the current season\r\nAND there is a multi player tie\r\n\r\ni.e.\r\n- Who has walked the most batters?\r\n- Which pitcher has walked the most batters on the teamName?\r\n- Which pitcher has walked the most batters in the league this year?",
+    "custom_expected": "THEN the bot responds with the multi player tie leaders in the current season for the stat specified\r\n\r\ni.e.\r\n- Stephen Strasburg and Max Scherzer have walked 28 batters this year, the most on the Washington Nationals.\r\n- Stephen Strasburg and Max Scherzer have walked 28 batters this year, the most in Major League Baseball.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1229557,
+    "title": "Multi Player Tie - ER (pitching), H (pitching), HR (pitching)",
+    "section_id": 148806,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BDINT-875",
+    "created_by": 65,
+    "created_on": 1533671595,
+    "updated_by": 65,
+    "updated_on": 1533673576,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18705,
+    "display_order": 9,
+    "custom_preconds": "As a baseball fan, I would like to be able to ask BAMbot about current season stats and receive a text/voice response in slack or on my voice response enabled device (Echo, Google Home, etc).",
+    "custom_steps": "WHEN the user asks/enters a leader stats query for: ER (pitching), H (pitching), HR (pitching)\r\nAND it's in the current season\r\nAND there is a multi player tie\r\n\r\ni.e.\r\n- Who has given up the most earned runs / hits / home runs?\r\n- Which pitcher has given up the most earned runs / hits / home runs on the teamName this year?\r\n- Who has given up the most earned runs / hits / home runs in the league?",
+    "custom_expected": "THEN the bot responds with the multi player tie leaders in the current season for the stat specified\r\n\r\ni.e.\r\n- Matt Harvey and Noah Syndergaard have given up 20 home runs this year, the most on the New York Mets.\r\n- Matt Harvey and Noah Syndergaard have given up 153 hits this year, the most in Major League Baseball.",
+    "custom_steps_separated": null
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "id": 57481,
+    "title": "All Star Game",
+    "section_id": 8404,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 40,
+    "created_on": 1436819596,
+    "updated_by": 43,
+    "updated_on": 1498861809,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1096,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the HR Derby end time has passed \n*Developer needs to configure this time",
+        "expected": "THEN The All Star Game event module will appear in the ballpark guide page of all star game venue"
+      },
+      {
+        "content": "When looking in the All Star Game event detail page",
+        "expected": "The user should see:\nThe logos for the AL and NL team\nThe day, date, and time of the game \nThe time zone should be the time zone of the ASG venue\n"
+      },
+      {
+        "content": "When the user is on the event detail page of the All Star Game\n",
+        "expected": "Then the user will see a link for At Bat\nAND tapping on the link will take you to Gameday in At Bat for the All Star Game"
+      },
+      {
+        "content": "When the user is on the event detail page of the All Star Game\nAnd there is an offer(s) available for the game",
+        "expected": "Then the user will see a 'Check In Offers' section\nAND there will be offers available in that section"
+      },
+      {
+        "content": "When the user views the All Star Game anywhere in Ballpark\n(Ballpark Guide - Upcoming Events, Event Details, Native Schedule, Native Schedule Event Details; Ticket Dashboard - Home Events lists, Ticket List, Your Upcoming Events + Ticket Scan view [require tickets])",
+        "expected": "Then the start time will be displayed with the timezone of the hosting venue and uses the expected NL and AL logos"
+      },
+      {
+        "content": "When the user checks into the All Star game",
+        "expected": "Then the user is able to successfully check in and view the entry in the Journal (both on main view and event details - all team names and logos appear normally)"
+      }
+    ]
+  },
+  {
+    "id": 57482,
+    "title": "Non-Events",
+    "section_id": 8404,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 40,
+    "created_on": 1436819684,
+    "updated_by": 40,
+    "updated_on": 1436820895,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1096,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When we have reached the non-event end date/time",
+        "expected": "THEN we will see the ballpark guide event module flip to the next event or All Star Game(depending on what is next)\n\n*Ask developer to set up the All Star Sunday and HR Derby end times to test this"
+      }
+    ]
+  },
+  {
+    "id": 1230228,
+    "title": "tessst",
+    "section_id": 8404,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1535662038,
+    "updated_by": 124,
+    "updated_on": 1535662038,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1096,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  }
+]

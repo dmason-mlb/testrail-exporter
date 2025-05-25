@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1902708,
+    "suite_id": 637023,
+    "name": "GAE Survey",
+    "description": "Android - https://baseball.atlassian.net/browse/BPA-7459\niOS - https://baseball.atlassian.net/browse/BP-10714\n\n[go_ahead_venues](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config/env/firebase?query=go_ahead_venues )\n*(HOU, PHI, WAS, SF) GAE enabled venues",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1760751,
+    "suite_id": 637023,
+    "name": "Qualtrics SDK - Deprecated Surveys",
+    "description": "Targeted Surveys [BP-10387](https://baseball.atlassian.net/browse/BP-10387 )",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

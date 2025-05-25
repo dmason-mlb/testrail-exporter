@@ -1,0 +1,445 @@
+[
+  {
+    "id": 1247379,
+    "title": "Branding",
+    "section_id": 151539,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1562692998,
+    "updated_by": 84,
+    "updated_on": 1617813939,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20803,
+    "display_order": 1,
+    "custom_preconds": "Given MLB app is installed\r\nand there is a YouTube Game of the Week (YTGOW) scheduled",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navigates to the Scoreboard",
+        "expected": "Then the game cell will be appropriately labeled as such (at the top of the cell)\nand the label will be displayed similarly to the MLB.TV Game of the Day label text\nEnglish: \"Live on YouTube - Watch Free\"\nSpanish: \"YouTube En Vivo - Ver Gratis\""
+      },
+      {
+        "content": "When the user navigates to the MLB.TV EPG",
+        "expected": "Then the game cell will include a red \"YouTube\" label"
+      },
+      {
+        "content": "When the user navigates to the team page of a team featured in the YouTube Game of the Week",
+        "expected": "Then the game cell will be appropriately labeled as such (at the top right of the schedule snapshot)\nand the label will be displayed similarly to the MLB.TV Game of the Day label text\nEnglish: \"Live on YouTube - Watch Free\"\nSpanish: \"YouTube En Vivo - Ver Gratis\""
+      }
+    ]
+  },
+  {
+    "id": 1247380,
+    "title": ".TV links",
+    "section_id": 151539,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1562692998,
+    "updated_by": 84,
+    "updated_on": 1617815463,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20803,
+    "display_order": 2,
+    "custom_preconds": "Given MLB app is installed\r\nand there is a YouTube Game of the Week scheduled\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navigates to the Scoreboard\nand expands the game cell of the YouTube Game of the Week\nand the game feed is live",
+        "expected": "Then the user will see a TV link for the feed\nand it will be labeled \"YouTube\" "
+      },
+      {
+        "content": "When the user navigates to the Team Page of a team featured in the YouTube Game of the Week\nand the game feed is live",
+        "expected": "Then the user will see a TV link in the schedule module's game detail section\nand it will be labeled \"YouTube\""
+      },
+      {
+        "content": "When the user navigates to the MLB.TV EPG\nand the game feed is live",
+        "expected": "Then the game cell will include a red \"YouTube\" label"
+      },
+      {
+        "content": "When the user navigates to Gameday of the YouTube Game of the Week \n(via Scoreboard or deep link)\nand navs to the Videos tab\nand the game feed is live",
+        "expected": "Then the user will see a TV link for the feed\nand it will be labeled \"YouTube\" "
+      }
+    ]
+  },
+  {
+    "id": 1246690,
+    "title": "iPhone Team Page Embed",
+    "section_id": 151540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1559840055,
+    "updated_by": 84,
+    "updated_on": 1614877224,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20803,
+    "display_order": 1,
+    "custom_preconds": "Given MLB app is installed on an iPhone\r\nand there is a YouTube Game of the Week with a live feed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navs to the team page of a team featured in a live YouTube Game of the Week",
+        "expected": "Then the user will view the live feed autoplaying in an embedded player at the top of the page\nand the video will automatically be muted\n"
+      },
+      {
+        "content": "When the user navs to the team page of a team featured in a live YouTube Game of the Week\nand the video is playing in an embedded player at the top",
+        "expected": "Then all other team view elements should be pushed when the video embed is active\nand they must retain their standard functionality"
+      },
+      {
+        "content": "When the user navs to the team page of a team featured in a live YouTube Game of the Week\nand Hide Scores is OFF",
+        "expected": "Then the video in the embedded player should play at the live point"
+      },
+      {
+        "content": "When the user navs to the team page of a team featured in a live YouTube Game of the Week\nand Hide Scores is ON",
+        "expected": "Then the video in the embedded player should not autoplay"
+      },
+      {
+        "content": "When the user is viewing a live YouTube Game feed in the embedded player \nand taps on the player to bring up the player controls",
+        "expected": "Then the user will see buttons for play/pause, mute, fullscreen, and closed captioning"
+      },
+      {
+        "content": "When the user brings up the player controls on a live YouTube Game feed in the embedded player\nand taps on the Pause button",
+        "expected": "Then the live feed will pause "
+      },
+      {
+        "content": "When the live YouTube Game feed in the embedded player is paused\nand the user taps the Play button",
+        "expected": "Then the live feed will resume"
+      },
+      {
+        "content": "When the user brings up the player controls on a live YouTube Game feed in the embedded player\nand taps on the fullscreen button",
+        "expected": "Then the video will begin playing in fullscreen mode"
+      },
+      {
+        "content": "When the live YouTube Game video is playing in fullscreen mode \nand the user rotates to portrait",
+        "expected": "Then the video will continue playing"
+      },
+      {
+        "content": "When the user brings up the player controls on a live YouTube Game feed in the embedded player\nand taps on the closed captioning button",
+        "expected": "Then closed captioning will begin to display on the video"
+      },
+      {
+        "content": "When the team with a live YouTube Game feed is set as the user's favorite team\nand the user navs to the team page via the bottom navigation bar",
+        "expected": "Then the embedded video player will be displayed at the top of the team page"
+      },
+      {
+        "content": "When a lite user navs to the team page of a team featured in a live YouTube Game of the Week",
+        "expected": "Then the user will see the embedded video player"
+      },
+      {
+        "content": "When a paid user navs to the team page of a team featured in a live YouTube Game of the Week",
+        "expected": "Then the user will see the embedded video player"
+      }
+    ]
+  },
+  {
+    "id": 1248194,
+    "title": "iPad Team Page Embed",
+    "section_id": 151540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1564589917,
+    "updated_by": 84,
+    "updated_on": 1614877246,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20803,
+    "display_order": 2,
+    "custom_preconds": "Given MLB app is installed on an iPad\r\nand there is a YouTube Game of the Week with a live feed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navs to the team page of a team featured in a live YouTube Game of the Week",
+        "expected": "Then the embedded YouTube player will occupy the position of the first news item\nand the video will automatically be muted\n"
+      },
+      {
+        "content": "When the user navs to the team page of a team featured in a live YouTube Game of the Week\nand the video is playing in an embedded player in the first news slot",
+        "expected": "Then the first news item should be bumped to the second slot when the video embed is active\nand the rest of the news items should follow suit"
+      },
+      {
+        "content": "When the user navs to the team page of a team featured in a live YouTube Game of the Week\nand Hide Scores is OFF",
+        "expected": "Then the video in the embedded player should play at the live point"
+      },
+      {
+        "content": "When the user navs to the team page of a team featured in a live YouTube Game of the Week\nand Hide Scores is ON",
+        "expected": "Then the video in the embedded player should not autoplay"
+      },
+      {
+        "content": "When the user is viewing a live YouTube Game feed in the embedded player \nand taps on the player to bring up the player controls",
+        "expected": "Then the user will see buttons for play/pause, mute, fullscreen, and closed captioning"
+      },
+      {
+        "content": "When the user brings up the player controls on a live YouTube Game feed in the embedded player\nand taps on the Pause button",
+        "expected": "Then the live feed will pause "
+      },
+      {
+        "content": "When the live YouTube Game feed in the embedded player is paused\nand the user taps the Play button",
+        "expected": "Then the live feed will resume"
+      },
+      {
+        "content": "When the user brings up the player controls on a live YouTube Game feed in the embedded player\nand taps on the fullscreen button",
+        "expected": "Then the video will begin playing in fullscreen mode"
+      },
+      {
+        "content": "When the live YouTube Game video is playing in fullscreen mode \nand the user rotates to portrait",
+        "expected": "Then the video will continue playing"
+      },
+      {
+        "content": "When the user brings up the player controls on a live YouTube Game feed in the embedded player\nand taps on the closed captioning button",
+        "expected": "Then closed captioning will begin to display on the video"
+      },
+      {
+        "content": "When the team with a live YouTube Game feed is set as the user's favorite team\nand the user navs to the team page via the bottom navigation bar",
+        "expected": "Then the embedded video player will be displayed at the top of the team page"
+      },
+      {
+        "content": "When a lite user navs to the team page of a team featured in a live YouTube Game of the Week",
+        "expected": "Then the user will see the embedded video player"
+      },
+      {
+        "content": "When a paid user navs to the team page of a team featured in a live YouTube Game of the Week",
+        "expected": "Then the user will see the embedded video player"
+      }
+    ]
+  },
+  {
+    "id": 1247381,
+    "title": "With YouTube Installed",
+    "section_id": 151540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1562692998,
+    "updated_by": 84,
+    "updated_on": 1598978919,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20803,
+    "display_order": 3,
+    "custom_preconds": "Given MLB app is installed\r\nand there is a YouTube Game of the Week with a live feed\r\nAND the user has the YouTube app installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navs to the Scoreboard\nand expands the game cell of the YouTube Game\nand taps the \"YouTube\" link to launch the game feed",
+        "expected": "Then the user will be taken to the YouTube app\nwhere the game feed will launch"
+      },
+      {
+        "content": "When the user navs to a Team Page of a team featured in the YouTube Game\nand taps the \"YouTube\" link in the game detail section to launch the game feed",
+        "expected": "Then the user will be taken to the YouTube app\nwhere the game feed will launch"
+      },
+      {
+        "content": "When the user navs to the TV EPG\nand taps the YouTube Game to launch the game feed",
+        "expected": "Then the user will be taken to the YouTube app\nwhere the game feed will launch"
+      },
+      {
+        "content": "When the user navigates to Gameday of the YouTube Game of the Week \n(via Scoreboard or deep link)\nand navs to the Videos tab\nand taps the \"YouTube\" link in the MLB.TV Broadcasts section to launch the game feed",
+        "expected": "Then the user will be taken to the YouTube app\nwhere the game feed will launch"
+      }
+    ]
+  },
+  {
+    "id": 1247383,
+    "title": "Without YouTube Installed",
+    "section_id": 151540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1562692998,
+    "updated_by": 84,
+    "updated_on": 1598978929,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20803,
+    "display_order": 5,
+    "custom_preconds": "Given MLB app is installed\r\nand there is a YouTube Game of the Week with a live feed\r\nAND the user DOES NOT have the YouTube app installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navs to the Scoreboard\nand expands the game cell of the YouTube Game\nand taps the \"YouTube\" link to launch the game feed",
+        "expected": "Then the user will be taken to a webview in which they can watch the feed"
+      },
+      {
+        "content": "When the user navs to a Team Page of a team featured in the YouTube Game\nand taps the \"YouTube\" link in the game detail section to launch the game feed",
+        "expected": "Then the user will be taken to a webview in which they can watch the feed"
+      },
+      {
+        "content": "When the user navs to the TV EPG\nand taps the YouTube Game to launch the game feed",
+        "expected": "Then the user will be taken to a webview in which they can watch the feed"
+      },
+      {
+        "content": "When the user navigates to Gameday of the YouTube Game of the Week \n(via Scoreboard or deep link)\nand navs to the Videos tab\nand taps the \"YouTube\" link in the MLB.TV Broadcasts section to launch the game feed",
+        "expected": "Then the user will be taken to a webview in which they can watch the feed"
+      }
+    ]
+  },
+  {
+    "id": 1247384,
+    "title": "MLB App Entitlements/Blackouts",
+    "section_id": 151540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1562692998,
+    "updated_by": 84,
+    "updated_on": 1598978947,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20803,
+    "display_order": 6,
+    "custom_preconds": "Given MLB app is installed\r\nand there is a YouTube Game of the Week with a live feed\r\nAND the user has the YouTube app installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a LITE user attempts to launch the YouTube Game from At Bat",
+        "expected": "Then the user will be taken to the YouTube app\nwhere the game feed will launch"
+      },
+      {
+        "content": "When a PAID user attempts to launch the YouTube Game from At Bat",
+        "expected": "Then the user will be taken to the YouTube app\nwhere the game feed will launch"
+      },
+      {
+        "content": "When a Single Team user attempts to launch the YouTube Game from At Bat",
+        "expected": "Then the user will be taken to the YouTube app\nwhere the game feed will launch"
+      },
+      {
+        "content": "When a user attempts to launch the YouTube Game from MLB app\nand one of teams features is a local team",
+        "expected": "Then the user will not receive any sort of blackout messaging in the MLB app\nand will be taken to the YouTube app"
+      }
+    ]
+  },
+  {
+    "id": 1247507,
+    "title": "Out Of Town Scoreboard Overlay",
+    "section_id": 151540,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1562791977,
+    "updated_by": 84,
+    "updated_on": 1598978961,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20803,
+    "display_order": 7,
+    "custom_preconds": "Given MLB app is installed\r\nand there is a YouTube Game of the Week with a live feed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user launches a (non-YouTube Game) MLB.TV feed\nthat's playing on the same day as a live YouTube Game\nand enables the top out of town scoreboard overlay",
+        "expected": "Then the user will be viewing an MLB.TV feed along with all of the day's Scoreboard info"
+      },
+      {
+        "content": "When the user taps the YouTube Game of the Week game cell from the out of town scoreboard",
+        "expected": "Then a feed picker will appear on the screen\nand the feed button will be labeled \"YouTube\""
+      },
+      {
+        "content": "When the user taps the \"YouTube\" feed button from the feed picker",
+        "expected": "Then the user will be prompted to leave the app in order to view this content in YouTube "
+      },
+      {
+        "content": "When the user taps No from the prompt",
+        "expected": "Then the prompt will dismiss \nand the user will remain on the feed they were currently watching"
+      },
+      {
+        "content": "When the user taps Yes from the prompt",
+        "expected": "Then the user will be taken to view the YouTube feed\neither in a webview or in the YouTube app, depending on if the user has the YT app installed"
+      }
+    ]
+  },
+  {
+    "id": 1247385,
+    "title": "Archives in MLB App",
+    "section_id": 151541,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1562692998,
+    "updated_by": 84,
+    "updated_on": 1598979538,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20803,
+    "display_order": 1,
+    "custom_preconds": "Given MLB app is installed\r\nand there is a YouTube Game of the Week scheduled",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the YouTube Game is flipped to media_archive",
+        "expected": "Then the archive will become available in the MLB app"
+      },
+      {
+        "content": "When the YouTube Game is flipped to media_archive\nand the user navs to the TV EPG",
+        "expected": "Then the game will NOT be labeled with the YouTube-specific text"
+      },
+      {
+        "content": "When the YouTube Game is flipped to media_archive\nand the user navs to the Scoreboard",
+        "expected": "Then the game will NOT be labeled with the YouTube-specific text"
+      },
+      {
+        "content": "When the YouTube Game is flipped to media_archive\nand the user navs to the team page of a team featured in the YouTube Game",
+        "expected": "Then the game will NOT be labeled with the YouTube-specific text"
+      },
+      {
+        "content": "When the YouTube Game is flipped to media_archive\nand the user navs to the team page of a team featured in the YouTube Game on iPhone",
+        "expected": "Then there will NOT be an embedded player appearing at the top of the team page"
+      },
+      {
+        "content": "When the YouTube Game is flipped to media_archive\nand the user navs to the team page of a team featured in the YouTube Game on iPad",
+        "expected": "Then there will NOT be an embedded player appearing as the first item in the News section"
+      },
+      {
+        "content": "When the YouTube Game is flipped to media_archive\nand a TV-entitled user is viewing another MLB.TV feed\nand taps to choose the YouTube Game's archive from the Out of Town Scoreboard overlay",
+        "expected": "Then the user will be taken to the YouTube Game's archive within MLB app\nand will not be prompted to leave the app"
+      },
+      {
+        "content": "When a TV-entitled user attempts to launch the archive from MLB app\nduring the 90 minute window after the game has ended",
+        "expected": "Then the user will be blacked out of the feed"
+      },
+      {
+        "content": "When a user attempts to launch the archive from MLB app\n90 minutes after the game has ended",
+        "expected": "Then the archive will follow MLB app requirements in regards to archive entitlements & blackouts:\n\n- TV-entitled users can playback\n- MLB Audio users will be gated by TV paywall with specific messaging\n- Lite users will be gated by TV paywall\n- Single Team users will only be able to view if their team had played\n- No blackouts"
+      }
+    ]
+  }
+]

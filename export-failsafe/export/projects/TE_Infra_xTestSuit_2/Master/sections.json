@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1153671,
+    "suite_id": 389160,
+    "name": "Home Run Derby",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1153672,
+    "suite_id": 389160,
+    "name": "All-Star Game",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1153673,
+    "suite_id": 389160,
+    "name": "CopyTest_FromTE_Infra_XTestSuit2_20210831_143115",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1153674,
+    "suite_id": 389160,
+    "name": "Cable Provider Verifications - Web Flow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1153675,
+    "suite_id": 389160,
+    "name": "More TV Providers - Web Flow subsection",
+    "description": null,
+    "parent_id": 1153674,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 1153676,
+    "suite_id": 389160,
+    "name": "Full Cable Provider Authentication - Web Flow",
+    "description": "This is an example of the final Cable Provider Authentication via DirecTV (given in the current Design Specs - 2.4.16)",
+    "parent_id": 1153674,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 1153677,
+    "suite_id": 389160,
+    "name": "Sign In/Sign Up to FS Account - Pop Up Subsection - Web Flow",
+    "description": null,
+    "parent_id": 1153674,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 1170268,
+    "suite_id": 389160,
+    "name": "Home Run Derby",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1170269,
+    "suite_id": 389160,
+    "name": "Home Run Derby",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1170274,
+    "suite_id": 389160,
+    "name": "All-Star Game",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  }
+]

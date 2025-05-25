@@ -1,0 +1,137 @@
+[
+  {
+    "id": 5328,
+    "suite_id": 713,
+    "name": "General Clubhouse Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 5329,
+    "suite_id": 713,
+    "name": "Scoreboard Module",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 5330,
+    "suite_id": 713,
+    "name": "Schedule and Results",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 23855,
+    "suite_id": 713,
+    "name": "Tickets",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 5333,
+    "suite_id": 713,
+    "name": "Roster",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 5331,
+    "suite_id": 713,
+    "name": "News",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 23856,
+    "suite_id": 713,
+    "name": "Video",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 22923,
+    "suite_id": 713,
+    "name": "Gameday Audio",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 5332,
+    "suite_id": 713,
+    "name": "Standings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 23857,
+    "suite_id": 713,
+    "name": "Stats",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 147807,
+    "suite_id": 713,
+    "name": "Club Specific Links",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 23859,
+    "suite_id": 713,
+    "name": "Team Site",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 23858,
+    "suite_id": 713,
+    "name": "App & Games",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 13390,
+    "suite_id": 713,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 80380,
+    "suite_id": 713,
+    "name": "ARCHIVE",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  }
+]

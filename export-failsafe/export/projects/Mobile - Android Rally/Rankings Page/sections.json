@@ -1,0 +1,29 @@
+[
+  {
+    "id": 305374,
+    "suite_id": 43414,
+    "name": "Daily",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 305375,
+    "suite_id": 43414,
+    "name": "XP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 305376,
+    "suite_id": 43414,
+    "name": "Leaderboards",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

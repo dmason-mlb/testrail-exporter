@@ -1,0 +1,3000 @@
+[
+  {
+    "id": 1181082,
+    "title": "D - Custom PS Header - Postseason",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505410008,
+    "updated_by": 403,
+    "updated_on": 1693581174,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": "Given a user has At Bat installed on iPad or iPhone\r\n",
+    "custom_steps": "When a user taps on the Postseason view\r\nand swipes the WC, DS, LCS views",
+    "custom_expected": "Then user will see a blue background on the header (rgb 10 30 64)\r\nand see a custom Postseason image centered\r\n\r\nShould be one image with MLB.com logo, Postseason text, current year, broadcaster logos for entire Postseason\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1213018,
+    "title": "Custom PS Header - Postseason - Configurable Image",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1511904700,
+    "updated_by": 39,
+    "updated_on": 1511904830,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 2,
+    "custom_preconds": "Given a user has At Bat installed on iPad or iPhone\r\n",
+    "custom_steps": "When seriesHeaderImageFilename is set for a specific round in the config",
+    "custom_expected": "Then the user will see the specific image in the header for that round\r\n\r\nTest for each round\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1213118,
+    "title": "Custom PS Header - Postseason - Configurable Text",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1511904838,
+    "updated_by": 39,
+    "updated_on": 1511904890,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 3,
+    "custom_preconds": "Given a user has At Bat installed on iPad or iPhone\r\n",
+    "custom_steps": "When seriesHeaderText is set for a specific round in the config",
+    "custom_expected": "Then the user will see the specific text in the header for that round\r\n\r\nTest for each round\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181196,
+    "title": "Custom PS Header - Division Series (iPhone only)",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505419368,
+    "updated_by": 39,
+    "updated_on": 1505420712,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 4,
+    "custom_preconds": "Given a user has At Bat installed on iPhone",
+    "custom_steps": "When a user taps on the Postseason view\r\nand swipes to DS\r\nand taps on View Full Series",
+    "custom_expected": "Then user will see a white back arrow left aligned\r\nand blue background on the header (rgb 10 30 64)\r\nand see a custom Division Series image centered\r\n\r\nShould be one image with MLB.com logo, Division Series text, current year, broadcaster logos for entire Division Series",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181197,
+    "title": "Custom PS Header - Championship Series (iPhone only)",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505419389,
+    "updated_by": 39,
+    "updated_on": 1505419728,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 5,
+    "custom_preconds": "Given a user has At Bat installed on iPhone",
+    "custom_steps": "When a user taps on the Postseason view\r\nand swipes to LCS\r\nand taps on View Full Series",
+    "custom_expected": "Then user will see a white back arrow left aligned\r\nand blue background on the header (rgb 10 30 64)\r\nand see a custom Championship Series image centered\r\n\r\nShould be one image with MLB.com logo, Championship Series text, current year, broadcaster logos for entire League Championship Series",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181184,
+    "title": "Custom PS Header - World Series",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505416715,
+    "updated_by": 39,
+    "updated_on": 1505419826,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 6,
+    "custom_preconds": "Given a user has At Bat installed on iPad or iPhone\r\n",
+    "custom_steps": "When a user taps on the Postseason view\r\nand swipes to WS view",
+    "custom_expected": "Then user will see a blue background on the header (rgb 10 30 64)\r\nand see a custom World Series image centered\r\n\r\nShould be one image with MLB.com logo, World Series text, current year, FOX broadcaster logo\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181187,
+    "title": "MLB.TV button",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505417664,
+    "updated_by": 39,
+    "updated_on": 1505417917,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 7,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on the Postseason view\r\nand views the header\r\n",
+    "custom_expected": "Then the user will see a MLB.TV button left aligned\r\nand the button color is white",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181188,
+    "title": "Chromecast button",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505417666,
+    "updated_by": 39,
+    "updated_on": 1505417911,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 8,
+    "custom_preconds": "Given a user has At Bat installed\r\nand on the same network as Chromecast",
+    "custom_steps": "When a user taps on the Postseason view\r\nand views the header\r\n",
+    "custom_expected": "Then the user will see Chromecast icon to the right of the MLB.TV button\r\nand the button color is white",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181189,
+    "title": "Gameday Audio",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505417670,
+    "updated_by": 39,
+    "updated_on": 1505417888,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 9,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on the Postseason view\r\nand views the header",
+    "custom_expected": "Then the user will see a Gameday Audio button right aligned\r\nand the button color is white",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181191,
+    "title": "Watermarks - Postseason",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505418186,
+    "updated_by": 39,
+    "updated_on": 1505418320,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 11,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\nand swipes between WC, DS, LCS\r\nand swipes to the bottom of the Postseason view",
+    "custom_expected": "Then the user will see Postseason watermark\r\nand will be the current year",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181192,
+    "title": "Watermarks - World Series",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505418215,
+    "updated_by": 39,
+    "updated_on": 1505418363,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 12,
+    "custom_preconds": "Given a user has At Bat installed\r\n",
+    "custom_steps": "When a user taps on Postseason\r\nand swipes between WS\r\nand swipes to the bottom of the Postseason view",
+    "custom_expected": "Then the user will see World Series watermark\r\nand will be the current year",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181194,
+    "title": "Series Status Header - NL matchup",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505419053,
+    "updated_by": 39,
+    "updated_on": 1505420107,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 14,
+    "custom_preconds": "Given a user has At Bat installed on iPad or iPhone",
+    "custom_steps": "When a user taps on Postseason\r\nand swipes between WC, DS, LCS\r\nand views matchup between NL teams",
+    "custom_expected": "then the user will see New Blue (NL) PS color scheme - rgb 10 30 64",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181195,
+    "title": "Series Status Header - AL matchup",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505419066,
+    "updated_by": 39,
+    "updated_on": 1505420151,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 15,
+    "custom_preconds": "Given a user has At Bat installed on iPad or iPhone",
+    "custom_steps": "When a user taps on Postseason\r\nand swipes between WC, DS, LCS\r\nand views matchup between AL teams",
+    "custom_expected": "then the user will see Gold (AL) PS color scheme - rgb 136 113 77",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181198,
+    "title": "Series Status Header - World Series",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505420169,
+    "updated_by": 39,
+    "updated_on": 1505420230,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 16,
+    "custom_preconds": "Given a user has At Bat installed on iPad or iPhone",
+    "custom_steps": "When a user taps on the Postseason view\r\nand swipes to WS",
+    "custom_expected": "then the user will see Gold PS color scheme - rgb 136 113 77",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181199,
+    "title": "Series Detail Sort Order",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505420258,
+    "updated_by": 39,
+    "updated_on": 1505423612,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 17,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\nand views the series detail section",
+    "custom_expected": "Then the user will see the away team name and logo on the left\r\nand home team name and logo on the right\r\n\r\nThe Postseason Schedule Config is published from Homebase",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182204,
+    "title": "If Ncessary label",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505763706,
+    "updated_by": 39,
+    "updated_on": 1505764658,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 18,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and views the Wild Card (WC)",
+        "expected": "then the user will not seeing *If Necessary text at the bottom"
+      },
+      {
+        "content": "and views the Divisional Series (DS)\nand taps to view the Full Series\n\nExpand All Series on iPad\nView Full Series on iPhone",
+        "expected": "then the user will seeing *If Necessary text at the bottom"
+      },
+      {
+        "content": "and views the Divisional Series (DS)\nand taps to view the Full Series\n\nExpand All Series on iPad\nView Full Series on iPhone",
+        "expected": "then the user will seeing *If Necessary text at the bottom"
+      },
+      {
+        "content": "and views the World Series (WS)\nand views the Full Series\n\n",
+        "expected": "then the user will seeing *If Necessary text at the bottom"
+      }
+    ]
+  },
+  {
+    "id": 1182205,
+    "title": "If Necessary game row",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505764377,
+    "updated_by": 39,
+    "updated_on": 1505764838,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 19,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and views the Divisional Series (DS)\nand taps to view the Full Series\n\nExpand All Series on iPad\nView Full Series on iPhone",
+        "expected": "then the user will see Game 4 and Game 5 rows\nand the rows will be grey and not bold like the necessary games\nand there will be star next to the number"
+      },
+      {
+        "content": "\t\nand views the Divisional Series (DS)\nand taps view the Full Series\n\nExpand All Series on iPad\nView Full Series on iPhone",
+        "expected": "then the user will see Game 5, Game 6, and Game 7 rows\nand the rows will be grey and not bold like the necessary games\nand there will be star next to the number"
+      },
+      {
+        "content": "and views the World Series (WS)\nand views the Full Series",
+        "expected": "then the user will see Game 5, Game 6, and Game 7 rows\nand the rows will be grey and not bold like the necessary games\nand there will be star next to the number"
+      }
+    ]
+  },
+  {
+    "id": 1182206,
+    "title": "If Necessary - Best of 5",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505764790,
+    "updated_by": 39,
+    "updated_on": 1505765588,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 20,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\nand views the full series between Team A and Team B",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and only game 1 is in final\nand Team A won\n\nSeries 1-0",
+        "expected": "then Game 4 and Game 5 are still if necessary"
+      },
+      {
+        "content": "and only game 2 is in final\nand Team A won\n\nSeries 2-0",
+        "expected": "then Game 4 and Game 5 are still if necessary"
+      },
+      {
+        "content": "and only game 3 is in final\nand Team B won\n\nSeries 2-1",
+        "expected": "then Game 4 is necessary \nand the row is now matches the previous played games\nand If Necessary indicator is removed\nand Game 5 is still if necessary"
+      },
+      {
+        "content": "and only game 4 is in final\nand Team B won\n\nSeries 2-2",
+        "expected": "Game 5 is necessary \nand the row is now matches the previous played games\nand If Necessary indicator is removed\n"
+      }
+    ]
+  },
+  {
+    "id": 1182208,
+    "title": "If Necessary - Best of 5 - Sweep",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505765221,
+    "updated_by": 39,
+    "updated_on": 1505765597,
+    "estimate": null,
+    "estimate_forecast": "5s",
+    "suite_id": 20024,
+    "display_order": 21,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\nand views the full series between Team A and Team B\r\nand Team A won Game 1, Game 2, and Game 3",
+    "custom_expected": "Then the user will not see Game 4 or Game 5",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182207,
+    "title": "If Necessary - Best of 7",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505764798,
+    "updated_by": 39,
+    "updated_on": 1505765904,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 22,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\nand views the full series between Team A and Team B",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and only game 1 is in final\nand Team A won\n\nSeries 1-0",
+        "expected": "then Game 5, Game 6, and Game 7 are still if necessary"
+      },
+      {
+        "content": "and only game 2 is in final\nand Team B won\n\nSeries 1-1",
+        "expected": "then Game 5 is necessary \nand the row is now matches the previous played games\nand If Necessary indicator is removed\nand Game 6, and Game 7 are still if necessary"
+      },
+      {
+        "content": "and only game 3 is in final\nand Team A won\n\nSeries 2-1",
+        "expected": "then Game 5 is necessary \nand the row is now matches the previous played games\nand If Necessary indicator is removed\nand Game 6, and Game 7 are still if necessary"
+      },
+      {
+        "content": "and only game 4 is in final\nand Team A won\n\nSeries 3-1",
+        "expected": "then Game 5 is necessary \nand the row is now matches the previous played games\nand If Necessary indicator is removed\nand Game 6, and Game 7 are still if necessary"
+      },
+      {
+        "content": "and only game 5 is in final\nand Team B won\n\nSeries 3-2",
+        "expected": "then Game 6 is necessary \nand the row is now matches the previous played games\nand If Necessary indicator is removed\nand Game 7 are still if necessary"
+      },
+      {
+        "content": "and only game 6 is in final\nand Team B won\n\nSeries 3-3",
+        "expected": "Game 7 is necessary \nand the row is now matches the previous played games\nand If Necessary indicator is removed"
+      }
+    ]
+  },
+  {
+    "id": 1182209,
+    "title": "If Necessary - Best of 7 - Sweep",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505765228,
+    "updated_by": 39,
+    "updated_on": 1505765977,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 23,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\nand views the full series between Team A and Team B\r\nand Team A won Game 1, Game 2, Game 3, and Game 4",
+    "custom_expected": "Then the user will not see Game 5, Game 6, and Game 7",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181200,
+    "title": "Override 1",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505421038,
+    "updated_by": 39,
+    "updated_on": 1505423603,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 24,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\nand views the series detail section\r\nand the headerOverrideLine1 is set in Homebase",
+    "custom_expected": "Then the user sees the data from the headerOverrideLine1\r\n\r\nThe Postseason Schedule Config is published from Homebase",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181201,
+    "title": "Override 2",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505421044,
+    "updated_by": 39,
+    "updated_on": 1505423645,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 25,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\nand views the series detail section\r\nand the headerOverrideLine2 is set in Homebase",
+    "custom_expected": "Then the user sees the data from the headerOverrideLine2\r\n\r\nThe Postseason Schedule Config is published from Homebase",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181202,
+    "title": "Default Series",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505423724,
+    "updated_by": 39,
+    "updated_on": 1505423899,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 26,
+    "custom_preconds": "Given a user has At Bat installed on iPad and iPhone",
+    "custom_steps": "When a user is on Postseason\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "AND <defaultSeriesID> is TB",
+        "expected": "then the WC will be the default view\nand the TB header will be over the WC header"
+      },
+      {
+        "content": "and the <defaultSeriesId> is WC",
+        "expected": "then the WC will be the default view"
+      },
+      {
+        "content": "and the <defaultSeriesId> is DS",
+        "expected": "then the DS will be the default view"
+      },
+      {
+        "content": "and the <defaultSeriesId> is LCS",
+        "expected": "then the LCS will be the default view"
+      },
+      {
+        "content": "and the <defaultSeriesId> is WS",
+        "expected": "then the WS will be the default view"
+      }
+    ]
+  },
+  {
+    "id": 1181203,
+    "title": "Default Game for Postseason",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505423728,
+    "updated_by": 39,
+    "updated_on": 1505424438,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 27,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user is on Postseason\r\nand <defaultGameId> is set ",
+    "custom_expected": "Then that game within a series that should be highlighted on the postseason view",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181204,
+    "title": "Default Game for Matchup",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505423991,
+    "updated_by": 39,
+    "updated_on": 1505483436,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 28,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user is on Postseason\r\nand game_id is set for a series",
+    "custom_expected": "Then the game row has that game as the featured game of each matchup within a series\r\nand correct game number will be displayed in the row\r\n\r\nFor DS, LCS, WS only, not on TB or WC ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182210,
+    "title": "Spanish",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505766012,
+    "updated_by": 39,
+    "updated_on": 1505766044,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 29,
+    "custom_preconds": "Given a user has At Bat installed\r\nand the device is set to Spanish\r\n",
+    "custom_steps": "When a user taps on Postseason\r\n",
+    "custom_expected": "Then the user will see the data in Spanish",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1182211,
+    "title": "Voiceover",
+    "section_id": 141550,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505766014,
+    "updated_by": 39,
+    "updated_on": 1505766153,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 30,
+    "custom_preconds": "Given a user has At Bat installed\r\nand has VoiceOver enabled in the iOS Accessibility Settings",
+    "custom_steps": "When a user taps on Postseasons\r\nand swipes through elements",
+    "custom_expected": "Then the key data for the view is read off",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181190,
+    "title": "Game Row Sort Order",
+    "section_id": 141523,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505418141,
+    "updated_by": 39,
+    "updated_on": 1505480613,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 2,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason view\r\nand views a game row\r\nand the game in Previews",
+    "custom_expected": "Then the user will see away team over home team",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181085,
+    "title": "Network logo - Preview",
+    "section_id": 141523,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505410444,
+    "updated_by": 393,
+    "updated_on": 1693582091,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 7,
+    "custom_preconds": "Given a user has MLB App installed",
+    "custom_steps": "When a user taps on the Postseason view\r\nand views the game row",
+    "custom_expected": "Then the user will see the appropriate network logo",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181247,
+    "title": "Text Links",
+    "section_id": 141523,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505484945,
+    "updated_by": 39,
+    "updated_on": 1505485038,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 8,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\nand views the Game Detail view (right)\r\nand the game is in Preview",
+    "custom_expected": "Then the Tickets and Promos link is gold font - rgb 136 113 77\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181088,
+    "title": "? - Perfect Game label",
+    "section_id": 141524,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505410477,
+    "updated_by": 393,
+    "updated_on": 1693581857,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 4,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\nand views the game row\r\nand the game is in progress\r\nand is Perfect Game",
+    "custom_expected": "Then the user will see Perfect Game text in red font\r\nand aligned above the two teams",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181096,
+    "title": "? - No hitter label",
+    "section_id": 141524,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505410719,
+    "updated_by": 393,
+    "updated_on": 1693582124,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 5,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\nand views the game row\r\nand the game is in progress\r\nand is No Hitter",
+    "custom_expected": "Then the user will see No-hitter text in red font\r\nand aligned above the two teams",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181246,
+    "title": "Text Links",
+    "section_id": 141524,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505484686,
+    "updated_by": 39,
+    "updated_on": 1505485155,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 7,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\nand views a live game",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "then the Expand All Series text on iPad (left)",
+        "expected": "is gold font - rgb 136 113 77"
+      },
+      {
+        "content": "then the Hide All Series text on iPad (left)",
+        "expected": "is gold font - rgb 136 113 77"
+      },
+      {
+        "content": "then the View Full Series text on iPhone ",
+        "expected": "is gold font - rgb 136 113 77"
+      },
+      {
+        "content": "then the Name Link for the Pitching on the iPad Game Detail (right)",
+        "expected": "is gold font - rgb 136 113 77"
+      },
+      {
+        "content": "then the Name Link for the At Bat on the iPad Game Detail (right)",
+        "expected": "is gold font - rgb 136 113 77"
+      },
+      {
+        "content": "then the Name Link for the HR on the iPad Game Detail (right)",
+        "expected": "is gold font - rgb 136 113 77"
+      },
+      {
+        "content": "then the MLB.TV & Postseason.TV link on the iPad Game Detail (right)",
+        "expected": "is gold font - rgb 136 113 77"
+      },
+      {
+        "content": "then the Gameday link on the iPad Game Detail (right)",
+        "expected": "is gold font - rgb 136 113 77"
+      },
+      {
+        "content": "then the Gameday Audio on the iPad Game Detail (right)",
+        "expected": "is gold font - rgb 136 113 77"
+      }
+    ]
+  },
+  {
+    "id": 1181091,
+    "title": "D - Base Runners",
+    "section_id": 141524,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505410667,
+    "updated_by": 393,
+    "updated_on": 1693582015,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 9,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\nand views a game in progress\r\nand the game has runners on base",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "for base runner in the game view on iPad (left)",
+        "expected": "is yellow color - rgb 202 148 44"
+      },
+      {
+        "content": "for base runner in the game view on iPhone (left)",
+        "expected": "is yellow color - rgb 202 148 44"
+      },
+      {
+        "content": "for base runner in the game detail view on iPad (right)",
+        "expected": "is yellow color - rgb 202 148 44"
+      }
+    ]
+  },
+  {
+    "id": 1181092,
+    "title": "Network logo - In-Progress",
+    "section_id": 141524,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505410674,
+    "updated_by": 393,
+    "updated_on": 1693582058,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 10,
+    "custom_preconds": "Given a user has MLB App installed",
+    "custom_steps": "When a user taps on Postseason\r\nand views the game view on the left\r\nand the game is in progress",
+    "custom_expected": "Then the user will see Watch live on text aligned below the teams\r\nand then see the correct network logo",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181095,
+    "title": "? - Perfect Game label",
+    "section_id": 141525,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505410719,
+    "updated_by": 393,
+    "updated_on": 1693582118,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 5,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\nand views the game row\r\nand the game is final\r\nand is Perfect Game",
+    "custom_expected": "Then the user will see Perfect Game text in red font\r\nand aligned above the two teams",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181089,
+    "title": "? - No hitter label",
+    "section_id": 141525,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505410652,
+    "updated_by": 393,
+    "updated_on": 1693581863,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 6,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\nand views the game row\r\nand the game is final\r\nand is No Hitter",
+    "custom_expected": "Then the user will see No-hitter text in red font\r\nand aligned above the two teams",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181090,
+    "title": "D - Text Links",
+    "section_id": 141525,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505410660,
+    "updated_by": 393,
+    "updated_on": 1693581970,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 8,
+    "custom_preconds": "Given a user has MLB App installed",
+    "custom_steps": "When a user taps on Postseason\r\nand views a final game",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "then the Expand All Series text on iPad (left)",
+        "expected": "is gold font - rgb 136 113 77"
+      },
+      {
+        "content": "then the Hide All Series text on iPad (left)",
+        "expected": "is gold font - rgb 136 113 77"
+      },
+      {
+        "content": "then the View Full Series text on iPhone",
+        "expected": "is gold font - rgb 136 113 77"
+      },
+      {
+        "content": "then the Name Link for the Winning Pitcher (W:) on the iPad Game Detail (right)",
+        "expected": "is gold font - rgb 136 113 77"
+      },
+      {
+        "content": "then the Name Link for the Losing Pitcher (L:) on the iPad Game Detail (right)",
+        "expected": "is gold font - rgb 136 113 77"
+      },
+      {
+        "content": "then the Name Link for the Save Pitcher (S:) on the iPad Game Detail (right)\n\nif applicable",
+        "expected": "is gold font - rgb 136 113 77"
+      },
+      {
+        "content": "then the Name Link for the HR on the iPad Game Detail (right)",
+        "expected": "is gold font - rgb 136 113 77"
+      },
+      {
+        "content": "then the Game Recap Link on the iPad Game  Detail (right)",
+        "expected": "is gold font - rgb 136 113 77"
+      }
+    ]
+  },
+  {
+    "id": 1181098,
+    "title": "E - Game Wrap and Recap Article",
+    "section_id": 141525,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505410742,
+    "updated_by": 393,
+    "updated_on": 1693582257,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 10,
+    "custom_preconds": "Given a user has MLB App installed",
+    "custom_steps": "When a user taps on Postseason\r\nand taps on a game in final\r\nand taps on a Wrap tab",
+    "custom_expected": "Then the user will see Gameday image\r\nand a video (Play button in upper left of the image)\r\nand Wrap Headline under the image\r\nand Wrap Blurb\r\nand Game Recap button\r\nand tapping on the Game Recap opens the Recap Article ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181099,
+    "title": "? - Image",
+    "section_id": 141525,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505410744,
+    "updated_by": 393,
+    "updated_on": 1693582315,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 11,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on Postseason\r\nand taps on a game in Final",
+    "custom_expected": "Then the user will see an rectangle image from Gamecenter file\r\n\r\n<wrap><photos> node ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181100,
+    "title": "? - Updated Postseason OOTSB",
+    "section_id": 141526,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505410872,
+    "updated_by": 393,
+    "updated_on": 1693582382,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": "Given a user has MLB App installed",
+    "custom_steps": "When a user is in Gameday for a Postseason game\r\nand views the OOTSB",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "for a game in Wild Card round",
+        "expected": "then the user will see all Wild Card games (and Tiebreakers, if applicable)\nand the selected game is highlight in the OOTSB"
+      },
+      {
+        "content": "for a game in Division Series round",
+        "expected": "then the user will see the latest game for each series in DS\nand the selected game is highlight in the OOTSB"
+      },
+      {
+        "content": "for game in League Championship series round",
+        "expected": "then the user will see the latest game for each series in LCS\nand the selected game is highlight in the OOTSB"
+      }
+    ]
+  },
+  {
+    "id": 1181253,
+    "title": "Postseason OOTSB - Preview",
+    "section_id": 141526,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505493037,
+    "updated_by": 119,
+    "updated_on": 1506718412,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 2,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on a Postseason game\r\nand views the OOTSB\r\nand the game viewed is in Preview",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and the game is in the WC,DS,CS",
+        "expected": "and see time (7:30 PM ET) - respect local time\nand see away team \nover home team "
+      }
+    ]
+  },
+  {
+    "id": 1181254,
+    "title": "Postseason OOTSB - Live",
+    "section_id": 141526,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505493048,
+    "updated_by": 119,
+    "updated_on": 1506719892,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 3,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on a Postseason game\r\nand views the OOTSB\r\nand the game viewed is in progress",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and the game is in WC,DS,CS",
+        "expected": "and see inning (Bot 4)\nand see away team and <score>\nover home team and <score>\nand bases and outs\n"
+      }
+    ]
+  },
+  {
+    "id": 1181255,
+    "title": "Postseason OOTSB - Final",
+    "section_id": 141526,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505493058,
+    "updated_by": 119,
+    "updated_on": 1506719941,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 4,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on a Postseason game\r\nand views the OOTSB\r\nand the game viewed is in final",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and the game is NL",
+        "expected": "and see Final\nand see away team and <score>\nover home team and <score>\n"
+      },
+      {
+        "content": "and the game is extra innings ",
+        "expected": "Then the user will see F/<Inning>"
+      }
+    ]
+  },
+  {
+    "id": 1181101,
+    "title": "? - Updated WS OOTSB",
+    "section_id": 141526,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505410876,
+    "updated_by": 393,
+    "updated_on": 1693582429,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 5,
+    "custom_preconds": "Given a user has MLB App  installed",
+    "custom_steps": "When a user is in Gameday for a Postseason game\r\nand the game is World Series game\r\nand views the OOTSB",
+    "custom_expected": "Then the user will see all of the games of the World Series\r\nand the selected game is highlight in the OOTSB",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181250,
+    "title": "WS OOTSB - Preview",
+    "section_id": 141526,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505493011,
+    "updated_by": 39,
+    "updated_on": 1505504276,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 6,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on a World Series game\r\nand views the OOTSB\r\nand the game viewed is in Preview",
+    "custom_expected": "then the user will see blue header - rgb 10 30 64\r\nand see the Gm <Number> and Time and Date in the header (GM 5: 10:05 PM Oct 25)\r\nand away team tricode and record\r\nover home team tricode and record\r\nand see the Fox logo",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181251,
+    "title": "WS OOTSB - Live",
+    "section_id": 141526,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505493020,
+    "updated_by": 39,
+    "updated_on": 1505504469,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 7,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on a World Series game\r\nand views the OOTSB\r\nand the game viewed is in Live",
+    "custom_expected": "then the user will see blue header - rgb 10 30 64\r\nand see the Inning and Series Status Text in the header (Top 4 WS Game 4: CHC leads series, 3-0\r\nand away team tricode and <score>\r\nover home team tricode and <score>\r\nand bases (no fill) and baserunners (gold)\r\nand outs (gold)\r\nand Pitcher (P: <Name>) over At Bat (AB: <Name>)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181252,
+    "title": "WS OOTSB - Final",
+    "section_id": 141526,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505493029,
+    "updated_by": 39,
+    "updated_on": 1505504551,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 8,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on a World Series game\r\nand views the OOTSB\r\nand the game viewed is in Final",
+    "custom_expected": "then the user will see blue header - rgb 10 30 64\r\nand see the Gm <Number>:Status and Date (GM 3:Final Oct 25)\r\nand away team tricode and <score>\r\nover home team tricode and <score>",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181257,
+    "title": "Watermark",
+    "section_id": 141526,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505493182,
+    "updated_by": 39,
+    "updated_on": 1505504716,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 9,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on a Postseason game\r\nand the game is in progress\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and views a Postseason Game",
+        "expected": "Then the user will see a Postseason watermark on the bottom of Pitch-by-Pitch pane\n\nMake sure the logo and year are correct"
+      },
+      {
+        "content": "and views a World Series Game",
+        "expected": "Then the user will see a World Series watermark on the bottom of Pitch-by-Pitch pane\n\nMake sure the logo and year are correct"
+      }
+    ]
+  },
+  {
+    "id": 1181703,
+    "title": "Broadcast Logo",
+    "section_id": 141526,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505504727,
+    "updated_by": 39,
+    "updated_on": 1505504864,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 10,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user views a Postseason Game in Gameday\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and views the top header",
+        "expected": "then the user will see Watch on <Logo> near the back arrow (left aligned)"
+      },
+      {
+        "content": "and views the Linescore",
+        "expected": "then the user will see Watch on <Logo> on the same line as the inning numbers"
+      }
+    ]
+  },
+  {
+    "id": 1181265,
+    "title": "Base runners and Outs",
+    "section_id": 141526,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505495330,
+    "updated_by": 39,
+    "updated_on": 1505496010,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 11,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user is viewing a game in Gameday\r\nand the game is Postseason\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and viewing that game in the the OOTSB\nand baserunners and/or outs",
+        "expected": "then the bases and outs are yellow color - rgb 202 148 44"
+      },
+      {
+        "content": "and viewing another game in the the OOTSB\nand baserunners and/or outs",
+        "expected": "then the bases and outs are grey color - rgba 47 47 47, 0.5"
+      }
+    ]
+  },
+  {
+    "id": 1181263,
+    "title": "WS - Perfect Game",
+    "section_id": 141526,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505495303,
+    "updated_by": 119,
+    "updated_on": 1506722434,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 12,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on a Postseason game\r\nand views the OOTSB\r\nand the game viewed is in progress \r\nand the game is Perfect Game",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and the game is in progress",
+        "expected": "then the user will see Inning - Perfect Game (Bot 4 - Perfect Game)\nand red pill around the text"
+      },
+      {
+        "content": "and the game is final",
+        "expected": "then the user will see Final - Perfect Game (Final - Perfect Game)\nand red pill around the text"
+      }
+    ]
+  },
+  {
+    "id": 1181264,
+    "title": "WS No-hitters",
+    "section_id": 141526,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505495307,
+    "updated_by": 119,
+    "updated_on": 1506722455,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 13,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on a Postseason game\r\nand views the OOTSB\r\nand the game viewed is in progress \r\nand the game is No-hitter",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and the game is in progress",
+        "expected": "then the user will see Inning - No-hitter (Bot 4 - No-hitter)\nand red pill around the text"
+      },
+      {
+        "content": "and the game is final",
+        "expected": "then the user will see Final - No-hitter (Final - No-hitter)\nand red pill around the text"
+      }
+    ]
+  },
+  {
+    "id": 1181108,
+    "title": "D - Postseason branding and color treatment",
+    "section_id": 141527,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505411223,
+    "updated_by": 393,
+    "updated_on": 1693582702,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": "Given a user has At Bat installed on iPad\r\n",
+    "custom_steps": "When a user is on the Team Page for a Postseason view\r\nand views a Postseason game in the Schedule Module\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "in focus game for a NL team",
+        "expected": "then the user will see the gold postseason header\nand see the series status text left aligned in the header (NLDS Game 3: CHC leads series 2-0) \nand see the broadcast logos right aligned in the header"
+      },
+      {
+        "content": "in focus game for a AL team",
+        "expected": "then the user will see the blue postseason header\nand see the series status text left aligned in the header (ALDS Game 3: NYY leads series 2-0) \nand see the broadcast logos right aligned in the header"
+      },
+      {
+        "content": "pre flip game (after the focus game) for a NL team",
+        "expected": "then the user will see the gold postseason header\nand see the series status text left aligned in the header (NLDS Game 3: CHC leads series 2-0) "
+      },
+      {
+        "content": "pre flip game (after the focus game) for a AL team",
+        "expected": "then the user will see the blue postseason header\nand see the series status text left aligned in the header (NLDS Game 3: CHC leads series 2-0) "
+      }
+    ]
+  },
+  {
+    "id": 1181109,
+    "title": "E - Series status",
+    "section_id": 141527,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505411228,
+    "updated_by": 393,
+    "updated_on": 1693582793,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 2,
+    "custom_preconds": "Given a user has MLB App  installed on iPad",
+    "custom_steps": "When a user is on the Team Page for a Postseason view\r\nand views a Postseason game in the Schedule Module",
+    "custom_expected": "The user will see the series status text left aligned in the header (NLDS Game 3: CHC leads series 2-0)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181110,
+    "title": "D - State for displaying last regular season game",
+    "section_id": 141527,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505411234,
+    "updated_by": 393,
+    "updated_on": 1693582852,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 3,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user is on a Team Page for a Postseason team\r\nand views the Schedule Module",
+    "custom_expected": "Then the user will see color header for the Postseason games\r\nand not a color header for the end of the regular season games",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181116,
+    "title": "D - Reduce number of games shown in schedule module to 3",
+    "section_id": 141530,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505411570,
+    "updated_by": 393,
+    "updated_on": 1693582943,
+    "estimate": null,
+    "estimate_forecast": "6s",
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When Ops sets usePostseasonSchedule to true for a team(s)\r\nand a user opens At Bat\r\nand taps on team page for that team",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "on iPhone ",
+        "expected": "then the user will see 3 games in schedule module\nand the Schedule button will be the fourth"
+      },
+      {
+        "content": "on iPhone Plus",
+        "expected": "then the user will see 4 games in schedule module\nand the Schedule button will be the fifth"
+      }
+    ]
+  },
+  {
+    "id": 1181117,
+    "title": "E - Include broadcast logos",
+    "section_id": 141530,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505411575,
+    "updated_by": 393,
+    "updated_on": 1693582984,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 2,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user opens At Bat\r\nand taps on Team Page\r\nand the team is in the Postseason\r\nand views the Game Detail Module",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "for a game live",
+        "expected": "then the user will see broadcaster logos"
+      },
+      {
+        "content": "for a game in progress",
+        "expected": "then the user will see broadcaster logos"
+      }
+    ]
+  },
+  {
+    "id": 1181118,
+    "title": "Include series status information",
+    "section_id": 141530,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505411583,
+    "updated_by": 39,
+    "updated_on": 1505508184,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 3,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user opens At Bat\r\nand taps on Team Page\r\nand the team is in the Postseason\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and views a game in preview",
+        "expected": "then the user will see a the series status text in between the date bar and the game detail\nand formatted accordingly (example: ALDS GM 3: NYY leads 2-0"
+      },
+      {
+        "content": "and views a game in progress",
+        "expected": "then the user will see a the series status text in between the date bar and the game detail\nand formatted accordingly (example: ALDS GM 3: NYY leads 2-0"
+      },
+      {
+        "content": "and views a game in final",
+        "expected": "then the user will see a the series status text in between the date bar and the game detail\nand formatted accordingly (example: ALDS GM 3: NYY leads 2-0"
+      }
+    ]
+  },
+  {
+    "id": 1181102,
+    "title": "D - 2017 Postseason branding color scheme",
+    "section_id": 141528,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505411135,
+    "updated_by": 393,
+    "updated_on": 1693582456,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181103,
+    "title": "Broadcast logos",
+    "section_id": 141528,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505411141,
+    "updated_by": 393,
+    "updated_on": 1693582506,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 2,
+    "custom_preconds": "Given a user has MLB App installed",
+    "custom_steps": "When the user navs to the Scoreboard view \r\nand there are Postseason games available",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "game in preview",
+        "expected": "Then the user will see the correct broadcaster logo"
+      },
+      {
+        "content": "game in progress",
+        "expected": "Then the user will see the correct broadcaster logo"
+      },
+      {
+        "content": "game in final",
+        "expected": "Then the user will NOT see a broadcaster logo"
+      }
+    ]
+  },
+  {
+    "id": 1181104,
+    "title": "E - Series status information",
+    "section_id": 141528,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505411146,
+    "updated_by": 393,
+    "updated_on": 1693582647,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 3,
+    "custom_preconds": "Given MLB App is installed",
+    "custom_steps": "When the user navs to the Scoreboard view\r\nand there are Postseason games available",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "game in Preview",
+        "expected": "Then the user will see the correct series status information\nrelevant to the previously played games"
+      },
+      {
+        "content": "game in progress",
+        "expected": "Then the user will see the correct series status information\nrelevant to the previously played games"
+      },
+      {
+        "content": "game in Final",
+        "expected": "Then the series status info will have updated based off the result of that game"
+      }
+    ]
+  },
+  {
+    "id": 1181119,
+    "title": "Broadcaster text",
+    "section_id": 141531,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505411593,
+    "updated_by": 39,
+    "updated_on": 1505411593,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1232873,
+    "title": "Series status information",
+    "section_id": 141531,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1539887824,
+    "updated_by": 84,
+    "updated_on": 1539887847,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 3,
+    "custom_preconds": "Given At Bat is installed",
+    "custom_steps": "When the user navs to the Scoreboard view\r\nand there are Postseason games available",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "game in Preview",
+        "expected": "Then the user will see the correct series status information\nrelevant to the previously played games"
+      },
+      {
+        "content": "game in progress",
+        "expected": "Then the user will see the correct series status information\nrelevant to the previously played games"
+      },
+      {
+        "content": "game in Final",
+        "expected": "Then the series status info will have updated based off the result of that game"
+      }
+    ]
+  },
+  {
+    "id": 1232872,
+    "title": "Broadcast logos",
+    "section_id": 141531,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1539887712,
+    "updated_by": 84,
+    "updated_on": 1539887712,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 4,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When the user navs to the Scoreboard view \r\nand there are Postseason games available",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "game in preview",
+        "expected": "Then the user will see the correct broadcaster logo"
+      },
+      {
+        "content": "game in progress",
+        "expected": "Then the user will see the correct broadcaster logo"
+      },
+      {
+        "content": "game in final",
+        "expected": "Then the user will NOT see a broadcaster logo"
+      }
+    ]
+  },
+  {
+    "id": 7997791,
+    "title": "Pitching - Number/Handedness",
+    "section_id": 424729,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1599666136,
+    "updated_by": 84,
+    "updated_on": 1599666450,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": "Given MLB app is installed on an iPhone\r\nand there is a live Postseason game",
+    "custom_steps": "When the user launches Gameday for the live Postseason game\r\nand is viewing the Gameday Live tab\r\nand the game is in the Top or Bot of an inning",
+    "custom_expected": "Then the current pitcher's jersey number and handedness will be displayed on the same line as \"Pitching:\"",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7997792,
+    "title": "Pitching - Live Stats",
+    "section_id": 424729,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1599666174,
+    "updated_by": 84,
+    "updated_on": 1599666526,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 2,
+    "custom_preconds": "Given MLB app is installed on an iPhone\r\nand there is a live Postseason game",
+    "custom_steps": "When the user launches Gameday for the live Postseason game\r\nand is viewing the Gameday Live tab\r\nand the game is in the Top or Bot of an inning",
+    "custom_expected": "Then the current pitcher's live game stats (IP, K, P-S) will appear on the same line as his last name",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7997793,
+    "title": "Pitching - Postseason ERA",
+    "section_id": 424729,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1599666195,
+    "updated_by": 84,
+    "updated_on": 1599666942,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 3,
+    "custom_preconds": "Given MLB app is installed on an iPhone\r\nand there is a live Postseason game",
+    "custom_steps": "When the user launches Gameday for the live Postseason game\r\nand is viewing the Gameday Live tab\r\nand the game is in the Top or Bot of an inning",
+    "custom_expected": "Then the current pitcher's cumulative Postseason ERA for that year will be displayed underneath his last name",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7997794,
+    "title": "Pitching - Regular Season Stats",
+    "section_id": 424729,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1599666205,
+    "updated_by": 84,
+    "updated_on": 1599667177,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 4,
+    "custom_preconds": "Given MLB app is installed on an iPhone\r\nand there is a live Postseason game",
+    "custom_steps": "When the user launches Gameday for the live Postseason game\r\nand is viewing the Gameday Live tab\r\nand the game is in the Top or Bot of an inning",
+    "custom_expected": "Then the current pitcher's regular season ERA will be displayed on the same line as his Postseason ERA\r\nbut will include a “(Regular Season)” text to the right of it",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7997833,
+    "title": "Pitching - No Regular Season Stats",
+    "section_id": 424729,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1599666973,
+    "updated_by": 84,
+    "updated_on": 1599667084,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 5,
+    "custom_preconds": "Given MLB app is installed on an iPhone\r\nand there is a live Postseason game",
+    "custom_steps": "When the user launches Gameday for the live Postseason game\r\nand is viewing the Gameday Live tab\r\nand the game is in the Top or Bot of an inning\r\nand the current pitcher hasn't pitched in the regular season and has no regular season ERA",
+    "custom_expected": "Then the following should be displayed: “-.-- ERA (Regular Season)”",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7997795,
+    "title": "At Bat - Number/Handedness",
+    "section_id": 424729,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1599666225,
+    "updated_by": 84,
+    "updated_on": 1599666774,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 6,
+    "custom_preconds": "Given MLB app is installed on an iPhone\r\nand there is a live Postseason game",
+    "custom_steps": "When the user launches Gameday for the live Postseason game\r\nand is viewing the Gameday Live tab\r\nand the game is in the Top or Bot of an inning",
+    "custom_expected": "Then the current batter's jersey number and handedness will be displayed on the same line as \"At Bat:\"",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7997796,
+    "title": "At Bat - Live Stats",
+    "section_id": 424729,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1599666234,
+    "updated_by": 84,
+    "updated_on": 1599667244,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 7,
+    "custom_preconds": "Given MLB app is installed on an iPhone\r\nand there is a live Postseason game",
+    "custom_steps": "When the user launches Gameday for the live Postseason game\r\nand is viewing the Gameday Live tab\r\nand the game is in the Top or Bot of an inning",
+    "custom_expected": "Then the current batter's live game stats (hits-atbats, HR, RBI) will appear on the same line as his last name",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7997797,
+    "title": "At Bat - Postseason Stats",
+    "section_id": 424729,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1599666251,
+    "updated_by": 84,
+    "updated_on": 1599667196,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 8,
+    "custom_preconds": "Given MLB app is installed on an iPhone\r\nand there is a live Postseason game",
+    "custom_steps": "When the user launches Gameday for the live Postseason game\r\nand is viewing the Gameday Live tab\r\nand the game is in the Top or Bot of an inning",
+    "custom_expected": "Then the current batter's cumulative Postseason stats (AVG, HR, RBI) for that year will be displayed underneath his last name",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7997798,
+    "title": "At Bat - Regular Season Stats",
+    "section_id": 424729,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1599666263,
+    "updated_by": 84,
+    "updated_on": 1599667172,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 9,
+    "custom_preconds": "Given MLB app is installed on an iPhone\r\nand there is a live Postseason game",
+    "custom_steps": "When the user launches Gameday for the live Postseason game\r\nand is viewing the Gameday Live tab\r\nand the game is in the Top or Bot of an inning",
+    "custom_expected": "Then the current batter's regular season stats (AVG, HR, RBI) will be displayed on the same line as his Postseason stats\r\nbut will include a “(Regular Season)” text to the right of it",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 7997834,
+    "title": "At Bat - No Regular Season Stats",
+    "section_id": 424729,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1599666982,
+    "updated_by": 84,
+    "updated_on": 1599667147,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 10,
+    "custom_preconds": "Given MLB app is installed on an iPhone\r\nand there is a live Postseason game",
+    "custom_steps": "When the user launches Gameday for the live Postseason game\r\nand is viewing the Gameday Live tab\r\nand the game is in the Top or Bot of an inning\r\nand the current batter has no plate appearances/at bats in the regular season",
+    "custom_expected": "Then the following will be displayed: .000 AVG, 0 HR, 0 RBI (Regular Season)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181702,
+    "title": "Suggested Date",
+    "section_id": 141664,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505503762,
+    "updated_by": 39,
+    "updated_on": 1505503949,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a Dev sets the suggested_day in the supportedSeasons section of the config\r\nand a user opens At Bat",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and navigates to the Team Page",
+        "expected": "then the focus game will be the same game as the suggested date"
+      },
+      {
+        "content": "and navigates to the Scoreboard",
+        "expected": "then the Scoreboard date will be that day"
+      },
+      {
+        "content": "and navigates to the Widget",
+        "expected": "then the Widget will display games on that day"
+      }
+    ]
+  },
+  {
+    "id": 1181169,
+    "title": "Enable",
+    "section_id": 141534,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505415921,
+    "updated_by": 39,
+    "updated_on": 1505502660,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a Dev sets shouldShowPostseasonSection to true in the iPhone and iPad Config\r\nand the user opens At Bat",
+    "custom_expected": "Then the user will see the Postseason view",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181170,
+    "title": "Disable",
+    "section_id": 141534,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505415922,
+    "updated_by": 39,
+    "updated_on": 1505502651,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 2,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a Dev sets shouldShowPostseasonSection to false in the iPhone and iPad Config\r\nand the user opens At Bat",
+    "custom_expected": "Then the user will not see the Postseason view ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181171,
+    "title": "Year",
+    "section_id": 141534,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505415927,
+    "updated_by": 39,
+    "updated_on": 1505502642,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 3,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a Dev sets shouldShowPostseasonSection to true in the iPhone and iPad Config\r\nand a  Dev sets postseasonSeason to a year\r\nand the user opens At Bat\r\n",
+    "custom_expected": "Then the user will see the Postseason view\r\nand tapping into the Postseason will display that year",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181172,
+    "title": "Enable",
+    "section_id": 141535,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505415931,
+    "updated_by": 39,
+    "updated_on": 1505502942,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": "Given the user has At Bat installed",
+    "custom_steps": "When a Dev sets shouldShowPostseasonNews to true\r\nand a user open At Bat\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and taps on News\nand taps on the team picker",
+        "expected": "Then the user will see the additional sections for Postseason News for each round\n\nAs enabled in the postSeasonNewsConfig.xml"
+      },
+      {
+        "content": "and taps on Videos\nand taps on the team picker",
+        "expected": "Then the user will see the additional sections for Postseason Videos for each round\n\nAs enabled in the postSeasonNewsConfig.xml"
+      }
+    ]
+  },
+  {
+    "id": 1181173,
+    "title": "Disable",
+    "section_id": 141535,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505415933,
+    "updated_by": 39,
+    "updated_on": 1505503008,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 2,
+    "custom_preconds": "Given the user has At Bat installed",
+    "custom_steps": "When a Dev sets shouldShowPostseasonNews to false\r\nand a user open At Bat",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and taps on News\nand taps on the team picker",
+        "expected": "Then the user will not see the additional sections for Postseason News for each round"
+      },
+      {
+        "content": "and taps on Videos\nand taps on the team picker",
+        "expected": "Then the user will not see the additional sections for Postseason News for each round"
+      }
+    ]
+  },
+  {
+    "id": 1181174,
+    "title": "Postseason Team",
+    "section_id": 141536,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505415944,
+    "updated_by": 39,
+    "updated_on": 1505503590,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": "Given a user has At Bat installed on iOS device with Extension\r\nand has a Favorite Team set",
+    "custom_steps": "When a Dev sets the isPostSeason: 1 in the extensionConfig section of the config\r\nand a Dev adds the team_id is added to the array in the postseasonTeams: []\r\nand a Dev adds the year is set in postseasonSeason\r\nand when a user navigates to the Widget on a day with a game for that team",
+    "custom_expected": "Then the user will see the game details\r\n\r\nRespect the 10am flip rule",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181175,
+    "title": "Non Postseason Team",
+    "section_id": 141536,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505415947,
+    "updated_by": 39,
+    "updated_on": 1505503715,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 2,
+    "custom_preconds": "Given a user has At Bat installed on iOS device with Extension\r\nand has a Favorite Team set",
+    "custom_steps": "When a Dev sets the isPostSeason: 1 in the extensionConfig section of the config\r\nand the team_id is not added to the array in the postseasonTeams: []\r\nand a Dev adds the year is set in postseasonSeason\r\nand when a user navigates to the Widget",
+    "custom_expected": "Then the user will see the team news in the Widget",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181176,
+    "title": "Postseason - Favorite Team not in Postseason",
+    "section_id": 141536,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505416032,
+    "updated_by": 39,
+    "updated_on": 1505416044,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 3,
+    "custom_preconds": "Given a user is on an iOS 10 device\r\nand has At Bat installed\r\nand has Widget added",
+    "custom_steps": "When a user is viewing the Widget",
+    "custom_expected": "\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "Collapsed",
+        "expected": "views top story in the Team News"
+      },
+      {
+        "content": "Expanded",
+        "expected": "views top 3-4 stories in the Team News"
+      }
+    ]
+  },
+  {
+    "id": 1181177,
+    "title": "Postseason -  Favorite Team",
+    "section_id": 141536,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505416032,
+    "updated_by": 39,
+    "updated_on": 1505416044,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 4,
+    "custom_preconds": "Given a user is on an iOS 10 device\r\nand has At Bat installed\r\nand has Widget added",
+    "custom_steps": "When a user is viewing the Widget",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Collapsed (before 10am)",
+        "expected": "Display Postseason game from previous day with Postseason content:\n\nExample: NLDS Game 5: NYM leads series 3-2"
+      },
+      {
+        "content": "Collapsed (after 10am)",
+        "expected": "Display Postseason game from current day with Postseason content:\n\nExample: NLDS Game 5: NYM leads series 3-2"
+      },
+      {
+        "content": "Expanded (before 10am)",
+        "expected": "Display Postseason game from previous day with Postseason content\nand Postseason game from next day with Postseason content\n\nExample: NLDS Game 5: NYM leads series 3-2"
+      },
+      {
+        "content": "Expanded (after 10am)\n",
+        "expected": "Display Postseason game from next day with Postseason content\nand Postseason game from day after next with Postseason content\n\nExample: NLDS Game 5: NYM leads series 3-2"
+      }
+    ]
+  },
+  {
+    "id": 1181178,
+    "title": "Postseason -  No Favorite Team",
+    "section_id": 141536,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505416032,
+    "updated_by": 39,
+    "updated_on": 1505416044,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 5,
+    "custom_preconds": "Given a user is on an iOS 10 device\r\nand has At Bat installed\r\nand has Widget added",
+    "custom_steps": "When a user is viewing the Widget",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Collapsed (before 10am)",
+        "expected": "Display Postseason game from previous day with Postseason content:\n\nExample: NLDS Game 5: NYM leads series 3-2"
+      },
+      {
+        "content": "Collapsed (after 10am)",
+        "expected": "Display Postseason game from current day with Postseason content:\n\nExample: NLDS Game 5: NYM leads series 3-2"
+      },
+      {
+        "content": "Expanded (before 10am)",
+        "expected": "Display Postseason game from previous day with Postseason content\nand Postseason game from previous day with Postseason content\n\nExample: NLDS Game 5: NYM leads series 3-2"
+      },
+      {
+        "content": "Expanded (after 10am)\n",
+        "expected": "Display Postseason game from next day with Postseason content\nand Postseason game from same day with Postseason content\n\nExample: NLDS Game 5: NYM leads series 3-2"
+      }
+    ]
+  },
+  {
+    "id": 1181179,
+    "title": "Postseason - Scoreboard - Postseason Content (Game Number, Round, Series Status)",
+    "section_id": 141536,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505416032,
+    "updated_by": 39,
+    "updated_on": 1505416044,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 6,
+    "custom_preconds": "Given a user is on an iOS 10 device\r\nand has At Bat installed\r\nand has Widget added",
+    "custom_steps": "When a user is viewing the Widget",
+    "custom_expected": "Scoreboard will remain the Daily Scoreboard but with Postseason content\r\n\r\nExample: NLDS Game 5: NYM leads series 3-2",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181180,
+    "title": "Postseason - Scoreboard Logo",
+    "section_id": 141536,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505416032,
+    "updated_by": 39,
+    "updated_on": 1505416044,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 7,
+    "custom_preconds": "Given a user is on an iOS 10 device\r\nand has At Bat installed\r\nand has Widget added",
+    "custom_steps": "When a user is viewing the Widget\r\nand game is in ",
+    "custom_expected": "\r\n\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "Preview",
+        "expected": "Scoreboard will remain the Daily Scoreboard but with Postseason content including:\n\nBroadcaster Logo"
+      },
+      {
+        "content": "Live",
+        "expected": "Scoreboard will remain the Daily Scoreboard but with Postseason content\n\nBroadcaster Logo"
+      },
+      {
+        "content": "Final",
+        "expected": "Scoreboard will remain the Daily Scoreboard but with Postseason content\n\nNo Broadcaster Logo"
+      }
+    ]
+  },
+  {
+    "id": 1181181,
+    "title": "Postseason - Scores - Deep Link",
+    "section_id": 141536,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505416032,
+    "updated_by": 39,
+    "updated_on": 1505416044,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 8,
+    "custom_preconds": "Given a user is on an iOS 10 device\r\nand has At Bat installed\r\nand has Widget added",
+    "custom_steps": "When a user is viewing the Widget",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Favorite Team",
+        "expected": "Deep Link to Postseason view"
+      },
+      {
+        "content": "Favorite Team",
+        "expected": "Deep Link to Team Page"
+      },
+      {
+        "content": "No Favorite Team ",
+        "expected": "Deep link to Postseason View"
+      }
+    ]
+  },
+  {
+    "id": 1181712,
+    "title": "Stats Season",
+    "section_id": 141665,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505505338,
+    "updated_by": 39,
+    "updated_on": 1505506933,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a Dev sets the statsSeason to 2017\r\nand a user opens At Bat\r\nand taps on the main Stats view (not the Team Page)",
+    "custom_expected": "Then the user will see the that year as the default Stats\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181713,
+    "title": "Stat Type",
+    "section_id": 141665,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505505342,
+    "updated_by": 39,
+    "updated_on": 1505506755,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 2,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a Dev sets the defaultStatsGameType to a number\r\nand a user opens At Bat \r\nand taps on the main Stats view (not from the Team Page)\r\n",
+    "custom_expected": "Then the user will see that stats type as the defaullt\r\n\r\nBased off of these defaultStatsType values:\r\n* 1 ­ Exhibition\r\n* 2 ­ Spring Training\r\n* 4 ­ Regular Season\r\n* 8 ­ Postseason (Combined) - This shows as just \"Postseason\".\r\n* 16 ­ World Series\r\n* 32 ­ League Championship Series\r\n* 64 ­ Division Series\r\n* 128 ­ Wild Card\r\n* 256 ­ Game Type Max",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181726,
+    "title": "Team Page Stats",
+    "section_id": 141665,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505506798,
+    "updated_by": 39,
+    "updated_on": 1505506917,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 3,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When When Ops sets statsMode is set to a value for a team(s)\r\nand a user opens At Bat\r\nand taps on that Team Page\r\nand taps on Stats\r\n",
+    "custom_expected": "Then that stat type is displayed in the Stats view for that team\r\n\r\n0 = Spring\r\n1 = Regular Season\r\n2 = Postseason Total\r\n3 = Wild Card\r\n4 = Division\r\n5 = LCS\r\n6 = WS",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1181755,
+    "title": "Tune In Banners",
+    "section_id": 141666,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505509262,
+    "updated_by": 39,
+    "updated_on": 1505768902,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When Ops sets up Tune In Banners on views\r\nand a user opens At Bat",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "iPad Team Page",
+        "expected": "the user will see the banner"
+      },
+      {
+        "content": "iPad Scoreboard",
+        "expected": "the user will see the banner"
+      },
+      {
+        "content": "iPad Postseason",
+        "expected": "the user will see the banner"
+      },
+      {
+        "content": "iPad EPG",
+        "expected": "the user will see the banner"
+      },
+      {
+        "content": "iPad Newsreader",
+        "expected": "the user will see the banner"
+      },
+      {
+        "content": "iPhone Team Page",
+        "expected": "the user will see the banner"
+      },
+      {
+        "content": "iPhone Scoreboard",
+        "expected": "the user will see the banner"
+      },
+      {
+        "content": "iPhone Postseason",
+        "expected": "the user will see the banner"
+      },
+      {
+        "content": "iPhone EPG",
+        "expected": "the user will see the banner"
+      },
+      {
+        "content": "iPhone Newsreader",
+        "expected": "the user will see the banner"
+      }
+    ]
+  },
+  {
+    "id": 1182223,
+    "title": "National Feed - Live",
+    "section_id": 141667,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505768806,
+    "updated_by": 84,
+    "updated_on": 1568411451,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user is logged in\r\nand taps on a National Feed \r\n\r\nFrom Team Page, Scoreboard, Gameday, Postseason",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "as a Lite user",
+        "expected": "Then the user will see the MLB.TV Paywall"
+      },
+      {
+        "content": "as a At Bat user",
+        "expected": "Then the user will see the MLB.TV paywall\n"
+      },
+      {
+        "content": "as a Single Team User (own team's feed)",
+        "expected": "Then the user will see the Cable Auth Flow"
+      },
+      {
+        "content": "as a Single Team User (another team's feed)",
+        "expected": "Then the user will see an Access Issue message"
+      },
+      {
+        "content": "as a TV-entitled User",
+        "expected": "Then the user will see the Cable Auth Flow"
+      },
+      {
+        "content": "Executive Account",
+        "expected": "Then the user will bypass the Cable Auth Flow and view the feed"
+      }
+    ]
+  },
+  {
+    "id": 1182224,
+    "title": "International Feed - Live",
+    "section_id": 141667,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505768812,
+    "updated_by": 84,
+    "updated_on": 1568411413,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 2,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user is logged in\r\nand taps on an International Feed\r\n\r\nFrom Team Page, Scoreboard, Gameday, Postseason",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "As a Lite User",
+        "expected": "Then the user will see MLB.TV Paywall"
+      },
+      {
+        "content": "as a At Bat user",
+        "expected": "Then the user will see the MLB.TV paywall"
+      },
+      {
+        "content": "as a Single Team User and in the US",
+        "expected": "Then the user will see see the international blackout message"
+      },
+      {
+        "content": "as a TV-entitled User and in the US",
+        "expected": "Then the user will see see the international blackout message"
+      },
+      {
+        "content": "as a TV-entitled User and outside the US",
+        "expected": "Then the user will view the feed"
+      },
+      {
+        "content": "Executive Account",
+        "expected": "Then the user will bypass the Cable Auth Flow and view the feed"
+      }
+    ]
+  },
+  {
+    "id": 1182225,
+    "title": "Archive",
+    "section_id": 141667,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505768817,
+    "updated_by": 84,
+    "updated_on": 1568411891,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 3,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user taps on a Postseason archive feed",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "as a Lite user",
+        "expected": "Then the user will see the MLB.TV Paywall"
+      },
+      {
+        "content": "as a At Bat user",
+        "expected": "Then the user will see the MLB.TV Paywall"
+      },
+      {
+        "content": "as a Single Team User (own team's feed)",
+        "expected": "Then the archive feed will start"
+      },
+      {
+        "content": "as a Single Team User (another team's feed)",
+        "expected": "Then the user will receive an Access Issue message"
+      },
+      {
+        "content": "as a TV-entitled User",
+        "expected": "Then the archive feed will start"
+      },
+      {
+        "content": "Executive Account",
+        "expected": "Then the archive feed will start"
+      }
+    ]
+  },
+  {
+    "id": 1182226,
+    "title": "Cable Auth - Positive",
+    "section_id": 141667,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505768822,
+    "updated_by": 84,
+    "updated_on": 1568412737,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 5,
+    "custom_preconds": "Given a user has At Bat installed\r\nand logged in with TV-entitled account",
+    "custom_steps": "When a user taps on a MLB.TV Postseason feed\r\nthen the user will see the cable auth flow",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and has cable creds for FS1\nand accessing FS1 feed",
+        "expected": "then the feed will start"
+      },
+      {
+        "content": "and has cable creds for Fox\nand accessing Fox feed",
+        "expected": "then the feed will start"
+      },
+      {
+        "content": "and has cable creds for MLB Network\nand accessing MLB Network feed",
+        "expected": "then the feed will start"
+      },
+      {
+        "content": "and has cable creds for TBS\nand accessing TBS feed",
+        "expected": "then the feed will start"
+      }
+    ]
+  },
+  {
+    "id": 1182227,
+    "title": "Cable Auth - Negative",
+    "section_id": 141667,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505768828,
+    "updated_by": 84,
+    "updated_on": 1568412697,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 6,
+    "custom_preconds": "Given a user has At Bat installed\r\nand logged in with TV-entitled account",
+    "custom_steps": "When a user taps on a MLB.TV Postseason feed\r\nthen the user will see the cable auth flow",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and does not have cable creds for FS1\nand accessing FS1 feed",
+        "expected": "then the user will see a message on the cable auth flow screen that they can't access the feed"
+      },
+      {
+        "content": "and does not have cable creds for Fox\nand accessing Fox feed",
+        "expected": "then the user will see a message on the cable auth flow screen that they can't access the feed"
+      },
+      {
+        "content": "and does not have cable creds for MLB Network\nand accessing MLB Network feed",
+        "expected": "then the user will see a message on the cable auth flow screen that they can't access the feed"
+      },
+      {
+        "content": "and does not have cable creds for TBS\nand accessing TBS feed",
+        "expected": "then the user will see a message on the cable auth flow screen that they can't access the feed"
+      }
+    ]
+  },
+  {
+    "id": 1182228,
+    "title": "Blackout Message",
+    "section_id": 141667,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505768859,
+    "updated_by": 39,
+    "updated_on": 1505770057,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 7,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user is logged in with MLB.TV account\r\nand taps on a MLB.TV Postseason feed",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "inside the US and taps on international feed",
+        "expected": "Then the user will see the Blackout Message"
+      },
+      {
+        "content": "outside the US and taps on the national feed",
+        "expected": "Then the user will see the Blackout Message"
+      }
+    ]
+  },
+  {
+    "id": 1273518,
+    "title": "Logged In TV-Entitled User",
+    "section_id": 153925,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1568410675,
+    "updated_by": 84,
+    "updated_on": 1568411477,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed\r\nand the user has logged in to At Bat with an MLB account that is TV-entitled\r\nand there are live Postseason TV feeds available ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navs to the MLB.TV EPG via the TV icon in the top left corner",
+        "expected": "Then the user will be presented with the day's TV feeds"
+      },
+      {
+        "content": "When the user taps a live US Feed for any of the participating networks\n(TBS, FS1, FOX, MLBN)",
+        "expected": "Then the user will be prompted that \"At Bat wants to use 'mlb.com' to sign in\""
+      },
+      {
+        "content": "When the user taps \"Continue\" from the prompt",
+        "expected": "Then the user will be taken to a webview where they can select their cable provider from a drop-down"
+      },
+      {
+        "content": "When the user selects their cable provider from the drop down",
+        "expected": "Then the user is taken to the provider login page"
+      },
+      {
+        "content": "When the user enters valid cable provider credentials that include the network package",
+        "expected": "Then the user is deeplinked back to the app and the feed will launch"
+      },
+      {
+        "content": "When the user navs back to the TV EPG\nand selects a live Postseason feed from the same network they auth'd for",
+        "expected": "Then the user should be able to successfully launch the feed"
+      }
+    ]
+  },
+  {
+    "id": 1273519,
+    "title": "In-App Purchase TV-Entitled User",
+    "section_id": 153925,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1568410675,
+    "updated_by": 84,
+    "updated_on": 1568759929,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat is installed\r\nand the user has purchased TV via in-app purchase\r\nand is not logged in to the app\r\nand has NOT linked to an MLB account",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navs to the MLB.TV EPG via the TV icon in the top left corner",
+        "expected": "Then the user will be presented with the day's TV feeds"
+      },
+      {
+        "content": "When the user taps a live US Feed for any of the participating networks\n(TBS, FS1, FOX, MLBN)",
+        "expected": "Then the user will be prompted that \"At Bat wants to use 'mlb.com' to sign in\""
+      },
+      {
+        "content": "When the user taps \"Continue\" from the prompt",
+        "expected": "Then the user will be taken to a webview where they can select their cable provider from a drop-down"
+      },
+      {
+        "content": "When the user selects their cable provider from the drop down",
+        "expected": "Then the user is taken to the provider login page"
+      },
+      {
+        "content": "When the user enters valid cable provider credentials that include the network package",
+        "expected": "Then the user is deeplinked back to the app and the feed will launch"
+      },
+      {
+        "content": "When the user navs back to the TV EPG\nand selects a live Postseason feed from the same network they auth'd for",
+        "expected": "Then the user should be able to successfully launch the feed"
+      },
+      {
+        "content": "When the user navs to Settings\nand logs in to the app with a non-entitled MLB account",
+        "expected": "Then the user's in-app purchase and the cable auth entitlements will now be linked to the MLB account"
+      },
+      {
+        "content": "When the user tries to launch a live Postseason US feed from the same network they auth'd for\nafter having linked to an MLB account\nand remains logged in to the MLB account",
+        "expected": "Then the user should be able to successfully launch the feed"
+      }
+    ]
+  },
+  {
+    "id": 1273528,
+    "title": "Non-Participating Networks",
+    "section_id": 153925,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1568411948,
+    "updated_by": 84,
+    "updated_on": 1568412104,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 3,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is TV-entitled ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user tries to access a non-participating Postseason game (i.e. games tied to broadcasters that don't support MVPD access for U.S. users during the Postseason) (ESPN)",
+        "expected": "THEN the user will be nationally blacked out of the feed\nand will receive a blackout message"
+      }
+    ]
+  },
+  {
+    "id": 1273530,
+    "title": "All Premium Users",
+    "section_id": 153929,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-8151",
+    "created_by": 84,
+    "created_on": 1568413020,
+    "updated_by": 84,
+    "updated_on": 1568413020,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed\r\nand there are live Postseason Gameday Audio feeds available",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is an At Bat Premium user\nand attempts to access stream game audio live via the Audio EPG",
+        "expected": "THEN user is able to stream game audio live"
+      },
+      {
+        "content": "WHEN user is a TV-entitled user\nand attempts to access stream game audio live via the Audio EPG",
+        "expected": "THEN user is able to stream game audio live"
+      },
+      {
+        "content": "WHEN user is a Single Team user\nand attempts to access stream game audio live via the Audio EPG",
+        "expected": "THEN user is able to stream game audio live"
+      }
+    ]
+  },
+  {
+    "id": 1181753,
+    "title": "iPhone and iPad",
+    "section_id": 141668,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1505508403,
+    "updated_by": 39,
+    "updated_on": 1505508570,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20024,
+    "display_order": 1,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When Ops sets a hideSchedule to 1 for a team that is eliminated or not in the Postseason\r\nand a user opens At Bat\r\nand taps on that Team Page\r\n",
+    "custom_expected": "Then the user will not see the Schedule Module\r\nand see the News section below the header",
+    "custom_steps_separated": null
+  }
+]

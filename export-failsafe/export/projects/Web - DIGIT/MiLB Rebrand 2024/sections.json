@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1809988,
+    "suite_id": 649036,
+    "name": "Color Contentful Overrides",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1809989,
+    "suite_id": 649036,
+    "name": "Page Verification - Color",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1809990,
+    "suite_id": 649036,
+    "name": "Logo Verification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

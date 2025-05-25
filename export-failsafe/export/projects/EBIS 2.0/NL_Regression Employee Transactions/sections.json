@@ -1,0 +1,137 @@
+[
+  {
+    "id": 143803,
+    "suite_id": 20165,
+    "name": "Assign as 7th Coach",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 143804,
+    "suite_id": 20165,
+    "name": "Remove as 7th Coach",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 143807,
+    "suite_id": 20165,
+    "name": "Assign/Reassign Employee",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 143808,
+    "suite_id": 20165,
+    "name": "Remove Employee From Org",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 145939,
+    "suite_id": 20165,
+    "name": "Assign/Reassign Employee",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 145940,
+    "suite_id": 20165,
+    "name": "Ineligible List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 145941,
+    "suite_id": 20165,
+    "name": "Assign/Reassign Employee",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 145942,
+    "suite_id": 20165,
+    "name": "Temporarily Inactive List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 145943,
+    "suite_id": 20165,
+    "name": "Temp Inactive - Permissions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 145944,
+    "suite_id": 20165,
+    "name": "Ineligible List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 145945,
+    "suite_id": 20165,
+    "name": "Ineligible List - Perms",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 145946,
+    "suite_id": 20165,
+    "name": "Deceased List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 145947,
+    "suite_id": 20165,
+    "name": "Deceased List - Perms",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 146373,
+    "suite_id": 20165,
+    "name": "Suspended List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 146374,
+    "suite_id": 20165,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  }
+]

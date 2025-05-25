@@ -1,0 +1,116 @@
+[
+  {
+    "id": 34796900,
+    "title": "Initializing the App",
+    "section_id": 2038973,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1747240629,
+    "updated_by": 232,
+    "updated_on": 1747240629,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 705707,
+    "display_order": 1,
+    "custom_preconds": "GIVEN No Audio is selected \r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Opening App from receiver \n",
+        "expected": "THEN present Feeds for today"
+      },
+      {
+        "content": "WHEN Match is selected ",
+        "expected": "THEN present Feed Select\n"
+      },
+      {
+        "content": "WHEN Feed is selected ",
+        "expected": "THEN begin playback"
+      }
+    ]
+  },
+  {
+    "id": 34796901,
+    "title": "Playback Controls",
+    "section_id": 2038973,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1747240700,
+    "updated_by": 232,
+    "updated_on": 1747240700,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 705707,
+    "display_order": 2,
+    "custom_preconds": "GIVEN Audio is playing\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN pause is actioned \n",
+        "expected": "THEN pause content"
+      },
+      {
+        "content": "WHEN play is actioned \n",
+        "expected": "THEN play content"
+      },
+      {
+        "content": "WHEN back is actioned ",
+        "expected": "THEN return to Feed Select"
+      }
+    ]
+  },
+  {
+    "id": 34796902,
+    "title": "Connect while audio is playing",
+    "section_id": 2038973,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1747240796,
+    "updated_by": 232,
+    "updated_on": 1747240796,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 705707,
+    "display_order": 3,
+    "custom_preconds": "GIVEN audio is selected from the mobile device\r\n",
+    "custom_steps": "WHEN connecting to Android Auto ",
+    "custom_expected": "THEN playback should continue ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34796903,
+    "title": "Un-entitled user",
+    "section_id": 2038973,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1747240907,
+    "updated_by": 232,
+    "updated_on": 1747240907,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 705707,
+    "display_order": 4,
+    "custom_preconds": "GIVEN user is not-entitled\r\n",
+    "custom_steps": "WHEN playback occurs ",
+    "custom_expected": "THEN show appropriate error message ",
+    "custom_steps_separated": null
+  }
+]

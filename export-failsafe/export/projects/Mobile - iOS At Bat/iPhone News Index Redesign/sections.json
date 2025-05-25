@@ -1,0 +1,20 @@
+[
+  {
+    "id": 304826,
+    "suite_id": 43569,
+    "name": "iPhone News Index Redesign",
+    "description": "Epic: https://baseball.atlassian.net/browse/IAB-22529\nUser Story: https://baseball.atlassian.net/browse/IAB-22369\n\nDesigns\n\nNews Feed - Paid Subscriber: https://app.zeplin.io/project/5e5fb341773c481563272985/screen/5e75311d855dd3705c0bccee/\n\nNews Feed - Free User: https://app.zeplin.io/project/5e5fb341773c481563272985/screen/5e75312269465662fcee6494/",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 305144,
+    "suite_id": 43569,
+    "name": "iPad (Portrait mode only)- News Index Redesign",
+    "description": "When you are on the app and on NEWs section \nScroll up to bring apps \nBring one of the app on to the mlb app screen \nUsing Controller - divide the screen between apps you want to use",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

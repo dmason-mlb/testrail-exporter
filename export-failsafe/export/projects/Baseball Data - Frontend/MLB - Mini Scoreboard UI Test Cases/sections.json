@@ -1,0 +1,110 @@
+[
+  {
+    "id": 306449,
+    "suite_id": 43790,
+    "name": "Empty State",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 306447,
+    "suite_id": 43790,
+    "name": "Free Game of the Day",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 306444,
+    "suite_id": 43790,
+    "name": "Game State",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 306476,
+    "suite_id": 43790,
+    "name": "Miscellaneous",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 306445,
+    "suite_id": 43790,
+    "name": "Perfect Game/No-Hitter",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 306446,
+    "suite_id": 43790,
+    "name": "Product Links",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 306448,
+    "suite_id": 43790,
+    "name": "Schedule Sort",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 306442,
+    "suite_id": 43790,
+    "name": "Smoke Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 306443,
+    "suite_id": 43790,
+    "name": "Teams, Records & Scores",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 306475,
+    "suite_id": 43790,
+    "name": "YouTube",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 414467,
+    "suite_id": 43790,
+    "name": "Personalization",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 441755,
+    "suite_id": 43790,
+    "name": "Postseason",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  }
+]

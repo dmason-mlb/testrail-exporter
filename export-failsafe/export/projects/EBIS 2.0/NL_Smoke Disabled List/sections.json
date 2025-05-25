@@ -1,0 +1,182 @@
+[
+  {
+    "id": 15217,
+    "suite_id": 1671,
+    "name": "Place on 7 Day Concussion DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 29479,
+    "suite_id": 1671,
+    "name": "Printing",
+    "description": null,
+    "parent_id": 15217,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 124967,
+    "suite_id": 1671,
+    "name": "Place on 10 Day DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 15220,
+    "suite_id": 1671,
+    "name": "Place on 60 Day DL (MJ)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 124968,
+    "suite_id": 1671,
+    "name": "Transfer to 10 Day DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 20726,
+    "suite_id": 1671,
+    "name": "Transfer to 60 Day DL (MJ)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 20727,
+    "suite_id": 1671,
+    "name": "Place on Rehab Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 20728,
+    "suite_id": 1671,
+    "name": "Transfer of Rehab Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 22619,
+    "suite_id": 1671,
+    "name": "Return from Rehab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 15221,
+    "suite_id": 1671,
+    "name": "Reinstate from DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 22620,
+    "suite_id": 1671,
+    "name": "Recertification Widget",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 22621,
+    "suite_id": 1671,
+    "name": "Recertify a player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 24593,
+    "suite_id": 1671,
+    "name": "MN-Place on 7-Day DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 24594,
+    "suite_id": 1671,
+    "name": "MN-Place on 60-Day DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 24595,
+    "suite_id": 1671,
+    "name": "MN-Reinstate from DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 29483,
+    "suite_id": 1671,
+    "name": "Printing",
+    "description": null,
+    "parent_id": 24595,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 24596,
+    "suite_id": 1671,
+    "name": "MN-Rehab Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 24902,
+    "suite_id": 1671,
+    "name": "MN-Return from Rehab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 24903,
+    "suite_id": 1671,
+    "name": "MN-Transfer of Rehab Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 129515,
+    "suite_id": 1671,
+    "name": "Reports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  }
+]

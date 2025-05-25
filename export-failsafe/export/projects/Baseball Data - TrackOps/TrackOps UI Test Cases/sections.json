@@ -1,0 +1,20 @@
+[
+  {
+    "id": 423185,
+    "suite_id": 93281,
+    "name": "Smoke Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 444145,
+    "suite_id": 93281,
+    "name": "Regression Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

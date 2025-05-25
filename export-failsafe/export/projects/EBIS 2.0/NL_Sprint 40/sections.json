@@ -1,0 +1,65 @@
+[
+  {
+    "id": 146552,
+    "suite_id": 20311,
+    "name": "Global",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 146553,
+    "suite_id": 20311,
+    "name": "OffSeason Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 146554,
+    "suite_id": 20311,
+    "name": "International Amateur",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 146555,
+    "suite_id": 20311,
+    "name": "Disabled List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 146556,
+    "suite_id": 20311,
+    "name": "Professional Player Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 146557,
+    "suite_id": 20311,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 146564,
+    "suite_id": 20311,
+    "name": "Employee Contracts (UEC)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  }
+]

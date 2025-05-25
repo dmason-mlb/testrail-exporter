@@ -1,0 +1,83 @@
+[
+  {
+    "id": 83068,
+    "suite_id": 13612,
+    "name": "Print",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 83070,
+    "suite_id": 13612,
+    "name": "Global",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 83071,
+    "suite_id": 13612,
+    "name": "Enhancement",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 83130,
+    "suite_id": 13612,
+    "name": "Waivers",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 83131,
+    "suite_id": 13612,
+    "name": "Optional Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 85822,
+    "suite_id": 13612,
+    "name": "Rule 6 Return Process",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 85823,
+    "suite_id": 13612,
+    "name": "Return of Rule 5 Selection",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 85824,
+    "suite_id": 13612,
+    "name": "Optional Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 103253,
+    "suite_id": 13612,
+    "name": "Rule 5",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1685179,
+    "suite_id": 611460,
+    "name": "Ticket Sales",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1685180,
+    "suite_id": 611460,
+    "name": "Ticket Sale Cart",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1685181,
+    "suite_id": 611460,
+    "name": "Sell - Single Ticket Sale -Reprice by Ticket",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1685182,
+    "suite_id": 611460,
+    "name": "Sell - Single Ticket Sale -Reprice by Buyer",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1685183,
+    "suite_id": 611460,
+    "name": "Ticket Sales Map Sales Review offers invalid buyers for reprice",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1685184,
+    "suite_id": 611460,
+    "name": "Direct Marketing Scenarios",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1685185,
+    "suite_id": 611460,
+    "name": "Split-Tender  (GiftCard/ MasterCard)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1685186,
+    "suite_id": 611460,
+    "name": "Sell - Single Ticket Sales - Delivery Method",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1685187,
+    "suite_id": 611460,
+    "name": "Ticket sale without Patron",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1685188,
+    "suite_id": 611460,
+    "name": "Ticket sales - Additional criteria tabs",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1685189,
+    "suite_id": 611460,
+    "name": "Sell - Single Ticket Sales - Event Search",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 1685190,
+    "suite_id": 611460,
+    "name": "Digital Access Cards",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 1685191,
+    "suite_id": 611460,
+    "name": "Best Available/Hold Codes",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 1685192,
+    "suite_id": 611460,
+    "name": "Hold Code Management",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 1685193,
+    "suite_id": 611460,
+    "name": "Hold_Code_Master Events",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 1685194,
+    "suite_id": 611460,
+    "name": "Hold Codes",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 1685195,
+    "suite_id": 611460,
+    "name": "Hold Code Inventory",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 1685196,
+    "suite_id": 611460,
+    "name": "Filter best seat available",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 1685197,
+    "suite_id": 611460,
+    "name": "Set Hold Codes",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 1685198,
+    "suite_id": 611460,
+    "name": "Best Seat configuration-Ranking Editor",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 1685199,
+    "suite_id": 611460,
+    "name": "Best Seat Engine Processing Order",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 1685200,
+    "suite_id": 611460,
+    "name": "A - Best Seat",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 1685201,
+    "suite_id": 611460,
+    "name": "BO Sales Map, ISM & MPV User Interface",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 1685202,
+    "suite_id": 611460,
+    "name": "BT@H_LA Dodgers",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 1685203,
+    "suite_id": 611460,
+    "name": "Cart Confirmation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 1685204,
+    "suite_id": 611460,
+    "name": "Cart Transactions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 1685205,
+    "suite_id": 611460,
+    "name": "Shopping Cart",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 1685206,
+    "suite_id": 611460,
+    "name": "Sell - Group Sales - Group Claims",
+    "description": null,
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  },
+  {
+    "id": 1685207,
+    "suite_id": 611460,
+    "name": "Sell - Group Sales - Group Reoffers",
+    "description": null,
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 1685208,
+    "suite_id": 611460,
+    "name": "Sell-Group Sales",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 1685209,
+    "suite_id": 611460,
+    "name": "Group Sales - Returns",
+    "description": null,
+    "parent_id": null,
+    "display_order": 31,
+    "depth": 0
+  },
+  {
+    "id": 1685210,
+    "suite_id": 611460,
+    "name": "Map Sales",
+    "description": null,
+    "parent_id": null,
+    "display_order": 32,
+    "depth": 0
+  },
+  {
+    "id": 1685211,
+    "suite_id": 611460,
+    "name": "Single Ticket Sales",
+    "description": null,
+    "parent_id": null,
+    "display_order": 33,
+    "depth": 0
+  },
+  {
+    "id": 1685212,
+    "suite_id": 611460,
+    "name": "Single Sales - Returns",
+    "description": null,
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 1685213,
+    "suite_id": 611460,
+    "name": "Sell - Single Ticket Sales - Payment applied",
+    "description": null,
+    "parent_id": null,
+    "display_order": 35,
+    "depth": 0
+  },
+  {
+    "id": 1685214,
+    "suite_id": 611460,
+    "name": "Sell - Single Ticket Sales - Seat Map",
+    "description": null,
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  },
+  {
+    "id": 1685215,
+    "suite_id": 611460,
+    "name": "Sell - Single Ticket Sales - Best Available Seat Selection",
+    "description": null,
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 1685216,
+    "suite_id": 611460,
+    "name": "Sell by command or pick seat",
+    "description": null,
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 1685217,
+    "suite_id": 611460,
+    "name": "Time outs",
+    "description": null,
+    "parent_id": null,
+    "display_order": 39,
+    "depth": 0
+  },
+  {
+    "id": 1685218,
+    "suite_id": 611460,
+    "name": "Transaction",
+    "description": null,
+    "parent_id": null,
+    "display_order": 40,
+    "depth": 0
+  }
+]

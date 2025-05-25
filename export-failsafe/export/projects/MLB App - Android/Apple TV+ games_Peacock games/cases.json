@@ -1,0 +1,810 @@
+[
+  {
+    "id": 26677883,
+    "title": "Archived Apple TV + game-  Scoreboard & Watch View Game Tab",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1646862068,
+    "updated_by": 232,
+    "updated_on": 1653335574,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user\r\nAND an Apple TV+ game that is archived is available\r\n\r\nNOTE: On May 6th, the White Sox at Red Sox game is an archived Apple TV+ game and can be used for the purposes of this test",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user sees the game on the scores page in expanded mode\n",
+        "expected": "THEN no Apple TV + text is present in the game on the schedule\nAND the game appears as a normal archived game"
+      },
+      {
+        "content": "WHEN the user sees the game on the scores page in compact mode\n",
+        "expected": "THEN no Apple TV + text is present in the game on the game tile\nAND the game appears as a normal archived game"
+      },
+      {
+        "content": "WHEN the user sees the game on the Watch View Games Tab\n",
+        "expected": "THEN no Apple TV + text is present in the game on the game tile\nAND the game appears as a normal archived game\n"
+      },
+      {
+        "content": "WHEN the user sees the game on the Watch View Games Tab\nAND the user clicks the game",
+        "expected": "THEN the app responds to the click like other archived games (plays for entitled, messages for non-entitled)"
+      },
+      {
+        "content": "WHEN the user sees the game in the in-game scoreboard\nNOTE: Mark this step as \"not applicable\" for regression testing. This rare case can only be tested live or with extensive proxying, but remains part of this test case so that it can be examined when code changes are made surrounding this part of the app.\n",
+        "expected": "THEN no Apple TV + text is present in the game on the game tile\nAND the game appears as a normal archived game\n"
+      }
+    ]
+  },
+  {
+    "id": 26679208,
+    "title": "Archived Apple TV+ game- in-player scoreboard",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1646868819,
+    "updated_by": 232,
+    "updated_on": 1647377524,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user\r\nAND an AppleTV+ game is archived on today's date and other games are currently live\r\n\r\nNOTE: This is tricky to simulate because it requires a live game in addition to the simulated archived Apple TV+ game",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user sees the game in the in-game scoreboard(while playing one of the non-Apple TV+ games\nAND the user observes the Apple TV+ game card",
+        "expected": "THEN Watch on Apple(Apple is an icon)tv+ badge is NOT present in the game tile"
+      },
+      {
+        "content": "WHEN the user sees the game in the in-game scoreboard(while playing one of the non-Apple TV+ games\nAND the user clicks the Apple TV+ game card",
+        "expected": "THEN the app responds to the click like other archived games (plays for entitled, messages for non-entitled)"
+      }
+    ]
+  },
+  {
+    "id": 26679817,
+    "title": "Archived Apple TV+ game- teams tab",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "DISCO-243",
+    "created_by": 232,
+    "created_on": 1646869610,
+    "updated_by": 311,
+    "updated_on": 1646939450,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 5,
+    "custom_preconds": "GIVEN a user\r\nAND an archived Apple TV+ game is available on today's date",
+    "custom_steps": "WHEN the user sees the game on the team page",
+    "custom_expected": " THEN no Apple TV + text is present in the game on the schedule\r\nAND the game appears as a normal archived game",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26677887,
+    "title": "Live Apple TV+ game- team tab",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1646862754,
+    "updated_by": 232,
+    "updated_on": 1650901425,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 7,
+    "custom_preconds": "GIVEN a user\r\nAND a live YouTube TV+ game is available",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user sees the game on the team tab",
+        "expected": "THEN the Apple TV+ text should be available on the schedule\nAND an Apple TV+ button will display below"
+      },
+      {
+        "content": "WHEN the user sees the game on the team tab\nAND the user clicks the Apple TV+ button\nAND the user is located in a blacked out country",
+        "expected": "THEN the app should redirect to the player\nAND \"Watch on Apple TV+ This broadcast is available to watch only at tv.apple.com\" modal should appear over the player"
+      },
+      {
+        "content": "WHEN the user sees the game on the team tab\nAND the user clicks the Apple TV+ button\nAND the user is located in a non-blacked out country",
+        "expected": "THEN the feed should play"
+      },
+      {
+        "content": "WHEN the user's device is set to Spanish\nAND the user sees the game on the team tab\n",
+        "expected": "THEN a bar will be displayed with \"Ver en Apple Tv+\" at the top of the game card"
+      },
+      {
+        "content": "WHEN the user clicks the Apple TV+ button\nAND the user is located in a blacked out country",
+        "expected": "THEN the app should redirect to the player\nAND a modal should be displayed over the player with the following messaging: \"Ver en Apple Tv+\" and \"Esta transmisión está disponible para ver solo en tv.apple.com\""
+      },
+      {
+        "content": "WHEN the user repeats these steps in the opposing light/dark mode",
+        "expected": "THEN the outcome is the same (The player is always forced to dark mode)"
+      }
+    ]
+  },
+  {
+    "id": 26677906,
+    "title": "Live Apple TV+ game- scoreboard",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1646863839,
+    "updated_by": 232,
+    "updated_on": 1650637918,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 9,
+    "custom_preconds": "GIVEN a user\r\nAND an Apple TV+ game is live",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user views the game on the scoreboard in expanded mode",
+        "expected": "THEN \"Watch on Apple TV+\" text is visible in the game card\nAND an Apple TV+ button is available under the scores"
+      },
+      {
+        "content": "WHEN the user views the game on the scoreboard in expanded mode\nAND the user clicks the Apple TV+ button",
+        "expected": "THEN the app redirects to the player\nAND a modal displays with \"Watch on Apple TV+\" and \"This broadcast is available to watch only at tv.apple.com\""
+      },
+      {
+        "content": "WHEN the user's device is set to Spanish\nAND the user views the game on the scoreboard in expanded mode\nAND the user clicks the Apple TV+ button",
+        "expected": "THEN the app redirects to the player\nAND a modal displays with \"Ver en Apple Tv+\" and \"Esta transmisión está disponible para ver solo en tv.apple.com\""
+      },
+      {
+        "content": "WHEN the user views the game on the scoreboard in compact mode",
+        "expected": "THEN the \"Watch on Apple(Apple is an icon)tv+\" badge is present in the game tile\n\n"
+      },
+      {
+        "content": "WHEN the user clicks the game tile for the game on the scoreboard in compact mode",
+        "expected": "THEN the app redirects to the Gameday page for the game"
+      },
+      {
+        "content": "WHEN the user repeats these steps in the opposing light/dark mode",
+        "expected": "THEN the outcome is the same"
+      }
+    ]
+  },
+  {
+    "id": 26678706,
+    "title": "Live Apple TV+ game- Watch View Games Tab",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1646867612,
+    "updated_by": 232,
+    "updated_on": 1650638089,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 10,
+    "custom_preconds": "GIVEN a user\r\nAND an Apple TV+ game is live",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user views the game on the Watch View Games Tab",
+        "expected": "THEN Watch on Apple(Apple is an icon)tv+ badge is present in the game tile"
+      },
+      {
+        "content": "WHEN the user views the game on the Watch View Games Tab\nAND selects the game tile",
+        "expected": "THEN the app redirects to the player\nAND a modal displays with \"Watch on Apple TV+\" and \"This broadcast is available to watch only at tv.apple.com\""
+      },
+      {
+        "content": "WHEN the user's device is set to Spanish\nAND the user views the game on the Watch View Games Tab\nAND selects the game tile",
+        "expected": "THEN the app redirects to the player\nAND a modal displays with \"Ver en Apple TV+\" and \"Esta transmisión está disponible para ver solo en tv.apple.com\"\n\n"
+      },
+      {
+        "content": "WHEN the user repeats these steps in the opposing light/dark mode",
+        "expected": "THEN the outcome is the same"
+      }
+    ]
+  },
+  {
+    "id": 26680319,
+    "title": "Live Apple TV+ game- in-player scoreboard",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1646870320,
+    "updated_by": 232,
+    "updated_on": 1647376472,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 11,
+    "custom_preconds": "GIVEN a user\r\nAND a live Apple TV+ game is available",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user views the game on the in-player scoreboard",
+        "expected": "THEN Watch on Apple(Apple is an icon)tv+ badge is present in the game tile\n\n"
+      },
+      {
+        "content": "WHEN the user views the game on the in-player scoreboard\nAND selects the game tile",
+        "expected": "THEN a modal displays with \"Watch on Apple TV+\" and \"This broadcast is available to watch only at tv.apple.com\"\n\n"
+      },
+      {
+        "content": "WHEN the user's device is set to Spanish\nAND the user views the game on the in-player scoreboard\nAND selects the game tile",
+        "expected": "THEN a modal displays with \"Watch on Apple TV+\" and \"Esta transmisión está disponible para ver solo en tv.apple.com\"\n\n"
+      },
+      {
+        "content": "WHEN the user repeats these steps in the opposing light/dark mode\nNOTE: The player is always forced to dark mode regardless of the app or device settings\n\n",
+        "expected": "THEN the outcome is the same\n\n"
+      }
+    ]
+  },
+  {
+    "id": 26685212,
+    "title": "Pregame Apple TV+ game-Watch View Games Tab",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1646928721,
+    "updated_by": 232,
+    "updated_on": 1646928721,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 12,
+    "custom_preconds": "GIVEN a user\r\nAND an Apple TV+ game is in pregame state with MEDIA_OFF",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user observes the game tile for the game on the Watch View Games Tab",
+        "expected": "THEN the \"Watch on Apple(Apple is an icon)tv+\" badge is present in the game tile"
+      },
+      {
+        "content": "WHEN the user clicks the game tile for the game on the Watch View Games Tab",
+        "expected": "THEN nothing happens"
+      }
+    ]
+  },
+  {
+    "id": 26685213,
+    "title": "Pregame Apple TV+ game- scoreboard",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1646929131,
+    "updated_by": 232,
+    "updated_on": 1646929131,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 13,
+    "custom_preconds": "GIVEN a user on the scoreboard\r\nAND an AppleTV+ game is available in the pregame state with MEDIA_OFF",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the scoreboard is in expanded mode\nAND the user observes the Apple TV+ game",
+        "expected": "THEN \"Watch on Apple TV+\" messaging is present above the scores section for that game\nAND a Preview button is visible below the scores section for that game"
+      },
+      {
+        "content": "WHEN the user clicks the preview button in expanded mode",
+        "expected": "THEN the app navigates to the Gameday page for the game"
+      },
+      {
+        "content": "WHEN the scoreboard is in compact mode\nAND the user observes the Apple TV+ game",
+        "expected": "THEN the \"Watch on Apple(Apple is an icon)tv+\" badge is present in the game tile"
+      },
+      {
+        "content": "WHEN the user clicks the game tile for the game in compact mode",
+        "expected": "THEN the app navigates to the Gameday page for the game"
+      }
+    ]
+  },
+  {
+    "id": 26685214,
+    "title": "Pregame Apple TV+ game- team tab",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "DISCO-243",
+    "created_by": 232,
+    "created_on": 1646930556,
+    "updated_by": 311,
+    "updated_on": 1646939501,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 14,
+    "custom_preconds": "GIVEN a user\r\nAND and Apple TV+ game is available in a preview state for the current day with MEDIA_OFF",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user views the game from the team page of one teams involved in the game",
+        "expected": "THEN \"Watch on Apple TV+\" messaging is present above the scores section for that game\nAND a Preview button is visible below the scores section for that game"
+      },
+      {
+        "content": "WHEN the user switches to the the opposing light/dark mode and returns to the team page",
+        "expected": "THEN \"Watch on Apple TV+\" messaging is present above the scores section for that game\nAND a Preview button is visible below the scores section for that game"
+      },
+      {
+        "content": "WHEN the user's device is set to Spanish",
+        "expected": "THEN \"Ver en Apple TV+\" messaging is present above the scores section for that game"
+      }
+    ]
+  },
+  {
+    "id": 26686486,
+    "title": "Preview Apple TV+ game- in-player scoreboard",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1646935930,
+    "updated_by": 232,
+    "updated_on": 1646935930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 15,
+    "custom_preconds": "GIVEN an entitled user \r\nAND an AppleTV+ game is available in the pregame state with MEDIA_OFF for the current day\r\nAND other games have live feeds available",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user opens another feed\nAND clicks the scores option",
+        "expected": "THEN the game should be visible on the in-player scoreboard\nAND the \"Watch on Apple(Apple is an icon)tv+\" badge is present on the game tile for the game"
+      },
+      {
+        "content": "WHEN the user clicks the game tile for the game",
+        "expected": "THEN nothing happens"
+      }
+    ]
+  },
+  {
+    "id": 28004639,
+    "title": "Archived Peacock + game-  Scoreboard & Watch View Game Tab",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1650901955,
+    "updated_by": 232,
+    "updated_on": 1651088983,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 16,
+    "custom_preconds": "GIVEN a user\r\nAND a Peacock game that is archived is available\r\n\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user sees the game on the scores page in expanded mode",
+        "expected": "THEN no Peacock text is present in the game on the schedule\nAND the game appears as a normal archived game"
+      },
+      {
+        "content": "WHEN the user sees the game on the scores page in compact mode",
+        "expected": "THEN no Peacock text is present in the game on the game tile\nAND the game appears as a normal archived game"
+      },
+      {
+        "content": "WHEN the user sees the game on the Watch View Games Tab",
+        "expected": "THEN no Peacock text is present in the game on the game tile\nAND the game appears as a normal archived game\n"
+      },
+      {
+        "content": "WHEN the user sees the game on the Watch View Games Tab\nAND the user clicks the game",
+        "expected": "THEN the app responds to the click like other archived games (plays for entitled, messages for non-entitled)"
+      },
+      {
+        "content": "WHEN the user sees the game in the in-game scoreboard",
+        "expected": "THEN no Peacock text is present in the game on the game tile\nAND the game appears as a normal archived game\n"
+      }
+    ]
+  },
+  {
+    "id": 28007910,
+    "title": "Archived Peacock game- in-player scoreboard",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1650902012,
+    "updated_by": 232,
+    "updated_on": 1651091293,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 17,
+    "custom_preconds": "GIVEN a user\r\nAND a Peacock game is archived on today's date and other games are currently live\r\n\r\nNOTE: This is tricky to simulate because it requires a live game in addition to the simulated archived Peacock game",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user sees the game in the in-game scoreboard(while playing one of the non-Peacock games\nAND the user observes the Peacock game card",
+        "expected": "THEN Watch on Peacock badge is NOT present in the game tile"
+      },
+      {
+        "content": "WHEN the user sees the game in the in-game scoreboard(while playing one of the non-Peacock games)\nAND the user clicks the Peacock game card",
+        "expected": "THEN the app responds to the click like other archived games (plays for entitled, messages for non-entitled)"
+      }
+    ]
+  },
+  {
+    "id": 28020928,
+    "title": "Archived Peacock TV+ game- teams tab",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "DISCO-243",
+    "created_by": 232,
+    "created_on": 1650902535,
+    "updated_by": 232,
+    "updated_on": 1651091507,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 18,
+    "custom_preconds": "GIVEN a user\r\nAND an archived Peacock game is available on today's date",
+    "custom_steps": "WHEN the user sees the game on the team page",
+    "custom_expected": " THEN no Peacock text is present in the game on the schedule\r\nAND the game appears as a normal archived game",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 28065503,
+    "title": "Live Peacock game- team tab",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1650918768,
+    "updated_by": 232,
+    "updated_on": 1651083502,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 19,
+    "custom_preconds": "GIVEN a user\r\nAND a live Peacock game is available",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user sees the game on the team tab",
+        "expected": "THEN the Peacock text should be available on the schedule\nAND an Peacock button will display below"
+      },
+      {
+        "content": "WHEN the user sees the game on the team tab\nAND the user clicks the Peacock button\nAND the user is located in a blacked out country",
+        "expected": "THEN the app should redirect to the player\nAND \"Watch on Peacock This broadcast is available to watch only at peacocktv.com\" modal should appear over the player"
+      },
+      {
+        "content": "WHEN the user sees the game on the team tab\nAND the user clicks the Peacock button\nAND the user is located in a non-blacked out country",
+        "expected": "THEN the feed should play"
+      },
+      {
+        "content": "WHEN the user's device is set to Spanish\nAND the user sees the game on the team tab\n",
+        "expected": "THEN a bar will be displayed with \"Ver en Peacock\" at the top of the game card"
+      },
+      {
+        "content": "WHEN the user clicks the Peacock button\nAND the user is located in a blacked out country",
+        "expected": "THEN the app should redirect to the player\nAND a modal should be displayed over the player with the following messaging: \"Ver en Peacock\" and \"Esta transmisión está disponible para ver solo en peacocktv.com\""
+      },
+      {
+        "content": "WHEN the user repeats these steps in the opposing light/dark mode",
+        "expected": "THEN the outcome is the same but implementing the other theme"
+      }
+    ]
+  },
+  {
+    "id": 28065504,
+    "title": "Live Peacock game- scoreboard",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1650918814,
+    "updated_by": 232,
+    "updated_on": 1651084600,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 20,
+    "custom_preconds": "GIVEN a user\r\nAND a Peacock game is live",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user views the game on the scoreboard in expanded mode",
+        "expected": "THEN \"Watch on Peacock\" text is visible in the game card\nAND a Peacock button is available under the scores"
+      },
+      {
+        "content": "WHEN the user views the game on the scoreboard in expanded mode\nAND the user clicks the Peacock button",
+        "expected": "THEN the app redirects to the player\nAND a modal displays with \"Watch on Peacock\" and \"This broadcast is available to watch only at peacocktv.com\""
+      },
+      {
+        "content": "WHEN the user's device is set to Spanish\nAND the user views the game on the scoreboard in expanded mode\nAND the user clicks the Peacock button",
+        "expected": "THEN the app redirects to the player\nAND a modal displays with \"Ver en Peacock\" and \"Esta transmisión está disponible para ver solo en peacocotv.com\""
+      },
+      {
+        "content": "WHEN the user views the game on the scoreboard in compact mode",
+        "expected": "THEN the \"Watch on peacock\" badge is present in the game tile\n\n"
+      },
+      {
+        "content": "WHEN the user clicks the game tile for the game on the scoreboard in compact mode",
+        "expected": "THEN the app redirects to the Gameday page for the game"
+      },
+      {
+        "content": "WHEN the user repeats these steps in the opposing light/dark mode",
+        "expected": "THEN the outcome is the same"
+      }
+    ]
+  },
+  {
+    "id": 28065505,
+    "title": "Live Peacock game- Watch View Games Tab",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1650918839,
+    "updated_by": 232,
+    "updated_on": 1651088528,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 21,
+    "custom_preconds": "GIVEN a user\r\nAND a Peacock game is live",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user views the game on the Watch View Games Tab",
+        "expected": "THEN Watch on peacock badge is present in the game tile"
+      },
+      {
+        "content": "WHEN the user views the game on the Watch View Games Tab\nAND selects the game tile",
+        "expected": "THEN the app redirects to the player\nAND a modal displays with \"Watch on Peacock\" and \"This broadcast is available to watch only at peacocktv.com\""
+      },
+      {
+        "content": "WHEN the user's device is set to Spanish\nAND the user views the game on the Watch View Games Tab\nAND selects the game tile",
+        "expected": "THEN the app redirects to the player\nAND a modal displays with \"Ver en Peacock\" and \"Esta transmisión está disponible para ver solo en peacocktv.com\"\n\n"
+      },
+      {
+        "content": "WHEN the user repeats these steps in the opposing light/dark mode",
+        "expected": "THEN the outcome is the same"
+      }
+    ]
+  },
+  {
+    "id": 28065506,
+    "title": "Live Peacock game- in-player scoreboard",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1650918950,
+    "updated_by": 232,
+    "updated_on": 1651088709,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 23,
+    "custom_preconds": "GIVEN a user\r\nAND a live Peacock game is available",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user views the game on the in-player scoreboard",
+        "expected": "THEN Watch on peacock badge is present in the game tile\n\n"
+      },
+      {
+        "content": "WHEN the user views the game on the in-player scoreboard\nAND selects the game tile",
+        "expected": "THEN a modal displays with \"Watch on Peacock\" and \"This broadcast is available to watch only at peacocktv.com\"\n\n"
+      },
+      {
+        "content": "WHEN the user's device is set to Spanish\nAND the user views the game on the in-player scoreboard\nAND selects the game tile",
+        "expected": "THEN a modal displays with \"Watch on Peacock\" and \"Esta transmisión está disponible para ver solo en peacocktv.com\"\n\n"
+      },
+      {
+        "content": "WHEN the user repeats these steps in the opposing light/dark mode\nNOTE: The player is always forced to dark mode regardless of the app or device settings\n\n",
+        "expected": "THEN the outcome is the same\n\n"
+      }
+    ]
+  },
+  {
+    "id": 28065507,
+    "title": "Pregame Peacock game-Watch View Games Tab",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1650919010,
+    "updated_by": 232,
+    "updated_on": 1651072023,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 24,
+    "custom_preconds": "GIVEN a user\r\nAND a Peacock game is in pregame state with MEDIA_OFF",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user observes the game tile for the game on the Watch View Games Tab",
+        "expected": "THEN the \"Watch on peacock\" badge is present in the game tile"
+      },
+      {
+        "content": "WHEN the user clicks the game tile for the game on the Watch View Games Tab",
+        "expected": "THEN nothing happens"
+      }
+    ]
+  },
+  {
+    "id": 28065508,
+    "title": "Pregame Peacock game- scoreboard",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1650919067,
+    "updated_by": 232,
+    "updated_on": 1651072228,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 25,
+    "custom_preconds": "GIVEN a user on the scoreboard\r\nAND a Peacock game is available in the pregame state with MEDIA_OFF",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the scoreboard is in expanded mode\nAND the user observes the Peacock game",
+        "expected": "THEN \"Watch on Peacock\" messaging is present above the scores section for that game\nAND a Preview button is visible below the scores section for that game"
+      },
+      {
+        "content": "WHEN the user clicks the preview button in expanded mode",
+        "expected": "THEN the app navigates to the Gameday page for the game"
+      },
+      {
+        "content": "WHEN the scoreboard is in compact mode\nAND the user observes the Peacock game",
+        "expected": "THEN the \"Watch on peacock\" badge is present in the game tile"
+      },
+      {
+        "content": "WHEN the user clicks the game tile for the game in compact mode",
+        "expected": "THEN the app navigates to the Gameday page for the game"
+      }
+    ]
+  },
+  {
+    "id": 28065509,
+    "title": "Pregame Peacock game- team tab",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "DISCO-243",
+    "created_by": 232,
+    "created_on": 1650919102,
+    "updated_by": 232,
+    "updated_on": 1651072918,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 26,
+    "custom_preconds": "GIVEN a user\r\nAND and a Peacock game is available in a preview state for the current day with MEDIA_OFF",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user views the game from the team page of one teams involved in the game",
+        "expected": "THEN \"Watch on Peacock\" messaging is present above the scores section for that game\nAND a Preview button is visible below the scores section for that game"
+      },
+      {
+        "content": "WHEN the user switches to the the opposing light/dark mode and returns to the team page",
+        "expected": "THEN \"Watch on Peacock\" messaging is present above the scores section for that game\nAND a Preview button is visible below the scores section for that game"
+      },
+      {
+        "content": "WHEN the user's device is set to Spanish",
+        "expected": "THEN \"Ver en Peacock\" messaging is present above the scores section for that game"
+      }
+    ]
+  },
+  {
+    "id": 28065510,
+    "title": "Preview Peacock game- in-player scoreboard",
+    "section_id": 1391594,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1650919136,
+    "updated_by": 232,
+    "updated_on": 1650919203,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 486438,
+    "display_order": 27,
+    "custom_preconds": "GIVEN an entitled user \r\nAND a Peacock game is available in the pregame state with MEDIA_OFF for the current day\r\nAND other games have live feeds available",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user opens another feed\nAND clicks the scores option",
+        "expected": "THEN the game should be visible on the in-player scoreboard\nAND the \"Watch on Peacock\" badge is present on the game tile for the game"
+      },
+      {
+        "content": "WHEN the user clicks the game tile for the game",
+        "expected": "THEN nothing happens"
+      }
+    ]
+  }
+]

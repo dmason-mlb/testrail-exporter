@@ -1,0 +1,11 @@
+{
+  "id": 702848,
+  "name": "Remove Favorite Team Tint Color Logic",
+  "description": "Reference:  https://baseball.atlassian.net/browse/CATCH-877\r\n\r\nThere are several Accessibility concerns around the existing Favorite Team tint color applied to the Top/Bottom Navigation bars if a user has a Favorite Team set, so Design would like this logic removed so that the Navigation Bar only supports Light/Dark mode color themes.\r\n\r\nAcceptance Criteria\r\nExisting Favorite Team tint color logic for the Top/Bottom Nav bars should be removed\r\n\r\nNavigation bars only support Light/Dark mode color themes",
+  "project_id": 205,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/702848"
+}

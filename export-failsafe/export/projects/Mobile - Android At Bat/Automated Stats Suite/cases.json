@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1277358,
+    "title": "When the user opens drawer And navigates to Stats view Then the correct URL is loaded",
+    "section_id": 154519,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 203,
+    "created_on": 1569600408,
+    "updated_by": 203,
+    "updated_on": 1569600408,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 21357,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1684050,
+    "suite_id": 611354,
+    "name": "Targeted Promotions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1684051,
+    "suite_id": 611354,
+    "name": "Promotions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1684052,
+    "suite_id": 611354,
+    "name": "User association for promotions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1684053,
+    "suite_id": 611354,
+    "name": "Search for promotions in Events and Packages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1684054,
+    "suite_id": 611354,
+    "name": "Promotion Types",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1684055,
+    "suite_id": 611354,
+    "name": "Promotion Administration",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1684056,
+    "suite_id": 611354,
+    "name": "Promotions and Coupons",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1684057,
+    "suite_id": 611354,
+    "name": "Different coupon code by event/ pkg",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1684058,
+    "suite_id": 611354,
+    "name": "Promotion Exclusion",
+    "description": "PV-26458- Promotion Exclusion",
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  }
+]

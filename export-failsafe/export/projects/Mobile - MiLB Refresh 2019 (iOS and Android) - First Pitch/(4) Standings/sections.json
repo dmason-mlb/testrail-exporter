@@ -1,0 +1,20 @@
+[
+  {
+    "id": 150240,
+    "suite_id": 20677,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 150256,
+    "suite_id": 20677,
+    "name": "Class + League Picker",
+    "description": null,
+    "parent_id": 150240,
+    "display_order": 2,
+    "depth": 1
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "id": 7704,
+    "suite_id": 1052,
+    "name": "International Prospect Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 7856,
+    "suite_id": 1052,
+    "name": "Scout Clipboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 7707,
+    "suite_id": 1052,
+    "name": "International Suspect Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 7781,
+    "suite_id": 1052,
+    "name": "International Player Reports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 7790,
+    "suite_id": 1052,
+    "name": "Daily Reports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 7807,
+    "suite_id": 1052,
+    "name": "Trainer/Agent",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 7808,
+    "suite_id": 1052,
+    "name": "MLSB Reg Match",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 7857,
+    "suite_id": 1052,
+    "name": "Scouting admin clipboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 12059,
+    "suite_id": 1052,
+    "name": "International Player Update",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 155027,
+    "suite_id": 21482,
+    "name": "MLB MiniSB",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 155028,
+    "suite_id": 21482,
+    "name": "MLB Scores",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 155029,
+    "suite_id": 21482,
+    "name": "MLB Standings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 155030,
+    "suite_id": 21482,
+    "name": "MLB Club MIG",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

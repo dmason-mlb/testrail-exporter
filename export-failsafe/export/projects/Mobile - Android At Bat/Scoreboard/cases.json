@@ -1,0 +1,739 @@
+[
+  {
+    "id": 48777,
+    "title": "Scoreboard General",
+    "section_id": 7025,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1421080510,
+    "updated_by": 84,
+    "updated_on": 1521588595,
+    "estimate": null,
+    "estimate_forecast": "1h 27m 54s",
+    "suite_id": 922,
+    "display_order": 1,
+    "custom_preconds": "**All cases should be run on both Handset and Tablet unless specifically noted.**\r\nCases for Handset only are indicated with **[H]**\r\nCases for Tablet only are indicated with **[T]**\r\n\r\nScoreboard Data File - Comes from this file adjusted for each year and date - \r\nhttps://statsapi.mlb.com/api/v1/schedule?hydrate=decisions,probablePitcher,broadcasts(all),game(content(highlights(live),limit=5,media(epg)),tickets),linescore(matchup,runners,positions),stats,person,team,flags,liveLookin,gameId,venue(location)&sportId=1,51&date=07/07/2018\r\n\r\nGame Type - Code defining which season or round game belongs to. (Exhibition [E], Spring Training [S], Regular Season [R], Postseason [D, C, W] etc.) \r\nGame State/Game Status - Code defining whether a game is scheduled, in progress, or completed with varying in between states. \r\nRefresh Rate - App setting, dictates how often the scoreboard polls the Scoreboard Data File to refresh the Scoreboard data.",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user set the devices timezone to Eastern (ET)\nand then sets the devices timezone to Central (CT)\nand then set the devices timezone to Mountain (MT)\nand then sets the devices timezone to Pacific (PT)",
+        "expected": "Then the scheduled games on the scoreboard should appear with game times per the device's selected timezone"
+      },
+      {
+        "content": "When a user views the order of the games on the Scoreboard and there are some regular season games, spring training, exhibition games displayed and the user doesn't have a Favorite Team set",
+        "expected": "Then the games will be sorted by Regular Season first followed by Spring Training & Exhibition based games"
+      },
+      {
+        "content": "When there are games in different Game States",
+        "expected": "Then the games will be sorted within their \"Game type\" grouping according to their game state\nGames that are \"In Progress\" will be at the top of each grouping\nGames that have not yet begun will be next in each grouping\nGames that have finished will be ordered next in each grouping\nGames that have a varying state of postponement (PPD, SUSP etc.) will be last in each grouping"
+      },
+      {
+        "content": "When the user has a favorite team set",
+        "expected": "Then the favorite team will always appear at the top of the of the scoreboard regardless of Game Type\nAnd the favorite team will appear at the top of the scoreboard regardless of Game State\nAnd the favorite team will have a Star icon next to their name to indicate that they are a user's favorite team"
+      },
+      {
+        "content": "When the user has multiple favorite teams set",
+        "expected": "Then the favorite teams will appear on the scoreboard in the order the user has defined in Favorite Team Settings"
+      },
+      {
+        "content": "When the user views the game cells on the scoreboard",
+        "expected": "Then the Team Names should appear correctly\nAnd the Team Logos should appear correctly"
+      },
+      {
+        "content": "When the user views the game information for a game in a Preview state on the scoreboard\n",
+        "expected": "Then the game time should appear formatted correctly\nAnd the Team records should appear correctly\nAnd the pitcher matchup information should appear if available in the data \nAnd if the pitcher matchup information is not available for one or both teams then \"TBD\" should be displayed\n\nPitcher information should appear as follows:\nAWY: Pitcher (W-L, ERA) HOM: Pitcher (W-L, ERA)"
+      },
+      {
+        "content": "When the user views the game information for a game in an In Progress state on the scoreboard",
+        "expected": "Then the Game State should appear formatted correctly\nAnd the pitcher/batter matchup information should appear correctly and have the correct data\n\nInformation should be formatted as follows:\nP: <pitchername> (W-L, ERA) AB: <battername> (<hits>-<at bats>, <season avg>)\n"
+      },
+      {
+        "content": "When the user views the game information for a completed game",
+        "expected": "Then the Game state should appear correctly\nAnd if the game ended in more or fewer than 9 innings, the amount of innings should be noted\nAnd if the game was postponed or suspended, the Game State and reason should be displayed on the game cell\nAnd the final pitching information should appear formatted correctly and have the correct data (Win, Loss, Save)\n"
+      },
+      {
+        "content": "When a game was completed in extra innings or in fewer than 9 innings",
+        "expected": "Then the Scoreboard should show \"Final/<# OF INNINGS>"
+      },
+      {
+        "content": "When an MLB.TV Game of the Day or Facebook Game of the Week is set up [H]",
+        "expected": "Then the text label should appear just above the game cell (Clearly distinguishable) "
+      },
+      {
+        "content": "When the user views the scoreboard when the device time is set to a time earlier than 10AM ET",
+        "expected": "Then the previous day's set of games should be displayed"
+      },
+      {
+        "content": "When the user views the scoreboard when the device time is 10AM ET or later",
+        "expected": "Then the current day's set of games should be displayed"
+      },
+      {
+        "content": "When there is a game time that is set to 3:33 AM in the Scoreboard Data File.",
+        "expected": "Then the game time will be displayed on the scoreboard with a start time of TBD"
+      },
+      {
+        "content": "When the user attempts to navigate to a date outside the current season",
+        "expected": "Then the user should not be able to find a way to navigate to a previous or future season\n(Assumes the date range is restricted to one season)"
+      },
+      {
+        "content": "When there is a live game in progress and the user views the scoreboard",
+        "expected": "Then the game data should update according to the Refresh Rate set in the app settings\n\nTest 15, 30, 60 seconds"
+      },
+      {
+        "content": "When the Scoreboard Data File contains a game with a player or players on base",
+        "expected": "Then the Scoreboard should show the basepad occupation correctly, highlighting the base that is occupied\n\nAnd the basepads should update throughout in the inning and game according to the Refresh Rate"
+      },
+      {
+        "content": "When the Inning status changes for a given game in progress",
+        "expected": "Then the user should see the inning status reflected on the Scoreboard\nThe user should see the following transitions\n\nTop to Mid\nMid to Bottom\nBottom to End\nEnd to Top "
+      },
+      {
+        "content": "When the user taps on a game cell on the scoreboard",
+        "expected": "Then the user should be taken into Gameday for the selected game\n"
+      },
+      {
+        "content": "When the user returns to the scoreboard from another section of the app\nOr the user brings the app back to the foreground after it has been backgrounded",
+        "expected": "Then the scoreboard should immediately refresh\nAnd the scoreboard should subsequently refresh according to the Refresh Rate set in the app settings"
+      },
+      {
+        "content": "When the user loses their data connection (or forces the device into airplane mode)",
+        "expected": "Then when the scoreboard data is refreshed, the user should see an error on the scoreboard indicating that data could not be loaded (\"Unable to Load Data\")\nAnd there should be a refresh button"
+      },
+      {
+        "content": "When the user attempts to manually refresh data after they have received the Unable to Load Data message",
+        "expected": "If connectivity has been restored: The user should see data loading correctly\n\nIf connectivity has NOT been restored: The user should see the same \"Unable to Load Data\" message again"
+      },
+      {
+        "content": "When the user navigates to a date on the schedule with no games scheduled (usually around All-Star Break)",
+        "expected": "Then the scoreboard should display a message that says \"No Games Scheduled\"\nAnd the app should not display an error or crash"
+      },
+      {
+        "content": "When the user rotates the device from portrait to landscape and vice versa while on the scoreboard page",
+        "expected": "Then the layout of the scoreboard and app will change according to the device orientation\nAnd the all elements in the layout will remain readable and visible according to the new orientation\nAnd the user should remain on the date they were on before the device was rotated"
+      },
+      {
+        "content": "When a Lite user scrolls down the Scoreboard",
+        "expected": "Then the user will see a 320x150 inline ad served by DFP, slotted after every third game\n(check Charles log for pubads.g.doubleclick.net calls)"
+      }
+    ]
+  },
+  {
+    "id": 708210,
+    "title": "Expanded Scoreboard [H]",
+    "section_id": 7025,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1481664995,
+    "updated_by": 84,
+    "updated_on": 1520610393,
+    "estimate": null,
+    "estimate_forecast": "26m 18s",
+    "suite_id": 922,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user navigates to the Scoreboard",
+        "expected": "Then they will see the Scoreboard game cells in a collapsed state\n"
+      },
+      {
+        "content": "When the game cell is in a collapsed state",
+        "expected": "Then each game cell will have a bottom row for displaying pitching probables/current at bat\nand there will be an arrow pointing down at the right end of this row"
+      },
+      {
+        "content": "When a user taps on the arrow pointing down",
+        "expected": "Then the game cell will expand\nand the arrow will now be pointing up"
+      },
+      {
+        "content": "When the game cell of a game in Preview expands\nand that game does not have an active Audio or Video Feed attached",
+        "expected": "Then the user will see the following appear under the game cell:\n\nprobable pitchers for each team (if known) \nalong with their headshots and stats (LHP/RHP, jersey number, W-L, ERA)\nballpark name & location\nPreview and Tickets links"
+      },
+      {
+        "content": "When a user taps on the Preview link of a game in Preview",
+        "expected": "Then the user will be taken to the Gameday Preview page for that game"
+      },
+      {
+        "content": "When a user taps on the Tickets link of a game in Preview",
+        "expected": "Then the user will be taken to a webview where they can purchase tickets for that game"
+      },
+      {
+        "content": "When the game cell of a game in Warmups expands\nand that game has an active Audio or Video Feed attached",
+        "expected": "Then the user will see the following:\n\nlinks for MLB.TV, Gameday, Box, Plays, Audio"
+      },
+      {
+        "content": "When a user taps on any of the Gameday links while a game is in progress (Gameday, Box, Plays)",
+        "expected": "Then the user will be taken to that specific tab in Gameday (confirm for all 3)"
+      },
+      {
+        "content": "When the game cell of an in-progress game expands",
+        "expected": "Then the user will see the following:\n(confirm for both lite & paid users)\n\nlinescore\nvideo highlight carousel (if videos are available) - make sure Lite users are NOT gated from this\nlinks for MLB.TV, Gameday, Box, Plays, Audio"
+      },
+      {
+        "content": "When the game cell of a game with video highlights expands",
+        "expected": "Then the user will see a video carousel containing up to 5 videos\nand each video will have a play button, headline, duration, and date"
+      },
+      {
+        "content": "When a user taps to play one of the videos in the video carousel",
+        "expected": "Then the video will start to play"
+      },
+      {
+        "content": "When a LITE user taps to play one of the videos in the video carousel",
+        "expected": "Then the user will see a pre-roll ad and then the video will start to play right after"
+      },
+      {
+        "content": "When there are Review and Statcast video highlights available in the video carousel",
+        "expected": "Then the video thumbnails will be labeled as such with a flag at the bottom of the image"
+      },
+      {
+        "content": "When the game cell of a final game expands",
+        "expected": "Then the user will see the following:\n\nfull linescore\nvideo highlight carousel\nlinks for MLB.TV (once archives are available), Wrap, Box, Plays, Video"
+      },
+      {
+        "content": "When a user taps on any of the Gameday links of a Final game (Wrap, Box, Plays, Video)",
+        "expected": "Then the user will be taken to that specific tab in Gameday (confirm for all 4)"
+      },
+      {
+        "content": "When the game cell of a Final game expands after the Condensed Game has been posted",
+        "expected": "Then the user will not see the Condensed Game available in the video carousel"
+      },
+      {
+        "content": "When the game cell of a Final game that ended in less than 9 innings expands",
+        "expected": "Then the linescore will include X's in the inning columns that weren't played"
+      },
+      {
+        "content": "When a user taps on the arrow pointing up while the game cell is in an expanded state",
+        "expected": "Then the game cell will collapse\nand the arrow will now be pointing down"
+      }
+    ]
+  },
+  {
+    "id": 48784,
+    "title": "Scoreboard Navigation",
+    "section_id": 7025,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1421094572,
+    "updated_by": 84,
+    "updated_on": 1516636895,
+    "estimate": null,
+    "estimate_forecast": "14m 5s",
+    "suite_id": 922,
+    "display_order": 4,
+    "custom_preconds": "Sections and cases for Handset only are indicated with **[H]**\r\n\r\nDate Range - server side file that sets the allowed date range within which the user can navigate on the scoreboard. (Differs for each release version of the app but can be found here: https://atbatappconfig.mlb.com/android/7.0.0/ranges.json",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the forward arrow once [H]",
+        "expected": "Then the Scoreboard should move forward by one day"
+      },
+      {
+        "content": "When the user taps the back arrow once [H]",
+        "expected": "Then the Scoreboard should move backward by one day"
+      },
+      {
+        "content": "When the user taps and holds the forward arrow [H]",
+        "expected": "Then the Scoreboard should move forward one day at a time and after a few seconds the speed of the forward navigation should increase until the user lets go of the arrow. \nThen the user should be left on the date they expect to be left on. "
+      },
+      {
+        "content": "When the user taps and holds the back arrow [H]",
+        "expected": "Then the Scoreboard should move backward one day at a time and after a few seconds the speed of the backward navigation should increase until the user lets go of the arrow. \nThen the user should be left on the date they expect to be left on. "
+      },
+      {
+        "content": "When the user taps on the date at the top of the Scoreboard page",
+        "expected": "Then the Calendar Date Picker dialog should appear showing the current month\nand arrows to the left and right of the month\nand today's date highlighted\nand each date will have the number of games scheduled for that day\nand there will be two options underneath the calendar: \"Cancel\" \"Go To Today\""
+      },
+      {
+        "content": "When the user navigates to a date by tapping it from the calendar",
+        "expected": "Then the Calendar Date Picker should close and the scoreboard should load the date the user selected. "
+      },
+      {
+        "content": "When the user has navigated to another date\nAnd the user launches the Calendar Date Picker\nAnd the user taps the 'Today' button",
+        "expected": "Then the user should be taken to today's date\nAnd the games on the scoreboard for today's date should load. "
+      },
+      {
+        "content": "When the user attempts to select a date outside the date range using the date picker. ",
+        "expected": "Then the user should not able to select a date from the date picker outside of the allowed date range.\nAnd the user should be taken to the First or Last date allowed in the date range. "
+      },
+      {
+        "content": "When the user attempts to use the back arrow from the first date available in the date range [H]",
+        "expected": "Then the back arrow should not appear on the first date in the date range. "
+      },
+      {
+        "content": "When the user attempts to use the forward arrow from the last date available in the date range [H]",
+        "expected": "Then the forward arrow should not appear on the last date in the date range. "
+      }
+    ]
+  },
+  {
+    "id": 48786,
+    "title": "Game States",
+    "section_id": 7025,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1421096883,
+    "updated_by": 84,
+    "updated_on": 1486692947,
+    "estimate": null,
+    "estimate_forecast": "11m 22s",
+    "suite_id": 922,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Verify a game in Final State",
+        "expected": "The pitching information should appear immediately below the game cell\nAnd the pitching information will be in the format of - W: <pitchername> (W-L, ERA) L: <pitchername> (W-L, ERA) S: <pitchername> (<saves>)"
+      },
+      {
+        "content": "Verify a game completed in fewer than 9 innings",
+        "expected": "Game should appear as \"Final/<INNINGS>\" "
+      },
+      {
+        "content": "Verify a game completed in extra innings",
+        "expected": "Game should appear as \"Final/<INNINGS>\" "
+      },
+      {
+        "content": "Verify a game completed in 9 full innings\n",
+        "expected": "Game should appear as \"Final\""
+      },
+      {
+        "content": "Verify a game completed in 9 innings (home team did not bat in bottom of 9th inning)",
+        "expected": "Game should appear as \"Final\""
+      },
+      {
+        "content": "Verify a game in Warmups",
+        "expected": "The game time should be replaced by text that says \"Warmups\"\nAnd the pitching matchup information under the game cell should be replaced by the Pitcher/Batter Matchup\nAnd the basepads should appear as if it were a game in progress"
+      },
+      {
+        "content": "Verify a game in pre-game Ceremony status",
+        "expected": "Game should appear with Scheduled game time \nand the text \"Ceremony\" should appear at the top of the game cell"
+      },
+      {
+        "content": "Verify a game in in-game Ceremony delay status ",
+        "expected": "Inning status should be shown\nAnd the text \"Ceremony\" should appear at the top of the game cell"
+      },
+      {
+        "content": "Verify a game in a Manager Challenge status",
+        "expected": "The inning status should be shown\nAnd text indicating the challenging team code and \"Chal\" should appear at the top of the game cell"
+      },
+      {
+        "content": "Verify a game in an Umpire Review status",
+        "expected": "The inning status should be shown\nAnd the text \"Umpire Review\" should appear at the top of the game cell"
+      },
+      {
+        "content": "Verify a game in a delayed start",
+        "expected": "The scheduled game time should be displayed\nThe word \"Delayed\" should be displayed at the top of the game cell"
+      },
+      {
+        "content": "Verify a game in a weather or other delay ",
+        "expected": "The inning status should be shown\nAnd the text indicating the delay should appear at the top of the game cell"
+      },
+      {
+        "content": "Verify a game that has been Postponed",
+        "expected": "Then the game cell should NOT reflect the inning state anywhere\nAnd the game cell should show the game status as \"Postponed\"\nAnd the Pitching Matchup and Pitcher Batter Matchup information should not appear under the cell\nAnd the basepads should not be visible\nAnd the reason for the postponement should be displayed at the top of the game cell"
+      },
+      {
+        "content": "When the user taps on a the game cell for a game that has been postponed",
+        "expected": "Then the user should be taken to the Gameday Webview for that game\nAnd the Postponement status and reason for the postponement should appear"
+      },
+      {
+        "content": "Verify a game that has been Suspended",
+        "expected": "Then the text \"Susp\" should appear with the inning status\nex: \"Susp/4\""
+      },
+      {
+        "content": "Verify a game that has been Suspended, and that has the resume date available",
+        "expected": "Then the inning status should appear \nand the text \"Suspended: Resumes [date]\" should be displayed at the top of the game cell"
+      },
+      {
+        "content": "Verify the Resume date for a suspended game",
+        "expected": "Then the scheduled resumption time should appear\nand the text \"Resumed from (date)\" should appear at the top of the game cell\nand the Score should be shown on the scoreboard\nand the Inning status should NOT appear on the scoreboard\n"
+      },
+      {
+        "content": "Verify a game that has been forfeited",
+        "expected": "The inning status should NOT appear on the Scoreboard\nand the game status should show the word \"Forfeit\""
+      }
+    ]
+  },
+  {
+    "id": 58889,
+    "title": "No-Hitter/Perfect Game indicator",
+    "section_id": 7025,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1438699599,
+    "updated_by": 166,
+    "updated_on": 1553223717,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 922,
+    "display_order": 6,
+    "custom_preconds": "UI/UX Rules: https://wiki.mlbam.com/pages/viewpage.action?pageId=55312418\r\n\r\nScreen: https://jira.mlbam.com/browse/ANDROID-4244\r\n\r\nA perfect game is a game in which a pitcher (or combination of pitchers) pitches a victory that lasts a minimum of nine innings in which no opposing player reaches base.  A no-hitter is a game in which a team was not able to record a single hit. \r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a game is in progress after the 6th inning, if no batter has reached the base.\n\n",
+        "expected": "Then there will be a Perfect Game indicator at the top of the game cell"
+      },
+      {
+        "content": "When a game is in a suspended state\n",
+        "expected": "Then there will be a Perfect Game indicator at the top of the game cell"
+      },
+      {
+        "content": "When a game is in extra innings",
+        "expected": "Then there will be a Perfect Game indicator at the top of the game cell"
+      },
+      {
+        "content": "When a game is final\n",
+        "expected": "Then there will be a Perfect Game indicator at the top of the game cell"
+      },
+      {
+        "content": "When a game is a Perfect Game",
+        "expected": "Then that game cell should continue to follow standard sorting rules (see General Scoreboard for more details, but should respect Favorite Team order and active over final)"
+      },
+      {
+        "content": "When a game is in progress\nand the flag on master_scoreboard changes from \n(is_perfect_game=\"Y\" and is_no_hitter=\"N\") to \n(is_perfect_game=\"N\" and is_no_hitter=\"Y\")\nand the user is on Scoreboard\n\ne.g. Pitcher loses perfect game but is now pitching a no-hitter",
+        "expected": "Then the Perfect Game indicator changes to a No-Hitter indicator on the Scoreboard at the top of the game cell when the Scoreboard refreshes"
+      },
+      {
+        "content": "When a game is in progress\nand the flag on master_scoreboard changes from \n(is_perfect_game=\"Y\" and is_no_hitter=\"N\") to \n(is_perfect_game=\"N\" and is_no_hitter=\"N\")\nand the user is on Scoreboard\n\ne.g. Pitcher loses perfect game and no-hitter simultaneously",
+        "expected": "Then the Perfect Game indicator is removed from the Scoreboard when the Scoreboard refreshes, user will NOT see the indicator downgraded to No-Hitter"
+      },
+      {
+        "content": "When a game is in progress\nand the flag on master_scoreboard changes from \n(is_perfect_game=\"N\" and is_no_hitter=\"Y\") to \n(is_perfect_game=\"N\" and is_no_hitter=\"N\")\nand the user is on Scoreboard\n\ne.g. Pitcher loses no-hitter",
+        "expected": "Then the No-Hitter indicator is removed from the Scoreboard when the Scoreboard refreshes"
+      },
+      {
+        "content": "When the user taps on the Perfect Game or No-hitter indicator",
+        "expected": "Then nothing will happen and the indicator is for informational/visual purposes only"
+      },
+      {
+        "content": "When the device is set to Spanish\nand the flag on master_scoreboard is set for a Perfect Game (or No-Hitter)\nand the indicator is on the Scoreboard",
+        "expected": "Then the text in the indicator text will display in Spanish\n\nNo-Hitter - Sin hit\nPerfect Game - Juego perfecto"
+      }
+    ]
+  },
+  {
+    "id": 723331,
+    "title": "MLB.TV Game of the Day/Facebook Game of the Week",
+    "section_id": 7025,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1481834476,
+    "updated_by": 166,
+    "updated_on": 1548115844,
+    "estimate": null,
+    "estimate_forecast": "2m 44s",
+    "suite_id": 922,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navigates to the Scoreboard\nand there is a Free Game of the Day scheduled",
+        "expected": "Then there will be a \"MLB.TV Game of the Day\" label at the top of the particular game's cell"
+      },
+      {
+        "content": "When there is a Free Game or Facebook Game scheduled on the Scoreboard\nand that game has any of the following game state labels at the top of the game cell\n(No hitter, Perfect game, Manager Challenge, Ump Review, Delay, Ceremony)",
+        "expected": "Then the Free Game/Facebook label will appear right on top of the game state label"
+      }
+    ]
+  },
+  {
+    "id": 896712,
+    "title": "Initial Entry",
+    "section_id": 145026,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1489430892,
+    "updated_by": 84,
+    "updated_on": 1508435817,
+    "estimate": null,
+    "estimate_forecast": "7s",
+    "suite_id": 922,
+    "display_order": 1,
+    "custom_preconds": "Given user has At Bat installed",
+    "custom_steps": "When the user navigates to the Scoreboard for the first time",
+    "custom_expected": "Then Scoreboard should refresh",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 896713,
+    "title": "Switching Tabs",
+    "section_id": 145026,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1489430900,
+    "updated_by": 84,
+    "updated_on": 1508435817,
+    "estimate": null,
+    "estimate_forecast": "1m 49s",
+    "suite_id": 922,
+    "display_order": 2,
+    "custom_preconds": "Given a user has navigated to the Scoreboard",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navigates away from the Scoreboard\nand then returns to the Scoreboard",
+        "expected": "Then the Scoreboard should refresh"
+      },
+      {
+        "content": "When the user has returned to the Scoreboard",
+        "expected": "Then the Scoreboard should continue to refresh according to the app refresh rate"
+      }
+    ]
+  },
+  {
+    "id": 896717,
+    "title": "Returning After Backgrounding",
+    "section_id": 145026,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1489430940,
+    "updated_by": 84,
+    "updated_on": 1508435817,
+    "estimate": null,
+    "estimate_forecast": "3m 13s",
+    "suite_id": 922,
+    "display_order": 3,
+    "custom_preconds": "Given the user has navigated to the Scoreboard",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user backgrounds the app\nand then returns to the Scoreboard",
+        "expected": "Then the Scoreboard should refresh\nand should continue to refresh according to the app refresh rate"
+      }
+    ]
+  },
+  {
+    "id": 896720,
+    "title": "Launching Gameday",
+    "section_id": 145026,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1489430997,
+    "updated_by": 84,
+    "updated_on": 1508435817,
+    "estimate": null,
+    "estimate_forecast": "2m 7s",
+    "suite_id": 922,
+    "display_order": 4,
+    "custom_preconds": "Given a user has navigated to the Scoreboard",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user launches Gameday from the Scoreboard\nand then returns to the Scoreboard",
+        "expected": "Then the Scoreboard should refresh\nand should continue to refresh according to the app refresh rate"
+      }
+    ]
+  },
+  {
+    "id": 896714,
+    "title": "Launching Video Highlight",
+    "section_id": 145026,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1489430911,
+    "updated_by": 84,
+    "updated_on": 1508435817,
+    "estimate": null,
+    "estimate_forecast": "2m 18s",
+    "suite_id": 922,
+    "display_order": 5,
+    "custom_preconds": "Given a user has navigated to the Scoreboard",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user has launched a video highlight from an expanded game cell on the Scoreboard",
+        "expected": "Then the video highlight should play"
+      },
+      {
+        "content": "When the video highlight finishes playing or the user exits the video highlight",
+        "expected": "Then the user should return to the Scoreboard\nand the Scoreboard should refresh\nand should continue to refresh according to the app refresh rate"
+      }
+    ]
+  },
+  {
+    "id": 896715,
+    "title": "Launching TV",
+    "section_id": 145026,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1489430916,
+    "updated_by": 84,
+    "updated_on": 1508435817,
+    "estimate": null,
+    "estimate_forecast": "2m 44s",
+    "suite_id": 922,
+    "display_order": 6,
+    "custom_preconds": "Given a user has navigated to the Scoreboard",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user has launched a TV feed from the \"MLB.TV\" button from an expanded game cell on the Scoreboard",
+        "expected": "Then the TV feed should play (if the user has access)"
+      },
+      {
+        "content": "When the user exits from the TV feed",
+        "expected": "Then the user should return to the Scoreboard\nand the Scoreboard should refresh\nand should continue to refresh according to the app refresh rate"
+      }
+    ]
+  },
+  {
+    "id": 896716,
+    "title": "Launching Audio",
+    "section_id": 145026,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1489430918,
+    "updated_by": 84,
+    "updated_on": 1508435817,
+    "estimate": null,
+    "estimate_forecast": "1m 51s",
+    "suite_id": 922,
+    "display_order": 7,
+    "custom_preconds": "Given a user has navigated to the Scoreboard",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user has launched an Audio feed from the \"Audio\" button of an expanded game cell on the Scoreboard",
+        "expected": "Then the user should be taken to the Audio EPG where the audio feed will begin to play"
+      },
+      {
+        "content": "When the user returns to the Scoreboard",
+        "expected": "Then the Scoreboard should refresh\nand should continue to refresh according to the app refresh rate"
+      }
+    ]
+  },
+  {
+    "id": 896723,
+    "title": "Remaining on Scoreboard",
+    "section_id": 145026,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1489431149,
+    "updated_by": 84,
+    "updated_on": 1508435817,
+    "estimate": null,
+    "estimate_forecast": "11m 53s",
+    "suite_id": 922,
+    "display_order": 8,
+    "custom_preconds": "Given user has navigated to the Scoreboard",
+    "custom_steps": "When the user sits on the Scoreboard",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Refresh Rate in App Settings",
+        "expected": "Then the Scoreboard will refresh according to the refresh rate"
+      },
+      {
+        "content": "Scores",
+        "expected": "Then the Scores on the Scoreboard will update"
+      },
+      {
+        "content": "Inning",
+        "expected": "Then the Innings on the Scoreboard will update"
+      },
+      {
+        "content": "Basepads",
+        "expected": "Then the Basepads on the Scoreboard will update"
+      },
+      {
+        "content": "Balls/Strikes",
+        "expected": "Then the Balls/Strikes on the Scoreboard will update"
+      },
+      {
+        "content": "Outs",
+        "expected": "Then the Outs on the Scoreboard will update"
+      },
+      {
+        "content": "Pitcher/Batter",
+        "expected": "Then the Pitcher/Batter data on the Scoreboard will update"
+      },
+      {
+        "content": "Linescore (expanded game cell)",
+        "expected": "Then the Linescores on the Scoreboard will update"
+      },
+      {
+        "content": "Video Highlights",
+        "expected": "Then the Video Highlights will populate on the Scoreboard according to when they're posted"
+      },
+      {
+        "content": "Team Records",
+        "expected": "Then the Team Records on the Scoreboard will update"
+      },
+      {
+        "content": "Final Pitcher Data (W, L, S)",
+        "expected": "Then the Final Pitcher Data on the Scoreboard will update"
+      }
+    ]
+  }
+]

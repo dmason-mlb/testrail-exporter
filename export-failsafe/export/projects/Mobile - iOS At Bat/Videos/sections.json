@@ -1,0 +1,20 @@
+[
+  {
+    "id": 6857,
+    "suite_id": 866,
+    "name": "iPhone",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 6862,
+    "suite_id": 866,
+    "name": "iPad",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

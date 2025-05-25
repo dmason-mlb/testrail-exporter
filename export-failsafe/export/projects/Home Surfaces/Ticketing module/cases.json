@@ -1,0 +1,1452 @@
+[
+  {
+    "id": 33510604,
+    "title": "TMM UI",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718125627,
+    "updated_by": 258,
+    "updated_on": 1722963016,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 1,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is viewing the TMM ",
+        "expected": "THEN user is displayed with: \n* hero image\n* short description\n* divider line\n* team names, day, date, time and location on the  left\n* teams logos on the right\n* 'Buy Tickets' cta"
+      },
+      {
+        "content": "WHEN user clicks on the hero image",
+        "expected": "THEN hero image should not be linked"
+      },
+      {
+        "content": "WHEN user clicks on the section below the hero image",
+        "expected": "THEN the section should not be linked"
+      },
+      {
+        "content": "WHEN user clicks on 'Buy Tickets' cta",
+        "expected": "THEN user is taken to tdc"
+      }
+    ]
+  },
+  {
+    "id": 33464146,
+    "title": "Display Mode (Light/Dark)",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1717603033,
+    "updated_by": 258,
+    "updated_on": 1722963039,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 2,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user's device is set to light mode",
+        "expected": "THEN ticketing module has a light mode design"
+      },
+      {
+        "content": "WHEN user's device is set to dark mode",
+        "expected": "THEN ticketing module has a dark mode design"
+      }
+    ]
+  },
+  {
+    "id": 33510606,
+    "title": "Hero image - favorite team",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718126051,
+    "updated_by": 258,
+    "updated_on": 1718649356,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 3,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Hero image is dynamic",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user sees TMM \nAND TMM is based on user's favorite team",
+        "expected": "THEN hero image displays user's favorite team's star player\n\nTeam action shot"
+      }
+    ]
+  },
+  {
+    "id": 33528083,
+    "title": "Hero image - followed player",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718649231,
+    "updated_by": 258,
+    "updated_on": 1718649319,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 4,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Hero image is dynamic",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user sees TMM \nAND TMM is based on followed player in town",
+        "expected": "THEN hero image displays followed player image"
+      }
+    ]
+  },
+  {
+    "id": 33510608,
+    "title": "Hero image - good weather in town",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718126509,
+    "updated_by": 258,
+    "updated_on": 1718138356,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 5,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Hero image is dynamic",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user sees TMM \nAND TMM is based on good weather",
+        "expected": "THEN hero image display stadium image of the city user resides in"
+      }
+    ]
+  },
+  {
+    "id": 33510607,
+    "title": "Short description - favorite team",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718126360,
+    "updated_by": 258,
+    "updated_on": 1718129769,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 7,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Copy is configurable",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user sees TMM based of favorite team in town",
+        "expected": "THEN short description has a favorite team logo and the copy talks about user's favorite team coming to town"
+      }
+    ]
+  },
+  {
+    "id": 33528082,
+    "title": "Short description - followed player",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718649125,
+    "updated_by": 258,
+    "updated_on": 1722963147,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 8,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Copy is configurable",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user sees TMM based of followed player in town",
+        "expected": "THEN short description has a favorite team logo and the copy talks about user's followed player coming to town"
+      }
+    ]
+  },
+  {
+    "id": 33510635,
+    "title": "Short description - good weather",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718126562,
+    "updated_by": 258,
+    "updated_on": 1722963174,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 9,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Copy is configurable",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user sees tMM based on weather",
+        "expected": "THEN short description has weather logo (sun) and the copy talks about weather in the town user resides in"
+      }
+    ]
+  },
+  {
+    "id": 33510636,
+    "title": "Game Data",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718126650,
+    "updated_by": 258,
+    "updated_on": 1722963236,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 10,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the Game data in TMM",
+        "expected": "THEN user sees:\n* team names as a headline\n* day (ddd format), date, time, time zone and location on the left\n* teams logos on the right"
+      }
+    ]
+  },
+  {
+    "id": 33510637,
+    "title": "Time Zone",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718126789,
+    "updated_by": 258,
+    "updated_on": 1722014344,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 11,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Always depends on the time zone where the stadium is, not where user is",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is in EDT zone",
+        "expected": "THEN time in game data is displayed in the Time Zone where user's phone is registered "
+      },
+      {
+        "content": "WHEN user is in CDT zone",
+        "expected": "THEN time in game data is displayed in the Time Zone where user's phone is registered "
+      },
+      {
+        "content": "WHEN user is in MDT zone",
+        "expected": "THEN time in game data is displayed in the Time Zone where user's phone is registered "
+      },
+      {
+        "content": "WHEN user is in MST zone",
+        "expected": "THEN time in game data is displayed in the Time Zone where user's phone is registered "
+      },
+      {
+        "content": "WHEN user is in PDT zone",
+        "expected": "THEN time in game data is displayed in the Time Zone where user's phone is registered "
+      }
+    ]
+  },
+  {
+    "id": 33774491,
+    "title": "Military Time",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1722014362,
+    "updated_by": 258,
+    "updated_on": 1722014461,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 12,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": "WHEN user's phone time is set to military",
+    "custom_expected": "THEN TMM time is displayed in am/pm format. This is coming from StatsAPI",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 33406045,
+    "title": "One TMM display",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1717090354,
+    "updated_by": 258,
+    "updated_on": 1717090592,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 16,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "A fan should only see one module on the Home surface\r\n\r\nPriority of TMM is TBD\r\n\r\nDesign and display inputs could differ (e.g. see the Favorite Team treatment on day X and the Good Weather treatment on day Y).",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user's favorite team is coming to the town user resides in\nAND user's followed player is also coming to town ",
+        "expected": "THEN user sees only one module on the Home surface\n"
+      },
+      {
+        "content": "WHEN user's favorite team is coming to the town user resides in\nAND the weather looks good ",
+        "expected": "THEN user sees only one module on the Home surface"
+      },
+      {
+        "content": "WHEN user's followed player is also coming to town \nAND the weather looks good ",
+        "expected": "THEN user sees only one module on the Home surface"
+      }
+    ]
+  },
+  {
+    "id": 33406049,
+    "title": "NON logged in user",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1717092122,
+    "updated_by": 258,
+    "updated_on": 1718129811,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 17,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": "WHEN user is logged out",
+    "custom_expected": "THEN user does NOT see TMM",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 33406061,
+    "title": "NON TDC clubs",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1717092463,
+    "updated_by": 258,
+    "updated_on": 1722963329,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 18,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN users favorite team is LAA (or any team that uses TDC)\nAND this team comes to Denver (or city of NYY, SEA, ARI, COL, CWS, ATL, TOR, SD)\nAND user resides in Denver",
+        "expected": "THEN user DO NOT see the TMM"
+      },
+      {
+        "content": "WHEN user's followed player is in Denver (or city of NYY, SEA, ARI, COL, CWS, ATL, TOR, SD)\nAND user resides in Denver",
+        "expected": "THEN user DO NOT see the TMM"
+      },
+      {
+        "content": "WHEN weather is good in Denver (or city of NYY, SEA, ARI, COL, CWS, ATL, TOR, SD)\nAND user resides in Denver",
+        "expected": "THEN user DO NOT see the TMM"
+      }
+    ]
+  },
+  {
+    "id": 33510605,
+    "title": "EC - user updates favorite team",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718125892,
+    "updated_by": 258,
+    "updated_on": 1722963396,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 19,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user's favorite team is set to Cardinals and user is in LA\nAND Cardinals are coming to LA",
+        "expected": "THEN user sees the TMM"
+      },
+      {
+        "content": "WHE user updates the favorite team to Dodgers",
+        "expected": "THEN user should not see the TMM"
+      },
+      {
+        "content": "WHEN user updates the favorite team to Rockies",
+        "expected": "THEN user should not see the TMM"
+      }
+    ]
+  },
+  {
+    "id": 33510673,
+    "title": "TMM for cancelled and postponed games",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718138627,
+    "updated_by": 258,
+    "updated_on": 1718306720,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 22,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user receives the TMM\nAND the game status changes to cancelled",
+        "expected": "THEN TMM disappears immediately after game status got changed"
+      },
+      {
+        "content": "WHEN user receives the TMM\nAND the game status changes to postponed",
+        "expected": "THEN TMM disappears immediately after game status got changed"
+      }
+    ]
+  },
+  {
+    "id": 33510674,
+    "title": "CTA - TDC login",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718140023,
+    "updated_by": 258,
+    "updated_on": 1722963725,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 23,
+    "custom_type_automation": null,
+    "custom_preconds": "GIVEN user is logged in in TDC using the same credentials as mlb.com",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user sees TMM \nAND user did not click on 'Buy Tickets' CTA before\nAND user clicks on 'Buy Tickets' CTA",
+        "expected": "THEN user is displayed with a login screen \nwhere user needs to enter first and last name"
+      },
+      {
+        "content": "WHEN user sees TMM \nAND user clicked on 'Buy Tickets' CTA before\nAND user clicks on 'Buy Tickets' CTA",
+        "expected": "THEN user is NOT displayed with a login screen"
+      }
+    ]
+  },
+  {
+    "id": 33518634,
+    "title": "TMM designs",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718294379,
+    "updated_by": 258,
+    "updated_on": 1722963737,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 25,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "TMM is configurable and have several designs \r\nhttps://www.figma.com/design/zzcIJn8mD4cLVmE7RwsUAN/Ticketing-Module?node-id=1067-25880&t=YaB4pfclzRL8LWys-0\r\nAND each design should have 'Buy Tickets' CTA, game date, location and coming team name",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 33518635,
+    "title": "Series",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718294782,
+    "updated_by": 258,
+    "updated_on": 1723744690,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 26,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user clicks on series CTA link",
+        "expected": "THEN link is opened in webview\nAND all games are displayed in the list\nAND user can pick the game user wants to purchase tickets for"
+      }
+    ]
+  },
+  {
+    "id": 33877537,
+    "title": "Series CTA",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1723744589,
+    "updated_by": 258,
+    "updated_on": 1723744600,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 27,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user the TMM for series",
+        "expected": "THEN TMM should display  dates of 3 (maybe 4) upcoming games\n"
+      },
+      {
+        "content": "WHEN first game has been played",
+        "expected": "THEN TMM still displayed all dates of the series"
+      },
+      {
+        "content": "WHEN there are only 2 games left in series",
+        "expected": "THEN TMM still displayed all dates of the series"
+      },
+      {
+        "content": "WHEN there is only one games left in series",
+        "expected": "THEN TMM still displayed all dates of the series"
+      }
+    ]
+  },
+  {
+    "id": 33520998,
+    "title": "User changes location while seeing TMM",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718393151,
+    "updated_by": 258,
+    "updated_on": 1719331876,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 28,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN users sees TMM\nAND then user's phone location changes",
+        "expected": "THEN TMM is appear based on registered phone location (coming from machine learning team, DMA) and phones current location will not have an impact"
+      },
+      {
+        "content": "WHEN users sees TMM\nAND then user updates the location (time zone)",
+        "expected": "THEN TMM appear logic does not change"
+      }
+    ]
+  },
+  {
+    "id": 33543864,
+    "title": "Performance / Sanity test",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1719251754,
+    "updated_by": 258,
+    "updated_on": 1719333806,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 30,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user scrolls down on the home screen\nAND user meets the TMM logic criteria",
+        "expected": "THEN user sees TMM"
+      },
+      {
+        "content": "WHEN user views the TMM",
+        "expected": "THEN user sees team logo, date and CTA"
+      },
+      {
+        "content": "WHEN user clicks on CTA",
+        "expected": "THEN user is taken to TDC "
+      }
+    ]
+  },
+  {
+    "id": 33604307,
+    "title": "Stress test",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1719331993,
+    "updated_by": 258,
+    "updated_on": 1719333799,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 31,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Show / No show - Services team use either local machine or blaze meter to test it ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user spam clicks on CTA button",
+        "expected": "THEN CTA does not break\nAND user is not able to spam click it"
+      }
+    ]
+  },
+  {
+    "id": 33797401,
+    "title": "Spanish version",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1722367457,
+    "updated_by": 258,
+    "updated_on": 1722367557,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 32,
+    "custom_type_automation": null,
+    "custom_preconds": "GIVEN user's phone language is set to spanish",
+    "custom_steps": "WHEN user views the TMM",
+    "custom_expected": "THEN TMM is displayed in spanish",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 33836654,
+    "title": "TMM loader",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1722969930,
+    "updated_by": 258,
+    "updated_on": 1722970116,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 33,
+    "custom_type_automation": null,
+    "custom_preconds": "WHEN user has bad internet connection",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user's phone is set to light mode\nAND user is viewing TMM",
+        "expected": "THEN the TMM loader has a light background"
+      },
+      {
+        "content": "WHEN user's phone is set to dark mode\nAND user is viewing TMM",
+        "expected": "THEN the TMM loader has a dark background"
+      }
+    ]
+  },
+  {
+    "id": 33877538,
+    "title": "TMM Error view",
+    "section_id": 1917144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1723744760,
+    "updated_by": 258,
+    "updated_on": 1723745255,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 34,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN TMM is down",
+        "expected": "THEN user id displayed with error view\n\n* 'OOF! We dropped the ball!' title\n* 'We are sorry, but this module has an error.\nPlease try refreshing and if the problem persists, contact Customer Support.'\n* CTA 'Refresh'"
+      },
+      {
+        "content": "WHEN user tabs 'Refresh'",
+        "expected": "THEN page refreshes"
+      }
+    ]
+  },
+  {
+    "id": 34632731,
+    "title": "User Dismissal",
+    "section_id": 2020571,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1738696272,
+    "updated_by": 258,
+    "updated_on": 1738696980,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 1,
+    "custom_type_automation": null,
+    "custom_preconds": "GIVEN the user is shown a TMM",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user dismiss the module",
+        "expected": "THEN the user should not see the TMM for the same campaign again"
+      },
+      {
+        "content": "WHEN user quits the app\nAND opens the app again",
+        "expected": "THE TMM is not displayed"
+      }
+    ]
+  },
+  {
+    "id": 34632732,
+    "title": "Muting any TMM campaign after dismissal",
+    "section_id": 2020571,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1738696421,
+    "updated_by": 258,
+    "updated_on": 1738696980,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 2,
+    "custom_type_automation": null,
+    "custom_preconds": "GIVEN user previously dismissed the TMM ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is on the home tab",
+        "expected": "THEN user does not see any other campaign for X  configurable number of hours"
+      },
+      {
+        "content": "WHEN user reopens the app within those X number of hours",
+        "expected": "THEN user does not see any campaign"
+      },
+      {
+        "content": "WHEN X hours passed\nAND user opens the app again",
+        "expected": "THEN user displayed with a campaign (if available)"
+      }
+    ]
+  },
+  {
+    "id": 34632733,
+    "title": "TMM display after user purchased a ticket via TMM",
+    "section_id": 2020571,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1738696671,
+    "updated_by": 258,
+    "updated_on": 1738696980,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 3,
+    "custom_type_automation": null,
+    "custom_preconds": "GIVEN a list of games being promoted",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user buys a ticket via the TMM\nAND returns to the Home Surface",
+        "expected": "THEN the TMM should no longer show"
+      }
+    ]
+  },
+  {
+    "id": 34632734,
+    "title": "TMM display after user purchased a ticket NOT via TMM",
+    "section_id": 2020571,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1738696734,
+    "updated_by": 258,
+    "updated_on": 1738696980,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 4,
+    "custom_type_automation": null,
+    "custom_preconds": "GIVEN a list of games being promoted",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user has tickets to at least one of the games\n(user purchased ticket at ticket.com without clicking on TMM)",
+        "expected": "THEN the user still sees that campaign"
+      }
+    ]
+  },
+  {
+    "id": 34634173,
+    "title": "TMM display using several devices",
+    "section_id": 2020571,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1738860681,
+    "updated_by": 258,
+    "updated_on": 1738860744,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 5,
+    "custom_type_automation": null,
+    "custom_preconds": "GIVEN user dismissed the TMM on device 1",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user opens Home surface on device 2",
+        "expected": "THEN the TMM is not displayed"
+      },
+      {
+        "content": "WHEN user opens Home surface on device 1",
+        "expected": "THEN the TMM is not displayed"
+      }
+    ]
+  },
+  {
+    "id": 33403272,
+    "title": "Tampa Bay Rays ballpark - bad weather",
+    "section_id": 1912687,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1716999443,
+    "updated_by": 258,
+    "updated_on": 1716999551,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 1,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the weather is bad in Tampa",
+        "expected": "THEN user still gets a TMM since the Tampa Bay Rays ballpark is Dome"
+      }
+    ]
+  },
+  {
+    "id": 33403274,
+    "title": "Good weather; fav team is in market",
+    "section_id": 1912687,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1716999725,
+    "updated_by": 258,
+    "updated_on": 1717096697,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 3,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN favorite team is in market\nAND weather is sunny and clear\nEx Mets fan living in New York",
+        "expected": "THEN the TMM should be displayed"
+      }
+    ]
+  },
+  {
+    "id": 33406184,
+    "title": "Good weather; fav team is out of market",
+    "section_id": 1912687,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1717095962,
+    "updated_by": 258,
+    "updated_on": 1717096706,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 4,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN favorite team is out of market\nAND weather is sunny and clear\nEx Dodgers fan living in New York",
+        "expected": "THEN the TMM should NOT be displayed"
+      }
+    ]
+  },
+  {
+    "id": 33520999,
+    "title": "Mets and Yankees",
+    "section_id": 1912687,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718393226,
+    "updated_by": 258,
+    "updated_on": 1722963855,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 6,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Location and user's favorite team logic should be combined for some cases",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is Yankee's fan \nAND user lives closer to Mets ballpark",
+        "expected": "THEN user sees the TMM for Yankees only and not the Mets"
+      }
+    ]
+  },
+  {
+    "id": 33518636,
+    "title": "Followed player is out of market; user logged in",
+    "section_id": 1912688,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718295790,
+    "updated_by": 258,
+    "updated_on": 1718295859,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 2,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user has a followed player visiting the town the user resides in city  which domestic club uses TDC\nAND user is logged in\n\nEx A Shohei Ohtani fan lives in New York and the Dodgers are in town to play the Mets and/or Yankees",
+        "expected": "THEN the user sees TMM "
+      },
+      {
+        "content": "2nd example:\nMets fan living in LA.\nThe Mets are playing the Dodgers in LA.\n",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 33518637,
+    "title": "Followed player is out of market; user NOT logged in",
+    "section_id": 1912688,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718295790,
+    "updated_by": 258,
+    "updated_on": 1718295894,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 3,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user has a followed player visiting the town the user resides in city  which domestic club uses TDC\nAND user is NOT logged in\n\nEx A Shohei Ohtani fan lives in New York and the Dodgers are in town to play the Mets and/or Yankees",
+        "expected": "THEN the user DOES NOT see TMM "
+      },
+      {
+        "content": "2nd example:\nMets fan living in LA.\nThe Mets are playing the Dodgers in LA.\n",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 33521000,
+    "title": "Injured (inactive) followed players - TBD",
+    "section_id": 1912688,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1718393287,
+    "updated_by": 258,
+    "updated_on": 1722963938,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 4,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user has a followed player in market\nAND this player get injured and does not play",
+        "expected": "THEN TBD"
+      }
+    ]
+  },
+  {
+    "id": 33406043,
+    "title": "In-market fans",
+    "section_id": 1917405,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1717090110,
+    "updated_by": 258,
+    "updated_on": 1722963983,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 1,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": "WHEN user follows the local team",
+    "custom_expected": "THEN user sees TMM whenever a club has a special event or promotion\r\nAND user does NOT see every TMM for upcoming games in the ballpark",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 33464150,
+    "title": "Favorite team is in market; user is logged in",
+    "section_id": 1917405,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1717604637,
+    "updated_by": 258,
+    "updated_on": 1718139647,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 4,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Mets fan living in New York\nAND The Mets are playing the Dodgers in LA\nAND user is logged in\n",
+        "expected": "THEN user DOES NOT see the TMM"
+      }
+    ]
+  },
+  {
+    "id": 33406042,
+    "title": "Key Player",
+    "section_id": 1975452,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1717089548,
+    "updated_by": 258,
+    "updated_on": 1726249499,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 1,
+    "custom_type_automation": null,
+    "custom_preconds": "GIVEN user is located in the city with TDC club",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN key player is coming to town\nAND user's favorite team is not the team where key player is playing",
+        "expected": "THEN user sees the TDC"
+      },
+      {
+        "content": "WHEN there are 2 key players from the same club are coming in town",
+        "expected": "THEN both players are displayed in the TDC"
+      }
+    ]
+  },
+  {
+    "id": 34080376,
+    "title": "Priority for TDC",
+    "section_id": 1975452,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1726249460,
+    "updated_by": 258,
+    "updated_on": 1726249460,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 2,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 33656141,
+    "title": "TMM UI",
+    "section_id": 1938753,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1719946068,
+    "updated_by": 258,
+    "updated_on": 1722964008,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 1,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is viewing the TMM ",
+        "expected": "THEN user is displayed with: \n* hero image\n* short description\n* divider line\n* team names, day, date, time and location on the  left\n* teams logos on the right\n* 'Buy Tickets' cta"
+      },
+      {
+        "content": "WHEN user clicks on the hero image",
+        "expected": "THEN hero image should not be linked"
+      },
+      {
+        "content": "WHEN user clicks on the section below the hero image",
+        "expected": "THEN the section should not be linked"
+      },
+      {
+        "content": "WHEN user clicks on 'Buy Tickets' cta",
+        "expected": "THEN user is taken to tdc"
+      }
+    ]
+  },
+  {
+    "id": 33656142,
+    "title": "Light/Dark Mode",
+    "section_id": 1938753,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1719946100,
+    "updated_by": 258,
+    "updated_on": 1722627093,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 2,
+    "custom_type_automation": null,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user's device is set to light mode",
+        "expected": "THEN TMM module has a light mode design"
+      },
+      {
+        "content": "WHEN user's device is set to dark mode",
+        "expected": "THEN TMM module has a dark mode design"
+      }
+    ]
+  },
+  {
+    "id": 33815256,
+    "title": "CTA - TDC login",
+    "section_id": 1938753,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1722627679,
+    "updated_by": 258,
+    "updated_on": 1722964031,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 3,
+    "custom_type_automation": null,
+    "custom_preconds": "GIVEN user is logged in in TDC using the same credentials as mlb.com",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user sees TMM \nAND user did not click on 'Buy Tickets' CTA before\nAND user clicks on 'Buy Tickets' CTA",
+        "expected": "THEN user is displayed with a login screen \nwhere user needs to enter first and last name"
+      },
+      {
+        "content": "WHEN user sees TMM \nAND user clicked on 'Buy Tickets' CTA before\nAND user clicks on 'Buy Tickets' CTA",
+        "expected": "THEN user is NOT displayed with a login screen"
+      }
+    ]
+  },
+  {
+    "id": 33836652,
+    "title": "Voice Over",
+    "section_id": 1954252,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1722964355,
+    "updated_by": 258,
+    "updated_on": 1726165885,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 2,
+    "custom_type_automation": null,
+    "custom_preconds": "GIVEN user has a voice over setting on\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user clicks on the images/logos",
+        "expected": "THEN voice over reads the alt text of the images and logos\n\nExample: “Bryce Harper of the Philadelphia Phillies.”\n"
+      },
+      {
+        "content": "WHEN user clicks on the headline",
+        "expected": "THEN voice over reads the headline"
+      },
+      {
+        "content": "WHEN user clicks on matchup section",
+        "expected": "THEN team matchup reads together\nAND date is announced together in formal 'Month date'. Ex (“August Fifth, August Sixth, August Seventh”)."
+      },
+      {
+        "content": "WHEN user clicks on team logos",
+        "expected": "THEN both logos read together\n\nExample: “Logos for the Philadelphia Phillies and the Los Angeles Dodgers.”\n"
+      },
+      {
+        "content": "WHEN user clicks on CTA",
+        "expected": "THEN voice over reads CTA as 'Buy [awayTeam] At [homeTeam] Tickets' format\nAND the frontend button text still displays \"Buy Tickets\""
+      }
+    ]
+  },
+  {
+    "id": 33836653,
+    "title": "Accessibility - font size",
+    "section_id": 1954252,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1722964518,
+    "updated_by": 258,
+    "updated_on": 1722964618,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 670949,
+    "display_order": 3,
+    "custom_type_automation": null,
+    "custom_preconds": "GIVEN a user is on TMM module",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user's phone setting is set to dark mode",
+        "expected": "THEN there is no visual defects and all UI looks good"
+      },
+      {
+        "content": "WHEN user's phone setting is set to light mode",
+        "expected": "THEN there is no visual defects and all UI looks good"
+      }
+    ]
+  }
+]

@@ -1,0 +1,139 @@
+[
+  {
+    "id": 172805,
+    "title": "MLB.TV Button (Scoreboard)",
+    "section_id": 24112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4957",
+    "created_by": 84,
+    "created_on": 1465407369,
+    "updated_by": 84,
+    "updated_on": 1467148850,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2669,
+    "display_order": 3,
+    "custom_preconds": "Given a user is logged in with a FYT account (following Team A)\r\nand Team B is in-market",
+    "custom_steps": "When a user is on the Scoreboard\r\nand taps on the Game Detail popover\r\nand then taps on the MLB.TV button for that game (Team A vs Team B)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "with a fav team set",
+        "expected": "Then the feed for Team A plays"
+      },
+      {
+        "content": "with no fav team set",
+        "expected": "Then the feed for Team A plays"
+      }
+    ]
+  },
+  {
+    "id": 180949,
+    "title": "MLB.TV Button (Team Page)",
+    "section_id": 24112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4957",
+    "created_by": 84,
+    "created_on": 1467148862,
+    "updated_by": 84,
+    "updated_on": 1467149062,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2669,
+    "display_order": 4,
+    "custom_preconds": "Given a user is logged in with a FYT account (following Team A)\r\nand Team B is in-market",
+    "custom_steps": "When a user is on a Team Page\r\nand taps on the MLB.TV button for that game (Team A vs Team B)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Team A's team page",
+        "expected": "Then the feed for Team A plays"
+      },
+      {
+        "content": "Team B's team page",
+        "expected": "Then the feed for Team A plays"
+      }
+    ]
+  },
+  {
+    "id": 180950,
+    "title": "MLB.TV EPG",
+    "section_id": 24112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4959",
+    "created_by": 84,
+    "created_on": 1467149082,
+    "updated_by": 84,
+    "updated_on": 1467149190,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2669,
+    "display_order": 5,
+    "custom_preconds": "Given a user is logged in with a FYT account (following Team A)\r\nand Team B is in-market",
+    "custom_steps": "When a user is on the MLB.TV EPG\r\nand taps on a feed for Team A vs. Team B",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "for Team A",
+        "expected": "Then the feed will start"
+      },
+      {
+        "content": "for Team B",
+        "expected": "Then the user will see a blackout message"
+      }
+    ]
+  },
+  {
+    "id": 172804,
+    "title": "Deep Links",
+    "section_id": 24112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4957",
+    "created_by": 84,
+    "created_on": 1465407363,
+    "updated_by": 84,
+    "updated_on": 1467149210,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2669,
+    "display_order": 6,
+    "custom_preconds": "Given a user is logged in with a FYT account (following Team A)\r\nand Team B is in-market",
+    "custom_steps": "When a user navigates to a MLB.TV Deep link for a game (Team A vs Team B)\r\nand the game has a live MLB.TV feed\r\n\r\nhttp://wapqa.mlb.com/test/android/atbat-links.html",
+    "custom_expected": "Then the Team A feed should start",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 173067,
+    "title": "Ads",
+    "section_id": 24112,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1465415821,
+    "updated_by": 84,
+    "updated_on": 1465415821,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2669,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  }
+]

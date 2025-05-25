@@ -1,0 +1,11 @@
+{
+  "id": 20288,
+  "name": "LL_Link UI Regression",
+  "description": "Tests for the eBis app/UI for regressions that may have occured due to changes in eBis Link code:\r\n\r\nhttps://wiki.mlbam.com/display/EBIS/Ebis+Link+Overview",
+  "project_id": 73,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20288"
+}

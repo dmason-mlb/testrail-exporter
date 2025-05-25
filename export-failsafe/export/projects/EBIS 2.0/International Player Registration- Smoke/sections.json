@@ -1,0 +1,83 @@
+[
+  {
+    "id": 7135,
+    "suite_id": 954,
+    "name": "Player Registration",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 7909,
+    "suite_id": 954,
+    "name": "Hidden Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 7910,
+    "suite_id": 954,
+    "name": "Verification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 7911,
+    "suite_id": 954,
+    "name": "Make Public",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 7912,
+    "suite_id": 954,
+    "name": "Add Club Reg",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 7913,
+    "suite_id": 954,
+    "name": "Merge",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 7915,
+    "suite_id": 954,
+    "name": "Trainer Agent",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 7916,
+    "suite_id": 954,
+    "name": "L2 Reg",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 147914,
+    "suite_id": 954,
+    "name": "Spreadsheet Upload",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  }
+]

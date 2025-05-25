@@ -1,0 +1,37 @@
+[
+  {
+    "id": 48714,
+    "title": "Sponsorship & Banners",
+    "section_id": 6992,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1418936362,
+    "updated_by": 40,
+    "updated_on": 1461879843,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 904,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user is in the ballpark guide page for a team\nand ad ops configures an ad for a specific team",
+        "expected": "Then an Ad Banner will be seen at the bottom of that team's Ballpark guide page and the event details page\nbut will not be visible in other team's summary or event details page"
+      },
+      {
+        "content": "When the user is in the ballpark guide page\nand an ad has been configured for the team \nand the ad appears at the bottom of the page\nand ad ops removes the ad",
+        "expected": "Then the user will no longer be able to see the ad at the bottom of the page(ballpark guide page and event details page)"
+      },
+      {
+        "content": "WHEN an ad ops has enabled a global ad",
+        "expected": "THEN the ad will appear on both the ballpark guide page and event details page of every team unless a team has a team specific ad enabled for it"
+      }
+    ]
+  }
+]

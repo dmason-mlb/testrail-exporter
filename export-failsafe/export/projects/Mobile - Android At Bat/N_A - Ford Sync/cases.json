@@ -1,0 +1,125 @@
+[
+  {
+    "id": 50646,
+    "title": "General",
+    "section_id": 7350,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1424314422,
+    "updated_by": 25,
+    "updated_on": 1446143130,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 995,
+    "display_order": 1,
+    "custom_preconds": "Verify that Ford Sync is ENABLED in the config otherwise it won't connect.\r\n\r\nMake sure the sync device is in \"Drive\" mode otherwise the lock screen won't appear on At Bat. \r\n\r\nEnable Bluetooth on the device to pair with Sync\r\n(On Sync, access the Sync-Media menu, press the menu button and select System Settings, Add Bluetooth Device)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user turns on the Sync device\nAnd pairs with an Android device\nAnd selects Mobile Applications from the Sync-Media menu\nAnd selects the At Bat application",
+        "expected": "Then the ford sync branded screen should appear on the app\nAnd the user should see a Disconnect button but no other buttons. "
+      },
+      {
+        "content": "When the user give the 'List Games' command",
+        "expected": "Then the games on the scoreboard for that day should be read out loud by the sync system"
+      },
+      {
+        "content": "When the user give the 'More' command",
+        "expected": "Then more games should be read out loud by the sync system"
+      },
+      {
+        "content": "When the user gives the Team Name command (eg. 'Yankees') for a team that has a game but the game is not in progress",
+        "expected": "Then the sync system should display '[Team] vs. [Team]', [Game start time]\nAnd the system should display \"No feeds\""
+      },
+      {
+        "content": "When the user gives the Team Name command (eg. 'Yankees') for a team that has a game in progress with live feeds",
+        "expected": "Then the feed detail and game details should be said out loud by the sync system. "
+      },
+      {
+        "content": "When the user gives the Team Name command (eg. 'Yankees') for a team that does not have any games scheduled on the current day.\n",
+        "expected": "Then the sync system should say \"No game for [Team], say list games or a team name to continue.\""
+      },
+      {
+        "content": "When the user gives the Team Name command (eg. 'Yankees') for a team that has a scheduled game that has not yet begun (but feeds are live.)",
+        "expected": "Then the sync system should say \"[Away team] vs. [Home team], [Game start time], and [feed name]\""
+      },
+      {
+        "content": "When the user has selected a game with multiple audio feeds\nAnd the user turns the Tune knob on the sync device",
+        "expected": "Then the audio feed should change and begin playback successfully.\nAnd the newly selected audio feed should be reflected in the Sync UI. "
+      },
+      {
+        "content": "When the user taps the 'Reset SYNC Connection' button on the app lockscreen",
+        "expected": "Then the sync lockscreen should disappear from the handset\nAnd the user should be able to navigate through and use At Bat on the device. \nAnd the sync system should display \"Mobile Applications\" "
+      },
+      {
+        "content": "When the user gives the Exit command",
+        "expected": "Then the sync lockscreen should disappear from the handset\nAnd the user should be able to navigate through and use At Bat on the device. \nAnd the sync system should display \"Mobile Applications\" "
+      },
+      {
+        "content": "When the user flips the Voice switch (Listen button in an actual automobile)\nAnd says the Cancel command",
+        "expected": "Then the screen on the SYNC system will revert back to the previous state\nAnd the command request is cancelled successfully"
+      },
+      {
+        "content": "When the Play command is spoken\n",
+        "expected": "Then audio playback for the selected feed will begin successfully\n"
+      },
+      {
+        "content": "When the Pause command is spoken\n",
+        "expected": "Then the audio playback will stop as per the command given\n"
+      },
+      {
+        "content": "When the Next Feed command is spoken\n",
+        "expected": "Then the SYNC system will switch over the next available feed for the game\n"
+      },
+      {
+        "content": "When the Previous Feed command is given\n",
+        "expected": "Then the SYNC system will switch from the current feed to the previously played feed\n"
+      },
+      {
+        "content": "When the Help command is spoken\n",
+        "expected": "Then the SYNC system will say \"MLB.com At Bat Help\"\nAnd will say \"You can say: List Games, Play, Pause, Next Feed, Previous Feed, <all 30 teams' names>, Help, Cancel, or Exit\""
+      },
+      {
+        "content": "When the user has set at least one favorite team\nAnd the user has a device connected to the SYNC system\nAnd the user issues the \"List Games\" command\n",
+        "expected": "When the device is connected to the SYNC system\nAnd the user issues the \"List Games\" command\n"
+      },
+      {
+        "content": "When the ford sync lockscreen appears on top of at bat",
+        "expected": "Then the user should see the At Bat/Ford Sync logo\nAnd the user should see the disconnect button."
+      },
+      {
+        "content": "When the game is in progress and data is updating",
+        "expected": "Then the game data should update on the Ford Sync Display every 2 minutes or so. "
+      },
+      {
+        "content": "When the user is listening to a game\nAnd the user gives the Next Feed or Previous Feed commands",
+        "expected": "The the feeds should change and begin playing as expected. "
+      },
+      {
+        "content": "When the user gives the team command (eg. Yankees) for a team that has a game in progress",
+        "expected": "Then the game should be announced correctly as \"[Away Team] vs. [Home Team], [Inning information], [Leading Team] leads, [x] to [y]\""
+      },
+      {
+        "content": "When the user changes Audio feeds",
+        "expected": "Then the newly selected audio feed should display on the ford sync display"
+      },
+      {
+        "content": "When the user opens the MLB.TV or Audio overlay on an Android Tablet\nAnd the user connects the device to Ford Sync",
+        "expected": "Then the ford sync lockscreen should appear and block either of those views.\nAnd the MLB.TV or Audio UI should not be visible on top of the ford sync screen."
+      },
+      {
+        "content": "When a game has just ended and is in a \"Game over\" state in the data but not yet \"Final\"\nAnd the ford sync announces the game",
+        "expected": "Then the game status should be announced as \"Final\" and not \"Game Over\" "
+      },
+      {
+        "content": "When a game has ended and feeds are no longer available",
+        "expected": "Then the game should appear in the ford sync display as Final.\nAnd there shoudl be an indication that no feeds are available. "
+      }
+    ]
+  }
+]

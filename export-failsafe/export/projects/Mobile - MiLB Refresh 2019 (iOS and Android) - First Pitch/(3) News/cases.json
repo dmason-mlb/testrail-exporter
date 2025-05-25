@@ -1,0 +1,367 @@
+[
+  {
+    "id": 1238201,
+    "title": "News UX/UI",
+    "section_id": 150239,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1551894628,
+    "updated_by": 173,
+    "updated_on": 1553612260,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20676,
+    "display_order": 1,
+    "custom_preconds": "GIVEN that the user finished on-boarding",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates to News tab",
+        "expected": "THEN the app will display the following:\n\n* TV icon\n* Audio icon (iOS only)\n* Class picker (Triple-A, Double-A, Class A Advanced, Class A, Class A Short Season, Rookie)\n* League filter\n* News Articles"
+      },
+      {
+        "content": "WHEN the user navigates to News tab",
+        "expected": "THEN the app will display the navigation bar complete and neat (no typographical errors, no overlapping and/or missing icons/texts)\n\nTHEN the wait time for the page to load will not be longer than 5 secs\n\nTHEN the user will be able to scroll through the page smoothly \n\nTHEN the app will display the content of that tab in a scale to fit manner (the user will not be able to pinch in/out of the web views)\n\nTHEN the users will be able to click on buttons/elements and these will work"
+      }
+    ]
+  },
+  {
+    "id": 1238335,
+    "title": "TV Icon",
+    "section_id": 150239,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552578586,
+    "updated_by": 173,
+    "updated_on": 1553626240,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20676,
+    "display_order": 2,
+    "custom_preconds": "GIVEN that the user navigated to News Page",
+    "custom_steps": "WHEN the user taps on the TV icon",
+    "custom_expected": "THEN the app will display the following:\r\n\r\n* Class picker\r\n* Date (Day Month Date)\r\n* Arrows to navigate through the date (next/previous date)\r\n* Video list (if available depending on the selected date)\r\n* Done button ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238202,
+    "title": "Audio Icon (iOS only)",
+    "section_id": 150239,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1551894701,
+    "updated_by": 173,
+    "updated_on": 1553092316,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20676,
+    "display_order": 3,
+    "custom_preconds": "GIVEN that the user navigated to News tab",
+    "custom_steps": "WHEN the user taps on Audio icon",
+    "custom_expected": "THEN the app will display the Gameday Audio page\r\n\r\nTHEN the app will not use any third-party application to open this",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238204,
+    "title": "Social Media/Share Icons",
+    "section_id": 150239,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1551894724,
+    "updated_by": 173,
+    "updated_on": 1552498255,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20676,
+    "display_order": 6,
+    "custom_preconds": "GIVEN that the user navigated to News tab",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on Facebook icon",
+        "expected": "THEN the app will redirect the user to Facebook app/page"
+      },
+      {
+        "content": "WHEN the user taps on Twitter icon",
+        "expected": "THEN the app will redirect the user to Twitter app/page"
+      },
+      {
+        "content": "//pending//\n\nWHEN the user taps on G+ icon",
+        "expected": "//will be deprecated in April 2019//\n\nTHEN the app will redirect the user to Google+ app/page"
+      },
+      {
+        "content": "WHEN the user taps on Email icon",
+        "expected": "THEN the app will redirect the user to Email app/page (depending on the user's settings)"
+      },
+      {
+        "content": "WHEN the user taps on Printer icon",
+        "expected": "THEN the app will redirect the user to the printable page "
+      }
+    ]
+  },
+  {
+    "id": 1238334,
+    "title": "Selecting Another League",
+    "section_id": 150239,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552518630,
+    "updated_by": 173,
+    "updated_on": 1552518702,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20676,
+    "display_order": 7,
+    "custom_preconds": "GIVEN that the user is in the News tab",
+    "custom_steps": "WHEN the user scrolls through the News\r\n\r\nWHEN the user taps on a different league",
+    "custom_expected": "THEN the app will scroll to the top\r\n\r\nTHEN the app will display related only to the newly selected league",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1240483,
+    "title": "View More/View Less Button",
+    "section_id": 150239,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1555447567,
+    "updated_by": 173,
+    "updated_on": 1555447693,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20676,
+    "display_order": 8,
+    "custom_preconds": "GIVEN that the user navigated to News tab",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on 'View More'",
+        "expected": "THEN the app will display the remaining texts of that article\n\nTHEN the 'View More' button will be replaced by 'View Less'"
+      },
+      {
+        "content": "WHEN the user taps on 'View Less'",
+        "expected": "THEN the app will hide the some texts of that article\n\nTHEN the 'View More' button will be replaced by 'View More'\n\nTHEN the user will be brought to the beginning of that article"
+      }
+    ]
+  },
+  {
+    "id": 1238328,
+    "title": "Triple-A",
+    "section_id": 150261,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552518140,
+    "updated_by": 173,
+    "updated_on": 1552519081,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20676,
+    "display_order": 1,
+    "custom_preconds": "GIVEN that the user navigated to News tab\r\n\r\nGIVEN that the user tapped on \"Triple-A\" class",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on \"International\"",
+        "expected": "THEN the app will display the International League News only"
+      },
+      {
+        "content": "WHEN the user taps on \"Pacific Coast\"",
+        "expected": "THEN the app will display the Pacific Coast League News only"
+      }
+    ]
+  },
+  {
+    "id": 1238329,
+    "title": "Double-A",
+    "section_id": 150261,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552518142,
+    "updated_by": 173,
+    "updated_on": 1552519101,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20676,
+    "display_order": 2,
+    "custom_preconds": "GIVEN that the user navigated to News tab\r\n\r\nGIVEN that the user tapped on \"Double-A\" class",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on \"Eastern\"",
+        "expected": "THEN the app will display the Eastern League News only"
+      },
+      {
+        "content": "WHEN the user taps on \"Southern\"",
+        "expected": "THEN the app will display the Southern League News only"
+      },
+      {
+        "content": "WHEN the user taps on \"Texas\"",
+        "expected": "THEN the app will display the Texas League News only"
+      }
+    ]
+  },
+  {
+    "id": 1238330,
+    "title": "Class A Advanced",
+    "section_id": 150261,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552518145,
+    "updated_by": 173,
+    "updated_on": 1552519114,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20676,
+    "display_order": 3,
+    "custom_preconds": "GIVEN that the user navigated to News tab\r\n\r\nGIVEN that the user tapped on \"Class A Advanced\" class",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on \"California\" ",
+        "expected": "THEN the app will display the California League News only"
+      },
+      {
+        "content": "WHEN the user taps on \"Carolina\" ",
+        "expected": "THEN the app will display the Carolina League News only"
+      },
+      {
+        "content": "WHEN the user taps on \"Florida State\" ",
+        "expected": "THEN the app will display the Florida State League News only"
+      }
+    ]
+  },
+  {
+    "id": 1238331,
+    "title": "Class A",
+    "section_id": 150261,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552518148,
+    "updated_by": 173,
+    "updated_on": 1552519122,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20676,
+    "display_order": 4,
+    "custom_preconds": "GIVEN that the user navigated to News tab\r\n\r\nGIVEN that the user tapped on \"Class A\" class\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on \"Midwest\"",
+        "expected": "THEN the app will display the Midwest League News only"
+      },
+      {
+        "content": "WHEN the user taps on \"South Atlantic\"",
+        "expected": "THEN the app will display the South Atlantic League News only"
+      }
+    ]
+  },
+  {
+    "id": 1238332,
+    "title": "Class A Short Season",
+    "section_id": 150261,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552518152,
+    "updated_by": 173,
+    "updated_on": 1552518987,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20676,
+    "display_order": 5,
+    "custom_preconds": "GIVEN that the user navigated to News tab\r\n\r\nGIVEN that the user tapped on \"Class A Short Season\" class",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on \"New York-Penn\"",
+        "expected": "THEN the app will display the New York-Penn League News only"
+      },
+      {
+        "content": "WHEN the user taps on \"Northwest\"",
+        "expected": "THEN the app will display the Northwest League News only"
+      }
+    ]
+  },
+  {
+    "id": 1238333,
+    "title": "Rookie",
+    "section_id": 150261,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552518153,
+    "updated_by": 173,
+    "updated_on": 1552519056,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20676,
+    "display_order": 6,
+    "custom_preconds": "GIVEN that the user navigated to News tab\r\n\r\nGIVEN that the user tapped on \"Rookie\" class",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on \"Appalachian\" ",
+        "expected": "THEN the app will display the Appalachian League News only"
+      },
+      {
+        "content": "WHEN the user taps on \"Pioneer\"",
+        "expected": "THEN the app will display the Pioneer League News only"
+      }
+    ]
+  }
+]

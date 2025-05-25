@@ -1,0 +1,11 @@
+{
+  "id": 531233,
+  "name": "BoxOffice_WithAdmin 2integration",
+  "description": "Test cases for admin2 changes that impact the boxoffice tickets",
+  "project_id": 234,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/531233"
+}

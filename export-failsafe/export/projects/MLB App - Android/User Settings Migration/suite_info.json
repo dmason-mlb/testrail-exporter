@@ -1,0 +1,11 @@
+{
+  "id": 200758,
+  "name": "User Settings Migration",
+  "description": "This suite is to test the migration of user setting when upgrading the app.",
+  "project_id": 205,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/200758"
+}

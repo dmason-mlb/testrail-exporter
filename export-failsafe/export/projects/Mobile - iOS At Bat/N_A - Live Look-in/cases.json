@@ -1,0 +1,236 @@
+[
+  {
+    "id": 48257,
+    "title": "Live Look-in",
+    "section_id": 6884,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1414763806,
+    "updated_by": 39,
+    "updated_on": 1434644507,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 872,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user is on the Scoreboard or Team Page or Gameday page when a Live Look In appears",
+        "expected": "Then the banner is clear and readable\nand the proper team abbreviations for that Live Look In are displayed"
+      },
+      {
+        "content": "When a user is on the Scoreboard when a Live Look In appears",
+        "expected": "Then the Live Look In has the Home Team abbreviation appearing on the right side"
+      },
+      {
+        "content": "When a user is on the Scoreboard when a Live Look In appears",
+        "expected": "Then the Date bar will no longer be visible\nand the Live Look In banner will be displayed below the MLB.com logo"
+      },
+      {
+        "content": "When a user is on the Scoreboard and taps on the Live Look In banner",
+        "expected": "Then the Live Look In launches successfully"
+      },
+      {
+        "content": "When a user is on the game cell of a game when a Live Look In appears",
+        "expected": "Then there will be a Look-in button in the expanded game cell"
+      },
+      {
+        "content": "When a user is on the Gameday menu item and a Live Look In appears",
+        "expected": "Then the Live Look In banner will appear below the header in Gameday"
+      },
+      {
+        "content": "When a user taps on the Live Look In banner when on the Gameday",
+        "expected": "Then the Live Look In will launch successfully"
+      },
+      {
+        "content": "When a user is on the Team page with a game in progress and a Live Look In available for that game",
+        "expected": "Then the Live Look In will appear on top of the 5-game Scoreboard below the team header"
+      },
+      {
+        "content": "When a user is on the Team page with a game in progress and taps on the Live Look In banner",
+        "expected": "Then the Live Look In launches successfully"
+      },
+      {
+        "content": "When a user is on a WIFI connection and taps on a Live Look In banner on the Scoreboard",
+        "expected": "Then the Live Look In launches successfully"
+      },
+      {
+        "content": "When a user is on a Cellular connection and taps on a Live Look In banner on the Scoreboard\n\nTest on both Verizon or Sprint and AT&T or T-Mobile",
+        "expected": "Then the Live Look In launches successfully"
+      },
+      {
+        "content": "When a user is listening to an audio stream and then taps on a Live Look In banner",
+        "expected": "Then the Audio Stream stops playing\nand the Live Look In launches successfully"
+      },
+      {
+        "content": "When a user taps on a Live Look In banner and then ignores a phone call on the device",
+        "expected": "Then the Live Look In will continue to play successfully"
+      },
+      {
+        "content": "When a user taps on a Live Look in banner and then answers a phone call on the device",
+        "expected": "Then we successfully are able to answer the Phone Call\nand the Live Look In stream will close out of the media player"
+      },
+      {
+        "content": "When a user launches a Live Look In from the Scoreboard and then receives a text message on the device",
+        "expected": "Then we receive the Text Message successfully\nand the Live Look In continues to play without interruption"
+      },
+      {
+        "content": "When a user taps on Done to a Live Look In stream and then taps on the MLB.TV stream",
+        "expected": "Then the MLB.TV stream starts up successfully"
+      },
+      {
+        "content": "When a user taps on Done to a Live Look In stream and then taps on a game highlight",
+        "expected": "Then the Video Highlight starts up successfully"
+      },
+      {
+        "content": "When a user taps on screen while a Live Look in is playing",
+        "expected": "Then the Media Player UI will behave normally"
+      },
+      {
+        "content": "When a user has a Live Look In banner present and is in Offline Mode",
+        "expected": "Then tapping Live Look In banner will not play a stream and will just display the media player for a second and close out of it quickly"
+      },
+      {
+        "content": "When a user is playing a Live Look In stream and then backgrounds the app and then foregrounded",
+        "expected": "Then the Live Look In is closed out"
+      },
+      {
+        "content": "When the user has Closed Captioning settings turned on in the iOS settings and then launches the Live Look In stream",
+        "expected": "Then closed captioning will display on the Live Look-in stream"
+      },
+      {
+        "content": "When a user taps on the X on the Live Look In banner",
+        "expected": "Then the Live Look In banner is dismissed "
+      },
+      {
+        "content": "When a user is on a screen with MLB.tv icon and a Live Look In is present",
+        "expected": "Then a Live Look In badge is present on the MLB.tv icon"
+      },
+      {
+        "content": "When a user is on the MLB.tv grid for active streams and a Live Look in appears",
+        "expected": "Then the Live Look In is on the grid "
+      },
+      {
+        "content": "When a user has a multiple Live Look Ins",
+        "expected": "The banner will update to the latest Live Look In"
+      },
+      {
+        "content": "When a user is the At Bat settings ",
+        "expected": "Then the user will see an option for Live Look In Banners"
+      },
+      {
+        "content": "When a Live Look In banner comes in",
+        "expected": "Then the yellow banner should reach from edge to edge on the specific device\n\nTest on iPhone 6 Plus, iPhone 6, iPhone 5, iPhone 4"
+      }
+    ]
+  },
+  {
+    "id": 48258,
+    "title": "Live Look-in",
+    "section_id": 6885,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1414763818,
+    "updated_by": 39,
+    "updated_on": 1414770031,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 872,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user is the below parts of the At Bat App and a Live Look In banner is present\n\nNews, Gameday, Scoreboard, Standings, Teams Schedules, Stats, Videos",
+        "expected": "Then the banner is clear and readable\nand the proper team abbreviations for that Live Look In are displayed"
+      },
+      {
+        "content": "When a user is on the Scoreboard and a Live Look In is present",
+        "expected": "Then the Live Look In has the Home Team abbreviation appearing on the right side"
+      },
+      {
+        "content": "When a user is on the Scoreboard and a Live Look In is present",
+        "expected": "Then the banner will appear to the right of the data picker on the date bar\nAnd the Live Look In banner will be displayed below the MLB.tv and Audio icons"
+      },
+      {
+        "content": "When a user is on the Scoreboard and taps on the Live Look In banner",
+        "expected": "Then the Live Look In launches successfully"
+      },
+      {
+        "content": "When a user is on the News menu and a Live Look In is appears",
+        "expected": "Then the Live Look In button will be visible to the right of the Teams filter"
+      },
+      {
+        "content": "When a user taps on the Live Look In banner on the News menu page",
+        "expected": "Then the Live Look In plays successfully"
+      },
+      {
+        "content": "When a user is on the Gameday menu item and a Live Look In appears",
+        "expected": "Then the Live Look In button will be visible to the right of the Date Picker"
+      },
+      {
+        "content": "When a user taps on the Live Look In banner on the Gameday menu",
+        "expected": "Then the Live Look In plays successfully"
+      },
+      {
+        "content": "When a user is on the Standings menu page and a Live Look in appears",
+        "expected": "Then the live look in button will be to the right of the Standings title at the top"
+      },
+      {
+        "content": "When a user taps on the Live Look In banner on the Standings menu page",
+        "expected": "Then the Live Look In plays successfully"
+      },
+      {
+        "content": "When a user is on the WIFI Connection and then taps on the Live Look In banner on the Scoreboard menu page",
+        "expected": "Then the Live Look In launches successfully"
+      },
+      {
+        "content": "When a user is on a Cellular Connection and then taps on a Live Look In banner on the Scoreboard menu page\n\nTest on both Verizon or Sprint and AT&T or T-Mobile",
+        "expected": "Then the Live Look In launches successfully"
+      },
+      {
+        "content": "When a user dismisses a Live Look In stream and then launches an MLB.tv stream",
+        "expected": "Then the MLB.TV stream starts up successfully"
+      },
+      {
+        "content": "When a user dismisses a Live Look In stream and then launches a video highlight",
+        "expected": "Then the Video Highlight starts up successfully"
+      },
+      {
+        "content": "When a user taps on the screen during a Live Look In stream",
+        "expected": "Then the Media Player UI will behave normally"
+      },
+      {
+        "content": "When a user has a game audio stream playing and launches a Live Look In",
+        "expected": "Then the Audio Stream stops playing\nand the Live Look In launches successfully"
+      },
+      {
+        "content": "When a user is playing a Live Look In stream and a receives a text message",
+        "expected": "Then we receive the Text Message successfully\nand the Live Look In continues to play without interruption"
+      },
+      {
+        "content": "When a user has a sees a Live Look In banner and then is in offline mode",
+        "expected": "Then tapping Live Look In banner will not play a stream and will just display the media player for a second and close out of it quickly"
+      },
+      {
+        "content": "When a user is playing a Live Look in and then backgrounds the app and then brings it to the foreground",
+        "expected": "Then the Live Look In is closed out"
+      },
+      {
+        "content": "When a user has a Closed Captioning setting turned on in the iOS settings and then a Live Look In stream is playing",
+        "expected": "Then closed captioning will display on the Live Look-in stream"
+      }
+    ]
+  }
+]

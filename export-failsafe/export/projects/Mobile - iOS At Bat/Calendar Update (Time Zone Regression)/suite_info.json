@@ -1,0 +1,11 @@
+{
+  "id": 600876,
+  "name": "Calendar Update (Time Zone Regression)",
+  "description": "For users who are located in different time zones around the world to test the schedule flipping to the current day at 11 AM Eastern Standard Time. ",
+  "project_id": 4,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/600876"
+}

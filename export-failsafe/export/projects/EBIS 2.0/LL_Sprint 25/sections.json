@@ -1,0 +1,56 @@
+[
+  {
+    "id": 108082,
+    "suite_id": 16531,
+    "name": "CSP (CEP) Sumary",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 108083,
+    "suite_id": 16531,
+    "name": "Invoices",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 108097,
+    "suite_id": 16531,
+    "name": "Credits",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 108099,
+    "suite_id": 16531,
+    "name": "CSP School",
+    "description": null,
+    "parent_id": null,
+    "display_order": 33,
+    "depth": 0
+  },
+  {
+    "id": 108100,
+    "suite_id": 16531,
+    "name": "Global",
+    "description": null,
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 108104,
+    "suite_id": 16531,
+    "name": "Batches",
+    "description": null,
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  }
+]

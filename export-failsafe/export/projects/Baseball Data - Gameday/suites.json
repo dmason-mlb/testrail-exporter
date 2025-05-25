@@ -1,0 +1,35 @@
+[
+  {
+    "id": 106626,
+    "name": "Gameday UI Performance Test Cases",
+    "description": null,
+    "project_id": 208,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/106626"
+  },
+  {
+    "id": 106627,
+    "name": "Gameday UI Test Cases",
+    "description": null,
+    "project_id": 208,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/106627"
+  },
+  {
+    "id": 694009,
+    "name": "Sanity",
+    "description": null,
+    "project_id": 208,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/694009"
+  }
+]

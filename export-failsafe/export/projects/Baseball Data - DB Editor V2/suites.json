@@ -1,0 +1,68 @@
+[
+  {
+    "id": 218846,
+    "name": "Person Tab",
+    "description": null,
+    "project_id": 217,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/218846"
+  },
+  {
+    "id": 218848,
+    "name": "Game Tab",
+    "description": null,
+    "project_id": 217,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/218848"
+  },
+  {
+    "id": 218849,
+    "name": "Team Tab",
+    "description": null,
+    "project_id": 217,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/218849"
+  },
+  {
+    "id": 218850,
+    "name": "Transactions Tab",
+    "description": null,
+    "project_id": 217,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/218850"
+  },
+  {
+    "id": 218851,
+    "name": "Venue Tab",
+    "description": null,
+    "project_id": 217,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/218851"
+  },
+  {
+    "id": 218852,
+    "name": "Miscellaneous Tab",
+    "description": null,
+    "project_id": 217,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/218852"
+  }
+]

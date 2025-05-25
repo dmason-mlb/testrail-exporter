@@ -1,0 +1,868 @@
+[
+  {
+    "id": 172703,
+    "title": "News Index",
+    "section_id": 24090,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4562",
+    "created_by": 84,
+    "created_on": 1465320667,
+    "updated_by": 84,
+    "updated_on": 1476806917,
+    "estimate": null,
+    "estimate_forecast": "42s",
+    "suite_id": 1654,
+    "display_order": 1,
+    "custom_preconds": "Given a user is on an Android device",
+    "custom_steps": "When a user navigates to the Android At Bat News Index\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat News Index",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has navigated to the Android At Bat News Index\nand begins to type \"MLB News\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"MLB News\" will appear\nand that link will bring the user to the MLB.com News Index in At Bat\n"
+      }
+    ]
+  },
+  {
+    "id": 181414,
+    "title": "Team News Index",
+    "section_id": 24090,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1467738575,
+    "updated_by": 84,
+    "updated_on": 1476806924,
+    "estimate": null,
+    "estimate_forecast": "1m 14s",
+    "suite_id": 1654,
+    "display_order": 2,
+    "custom_preconds": "Given a user is on an Android device",
+    "custom_steps": "When a user navigates to the Android At Bat News Index for a specific team\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Team News Indices\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has navigated to the Android At Bat News Index for a specific team\nand begins to type \"[Team Name] News\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name] News\" will appear\nand that link will bring the user to the MLB.com News Index in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 172704,
+    "title": "News Articles",
+    "section_id": 24090,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4562",
+    "created_by": 84,
+    "created_on": 1465320670,
+    "updated_by": 84,
+    "updated_on": 1476806930,
+    "estimate": null,
+    "estimate_forecast": "40s",
+    "suite_id": 1654,
+    "display_order": 3,
+    "custom_preconds": "Given a user is on an Android device",
+    "custom_steps": "When a user views an Android At Bat News Article\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat News Articles",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has viewed an Android At Bat News Article\nand begins to type the News Article headline in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[News Article Headline]\" will appear\nand that link will bring the user to that specific news article"
+      }
+    ]
+  },
+  {
+    "id": 93957,
+    "title": "Video Index",
+    "section_id": 14968,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1459870942,
+    "updated_by": 84,
+    "updated_on": 1476806939,
+    "estimate": null,
+    "estimate_forecast": "36s",
+    "suite_id": 1654,
+    "display_order": 1,
+    "custom_preconds": "Given a user is on an Android device",
+    "custom_steps": "When a user navigates to the Android At Bat MLB.com Video Index\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Video Indices",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has navigated to the Android At Bat MLB.com Video Index\nand begins to type \"MLB Videos\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"MLB Videos\" will appear\nand that link will bring the user to the MLB.com Video Index in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 93959,
+    "title": "Team Video Index",
+    "section_id": 14968,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1459871151,
+    "updated_by": 84,
+    "updated_on": 1476806945,
+    "estimate": null,
+    "estimate_forecast": "30s",
+    "suite_id": 1654,
+    "display_order": 2,
+    "custom_preconds": "Given a user is on an Android device",
+    "custom_steps": "When a user navigates to the Android At Bat Video Index for a specific team\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Team Video Indices",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has navigated to the Android At Bat Video Index for a specific team \nand begins to type \"[Team Name] Videos\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name] Videos\" will appear\nand that link will bring the user to that specific team's Video Index in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 93958,
+    "title": "Video Highlights",
+    "section_id": 14968,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1459870949,
+    "updated_by": 84,
+    "updated_on": 1476806953,
+    "estimate": null,
+    "estimate_forecast": "1m 35s",
+    "suite_id": 1654,
+    "display_order": 3,
+    "custom_preconds": "Given a user is on an Android device",
+    "custom_steps": "When a user views an At Bat Video\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Videos",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has viewed an At Bat Video\nand begins to type the title of that Video in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Video Title]\" will appear\nand that link will bring the user to that specific video\nand that video will start to play"
+      }
+    ]
+  },
+  {
+    "id": 172706,
+    "title": "Scoreboard",
+    "section_id": 24089,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4563",
+    "created_by": 84,
+    "created_on": 1465321158,
+    "updated_by": 84,
+    "updated_on": 1506130789,
+    "estimate": null,
+    "estimate_forecast": "3m 33s",
+    "suite_id": 1654,
+    "display_order": 1,
+    "custom_preconds": "Given a user is on an Android device",
+    "custom_steps": "When a user navigates to the Android At Bat Scoreboard\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Scoreboard pages",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has navigated to the Android At Bat Scoreboard\nand begins to type \"MLB Scoreboard\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"MLB Scoreboard\" will appear\nand that link will bring the user to the MLB.com Scoreboard in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 172712,
+    "title": "Standings",
+    "section_id": 24094,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4784",
+    "created_by": 84,
+    "created_on": 1465323229,
+    "updated_by": 84,
+    "updated_on": 1476806976,
+    "estimate": null,
+    "estimate_forecast": "2m 40s",
+    "suite_id": 1654,
+    "display_order": 1,
+    "custom_preconds": "Given a user is on an Android device",
+    "custom_steps": "When a user navigates to Android At Bat Standings\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Standings pages",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has navigated to Android At Bat Standings\nand then begins to type \"MLB Standings\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"MLB Standings\" will appear\nand that link will bring the user to the MLB.com Standings page in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 198182,
+    "title": "Favorite Teams",
+    "section_id": 24094,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-5133",
+    "created_by": 84,
+    "created_on": 1470689797,
+    "updated_by": 84,
+    "updated_on": 1476806995,
+    "estimate": null,
+    "estimate_forecast": "1m 18s",
+    "suite_id": 1654,
+    "display_order": 2,
+    "custom_preconds": "Given a user is on an Android device\r\nand has favorite teams set in At Bat",
+    "custom_steps": "When a user navigates to Android At Bat Standings\r\nand then uses the Google app search some time after",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user has navigated to Android At Bat Standings\nand then begins to type \"MLB Standings\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"MLB Standings\" will appear\nand that link will bring the user to the MLB.com Standings page in At Bat\nand that Standings page will respect the Favorite Teams setting"
+      }
+    ]
+  },
+  {
+    "id": 172701,
+    "title": "Team Page",
+    "section_id": 24088,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4613",
+    "created_by": 84,
+    "created_on": 1465320558,
+    "updated_by": 84,
+    "updated_on": 1476807026,
+    "estimate": null,
+    "estimate_forecast": "1m 20s",
+    "suite_id": 1654,
+    "display_order": 1,
+    "custom_preconds": "Given a user is on an Android handset or 7 inch tablet",
+    "custom_steps": "When a user navigates to an Android At Bat team page\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Team Pages",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has navigated to an Android At Bat team page\nand then begins to type part of the team name (either location or name) in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name]\" will appear\nand that link will bring the user to that Team Page in the app"
+      }
+    ]
+  },
+  {
+    "id": 172709,
+    "title": "Active Roster",
+    "section_id": 24091,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4788",
+    "created_by": 84,
+    "created_on": 1465323214,
+    "updated_by": 84,
+    "updated_on": 1476807050,
+    "estimate": null,
+    "estimate_forecast": "1m 35s",
+    "suite_id": 1654,
+    "display_order": 1,
+    "custom_preconds": "Given a user is on an Android handset or 7 inch tablet",
+    "custom_steps": "When a user navigates to an Android At Bat Team Roster from that Team's Page\r\nand is viewing the \"Active\" roster tab\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Team \"Active\" Roster tabs",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has navigated to an Android At Bat Team Roster from that Team's Page\nand has viewed the \"Active\" roster tab\nand then begins to type \"[Team Name] Roster\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name] Roster\" will appear\nand that link will bring the user to that team's \"Active\" Roster page in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 195343,
+    "title": "40-Man Roster",
+    "section_id": 24091,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4788",
+    "created_by": 84,
+    "created_on": 1469561186,
+    "updated_by": 84,
+    "updated_on": 1476807075,
+    "estimate": null,
+    "estimate_forecast": "1m 32s",
+    "suite_id": 1654,
+    "display_order": 2,
+    "custom_preconds": "Given a user is on an Android handset or 7 inch tablet",
+    "custom_steps": "When a user navigates to an Android At Bat Team Roster from that Team's Page\r\nand taps on the \"40-Man\" roster tab\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Team \"40-Man\" Roster tabs",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has navigated to an Android At Bat Team Roster from that Team's Page\nand has viewed the \"40-Man\" roster tab\nand then begins to type \"[Team Name] 40-Man Roster\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name] 40-Man Roster\" will appear\nand that link will bring the user to that team's \"40-Man\" Roster page in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 195344,
+    "title": "Depth Chart",
+    "section_id": 24091,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-5104",
+    "created_by": 84,
+    "created_on": 1469561188,
+    "updated_by": 84,
+    "updated_on": 1476807100,
+    "estimate": null,
+    "estimate_forecast": "2m 45s",
+    "suite_id": 1654,
+    "display_order": 3,
+    "custom_preconds": "Given a user is on an Android handset or 7 inch tablet",
+    "custom_steps": "When a user navigates to an Android At Bat Team Roster from that Team's Page\r\nand taps on the \"Depth Chart\" roster tab\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Team \"Depth Chart\" roster tabs",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has navigated to an Android At Bat Team Roster from that Team's Page\nand has viewed the \"Depth Chart\" roster tab\nand then begins to type \"[Team Name] Depth Chart\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name] Depth Chart\" will appear\nand that link will bring the user to that team's \"Depth Chart\" Roster page in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 195345,
+    "title": "Schedule Calendar View",
+    "section_id": 24092,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4786",
+    "created_by": 84,
+    "created_on": 1469563143,
+    "updated_by": 84,
+    "updated_on": 1472490229,
+    "estimate": null,
+    "estimate_forecast": "4m 24s",
+    "suite_id": 1654,
+    "display_order": 1,
+    "custom_preconds": "Given a user is on an Android handset or 7 inch tablet",
+    "custom_steps": "When a user navigates to an Android At Bat Team Schedule from that Team's Page\r\nand taps on the Calendar View\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Team Schedule Calendar Views",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has viewed the current month's Team Schedule Calendar view \nand begins to type \"[Team Name] Schedule - This Month's Calendar\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name] Schedule - This Month's Calendar\" will appear\nand that link will bring the user to that team's Schedule Calendar view page for the current month in At Bat"
+      },
+      {
+        "content": "When a user has viewed a different month's Team Schedule Calendar view \nand begins to type \"[Team Name] Schedule - [Month] [Year] Calendar\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name] Schedule - [Month] [Year] Calendar\" will appear\nand that link will bring the user to that team's Schedule Calendar view page for that month in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 172710,
+    "title": "Schedule List View",
+    "section_id": 24092,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4786",
+    "created_by": 84,
+    "created_on": 1465323219,
+    "updated_by": 84,
+    "updated_on": 1472490249,
+    "estimate": null,
+    "estimate_forecast": "3m 37s",
+    "suite_id": 1654,
+    "display_order": 2,
+    "custom_preconds": "Given a user is on an Android handset or 7 inch tablet",
+    "custom_steps": "When a user navigates to an Android At Bat Team Schedule from that Team's Page\r\nand taps on the List View\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Team Schedule List Views",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has viewed the current month's schedule List view\nand begins to type \"[Team Name] Schedule - This Month's List\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name] Schedule - This Month's List\" will appear\nand that link will bring the user to that team's Schedule List view page for the current month in At Bat"
+      },
+      {
+        "content": "When a user has viewed another month's schedule List view\nand begins to type \"[Team Name] Schedule - [Month] [Year] List\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name] Schedule - [Month] [Year] List\" will appear\nand that link will bring the user to that team's Schedule List view page for that month in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 172711,
+    "title": "Stats",
+    "section_id": 24093,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4785",
+    "created_by": 84,
+    "created_on": 1465323224,
+    "updated_by": 84,
+    "updated_on": 1476807134,
+    "estimate": null,
+    "estimate_forecast": "1m 39s",
+    "suite_id": 1654,
+    "display_order": 1,
+    "custom_preconds": "Given a user is on an Android device",
+    "custom_steps": "When a user navigates to Android At Bat Stats\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Stats pages",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has navigated to Android At Bat Stats\nand then begins to type \"MLB Stats\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"MLB Stats\" will appear\nand that link will bring the user to the MLB.com Stats page in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 172713,
+    "title": "MLB.TV EPG",
+    "section_id": 24095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4787",
+    "created_by": 84,
+    "created_on": 1465323235,
+    "updated_by": 84,
+    "updated_on": 1490747495,
+    "estimate": null,
+    "estimate_forecast": "1m 7s",
+    "suite_id": 1654,
+    "display_order": 1,
+    "custom_preconds": "Given a user is on an Android device",
+    "custom_steps": "When a user navigates to the Android At Bat MLB.TV EPG\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat MLB.TV EPG",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has navigated to the Android At Bat MLB.TV EPG\nand begins to type \"MLB.TV\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"MLB.TV\" will appear\nand that link will bring the user to the MLB.TV EPG in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 195362,
+    "title": "MLB.TV - Live/Archive Feeds",
+    "section_id": 24095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4787",
+    "created_by": 84,
+    "created_on": 1469564702,
+    "updated_by": 84,
+    "updated_on": 1476807193,
+    "estimate": null,
+    "estimate_forecast": "47s",
+    "suite_id": 1654,
+    "display_order": 2,
+    "custom_preconds": "Given a user is on an Android device",
+    "custom_steps": "When a user has launched and played a live or archived MLB.TV feed in At Bat \r\nand then uses the Google app search some time after\r\n\r\n(test for both live and archived feeds)",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat MLB.TV live/archive feeds",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has launched and played a live or archived MLB.TV feed in At Bat \nand begins to type \"MLB.TV: [Away Team] @ [Home Team]\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"MLB.TV: [Away Team] @ [Home Team]\" will appear\nand that link will bring the user to that MLB.TV feed"
+      }
+    ]
+  },
+  {
+    "id": 172714,
+    "title": "Gameday Audio EPG",
+    "section_id": 24095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-5100",
+    "created_by": 84,
+    "created_on": 1465323238,
+    "updated_by": 84,
+    "updated_on": 1476807216,
+    "estimate": null,
+    "estimate_forecast": "3m 7s",
+    "suite_id": 1654,
+    "display_order": 3,
+    "custom_preconds": "Given a user is on Android device",
+    "custom_steps": "When a user navigates to the Android At Bat Gameday Audio EPG\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index the previously viewed At Bat Gameday Audio EPG",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has navigated to the Android At Bat Gameday Audio EPG\nand begins to type \"Audio\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"Audio\" will appear\nand that link will bring the user to the Gameday Audio EPG in At Bat"
+      }
+    ]
+  },
+  {
+    "id": 195369,
+    "title": "Gameday Audio - Live Feeds",
+    "section_id": 24095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-5100",
+    "created_by": 84,
+    "created_on": 1469565106,
+    "updated_by": 84,
+    "updated_on": 1476807247,
+    "estimate": null,
+    "estimate_forecast": "5s",
+    "suite_id": 1654,
+    "display_order": 4,
+    "custom_preconds": "Given a user is on Android device",
+    "custom_steps": "When a user navigates to the Android At Bat Gameday Audio EPG\r\nand has launched a live Gameday Audio feed\r\nand then uses the Google app search some time after\r\n\r\n(Note that this only applies to LIVE feeds, as Audio feeds are not archived on mobile)",
+    "custom_expected": "Then the user will be able to quickly index the previously launched At Bat Gameday Audio LIVE feed EPG",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has navigated to the Android At Bat Gameday Audio EPG\nand has launched a LIVE Gameday Audio feed\nand then begins to type \"Audio: [Away Team] @ [Home Team]\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"Audio: [Away Team] @ [Home Team]\" will appear\nand that link will bring the user to that LIVE Gameday Audio feed"
+      }
+    ]
+  },
+  {
+    "id": 199386,
+    "title": "News Indices",
+    "section_id": 27887,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1471015515,
+    "updated_by": 84,
+    "updated_on": 1472508448,
+    "estimate": null,
+    "estimate_forecast": "3m 42s",
+    "suite_id": 1654,
+    "display_order": 1,
+    "custom_preconds": "Given Android device is set to Spanish",
+    "custom_steps": "When a user navigates to the Android At Bat News Indices in Spanish\r\nand At Bat Spanish News articles in\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat News Indices & news articles in Spanish",
+    "custom_steps_separated": [
+      {
+        "content": "When a user begins to type \"Noticias de MLB\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"Noticias de MLB\" will appear\nand that link will bring the user to the MLB.com News Index in At Bat in Spanish"
+      },
+      {
+        "content": "When a user begins to type \"Noticias de los [Team Name]\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"Noticias de los [Team Name]\" will appear\nand that link will bring the user to the MLB.com News Index in At Bat in Spanish"
+      },
+      {
+        "content": "When a user begins to type a previously viewed Spanish News Article headline in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[News Article Headline]\" will appear\nand that link will bring the user to that specific news article"
+      }
+    ]
+  },
+  {
+    "id": 199388,
+    "title": "Video Indices",
+    "section_id": 27887,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1471015521,
+    "updated_by": 84,
+    "updated_on": 1472573358,
+    "estimate": null,
+    "estimate_forecast": "4m 44s",
+    "suite_id": 1654,
+    "display_order": 3,
+    "custom_preconds": "Given Android device is set to Spanish",
+    "custom_steps": "When a user navigates to the Android At Bat Video Indices in Spanish\r\nand At Bat Spanish Video Highlights\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Video Indices and video highlights in Spanish",
+    "custom_steps_separated": [
+      {
+        "content": "When a user begins to type \"Videos de MLB\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"Videos de MLB\" will appear\nand that link will bring the user to the MLB.com Video Index in At Bat in Spanish"
+      },
+      {
+        "content": "When a user begins to type \"Videos de los [Team Name]\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"Videos de los [Team Name]\" will appear\nand that link will bring the user to that specific team's Video Index in At Bat in Spanish"
+      },
+      {
+        "content": "When a user begins to type the title of a previously played Spanish Video Highlight in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Video Title]\" will appear\nand that link will bring the user to that specific video\nand that video will start to play"
+      }
+    ]
+  },
+  {
+    "id": 199390,
+    "title": "Scoreboard",
+    "section_id": 27887,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1471015550,
+    "updated_by": 84,
+    "updated_on": 1471017457,
+    "estimate": null,
+    "estimate_forecast": "54s",
+    "suite_id": 1654,
+    "display_order": 5,
+    "custom_preconds": "Given Android device is set to Spanish",
+    "custom_steps": "When a user navigates to the Android At Bat Scoreboard\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Scoreboard pages in Spanish",
+    "custom_steps_separated": [
+      {
+        "content": "When a user begins to type \"Resultados de MLB\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"Resultados de MLB\" will appear\nand that link will bring the user to the MLB.com Scoreboard in At Bat in Spanish"
+      }
+    ]
+  },
+  {
+    "id": 199396,
+    "title": "Standings",
+    "section_id": 27887,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1471016850,
+    "updated_by": 84,
+    "updated_on": 1471017470,
+    "estimate": null,
+    "estimate_forecast": "1m 23s",
+    "suite_id": 1654,
+    "display_order": 6,
+    "custom_preconds": "Given Android device is set to Spanish",
+    "custom_steps": "When a user navigates to Android At Bat Standings\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Standings pages in Spanish",
+    "custom_steps_separated": [
+      {
+        "content": "When a user begins to type \"Posiciones de MLB\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"Posiciones de MLB\" will appear\nand that link will bring the user to the MLB.com Standings page in At Bat in Spanish"
+      },
+      {
+        "content": "(With favorite team(s) set)\nWhen a user begins to type \"Posiciones de MLB\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"Posiciones de MLB\" will appear\nand that link will bring the user to the MLB.com Standings page in At Bat in Spanish\nand that Standings page will respect the Favorite Teams setting"
+      }
+    ]
+  },
+  {
+    "id": 199391,
+    "title": "Team Page",
+    "section_id": 27887,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1471015592,
+    "updated_by": 84,
+    "updated_on": 1471017480,
+    "estimate": null,
+    "estimate_forecast": "59s",
+    "suite_id": 1654,
+    "display_order": 7,
+    "custom_preconds": "Given Android handset or 7 inch tablet is set to Spanish",
+    "custom_steps": "When a user navigates to an Android At Bat team page\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Team Pages in Spanish",
+    "custom_steps_separated": [
+      {
+        "content": "When a user begins to type part of the team name (either location or name) in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name]\" will appear\nand that link will bring the user to that Team Page in the app in Spanish"
+      }
+    ]
+  },
+  {
+    "id": 199392,
+    "title": "Team Roster",
+    "section_id": 27887,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1471015602,
+    "updated_by": 84,
+    "updated_on": 1472489914,
+    "estimate": null,
+    "estimate_forecast": "4m 33s",
+    "suite_id": 1654,
+    "display_order": 8,
+    "custom_preconds": "Given Android handset or 7 inch tablet is set to Spanish",
+    "custom_steps": "When a user navigates to an Android At Bat Team Roster from that Team's Page\r\nand is viewing the different roster tabs\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Team Roster tabs in Spanish",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has navigated to a team's \"Activo\" roster tab\nand then begins to type \"[Team Name] Lista\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name] Lista\" will appear\nand that link will bring the user to that team's \"Activo\" Roster page in At Bat in Spanish"
+      },
+      {
+        "content": "When a user has navigated to a team's \"40-Jugadores\" roster tab\nand then begins to type \"[Team Name] 40-Jugadores Lista\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name] 40-Jugadores Lista\" will appear\nand that link will bring the user to that team's \"40-Jugadores\" Roster page in At Bat in Spanish"
+      },
+      {
+        "content": "When a user has navigated to a team's \"Grafico de Posiciones\" roster tab\nand then begins to type \"[Team Name] Grafico de Posiciones\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name] Grafico de Posiciones\" will appear\nand that link will bring the user to that team's \"Grafico de Posiciones\" Roster page in At Bat in Spanish"
+      }
+    ]
+  },
+  {
+    "id": 199393,
+    "title": "Team Schedule",
+    "section_id": 27887,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1471015629,
+    "updated_by": 84,
+    "updated_on": 1472489834,
+    "estimate": null,
+    "estimate_forecast": "6m 35s",
+    "suite_id": 1654,
+    "display_order": 9,
+    "custom_preconds": "Given Android handset or 7 inch tablet is set to Spanish",
+    "custom_steps": "When a user navigates to an Android At Bat Team Schedule from that Team's Page\r\nand taps on the different views\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Team Schedule Views in Spanish",
+    "custom_steps_separated": [
+      {
+        "content": "When a user has viewed a team's Schedule List view for the current month\nand then begins to type \"[Team Name] Calendario - Lista de este mes\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name] Calendario - Lista de este mes\" will appear\nand that link will bring the user to that team's Schedule List view page for the current month in At Bat in Spanish"
+      },
+      {
+        "content": "When a user has viewed a team's Schedule List view for another month\nand then begins to type \"[Team Name] Calendario - Lista de [month] [year]\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name] Calendario - Lista de [month] [year]\" will appear\nand that link will bring the user to that team's Schedule List view page for that month in At Bat in Spanish"
+      },
+      {
+        "content": "When a user has viewed a team's Schedule Calendar view for the current month\nand then begins to type \"[Team Name] Calendario - Calendario de este mes\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name] Calendario - Calendario de este mes\" will appear\nand that link will bring the user to that team's Schedule Calendar view page for the current month in At Bat in Spanish"
+      },
+      {
+        "content": "When a user has viewed a team's Schedule Calendar view for another month\nand then begins to type \"[Team Name] Calendario - Calendario de [month] [year]\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"[Team Name] Calendario - Calendario de [month] [year]\" will appear\nand that link will bring the user to that team's Schedule Calendar view page for that month in At Bat in Spanish"
+      }
+    ]
+  },
+  {
+    "id": 199394,
+    "title": "Stats",
+    "section_id": 27887,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1471015634,
+    "updated_by": 84,
+    "updated_on": 1472492169,
+    "estimate": null,
+    "estimate_forecast": "5m 11s",
+    "suite_id": 1654,
+    "display_order": 10,
+    "custom_preconds": "Given Android device is set to Spanish",
+    "custom_steps": "When a user navigates to Android At Bat Stats\r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat Stats pages in Spanish",
+    "custom_steps_separated": [
+      {
+        "content": "When a user begins to type \"Estadisticas de MLB\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"Estadisticas de MLB\" will appear\nand that link will bring the user to the MLB.com Stats page in At Bat in Spanish"
+      }
+    ]
+  },
+  {
+    "id": 199395,
+    "title": "MLB.TV",
+    "section_id": 27887,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1471015639,
+    "updated_by": 84,
+    "updated_on": 1490747523,
+    "estimate": null,
+    "estimate_forecast": "2m 30s",
+    "suite_id": 1654,
+    "display_order": 11,
+    "custom_preconds": "Given Android device is set to Spanish",
+    "custom_steps": "When a user navigates to the Android At Bat MLB.TV EPG\r\nand has launched and played a live or archived MLB.TV feed in At Bat \r\nand then uses the Google app search some time after",
+    "custom_expected": "Then the user will be able to quickly index previously viewed At Bat MLB.TV EPG and At Bat MLB.TV live/archive feeds",
+    "custom_steps_separated": [
+      {
+        "content": "When a user begins to type \"MLB.TV\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"MLB.TV\" will appear\nand that link will bring the user to the MLB.TV EPG in At Bat"
+      },
+      {
+        "content": "When a user begins to type \"MLB.TV: [Away Team] @ [Home Team]\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"MLB.TV: [Away Team] @ [Home Team]\" will appear\nand that link will bring the user to that MLB.TV feed"
+      }
+    ]
+  },
+  {
+    "id": 199397,
+    "title": "Gameday Audio",
+    "section_id": 27887,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1471018081,
+    "updated_by": 84,
+    "updated_on": 1471018513,
+    "estimate": null,
+    "estimate_forecast": "49s",
+    "suite_id": 1654,
+    "display_order": 12,
+    "custom_preconds": "Given Android device is set to Spanish",
+    "custom_steps": "When a user navigates to the Android At Bat Gameday Audio EPG\r\nand has launched a live Gameday Audio feed\r\nand then uses the Google app search some time after\r\n\r\n(Note that this only applies to LIVE feeds, as Audio feeds are not archived on mobile)",
+    "custom_expected": "Then the user will be able to quickly index the previously viewed At Bat Gameday Audio EPG\r\nand the previously launched At Bat Gameday Audio LIVE feed EPG",
+    "custom_steps_separated": [
+      {
+        "content": "When a user begins to type \"Audio\" in the device's Google app search",
+        "expected": "Then a link to the At Bat app titled \"Audio\" will appear\nand that link will bring the user to the Gameday Audio EPG in At Bat"
+      },
+      {
+        "content": "When a user begins to type \"Audio: [Away Team] @ [Home Team]\" in the device's Google app search\n",
+        "expected": "Then a link to the At Bat app titled \"Audio: [Away Team] @ [Home Team]\" will appear\nand that link will bring the user to that LIVE Gameday Audio feed"
+      }
+    ]
+  }
+]

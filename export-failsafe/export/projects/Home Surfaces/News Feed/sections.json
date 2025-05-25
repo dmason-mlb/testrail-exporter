@@ -1,0 +1,245 @@
+[
+  {
+    "id": 1805701,
+    "suite_id": 647397,
+    "name": "Additional",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1805702,
+    "suite_id": 647397,
+    "name": "trio (3)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1805703,
+    "suite_id": 647397,
+    "name": "quartet (4)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1805704,
+    "suite_id": 647397,
+    "name": "carousel",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1805705,
+    "suite_id": 647397,
+    "name": "persistent pill",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1805706,
+    "suite_id": 647397,
+    "name": "breaking news",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1805707,
+    "suite_id": 647397,
+    "name": "trio (6)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1805708,
+    "suite_id": 647397,
+    "name": "quartet (8)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1805709,
+    "suite_id": 647397,
+    "name": "secondary large",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1805710,
+    "suite_id": 647397,
+    "name": "secondary pair",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1805711,
+    "suite_id": 647397,
+    "name": "secondary quartet",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 1805712,
+    "suite_id": 647397,
+    "name": "carousel large",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 1805713,
+    "suite_id": 647397,
+    "name": "stories stack",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 1805714,
+    "suite_id": 647397,
+    "name": "stories carousel",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 1805715,
+    "suite_id": 647397,
+    "name": "stories duo",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 1805716,
+    "suite_id": 647397,
+    "name": "stories trio",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 1805717,
+    "suite_id": 647397,
+    "name": "stories single",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 1805718,
+    "suite_id": 647397,
+    "name": "headline stack",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 1948449,
+    "suite_id": 647397,
+    "name": "Bilingual Support",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 1975567,
+    "suite_id": 647397,
+    "name": "Pill Menu",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 1975566,
+    "suite_id": 647397,
+    "name": "Topic collection Onboarding",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 1975565,
+    "suite_id": 647397,
+    "name": "Grid behavior",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 1975564,
+    "suite_id": 647397,
+    "name": "Tap story stack",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 1975563,
+    "suite_id": 647397,
+    "name": "Tap  story",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 1975561,
+    "suite_id": 647397,
+    "name": "Quartet grid",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 1975560,
+    "suite_id": 647397,
+    "name": "Trio grid",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 1975559,
+    "suite_id": 647397,
+    "name": "Duo grid",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  }
+]

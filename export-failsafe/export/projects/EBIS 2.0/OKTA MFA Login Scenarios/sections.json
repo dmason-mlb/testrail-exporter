@@ -1,0 +1,20 @@
+[
+  {
+    "id": 382052,
+    "suite_id": 80006,
+    "name": "Positive Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 382053,
+    "suite_id": 80006,
+    "name": "Negative Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

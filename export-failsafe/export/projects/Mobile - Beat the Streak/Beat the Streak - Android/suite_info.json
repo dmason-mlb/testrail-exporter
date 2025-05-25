@@ -1,0 +1,11 @@
+{
+  "id": 592,
+  "name": "Beat the Streak - Android",
+  "description": "OS version\r\n4.1 or later (same as currently)\r\n\r\nDevices\r\nPhone\r\nTablet\r\n\r\nwiki instructions for scoring picks - https://wiki.mlbam.com/display/fantasy/Resetting+date+and+running+scoring+job+in+QA",
+  "project_id": 23,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/592"
+}

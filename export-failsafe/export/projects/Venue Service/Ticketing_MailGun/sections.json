@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1645384,
+    "suite_id": 594609,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1645385,
+    "suite_id": 594609,
+    "name": "Forward email failure",
+    "description": null,
+    "parent_id": 1645384,
+    "display_order": 2,
+    "depth": 1
+  }
+]

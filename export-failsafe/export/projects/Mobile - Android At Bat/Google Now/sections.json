@@ -1,0 +1,20 @@
+[
+  {
+    "id": 2417,
+    "suite_id": 432,
+    "name": "Lite User",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 2418,
+    "suite_id": 432,
+    "name": "Paid User",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

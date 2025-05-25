@@ -1,0 +1,402 @@
+[
+  {
+    "id": 15992043,
+    "title": "Buy Tickets Segment",
+    "section_id": 712787,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1613172098,
+    "updated_by": 288,
+    "updated_on": 1635204158,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192826,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "Given User has Ballpark app installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user has no favorite team selected\nAND navigates to the Wallet Tab\nAnd taps on the \"Buy Tickets\" Section\n",
+        "expected": "THEN No Games please change your filter to view tickets will be displayed in the center of the screen.\n\nSelect A Team will be displayed on the top left button"
+      },
+      {
+        "content": "WHEN user selects a team from the Team Picker",
+        "expected": "THEN the selected team's schedule is displayed"
+      },
+      {
+        "content": "WHEN the user has never visited the buy tickets Team picker\nAND has at least one favorite team selected\nAND navigates to the Wallet Tab\nAnd taps on the \"Buy Tickets\" Section",
+        "expected": "THEN the number one ranked favorite team's schedule is displayed."
+      },
+      {
+        "content": "WHEN user has at least one favorite team associated with account\nAND user has made a previous selection on the Buy Tickets team picker\nAND navigates to the Wallet Tab\nAnd taps on the \"Buy Tickets\" section",
+        "expected": "THEN the previously selected team's schedule will be displayed,  if different from the favorite team."
+      }
+    ]
+  },
+  {
+    "id": 15991946,
+    "title": "First View without Favorite Team",
+    "section_id": 732312,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1613171473,
+    "updated_by": 288,
+    "updated_on": 1657040219,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192826,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user does not have a favorite team established\r\nAND user navigates to Tickets on bottom navigation",
+    "custom_steps": null,
+    "custom_expected": "THEN no team is selected on the filter",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user selects the Buy tickets tab for the first time",
+        "expected": "THEN user is shown No Games page\nAND user is shown 'Select Team' button\nAND user is shown 'Home Games' button"
+      },
+      {
+        "content": "WHEN user taps 'Select Team' button",
+        "expected": "THEN the team picker will animate up over the view\nAND all Teams will be displayed\n"
+      },
+      {
+        "content": "",
+        "expected": "AND the team names will be displayed as follows: Location name, Team Name (Check all 30 teams)\n"
+      },
+      {
+        "content": "",
+        "expected": "AND the team picker will display all team names in alphabetical order."
+      },
+      {
+        "content": "",
+        "expected": "AND a Cancel/X button is displayed on the team picker"
+      },
+      {
+        "content": "WHEN user taps Cancel/X button with team picker",
+        "expected": "THEN team picker is dismissed\nAND user is returned back to No Games page"
+      },
+      {
+        "content": "WHEN user taps 'Select Team' button\nAND user selects a team",
+        "expected": "THEN user is returned back to Buy Tickets page with the selected team's schedule shown"
+      }
+    ]
+  },
+  {
+    "id": 15991945,
+    "title": "View with Favorite Team",
+    "section_id": 732312,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1613171473,
+    "updated_by": 288,
+    "updated_on": 1681487356,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192826,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has a favorite team established\r\nAND user navigates to Tickets on bottom navigation\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the User taps the Buy Tickets tab",
+        "expected": "THEN the favorited team's events are returned"
+      },
+      {
+        "content": "",
+        "expected": "AND the Month Headers will be Sticky when scrolled"
+      },
+      {
+        "content": "",
+        "expected": "AND Display day of week and date # in the left column (this font size should be fixed and NOT change based on device settings)"
+      },
+      {
+        "content": "WHEN the user views each scheduled event presented",
+        "expected": "THEN each event has Away team logo, away team name @ home team cap logo, home team name presented \nAND followed by Event time (always use local time) \nAND followed by Venue name (use venue string from data)\n\n"
+      },
+      {
+        "content": "[Remaining validation steps to be verified, ONLY if data is available]\n\n",
+        "expected": "AND followed by Game description (example - 'Cubs home opener')\nAND followed by Probable pitcher: Away probable pitcher name (away_name_abbrev) @ Home probable pitcher name (home_name_abbrev (example - 'Gibson, Kyle (PHI) @ Widener, Taylor (ARI)')"
+      },
+      {
+        "content": "When the User taps the Buy Tickets button\nAnd Events are returned\nAND If probable data is not provided for one team",
+        "expected": "Then the probable pitcher name will be replaced with \"TBD\""
+      },
+      {
+        "content": "When the User taps the Buy Tickets button\nAnd Events are returned\nAND If probable data is not provided for either team",
+        "expected": "Then do not show this pitcher row and \"collapse\" the space"
+      },
+      {
+        "content": "When the User taps the Buy Tickets button\nAnd Events are returned\nAnd Promotions are available",
+        "expected": "Then a promotions link is displayed along with the number of available promotions"
+      },
+      {
+        "content": "When the User taps the Buy Tickets button\nAnd Events are returned\nAnd Promotions are not available",
+        "expected": "Then the Row for promotions is not displayed"
+      }
+    ]
+  },
+  {
+    "id": 15991948,
+    "title": "No Search Results Returned [*Offseaon /Proxy]",
+    "section_id": 732312,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1613171484,
+    "updated_by": 288,
+    "updated_on": 1681487633,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192826,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user navigates to Tickets on bottom navigation\r\n\r\n[During the season, a schedule is expected. During offseason, a schedule may also be shown for following season. May need to interrupt call via Proxy to validate view]",
+    "custom_steps": "WHEN No Event shown in the Filter game\r\n",
+    "custom_expected": "Then the page displays as No Game \"Please change your filter\"\r\n ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on Buy Tickets \nAND selects a team that has no events",
+        "expected": "THEN the page displays No Games in the middle of the page \n"
+      },
+      {
+        "content": "",
+        "expected": "[IOS] AND text stating \"Please change your filters\"\nOR\n[ANDROID] AND text stating \"Please change your filter to view tickets\""
+      }
+    ]
+  },
+  {
+    "id": 15991949,
+    "title": "Buy Tickets - Team Filter",
+    "section_id": 712760,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1613171487,
+    "updated_by": 288,
+    "updated_on": 1635204643,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192826,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "Given\r\nThe user has selected a team and is viewing the buy tickets tab",
+    "custom_steps": null,
+    "custom_expected": "THEN user can switch the Team to any team to Buy Tickets",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is on the Buy Tickets Tab\nAND taps with the team name",
+        "expected": "THEN the team picker slides up from the Bottom\nAND all 30 MLB teams are displayed with their \"cap\" logo, sorted alphabetically."
+      },
+      {
+        "content": "WHEN the user selects a team from the Team Picker",
+        "expected": "THEN the team picker is dismissed (including the team already selected)"
+      },
+      {
+        "content": "WHEN the user is on the Buy Tickets Tab\nAND taps with the team name\nAND the user taps close from the Team Picker",
+        "expected": "THEN the team picker is dismissed\nAND user is returned to the browse results previously displayed\n"
+      }
+    ]
+  },
+  {
+    "id": 15991950,
+    "title": "Buy Tickets - Team Filter presents TeamPicker",
+    "section_id": 712760,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1613171487,
+    "updated_by": 288,
+    "updated_on": 1635204428,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192826,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN that the user is logged in.\r\nGIVEN that the user has no favorite team.",
+    "custom_steps": null,
+    "custom_expected": "THEN the user closes the team picker without selecting a team they are taken back to the screen they where previously on",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User open the Ballpark app and Log In to the their account\n",
+        "expected": "THEN User is looged in with their credentials"
+      },
+      {
+        "content": "WHEN user has no fave team\nAND user is on Tickets > Buy Tickets tab\nAND user taps 'Select team' filter\n",
+        "expected": "THEN team picker is shown"
+      },
+      {
+        "content": "When User closes the Team Picker by clicking 'X'/'Cancel' without selecting any Team \n",
+        "expected": "THEN User is taken to the previous page when trying to select the Team"
+      }
+    ]
+  },
+  {
+    "id": 15991951,
+    "title": "Buy Tickets - Team Filter  shows Favorites Teams before remaining teams",
+    "section_id": 712760,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1613171487,
+    "updated_by": 288,
+    "updated_on": 1635204988,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192826,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User has a favorite team selected associated with the account \r\n\r\n",
+    "custom_steps": "WHEN the user navigates to Tickets Tab Buy Tickets Segment",
+    "custom_expected": "Team filter screen will have the user's favorite team(s) pulled to the top of the list.\r\nAll other teams will display alphabetically\r\n\r\nTHEN List of teams, Logo, and Team Name\r\n\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user on the Buy Tickets segment within Tickets Tab\nAND user selects the Team filter \nAND user selects a team",
+        "expected": "THEN Selected Team shows on the list"
+      },
+      {
+        "content": "",
+        "expected": "AND Team filter screen will have the user's favorite team(s) pulled to the top of the list.\nAND All other teams will display alphabetically\n"
+      },
+      {
+        "content": "When the user tap the team selected, the filter will close and the list of game get refreshed and shows newly selected teams schedule",
+        "expected": "THEN  Team is selected and filters are closed and list of the games get refreshed"
+      }
+    ]
+  },
+  {
+    "id": 15991953,
+    "title": "Buy Tickets - Schedule Filter (Home / Full)",
+    "section_id": 712761,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1613171502,
+    "updated_by": 288,
+    "updated_on": 1657036545,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 192826,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN user has downloaded BP app (11.3.0 or above)\r\nAND user has logged in",
+    "custom_steps": "WHEN user views the buy tickets tab",
+    "custom_expected": "THEN user has ability to filter by team AND by schedule (Full Schedule / Home Games)",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN a user does not have a favorite team set NOR has the user visited the team page\nWHEN the user navigates to Buy Tickets view within the Tickets tab\n",
+        "expected": "[iOS]\nTHEN 'Select Team' is defaulted as the team filter\nAND 'Home Games' is defaulted at the schedule filter\nAND 'No Games' is shown on the page with 'Please change your filters'\n\n[Android]\nTHEN 'SELECT A TEAM' is defaulted as the team filter\nAND 'HOME GAMES' is defaulted at the schedule filter \nAND 'No Games' is shown on the page with 'Please change your filter to view tickets'"
+      },
+      {
+        "content": "WHEN the user taps the 'Select Team'/'SELECT A TEAM' filter button\n",
+        "expected": "THEN a slide up menu will be displayed with all 30 teams listed with team logo, team location, and team name\n\n[iOS]\nAND 'Cancel' is shown at the top of the menu\n\n[Android]\nAND 'X' is shown at the top of the menu"
+      },
+      {
+        "content": "WHEN the user taps 'Cancel'/'X' on the team selection menu",
+        "expected": "THEN user is returned to Buy Tickets view without a team selected\nAND 'No Games' page is shown"
+      },
+      {
+        "content": "WHEN the user taps the 'Select Team'/'SELECT A TEAM' filter button\nAND the user selects any team",
+        "expected": "THEN user is returned to Buy Tickets view with the selected team show as the team filter button\nAND the selected team schedule is shown with entries for each upcoming matchup particular to the schedule filter\n\n\n[iOS/Android defaults to 'Home Games']\n*list will only show games where the selected team is home for 'Home Games'"
+      },
+      {
+        "content": "WHEN the user taps the schedule filter button ('Home Games' or 'Full Schedule')",
+        "expected": "THEN a slide up menu will be displayed with Full Schedule and Home Games options\n\n[iOS]\nAND 'Cancel' is shown at the top of the menu\n\n[Android]\nAND 'X' is shown at the top of the menu\n\n"
+      },
+      {
+        "content": "WHEN the user taps 'Cancel'/'X' on the schedule selection menu",
+        "expected": "THEN user is returned to Buy Tickets view\nAND the previously displayed game data is shown"
+      },
+      {
+        "content": "WHEN the user taps the schedule filter button ('Home Games' or 'Full Schedule')\nAND the user taps the prev selected schedule filter (noted with a checkmark) ",
+        "expected": "THEN user is returned to Buy Tickets view\nAND the previously displayed game data is shown"
+      },
+      {
+        "content": "WHEN the user taps the schedule filter button ('Home Games' or 'Full Schedule')\nAND the user taps the schedule filter NOT prev selected (noted without a checkmark) ",
+        "expected": "THEN user is returned to Buy Tickets view\nAND the game data particular to the schedule filter is shown\n\n*list will only show games where the selected team is home for 'Home Games'\n*list will show games where the selected team is home or away for 'Full Schedule'"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "*may need to perform a fresh install of the app\n\nGIVEN a user does not have a favorite team set BUT the user has visited any team page (via Team Tab dropdown)\nWHEN the user navigates to Buy Tickets view within the Tickets tab",
+        "expected": "[iOS]\nTHEN the team selected from team page is defaulted as the team filter\nAND 'Home Games' is defaulted at the schedule filter \n\n\n[Android]\nTHEN 'SELECT A TEAM' is defaulted as the team filter\nAND 'HOME GAMES' is defaulted at the schedule filter \nAND 'No Games' page is shown"
+      },
+      {
+        "content": "REPEAT STEPS 5 THROUGH 8\n\n*Android will need to select a team before validation",
+        "expected": "VERIFY EXPECTATION OF EACH STEP"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "*may need to perform a fresh install of the app\n\nGIVEN a user has a favorite team set BUT the user has not visited a team page\nWHEN the user navigates to Buy Tickets view within the Tickets tab",
+        "expected": "THEN the first favorited team is defaulted as the team filter\n\n[iOS/Android]\nAND 'Home Games'/'HOME GAMES' is defaulted at the schedule filter "
+      },
+      {
+        "content": "REPEAT STEPS 5 THROUGH 8",
+        "expected": "VERIFY EXPECTATION OF EACH STEP"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "*may need to perform a fresh install of the app\n\nGIVEN a user has a favorite team set AND the user has visited a different team page from the favorite team (prior to navigating to Buy Tickets view)*\nWHEN the user navigates to Buy Tickets view within the Tickets tab\n\n",
+        "expected": "[iOS]\nTHEN the team selected from team page is defaulted as the team filter\nAND 'Home Games' is defaulted at the schedule filter \n\n[Android]\nTHEN the first favorited team is defaulted as the team filter\nAND 'HOME GAMES' is defaulted at the schedule filter "
+      },
+      {
+        "content": "REPEAT STEPS 5 THROUGH 8",
+        "expected": "VERIFY EXPECTATION OF EACH STEP"
+      }
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 156770,
+    "suite_id": 21881,
+    "name": "Deprecated",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 156763,
+    "suite_id": 21881,
+    "name": "General / Configuration",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 156764,
+    "suite_id": 21881,
+    "name": "Initial Launch",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 156765,
+    "suite_id": 21881,
+    "name": "Feature Gates",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 156766,
+    "suite_id": 21881,
+    "name": "Purchase",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 156767,
+    "suite_id": 21881,
+    "name": "Restore",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 156768,
+    "suite_id": 21881,
+    "name": "Linking",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 156769,
+    "suite_id": 21881,
+    "name": "Subscribe and Install",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  }
+]

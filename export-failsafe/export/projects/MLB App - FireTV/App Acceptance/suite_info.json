@@ -1,0 +1,11 @@
+{
+  "id": 121184,
+  "name": "App Acceptance",
+  "description": "This suite is for test cases that are specifically geared toward passing app acceptance from Google Play Store or Amazon App Store\r\n\r\n",
+  "project_id": 206,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/121184"
+}

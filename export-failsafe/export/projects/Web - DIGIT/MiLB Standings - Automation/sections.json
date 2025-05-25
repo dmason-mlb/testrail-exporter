@@ -1,0 +1,38 @@
+[
+  {
+    "id": 825566,
+    "suite_id": 256071,
+    "name": "Filter",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 825567,
+    "suite_id": 256071,
+    "name": "Team Info",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 825568,
+    "suite_id": 256071,
+    "name": "Next Game",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 825569,
+    "suite_id": 256071,
+    "name": "Elements",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

@@ -1,0 +1,147 @@
+[
+  {
+    "id": 6687047,
+    "title": "Game Screen Layout",
+    "section_id": 305369,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1588190962,
+    "updated_by": 258,
+    "updated_on": 1588190962,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43412,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a game is in Pre-Game state",
+    "custom_steps": "WHEN the user navigates to the Game page",
+    "custom_expected": "THEN Game should open, taking up whole screen \r\nAND Teams should be displayed at the top, along with the time and time zone of the game\r\nAND Card should be displayed for the user to tap and select their projected winner",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6687042,
+    "title": "Pre-Game flow",
+    "section_id": 305370,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1588190962,
+    "updated_by": 258,
+    "updated_on": 1588190962,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43412,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user is in the app and there is game in the pre-game state",
+    "custom_steps": "WHEN the user click on a game in pre-game state",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Open a game in the pre-game state",
+        "expected": "User is presented with a pre-game explanation card:\n![](index.php?/attachments/get/26619)\n"
+      },
+      {
+        "content": "Swipe down to the next card",
+        "expected": "User is presented with a card asking them which team they think will win:\n![](index.php?/attachments/get/26620)\n"
+      },
+      {
+        "content": "Swipe down to the next card",
+        "expected": "User is presented with a final pre-game card, telling them how many picks they have remaining or if their picks are complete and containing a button allowing them to enable notifications for the game:\n![](index.php?/attachments/get/26623)![](index.php?/attachments/get/26624)"
+      },
+      {
+        "content": "Swipe down ",
+        "expected": "Top 1, Batter up, On Deck, In The Hole cards are displayed. User can make a pick for those props. (!!!the first set of atBat props showing up few min before the contest starts. If the game is not starting soon then those props should not be displayed) "
+      }
+    ]
+  },
+  {
+    "id": 6687043,
+    "title": "Pre-Game Goes Live",
+    "section_id": 305370,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1588190962,
+    "updated_by": 258,
+    "updated_on": 1588190962,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43412,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a user is in the app and inside a game\r\nAND the game is in a PRE-GAME state",
+    "custom_steps": "WHEN the game time is reached",
+    "custom_expected": "THEN a card saying \"It's game time!\" should be displayed at the bottom of the deck of pre-game props\r\nAND when the first batters are at bat, a \"TOP 1\" card should be displayed, followed by the \"Batter Up\", \"On Deck\", and \"In the Hole\" batter props\r\nAND the time at the top of the card should change to a display of the bases, number of outs, and have \"TOP 1\" displayed above it\r\n\r\n![](index.php?/attachments/get/27557)![](index.php?/attachments/get/27559)\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6687044,
+    "title": "Pre-Game behavior",
+    "section_id": 305370,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1588190962,
+    "updated_by": 258,
+    "updated_on": 1588190962,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43412,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User skips first pre-game question and answers any questions and exits the game",
+        "expected": "When user reopen the game, the first card to open is Welcome card"
+      },
+      {
+        "content": "User answers first pre-game question and exits the game",
+        "expected": "First unanswered prop is open"
+      }
+    ]
+  },
+  {
+    "id": 6687128,
+    "title": "Top 1 cards for pre-game",
+    "section_id": 305370,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1588193459,
+    "updated_by": 258,
+    "updated_on": 1588193538,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43412,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "A few minutes before the game starts",
+        "expected": "1. Top 1, Batter up, On Deck, In The Hole cards are displayed. \n2. User can make a pick for those props. "
+      },
+      {
+        "content": "If the game is not starting soon",
+        "expected": "then those props should not be displayed"
+      }
+    ]
+  }
+]

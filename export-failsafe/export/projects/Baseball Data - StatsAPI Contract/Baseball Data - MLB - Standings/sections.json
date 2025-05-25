@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1059425,
+    "suite_id": 354398,
+    "name": "Schedule",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1059426,
+    "suite_id": 354398,
+    "name": "Standings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

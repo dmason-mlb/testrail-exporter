@@ -1,0 +1,101 @@
+[
+  {
+    "id": 135412,
+    "suite_id": 19583,
+    "name": "Search",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 134657,
+    "suite_id": 19583,
+    "name": "Create Major Contract",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 134675,
+    "suite_id": 19583,
+    "name": "Pay Schedule",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 134676,
+    "suite_id": 19583,
+    "name": "Flags",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 134678,
+    "suite_id": 19583,
+    "name": "Season Days",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 134679,
+    "suite_id": 19583,
+    "name": "Contract History",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 134680,
+    "suite_id": 19583,
+    "name": "Approvals Clipboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 134681,
+    "suite_id": 19583,
+    "name": "Agent",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 134682,
+    "suite_id": 19583,
+    "name": "Agencies",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 134683,
+    "suite_id": 19583,
+    "name": "Award",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 134684,
+    "suite_id": 19583,
+    "name": "Batch Screen",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  }
+]

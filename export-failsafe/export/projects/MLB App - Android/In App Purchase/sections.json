@@ -1,0 +1,38 @@
+[
+  {
+    "id": 395335,
+    "suite_id": 84346,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 773907,
+    "suite_id": 84346,
+    "name": "Initial Launch",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 773908,
+    "suite_id": 84346,
+    "name": "Feature Gates",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 773909,
+    "suite_id": 84346,
+    "name": "Subscribe and Install",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

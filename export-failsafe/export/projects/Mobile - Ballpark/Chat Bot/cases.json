@@ -1,0 +1,164 @@
+[
+  {
+    "id": 28887942,
+    "title": "Chat Bot Configuration",
+    "section_id": 1534598,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1657732211,
+    "updated_by": 288,
+    "updated_on": 1744305629,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 543399,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "Prerequisite - Remote Config Setup for: ChatBot configuration\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"support_chat_url\" as needed to force display.\r\n3. Save changes.\r\n4. Publish changes.\r\n\r\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\r\n\r\nRemote Configs \r\n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobiletools-npd-d08e/config)\r\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\r\n(can have condition set up to differentiate desired behavior for different envs/platform/target_audience)\r\n\r\nNOTE: Making changes to the configuration may take a few minutes to propagate and/or require a few app restarts\r\n\r\n\r\nGIVEN Ballpark app is installed* \r\n\r\n*Chatbot feature introduced w/ 11.4.0",
+    "custom_steps": null,
+    "custom_expected": "For feature flag in remote config - if the URL is present then the icon should be considered active for both tabs",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the support_chat_url within config updated and published with correct URL(s)*\nWHEN the user is on the Home Tab\n\n[iOS] - ballpark://webview?url=https%3A%2F%2Fchat.satis.fi%2F%3FpageID%3D11070\n[Android] - https://chat.satis.fi/?pageID=11070",
+        "expected": "THEN chat feature is enabled\nAND user is shown the chat icon* at the top right\n\n*icon is shown as a chat bubble with 3 dots inside"
+      },
+      {
+        "content": "GIVEN the support_chat_url within config updated and published with correct URL(s)*\nWHEN the user is on the Tickets Tab",
+        "expected": "THEN chat feature is enabled\nAND user is shown the chat icon* at the top right\n\n*icon is shown as a chat bubble with 3 dots inside"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN the support_chat_url within config updated and published with missing/empty URL(s)*\nWHEN the user is on the Home Tab",
+        "expected": "THEN chat feature is disabled \nAND user is NOT shown the chat icon"
+      },
+      {
+        "content": "GIVEN the support_chat_url within config updated and published with missing/empty URL(s)*\nWHEN the user is on the Tickets Tab",
+        "expected": "THEN chat feature is disabled \nAND user is NOT shown the chat icon"
+      }
+    ]
+  },
+  {
+    "id": 28887946,
+    "title": "Chat Bot Icon - Home Tab",
+    "section_id": 1534599,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1657746755,
+    "updated_by": 288,
+    "updated_on": 1658942754,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 543399,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the support_chat_url within config updated and published with correct URL(s)*\r\nAND Ballpark app is installed** \r\n\r\n\r\n[iOS] - ballpark://webview?url=https%3A%2F%2Fchat.satis.fi%2F%3FpageID%3D11070\r\n[Android] - https://chat.satis.fi/?pageID=11070\r\n**Chatbot feature introduced w/ 11.4.0",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is on the Home Tab\n",
+        "expected": "THEN chat feature is enabled\nAND user is shown the chat icon* at the top right\n\n*icon is shown as a chat bubble with 3 dots inside"
+      },
+      {
+        "content": "WHEN the user taps on the Chat Bot icon on the Home Page",
+        "expected": "THEN user is taken to the chat assistant experience"
+      },
+      {
+        "content": "(this step requires access to Adobe and/or access to ProxyTool to verify the action sent)\n\n[THIS VALIDATION CAN BE SKIPPED, IF ACCESS HAS NOT BEEN GRANTED]",
+        "expected": "AND an Adobe action will be sent: \n'MLB Ballpark : Home : Chatbot Click'"
+      },
+      {
+        "content": "WHEN the user navigates through chat (via options presented)",
+        "expected": "THEN chat bot responds accordingly"
+      },
+      {
+        "content": "WHEN the user types a question \nAND submits via either 'submit arrow on the right' or device keyboard",
+        "expected": "THEN chat bot responds accordingly"
+      },
+      {
+        "content": "WHEN the user taps the info icon next to 'Ask a question' field",
+        "expected": "THEN Privacy & Legal Policies page is shown with appropriate links\n\n(can validate the links and dismissal via 'X', but this page is handled by the clubs - external to BP app)"
+      },
+      {
+        "content": "WHEN the user taps the refresh icon on the top right",
+        "expected": "THEN the page is refreshed"
+      },
+      {
+        "content": "WHEN the user closes the webview\n\n",
+        "expected": "THEN user is returned to the Home tab"
+      }
+    ]
+  },
+  {
+    "id": 28887947,
+    "title": "Chat Bot Icon - Tickets Tab",
+    "section_id": 1534599,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1657747765,
+    "updated_by": 288,
+    "updated_on": 1658942742,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 543399,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the support_chat_url within config updated and published with correct URL(s)*\r\nAND Ballpark app is installed** \r\n\r\n\r\n[iOS] - ballpark://webview?url=https%3A%2F%2Fchat.satis.fi%2F%3FpageID%3D11070\r\n[Android] - https://chat.satis.fi/?pageID=11070\r\n**Chatbot feature introduced w/ 11.4.0",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is on the Tickets Tab\n",
+        "expected": "THEN chat feature is enabled\nAND user is shown the chat icon* at the top right\n\n*icon is shown as a chat bubble with 3 dots inside"
+      },
+      {
+        "content": "WHEN the user taps on the Chat Bot icon on the Tickets Page",
+        "expected": "THEN user is taken to the chat assistant experience"
+      },
+      {
+        "content": "(this step requires access to Adobe and/or access to ProxyTool to verify the action sent)\n\n[THIS VALIDATION CAN BE SKIPPED, IF ACCESS HAS NOT BEEN GRANTED]",
+        "expected": "AND an Adobe action will be sent: \n'MLB Ballpark : Tickets : Chatbot Click'"
+      },
+      {
+        "content": "WHEN the user navigates through chat (via options presented)",
+        "expected": "THEN chat bot responds accordingly"
+      },
+      {
+        "content": "WHEN the user types a question \nAND submits via either 'submit arrow on the right' or device keyboard",
+        "expected": "THEN chat bot responds accordingly"
+      },
+      {
+        "content": "WHEN the user taps the info icon next to 'Ask a question' field",
+        "expected": "THEN Privacy & Legal Policies page is shown with appropriate links\n\n(can validate the links and dismissal via 'X', but this page is handled by the clubs - external to BP app)"
+      },
+      {
+        "content": "WHEN the user taps the refresh icon on the top right",
+        "expected": "THEN the page is refreshed"
+      },
+      {
+        "content": "WHEN the user closes the webview\n\n",
+        "expected": "THEN user is returned to the Tickets tab"
+      }
+    ]
+  }
+]

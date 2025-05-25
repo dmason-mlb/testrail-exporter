@@ -1,0 +1,763 @@
+[
+  {
+    "id": 1216918,
+    "title": "Team's Positions",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-485",
+    "created_by": 65,
+    "created_on": 1516228767,
+    "updated_by": 65,
+    "updated_on": 1518105732,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": "WHEN the user asks BAMbot about a team's position in its division, league, or in all of baseball\r\nOR league standings\r\n\r\ni.e.\r\n- Who is in first place in the AL West?\r\n- What place are the Dodgers in?\r\n- What place is teamName in?\r\n- Who is in place in the divisionName?\r\n- Who has the best record in the leagueName?\r\n- Who has the best record in the divisionName?\r\n- Who has the worst record in the divisionName?\r\n- How many games back are the teamName?",
+    "custom_expected": "THEN the feature should support all queries about divisions, leagues, and league-wide information.\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user asks BAMbot about a team's position in its division, league, or in all of baseball",
+        "expected": "THEN bot replies with Division, League, MLB info"
+      },
+      {
+        "content": "WHEN user asks BAMbot about a team's position in the wild card",
+        "expected": "THEN bot replies with Wild card info"
+      },
+      {
+        "content": "WHEN user asks BAMbot about team run differentials \n",
+        "expected": "THEN bot replies with Run differential info"
+      },
+      {
+        "content": "WHEN user asks BAMbot about team run differentials \nAND expected wins and losses",
+        "expected": "THEN bot replies with Run differential info and — if requested — what the expected win/loss should be"
+      },
+      {
+        "content": "WHEN user asks BAMbot about team win/loss splits for spring training, the regular season, or the postseason",
+        "expected": "THEN bot replies with specific team Splits info that is also found on the standings page"
+      },
+      {
+        "content": "WHEN user asks BAMbot about team win/loss splits for spring training, the regular season, or the postseason\nAND asks about specific team splits found on standings pages, including: home/away, grass/turf, day/night, vs. >.500",
+        "expected": "THEN bot replies with specific team Splits info that is also found on the standing page"
+      }
+    ]
+  },
+  {
+    "id": 1216876,
+    "title": "Team Division Rank Mid Season",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-485",
+    "created_by": 65,
+    "created_on": 1516141512,
+    "updated_by": 65,
+    "updated_on": 1518717498,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the time frame is the following:\r\n\r\n- request time: mid-season\r\n- season type: regular season\r\n- year: current year\r\n- utterance tense: present\r\n",
+    "custom_steps": "WHEN the user asks a query for team division rank\r\n\r\ni.e. What PLACE are the Yankees in?",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user asks a query for team division rank\nAND If team is in 1st place",
+        "expected": "THEN the response is in the following format:\n\nThe teamName are in divisionRank place in the teamDivision with a record of teamRecord.\n\ni.e.\nThe Yankees are in 1st place in the AL East with a record of 92-59"
+      },
+      {
+        "content": "WHEN the user asks a query for team division rank\nAND If team is Not in 1st place",
+        "expected": "THEN the response is in the following format:\n\nThe teamName are in divisionRank place in the teamDivision with a record of teamRecord.\nThey are gamesBack games behind the division-leading divisionLeader.\n\ni.e.\nThe Yankees are in 2nd place in the AL East with a record of 92-59.\nThey are 4 games behind the division-leading Red Sox."
+      },
+      {
+        "content": "WHEN the user asks a query for team division rank\nAND If date is after 8/1 & games back from 2nd wildcard is less than 5",
+        "expected": "THEN the response is in the following format:\n\nThe teamName are in divisionRank place in the teamDivision with a record of teamRecord.\nThey are gamesBack games behind the division-leading divisionLeader.\nCurrently, the teamName are wildCardGamesBack games out of the 2nd division Wild Card spot.\n\ni.e.\nThe Yankees are in 2nd place in the AL East with a record of 92-59.\nThey are 4 games behind the division-leading Red Sox.\nCurrently, the Yankees are 3 games out of the 2nd AL Wild Card spot."
+      },
+      {
+        "content": "WHEN the user asks a query for team division rank\nAND\nIf after a certain date, (Aug. 1?) should also include standings in the Wild Card race if a team is NOT in 1st place and within 5 games of 1 of the 2 league Wild Card spots. Say a team is 12 back in the NL East on Aug. 15 but only 2 back of a Wild Card spot.",
+        "expected": "THEN the response is:\n\ni.e.\nThe Yankees are in second place in the A L East with a record of 92-59. They are 8 games behind the division-leading Red Sox, 4 games behind the Twins for the first AL Wild Card spot, and 3 games behind 2 teams for the 2nd AL Wild Card spot."
+      },
+      {
+        "content": "Deeplink",
+        "expected": "mlbatbat://standings?selectedTeams=nyy"
+      }
+    ]
+  },
+  {
+    "id": 1216877,
+    "title": "Team Division Rank Off Season",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-485",
+    "created_by": 65,
+    "created_on": 1516141800,
+    "updated_by": 65,
+    "updated_on": 1521730459,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the time frame is the following:\r\n\r\n- request time: off-season\r\n- season type: regular season\r\n- year: current year\r\n- utterance tense: present\r\n",
+    "custom_steps": "WHEN the user asks a query for Team division rank\r\n\r\ni.e. What PLACE are the Yankees in?",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user asks a query for Team division rank\nAND If team made playoffs\nAND was not 1st in their division\nAND did not win the world series",
+        "expected": "THEN the response is in the following format:\n\nThe teamName finished the year regular season in divisionRank place in the division with a record of teamRecord.\n\nThey were the first/second Wild Card team in the league and advanced to the playoffRound, where they lost to the winningTeam gamesLost games to gamesWon.\n\ni.e.\nThe New York Yankees finished the 2017 regular season in 2nd place in the AL East with a record of 91-71.  \n\nThey were the 1st Wild Card team in the AL and advanced to the ALCS, where they lost to the Houston Astros 4 games to 3."
+      },
+      {
+        "content": "WHEN the user asks a query for Team division rank\nAND If team made playoffs\nAND won their division\nAND did not win world series",
+        "expected": "THEN the response is in the following format:\n\nThe teamName finished the year regular season in divisionRank place in the division with a record of teamRecord.\n\nThey lost to the winningTeam in the playoffRound gamesLost to gamesWon.\n\ni.e.\nThe Washington Nationals finsihed the 2017 regular season in 1st place in the NL East with a record of 97-65.\n\nThey lost to the Chicago Cubs in the NLDS 3 games to 2."
+      },
+      {
+        "content": "WHEN the user asks a query for Team division rank\nAND If team made playoffs\nAND won their division\nAND won the world series",
+        "expected": "THEN the response is in the following format:\n\nThe teamName finished the year regular season in divisionRank place in the division with a record of teamRecord.\n\nThey won the World Series, where they defeated the losingTeam gamesWon games to gamesLost.\n\ni.e.\nThe Houston Astros finished the 2017 regular season in 1st place in the AL West with a record of 101-61.\n\nThey won the World Series, where they defeated the Los Angeles Dodgers 4 games to 3."
+      },
+      {
+        "content": "WHEN the user asks a query for Team division rank\nAND\nIf relevent, should also include info if the team made the playoffs. This would be an odd response if a team entered the postseason as a Wild Card and won the World Series, as an example. Also adding regular to season.",
+        "expected": "Then the response is:\n\ni.e.\nThe New York Yankees finished the 2017 regular season in second place in the A L East with a record of 92-70. \n\nThey were the first Wild Card team in the A L and advanced to the A L C S round, where they lost, 4 games to 3, to the Houston Astros."
+      },
+      {
+        "content": "Deeplink",
+        "expected": "mlbatbat://standings?selectedTeams=nyy&state=divison"
+      }
+    ]
+  },
+  {
+    "id": 1216878,
+    "title": "Team Division Rank in Specific Year",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-485",
+    "created_by": 65,
+    "created_on": 1516141901,
+    "updated_by": 65,
+    "updated_on": 1518717615,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the time frame is the following:\r\n\r\n- request time: irrelevant\r\n- season type: regular season\r\n- year: 2012\r\n- utterance tense: past\r\n",
+    "custom_steps": "WHEN the user asks a query for team division rank in a specific year\r\n\r\ni.e. What PLACE did the Orioles finish in in 2012?",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user asks a query for team division rank in a specific year\nAND If team made playoffs\nAND team was not 1st in their division\nAND did not win the world series",
+        "expected": "THEN the response is in the following format:\n\nThe teamName finished the year regular season in divisionRank place in the division with a record of teamRecord. \nThey were the first/second Wild Card team in the league and advanced to the playoffRound, where they lost to the winningTeam gamesLost games to gamesWon.\n\ni.e.\nThe Orioles finished the 2012 regular season in 2nd place in the AL East with a record of 93-69.\n\nThey were the 2nd Wild Card team in the AL and advanced to the ALDS, where they lost to the Yankees 3 games to 2.\n"
+      },
+      {
+        "content": "WHEN the user asks a query for team division rank in a specific year\nAND If team made playoffs\nAND if team won their division\nAND did not win world series",
+        "expected": "THEN the response is in the following format:\n\nThe teamName finished the year regular season in divisionRank place in the division with a record of teamRecord. \nThey lost to the winningTeam in the playoffRound gamesLost to gamesWon.\n\ni.e.\nThe Yankees finished the 2012 regular season in 1st place in the AL East with a record of 95-67.\nThey lost to the Detroit Tigers in the ALCS 4 games to 0.\n"
+      },
+      {
+        "content": "WHEN the user asks a query for team division rank in a specific year\nAND If team made playoffs\nAND team won world series",
+        "expected": "THEN the response is in the following format:\n\nThe teamName finished the year regular season in divisionRank place in the division with a record of teamRecord. \nThey won the World Series, where they defeated the losingTeam gamesWon games to gamesLost.\n\ni.e.\nThe Giants finsihed the 2012 regular season in 1st place in the NL West with a record of 94-68.\nThey won the World Series, where they defeated the Detroit Tigers 4 games to 0."
+      },
+      {
+        "content": "Deeplink ????",
+        "expected": "Is there a standings deep link for a specific year and team?"
+      }
+    ]
+  },
+  {
+    "id": 1225388,
+    "title": "Team Division Rank responses",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-588",
+    "created_by": 65,
+    "created_on": 1523638713,
+    "updated_by": 65,
+    "updated_on": 1523639659,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 7,
+    "custom_preconds": "GIVEN that as a baseball fan, I want to be able to ask BAMbot what place my favorite team is in",
+    "custom_steps": "WHEN the user asks a query for team division rank\r\n\r\ni.e.\r\n- What place are the Yankees in?\r\n- How are the Mets doing this season?\r\n- What is the Nationals record this year?",
+    "custom_expected": "THEN the user should be deep linked into the native standings view with the requested team(s) highlighted\r\n\r\n(see deeplinks here: https://wiki.mlbam.com/pages/viewpage.action?pageId=55312411)",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user asks a query for team division rank\nAND the team is in 1st place",
+        "expected": "THEN the response is in the following format:\n\ni.e.\nThe Yankees are in 1st place in the AL East with a record of 92-59.\n"
+      },
+      {
+        "content": "WHEN the user asks a query for team division rank\nAND the team is in NOT in 1st place",
+        "expected": "THEN in the response a 2nd line should be added telling the user how many games back from 1st place the team is.\n\ni.e. \nThe Yankees are in 2nd place in the AL East with a record of 92-59.\nThey are 4 games behind the division-leading Red Sox.\n"
+      },
+      {
+        "content": "WHEN the user asks a query for team division rank \nAND the team is not in 1st place\nAND the date is after 8/1 \nAND they are less than 5 games back from the 2nd wild card spot",
+        "expected": "THEN in the response a 3rd line should be added telling the user how many games out of the wild card the team is.\n\ni.e. \nThe Yankees are in 2nd place in the AL East with a record of 92-59.\nThey are 4 games behind the division-leading Red Sox.\nCurrently, the Yankees are 3 games out of the 2nd AL Wild Card spot."
+      },
+      {
+        "content": "WHEN the user asks a query for team division rank\nAND multiple teams are tied for first place\nAND they have the same record",
+        "expected": "THEN in the response template should indicate which teams are tied and return their records\n\ni.e.\nThe Pirates and Cardinals are tied for 1st place in the NL Central with records of 72-70."
+      },
+      {
+        "content": "WHEN the user asks a query for team division rank\nAND multiple teams are tied for first place\nAND they have different records",
+        "expected": "THEN the response template should indicate which teams are tied but omit the records.\n\ni.e.\nThe Yankees and Orioles are tied for 1st place in the AL East."
+      },
+      {
+        "content": "WHEN the user asks a query for team division rank\nAND multiple teams are tied, not in first place\nAND they have the same record",
+        "expected": "THEN the response template should indicate which teams are tied and return their records\n\ni.e. \nThe Pirates and Cardinals are tied for 3rd place in the NL Central with records of 72-70.\nThey are 8 games behind the division-leading Cubs."
+      },
+      {
+        "content": "WHEN the user asks a query for team division rank\nAND multiple teams are tied, not in 1st place\nAND they have different records",
+        "expected": "THEN the response template should indicate which teams are tied but omit the records\n\ni.e. \nThe Yankees and Orioles are tied for 3rd place in the AL East.\nThey are 4 games behind the division-leading Red Sox."
+      },
+      {
+        "content": "WHEN the user asks a query for team division rank\nAND multiple teams are tied, not in 1st place, the date is after 8/1, \nAND they are less than 5 games back from the 2nd wild card",
+        "expected": "Then in the response a 3rd line should be added indicating how many games back from the 2nd wild card the teams are\n\ni.e. \nThe Yankees and Orioles are tied for 3rd place in the AL East with records of 22-16.\nThey are 4 games behind the division-leading Red Sox.\nCurrently, the Yankees and Orioles are 3 games out of the 2nd AL Wild Card spot."
+      }
+    ]
+  },
+  {
+    "id": 1225389,
+    "title": "Team Division Rank in Specific Year responses",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-586",
+    "created_by": 65,
+    "created_on": 1523639694,
+    "updated_by": 65,
+    "updated_on": 1523640313,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 8,
+    "custom_preconds": "GIVEN that as a baseball fan, I want to be able to ask BAMbot what place a specific team finished in for a certain year",
+    "custom_steps": "WHEN the user asks a query for team division rank\r\n\r\ni.e.\r\n- How did the Yankees do in 1985?\r\n- How did the Nationals finish last year?\r\n- What place did the Pirates finish in in 1897?",
+    "custom_expected": "THEN the user should get a response in the following format / template",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user asks a query for team division rank in a specific year\nAND a 2nd Wild Card team was added (i.e. Orioles in 2012):",
+        "expected": "THEN if a team made the wild card, the response / template is in the following format to reflect if they were the 1st or 2nd Wild Card team\n\ni.e.\nThe Baltimore Orioles finished the 2012 regular season in 2nd place in the AL East with a record of 93-69.\nThey were the second Wild Card team in the American League and advanced to the ALDS, where they lost to the New York Yankees 3 games to 2.\n"
+      },
+      {
+        "content": "WHEN the user asks a query for team division rank in a specific year\nAND there was a player strike (i.e. in 1994)",
+        "expected": "THEN if asking about standings when there was a player's strike, the response / template should indicate that no playoff games occurred that year if the team would have made the playoffs\n\ni.e. \nThe New York Yankees finished the 1994 regular season in 1st place in the AL East with a record of 70-43.\nNo MLB postseason games were played this year."
+      },
+      {
+        "content": "WHEN the user asks a query for team division rank in a between 1969 and present",
+        "expected": "THEN in the response a division name and ranking should be present (AL East, NL East, etc)\n"
+      },
+      {
+        "content": "WHEN the user asks a query for team division rank before 1969",
+        "expected": "THEN in the response just the league and ranking should be present (American League, National League)\n\ni.e. \nThe New York Yankees finished the 1967 regular season in 9th place in the American League with a record of 72-90."
+      },
+      {
+        "content": "WHEN the user asks a query for team division rank before 1903",
+        "expected": "THEN in the response template should indicate that no playoff games occurred that year\n\ni.e.\nThe Philadelphia Athletics finished the 1902 regular season in 1st place in the American League with a record of 83-53.\nNo MLB postseason games were played this year."
+      }
+    ]
+  },
+  {
+    "id": 1216879,
+    "title": "Unspecified Team - Ranking in Division, Mid-Season",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-485",
+    "created_by": 65,
+    "created_on": 1516142093,
+    "updated_by": 65,
+    "updated_on": 1518717011,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 9,
+    "custom_preconds": "GIVEN the time frame is the following:\r\n\r\n- request time: mid-season\r\n- season type: regular season\r\n- year: current\r\n- utterance tense: present",
+    "custom_steps": "WHEN the user asks a query for an unspecified team - ranking in division\r\n\r\ni.e. Who's in LAST PLACE in the AL EAST?",
+    "custom_expected": "THEN the response is in the following format:\r\n\r\nThe teamName are in divisionRank place in the division with a record of teamRecord.\r\n\r\ni.e. The Rays are in last place in the AL East with a record of 62-99.",
+    "custom_steps_separated": [
+      {
+        "content": "Deeplink",
+        "expected": "mlbatbat://standings"
+      }
+    ]
+  },
+  {
+    "id": 1216880,
+    "title": "Unspecified Team - Ranking in Division, Spring Training",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-485",
+    "created_by": 65,
+    "created_on": 1516142250,
+    "updated_by": 65,
+    "updated_on": 1521732976,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 10,
+    "custom_preconds": "GIVEN the time frame is the following:\r\n\r\n- request time: spring training\r\n- season type: regular season\r\n- year: previous year\r\n- utterance tense: present\r\n",
+    "custom_steps": "WHEN the user asks a query for an unspecified team - ranking in division\r\n\r\ni.e. Who's in LAST PLACE in the AL EAST?",
+    "custom_expected": "THEN the response is in the following format:\r\n\r\nThe year has not started yet, but the teamName finished in divisionRank in the teamDivision last year with a teamRecord regular season record.\r\n\r\ni.e. The 2018 season has not started yet, but the Houston Astros finished in 1st place in the AL West last year with a 101-61 regular season record.",
+    "custom_steps_separated": [
+      {
+        "content": "Deeplink",
+        "expected": "TBD"
+      }
+    ]
+  },
+  {
+    "id": 1216881,
+    "title": "Unspecified Team - Ranking in Spring Training League",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-485",
+    "created_by": 65,
+    "created_on": 1516142397,
+    "updated_by": 65,
+    "updated_on": 1521235295,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 11,
+    "custom_preconds": "GIVEN the time frame is the following:\r\n\r\n- request time: spring training\r\n- season type: spring training\r\n- year: current year\r\n- utterance tense: present\r\n",
+    "custom_steps": "WHEN the user asks a query for an unspecified team - ranking in spring training league\r\n\r\ni.e. Who is in FIRST PLACE in the CACTUS LEAGUE?",
+    "custom_expected": "THEN user is taken to the Standings page\r\n\r\n* NOTE: This is fine as is for right now. Since we likely won't be \"launching\" (marketing the standings intent) until after opening day, we'll likely implement the text template sometime later on this season. We could leave this ticket SDBB-576 open for now but we won't be implementing a standings spring training template anytime soon.",
+    "custom_steps_separated": [
+      {
+        "content": "Deeplink",
+        "expected": "TBD"
+      },
+      {
+        "content": "NOT YET IMPLEMENTED: For Future Release after Opening Day\n",
+        "expected": "THEN the response is in the following format:\n\nThe teamName are in springLeagueRank place in the springLeague with a record of teamRecord.\n\ni.e. The Cubs are in 1st place in the Cactus League with a record of 12-5."
+      }
+    ]
+  },
+  {
+    "id": 1223884,
+    "title": "Unspecified Team - Ranking in Division for a Specific Year / No Specific Year",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-485, SDBB-589",
+    "created_by": 65,
+    "created_on": 1521742832,
+    "updated_by": 65,
+    "updated_on": 1522198472,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 12,
+    "custom_preconds": "GIVEN the user is in Ask At Bat\r\n",
+    "custom_steps": "WHEN the user asks a query for an unspecified team - ranking in specific division for a specific year or no specific year mentioned\r\n\r\ni.e. \r\n\r\n- Who is in first place in the AL East?\r\n- Who finished in 2nd place in the NL Central in 2013?",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user asks a query with No year specified\nAND the current season has not started yet\n\ni.e. Who is in first place in the AL East?",
+        "expected": "THEN the response template should indicate that the season has not started \nand fall back to the results from the previous year.\n\ni.e. The 2018 season has not started yet, but the Boston Red Sox finished in 1st place in the AL East last year with a 93-69 regular season record."
+      },
+      {
+        "content": "WHEN the user asks a query for a team which made the wild card (in 2012 - A 2nd Wild Card team was added)",
+        "expected": "THEN the response template should reflect if they were the 1st or 2nd Wild Card team. (i.e. Orioles in 2012)\n\ni.e. \n\nThe Baltimore Orioles finished the 2012 regular season in 2nd place in the AL East with a record of 93-69.\n\nThey were the second Wild Card team in the American League and advanced to the ALDS, where they lost to the New York Yankees 3 games to 2."
+      },
+      {
+        "content": "WHEN the user asks a query about a team\nAND there was a Player Strike that year (i.e. Player Strike occurred in 1994)",
+        "expected": "THEN the response template should indicate that no playoff games occurred that year if the team would have made the playoffs\n\ni.e. \n\nThe New York Yankees finished the 1994 regular season in 1st place in the AL East with a record of 70-43.\n\nNo MLB postseason games were played this year."
+      },
+      {
+        "content": "WHEN the user ask about a team between 1969 - Present",
+        "expected": "THEN the response template should indicate division name and ranking (AL East, NL East, etc)."
+      },
+      {
+        "content": "WHEN the user ask about a team before 1969",
+        "expected": "THEN the response template should indicate just the league and ranking (American League, National League)\n\ni.e. The New York Yankees finished the 1967 regular season in 9th place in the American League with a record of 72-90."
+      },
+      {
+        "content": "WHEN the user ask about a team before the playoffs were implemented in 1903",
+        "expected": "THEN the response template should indicate that no playoff games occured that year\n\ni.e. \n\nThe Philadelphia Athletics finished the 1902 regular season in 1st place in the American League with a record of 83-53.\n\nNo MLB postseason games were played this year."
+      },
+      {
+        "content": "WHEN the user ask about a team in a specific division by ranking with no year (MLB divisions each have 5 teams so when you're asking divisional ranking questions, it should be 1-5)\n\ni.e. Who finished in 4th place in the nl east?\n",
+        "expected": "THEN the response should be \n\nThe 2018 season has not started yet, but the New York Mets finished in 4th place in the NL East last year with a 70-92 regular season record.\n"
+      },
+      {
+        "content": "WHEN the user ask about a team by ranking by AL, NL, or MLB with no year (AL/NL rankings currently would not exceed 15th place & MLB rankings currently would not exceed 30th place)\n\ni.e. who finished in 11th place in the nl?",
+        "expected": "THEN the user is taken to the standings page"
+      },
+      {
+        "content": "WHEN the user ask about a team in a specific division by ranking over 5th place with no year (MLB divisions each have 5 teams so when you're asking divisional ranking questions, it should be 1-5)\n\ni.e. \n\n- who's 123rd\n- who placed 200 before last\n- who finished in 11th place in the nl east?\n",
+        "expected": "THEN the response should be an error message:\n\ni.e. I'm having trouble looking up that standings information right now."
+      },
+      {
+        "content": "WHEN the user ask about a team by ranking with no year\nAND there is a two way tie (i.e. two way tie in 4th place)\n\ni.e. Who's in 5th place?",
+        "expected": "THEN the response should tell you about who's tied for 4th and 5th place\n"
+      }
+    ]
+  },
+  {
+    "id": 1216882,
+    "title": "Ranking in the Division - Two Team Tie",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-485",
+    "created_by": 65,
+    "created_on": 1516142526,
+    "updated_by": 65,
+    "updated_on": 1520965150,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 14,
+    "custom_preconds": "GIVEN the time frame is the following:\r\n\r\n- request time: mid-season\r\n- season type: regular season\r\n- year: current year\r\n- utterance tense: present",
+    "custom_steps": "WHEN the user asks a query for ranking in the division\r\nAND there is a two team tie\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user asks a query for ranking in the division\nAND there is a two team tie\nAND both teams are in first place",
+        "expected": "THEN the response is in the following format:\n\nThe teamName and teamName are tied for divisionRank in the division with records of teamRecord.\n\ni.e. The Pirates and Cardinals are tied for 1st place in the NL Central with records of 72-70."
+      },
+      {
+        "content": "WHEN the user asks a query for ranking in the division\nAND there is a two team tie\nAND teams are not in first place\n\ni.e. Who's in THIRD in the NL CENTRAL?",
+        "expected": "THEN the response is in the following format:\n\nThe teamName and teamName are tied for divisionRank in the division with records of teamRecord.\nThey are gamesBack games behind the division-leading divisionLeader.\n\ni.e. \nThe Pirates and Cardinals are tied for third place in the NL Central with records of 72-70.\nThey are 8 games behind the division-leading Cubs."
+      },
+      {
+        "content": "WHEN the user asks a query for ranking in the division\nAND there is a two team tie\nAND If teams are not in 1st place\nAND date is after 8/1\nAND games back from 2nd wildcard is less than 5\n\ni.e. Who's in THIRD in the NL CENTRAL?",
+        "expected": "THEN the response is in the following format:\n\nThe teamName and teamName are tied for divisionRank in the division with records of teamRecord.\nThey are gamesBack games behind the division-leading divisionLeader.\nCurrently, the teamName and teamName are wildCardGamesBack games out of the 2nd division Wild Card spot.\n\ni.e.\n\nThe Pirates and Cardinals are tied for 3rd place in the NL Central with records of 72-70.\nThey are 8 games behind the division-leading Cubs.\nCurrently, the Pirates and Cardinals are 3 games out of the 2nd NL Wild Card spot"
+      },
+      {
+        "content": "NEEDS REVIEW",
+        "expected": "Would add logic to provide context on how far out of the playoff race they are from Aug. 1 forward. This may be the reason the question is being asked, rather than just wanting the raw record.\n\ni.e. \nThe Pirates and Cardinals are tied for third place in the N L Central with records of 72 and 70. They are eight games behind the division-leading Cubs, four games behind the Mets for the first NL Wild Card spot and 3 games behind the Dodgers for the second NL WIld Card spot."
+      },
+      {
+        "content": "Deeplink",
+        "expected": "TBD"
+      },
+      {
+        "content": "WHEN the user asks a query for ranking in the division\nAND there is a two team tie\nAND teams are both in first place\n\ni.e. What place are the Yankees in?",
+        "expected": "THEN the response is in the following format:\n\nThe teamName and teamName are tied for divisionRank in the division with records of teamRecord.\n\ni.e. The Yankees and Orioles are tied for 1st place in the A L East with records of 22 and 16."
+      },
+      {
+        "content": "WHEN the user asks a query for ranking in the division\nAND there is a two team tie\nAND teams are not in first place\n\ni.e. What place are the Yankees in?",
+        "expected": "THEN the response is in the following format:\n\nThe teamName and teamName are tied for divisionRank in the division with records of teamRecord.\nThey are gamesBack games behind the division-leading divisionLeader.\n\ni.e.\nThe Yankees and Orioles are tied for 3rd place in the AL East with records of 22-16.\nThey are 4 games behind the division-leading Red Sox."
+      },
+      {
+        "content": "WHEN the user asks a query for ranking in the division\nAND there is a two team tie\nAND teams are not in first place\nAND date is after 8/1\nAND games back from 2nd wildcard is less than 5\n\ni.e. What place are the Yankees in?\ni.e. What place are the Yankees in?",
+        "expected": "THEN the response is in the following format:\n\nThe teamName and teamName are tied for divisionRank in the division with records of teamRecord.\nThey are gamesBack games behind the division-leading divisionLeader.\nCurrently, the teamName and teamName are wildCardGamesBack games out of the 2nd division Wild Card spot.\n\ni.e.\nThe Yankees and Orioles are tied for 3rd place in the AL East with records of 22-16.\nThey are 4 games behind the division-leading Red Sox.\nCurrently, the Yankees and Orioles are 3 games out of the 2nd AL Wild Card spot."
+      },
+      {
+        "content": "Deeplink",
+        "expected": "TBD"
+      }
+    ]
+  },
+  {
+    "id": 1224383,
+    "title": "Ranking in the Division - Two Team Time, Off Season",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-485",
+    "created_by": 65,
+    "created_on": 1522198567,
+    "updated_by": 65,
+    "updated_on": 1522198814,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 15,
+    "custom_preconds": "GIVEN the time frame is the following:\r\n\r\n- request time: off-season\r\n- season type: regular season\r\n- year: current year\r\n- utterance tense: present",
+    "custom_steps": "WHEN the user asks a query for ranking in the division\r\nAND there is a two team tie\r\n\r\ni.e. Who's in 3rd in the al west?",
+    "custom_expected": "THEN the response should contain text mentioning that the current season has not started as well as info for the last season\r\n\r\ni.e. The 2018 season has not started yet, but the Seattle Mariners and Texas Rangers finished tied for 3rd place in the AL West last year with a 78-84 regular season record.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1216883,
+    "title": "Unspecified League and Team - Ranking",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-485",
+    "created_by": 65,
+    "created_on": 1516143063,
+    "updated_by": 65,
+    "updated_on": 1518717188,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 16,
+    "custom_preconds": "GIVEN the time frame is the following:\r\n\r\n- request time: mid-season\r\n- season type: regular season\r\n- year: current year\r\n- utterance tense: present",
+    "custom_steps": "WHEN the user asks a query for unspecified league and team - ranking\r\n\r\ni.e. Who is in last place in the East?",
+    "custom_expected": "THEN the response is in the following format:\r\n\r\nDo you want to know about the division or division?\r\n\r\ni.e. Do you want to know about the American League East or the National League East?",
+    "custom_steps_separated": [
+      {
+        "content": "Deeplink",
+        "expected": "TBD"
+      }
+    ]
+  },
+  {
+    "id": 1216884,
+    "title": "Team Records",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-485",
+    "created_by": 65,
+    "created_on": 1516143294,
+    "updated_by": 65,
+    "updated_on": 1520967562,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 17,
+    "custom_preconds": "GIVEN the time frame is the following:\r\n\r\n- request time: mid-season\r\n- season type: regular season\r\n- year: current year\r\n- utterance tense: present",
+    "custom_steps": "WHEN the user asks team record queries",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user asks a query for best team record\n\ni.e. \nWho has the best record?\nWho has the best record in baseball?\nWho has the best record in MLB?",
+        "expected": "THEN the response is in the following format:\n\nThe teamName currently have the best record in baseball with a mark of teamRecord\n\ni.e. The Nationals currently have the best record in baseball with a mark of 45-20.\n"
+      },
+      {
+        "content": "Deeplink",
+        "expected": "TBD"
+      },
+      {
+        "content": "When the user asks a query for worst team record\n\ni.e. \nWho has the worst record?\nWho has the worst record in baseball?\nWho has the worst record in MLB?",
+        "expected": "THEN the response is in the following format:\n\nThe teamName currently have the worst record in baseball with a mark of teamRecord\n\ni.e. The Mets currently have the worst record in baseball with a mark of 20-30."
+      },
+      {
+        "content": "Deeplink",
+        "expected": "TBD"
+      },
+      {
+        "content": "When the user asks a query for best team record in american league\n\ni.e.\nWho has the best record in the AL?\nWho has the best record in the American League?",
+        "expected": "THEN the response is in the following format:\n\nThe teamName currently have the best record in the league with a mark of teamRecord\n\ni.e. The Yankees currently have the best record in the American League with a mark of 56-24."
+      },
+      {
+        "content": "Deeplink",
+        "expected": "TBD"
+      },
+      {
+        "content": "When the user asks a query for best team record in national league\n\ni.e. Who has the best record in the NL East?",
+        "expected": "THEN the response is in the following format:\n\nThe teamName currently have the best record in the division with a mark of teamRecord\n\ni.e. The Nationals currently have the best record in the NL East with a mark of 45-20."
+      },
+      {
+        "content": "Deeplink",
+        "expected": "TBD"
+      },
+      {
+        "content": "When the user asks a query for worst team record in national league\n\ni.e. Who has the worst record in the NL East?",
+        "expected": "THEN the response is in the following format:\n\nThe teamName currently have the worst record in the division with a mark of teamRecord\n\ni.e. The Mets currently have the worst record in the NL East with a mark of 20-30."
+      },
+      {
+        "content": "Deeplink",
+        "expected": "TBD"
+      },
+      {
+        "content": "When the user asks a query for how many games back, games out of first (place), or games behind\nAND if requested team is in first place\n\ni.e.\nHow many games back are the Mets?\nHow many games out of first (place) are the Mets?\nHow many games behind are the Mets?",
+        "expected": "THEN the response is in the following format:\n\nThe requestedTeamName, with a record of requestedTeamRecord, are currently in 1st place in the division, with a gameLead game lead over the secondPlaceTeam.\n\ni.e. The Nationals, with a record of 28-20, are currently in 1st place in the NL East with a 2 game lead over the Mets."
+      },
+      {
+        "content": "When the user asks a query for how many games back, games out of first (place), or games behind\nAND if requested team is NOT in first place\n\ni.e.\nHow many games back are the Mets?\nHow many games out of first (place) are the Mets?\nHow many games behind are the Mets?",
+        "expected": "THEN the response is in the following format:\n\nThe requestedTeamName, with a record of requestedTeamRecord, are currently gamesBack games back from the first place firstPlaceTeam in the division. \nThey are firstWildCardGamesBack games back of the firstWildCardTeam for the first division Wild Card spot and secondWildCardGamesBack games back of the secondWildCardTeam for the second division Wild Card spot.\n\ni.e.\nThe Mets, with a record of 20-35, are currently 6.5 games back from the 1st place Nationals in the NL East. They are 5 games back of the Cubs for the 1st NL Wild Card spot and 3 games back of the D-backs for the 2nd NL Wild Card spot."
+      },
+      {
+        "content": "Deeplink",
+        "expected": "TBD"
+      }
+    ]
+  },
+  {
+    "id": 1219651,
+    "title": "Team Records by League",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-485",
+    "created_by": 65,
+    "created_on": 1518716462,
+    "updated_by": 65,
+    "updated_on": 1518717299,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 18,
+    "custom_preconds": "GIVEN the time frame is the following:\r\n\r\n- request time: mid-season\r\n- season type: regular season\r\n- year: current year\r\n- utterance tense: present",
+    "custom_steps": "WHEN the user asks team record by league queries",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user asks a query for best team record in american league\n\ni.e.\nWho has the best record in the AL?\nWho has the best record in the American League?",
+        "expected": "THEN the response is in the following format:\n\nThe teamName currently have the best record in the league with a record of teamRecord\n\ni.e. The Yankees currently have the best record in the American League with a record of 56-24."
+      },
+      {
+        "content": "Deeplink",
+        "expected": "TBD"
+      },
+      {
+        "content": "When the user asks a query for best team record in national league\n\ni.e. Who has the best record in the NL East?",
+        "expected": "THEN the response is in the following format:\n\nThe teamName currently have the best record in the division with a record of teamRecord\n\ni.e. The Nationals currently have the best record in the NL East with a record of 45-20."
+      },
+      {
+        "content": "Deeplink",
+        "expected": "TBD"
+      },
+      {
+        "content": "When the user asks a query for worst team record in national league\n\ni.e. Who has the worst record in the NL East?",
+        "expected": "THEN the response is in the following format:\n\nThe teamName currently have the worst record in the division with a record of teamRecord\n\ni.e. The Mets currently have the worst record in the NL East with a record of 20-30."
+      },
+      {
+        "content": "Deeplink",
+        "expected": "TBD"
+      }
+    ]
+  },
+  {
+    "id": 1219652,
+    "title": "Team Records by Games",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-485",
+    "created_by": 65,
+    "created_on": 1518716607,
+    "updated_by": 65,
+    "updated_on": 1518717346,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 19,
+    "custom_preconds": "GIVEN the time frame is the following:\r\n\r\n- request time: mid-season\r\n- season type: regular season\r\n- year: current year\r\n- utterance tense: present",
+    "custom_steps": "WHEN the user asks team records by games queries",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user asks a query for how many games back, games out of first (place), or games behind\nAND if requested team is in first place\n\ni.e.\nHow many games back are the Mets?\nHow many games out of first (place) are the Mets?\nHow many games behind are the Mets?",
+        "expected": "THEN the response is in the following format:\n\nThe requestedTeamName, with a record of requestedTeamRecord, are currently in 1st place in the division, with a gameLead game lead over the secondPlaceTeam.\n\ni.e. The Nationals, with a record of 28-20, are currently in 1st place in the NL East with a 2 game lead over the Mets."
+      },
+      {
+        "content": "When the user asks a query for how many games back, games out of first (place), or games behind\nAND if requested team is NOT in first place\n\ni.e.\nHow many games back are the Mets?\nHow many games out of first (place) are the Mets?\nHow many games behind are the Mets?",
+        "expected": "THEN the response is in the following format:\n\nThe requestedTeamName, with a record of requestedTeamRecord, are currently gamesBack games back from the first place firstPlaceTeam in the division. \nThey are firstWildCardGamesBack games back of the firstWildCardTeam for the first division Wild Card spot and secondWildCardGamesBack games back of the secondWildCardTeam for the second division Wild Card spot.\n\ni.e.\nThe Mets, with a record of 20-35, are currently 6.5 games back from the 1st place Nationals in the NL East. They are 5 games back of the Cubs for the 1st NL Wild Card spot and 3 games back of the D-backs for the 2nd NL Wild Card spot."
+      },
+      {
+        "content": "Deeplink",
+        "expected": "TBD"
+      }
+    ]
+  },
+  {
+    "id": 1216889,
+    "title": "DELETE Team Records, League",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-485",
+    "created_by": 65,
+    "created_on": 1516205235,
+    "updated_by": 65,
+    "updated_on": 1518716591,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 20,
+    "custom_preconds": null,
+    "custom_steps": "WHEN the time frame is the following:\r\n\r\n- request time: mid-season\r\n- season type: regular season\r\n- year: current year\r\n- utterance tense: present\r\n\r\nAND the user asks the queries below",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "The user asks a query for team record by league\n\ni.e. Who has the best record in the AL?",
+        "expected": "THEN the response is in the following format:\n- The teamName currently have the best record in the league with a record of teamRecord\n\ni.e. The Yankees currently have the best record in the American League with a record of 56-24.\n"
+      },
+      {
+        "content": "The user asks a query for team record by league\n\ni.e. Who has the best record in the American League?",
+        "expected": "THEN the response is in the following format:\n- The teamName currently have the best record in the league with a record of teamRecord\n\ni.e. The Yankees currently have the best record in the American League with a record of 56-24."
+      },
+      {
+        "content": "The user asks a query for team record by league\n\ni.e. Who has the best record in the NL?",
+        "expected": "THEN the response is in the following format:\n???????"
+      },
+      {
+        "content": "The user asks a query for team record by league\n\ni.e. Who has the best record in the NL East?",
+        "expected": "THEN the response is in the following format:\n- The teamName currently have the best record in the division with a record of teamRecord\n\ni.e. The Nationals currently have the best record in the NL East with a record of 45-20."
+      },
+      {
+        "content": "The user asks a query for team record by league\n\ni.e. Who has the worst record in the NL East?",
+        "expected": "THEN the response is in the following format:\n- The teamName currently have the worst record in the division with a record of teamRecord\n\ni.e. The Mets currently have the worst record in the NL East with a record of 20-30."
+      }
+    ]
+  },
+  {
+    "id": 1216891,
+    "title": "DELETE Team Records, Games",
+    "section_id": 146386,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-485",
+    "created_by": 65,
+    "created_on": 1516209747,
+    "updated_by": 65,
+    "updated_on": 1518716599,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20298,
+    "display_order": 21,
+    "custom_preconds": null,
+    "custom_steps": "WHEN the time frame is the following:\r\n\r\n- request time: mid-season\r\n- season type: regular season\r\n- year: current year\r\n- utterance tense: present\r\n\r\nAND the user asks the queries below",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "The user asks a query for team record by games\n\ni.e. How many games back are the Mets?",
+        "expected": "THEN the response is in the following format:\n- The teamName (record) are currently gamesBack games back from the first place firstPlaceTeam (record) in the division\n{{if in first place}}\nThe teamName (record) are currently in first place in the division.\n\ni.e. The Mets (20 - 35) are currently 6.5 games back from the first place Nationals (28 - 20) in the NL East.\nThe Nationals (28 - 20) are currently in first place in the NL East."
+      },
+      {
+        "content": "The user asks a query for team record by games\n\ni.e. How many games out of first (place) are the Mets?",
+        "expected": "THEN the response is in the following format:\n- The teamName (record) are currently gamesBack games back from the first place firstPlaceTeam (record) in the division\n{{if in first place}}\nThe teamName (record) are currently in first place in the division.\n\ni.e. The Mets (20 - 35) are currently 6.5 games back from the first place Nationals (28 - 20) in the NL East.\nThe Nationals (28 - 20) are currently in first place in the NL East."
+      },
+      {
+        "content": "The user asks a query for team record by games\n\ni.e. How many games behind are the Mets?",
+        "expected": "THEN the response is in the following format:\n- The teamName (record) are currently gamesBack games back from the first place firstPlaceTeam (record) in the division\n{{if in first place}}\nThe teamName (record) are currently in first place in the division.\n\ni.e. The Mets (20 - 35) are currently 6.5 games back from the first place Nationals (28 - 20) in the NL East.\nThe Nationals (28 - 20) are currently in first place in the NL East."
+      }
+    ]
+  }
+]

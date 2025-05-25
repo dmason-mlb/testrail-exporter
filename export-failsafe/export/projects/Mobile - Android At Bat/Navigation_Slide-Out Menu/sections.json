@@ -1,0 +1,20 @@
+[
+  {
+    "id": 144955,
+    "suite_id": 973,
+    "name": "Slide Out Menu",
+    "description": "Slide out menu item and section order is determined predominantly by Extras config.\nex: https://atbatappconfig.mlb.com/android/6.6.0/lite-phone/extras.xml\n\nThe following items may or may not appear even if they are set up in the config depending on user's entitlement status or device API Level.\n\nBuy At Bat button - Only for LITE users\nBallpark button - Can be configured depending on user's market (Google vs. Amazon)\n\n[H] - Handset Only\n[T] - Tablet Only\n\nTop Level section - Contains hamburger button, no 'Up' button, slide out menu should be accessible \nBottom level section - Contains 'Up' button, no hamburger button, slide out menu should not be accessible",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 7256,
+    "suite_id": 973,
+    "name": "Wallpapers",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

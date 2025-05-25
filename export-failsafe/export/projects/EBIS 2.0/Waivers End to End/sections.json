@@ -1,0 +1,254 @@
+[
+  {
+    "id": 96599,
+    "suite_id": 14805,
+    "name": "Request Entry",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 96600,
+    "suite_id": 14805,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 96599,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 96601,
+    "suite_id": 14805,
+    "name": "On Select",
+    "description": null,
+    "parent_id": 96599,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 96602,
+    "suite_id": 14805,
+    "name": "Screen Functionality",
+    "description": null,
+    "parent_id": 96599,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 96624,
+    "suite_id": 14805,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 96599,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 96630,
+    "suite_id": 14805,
+    "name": "UAT Feedback",
+    "description": null,
+    "parent_id": 96599,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 96604,
+    "suite_id": 14805,
+    "name": "Players with requested waivers",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 96605,
+    "suite_id": 14805,
+    "name": "Screen Functionality",
+    "description": null,
+    "parent_id": 96604,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 96625,
+    "suite_id": 14805,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 96604,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 96626,
+    "suite_id": 14805,
+    "name": "Results",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 96627,
+    "suite_id": 14805,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 96626,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 96645,
+    "suite_id": 14805,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 96626,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 96628,
+    "suite_id": 14805,
+    "name": "Waivers Screen Functionality",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 96633,
+    "suite_id": 14805,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 96628,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 96629,
+    "suite_id": 14805,
+    "name": "Pro Player Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 96632,
+    "suite_id": 14805,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 96629,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 96635,
+    "suite_id": 14805,
+    "name": "Misc",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 96636,
+    "suite_id": 14805,
+    "name": "UAT Feedback",
+    "description": null,
+    "parent_id": 96635,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 96641,
+    "suite_id": 14805,
+    "name": "Batch",
+    "description": null,
+    "parent_id": 96635,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 96637,
+    "suite_id": 14805,
+    "name": "Email Utility",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 96638,
+    "suite_id": 14805,
+    "name": "Results",
+    "description": null,
+    "parent_id": 96637,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 96639,
+    "suite_id": 14805,
+    "name": "Players with Requested Waivers",
+    "description": null,
+    "parent_id": 96637,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 96640,
+    "suite_id": 14805,
+    "name": "Withdrawal Process",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 96642,
+    "suite_id": 14805,
+    "name": "Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 96644,
+    "suite_id": 14805,
+    "name": "Player Letters",
+    "description": null,
+    "parent_id": 96642,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 96643,
+    "suite_id": 14805,
+    "name": "Waiver Claim Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  },
+  {
+    "id": 96646,
+    "suite_id": 14805,
+    "name": "CBA Changes",
+    "description": null,
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 1588591,
+    "suite_id": 14805,
+    "name": "Updates 2022",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  }
+]

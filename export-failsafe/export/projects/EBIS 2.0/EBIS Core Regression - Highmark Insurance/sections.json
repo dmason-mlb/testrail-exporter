@@ -1,0 +1,38 @@
+[
+  {
+    "id": 749599,
+    "suite_id": 212084,
+    "name": "MN Insurance",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 768061,
+    "suite_id": 212084,
+    "name": "Opening Day",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1138794,
+    "suite_id": 212084,
+    "name": "Profiles/Transactions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1138795,
+    "suite_id": 212084,
+    "name": "Profiles/Transactions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "id": 8872568,
+    "title": "FireTV /Android TV- Performance",
+    "section_id": 501237,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1607552389,
+    "updated_by": 232,
+    "updated_on": 1646082829,
+    "estimate": null,
+    "estimate_forecast": "20s",
+    "suite_id": 121184,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user with MLB App installed on their FireTV device\r\n\r\n",
+    "custom_steps": "WHEN I am using the app",
+    "custom_expected": "THEN the app does not crash, close or lock",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8872569,
+    "title": "Amazon/Google audio button",
+    "section_id": 501237,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1607552509,
+    "updated_by": 232,
+    "updated_on": 1646082880,
+    "estimate": null,
+    "estimate_forecast": "2m 57s",
+    "suite_id": 121184,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a user with the MLB app installed on their Amazon FireTV or Android TV device\r\n\r\n",
+    "custom_steps": "WHEN I am using the app\r\nAND I press the microphone button on the remote",
+    "custom_expected": "THEN no stability or graphical issues occur",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16775977,
+    "title": "App Icon",
+    "section_id": 501237,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1618839978,
+    "updated_by": 232,
+    "updated_on": 1646082908,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 121184,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user with the app installed on their Android TV or Fire TV (recommended to test this test case on an older device)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user accesses the app on their homescreen or app page",
+        "expected": "THEN the appropriate MLB icon is displayed for the app"
+      },
+      {
+        "content": "WHEN the user accesses the app from Settings---> Application----> Managed install application",
+        "expected": "THEN the appropriate MLB icon is displayed for the app"
+      }
+    ]
+  }
+]

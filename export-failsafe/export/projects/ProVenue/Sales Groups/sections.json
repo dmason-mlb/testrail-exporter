@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1998009,
+    "suite_id": 700095,
+    "name": "Sales Group - Smoke Test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1998080,
+    "suite_id": 700095,
+    "name": "Public Sales Groups",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1995092,
+    "suite_id": 700095,
+    "name": "Sales Group Images",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1995093,
+    "suite_id": 700095,
+    "name": "Delete Sales Group Images",
+    "description": null,
+    "parent_id": 1995092,
+    "display_order": 4,
+    "depth": 1
+  }
+]

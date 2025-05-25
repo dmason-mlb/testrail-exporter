@@ -1,0 +1,533 @@
+[
+  {
+    "id": 1238216,
+    "title": "More UX/UI",
+    "section_id": 150242,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1551898152,
+    "updated_by": 173,
+    "updated_on": 1554148139,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20679,
+    "display_order": 1,
+    "custom_preconds": "GIVEN that the user finished on-boarding",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates to More tab",
+        "expected": "THEN the app will display the following:\n\n* TV icon (iOS only)\n* Settings\n* Stats (when the user selected a favorite team)\n* Player Search \n* Gameday Audio\n* MiLB.com Podcast\n* MiLBStore.com\n* MiLB Auctions\n* Ben's Biz Blog (iOS only)\n* Prospect Watch\n* Playball.org\n* First Pitch FAQ\n* Subscription Management\n* Contact Us\n* About MiLB.com\n* Blackout Restrictions\n* Privacy Policy\n* Terms and Conditions\n* MLB At Bat\n* MLB Ballpark"
+      },
+      {
+        "content": "WHEN the user navigates to More tab",
+        "expected": "THEN the app will display the navigation bar complete and neat (no typographical errors, no overlapping and/or missing icons/texts)\n\nTHEN the wait time for the page to load will not be longer than 5 secs\n\nTHEN the user will be able to scroll through the page smoothly \n\nTHEN the user will be able to pinch in/out of the web views\n\nTHEN the users will be able to click on buttons/elements and these will work"
+      },
+      {
+        "content": "WHEN the user taps on an item",
+        "expected": "THEN the app will display the correct page associated to that item "
+      }
+    ]
+  },
+  {
+    "id": 1238218,
+    "title": "TV Icon (iOS only)",
+    "section_id": 150242,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1551898199,
+    "updated_by": 173,
+    "updated_on": 1553626282,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20679,
+    "display_order": 3,
+    "custom_preconds": "GIVEN that the user navigated to More Page",
+    "custom_steps": "WHEN the user taps on TV icon",
+    "custom_expected": "THEN the app will display the following:\r\n\r\n* Class picker\r\n* Date (Day Month Date)\r\n* Arrows to navigate through the date (next/previous date)\r\n* Video list (if available depending on the selected date)\r\n* Done button ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238271,
+    "title": "Notifications (same to the one in On-Boarding)",
+    "section_id": 150242,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552433624,
+    "updated_by": 173,
+    "updated_on": 1553804650,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20679,
+    "display_order": 4,
+    "custom_preconds": "GIVEN that the user navigated to More tab\r\n\r\nGIVEN that the user navigated to Settings",
+    "custom_steps": "WHEN the user taps on \"Notifications\"",
+    "custom_expected": "THEN the user will be able to configure the notifications\r\n\r\nTHEN the app will push notifications depending on the user's preferences",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238718,
+    "title": "Create a MiLB Account (Webview)",
+    "section_id": 150242,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553803456,
+    "updated_by": 173,
+    "updated_on": 1553805890,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20679,
+    "display_order": 5,
+    "custom_preconds": "GIVEN that the user navigated to Settings page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user tapped on 'Create a MiLB.com Account'",
+        "expected": "THEN the app will display the MiLB.com Register form"
+      }
+    ]
+  },
+  {
+    "id": 1238273,
+    "title": "About First Pitch",
+    "section_id": 150242,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552433631,
+    "updated_by": 173,
+    "updated_on": 1554314820,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20679,
+    "display_order": 6,
+    "custom_preconds": "GIVEN that the user navigated to More tab\r\n\r\nGIVEN that the user navigated to Settings",
+    "custom_steps": "WHEN the user taps on \"About First Pitch\"",
+    "custom_expected": "THEN the app will display the About First Pitch page containing the following: \r\n\r\nFor iOS:\r\n* Application Version\r\n* Carrier \r\n* Device\r\n* ID5\r\n* iOS Version\r\n* Model\r\n* Build Number\r\n* Config Environment \r\n* Email Logs button\r\n\r\nFor Android:\r\n* Build Number\r\n* Config Environment ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238272,
+    "title": "Favorite Teams (same to the one in On-Boarding)",
+    "section_id": 150242,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552433627,
+    "updated_by": 173,
+    "updated_on": 1553804677,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20679,
+    "display_order": 7,
+    "custom_preconds": "GIVEN that the user navigated to More tab\r\n\r\nGIVEN that the user navigated to Settings",
+    "custom_steps": "WHEN the user taps on \"Notifications\"",
+    "custom_expected": "THEN the user will be able to select favorite teams\r\n\r\nTHEN the app will save the user's preferences \r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238223,
+    "title": "Settings UI",
+    "section_id": 150243,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1551898406,
+    "updated_by": 173,
+    "updated_on": 1553805185,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20679,
+    "display_order": 1,
+    "custom_preconds": "GIVEN that the user navigated to More tab",
+    "custom_steps": "WHEN the user taps on Settings",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on Settings",
+        "expected": "THEN the app will display the following:\n\n* Log in to MiLB.com Account button\n* Create a MiLB Account button\n* Set Home Screen Icon\n* Notifications\n* Favorite Teams\n* About First Pitch"
+      },
+      {
+        "content": "WHEN the user taps on an item",
+        "expected": "THEN the app will display the correct page associated to that item"
+      }
+    ]
+  },
+  {
+    "id": 1238270,
+    "title": "Set Home Screen Icon",
+    "section_id": 150243,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552433620,
+    "updated_by": 173,
+    "updated_on": 1553805198,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20679,
+    "display_order": 2,
+    "custom_preconds": "GIVEN that the user navigated to Settings\r\n\r\nGIVEN that the user tapped on \"Set Home Screen Icon\"",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user scrolls through",
+        "expected": "THEN the app will display the correct team names and team logos\n\nTHEN the app will display all of the teams alphabetically in the 'All Teams' section"
+      },
+      {
+        "content": "WHEN the user has favorite teams selected\n\n",
+        "expected": "THEN the 'Favorite Teams' section will be filled by user's selected favorite teams"
+      },
+      {
+        "content": "WHEN the user has no favorite teams selected",
+        "expected": "THEN the 'Favorite Teams' section will be empty (no teams listed)"
+      },
+      {
+        "content": "WHEN the user taps on a team from either 'Favorite Teams' or 'All Teams' section",
+        "expected": "THEN the app will set the home screen icon to that team's icon\n\nTHEN the app will display the \"You have changed the icon for 'First Pitch'\" modal with the icon of the team selected\n\nTHEN the icon and team name in 'Current Icon' section will change (to the team the user has selected)"
+      },
+      {
+        "content": "WHEN the user taps on \"Reset\" ",
+        "expected": "THEN the app will revert the icon to First Pitch's icon\n\nTHEN the app will display the \"You have changed the icon for 'First Pitch'\" modal with the app's default icon"
+      }
+    ]
+  },
+  {
+    "id": 1238700,
+    "title": "No Account Logged In",
+    "section_id": 150243,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553280581,
+    "updated_by": 173,
+    "updated_on": 1553805344,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20679,
+    "display_order": 3,
+    "custom_preconds": "GIVEN that the user navigated to More tab\r\n\r\nGIVEN that the user has no account logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on Settings",
+        "expected": "THEN the app will display the following:\n\n* 'Log in to MiLB.com Account' button\n* 'Create a MiLB Account' button\n* Preferences section"
+      },
+      {
+        "content": "WHEN the user taps on 'Log in to MiLB.com Account' button",
+        "expected": "THEN the app will display the 'Log In With Your MiLB Account' form"
+      },
+      {
+        "content": "WHEN the user taps on 'Create a MiLB Account' button",
+        "expected": "THEN the app will display the webview for registration for MiLB.com account"
+      }
+    ]
+  },
+  {
+    "id": 1238699,
+    "title": "An Account Logged In",
+    "section_id": 150243,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553280036,
+    "updated_by": 173,
+    "updated_on": 1553805221,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20679,
+    "display_order": 4,
+    "custom_preconds": "GIVEN that the user navigated to More tab\r\n\r\nGIVEN that the user has an account logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on Settings",
+        "expected": "THEN the app will display the following:\n\n* User's email address\n* \"Logged into MiLB Account\" text under it\n* Preferences section\n* Sign Out button"
+      },
+      {
+        "content": "WHEN the user taps on \"Sign Out\" ",
+        "expected": "THEN the app will display the iOS modal \"Are you sure you want to sign out?\"\n\nTHEN the app will display \"Sign Out\" button\n\nTHEN the app will display \"Cancel\" button"
+      },
+      {
+        "content": "WHEN the user taps on \"Sign Out\" ",
+        "expected": "THEN the app will sign out the user\n\nTHEN the app will display the modal\n\nTHEN the User Account section of the Settings will be updated (no signed in account scenario)"
+      },
+      {
+        "content": "WHEN the user taps on \"Cancel\" ",
+        "expected": "THEN the app will dismiss the modal and the buttons\n\nTHEN the app will not sign out the user"
+      }
+    ]
+  },
+  {
+    "id": 1238701,
+    "title": "'Log In With Your MiLB Account' Form",
+    "section_id": 150243,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553280875,
+    "updated_by": 173,
+    "updated_on": 1553805245,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20679,
+    "display_order": 5,
+    "custom_preconds": "GIVEN that the user navigated to Settings",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on 'Log In With Your MiLB Account' button",
+        "expected": "THEN the app will display the 'Log In With Your MiLB Account' form with the following:\n\n* Username field\n* Password field\n* Login button\n* 'Privacy Policy' link button\n* 'Forgot Password' link button "
+      },
+      {
+        "content": "WHEN the user taps on the username filed",
+        "expected": "THEN the user will be able to type in the username in this field \n\nTHEN the field will display the username typed by the user"
+      },
+      {
+        "content": "WHEN the user taps on the password filed",
+        "expected": "THEN the user will be able to type in the password in this field \n"
+      },
+      {
+        "content": "WHEN the user types the next character of the password",
+        "expected": "THEN the app will hide the recently typed character by using ●"
+      },
+      {
+        "content": "WHEN the user taps on \"Login\" button with valid credentials on the username and password fields",
+        "expected": "THEN the app will collapse the form\n\nTHEN the app will update the User Account section of the Settings page"
+      },
+      {
+        "content": "WHEN the user taps on \"Login\" button with invalid credentials on the username and password fields",
+        "expected": "THEN the app will display an error message: \"Invalid Username/Password\""
+      },
+      {
+        "content": "WHEN the user taps on 'Privacy Policy'",
+        "expected": "THEN the app will display the Privacy Policy page\n\nTHEN the app will not use a third-party app to display this"
+      },
+      {
+        "content": "WHEN the user taps on 'Done' ",
+        "expected": "THEN the app will collapse the Privacy Policy window\n\nTHEN the app will bring back the user to the 'Log In With Your MiLB Account' Form"
+      },
+      {
+        "content": "WHEN the user taps on 'Forgot Password'",
+        "expected": "THEN the app will display the Send Password Form"
+      },
+      {
+        "content": "WHEN the user taps on the email filed",
+        "expected": "THEN the user will be able to type in the email in this field \n\nTHEN the field will display the email typed by the user"
+      },
+      {
+        "content": "WHEN the user taps on \"Submit\" button with a valid email address in the email field",
+        "expected": "THEN the app will display a confirmation message: \"New Password Sent\"\n\nTHEN the user will receive an email in the email address provided "
+      },
+      {
+        "content": "WHEN the user taps on \"Submit\" button with an invalid email address in the email field\n\nWHEN the user taps on \"Submit\" button with an invalid input in the field (e.g. random texts that are not an email)\n",
+        "expected": "THEN the app will display an error message: \"Invalid Email Address\"\n\nTHEN the user will not receive an email in the email address provided"
+      }
+    ]
+  },
+  {
+    "id": 1238238,
+    "title": "Settings UI",
+    "section_id": 150244,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552407345,
+    "updated_by": 173,
+    "updated_on": 1553805091,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20679,
+    "display_order": 1,
+    "custom_preconds": "GIVEN that the user navigated to More tab",
+    "custom_steps": "WHEN the user taps on Settings",
+    "custom_expected": "THEN the app will display the following:\r\n\r\n* Log In to MiLB.com button\r\n* Notifications\r\n* About First Pitch\r\n* Select Favorite Teams\r\n* Reset Your MiLB.com Password\r\n* Create a MiLB.com Account ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238689,
+    "title": "Reset Your MiLB.com Password",
+    "section_id": 150244,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553196877,
+    "updated_by": 173,
+    "updated_on": 1554322708,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20679,
+    "display_order": 2,
+    "custom_preconds": "GIVEN that the user navigated to Settings",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on 'Reset your MiLB.com password'",
+        "expected": "THEN the app will display the following: \n\n* Reset the password to your MiLB.com account\n* Email field\n* 'Send Reset Request' button"
+      },
+      {
+        "content": "WHEN the user taps on the username filed",
+        "expected": "THEN the user will be able to type in the username in this field\n\nTHEN the field will display the username typed by the user"
+      },
+      {
+        "content": "WHEN the user taps on 'Send Reset Request' button with valid email address in the field\n\nWHEN the user taps on 'Send Reset Request' button with invalid email address in the field",
+        "expected": "THEN the app will display the Settings page"
+      }
+    ]
+  },
+  {
+    "id": 1238706,
+    "title": "No Account Logged In",
+    "section_id": 150244,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553552629,
+    "updated_by": 173,
+    "updated_on": 1553804712,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20679,
+    "display_order": 3,
+    "custom_preconds": "GIVEN that the user navigated to More tab\r\n\r\nGIVEN that the user has no account logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on Settings",
+        "expected": "THEN the app will display the following:\n\n* Log In to MiLB.com button\n* Preferences section "
+      },
+      {
+        "content": "WHEN the user taps on 'Log In to MiLB.com' button",
+        "expected": "THEN the app will display the 'Log In With Your MiLB.com Account' form"
+      }
+    ]
+  },
+  {
+    "id": 1238707,
+    "title": "An Account Logged In",
+    "section_id": 150244,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553552640,
+    "updated_by": 173,
+    "updated_on": 1553805791,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20679,
+    "display_order": 4,
+    "custom_preconds": "GIVEN that the user navigated to More tab\r\n\r\nGIVEN that the user has an account logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on Settings",
+        "expected": "THEN the app will display the following:\n\n* 'Logged into MiLB.com'\n* Preferences section\n* 'Log Out' button"
+      },
+      {
+        "content": "WHEN the user taps on 'Log Out' button",
+        "expected": "THEN the User Account section of the Settings will be updated (no signed in account scenario)"
+      }
+    ]
+  },
+  {
+    "id": 1238708,
+    "title": "'Log In With Your MiLB.com Account' Form",
+    "section_id": 150244,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553553068,
+    "updated_by": 173,
+    "updated_on": 1553805048,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20679,
+    "display_order": 5,
+    "custom_preconds": "GIVEN that the app displayed the 'Log In With Your MiLB.com Account' Form",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on the username field",
+        "expected": "THEN the user will be able to type in the username in this field\n\nTHEN the field will display the username typed by the user"
+      },
+      {
+        "content": "WHEN the user taps on the password field",
+        "expected": "THEN the user will be able to type in the password in this field"
+      },
+      {
+        "content": "WHEN the user types the next character of the password",
+        "expected": "THEN the app will hide the recently typed character by using ●"
+      },
+      {
+        "content": "WHEN the user taps on \"Login\" button with valid credentials on the username and password fields",
+        "expected": "THEN the app will display 'Logged in to MiLB.com' at the top of Settings page\n\nTHEN the app will display 'Log out of MiLB.com' button at the bottom "
+      },
+      {
+        "content": "WHEN the user taps on \"Login\" button with invalid credentials on the username and password fields",
+        "expected": "THEN the app will display an error message: \"Log in failed\""
+      }
+    ]
+  }
+]

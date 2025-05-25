@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1311069,
+    "suite_id": 450659,
+    "name": "Push Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1475626,
+    "suite_id": 450659,
+    "name": "Push Notifications - Contest Scored and User event sent for each Game",
+    "description": "Test cases coverage for Push Notification sent when Contest Scored and User event sent for each Game\n\nhttps://docs.google.com/document/d/1oAVua_nZlopAzWljnOQAcAoWGljhdvf9dy45cKE2qIA/edit",
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

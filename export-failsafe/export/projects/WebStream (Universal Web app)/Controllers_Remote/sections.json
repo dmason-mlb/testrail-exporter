@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1922353,
+    "suite_id": 680418,
+    "name": "LG TV Remote Control",
+    "description": "These tests are for LG Remote Controls",
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 1922354,
+    "suite_id": 680418,
+    "name": "LG Remote Control Functionality",
+    "description": "These test cases are for LG's Remote Control functionality.",
+    "parent_id": 1922353,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 1922355,
+    "suite_id": 680418,
+    "name": "Power Button Test",
+    "description": "This test case is for testing LG's power button functionality.",
+    "parent_id": 1922354,
+    "display_order": 15,
+    "depth": 2
+  },
+  {
+    "id": 1922356,
+    "suite_id": 680418,
+    "name": "Menu Navigation Test",
+    "description": "This test case is for testing the menu navigation.",
+    "parent_id": 1922354,
+    "display_order": 16,
+    "depth": 2
+  },
+  {
+    "id": 1922358,
+    "suite_id": 680418,
+    "name": "Smart TV Functions",
+    "description": "These test cases for testing the LG's Smart TV remote button's functionality. (if applicable)",
+    "parent_id": 1922354,
+    "display_order": 18,
+    "depth": 2
+  },
+  {
+    "id": 1922892,
+    "suite_id": 680418,
+    "name": "Volume and Channel Control Button Test",
+    "description": "These test case is for testing the Volume and Channel Control buttons.",
+    "parent_id": 1922354,
+    "display_order": 20,
+    "depth": 2
+  },
+  {
+    "id": 1923365,
+    "suite_id": 680418,
+    "name": "Remote App",
+    "description": "This test case is for testing LG's Remote App functionality. (if applicable)",
+    "parent_id": 1922354,
+    "display_order": 21,
+    "depth": 2
+  },
+  {
+    "id": 1922883,
+    "suite_id": 680418,
+    "name": "Xbox Controllers",
+    "description": "This section is for testing Xbox Gamepad Controllers.",
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 1922884,
+    "suite_id": 680418,
+    "name": "Xbox Button Functionality",
+    "description": "This is the round button at the top front face of the controller.",
+    "parent_id": 1922883,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 1922885,
+    "suite_id": 680418,
+    "name": "Button Press Test",
+    "description": "These tests are for pressing each of the buttons on the Controller.",
+    "parent_id": 1922884,
+    "display_order": 30,
+    "depth": 2
+  },
+  {
+    "id": 1922886,
+    "suite_id": 680418,
+    "name": "Analog Stick Test",
+    "description": "These test cases are for testing the Analog Stick.",
+    "parent_id": 1922884,
+    "display_order": 31,
+    "depth": 2
+  },
+  {
+    "id": 1922887,
+    "suite_id": 680418,
+    "name": "Power Button Test",
+    "description": "These test cases are for powering on, powering off, and restarting the console box.",
+    "parent_id": 1922884,
+    "display_order": 32,
+    "depth": 2
+  },
+  {
+    "id": 1922891,
+    "suite_id": 680418,
+    "name": "Share Button",
+    "description": "This test case is for testing the Share button.",
+    "parent_id": 1922884,
+    "display_order": 33,
+    "depth": 2
+  },
+  {
+    "id": 1923366,
+    "suite_id": 680418,
+    "name": "PS 5 Controllers",
+    "description": "These tests are for the PS 5 controllers.",
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 1923367,
+    "suite_id": 680418,
+    "name": "PS 5 Controller Functionality",
+    "description": "These test cases are for the PS 5 Controllers.",
+    "parent_id": 1923366,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 1923369,
+    "suite_id": 680418,
+    "name": "Analog Stick Test",
+    "description": "This test is for testing the Analog Stick when it is connected to the PS 5 Console.",
+    "parent_id": 1923367,
+    "display_order": 37,
+    "depth": 2
+  },
+  {
+    "id": 1923370,
+    "suite_id": 680418,
+    "name": "Button Press Test",
+    "description": "This test case is for testing ALL of the PS 5 buttons.",
+    "parent_id": 1923367,
+    "display_order": 38,
+    "depth": 2
+  },
+  {
+    "id": 1923368,
+    "suite_id": 680418,
+    "name": "Power Button Test",
+    "description": "This test is for testing the Power Button when the PS 5 controller is connected to the PS 5 console.",
+    "parent_id": 1923367,
+    "display_order": 39,
+    "depth": 2
+  },
+  {
+    "id": 1923871,
+    "suite_id": 680418,
+    "name": "Samsung TV Remote Control",
+    "description": "This test case is for Samsung TV Remote Control.",
+    "parent_id": null,
+    "display_order": 40,
+    "depth": 0
+  },
+  {
+    "id": 1923872,
+    "suite_id": 680418,
+    "name": "Power Button Test",
+    "description": "This test case is for the Samsung TV Remote Power Button function.",
+    "parent_id": 1923871,
+    "display_order": 41,
+    "depth": 1
+  },
+  {
+    "id": 1923873,
+    "suite_id": 680418,
+    "name": "Menu Navigation Test",
+    "description": "This test case is for testing the Samsung TV Remote Menu Navigation.",
+    "parent_id": 1923871,
+    "display_order": 42,
+    "depth": 1
+  },
+  {
+    "id": 1923874,
+    "suite_id": 680418,
+    "name": "Button Press Test",
+    "description": "These test cases for pressing the buttons on the remote control.",
+    "parent_id": 1923871,
+    "display_order": 43,
+    "depth": 1
+  },
+  {
+    "id": 1923875,
+    "suite_id": 680418,
+    "name": "Remote App",
+    "description": "This test case is for testing the Samsung TV Remote Control's Remote App function.",
+    "parent_id": 1923871,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 1923876,
+    "suite_id": 680418,
+    "name": "Pair Remote to TV",
+    "description": "This test case syncs/pairs/connects the Samsung TV remote to the Samsung TV.",
+    "parent_id": 1923871,
+    "display_order": 45,
+    "depth": 1
+  }
+]

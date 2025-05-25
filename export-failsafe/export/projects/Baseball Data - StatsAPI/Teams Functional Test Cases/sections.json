@@ -1,0 +1,47 @@
+[
+  {
+    "id": 154889,
+    "suite_id": 21196,
+    "name": "Player Pages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 154890,
+    "suite_id": 21196,
+    "name": "Club Homepage",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 154891,
+    "suite_id": 21196,
+    "name": "MiLB Club Homepage",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 154892,
+    "suite_id": 21196,
+    "name": "Club Data",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 154893,
+    "suite_id": 21196,
+    "name": "Club Personnel",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

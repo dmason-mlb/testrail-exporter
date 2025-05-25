@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1153714,
+    "suite_id": 389166,
+    "name": "BDFED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1153715,
+    "suite_id": 389166,
+    "name": "BOSS",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1153716,
+    "suite_id": 389166,
+    "name": "Club Schedule",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1153717,
+    "suite_id": 389166,
+    "name": "Field Vision",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1153719,
+    "suite_id": 389166,
+    "name": "Gameday",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1153720,
+    "suite_id": 389166,
+    "name": "Leaders",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1153721,
+    "suite_id": 389166,
+    "name": "MIG",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1153722,
+    "suite_id": 389166,
+    "name": "Mini SB",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1153723,
+    "suite_id": 389166,
+    "name": "ML",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1153724,
+    "suite_id": 389166,
+    "name": "MLDE",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 1153725,
+    "suite_id": 389166,
+    "name": "Norad",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 1153726,
+    "suite_id": 389166,
+    "name": "Pitch Classification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 1153727,
+    "suite_id": 389166,
+    "name": "Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 1153728,
+    "suite_id": 389166,
+    "name": "Postseason Schedule",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 1153729,
+    "suite_id": 389166,
+    "name": "Research Tool",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 1153730,
+    "suite_id": 389166,
+    "name": "Rosters",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 1153731,
+    "suite_id": 389166,
+    "name": "Scores Schedule",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 1153732,
+    "suite_id": 389166,
+    "name": "Sporty Bot",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 1153733,
+    "suite_id": 389166,
+    "name": "Spotlight",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 1153734,
+    "suite_id": 389166,
+    "name": "Standings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 1153735,
+    "suite_id": 389166,
+    "name": "Stats",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 1153736,
+    "suite_id": 389166,
+    "name": "TrackOps",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 1577080,
+    "suite_id": 389166,
+    "name": "Sabermetrics",
+    "description": "Stats API Sabermetrics calls collecting data from FanGraphs",
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 1577081,
+    "suite_id": 389166,
+    "name": "Projections",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 1680932,
+    "suite_id": 389166,
+    "name": "Rule Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  }
+]

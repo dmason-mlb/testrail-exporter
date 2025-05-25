@@ -1,0 +1,128 @@
+[
+  {
+    "id": 154777,
+    "suite_id": 20802,
+    "name": "Start-Up",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 154786,
+    "suite_id": 20802,
+    "name": "Main Menu",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 154787,
+    "suite_id": 20802,
+    "name": "Today's Games (a.k.a. Scores, Day schedule)",
+    "description": null,
+    "parent_id": 154786,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 154788,
+    "suite_id": 20802,
+    "name": "Standings",
+    "description": null,
+    "parent_id": 154786,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 154789,
+    "suite_id": 20802,
+    "name": "Game Recaps",
+    "description": null,
+    "parent_id": 154786,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 154790,
+    "suite_id": 20802,
+    "name": "Team By Team",
+    "description": null,
+    "parent_id": 154786,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 154829,
+    "suite_id": 20802,
+    "name": "Team selected",
+    "description": null,
+    "parent_id": 154790,
+    "display_order": 7,
+    "depth": 2
+  },
+  {
+    "id": 154828,
+    "suite_id": 20802,
+    "name": "Sign in with MLB.TV",
+    "description": null,
+    "parent_id": 154786,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 154791,
+    "suite_id": 20802,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 154786,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 154779,
+    "suite_id": 20802,
+    "name": "Free User",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 154798,
+    "suite_id": 20802,
+    "name": "Paid User",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 154792,
+    "suite_id": 20802,
+    "name": "Audio Playback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  },
+  {
+    "id": 154793,
+    "suite_id": 20802,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 154794,
+    "suite_id": 20802,
+    "name": "Network Performance",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  }
+]

@@ -1,0 +1,206 @@
+[
+  {
+    "id": 50639,
+    "title": "MLB.com widget",
+    "section_id": 7348,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1424313025,
+    "updated_by": 84,
+    "updated_on": 1522262202,
+    "estimate": null,
+    "estimate_forecast": "39m 47s",
+    "suite_id": 994,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user selects 'Add Widget' from the app homescreen or app tray ",
+        "expected": "Then the user should see the At Bat widget in the drawer of available widgets\nAnd the user should be able to add it to their homescreen. "
+      },
+      {
+        "content": "When the user adds the MLB widget to their homescreen",
+        "expected": "Then the current day's games should load in the main window of the widget\nAnd each game should have:\nThe game time with time zone\nAway team above home team\nTeam records\n\nThe widget should have:\nDate being shown\nnumber of games in schedule for day. (eg. 1/15 or 4/10 etc.)"
+      },
+      {
+        "content": "When the user taps the Up/down arrows on the widget",
+        "expected": "Then the main view of the widget should refresh to show the next/previous game in the widget\nAnd when the user reaches the beginning or end of the list of games the user should be brought to the other end of the list \n(ie. Tapping up on game 1 of 6 should bring user to game 6 of 6) "
+      },
+      {
+        "content": "When there is a game in progress\nAnd the game data is updating ",
+        "expected": "Then the runs hits and errors should be updating according to the refresh rate set in the app settings \n(check each refresh rate) "
+      },
+      {
+        "content": "When a game has gone final in the scoreboard data\nAnd the user views that game in the scoreboard widget",
+        "expected": "Then the widget should show the game state above the teams,\nAnd the Runs, Hits, Errors, should be listed to the right of both teams"
+      },
+      {
+        "content": "When the user taps on the MLB logo",
+        "expected": "Then the user should be launched into the scoreboard view of At Bat"
+      },
+      {
+        "content": "When the user taps on game in Preview state in the widget",
+        "expected": "Then the user should be launched into the Gameday view of At Bat and taken to the preview tab of Gameday"
+      },
+      {
+        "content": "When the user taps on game in a Live state in the widget",
+        "expected": "Then the user should be taken to the Live tab of the Gameday view of At Bat for the game they selected."
+      },
+      {
+        "content": "When the user loses their network connection",
+        "expected": "Then the widget should say \"Unable to load data\""
+      },
+      {
+        "content": "When the user loses their network connection but the widget still shows game data\nWhen the user taps a game in the widget",
+        "expected": "Then the app should open and the user should receive an appropriate lack of connectivity error"
+      },
+      {
+        "content": "When the user attempts to remove the MLB.com widget",
+        "expected": "Then the user should be able to remove the widget without issue"
+      }
+    ]
+  },
+  {
+    "id": 50645,
+    "title": "Team widget",
+    "section_id": 7348,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1424313075,
+    "updated_by": 84,
+    "updated_on": 1522262253,
+    "estimate": null,
+    "estimate_forecast": "47m 2s",
+    "suite_id": 994,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user selects 'Add Widget' from the app homescreen or app tray\n",
+        "expected": "Then the user should see the At Bat - Teams widget in the drawer of available widgets"
+      },
+      {
+        "content": "When the user adds the Teams widget to their homescreen",
+        "expected": "Then they should see the teams list appear\n"
+      },
+      {
+        "content": "When the user has set at least one favorite team in At Bat\nAnd the user attempts to add a team widget to their homescreen",
+        "expected": "Then the teams list should show their favorite teams sorted to the top of the list\nAnd the favorite teams should be indicated with a star icon"
+      },
+      {
+        "content": "When the user selects a team from the teams list when adding a widget",
+        "expected": "Then the team widget for the selected team should appear in the homescreen location they selected\n(Teams widgets should take up 1x1 space)"
+      },
+      {
+        "content": "When the user adds a widget for each team",
+        "expected": "Then each team should have the correct icon for their team page\n(Verify all teams have correct icons) "
+      },
+      {
+        "content": "When the user adds a team widget on an Android Handset\nAnd the user taps on the team widget",
+        "expected": "Then the user should be taken into At Bat and straight to the team page for that team\n(Verify each team widget goes to the correct team page)"
+      },
+      {
+        "content": "When the user adds a team widget on an Android Tablet\nAnd the user taps on the team widget",
+        "expected": "Then the user should be taken into the app to the scoreboard section\n(Repeat for a few teams) "
+      },
+      {
+        "content": "When the user adds a team widget to their homescreen\nAnd the user adds a second and subsequent team widgets to their homescreen",
+        "expected": "Then each team widget should maintain their correct icon\nAnd tapping each widget should go to the correct team page"
+      },
+      {
+        "content": "When the user adds a team widget\nAnd the user restarts their device",
+        "expected": "Then the team widget should remain visibly correct and take the user to the correct team page even after a restart"
+      },
+      {
+        "content": "When the user is on an older version of At Bat and has added one or more team widgets\nAnd the user updates and overwrites At Bat with a newer version",
+        "expected": "Then the team widgets should remain visibly correct and take the user to the correct team page even after an app update"
+      },
+      {
+        "content": "When the user attempts to remove a team widget from their homescoreen",
+        "expected": "Then the team widget should be able to be removed\n"
+      }
+    ]
+  },
+  {
+    "id": 50640,
+    "title": "Offseason Widget",
+    "section_id": 7348,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1424313032,
+    "updated_by": 84,
+    "updated_on": 1522262278,
+    "estimate": null,
+    "estimate_forecast": "5m 27s",
+    "suite_id": 994,
+    "display_order": 3,
+    "custom_preconds": "We have set <isOffseasonModeEnabled> parameter to true for offseason in Extras",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user adds At Bat widget to homescreen",
+        "expected": "Then the widget will display news stories from the MLB headlines index"
+      },
+      {
+        "content": "When the user taps the up and down arrows ",
+        "expected": "Then the news stories will cycle as expected"
+      },
+      {
+        "content": "When the user taps on a news story",
+        "expected": "Then the app will open up to that story"
+      },
+      {
+        "content": "When the user taps on the MLB logo",
+        "expected": "Then the MLB News Index is opened in the app"
+      }
+    ]
+  },
+  {
+    "id": 1299509,
+    "title": "MLB.com Widget - Fast Cycling",
+    "section_id": 7348,
+    "template_id": 1,
+    "type_id": 11,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "ANDROID-9650",
+    "created_by": 238,
+    "created_on": 1582331063,
+    "updated_by": 238,
+    "updated_on": 1582331688,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 994,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the Up/down arrows on the widget",
+        "expected": "Then the main view of the widget should refresh to show the next/previous game in the widget\nAnd when the user reaches the beginning or end of the list of games the user should be brought to the other end of the list\n(ie. Tapping up on game 1 of 6 should bring user to game 6 of 6)"
+      },
+      {
+        "content": "When the user taps quickly and repeatedly on the up/down arrows on the widget",
+        "expected": "The main view of the widget continues to respond in a timely fashion\n\nAt the time of this test, the widget stops responding after 6-10 successive taps and requires around 30 seconds or so before it becomes responsive again."
+      }
+    ]
+  }
+]

@@ -1,0 +1,511 @@
+[
+  {
+    "id": 48731,
+    "title": "Journal",
+    "section_id": 7009,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1419350450,
+    "updated_by": 73,
+    "updated_on": 1505835068,
+    "estimate": null,
+    "estimate_forecast": "32m 59s",
+    "suite_id": 917,
+    "display_order": 1,
+    "custom_preconds": "For those cases where you have to search for certain teams in certain years you can use the attached Excel sheet and use the years to determine which teams existed in what year. This is for case #48. \r\n\r\nhttps://wiki.mlbam.com/display/QAspace/Data+Points+and+Lookups\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user is in My Journal\nand the content on the screen loads",
+        "expected": "Then the user will see an option to 'Add your cover photo' at the bottom of the page"
+      },
+      {
+        "content": "When user uploads a cover photo",
+        "expected": "THEN the user will be able to position the cover photo to fit within the cover photo area"
+      },
+      {
+        "content": "When a user is in My Journal\nand the user has added  cover photo\nand the user upgrades their version of Ballpark",
+        "expected": "THEN after the user has upgraded Ballpark the cover photo will have been retained\n\n*Test this by adding a cover photo in an older version of Ballpark then upgrade to the latest build(download store build from app store then upgrade to the prod master build)"
+      },
+      {
+        "content": "When a user is in My Journal\nand has not already added a background image\nand taps on 'Add your photo'",
+        "expected": "Then the user will be prompted to take a photo or select a photo from the gallery"
+      },
+      {
+        "content": "When a user is in My Journal\nand has previously set a background image\nand taps the camera icon in the bottom right of the image",
+        "expected": "Then the user will be prompted to take a photo or select a photo from the gallery"
+      },
+      {
+        "content": "When a user is in Journal\nAnd the user looks under the cover photo section",
+        "expected": "Then the user will see three buttons: Ballpark, Teams, and Photos"
+      },
+      {
+        "content": "When a user is on My Journal\nand hasn't made any Check-Ins\nor added any games\nand the content on the screen loads",
+        "expected": "Then the user will see '0'next to Ballparks\nand will see '0' next to Teams\n"
+      },
+      {
+        "content": "When a user is in My Journal\nand has not uploaded any photos\nand the content on the screen loads",
+        "expected": "Then the user will see 0 next to Photos"
+      },
+      {
+        "content": "When the content loads Given the user is on My Journal\nand the user has no check-ins",
+        "expected": "Then the user will see '0 Total check-ins'\nAnd there will be a blank section underneath that title"
+      },
+      {
+        "content": "When a user is in Journal\nand the content on the screen loads\nand taps 'Ballparks' button \nor taps 'Teams' button",
+        "expected": "Then the user will be taken to the Ballparks Stats page tab\nor the user will be taken to the Team Stats page tab"
+      },
+      {
+        "content": "When a user is in My Journal\nand checks in to at least 1 game\nand the content on the screen loads",
+        "expected": "Then the user will see the number of Total check-ins update to 1\nand this number will be the total number of ballpark check-ins plus added historical games"
+      },
+      {
+        "content": "When a user is in My Journal\nand checks in to at least 1 game\nand the content on the screen loads",
+        "expected": "Then the user will see the numerical value next to the Ballparks button and Teams button update to the new value\nand this number will be the total number of ballpark check-ins plus added historical games\nBallparks value does not count multiple visits"
+      },
+      {
+        "content": "When a user is in My Journal\nand checks in to at least 1 game\nand the content on the screen loads",
+        "expected": "Then the user will see the checked in game load below the # Total Check-Ins section"
+      },
+      {
+        "content": "When a user is in My Journal\nand has uploaded at least 1 photo\n",
+        "expected": "Then the user will see the numerical value next to the Photos button update to the newest value\nAND this value will match the number of photos that the user has added"
+      },
+      {
+        "content": "When a user is in Journal\nand the user taps on the Photos button",
+        "expected": "THEN the user will be brought to the photos page\nAND the most recent photo will display from left to right"
+      },
+      {
+        "content": "When a user is in Journal\nand the user taps on the Photos button\nand the user is brought to the Photos page\nAND the user taps on the first photo",
+        "expected": "THEN the photo viewer will open\nAND the user will be able to swipe through the photos\nAND the most recent photo will display from left to right"
+      },
+      {
+        "content": "When a user views a photo from Journal that was added for a game\n",
+        "expected": "THEN the the user will see the Date, Venue, and Event name displayed on the photo\nIf it is is a game event then:\nDate, Ballpark name, away team @ home team"
+      },
+      {
+        "content": "When user views a photo from Journal that was added from the photo gallery, or the BP Guide page or a POI page",
+        "expected": "THEN the user will see the date and venue only when viewing the photo"
+      },
+      {
+        "content": "When a user is in Journal\nand the user has only one photo for a game that was checked into or added",
+        "expected": "THEN the user will see the photo displayed for that game in the History section\nAND the photo will be in a square shape and fit into that game's cell"
+      },
+      {
+        "content": "When a user is in Journal\nand the user has uploaded multiple photos for a game that was checked into or added",
+        "expected": "THEN the user will see multiple photos for that game in the History section\nAND the user will be able to swipe through those photos from left to right\nAND the most recent photo will display first"
+      },
+      {
+        "content": "When a user is in My Journal\nand uploads at least one photo\nand taps on the photo for the game in the History section that it was uploaded for",
+        "expected": "Then the photo will open in a photo viewer\nand the user will be able to swipe through all their photos ONLY for that game(if more than one was uploaded)\nand will see a back button on the top left\nand will see a delete button on the top right"
+      },
+      {
+        "content": "When a user is in My Journal\nand uploads at least one photo\nand taps on the photo for the game in the History section that it was uploaded for",
+        "expected": "Then the photo will open in a photo viewer\nand the user will be able to swipe through all their photos for that game(if more than one was uploaded\nAND the user will see x of x at the top indicating which photo they are on\nAND the most recent photo will always be 1st. "
+      },
+      {
+        "content": "When a user is in My Journal\nand uploads at least one photo\nand taps on the photo for the game in the History section that it was uploaded for to view the photo in the photo viewer\nAND the user taps on the Delete button on the top right",
+        "expected": "Then that photo will be deleted\nAND the x of x value will update to the newest total number of photos value for that game\n"
+      },
+      {
+        "content": "When a user is in My Journal\nand has uploaded multiple photos for a game\nand taps a photo for that game in the History section that it was uploaded for to view the photo in the photo viewer",
+        "expected": "Then the photo that was tapped will open in photo viewer \nAND the position number that the photo is in will match what the x of x value says on top of photo viewer\nex. If you tap on 3rd photo out of 5 then photo viewer should say 3 of 5. "
+      },
+      {
+        "content": "When a user is in the photo viewer\nand clicks on the Photos back button",
+        "expected": "Then the user will be brought back to My Journal"
+      },
+      {
+        "content": "When the user taps on the Photos button\nAND the user taps on a photo to open the photo viewer\n",
+        "expected": "THEN the user will be able to scroll through all of their photos\nAND there will be an x of x value at top middle to indicate which photo they are on\nAND the newest photo will always be first"
+      },
+      {
+        "content": "When a user is in in the photos page\nand long presses on a photo",
+        "expected": "Then the user will be prompted with a confirmation window\nand the window will have a Delete and Cancel button\nand tapping on the Delete button will remove the photo from the gallery\nor tapping Cancel will dismiss the window\n\nexecute both Delete & Cancel options"
+      },
+      {
+        "content": "When a user is in My Journal\nand has checked into or added games\nand the content on the screen loads\nand scrolls down below the Total Check-Ins section",
+        "expected": "Then the user will see all the games games that they have checked in to or added\nand the games will be listed in descending order from most recent checked in to or added\nand the games will display the date of those games and also the final score\nand tapping on one of the games will open the Event Detail page of that game"
+      },
+      {
+        "content": "When a user is in Journal\nand taps on the 'Add Game' button in the Total Check-Ins section\n",
+        "expected": "Then the user will be brought to the Add Game search screen"
+      },
+      {
+        "content": "When a user is in Journal\nand taps on the 'Add Game' button in the Total Check-Ins section to \nand clicks Cancel on the Add Games screen",
+        "expected": "Then the user will be brought back to Journal"
+      },
+      {
+        "content": "When a user has added or checked into at least 1 game\nand the user taps on that game to open the Event Detail page for that game\nAND the user taps on the back button in the Event Detail page",
+        "expected": "Then the user will be taken back to Journal"
+      },
+      {
+        "content": "When a user has a game that he has checked into in the Total Check-Ins section\nand taps on a game that they have checked in to",
+        "expected": "Then the user will not see an option to remove this game"
+      },
+      {
+        "content": "When a user looks under the Total Check-Ins section\nand checks into at least one game\nand views the checked in game in that section",
+        "expected": "Then the user will see the check-in icon on the bottom right of the cell"
+      },
+      {
+        "content": "When a user has added at least one historical game\nand has not checked in to any games\nand looks at the game in the Total Check-Ins section",
+        "expected": "Then the user will never see the checked in icon located at the bottom right of the cell"
+      },
+      {
+        "content": "When a user looks under the Total Check-Ins section\nand has added or checked into at least one game\nand scrolls down to the game that was added",
+        "expected": "Then the user will see the date of the game at the top of the cell\nand the upper left corner will have the 'DD' of the game\nand one space over will have the 'Month'\nand to the upper right corner will be the 'Year' of the game\nand the font of this text will be considerably larger than the other font in the cell"
+      },
+      {
+        "content": "When a user looks under the Total Check-Ins section\nand has added or checked into at least one game\nand scrolls down to the game that was added",
+        "expected": "Then the user will see the score of the game\nand the score will be listed in the following matter [awayTeamName awayTeamScore , homeTeamName homeTeamScore]"
+      },
+      {
+        "content": "When a user looks under the Total Check-Ins section\nand has added or checked into at least one game\nand scrolls down to the game that was added",
+        "expected": "Then the user will see the name of the Ballpark in which this game took place \nand this will be located above the score\nand to the right of the stadium image"
+      },
+      {
+        "content": "When a user looks under the Total Check-Ins section\nand has added or checked into at least one game\nand scrolls down to the game that was added",
+        "expected": "Then the user will see the location of the game\nand it will be City, State (abbreviated state)\nand it will be located to the right of the name of the ballpark"
+      },
+      {
+        "content": "When a user looks under the Total Check-Ins section\nand has added at least one game\nand scrolls down to the game they have added\nand taps on that game to bring up the Event Detail page",
+        "expected": "Then the user will see a 'Remove' button at the top right of the Event Detail page for that game \nand this button will not appear for any Checked In games"
+      },
+      {
+        "content": "When a user looks under the Total Check-Ins section\nand has added at least one game\nand scrolls down to the game they have added\nand taps on that game to bring up the Event Detail page\nand taps on the 'Remove' button on the Event Detail page\nand is prompted with a Remove Game pop up\nand taps on Cancel",
+        "expected": "Then the user is returned to the Event Detail screen for that game"
+      },
+      {
+        "content": "When a user looks under the Total Check-Ins section\nand has added at least one game\nand scrolls down to the game they have added\nand taps on that game to bring up the Event Detail page\nAnd the user taps on the Remove button on the top right",
+        "expected": "Then the user will be prompted with a Remove Game pop up\nand will be able to choose to Cancel or Remove"
+      },
+      {
+        "content": "When a user taps on the 'Add Game' button in the Total Check-Ins section to open the Add Games page",
+        "expected": "Then the user will see the following search fields: \nYear, Home Team, Away Team, Year, Month, Day \nand Home Team and Year will be marked as required fields"
+      },
+      {
+        "content": "When a user taps on the 'Add Game' button in the Total Check-Ins section to open the Add Games page\nand fills in the required search fields\nand taps Search For Games\nand there are no games meeting the criteria searched for",
+        "expected": "Then the user will see the Add Games screen\nAnd there will be a message stating:\n\n'No games were found matching your criteria.'"
+      },
+      {
+        "content": "When a user taps on the 'Add Game' button in the Total Check-Ins section to open the Add Games page\nand enters in valid search criteria on the Add Games screen\nand clicks Search For Games\nand when the screen loads displaying the games that match the users query\nand clicks Back",
+        "expected": "Then the user will be returned to Add Games search page"
+      },
+      {
+        "content": "When a user taps on the 'Add Games' button in the Total Check-Ins section to open the Add Games page\nand enters in valid search criteria on the Add Games Screen\nand clicks Search For Games\nand when the list of games on the screen loads",
+        "expected": "Then the top of every game's cell shows the date of the game in the following format\nDAY MONTH DATE, YEAR\nand the bottom of every game's cell shows the teams playing in the following format\nAWAY TEAM (city and team nickname) vs. HOME TEAM (city and team nickname)\nAnd to the left of the game cell will be a check circle that will be blank"
+      },
+      {
+        "content": "When a user searches for a certain year where only certain teams existed(ex. 2004)",
+        "expected": "THEN when the user searches for a Home or Away team then they will only see teams that existed in 2004\n\n*Test different years and refer to spreadsheet attached for teams and years played. \n"
+      },
+      {
+        "content": "When a user searches for a Home Team or Away Team FIRST(year field is still blank) that only existed in certain years",
+        "expected": "THEN when the user taps on the Year picker they will only see the years in which that team played\n*Example: If you search for Washington Nationals then when you tap on Year field you will only see years 2005-2015. Refer to spreadsheet for years and teams. "
+      },
+      {
+        "content": "When a user searches for a year\nand the user goes to Away Team picker",
+        "expected": "THEN The user will only see teams that existed for that year"
+      },
+      {
+        "content": "When a user searches for a year\nand the user goes to the Home Team picker",
+        "expected": "THEN the user will only see teams that existed for that year"
+      },
+      {
+        "content": "When a user taps on the 'Add Game' button in the Total Check-Ins section to open the Add Games page\nand enters in valid search criteria on the Add Games Screen\nand clicks Search For Games\nand taps on a game\n",
+        "expected": "Then the check circle will become blue and will have a check mark in it"
+      },
+      {
+        "content": "When a user taps on the 'Add Game' button in the Total Check-Ins section to open the Add Games page\nand enters in valid search criteria on the Add Games Screen\nand clicks Search For Games\nand then the user selects only one game\nand then the user taps on the 'Add Games' button",
+        "expected": "THEN the user will be brought the final Add Games page\nand there will be text on top saying 'The following game will be added to your journal:'\nand below that will be the game details with date above and matchup below the date\nand below the game details will be a caption box with a camera icon to the right of it"
+      },
+      {
+        "content": "When a user has selected only one game from the add games page",
+        "expected": "THEN the user will see a caption box\nand in the caption box will be ghost text saying 'Add a Note'\nand typing in the box will remove the ghost text\nand deleting the text will again bring back the ghost text"
+      },
+      {
+        "content": "When a user has selected only one game form the add games page\nand the user adds that game to the journal by tapping the 'Add Games' button",
+        "expected": "THEN the user will be taken to the Journal\nand the user will be anchored to that game that he just added"
+      },
+      {
+        "content": "When a user has selected multiple games\nand the user taps on 'Add Games' button to add the games to Journal",
+        "expected": "THEN the user will be anchored to those games that were just added in Journal"
+      },
+      {
+        "content": "When a user has selected only one game from the add games page\nand the user adds a comment in the comment box\nand the user taps on the 'Add Games' button",
+        "expected": "Then the user will be anchored to that game in Journal\nand when looking at the game that was just added the user will see the comment they entered in displaying below the ballpark image of that game"
+      },
+      {
+        "content": "When a user has entered in a note for a game in Journal\nand the user taps on that game to go to the event detail view\nand the user taps on the edit button for the note",
+        "expected": "THEN the user will be able to edit the note"
+      },
+      {
+        "content": "When a user is editing a note\nand the user taps on the Done button on top right",
+        "expected": "THEN the user will be brought back to the event detail view of that game\nand the user will see the updated note"
+      },
+      {
+        "content": "When a user deletes the note for a game from the event detail page",
+        "expected": "Then when the user goes back to Journal and looks at that game the previous note will no longer be present"
+      },
+      {
+        "content": "When a user selects only one game from the add games page\nand the user taps on the photo icon located on the rights side of the comment box",
+        "expected": "THEN the user will be asked to choose a photo from their gallery\nand after the user has chosen a photo they will then be taken through the photo upload/edit flow"
+      },
+      {
+        "content": "When a user has selected only one game and is on the add games view\nand the user adds a photo",
+        "expected": "THEN the user will see the photo thumbnail image appear on the right side of the comment box\nand there will be an 'x' button on the top right of that photo\nand tapping on that 'x' button will delete the photo"
+      },
+      {
+        "content": "When a user has selected only one game from the add games view\nand the user uploads a photo\nand the user taps on the 'Add' button",
+        "expected": "THEN the user will be taken to the Journal view\nand the user will see the photo they uploaded under the game that they added"
+      },
+      {
+        "content": "When a user taps on the 'Add Game' button in the Total Check-Ins section to open the Add Games page\nand enters in valid search criteria on the Add Games Screen\nand clicks Search For Games\n",
+        "expected": "THEN the user will be able to select multiple games on that screen\nand as the user selects the game the check circle will become blue with a check mark"
+      },
+      {
+        "content": "When a user taps on the 'Add Game' button in the Total Check-Ins section to open the Add Games page\nand enters in valid search criteria on the Add Games Screen\nand clicks Search For Games\nand the user selects multiple games(2 or more)\nand the user taps on 'Add' button",
+        "expected": "Then the user will be taken directly to the Journal view\nand the user will be anchored to those games that were just added"
+      },
+      {
+        "content": "When a user taps on the 'Add Game' button in the Total Check-Ins section to open the Add Games page\nand enters in valid search criteria\nand clicks Find Games\nand clicks on any game to add",
+        "expected": "Then the user will see some disclaimer text beneath the game they want to add"
+      },
+      {
+        "content": "When a user has tapped on the 'Add Game' button in Journal",
+        "expected": "THEN at the bottom of the Add Games search page the user will see some disclaimer text"
+      },
+      {
+        "content": "When a user is in Journal\nand the user has added a game(s)\nand the user taps on the ballpark image thumbnail located in the event module",
+        "expected": "THEN the user will be brought to a larger version of that ballpark image\nand in the top of the photo viewer will be the ballpark's name\nand there will be a back button saying 'Journal' which will take you back to Journal when tapped"
+      },
+      {
+        "content": "When a user is in Journal",
+        "expected": "Then the user will see Offers on the top right of the page"
+      },
+      {
+        "content": "When a user is in Journal\nAnd the user taps on Offers on the top right of the page",
+        "expected": "Then the user will be taken to the Offers page"
+      },
+      {
+        "content": "When a user goes to the Offers page\nAND the user tapts on the back button",
+        "expected": "Then the user will be brought back to Journal"
+      },
+      {
+        "content": "When a user has no offers\nAND the user taps on the Offers button on the top right of Journal",
+        "expected": "Then the user will be taken to the Offers page\nAnd the user will see a message saying \"No unlocked offers available\""
+      },
+      {
+        "content": "When a user has offers available\nAND the user taps on the Offers button on the top right of Journal",
+        "expected": "Then the user will see all of the offers that were unlocked\nAnd tapping on the offer will open the page for that offer"
+      },
+      {
+        "content": "When a user has opened the page of an Offer\nAND the user taps on the back button\n",
+        "expected": "THEN the user will be taken back to the Offers page"
+      },
+      {
+        "content": "When a user has checked into a game\nand the user entered in a section, row, and seat value during the checkin",
+        "expected": "THEN when the user views that entry in Journal they will see SEC, ROW, and SEAT fields and values appearing in the journal entry"
+      }
+    ]
+  },
+  {
+    "id": 48713,
+    "title": "Stats",
+    "section_id": 7009,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1418935974,
+    "updated_by": 43,
+    "updated_on": 1494432337,
+    "estimate": null,
+    "estimate_forecast": "1h 3m 2s",
+    "suite_id": 917,
+    "display_order": 2,
+    "custom_preconds": "Stats page is accessed by tapping on either the Ballparks or Teams buttons on the Journal",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user navigates to Journal\nand the user taps on the Ballparks button",
+        "expected": "Then the user will see a selector at the top for Ballparks and Teams (ballparks is default)\nand a count for Ballparks, Total Visits \nand a list of stadiums visited sorted most visited to least"
+      },
+      {
+        "content": "When the user is in Journal\nand the user has tapped on the Ballparks button \nand the user checks into a game\nor the user adds a game in History\n\n(check both cases)",
+        "expected": "Then the number next to Ballparks will increase by 1 (unless the user has already checked into or added a game at this same stadium)\nand the number next to Total Visits will increase by 1 (always)\nand the number next to the stadium's image and name will increase by 1 (always)\n\n*The change may take up to 5 minutes so keep refreshing the view."
+      },
+      {
+        "content": "When the user is in Journal \nand the user has taps on the Ballparks button\nand the user has added a historical game\nand the user removes a game from their History",
+        "expected": "Then the number next to Ballparks will decrease by 1 (unless the user has already checked into or added another game at this same stadium)\nand the number next to Total Visits will decrease by 1 (always)\nand the number next to the stadium's image and name will decrease by 1 (always)"
+      },
+      {
+        "content": "When the user has added and/or checked into games\nand the user is in Journal\nand the user taps on the Ballparks button\nand the user looks at the ballpark's visited list",
+        "expected": "Then the user will see an image of the stadium\nand the name of the stadium will be to the right of it\nand the city, state will be underneath the stadium name in lighter text"
+      },
+      {
+        "content": "When the user is in Journal\nand the user taps on the Ballparks button\nand the user checks into a game\nor the user adds a game in History for a stadium\n\n(check both cases)",
+        "expected": "Then the number to the right of the stadium in the stadium list will increase by 1"
+      },
+      {
+        "content": "When the user is in Journal\nand the user taps on the Ballparks button\nand the user views the list of visited ballparks",
+        "expected": "Then the user will see the correct thumbnail for each stadium\n\n(check for all teams and please check historical stadiums Nationals 2005 RFK Stadium, Marlins 2005 Dolphins Stadium, Twins 2005 Metrodome, Mets 2005 Shea Stadium)\n\n{See attachments for ballpark thumbnail images}\n\n![](index.php?/attachments/get/1034)![](index.php?/attachments/get/1035)![](index.php?/attachments/get/1036)![](index.php?/attachments/get/1037)![](index.php?/attachments/get/1038)![](index.php?/attachments/get/1039)![](index.php?/attachments/get/1040)![](index.php?/attachments/get/1041)![](index.php?/attachments/get/1042)"
+      },
+      {
+        "content": "When the user is in Journal\nand the user taps on the Teams button\nand the user taps on the All Teams drop down",
+        "expected": "Then the user will see an option to sort by All Teams, Home Teams, or Away Teams."
+      },
+      {
+        "content": "When the user is in Journal\nand the user taps on the Teams button\nand the user taps on the All Teams drop down\nand the user selects each option",
+        "expected": "Then the data will sort by the selected option \nand it will be in descending order based on amount of visits"
+      },
+      {
+        "content": "When the user is in Journal\nand the user taps on the Teams button\nand the user taps on the All Teams from the drop down",
+        "expected": "Then all team logos and team names are correct and up to date\n\n(check all teams)"
+      },
+      {
+        "content": "When the user is in Journal\nAnd the user taps on the Teams button\nand the user checks into a game\nor the user adds a game in History\n\n(check both cases)",
+        "expected": "Then the Overall Home Team Record will update correctly\nand the individual team record will update correctly\n\n*the update may take about 5 minutes so keep refreshing page"
+      },
+      {
+        "content": "When the user is in Journal\nand the user taps on the Teams button\nand the user has added a historical game\nand the user removes the added game from their History",
+        "expected": "Then the Overall Home Team Record will update correctly\nand the individual team record will update correctly"
+      },
+      {
+        "content": "When the user is in Journal\nAnd the user taps on the Teams button\nand the user taps on the back button on the top left",
+        "expected": "Then the user will be brought back to the Journal"
+      }
+    ]
+  },
+  {
+    "id": 1205244,
+    "title": "Journal (New)",
+    "section_id": 7009,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 73,
+    "created_on": 1508172338,
+    "updated_by": 73,
+    "updated_on": 1508530102,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 917,
+    "display_order": 3,
+    "custom_preconds": "For those cases where you have to search for certain teams in certain years you can use the attached Excel sheet and use the years to determine which teams existed in what year.\r\n\r\nhttps://wiki.mlbam.com/display/QAspace/Data+Points+and+Lookups",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a user is in My Journal\nAND the content on the screen loads",
+        "expected": "THEN the user will see the following being displayed:\n- “Journal” Header on top center\n- Offers on top right of the page\n- Add your photo (Cover photo)\n- Three buttons under the cover photo (Ballpark, Teams, Photos)\n- Total Check-ins section\n- Add games (+) button that's pinned on the bottom right corner of the screen"
+      },
+      {
+        "content": "WHEN a user is in My Journal\nAND taps on Offers\nAND has offers",
+        "expected": "THEN the user will be taken to the offers page\nAND the user will see all of the offers that were unlocked\nAND tapping on the offer will open page for that offer\nAND tapping on the back button will bring user back to Journal"
+      },
+      {
+        "content": "WHEN a user is in My Journal\nAND taps on Offers\nAND has no offers",
+        "expected": "THEN the user will be taken to the offers page\nAND the user will see a message saying “No unlocked offers available”\nAND tapping on the back button will bring user back to Journal"
+      },
+      {
+        "content": "WHEN a user has opened the page of an Offer\nAND the user taps on the back (offers) button",
+        "expected": "THEN the user will be taken back to the Offers page"
+      },
+      {
+        "content": "WHEN a user is in Journal\nand taps on the 'Add Games’ button in the Total Check-Ins section",
+        "expected": "THEN the Add Games search module will slide up from bottom over the journal page\nAND the module will display the following:\n- “Add Games” header on top\n- Cancel button that dismisses the module and returns user back to Journal\n- “* REQUIRED FIELDS” text\n- Following search fields: Year, Home Team, Away Team, Month, Date, Search for games button, some text on the bottom of the page.\nNOTE: Home team and Year fields will be marked as required (*)"
+      },
+      {
+        "content": "WHEN a user taps on the “Add Game” (+) button\nAND fills in the required search field\nAND taps search for games button\nAND the query user searched for happens to have a match",
+        "expected": "THEN the screen loads displaying the games that match the user query\nAND the user is able to select game and add games to Journal"
+      },
+      {
+        "content": "WHEN a user taps on the “Add Game” (+) button\nAND fills in the required search field\nAND taps search for games button\nAND the query user searched for is wrong or have no match",
+        "expected": "THEN a message will display that reads “No games were found matching your criteria”.\n"
+      },
+      {
+        "content": "WHEN a user taps on the “Add Game” (+) button\nAND enters in valid search criteria and taps search for games button\nAND the screen loads displaying the games that match the users query\nAND the user taps back button",
+        "expected": "THEN the user will be returned to Add Games module\n"
+      },
+      {
+        "content": "WHEN a user taps on the “Add Game” (+) button\nAND enters in valid search criteria and taps search for games button\nAND the screen loads displaying the result that match the users query",
+        "expected": "THEN top of every game’s cell shows the date of the game in the following format: \nDAY, MONTH DATE, YEAR\nAND the bottom of every game’s cell shows the teams playing in the following format:\nAWAY TEAM (City and team nickname) vs. HOME TEAM (City and team nickname)\nAND to the left of the game cell will be a check circle that will be blank\nAND tapping one of the game’s cell selects the game (make sure the circle on left shows check mark is blue)\nAND “ADD GAMES” button pinned on bottom becomes active (blue)\n"
+      },
+      {
+        "content": "WHEN a user taps on the “Add Game” (+) button\nAND enters in valid search criteria on the Add Games Screen\nAND clicks Search For Games\nAND the user selects only one game\nAND the user taps on the “Add Games” button",
+        "expected": "THEN the user will be brought the final Add Games page that displays the following:\n- Header on top of the page that reads “Add Games”\n- Cancel button on the top right of the page\n- Text below the header which reads “The following game will be added to your journal:”\n- Game details with matchup and both teams logos, date below matchup, and park name\n- Caption box with a camera icon to the left of it AND a ghost text “Add a Note…” which disappears upon typing and show when text is deleted.\n- Add Game button\n- Disclaimer text at he bottom of the page"
+      },
+      {
+        "content": "WHEN a user taps on the “Add Game” (+) button\nAND enters in valid search criteria on the Add Games Screen\nAND clicks Search For Games\nAND the user selects only one game\nAND the user taps on the “Cancel” button\n",
+        "expected": "THEN the entire add games module will be dismissed\nAND the user will be brought back to the Journal page."
+      },
+      {
+        "content": "WHEN a user has selected one or multiple game(s) from the add games page\nand the user adds that game(s) to the journal by tapping the “Add Games” button",
+        "expected": "THEN the user will be anchored to that game(s) that was just added in Journal"
+      },
+      {
+        "content": "WHEN a user has selected only one game from the add games page\nAND the user adds a note in the o box\nAND the user taps on the 'Add Games' button",
+        "expected": "THEN the user will be anchored to that game in Journal\nAND the comment that was just added is displayed below the ballpark image of that game"
+      },
+      {
+        "content": "WHEN a user has entered in a note for a game in Journal\nAND the user taps on that game to go to the event detail view\nAND the user taps on the note added previously",
+        "expected": "THEN the user will be able to edit the note\nAND the user can tap “Done” after finish editing note\nAND the user will be brought back to the event detail page after tapping done\nAND the user will see the note updated"
+      },
+      {
+        "content": "WHEN a user deletes the note for a game from the event detail page",
+        "expected": "THEN upon viewing that game in Journal the previous note will no longer be present\n"
+      },
+      {
+        "content": "WHEN a user selects only one game from the add games page\nAND the user taps on the photo icon located on the left side of the add a note box",
+        "expected": "THEN the user will be asked to choose a photo from their gallery\nAND after the user has chosen a photo they will then be taken through the photo upload/edit flow"
+      },
+      {
+        "content": "WHEN a user has selected only one game and is on the add games view\nAND the user adds a photo",
+        "expected": "THEN the user will see the photo thumbnail image appear on the left side of the add a note box\nAND there will be an “x” button on the top right of that photo\nAND tapping on that “x” button will delete the photo"
+      },
+      {
+        "content": "WHEN a user has selected only one game from the add games view\nAND the user uploads a photo\nAND the user taps on the 'Add' button",
+        "expected": "THEN the user will be taken to the Journal view\nAND the user will see the photo they uploaded under the game that they added"
+      },
+      {
+        "content": "WHEN a user is in Journal\nAND the user has added a game(s)\nAND the user taps on the ballpark image thumbnail located in the event module",
+        "expected": "THEN the user will be taken to a larger version of that ballpark image\nAND on the top of the photo viewer will be the ballpark's name\nAND there will be a back button which will take the user back to Journal when tapped"
+      },
+      {
+        "content": "WHEN a user has checked into a game\nAND the user entered in a section, row, and seat value during the checkin",
+        "expected": "THEN as the user views that entry in Journal they will see SEC, ROW, and SEAT fields and values appearing in the journal entry"
+      },
+      {
+        "content": "WHEN a user is in Journal\nAND the user taps on \"BALLPARKS\" icon under the cover photo",
+        "expected": "THEN the user is taken to the Stats page\nAND the user is on the Ballparks tab\nAND there is a black indicator under the Ballparks tab assuring ballparks tab is active\nAND the user can tap back button to go back to Journal"
+      },
+      {
+        "content": "WHEN a user is in Journal\nAND the user taps on \"TEAMS\" icon under the cover photo",
+        "expected": "THEN the user is taken to the Stats page\nAND the user is on the Teams tab\nAND there is a black indicator under the Teams tab assuring Teams tab is active\nAND there is a TEAM BY TEAM stats filter button by default showing \"All Teams\"\nAND the user can tap back button to go back to Journal"
+      },
+      {
+        "content": "WHEN a user is in Journal\nAND the user taps on \"TEAMS\" icon under the cover photo\nAND the user taps the \"All Teams\" button",
+        "expected": "THEN user is displayed with a Stats filter module\nAND stats filter includes All Teams, Home Teams, Away Teams\nAND there is a \"Done\" button on top left of the page which dismisses the stats filter module upon users tap"
+      },
+      {
+        "content": "WHEN a user is in Journal\nAND the user taps on \"TEAMS\" icon under the cover photo\nAND the user taps the \"All Teams\" button",
+        "expected": "THEN the user is able to choose between stats filter options\nAND a check mark is displayed for the option selected\nAND upon module dismissal, the option select reflects result on the Teams stats page"
+      },
+      {
+        "content": "WHEN a user is in Journal\nAND the user taps on \"PHOTOS\" icon under the cover photo",
+        "expected": "THEN the user is taken to the Photos page\nAND the photos page displays the following:\n-Back button on top left of the page\n-Header on top center of the page that reads \"Photos\"\n-(+) add button on top right of the page\n- Text which reads \"Add a photo to remember the moment.\" in the center of the page"
+      }
+    ]
+  }
+]

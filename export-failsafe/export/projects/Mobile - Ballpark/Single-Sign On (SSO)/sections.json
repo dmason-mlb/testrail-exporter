@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1573099,
+    "suite_id": 561942,
+    "name": "SSO into MPV",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1573922,
+    "suite_id": 561942,
+    "name": "End-to-End SSO",
+    "description": "[BP-9863](https://baseball.atlassian.net/browse/BP-9863)",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1574672,
+    "suite_id": 561942,
+    "name": "SSO into MLB.com",
+    "description": "Test cases to be created to confirm a user no longer needs to sign into MLB.com pages within BP webviews.\n\nTeam Pages links/buttons [TBD/FUTURE] (currently out of scope)\nOther Flows within BP app (i.e MyHistory > EventDetails > GameWrap) (TBD)",
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

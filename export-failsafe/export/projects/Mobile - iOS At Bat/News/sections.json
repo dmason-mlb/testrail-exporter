@@ -1,0 +1,29 @@
+[
+  {
+    "id": 7001,
+    "suite_id": 911,
+    "name": "iPad",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 7003,
+    "suite_id": 911,
+    "name": "iPhone",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 101437,
+    "suite_id": 911,
+    "name": "Refresh",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

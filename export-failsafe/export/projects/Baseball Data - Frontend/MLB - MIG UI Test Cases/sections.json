@@ -1,0 +1,110 @@
+[
+  {
+    "id": 771123,
+    "suite_id": 223862,
+    "name": "Date Picker & Default Game",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 771124,
+    "suite_id": 223862,
+    "name": "Teams, Records & Scores",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 771125,
+    "suite_id": 223862,
+    "name": "Game Type",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 771126,
+    "suite_id": 223862,
+    "name": "Postseason Game Types",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 771127,
+    "suite_id": 223862,
+    "name": "Game States",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 771128,
+    "suite_id": 223862,
+    "name": "Perfect Game / No Hitter",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 771129,
+    "suite_id": 223862,
+    "name": "Matchups/Probables/Decisions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 771130,
+    "suite_id": 223862,
+    "name": "Product Links",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 771131,
+    "suite_id": 223862,
+    "name": "Free Game of the Day",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 771132,
+    "suite_id": 223862,
+    "name": "YouTube Game of the Week",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 771133,
+    "suite_id": 223862,
+    "name": "Empty State",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 773753,
+    "suite_id": 223862,
+    "name": "Smoke Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  }
+]

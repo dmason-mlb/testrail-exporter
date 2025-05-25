@@ -1,0 +1,38 @@
+[
+  {
+    "id": 147803,
+    "suite_id": 19823,
+    "name": "R4 Signing Bonus",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 147804,
+    "suite_id": 19823,
+    "name": "BOC - Contract Stateflow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 147805,
+    "suite_id": 19823,
+    "name": "Club -  Contract Stateflow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 147806,
+    "suite_id": 19823,
+    "name": "Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

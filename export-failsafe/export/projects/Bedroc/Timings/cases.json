@@ -1,0 +1,24 @@
+[
+  {
+    "id": 28628032,
+    "title": "Timings Calculations",
+    "section_id": 1512705,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 106,
+    "created_on": 1654008699,
+    "updated_by": 106,
+    "updated_on": 1702481363,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 500934,
+    "display_order": 1,
+    "custom_preconds": "Timecodes have been entered into the UI by the ADM",
+    "custom_steps": "Time from Call to challenge \t\t\t= (Challenge \t\t\tminus \tCall on the field)\r\nTime on headset \t\t\t\t= (Headset off \t\t\tminus \tHeadset on)\r\nTime from challenge to ruling \t\t\t= (Ruling \t\t\tminus \tChallenge)\r\nTime from call to next pitch\t\t\t= (Next pitch \t\t\tminus \tCall on the Field)\r\nTime from call to initial announcement\t\t= (initial announcement start\tminus \tCall on the Field)\r\nTime from challenge to initial announcement\t= (initial announcement start\tminus \tChallenge)\r\nLength of initial announcement\t\t\t=((initial announcement end\tminus\tinitial announcement start)\r\nTime from replay off. decision to post review ann=(post review announce start\tminus\t(headset on + time on 2 min clock))\r\nLength of post review announcement\t\t=(post review ann end\t        minus\tpost review ann start)\r\nTime from FTC EoP to Challenge\t\t\t=(15 secs\t\t\tminus\ttime left on FTC clock)",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 347365,
+    "suite_id": 67543,
+    "name": "MNC",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 347359,
+    "suite_id": 67543,
+    "name": "MJC",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 347366,
+    "suite_id": 67543,
+    "name": "Contract Language",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 347367,
+    "suite_id": 67543,
+    "name": "Profiles",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 347368,
+    "suite_id": 67543,
+    "name": "Tx/Investigation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  }
+]

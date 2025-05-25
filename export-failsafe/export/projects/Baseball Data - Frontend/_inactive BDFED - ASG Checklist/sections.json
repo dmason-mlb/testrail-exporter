@@ -1,0 +1,29 @@
+[
+  {
+    "id": 155009,
+    "suite_id": 21337,
+    "name": "4S Pages",
+    "description": "Homepage, Club Pages, Club Schedules, Scores, Standings, Schedule, Player Pages",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 155010,
+    "suite_id": 21337,
+    "name": "Gameday",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 155011,
+    "suite_id": 21337,
+    "name": "MLB.TV",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1286750,
+    "title": "Tickets Tab Badging - Unverified",
+    "section_id": 1231621,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1574269393,
+    "updated_by": 288,
+    "updated_on": 1658183387,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 203046,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN user has installed Ballpark App\r\nAND user is logged in with an unverified account\r\nAND user has tickets associated with the account\r\n\r\n*Testing Notes:[How to test Ballpark Features with an Unverified Account with Tickets](https://baseball.atlassian.net/wiki/spaces/BET/pages/2587656220/How+to+test+Ballpark+Features+with+an+Unverified+Account+with+Tickets)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user logins into Ballpark \nAND user is on the Home Tab",
+        "expected": "THEN the alert badge on the Wallet icon in the bottom navigation view is displayed"
+      },
+      {
+        "content": "WHEN user sends app to background and brings back to foreground with tickets that still have an unverified email address",
+        "expected": "THEN the alert badge on the Wallet icon in the bottom navigation view is still displayed"
+      },
+      {
+        "content": "WHEN user verifies the email address associated with tickets in ticket summary",
+        "expected": "THEN the alert badge on the Wallet icon in the bottom navigation view is removed"
+      }
+    ]
+  },
+  {
+    "id": 30206276,
+    "title": "Embargoed Barcode",
+    "section_id": 1231621,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://baseball.atlassian.net/browse/BPA-6728",
+    "created_by": 282,
+    "created_on": 1677539214,
+    "updated_by": 288,
+    "updated_on": 1677607677,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 203046,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN user has installed Ballpark App\r\nAND user is logged in with an account\r\nAND user has tickets associated with the account which has ticket with embargoes barcode ",
+    "custom_steps": "WHEN user tap on “Forward Tickets” in the ticket-list view\r\n\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN use have a valid embargoed ticket \n\nAND user select “Forward tickets” ",
+        "expected": "THEN user should be presented a checkbox to select (if have multiple ticket) and forwarding should be enabled\n\n(Don't auto Select if user have multiple ticket will be covered in [test case](https://testrail.testeng.mlbinfra.net/index.php?/cases/view/29995582&group_by=cases:section_id&group_order=asc&group_id=1251461 ))"
+      },
+      {
+        "content": "",
+        "expected": "AND user able to forward tickets without any issue \n"
+      }
+    ]
+  },
+  {
+    "id": 23733509,
+    "title": "Tickets Tab Deep Links",
+    "section_id": 1224689,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1633554943,
+    "updated_by": 288,
+    "updated_on": 1698785791,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 203046,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "NOTE: Legacy TicketTab view shown for BP app versions prior to 13.0.0 release. Legacy view is also planned to be viewable and able to toggle between, during early BETA releases of 13.0.0\r\n\r\nGIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND the user has BallPark account\r\nAND the user has been given a deeplink\r\n\r\n\r\n*when User has Legacy flow enabled, the deeplinks directs user appropriately to the Legacy views. Comparably, when user has Beta flow enabled, the deeplinks directs user appropriately to the Beta views.",
+    "custom_steps": "Log in to an account and have the app open AND click the deep link.",
+    "custom_expected": "The expected view is shown in the Ballpark app",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user accesses deeplink of ballpark://wallet",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the Wallet sub tab shown"
+      },
+      {
+        "content": "WHEN the user accesses deeplink of ballpark://buytickets",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab\nAND the Buy Tickets sub tab shown"
+      },
+      {
+        "content": "WHEN the user accesses deeplink of ballpark://buytickets?teamID=158",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the Buy Tickets sub tab shown\nAND the Milwaukee Brewers team os selected with scheduled events listed"
+      }
+    ]
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1684195,
+    "suite_id": 611366,
+    "name": "Picklist",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1684196,
+    "suite_id": 611366,
+    "name": "Lead",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1684197,
+    "suite_id": 611366,
+    "name": "User",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1684198,
+    "suite_id": 611366,
+    "name": "Patron Account",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1684199,
+    "suite_id": 611366,
+    "name": "Notneeded_Saleforce Integration",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1684200,
+    "suite_id": 611366,
+    "name": "Pricebook",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1684201,
+    "suite_id": 611366,
+    "name": "PVO PV",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  }
+]

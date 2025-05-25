@@ -1,0 +1,1979 @@
+[
+  {
+    "id": 34504097,
+    "title": "Notification Settings",
+    "section_id": 2010615,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736442875,
+    "updated_by": 336,
+    "updated_on": 1736442875,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 1,
+    "custom_preconds": "User must be using a Google Play Store device with an active Google Play Store account and an up to date Google Play Services\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navigates to the Notification Settings Screen during Onboarding\nand adds a favorite team",
+        "expected": "Then the user should see:\n- Global notification toggled ON\n- MLB News notification toggled ON\n- Favorite team's Game Start, Game End, Scoring Plays, and News notifications toggled ON"
+      },
+      {
+        "content": "When the user navigates to the Notification Settings Screen",
+        "expected": "Then the user should see:\n- A Global Notification ON/OFF Toggle\n- MLB News Notification Toggle\n- Notification Toggles for each team alert type"
+      },
+      {
+        "content": "When the user toggles the global notification toggle on\nAnd when the user signs up for at least one notification type for a given team \nAnd the user leaves the notification screen",
+        "expected": "Then the user should be subscribed to the notification channel\nAnd the user should begin receiving notifications for the selected channel"
+      },
+      {
+        "content": "When the user toggles the global notification toggle OFF\nAnd the user leaves the notification settings screen",
+        "expected": "Then the user should not receive notifications for any subscribed channel.\n\n(Verify with second subscribed device that notification is sent successfully.)"
+      },
+      {
+        "content": "Verify all notification types for each team",
+        "expected": "Notification options for each team should be:\n\nGame Start\nGame End\nScoring Plays\nLead Change\nPitching Change\nCondensed Game\nVideo Highlight\nTeam News"
+      },
+      {
+        "content": "When the user makes changes to their notification settings\nAnd the user loses connection (can force airplane mode)\nAnd the user leaves the notification settings screen",
+        "expected": "Then the user should receive a notification informing them that their notification settings could not be saved. "
+      },
+      {
+        "content": "When the user regains connection after leaving the notification screen\nAnd taps the notification in the notification tray",
+        "expected": "Then the user should receive a notification informing them that their notification settings have been saved\nAnd when the user returns to the notification screen they should see their changes appear as they have saved them. \nAnd when the user receives a notification that they recently signed up for and saved via the notification, they should receive the notification. (Verifying that their changes were actually sent to the service by tapping the notification.) "
+      }
+    ]
+  },
+  {
+    "id": 34504098,
+    "title": "MLB News",
+    "section_id": 2010616,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736442877,
+    "updated_by": 336,
+    "updated_on": 1736442877,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to \"MLB News\" notifications",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send MLB News Notification of a news article",
+        "expected": "User should receive the notification and the content of the notification should not be truncated or cut off"
+      },
+      {
+        "content": "User taps MLB News Notification of a news article",
+        "expected": "At Bat should open and the user should be taken to the URL that was sent with the MLB News Notification\n\n(If no URL was specified, the user should be left on the default At Bat screen)"
+      },
+      {
+        "content": "Send MLB News Notification of a video highlight\n(usually begins with the word \"Video\")",
+        "expected": "User should receive the notification and the content of the notification should not be truncated or cut off"
+      },
+      {
+        "content": "User taps MLB News Notification of a video highlight",
+        "expected": "At Bat should open and the video highlight that was sent with the MLB News Notification should launch\n\n(If no URL was specified, the user should be left on the default At Bat screen)"
+      }
+    ]
+  },
+  {
+    "id": 34504099,
+    "title": "Game Start",
+    "section_id": 2010616,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736442877,
+    "updated_by": 336,
+    "updated_on": 1736442877,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to a team's Game Start notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Game Start Notification",
+        "expected": "Then the user should receive a 'Game Start'  notification"
+      },
+      {
+        "content": "User taps Game Start Notification",
+        "expected": "At Bat should open and the user should be taken to the Gameday view for the appropriate game"
+      }
+    ]
+  },
+  {
+    "id": 34504100,
+    "title": "Game End",
+    "section_id": 2010616,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736442877,
+    "updated_by": 336,
+    "updated_on": 1736442877,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 3,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to a team's Game End notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Game End Notification",
+        "expected": "Then the user should receive a 'Game End' notification"
+      },
+      {
+        "content": "User taps Game End Notification",
+        "expected": "At Bat should open and the user should be taken to the Gameday view for the appropriate game"
+      }
+    ]
+  },
+  {
+    "id": 34504101,
+    "title": "Scoring Plays",
+    "section_id": 2010616,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736442877,
+    "updated_by": 336,
+    "updated_on": 1736442877,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 4,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to a team's Scoring Play notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Scoring Play Notification",
+        "expected": "Then the user should receive a 'Scoring Play' notification"
+      },
+      {
+        "content": "User taps Scoring Play Notification",
+        "expected": "At Bat should open and the user should be taken to the Gameday view for the appropriate game"
+      }
+    ]
+  },
+  {
+    "id": 34504102,
+    "title": "Lead Change",
+    "section_id": 2010616,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736442877,
+    "updated_by": 336,
+    "updated_on": 1736442877,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 5,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to a team's Lead Change notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Lead Change Notification",
+        "expected": "Then the user should receive a 'Lead Change' notification"
+      },
+      {
+        "content": "User taps Lead Change Notification",
+        "expected": "At Bat should open and the user should be taken to the Gameday view for the appropriate game"
+      }
+    ]
+  },
+  {
+    "id": 34504103,
+    "title": "Pitching Change",
+    "section_id": 2010616,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736442877,
+    "updated_by": 336,
+    "updated_on": 1736442877,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 6,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to a team's Pitching Change notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Pitching Change Notification",
+        "expected": "Then the user should receive a 'Pitching Change' notification"
+      },
+      {
+        "content": "User taps Pitching Change notification",
+        "expected": "At Bat should open and the user should be taken to the Gameday view for the appropriate game"
+      }
+    ]
+  },
+  {
+    "id": 34504104,
+    "title": "Condensed Game",
+    "section_id": 2010616,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736442877,
+    "updated_by": 336,
+    "updated_on": 1736442877,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 7,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is logged in with a paid account\r\nand is subscribed to a team's Condensed Game notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Condensed Game notification",
+        "expected": "Then the user should receive a video highlight notification\nAnd the highlight should have \"CG:\" in the notification title"
+      },
+      {
+        "content": "User taps on the Condensed Game notification",
+        "expected": "Then the Video Highlight should begin to play\nAnd when the highlight is done the user should be left on At Bat's default screen (Generally Team page or Scoreboard)"
+      }
+    ]
+  },
+  {
+    "id": 34504105,
+    "title": "Video Highlights",
+    "section_id": 2010616,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736442877,
+    "updated_by": 336,
+    "updated_on": 1736442877,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 8,
+    "custom_preconds": "Given At Bat is installed\r\nand they are subscribed to a team's In-Game Video Highlights notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Video Highlight notification",
+        "expected": "Then the user should receive a video highlight notification\nAnd the highlight should have \"Video:\" in the notification title"
+      },
+      {
+        "content": "User taps on the Video highlight notification",
+        "expected": "Then the Video Highlight should begin to play\nAnd when the highlight is done the user should be left on At Bat's default screen (Generally Team page or Scoreboard)"
+      }
+    ]
+  },
+  {
+    "id": 34504106,
+    "title": "Team News",
+    "section_id": 2010616,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736442877,
+    "updated_by": 336,
+    "updated_on": 1736442877,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 9,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to a team's news notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Team News Notification",
+        "expected": "User should receive the notification and the content of the notification should not be truncated or cut off"
+      },
+      {
+        "content": "User taps Team News Notification",
+        "expected": "At Bat should open and the user should be taken to the URL that was sent with the Team News Notification\n\n(If no URL was specified, the user should be left on the default At Bat screen)"
+      }
+    ]
+  },
+  {
+    "id": 34504107,
+    "title": "Spanish",
+    "section_id": 2010616,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736442877,
+    "updated_by": 336,
+    "updated_on": 1736442877,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 10,
+    "custom_preconds": "Given At Bat is installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the device language is set to Spanish\nand the user subscribes to At Bat push notifications",
+        "expected": "Then the user should be able to sign up for and receive notifications on the device\nAnd the user should receive Spanish language notifications"
+      },
+      {
+        "content": "When the user is signed up for English notifications\nAnd the user changes their device to Spanish language\nAnd the user opens At Bat",
+        "expected": "Then the user's notification subscriptions should be changed from English to Spanish\nAnd vice versa"
+      }
+    ]
+  },
+  {
+    "id": 34504108,
+    "title": "Notification Tray",
+    "section_id": 2010616,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736442877,
+    "updated_by": 336,
+    "updated_on": 1736442877,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 11,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to push notifications",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user expands a notification from the notification tray",
+        "expected": "Then the notification should expand\nand the user should be able to read the notification text in its entirety"
+      },
+      {
+        "content": "When the user swipes away an individual notification\nOr clears all notifications",
+        "expected": "Then the Notification should disappear\nAnd the Notifications should NOT be 'ongoing' notifications"
+      }
+    ]
+  },
+  {
+    "id": 34504499,
+    "title": "Quick hits navigation",
+    "section_id": 2010653,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736529730,
+    "updated_by": 336,
+    "updated_on": 1736529730,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN that user is in browse menu page\r\nAND clicks on teams, standings, stats and starting lineups\r\nTHEN user should be redirected to the correct page\r\nAND when user clicks on back button it should be redirected back to browse menu\r\n\r\nNOTE: AUDIO do not redirect back to browse menu, it redirects back to home page. This has been already issued and accepted as it is.",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34504500,
+    "title": "Shop & tickets navigation",
+    "section_id": 2010653,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736529730,
+    "updated_by": 336,
+    "updated_on": 1736529730,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN that user is in browse menu page\r\nAND user clicks in shop, tickets and action\r\nTHEN user should be redirected to the corresponding page",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34504501,
+    "title": "Ranking and advanced stats navigation",
+    "section_id": 2010653,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736529730,
+    "updated_by": 336,
+    "updated_on": 1736529730,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN that user is in browse menu page\r\nAND user clicks in prospect ranking, baseball savant\r\nTHEN user should be redirected to the corresponding page",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34504502,
+    "title": "Listen & watch navigation",
+    "section_id": 2010653,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736529730,
+    "updated_by": 336,
+    "updated_on": 1736529730,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN that user is in browse menu page\r\nAND user clicks in watch MLB network and podcasts\r\nTHEN user should be redirected to the corresponding page",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34504503,
+    "title": "More Apps from MLB navigation",
+    "section_id": 2010653,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736529730,
+    "updated_by": 336,
+    "updated_on": 1736529730,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN that user is in browse menu page\r\nAND user clicks in ballpark app, MLB play app, first pitch app, homerun derby app\r\nTHEN user should be redirected to the corresponding application",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34504504,
+    "title": "Your account navigation",
+    "section_id": 2010653,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736529730,
+    "updated_by": 336,
+    "updated_on": 1736529730,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 6,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN that user is in browse menu page\r\nAND user clicks in account settings\r\nTHEN user should be redirected to the corresponding page",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34504505,
+    "title": "Help navigation",
+    "section_id": 2010653,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736529730,
+    "updated_by": 336,
+    "updated_on": 1736529730,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN that user is in browse menu page\r\nAND user clicks in FAQS, Restore account, subscription management, contact us\r\nTHEN user should be redirected to the corresponding page",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34504506,
+    "title": "About navigation",
+    "section_id": 2010653,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736529730,
+    "updated_by": 336,
+    "updated_on": 1736529730,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 8,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN that user is in browse menu page\r\nAND user clicks in blackout restriction, privacy policy, terms of use, do not sell my personal data\r\nTHEN user should be redirected to the corresponding page",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34504514,
+    "title": "Watch View",
+    "section_id": 2010654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736530637,
+    "updated_by": 336,
+    "updated_on": 1736530637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user on the Watch View (This is the screen that presents after clicking the TV icon in the app)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I am first enter the Watch View\n\n",
+        "expected": "THEN I will see a Watch Now Tab that includes a single large hero item\nAND I will see scrollable carousel with content"
+      },
+      {
+        "content": "WHEN I click the Games Tab",
+        "expected": "THEN I will see a list of games on today's date or on the configured suggested date if no games are available on today's date"
+      },
+      {
+        "content": "WHEN I click the Search Tab\n",
+        "expected": "THEN I will see the Film Room webview"
+      },
+      {
+        "content": "WHEN I am on the Watch View\n",
+        "expected": "THEN all text and navigation should be accessible in accessibility mode"
+      }
+    ]
+  },
+  {
+    "id": 34504515,
+    "title": "SVOD/VOD Playback on Mobile",
+    "section_id": 2010654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736530637,
+    "updated_by": 336,
+    "updated_on": 1736530637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 2,
+    "custom_preconds": "Set device display timeout to a low time\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN a user with SVOD ability (entitlement)\nWHEN I select a select a \"Featured\" video",
+        "expected": "THEN the SVOD media content should stream\nAND the playback controls will display and dismiss after a few seconds\nAND the device will not timeout \nAND the screen will not turn off while the video is playing"
+      },
+      {
+        "content": "GIVEN a user without SVOD ability (entitlement)\nWHEN I select a select a \"Featured\" video",
+        "expected": "THEN the currently configured paywall will display"
+      },
+      {
+        "content": "GIVEN a User\nWHEN I select a select a \"Highlights\" video",
+        "expected": "THEN the VOD media content should stream\nAND the playback controls will display and dismiss after a few seconds\nAND the device will not timeout \nAND the screen will not turn off while the video is playing"
+      },
+      {
+        "content": "WHEN the screen is rotated 90 degrees and then back",
+        "expected": "THEN the video will toggle between landscape and portrait mode"
+      },
+      {
+        "content": "WHEN I tap on the screen",
+        "expected": "THEN the playback controls will display and dismiss after a few seconds"
+      },
+      {
+        "content": "WHEN I view the scrubber bar",
+        "expected": "THEN it shows, in seconds, the time elapsed on the left\nAND the scrubber position reflects the current position in the video"
+      },
+      {
+        "content": "WHEN I drag or tap the scrubber bar to the left of the current position",
+        "expected": "THEN the video will go back to the position selected"
+      },
+      {
+        "content": "WHEN I drag or tap the scrubber bar to the right of the current position",
+        "expected": "THEN the video will advance to the position selected"
+      },
+      {
+        "content": "WHEN I tap the +10 control",
+        "expected": "THEN the playback will advance forward 10 seconds in time until the end point is reached"
+      },
+      {
+        "content": "WHEN I tap the -10 control",
+        "expected": "THEN the playback will move back 10 seconds in time until the beginning is reached"
+      },
+      {
+        "content": "WHEN pause is tapped",
+        "expected": "THEN the video will pause"
+      },
+      {
+        "content": "WHEN play is tapped",
+        "expected": "THEN the video will resume"
+      },
+      {
+        "content": "WHEN the device screen is turned off",
+        "expected": "THEN the video will pause"
+      },
+      {
+        "content": "WHEN the strikethrough CC button is tapped",
+        "expected": "THEN closed captions will turn on and the regular CC button will display"
+      },
+      {
+        "content": "WHEN the regular CC button is tapped",
+        "expected": "THEN closed captions will turn on and the strikethrough CC button will display"
+      },
+      {
+        "content": "WHEN the PIP button is tapped\nAND then the full screen button is tapped from PIP",
+        "expected": "THEN the app will dismiss\nAND the PIP window will display\nAND then the full view screen view will display"
+      }
+    ]
+  },
+  {
+    "id": 34504516,
+    "title": "VOD- preroll ads",
+    "section_id": 2010654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736530637,
+    "updated_by": 336,
+    "updated_on": 1736530637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user on the Watch View- Watch Now Tab",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the use is un-entitled\nAND the user selects a VOD clip (these are the clips that do not require entitlements (example: Most Popular carousel)",
+        "expected": " THEN a preroll ad will play\nAND the video will play after the preroll ad is complete "
+      },
+      {
+        "content": "WHEN the use is entitled\nAND the user selects a VOD clip ",
+        "expected": "THEN the video will play without preroll ad"
+      }
+    ]
+  },
+  {
+    "id": 34504517,
+    "title": "Watch Now Tab - Callsigns",
+    "section_id": 2010654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736530637,
+    "updated_by": 336,
+    "updated_on": 1736530637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 4,
+    "custom_preconds": "GIVEN I am any user \r\nWHEN on the Watch tab \r\nAND there are games in the Hero and/or Game carousel\r\nTHEN I should see the broadcast Callsigns presented amongst the game information on the hero as well as for each game chip in the games carousel",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user navigates to \"Watch\" tab on app and looks at game in the hero and games carousel on Watch Now",
+        "expected": "THEN correct television callsigns (included those not carried on app) are presented underneath the game information for game in hero and games carousel"
+      },
+      {
+        "content": "WHEN user observes TV Callsigns on hero and game chips within games carousel",
+        "expected": "THEN all Callsigns on chip are listed out on a single line with each separated by commas"
+      },
+      {
+        "content": "IF Callsigns reach character limit on hero or game chip",
+        "expected": "THEN Ellipsis (…) should appear at spot of overflow"
+      },
+      {
+        "content": "IF a game is not being broadcasts and thus has no callsigns",
+        "expected": "THEN no Callsigns should be displayed "
+      },
+      {
+        "content": "WHEN user turns on Hide Spoilers/Scores",
+        "expected": "THEN Callsign information for games within games carousel should migrate from game information section to team logo area within the game chip"
+      },
+      {
+        "content": "IF user toggles Hide Scores/Spoilers mode on and off",
+        "expected": "THEN correct logic should be applied for location of Callsign on game chip"
+      }
+    ]
+  },
+  {
+    "id": 34504518,
+    "title": "Watch Now Tab - Highlight Playback - CC",
+    "section_id": 2010654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736530637,
+    "updated_by": 336,
+    "updated_on": 1736530637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 5,
+    "custom_preconds": "GIVEN a user on the Watch Now Tab\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user selects an VOD/SVOD content from the carousels\nAND the content is playing\nAND the controls are visible\n\n\n",
+        "expected": "THEN a CC icon should be available to select\n"
+      },
+      {
+        "content": "WHEN an VOD/SVOD content is playing\nAND the CC icon is selected\n",
+        "expected": "THEN the video will start showing closed captions IF they are available (sometimes they are not)"
+      }
+    ]
+  },
+  {
+    "id": 34504519,
+    "title": "Games Tab - Callsigns",
+    "section_id": 2010654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736530637,
+    "updated_by": 336,
+    "updated_on": 1736530637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 6,
+    "custom_preconds": "GIVEN I am any user \r\nAND I am on the Games tab in the \"Watch\" View\r\nAND there are games on the given date\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I observe the game tiles",
+        "expected": "THEN I should see the broadcast Callsigns (included those not carried on app) presented underneath the game information for each game tile"
+      },
+      {
+        "content": "WHEN user observes TV Callsigns on game tile",
+        "expected": "THEN all Callsigns on each game tile are listed out on a single line with each separated by commas"
+      },
+      {
+        "content": "IF Callsigns reach character limit on game tiles\nMARK THIS STEP AS BLOCKED IF THIS SITUATION IS NOT READILY PRESENT",
+        "expected": "THEN Ellipsis (…) should appear at spot of overflow"
+      },
+      {
+        "content": "IF a game is not being broadcasts and thus has no callsigns\nTRY NAVIGATING TO SPRING TRAINING (example Feb 24, 2024) TO FIND GAMES WITH NO BROADCASTS",
+        "expected": "THEN no Callsigns should be displayed on the game tile"
+      }
+    ]
+  },
+  {
+    "id": 34504520,
+    "title": "Back navigation from player",
+    "section_id": 2010654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736530637,
+    "updated_by": 336,
+    "updated_on": 1736530637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 7,
+    "custom_preconds": "GIVEN a User on the Watch View",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a selection is streamed from the Watch Now tab\nAND the back button is tapped\n",
+        "expected": "THEN the user is taken to the Watch now tab"
+      },
+      {
+        "content": "WHEN a selection is streamed from the Watch Now tab\nAND the stream is played to completion",
+        "expected": "THEN the video will close and the app will return to the Watch Now tab"
+      },
+      {
+        "content": "WHEN a game is streamed from the Games tab\nAND the the back button is tapped",
+        "expected": "THEN the user is taken to the Games tab"
+      }
+    ]
+  },
+  {
+    "id": 34504521,
+    "title": "VOD/SVOD content  Playback - PIP",
+    "section_id": 2010654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10738",
+    "created_by": 336,
+    "created_on": 1736530637,
+    "updated_by": 336,
+    "updated_on": 1736530637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 8,
+    "custom_preconds": "GIVEN a user\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an MLB Video VOD/SVOD is playing\nAND the controls are visible\n",
+        "expected": "THEN a PIP icon should be available to select"
+      },
+      {
+        "content": "WHEN an MLB Video Highlight/SVOD is playing\nAND the PIP icon is selected\n",
+        "expected": "THEN the video will minimize into a PIP window and continue playing"
+      },
+      {
+        "content": "WHEN an MLB Video Highlight/SVOD is playing in PIP\nAND the video ends\n",
+        "expected": "THEN the PiP window will close"
+      }
+    ]
+  },
+  {
+    "id": 34504522,
+    "title": "Hide Scores",
+    "section_id": 2010654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-11339",
+    "created_by": 336,
+    "created_on": 1736530637,
+    "updated_by": 336,
+    "updated_on": 1736530637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 9,
+    "custom_preconds": "GIVEN hide scores is ON\r\n",
+    "custom_steps": "WHEN viewing the Watch page\r\n",
+    "custom_expected": "THEN the scores are replaced by rounded rects\r\nAND all completed games say only “Final” (no inning info)\r\nAND perfect game/no hitter badges are hidden\r\nAND game status is hidden for live games\r\nAND tv callsigns are moved inside the logo area on the game chip from their usual location",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34504523,
+    "title": "SLIVE feeds on Watch Now Tab",
+    "section_id": 2010654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736530637,
+    "updated_by": 336,
+    "updated_on": 1736530637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 10,
+    "custom_preconds": "GIVEN that an SLIVE (subscription required, live feeds (not a normal game feed)) feed is in progress\r\nAND they are offered on the Watch Now Tab in the Watch View\r\n(If no SLIVE feed is available Mark this test case as blocked) NOTE: Live games in the Affiliated carousel & Big Inning are examples of SLive feeds",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a user without the SUBSCIBERVOD entitlement taps on an SLIVE offering",
+        "expected": "THEN then currently configure video paywall will display"
+      },
+      {
+        "content": "WHEN a user with the SUBSCIBERVOD entitlement taps on an SLIVE offering",
+        "expected": "THEN the SLIVE offering will begin streaming\nAND the playback controls will display for a few seconds and dismiss"
+      },
+      {
+        "content": "WHEN the screen is rotated 90 degrees and then back",
+        "expected": "THEN the video will toggle between landscape and portrait mode"
+      },
+      {
+        "content": "WHEN I tap on the screen ",
+        "expected": "THEN the playback controls will display and dismiss after a few seconds"
+      },
+      {
+        "content": "WHEN I view the scrubber bar",
+        "expected": "THEN it shows a variable live window of content\n"
+      },
+      {
+        "content": "WHEN I attempt to drag the scrubber bar to the left or right",
+        "expected": "THEN scrubbing is possible"
+      },
+      {
+        "content": "WHEN pause is tapped",
+        "expected": "THEN the video will pause"
+      },
+      {
+        "content": "WHEN play is tapped",
+        "expected": "THEN the video will resume from the live point"
+      },
+      {
+        "content": "WHEN the device screen is turned off",
+        "expected": "THEN the video will pause"
+      },
+      {
+        "content": "WHEN LIVE is tapped\nAND the video is paused",
+        "expected": "THEN the video will resume from the live point"
+      },
+      {
+        "content": "WHEN LIVE is tapped\nAND the video is playing",
+        "expected": "THEN nothing will happen"
+      },
+      {
+        "content": "WHEN the strikethrough CC button is tapped",
+        "expected": "THEN closed captions will turn on and the regular CC button will display"
+      },
+      {
+        "content": "WHEN the regular CC button is tapped ",
+        "expected": "THEN closed captions will turn on and the strikethrough CC button will display"
+      },
+      {
+        "content": "WHEN the PIP button is tapped\nAND then the full screen button is tapped from PIP ",
+        "expected": "THEN the app will dismiss \nAND the PIP window will display\nAND then the full view screen view will display"
+      }
+    ]
+  },
+  {
+    "id": 34504524,
+    "title": "Lock Icons on SVOD (subscriber restricted) content",
+    "section_id": 2010654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736530637,
+    "updated_by": 336,
+    "updated_on": 1736530637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 11,
+    "custom_preconds": "GIVEN a user on the Watch Now Tab\r\nNOTE: CLEAR APP DATA BETWEEN TESTING DIFFERENT USERS AS ENTITLEMENTS WILL BE CACHED FROM A PREVIOUS LOGIN. CLEARING APP CACHE IS INSUFFICIENT. APP DATA MUST BE CLEARED IN BETWEEN ANY CHANGE TO A NEW USER.",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is entitled to SVOD content\nAND the user observes SVOD content in a carousel (MilB Affiliate carousel and Featured carousel are examples of fairly consistently available SVOD content)",
+        "expected": "THEN lock icons will NOT be display on carousel tiles\nNOTE: There is a known issue that the lock icons still display when the user has seen the lock icons and then logs in as entitled. This will be addressed in upcoming work, but is expected for now. Delete this note once this has been addressed."
+      },
+      {
+        "content": "WHEN the user is logged in\nAND the user is un-entitled to SVOD content (free logged in user)\nAND the user observes SVOD content in a carousel (MilB Affiliate carousel and Featured carousel are examples of fairly consistently available SVOD content)",
+        "expected": "THEN lock icons  will be display on carousel tiles"
+      },
+      {
+        "content": "WHEN the user is logged out\nAND the user observes SVOD content in a carousel (MilB Affiliate carousel and Featured carousel are examples of fairly consistently available SVOD content)",
+        "expected": "THEN lock icons  will be display on carousel tiles"
+      }
+    ]
+  },
+  {
+    "id": 34504525,
+    "title": "Pull to refresh",
+    "section_id": 2010654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736530637,
+    "updated_by": 336,
+    "updated_on": 1736530637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 12,
+    "custom_preconds": "GIVEN a user on the Watch Now Tab",
+    "custom_steps": "WHEN the user executes a pull down from the top of the screen",
+    "custom_expected": "THEN the Watch Now Tab resets\r\n\r\nNOTES: This can be exemplified by turning off the wifi/cell data signal when the page first tries to load and then turning wifi/cell data on and pulling down to refresh (The page would be blank on first attempt and then populate on the second attempt after a signal is available). Currently, Hide Scores will not update with a pull down if the user changes Hide Scores in settings (app restart is required to update). This is a known issue and is currently the expected behavior (Delete note on Hide Scores after this is addressed in the app)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34504526,
+    "title": "Orientation",
+    "section_id": 2010654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-5423",
+    "created_by": 336,
+    "created_on": 1736530637,
+    "updated_by": 336,
+    "updated_on": 1736530637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 13,
+    "custom_preconds": "GIVEN MLB app installed on device\r\nAND user is logged in the app\r\nAND user is on Watch tab",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user clicks on any vod/svod \nAND user viewing a (s)vod in landscape mode\nAND user hits the device back arrow ",
+        "expected": "THEN the main watch tab screen should show in portrait mode and the content should fill the whole screen. \n\n"
+      },
+      {
+        "content": "WHEN user clicks on any vod/svod \nAND user viewing a (s)vod in portrait mode\nAND user hits the device back arrow ",
+        "expected": "THEN the main watch tab screen should show in portrait mode and the content should fill the whole screen. \n"
+      }
+    ]
+  },
+  {
+    "id": 34504527,
+    "title": "Share functionality to the native VOD media player",
+    "section_id": 2010654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-5391",
+    "created_by": 336,
+    "created_on": 1736530637,
+    "updated_by": 336,
+    "updated_on": 1736530637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 14,
+    "custom_preconds": "GIVEN MLB app installed on device\r\nAND user is logged in the app\r\nAND user is on Watch tab",
+    "custom_steps": null,
+    "custom_expected": "Video on demand (VOD) videos should be sharable from the following areas of the app:\r\n\r\n- Home Tab\r\n\r\n- Scores\r\n\r\n- Watch\r\n\r\n- News\r\n\r\n- Gameday",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user opens the free/non-entitled content",
+        "expected": "THEN the share option is available\nAND user is able to share the content "
+      },
+      {
+        "content": "WHEN user opens any content that requires subscription access ",
+        "expected": "THEN share option is not presented"
+      }
+    ]
+  },
+  {
+    "id": 34504528,
+    "title": "Pre/Postgame Indicators",
+    "section_id": 2010654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-5381",
+    "created_by": 336,
+    "created_on": 1736530637,
+    "updated_by": 336,
+    "updated_on": 1736530637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 15,
+    "custom_preconds": "GIVEN MLB app installed on device\r\nAND user is logged in the app\r\nAND user is on Watch tab",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN game is in pre-game state",
+        "expected": "THEN the game tile shows the start time of the game"
+      },
+      {
+        "content": "WHEN the Pre-game show has started (start times provided by club)",
+        "expected": "THEN the game tile shows a “Live” indicator"
+      },
+      {
+        "content": "WHEN both clubs have a pre-game show",
+        "expected": "THEN copy “Pregame Show” should be displayed"
+      },
+      {
+        "content": "WHEN only one club has a pre-game show",
+        "expected": "THEN club 3-letter name eg. “OAK: Pregame” is displayed"
+      },
+      {
+        "content": "WHEN the Game is live (game start time has passed)",
+        "expected": "THEN the red “Live” indicator is displayed"
+      },
+      {
+        "content": "WHEN the game is Final",
+        "expected": "THEN the game tile continues to show a “Live” indicator"
+      },
+      {
+        "content": "WHEN both clubs have a post-game show",
+        "expected": "THEN copy “Postgame Show” is displayed"
+      },
+      {
+        "content": "WHEN only one club has a post-game show",
+        "expected": "THEN club 3-letter name eg. “OAK: Postgame” is displayed"
+      },
+      {
+        "content": "WHEN the game tile has a “Perfect Game” tag",
+        "expected": "THEN the tag is hidden while showing the Postgame label due to lack of space\nAND the “Perfect Game” tag should be shown again after the Postgame is over"
+      },
+      {
+        "content": "WHEN the post-game show is over (Media=off)",
+        "expected": "THEN the game tile shows “Final” or Final/inning"
+      },
+      {
+        "content": "WHEN neither club has a pre/post show",
+        "expected": "THEN game tiles follow existing rules and only show start time>Live>Final"
+      }
+    ]
+  },
+  {
+    "id": 34504529,
+    "title": "VOD/SVOD resume behavior",
+    "section_id": 2010654,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736530637,
+    "updated_by": 336,
+    "updated_on": 1736530637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 16,
+    "custom_preconds": "GIVEN a user ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN starting non-live VOD content ",
+        "expected": "THEN start from the beginning"
+      },
+      {
+        "content": "WHEN resuming VOD content from the app being backgrounded \n\n",
+        "expected": "THEN the content should resume from the point the user was previously watching from"
+      },
+      {
+        "content": "WHEN resume any time of VOD content that the user previously watched ",
+        "expected": "THEN resume from where they were watching"
+      },
+      {
+        "content": "WHEN  a user finishes any type of VOD within 10s of the end of the video ",
+        "expected": "THEN the next time they play the video, it should start at the beginning"
+      }
+    ]
+  },
+  {
+    "id": 34504507,
+    "title": "Games Tab - Date picker",
+    "section_id": 2010655,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736530619,
+    "updated_by": 336,
+    "updated_on": 1736530619,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a User on the Games Tab of the Featured Page\r\n\r\n",
+    "custom_steps": "WHEN I select the date",
+    "custom_expected": "THEN I will be presented with a date picker",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34504508,
+    "title": "Games Tab View",
+    "section_id": 2010655,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10550",
+    "created_by": 336,
+    "created_on": 1736530619,
+    "updated_by": 336,
+    "updated_on": 1736530619,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a user in the MLB App",
+    "custom_steps": "WHEN I select the Games tab on the Watch View",
+    "custom_expected": "THEN I will see the scoreboard Compact View based on the date displayed in the date picker",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34504509,
+    "title": "Games Tab - w/ MLB.tv Subscription",
+    "section_id": 2010655,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10550",
+    "created_by": 336,
+    "created_on": 1736530619,
+    "updated_by": 336,
+    "updated_on": 1736530619,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user with MLB.tv ability",
+    "custom_steps": "WHEN I select a game in the compact view",
+    "custom_expected": "THEN the MLB.tv game view will launch\r\nAND the game will start playing according to the default launch rules",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34504510,
+    "title": "Games Tab without MLB.tv Subscription",
+    "section_id": 2010655,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10550",
+    "created_by": 336,
+    "created_on": 1736530619,
+    "updated_by": 336,
+    "updated_on": 1736530619,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 4,
+    "custom_preconds": "GIVEN a user without MLB.tv ability",
+    "custom_steps": "WHEN I select a game in the compact view",
+    "custom_expected": "THEN the user will be presented with the MLB.TV paywall",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34504511,
+    "title": "PIP window",
+    "section_id": 2010656,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-5383",
+    "created_by": 336,
+    "created_on": 1736530629,
+    "updated_by": 336,
+    "updated_on": 1736530629,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 1,
+    "custom_preconds": "GIVEN MLB app installed on device\r\nAND user is logged in the app\r\nAND user is on Watch tab",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a user watching a MLBTV game in PIP\nAND the end of the playback is reached",
+        "expected": "THEN the PIP window closes "
+      },
+      {
+        "content": "WHEN the PIP window closed automatically\nAND the user opens the MLB app",
+        "expected": "THEN the app launches to the screen that the user launched playback from"
+      }
+    ]
+  },
+  {
+    "id": 34504512,
+    "title": "PiP for un-entitled user",
+    "section_id": 2010656,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-5379",
+    "created_by": 336,
+    "created_on": 1736530629,
+    "updated_by": 336,
+    "updated_on": 1736530629,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 2,
+    "custom_preconds": "GIVEN MLB app installed on device\r\nAND user is logged in the app\r\nAND user is on Watch tab\r\nAND user is unentitled user",
+    "custom_steps": "WHEN user watches a VOD clip in PiP mode\r\nAND moved the PiP screen around on the phone to various locations",
+    "custom_expected": "THEN the video is maintained regardless of the PiP location",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34504513,
+    "title": "PiP for entitled user",
+    "section_id": 2010656,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-5379",
+    "created_by": 336,
+    "created_on": 1736530629,
+    "updated_by": 336,
+    "updated_on": 1736530629,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 3,
+    "custom_preconds": "GIVEN MLB app installed on device\r\nAND user is logged in the app\r\nAND user is on Watch tab\r\nAND user is entitled user",
+    "custom_steps": "WHEN user watches a VOD clip in PiP mode\r\nAND moved the PiP screen around on the phone to various locations",
+    "custom_expected": "THEN the video is maintained regardless of the PiP location",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34505022,
+    "title": "Divisional Standings",
+    "section_id": 2010693,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736788004,
+    "updated_by": 336,
+    "updated_on": 1736788004,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user is on the Standings page with no favorite team selected",
+        "expected": "Then the user will see two League tables: American League and National League\nand the default division order: East, Central, West"
+      },
+      {
+        "content": "When a user is on the Standings page \nand the favorite team selected is in the AL East",
+        "expected": "Then the user will see two divisional league table\nAmerican: AL East, AL Central, AL West\nNational: NL East, NL Central, NL West\nAnd the user's favorite team(s) is highlighted"
+      },
+      {
+        "content": "When a user is on the Standings page \nand the favorite team selected is in the AL Central",
+        "expected": "Then the user will see two divisional league table\nAmerican: AL Central, AL East, AL West\nNational: NL East, NL Central, NL West\nAnd the user's favorite team(s) is highlighted"
+      },
+      {
+        "content": "When a user is on the Standings page \nand the favorite team selected is in the AL West",
+        "expected": "Then the user will see two divisional league table\nAmerican: AL West, AL East, AL Central\nNational: NL East, NL Central, NL West\nAnd the user's favorite team(s) is highlighted"
+      },
+      {
+        "content": "When a user is on the Standings page \nand the favorite team selected is in the NL East",
+        "expected": "Then the user will see two divisional league table\nNational: NL East, NL Central, NL West\nAmerican: AL East, AL Central, AL West\nAnd the user's favorite team(s) is highlighted\n"
+      },
+      {
+        "content": "When a user is on the Standings page \nand the favorite team selected is in the NL Central",
+        "expected": "Then the user will see two divisional league table\nNational: NL Central, NL East, NL West\nAmerican: AL East, AL Central, AL West\nAnd the user's favorite team(s) is highlighted\n"
+      },
+      {
+        "content": "When a user is on the Standings page \nand the favorite team selected is in the NL West",
+        "expected": "Then the user will see two divisional league table\nNational: NL West, NL East, NL Central\nAmerican: AL East, AL Central, AL West\nAnd the user's favorite team(s) is highlighted\n"
+      },
+      {
+        "content": "When a user is on the Standings Page with 1 or more favorite teams sset",
+        "expected": "Then each favorite team row should be bold with a light background highlight\n"
+      },
+      {
+        "content": "When a user is on the Standings Page",
+        "expected": "Then the page is viewable in Portrait or Landscape mode"
+      },
+      {
+        "content": "When a user is on Standings and views the default headers",
+        "expected": "Then W, L, PCT, GB, L10, STRK are displayed as default categories \nand RDIFF is displayed (on wider phones & tablet)\nand Next/Last game (on tablet landscape)\nand Home/Away/.500 splits (on wider phone and tablet)"
+      },
+      {
+        "content": "When a user navigates to a year prior to 1901 (1900 and back)\n\nhttp://m.mlb.com/standings/?yyyy=1900&view=divisional",
+        "expected": "Then the user should see only National League"
+      },
+      {
+        "content": "When a user navigates to a year prior to 1994 (1993 to 1901)\n\nhttp://m.mlb.com/standings/?yyyy=1993&view=divisional",
+        "expected": "Then then user should see National League and American League\nand see NL East, NL West, AL East, and AL West"
+      }
+    ]
+  },
+  {
+    "id": 34505023,
+    "title": "Update Time and Refresh",
+    "section_id": 2010693,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736788004,
+    "updated_by": 336,
+    "updated_on": 1736788004,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user initially enters the Standings page\nand no standings data loaded\n\n",
+        "expected": "Then the user will see a spinner over a blank page until the data loads"
+      },
+      {
+        "content": "When a user initially enters the Standings page\nand if there is standings data loaded\n\nUse Cases: If I come from the background or another app directly to Standings OR Open from lock screen directly into standings OR Change segment control OR Change from main tab bar",
+        "expected": "Then the user will see the last available data \nand immediately requests new data\nand see a spinner of a 50% white transparency mask"
+      },
+      {
+        "content": "When a user sits on the standings page",
+        "expected": "Then the page will refresh automatically\n\nConfigurable refresh time\nDefault 5 minutes\nPull to refresh restarts clock\nDo not blank out standings on refresh"
+      },
+      {
+        "content": "When a user is on the Standings page\nand pulls to refresh",
+        "expected": "Then the user will see latest data from the server and restart auto refresh cycle"
+      },
+      {
+        "content": "When a user arrives on the Standings page on the current year",
+        "expected": "We can see when the page was last updated\n"
+      },
+      {
+        "content": "When a user is on the Standings page\nand views the last updated data",
+        "expected": "Then the user will see the text: 'Standings current as of Dec. 16, 2016 10:59 AM ET'\nand will show in User local time (ET, CT, MST, MT, PT, outside the US)\nand will show above clinch key"
+      },
+      {
+        "content": "When a user is on the Standings page\nand changes to a past year",
+        "expected": "Then the user will not see the last updated date and time. "
+      }
+    ]
+  },
+  {
+    "id": 34505024,
+    "title": "Postseason Clinch",
+    "section_id": 2010693,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736788004,
+    "updated_by": 336,
+    "updated_on": 1736788004,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user is on the Standings view\nand no team has clinched a playoff spot",
+        "expected": "Then we should not see any clinch text\nand we should not see any clinch indicators\nand we should not see any clinch key"
+      },
+      {
+        "content": "When a user is on the Standings view\nand a team has clinched any postseason spot \n\nw - wild card\nx - playoff berth\ny - division leader\nz - division and best record in the league\n",
+        "expected": "Then the user should see the clinch indicator after the name (BAL - x)\nand clinch key at the bottom"
+      },
+      {
+        "content": "When a user changes to a previous season",
+        "expected": "Then the user will see the clinch indicators and clinch key for the postseason teams from that year"
+      },
+      {
+        "content": "When a user changes to a previous season prior to Wild Card (1993 and back)",
+        "expected": "Then the user will not see the clinch indicator for wild card (w - wild card)\nand w - wild card will not be in the clinch key"
+      },
+      {
+        "content": "When the editorial clinch text is blank",
+        "expected": "Then the editorial clinch text is not displayed on Divisional Standings"
+      },
+      {
+        "content": "When the editorial clinch text is populated",
+        "expected": "Then the editorial clinch text is displayed on Divisional Standings\n\nSupport HTML Tags (Bold and Break)"
+      },
+      {
+        "content": "When the configurable override is set to hide the Clinch text, use file:\nhttps://atbatappconfig.mlb.com/android/[version number]/lite-phone/extras.xml\ni.e. https://atbatappconfig.mlb.com/android/6.5.0/lite-phone/extras.xml\n\nshowClinchDescription=\"false\"",
+        "expected": "Then the clinch text will not be displayed on Divisional Standings"
+      }
+    ]
+  },
+  {
+    "id": 34505025,
+    "title": "Wildcard Standings",
+    "section_id": 2010693,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736788004,
+    "updated_by": 336,
+    "updated_on": 1736788004,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 4,
+    "custom_preconds": "Given a user has At Bat installed\r\n",
+    "custom_steps": "When a user is on Standings",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and views the Wild Card Standings",
+        "expected": "Then the user will see American and National League tables\nand top section of each table will show the correct division leaders (East, Central, West)\nand divisional division label next to the name (E, C, W)\n"
+      },
+      {
+        "content": "and views the Wild Card Standings",
+        "expected": "Then the user will see American and National League tables\nand second section of each table will show the rest of the division ordered by Wild Card Games Behind (WCGB)"
+      },
+      {
+        "content": "and views the Wild Card teams",
+        "expected": "Then the user will see a separator below the top two (2) Wild Card leaders"
+      },
+      {
+        "content": "and views the Wild Card Standings",
+        "expected": "Then see the Wild Card informative text\n\n\"The top two Wild Card teams from each league make the postseason and play each other in a one-game playoff.\"\n\n"
+      },
+      {
+        "content": "when a user is on Standings and views the default headers",
+        "expected": "Then W, L, PCT, WCGB, L10, STRK are displayed as default categories \nand RDIFF is displayed (on wider phones and tablet)\nand Next/Last game (on tablet)\nand Home/Away/.500 splits (on wider phones and tablet)"
+      }
+    ]
+  },
+  {
+    "id": 34505026,
+    "title": "Spring Standings",
+    "section_id": 2010693,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736788004,
+    "updated_by": 336,
+    "updated_on": 1736788004,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 5,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user is on Standings view",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and views the Spring Training Standings\n\nTeams: http://mlb.mlb.com/springtraining/",
+        "expected": "Then the user will see Cactus and Grapefruit League tables\n\nCactus League in AZ\nGrapefruit League in FL"
+      },
+      {
+        "content": "and views the Spring Training Standings",
+        "expected": "Then the user will see the standings ordered descending by W and PCT"
+      },
+      {
+        "content": "and changes to a previous season\n",
+        "expected": "then the user will not see previous season Spring Training Standings \nand it is only available for the current year"
+      },
+      {
+        "content": "and when the Spring Training year has tie game",
+        "expected": "then the user will see the tie game at the bottom\nand the informative text\n\n\"Tie games do not count towards standings calculations.\""
+      }
+    ]
+  },
+  {
+    "id": 34505027,
+    "title": "Postseason Picture",
+    "section_id": 2010693,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736788004,
+    "updated_by": 336,
+    "updated_on": 1736788004,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 6,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user is on Standings Page from (tab bar or More Menu)\r\nor from the Standings link from Team Page",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and Postseason Picture URL is configured with a URL\n\n",
+        "expected": "Then the webview loads\nand the user is able to view the page"
+      },
+      {
+        "content": "and Postseason Picture header text is configured",
+        "expected": "Then the user will see header text that is in the config"
+      },
+      {
+        "content": "and is on the Divisional or Wild Card Standings\nand goes back to a previous season",
+        "expected": "Then the user will not see Postseason Picture\nand it is only available for the current year"
+      }
+    ]
+  },
+  {
+    "id": 34505028,
+    "title": "Ads",
+    "section_id": 2010693,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736788004,
+    "updated_by": 336,
+    "updated_on": 1736788004,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 7,
+    "custom_preconds": "Given a user has At Bat installed\r\n",
+    "custom_steps": "When a lite user is on the Standings view",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and scrolls through the Standings view",
+        "expected": "the user should see an Advertisement between the two league standings tables"
+      },
+      {
+        "content": "on handset portrait",
+        "expected": "the user will see 320x50 DFP Ad"
+      },
+      {
+        "content": "on handset landscape",
+        "expected": "the user will not see an ad"
+      },
+      {
+        "content": "on tablet portrait",
+        "expected": "the user will see 728x90 DFP ad"
+      },
+      {
+        "content": "on tablet landscape",
+        "expected": "the user will not see an ad"
+      }
+    ]
+  },
+  {
+    "id": 34505029,
+    "title": "Table Headers",
+    "section_id": 2010693,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736788004,
+    "updated_by": 336,
+    "updated_on": 1736788004,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 8,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user is in At Bat\r\nand taps on the main Standings view",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and views the American League header",
+        "expected": "then the user should see red horizontal header\nand American League text\nand American League logo"
+      },
+      {
+        "content": "and views the National League header",
+        "expected": "then the user should see blue horizontal header\nand National League text\nand National League logo"
+      },
+      {
+        "content": "and scrolls down the Standings view",
+        "expected": "then the appropriate headers will stick while the data is swiped \n\nExample: see East header when swipe AL East teams and Central header will push East header off"
+      }
+    ]
+  },
+  {
+    "id": 34505030,
+    "title": "Responsive Columns",
+    "section_id": 2010693,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736788004,
+    "updated_by": 336,
+    "updated_on": 1736788004,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 9,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user is on Standings",
+    "custom_expected": "Then the user will get more standings data when have more screen space ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34505031,
+    "title": "Teams Information",
+    "section_id": 2010693,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736788004,
+    "updated_by": 336,
+    "updated_on": 1736788004,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 10,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user is on the Standings view",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "on handset portrait",
+        "expected": "then the user will see the team tricode (BOS, CLE, HOU)"
+      },
+      {
+        "content": "on handset landscape",
+        "expected": "then the user will see the team logo and team tricode (BOS, CLE, HOU)"
+      },
+      {
+        "content": "on tablet",
+        "expected": "then the user will see the team logo and team tricode (BOS, CLE, HOU)"
+      },
+      {
+        "content": "When the user navs to a previous season on any device",
+        "expected": "then the user will not see any team logo, and will only see the team tricode"
+      }
+    ]
+  },
+  {
+    "id": 34505032,
+    "title": "Last & Next Game Columns (Tablet Landscape)",
+    "section_id": 2010693,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736788004,
+    "updated_by": 336,
+    "updated_on": 1736788004,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 11,
+    "custom_preconds": "GIVEN the user is using a Tablet in landscape mode \r\nAND the user has At Bat installed",
+    "custom_steps": "When a user is in At Bat\r\nand sees the Last Game and Next Game column",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "and sees the Last Game column",
+        "expected": "then the user will see:\n@ if the team was away or vs. if the team was home\nand opponent's tricode (CLE, SEA, MIL)\nand outcome (W or L)\nand score (8-1, 10-1)\n\nexamples: @ CLE, W 8-1 or vs. SEA, 9-1"
+      },
+      {
+        "content": "and sees the Next Game column (in Preview)",
+        "expected": "then the user will see:\nMM/DD (08/08)\nand @ if the team was away or vs. if the team was home\nand opponent's tricode (CLE, SEA, MIL)\n\nexamples: 08/08, @ TOR or 08/08, vs. NYY"
+      },
+      {
+        "content": "and taps Next Game or Last Game on the link",
+        "expected": "then Gameday view of the game should open\n\n(Preview, Live, Wrap)"
+      },
+      {
+        "content": "and changes the date to a previous year",
+        "expected": "then the Last Game and Next Game columns are hidden"
+      }
+    ]
+  },
+  {
+    "id": 34505033,
+    "title": "Timeout Message",
+    "section_id": 2010693,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736788004,
+    "updated_by": 336,
+    "updated_on": 1736788004,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 12,
+    "custom_preconds": "Given At Bat is installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navs to Standings with low connectivity\n(can test by throttling via Charles - try adjusting \"Round-trip Latency\" to 60000)",
+        "expected": "Then the user will see an alert dialog that says, \"Low Connectivity: using last available data\" after a timeout of 30 seconds\nand until the user presses okay, the loading spinner will be displayed"
+      },
+      {
+        "content": "When the user presses 'okay' in the alert dialog",
+        "expected": "Then the last available data will be shown\n"
+      },
+      {
+        "content": "When the last available data is shown\nand there are no user interactions while on the page\n(e.g. when the autoload feature tries to update in the background)",
+        "expected": "Then the last available data will continue to be shown\n(and the alert will be suppressed if page is auto-refreshed)"
+      },
+      {
+        "content": "When the last available data is shown\nand the user pulls to refresh",
+        "expected": "Then the alert is re-enabled for the next call\nand displayed in the event of a timeout"
+      }
+    ]
+  },
+  {
+    "id": 34505034,
+    "title": "Show Full Standings",
+    "section_id": 2010694,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736788034,
+    "updated_by": 336,
+    "updated_on": 1736788034,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 1,
+    "custom_preconds": "Given a user has At Bat installed",
+    "custom_steps": "When a user is on the Team Page\nand taps on Standings ",
+    "custom_expected": "Then the user should see the full Standings page",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34505035,
+    "title": "Current Team Standings",
+    "section_id": 2010694,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1736788034,
+    "updated_by": 336,
+    "updated_on": 1736788034,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 600602,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user is on the Team Page\nand taps on Standings",
+        "expected": "Then we can see the Divisional and Wild Card Standings"
+      },
+      {
+        "content": "When a user has a Favorite Team\nand navigates to a Team Page of a Favorite Team ",
+        "expected": "Then the favorite team league table should be shown first\nand current team division section should be shown first\nand current team should be bold with a light background highlight"
+      },
+      {
+        "content": "When a user has a Favorite Team\nand navigates to a Team Page of another team (current team)",
+        "expected": "Then the current team league table should be shown first\nand current team division section should be shown first\nand current team should be bold with a light background highlight"
+      },
+      {
+        "content": "When a user has a Favorite Team\nand navigates to a Team Page of another team (current team)",
+        "expected": "Then ignore other favorite teams when on a team standings page"
+      }
+    ]
+  }
+]

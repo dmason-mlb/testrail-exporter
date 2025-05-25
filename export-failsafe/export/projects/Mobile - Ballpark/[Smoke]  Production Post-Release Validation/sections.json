@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1647791,
+    "suite_id": 595676,
+    "name": "Upgrade",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1647792,
+    "suite_id": 595676,
+    "name": "Onboarding / Reset Password",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1647819,
+    "suite_id": 595676,
+    "name": "Location",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1647793,
+    "suite_id": 595676,
+    "name": "iOS",
+    "description": null,
+    "parent_id": 1647819,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 1647794,
+    "suite_id": 595676,
+    "name": "Android",
+    "description": null,
+    "parent_id": 1647819,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 1647795,
+    "suite_id": 595676,
+    "name": "Buy Tickets Segment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1647796,
+    "suite_id": 595676,
+    "name": "Ticket list*",
+    "description": "https://jira.mlbam.com/browse/BP-6944",
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1647797,
+    "suite_id": 595676,
+    "name": "Ticket scan view*",
+    "description": "https://jira.mlbam.com/browse/BP-6943",
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1647798,
+    "suite_id": 595676,
+    "name": "Ticket list forwarding mode*",
+    "description": "https://jira.mlbam.com/browse/BP-6940",
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 1647799,
+    "suite_id": 595676,
+    "name": "Ticket forward by email*",
+    "description": "https://jira.mlbam.com/browse/BP-6941",
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 1647800,
+    "suite_id": 595676,
+    "name": "Ticket forward by link*",
+    "description": "https://jira.mlbam.com/browse/BP-6942",
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 1647801,
+    "suite_id": 595676,
+    "name": "Embargoed Barcode*",
+    "description": "(requires an acct with embargoed tickets)",
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 1647802,
+    "suite_id": 595676,
+    "name": "Team Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 1647803,
+    "suite_id": 595676,
+    "name": "Personalization",
+    "description": "GIVEN the user downloaded the Ballpark app (11.5.0 or greater for IOS / 12.0.0 or greater for Android)",
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  }
+]

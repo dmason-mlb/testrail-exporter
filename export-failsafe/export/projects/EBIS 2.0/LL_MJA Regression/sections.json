@@ -1,0 +1,479 @@
+[
+  {
+    "id": 146562,
+    "suite_id": 20324,
+    "name": "Report Date",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 146567,
+    "suite_id": 20324,
+    "name": "Selection to ML Roster",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 146568,
+    "suite_id": 20324,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 146567,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 146569,
+    "suite_id": 20324,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 146567,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 146570,
+    "suite_id": 20324,
+    "name": "Flags",
+    "description": null,
+    "parent_id": 146567,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 146571,
+    "suite_id": 20324,
+    "name": "Print",
+    "description": null,
+    "parent_id": 146567,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 146572,
+    "suite_id": 20324,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 146567,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 146573,
+    "suite_id": 20324,
+    "name": "Player History",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 146574,
+    "suite_id": 20324,
+    "name": "Major League Roster Widget",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 146575,
+    "suite_id": 20324,
+    "name": "Major/Minor Outright",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 146576,
+    "suite_id": 20324,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 146575,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 146577,
+    "suite_id": 20324,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 146575,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 146579,
+    "suite_id": 20324,
+    "name": "Optional Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 146580,
+    "suite_id": 20324,
+    "name": "On create rule",
+    "description": null,
+    "parent_id": 146579,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 146581,
+    "suite_id": 20324,
+    "name": "On submit rule",
+    "description": null,
+    "parent_id": 146579,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 146582,
+    "suite_id": 20324,
+    "name": "On approve rule",
+    "description": null,
+    "parent_id": 146579,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 146583,
+    "suite_id": 20324,
+    "name": "Recall",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 146584,
+    "suite_id": 20324,
+    "name": "On create rule",
+    "description": null,
+    "parent_id": 146583,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 146585,
+    "suite_id": 20324,
+    "name": "On submit rule",
+    "description": null,
+    "parent_id": 146583,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 146586,
+    "suite_id": 20324,
+    "name": "On approved rule",
+    "description": null,
+    "parent_id": 146583,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 146587,
+    "suite_id": 20324,
+    "name": "Transfer of option",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 146588,
+    "suite_id": 20324,
+    "name": "On create rule",
+    "description": null,
+    "parent_id": 146587,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 146589,
+    "suite_id": 20324,
+    "name": "On submit rule",
+    "description": null,
+    "parent_id": 146587,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 146590,
+    "suite_id": 20324,
+    "name": "On approved rule",
+    "description": null,
+    "parent_id": 146587,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 146591,
+    "suite_id": 20324,
+    "name": "Appointment of 26th man",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 146592,
+    "suite_id": 20324,
+    "name": "On create rule",
+    "description": null,
+    "parent_id": 146591,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 146593,
+    "suite_id": 20324,
+    "name": "On submit rule",
+    "description": null,
+    "parent_id": 146591,
+    "display_order": 29,
+    "depth": 1
+  },
+  {
+    "id": 146594,
+    "suite_id": 20324,
+    "name": "Return of 26th man",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 146595,
+    "suite_id": 20324,
+    "name": "On create rule",
+    "description": null,
+    "parent_id": 146594,
+    "display_order": 31,
+    "depth": 1
+  },
+  {
+    "id": 146596,
+    "suite_id": 20324,
+    "name": "On submit rule",
+    "description": null,
+    "parent_id": 146594,
+    "display_order": 32,
+    "depth": 1
+  },
+  {
+    "id": 146597,
+    "suite_id": 20324,
+    "name": "On approve rule",
+    "description": null,
+    "parent_id": 146594,
+    "display_order": 33,
+    "depth": 1
+  },
+  {
+    "id": 146598,
+    "suite_id": 20324,
+    "name": "Designated for Release",
+    "description": null,
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 146599,
+    "suite_id": 20324,
+    "name": "Elect Free Agency",
+    "description": null,
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  },
+  {
+    "id": 146600,
+    "suite_id": 20324,
+    "name": "Sign Free Agent",
+    "description": null,
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 146601,
+    "suite_id": 20324,
+    "name": "Tender Qualifying Offer Under Article xx(b)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 39,
+    "depth": 0
+  },
+  {
+    "id": 146602,
+    "suite_id": 20324,
+    "name": "Player Terminates Contract Under Paragraph 7(a)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 40,
+    "depth": 0
+  },
+  {
+    "id": 146603,
+    "suite_id": 20324,
+    "name": "Accepted A Qualifying Offer Under Article xx(b)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 41,
+    "depth": 0
+  },
+  {
+    "id": 146604,
+    "suite_id": 20324,
+    "name": "Read Only Transactions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 42,
+    "depth": 0
+  },
+  {
+    "id": 146633,
+    "suite_id": 20324,
+    "name": "Rule 6 Return Process",
+    "description": null,
+    "parent_id": null,
+    "display_order": 43,
+    "depth": 0
+  },
+  {
+    "id": 146634,
+    "suite_id": 20324,
+    "name": "Return of Rule 5 Selection",
+    "description": null,
+    "parent_id": 146633,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 146635,
+    "suite_id": 20324,
+    "name": "Miscellaneous",
+    "description": null,
+    "parent_id": null,
+    "display_order": 82,
+    "depth": 0
+  },
+  {
+    "id": 146637,
+    "suite_id": 20324,
+    "name": "UAT Feedback",
+    "description": null,
+    "parent_id": 146635,
+    "display_order": 83,
+    "depth": 1
+  },
+  {
+    "id": 146643,
+    "suite_id": 20324,
+    "name": "Enhancement",
+    "description": null,
+    "parent_id": 146635,
+    "display_order": 84,
+    "depth": 1
+  },
+  {
+    "id": 146627,
+    "suite_id": 20324,
+    "name": "Interactions",
+    "description": null,
+    "parent_id": 146635,
+    "display_order": 85,
+    "depth": 1
+  },
+  {
+    "id": 146606,
+    "suite_id": 20324,
+    "name": "Minor Contracts Interactions",
+    "description": null,
+    "parent_id": 146627,
+    "display_order": 86,
+    "depth": 2
+  },
+  {
+    "id": 146613,
+    "suite_id": 20324,
+    "name": "New Authorized Signatory",
+    "description": null,
+    "parent_id": 146627,
+    "display_order": 87,
+    "depth": 2
+  },
+  {
+    "id": 146616,
+    "suite_id": 20324,
+    "name": "Addendum C",
+    "description": null,
+    "parent_id": 146627,
+    "display_order": 88,
+    "depth": 2
+  },
+  {
+    "id": 146638,
+    "suite_id": 20324,
+    "name": "Waivers Interactions",
+    "description": null,
+    "parent_id": 146627,
+    "display_order": 89,
+    "depth": 2
+  },
+  {
+    "id": 146779,
+    "suite_id": 20324,
+    "name": "Service Interactions",
+    "description": null,
+    "parent_id": 146627,
+    "display_order": 90,
+    "depth": 2
+  },
+  {
+    "id": 146631,
+    "suite_id": 20324,
+    "name": "Update Player's Info with Tx",
+    "description": null,
+    "parent_id": 146635,
+    "display_order": 91,
+    "depth": 1
+  },
+  {
+    "id": 146640,
+    "suite_id": 20324,
+    "name": "Free Agency Profile Updates",
+    "description": null,
+    "parent_id": 146631,
+    "display_order": 92,
+    "depth": 2
+  },
+  {
+    "id": 146649,
+    "suite_id": 20324,
+    "name": "Rule 5 Status",
+    "description": null,
+    "parent_id": 146631,
+    "display_order": 93,
+    "depth": 2
+  },
+  {
+    "id": 146641,
+    "suite_id": 20324,
+    "name": "Print",
+    "description": null,
+    "parent_id": null,
+    "display_order": 99,
+    "depth": 0
+  }
+]

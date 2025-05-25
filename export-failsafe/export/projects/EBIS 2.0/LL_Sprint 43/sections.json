@@ -1,0 +1,47 @@
+[
+  {
+    "id": 147327,
+    "suite_id": 20366,
+    "name": "Draft Day",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 147435,
+    "suite_id": 20366,
+    "name": "Draft API",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 147442,
+    "suite_id": 20366,
+    "name": "Commissioners Screen",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 147444,
+    "suite_id": 20366,
+    "name": "Post Draft",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 147445,
+    "suite_id": 20366,
+    "name": "Miscellaneous",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  }
+]

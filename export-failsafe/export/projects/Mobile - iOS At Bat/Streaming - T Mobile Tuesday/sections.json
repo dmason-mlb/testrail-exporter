@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1981051,
+    "suite_id": 695373,
+    "name": "iPhone - Promo",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1981052,
+    "suite_id": 695373,
+    "name": "iPad - Promo",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 2033220,
+    "suite_id": 695373,
+    "name": "2025 Updates",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 48695,
+    "title": "Class Switching",
+    "section_id": 6977,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 40,
+    "created_on": 1418760463,
+    "updated_by": 119,
+    "updated_on": 1477930230,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 892,
+    "display_order": 1,
+    "custom_preconds": "Given the app has been installed\r\nAnd the user is on the Scoreboard page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the MiLB class logo in the top center of the app",
+        "expected": "Then a pop over should appear and show 6 classes:\nTriple-A\nDouble-A\nClass A Advanced\nClass A\nClass A Short Season\nRookie\nAND the currently selected class will have a check mark(iPad Only) and the name will be greyed out"
+      },
+      {
+        "content": "When the user navigates to the Scoreboard\nAnd the user taps the MiLB logo displaying the class name on top center\nAnd the user taps the Double-A cell in the pop over",
+        "expected": "Then the app should switch from Triple-A to Double-A mode\nAnd the pop over should dismiss\nAnd the user should be left on the Scoreboard\nAnd the schedule on the page should reflect the Double-A schedule for the given day.\nREPEAT FOR ALL CLASSES"
+      },
+      {
+        "content": "When the user navigates to the Scoreboard\nAnd the user taps the MiLB logo in the top center\nAnd the user taps outside the class selection pop over.",
+        "expected": "Then the pop over should dismiss\nAnd the user should be left on the Scoreboard\nAnd the schedule on the page should reflect the schedule for the day for the mode on which they were when they opened the pop over."
+      },
+      {
+        "content": "When the user navigates to the Scoreboard\nAnd the user taps the MiLB logo in the top center",
+        "expected": "Then the class mode which is currently active in the app should be clearly marked and visible. It should be immediately obvious to a first time user which mode is selected and which is deselected."
+      },
+      {
+        "content": "When the user navigates to the Scoreboard\nAnd the user taps the MiLB logo in the top center\nAnd the user taps on one of the classes cell in the pop over",
+        "expected": "Then the user's selection should be clearly indicated to the user so they are immediately aware that they cell they chose has been selected.\nAnd the scoreboard should reflect the games for the mode the user has chosen."
+      },
+      {
+        "content": "When the user navigates to any section or page in the app",
+        "expected": "Then the only data they should see should reference Triple-A and teams in Triple-A, all logos that appear should belong to Triple-A teams. \n(Check: \nScoreboard, News/Video (Filter), Standings, Teams, MiLB.TV )\n*REPEAT FOR ALL CLASSES*"
+      }
+    ],
+    "custom_feature_tag": null
+  }
+]

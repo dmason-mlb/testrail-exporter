@@ -1,0 +1,792 @@
+[
+  {
+    "id": 57370,
+    "title": "Banners",
+    "section_id": 8391,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1436798939,
+    "updated_by": 39,
+    "updated_on": 1469731771,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1095,
+    "display_order": 1,
+    "custom_preconds": "Prod - http://mlb.mlb.com/gen/hb/list/atbat/device-banners.json\r\n\r\nQA - http://qa.mlb.com/gen/hb/list/atbat/device-banners.json",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a banner is published in CMS\nand targeted to screen:TeamMainViewController",
+        "expected": "Then the banner will be displayed on the iPhone Team Page"
+      },
+      {
+        "content": "When a banner is published in CMS\nand targeted to screen:ScoreboardViewController",
+        "expected": "Then the banner will be displayed on the iPhone Scoreboard"
+      },
+      {
+        "content": "When a banner is published in CMS\nand targeted to screen:MediaProgramGuideController",
+        "expected": "Then the banner will be displayed on the iPhone MLB.TV EPG"
+      },
+      {
+        "content": "When a banner is published in CMS\nand the type: \"image\"\nand no link: is provided",
+        "expected": "Then the banner will appear\nand tapping on the banner will not do anything"
+      },
+      {
+        "content": "When a banner is published in CMS\nand the type: \"image\"\nand link:http://www.mlb.com is provided",
+        "expected": "Then the banner will appear\nand tapping on the banner will open internal webview to MLB.com"
+      },
+      {
+        "content": "When a banner is published in CMS\nand the type:image_external\nand link:http://www.mlb.com is provided",
+        "expected": "Then the banner will appear\nand tapping on the banner will exit At Bat\nand bring the user to MLB.com in external browser"
+      },
+      {
+        "content": "When a banner is published in CMS\nand the type:video\nand the link:http://mlblive-akc.mlb.com/ls04/mlbam/2015/12/10/MLB_VIDEO_AD_HOC_FMS_Rule_5_Draft_20151210/master_mobile.m3u8",
+        "expected": "Then the banner will appear\nand tapping on the banner will open the video player"
+      },
+      {
+        "content": "When a banner is published in CMS\nand the type:image\nand the webViewtype:3\nand link:http://www.mlb.com is provided",
+        "expected": "Then the banner will appear\nand tapping on the banner will exit At Bat\nand bring the user to MLB.com in external browser"
+      },
+      {
+        "content": "When a banner is published in CMS\nand the type:image\nand the webViewtype:2\nand link:http://www.mlb.com is provided",
+        "expected": "Then the banner will appear\nand tapping on the banner will open internal webview to MLB.com\nand all webview controls will be available (top and bottom)"
+      },
+      {
+        "content": "When a banner is published in CMS\nand the type:image\nand the webViewtype:1\nand link:http://www.mlb.com is provided",
+        "expected": "Then the banner will appear\nand tapping on the banner will open internal webview to MLB.com\nand all webview controls will be available on top and bottom except no refresh control"
+      },
+      {
+        "content": "When a banner is published in CMS\nand the type:image\nand the webViewtype:0\nand link:http://www.mlb.com is provided",
+        "expected": "Then the banner will appear\nand tapping on the banner will open internal webview to MLB.com\nand only top webview controls (Done button) will be available\nand no bottom webview controls will be visible"
+      },
+      {
+        "content": "When a banner is published in CMS\nand closable:true",
+        "expected": "Then the banner will appear\nand the user can tap X to close the banner"
+      },
+      {
+        "content": "When a banner is published in CMS\nand closable:false",
+        "expected": "Then the banner will appear\nand no X will appear to close the banner"
+      }
+    ]
+  },
+  {
+    "id": 57371,
+    "title": "Free Trial & Lite Sponsorship",
+    "section_id": 8391,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1436798942,
+    "updated_by": 39,
+    "updated_on": 1436800866,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1095,
+    "display_order": 2,
+    "custom_preconds": "https://wiki.mlbam.com/display/mobile/Sponsorship+Requirements",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When there is Free Trial enabled in the config\nand the app has been freshly installed\nand the user taps on the Go to Lite button",
+        "expected": "Then an interstitial page opens with a tappable WebView image (the image will only be tappable if it appears, this is can be modified through the config file)\nand the MLB.com logo will appear on the top banner of the interstitial page"
+      },
+      {
+        "content": "When a Free Trail Interstitial page has been loaded\nand the Register Button is tapped",
+        "expected": "The the standard Login/Register flow page will display"
+      },
+      {
+        "content": "When the app has been initially installed\nand the user taps the Continue to LIte button\nand the user taps on the Skip button on the Free Trial Interstitial",
+        "expected": "The Add Favorite Team screen appears"
+      },
+      {
+        "content": "When a user is a Lite user \nand the app hasn't been installed for the first time\nand the user taps on the Free Trial button on the upper left of the Scoreboard",
+        "expected": "Then the Free Trial Interstitial is loaded"
+      },
+      {
+        "content": "When the user has Logged In and/or Registered for a Free Trial\nand the user selects the Login/Register button",
+        "expected": "Then the Interstitial Ad appears"
+      },
+      {
+        "content": "When a user is on the Resister Page through the Free Trial flow\nand the opt in label is enabled through the config",
+        "expected": "Then the user is able to select/deselect the option"
+      },
+      {
+        "content": "When a user unlocked a At Bat free trial and accesses the At Bat app",
+        "expected": "Then the user will be able to access all the features associated with the At Bat Full paid application\nand the user will be able to access Gameday Audio\nand the user will be able to access the Gameday tab (Live game)\nand the user will be able to access in-game Gameday highlights (Live game)\nand the user will be able to access the FGOD and FGOD archives"
+      },
+      {
+        "content": "When the same Bamnet account attempts to access the Free Trial",
+        "expected": "Then the Bamnet account is denied access to the Free Trial"
+      },
+      {
+        "content": "When a user is on one device\nWhen the user attempts to sign up to a Free Trial on the same device with different Bamnet accounts",
+        "expected": "Then only the first account is entitled with the Free Trail access and all other attempts on the same device are denied"
+      },
+      {
+        "content": "When a user attempts to sign up for a Free Trial with the same Bamnet across multiple devices",
+        "expected": "Then only the initial Free Trial login is granted access, all others are denied"
+      },
+      {
+        "content": "When Lite is currently being sponsored\nand the app has been freshly installed\nand the user selects 'Continue to Lite' from the initial paywall",
+        "expected": "Then the user will get an interstitial for the sponsor\nand the interstitial will be tapable\nand there will be a continue button below the interstitial\nand the continue button will take the user to the Lite version of the application"
+      },
+      {
+        "content": "When we have installed At Bat\nand we have launched the Application\nand we compare the Light Sponsorship\nand we compare the Free Trial sponsorship",
+        "expected": "Then we will see that both contain a Thin top Banner on the Scoreboard\nand we will see that all normal Ad Marvel banners are present as well\nand we will see that both contain the full page interstitial"
+      }
+    ]
+  },
+  {
+    "id": 57372,
+    "title": "TV Free Trial Sponsorship",
+    "section_id": 8391,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1436798951,
+    "updated_by": 39,
+    "updated_on": 1436801767,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1095,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When you have purchased the app through In-App Purchase on QA\nand the MLB.TV Free Trial is enabled in the config\nand you are on the Scoreboard",
+        "expected": "Then you will see the MLB.TV Free Trial button on the upper left of the Scoreboard"
+      },
+      {
+        "content": "When you are an app entitled user\nand you are on the Scoreboard\nand you tap on the Free Trial button",
+        "expected": "Then the Free Trial interstitial page is displayed\nand there are Cancel and Register buttons at the bottom of the page"
+      },
+      {
+        "content": "When the trial button is pressed to launch the interstitial page\nand the page is displayed",
+        "expected": "Then there is company branding for the appropriate sponsor"
+      },
+      {
+        "content": "When you have tapped on the Free Trial button on the Scoreboard\nand the Cancel button is tapped on the interstitial page",
+        "expected": "Then the interstitial page is dismissed"
+      },
+      {
+        "content": "When you have tapped on the Free Trial button on the Scoreboard or on the MLB.TV paywall\nand the interstitial page is launched\nand the Register button is tapped",
+        "expected": "Then the Login/Register window is displayed"
+      },
+      {
+        "content": "When the opt-in value is enabled in the config",
+        "expected": "Then you will see the opt-in label on the Login and Register screens"
+      },
+      {
+        "content": "When the Login/Register page is displayed\nand the Login username and password sections ware filled out with an existing Bamnet account that was Linked to an app entitled account\nand the Log In button is tapped",
+        "expected": "Then the user will be signed up for the MLB.TV Free Trial for the defined time"
+      },
+      {
+        "content": "When you are the Login/Register page\nand you tap on the Register button on top\nand fills out the required fields\nand taps on the blue Register button at the bottom of the form",
+        "expected": "Then the user is signed up to the MLB.TV Free Trial"
+      },
+      {
+        "content": "When there is Free Game of the Day\nand a Free trial is enabled through the config\nand the app entitled user tries to access this game",
+        "expected": "Then the user is grated access to the MLB.TV feed"
+      },
+      {
+        "content": "When the user has signed up the MLB.TV Free Trial\nand the user accesses an MLB.TV feed",
+        "expected": "Then the users sees a Sponsorship branded Play Ball screen"
+      },
+      {
+        "content": "When a user is attempting to sign up to the free tv trial\nand uses the same account that has been previously signed up",
+        "expected": "Then the user will be denied access to the free trial"
+      }
+    ]
+  },
+  {
+    "id": 57373,
+    "title": "Upsell Banners",
+    "section_id": 8391,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1436798959,
+    "updated_by": 39,
+    "updated_on": 1469803509,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1095,
+    "display_order": 4,
+    "custom_preconds": "Given a user has iOS At Bat installed",
+    "custom_steps": "When a user taps on the MLB.TV button",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "on an iPad with Lite user",
+        "expected": "Then the user will see an MLB.TV upsell banner\nand tapping the banner will bring the user to MLB.TV Paywall"
+      },
+      {
+        "content": "on an iPad with Single Team Account",
+        "expected": "Then the user will not see an MLB.TV upsell banner"
+      },
+      {
+        "content": "on an iPad with Single Team and At Bat account",
+        "expected": "Then the user will not see an MLB.TV upsell banner"
+      },
+      {
+        "content": "on an iPad as MLB.TV account",
+        "expected": "Then the user will not see an MLB.TV upsell banner"
+      },
+      {
+        "content": "on an iPhone with Lite user",
+        "expected": "Then the user will see an MLB.TV upsell banner\nand tapping the banner will bring the user to MLB.TV Paywall"
+      },
+      {
+        "content": "on an iPhone with Single Team Account",
+        "expected": "Then the user will not see an MLB.TV upsell banner"
+      },
+      {
+        "content": "on an iPhone with Single Team and At Bat account",
+        "expected": "Then the user will not see an MLB.TV upsell banner"
+      },
+      {
+        "content": "on an iPhone as MLB.TV account",
+        "expected": "Then the user will not see an MLB.TV upsell banner"
+      }
+    ]
+  },
+  {
+    "id": 57603,
+    "title": "Splash Screen Sponsor",
+    "section_id": 8391,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1436904852,
+    "updated_by": 39,
+    "updated_on": 1469732715,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1095,
+    "display_order": 5,
+    "custom_preconds": "Prod - https://atbatappconfig.mlb.com/ios/9.4.0/iphoneConfigExtrasLite.json\r\n\r\n\"splashScreenSponsorImageURL\": \"tmobileSplashURLKey\",\r\n\"sponsorshipImageDelayTime\": 3,",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When no sponsor logo is setup in the config for either English or Spanish\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then the current app start and foreground behavior should be maintained including At Bat splash screen and the grey spinner "
+      },
+      {
+        "content": "When a sponsor logo is setup for English\nand the device is set for Spanish\nand the user opens At Bat\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then the current app start and foreground behavior should be maintained including At Bat splash screen and the grey spinner "
+      },
+      {
+        "content": "When a sponsor logo is setup for Spanish\nand the device is set for English\nand the user opens At Bat\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then the current app start and foreground behavior should be maintained including At Bat splash screen and the grey spinner "
+      },
+      {
+        "content": "When a sponsor logo is setup for English\nand the device is set for English\nand the user opens At Bat\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then the app starts, the splash screen should include the At Bat logo, grey spinner and sponsor logo once it's loaded, and delay dismissing the screen an extra 3 seconds to give the logo some time to display"
+      },
+      {
+        "content": "When a sponsor logo is setup for English\nand the config has no delay value set in the config\nand the device is set for English\nand the user foregrounds the app\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then the app will continue to do existing implementation so as not to slow down users"
+      },
+      {
+        "content": "When a sponsor logo is setup for English\nand the config has delay value set in the config\nand the device is set for English\nand the user foregrounds the app\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then when you foreground the app the splash screen is delayed"
+      },
+      {
+        "content": "When a sponsor logo is setup for Spanish\nand the device is set for Spanish\nand the user opens At Bat\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then the app starts, the splash screen should include the At Bat logo, grey spinner and sponsor logo once it's loaded, and delay dismissing the screen an extra 3 seconds to give the logo some time to display"
+      },
+      {
+        "content": "When a sponsor logo is setup for Spanish\nand the config has no delay value set in the config\nand the device is set for Spanish\nand the user foregrounds the app",
+        "expected": "Then the app will continue to do existing implementation so as not to slow down users"
+      },
+      {
+        "content": "When a sponsor logo is setup for Spanish\nand the config has no delay value set in the config\nand the device is set for Spanish\nand the user foregrounds the app\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then when you foreground the app the splash screen is delayed"
+      },
+      {
+        "content": "When the user taps on the sponsor logo on the splash screen\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then nothing will happen"
+      },
+      {
+        "content": "When a sponsor logo is setup\nand the user taps on At Bat\n\nCheck for English and Spanish on iPhone 4S/5/6/6+\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then the At Bat logo, grey spinner, sponsor logo will all be displayed clearly and won't be cut off\n\nNR - 160px x 65px\n@2x - 320px x 130px\n@3x - 480px x 195px"
+      }
+    ]
+  },
+  {
+    "id": 58548,
+    "title": "Gameday Changes for Lite Users",
+    "section_id": 8391,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1437077464,
+    "updated_by": 39,
+    "updated_on": 1438629431,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1095,
+    "display_order": 6,
+    "custom_preconds": "Homebase or Ad-Ops Banner Support - ConfigExtras, adSupportForScreen, AdMarvel \r\n\r\niOS At Bat iPhone QA Site ID: 5225\r\niOS At Bat iPhone PROD Site ID: 3275\r\niOS At Bat iPad QA Site ID: 11198\r\niOS At Bat iPad PROD Site ID: 3276",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a banner is configured for Gameday\nand a lite user is on Gameday Screen for a game in progress\nand the game is in mid or end of a inning",
+        "expected": "Then the user will see an ad banner with a X "
+      },
+      {
+        "content": "When a game is in progress in the mid or end of an inning\nand the ad banner is on the screen\nand the user taps on the X",
+        "expected": "Then the user will have to dismiss the ad and the user will be returned to Gmaeday"
+      },
+      {
+        "content": "When a mid or end inning interstitial ad appears\nand the next inning starts",
+        "expected": "Then the interstitial dismisses and Gameday will update"
+      },
+      {
+        "content": "When a banner is configured for Gameday\nand a lite user is on another screen (not Gameday) for a game in progress\nand the game is in mid or end of a inning",
+        "expected": "The user will not see a banner"
+      }
+    ]
+  },
+  {
+    "id": 197137,
+    "title": "Ads",
+    "section_id": 8391,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1470324328,
+    "updated_by": 84,
+    "updated_on": 1574713250,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1095,
+    "display_order": 7,
+    "custom_preconds": "Given a user has a local copy of configextraslite for iPad and iPhone\r\nand use Charles to override the configExtrasLite",
+    "custom_steps": "When a user is in iOS At Bat",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "when shouldKillDFPAds is set to true in configExtrasLite",
+        "expected": "no DFP Ads will be seen"
+      },
+      {
+        "content": "when shouldKillNativeAds is set to true in configExtrasLite",
+        "expected": "no Facebook Native Ads will be seen on the iPhone Newsreader\n\n(Facebook installed and logged into on the device)"
+      },
+      {
+        "content": "when shouldKillAllAds is set to true in configExtrasLite",
+        "expected": "no ads will be seen regardless of type"
+      }
+    ]
+  },
+  {
+    "id": 30097550,
+    "title": "Updated Splash Screen -> With Sponsor -> 3 Second Splash Screen",
+    "section_id": 8391,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1675984631,
+    "updated_by": 336,
+    "updated_on": 1675984631,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1095,
+    "display_order": 8,
+    "custom_preconds": "* User has latest build downloaded\r\n* Sponsor is active ",
+    "custom_steps": "GIVEN that the app is launched from a cold start\r\nWHEN the splash screen is displayed\r\nAND there is a paying sponsor\r\n\r\n\r\n",
+    "custom_expected": "THEN the splash screen will display for at least 3 seconds \r\nAND the user will see sponsor at the bottom of the page. EG-\"Presented by Camping World\" \r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30097551,
+    "title": "Updated Splash Screen -> Without Sponsor",
+    "section_id": 8391,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1675984840,
+    "updated_by": 336,
+    "updated_on": 1675984840,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1095,
+    "display_order": 9,
+    "custom_preconds": "* User has latest build downloaded\r\n* No Sponsor is active ",
+    "custom_steps": "GIVEN that the app is launched from a cold start\r\nWHEN the splash screen is displayed\r\nAND there is not a paying sponsor\r\n",
+    "custom_expected": "THEN the splash screen will display for at least 1.5 seconds (depending on network) ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 57374,
+    "title": "Banners",
+    "section_id": 8392,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1436798978,
+    "updated_by": 39,
+    "updated_on": 1469731851,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1095,
+    "display_order": 1,
+    "custom_preconds": "Prod - http://mlb.mlb.com/gen/hb/list/atbat/device-banners.json\r\n\r\nQA - http://qa.mlb.com/gen/hb/list/atbat/device-banners.json",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a banner is published in CMS\nand targeted to screen:ABScoreboardPadViewController",
+        "expected": "Then the banner is displayed on the iPad Scoreboard"
+      },
+      {
+        "content": "When a banner is published in CMS\nand targeted to screen:MediaProgramGuideController",
+        "expected": "Then the banner will be displayed on the iPad MLB.TV EPG"
+      },
+      {
+        "content": "When a banner is published in CMS\nand the type: \"image\"\nand no link is provided",
+        "expected": "Then the banner will appear\nand tapping on the banner will not do anything"
+      },
+      {
+        "content": "When a banner is published in CMS\nand the type: \"image\"\nand link:http://www.mlb.com is provided",
+        "expected": "Then the banner will appear\nand tapping on the banner will bring the user to MLB.com"
+      },
+      {
+        "content": "When a banner is published in CMS\nand the type:image_external\nand link:http://www.mlb.com is provided",
+        "expected": "Then the banner will appear\nand tapping on the banner will exit At Bat\nand bring the user to MLB.com in external browser"
+      },
+      {
+        "content": "When a banner is published in CMS\nand the type:video\nand the link:http://mlblive-akc.mlb.com/ls04/mlbam/2015/12/10/MLB_VIDEO_AD_HOC_FMS_Rule_5_Draft_20151210/master_mobile.m3u8",
+        "expected": "Then the banner will appear\nand tapping on the banner will open the video player"
+      },
+      {
+        "content": "When a banner is published in CMS\nand the type:image\nand the webViewtype:3\nand link:http://www.mlb.com is provided",
+        "expected": "Then the banner will appear\nand tapping on the banner will exit At Bat\nand bring the user to MLB.com in external browser"
+      },
+      {
+        "content": "When a banner is published in CMS\nand the type:image\nand the webViewtype:2\nand link:http://www.mlb.com is provided",
+        "expected": "Then the banner will appear\nand tapping on the banner will open internal webview to MLB.com\nand all webview controls will be available (top and bottom)"
+      },
+      {
+        "content": "When a banner is published in CMS\nand the type:image\nand the webViewtype:1\nand link:http://www.mlb.com is provided",
+        "expected": "Then the banner will appear\nand tapping on the banner will open internal webview to MLB.com\nand all webview controls will be available on top and bottom except no refresh control"
+      },
+      {
+        "content": "When a banner is published in CMS\nand the type:image\nand the webViewtype:0\nand link:http://www.mlb.com is provided",
+        "expected": "Then the banner will appear\nand tapping on the banner will open internal webview to MLB.com\nand only top webview controls (Done button) will be available\nand no bottom webview controls will be visible"
+      },
+      {
+        "content": "When a banner is published in CMS\nand closable:true",
+        "expected": "Then the banner will appear\nand the user can tap X to close the banner"
+      },
+      {
+        "content": "When a banner is published in CMS\nand closable:false",
+        "expected": "Then the banner will appear\nand no X will appear to close the banner"
+      }
+    ]
+  },
+  {
+    "id": 57375,
+    "title": "Free Trial & Lite Sponsorship",
+    "section_id": 8392,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1436798988,
+    "updated_by": 39,
+    "updated_on": 1436885009,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1095,
+    "display_order": 2,
+    "custom_preconds": "https://wiki.mlbam.com/display/mobile/Sponsorship+Requirements",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When there is Free Trail enabled\nand the app has been freshly installed\nand the user taps on the Go to Lite button",
+        "expected": "Then an interstitial page opens with a tappable WebView image (the image will only be tappable if it appears, this is can be modified through the config file)\nand the MLB.com logo will apear on the top banner of the interstitial page"
+      },
+      {
+        "content": "When the Free Trail Interstitial page has been loaded\nand the Register Button is tapped",
+        "expected": "The the standard Login/Register flow page will display"
+      },
+      {
+        "content": "When the app has been initially installed\nand the user taps the Continue to LIte button\nand the user taps on the Skip button on the Free Trial Interstitial",
+        "expected": "Then the favorite team selection screen will appear"
+      },
+      {
+        "content": "When the user is a Lite user \nand the app hasn't been installed for the first time\nand the user taps on the Free Trial button on the upper center of the Scoreboard",
+        "expected": "Then the Free Trial Interstitial is loaded"
+      },
+      {
+        "content": "When the user has Logged In and/or Registered for a Free Trial\nand the user selects the Login/Register button",
+        "expected": "Then the Interstitial Ad appears"
+      },
+      {
+        "content": "When the user is on the Resister Page through the Free Trial flow\nand the opt in label is enabled through the config\n",
+        "expected": "Then the user is able to select/deselect the option"
+      },
+      {
+        "content": "When the user unlocked a At Bat free trial\nand the user accesses the At Bat app",
+        "expected": "Then the user will be able to access all the features associated with the At Bat Full paid application\nand the user will be able to access Gameday Audio\nand the user will be able to access the Gameday tab (Live game)\nand the user will be able to access in-game Gameday highlights (Live game)\nand the user will be able to access the FGOD and FGOD archives"
+      },
+      {
+        "content": "When the same Bamnet account attempts to access the Free Trial",
+        "expected": "Then the Bamnet account is denied access to the Free Trial"
+      },
+      {
+        "content": "When the user is on one device\nand the user attempts to sign up to a Free Trial on the same device with different Bamnet accounts",
+        "expected": "Then only the first account is entitled with the Free Trail access and all other attempts on the same device are denied"
+      },
+      {
+        "content": "When a user attempts to sign up for a Free Trial with the same Bamnet across multiple devices",
+        "expected": "Then only the initial Free Trial login is granted access, all others are denied"
+      },
+      {
+        "content": "When Lite is currently being sponsored\nand the app has been freshly installedWhen the user selects 'Continue to Lite' from the initial paywall",
+        "expected": "Then the user will get an interstitial for the sponsor\nand the interstitial will be tapable\nand there will be a continue button below the interstitial\nand the continue button will take the user to the Lite version of the application"
+      },
+      {
+        "content": "When we have installed At Bat\nand we have launched the Application\nand we compare the Light Sponsorship\nand we compare the Free Trial sponsorship",
+        "expected": "Then we will see that both contain a Thin top Banner on the Scoreboard\nand we will see that all normal Ad Marvel banners are present as well\nand we will see that both contain the full page interstitial"
+      }
+    ]
+  },
+  {
+    "id": 57376,
+    "title": "TV Free Trial Sponsorship",
+    "section_id": 8392,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1436798997,
+    "updated_by": 39,
+    "updated_on": 1436885385,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1095,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Given you have purchased the app through In-App Purchase on QA\nAnd the MLB.TV Free Trial is enabled in the config\nWhen you are on the Scoreboard",
+        "expected": "Then you will see the MLB.TV Free Trial button on the upper left of the Scoreboard"
+      },
+      {
+        "content": "When you are an app entitled user\nand you are on the Scoreboard\nand you tap on the Free Trial button",
+        "expected": "Then the Free Trial interstitial page is displayed\nAnd there are Cancel and Register buttons at the bottom of the page"
+      },
+      {
+        "content": "When the trial button is pressed to launch the interstitial page\nand the page is displayed",
+        "expected": "Then there is company branding for the appropriate sponsor"
+      },
+      {
+        "content": "When you have tapped on the Free Trial button on the Scoreboard or on the MLB.TV paywall\nand the interstitial page is launched\nand the Register button is tapped",
+        "expected": "Then the Login/Register window is displayed"
+      },
+      {
+        "content": "When the opt-in config value is enabled\nand The opt-in value is enabled in the config",
+        "expected": "Then you will see the opt-in label on the Login and Register screens"
+      },
+      {
+        "content": "When the Login/Register page is displayed\nand the Login username and password sections ware filled out with an existing Bamnet account that was Linked to an app entitled account\nand the Log In button is tapped",
+        "expected": "Then the user will be signed up for the MLB.TV Free Trial for the defined time"
+      },
+      {
+        "content": "When you are the Login/Register page\nand you tap on the Register button on top\nand fills out the required fields\nand Taps on the blue Register button at the bottom of the form",
+        "expected": "Then the user is signed up to the MLB.TV Free Trial"
+      },
+      {
+        "content": "When there is Free Game of the Day\nand a Free trial is enabled through the config\nand the app entitled user tris to access this game",
+        "expected": "Then the user is grated access to the MLB.TV feed"
+      },
+      {
+        "content": "When a user has signed up the MLB.TV Free Trial\nand the user access an MLB.TV feed",
+        "expected": "Then the users sees a Sponsorship branded Play Ball screen"
+      },
+      {
+        "content": "When a user is attempting to sign up to the free tv trial\nand the user uses the same account that has been previously signed up",
+        "expected": "Then the user will be denied access to the free trial"
+      },
+      {
+        "content": "When a user is attempting to sign up the tv free trial\nand the user tries to use a device that already signed up to the tv free trial",
+        "expected": "Then the user will be denied access"
+      }
+    ]
+  },
+  {
+    "id": 57604,
+    "title": "Splash Screen Sponsor",
+    "section_id": 8392,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1436904853,
+    "updated_by": 39,
+    "updated_on": 1469732701,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1095,
+    "display_order": 4,
+    "custom_preconds": "Prod - https://atbatappconfig.mlb.com/ios/9.4.0/ipadConfigExtrasLite.json\r\n\r\n\"splashScreenSponsorImageURL\": \"tmobileSplashURLKey\",\r\n\"sponsorshipImageDelayTime\": 3,",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When no sponsor logo is setup in the config for either English or Spanish\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then the current app start and foreground behavior should be maintained including At Bat splash screen and the grey spinner"
+      },
+      {
+        "content": "When a sponsor logo is setup for English\nand the device is set for Spanish\nand the user opens At Bat\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then the current app start and foreground behavior should be maintained including At Bat splash screen and the grey spinner"
+      },
+      {
+        "content": "When a sponsor logo is setup for Spanish\nand the device is set for English\nand the user opens At Bat\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then the current app start and foreground behavior should be maintained including At Bat splash screen and the grey spinner"
+      },
+      {
+        "content": "When a sponsor logo is setup for English\nand the device is set for English\nand the user opens At Bat\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then the app starts, the splash screen should include the At Bat logo, grey spinner and sponsor logo once it's loaded, and delay dismissing the screen an extra 3 seconds to give the logo some time to display"
+      },
+      {
+        "content": "When a sponsor logo is setup for English\nand the config has no delay value set in the config\nand the device is set for English\nand the user foregrounds the app\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then the app will continue to do existing implementation so as not to slow down users"
+      },
+      {
+        "content": "When a sponsor logo is setup for English\nand the config has delay value set in the config\nand the device is set for English\nand the user foregrounds the app\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then when you foreground the app the splash screen is delayed"
+      },
+      {
+        "content": "When a sponsor logo is setup for Spanish\nand the device is set for Spanish\nand the user opens At Bat\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then the app starts, the splash screen should include the At Bat logo, grey spinner and sponsor logo once it's loaded, and delay dismissing the screen an extra 3 seconds to give the logo some time to display"
+      },
+      {
+        "content": "When a sponsor logo is setup for Spanish\nand the config has no delay value set in the config\nand the device is set for Spanish\nand the user foregrounds the app\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then the app will continue to do existing implementation so as not to slow down users"
+      },
+      {
+        "content": "When a sponsor logo is setup for Spanish\nand the config has no delay value set in the config\nand the device is set for Spanish\nand the user foregrounds the app\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then when you foreground the app the splash screen is delayed"
+      },
+      {
+        "content": "When the user taps on the sponsor logo on the splash screen\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then nothing will happen"
+      },
+      {
+        "content": "When a sponsor logo is setup\nand the user taps on At Bat\n\nCheck for English and Spanish on both Retina and Non Retina\n\nT-Mobile splash screen setup on iPhone/iPad in ES in Prod",
+        "expected": "Then the At Bat logo, grey spinner, sponsor logo will all be displayed clearly and won't be cut off\n\nNR - 160px x 65px\n@2x - 320px x 130px\n@3x - 480px x 195px"
+      }
+    ]
+  },
+  {
+    "id": 58549,
+    "title": "Gameday Changes for Lite Users",
+    "section_id": 8392,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1437077474,
+    "updated_by": 10,
+    "updated_on": 1439418460,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1095,
+    "display_order": 5,
+    "custom_preconds": "iOS At Bat iPhone QA Site ID: 5225\r\niOS At Bat iPhone PROD Site ID: 3275\r\niOS At Bat iPad QA Site ID: 11198\r\niOS At Bat iPad PROD Site ID: 3276",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a banner is configured for Gameday\nand a lite user is observing a game that is in the Mid inning",
+        "expected": "Then the user will see a mid-inning interstitial ad (iPad: 970x650) with an X"
+      },
+      {
+        "content": "When a banner is configured for Gameday\nand a lite user is observing a game that is in the End inning",
+        "expected": "Then the user will see a end-inning interstitial ad (iPad: 970x650) with an X"
+      },
+      {
+        "content": "When a game in progress is in the mid or end of an inning\nand the interstitial ad is present\nand the user taps on the X",
+        "expected": "Then the ad is dismissed and the user is returned to Gmaeday\nand the user has access to all tabs and overlays in Gameday\nand Gameday updates"
+      },
+      {
+        "content": "When a mid or end inning interstitial appears\nand the next inning starts",
+        "expected": "Then the interstitial dismisses and Gameday continues to update"
+      }
+    ]
+  },
+  {
+    "id": 197136,
+    "title": "Ads",
+    "section_id": 8392,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1470324327,
+    "updated_by": 39,
+    "updated_on": 1470324327,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1095,
+    "display_order": 6,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  }
+]

@@ -1,0 +1,227 @@
+[
+  {
+    "id": 114330,
+    "suite_id": 17464,
+    "name": "Search",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 114331,
+    "suite_id": 17464,
+    "name": "Contract History",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 114332,
+    "suite_id": 17464,
+    "name": "Create Major Contract",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 114333,
+    "suite_id": 17464,
+    "name": "Language",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 114334,
+    "suite_id": 17464,
+    "name": "Pay Schedule",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 114335,
+    "suite_id": 17464,
+    "name": "Set Flags",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 114336,
+    "suite_id": 17464,
+    "name": "Maintain Flags",
+    "description": null,
+    "parent_id": 114335,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 114337,
+    "suite_id": 17464,
+    "name": "Remove Flags",
+    "description": null,
+    "parent_id": 114335,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 114338,
+    "suite_id": 17464,
+    "name": "Viewing Flags",
+    "description": null,
+    "parent_id": 114335,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 114340,
+    "suite_id": 17464,
+    "name": "Print Contract",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 114341,
+    "suite_id": 17464,
+    "name": "Approvals Clipboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 114342,
+    "suite_id": 17464,
+    "name": "Notifications Clipboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 114343,
+    "suite_id": 17464,
+    "name": "Action Items Clipboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 114345,
+    "suite_id": 17464,
+    "name": "Agent/ Agencies",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 114349,
+    "suite_id": 17464,
+    "name": "Award Entry Utility",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 114353,
+    "suite_id": 17464,
+    "name": "Payment Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 114354,
+    "suite_id": 17464,
+    "name": "Player Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 114355,
+    "suite_id": 17464,
+    "name": "Player/Agent Mapping",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 114356,
+    "suite_id": 17464,
+    "name": "Payment Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 114359,
+    "suite_id": 17464,
+    "name": "Payments",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 114362,
+    "suite_id": 17464,
+    "name": "Batch Screen",
+    "description": null,
+    "parent_id": null,
+    "display_order": 33,
+    "depth": 0
+  },
+  {
+    "id": 114363,
+    "suite_id": 17464,
+    "name": "Season Days",
+    "description": null,
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 114366,
+    "suite_id": 17464,
+    "name": "Payroll Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 114367,
+    "suite_id": 17464,
+    "name": "Payroll Calculations",
+    "description": null,
+    "parent_id": 114366,
+    "display_order": 38,
+    "depth": 1
+  },
+  {
+    "id": 114369,
+    "suite_id": 17464,
+    "name": "Global",
+    "description": null,
+    "parent_id": null,
+    "display_order": 40,
+    "depth": 0
+  }
+]

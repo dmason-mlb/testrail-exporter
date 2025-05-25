@@ -1,0 +1,29 @@
+[
+  {
+    "id": 151726,
+    "suite_id": 20835,
+    "name": "Award",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 151727,
+    "suite_id": 20835,
+    "name": "Award Entry Utility",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 151729,
+    "suite_id": 20835,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

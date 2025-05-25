@@ -1,0 +1,791 @@
+[
+  {
+    "id": 8667081,
+    "title": "Feed select Modal: Final Game State",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1604704938,
+    "updated_by": 232,
+    "updated_on": 1665757193,
+    "estimate": null,
+    "estimate_forecast": "34s",
+    "suite_id": 113002,
+    "display_order": 1,
+    "custom_preconds": "GIVEN an entitled user is in MLB.TV App\r\n\r\n",
+    "custom_steps": "WHEN the user Selects an Archived game to watch \r\nAND show the feed select modal appears\r\n",
+    "custom_expected": "THEN the user can choose between available video feeds, Recap, or Condensed feeds\r\nAND the user can play back the Recap\r\nAND the user can play back the condensed feed\r\nAND the user can play back the available video feeds",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8733385,
+    "title": "No Feeds available/Postponed Game",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1605806509,
+    "updated_by": 232,
+    "updated_on": 1653505236,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 2,
+    "custom_preconds": "GIVEN an MLB user is in MLB.TV App",
+    "custom_steps": "WHEN the user Selects a postponed game or other game without feeds to watch \r\nAND the feed select modal appears\r\n",
+    "custom_expected": "THEN the user should see messaging that states there are \"No Broadcasts Available\"",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16672823,
+    "title": "statsapi failure (automated)",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-11140",
+    "created_by": 232,
+    "created_on": 1617997216,
+    "updated_by": 232,
+    "updated_on": 1672850990,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user\r\n",
+    "custom_steps": "WHEN the user selects a game tile on the homepage or games page\r\nAND calls to statsapi fail (this can be simulated by adding https://statsapi.mlb.com/api/v1/schedule?gamePk=* to Block List on Charles with Drop connection Blocking action selected)",
+    "custom_expected": "THEN the feed select modal will display the following message: \"Sorry, an error occurred retrieving game data. Please try again.\"",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16849400,
+    "title": "Feed Select: Postponed & Suspended Game",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1619188664,
+    "updated_by": 232,
+    "updated_on": 1733170782,
+    "estimate": null,
+    "estimate_forecast": "1m 21s",
+    "suite_id": 113002,
+    "display_order": 4,
+    "custom_preconds": "GIVEN an MLB user\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a game was Postponed on the selected date (for the example below, use 05/13/2024)\nAND the user selects the game tile\nExample game from 2024:\nPostponed WSH @CWS postponed on 05/13/2024 resumed 05/14/2024",
+        "expected": "THEN the \"No Broadcasts Available\" modal displays"
+      },
+      {
+        "content": "WHEN a game was Postponed on a previous day and is being resumed on the selected date(for the example, use 05/13/2024)\nAND the user selects the game tile\nExample game from 2024:\nPostponed WSH @CWS postponed on 05/13/2024 resumed 05/14/2024",
+        "expected": "THEN the available feeds for that date display"
+      },
+      {
+        "content": "WHEN a game was Suspended on the selected date (for the example below, use 08/27/2024)\nAND the user selects the game tile\nExample game from 2024:\nSuspended TEX @ CWS suspended on 08/27/2024 resumed 08/28/2024",
+        "expected": "THEN two separate feeds (one for the first part of the game and one for the completion of the game) will display for each feed if the suspended game starts or is completed"
+      },
+      {
+        "content": "WHEN  game was Suspended on a previous day and is being resumed on the selected date (for the example below, use 08/27/2024)\nAND the user selects the game tile\nExample game from 2024:\nSuspended TEX @ CWS suspended on 08/27/2024 resumed 08/28/2024",
+        "expected": "THEN two separate feeds (one for the first part of the game and one for the completion of the game) will display for each feed if the suspended game starts or is completed"
+      }
+    ]
+  },
+  {
+    "id": 16851504,
+    "title": "FeedSelect: Blackout Feed select Modal (automated)",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1619202854,
+    "updated_by": 232,
+    "updated_on": 1619202854,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 5,
+    "custom_preconds": "GIVEN a user is in MLB.TV App\r\n",
+    "custom_steps": "WHEN the game is blacked out for the user\r\n",
+    "custom_expected": "THEN the user will see a black out message and no feeds",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 17029589,
+    "title": "Launch Youtube Game of the Week",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1620341285,
+    "updated_by": 232,
+    "updated_on": 1642104677,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 6,
+    "custom_preconds": "GIVEN a user\r\nNOTE: YouTube game can be simulated in the app by proxying https://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search* with the attached json file",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I select the Youtube option on the feed select modal for a Youtube free game of the week\nAND I do not have YouTube installed\nNOTE: On some Android TV devices it is not possible to remove YouTube app from the device, so this step should be marked as \"Not applicable\" for such devices. ",
+        "expected": "THEN I will be redirected the the App Store and presented with the option to get the Youtube app\nNOTE: Proxy must be turned off in order to access the Play or Amazon store page for the YouTube app."
+      },
+      {
+        "content": "WHEN I select the Youtube option on the feed select modal for a Youtube free game of the week\nAND I do have YouTube installed\n",
+        "expected": "THEN the Youtube app will open and the feed will play in Youtube"
+      }
+    ]
+  },
+  {
+    "id": 17636342,
+    "title": "Blackouts- Feed Level",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1624398398,
+    "updated_by": 232,
+    "updated_on": 1650469799,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 7,
+    "custom_preconds": "GIVEN a user is viewing feeds",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a feed is Video and not blacked out\n",
+        "expected": "THEN render the feed"
+      },
+      {
+        "content": "WHEN all video feeds are Blacked out\n\nNOTE: To simulate the conditions for this test case, proxy https://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search*\twith the attached mastapi_blackout_simulated_in_hero.json. You should be able to test the hero on the homepage and the game tiles on the games page\n",
+        "expected": "THEN render the blackout messages"
+      }
+    ]
+  },
+  {
+    "id": 17700263,
+    "title": "Check entitlements and MVPD",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "Android-11147",
+    "created_by": 232,
+    "created_on": 1624919522,
+    "updated_by": 232,
+    "updated_on": 1653506374,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 8,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": "https://baseball.atlassian.net/browse/ANDROID-11475",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is viewing feeds \nAND is not logged in",
+        "expected": "THEN the user will see \"Upgrade MLB.TV\" "
+      },
+      {
+        "content": "WHEN the user is viewing feeds\nAND a feed is Video\nAND the user is entitled\n",
+        "expected": "THEN render the feed"
+      },
+      {
+        "content": "WHEN the user is viewing feeds\nAND all video feeds are not entitled and at least one requires MVPD\n",
+        "expected": "THEN render the MVPD message for that feed"
+      },
+      {
+        "content": "WHEN the user is viewing feeds\nAND all video feeds are not entitled\nAND none are MVPD\n",
+        "expected": "THEN render lock icons and upgrade button"
+      }
+    ]
+  },
+  {
+    "id": 24350192,
+    "title": "Feed selected too early",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1635785016,
+    "updated_by": 232,
+    "updated_on": 1650469889,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 9,
+    "custom_preconds": "GIVEN an MLB user is in MLB.TV App\r\n",
+    "custom_steps": "WHEN the user Selects a future game to watch \r\nAND show the feedselect modal appears\r\n",
+    "custom_expected": "THEN the user should see messaging that states You’re a bit too early",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 24350193,
+    "title": "SVOD modal- logged in user without entitlements purchase flow",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1635785199,
+    "updated_by": 232,
+    "updated_on": 1650469949,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 10,
+    "custom_preconds": "GIVEN a logged in user without entitlements",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN they click on an SVOD/SLIVE piece of content\n",
+        "expected": "THEN they will see a modal asking them to Upgrade MLB TV"
+      },
+      {
+        "content": "WHEN the user is presented with the modal asking them to Upgrade MLB TV\nAND the user completes a purchase",
+        "expected": "THEN they will be redirected to the video"
+      }
+    ]
+  },
+  {
+    "id": 24350242,
+    "title": "SVOD modal- logged out user- general navigation",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1635786607,
+    "updated_by": 232,
+    "updated_on": 1728574873,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 11,
+    "custom_preconds": "GIVEN an a logged out user\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN they click on an SVOD/SLIVE piece of content\nAND then successfully log in from the modal\nAND are entitled to watch the content\n\n\n",
+        "expected": "THEN the user should be returned to the homepage with proper entitlements\nAND SVOD video should be playable\n\nNOTE: This is the current expected behavior. The desired behavior in upcoming work is:\n\nTHEN they should return directly into the video content"
+      },
+      {
+        "content": "WHEN they click on an SVOD/SLIVE piece of content\nAND they choose \"Get MLB.TV\"\nAND then successfully purchase a subscription\nAND they create an account\n",
+        "expected": "THEN the user should be returned to the homepage with proper entitlements\nAND SVOD video should be playable\nNOTE: This is the current expected behavior. The desired behavior in upcoming work is:\n\nTHEN they should return directly into the video content"
+      },
+      {
+        "content": "WHEN they click on an SVOD/SLIVE piece of content\nAND then successfully log in from the modal\nAND are not entitled to watch the content\n",
+        "expected": "THEN they should be presented with a screen providing option to \"Upgrade MLB.TV\" "
+      },
+      {
+        "content": "WHEN the user is on the screen providing options to \"Upgrade MLB.TV\"\nAND the user selects \"Upgrade MLB.TV\"\nAND the user makes a purchase",
+        "expected": "THEN they should return into the video content\n"
+      }
+    ]
+  },
+  {
+    "id": 26385487,
+    "title": "SVOD modal- logged out user- Purchase through modal",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1644500202,
+    "updated_by": 232,
+    "updated_on": 1664379901,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 12,
+    "custom_preconds": "GIVEN a logged out user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN they click on an SVOD/SLIVE piece of content AND they choose \"Get MLB.TV\"\n AND then successfully purchase a subscription \nAND they create an account ",
+        "expected": "THEN the user should be returned to the homepage with proper entitlements \nAND SVOD video should be playable\nNOTE: This is the current expected behavior. The desired behavior in upcoming work is:\n\nTHEN they should return directly into the video content"
+      },
+      {
+        "content": "WHEN they click on an SVOD/SLIVE piece of content\nAND then successfully log in from the modal\nAND are not entitled to watch the content\n",
+        "expected": "THEN they should be presented with a screen providing options to \"Upgrade MLB.TV\" or \"Exit\""
+      },
+      {
+        "content": "WHEN the user is on the screen providing options to \"Upgrade MLB.TV\" or \"Exit\"\nAND the user selects \"Upgrade MLB.TV\"\nAND the user makes a purchase\n",
+        "expected": "THEN they should return into the video content"
+      }
+    ]
+  },
+  {
+    "id": 24350243,
+    "title": "Browse for Free User: Feed Select Modal Game",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1635787497,
+    "updated_by": 232,
+    "updated_on": 1653517577,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 13,
+    "custom_preconds": "GIVEN a Non-logged in MLB.tv user\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I select game tile for a game that has a feed available\n\n\n ",
+        "expected": "THEN a feed picker opens with options to get access to the game"
+      },
+      {
+        "content": "WHEN the user sees the feed select modal\nAND the user selects the log in button\n",
+        "expected": "THE the login page is displayed"
+      },
+      {
+        "content": "WHEN the user sees the feed select modal\nAND the user selects the Get MLB.TV button\n",
+        "expected": "THEN the paywall is displayed"
+      },
+      {
+        "content": "WHEN the user sees the feed select modal for an archived game\nAND free content is available\n",
+        "expected": "THEN the user is presented with the free options (Condensed Game and Recap)\nAND the user will be able to watch the free video without an account (the condensed and recap videos only)"
+      }
+    ]
+  },
+  {
+    "id": 25033921,
+    "title": "Free Users: MLB Free Game of the day modal",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1638382531,
+    "updated_by": 232,
+    "updated_on": 1650482360,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 14,
+    "custom_preconds": "GIVEN a Non-logged in MLB.tv user\r\nNOTE: This test case is written for the updated feed select. Delete this comment after updated feed select is toggled on.",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I select a live MLB.TV Free game tile \n",
+        "expected": "THEN a feed picker opens with options to Log in or Create a Free Account"
+      },
+      {
+        "content": "WHEN I select an Archived MLB.TV Free game tile \n\n\n",
+        "expected": "AND VOD Content is available\nTHEN a feed picker opens with options to watch condensed game / recap or Log in or Create a Free Account"
+      }
+    ]
+  },
+  {
+    "id": 25378616,
+    "title": "Default to User's Favorite Team",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1639609485,
+    "updated_by": 232,
+    "updated_on": 1650482475,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 16,
+    "custom_preconds": "GIVEN an MLB user is in MLB.TV App\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user Selects their Favorite team’s game to watch \nAND the feed select modal appears",
+        "expected": "THEN the user’s cursor should default to their favorite team’s Video feed"
+      },
+      {
+        "content": "WHEN the user Selects their Following team’s game to watch \nAND the feed select modal appears\n",
+        "expected": "THEN the user’s cursor should default to their Following team’s Video feed"
+      },
+      {
+        "content": "WHEN the user Selects a non-Favorite or following team’s game to watch \nAND the feed select modal appears\n",
+        "expected": "THEN the user’s cursor should default to their first feed available"
+      }
+    ]
+  },
+  {
+    "id": 25637705,
+    "title": "Logged in Free User: Feed Select Modal",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1641233358,
+    "updated_by": 232,
+    "updated_on": 1650482789,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 17,
+    "custom_preconds": "GIVEN a logged in MLB.tv user\r\nAND the user is not entitled\r\n \r\nNOTE: When \"Break Glass\" mode is enabled, all feeds will return as entitled. In this case, users will NOT see the expected behaviors. If you are not sure if break glass mode is enabled, please inquire for clarification. In this case, users will instead will see this:\r\nWHEN the user selects the un-entitled game feed\r\nAND chooses a playback option\r\nTHEN \"You do not have access to play this game\" message is presented to the user\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I select a live game tile\n",
+        "expected": "THEN a feed picker opens an option to Upgrade MLB.TV "
+      },
+      {
+        "content": "WHEN I select upgrade mlb.tv\n",
+        "expected": "THEN I’m taken to the paywall page "
+      }
+    ]
+  },
+  {
+    "id": 26386321,
+    "title": "No Broadcasts available",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "GSTREAM-268",
+    "created_by": 232,
+    "created_on": 1644532646,
+    "updated_by": 442,
+    "updated_on": 1713983577,
+    "estimate": null,
+    "estimate_forecast": "2m 47s",
+    "suite_id": 113002,
+    "display_order": 18,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": "WHEN they select the game tile of a feed with no broadcasts available\r\nNOTE: This can include postponed games (eg BAL @ BOS on April 1, 2021) and Spring Training games with no feeds (eg KC @ TEX on February 23, 2024)",
+    "custom_expected": "THEN a feed select modal displays with the message \"No Broadcasts Available There are no broadcasts available for this game.\"",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26450661,
+    "title": "Archived game-Resume Options",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1645551453,
+    "updated_by": 232,
+    "updated_on": 1650482881,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 19,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user selects a feed from an archived game",
+        "expected": "THEN the feed will begin playing"
+      },
+      {
+        "content": "WHEN a user leaves the archived feed\nAND selects a feed from the same game again",
+        "expected": "THEN a modal will be presented with options to \"Resume\" or \"Watch From The Beginning\""
+      },
+      {
+        "content": "WHEN the user selects the \"Resume\" option",
+        "expected": "THEN the feed will play from the bookmarked position"
+      },
+      {
+        "content": "WHEN the user selects the \"Watch From The Beginning\" option",
+        "expected": "THEN the feed will play from the beginning"
+      }
+    ]
+  },
+  {
+    "id": 26450662,
+    "title": "Live Game- Resume Options",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1645553420,
+    "updated_by": 232,
+    "updated_on": 1650482918,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 20,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user selects a live feed",
+        "expected": "THEN the user will be presented with options to \"Watch Live\" or \"Watch From The Beginning\""
+      },
+      {
+        "content": "WHEN the user selects the \"Watch Live\" option",
+        "expected": "THEN the feed will play from the live point"
+      },
+      {
+        "content": "WHEN the user selects the \"Watch from Beginning\" option",
+        "expected": "THEN the feed will play from the beginning "
+      },
+      {
+        "content": "WHEN the user leaves a feed after playing\nAND the user selects a feed from the same game again",
+        "expected": "THEN the user will be presented with options to \"Resume\", \"Watch Live\", or  \"Watch From The Beginning\""
+      },
+      {
+        "content": "WHEN the user selects the \"Resume\" option",
+        "expected": "THEN the feed will play from the bookmarked position"
+      }
+    ]
+  },
+  {
+    "id": 26623842,
+    "title": "YouTube Pregame State",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1646173246,
+    "updated_by": 232,
+    "updated_on": 1654108582,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 21,
+    "custom_preconds": "GIVEN a user\r\n\r\n\r\nNOTE: YoutTube games are usually scheduled on Wednesdays. Look to a future Wendnesday on the Games page for a YouTube game to test with. If that is not possible (as in offseason it likely will be), to create the correct conditions to simulate this state, proxy https://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search* with the mastapi_youtube_pregame_in_tiles.json  file available at this link (too large to attach) AFTV: https://drive.google.com/file/d/1sawfuvFUafMk4cju4rCV3-wG7hGQzRuR/view?usp=sharing\r\nAND proxy https://statsapi.mlb.com/api/v1/schedule?gamePk=634641&hydrate=broadcasts%28all%29%2Cteam%2Cgame%28content%28media%28epg%29%29%29%2Clinescore%28%29&useLatestGames=false with the attached statsapi_youtube_pregame_in_tiles_feed_select.json (The date of the game will need be updated over time in these files, or the \"No Broadcasts Available\" feed will display once past the game date)",
+    "custom_steps": "WHEN a user selects a YouTube Game\r\nAND the game is in a pregame state\r\nAND there are no active feeds available",
+    "custom_expected": "THEN the \"You're a bit early!\" modal should be displayed",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26623843,
+    "title": "YouTube Live State",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1646173561,
+    "updated_by": 232,
+    "updated_on": 1646173561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 22,
+    "custom_preconds": "GIVEN a user\r\n\r\n\r\nNOTE: to create the correct conditions to simulate this state, proxy\thttps://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search* with the mastapi_youtube_live_game_in_tiles.json \r\navailable at this link (too large to attach) https://drive.google.com/file/d/16rOH9NsAYppWRHjhvK_sLZfLMF-YoSak/view?usp=sharing\r\nand \r\n\r\nhttps://statsapi.mlb.com/api/v1/schedule?gamePk=634641&hydrate=broadcasts%28all%29%2Cteam%2Cgame%28content%28media%28epg%29%29%29%2Clinescore%28%29&useLatestGames=false with the attached statsapi_youtube_live_game_in_tiles_feed_select.json",
+    "custom_steps": " WHEN a user selects a YouTube Game\r\nAND the game is in a live state",
+    "custom_expected": "  THEN the user should be presented with the \"Open YouTube\" modal",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26623844,
+    "title": "YouTube Archived State",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1646173974,
+    "updated_by": 232,
+    "updated_on": 1653504354,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 23,
+    "custom_preconds": "GIVEN a user\r\n\r\nNOTE: A real archived game should be available on Sept 8, 2021, Seattle at Houston. This game can be accessed to run this test case.\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a user selects a YouTube Game\nAND the game is in an archived state\n\n",
+        "expected": "THEN the user should be presented with a standard archived game modal (YouTube will be listed as the broadcaster call letters)"
+      },
+      {
+        "content": "WHEN the user is presented with the archived game modal\nANS the user is entitled\nAND the user selects the feed",
+        "expected": "THEN the game should play inside the MLB app"
+      }
+    ]
+  },
+  {
+    "id": 26636262,
+    "title": "Apple TV pregame",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1646335471,
+    "updated_by": 232,
+    "updated_on": 1686668362,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 24,
+    "custom_preconds": "GIVEN a user\r\n\r\nNOTE: Apple Games are usually scheduled on Fridays. Look to a future Friday on the Games page for an Apple TV game in pregame state. If this is not possible (as will likely be the case in the offseason), to simulate the conditions for this test case, proxy https://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search* with mastapi_appletv_pregame_in_tiles.json file available at this link(file too large to attach): https://drive.google.com/file/d/1pmGtMt37zp5rS1l1S0TxN7rl26k-R5aY/view?usp=sharing\r\nAND proxy true\thttps://statsapi.mlb.com:443/api/v1/schedule?gamePk=634641&hydrate=broadcasts%28all%29%2Cteam%2Cgame%28content%28media%28epg%29%29%29%2Clinescore%28%29&useLatestGames=false\twith the attached statsapi_search_appletv_pregame_in_feed_select.json\r\n",
+    "custom_steps": "WHEN an Apple + game is available in the game tiles\r\nAND the game is pregame (the stream is not yet available)\r\nAND the user selects the game ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an Apple + game is available in the game tiles\nAND the game is pregame (the stream is not yet available)",
+        "expected": "THEN an Apple TV+ pill should display on the tile"
+      },
+      {
+        "content": "WHEN the user selects the game tile",
+        "expected": "THEN a modal should indicate that the user is too early or that no broadcasts are available\n"
+      }
+    ]
+  },
+  {
+    "id": 26636266,
+    "title": "Apple TV live",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1646341568,
+    "updated_by": 232,
+    "updated_on": 1650647001,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 25,
+    "custom_preconds": "GIVEN a user\r\n\r\nNOTE: to simulate the conditions for this test case, proxy https://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search* with mastapi_appletv_live_game_in_tiles.json file available at this link(file too large to attach): https://drive.google.com/file/d/1fbv72ec2-4u95d9rp-9IK1qGjDzF-THz/view?usp=sharing\r\nAND proxy true https://statsapi.mlb.com:443/api/v1/schedule?gamePk=634641&hydrate=broadcasts%28all%29%2Cteam%2Cgame%28content%28media%28epg%29%29%29%2Clinescore%28%29&useLatestGames=false with the attached statsapi_search_appletv_live_game_in_feed_select.json",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an Appletv+ game is available in the game tiles\nAND the game is in a live state\nAND the user selects the game ",
+        "expected": "THEN the modal shows Apple TV+ specific messaging\nAND a selectable feed is available"
+      },
+      {
+        "content": "WHEN the user selects the selectable feed\nAND the user is in a blacked out country",
+        "expected": "THEN the app will redirect to the player\nAND Apple specific blackout messaging will be presented"
+      },
+      {
+        "content": "WHEN the user selects the selectable feed\nAND the user is in a non-blacked out country\n(a location spoofed account for France or the Dominican Republic will work to test this test case)",
+        "expected": "THEN the feed will play"
+      }
+    ]
+  },
+  {
+    "id": 26636267,
+    "title": "Apple TV archived",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1646341805,
+    "updated_by": 232,
+    "updated_on": 1653504985,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 26,
+    "custom_preconds": "GIVEN a user\r\n\r\nNOTE: Go to May 20, 2022 on the Games page and select the Saint Louis at Pittsburgh game to run this test case. ",
+    "custom_steps": "WHEN an Appletv+ game is available in the game tiles\r\nAND the game is in an archived state\r\nAND the user selects the game",
+    "custom_expected": "THEN the feed is presented as a standard archived game (No badge will be presented on the game tile, but the feed will be listed as \"Apple TV+\" in the feed select modal)\r\nAND an entitled user will be able to stream the game inside the app",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 28115050,
+    "title": "Pregame Show Feed select modal",
+    "section_id": 481393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1651185473,
+    "updated_by": 232,
+    "updated_on": 1651185473,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 113002,
+    "display_order": 27,
+    "custom_preconds": "GIVEN an entitled user\r\nAND a game with a live pregame show is currently available",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user clicks the game tile\nAND selects a feed with a live pregame show",
+        "expected": "THEN a modal will pop up with Watch Live and Watch From The Beginning options\nAND these buttons will function as expected"
+      },
+      {
+        "content": "WHEN the user leaves the pregame show\nAND then returns to the feed",
+        "expected": "THEN a modal will pop up with Resume, Watch Live, and Watch From The Beginning options\nAND these buttons will function as expected"
+      }
+    ]
+  }
+]

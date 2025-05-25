@@ -1,0 +1,137 @@
+[
+  {
+    "id": 142324,
+    "suite_id": 18705,
+    "name": "Device Support",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 139990,
+    "suite_id": 18705,
+    "name": "On-boarding",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 139997,
+    "suite_id": 18705,
+    "name": "Questions Interface",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 140002,
+    "suite_id": 18705,
+    "name": "Text",
+    "description": null,
+    "parent_id": 139997,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 140003,
+    "suite_id": 18705,
+    "name": "Voice",
+    "description": null,
+    "parent_id": 139997,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 124542,
+    "suite_id": 18705,
+    "name": "General",
+    "description": "https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=Stats+Leaders",
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 139746,
+    "suite_id": 18705,
+    "name": "iOS Stat Type Categories",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 144050,
+    "suite_id": 18705,
+    "name": "Android Stat Type Categories",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 139542,
+    "suite_id": 18705,
+    "name": "Deeplinks",
+    "description": "https://wiki.mlbam.com/pages/viewpage.action?pageId=55312411",
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 139699,
+    "suite_id": 18705,
+    "name": "Requests by Stat Category",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 139747,
+    "suite_id": 18705,
+    "name": "Requests by Stat Type",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 139543,
+    "suite_id": 18705,
+    "name": "Shared Stat Categories for iOS",
+    "description": null,
+    "parent_id": null,
+    "display_order": 45,
+    "depth": 0
+  },
+  {
+    "id": 148803,
+    "suite_id": 18705,
+    "name": "Individual Leader - Current Season (Text/Voice Response)_BDINT-875",
+    "description": null,
+    "parent_id": null,
+    "display_order": 46,
+    "depth": 0
+  },
+  {
+    "id": 148805,
+    "suite_id": 18705,
+    "name": "One Leader",
+    "description": null,
+    "parent_id": 148803,
+    "display_order": 47,
+    "depth": 1
+  },
+  {
+    "id": 148806,
+    "suite_id": 18705,
+    "name": "Multi Player Tie",
+    "description": null,
+    "parent_id": 148803,
+    "display_order": 49,
+    "depth": 1
+  }
+]

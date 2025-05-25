@@ -1,0 +1,11 @@
+{
+  "id": 549459,
+  "name": "FieldPass Tracking",
+  "description": "This test suite contains test cases regarding tracking on field pass in an Android device. \r\nIn order to test the tracking, you must have access to wi-fi, an android phone and Charles Proxy or a similar proxying tool. The test cases were built around using Charles, so if you would like to use a different tool, you must be aware of the analogous behavior of the other tool of your choice. It is also important that you have a debug version of the app NOT release version. With release version, you won't be able to track these events.",
+  "project_id": 205,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/549459"
+}

@@ -1,0 +1,362 @@
+[
+  {
+    "id": 157241,
+    "suite_id": 21892,
+    "name": "Season",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 157242,
+    "suite_id": 21892,
+    "name": "Timeframe",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 157243,
+    "suite_id": 21892,
+    "name": "Game Type",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 157244,
+    "suite_id": 21892,
+    "name": "Day/Night",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 157245,
+    "suite_id": 21892,
+    "name": "Balls",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 157246,
+    "suite_id": 21892,
+    "name": "Strikes",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 157247,
+    "suite_id": 21892,
+    "name": "Outs",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 157248,
+    "suite_id": 21892,
+    "name": "Team",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 157249,
+    "suite_id": 21892,
+    "name": "Home Team Name",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 157250,
+    "suite_id": 21892,
+    "name": "Away Team Name",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 157251,
+    "suite_id": 21892,
+    "name": "Batting Team Name",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 157252,
+    "suite_id": 21892,
+    "name": "Pitching Team Name",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 157253,
+    "suite_id": 21892,
+    "name": "Batter Name",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 157254,
+    "suite_id": 21892,
+    "name": "Batter Side",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 157255,
+    "suite_id": 21892,
+    "name": "Pitcher Name",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 157256,
+    "suite_id": 21892,
+    "name": "Pitcher Hand",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 157257,
+    "suite_id": 21892,
+    "name": "Hit Result",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 157258,
+    "suite_id": 21892,
+    "name": "Pitch Type",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 157259,
+    "suite_id": 21892,
+    "name": "Pitch Result",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 157260,
+    "suite_id": 21892,
+    "name": "Primary Fielder Name",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 157261,
+    "suite_id": 21892,
+    "name": "Primary Fielder Position",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 157262,
+    "suite_id": 21892,
+    "name": "Catch Rating",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 157263,
+    "suite_id": 21892,
+    "name": "Limit",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 157264,
+    "suite_id": 21892,
+    "name": "Feed Preference",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 157265,
+    "suite_id": 21892,
+    "name": "Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 305183,
+    "suite_id": 21892,
+    "name": "Metadata",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 305202,
+    "suite_id": 21892,
+    "name": "Inning",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 305203,
+    "suite_id": 21892,
+    "name": "Result Of Runner On First",
+    "description": null,
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  },
+  {
+    "id": 305204,
+    "suite_id": 21892,
+    "name": "Result Of Runner On Second",
+    "description": null,
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 305205,
+    "suite_id": 21892,
+    "name": "Result Of Runner On Third",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 305206,
+    "suite_id": 21892,
+    "name": "Runner Name On First",
+    "description": null,
+    "parent_id": null,
+    "display_order": 31,
+    "depth": 0
+  },
+  {
+    "id": 305207,
+    "suite_id": 21892,
+    "name": "Runner Name On Second",
+    "description": null,
+    "parent_id": null,
+    "display_order": 32,
+    "depth": 0
+  },
+  {
+    "id": 305208,
+    "suite_id": 21892,
+    "name": "Runner Name On Third",
+    "description": null,
+    "parent_id": null,
+    "display_order": 33,
+    "depth": 0
+  },
+  {
+    "id": 305209,
+    "suite_id": 21892,
+    "name": "Runner On Base",
+    "description": null,
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 305210,
+    "suite_id": 21892,
+    "name": "Runner Out At",
+    "description": null,
+    "parent_id": null,
+    "display_order": 35,
+    "depth": 0
+  },
+  {
+    "id": 305231,
+    "suite_id": 21892,
+    "name": "Master Tags",
+    "description": null,
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  },
+  {
+    "id": 353711,
+    "suite_id": 21892,
+    "name": "Video Recommendations",
+    "description": null,
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 383567,
+    "suite_id": 21892,
+    "name": "Reel Creation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 478193,
+    "suite_id": 21892,
+    "name": "Range Operator",
+    "description": null,
+    "parent_id": null,
+    "display_order": 39,
+    "depth": 0
+  },
+  {
+    "id": 859341,
+    "suite_id": 21892,
+    "name": "Typeahead",
+    "description": null,
+    "parent_id": null,
+    "display_order": 40,
+    "depth": 0
+  }
+]

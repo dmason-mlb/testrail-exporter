@@ -1,0 +1,11 @@
+{
+  "id": 450658,
+  "name": "OneSignal- In-App Messaging",
+  "description": "TESTING NOTES:\r\n* The One Signal dashboard can be found here: https://app.onesignal.com/\r\n* To have a device show up as a user in production One Signal Users Tab, you need to run the prod release build (all other variants of prod, staging and qa show up in One Signal's QA MLB Predict (TBD the name of the app)  App)\r\n* To have a InApp Message with trigger show up, you need to include an IN-APP TRIGGER and SESSION DURATION",
+  "project_id": 225,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/450658"
+}

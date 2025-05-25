@@ -1,0 +1,402 @@
+[
+  {
+    "id": 21779012,
+    "title": "Notification Settings",
+    "section_id": 1087170,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1628525518,
+    "updated_by": 435,
+    "updated_on": 1715020875,
+    "estimate": null,
+    "estimate_forecast": "29m 40s",
+    "suite_id": 364841,
+    "display_order": 1,
+    "custom_preconds": "User must be using a Google Play Store device with an active Google Play Store account and an up to date Google Play Services\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navigates to the Notification Settings Screen during Onboarding\nand adds a favorite team",
+        "expected": "Then the user should see:\n- Global notification toggled ON\n- MLB News notification toggled ON\n- Favorite team's Game Start, Game End, Scoring Plays, and News notifications toggled ON"
+      },
+      {
+        "content": "When the user navigates to the Notification Settings Screen",
+        "expected": "Then the user should see:\n- A Global Notification ON/OFF Toggle\n- MLB News Notification Toggle\n- Notification Toggles for each team alert type"
+      },
+      {
+        "content": "When the user toggles the global notification toggle on\nAnd when the user signs up for at least one notification type for a given team \nAnd the user leaves the notification screen",
+        "expected": "Then the user should be subscribed to the notification channel\nAnd the user should begin receiving notifications for the selected channel"
+      },
+      {
+        "content": "When the user toggles the global notification toggle OFF\nAnd the user leaves the notification settings screen",
+        "expected": "Then the user should not receive notifications for any subscribed channel.\n\n(Verify with second subscribed device that notification is sent successfully.)"
+      },
+      {
+        "content": "Verify all notification types for each team",
+        "expected": "Notification options for each team should be:\n\nGame Start\nGame End\nScoring Plays\nLead Change\nPitching Change\nCondensed Game\nVideo Highlight\nTeam News"
+      },
+      {
+        "content": "When the user makes changes to their notification settings\nAnd the user loses connection (can force airplane mode)\nAnd the user leaves the notification settings screen",
+        "expected": "Then the user should receive a notification informing them that their notification settings could not be saved. "
+      },
+      {
+        "content": "When the user regains connection after leaving the notification screen\nAnd taps the notification in the notification tray",
+        "expected": "Then the user should receive a notification informing them that their notification settings have been saved\nAnd when the user returns to the notification screen they should see their changes appear as they have saved them. \nAnd when the user receives a notification that they recently signed up for and saved via the notification, they should receive the notification. (Verifying that their changes were actually sent to the service by tapping the notification.) "
+      }
+    ]
+  },
+  {
+    "id": 21779014,
+    "title": "MLB News",
+    "section_id": 1087171,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1628525525,
+    "updated_by": 238,
+    "updated_on": 1628525525,
+    "estimate": null,
+    "estimate_forecast": "4h 58m 55s",
+    "suite_id": 364841,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to \"MLB News\" notifications",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send MLB News Notification of a news article",
+        "expected": "User should receive the notification and the content of the notification should not be truncated or cut off"
+      },
+      {
+        "content": "User taps MLB News Notification of a news article",
+        "expected": "At Bat should open and the user should be taken to the URL that was sent with the MLB News Notification\n\n(If no URL was specified, the user should be left on the default At Bat screen)"
+      },
+      {
+        "content": "Send MLB News Notification of a video highlight\n(usually begins with the word \"Video\")",
+        "expected": "User should receive the notification and the content of the notification should not be truncated or cut off"
+      },
+      {
+        "content": "User taps MLB News Notification of a video highlight",
+        "expected": "At Bat should open and the video highlight that was sent with the MLB News Notification should launch\n\n(If no URL was specified, the user should be left on the default At Bat screen)"
+      }
+    ]
+  },
+  {
+    "id": 21779016,
+    "title": "Game Start",
+    "section_id": 1087171,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1628525525,
+    "updated_by": 238,
+    "updated_on": 1628525525,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 364841,
+    "display_order": 3,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to a team's Game Start notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Game Start Notification",
+        "expected": "Then the user should receive a 'Game Start'  notification"
+      },
+      {
+        "content": "User taps Game Start Notification",
+        "expected": "At Bat should open and the user should be taken to the Gameday view for the appropriate game"
+      }
+    ]
+  },
+  {
+    "id": 21779017,
+    "title": "Game End",
+    "section_id": 1087171,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1628525525,
+    "updated_by": 238,
+    "updated_on": 1628525525,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 364841,
+    "display_order": 4,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to a team's Game End notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Game End Notification",
+        "expected": "Then the user should receive a 'Game End' notification"
+      },
+      {
+        "content": "User taps Game End Notification",
+        "expected": "At Bat should open and the user should be taken to the Gameday view for the appropriate game"
+      }
+    ]
+  },
+  {
+    "id": 21779018,
+    "title": "Scoring Plays",
+    "section_id": 1087171,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1628525525,
+    "updated_by": 238,
+    "updated_on": 1628525525,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 364841,
+    "display_order": 5,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to a team's Scoring Play notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Scoring Play Notification",
+        "expected": "Then the user should receive a 'Scoring Play' notification"
+      },
+      {
+        "content": "User taps Scoring Play Notification",
+        "expected": "At Bat should open and the user should be taken to the Gameday view for the appropriate game"
+      }
+    ]
+  },
+  {
+    "id": 21779019,
+    "title": "Lead Change",
+    "section_id": 1087171,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1628525525,
+    "updated_by": 238,
+    "updated_on": 1628525525,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 364841,
+    "display_order": 6,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to a team's Lead Change notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Lead Change Notification",
+        "expected": "Then the user should receive a 'Lead Change' notification"
+      },
+      {
+        "content": "User taps Lead Change Notification",
+        "expected": "At Bat should open and the user should be taken to the Gameday view for the appropriate game"
+      }
+    ]
+  },
+  {
+    "id": 21779020,
+    "title": "Pitching Change",
+    "section_id": 1087171,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1628525525,
+    "updated_by": 238,
+    "updated_on": 1628525525,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 364841,
+    "display_order": 7,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to a team's Pitching Change notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Pitching Change Notification",
+        "expected": "Then the user should receive a 'Pitching Change' notification"
+      },
+      {
+        "content": "User taps Pitching Change notification",
+        "expected": "At Bat should open and the user should be taken to the Gameday view for the appropriate game"
+      }
+    ]
+  },
+  {
+    "id": 21779021,
+    "title": "Condensed Game",
+    "section_id": 1087171,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1628525525,
+    "updated_by": 238,
+    "updated_on": 1628525525,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 364841,
+    "display_order": 8,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is logged in with a paid account\r\nand is subscribed to a team's Condensed Game notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Condensed Game notification",
+        "expected": "Then the user should receive a video highlight notification\nAnd the highlight should have \"CG:\" in the notification title"
+      },
+      {
+        "content": "User taps on the Condensed Game notification",
+        "expected": "Then the Video Highlight should begin to play\nAnd when the highlight is done the user should be left on At Bat's default screen (Generally Team page or Scoreboard)"
+      }
+    ]
+  },
+  {
+    "id": 21779022,
+    "title": "Video Highlights",
+    "section_id": 1087171,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1628525525,
+    "updated_by": 238,
+    "updated_on": 1628525525,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 364841,
+    "display_order": 9,
+    "custom_preconds": "Given At Bat is installed\r\nand they are subscribed to a team's In-Game Video Highlights notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Video Highlight notification",
+        "expected": "Then the user should receive a video highlight notification\nAnd the highlight should have \"Video:\" in the notification title"
+      },
+      {
+        "content": "User taps on the Video highlight notification",
+        "expected": "Then the Video Highlight should begin to play\nAnd when the highlight is done the user should be left on At Bat's default screen (Generally Team page or Scoreboard)"
+      }
+    ]
+  },
+  {
+    "id": 21779023,
+    "title": "Team News",
+    "section_id": 1087171,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1628525525,
+    "updated_by": 238,
+    "updated_on": 1628525525,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 364841,
+    "display_order": 10,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to a team's news notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Team News Notification",
+        "expected": "User should receive the notification and the content of the notification should not be truncated or cut off"
+      },
+      {
+        "content": "User taps Team News Notification",
+        "expected": "At Bat should open and the user should be taken to the URL that was sent with the Team News Notification\n\n(If no URL was specified, the user should be left on the default At Bat screen)"
+      }
+    ]
+  },
+  {
+    "id": 21779024,
+    "title": "Spanish",
+    "section_id": 1087171,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1628525525,
+    "updated_by": 238,
+    "updated_on": 1628525525,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 364841,
+    "display_order": 11,
+    "custom_preconds": "Given At Bat is installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the device language is set to Spanish\nand the user subscribes to At Bat push notifications",
+        "expected": "Then the user should be able to sign up for and receive notifications on the device\nAnd the user should receive Spanish language notifications"
+      },
+      {
+        "content": "When the user is signed up for English notifications\nAnd the user changes their device to Spanish language\nAnd the user opens At Bat",
+        "expected": "Then the user's notification subscriptions should be changed from English to Spanish\nAnd vice versa"
+      }
+    ]
+  },
+  {
+    "id": 21779025,
+    "title": "Notification Tray",
+    "section_id": 1087171,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 238,
+    "created_on": 1628525525,
+    "updated_by": 238,
+    "updated_on": 1628525525,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 364841,
+    "display_order": 12,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to push notifications",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user expands a notification from the notification tray",
+        "expected": "Then the notification should expand\nand the user should be able to read the notification text in its entirety"
+      },
+      {
+        "content": "When the user swipes away an individual notification\nOr clears all notifications",
+        "expected": "Then the Notification should disappear\nAnd the Notifications should NOT be 'ongoing' notifications"
+      }
+    ]
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "id": 86658,
+    "suite_id": 14078,
+    "name": "Initial Launch of App",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 86659,
+    "suite_id": 14078,
+    "name": "Login Required window",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 86660,
+    "suite_id": 14078,
+    "name": "Login to MLB.TV window",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 86661,
+    "suite_id": 14078,
+    "name": "Menu window",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 86662,
+    "suite_id": 14078,
+    "name": "Sub-Menus",
+    "description": null,
+    "parent_id": 86661,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 86663,
+    "suite_id": 14078,
+    "name": "Home Team",
+    "description": null,
+    "parent_id": 86662,
+    "display_order": 6,
+    "depth": 2
+  },
+  {
+    "id": 86664,
+    "suite_id": 14078,
+    "name": "Calendar",
+    "description": null,
+    "parent_id": 86662,
+    "display_order": 7,
+    "depth": 2
+  },
+  {
+    "id": 86665,
+    "suite_id": 14078,
+    "name": "Stats & Standings",
+    "description": null,
+    "parent_id": 86662,
+    "display_order": 8,
+    "depth": 2
+  },
+  {
+    "id": 86666,
+    "suite_id": 14078,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 86662,
+    "display_order": 9,
+    "depth": 2
+  }
+]

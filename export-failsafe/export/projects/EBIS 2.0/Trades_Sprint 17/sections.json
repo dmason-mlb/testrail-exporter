@@ -1,0 +1,74 @@
+[
+  {
+    "id": 29471,
+    "suite_id": 3273,
+    "name": "View Outright Trade",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 29472,
+    "suite_id": 3273,
+    "name": "Create Outright Trade",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 30482,
+    "suite_id": 3273,
+    "name": "Add Player",
+    "description": null,
+    "parent_id": 29472,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 69449,
+    "suite_id": 3273,
+    "name": "Written Consent Column",
+    "description": null,
+    "parent_id": 30482,
+    "display_order": 5,
+    "depth": 2
+  },
+  {
+    "id": 30484,
+    "suite_id": 3273,
+    "name": "Cash Considerations",
+    "description": null,
+    "parent_id": 29472,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 29837,
+    "suite_id": 3273,
+    "name": "Submit Outright Trade",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 30483,
+    "suite_id": 3273,
+    "name": "Business Rules",
+    "description": null,
+    "parent_id": 29837,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 69861,
+    "suite_id": 3273,
+    "name": "Approve an Outright Trade",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  }
+]

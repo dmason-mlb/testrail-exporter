@@ -1,0 +1,1055 @@
+[
+  {
+    "id": 26191537,
+    "title": "Splash Page",
+    "section_id": 1353639,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-3553",
+    "created_by": 282,
+    "created_on": 1643132856,
+    "updated_by": 258,
+    "updated_on": 1654116727,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 2,
+    "custom_preconds": "GIVEN user MLB Play app open \r\nAND User not Logged in ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is not logged in / or freshly installed the app",
+        "expected": "THEN user should see a splash page that asks user to Log In or Sign Up \nThings to be displayed\n* MLB Play logo\n* 'Log in with MLB' button\n* 'Don't have an account? Sign Up'"
+      },
+      {
+        "content": "WHEN user is logged in",
+        "expected": "THEN bypass the splash page and send user back to the home page (Games Tab) "
+      }
+    ]
+  },
+  {
+    "id": 28602957,
+    "title": "Sign Up page",
+    "section_id": 1510828,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1653599194,
+    "updated_by": 258,
+    "updated_on": 1680197679,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 1,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user goes through the Sign up flow",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the sign up page",
+        "expected": "THEN user is displayed with\n* title “Sign Up” \n* back arrow in the top left corner\n* copy 'Join the fun of MLB Play with a FREE MLB account.' \n* '*Please fill in the required fields.' copy\n* An email text field with \n* A Nickname text field \n* A password field\n* A Birthdate MM/DD/YYY text field with \n* A Country of Residence field\n* 'If your country is not listed, choose \"Other\"' copy underneath the Country of Residence field\n* Legal copy 'By signing up, I acknowledge that I have read, understand, and agree to be bound by MLB Play’s Official Rules, MLB's Terms of Use and MLB’s Privacy Policy. \n* A greyed out sign up button\n* Already have an account? Log In. Log In is a link\n\nAND all fields have an asterisk"
+      },
+      {
+        "content": "WHEN user clicks on Official Rules",
+        "expected": "THEN Official Rules page opens in a webview "
+      },
+      {
+        "content": "WHEN user clicks on Terms of Use",
+        "expected": "THEN Terms of Use Agreement page opens in a webview"
+      },
+      {
+        "content": "WHEN user clicks on Privacy Policy",
+        "expected": "THEN MLB Privacy Policy page opens in a webview"
+      },
+      {
+        "content": "WHEN user enters the information in all the fields",
+        "expected": "THEN the Sign Up button becomes blue and active"
+      },
+      {
+        "content": "WHEN user clicks on Log In ",
+        "expected": "THEN Log In page opens"
+      },
+      {
+        "content": "WHEN user clicks on back arrow",
+        "expected": "THEN the welcome page opens"
+      }
+    ]
+  },
+  {
+    "id": 28606495,
+    "title": "Sign Up - Email field",
+    "section_id": 1510828,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1653672280,
+    "updated_by": 258,
+    "updated_on": 1683824500,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 2,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user goes through the Sign up flow",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user enters an Invalid email ",
+        "expected": "THEN the line is turned red with the text “Please enter a valid email address”"
+      },
+      {
+        "content": "WHEN user enters Latin symbols",
+        "expected": "THEN the line is turned red with the text “Please enter a valid email address”"
+      },
+      {
+        "content": "WHEN user puts the space",
+        "expected": "THE the error message appears: 'The first character must be a letter or number'"
+      },
+      {
+        "content": "WHEN user enters a valid email\n\nvalid emails include:\n\nuser@gmail.com\nuser+@gmail.com\nuser-@gmail.com\nuser?@gmail.com\nuser=/-+@gmail.com\nuser%20@gmail.com\nandi2019p@mlb.com",
+        "expected": "WHEN the field accepts the email and throws no error message"
+      }
+    ]
+  },
+  {
+    "id": 26017756,
+    "title": "Sign Up - Nickname",
+    "section_id": 1510828,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1642171709,
+    "updated_by": 258,
+    "updated_on": 1654116740,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 4,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user goes through the Sign up flow\r\n",
+    "custom_steps": "WEHN User on Nickname field during the Sign Up ",
+    "custom_expected": "THEN user should be able to enter nickname ( 6-15 Character / Letter and numbers only) \r\n\r\n\r\n\r\nIf User leave empty or does not met requirement - User should display with enter valid nickname) \r\n\r\niOS - Nickname must be 6-15 character long \r\nAndroid - First we display message - 6-15 Character \r\nIf User enter special character then display message - only letters and numbers",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the Nickname field",
+        "expected": "THEN nickname criteria should be: \n\n* nicknames should not be unique\nmust be 6-15 characters long\n* must contain only letters and numbers\n* can not contain spaces and special characters\n* can not contain non-English characters\n* can not be disruptive or offensive\n* can not contain emoji"
+      },
+      {
+        "content": "WHEN user enters nickname that is shorter than 6 characters or longer than 15",
+        "expected": "THEN user should see the error message\n\n\niOS - Nickname must be 6-15 character long \nAndroid - First we display message - 6-15 Character "
+      },
+      {
+        "content": "WHEN user enters nickname with special character",
+        "expected": "THEN user should see the error message 'Nickname mush contain only letters and numbers"
+      },
+      {
+        "content": "WHEN user enters disruptive or offensive nickname",
+        "expected": "THEN user should see the error message 'Please choose another nickname'"
+      }
+    ]
+  },
+  {
+    "id": 28606517,
+    "title": "Sign Up - Password",
+    "section_id": 1510828,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1653676170,
+    "updated_by": 258,
+    "updated_on": 1678904092,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 7,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user goes through the Sign up flow\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is creating a password",
+        "expected": "THEN the user will see the following password requirements and must make a password fitting the following password requirements:\n - No special characters\n - One number\n - One uppercase letter\n - One lowercase letter\n - 8-15 characters"
+      },
+      {
+        "content": "WHEN user enters an invalid password ",
+        "expected": "THEN the corresponding issues with the password should be red with an X in the requirements field\n"
+      },
+      {
+        "content": "WHEN user enters a valid password",
+        "expected": "THEN all the password requirements should have a check mark next to them"
+      },
+      {
+        "content": "WHEN user clicks the eyeball after entering a password",
+        "expected": "THEN the text in the password field should become visible"
+      }
+    ]
+  },
+  {
+    "id": 26017755,
+    "title": "Sign Up - Birthdate",
+    "section_id": 1510828,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1642171692,
+    "updated_by": 258,
+    "updated_on": 1682439838,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 8,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user goes through the Sign up flow\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the Birthdate field",
+        "expected": "THEN user should see:\n* the field placeholder iOS: 'Birthdate MM/DD/YYYY'\nAndroid: Birthdate"
+      },
+      {
+        "content": "WHEN user enters a future birthdate",
+        "expected": "THEN user is displayed with “Please enter a correct birthdate” message "
+      },
+      {
+        "content": "WHEN user enters an invalid birthdate ",
+        "expected": "THEN user is displayed with: 'Please enter your birthday in the format mm/dd/yyyy' message "
+      },
+      {
+        "content": "WHEN user enters a birthdate which is under 21",
+        "expected": "THEN user is displayed with: 'You must be at least 21 years of age to access MLB Play.'\nAND 'Sign Up' button stays diactivated"
+      },
+      {
+        "content": "WHEN user enters a birthday which is 21+",
+        "expected": "THEN no error message should appear\nAND user should be able to continue the sign up flow"
+      },
+      {
+        "content": "WHEN user enters year older than 122 years",
+        "expected": "THEN user receives an error message 'Please enter a correct birthdate'"
+      }
+    ]
+  },
+  {
+    "id": 30296746,
+    "title": "Sign Up - Country of Residence",
+    "section_id": 1510828,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1678904007,
+    "updated_by": 258,
+    "updated_on": 1678904086,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 9,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is going through the Sign Up flow",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the 'Country of Residence' field",
+        "expected": "THEN user sees 'Country of Residence' inside the field\nAND 'Country of Residence' is not pre-filled\nAND copy 'If your country is not listed, choose “Other”' is displayed underneath the text field"
+      },
+      {
+        "content": "WHEN user clicks on that field",
+        "expected": "THEN 'Country of Residence' moved to the top borderline\nAND drop down list appears"
+      },
+      {
+        "content": "WHEN user scrolls through the drop down list",
+        "expected": "THEN user is displayed with a drop-down list with the following countries in order:\n\nUnited States\nAustralia\nCanada\nChina\nColombia\nCuba\nDominican Republic\nFrance\nGermany\nIndia\nIsrael\nItaly\nJapan\nMexico\nNetherlands\nPanama\nPuerto Rico\nSouth Korea\nTaiwan\nUnited Kingdom\nVenezuela\nOther"
+      },
+      {
+        "content": "WHEN user selects Canada",
+        "expected": "THEN an additional drop-down field is displayed (separate TC)"
+      },
+      {
+        "content": "WHEN user selects any other country",
+        "expected": "THEN no additional drop-down field is displayed "
+      },
+      {
+        "content": "WHEN user selects Country of Residence",
+        "expected": "THEN Sign Up button gets active"
+      }
+    ]
+  },
+  {
+    "id": 30296747,
+    "title": "Sign Up - Province",
+    "section_id": 1510828,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1678904007,
+    "updated_by": 258,
+    "updated_on": 1678904135,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 10,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is going through the Sign Up flow\r\nAND user selected Canada as Residence",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user selects Canada",
+        "expected": "THEN an additional drop-down field is displayed asking them to declare their Province (listed in alphabetical order)\n\nAlberta\nBritish Columbia\nManitoba\nNew Brunswick\nNewfoundland and Labrador\nNorthwest Territories\nNova Scotia\nNunavut\nOntario\nPrince Edward Island\nQuebec\nSaskatchewan\nYukon\n"
+      },
+      {
+        "content": "WHEN user selects a province ",
+        "expected": "THEN Sign UP button gets active"
+      }
+    ]
+  },
+  {
+    "id": 28511371,
+    "title": "EC - existing email",
+    "section_id": 1510828,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1652382169,
+    "updated_by": 258,
+    "updated_on": 1654116754,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 11,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user has an MLB account",
+    "custom_steps": "WHEN user tried to Sign Up with an existing account (e-mail address)",
+    "custom_expected": "THEN user is not able to SIgn Up \r\nAND error message is displayed 'An account has already been created with that email address. If this account belongs to you, please log in to access your account or update your information and preference.'",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 28628052,
+    "title": "Favorite Team",
+    "section_id": 1510828,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1654017648,
+    "updated_by": 258,
+    "updated_on": 1677526827,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 15,
+    "custom_preconds": "GIVEN MLB  Play app installed on Device\r\nAND user is going through Sign Up flow",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the favorite team selection page",
+        "expected": "THEN user is displayed with:\n\n* 'Favorite Team' title\n* copy 'Select your favorite team.\nYou can change at any time.'\n* Grid of all teams with their logos and names (make sure logos and names are up to date)\n* 'Next' button (disabled)\n"
+      },
+      {
+        "content": "WHEN user selects a team",
+        "expected": "THEN selected team has a white border \nAND 'Next' button is enabled"
+      },
+      {
+        "content": "WHEN user clicks on 'Skip'",
+        "expected": "THEN user is brought to the Games tab"
+      },
+      {
+        "content": "WHEN user selects the team\nAND user clicks 'Next'",
+        "expected": "THEN user is brought to the Games tab\nAND selected favorite team is displayed in user's avatar and wallpaper"
+      }
+    ]
+  },
+  {
+    "id": 28602958,
+    "title": "Notification page - iOS",
+    "section_id": 1510828,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1653599194,
+    "updated_by": 258,
+    "updated_on": 1654808527,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 17,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user goes through the Sign up flow\r\nAND user is on Notification page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the Notification page",
+        "expected": "THEN user should be displayed with\n\n* title “Notifications” \n- picture/icon in the middle of the screen\n- below the picture should be the message “MLB Play uses push notifications to notify you of available games, important updated, and your scores.”\n- and there should be a clickable \"Enable In Settings\" and \"Skip this for now\" buttons\n\n"
+      },
+      {
+        "content": "If user clicks on 'Enable Notifications'",
+        "expected": "THEN user is taken to device settings - MLB Play\n"
+      },
+      {
+        "content": "WHEN user click 'Skip for now'",
+        "expected": "THEN user is brought to the Games tab in the app"
+      },
+      {
+        "content": "WHEN user enables notification in device settings",
+        "expected": "WHEN user goes back to the app, user sees the copy 'Notifications are enabled. You'll be notified of available games, important updates, and your scores.'"
+      },
+      {
+        "content": "WHEN user disables notification in device settings",
+        "expected": "WHEN user goes back to the app, user sees the copy 'Notifications are disabled. MLB Play uses push notifications to notify you of available games, important updates, and your scores.'"
+      }
+    ]
+  },
+  {
+    "id": 28511334,
+    "title": "App Tracking Transparency for new users",
+    "section_id": 1510828,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-3564",
+    "created_by": 258,
+    "created_on": 1652376090,
+    "updated_by": 258,
+    "updated_on": 1654116772,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 20,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user Signs Up to the app\nAND is on the EULA page (Agree to Term page)",
+        "expected": "THEN the App Tracking Transparency (ATT) is prompt \n\nThings to display: \n* title 'Allow \"MLB Play\" to track your activity across other companies' apps and websites?'\n* copy ' This allows MLB PLay to provide you with a more personalized playing experience\n* Ask App not ot Track \n* Allow\n"
+      },
+      {
+        "content": "WHEN user clicks 'Allow'",
+        "expected": "THEN the Allow Tracking switch should be ON"
+      },
+      {
+        "content": "WHEN user clicks 'Ask App not to Track'",
+        "expected": "THEN the Allow Tracking switch should be OFF"
+      }
+    ]
+  },
+  {
+    "id": 28606505,
+    "title": "Sign Up flow",
+    "section_id": 1510828,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1653674736,
+    "updated_by": 258,
+    "updated_on": 1677526869,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 21,
+    "custom_preconds": "GIVEN MLB Play app installed on Device",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user opens the MLB PLay app",
+        "expected": "THEN user sees the splash page (separate TC)"
+      },
+      {
+        "content": "WHEN user clicks on 'Sign Up' or 'Don't have an account? Sign Up' links",
+        "expected": "THEN user is displayed with 'Sign Up' page (separate TC)"
+      },
+      {
+        "content": "WHEN user clicks on back arrow",
+        "expected": "THEN user is brought to the splash screen"
+      },
+      {
+        "content": "WHEN user enters information in all fields and clicks in 'Sign Up' button",
+        "expected": "THEN user is displayed with the Notification page (separate TC)"
+      },
+      {
+        "content": "WHEN user selects the notification option",
+        "expected": "THEN user is displayed with 'Select Your Favorite Team' page (separate TC)"
+      },
+      {
+        "content": "WHEN user selects their favorite team and clicks 'Next'",
+        "expected": "THEN user is brought to the Games tab"
+      }
+    ]
+  },
+  {
+    "id": 26081128,
+    "title": "Sign Up - error messages",
+    "section_id": 1510828,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-3538",
+    "created_by": 282,
+    "created_on": 1642791709,
+    "updated_by": 258,
+    "updated_on": 1674162922,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 22,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user goes through the Sign up flow\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WEHN user enters an invalid email address in Email Address field ",
+        "expected": "THEN user should be displayed with an error message 'Please enter a valid email address'"
+      },
+      {
+        "content": "WHEN user enters an invalid Nickname ",
+        "expected": "THEN user should be displayed with an error message 'Nickname must be 6-15 characters long'"
+      },
+      {
+        "content": "WHEN user enters Password on the Password field ",
+        "expected": "THEN user should be displayed with checkmark against the requirement for the password \n\nNote: All option are displayed below the Password and user will display with Red color for invalid entries and checkmark filled with white background for the valid entry \n"
+      },
+      {
+        "content": "WHEN user enters an invalid Password and clicks on another text field",
+        "expected": "THEN user should be displayed with an error message 'Your password does not meet the requirement'"
+      },
+      {
+        "content": "WHEN user enters a password of less than 8 characters or more than 15 characters ",
+        "expected": "THEN user should be displayed with an error message 'Password is not between 8 and 15 characters'"
+      },
+      {
+        "content": "WHEN user is on Birthdate field and enters a birthday > 21 year old ",
+        "expected": "THEN user should be displayed with 'You must be at least 21 years of age to access MLB Play'"
+      },
+      {
+        "content": "WHEN user is on Birthdate field and enters a future date",
+        "expected": "THEN user should be displayed with an error message 'You must be at least 21 years of age to access MLB Play'"
+      }
+    ]
+  },
+  {
+    "id": 26017747,
+    "title": "Login UI",
+    "section_id": 1511141,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-3531",
+    "created_by": 282,
+    "created_on": 1642171223,
+    "updated_by": 258,
+    "updated_on": 1680200817,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 1,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user goes through the Log In flow\r\n",
+    "custom_steps": "[Android] WHEN user taps 'Log in with MLB' link\r\nOR\r\n[iOS] WHEN user taps 'Log in with another MLB account' link",
+    "custom_expected": "THEN Log In screen is displayed:\r\n* Email textfield\r\n* Password textfield\r\n* Log In button\r\n\r\nDon't have an account? Sign Up link (iOs/Android)\r\nForgot Password? link (ANDROID) (Above the copy of TOS and PP and Log In)\r\nForgot Password? (iOS) - (Above the copy of TOS and PP and Log In)\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is viewing the Log In page\n\n",
+        "expected": "THEN user is displayed with\n* \"Log In\" title\n* copy 'Join the fun of MLB Play with your MLB account.'\n* Email Address fiend\n* Password field\n* copy 'By logging in, I agree to MLB Play’s Official Rules, MLB's Terms of Use and MLB’s Privacy Policy.'\n* 'Forgot Password?' link\n* 'Log In' button (grayed out)\n* 'Don't have an account? Sign Up'"
+      },
+      {
+        "content": "WHEN user clicks on Official Rules link",
+        "expected": "THEN user is displayed with Official Rules in a webview"
+      },
+      {
+        "content": "WHEN user clicks on Terms of Use link",
+        "expected": "THEN user is displayed with Terms of Use in a webview"
+      },
+      {
+        "content": "WHEN user clicks on Privacy Policy link",
+        "expected": "THEN user is displayed with Privacy Policy in a webview"
+      },
+      {
+        "content": "WHEN user viewing the Log In page\nAnd taps the text entry fields",
+        "expected": "THEN the keyboard will slide up into view\n[iOS] AND tapping anywhere will dismiss the keyboard\n[Android] AND tapping the device bottom nav downarrow will dismiss the keyboard"
+      },
+      {
+        "content": "WHEN the user is viewing the Log In page\nAnd taps the on Sign Up link",
+        "expected": "THEN the view will transition to the Sign Up page\n\n"
+      }
+    ]
+  },
+  {
+    "id": 26017750,
+    "title": "'Forgot Password?' link",
+    "section_id": 1511141,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1642171580,
+    "updated_by": 258,
+    "updated_on": 1654116790,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user downloaded the MLB Play app on device \r\nAND the user has existing account\r\nAND the user is on Log In page",
+    "custom_steps": "WHEN user taps 'Forgot Password?' link\r\n\r\n",
+    "custom_expected": "THEN Reset Password Page is shown allowing user to reset their password\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is viewing the Reset Password page\n\n",
+        "expected": "THEN Reset Password will be shown as the title with a back navigation arrow\nAND beneath the header there is text to instruct the user to reset password\n* [Android] - Forgot Password \n\nRecover your Account\n\"Email Address field . We'll send you an email with a link to reset your password.\"\n* [iOS] - Then user display with Web url https://www.mlb.com/forgot-password\n\nfor reseting the password \n\nForgot Password \nPlease enter your e-mail address below and we'll send a link to reset your password.\nEmail field \nReset Password radio button "
+      },
+      {
+        "content": "",
+        "expected": "AND an email field is shown above 'Submit' button\n"
+      },
+      {
+        "content": "WHEN email address input field is unpopulated\nand the \"submit\" button is tapped\n\n",
+        "expected": "THEN an error prompt is shown\n* [Android] \"Reset Password Failed.\" - \"Please enter a valid email address.\" (this is within the app) \n* [iOS] - Open Web link to fill the form \n\n"
+      },
+      {
+        "content": "WHEN user taps \"OK\" on error prompt\n\n",
+        "expected": "THEN Reset Password page is shown as the title with a back navigation arrow\n\n"
+      },
+      {
+        "content": "WHEN the user enters an Email address that does not conform to standard email rules (i.e @ symbol missing, domain missing)\nAND taps the Submit Button",
+        "expected": "THEN an error prompt is shown\n* [Android] \"Reset Password Failed.\" - \"Please enter a valid email address.\"\n* [iOS] - TODO: CONFIRM"
+      },
+      {
+        "content": "WHEN user taps \"OK\" on error prompt\n\n",
+        "expected": "THEN Reset Password page is shown as the title with a back navigation arrow\n\n"
+      },
+      {
+        "content": "\t\nGIVEN user disables the network (setting device to airplane mode is one way to achieve this)\nWHEN the user is viewing the Reset Password page\nAND the user enters an Email address that does confirm to standard email rules (i.e example@example.com)\nAND taps the Submit Button",
+        "expected": "THEN an error prompt is shown\n* [Android] \"Reset Password Failed.\" - \"Password recovery failed.\"\n* [iOS] - TODO: CONFIRM\n\n"
+      },
+      {
+        "content": "WHEN user taps \"OK\" on error prompt\n\n",
+        "expected": "THEN Reset Password page is shown as the title with a back navigation arrow\n\n"
+      },
+      {
+        "content": "\t\n \nGIVEN user enables the network\nWHEN the user is viewing the Reset Password page\nAND the user enters an Email address that does confirm to standard email rules (i.e example@example.com)\nAND taps the Submit Button",
+        "expected": "THEN Reset Password page is shown as the title with a back navigation arrow\nAND the email field and submit are no longer shown, INSTEAD is shown \"Reset password instructions have been sent to your email.\""
+      },
+      {
+        "content": "WHEN user accesses their email containing a Reset Password link\nAND user completes needed actions to successfully reset the password\nAND user returns to MLB PREDICT app (Reset Password page, if prev minimized)\nAND user logs in with new password\n\n",
+        "expected": "THEN user is logged in successfully with newly reset password.\n\n"
+      }
+    ]
+  },
+  {
+    "id": 28606511,
+    "title": "Log In flow - freshly installed app",
+    "section_id": 1511141,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1653674842,
+    "updated_by": 258,
+    "updated_on": 1654116793,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 8,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user has an MLB account",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user opens the MLB Play app",
+        "expected": "THEN user is displayed with splash screen"
+      },
+      {
+        "content": "WHEN user clicks on 'Log in with MLB' button",
+        "expected": "THEN user is displayed with Log In page"
+      },
+      {
+        "content": "WHEN user enters Email Address and Password \nAND clicks on 'Log In' button",
+        "expected": "THEN user is brought to the Games tab"
+      }
+    ]
+  },
+  {
+    "id": 28511370,
+    "title": "App Tracking Transparency for existing users",
+    "section_id": 1511141,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-3564",
+    "created_by": 258,
+    "created_on": 1652381762,
+    "updated_by": 258,
+    "updated_on": 1654116801,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 13,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user created a profile in MLB.com and never logged in MLB Play app",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user log in to the app for the first time\nAND is on the EULA page (Agree to Term page)",
+        "expected": "THEN the App Tracking Transparency (ATT) is prompt \n\nThings to display: \n* title 'Allow \"MLB Play\" to track your activity across other companies' apps and websites?'\n* copy ' This allows MLB PLay to provide you with a more personalized playing experience\n* Ask App not ot Track \n* Allow\n"
+      },
+      {
+        "content": "WHEN user clicks 'Allow'",
+        "expected": "THEN the Allow Tracking switch should be ON"
+      },
+      {
+        "content": "WHEN user clicks 'Ask App not to Track'",
+        "expected": "THEN the Allow Tracking switch should be OFF"
+      },
+      {
+        "content": "WHEN user closes the app and logs back in",
+        "expected": "THEN the App Tracking Transparency (ATT) is  not prompt "
+      }
+    ]
+  },
+  {
+    "id": 28606518,
+    "title": "iOS keychain functionality",
+    "section_id": 1511141,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1653677392,
+    "updated_by": 258,
+    "updated_on": 1677526936,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 15,
+    "custom_preconds": "GIVEN user has no other MLB apps on device\r\nAND user downloads MLB Play app",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user opens the MLB Play app",
+        "expected": "THEN there should be a “Log in with MLB” button on the login screen "
+      },
+      {
+        "content": "WHEN user is logged in in another MLB app on their device",
+        "expected": "THEN the user’s email address is shown, and the “Continue with MLB” button is added that allows them to continue their log in.\n\n'Log In with another MLB account' is displayed\n'Don't have an account? Sign Up' is displayed\n('Log In' and 'Sign Up' are light bold)\n\n"
+      },
+      {
+        "content": "WHEN user clicks on 'Continue with MLB' button",
+        "expected": "THEN user is able to proceed to the app using their account"
+      }
+    ]
+  },
+  {
+    "id": 28065485,
+    "title": "iOS - EC - Keychain Functionality",
+    "section_id": 1511141,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-4052",
+    "created_by": 258,
+    "created_on": 1650907944,
+    "updated_by": 258,
+    "updated_on": 1654116809,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 16,
+    "custom_preconds": "GIVEN user freshly installs the MLB Play app",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN opens the app",
+        "expected": "THE user is displayed with \n\n* 'Log In with MLB'\n* 'Don't have an account? Sign Up'"
+      },
+      {
+        "content": "WHEN user logs in \nAND logs out \nAND logs back in",
+        "expected": "THEN user's account is saved into keychain and user is displayed with\n\n* previously logged in account\n* 'Continue with MLB' CTA\n* 'Log In with another MLB account'\n* ' Don't have an account? Sign Up'\n"
+      },
+      {
+        "content": "WHEN user is logged in to other MLB apps on device\nAND freshly installs MLB app",
+        "expected": "THEN user's account is saved into keychain and user is displayed with\n\n* logged in account from another MLB app\n* 'Continue with MLB' CTA\n* 'Log In with another MLB account\n* ' Don't have an account? Sign Up'\n"
+      },
+      {
+        "content": "WHEN user is logged in to other MLB apps on device\nAND freshly installs MLB PLay app\nAND user updates the password in mlb.com\nAND opens the MLB Play app\nAND user clicks on 'Continue with MLB' CTA\n",
+        "expected": "THEN user is displayed with\n\n* 'Please enter a valid email/password error message* 'Log In with another MLB account'\n* ' Don't have an account? Sign Up'"
+      },
+      {
+        "content": "WHEN user is logged in in MLB Play\nAND user updates the password in mlb.com\nAND opens the MLB Play app\n",
+        "expected": "THEN user is displayed with\n\n* 'Please enter a valid email/password error message* 'Log In with another MLB account'\n* ' Don't have an account? Sign Up'"
+      }
+    ]
+  },
+  {
+    "id": 28606510,
+    "title": "iOS - EC/negative testing for 'Log in with MLB'",
+    "section_id": 1511141,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1653674842,
+    "updated_by": 258,
+    "updated_on": 1654116814,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 17,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User logs out\nAND opens the app again",
+        "expected": "THEN the newly created account is displayed in log in with MLB section"
+      },
+      {
+        "content": "WHEN user has a long email address",
+        "expected": "THEN full email address is displayed and email has a trancation\n"
+      },
+      {
+        "content": "WHEN user deletes DOB or nickname from MLB.com\nAND opens the app\nAND clicks on 'Continue with MLB'",
+        "expected": "THEN it takes user to update your profile page"
+      }
+    ]
+  },
+  {
+    "id": 26081127,
+    "title": "Log In - error messages",
+    "section_id": 1511141,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://baseball.atlassian.net/browse/FTP-3538",
+    "created_by": 282,
+    "created_on": 1642791699,
+    "updated_by": 258,
+    "updated_on": 1654116818,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 18,
+    "custom_preconds": "GIVEN MLB Play app installed on device \r\nAND user is going through Log In flow",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user enters invalid email and valid password \nAND clicks on 'Log In' button",
+        "expected": "THEN user should be displayed with 'Please enter a valid email address'"
+      },
+      {
+        "content": "WHEN user enters valid email, invalid password \nAND clicks on 'Log In' button",
+        "expected": "THEN user should be displayed with 'Please enter a valid email/Password'"
+      },
+      {
+        "content": "WHEN user enters valid email and password",
+        "expected": "THEN no error message is dusplayed"
+      }
+    ]
+  },
+  {
+    "id": 30296749,
+    "title": "Log In - new account",
+    "section_id": 1511141,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1678904007,
+    "updated_by": 258,
+    "updated_on": 1678904208,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 19,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user created an account after the Onboarding flow was updated (Country of Residence was added)\r\nAND user is Logged Out",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user Logs back In",
+        "expected": "THEN user is able to proceed to the app successfully \nAND does not need to update an account \nAND 'Update Your Account' page is not displayed"
+      }
+    ]
+  },
+  {
+    "id": 30296748,
+    "title": "Log In - Update Your Account",
+    "section_id": 1355606,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1678904007,
+    "updated_by": 258,
+    "updated_on": 1680198367,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 2,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user going through the Log In flow with existing account (created before 2023 season)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user Logs In",
+        "expected": "THEN user is taken to 'Update Your Account' page "
+      },
+      {
+        "content": "WHEN user is viewing 'Update Your Account' page ",
+        "expected": "THEN user is displayed with: \n\n* 'Update Your Account' title\n* back arrow in the top left corner\n* 'Please update your account with the necessary information to access MLB Play.' copy\n* Nickname, Birthdate, Country of Residence field\n* 'If your country is not listed, choose “Other”' copy underneath the Country of Residence field\n* 'By updating your account and logging into MLB Play, you consent to the Official Rules of MLB Play.' legal copy\n* 'Update & Log In' button\n* 'Don’t have an account? Sign Up' copy\n\nAND all fields are required and have asterisks"
+      },
+      {
+        "content": "WHEN user clicks on Official Rules link",
+        "expected": "THEN it should open the Official Rules page in webview"
+      },
+      {
+        "content": "WHEN user clicks on the back arrow",
+        "expected": "THEN user is brought to Log In page or Welcome page"
+      },
+      {
+        "content": "WHEN user clicks on Sign Up",
+        "expected": "THEN user is brought to Sign Up page"
+      },
+      {
+        "content": "WHEN user fills all 3 fields",
+        "expected": "THEN 'Update & Log In' button gets active"
+      }
+    ]
+  },
+  {
+    "id": 30296750,
+    "title": "Update Your Account - Country of Residence",
+    "section_id": 1355606,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1678904007,
+    "updated_by": 258,
+    "updated_on": 1678904246,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 3,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is going through the Log In flow\r\nAND user is on the 'Update Your Account' page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the 'Country of Residence' field",
+        "expected": "THEN user sees 'Country of Residence' inside the field\nAND 'Country of Residence' is not pre-filled\nAND copy 'If your country is not listed, choose “Other”' is displayed underneath the text field"
+      },
+      {
+        "content": "WHEN user clicks on that field",
+        "expected": "THEN 'Country of Residence' moved to the top borderline\nAND drop down list appears"
+      },
+      {
+        "content": "WHEN user scrolls through the drop down list",
+        "expected": "THEN user is displayed with a drop-down list with the following countries in order:\n\nUnited States\nAustralia\nCanada\nChina\nColombia\nCuba\nDominican Republic\nFrance\nGermany\nIndia\nIsrael\nItaly\nJapan\nMexico\nNetherlands\nPanama\nPuerto Rico\nSouth Korea\nTaiwan\nUnited Kingdom\nVenezuela\nOther"
+      },
+      {
+        "content": "WHEN user selects Canada",
+        "expected": "THEN an additional drop-down field is displayed (separate TC)"
+      },
+      {
+        "content": "WHEN user selects any other country",
+        "expected": "THEN no additional drop-down field is displayed "
+      },
+      {
+        "content": "WHEN user selects Country of Residence",
+        "expected": "THEN Sign Up button gets active"
+      }
+    ]
+  },
+  {
+    "id": 30296751,
+    "title": "Update Your Account - Province",
+    "section_id": 1355606,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1678904007,
+    "updated_by": 258,
+    "updated_on": 1678904251,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 468707,
+    "display_order": 4,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is going through the Log In flow\r\nAND user is on the 'Update Your Account' page\r\nAND user selected Canada as Residence",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user selects Canada",
+        "expected": "THEN an additional drop-down field is displayed asking them to declare their Province (listed in alphabetical order)\n\nAlberta\nBritish Columbia\nManitoba\nNew Brunswick\nNewfoundland and Labrador\nNorthwest Territories\nNova Scotia\nNunavut\nOntario\nPrince Edward Island\nQuebec\nSaskatchewan\nYukon\n"
+      },
+      {
+        "content": "WHEN user selects a province ",
+        "expected": "THEN Sign UP button gets active"
+      },
+      {
+        "content": "WHEN user clicked on the Province drop down and doesn't make a pick",
+        "expected": "THEN the error message appears 'You must choose a province to continue'"
+      },
+      {
+        "content": "WHEN user selects the Province",
+        "expected": "THEN the error message disappears \nAND 'Sign Up' button gets enabled"
+      }
+    ]
+  }
+]

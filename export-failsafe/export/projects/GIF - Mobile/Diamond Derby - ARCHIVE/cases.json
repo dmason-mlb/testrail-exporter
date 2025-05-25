@@ -1,0 +1,819 @@
+[
+  {
+    "id": 28318259,
+    "title": "DD Game Card position",
+    "section_id": 1406468,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-4106",
+    "created_by": 258,
+    "created_on": 1651607980,
+    "updated_by": 258,
+    "updated_on": 1656519878,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 1,
+    "custom_preconds": "GIVEN MLB Play app installed on device\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the Games tab on the DD launch date",
+        "expected": "THEN the Diamond Derby’s game card has the topmost position "
+      },
+      {
+        "content": "WHEN user views the Games tab a week after the DD launch date",
+        "expected": "THEN the Diamond Derby’s game card has the 2nd top position "
+      }
+    ]
+  },
+  {
+    "id": 26965447,
+    "title": "Game Card - unlocked state",
+    "section_id": 1406468,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1648651008,
+    "updated_by": 258,
+    "updated_on": 1656519883,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 2,
+    "custom_preconds": "GIVEN user MLB Play app installed on device \r\nAND user is logged in \r\nAND user is on the Game tab\r\nAND games have unlocked state (scheduled or live)",
+    "custom_steps": null,
+    "custom_expected": "THEN user should display with Diamond Derby game card",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the DD card ",
+        "expected": "THEN user should be displayed with\n\n* Diamond Derby logo in the center\n* 100 XP on the bottom left corner\n* 5 token on the bottom left corner next to XP\n* blue background image\n* Presented by *sponsor*\n"
+      },
+      {
+        "content": "WHEN user clicks on the game card",
+        "expected": "THEN user is brought to the game loop"
+      }
+    ]
+  },
+  {
+    "id": 28523966,
+    "title": "Game Card - locked state",
+    "section_id": 1406468,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1652478887,
+    "updated_by": 258,
+    "updated_on": 1656519887,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 3,
+    "custom_preconds": "GIVEN user MLB Play app installed on device \r\nAND user is logged in \r\nAND user is on the Game tab\r\nAND games have locked state (all games are final)",
+    "custom_steps": null,
+    "custom_expected": "THEN user should display with Diamond Derby game card",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the DD card ",
+        "expected": "THEN user should be displayed with\n\n* Diamond Derby logo in the center\n* 100 XP on the bottom left corner\n* 5 token on the bottom left corner next to XP\n* blue background image\n* lock icon is displayed in the top right corner\n"
+      },
+      {
+        "content": "WHEN user clicks on the game card",
+        "expected": "THEN user is brought to the game loop"
+      }
+    ]
+  },
+  {
+    "id": 26999235,
+    "title": "EOG push notification",
+    "section_id": 1406471,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://baseball.atlassian.net/browse/FTP-3736",
+    "created_by": 282,
+    "created_on": 1649082820,
+    "updated_by": 258,
+    "updated_on": 1656519893,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 1,
+    "custom_preconds": "GIVEN user MLB Play app installed on device\r\nAND user is logged in\r\nAND user has notification ON\r\n\r\n",
+    "custom_steps": "WHEN user play Diamond Derby \r\nAND all contests are final for the Day ",
+    "custom_expected": "THEN user should receive a push notification for a contest complete user event \r\nAND the push notification copy should be randomly selected from this document (Any game and DD only sections)https://docs.google.com/document/d/1oAVua_nZlopAzWljnOQAcAoWGljhdvf9dy45cKE2qIA/edit\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 28318258,
+    "title": "DD launch notification",
+    "section_id": 1406471,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-4109",
+    "created_by": 258,
+    "created_on": 1651607674,
+    "updated_by": 258,
+    "updated_on": 1656519896,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 2,
+    "custom_preconds": "GIVEN MLB Play app installed on device\r\nAND user is logged in\r\nAND user has notification on",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Diamond Derby is launched",
+        "expected": "THEN user should receive a push notification\n\nTitle: New MLB Play Game\n\nBody: 💎 We’ve got a new game available for you to play now. See if you can pick the winning team for each day’s game in Diamond Derby. "
+      }
+    ]
+  },
+  {
+    "id": 27106396,
+    "title": "DD Results (copy to add)",
+    "section_id": 1414850,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1649265986,
+    "updated_by": 258,
+    "updated_on": 1656518982,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 1,
+    "custom_preconds": "GIVEN MLB Play app installed on device \r\nAND User logged in \r\n\r\n",
+    "custom_steps": "WHEN user played the Diamond Derby contest \r\nAND all contests are final",
+    "custom_expected": "THEN user should be displayed with Results in Results tab \r\n\r\n* Users avatar with outline\r\n* 'You' bubble\r\n* date in m/d format on the top right corner\r\n* Diamond Derby logo\r\n* Result description\r\n* XP earned (user will receive 100 XP for playing even if no correct picks)\r\n* token earned (user will receive 5 tokens for each correct pick)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 27106443,
+    "title": "User view the Result when Not playing contest for the day",
+    "section_id": 1414850,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1649266181,
+    "updated_by": 282,
+    "updated_on": 1649266346,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 2,
+    "custom_preconds": "GIVEN user MLB Play app installed on device\r\nAND User logged in\r\nAND User did not played Diamond Derby for the day \r\n\r\n\r\n\r\nTHEN user should display with Results in Result tab\r\n\r\n",
+    "custom_steps": "WHEN user DID NOT played the Diamond Derby contest\r\n\r\n",
+    "custom_expected": "THEN user display with\r\nX Icon on top left \r\nDate(MM/DD) Results \r\n\r\nSort Description ( You did not submit any picks. Make correct picks to move along the base paths and score runs! \r\n\r\nSee Past pick results by pressing the back arrow in the date bar. ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 27106506,
+    "title": "User gets the Results on Strikeout",
+    "section_id": 1414850,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1649266375,
+    "updated_by": 282,
+    "updated_on": 1649266573,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 3,
+    "custom_preconds": "GIVEN user MLB Play app installed on device\r\nAND User logged in\r\nAND User did played Diamond Derby for the day\r\n",
+    "custom_steps": "WHEN user played Diamond Derby \r\nAND received results when they have earned bases and Strike Out ",
+    "custom_expected": "THEN user should display with \r\nX Icon on top left \r\nMM/DD Results \r\n\r\nSort description (i.e. You earned 6 bases and Struck Out!) \r\n\r\nBackground image \r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26965451,
+    "title": "EC - token value",
+    "section_id": 1414850,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1648651901,
+    "updated_by": 258,
+    "updated_on": 1656519902,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 4,
+    "custom_preconds": "GIVEN MLB Play app installed on device\r\nAND user has played Diamond Derby ",
+    "custom_steps": "WHEN user made correct picks for all 15 games",
+    "custom_expected": "THEN user should receive 75 tokens for 15 games ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 28522117,
+    "title": "Customizable Prizing Header",
+    "section_id": 1504812,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2986",
+    "created_by": 258,
+    "created_on": 1652464402,
+    "updated_by": 258,
+    "updated_on": 1656519906,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 1,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user logged in to the app\r\nAND user opens the DD game\r\nAND taps the hamburger menu",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user opens the Leaderboard",
+        "expected": "THEN the user is displayed with \n\n* Title 'Leaderboard'\n* X icon on the top right corner\n* Diamond Derby logo\n* sponsor logo\n* token icon + amount (5)\n\n"
+      },
+      {
+        "content": "WHEN User clicks on the X icon",
+        "expected": "THEN User should be taken back to the gameloop"
+      }
+    ]
+  },
+  {
+    "id": 28522120,
+    "title": "Leaderboard segment controller",
+    "section_id": 1504812,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2985",
+    "created_by": 258,
+    "created_on": 1652464402,
+    "updated_by": 258,
+    "updated_on": 1656519910,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 4,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user logged in to the app\r\nAND user opens the DD game\r\nAND taps the hamburger menu ",
+    "custom_steps": null,
+    "custom_expected": "Leaderboards should be able to filter between the Friends /All time leaderboard. ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user opens the Leaderboard",
+        "expected": "THEN user should be displayed with\n* Friends and All leaderboards\nAND both leaderboards should have 3 subsegments\n* Yesterday (Bases)\n* Today (Bases)\n* Season (Runs)\n"
+      },
+      {
+        "content": "",
+        "expected": "THEN the leaderboard should always defaulted to Friends\nAND selected leaderboard should have a blue underline"
+      },
+      {
+        "content": "",
+        "expected": "AND user should be able to switch between All and Friends segment"
+      },
+      {
+        "content": "",
+        "expected": "AND user should be presented with the total number of users to the right of the leaderboard name in the segment controller"
+      }
+    ]
+  },
+  {
+    "id": 28522123,
+    "title": "'You' cell",
+    "section_id": 1504812,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1652464402,
+    "updated_by": 258,
+    "updated_on": 1656519915,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 7,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user logged in to the app\r\nAND user opens the DD game\r\nAND taps the hamburger menu\r\nAND opens the Leaderboard",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user first opens the leaderboard \nAND the user is in the first set of visible ranks",
+        "expected": "THEN the default view shows the top of the leaderboard (starting with position 1) AND the user’s position is highlighted light grey"
+      },
+      {
+        "content": "WHEN the user is scrolled to a position that is less than the user’s current position\n\n",
+        "expected": "THEN the 'you' cell sticks at the bottom of the leaderboard"
+      },
+      {
+        "content": "WHEN the user taps on the 'you' cell",
+        "expected": "THEN the user is taken to their position in the leaderboard and the position is centered on the page"
+      },
+      {
+        "content": "WHEN the user scrolls to the user’s position in the leaderboard",
+        "expected": "THEN the 'you' cell will slot into the correct position"
+      },
+      {
+        "content": "WHEN the user is scrolled to a position that is greater than the user’s current position",
+        "expected": "THEN the 'you' cell sticks at the top of the leaderboard"
+      }
+    ]
+  },
+  {
+    "id": 28522124,
+    "title": "Page scrolling",
+    "section_id": 1504812,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-3253",
+    "created_by": 258,
+    "created_on": 1652464402,
+    "updated_by": 258,
+    "updated_on": 1656519920,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 8,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in",
+    "custom_steps": "WHEN user opens the DD game\r\nAND taps the hamburger menu\r\nAND opens the Leaderboard - All segment AND/OR Friends segment \r\n",
+    "custom_expected": "THEN User is able to scroll to the next or previous set of data without any issues \r\nAND Page is displayed fully while scrolling and top and bottom of the page does not get cut off",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 28522128,
+    "title": "Leaderboard Empty States UI - user has no friends",
+    "section_id": 1504813,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-3154",
+    "created_by": 258,
+    "created_on": 1652464424,
+    "updated_by": 258,
+    "updated_on": 1656519925,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 1,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user logged in to the app\r\nAND user opens the DD game\r\nAND taps the hamburger menu \r\nAND user selects Leaderboard",
+    "custom_steps": "WHEN user has no friends",
+    "custom_expected": "THEN User should display with empty State version of the page instead of blank page ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the Friends segment",
+        "expected": "THEN 0 should be displayed to the right of 'Freidns'"
+      },
+      {
+        "content": "WHEN user views the empty Leaderboard ",
+        "expected": "THEN user should be displayed with- \n\n* leaderboard image\n* copy 'There aren't any scores to display. \nInvite some friends to play! '\n* Invite Friends CTA  "
+      },
+      {
+        "content": "WHEN user taps on Invite Friends ",
+        "expected": "THEN user should be displayed with the native share sheet, pre-filled with our custom language.\n\nThe copy in the share sheet should read “Let's compete on mLB Play” + options where user can send an invite."
+      }
+    ]
+  },
+  {
+    "id": 28566291,
+    "title": "Empty State display",
+    "section_id": 1504813,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-3635",
+    "created_by": 258,
+    "created_on": 1652978952,
+    "updated_by": 258,
+    "updated_on": 1656519929,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 2,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user logged in to the app\r\nAND user opens the DD game\r\nAND taps the hamburger menu\r\nAND user selects Leaderboard",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user HAS A SCORE",
+        "expected": "THEN show the leaderboard no matter what."
+      },
+      {
+        "content": "WHEN user has no score BUT has friends",
+        "expected": "THEN show the leaderboard."
+      },
+      {
+        "content": "WHEN user has NO FRIENDS AND NO SCORE",
+        "expected": "THEN show empty state"
+      }
+    ]
+  },
+  {
+    "id": 28522125,
+    "title": "Inviting Friends - user has friends",
+    "section_id": 1504813,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1652464424,
+    "updated_by": 258,
+    "updated_on": 1656519933,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 3,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\nAND user has friends",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user opens the DD game\nAND taps the hamburger menu\nAND opens the Leaderboard -> Friends\n",
+        "expected": "THEN user sees the 'Invite Freinds' cell \nAND the cell isn’t “sticky”\nAND it' only visible at the end of the list. "
+      },
+      {
+        "content": "WHEN user taps on Invite Friends",
+        "expected": "\nAND taps the hamburger menu\nAND opens the Leaderboard -> Friends\nAND user taps on Invite Friends\n\nTHEN user should be displayed with the native share sheet, pre-filled with our custom language.\n\nThe copy in the share sheet should read “Let's compete on mLB Play” + options where user can send an invite."
+      }
+    ]
+  },
+  {
+    "id": 28522126,
+    "title": "Inviting Friends - user has no friends",
+    "section_id": 1504813,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-3143",
+    "created_by": 258,
+    "created_on": 1652464424,
+    "updated_by": 258,
+    "updated_on": 1656519936,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 4,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\nAND user has no friends",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user opens the DD game\nAND taps the hamburger menu\nAND opens the Leaderboard -> Friends\nAND user taps on Invite Friends ",
+        "expected": "THEN user should be displayed with the native share sheet, pre-filled with our custom language.\n\nThe copy in the share sheet should read “Let's compete on mLB Play” + options where user can send an invite."
+      }
+    ]
+  },
+  {
+    "id": 28522127,
+    "title": "Leaderboard Score State",
+    "section_id": 1504813,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1652464424,
+    "updated_by": 258,
+    "updated_on": 1656519940,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 5,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user logged in to the app\r\nAND user opens the DD game\r\nAND taps the hamburger menu - Leaderboard - Friends",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views Friends leaderboard \nAND the user OR at least one of the friends played and has scores",
+        "expected": "THEN the leaderboard has a Score State (not empty) and displayed with the list of all current players \nAND the top 3 ranked positions does not have gold/silver/bronze color scheme as the All leaderboard does\n"
+      }
+    ]
+  },
+  {
+    "id": 28522129,
+    "title": "Social Leaderboard",
+    "section_id": 1504813,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-3158, FTP-3629",
+    "created_by": 258,
+    "created_on": 1652464424,
+    "updated_by": 258,
+    "updated_on": 1656519944,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 7,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user logged in to the app\r\nAND user opens the DD game\r\nAND taps the hamburger menu \r\nAND user selects Leaderboard - Friends",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN no friends or self playing",
+        "expected": "THEN friends are displayed in the leaderboard in inactive state \nAND friends cell is grayed out and no scores are displayed "
+      },
+      {
+        "content": "WHEN Self playing, no friends playing",
+        "expected": "THEN Self is displayed in the leaderboard with the current score\n"
+      },
+      {
+        "content": "WHEN Friends and self playing.",
+        "expected": "THEN Friends and self are displayed in the leaderboard with the current score"
+      },
+      {
+        "content": "WHEN Friends playing and no self playing.",
+        "expected": "THEN only friends are displayed in the leaderboard, no self"
+      }
+    ]
+  },
+  {
+    "id": 28522121,
+    "title": "Cell design",
+    "section_id": 1504813,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2989",
+    "created_by": 258,
+    "created_on": 1652464402,
+    "updated_by": 258,
+    "updated_on": 1656519950,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 9,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user is logged in\r\n",
+    "custom_steps": "WHEN user opens the DD game\r\nAND taps the hamburger menu\r\nAND opens the Leaderboard",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "AND user views the cell for the friend who is playing\n",
+        "expected": "THEN user sees \n* Leaderboard Rank Number\n* User Profile Avatar (with outline)\n* Username (in white)\n* User XP Level (in white)\n* Score(in white)\nAND places are gray with no gradient\nAND badge is oval with a gray background, shadow, and white rank\n"
+      },
+      {
+        "content": "AND user views the cell for the friend who is not playing\n",
+        "expected": "THEN user sees \n* User cell is grayed out\n* User Profile Avatar (with outline)\n* Username (in gray)\n* User XP Level (in gray)\n"
+      }
+    ]
+  },
+  {
+    "id": 28523961,
+    "title": "Yesterday/Today/Season",
+    "section_id": 1504813,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1652471134,
+    "updated_by": 258,
+    "updated_on": 1656519955,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 10,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user logged in to the app\r\nAND user opens the DD game\r\nAND taps the hamburger menu \r\nAND user is on Friends leaderboard",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user navigates to Yesterday (Bases)",
+        "expected": "THEN user is displayed with the list of friends who played yesterday with the number of bases they earned"
+      },
+      {
+        "content": "WHEN user navigates to Today (Bases)",
+        "expected": "THEN user is displayed with the list of friends who played today with the number of bases they earned"
+      },
+      {
+        "content": "WHEN user navigates to Season (Runs)",
+        "expected": "THEN user is displayed with the list of friends who played the game and got the home runs with the number of home run they earned\n"
+      },
+      {
+        "content": "",
+        "expected": "AND the leaderboard should be defaulted to Today"
+      }
+    ]
+  },
+  {
+    "id": 28523967,
+    "title": "Season leaderboard",
+    "section_id": 1504813,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1652481131,
+    "updated_by": 258,
+    "updated_on": 1656519960,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 11,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user logged in to the app\r\nAND user opens the DD game\r\nAND taps the hamburger menu\r\nAND user is on Friends leaderboard",
+    "custom_steps": "WHEN user views the leaderboard",
+    "custom_expected": "THEN users with 0 scores should not be displayed. Only users who earned a home run should be displayed",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 28523964,
+    "title": "Leaderboard Score State",
+    "section_id": 1504814,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1652473604,
+    "updated_by": 258,
+    "updated_on": 1656519965,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 2,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user logged in to the app\r\nAND user opens the DD game\r\nAND taps the hamburger menu - Leaderboard - All",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views All leaderboard \nAND the user OR at least one of the friends played and has scores",
+        "expected": "THEN the leaderboard has a Score State (not empty) and displayed with the list of all current players \nAND the top 3 ranked positions  have gold/silver/bronze color scheme as the All leaderboard does\n"
+      }
+    ]
+  },
+  {
+    "id": 28522132,
+    "title": "Leaderboard Empty States",
+    "section_id": 1504814,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-3154",
+    "created_by": 258,
+    "created_on": 1652464440,
+    "updated_by": 258,
+    "updated_on": 1656519969,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 3,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user logged in to the app\r\nAND user opens the DD game\r\nAND taps the hamburger menu",
+    "custom_steps": "WHEN user opens the Leaderboard - All\r\nAND no scores are displayed (before the first game is played)",
+    "custom_expected": "THEN user should be displayed with the copy - \r\n\r\nThere aren't any scores to display. \r\nCheck back later.\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 28523962,
+    "title": "Yesterday/Today/Season",
+    "section_id": 1504814,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1652471399,
+    "updated_by": 258,
+    "updated_on": 1656519973,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 4,
+    "custom_preconds": "GIVEN MLB Play app installed on Device\r\nAND user logged in to the app\r\nAND user opens the DD game\r\nAND taps the hamburger menu \r\nAND user is on All leaderboard",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user navigates to Yesterday (Bases)",
+        "expected": "THEN user is displayed with the list of people who played yesterday with the number of bases they earned"
+      },
+      {
+        "content": "WHEN user navigates to Today (Bases)",
+        "expected": "THEN user is displayed with the list of people who played today with the number of bases they earned"
+      },
+      {
+        "content": "WHEN user navigates to Season (Runs)",
+        "expected": "THEN user is displayed with the list of people who played the game and got the home run with the number of home runs they earned\n"
+      },
+      {
+        "content": "",
+        "expected": "THEN the leaderboard should be defaulted to Yesterday until contests are scored"
+      },
+      {
+        "content": "WHEN contests are scored",
+        "expected": "THEN the leaderboard should be defaulted to Today"
+      }
+    ]
+  },
+  {
+    "id": 28566289,
+    "title": "Contest Results card",
+    "section_id": 1507919,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-4037",
+    "created_by": 258,
+    "created_on": 1652978213,
+    "updated_by": 258,
+    "updated_on": 1652978213,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 1,
+    "custom_preconds": "GIVEN user MLB Predict app installed on device\r\nAND User is logged in\r\nAND user played Diamond Derby\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the results of Diamond Derby in the Results Feed",
+        "expected": "THEN user is displayed with: \n\n* user's avatar\n* 'You' bubble\n* date (top right corner)\n* 'Diamond Derby' logo\n* feed copy (separate TC)\n* amount of XP and tokens user earned\n\n"
+      }
+    ]
+  },
+  {
+    "id": 28566290,
+    "title": "Contest Scored Feed Copy",
+    "section_id": 1507919,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1652978213,
+    "updated_by": 258,
+    "updated_on": 1653510904,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493469,
+    "display_order": 2,
+    "custom_preconds": "GIVEN user MLB Predict app installed on device\r\nAND User is logged in\r\nAND user played Diamond Derby",
+    "custom_steps": "WHEN user views the results of Diamond Derby in the Results Feed",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user had no correct picks and did not strike out",
+        "expected": "THEN the copy should say 'You did not earn any bases so you remain at [base]'"
+      },
+      {
+        "content": "WHEN user had no correct picks and struck out",
+        "expected": "THEN the copy should say 'You did not earn any bases and struck out'"
+      },
+      {
+        "content": "WHEN user's runs were not scored and did not strike out",
+        "expected": "THEN the copy should say 'You earned # bases, advancing to [base]'"
+      },
+      {
+        "content": "WHEN user's runs were scored and did not strike out",
+        "expected": "THEN the copy should say 'You earned # bases, scoring # runs and advancing to [base]'"
+      },
+      {
+        "content": "WHEN user's runs were scored and struck out",
+        "expected": "THEN the copy should say 'You earned # bases, scoring # runs and struck out'"
+      },
+      {
+        "content": "WHEN user's runs were not scored and struck out",
+        "expected": "THEN the copy should say 'You earned # bases and struck out'"
+      }
+    ]
+  }
+]

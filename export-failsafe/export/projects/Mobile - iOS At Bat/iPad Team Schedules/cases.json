@@ -1,0 +1,89 @@
+[
+  {
+    "id": 48283,
+    "title": "iPad Team Schedule",
+    "section_id": 6902,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1415117185,
+    "updated_by": 119,
+    "updated_on": 1487176952,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 882,
+    "display_order": 1,
+    "custom_preconds": "1.) Config Values that control data range\r\n\r\nYou need to change the version parameter for the version you are working on:\r\n\r\nhttp://qa-atbatappconfig.mlb.com/ios/9.4.0/ipadConfig.json\r\nhttp://qa-atbatappconfig.mlb.com/ios/9.4.0/iphoneConfig.json\r\n\r\n\"supportedSeasons\":  {\"2016\":{\"first_allowed_day\":\"20160228\",\"last_allowed_day\":\"20161002\",\"suggested_day\":\"20160228\"}},\r\n\r\n2.) In case you need to use Charles Proxy to locally map to for Plan a Trip (see attached for dummy file with text)\r\n\r\nMap from:\r\nhttp://m.mlb.com/gen/content/tag/v1/key-value/atbat-planatrip/ari/general-v3.json (points to ARI but change Club ID param)\r\nhttp://qa.mlb.com/gen/content/tag/v1/key-value/atbat-planatrip/ari/general-v3.json (points to ARI but change Club ID param)\r\n\r\nMap to:\r\nAttached file",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user taps on the More then Team Schedules then selects a team",
+        "expected": "Then the current month's schedule will be brought up"
+      },
+      {
+        "content": "When a user has a Favorite Team set and taps on More tab then taps on Team Schedules",
+        "expected": "Then the user will see\n- MLB.com logo and a Downloading Schedule text with loading spinner\n- Current month's schedule will load"
+      },
+      {
+        "content": "When a user does not have a Favorite Team set and taps on More tab then taps on Team Schedules",
+        "expected": "Then the user will see\n-Back button to return to More Menu\n-Select a Team button (instead of a team's logo)\n-Team selector popover underneath"
+      },
+      {
+        "content": "When a user taps on More tab then taps on Team Schedules ",
+        "expected": "Then the user will see:\n-appropriate team's word mark will be displayed over team's color in the header\n-team's schedule will load\n\nRepeat for all teams"
+      },
+      {
+        "content": "When a user is on the Team Schedule for a team and attempts to scroll vertically ",
+        "expected": "Then we will see that we are bound to the dates set inside of the configuration file\n\n\"first_allowed_day\":\"YYYYMMDD\"\n\"last_allowed_day\":\"YYYYMMDD\""
+      },
+      {
+        "content": "When a user is on the Team Schedule for a team and views a game that is not completed yet",
+        "expected": "Then the user will not see a W or L on that date cell "
+      },
+      {
+        "content": "When a user taps on More tab and then Team Schedule",
+        "expected": "Then we will see that today's Date has the text 'Today' in the bottom left corner of the cell"
+      },
+      {
+        "content": "When a user taps on More tab and then Team Schedule and is on a team's schedule",
+        "expected": "Then the home games will have the team's color"
+      },
+      {
+        "content": "When a user is on the Team Schedule and taps on the Today button at the bottom toolbar",
+        "expected": "Then the view is moved to Today's Month/Date"
+      },
+      {
+        "content": "When a user is on Team Schedules and taps on Download in the bottom bar",
+        "expected": "Then the user receives an UI Alert asking if the user wants to subscribe to the calendar \"teamname\" with the following prompts:\n\nCancel - closes the Dialog\nSubscribe - Subscribes user to the team's calendar and calendar is then downloaded to device calendar"
+      },
+      {
+        "content": "When a user is on Team Schedules and taps on Plan a Trip\n\n**Might need to follow step 2 to locally map it",
+        "expected": "Then an action sheet opens with a list of Trip items, each tappable to open a webview, and including:\n\nName\nIcon\nWebview URL\n\nThe Action Sheet options should be configurable per team."
+      },
+      {
+        "content": "When a user is on a Team Schedule and taps on a date cell with a star icon",
+        "expected": "Then Gameday (Game Preview) will open and a Promo link will be available"
+      },
+      {
+        "content": "When a user is on a Team Schedule and taps on a date cell with a T icon",
+        "expected": "Then Gameday (Game Preview) will open and a Ticket link will be available"
+      },
+      {
+        "content": "When a user is on a Team Schedule and taps on a date cell with Live",
+        "expected": "Then Gameday will open for the game in progress"
+      },
+      {
+        "content": "When a user is on a Team Schedule and taps on date cell that has W or L",
+        "expected": "Then Gameday (Game Wrap) will open"
+      },
+      {
+        "content": "When a user is viewing the Team Schedule and has low connectivity",
+        "expected": "Then the view will timeout 30 seconds\nand then display the last available dat with the following:\n\nMessage: \"Low Connectivity: using last available data\nButton: \"OK\""
+      }
+    ]
+  }
+]

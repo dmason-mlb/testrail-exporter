@@ -1,0 +1,196 @@
+[
+  {
+    "id": 33234668,
+    "title": "GAE Survey",
+    "section_id": 1902708,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1715100124,
+    "updated_by": 288,
+    "updated_on": 1715625190,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 637023,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "As a Business, we want an easy way to gain qualitative insights into Go-Ahead Entry so we can improve the feature as it rolls out to more Clubs. \r\n\r\nGIVEN User has authenticated into BP (ANDROID 13.2 or later) or iOS 13.1.2 or later\r\nAND user has enrolled to GAE to respective(GAE) club\r\nAND User is checked in to an event\r\n\r\n\r\n*TESTING NOTES: To trigger subsequent survey prompts\r\n* Has to be in STG and request 100% \r\n* RECOMMEND restarting the app \r\n* Enrolled into GAE and checked in (HOU,PHI, WAS, SF) \r\n[go_ahead_venues](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config/env/firebase?query=go_ahead_venues )\r\n*(HOU, PHI, WAS, SF) GAE enabled venues\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user enrolled to GAE \nAND Checked In \nAND user restart the app ",
+        "expected": "THEN a percentage of eligible users will be prompted to take a brief survey for GAE*\n\n*the percentage is configurable within Qualtrics webview, Can be set to 100% in lower environment (STG) to guarantee prompt shown to assist with validation*"
+      },
+      {
+        "content": "",
+        "expected": "AND user is displayed a Qualtrics survey prompt\n\n*Header - “Go-Ahead Entry values your feedback”\n*Body - “Help improve the stadium entry experience by taking a short survey.” \n*CTA - “Share Feedback” button (black background, white text), “Dismiss” text (black text)\n\nhttps://mlb.az1.qualtrics.com/survey-builder/SV_eFfVrL5mwZ7YuNg/edit"
+      },
+      {
+        "content": "WHEN user taps 'Share Feedback' CTA\nAND user completes the consumer survey",
+        "expected": "THEN the survey results are populated in Qualtrics"
+      },
+      {
+        "content": "[RECOMMEND restarting the app and/OR doing a fresh install to get around survey eligibility restrictions]\n\n ",
+        "expected": ""
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN user taps 'Dismiss' CTA",
+        "expected": "THEN the Survey prompt is dismissed"
+      },
+      {
+        "content": "WHEN user enrolled to GAE \nAND Checked In \nAND user restart the app ",
+        "expected": "THEN a percentage of eligible users will be prompted to take a brief survey for GAE*\n\n*the percentage is configurable within Qualtrics webview, Can be set to 100% in lower environment (STG) to guarantee prompt shown to assist with validation*\n\n\nAND user is displayed a Qualtrics survey prompt\n\n*Header - “Ballpark values your feedback”\n*Body - “Help improve Go-Ahead Entry by answering a few questions about your experience.” \n*Buttons - Blue display - “Share Feedback” “Dismiss”\n\nhttps://mlb.az1.qualtrics.com/survey-builder/SV_eFfVrL5mwZ7YuNg/edit"
+      }
+    ]
+  },
+  {
+    "id": 31577685,
+    "title": "[IOS ONLY- DEPRECATED]Qualtrics - Forward Ticket Survey (TDC ONLY)",
+    "section_id": 1760751,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1695237234,
+    "updated_by": 288,
+    "updated_on": 1715098978,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 637023,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[THIS SURVEY DEPRECATED W/ 13.x]\r\n\r\n\r\n\r\nTargeted Surveys [BP-10387](https://baseball.atlassian.net/browse/BP-10387 )\r\n\r\nAs a Ballpark staffer, I want to better understand our users sentiment around specific features so that we can make more well-informed decisions \r\n\r\nGIVEN User has authenticated into BP (iOS 12.3.4 or later)\r\nAND user has forward-able ticket(s) on their account\r\n\r\n\r\n*TESTING NOTES: To trigger subsequent survey prompts\r\n**The display prevention time is set to 1 hour, regardless if you dismiss or answer the survey, you'll get prompted again after the specified time\r\n**If you're eligible for both surveys only one will be displayed, selection is random\r\n**As surveys are grouped on the same intercept, you'll need to wait an hour after one was displayed to attempt to get the other (even if you logout). RECOMMEND deleting the app and doing a fresh install instead\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user forwards a ticket via share link\nAND user restarts BP app\n ",
+        "expected": "THEN a percentage of eligible users will be prompted to take a brief survey*\n\n*the percentage is configurable within Qualtrics webview, but will be set to 100% in lower env(QA/STG) to guarantee prompt is shown to assist with validation "
+      },
+      {
+        "content": "",
+        "expected": "AND user is displayed a Qualtrics survey prompt\n*Header - “Ballpark values your feedback”\n*Body - “Help improve the Ballpark app by answering 3 questions about your Ticketing experience” \n*Buttons - Blue display - “Share Feedback” “Dismiss”\n\n\n(https://mlb.az1.qualtrics.com/survey-builder/SV_6zGaMLBMHkd7D7M/edit )\n"
+      },
+      {
+        "content": "WHEN user taps 'Share Feedback' CTA\nAND user completes the consumer survey",
+        "expected": "THEN the survey results are populated in Qualtrics\n\n[TODO: Determine if this needs to be confirmed for within Qualtrics]"
+      },
+      {
+        "content": "[RECOMMEND deleting the app and doing a fresh install to get around survey eligibility restrictions]\n",
+        "expected": ""
+      },
+      {
+        "content": "WHEN user forwards a ticket via share link\nAND user restarts BP app\n ",
+        "expected": "THEN a percentage of eligible users will be prompted to take a brief survey*\n\n*the percentage is configurable within Qualtrics webview, but will be set to 100% in lower env(QA/STG) to guarantee prompt is shown to assist with validation \n\nAND user is displayed a Qualtrics survey prompt\n*Header - “Ballpark app values your feedback”\n*Body - “Help improve the Ballpark app by answering 3 questions about your Ticketing experience” \n*Buttons - Blue display - “Share Feedback” “Dismiss”\n\n\n(https://mlb.az1.qualtrics.com/survey-builder/SV_6zGaMLBMHkd7D7M/edit )\n"
+      },
+      {
+        "content": "WHEN user taps 'Dismiss' CTA",
+        "expected": "THEN the Survey prompt is dismissed"
+      },
+      {
+        "content": "[RECOMMEND deleting the app and doing a fresh install to get around survey eligibility restrictions]\n",
+        "expected": ""
+      },
+      {
+        "content": "WHEN user successfully forwards a ticket via email*\nAND user restarts BP app\n\n*sending to an email that has not yet verified is best to validate pending email accept",
+        "expected": "THEN a percentage of eligible users will be prompted to take a brief survey*\n\n*the percentage is configurable within Qualtrics webview, but will be set to 100% in lower env(QA/STG) to guarantee prompt is shown to assist with validation \n\nAND user is displayed a Qualtrics survey prompt\n*Header - “Ballpark app values your feedback”\n*Body - “Help improve the Ballpark app by answering 3 questions about your Ticketing experience” \n*Buttons - Blue display - “Share Feedback” “Dismiss”\n\n\n(https://mlb.az1.qualtrics.com/survey-builder/SV_6zGaMLBMHkd7D7M/edit )\n"
+      },
+      {
+        "content": "[RECOMMEND deleting the app and doing a fresh install to get around survey eligibility restrictions]\n",
+        "expected": ""
+      },
+      {
+        "content": "WHEN user successfully forwards a ticket via email (or suggested recipient)\nAND user restarts BP app\n\n*sending to verified acct (or suggested recipient) should auto-accept",
+        "expected": "THEN a percentage of eligible users will be prompted to take a brief survey*\n\n*the percentage is configurable within Qualtrics webview, but will be set to 100% in lower env(QA/STG) to guarantee prompt is shown to assist with validation \n\nAND user is displayed a Qualtrics survey prompt\n*Header - “Ballpark app values your feedback”\n*Body - “Help improve the Ballpark app by answering 3 questions about your Ticketing experience” \n*Buttons - Blue display - “Share Feedback” “Dismiss”\n\n\n(https://mlb.az1.qualtrics.com/survey-builder/SV_6zGaMLBMHkd7D7M/edit )\n"
+      }
+    ]
+  },
+  {
+    "id": 31577693,
+    "title": "[IOS ONLY- DEPRECATED]Qualtrics - MyHistory Add Photo Survey",
+    "section_id": 1760751,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1695239222,
+    "updated_by": 288,
+    "updated_on": 1715098991,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 637023,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[THIS SURVEY DEPRECATED W/ 13.x]\r\n\r\nTargeted Surveys [BP-10387](https://baseball.atlassian.net/browse/BP-10387 )\r\n\r\nAs a Ballpark staffer, I want to better understand our users sentiment around specific features so that we can make more well-informed decisions \r\n\r\nGIVEN User has authenticated into BP (iOS 12.3.4 or later)\r\nAND user has an event in their MyHistory \r\n\r\n\r\n\r\n*TESTING NOTES: To trigger subsequent survey prompts\r\n**The display prevention time is set to 1 hour, regardless if you dismiss or answer the survey, you'll get prompted again after the specified time\r\n**If you're eligible for both surveys only one will be displayed, selection is random\r\n**As surveys are grouped on the same intercept, you'll need to wait an hour after one was displayed to attempt to get the other (even if you logout). RECOMMEND deleting the app and doing a fresh install instead\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user successfully adds a photo* to an Event entry prev shown in MyHistory\nAND user restarts BP app \n\n*photo can be obtained via device library or via camera",
+        "expected": "THEN a percentage of eligible users will be prompted to take a brief survey*\n\n*the percentage is configurable within Qualtrics webview, but will be set to 100% in lower env(QA currently) to guarantee prompt is shown to assist with validation "
+      },
+      {
+        "content": "",
+        "expected": "AND user is displayed a Qualtrics survey prompt\n*Header - “Ballpark app values your feedback”\n*Body - “Help improve the Ballpark app by taking a 2 minute survey about My History”  \n*Buttons - Blue display - “Share Feedback” “Dismiss”\n\n\n(https://mlb.az1.qualtrics.com/survey-builder/SV_9HcdjurkGtHtVfE/edit )\n"
+      },
+      {
+        "content": "WHEN user taps 'Share Feedback' CTA\nAND user completes the consumer survey",
+        "expected": "THEN the survey results are populated in Qualtrics\n\n[TODO: Determine if this needs to be confirmed for within Qualtrics]"
+      },
+      {
+        "content": "[RECOMMEND deleting the app and doing a fresh install to get around survey eligibility restrictions]\n",
+        "expected": ""
+      },
+      {
+        "content": "WHEN user successfully adds a photo* to an Event entry prev shown in MyHistory\nAND user restarts BP app \n\n*photo can be obtained via device library or via camera",
+        "expected": "THEN a percentage of eligible users will be prompted to take a brief survey*\n\n*the percentage is configurable within Qualtrics webview, but will be set to 100% in lower env(QA currently) to guarantee prompt is shown to assist with validation \n\nAND user is displayed a Qualtrics survey prompt\n*Header - “Ballpark app values your feedback”\n*Body - “Help improve the Ballpark app by taking a 2 minute survey about My History”  \n*Buttons - Blue display - “Share Feedback” “Dismiss”\n\n\n(https://mlb.az1.qualtrics.com/survey-builder/SV_9HcdjurkGtHtVfE/edit )\n\n\n"
+      },
+      {
+        "content": "WHEN user taps 'Dismiss' CTA",
+        "expected": "THEN the Survey prompt is dismissed"
+      },
+      {
+        "content": "[RECOMMEND deleting the app and doing a fresh install to get around survey eligibility restrictions]\n",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN user auto-check-in to an event*\nWHEN user successfully adds a photo to newly Auto-checked-in* MyHistory Event\nAND user restarts BP app \n\n\n\n*Note to complete a check-in User must: [test case](https://testrail.testeng.mlbinfra.net/index.php?/cases/view/22474676&group_by=cases:section_id&group_order=asc&group_id=1144389 )\n**have location permissions (precise) enabled for Ballpark App on the device\n**have device located at the venue (can be mocked)\n**have a home game scheduled at the team venue within 3 hrs of device time AND also prior to after 6 hrs of game time (can be mocked)\n\nNOTE: Auto Check-in feature is ticket agnostic, meaning that expected behavior is witnessed both with AND without tickets to the event",
+        "expected": "THEN user is displayed a Qualtrics survey prompt\n*Header - “Ballpark app values your feedback”\n*Body - “Help improve the Ballpark app by taking a 2 minute survey about My History”  \n*Buttons - Blue display - “Share Feedback” “Dismiss”\n\n\n(https://mlb.az1.qualtrics.com/survey-builder/SV_9HcdjurkGtHtVfE/edit )\n"
+      },
+      {
+        "content": "[RECOMMEND deleting the app and doing a fresh install to get around survey eligibility restrictions]\n",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN user performs a manual checkin into an event*\nWHEN user successfully adds a photo to newly Manual-checked-in MyHistory Event\nAND user restarts BP app \n\n*CANNOT BE CONFIRMED IN QA\n*see rules for auto-checkin in prev step",
+        "expected": "THEN user is displayed a Qualtrics survey prompt\n*Header - “Ballpark app values your feedback”\n*Body - “Help improve the Ballpark app by taking a 2 minute survey about My History”  \n*Buttons - Blue display - “Share Feedback” “Dismiss”\n\n\n(https://mlb.az1.qualtrics.com/survey-builder/SV_9HcdjurkGtHtVfE/edit )\n"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "[PRODUCT/ENGINEERING - FUTURE DEVELOPMENT]\n\nWHEN user successfully adds a photo to newly Historical-checked-in MyHistory Event\nAND user restarts BP app \n",
+        "expected": ""
+      }
+    ]
+  }
+]

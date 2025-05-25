@@ -1,0 +1,24 @@
+[
+  {
+    "id": 17413616,
+    "title": "ASG Logos",
+    "section_id": 829771,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1623088487,
+    "updated_by": 232,
+    "updated_on": 1623088487,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 258684,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user is in MLB.TV App",
+    "custom_steps": "WHEN the All Star Game is upcoming, live or archived",
+    "custom_expected": "THEN I can see the ASG Logos in the hero tile\r\nAND I can see the ASG logos on the scores tab\r\nAND background on Game tiles is Gray on the scores tab",
+    "custom_steps_separated": null
+  }
+]

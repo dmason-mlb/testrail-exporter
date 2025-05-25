@@ -1,0 +1,297 @@
+[
+  {
+    "id": 58906,
+    "title": "Loading / Entry Ad - Handset",
+    "section_id": 94817,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 25,
+    "created_on": 1438797218,
+    "updated_by": 84,
+    "updated_on": 1482253929,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1657,
+    "display_order": 1,
+    "custom_preconds": "Lite users only\r\n\r\nLoading/Entry Ad (300X250 for phone and 970X500 for tablet)\r\nQA Site ID = 5225\r\nPROD Site ID = 3275\r\nSection_ID: Gameday\r\nSubsection_ID: androidEntry\r\nClose button shows after 5 sec\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user launches gameday for the first time in 6 hours (configurable in minutes)",
+        "expected": "Then there should be a loading interstitial displayed"
+      },
+      {
+        "content": "When the loading insterstitial is displayed",
+        "expected": "Then there will be a progress bar that says, 'loading' with the ad unit below\nand once gameday has successfully loaded then 'loading' will change to 'continue' "
+      },
+      {
+        "content": "When the user taps the 'continue' button\n",
+        "expected": "Then the user will be taken into gameday"
+      },
+      {
+        "content": "When the user sits on the screen with 'continue' up for > 5 seconds\n",
+        "expected": "Then the user will be automatically taken into gameday"
+      },
+      {
+        "content": "When the user launches gameday again within the 6 hour time frame",
+        "expected": "Then the loading screen should work as it currently does \nAnd just push the user into gameday"
+      }
+    ]
+  },
+  {
+    "id": 58913,
+    "title": "Gameday Tab Banner - (tablets / handsets)",
+    "section_id": 94817,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 25,
+    "created_on": 1438799121,
+    "updated_by": 84,
+    "updated_on": 1482253929,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1657,
+    "display_order": 3,
+    "custom_preconds": "Lite users only\r\n\r\n320X50 banner on each Gameday tab for handset and tablet, bottom of content\r\nQA Site ID = 5225\r\nPROD Site ID = 3275\r\nSection_ID: Gameday\r\nSubsection_ID\r\nGame\r\nBoxscore\r\nPlays\r\nVideos\r\nField\r\nColor",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a Lite user is in gameday",
+        "expected": "Then they will see a banner on both tablets and handsets\nAnd the banner will be locked at the bottom of each tab"
+      },
+      {
+        "content": "Confirm banner on Live, Box, Plays, Videos, Field, and Feed",
+        "expected": ""
+      },
+      {
+        "content": "When the user taps on the ad\nAnd then closes out of the ad",
+        "expected": "Then the user will be brought back into the gameday tab they tapped the ad on"
+      }
+    ]
+  },
+  {
+    "id": 58935,
+    "title": "Mid-inning Interstitial (tablets / handsets)",
+    "section_id": 94817,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 25,
+    "created_on": 1438801731,
+    "updated_by": 84,
+    "updated_on": 1486673785,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1657,
+    "display_order": 4,
+    "custom_preconds": "Lite users only\r\n\r\nAd Marvel 300 X 250 Mid-inning interstitial\r\nAd Marvel SDK implementation\r\nQA Site ID = 5225\r\nPROD Site ID = 3275\r\nSection_ID: Gameday\r\nSubsection_ID: androidInterstitial\r\nClose button shows after 5 sec\r\nIf next inning starts, interstitial dismisses\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the Lite user is in gameday\nAnd the game is between innings",
+        "expected": "Then the user will see an interstitial ad\nAnd the ad will have a 'Close' button after 5 seconds"
+      },
+      {
+        "content": "When the user taps the 'Close' button\nOr the user taps outside of the ad on the screen while the 'Close' button is present",
+        "expected": "Then the ad will close"
+      }
+    ]
+  },
+  {
+    "id": 58937,
+    "title": "Pre-roll on all Gameday Video (tablets / handsets)",
+    "section_id": 94817,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 25,
+    "created_on": 1438802737,
+    "updated_by": 84,
+    "updated_on": 1482253929,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1657,
+    "display_order": 5,
+    "custom_preconds": "Lite users only\r\n\r\nPre Roll on all Gameday Video \r\nFreeWheel implementation\r\nContent ID set at 19191919 for push derived video plays\r\nTargeting Lite site section IDs\r\nAtBat_Android_Lite_condensed.game\r\nAtBat_Android_Lite_video.highlight",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the Lite user accesses a video highlight\nor a condensed game",
+        "expected": "Then the user will be served a pre-roll ad"
+      },
+      {
+        "content": "When the user taps the pre-roll ad",
+        "expected": "Then the user will be taken to a webview"
+      },
+      {
+        "content": "When the user closes the ad webview",
+        "expected": "Then the user will be taken back into the video player\nAnd the highlight or cg will play successfully"
+      }
+    ]
+  },
+  {
+    "id": 94095,
+    "title": "Entry Interstitial",
+    "section_id": 134282,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4744",
+    "created_by": 84,
+    "created_on": 1459875068,
+    "updated_by": 84,
+    "updated_on": 1499799911,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1657,
+    "display_order": 1,
+    "custom_preconds": "Given a user is on an Android device",
+    "custom_steps": "When a LITE user navigates to Gameday during a LIVE game",
+    "custom_expected": "Then the user will see an entry interstitial ad every 12 hours\r\n-the ad will have a close button\r\n-once the ad has loaded, if the LITE user has not closed the ad unit after 5 seconds, the ad unit will be closed automatically\r\nand Gameday data will load",
+    "custom_steps_separated": [
+      {
+        "content": "on a handset",
+        "expected": "Then the user will see an entry interstitial ad\nand the ad size will be 320x480\n(enable Charles SSL proxying; check \"securepubads.g.doubleclick.net\" response) \n\ni.e.: \nhttps://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&correlator=3979797814624641&output=json_html&callback=callbackProxy&impl=fif&eid=108809080&sc=0&sfv=1-0-5&iu=%2F2605%2Fmlb.mlb%2Fgame&sz=320x480"
+      },
+      {
+        "content": "on a 7 inch tablet in Portrait\n(including the Kindle)",
+        "expected": "Then the user will see an entry interstitial ad\nand the ad size will be 320x480\n(enable Charles SSL proxying; check \"securepubads.g.doubleclick.net\" response)\n\ni.e.: https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&correlator=3979797814624641&output=json_html&callback=callbackProxy&impl=fif&eid=108809080&sc=0&sfv=1-0-5&iu=%2F2605%2Fmlb.mlb%2Fgame&sz=320x480"
+      },
+      {
+        "content": "on a 7 inch tablet in Landscape\n(NOT including the Kindle)",
+        "expected": "Then the user will see an entry interstitial ad\nand the ad size will be 300x250\n(enable Charles SSL proxying; check \"securepubads.g.doubleclick.net\" response)\n\nhttps://securepubads.g.doubleclick.net/gampad/..."
+      },
+      {
+        "content": "on a larger than 7 inch tablet",
+        "expected": "Then the user will NOT see an entry interstitial ad"
+      },
+      {
+        "content": "When the user enters mid-inning",
+        "expected": "Then the entry interstitial ad will be shown\nand NOT the mid-inning interstitial ad"
+      },
+      {
+        "content": "When no entry interstitial ad is returned",
+        "expected": "Then no entry interstitial ad will appear"
+      }
+    ]
+  },
+  {
+    "id": 94096,
+    "title": "Entry to Gameday",
+    "section_id": 134282,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4746",
+    "created_by": 84,
+    "created_on": 1459875079,
+    "updated_by": 84,
+    "updated_on": 1499799911,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1657,
+    "display_order": 2,
+    "custom_preconds": "Given a user is on an Android device\r\nand is viewing At Bat as a LITE user",
+    "custom_steps": "When the LITE user enters Gameday through different entry points",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "via Push Notifications",
+        "expected": "Then the LITE user should enter Gameday using the default tab for Game Start, Game End, Score Change & Lead Change\n\n(should see entry interstitial if this is first entry in 12 hours)"
+      },
+      {
+        "content": "by tapping on Game Cell of LIVE game on Scoreboard ",
+        "expected": "Then the LITE user should enter Pitch by Pitch tab\n\n(should see entry interstitial if this is first entry in 12 hours)"
+      },
+      {
+        "content": "via Scoreboard Expanded Game Cell link",
+        "expected": "Then the LITE user should enter Pitch by Pitch by default (or the last opened view)\n\n(should see entry interstitial if this is first entry in 12 hours)"
+      },
+      {
+        "content": "via Gameday button on Team Schedule",
+        "expected": "Then the LITE user should enter Pitch by Pitch tab\n\n(should see entry interstitial if this is first entry in 12 hours)"
+      },
+      {
+        "content": "on initial entry into Gameday",
+        "expected": "Then the LITE user should enter Pitch by Pitch by default (or the last opened view)\n\n(should see entry interstitial if this is first entry in 12 hours)"
+      }
+    ]
+  },
+  {
+    "id": 94099,
+    "title": "Mid-Inning Video Interstitial",
+    "section_id": 134282,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4749",
+    "created_by": 84,
+    "created_on": 1459875125,
+    "updated_by": 84,
+    "updated_on": 1499799911,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1657,
+    "display_order": 3,
+    "custom_preconds": "Given a user is on an Android device\r\nand is viewing At Bat as a LITE user",
+    "custom_steps": "When a LITE user has been viewing Gameday of a LIVE game",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the 3rd out of a half-inning is recorded ",
+        "expected": "Then the mid-inning video interstitial will start\nand it will be muted (user can unmute)"
+      },
+      {
+        "content": "When the mid-inning video interstitial ends",
+        "expected": "Then the ad player will be hidden\nand will not show any more ads"
+      },
+      {
+        "content": "If the next half-inning starts while the ad is playing",
+        "expected": "Then the ad will immediately end/hide\nand no more ads will be shown"
+      },
+      {
+        "content": "When no mid-inning video interstitial is returned ",
+        "expected": "Then no mid-inning video interstitial will appear"
+      }
+    ]
+  },
+  {
+    "id": 144113,
+    "title": "Deep Link",
+    "section_id": 134282,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4743",
+    "created_by": 84,
+    "created_on": 1462830155,
+    "updated_by": 84,
+    "updated_on": 1499799911,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1657,
+    "display_order": 4,
+    "custom_preconds": "Given a user is on an Android device\r\nand is viewing At Bat as a LITE user",
+    "custom_steps": "When a LITE user enters Gameday from a Deep Link\r\nhttp://wapqa.mlb.com/test/android/atbat-links.html",
+    "custom_expected": "Then the LITE user will not see an entry interstitial OR a mid-inning interstitial",
+    "custom_steps_separated": null
+  }
+]

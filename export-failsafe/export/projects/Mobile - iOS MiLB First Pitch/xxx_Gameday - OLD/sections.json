@@ -1,0 +1,83 @@
+[
+  {
+    "id": 338,
+    "suite_id": 82,
+    "name": "Preview/Warmup/Live State Verification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 339,
+    "suite_id": 82,
+    "name": "Gameday Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 340,
+    "suite_id": 82,
+    "name": "Boxscore Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 341,
+    "suite_id": 82,
+    "name": "Field Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 342,
+    "suite_id": 82,
+    "name": "Summary Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 344,
+    "suite_id": 82,
+    "name": "Delayed State Verification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 345,
+    "suite_id": 82,
+    "name": "Postponed State Verification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 346,
+    "suite_id": 82,
+    "name": "Suspended State Verification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 347,
+    "suite_id": 82,
+    "name": "Final State Verification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  }
+]

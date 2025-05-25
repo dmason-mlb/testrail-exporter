@@ -1,0 +1,119 @@
+[
+  {
+    "id": 99332,
+    "suite_id": 15222,
+    "name": "Permissions/Misc",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 99333,
+    "suite_id": 15222,
+    "name": "Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 99334,
+    "suite_id": 15222,
+    "name": "Contract - BOC Functions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 99335,
+    "suite_id": 15222,
+    "name": "Contract - Club Functions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 99336,
+    "suite_id": 15222,
+    "name": "Esign and Add C's",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 99970,
+    "suite_id": 15222,
+    "name": "Single C Workflow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 99971,
+    "suite_id": 15222,
+    "name": "Multi C Workflow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 116405,
+    "suite_id": 15222,
+    "name": "Other",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 121098,
+    "suite_id": 15222,
+    "name": "R4 Signing Bonus",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 1138785,
+    "suite_id": 15222,
+    "name": "MNC/AddC",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 1138829,
+    "suite_id": 15222,
+    "name": "MNC",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 1144314,
+    "suite_id": 15222,
+    "name": "MNC Admin",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 1144357,
+    "suite_id": 15222,
+    "name": "MNC",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  }
+]

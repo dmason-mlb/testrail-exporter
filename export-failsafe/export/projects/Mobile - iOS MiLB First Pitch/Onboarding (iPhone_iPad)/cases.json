@@ -1,0 +1,136 @@
+[
+  {
+    "id": 1225006,
+    "title": "Launcher Icon",
+    "section_id": 7496,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1523039526,
+    "updated_by": 65,
+    "updated_on": 1523039889,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1015,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": "When the user looks at the launcher icon",
+    "custom_expected": "Then they see a clear image\r\nAnd the text under the icon should read \"MiLB\"",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1225007,
+    "title": "Splash Screen",
+    "section_id": 7496,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1523039673,
+    "updated_by": 65,
+    "updated_on": 1523039917,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1015,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": "When the user launches the app",
+    "custom_expected": "Then they see the splash screen and see a clear image and can read that it says \"First Pitch\" and below that should say \"MiLB.com\"",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 51502,
+    "title": "Favorite Team",
+    "section_id": 7496,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": 938,
+    "refs": null,
+    "created_by": 40,
+    "created_on": 1429555855,
+    "updated_by": 65,
+    "updated_on": 1523039935,
+    "estimate": null,
+    "estimate_forecast": "7m 13s",
+    "suite_id": 1015,
+    "display_order": 3,
+    "custom_preconds": "Fresh install of MiLB First Pitch\r\n\r\n(use .Debug build to see notifications during on-boarding)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user initially launched the app",
+        "expected": "User will recieve prompt asking if you would like to recieve notifications, then you will be brought to the favorite team picker page"
+      },
+      {
+        "content": "When you open the app for the first time\nAND you do not choose a favorite team",
+        "expected": "Then you will be brought to the notifications settings page\nAND News notification will be enabled"
+      },
+      {
+        "content": "When you open the app for the first time\nAND you do choose a favorite team(s)",
+        "expected": "Then you will be brought to the notifications settings page\nAND News and your favorite teams notifications will be enabled"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 48696,
+    "title": "Notifications",
+    "section_id": 7496,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 40,
+    "created_on": 1418761842,
+    "updated_by": 65,
+    "updated_on": 1523038745,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1015,
+    "display_order": 6,
+    "custom_preconds": "Given the .debug build of the app has been installed\r\nAnd the app has NOT yet been launched",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user installs the app\nAnd launches the app for the first time",
+        "expected": "Then the user will be prompted with a modal asking them to choose a team from either of three sections: MLB Affiliate, MILB Class or View all MiLB Teams"
+      },
+      {
+        "content": "When the user launches the app\nAnd chooses the Class of Favorite Team(MLB Affiliate, AAA, AA, A) \nAnd the user chooses NOT to add a favorite team",
+        "expected": "Then the user will be taken to the Notifications settings screen\nAND News will be automatically enabled"
+      },
+      {
+        "content": "When the user launches the app\nAnd chooses the Class of Favorite Team(MLB Affiliate, AAA, AA, A) \nAnd chooses a team \nAnd taps the 'Done' button on the upper right",
+        "expected": "Then the user should be taken to the Notifications settings screen\nAnd Notifications, News, and all the Gameday notifications of your favorite team will be enabled by default\n"
+      },
+      {
+        "content": "When the user launches the app (iPhone Only)\nAnd the user chooses Triple-A as the Favorite Team Class\nAnd is presented with the Triple-A Favorite Team modal\nAnd adds at least one favorite team \nAnd taps the 'Done' button\nAnd the user taps 'Done' on the Notifications settings page",
+        "expected": "Then the user should be taken directly to that team's page\nAnd the corresponding logo of the team chosen is on the lower left\nREPEAT FOR ALL TEAMS"
+      },
+      {
+        "content": "When the user launches the app for the first time\nAND when the user goes to the scoreboard for the first time",
+        "expected": "THEN the user will get a bubble message pointing to the Class picker on the top center \nAND the bubble message will list all the classes(Triple A, Double A, Class A Advanced, Class A, Class A short season, and Rookie)"
+      },
+      {
+        "content": "When the user launches the app  (iPhone Only)\nAnd the user chooses Class A as the Favorite Team Class\nAnd is presented with the Class A Favorite Team modal\nAnd adds at least one favorite team\nAnd taps the 'Done' button",
+        "expected": "Then the user should be taken directly to that team's page\nAnd the corresponding logo of the team chosen is on the lower left\nREPEAT FOR ALL TEAMS"
+      },
+      {
+        "content": "When the user launches the app\nAnd the user chooses Triple-A as the Favorite Team Class\nAnd is presented with the Triple-A Favorite Team modal\nAnd adds at least one favorite team \nAnd taps the 'Done' button\nAnd the user taps 'Done' on the Notifications settings page",
+        "expected": "Then when the user goes to the Settings->Push Notifications page all of the settings that were set in the initial flow for notifications is retained"
+      }
+    ],
+    "custom_feature_tag": null
+  }
+]

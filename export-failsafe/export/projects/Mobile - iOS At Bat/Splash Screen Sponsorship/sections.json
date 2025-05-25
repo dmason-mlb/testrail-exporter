@@ -1,0 +1,11 @@
+[
+  {
+    "id": 145727,
+    "suite_id": 20247,
+    "name": "Test Cases",
+    "description": "Config Values:\nhttps://atbatappconfig.mlb.com/ios/10.6.0/iphoneEnvironmentStrings.json\nhttps://atbatappconfig.mlb.com/ios/10.6.0/ipadEnvironmentStrings.json\n\nValues:\nsplashScreenSponsorImageURL\nsponsorshipImageDelayTime",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  }
+]

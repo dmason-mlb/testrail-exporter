@@ -1,0 +1,119 @@
+[
+  {
+    "id": 143389,
+    "suite_id": 20142,
+    "name": "Reaffiliation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 143391,
+    "suite_id": 20142,
+    "name": "EBIS Link",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 143392,
+    "suite_id": 20142,
+    "name": "Central Tender",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 143393,
+    "suite_id": 20142,
+    "name": "Employee Profiles",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 143394,
+    "suite_id": 20142,
+    "name": "Employee Transaction",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 143395,
+    "suite_id": 20142,
+    "name": "Assign as 7th coach",
+    "description": null,
+    "parent_id": 143394,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 143400,
+    "suite_id": 20142,
+    "name": "Remove as 7th Coach",
+    "description": null,
+    "parent_id": 143394,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 143401,
+    "suite_id": 20142,
+    "name": "Assign/Reassign Employee",
+    "description": null,
+    "parent_id": 143394,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 143402,
+    "suite_id": 20142,
+    "name": "Remove Employee From Org",
+    "description": null,
+    "parent_id": 143394,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 143403,
+    "suite_id": 20142,
+    "name": "Employee Roster Widget",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 143406,
+    "suite_id": 20142,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 143403,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 143404,
+    "suite_id": 20142,
+    "name": "Employee Contracts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 143409,
+    "suite_id": 20142,
+    "name": "Waivers",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  }
+]

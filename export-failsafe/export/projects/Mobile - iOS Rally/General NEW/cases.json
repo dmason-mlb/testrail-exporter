@@ -1,0 +1,1763 @@
+[
+  {
+    "id": 16646972,
+    "title": "Swipe right functionality",
+    "section_id": 763711,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2641",
+    "created_by": 258,
+    "created_on": 1617831667,
+    "updated_by": 258,
+    "updated_on": 1617831667,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Swipe edge right on splitter screen",
+        "expected": "Will return user to games tab"
+      },
+      {
+        "content": "Swipe edge right on card deck",
+        "expected": "Will return user to return to splitter screen"
+      },
+      {
+        "content": "Swipe edge right 'In the money' section",
+        "expected": "Will return user to ranking screen"
+      }
+    ]
+  },
+  {
+    "id": 16778614,
+    "title": "EC - Favorite team",
+    "section_id": 763711,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618872633,
+    "updated_by": 225,
+    "updated_on": 1620688162,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Newly created user",
+        "expected": "User is able to go through selecting favorite team flow after signing up"
+      },
+      {
+        "content": "Existing user",
+        "expected": "User is able to go through selecting favorite team flow after logging in"
+      },
+      {
+        "content": "* Log In / Sign Up\n* background the app when on Favorite team page\n* go back to the app",
+        "expected": "User is not able to proceed to the app without selecting their Favorite team"
+      },
+      {
+        "content": "* Log In / Sign Up\n* exit the app when on Favorite team page\n* go back to the app",
+        "expected": "User is not able to proceed to the app without selecting their Favorite team"
+      }
+    ]
+  },
+  {
+    "id": 16932628,
+    "title": "Scrollbar indicator",
+    "section_id": 763711,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1619731887,
+    "updated_by": 258,
+    "updated_on": 1619732119,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Scrollbar indicator should not be there in any pages:\r\n\r\n* games page\r\n* deck view\r\n* daily ranking page\r\n* game rankings page\r\n* profile page\r\n\r\n![](index.php?/attachments/get/8298237)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16932632,
+    "title": "Bottom Nav bar",
+    "section_id": 763711,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1619732186,
+    "updated_by": 225,
+    "updated_on": 1620688233,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": "When the user views the bottom of the screen",
+    "custom_expected": "Then the user sees \"Games\" (default), \"Rankings\" and \"Profile\" buttons",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16740344,
+    "title": "No notification for no game day",
+    "section_id": 770485,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618525658,
+    "updated_by": 258,
+    "updated_on": 1618525671,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "No notification should be sent for the day when games are not scheduled",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16740345,
+    "title": "\"Enable Notification\" button is disabled for final games",
+    "section_id": 770485,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618525789,
+    "updated_by": 258,
+    "updated_on": 1618525837,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": "1. Wait until the game is final\r\n2. Open the game scroll to the lue card that follows after pre-game props",
+    "custom_expected": "When a game has completed, the enable notifications button that is on the card at the end of the pre-game props no longer has a button to enable notifications.\r\n\r\n![](index.php?/attachments/get/34115)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16740506,
+    "title": "Setting notification before game is live",
+    "section_id": 770485,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618525997,
+    "updated_by": 258,
+    "updated_on": 1618527320,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 3,
+    "custom_preconds": "Game is scheduled",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User can enable the notification on the blue card that follows after the pre-game props",
+        "expected": "* The button should change color and display \"On\"\n* The buttons should still say \"On\" when the user navigates away from that game and then back into it\n\n![](index.php?/attachments/get/9115784)\n"
+      },
+      {
+        "content": "If user enabled the notification in Rally game",
+        "expected": "The button will be 'On' for both, Rally and Rally Pro game"
+      },
+      {
+        "content": "If user enabled the notification in Rally Pro game",
+        "expected": "The button will be 'On' for both, Rally and Rally Pro game"
+      },
+      {
+        "content": "When game starts ",
+        "expected": "User will receive push notification (only one)\n\nAnd the notification reads: \"You have predictions to make! Come make your predictions on today's games!"
+      }
+    ]
+  },
+  {
+    "id": 16740508,
+    "title": "Setting notification after game is live",
+    "section_id": 770485,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618526054,
+    "updated_by": 258,
+    "updated_on": 1618527207,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "User is able to set the notification when the game is live. User will receive push notification when the game is final. \r\n\r\n![](index.php?/attachments/get/9115787)\r\n\r\n\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16740512,
+    "title": "Push notification for final games",
+    "section_id": 770485,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618526533,
+    "updated_by": 258,
+    "updated_on": 1618528645,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 5,
+    "custom_preconds": "User played the game and it's now final",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User played Rally only",
+        "expected": "When game is final, user receives push notification (only one)\nUser get the notification immediately after the game is over.\n\n\"This game is over!\nFinal Score: team : @ team : . Come see how well you did!\n\n![](index.php?/attachments/get/9115785)\n"
+      },
+      {
+        "content": "User played Rally Pro only",
+        "expected": "When game is final, user receives push notification (only one)\nUser get the notification immediately after the game is over.\n\n\"This game is over!\nFinal Score: team : @ team : . Come see how well you did!\n\n![](index.php?/attachments/get/9115785)\n"
+      },
+      {
+        "content": "User plays Rally and Rally Pro ",
+        "expected": "User will receive 2 push notifications"
+      }
+    ]
+  },
+  {
+    "id": 16740513,
+    "title": "Notification behavior",
+    "section_id": 770485,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618527416,
+    "updated_by": 258,
+    "updated_on": 1620245010,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 6,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Disable notification for Rally in device settings",
+        "expected": "After clicking on 'Enable Notification' button in pre-game, Notification screen pops up\n\n![](index.php?/attachments/get/9115788)\n"
+      },
+      {
+        "content": "Disable notification for Rally in device settings",
+        "expected": "After clicking on Notification toggle on Profile page, Notification screen pops up\n\n![](index.php?/attachments/get/9386945)\n"
+      },
+      {
+        "content": "Disable notification on the profile page in the app",
+        "expected": "After clicking on 'Enable Notification' button in pre-game, 'Notifications are disabled' screen pops up and the user can enable it. If the user enables it, the notification toggle is on on the Profile page\n\n![](index.php?/attachments/get/9386944)\n\n"
+      },
+      {
+        "content": "If user disables notification for Rally in device settings",
+        "expected": "The notification toggle is off on Profile page"
+      },
+      {
+        "content": "If user's notification for Rally is On",
+        "expected": "After clicking on 'Enable Notification' button in pre-game, no Notification screen pops up"
+      },
+      {
+        "content": "If user turns on notification on pre-game and go to profile page and toggles the notification off",
+        "expected": "Turning notification off in user’s profile should turn pre-game notification off."
+      }
+    ]
+  },
+  {
+    "id": 16946603,
+    "title": "EC Notification",
+    "section_id": 770485,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1619798904,
+    "updated_by": 258,
+    "updated_on": 1619801277,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If the user's device notification is on and the notification toggle is off on the profile page ",
+        "expected": "User receives morning notification and does not receive any contest notification. "
+      },
+      {
+        "content": "If the user's device notification is on and the notification toggle is on on the profile page ",
+        "expected": "User receives morning notification and does not receive any contest notification. "
+      },
+      {
+        "content": "If the user's device notification is on and the notification toggle is on on the profile page and off on the contest",
+        "expected": "User receives morning notification and does not receive any contest notification. "
+      },
+      {
+        "content": "If the user's device notification is on and the notification toggle is on on the profile page and on on the contest",
+        "expected": "User receives morning notification and contest notification. "
+      }
+    ]
+  },
+  {
+    "id": 17698289,
+    "title": "'Finish Your Game' push notification behavior (for Rally game)",
+    "section_id": 770485,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2874",
+    "created_by": 258,
+    "created_on": 1624895512,
+    "updated_by": 258,
+    "updated_on": 1626109195,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 8,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "User should get a push notification that reminds them to complete their game of Rally",
+    "custom_steps_separated": [
+      {
+        "content": "Positive TC\n* If user made a pick in an EZ play game\n* It has been 15 minutes since user's last pick\n\nNote: per Donna: “15 minutes” is the minimum time - we use an interval of 15 minutes but the job runs every 5 minutes so it could be 20 minutes before you get the push notification.",
+        "expected": "* User made a pick and backgrounds the app, user receives a push notification\n* User made a pick and user is inside the app, user does not get a push notification\n* User made a pick and logged off, user does not receive push notification"
+      },
+      {
+        "content": "Positive TC\n* If user hasn’t completed their EZ play game\n* It has been 15 minutes since user's last pick",
+        "expected": "* If user has one (or more) picks left, user received a push notification\n* If user completed the game, user does not receive a push notification (per new update - user still receives PN notification if the first iterations has ended and the second iteration has not started yet)"
+      },
+      {
+        "content": "EC - When user should still get push notifications \n",
+        "expected": "* If user made only one pick and this pick got voided - user still receives a push notification\n* If user made only one pick and this pick got withdrawn - user still receives a push notification"
+      },
+      {
+        "content": "User should receive a push notification for each EZ play game user plays. User should only receive one push notification per game.\n",
+        "expected": "* If user played 1 game - User receives one push notification for the game user played. (only one notification)\n* If user played 5 games - User receives five push notifications for the games user played (only one of each notification)"
+      },
+      {
+        "content": "User should only receive this for their first iteration in a contest.\n\n",
+        "expected": "* If user plays first iteration - user receives the push notification\n* If user plays second (or more) iteration - user does not receive this push notification"
+      },
+      {
+        "content": "If the user has Rally notifications disabled, this notification should never be sent.",
+        "expected": "* If user's notification is enabled in device settings and profile - user receives the push notification\n* If user's notification is enabled in device settings and disabled in profile - user does not receive the notification\n* If users notification is disabled in device settings and profile - user does not receive the push notification\n"
+      },
+      {
+        "content": "EC - User only receive push notification when game is live",
+        "expected": "* User does not receive the push notification for scheduled games\n   - Play scheduled contest, no push notification is received\n* User does not receive the push notification for final games a pick for the \n   - Make a pick for the game that will go final within 15 minutes, no push notification is received\n"
+      }
+    ]
+  },
+  {
+    "id": 17748372,
+    "title": "'Finish Your Game' push notification (wording)",
+    "section_id": 770485,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1625074980,
+    "updated_by": 258,
+    "updated_on": 1626109248,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 9,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "title: You Have Picks Left to Make\r\nbody: Complete them all to earn XP and compete for prizes!",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 17751286,
+    "title": "Clicking on 'Finish Your Game' push notification",
+    "section_id": 770485,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1625076641,
+    "updated_by": 258,
+    "updated_on": 1626107173,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 10,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When user clicks on PN when link is expired (next day)",
+        "expected": "‘Link Has Expired’ popup is displayed\n"
+      },
+      {
+        "content": "When user clicks on PN when link with a bad connection",
+        "expected": "The app will be open and  genetic bad connection page will be displayed"
+      },
+      {
+        "content": "if the app is backgrounded",
+        "expected": "it takes user to the last page opened in Rally"
+      },
+      {
+        "content": "if the app is not active (user is logged in)",
+        "expected": "it will take user to contest home"
+      },
+      {
+        "content": "if user made picks and logged out",
+        "expected": "user will still get PN, tapping on PN will take user to login screen"
+      },
+      {
+        "content": "clicking on PN when iteration is not complete ",
+        "expected": "it will take user to the last page opened "
+      },
+      {
+        "content": "clicking on PN when iteration is complete",
+        "expected": "it will take user to the last page opened "
+      },
+      {
+        "content": "clicking on PN when game is final",
+        "expected": "it will take user to the last page opened. If the last page opened is the game page, it will take user to EOG flow (if not seen)"
+      },
+      {
+        "content": "User played the game, then in 5 minutes user goes back to the app and plays another game ",
+        "expected": "User will receive PN for both games (PN looks at individual games)"
+      }
+    ]
+  },
+  {
+    "id": 21028830,
+    "title": "EC - 'Finish Your Game' PN",
+    "section_id": 770485,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1626107211,
+    "updated_by": 258,
+    "updated_on": 1626107699,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 11,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "1. User plays the game\n2. User finishes the iteration\n3. User doesn't start the new iteration\n",
+        "expected": "User still receives the PN "
+      },
+      {
+        "content": "If user stats new iteration",
+        "expected": "User does not receive the PN"
+      }
+    ]
+  },
+  {
+    "id": 16777714,
+    "title": "Welcome page for first time user",
+    "section_id": 770501,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618859714,
+    "updated_by": 225,
+    "updated_on": 1620688325,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "* background image is black and white\n* at the top there is a flashing neon logo\n* 'Log in with MLB' button\n* 'Don't have an account? Sign Up' link",
+        "expected": "![](index.php?/attachments/get/8520268)"
+      },
+      {
+        "content": "No MGM logo should be displayed on the page or while logo splash happening",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 16777715,
+    "title": "Welcome page for existing time user",
+    "section_id": 770501,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618859729,
+    "updated_by": 225,
+    "updated_on": 1620688340,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "1. background image is black and white\n2. at the top there is flashing neon logo\n3. Box with users previously logged in email and 'Continue with MLB' button\n4. 'Log in with another MLB account\n5. 'New to ML? Sign Up'",
+        "expected": "![](index.php?/attachments/get/9134137)\n"
+      },
+      {
+        "content": "No MGM logo should be displayed on the page or while logo splash happening\n\n \n\n",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 16777717,
+    "title": "Welcome page for user that has other MLB apps",
+    "section_id": 770501,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618859845,
+    "updated_by": 225,
+    "updated_on": 1620688357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "If user didn't play Rally before, but has other MLB apps where they sign in. ",
+    "custom_steps_separated": [
+      {
+        "content": "When duser downloads and opens the Rally app\n\n* background image is black and white\n* at the top there is flashing neon logo\n* Box with users previously logged in email and 'Continue with MLB' button\n* 'Log in with another MLB account\n* 'New to ML? Sign Up'",
+        "expected": "![](index.php?/attachments/get/9134138)\n"
+      },
+      {
+        "content": "No MGM logo should be displayed on the page or while the logo splash happening",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 16777718,
+    "title": "Switching between Log In /Sign Up",
+    "section_id": 773913,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618859932,
+    "updated_by": 225,
+    "updated_on": 1620688445,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "1. User is on Sign Up page. \n2. User enters all information \n3. User taps 'Already have an account? Log In\"",
+        "expected": "Log In page is displayed. No previously entered info retains"
+      },
+      {
+        "content": "1. User is on Log In page. \n2. User enters all information \n3. User taps 'Don't have an account? Sign Up\"",
+        "expected": "Sign Up page is displayed. No previously entered info retains"
+      },
+      {
+        "content": "1. User is on Sign Up page. \n2. User enters all information \n3. User clicks back icon and clicks Sign Up again",
+        "expected": "Sign Up page is displayed. No previously entered info retains"
+      },
+      {
+        "content": "1. User is on Log In page. \n2. User enters all information \n3. User clicks back icon and clicks Log In again",
+        "expected": "Log In page is displayed. No previously entered info retains"
+      }
+    ]
+  },
+  {
+    "id": 16777738,
+    "title": "Log In page display",
+    "section_id": 773911,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618861737,
+    "updated_by": 225,
+    "updated_on": 1620688502,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "1. The words “Log In” should appear centered in the header\n2. And there should be a back arrow in the top left corner\n3. And there should be the words “Log in to your MLB.com account to participate and get access to exclusive MLB content.” below the title\n4. And there should be an email text field with “john.doe@email.com” as default\n5. And there should be a password field with “*******” as default\n6. And there should be a forgot your password link\n7. And there should be a greyed out Login button\n8. And there should be a Sign Up link if you don’t have an account",
+        "expected": "![](index.php?/attachments/get/34135)"
+      },
+      {
+        "content": "After user puts in all information, Log In button is enabled",
+        "expected": "![](index.php?/attachments/get/34136)"
+      }
+    ]
+  },
+  {
+    "id": 16777739,
+    "title": "Error message for incorrect email/password",
+    "section_id": 773911,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618862757,
+    "updated_by": 225,
+    "updated_on": 1620688518,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": "When user logs in with incorrect email/password\r\n\r\n",
+    "custom_expected": "'Please enter a valid email/password' error message is displayed.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16777740,
+    "title": "Resetting password",
+    "section_id": 773911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618862810,
+    "updated_by": 258,
+    "updated_on": 1618863136,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user clicks 'Forgot Your Password'",
+        "expected": "Then user should be presented with a webview to reset their password"
+      },
+      {
+        "content": "When user enters the information",
+        "expected": "\"A password reset link has been sent to you via email\" message has displayed"
+      },
+      {
+        "content": "When the user navigates to his/her email inbox\nAnd opens the \"MLB Account Password Reset\" email\nAnd taps the \"Reset Password\" button in the body of the email",
+        "expected": "Then the \"Reset your password\" screen opens\nAnd a \"New password\" field displays\nAnd a \"Repeat password\" field is present"
+      },
+      {
+        "content": "When user enteres different passwords in \"New password\" and \"Repeat password\" fields",
+        "expected": "Error message is displayed"
+      },
+      {
+        "content": "User has entered a valid password in the \"New password\" and \"Repeat password\" fields\nAnd taps the \"Save\" button",
+        "expected": "Then the user is redirected to the MLB App"
+      }
+    ]
+  },
+  {
+    "id": 16778615,
+    "title": "Log In with MLB",
+    "section_id": 773911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618873193,
+    "updated_by": 258,
+    "updated_on": 1618873305,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If user doesn't have any other MLB apps where they are currently logged in,  there shoud be a “Log in with MLB” button on the login screen. \nNote: 'Log In' should be light bold",
+        "expected": "![](index.php?/attachments/get/8299133)\n"
+      },
+      {
+        "content": "Clicking the “Log in with MLB” button will check to see if the device has logged in to any other MLB apps.",
+        "expected": ""
+      },
+      {
+        "content": "Clicking on 'Don't have an account? Sign Up'\nNote: 'Sign Up' should be light bold",
+        "expected": "Will bring user to sign up page"
+      },
+      {
+        "content": "If user is logged in in another MLB app",
+        "expected": "The user’s email address is shown, and the “Continue with MLB” button is added that allows them to continue their log in.\n\n'Log In with another MLB account' is displayed\n'New to MLB? Sign Up' is displayed\n('Log In' and 'Sign Up' are light bold)\n\n![](index.php?/attachments/get/6954914)\n"
+      },
+      {
+        "content": "Clicking on 'Log In with another MLB account'",
+        "expected": "Will bring user to 'Log In' page"
+      },
+      {
+        "content": "Clicking on 'New to MLB? Sign Up' ",
+        "expected": "Will bring user to 'Sign Up' page"
+      }
+    ]
+  },
+  {
+    "id": 16778616,
+    "title": "EC/negative testing for 'Log in with MLB'",
+    "section_id": 773911,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618873359,
+    "updated_by": 258,
+    "updated_on": 1618873475,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User creates an account and then signs out",
+        "expected": "When user goes back to Rally, the newly created account is displayed in log in with MLB section"
+      },
+      {
+        "content": "If user has long email address",
+        "expected": "Full email address is displayed os email has a trancation\n\n![](index.php?/attachments/get/6954915)\n"
+      },
+      {
+        "content": "User deletes DOB or nickname from MLB account",
+        "expected": "User clicks on 'Log in with MLB', then types in all the MLB account info, then it takes user to update your profile page"
+      },
+      {
+        "content": "User deletes DOB or nickname from MLB account",
+        "expected": "User is logged in to another MLB app on the phone. Then user clicks on 'Continue with MLB', then types in all the MLB account info, then it takes user to update your profile page"
+      }
+    ]
+  },
+  {
+    "id": 16777746,
+    "title": "Log In flow",
+    "section_id": 773911,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618864090,
+    "updated_by": 258,
+    "updated_on": 1620774489,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 6,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Tap the 'Log in with another ML account",
+        "expected": "Login page is displayed.\n\nThings are displayed: \n\n1. Text: \"Log in to your MLB.com account to play the game and get access to exclusive MLB content.\"\n2. Email and Password  fields are displayed\n3. \"Forgot Your Password?\"\n4. Log In button\n5. Text: \"Don't have an account? Sign Up\""
+      },
+      {
+        "content": "* Enter email and password\n* Click 'Log In'",
+        "expected": "Notifications page is displayed"
+      },
+      {
+        "content": "OR click 'Continue with MLB'",
+        "expected": "Notifications page is displayed"
+      },
+      {
+        "content": "Click 'Continue'",
+        "expected": "Favorite team selection page is displayed"
+      },
+      {
+        "content": "Select a team",
+        "expected": "Logos and team names are readable and are of uniform size and quality"
+      },
+      {
+        "content": "Tap next",
+        "expected": "Welcome page is displayed, with the same boilerplate agreement and links as listed in step 2. (Welcome and name is center aligned)\n\n![](index.php?/attachments/get/9491084)\n\n"
+      },
+      {
+        "content": "Tap on all 5 links and navigate back to app",
+        "expected": "Each link navigates to the appropriate page"
+      },
+      {
+        "content": "Tap Play",
+        "expected": "User is directed to Home page. Games list is displayed."
+      }
+    ]
+  },
+  {
+    "id": 16778052,
+    "title": "Notification page",
+    "section_id": 773911,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618869353,
+    "updated_by": 225,
+    "updated_on": 1620688631,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If user was previously logged and Rally’s notifications are enabled in device settings ",
+        "expected": "Things are displayed on Notification page: \n\n- word “Notifications” centered in the header\n- picture/icon in the middle of the screen\n- below the picture should be the message “Notifications are enabled. You’ll be notified of available games, game results, and your scores.”\n- clickable, blue 'Continue' button"
+      },
+      {
+        "content": "If user clicks 'Continue' button",
+        "expected": "Favorite team page is displayed"
+      },
+      {
+        "content": "If user was previously logged and Rally’s notifications are enabled in device settings ",
+        "expected": "Things are displayed on Notification page: \n\n- word “Notifications” centered in the header\n- picture/icon in the middle of the screen\n- below the picture should be the message “Notifications are disabled.” in red and “Rally uses push notifications to notify you of available games, game results, and your scores.” \n- and there should be a clickable \"Enable In Settings\" and \"Skip For Now\" buttons\n\n![](index.php?/attachments/get/34133)"
+      },
+      {
+        "content": "If user clicks on 'Enable in Settings'",
+        "expected": "User is redirected to MLB Rally page in device settings \n\n![](index.php?/attachments/get/9134142)\n"
+      },
+      {
+        "content": "If user clicks on 'Skip For Now'",
+        "expected": "Favorite team page is displayed"
+      }
+    ]
+  },
+  {
+    "id": 16778612,
+    "title": "Favorite team",
+    "section_id": 773911,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618872522,
+    "updated_by": 225,
+    "updated_on": 1620688691,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 8,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "User sees 'Select Favorite' page every time user logs in in the app",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16777741,
+    "title": "Sign Up page display",
+    "section_id": 773912,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618863210,
+    "updated_by": 225,
+    "updated_on": 1620688745,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "1. The words “Sign Up” should be centered in the header\n2. And there should be a back arrow in the top left corner\n3. And the words “Create an MLB.com account to participate and get access to exclusive MLB content.” appears just beneath the header\n4. And there should be an email text field with “john.doe@email.com” as default\n5. And there should be a Nickname text field with “Baseballfan2021” as default (should be current year(\n6. And there should be a password field with “*******” as default\n7. And there should be a Birthdate text field with “MM/DD/YYYY” as default\n8. And there should be a greyed out sign up button\n9. And there should be a Log in link if you already have an account",
+        "expected": "![](index.php?/attachments/get/34134)"
+      },
+      {
+        "content": "After entering the information in all the fields, the Sign Up button becomes blue and active",
+        "expected": "![](index.php?/attachments/get/9134139)\n"
+      }
+    ]
+  },
+  {
+    "id": 16777742,
+    "title": "Email field",
+    "section_id": 773912,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618863493,
+    "updated_by": 225,
+    "updated_on": 1620688779,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When user enters an Invalid email ",
+        "expected": "Then the line is turned red with the text “Please enter a valid email address”"
+      },
+      {
+        "content": "When user puts the space",
+        "expected": "The error message appears: 'The first character must be a letter or number'"
+      },
+      {
+        "content": "When user enters a valid email\n\nvalid emails include:\n\nuser@gmail.com\nuser+@gmail.com\nuser-@gmail.com\nuser?@gmail.com\nuser=/-+@gmail.com\nuser%20@gmail.com\nandi2019p@mlb.com",
+        "expected": "Then the field accepts the email and throws no error message"
+      },
+      {
+        "content": "When user enters an existing email and fills the rest of the fields and click sign up",
+        "expected": "Then user should be prompted with an error message saying “An account with that email already exists”"
+      }
+    ]
+  },
+  {
+    "id": 16777743,
+    "title": "Nickname field",
+    "section_id": 773912,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618863641,
+    "updated_by": 225,
+    "updated_on": 1620688806,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "The nickname criteria are ",
+        "expected": "1. nicknames should not be unique\n2. must be 6-15 characters long\n3. must contain only letters and numbers \n4. can not contain spaces and special characters\n5. can not contain non-English characters \n6. can not be disruptive or offensive\n7. can not contain emoji"
+      },
+      {
+        "content": "If the nickname has <6 and >15 characters",
+        "expected": "the error message is displayed 'Nickname must be 6-15 characters long'"
+      },
+      {
+        "content": "If the nickname contains special characters",
+        "expected": "the error message is displayed 'Nickname must contain only letters and numbers'"
+      },
+      {
+        "content": "If the nickname disruptive or offensive",
+        "expected": "the error message is displayed: 'Please choose another nickname'"
+      }
+    ]
+  },
+  {
+    "id": 16777744,
+    "title": "Password field",
+    "section_id": 773912,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618863818,
+    "updated_by": 225,
+    "updated_on": 1620688825,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is creating a password",
+        "expected": "THEN the user will see the following password requirements and must make a password fitting the following password requirements:\n - No special characters\n - One number\n - One uppercase letter\n - One lowercase letter\n - 8-15 characters"
+      },
+      {
+        "content": "When user enters an invalid password ",
+        "expected": "Then the corresponding issues with the password should be red with an X in the requirements field\n\n![](index.php?/attachments/get/34150)\n"
+      },
+      {
+        "content": "When user enters a valid password",
+        "expected": "Then all the password requirements should have a check mark next to them"
+      },
+      {
+        "content": "When user clicks the eyeball after entering a password",
+        "expected": "Then the text in the password field should become visible"
+      }
+    ]
+  },
+  {
+    "id": 16777745,
+    "title": "Date of birth field",
+    "section_id": 773912,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618863932,
+    "updated_by": 225,
+    "updated_on": 1620688918,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "DOB format",
+        "expected": "mm/dd/yyyy"
+      },
+      {
+        "content": "When user enters a future birthdate",
+        "expected": "“Please enter a correct birthdate” message is displayed"
+      },
+      {
+        "content": "When user enters an invalid birthdate",
+        "expected": "“Please enter your birthday in the format mm/dd/yyyy” message is displayed"
+      },
+      {
+        "content": "When user enters a birthday which is under 21",
+        "expected": "This page pops up \n\n![](index.php?/attachments/get/8519354)\n"
+      },
+      {
+        "content": "When user enters a birthday which is 21+",
+        "expected": "No erorr message appears"
+      },
+      {
+        "content": "When a user creates an account on their birthday",
+        "expected": "There should be a message stating \"Happy Birthday!\""
+      }
+    ]
+  },
+  {
+    "id": 16777747,
+    "title": "Favorite team",
+    "section_id": 773912,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618864096,
+    "updated_by": 225,
+    "updated_on": 1620688947,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 6,
+    "custom_preconds": "Favorite team after logging in, signing up and in the profile page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "The Favorite team has a list view",
+        "expected": "![](index.php?/attachments/get/6438740)"
+      },
+      {
+        "content": "Every line has a plus sign on the left, team logo and team name",
+        "expected": ""
+      },
+      {
+        "content": "Every team logo should have a team background",
+        "expected": ""
+      },
+      {
+        "content": "User is able to select Favorite team",
+        "expected": "![](index.php?/attachments/get/6438741)"
+      },
+      {
+        "content": "Text below the header",
+        "expected": "If user didn't select Favorite team yet:\n**Text:** Select your favorite team in the league. You can change at any time. \n\nAfter user select the Favorite team, the text updates to: \nSelect the team(s) you want to keep your eye on. You can change at any time."
+      },
+      {
+        "content": "User is able to select Following team",
+        "expected": "![](index.php?/attachments/get/6438742)"
+      },
+      {
+        "content": "First selection will move the selected team to the Favorite team section by default. Second selection will move the selected team to Followed team section",
+        "expected": ""
+      },
+      {
+        "content": "User is able to select multiple teams for the Followed teams section and deselect it at any time",
+        "expected": ""
+      },
+      {
+        "content": "Selected teams",
+        "expected": "should go to either Favorite or Followed teams and be removed from All teams list"
+      },
+      {
+        "content": "If user removes selected team from Favorite of Followed teams",
+        "expected": "the team should be displayed back in the All teams list"
+      },
+      {
+        "content": "Clicking and holding the 3-line icon next to the team ",
+        "expected": "should give the user ability to move the team between the Favorite teand and Followed team sections"
+      },
+      {
+        "content": "'Next' button gets enabled after user made his first selection",
+        "expected": ""
+      },
+      {
+        "content": "If user removed the team from Favorite team section ",
+        "expected": "the Next button gets disabled"
+      }
+    ]
+  },
+  {
+    "id": 16777753,
+    "title": "Sign Up under 21 y.o user",
+    "section_id": 773912,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618864924,
+    "updated_by": 258,
+    "updated_on": 1620774576,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 8,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Open the app and tap on sign up",
+        "expected": "The sign up page is displayed"
+      },
+      {
+        "content": "* Fill out the form. The user needs to be >21 y.o\n* User clicks 'Sign Up' ",
+        "expected": "* 'You are ineligible to play MLB Rally' message is displayed.\n* User is not able to proceed to the app\n* User have to reinstall the app to create a new user\n\n![](index.php?/attachments/get/9491086)\n\n"
+      }
+    ]
+  },
+  {
+    "id": 16777754,
+    "title": "User with DOB 02/29",
+    "section_id": 773912,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618865606,
+    "updated_by": 258,
+    "updated_on": 1618865697,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 9,
+    "custom_preconds": "User is able to sign up with DOB 02/29 and no error message appears.",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "* Create Rally profile from MLB profile with DOB 02/29\n* Attempt to login to Rally",
+        "expected": "Behavior should be the same as for any other user profile with no birth year."
+      },
+      {
+        "content": "* Create Rally profile from MLB profile with DOB 02/29 for leap year\n* Attempt to login to Rally",
+        "expected": "No error appears"
+      },
+      {
+        "content": "* Create Rally profile from MLB profile with DOB 02/29 for common year\n* Attempt to login to Rally",
+        "expected": "Error message appers. It takes user to 'Update' page."
+      },
+      {
+        "content": "Per Eric and Andrew, it's okay for the app to accept DOB with 02/29 for common years\n\n ",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 16777755,
+    "title": "Sign Up 21+ y.o user",
+    "section_id": 773912,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618865786,
+    "updated_by": 225,
+    "updated_on": 1620688975,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 10,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Open the app and tap on sign up",
+        "expected": "The sign up page is displayed\n\n![](index.php?/attachments/get/34149)\n"
+      },
+      {
+        "content": "Fill all the information",
+        "expected": "Agreement copy is displayed:\n\n\"By signing up, I acknowledge that I have read, understand, and agree to be bound by the Official Rules, Terms of User, and  MLB, MGM Resorts, and BetMGM Privacy Policies. I acknowledge that my registration and game information will be shared with MGM Resorts INTL and its subsidiaries and affiliates, including ROAR Digital.\"\n\n![](index.php?/attachments/get/34148)\n"
+      },
+      {
+        "content": "User taps 'Sigh Up'",
+        "expected": "New account is created"
+      }
+    ]
+  },
+  {
+    "id": 16777881,
+    "title": "Notification page",
+    "section_id": 773912,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618866790,
+    "updated_by": 225,
+    "updated_on": 1620689006,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 11,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Newly created user",
+        "expected": "Things are displayed on Notification page: \n\n- word “Notifications” centered in the header\n- picture/icon in the middle of the screen\n- below the picture should be the message “Rally uses push notifications to notify you of available games, game results, and your scores.”\n- and there should be a clickable \"Enable In Settings\" and \"Skip For Now\" buttons\n\n![](index.php?/attachments/get/9134143)\n\n"
+      },
+      {
+        "content": "If user clicks on 'Enable Notifications'",
+        "expected": "Then a dialogue box displays: \"MLB Rally\" Would Like to Send You Notifications\"\n\n![](index.php?/attachments/get/9134144)\n\n\n"
+      },
+      {
+        "content": "If user clicks 'Don't allow'",
+        "expected": "![](index.php?/attachments/get/9134145)\n"
+      },
+      {
+        "content": "If user clicks 'Allow'",
+        "expected": "Favorite team page is displayed"
+      }
+    ]
+  },
+  {
+    "id": 16778051,
+    "title": "Sign Up flow",
+    "section_id": 773912,
+    "template_id": 1,
+    "type_id": 10,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618869236,
+    "updated_by": 258,
+    "updated_on": 1622585242,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 12,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Open the app",
+        "expected": "1. the loading page is displayed\n2. Log in/Sign up page is displayed"
+      },
+      {
+        "content": "Tap Sign Up",
+        "expected": "Things are displayed: \n\n1. Text: \"Create an MLB.com account to play the game and get access to exclusive MLB content.\"\n2. Email, Nickname, Password, Birthday fields are displayed\n3. Sign Up button \n4. Text: \"Already have an account? Log In\"\n\n![](index.php?/attachments/get/9134146)\n\n"
+      },
+      {
+        "content": "After filling all fields",
+        "expected": "Agreement copy: 'By signing up, I acknowledge that I have read, understand, and agree to be bound by the Official Rules, Terms of Use, and MLB, MGM Resorts, and BetMGM Privacy Policies. I acknowledge that my registration and game information will be shared with MGM Resorts INTL and its subsidiaries and affiliates, including ROAR Digital.\n\nBoilerplate agreement displayed at bottom, containing links to:\n- Official Rules\n- Terms of Use\n\nAnd the following privacy policies:\n- MLB\n- MGM Resorts\n- BetMGM\n\n![](index.php?/attachments/get/9134147)\n"
+      },
+      {
+        "content": "Tap on all 5 links and navigate back to app",
+        "expected": "Each link navigate to the appropriate page"
+      },
+      {
+        "content": "Tap 'Sign Up'",
+        "expected": "Allow notifications dialogue is displayed"
+      },
+      {
+        "content": "Select allow",
+        "expected": "Favorite team selection page is displayed"
+      },
+      {
+        "content": "Select a team",
+        "expected": "Logos and team names are readable and are of uniform size and quality"
+      },
+      {
+        "content": "Tap next",
+        "expected": "Welcome page is displayed, with the same boilerplate agreement and links as listed in step 2. (Welcome and name is center aligned)\n\n![](index.php?/attachments/get/9491085)\n\n"
+      },
+      {
+        "content": "Tap on all 5 links and navigate back to app",
+        "expected": "Each link navigates to the appropriate page"
+      },
+      {
+        "content": "Tap Play",
+        "expected": "'What is Rally' tutorial starts"
+      },
+      {
+        "content": "After user watches all slides and taps 'Got It'",
+        "expected": "User is directed to Home page. Games list is displayed."
+      }
+    ]
+  },
+  {
+    "id": 17349896,
+    "title": "'What is Rally' tutorial",
+    "section_id": 773912,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1622585272,
+    "updated_by": 258,
+    "updated_on": 1622586579,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 13,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "At the end of the sign up flow user is presented with 'What is Rally' tutorial. Should only display for user once. If user has seen it, don’t ever show it again. The only way to see it after logging in / signing up when user goes to Home tab. ",
+    "custom_steps_separated": [
+      {
+        "content": "First slide",
+        "expected": "* 'What is Rally'\n* animated video\n* title: 'Pick what will happen when players bat.'\n* copy 'Choose games from across the league. Take a few seconds during the live game to make picks on the next batters.'\n\n![](index.php?/attachments/get/9799306)\n\n"
+      },
+      {
+        "content": "Second slide",
+        "expected": "* 'What is Rally'\n* animated video\n* title: 'Watch live to see if you picked right.'\n* copy: 'Follow the action as each batter takes their swings. Earn points if you picked right!'\n\n![](index.php?/attachments/get/9799307)\n"
+      },
+      {
+        "content": "Third slide",
+        "expected": "* 'What is Rally'\n* animated video\n* title: 'Try and get the most picks correct.'\n* copy: 'Complete all your picks for your final score. Compete with friends, or play for prizes.'\n\n![](index.php?/attachments/get/9799308)\n"
+      },
+      {
+        "content": "Fourth slide",
+        "expected": "* 'What is Rally'\n* animated video\n* title: 'Sync Rally with your live broadcast.'\n* copy: 'Tap the timer icon on the Games tab to sync batting times and prevent spoilers.'\n* 'Got It' button\n\n![](index.php?/attachments/get/9799309)\n"
+      },
+      {
+        "content": "When user taps 'Got It' button",
+        "expected": "User is brought up to Home tab"
+      }
+    ]
+  },
+  {
+    "id": 16798585,
+    "title": "Trophy award/modal flow 2020/2021 - if user played in 2020",
+    "section_id": 775521,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618944257,
+    "updated_by": 258,
+    "updated_on": 1618944342,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "* Starting on Opening Day 2021, the first time a player logs in who has a NONZERO XP value for 2020, they should be shown a screen where they are awarded a trophy\r\n* This flow only happens 1 time\r\n* This modal should be set up to be the highest-priority modal - even if additional modals are added in the future. ",
+    "custom_steps_separated": [
+      {
+        "content": "Player is awarded a Season Trophy for their 2020 performance",
+        "expected": "* 'Your 2020 Trophy' headline\n* Player ranking ia displayed from 2020 season\n* 2020 throphy is displayed\n* Fireworks appear around the trophy\n* Text 'You earned the rank of Legend for the 2020 season. Your trophy was added to your Profile'\n* Enable 'Next' button\n\n![](index.php?/attachments/get/6597477)\n"
+      },
+      {
+        "content": "When clicking on 'Next' button ",
+        "expected": "It takes user to 'Welcome to the 2021 Season' modal"
+      },
+      {
+        "content": "When getting to the second screen, the amount of Player XP that they have is then reset to 0, and their Player Ranking is reset to “Prospect”",
+        "expected": "* 'Welcome to the 2021 Season' headline\n* Player Ranking is reset to “Prospect”\n* Player XP is reset to 0\n* Trophy background with a question mark\n* Text 'The path to becoming a 2021 MLB Legend starts here. Are you up for the challenge?'\n* 'I'm Ready!' button\n\n\n![](index.php?/attachments/get/6597478)\n"
+      },
+      {
+        "content": "Clicking on 'I'm Ready!' button",
+        "expected": "Clicking “I’m Ready” closes the modal and taking user to the Home screen. "
+      },
+      {
+        "content": "User views his profile page, the 2020 trophy is added. ",
+        "expected": "![](index.php?/attachments/get/6597479)"
+      }
+    ]
+  },
+  {
+    "id": 16798586,
+    "title": "Trophy modal 2021 - if user didn't play 2020",
+    "section_id": 775521,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618945745,
+    "updated_by": 258,
+    "updated_on": 1618945865,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If user didn't play Rally in 2020 season and opens the app in 2021 season.",
+        "expected": "The 2020 modal should NOT appear, and no trophy should be awarded.\n"
+      },
+      {
+        "content": "",
+        "expected": "This modal should be set up to be the highest-priority modal - even if additional modals are added in the future. \nThis modal is shown first out of all modals."
+      },
+      {
+        "content": "",
+        "expected": "Starting on Opening Day, the first time the player opens Rally 'Welcome to the 2021 Season' modal is displayed. This flow only happens 1 time.\n\n![](index.php?/attachments/get/6597480)\n"
+      },
+      {
+        "content": "Clicking on 'I'm Ready!' button",
+        "expected": "Clicking “I’m Ready” closes the modal and taking user to the Home screen."
+      },
+      {
+        "content": "User views his profile page, the 2020 trophy is added.",
+        "expected": "2020 trophy is not there. The first trophy placeholder is 2021.\n\n![](index.php?/attachments/get/6863848)"
+      }
+    ]
+  },
+  {
+    "id": 16798587,
+    "title": "EC/negative testing for trophies",
+    "section_id": 775521,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618946020,
+    "updated_by": 258,
+    "updated_on": 1618946328,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User logs in the app after opening day - user played the 2020 season",
+        "expected": "Modal flow: \n\n* 2020 thropies modal is displayed\n* 2021 modal is displayed\n\nTrophies modal is the priority modal"
+      },
+      {
+        "content": "Test the above step while any other modal is active for the app",
+        "expected": "Trophies modal is displayed first"
+      },
+      {
+        "content": "User logs in the app after opening day - user did not play the 2020 season",
+        "expected": "Modal flow: \n\n* 2021 modal is displayed"
+      },
+      {
+        "content": "User logs in the app after opening day - user's profile was created in 2020 but user has 0 XP",
+        "expected": "Modal flow: \n\n* 2021 modal is displayed"
+      },
+      {
+        "content": "If users re-logs in to the app",
+        "expected": "The modal is not shown"
+      }
+    ]
+  },
+  {
+    "id": 16798814,
+    "title": "Trophies kind - 2020 season",
+    "section_id": 775521,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618946348,
+    "updated_by": 258,
+    "updated_on": 1618946622,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Prospect",
+        "expected": "* the title says 'Prospect'\n* Prospect trophy is displayed\n* the text below contains **Prospect** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n![](index.php?/attachments/get/6863857)\n"
+      },
+      {
+        "content": "Top Prospect",
+        "expected": "* the title says 'Top Prospect'\n* Prospect trophy is displayed\n* the text below contains **Top Prospect** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863858)\n"
+      },
+      {
+        "content": "Future Star",
+        "expected": "* the title says 'Future Star'\n* Prospect trophy is displayed\n* the text below contains **Future Star** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863859)\n"
+      },
+      {
+        "content": "September Call-up",
+        "expected": "* the title says 'September Call-up'\n* Prospect trophy is displayed\n* the text below contains **September Call-up** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863860)\n"
+      },
+      {
+        "content": "Rookie",
+        "expected": "* the title says 'Rookie'\n* Prospect trophy is displayed\n* the text below contains **Rookie** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863861)\n"
+      },
+      {
+        "content": "Starter",
+        "expected": "* the title says 'Starter'\n* Prospect trophy is displayed\n* the text below contains **Starter** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863862)\n"
+      },
+      {
+        "content": "All-Star",
+        "expected": "* the title says 'All-Star'\n* Prospect trophy is displayed\n* the text below contains **All-Star** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863863)\n"
+      },
+      {
+        "content": "All-MLB",
+        "expected": "* the title says 'All-MLB'\n* Prospect trophy is displayed\n* the text below contains **All-MLB** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863864)\n"
+      },
+      {
+        "content": "Captain",
+        "expected": "* the title says 'Captain'\n* Prospect trophy is displayed\n* the text below contains **Captain** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863865)\n"
+      },
+      {
+        "content": "MVP",
+        "expected": "* the title says 'MVP'\n* Prospect trophy is displayed\n* the text below contains **MVP** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863866)\n"
+      },
+      {
+        "content": "Superstar",
+        "expected": "* the title says 'Superstar'\n* Prospect trophy is displayed\n* the text below contains **Superstar** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863867)\n"
+      },
+      {
+        "content": "Jersey Retired",
+        "expected": "* the title says 'Jersey Retired'\n* Prospect trophy is displayed\n* the text below contains **Jersey Retired** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863868)\n"
+      },
+      {
+        "content": "Hall Of Farmer",
+        "expected": "* the title says 'Hall Of Farmer'\n* Prospect trophy is displayed\n* the text below contains **Hall Of Farmer** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863869)\n"
+      },
+      {
+        "content": "Legend",
+        "expected": "* the title says 'Legend'\n* Prospect trophy is displayed\n* the text below contains **Legend** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863870)\n"
+      },
+      {
+        "content": "Rally Champion",
+        "expected": "* the title says 'Rally Champion'\n* Prospect trophy is displayed\n* the text below contains **Rally Champion** word\n* **same trophy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863871)\n"
+      }
+    ]
+  },
+  {
+    "id": 16798815,
+    "title": "Trophy in profile page",
+    "section_id": 775521,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1618946726,
+    "updated_by": 258,
+    "updated_on": 1618946790,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 5,
+    "custom_preconds": "User is on the profile page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If user has 2020 throphy and clicks on it",
+        "expected": "The 2020 trophy modal pops up"
+      },
+      {
+        "content": "If user doesn't have 2020 trophy and clicks on 2021 trophy",
+        "expected": "Nothing happens"
+      }
+    ]
+  },
+  {
+    "id": 17453411,
+    "title": "Team logos",
+    "section_id": 833087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2887",
+    "created_by": 258,
+    "created_on": 1623266408,
+    "updated_by": 258,
+    "updated_on": 1623268135,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Team logo should be dispalayed ",
+        "expected": "* home tab\n* game page \n"
+      },
+      {
+        "content": "Favorite team list ",
+        "expected": "should not have AL and NL teams "
+      }
+    ]
+  },
+  {
+    "id": 17453417,
+    "title": "Modal",
+    "section_id": 833087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2888",
+    "created_by": 258,
+    "created_on": 1623268185,
+    "updated_by": 258,
+    "updated_on": 1623268235,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 219822,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "modal should show the All-Star contest",
+    "custom_steps_separated": null
+  }
+]

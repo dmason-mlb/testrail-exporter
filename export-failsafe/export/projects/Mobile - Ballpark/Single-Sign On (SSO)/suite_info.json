@@ -1,0 +1,11 @@
+{
+  "id": 561942,
+  "name": "Single-Sign On (SSO)",
+  "description": "Following can be used as Reference Material, but is not necessarily inclusive of the cases within this suite:\r\n[SSO into MPV (iOS)](https://baseball.atlassian.net/browse/BP-9688) \r\n[SSO_Flow_MPV_PVO](https://docs.google.com/document/d/19w1UbZbIgqtxB-lFv4PuUQ03h_T_Zr31/edit?pli=1)\r\n[Ballpark SSO Use cases](https://docs.google.com/spreadsheets/d/1n2ofQTFb3CA5h8n_-ynT3KC2j1mFBhGU/edit#gid=1433928645)\r\n\r\nBallpark specific:\r\n*[BP-9828](https://baseball.atlassian.net/browse/BP-9828) SSO into MPV - Webview deep link support\r\n*[BP-9690](https://baseball.atlassian.net/browse/BP-9690) SSO into MPV - T-links will have user already signed into primary MLB account\r\n*[BP-9829](https://baseball.atlassian.net/browse/BP-9829) Disable data dog monitoring in BPweb\r\n*[BP-9862](https://baseball.atlassian.net/browse/BP-9862) Log when users attempt to purchase without SSO\r\n*[BP-9863](https://baseball.atlassian.net/browse/BP-9863) End-to-End SSO Testing\r\n*[BP-9813](https://baseball.atlassian.net/browse/BP-9813) Migration to support users who have not recently logged in to use SSO",
+  "project_id": 179,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/561942"
+}

@@ -1,0 +1,470 @@
+[
+  {
+    "id": 11011,
+    "suite_id": 1261,
+    "name": "Search",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 11015,
+    "suite_id": 1261,
+    "name": "Contract History",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 11016,
+    "suite_id": 1261,
+    "name": "Create Major Contract",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 11018,
+    "suite_id": 1261,
+    "name": "Language",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 11017,
+    "suite_id": 1261,
+    "name": "Pay Schedule",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 11012,
+    "suite_id": 1261,
+    "name": "Set Flags",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 11013,
+    "suite_id": 1261,
+    "name": "Maintain Flags",
+    "description": null,
+    "parent_id": 11012,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 11014,
+    "suite_id": 1261,
+    "name": "Remove Flags",
+    "description": null,
+    "parent_id": 11012,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 12078,
+    "suite_id": 1261,
+    "name": "Viewing Flags",
+    "description": null,
+    "parent_id": 11012,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 11009,
+    "suite_id": 1261,
+    "name": "File Management",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 11020,
+    "suite_id": 1261,
+    "name": "Print Contract",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 11010,
+    "suite_id": 1261,
+    "name": "Approvals Clipboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 11453,
+    "suite_id": 1261,
+    "name": "Notifications Clipboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 11456,
+    "suite_id": 1261,
+    "name": "Action Items Clipboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 33,
+    "depth": 0
+  },
+  {
+    "id": 11975,
+    "suite_id": 1261,
+    "name": "Agent",
+    "description": null,
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 11976,
+    "suite_id": 1261,
+    "name": "Agent/ Agencies",
+    "description": null,
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 11979,
+    "suite_id": 1261,
+    "name": "Award",
+    "description": null,
+    "parent_id": null,
+    "display_order": 41,
+    "depth": 0
+  },
+  {
+    "id": 11980,
+    "suite_id": 1261,
+    "name": "Approved for Next Year",
+    "description": null,
+    "parent_id": null,
+    "display_order": 42,
+    "depth": 0
+  },
+  {
+    "id": 12250,
+    "suite_id": 1261,
+    "name": "Advanced Search",
+    "description": null,
+    "parent_id": null,
+    "display_order": 47,
+    "depth": 0
+  },
+  {
+    "id": 12251,
+    "suite_id": 1261,
+    "name": "Dropdown Filters",
+    "description": null,
+    "parent_id": 12250,
+    "display_order": 48,
+    "depth": 1
+  },
+  {
+    "id": 12252,
+    "suite_id": 1261,
+    "name": "Player/Agent Mapping Roster",
+    "description": null,
+    "parent_id": null,
+    "display_order": 49,
+    "depth": 0
+  },
+  {
+    "id": 12253,
+    "suite_id": 1261,
+    "name": "Award Entry Utility",
+    "description": null,
+    "parent_id": null,
+    "display_order": 50,
+    "depth": 0
+  },
+  {
+    "id": 12254,
+    "suite_id": 1261,
+    "name": "Pro Player Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 51,
+    "depth": 0
+  },
+  {
+    "id": 23421,
+    "suite_id": 1261,
+    "name": "Agents & Agencies",
+    "description": null,
+    "parent_id": null,
+    "display_order": 52,
+    "depth": 0
+  },
+  {
+    "id": 23422,
+    "suite_id": 1261,
+    "name": "Award Entry Utility",
+    "description": null,
+    "parent_id": null,
+    "display_order": 53,
+    "depth": 0
+  },
+  {
+    "id": 23423,
+    "suite_id": 1261,
+    "name": "Contracts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 54,
+    "depth": 0
+  },
+  {
+    "id": 23424,
+    "suite_id": 1261,
+    "name": "Payment Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 55,
+    "depth": 0
+  },
+  {
+    "id": 23425,
+    "suite_id": 1261,
+    "name": "Player Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 56,
+    "depth": 0
+  },
+  {
+    "id": 23426,
+    "suite_id": 1261,
+    "name": "Player/Agent Mapping",
+    "description": null,
+    "parent_id": null,
+    "display_order": 57,
+    "depth": 0
+  },
+  {
+    "id": 23431,
+    "suite_id": 1261,
+    "name": "Payment Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 58,
+    "depth": 0
+  },
+  {
+    "id": 23432,
+    "suite_id": 1261,
+    "name": "Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 59,
+    "depth": 0
+  },
+  {
+    "id": 23433,
+    "suite_id": 1261,
+    "name": "Contracts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 60,
+    "depth": 0
+  },
+  {
+    "id": 23434,
+    "suite_id": 1261,
+    "name": "Options",
+    "description": null,
+    "parent_id": 23433,
+    "display_order": 61,
+    "depth": 1
+  },
+  {
+    "id": 23435,
+    "suite_id": 1261,
+    "name": "Payments",
+    "description": null,
+    "parent_id": null,
+    "display_order": 62,
+    "depth": 0
+  },
+  {
+    "id": 23439,
+    "suite_id": 1261,
+    "name": "Major Contract",
+    "description": null,
+    "parent_id": null,
+    "display_order": 66,
+    "depth": 0
+  },
+  {
+    "id": 23440,
+    "suite_id": 1261,
+    "name": "Contracts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 67,
+    "depth": 0
+  },
+  {
+    "id": 23441,
+    "suite_id": 1261,
+    "name": "Batch Screen",
+    "description": null,
+    "parent_id": null,
+    "display_order": 68,
+    "depth": 0
+  },
+  {
+    "id": 23442,
+    "suite_id": 1261,
+    "name": "Season Days",
+    "description": null,
+    "parent_id": null,
+    "display_order": 69,
+    "depth": 0
+  },
+  {
+    "id": 23443,
+    "suite_id": 1261,
+    "name": "System Admin Screen",
+    "description": null,
+    "parent_id": null,
+    "display_order": 70,
+    "depth": 0
+  },
+  {
+    "id": 23444,
+    "suite_id": 1261,
+    "name": "Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 71,
+    "depth": 0
+  },
+  {
+    "id": 23445,
+    "suite_id": 1261,
+    "name": "Payroll Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 72,
+    "depth": 0
+  },
+  {
+    "id": 23446,
+    "suite_id": 1261,
+    "name": "Payroll Calculations",
+    "description": null,
+    "parent_id": 23445,
+    "display_order": 73,
+    "depth": 1
+  },
+  {
+    "id": 23448,
+    "suite_id": 1261,
+    "name": "Approvals Clipboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 75,
+    "depth": 0
+  },
+  {
+    "id": 114329,
+    "suite_id": 1261,
+    "name": "Global",
+    "description": null,
+    "parent_id": null,
+    "display_order": 77,
+    "depth": 0
+  },
+  {
+    "id": 138234,
+    "suite_id": 1261,
+    "name": "EBIS Link - MJC API",
+    "description": null,
+    "parent_id": null,
+    "display_order": 78,
+    "depth": 0
+  },
+  {
+    "id": 1138778,
+    "suite_id": 1261,
+    "name": "Award Bonus Package",
+    "description": null,
+    "parent_id": null,
+    "display_order": 79,
+    "depth": 0
+  },
+  {
+    "id": 1138784,
+    "suite_id": 1261,
+    "name": "Award Bonus Packages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 80,
+    "depth": 0
+  },
+  {
+    "id": 1138828,
+    "suite_id": 1261,
+    "name": "MJC",
+    "description": null,
+    "parent_id": null,
+    "display_order": 81,
+    "depth": 0
+  },
+  {
+    "id": 1144324,
+    "suite_id": 1261,
+    "name": "MJC/Payroll",
+    "description": null,
+    "parent_id": null,
+    "display_order": 82,
+    "depth": 0
+  },
+  {
+    "id": 1144351,
+    "suite_id": 1261,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 83,
+    "depth": 0
+  },
+  {
+    "id": 1144355,
+    "suite_id": 1261,
+    "name": "MJC",
+    "description": null,
+    "parent_id": null,
+    "display_order": 84,
+    "depth": 0
+  },
+  {
+    "id": 1144356,
+    "suite_id": 1261,
+    "name": "Contract Language",
+    "description": null,
+    "parent_id": null,
+    "display_order": 85,
+    "depth": 0
+  }
+]

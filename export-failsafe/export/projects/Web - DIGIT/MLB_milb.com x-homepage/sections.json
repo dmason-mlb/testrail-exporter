@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1952689,
+    "suite_id": 688211,
+    "name": "Header Navs",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1952690,
+    "suite_id": 688211,
+    "name": "Sub Navs",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1952691,
+    "suite_id": 688211,
+    "name": "Log In",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1952692,
+    "suite_id": 688211,
+    "name": "Ads",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1952693,
+    "suite_id": 688211,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1952694,
+    "suite_id": 688211,
+    "name": "MiLB News(Headline stack)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1952695,
+    "suite_id": 688211,
+    "name": "Top News Story",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1952697,
+    "suite_id": 688211,
+    "name": "Pipeline Stories",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1952698,
+    "suite_id": 688211,
+    "name": "Highlights",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1952699,
+    "suite_id": 688211,
+    "name": "Content Containers(images and stories in addition to Top News story)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 1952700,
+    "suite_id": 688211,
+    "name": "Footer",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 1962458,
+    "suite_id": 688211,
+    "name": "Tracking",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 1962459,
+    "suite_id": 688211,
+    "name": "xNews-tracking",
+    "description": null,
+    "parent_id": 1962458,
+    "display_order": 14,
+    "depth": 1
+  }
+]

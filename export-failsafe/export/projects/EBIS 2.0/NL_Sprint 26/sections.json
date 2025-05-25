@@ -1,0 +1,47 @@
+[
+  {
+    "id": 109892,
+    "suite_id": 16745,
+    "name": "MJC",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 109298,
+    "suite_id": 16745,
+    "name": "CBT/Payroll",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 109299,
+    "suite_id": 16745,
+    "name": "Investigations",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 110009,
+    "suite_id": 16745,
+    "name": "Winter League Requests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 109888,
+    "suite_id": 16745,
+    "name": "Global/Misc",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  }
+]

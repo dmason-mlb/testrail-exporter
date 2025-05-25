@@ -1,0 +1,287 @@
+[
+  {
+    "id": 1064063,
+    "title": "Live TV",
+    "section_id": 126876,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1497977045,
+    "updated_by": 84,
+    "updated_on": 1497993763,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18833,
+    "display_order": 1,
+    "custom_preconds": "Given the app has been installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user launches a live MLB.TV stream",
+        "expected": "Then the user will see a \"CC\" button in the player"
+      },
+      {
+        "content": "When the user taps the \"CC\" button in the player",
+        "expected": "Then the button should change from \"Off\" to \"On\"\nAnd the closed captions should begin to show on the device\n\n(Toggle back and forth to verify this works over and over)"
+      },
+      {
+        "content": "When the user turns Closed Captions on/off\nAnd then stops the stream and restarts another stream\nOr the user closes the app and reopens it\n(Make sure and force stop, don't just background app)",
+        "expected": "Then the Closed caption setting the user had selected should be maintained betweens sessions\n\n(ie. If the user had CC on, they should be on when the user starts another stream. \nIf the user had CC off, the user should see not see them on the next feed launch.)"
+      }
+    ]
+  },
+  {
+    "id": 1064074,
+    "title": "Archives",
+    "section_id": 126876,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1497978109,
+    "updated_by": 84,
+    "updated_on": 1497993823,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18833,
+    "display_order": 2,
+    "custom_preconds": "Given the app has been installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user launches an archived MLB.TV stream",
+        "expected": "Then the user will see a \"CC\" button in the player"
+      },
+      {
+        "content": "When the user taps the \"CC\" button in the player",
+        "expected": "Then the button should change from \"Off\" to \"On\"\nAnd the closed captions should begin to show on the device\n\n(Toggle back and forth to verify this works over and over)"
+      },
+      {
+        "content": "When the user turns Closed Captions on/off\nAnd then stops the stream and restarts another stream\nOr the user closes the app and reopens it\n(Make sure and force stop, don't just background app)",
+        "expected": "Then the Closed caption setting the user had selected should be maintained betweens sessions\n\n(ie. If the user had CC on, they should be on when the user starts another stream. \nIf the user had CC off, the user should see not see them on the next feed launch.)"
+      }
+    ]
+  },
+  {
+    "id": 1064058,
+    "title": "Video Indices",
+    "section_id": 126877,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1497976996,
+    "updated_by": 84,
+    "updated_on": 1497993832,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18833,
+    "display_order": 1,
+    "custom_preconds": "Given the app has been installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user launches a video from the MLB video index",
+        "expected": "Then the user will see a \"CC\" button in the player"
+      },
+      {
+        "content": "When the user taps the \"CC\" button in the player",
+        "expected": "Then the button should change from \"Off\" to \"On\"\nAnd the closed captions should begin to show on the device\n\n(Toggle back and forth to verify this works over and over)"
+      },
+      {
+        "content": "When the user launches a video from a team video index\nand taps the \"CC\" button in the player",
+        "expected": "Then the button should change from \"Off\" to \"On\"\nAnd the closed captions should begin to show on the device\n\n(Toggle back and forth to verify this works over and over)"
+      },
+      {
+        "content": "When the user launches a video from a team page video carousel\nand taps the \"CC\" button in the player",
+        "expected": "Then the button should change from \"Off\" to \"On\"\nAnd the closed captions should begin to show on the device\n\n(Toggle back and forth to verify this works over and over)"
+      },
+      {
+        "content": "When the user turns Closed Captions on/off\nAnd then stops the stream and restarts another stream\nOr the user closes the app and reopens it\n(Make sure and force stop, don't just background app)",
+        "expected": "Then the Closed caption setting the user had selected should be maintained betweens sessions\n\n(ie. If the user had CC on, they should be on when the user starts another stream. \nIf the user had CC off, the user should see not see them on the next feed launch.)"
+      }
+    ]
+  },
+  {
+    "id": 1064065,
+    "title": "Videos in News Articles",
+    "section_id": 126877,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1497977119,
+    "updated_by": 84,
+    "updated_on": 1498074716,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18833,
+    "display_order": 2,
+    "custom_preconds": "Given the app has been installed\r\nand the user navs to a news article with a video",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user launches the video within the news article",
+        "expected": "Then the user will see a \"CC\" button in the player"
+      },
+      {
+        "content": "When the user taps the \"CC\" button in the player",
+        "expected": "Then the button should change from \"Off\" to \"On\"\nAnd the closed captions should begin to show on the device\n\n(Toggle back and forth to verify this works over and over)"
+      }
+    ]
+  },
+  {
+    "id": 1064060,
+    "title": "Scoreboard Highlights",
+    "section_id": 126877,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1497977007,
+    "updated_by": 84,
+    "updated_on": 1508357310,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18833,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user has downloaded the AtBat Application\r\nAND the user has navigated through on boarding",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN users log in as a paid user (TV or At Bat Premium)\nAND the user navigates to the Scoreboard when a game is in progress\nAND the user taps on the highlight in the expanded game cell\nAND the user taps on the closed captioning button",
+        "expected": "THEN the button should change from \"Off\" to \"On\"\nAnd the closed captions should begin to show on the device\n\n(Toggle back and forth to verify this works over and over)"
+      },
+      {
+        "content": "WHEN user is a Lite user\nAND the user navigates to the Scoreboard with a game in Progress\nAND the user taps on the expanded game cell",
+        "expected": "THEN the user should not see highlights display"
+      },
+      {
+        "content": "WHEN users is as a Lite or Paid user\nAND the user navigates to the Scoreboard with a game in the Final state\nAND the user taps on the expanded game cell\nAND the user taps on the closed captioning button",
+        "expected": "Then the button should change from \"Off\" to \"On\"\nAnd the closed captions should begin to show on the device\n\n(Toggle back and forth to verify this works over and over)"
+      }
+    ]
+  },
+  {
+    "id": 1065280,
+    "title": "Gameday Highlights",
+    "section_id": 126877,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1497994440,
+    "updated_by": 84,
+    "updated_on": 1508357343,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18833,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user has downloaded the AtBat Application\r\nAND the user has navigated through on boarding",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN users log in as a paid user (TV or At Bat Premium)\nAND the user navigates to the highlights section in Gameday with a game in progress\nAND the user taps on a highlight\nAND the user taps on the closed captioning button",
+        "expected": "Then the button should change from \"Off\" to \"On\"\nAnd the closed captions should begin to show on the device\n\n(Toggle back and forth to verify this works over and over)"
+      },
+      {
+        "content": "WHEN user is a Lite user\nAND the user navigates to the highlights section in Gameday with a game in progress",
+        "expected": "THEN the user will be pushed to the At Bat Paywall"
+      }
+    ]
+  },
+  {
+    "id": 1064066,
+    "title": "MLB Network",
+    "section_id": 126878,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1497977153,
+    "updated_by": 91,
+    "updated_on": 1498149593,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18833,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user has downloaded the AtBat application",
+    "custom_steps": "WHEN the user taps on the hamburger button\r\nAND taps on the MLB Network tab\r\nAND the user authenticates with a TV Provider OR the user logged in with a MLB.TV account\r\nAND the user taps on the close captioning button",
+    "custom_expected": "THEN the button should change from \"Off\" to \"On\"\r\nAnd the closed captions should begin to show on the device\r\n\r\n(Toggle back and forth to verify this works over and over)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1064067,
+    "title": "Adhoc",
+    "section_id": 126878,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1497977157,
+    "updated_by": 91,
+    "updated_on": 1498149614,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18833,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user has downloaded AtBat",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user maps the banners URL to the attached file\nAND the user has authenticated with a MLB.TV account\nAND the user has received an in application banner (Team Page & Scores Tab)\nAND the user taps on the banner\nAND the user taps on the close captioning button",
+        "expected": "THEN the button should change from \"Off\" to \"On\"\nAnd the closed captions should begin to show on the device\n\n(Toggle back and forth to verify this works over and over)"
+      },
+      {
+        "content": "WHEN the user maps the banners URL to the attached file\nAND the user has authenticated with a Premium or a Lite account\nAND the user has received an in application banner (Team Page & Scores Tab)\nAND the user taps on the banner\nAND the user taps on the close captioning button",
+        "expected": "THEN the button should change from \"Off\" to \"On\"\nAnd the closed captions should begin to show on the device\n\n(Toggle back and forth to verify this works over and over)"
+      }
+    ]
+  },
+  {
+    "id": 1064422,
+    "title": "Default CC Option",
+    "section_id": 126878,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1497983434,
+    "updated_by": 84,
+    "updated_on": 1508357472,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 18833,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user has downloaded the AtBat application",
+    "custom_steps": "When the user launches video that supports Closed Captioning",
+    "custom_expected": "THEN the user should see the CC button available\r\nAND the CC should be defaulted to off",
+    "custom_steps_separated": null
+  }
+]

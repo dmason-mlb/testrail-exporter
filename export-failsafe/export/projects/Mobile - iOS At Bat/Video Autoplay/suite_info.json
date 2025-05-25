@@ -1,0 +1,11 @@
+{
+  "id": 20525,
+  "name": "Video Autoplay",
+  "description": "https://wiki.mlbam.com/display/mobile/Autoplay+Video+-+Initial+Rollout\r\n\r\nhttps://baseball.atlassian.net/browse/IAB-22733\r\n\r\nNote: The low power mode copy should display below the 3 options\r\n\r\nAND Muted by default message copy should display too ",
+  "project_id": 4,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20525"
+}

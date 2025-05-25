@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1917764,
+    "suite_id": 679300,
+    "name": "Onboarding/Log In UI",
+    "description": "Tests related to the UI design and layout through the onboarding and log in flows",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1917808,
+    "suite_id": 679300,
+    "name": "Welcome Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1917765,
+    "suite_id": 679300,
+    "name": "Create Free Account",
+    "description": "Functionality related to the Create Free Account flow",
+    "parent_id": 1917808,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 1917766,
+    "suite_id": 679300,
+    "name": "Browse Subscriptions",
+    "description": "Functional tests related to the Browse Subscriptions flow",
+    "parent_id": 1917808,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 1917767,
+    "suite_id": 679300,
+    "name": "Explore Free Content",
+    "description": "Functional tests related to the Explore Free Content flow",
+    "parent_id": 1917808,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 1917768,
+    "suite_id": 679300,
+    "name": "Log In",
+    "description": "Functional tests related to logging in through the \"Get Started\" flow",
+    "parent_id": 1917808,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 1917809,
+    "suite_id": 679300,
+    "name": "Have an MLB account",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 1917769,
+    "suite_id": 679300,
+    "name": "Log In",
+    "description": "Functional tests related to logging in through the \"Have an MLB account\" flow",
+    "parent_id": 1917809,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 2039148,
+    "suite_id": 679300,
+    "name": "App Launch",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  }
+]

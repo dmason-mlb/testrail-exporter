@@ -1,0 +1,182 @@
+[
+  {
+    "id": 11955,
+    "suite_id": 1363,
+    "name": "As a user, I want blue notifications to dismiss automatically",
+    "description": "https://www.pivotaltracker.com/story/show/109399918",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 11956,
+    "suite_id": 1363,
+    "name": "As BOC, I want to see a list of Addendum Cs for the upcoming season for all Orgs",
+    "description": "https://www.pivotaltracker.com/story/show/106785350",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 11981,
+    "suite_id": 1363,
+    "name": "As BOC, I want to see all Addendum C records for all Orgs in a reasonable amount of time",
+    "description": "https://www.pivotaltracker.com/story/show/103995538",
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 11982,
+    "suite_id": 1363,
+    "name": "As BOC, I want a Club sub filter based on my selected Org",
+    "description": "https://www.pivotaltracker.com/story/show/107441948",
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 11983,
+    "suite_id": 1363,
+    "name": "As BOC, I want to see years left more prominently on the Add C widget",
+    "description": "https://www.pivotaltracker.com/projects/1402858/stories/107441892",
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 11984,
+    "suite_id": 1363,
+    "name": "As BOC, I can filter Addendum Cs by various status combinations",
+    "description": "https://www.pivotaltracker.com/story/show/107441728",
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 11988,
+    "suite_id": 1363,
+    "name": "As BOC, I want to see hard errors on Approval if Date Signed field is not filled in",
+    "description": "https://www.pivotaltracker.com/story/show/106791512",
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 11989,
+    "suite_id": 1363,
+    "name": "As BOC, I want to be able to see and override all warnings on Approval",
+    "description": "https://www.pivotaltracker.com/story/show/106791616",
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 12217,
+    "suite_id": 1363,
+    "name": "As BOC, I want to see a flag if club ignores the 20% cut warning on the Add C",
+    "description": "https://www.pivotaltracker.com/story/show/106791852",
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 12315,
+    "suite_id": 1363,
+    "name": "As BOC, I want to edit an Addendum C on behalf of the club",
+    "description": "https://www.pivotaltracker.com/story/show/106949970",
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 12316,
+    "suite_id": 1363,
+    "name": "As BOC, I want a flag if a salary is over $25,000",
+    "description": "https://www.pivotaltracker.com/story/show/106791934",
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 12318,
+    "suite_id": 1363,
+    "name": "As BOC, I want to control ADD C auto-approval cut off as a system date",
+    "description": "https://www.pivotaltracker.com/story/show/108392486",
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 12319,
+    "suite_id": 1363,
+    "name": "As BOC, I want to split my scanned PDFs",
+    "description": "https://www.pivotaltracker.com/story/show/106792752",
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 12322,
+    "suite_id": 1363,
+    "name": "As BOC, I want to approve Addendum Cs from the Multi-C widget",
+    "description": "https://www.pivotaltracker.com/story/show/106789886",
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 12324,
+    "suite_id": 1363,
+    "name": "As BOC, I want to attach a file to Add C in any state",
+    "description": "https://www.pivotaltracker.com/story/show/107846254",
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 12325,
+    "suite_id": 1363,
+    "name": "As BOC, I want my approval to stamp an e-signed Add C PDF with BOC signature",
+    "description": "https://www.pivotaltracker.com/story/show/106949816",
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 12326,
+    "suite_id": 1363,
+    "name": "As BOC, I want a flag if Date signed isn't between system date: Add C Auto-Approval start and end",
+    "description": "https://www.pivotaltracker.com/story/show/106859596",
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 12436,
+    "suite_id": 1363,
+    "name": "As BOC, I want to be warned if making changes to an e-signed C",
+    "description": "https://www.pivotaltracker.com/story/show/107846100",
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 12437,
+    "suite_id": 1363,
+    "name": "As BOC, I want to be warned if making changes to a C that is currently being e-signed",
+    "description": "https://www.pivotaltracker.com/story/show/108237110",
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 12464,
+    "suite_id": 1363,
+    "name": "As BOC, I want a flag if player has an active Major contract with or without para 2 salary",
+    "description": "https://www.pivotaltracker.com/story/show/106791888",
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  }
+]

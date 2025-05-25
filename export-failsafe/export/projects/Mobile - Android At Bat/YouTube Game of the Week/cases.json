@@ -1,0 +1,299 @@
+[
+  {
+    "id": 1247390,
+    "title": "Branding",
+    "section_id": 151542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1562700794,
+    "updated_by": 84,
+    "updated_on": 1562700805,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20810,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed\r\nand there is a YouTube Game of the Week scheduled",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navigates to the Scoreboard",
+        "expected": "Then the game cell will be appropriately labeled as such (at the top of the cell)\nand the label will be displayed similarly to the MLB.TV Game of the Day label text\nEnglish: \"Live on YouTube - Watch Free\"\nSpanish: \"YouTube En Vivo - Ver Gratis\""
+      },
+      {
+        "content": "When the user navigates to the MLB.TV EPG",
+        "expected": "Then the game cell will be appropriately labeled as such (under game matchup text)\nand the label will be displayed similarly to the MLB.TV Game of the Day label text\nEnglish: \"Live on YouTube - Watch Free\"\nSpanish: \"YouTube En Vivo - Ver Gratis\""
+      },
+      {
+        "content": "When the user navigates to the team page of a team featured in the YouTube Game of the Week",
+        "expected": "Then the game cell will be appropriately labeled as such (at the top right of the schedule snapshot)\nand the label will be displayed similarly to the MLB.TV Game of the Day label text\nEnglish: \"Live on YouTube - Watch Free\"\nSpanish: \"YouTube En Vivo - Ver Gratis\""
+      }
+    ]
+  },
+  {
+    "id": 1247391,
+    "title": ".TV links",
+    "section_id": 151542,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1562700794,
+    "updated_by": 84,
+    "updated_on": 1562700794,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20810,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat is installed\r\nand there is a YouTube Game of the Week scheduled\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navigates to the Scoreboard\nand expands the game cell of the YouTube Game of the Week\nand the game feed is live",
+        "expected": "Then the user will see a TV link for the feed\nand it will be labeled \"YouTube\" "
+      },
+      {
+        "content": "When the user navigates to the Team Page of a team featured in the YouTube Game of the Week\nand the game feed is live",
+        "expected": "Then the user will see a TV link in the schedule module's game detail section\nand it will be labeled \"YouTube\""
+      },
+      {
+        "content": "When the user navigates to the MLB.TV EPG\nand expands the game cell of the YouTube Game of the Week\nand the game feed is live",
+        "expected": "Then the user will see a TV link for the feed\nand it will be labeled \"YouTube\" "
+      }
+    ]
+  },
+  {
+    "id": 1247386,
+    "title": "Team Page Embed",
+    "section_id": 151543,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1562700794,
+    "updated_by": 84,
+    "updated_on": 1562700932,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20810,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed\r\nand there is a YouTube Game of the Week with a live feed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navs to the team page of a team featured in a live YouTube Game of the Week",
+        "expected": "Then the user will view the live feed autoplaying in an embedded player at the top of the page\nand the video will automatically be muted\n"
+      },
+      {
+        "content": "When the user navs to the team page of a team featured in a live YouTube Game of the Week\nand the video is playing in an embedded player at the top",
+        "expected": "Then all other team view elements should be pushed when the video embed is active\nand they must retain their standard functionality"
+      },
+      {
+        "content": "When the user navs to the team page of a team featured in a live YouTube Game of the Week\nand Hide Scores is OFF",
+        "expected": "Then the video in the embedded player should play at the live point"
+      },
+      {
+        "content": "When the user navs to the team page of a team featured in a live YouTube Game of the Week\nand Hide Scores is ON",
+        "expected": "Then the video in the embedded player should start playing at the beginning"
+      },
+      {
+        "content": "When the user is viewing a live YouTube Game feed in the embedded player \nand taps on the player to bring up the player controls",
+        "expected": "Then the user will see buttons for play/pause, mute, fullscreen, and closed captioning"
+      },
+      {
+        "content": "When the user brings up the player controls on a live YouTube Game feed in the embedded player\nand taps on the Pause button",
+        "expected": "Then the live feed will pause "
+      },
+      {
+        "content": "When the live YouTube Game feed in the embedded player is paused\nand the user taps the Play button",
+        "expected": "Then the live feed will resume"
+      },
+      {
+        "content": "When the user brings up the player controls on a live YouTube Game feed in the embedded player\nand taps on the fullscreen button",
+        "expected": "Then the video will begin playing in fullscreen mode"
+      },
+      {
+        "content": "When the live YouTube Game video is playing in fullscreen mode \nand the user rotates to portrait",
+        "expected": "Then the video will continue playing"
+      },
+      {
+        "content": "When the user brings up the player controls on a live YouTube Game feed in the embedded player\nand taps on the closed captioning button",
+        "expected": "Then closed captioning will begin to display on the video"
+      },
+      {
+        "content": "When the team with a live YouTube Game feed is set as the user's favorite team\nand the user navs to the team page via the side navigation",
+        "expected": "Then the embedded video player will be displayed at the top of the team page"
+      }
+    ]
+  },
+  {
+    "id": 1247387,
+    "title": "With YouTube Installed",
+    "section_id": 151543,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1562700794,
+    "updated_by": 84,
+    "updated_on": 1562700794,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20810,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat is installed\r\nand there is a YouTube Game of the Week with a live feed\r\nAND the user has the YouTube app installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navs to the Scoreboard\nand expands the game cell of the YouTube Game\nand taps the \"YouTube\" link to launch the game feed",
+        "expected": "Then the user will be taken to the YouTube app\nwhere the game feed will launch"
+      },
+      {
+        "content": "When the user navs to a Team Page of a team featured in the YouTube Game\nand taps the \"YouTube\" link in the game detail section to launch the game feed",
+        "expected": "Then the user will be taken to the YouTube app\nwhere the game feed will launch"
+      },
+      {
+        "content": "When the user navs to the TV EPG\nand taps the YouTube Game to launch the game feed",
+        "expected": "Then the user will be taken to the YouTube app\nwhere the game feed will launch"
+      }
+    ]
+  },
+  {
+    "id": 1247388,
+    "title": "Without YouTube Enabled",
+    "section_id": 151543,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1562700794,
+    "updated_by": 171,
+    "updated_on": 1562716571,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20810,
+    "display_order": 3,
+    "custom_preconds": "Given At Bat is installed\r\nand there is a YouTube Game of the Week with a live feed\r\nAND the user DOES NOT have the YouTube app Enabled (Settings > Apps > YouTube > Disable)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navs to the Scoreboard\nand expands the game cell of the YouTube Game\nand taps the \"YouTube\" link to launch the game feed",
+        "expected": "Then the user will be taken to a webview in which they can watch the feed"
+      },
+      {
+        "content": "When the user navs to a Team Page of a team featured in the YouTube Game\nand taps the \"YouTube\" link in the game detail section to launch the game feed",
+        "expected": "Then the user will be taken to a webview in which they can watch the feed"
+      },
+      {
+        "content": "When the user navs to the TV EPG\nand taps the YouTube Game to launch the game feed",
+        "expected": "Then the user will be taken to a webview in which they can watch the feed"
+      }
+    ]
+  },
+  {
+    "id": 1247389,
+    "title": "At Bat Entitlements/Blackouts",
+    "section_id": 151543,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1562700794,
+    "updated_by": 171,
+    "updated_on": 1562716157,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20810,
+    "display_order": 4,
+    "custom_preconds": "Given At Bat is installed\r\nand there is a YouTube Game of the Week with a live feed\r\nAND the user has the YouTube app installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a LITE user attempts to launch the YouTube Game from At Bat",
+        "expected": "Then the user will be taken to the YouTube app\nwhere the game feed will launch"
+      },
+      {
+        "content": "When a PAID user attempts to launch the YouTube Game from At Bat",
+        "expected": "Then the user will be taken to the YouTube app\nwhere the game feed will launch"
+      },
+      {
+        "content": "When a Single Team user attempts to launch the YouTube Game from At Bat",
+        "expected": "Then the user will be taken to the YouTube app\nwhere the game feed will launch"
+      },
+      {
+        "content": "When a user attempts to launch the YouTube Game from At Bat\nand one of teams featured is a local team",
+        "expected": "Then the user will not receive any sort of blackout messaging in At Bat\nand will be taken to the YouTube app"
+      }
+    ]
+  },
+  {
+    "id": 1247392,
+    "title": "Archives in At Bat",
+    "section_id": 151544,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1562700794,
+    "updated_by": 84,
+    "updated_on": 1562700794,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20810,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed\r\nand there is a YouTube Game of the Week scheduled",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the YouTube Game is flipped to media_archive",
+        "expected": "Then the archive will become available in the At Bat app"
+      },
+      {
+        "content": "When the YouTube Game is flipped to media_archive\nand the user navs to the TV EPG",
+        "expected": "Then the game will NOT be labeled with the YouTube-specific text"
+      },
+      {
+        "content": "When the YouTube Game is flipped to media_archive\nand the user navs to the TV EPG\nand taps to expand the game cell for the YouTube Game",
+        "expected": "Then the feed button will NOT be labeled with the YouTube-specific text"
+      },
+      {
+        "content": "When the YouTube Game is flipped to media_archive\nand the user navs to the Scoreboard",
+        "expected": "Then the game will NOT be labeled with the YouTube-specific text"
+      },
+      {
+        "content": "When the YouTube Game is flipped to media_archive\nand the user navs to the team page of a team featured in the YouTube Game",
+        "expected": "Then the game will NOT be labeled with the YouTube-specific text"
+      },
+      {
+        "content": "When the YouTube Game is flipped to media_archive\nand the user navs to the team page of a team featured in the YouTube Game",
+        "expected": "Then there will NOT be an embedded player appearing at the top of the team page"
+      },
+      {
+        "content": "When a user attempts to launch the archive from At Bat",
+        "expected": "Then the archive will follow At Bat requirements in regards to archive entitlements & blackouts:\n\n- TV-entitled users can playback\n- At Bat users will be gated by TV paywall with specific messaging\n- Lite users will be gated by TV paywall\n- Single Team users will only be able to view if their team had played\n- No blackouts"
+      }
+    ]
+  }
+]

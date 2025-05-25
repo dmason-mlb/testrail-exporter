@@ -1,0 +1,419 @@
+[
+  {
+    "id": 1238337,
+    "title": "Scores Page  UX/UI",
+    "section_id": 150262,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552582191,
+    "updated_by": 173,
+    "updated_on": 1555447417,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20675,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates to Scores tab and there is/are game(s) scheduled for the date selected ",
+        "expected": "THEN the app will display the following: \n\n* Date picker\n* Class picker\n* League picker\n* Organization picker\n* Game information of the matchup(s)\n* Team matchup (names and logos)\n* Time of the matchup\n* Final scores\n* Game information"
+      },
+      {
+        "content": "WHEN the user navigates to Scores tab and there is no game scheduled for the date selected ",
+        "expected": "THEN the app will display the \"There are no games scheduled for the date selected.\" info message"
+      },
+      {
+        "content": "WHEN the user navigates to Scores tab",
+        "expected": "THEN the app will display the navigation bar complete and neat (no typographical errors, no overlapping and/or missing icons/texts)\n\nTHEN the wait time for the page to load will not be longer than 5 secs\n\nTHEN the user will be able to scroll through the page smoothly \n\nTHEN the app will display the content of that tab in a scale to fit manner (the user will not be able to pinch in/out of the web views)\n\nTHEN the users will be able to click on buttons/elements and these will work"
+      },
+      {
+        "content": "WHEN the user navigates to Scores tab and there are games scheduled for the date selected",
+        "expected": "THEN the app will display the following:\n\n* Current inning/Game status (Final, postponed, etc.)/Game number\n* Matchup's team names\n* Matchup's team logos\n* Matchup's scores\n* Game Information"
+      },
+      {
+        "content": "WHEN the user taps on 'Game Information'",
+        "expected": "THEN the app will display the following:\n\n* Player's last name, player's initial, 0-0 (for example), 13.50 ERA (for example)\n* P\n* AB\n* Last Play\n* Venue\n* Additional game info (if available; for example: Makeup of Apr 15, etc.)"
+      }
+    ]
+  },
+  {
+    "id": 1238719,
+    "title": "TV Icon",
+    "section_id": 150262,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553806726,
+    "updated_by": 173,
+    "updated_on": 1553806782,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20675,
+    "display_order": 2,
+    "custom_preconds": "GIVEN that the user navigated to Team Page",
+    "custom_steps": "WHEN the user taps on the TV icon",
+    "custom_expected": "THEN the app will display the following:\r\n\r\n* Class picker\r\n* Date (Day Month Date)\r\n* Arrows to navigate through the date (next/previous date)\r\n* Video list (if available depending on the selected date)\r\n* Done button ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238720,
+    "title": "Audio Icon (iOS only)",
+    "section_id": 150262,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1553806733,
+    "updated_by": 173,
+    "updated_on": 1553806764,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20675,
+    "display_order": 3,
+    "custom_preconds": "GIVEN that the user navigated to Team tab",
+    "custom_steps": "WHEN the user taps on Audio icon",
+    "custom_expected": "THEN the app will display the Gameday Audio page in the app\r\n\r\nTHEN the app will not use any third-party application to open the Gameday Audio page",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238338,
+    "title": "Date Picker",
+    "section_id": 150262,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552582219,
+    "updated_by": 173,
+    "updated_on": 1552587086,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20675,
+    "display_order": 4,
+    "custom_preconds": "GIVEN that the user navigated to Scores tab",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on next/previous arrow on the date picker",
+        "expected": "THEN the user will be able to go the next/previous date\n\nTHEN the app will update the information in the page"
+      },
+      {
+        "content": "WHEN the user taps on the the middle button in the date picker (the button that shows the date)",
+        "expected": "THEN the app will display the calendar\n\nTHEN the app will display the month and year buttons at the top of the calendar"
+      },
+      {
+        "content": "WHEN the user taps on the month button",
+        "expected": "THEN the app will show the list of the months\n\nTHEN the user will be able to select a month from the list"
+      },
+      {
+        "content": "WHEN the user taps on the year button",
+        "expected": "THEN the app will show the list of the years\n\nTHEN the user will be able to select a year from the list"
+      },
+      {
+        "content": "WHEN the user taps on a date in the calendar",
+        "expected": "THEN the app will update the date (based on the user's selection)\n\nTHEN the calendar will collapse\n\nTHEN the app will update the information in the page"
+      }
+    ]
+  },
+  {
+    "id": 1238339,
+    "title": "Class Picker",
+    "section_id": 150262,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552582223,
+    "updated_by": 173,
+    "updated_on": 1552587366,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20675,
+    "display_order": 5,
+    "custom_preconds": "GIVEN that the user navigated to Scores tab",
+    "custom_steps": "WHEN the user taps on \"Class\"",
+    "custom_expected": "THEN the app will display the following:\r\n\r\n* Class\r\n* Triple-A\r\n* Double-A\r\n* Class A Advanced\r\n* Class A\r\n* Class A Short Season\r\n* Rookie",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1238341,
+    "title": "Organization Picker",
+    "section_id": 150262,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552582233,
+    "updated_by": 173,
+    "updated_on": 1552589201,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20675,
+    "display_order": 7,
+    "custom_preconds": "GIVEN that the user navigated to Scores tab",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user selects \"Organization\" picker",
+        "expected": "THEN the app will display the following:\n\n* Arizona Diamondbacks\n* Atlanta Braves\n* Baltimore Orioles\n* Boston Red Sox\n* Chicago Cubs\n* Chicago White Sox\n* Cincinnati Reds\n* Cleveland Indians\n* Colorado Rockies\n* Detroit Tigers\n* Houston Astros\n* Kansas City Royals\n* Los Angeles Angels\n* Los Angeles Dodgers\n* Miami Marlins\n* Milwaukee Brewers\n* Minnesota Twins\n* New York Mets\n* New York Yankees\n* Oakland Athletics \n* Philadelphia Phillies \n* Pittsburg Pirates\n* San Diego Padres\n* San Francisco Giants\n* Seattle Mariners\n* St. Louis Cardinals\n* Tampa Bay Rays\n* Texas Rangers\n* Toronto Blue Jays\n* Washington Nationals"
+      },
+      {
+        "content": "WHEN the user selects any of the organizations",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in the selected organization only"
+      }
+    ]
+  },
+  {
+    "id": 1238342,
+    "title": "Triple-A",
+    "section_id": 150263,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552587230,
+    "updated_by": 173,
+    "updated_on": 1552587948,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20675,
+    "display_order": 1,
+    "custom_preconds": "GIVEN that the user navigated to Scores tab\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user selects \"Triple-A\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the League picker will have the following:\n\n* International League\n* Mexican League\n* Pacific Coast League"
+      },
+      {
+        "content": "WHEN the user selects \"International League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in International League only"
+      },
+      {
+        "content": "WHEN the user selects \"Mexican League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in Mexican League only"
+      },
+      {
+        "content": "WHEN the user selects \"Pacific Coast League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in Pacific Coast League only"
+      }
+    ]
+  },
+  {
+    "id": 1238343,
+    "title": "Double-A",
+    "section_id": 150263,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552587233,
+    "updated_by": 173,
+    "updated_on": 1552587958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20675,
+    "display_order": 2,
+    "custom_preconds": "GIVEN that the user navigated to Scores tab\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user selects \"Double-A\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the League picker will have the following:\n\n* Eastern League\n* Southern League\n* Texas League"
+      },
+      {
+        "content": "WHEN the user selects \"Eastern League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in Eastern League only"
+      },
+      {
+        "content": "WHEN the user selects \"Southern League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in Southern League only"
+      },
+      {
+        "content": "WHEN the user selects \"Texas League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in Texas League only"
+      }
+    ]
+  },
+  {
+    "id": 1238344,
+    "title": "Class A Advanced",
+    "section_id": 150263,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552587265,
+    "updated_by": 173,
+    "updated_on": 1552588030,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20675,
+    "display_order": 3,
+    "custom_preconds": "GIVEN that the user navigated to Scores tab\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user selects \"Class A Advanced\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the League picker will have the following:\n\n* California League\n* Carolina League\n* Florida State League"
+      },
+      {
+        "content": "WHEN the user selects \"California League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in California League only"
+      },
+      {
+        "content": "WHEN the user selects \"Carolina League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in Carolina League only"
+      },
+      {
+        "content": "WHEN the user selects \"Florida State League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in Florida State League only"
+      }
+    ]
+  },
+  {
+    "id": 1238345,
+    "title": "Class A",
+    "section_id": 150263,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552587268,
+    "updated_by": 173,
+    "updated_on": 1552588232,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20675,
+    "display_order": 4,
+    "custom_preconds": "GIVEN that the user navigated to Scores tab\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user selects \"Class A\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the League picker will have the following:\n\n* Midwest League\n* South Atlantic League"
+      },
+      {
+        "content": "WHEN the user selects \"Midwest League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in Midwest League only"
+      },
+      {
+        "content": "WHEN the user selects \"South Atlantic League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in South Atlantic League only"
+      }
+    ]
+  },
+  {
+    "id": 1238346,
+    "title": "Class A Short Season",
+    "section_id": 150263,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552587272,
+    "updated_by": 173,
+    "updated_on": 1552588316,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20675,
+    "display_order": 5,
+    "custom_preconds": "GIVEN that the user navigated to Scores tab\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user selects \"Class A Short Season\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the League picker will have the following:\n\n* New York-Penn League\n* Northwest League"
+      },
+      {
+        "content": "WHEN the user selects \"New York-Penn League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in New York-Penn League only"
+      },
+      {
+        "content": "WHEN the user selects \"Northwest League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in Northwest League only"
+      }
+    ]
+  },
+  {
+    "id": 1238347,
+    "title": "Rookie",
+    "section_id": 150263,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 173,
+    "created_on": 1552587274,
+    "updated_by": 173,
+    "updated_on": 1552588483,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20675,
+    "display_order": 6,
+    "custom_preconds": "GIVEN that the user navigated to Scores tab\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user selects \"Rookie\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the League picker will have the following:\n\n* Appalachian League\n* Arizona League\n* Dominican Summer League\n* Gulf Coast League\n* Pioneer League"
+      },
+      {
+        "content": "WHEN the user selects \"Appalachian League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in Appalachian League only"
+      },
+      {
+        "content": "WHEN the user selects \"Arizona League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in Arizona League only"
+      },
+      {
+        "content": "WHEN the user selects \"Dominican Summer League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in Dominican Summer League only"
+      },
+      {
+        "content": "WHEN the user selects \"Gulf Coast League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in Gulf Coast League only"
+      },
+      {
+        "content": "WHEN the user selects \"Pioneer League\"",
+        "expected": "THEN the app will update the information in the Scores page\n\nTHEN the app will display the games for the teams in Pioneer League only"
+      }
+    ]
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "id": 148899,
+    "suite_id": 20551,
+    "name": "Display Tickets on Main View",
+    "description": "https://jira.mlbam.com/browse/BP-6809",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 859339,
+    "suite_id": 20551,
+    "name": "Ticket Refresh",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 148904,
+    "suite_id": 20551,
+    "name": "View all ticketed events list",
+    "description": "https://jira.mlbam.com/browse/BP-6882",
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 156911,
+    "suite_id": 20551,
+    "name": "All Tickets List - Email Verification",
+    "description": "https://baseball.atlassian.net/browse/BP-8417\nhttps://baseball.atlassian.net/browse/BP-8379",
+    "parent_id": 148904,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 148905,
+    "suite_id": 20551,
+    "name": "Ticket listview",
+    "description": "https://jira.mlbam.com/browse/BP-6944",
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 148909,
+    "suite_id": 20551,
+    "name": "Ticket scanview",
+    "description": "https://jira.mlbam.com/browse/BP-6943",
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 148910,
+    "suite_id": 20551,
+    "name": "Ticket list forwarding mode",
+    "description": "https://jira.mlbam.com/browse/BP-6940",
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 148911,
+    "suite_id": 20551,
+    "name": "Ticket forward by email/contact",
+    "description": "https://jira.mlbam.com/browse/BP-6941",
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 148912,
+    "suite_id": 20551,
+    "name": "Ticket forward by link",
+    "description": "https://jira.mlbam.com/browse/BP-6942",
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 154812,
+    "suite_id": 20551,
+    "name": "App Lifecycle Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 155424,
+    "suite_id": 20551,
+    "name": "Email Verification",
+    "description": "https://baseball.atlassian.net/browse/BP-8381",
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 156884,
+    "suite_id": 20551,
+    "name": "Triggering Email Verification",
+    "description": "https://baseball.atlassian.net/browse/BP-8416",
+    "parent_id": 155424,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 303746,
+    "suite_id": 20551,
+    "name": "Wallet Tab Service Calls",
+    "description": null,
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 303749,
+    "suite_id": 20551,
+    "name": "Wallet Tab Initial Load",
+    "description": null,
+    "parent_id": 303746,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 303748,
+    "suite_id": 20551,
+    "name": "Wallet Tab Manual Refresh",
+    "description": "Wallet refresh is initiated via a pull/swipe down to refresh",
+    "parent_id": 303746,
+    "display_order": 36,
+    "depth": 1
+  },
+  {
+    "id": 303657,
+    "suite_id": 20551,
+    "name": "Wallet Tab Auto Refresh",
+    "description": "Wallet refresh actions automatically handled for the user.",
+    "parent_id": 303746,
+    "display_order": 37,
+    "depth": 1
+  },
+  {
+    "id": 303739,
+    "suite_id": 20551,
+    "name": "Wallet Detail List Service Calls",
+    "description": null,
+    "parent_id": null,
+    "display_order": 43,
+    "depth": 0
+  },
+  {
+    "id": 303738,
+    "suite_id": 20551,
+    "name": "Wallet Detail List Service Call Initial Load",
+    "description": null,
+    "parent_id": 303739,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 303736,
+    "suite_id": 20551,
+    "name": "Wallet Detail List Service Call Auto Refresh",
+    "description": null,
+    "parent_id": 303739,
+    "display_order": 46,
+    "depth": 1
+  },
+  {
+    "id": 303740,
+    "suite_id": 20551,
+    "name": "Wallet Detail List Service Call Manual Refresh",
+    "description": "These tests are only applicable to Android since iOS does not have manual refresh",
+    "parent_id": 303739,
+    "display_order": 47,
+    "depth": 1
+  },
+  {
+    "id": 306181,
+    "suite_id": 20551,
+    "name": "Navigation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 48,
+    "depth": 0
+  }
+]

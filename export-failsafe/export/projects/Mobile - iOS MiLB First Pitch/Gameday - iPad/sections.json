@@ -1,0 +1,47 @@
+[
+  {
+    "id": 8518,
+    "suite_id": 1113,
+    "name": "iPad",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 80095,
+    "suite_id": 1113,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 147996,
+    "suite_id": 1113,
+    "name": "Chyron",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 147997,
+    "suite_id": 1113,
+    "name": "Out Of Town Scoreboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 147998,
+    "suite_id": 1113,
+    "name": "Compact View",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "id": 32667645,
+    "title": "Onboarding - DOB over 18yrs old",
+    "section_id": 1851479,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1705615994,
+    "updated_by": 288,
+    "updated_on": 1705620910,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 658056,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN User has successfully authenticated into Ballpark (installed ANDROID 12.13.0 or later, iOS 13.0.0 or later)\r\nAND User's mlb.com account has an age above 18 already set up\r\n\r\n*GAE onboarding for customer w/ DOB over 18 [Acct to use: ballpark.applause@gmail.com / PW: BPapp123]\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user accesses the GAE Registration deeplink* (ballpark://go-ahead)\n\n*the deeplink is currently configured to show as 'Go-Ahead Entry' in More Menu (for STG and QA envs)",
+        "expected": "[ANDROID/iOS PAGE 1: GAE - SignUp page, Carousel 1]\n\nTHEN User displayed with Get Started screen with title of GO-AHEAD ENTRY"
+      },
+      {
+        "content": "",
+        "expected": "AND a middle section will be show that allows swiping to additional pages w/ further instructions\n\nAND the initial page text shows:\n*Title: Sign up for MLB's Go-Ahead Entry\n*Description: Register for MLB Go-Ahead Entry, the ultimate hands-free experience available for free to ticketed fans(18 and older) entering certain ballparks."
+      },
+      {
+        "content": "",
+        "expected": "AND a button shown w/ text 'Get Started' [button is disabled initially]\nAND a checkbox is shown w/ text 'By tapping \"Get Started\" I agree to MLB's Terms of Use and Privacy Policy' [checkbox is unchecked initially]**\nAND a checkbox is shown w/ text 'I attest that I am eighteen (18) years of age or older.' [checkbox is unchecked initially]\nAND user display with Cancel or X button on Top left to dismiss the GoAhead registration\n\n\n**Terms of Use is a link directing user to external browser with Terms\n**Privacy Policy is a link directing user to external browser with Policy\n[iOS Terms and PP links are not underlined]\n"
+      },
+      {
+        "content": "WHEN user scroll left to right (2nd screen)",
+        "expected": "[ANDROID/iOS PAGE 2: GAE - SignUp page, Carousel 2]\n\nTHEN user display with further instructions\n\n*Title: First we'll capture an image of your face.\n*Description: This image will be used by a service provider solely to create an alphanumeric MLB Go-Ahead ID for you and then immediately discarded.\n\nAND 'Learn more' CTA underlined*\\\nAND Get Started button remains disabled\nAND Terms and Services checkbox is displayed without check\nAND Age confirmation checkbox is displayed without check\nAND user display with Cancel or X button on Top left to dismiss the GoAhead registration"
+      },
+      {
+        "content": "WHEN user taps 'Learn more' CTA",
+        "expected": "[ANDROID/iOS PAGE 4: GAE - Learn More link (mlb.com page)]\n\nTHEN the 'Learn more' link directs user to external browser with more info (mlb.com page)"
+      },
+      {
+        "content": "WHEN user scroll left to right (3rd screen)",
+        "expected": "[ANDROID/iOS PAGE 3: GAE - SignUp page, Carousel 3]\n\nTHEN user display with further instructions\n\n*Title: At the ballpark, head to a designated Go-Ahead Entry gate\n*Description: Your tickets will already be tied to your Go-Ahead ID. All ticketed individuals in your group will be captured by the Go-Ahead cameras.\n\nAND 'Learn more' CTA underlined*\nAND Get Started button remains disabled\nAND Terms and Services checkbox is displayed without check\nAND Age confirmation checkbox is displayed without check\nAND user display with Cancel or X button on Top left to dismiss the GoAhead registration\n\n*Learn more is a link directing user to external browser with more info"
+      },
+      {
+        "content": "WHEN User acknowledges Terms and Privacy\nAND User acknowledges Age",
+        "expected": "THEN user should be able to checkmark MLB ID Terms of Use and Privacy Policy (Checkbox filled up with black color)\nAND User should be able to checkmark the age stipulation 'I attest that I am eighteen (18) years of age or older.' (Checkbox filled up with black color)\n\nTHEN Get Started button should be enabled with black color in white text"
+      },
+      {
+        "content": "WHEN user taps 'Get Started' within the Go-Ahead Entry page",
+        "expected": "[SKIP VALIDATION IF CAMERA ACCESS WAS PREV ALLOWED - PROCEED TO NEXT STEP]\n\n[ANDROID/iOS PAGE 5: Device Prompt - Camera access (when DOB over 18)]\n\n\nTHEN user should display with Camera Prompt\n\nAndroid/iOS:\nStandard Existing Camera Promot modal OR\n\"Ballpark\" Would Like to Access the Camera\nBallpark uses the camera to capture photos and videos.\n\nAND 'Don't Allow' and 'Okay' CTAs shown"
+      },
+      {
+        "content": "WHEN user grants (or has prev granted Camera access)",
+        "expected": "[ANDROID/iOS PAGE 6: GAE - Capture to generate MLB GAE ID (when DOB over 18)] \n\n\nTHEN user should be able to proceed with NEC for enrollment to Go Ahead Entry\nAND the page shows:\nGO-AHEAD ENTRY shown in Home Plate with MLB logo\nDescription: We’ll take a quick capture to generate your MLB Go-Ahead ID\n\nAND 'Continue' CTA shown"
+      },
+      {
+        "content": "WHEN user taps on Continue",
+        "expected": "[ANDROID/iOS PAGE 7: GAE - Image capturing w/ recommendations below (when DOB over 18)]\n\nTHEN user should be directed to capture their facial image\n\nExample Text display: Keep your face in the frame ....\n\n[iOS/Android verbiage may differ - i.e. No Faces were detected inside the frame.]\n"
+      },
+      {
+        "content": "WHEN user successfully captured their facial image for Go-Ahead ID\nAND NEC acceptance met",
+        "expected": "[ANDROID/iOS PAGE 8: GAE - Generating GAE ID (when DOB over 18)]\n\nTHEN Home plate image should show in green color \nAND user displays with loading indicator displayed when image validation is in-progress\nAND lottie animations(dots) within home plate shows on screen while generating Go-Ahead ID\n\nText display: Generating Go-Ahead ID...\n"
+      },
+      {
+        "content": "",
+        "expected": "[ANDROID/iOS PAGE 8: GAE - GAE - Success - All Set (when DOB over 18)]\n\nTHEN user should display with confirmation screen for successful enrollment in GoAhead\nAND the page shows:\nGreen (dotted) check icon mark\nText: You're all set!\nThanks for registering! When you arrive at the ballpark enter at the First Base Gate in the designated Go-Ahead Entry gate\n\n\nAND 'Learn more about Go-Ahead Entry' should display in green color with an underline shown\n\nAND 'Done' CTA shown\n"
+      },
+      {
+        "content": "WHEN user taps on 'Learn more about GO-Ahead Entry'",
+        "expected": "[ANDROID/iOS PAGE 4: GAE - Learn More link (mlb.com page)]\n\nTHEN the 'Learn more' link directs user to external browser with more info (mlb.com page)"
+      },
+      {
+        "content": "WHEN user returns to BP app \nAND user taps on Done within Go-Ahead confirmation screen",
+        "expected": "THEN user taken to Home page of Ballpark App"
+      }
+    ]
+  },
+  {
+    "id": 32667646,
+    "title": "Onboarding - DOB under 18yrs old",
+    "section_id": 1851479,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1705618237,
+    "updated_by": 288,
+    "updated_on": 1705620921,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 658056,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN User has successfully authenticated into Ballpark (installed ANDROID 12.13.0 or later, iOS 13.0.0 or later)\r\nAND User's mlb.com account has an age below 18 already set up\r\n\r\n*GAE onboarding for customer w/ DOB under 18 [Acct to use: ballpark.applause+under@gmail.com / PW: BPapp123]\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user accesses the GAE Registration deeplink* (ballpark://go-ahead)\n\n*the deeplink is currently configured to show as 'Go-Ahead Entry' in More Menu (for STG and QA envs)",
+        "expected": "[ANDROID/iOS PAGE 1: GAE - SignUp page, Carousel 1]\n\nTHEN User displayed with Get Started screen with title of GO-AHEAD ENTRY"
+      },
+      {
+        "content": "",
+        "expected": "AND a middle section will be show that allows swiping to additional pages w/ further instructions\n\nAND the initial page text shows:\n*Title: Sign up for MLB's Go-Ahead Entry\n*Description: Register for MLB Go-Ahead Entry, the ultimate hands-free experience available for free to ticketed fans(18 and older) entering certain ballparks."
+      },
+      {
+        "content": "",
+        "expected": "AND a button shown w/ text 'Get Started' [button is disabled initially]\nAND a checkbox is shown w/ text 'By tapping \"Get Started\" I agree to MLB's Terms of Use and Privacy Policy' [checkbox is unchecked initially]**\nAND a checkbox is shown w/ text 'I attest that I am eighteen (18) years of age or older.' [checkbox is unchecked initially]\nAND user display with Cancel or X button on Top left to dismiss the GoAhead registration\n\n\n**Terms of Use is a link directing user to external browser with Terms\n**Privacy Policy is a link directing user to external browser with Policy\n[iOS Terms and PP links are not underlined]\n"
+      },
+      {
+        "content": "WHEN User acknowledges Terms and Privacy\nAND User acknowledges Age",
+        "expected": "THEN user should be able to checkmark MLB ID Terms of Use and Privacy Policy (Checkbox filled up with black color)\nAND User should be able to checkmark the age stipulation 'I attest that I am eighteen (18) years of age or older.' (Checkbox filled up with black color)\n\nTHEN Get Started button should be enabled with black color in white text"
+      },
+      {
+        "content": "WHEN user taps 'Get Started' within the Go-Ahead Entry page",
+        "expected": "[ANDROID/iOS PAGE 10: Device Prompt - DOB required (when DOB under 18, or missing DOB)]\n\nTHEN user will reach a modal notifying them that DOB is required to confirm eligibility\nAND user should have the option to enter DOB or Cancel (Exit Flow)\n\nModal:\nDate of Birth Required\n\nEnter your date of birth to confirm eligibility.\n\nCTAs:\n*Android: Cancel, OK\n*iOS: Exit, Enter DOB"
+      },
+      {
+        "content": "WHEN user selects to enter DOB",
+        "expected": "[ANDROID/iOS PAGE 11: Device Prompt - Calendar picker (when DOB under 18, or missing DOB)]\n\nTHEN user will reach a modal with their DOB pre-populated\n\nAND they have the option to select and confirm their DOB, update to a new date, or exit the modal to close the modal"
+      },
+      {
+        "content": "WHEN user confirms the underage date provided\nOR user enters a DOB calculated under the age of 18",
+        "expected": "[ANDROID/iOS PAGE 12: Device Prompt - Sorry, ineligible (when user enters DOB under 18)]\n\nTHEN an under age notification is displayed\n\nModal:\nSorry, you are ineligible to participate in Go-Ahead Entry\nYou can still access your tickets to be scanned at the gate when you arrive at the ballpark.\n\nExit to Home CTA"
+      },
+      {
+        "content": "WHEN the user taps the CTA to exit/close the modal (“Exit to Home\")",
+        "expected": "THEN user is navigated to the home page"
+      }
+    ]
+  },
+  {
+    "id": 32738220,
+    "title": "My Profile",
+    "section_id": 1858404,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://baseball.atlassian.net/browse/BPA-7375",
+    "created_by": 288,
+    "created_on": 1706652947,
+    "updated_by": 288,
+    "updated_on": 1706653264,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 658056,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN User has successfully authenticated into Ballpark (installed ANDROID 12.13.0 or later, iOS 13.0.0 or later)\r\nAND User's mlb.com account has an age above 18 already set up\r\nAND user has completed the GAE Onboarding (including successful image capture)\r\n\r\n*GAE onboarding for customer w/ DOB over 18 [Acct to use: ballpark.applause@gmail.com / PW: BPapp123]",
+    "custom_steps": "GIVEN User is on Home page\r\nAND the user navigates to My Profile page (via Profile icon at the top right - initials)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User on My Profile page\nAND user has already completed the successful enrollment in Go-Ahead Entry program",
+        "expected": "THEN user should be display with drawer option \"MLB GO-Ahead ID\" on My Profile page\n\n* My Teams\n* My Notifications\n* My MLB Account Emails\n* My Ticket Accounts\n* MLB Go-Ahead ID"
+      },
+      {
+        "content": "WHEN User taps on the \"MLB Go-Ahead ID\"",
+        "expected": "THEN selection of \"MLB Go-Ahead ID\" leads user to new view "
+      },
+      {
+        "content": "",
+        "expected": "[ANDROID/iOS PAGE 13: My Profile - GAE ID]\n\nAND New view should displays user enrollment status \n\nMLB Go-Ahead ID - Header/Title\n\n'< My Profile' on top left corner in same line as MLB Go-Ahead ID (Android)\nOR  \n* '< Back' on top left corner in same line as MLB Go-Ahead ID (iOS)\n\nText Display: \nThe Go-Ahead Entry experience allows you to enter the stadium hands-free and is available at select ballparks. Tap here for more information and a list of participating ballparks.\n\nMLB Go-Ahead ID - Enrolled(in green font) \n\n'Delete MLB Go-Ahead ID' display in blue within blue pills icon"
+      },
+      {
+        "content": "WHEN user taps 'Tap here' within the MLB Go-Ahead ID profile page",
+        "expected": "THEN user is directed to an external browser opened to an appropriate page* with more information on Go Ahead Entry\n\n*the webpage may be temporarily set to mlb.com - It is configured as 'go_ahead_mlb_ballparks_url' in remote config"
+      },
+      {
+        "content": "WHEN user taps on back navigation ",
+        "expected": "THEN selection of back navigation brings user to My Profile page "
+      },
+      {
+        "content": "WHEN User taps on the \"MLB Go-Ahead ID\"\nAND user taps on \"Delete MLB Go-Ahead ID\" ",
+        "expected": "THEN user should display with Deletion prompt modal \n\nBody/Text: \n\nDelete MLB GO-Ahead ID \nDeleting your MLB Go-Ahead ID will remove your ID and require re-enrollment in the program. \n\nDelete Go-ahead ID - CTA\nCancel - CTA \n\nNote:Design may be vary Android vs iOS for this prompt Modal. "
+      },
+      {
+        "content": "WHEN user select \"Delete\"/\"Delete Go-Ahead ID\" on the Deletion prompt modal",
+        "expected": "THEN user is removed from Go-Ahead entry program\nAND the user is returned to My Profile page w/ MLB Go-Ahead ID entry removed \n\n\n"
+      },
+      {
+        "content": "WHEN user successfully Unenrolled from MLB Go-Ahead ID ",
+        "expected": "THEN user should not display with MLB Go-Ahead Entry/ID drawer option on My Profile page"
+      }
+    ]
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1977904,
+    "suite_id": 690097,
+    "name": "Apple Account Deletion",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1977905,
+    "suite_id": 690097,
+    "name": "Log In",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1977906,
+    "suite_id": 690097,
+    "name": "Favorite Team",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1977907,
+    "suite_id": 690097,
+    "name": "Hide Spoilers",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1977908,
+    "suite_id": 690097,
+    "name": "Get MLB.TV",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1977909,
+    "suite_id": 690097,
+    "name": "Restore Purchase",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1977910,
+    "suite_id": 690097,
+    "name": "Terms of Service",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1977911,
+    "suite_id": 690097,
+    "name": "Contact Support",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1977912,
+    "suite_id": 690097,
+    "name": "Environment Switching",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  }
+]

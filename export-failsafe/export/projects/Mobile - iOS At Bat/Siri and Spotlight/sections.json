@@ -1,0 +1,20 @@
+[
+  {
+    "id": 6889,
+    "suite_id": 876,
+    "name": "Siri",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 97714,
+    "suite_id": 876,
+    "name": "Spotlight",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

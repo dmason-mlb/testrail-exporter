@@ -1,0 +1,161 @@
+[
+  {
+    "id": 48248,
+    "title": "Standings",
+    "section_id": 6877,
+    "template_id": 1,
+    "type_id": 13,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1414614591,
+    "updated_by": 336,
+    "updated_on": 1735832463,
+    "estimate": null,
+    "estimate_forecast": "10m 13s",
+    "suite_id": 869,
+    "display_order": 1,
+    "custom_preconds": "Paid - http://m.mlb.com/atbat/iphone/standings/?view=divisional\r\n\r\nLite - http://m.mlb.com/atbat/iphone/standings/?view=divisional&lite=true",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user taps on Standings from either bottom menu or the More menu",
+        "expected": "Then the Standings page opens "
+      },
+      {
+        "content": "When a user switches between the Divisional & Wild Card tabs",
+        "expected": "Then the records and standings appear to be up to date & accurate"
+      },
+      {
+        "content": "When a user has the application in the background on the Settings page and returns to the application",
+        "expected": "Then Standings updates immediately"
+      },
+      {
+        "content": "When a user is on the Standings and a team has clinched a playoff spot",
+        "expected": "Then the playoff legend of (w, x y and z) will appear at the bottom of standings for both Divisional & Wild Card tabs"
+      },
+      {
+        "content": "When a user is on the Wild Card tab and their is a tie in the standings",
+        "expected": "Then the tied teams will display in the Divisional Leaders & Wild Card sections"
+      },
+      {
+        "content": "When a user is on the Wild Card tab",
+        "expected": "Then the division leaders have the corresponding division letter to the left of their name (E, C, or W)"
+      },
+      {
+        "content": "When a user has a favorite team selected and is on the Divisional tab",
+        "expected": "Then the favorite team appears highlighted"
+      },
+      {
+        "content": "When a user has a favorite team selected and it is on the Divisional tab",
+        "expected": "Then the division of the favorite team is on top"
+      },
+      {
+        "content": "When a user has a favorite team selected and it is on the Wild Card tab",
+        "expected": "Then the league sorted to the top is that of the favorite team"
+      },
+      {
+        "content": "When a user is on an iPad and the settings are in Regular Season Mode, when the Last Game and Next Game values are displayed",
+        "expected": "Then the game and result information they display are accurate"
+      },
+      {
+        "content": "When a user is on an iPad Standings and taps Deep Link under Last Game",
+        "expected": "Then the user is taken to the Gameday (Wrap) view of that game"
+      },
+      {
+        "content": "When a user is on an iPad Standings and taps Deep Link under Next Game",
+        "expected": "Then the user is taken to the Gameday view (Preview, PBP) of that game\n\nRepeat for Game in Preview state and Game in Live state"
+      }
+    ]
+  },
+  {
+    "id": 31089457,
+    "title": "Standings update every time a match is over",
+    "section_id": 6877,
+    "template_id": 1,
+    "type_id": 13,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1690576444,
+    "updated_by": 336,
+    "updated_on": 1735832463,
+    "estimate": null,
+    "estimate_forecast": "2m 3s",
+    "suite_id": 869,
+    "display_order": 2,
+    "custom_preconds": "* User has latest build \r\n* User is logged in",
+    "custom_steps": "Given the user launches the app when a match is live and navigates to standings tab\r\nAnd the standings are displayed \r\nAnd the user validates the order of the standings\r\nAnd the standings table should should the current values\r\nWhen the user waits for the game to end ",
+    "custom_expected": "Then the standings table should be updated with match finishing info",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 31089458,
+    "title": "Sticky Headers and Columns",
+    "section_id": 6877,
+    "template_id": 1,
+    "type_id": 13,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1690576508,
+    "updated_by": 336,
+    "updated_on": 1735832463,
+    "estimate": null,
+    "estimate_forecast": "2m 39s",
+    "suite_id": 869,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN I am on the Standings page\r\nWHEN scrolling to the right\r\n",
+    "custom_expected": "THEN the first column showing the team will remain frozen as a user scrolls horizontally\r\nAND the Division headers only will remain sticky as a user scrolls with each Division header replacing the other as they scroll\"",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 31089459,
+    "title": "Horizontal Scroll Support",
+    "section_id": 6877,
+    "template_id": 1,
+    "type_id": 13,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1690576621,
+    "updated_by": 336,
+    "updated_on": 1735832463,
+    "estimate": null,
+    "estimate_forecast": "2m 13s",
+    "suite_id": 869,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN I am on the Standings page\r\nWHEN enough columns are enabled and expand past the existing viewport for that device size",
+    "custom_expected": "THEN the view will automatically become horizontally scrollable",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 31089460,
+    "title": "Dynamic Type Size Support",
+    "section_id": 6877,
+    "template_id": 1,
+    "type_id": 13,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1690577099,
+    "updated_by": 336,
+    "updated_on": 1735832463,
+    "estimate": null,
+    "estimate_forecast": "7m",
+    "suite_id": 869,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN a user’s device settings have their system font set to large\r\nWHEN they go to the Standings tab",
+    "custom_expected": "THEN the text in that table should reflect that setting",
+    "custom_steps_separated": null
+  }
+]

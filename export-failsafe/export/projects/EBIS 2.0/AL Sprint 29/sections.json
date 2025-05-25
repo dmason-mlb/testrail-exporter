@@ -1,0 +1,137 @@
+[
+  {
+    "id": 126279,
+    "suite_id": 18804,
+    "name": "qa-approved, qa-point5, trades, uat feedback, ux-approval-na",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 126280,
+    "suite_id": 18804,
+    "name": "payment tracker, qa-approved, qa-point5, ux-approval-na",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 126281,
+    "suite_id": 18804,
+    "name": "enhancement, minor contracts, qa-approved, qa-point3, ux-approved",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 126282,
+    "suite_id": 18804,
+    "name": "enhancement, minor contracts, needs acceptance criteria, qa-point3, ux-approval-na",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 126283,
+    "suite_id": 18804,
+    "name": "payment tracker, qa-approved, qa-point3, ux-approved",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 126284,
+    "suite_id": 18804,
+    "name": "qa-approved, qa-point2, trades, uat feedback, ux-approval-na",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 126285,
+    "suite_id": 18804,
+    "name": "enhancement, qa-approved, qa-point1, ux-approval-na",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 126286,
+    "suite_id": 18804,
+    "name": "enhancement, minor contracts, qa-approved, qa-point2, ux-approved",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 126287,
+    "suite_id": 18804,
+    "name": "enhancement, minor contracts, qa-approved, qa-point1, ux-approval-na",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 126288,
+    "suite_id": 18804,
+    "name": "needs acceptance criteria, qa-approved, trades, ux-approval-na",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 126289,
+    "suite_id": 18804,
+    "name": "enhancement, global, qa-approved, qa-point1, ux-approved",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 126290,
+    "suite_id": 18804,
+    "name": "enhancement, qa-approved, qa-point5, trades, ux-approved",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 126291,
+    "suite_id": 18804,
+    "name": "enhancement, minor contracts, qa-approved, qa-point2, ux-approval-na",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 126292,
+    "suite_id": 18804,
+    "name": "payment tracker, qa-approved, qa-point3, ux-approval-na",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 126293,
+    "suite_id": 18804,
+    "name": "prd-support, qa-approved, ux-approval-na",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  }
+]

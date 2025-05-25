@@ -1,0 +1,29 @@
+[
+  {
+    "id": 28417,
+    "suite_id": 3128,
+    "name": "MJ Service",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 29500,
+    "suite_id": 3128,
+    "name": "MJ Service",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 29501,
+    "suite_id": 3128,
+    "name": "Manual Adjustments to Service",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

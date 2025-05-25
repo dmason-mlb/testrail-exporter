@@ -1,0 +1,3180 @@
+[
+  {
+    "id": 48735,
+    "title": "Launch Page Test",
+    "section_id": 7012,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1420559852,
+    "updated_by": 73,
+    "updated_on": 1522701204,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user installed 'Beat The Streak Application\"\r\nAND does not have an MLB.com Account",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user launches the app",
+        "expected": "THEN the splash screen should load with the Beat the Streak logo\nAND once the splash screen finishes loading, a user is presented with the initial screen AND should see the following:\n- \"Sign In\" button\n- \"Create Account\" button"
+      },
+      {
+        "content": "WHEN the app is launched\nAND the user is brought to the Fork screen\nAND the user taps the \"Sign In\" button",
+        "expected": "THEN the user will be brought to the Sign In screen with the following:\n- A header that reads \"Sign In\"\n- \"How To Play\" button (located in the top-right corner)\n- Email text field (Required)\n- Password text field (Required)\n- \"Forgot Password?\" link <Directs to the forgot password screens>\n- Official Rules, Terms and Conditions, and Privacy Policy links \n- \"Sign In\" button\n- \"Need an MLB.com account?\" link <Directs to the Register screen>\n- Text that starts with \"No purchase necessary to enter or win\"."
+      },
+      {
+        "content": "WHEN the app is launched\nAND the user is brought to the Fork screen\nAND the user then clicks the \"Create Account\" button",
+        "expected": "THEN the user is taken to the \"Create an MLB.com account\" screen with:\n- A header that reads \"Register\"\n- \"How To Play\" button (located in the top-right corner)\n- Email text field (Required)\n- Nickname text field (Required)\n- Password text field (Required)\n-Confirm Password text field (Required)\n- Birthday field (Required)\n- Official Rules, Terms and Conditions, and Privacy Policy links\n- \"Register\" button\n- \"Already Have An Account?\" link <Directs to the Sign In page>\n- Text that starts with \"No purchase necessary to enter or win\"."
+      },
+      {
+        "content": "WHEN the app is launched and the user taps either \"Sign In\" or \"Create Account\" buttons\nAND the user taps any of the following links from either \"Sign In\" or \"Register\" pages\n- How to Play link\n- Official Rules link\n- Terms and Conditions link\n- Privacy Policy link",
+        "expected": "THEN the user will be taken to each corresponding link that the user tapped on\nAND these pages will open as web view\nAND the corresponding page is displayed correctly (Verify by checking the header title of that page on top).\n\nCheck all the links"
+      },
+      {
+        "content": "WHEN the user launches the app\nAND the user is an existing user\nAND the user taps the \"Sign In\" button",
+        "expected": "THEN the user is taken to the Sign In page with the following required fields:\n- Email (Required)\n- Password (Required)"
+      },
+      {
+        "content": "WHEN the user launches the app\nAND the user is on the Sign In page\nAND the user taps on \"Forgot Password?\" link",
+        "expected": "THEN the user is brought to Forgot Password screen with:\n- Header on top that reads \"Forgot Password\"\n-Instructions\n-\"Email Address\" text field\n- On screen iOS keyboard\n- \"Back\" on top left corner <Directs user back to the sign in page>"
+      },
+      {
+        "content": "WHEN the user is on \"Forgot Password?\" screen\nAND the user enters their e-mail address in the field\nAND the user taps \"Send\" button on the keyboard",
+        "expected": "THEN the user directed back to the sign in page\nAND the user receives an e-mail with the reset password\nAND the user is allowed to log in to BTS with the password sent in the email\n\nNOTE: Setting a whole new password is not implemented within the app flow yet but can be done on the link sent in the email."
+      },
+      {
+        "content": "WHEN the user tries to Register a new account\nAND enters an email that's already taken\nOR enters a nickname that's already taken\nOR enters a birthday after October 1st 18 years ago",
+        "expected": "THEN all of the proper validations are enforced:\nMessage appears for emails and nicknames already registered\nBirthday date picker does not allow players younger than 18 during the regular season"
+      }
+    ]
+  },
+  {
+    "id": 48736,
+    "title": "My Picks Page Test",
+    "section_id": 7012,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1420559865,
+    "updated_by": 73,
+    "updated_on": 1522859367,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\" Application\r\nAND the user has an MLB .com\r\nAND the user has never logged into \"Beat the Streak\"",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user has just created an account\nAND logs in \nAND opens the My Picks page \nAND scrolls up",
+        "expected": "THEN they will not be able to see past picks because they have not made any"
+      },
+      {
+        "content": "WHEN the user taps on My Picks",
+        "expected": "THEN the following sections will display on the My Picks tab:\n- The navigation dropdown will be in the upper left corner\n- The logged in user's streak will appear in the top right corner\nAND dates will be listed on the left\nAND where there is a single pick listed\n- The option to double down is listed under the single pick\nOR where there is no pick\n- The option to 'Select a Player'"
+      },
+      {
+        "content": "WHEN the user presses the Select a Player option for an available date",
+        "expected": "THEN the \"MAKE A PICK\" page opens\nAND the user will see 3 sections accessible:\nTop Picks| My Recent | Custom | All Players\nAND the Top Picks and My Recent will display a Player row\nAND the All Players will display a team row"
+      },
+      {
+        "content": "WHEN the user taps on the Custom Tab\nAND toggles the categories on or off\nAND taps Apply or Reset",
+        "expected": "THEN the user will be redirected to the Custom Filter Tab\nAND the user will reach a page with filtered results yielding players that fall within the specific category OR the user will face a no result screen"
+      },
+      {
+        "content": "WHEN a new user logs into the app on a newly created account\nAND is on the My Picks page",
+        "expected": "THEN when they attempt to scroll up they will not be able to see past picks because they have not made any\nAND all previous days will appear in gray text"
+      },
+      {
+        "content": "WHEN the user clicks on the 'Make a Pick' cell for today\nAnd the user selects a player from the Top Picks tab on the the Make a Pick page\nAnd taps on the 'Yes' button on the confirmation pop up",
+        "expected": "THEN the user will be brought back to the My Picks page\nAND see their pick updated on that day"
+      },
+      {
+        "content": "When the user has not made a pick for the day \nAND selects the 'Make a Pick' cell for today\nAnd taps on the 'My Recent' Tab\nAnd the user selects a player\nAnd taps on the 'Yes' button on the confirmation pop up\n",
+        "expected": "THEN the user will be brought back to the My Picks page\nAND see their pick updated on that day"
+      },
+      {
+        "content": "WHEN the user clicks on the 'Make a Pick' cell for today\nAND taps on the 'All Teams' Tab\nAND tap on any team\nAND tap on any player\nAND taps on the 'Yes' button on the confirmation pop up",
+        "expected": "THEN the user will be brought back to the My Picks page\nAND see their pick updated on that day"
+      },
+      {
+        "content": "WHEN the user has submitted 1 pick for the day \nAND never used double down feature \nAND taps on the 'Double Down' cell for that day",
+        "expected": "THEN the user will see the Double Down confirmation that says:\n\n\"Want to Double Down?\nPick two players on any day to try to grow your streak by two.\nBut it's risky - if either player fails to get a hit, your streak will go back to ZERO.\""
+      },
+      {
+        "content": "WHEN the user has submitted 1 pick for the day \nAND has used the double down feature \nAND the user taps on the 'Double Down' cell for that day\nAND the user selects a player, then taps 'Yes' on the confirmation",
+        "expected": "THEN the user will be brought back to the My Picks page\nAND see their pick updated on that day"
+      },
+      {
+        "content": "WHEN the user taps double down \nAND selects a player as their first pick with a double header scheduled for that day",
+        "expected": "THEN the pick should be submitted as expected\nAND on the my picks page will show the same player for both double down picks\nAND the lock time will be the same for both picks\nAND the lock time will be the lock time of the earlier game"
+      },
+      {
+        "content": "WHEN the user taps on the existing pick or 'Edit' link for a given day with only 1 pick already selected",
+        "expected": "THEN the user is brought to the 'Remove Pick' page"
+      },
+      {
+        "content": "WHEN the user taps on the existing pick or 'Edit' link for a given day with a double down pick already selected \nAND then taps on the remove pick button",
+        "expected": "THEN the user will be brought back to the my picks page with the selected pick removed"
+      },
+      {
+        "content": "WHEN the user taps their second pick of the day that is also a double down pick of a player in a doubleheader \nAND then taps the remove button",
+        "expected": "THEN that pick will be removed from my picks page\nAND that user will return the my picks page\nThe original single pick of that player should still remain"
+      },
+      {
+        "content": "WHEN the user is on Make a Pick view and taps on the 'More' button for a player",
+        "expected": "THEN the user is taken to the Player Detail Pick screen\nAND will see the player on the left\nAND the probable pitcher on the right\nAND see the player's stats against the pitcher at the bottom\nAND see the player's season stats\nAND the button on the bottom will say 'Submit Pick'"
+      },
+      {
+        "content": "WHEN the user is on the my picks page\nAND taps on a date in the future\nAND taps on Teams\nAND taps on a team that does not have a probable pitcher\nAND taps on any player ('More' button)\n",
+        "expected": "THEN the user will be brought to the Player Details View\nAND will see the players picture the the left\nAND see the opposing team's logo to the right\nAND see the player's stats vs the opposing team at the bottom\nAND see the player's season stats below that\nAND the button on the bottom will say 'Submit Pick'"
+      },
+      {
+        "content": "WHEN the user taps on the single pick that has not been scored yet",
+        "expected": "THEN the user is taken to the Player Detail Pick screen\nAND will see the player on the left\nAND the probable pitcher on the right\nAND see the player's stats against the pitcher at the bottom\nAND the player's season stats\nAND the button on the bottom will say 'Remove Pick'"
+      },
+      {
+        "content": "WHEN the user is on the my picks page\nAND taps on the player who does not have an associated probable pitcher",
+        "expected": "THEN the user will be brought to the Player Details View\nAND will see the players picture the the left\nAND see the opposing team's logo to the right\nAND see the player's stats vs the opposing team at the bottom\nAND see the player's season stats below that\nAND the button on the bottom will say 'Remove Pick'"
+      },
+      {
+        "content": "WHEN the user is on a date with 2 picks selected that are still not scored or locked\nAND the user taps on either one of the picks for that date",
+        "expected": "THEN the user is taken to the Player Detail Pick screen\nAND will see the player on the left\nAND the probable pitcher on the right\nAND see the player's stats against the pitcher at the bottom\nAND the player's season stats\nAND the button on the bottom will say 'Remove Pick'"
+      },
+      {
+        "content": "WHEN the user is on a date with 2 picks selected that are still not scored or locked\nAND they do not have a probable pitcher \nAND then the user taps on either one of the picks for that date",
+        "expected": "THEN the user will be brought to the Player Details View\nAND will see the players picture the the left\nAND see the opposing team's logo to the right\nAND see the player's stats vs the opposing team at the bottom\nAND see the player's season stats below that\nAND the button on the bottom will say 'Remove Pick'"
+      },
+      {
+        "content": "WHEN a player is on the My Picks page that was selected on a day in which their team has a double header scheduled",
+        "expected": "THEN a label will display for which game the player was chosen for (Game 1 / Game 2)"
+      },
+      {
+        "content": "WHEN the user is on the my picks page before their picked player's team lock time",
+        "expected": "THEN the user will see their pick\nAND the pick has a time stamp that reads \"player locks at (time: X:XX) PM ET\""
+      },
+      {
+        "content": "WHEN the user is on the my picks page after their picked player's team lock time",
+        "expected": "THEN the user will see their pick get locked\nAND it will state 'Pick Locked At X:XX PM ET'\nAND if the user had not selected a Double Down option, that section will be removed"
+      },
+      {
+        "content": "WHEN the user is on Top Picks/ Recent Picks/ All Teams page before lock time \nAND has already made a pick for the day",
+        "expected": "THEN the user will see their pick as unlocked\n\n    \"Player Locks at XX:XX PM ET\"\n\n"
+      },
+      {
+        "content": "WHEN the user is on the My Picks page \nAND has not selected a player and all the games for that particular date are locked",
+        "expected": "THEN the user will NOT see 'Select a player' text in the date cell"
+      },
+      {
+        "content": "WHEN the user has made picks the past 2 days and is on the My Picks page",
+        "expected": "THEN the user will see the past 2 days of picks at the top"
+      },
+      {
+        "content": "WHEN the user has made no picks the past 10 days and is on the My Picks page",
+        "expected": "THEN the first date they will see at the top will be today's"
+      },
+      {
+        "content": "WHEN the user changes timezone to one other than ET and view the My Picks page",
+        "expected": "THEN the user will see the correct dates show properly with all game times set to ET"
+      }
+    ]
+  },
+  {
+    "id": 48745,
+    "title": "Pick Scoring Test",
+    "section_id": 7012,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1420650768,
+    "updated_by": 91,
+    "updated_on": 1449613961,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user has the Beat the Streak app installed \r\nAND the user has created an account\r\nGIVEN for the later portion of these tests, user should have At Bat installed as well",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user makes a pick, before the game has been scored \nAND the player recorded a hit during the game and after the game has been scored ",
+        "expected": "THEN the user's streak should advance by one"
+      },
+      {
+        "content": "WHEN the user makes a pick, before the game has been scored \nAND the player did not record a hit during the game and after the game has been scored ",
+        "expected": "THEN the user's streak is over and should revert back to zero"
+      },
+      {
+        "content": "WHEN the user makes a pick, before the game has been scored \nAND the player did not record a hit during the game and after the game has been scored \nAND the user has used the mulligan",
+        "expected": "THEN the user keeps their streak but it does not advance by any amount, the pick will indicate that the mulligan has been used AND the user's profile will now show mulligan as used"
+      },
+      {
+        "content": "WHEN the user makes a pick, before the game has been scored \nAND the player did not bat during the game and after the game has been scored.",
+        "expected": "THEN the user keeps their streak but it does not advance by one, the pick cell will indicate that the player did not have any at bats"
+      },
+      {
+        "content": "WHEN a user makes a double down pick, after the game has been scored and both picks got a hit\nAND the player did not record a hit during the game and after the game has been scored ",
+        "expected": "THEN the user's streak should advance by two"
+      },
+      {
+        "content": "WHEN a user makes a double down pick, \nAND only one of the players recorded a hit during the games and after the games has been scored \nAND the user does not have a Mulligan available for the streak",
+        "expected": "THEN the user's streak is over \nAND the user's streak should revert back to zero"
+      },
+      {
+        "content": "WHEN the user makes a double down pick\nAND neither players recorded a hit during the games and after the games has been scored ",
+        "expected": "THEN the user's streak is over \nAND the user's streak should revert back to zero"
+      },
+      {
+        "content": "WHEN the user makes a double down pick\nAND one player recorded a hit during the game and after the game has been scored \nAND one player did not have a at bat during the game and after the game has been scored",
+        "expected": "THEN the user's streak should advance by one, the user should be able to see the batter results for the one who recorded a hit \nAND text indicating that the other pick did not have an at bat"
+      },
+      {
+        "content": "WHEN a user makes a double down pick\nAND only one of the players recorded a hit during the games and after the games has been scored \nAND the user used the mulligan",
+        "expected": "THEN the user's streak will not increment and the user will see \"mulligan save\" for both picks"
+      },
+      {
+        "content": "WHEN the user has a streak in progress \nAND the user does not make a pick for the day of games and all of the day's games have been processed and the next day is available for selection",
+        "expected": "THEN the user's streak will be maintained \nAND they will be able to resume it when they make a their next pick"
+      },
+      {
+        "content": "WHEN the user taps on the picked player cell where the player's team is in a live game state \nAND the user is a Lite user in At Bat\nAND the user taps on Follow in At Bat",
+        "expected": "THEN the user should be transported to At Bat\nAND the user should be taken into gameday and straight to the Box tab. "
+      },
+      {
+        "content": "WHEN the user taps on the picked player cell where the player's team is in a live game state \nAND the user is a Full user in At Bat\nAND the user taps on Follow in At Bat",
+        "expected": "THEN the user should be transported to At Bat\nAND the user should be taken into gameday and straight to the Game tab. "
+      },
+      {
+        "content": "WHEN the user taps on the picked player cell where the player's team is in a final game state \nAND the pick has not been scored\nAND the user taps on Follow in At Bat",
+        "expected": "THEN the user should be transported to At Bat\nAND the user should be taken into gameday and straight to the Wrap tab. "
+      },
+      {
+        "content": "WHEN the user taps on a pick that has been scored",
+        "expected": "THEN the user will be brought to a scoring breakdown of the player\nAND each of the Innings where the player was at bat will display\nAND the Pitcher at the time will be listed\nAND the At Bat result will be listed\nAND the Follow in At Bat will be listed"
+      },
+      {
+        "content": "WHEN the user taps on a pick where the player has highlights for that specific game \nAND those highlights are of the player recording a hit",
+        "expected": "THEN a link will appear \"Watch (PLAYERNAME) highlights\""
+      },
+      {
+        "content": "WHEN the user taps on a pick where the player has highlights for that specific game \nAND those highlights are NOT of the player recording a hit\n",
+        "expected": "THEN no video link appears"
+      },
+      {
+        "content": "WHEN the user taps on a pick where the player has no highlights for that specific game",
+        "expected": "THEN no video link appears"
+      },
+      {
+        "content": "WHEN the user taps on \"Watch (PLAYERNAME) highlights\"",
+        "expected": "THEN the user will be brought to a webview where there is a MLB.com video search results with that player's name pre-populated as the search criteria"
+      },
+      {
+        "content": "WHEN the user taps on a player result\nAND the user taps on Follow in At Bat \nAND does not have At Bat installed",
+        "expected": "THEN they user sees a Get At Bat Go download At Bat from the app store prompt\nAND Cancel button\nAND Continue button\nAND Cancel caches the AT Bat redirection\nAND Continue button brings you to At Bat page of the App Store"
+      }
+    ]
+  },
+  {
+    "id": 70424,
+    "title": "Live At Bat Follow Test",
+    "section_id": 7012,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1449789011,
+    "updated_by": 91,
+    "updated_on": 1449850576,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user has \"Beat The Streak\" installed\r\nAND the user has an MLB.com Account\r\nAND the user has logged into the \"Beat the Streak\" application",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on a picked players cell\nAND the user taps on the picked player cell\nAND the picked player's game has not yet been scored in BTS\nAND the picked player's game is in a pregame state in the At Bat App\nAND the user taps on the follow in At Bat button on the players page",
+        "expected": "THEN the user should be transported to At Bat Application\nAND the user should be taken to the game preview game day screen"
+      },
+      {
+        "content": "WHEN the user taps on a picked players cell\nAND the picked player's game has no yet been scored in BTS\nAND the picked player's game is in a live state in the At Bat Application\nAND the user is a Lite user in At Bat.\nAND the user taps on the follow in At Bat button on the players page",
+        "expected": "THEN the user should be transported to At Bat Application\nAND the user should be taken into GameDay\nAnd straight into the boxscore tab for the picked player's game."
+      },
+      {
+        "content": "WHEN the user taps on a picked players cell\nAND the picked player's game has not yet been scored in BTS\nAND the picked player's game is in a live state in the At Bat Application\nAND the user is a Full user in At Bat.\nAND the user taps on the follow in At Bat button on the players page",
+        "expected": "THEN the user should be transported to the At Bat Application.\nAND the user should be taken into GameDay and straight to the game tab"
+      },
+      {
+        "content": "WHEN the user taps on a picked players cell\nAND the picked player's game has not yet been scored in BTS\nAND the picked player's game is in a Final state in the At Bat app\nAND the user taps on the follow in At Bat button on the players page",
+        "expected": "THEN the user should be transported to At Bat Application\nAND the user should be taken into GameDay \nAND straight to the Wrap tab for the picked player's game."
+      },
+      {
+        "content": "WHEN the user taps on a picked players cell\nAND the picked player's game has been scored in BTS",
+        "expected": "THEN the user will be brought to a scoring breakdown of the player\nAND each of the Innings where the player was at bat will display\nAND the Pitcher at the time will be listed\nAND the At Bat result will be listed\nAND the Follow in At Bat will be listed"
+      },
+      {
+        "content": "WHEN the user does not have At Bat Installed\nAND the user taps on a player row\nOR taps on view next on a player row\nAND pick result page is opened for that player\nAND tap on Follow in At Bat button",
+        "expected": "THEN they user sees a Get At Bat Go download At Bat from the app store prompt\nAND Cancel button\nAND Continue button\nAND Cancel caches the AT Bat redirection\nAND Continue button brings you to At Bat page of the App Store"
+      }
+    ]
+  },
+  {
+    "id": 48737,
+    "title": "Leaderboard Test",
+    "section_id": 7012,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1420559873,
+    "updated_by": 73,
+    "updated_on": 1521671866,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user has \"Beat The Streak\" installed\r\nAND the user has an MLB.com account",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is on the Leaderboard",
+        "expected": "THEN the user will see sections in the segmented controller at the top:\nCurrent Streak (*this season year*) | Season Streak (*this season year*) | Batting Average (*this season year*) | Pick Average (*this season year*) | MLB All-Time | BTS All-Time | Friends | Groups"
+      },
+      {
+        "content": "WHEN the user selects the Groups Leaderboard \nAND the user has no MLB Groups created\n",
+        "expected": "THEN no leaderboard will display\nAND the following message will display: \"This leaderboard is unavailable. Create groups by selecting the Groups tab in the Navigation menu. Press the + button to create/join a group\""
+      },
+      {
+        "content": "WHEN the user taps on the overall tab at the top, scrolls down \nAND there are more than 25 results on that particular leaderboard page",
+        "expected": "THEN the first 25 results will load\nAND when you get to the bottom of the list the next 25 results will load\nAND will continue until there are no more results"
+      },
+      {
+        "content": "WHEN the user is on the Leaderboard Overall Tab \nAND taps on the arrow to the right of the Current Season header",
+        "expected": "THEN the Overall Leaderboard will change from 'Current Season' standings to the 'BTS All Time' standings\nAND pressing the arrow again will change the Overall Leaderboard from 'BTS All Time' to 'MLB Hit Streaks'\n"
+      },
+      {
+        "content": "WHEN the user is on the Leaderboard Overall Tab \nAND the user taps on the leaderboard header name",
+        "expected": "THEN the user will be brought to the Overall Leaderboards options menu\nAND the user will see the followin options to choose from:\n\nCurrent Streak (2018)\nSeason Streak (2018)\nBatting Average (2018)\nPick Average (2018)\nMLB All-Time\nBTS All-Time\nFriends\nGroups\n\nAND there will be a Done option in the top left to return to the Overall Leaderboard\nAND a check will appear next to the Overall Leaderboard they were on at the time the menu was opened"
+      },
+      {
+        "content": "WHEN the user is on the Leaderboard Overall Tab \nAND the user taps on Current Season Overall Leaderboard",
+        "expected": "THEN the list of user standings will appear for the Current Season\nAND the list of users will appear in Rank Ascending / Season Streak Descending order\nAND the current logged in user's stats will appear above the standings"
+      },
+      {
+        "content": "WHEN the user selects the 'BTS All Time' Overall Leaderboard",
+        "expected": "THEN the list of user standings will appear for all BTS seasons\nAND the list of users will appear in Season Streak Descending order\nAND the year of the streak will be displayed\nAND the current logged in user's best streak stats will appear above the standings"
+      },
+      {
+        "content": "WHEN the user selects the 'MLB Hit Streak' Overall Leaderboard",
+        "expected": "THEN a list of MLB players will appear\nAND the list will show the each player's longest hit streaks\nAND the list will be sorted by Hit Streak Descending order\nAND the year the streak occurred will be displayed\nAND the current logged in user's best streak stats will appear above the standings"
+      },
+      {
+        "content": "WHEN the user selects the Friends leaderboard but is not logged into facebook",
+        "expected": "THEN the leaderboard list will not populate\nAND the following message will display: \"This leaderboard is unavailable. Log into Facebook to access this feature\"\nAND a Facebook connect button will display below the message"
+      },
+      {
+        "content": "WHEN the user selects the Friends leaderboard but is logged into facebook",
+        "expected": "THEN the list of the user's Facebook friends' standings will appear for the Current Season\nAND the list of players will appear in Rank Ascending / Season Streak Descending order\nAND the current logged in user's stats will appear above Friends' standings"
+      },
+      {
+        "content": "WHEN the user taps on the 'Invite Friends' tab underneath the segmented controller",
+        "expected": "THEN the user will see 4 options:\n\nFacebook\nTwitter\nEmail\nText Message"
+      },
+      {
+        "content": "WHEN the user taps the 'Invite Friends' tab without having a carrier connection ",
+        "expected": "THEN the user will see 4 options:\n\nFacebook\nTwitter\nEmail\nText Message"
+      },
+      {
+        "content": "WHEN the user is on the Invite Friends tab\nAND the user taps the Facebook button \nAND the user shares their post",
+        "expected": "THEN the post on facebook will be as expected\nAND when the link in the facebook post is tapped then it will link to the app store"
+      },
+      {
+        "content": "WHEN the user is on the Invite Friends tab, \nAND the user taps the email button\nAND the user enters ands sends a valid email (with email properly configured on the device)",
+        "expected": "THEN the email should be sent to the entered email address\nAND in that email when the link is tapped will bring the user to the app store"
+      },
+      {
+        "content": "WHEN the user is on the Invite Friends tab\nAND the user taps text message button\nAND the user enters and sends a valid message (with text messaging properly configured on the device)",
+        "expected": "THEN the receiving number will receive a text\nAND when that user taps on the link it will open up to the app store"
+      },
+      {
+        "content": "WHEN the user is on the Invite Friends tab\nAND the user taps Twitter button\nAND the user enters and submits a valid tweet (with Twitter properly configured on the device)",
+        "expected": "THEN the tweet will be posted to the users twitter account\nAND when the user taps on the link in the tweet the app store will open"
+      },
+      {
+        "content": "WHEN the user is on the Invite Friends tab \nAND the user attempts to invite friends using email, text or Twitter without having set up accounts",
+        "expected": "THEN the user will see a message saying:\n\n\"Sharing Unavailable Sharing BTS content requires that you enable the appropriate accounts on your device. Go to your Settings application to set this up\"\n"
+      }
+    ]
+  },
+  {
+    "id": 48739,
+    "title": "Settings/Misc Test",
+    "section_id": 7012,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1420559891,
+    "updated_by": 91,
+    "updated_on": 1449860676,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user has \"Beat the Streak\" installed\r\nAND has an MLB.com account\r\nAND has logged into \"Beat the Streak\" Application",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user goes into the setting tab \nAND the user taps the logout button",
+        "expected": "THEN the user is logged out \nAND the user brought to the login screen"
+      },
+      {
+        "content": "WHEN the user taps on the following cells from the Settings tab:\n\nHow to Play\nPrizes\nOfficial Rules\nTerms and Conditions\nPrivacy Policy",
+        "expected": "THEN they will be taken to a web view of the corresponding subject"
+      },
+      {
+        "content": "WHEN the user opens the app with the 'Force upgrade' option enabled via config",
+        "expected": "THEN they should receive a pop up dialog that does not allow them to use the app\nAND their only way of bypassing the the dialog would be to upgrade the app"
+      },
+      {
+        "content": "WHEN the user opens the app with the maintenance flag set ",
+        "expected": "THEN the user will see a notification that BTS is under maintenance\nAND the user can tap on the 'x' to dismiss the pop-up"
+      },
+      {
+        "content": "WHEN you follow the steps on this wiki page to check the architecture:\nhttps://wiki.mlbam.com/display/mobile/64bit+Architecture+Validation",
+        "expected": "THEN you should see that the app was built on 64-bit"
+      },
+      {
+        "content": "WHEN the user goes to the Settings Tab\nAND clicks the logout button",
+        "expected": "THEN the user will be logged out \nAND returned to the home login screen"
+      }
+    ]
+  },
+  {
+    "id": 48740,
+    "title": "Profile Test",
+    "section_id": 7012,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1420559898,
+    "updated_by": 91,
+    "updated_on": 1449675851,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 8,
+    "custom_preconds": "GIVEN the user has \"Beat The Streak\" installed\r\nAND has a MLB.com account\r\nAND has logged into \"Beat The Streak\"",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is on the profile page\nAND the user has previously made picks \nAND the user checks their streak counters",
+        "expected": "THEN at the top the \"Current Streak' and 'Season Long' streaks will be accurate"
+      },
+      {
+        "content": "WHEN the user is on the profile page\nAND the user has previously made picks \nAND the user checks their pick stats",
+        "expected": "THEN the Pick, Pick Avg, Hits-ABs, Batting Avg should all be accurate"
+      },
+      {
+        "content": "WHEN the user has made at least 3 scored or locked picks and is on the profile page",
+        "expected": "THEN the user will see the last 3 picks they made\nAND the dates they pick those players\nAND the opponents they played"
+      },
+      {
+        "content": "WHEN the user is on the profile page\nAND the user has made a pick in the past \nAND the user taps on the recent picks section",
+        "expected": "THEN the user will be brought to the Recent Picks page\nAND they will see there recent picks from most recent to first pick\nAND the user will see the date they picked the player\nAND how the player was scored on that date\nAND they will also see the current streak after that day\n"
+      },
+      {
+        "content": "WHEN the user has made multiple past picks \nAND the user is on the profile page",
+        "expected": "THEN the user will see a section 'Top Choices'\nAND in that section the user will see the top 3 choices\nAND the will be ordered from most picked to least picked\nAND the user will see the amount of times the player was picked"
+      },
+      {
+        "content": "WHEN the user goes to profile \nAND the user taps on the the Top Picks section",
+        "expected": "THEN the user will be brought to the Top Picks page\nAND see the players they picked\nAND these players will be ordered from most times picked to least time picked\nAND their will be the number of times they picked that player\nAND they will also show the results of their picks"
+      },
+      {
+        "content": "WHEN the user makes a pick that has locked \nAND the user goes into the profile page to view recent picks",
+        "expected": "THEN in the recent picks should see the recently made pick (the last 4 locked picks will be shown in recent picks)\n"
+      },
+      {
+        "content": "WHEN the user taps on Achievements section",
+        "expected": "THEN the Prizes tab will be open\nAND if there are no prizes: No prizes available\nAND if there are prizes: Claim and Unclaimed prizes"
+      },
+      {
+        "content": "WHEN the user taps on an unclaimed prize",
+        "expected": "THEN the prize will open"
+      },
+      {
+        "content": "WHEN the user has claimed a prize",
+        "expected": "THEN the BTS logo will become grey scale (orange background) with Claimed in red text over it\nAND it has Earned Date and Claimed Date on separate lines with dates"
+      }
+    ]
+  },
+  {
+    "id": 48789,
+    "title": "Badges Test",
+    "section_id": 7012,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1421101820,
+    "updated_by": 73,
+    "updated_on": 1522866064,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 9,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"\r\nAND the user has earned the respective badges",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is on the profile page and has earned badges",
+        "expected": "THEN the user will see the earned badge icons under the \"Achievements\" section \nAND locked icons for the ones still unearned"
+      },
+      {
+        "content": "WHEN the user taps on Achievements \"See All\" button or the array of badge icons then taps \"Badges\" in the selector",
+        "expected": "THEN the user will be brought to the badge page which will display all the badges earned by the user\n"
+      },
+      {
+        "content": "WHEN the user is on their Achievements page, Badges section and taps a badge cell",
+        "expected": "THEN the user will be shown the badge detail page explaining how the badge is earned\nAND it will also show the amount of times that the user has earned each badge as long as they earned more than 1"
+      },
+      {
+        "content": "WHEN the user is on the Badges selection",
+        "expected": "THEN all unearned badges will be distinguishable from the earned badges by locked diamond icons\nAND verify that all badges (earned color images and locked images) appear correctly in retina and non-retina devices"
+      },
+      {
+        "content": "WHEN the user taps on the Double Double Down badge",
+        "expected": "THEN the Double Double Down badge opens\nAND the Double Double Down label is legible\nAND it reads the definition: Successful Double Down two days in a row\nAND it has a lock icon if not earned\nAND it has a badge icon if earned"
+      },
+      {
+        "content": "WHEN a user taps on the Triple Double badge",
+        "expected": "THEN the Triple Double badge opens\nAND the Triple Double label is legible\nAND it reads the definition: Pick a player that gets 2+ hits, three days in a row\nAND it has a lock icon if not earned\nAND it has a badge icon if earned"
+      },
+      {
+        "content": "WHEN the user taps on the Garden Variety badge",
+        "expected": "THEN the Garden Variety badge opens\nAND the Garden Variety label is legible\nAND it reads the definition: Get a streak of eight while not repeating players\nAND it has a lock icon if not earned\nAND it has a badge icon if earned"
+      },
+      {
+        "content": "WHEN the user taps on the Road Warrior badge",
+        "expected": "THEN the Road Warrior badge opens\nAND the Road Warrior label is legible\nAND it reads the definition: Successfully pick five players who are playing on the road\nAND it has a lock icon if not earned\nAND it has a badge icon if earned"
+      },
+      {
+        "content": "WHEN the user taps on the Perfect week badge",
+        "expected": "THEN the Perfect week badge opens\nAND the Perfect week label is legible\nAND it reads the definition: Go one week without your streak breaking (min. 7 hits)\nAND it has a lock icon if not earned\nAND it has a badge icon if earned"
+      },
+      {
+        "content": "WHEN the user taps on the Make the Leaderboard badge",
+        "expected": "THEN the Make the Leaderboard badge opens\nAND the Make the Leaderboard label is legible\nAND it reads the definition: Achieve Leaderboard status for one day\nAND it has a lock icon if not earned\nAND it has a badge icon if earned"
+      },
+      {
+        "content": "WHEN the user taps on the Leader of the Pack badge",
+        "expected": "THEN the Leader of the Pack badge opens\nAND the Leader of the Pack label is legible\nAND it reads the definition: Be on top of the Leaderboard for one day (min 10 game streak)\nAND it has a lock icon if not earned\nAND it has a badge icon if earned"
+      },
+      {
+        "content": "WHEN the user taps on the Beat the Steak badge",
+        "expected": "THEN the Beat the Steak badge opens\nAND the Beat the Steak label is legible\nAND it reads the definition: Join Beat the Streak by making your first pick\nAND it has a lock icon if not earned\nAND it has a badge icon if earned"
+      }
+    ]
+  },
+  {
+    "id": 48741,
+    "title": "Push Notifications Test",
+    "section_id": 7012,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1420559907,
+    "updated_by": 73,
+    "updated_on": 1521729063,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 10,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user attempts to turn on a notification",
+        "expected": "THEN the notification should appear as \"ON or OFF\" depending on which was selected\nAND in http://qa.mlb.com, there should be post calls for all notifications turned on and off\nAND in the Request it should contain a pushId, the deviceId, CampaignCode, apiKey, OS, and push setting\nAND each new notification request (whether turning on a notification on or off) should send a new Post call."
+      },
+      {
+        "content": "WHEN the user has turned on the reminders notification alert ",
+        "expected": "THEN the user should receive a reminder alert asking user to make a pick at a predefined time (usually around 11 AM) in the morning"
+      },
+      {
+        "content": "WHEN the user has turned on the 'Player results' notification\nAND the user has selected a player \nAND the selected player's game has finished",
+        "expected": "THEN the user should receive a notification with their player's results"
+      },
+      {
+        "content": "WHEN a member on the user's group reaches a streak of 7",
+        "expected": "THEN the user should see a notification on their device: \"(USERTEAMNAME) extended their streak to 7. Make your pick(s) now to stake your claim in (GROUPNAME)\""
+      },
+      {
+        "content": "WHEN the user's pick has recorded a single in a live game",
+        "expected": "THEN the user will receive a notification on their device:\n(Top/Bottom) (Inning Number) : (Player Name) hit a (noun related to hit type).\nEx: Top 6: Pablo Sandoval hit a single."
+      },
+      {
+        "content": "WHEN the user's pick has recorded a double in a live game",
+        "expected": "THEN the user will receive a notification on their device:\n(Top/Bottom) (Inning Number) : (Player Name) hit a (noun related to hit type).\nEx: Bot 3: Josh Donaldson hit a double."
+      },
+      {
+        "content": "WHEN the user's pick has recorded a triple in a live game",
+        "expected": "THEN the user will receive a notification on their device:\n(Top/Bottom) (Inning Number) : (Player Name) hit a (noun related to hit type).\nEx: Top 7: Jacoby Ellsbury hit a triple."
+      },
+      {
+        "content": "WHEN the user's pick has recorded a homerun in a live game",
+        "expected": "THEN the user will receive a notification on their device:\n(Top/Bottom) (Inning Number) : (Player Name) hit a (noun related to hit type).\nEx: Bot 8: Giancarlo Stanton hit a homerun."
+      },
+      {
+        "content": "WHEN the user turns notifications \"off\"",
+        "expected": "THEN the user should stop receiving notifications\n\n(Test for Scoring, Reminder and Groups)"
+      }
+    ]
+  },
+  {
+    "id": 50885,
+    "title": "Creating/Editing Groups",
+    "section_id": 7012,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1425314752,
+    "updated_by": 73,
+    "updated_on": 1522867794,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 14,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"\r\n\r\nFor more details and designs:\r\nhttps://wiki.mlbam.com/pages/viewpage.action?pageId=36733220",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is not in any groups\nAND navigates to the groups view",
+        "expected": "THEN the groups home default screen appears with a \"Join or Create Group\" button"
+      },
+      {
+        "content": "WHEN the user taps on the Join or Create Group button",
+        "expected": "THEN the group option action sheet appears with \"Create a New Group\" and \"Join an Existing Group\""
+      },
+      {
+        "content": "WHEN the user taps on the \"+\"(plus symbol) in the top right corner or \"Create a New Group\" from the flyout menu",
+        "expected": "THEN the Create New Group form appears"
+      },
+      {
+        "content": "WHEN the user leaves all the fields blank and taps \"Done\" or \"Create Group\"",
+        "expected": "THEN a message appears that the group requires a name"
+      },
+      {
+        "content": "WHEN the user fills in only the Group Name\nAND leaves Description empty \nAND sets Private Off. \nAND taps \"Done\" or \"Create Group\"",
+        "expected": "THEN the group is created successfully\n"
+      },
+      {
+        "content": "WHEN the user fills in the Group Name \nAND the Description\nAND sets Private Off\nAND taps \"Done\" or \"Create Group\"",
+        "expected": "THEN the group is created successfully\n"
+      },
+      {
+        "content": "WHEN the user fills in only the Group Name\nAND the description \nAND sets Private On. \nAND taps \"Done\" or \"Create Group\"",
+        "expected": "THEN a message appears that private groups require a password"
+      },
+      {
+        "content": "WHEN the user fills in only the Group Name\nAND the description \nAND sets Private On. \nAND enters a password but leave the confirm password field blank\nAND taps \"Done\" or \"Create Group\"",
+        "expected": "THEN a message appears that the passwords do not match"
+      },
+      {
+        "content": "WHEN the user fills in only the Group Name\nAND the description \nAND sets Private On. \nAND enters a password with a matching confirmation password\nAND taps \"Done\" or \"Create Group\"",
+        "expected": "THEN the group is created successfully"
+      },
+      {
+        "content": "WHEN the user is on a group created by the current user\nAND taps \"Edit\" from the Your Groups list",
+        "expected": "THEN the Group Edit form appears"
+      },
+      {
+        "content": "WHEN the user is on the Group Edit form\nAND changes the group name. \nAND taps \"Save Changes\"",
+        "expected": "THEN the group is saved \nAND the new group name appears in user's Your Groups list"
+      },
+      {
+        "content": "WHEN the user is on the Group Edit form for a public group\nAND changes the Private setting to On\nAND taps \"Save Changes\"",
+        "expected": "THEN a message appears that a password is required"
+      },
+      {
+        "content": "WHEN the user is on the Group Edit form for a public group\nAND changes the Private setting to On. \nAND adds a password to the Password field but not to the confirm password field\nAND taps \"Save Changes\"",
+        "expected": "THEN a message appears that the passwords do not match"
+      },
+      {
+        "content": "WHEN the user is on the Group Edit form for a public group\nAND changes the Private setting to On. \nAND adds a matching passwords to the password and confirm password fields\nAND taps \"Save Changes\"",
+        "expected": "THEN the group is saved as a private group \n(Confirm by trying to join the group as another user)"
+      },
+      {
+        "content": "WHEN the user is on the Group Edit form for a private group\nAND changes the Private setting to Off \nAND taps \"Save Changes\"",
+        "expected": "THEN the group is saved as a public group \n(Confirm by trying to join the group as another user)"
+      }
+    ]
+  },
+  {
+    "id": 50886,
+    "title": "Sharing Groups",
+    "section_id": 7012,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1425321579,
+    "updated_by": 91,
+    "updated_on": 1449681136,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 15,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\" \r\nAND there is a test group sharing the group creator \r\nAND there is a standard group member in the test group\r\nAND there is a second device that has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\r\n(Another MLB.com account is recommended to confirm invite links are launching BTS and adding the user into a group they were not already a member)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps the Invite button in the top right corner (silhouette with a plus symbol)",
+        "expected": "THEN the group Invite action sheet is displayed"
+      },
+      {
+        "content": "WHEN the user taps Facebook from the invite action sheet (a Facebook account has been setup on the device)",
+        "expected": "THEN a pre-composed message with a unique link inviting others to join the group appears in a Facebook post dialog\nAND confirming the dialog will post the link to that user's Facebook page for both public and private group types"
+      },
+      {
+        "content": "WHEN the user logs in with a different MLB.com account\nAND the user follows the link from Facebook to join a public group",
+        "expected": "THEN the user is taken into BTS app, successfully joins the group \nAND the group is added to their groups list"
+      },
+      {
+        "content": "WHEN the user logs in with a different MLB.com account\nAND the user follows the link from Facebook to join a private group",
+        "expected": "THEN the user is taken into BTS app with the join group form displayed and the password pre-populated. \nAND confirming the dialog will successfully join the group \nAND the group is added to the users groups list"
+      },
+      {
+        "content": "WHEN the user taps Facebook from the invite action sheet (a Facebook account has NOT been setup on the device)",
+        "expected": "THEN a message appears for the user to setup Facebook on the device"
+      },
+      {
+        "content": "WHEN the user taps Twitter from the invite action sheet (a Twitter account has been setup on the device)",
+        "expected": "THEN a pre-composed message with a unique link inviting others to join the group appears in a Twitter post dialog\nAND confirming the dialog will post the link to that user's Twitter feed for both public and private group types"
+      },
+      {
+        "content": "WHEN a user taps Twitter from the invite action sheet (a Twitter account has NOT been setup on the device)",
+        "expected": "THEN a message appears for the user to setup Twitter on the device"
+      },
+      {
+        "content": "WHEN a user with a different MLB.com account\nAND the user follows the link from Twitter to join a public group",
+        "expected": "THEN a user is taken into BTS app\nAND successfully joins the group \nAND the group is added to the user's groups list"
+      },
+      {
+        "content": "WHEN a user with a different MLB.com account\nAND the user follows the link from Twitter to join a private group",
+        "expected": "THEN the user is taken into BTS app with the join group form displayed and the password pre-populated. \nAND confirming the dialog will successfully join the group and it is added to their groups list"
+      },
+      {
+        "content": "WHEN a user taps Email from the invite action sheet (an Email account has been setup on the device)",
+        "expected": "THEN a pre-composed message with a unique link inviting others to join the group appears in a compose email dialog\nAND confirming the dialog will send the link to the intended email recipients for both public and private group types"
+      },
+      {
+        "content": "WHEN a user with a different MLB.com account\nAND the user follows the link from the received email to join a public group",
+        "expected": "THEN the user is taken into BTS app\nAND the user successfully joins the group \nAND the group is added to the users groups list"
+      },
+      {
+        "content": "WHEN a user with a different MLB.com account \nAND the user follows the link from their email to join a private group",
+        "expected": "THEN the user is taken into BTS app with the join group form displayed\nAND the password pre-populated. \nAND confirming the dialog will successfully join the group \nAND the group is added to the user's groups list"
+      },
+      {
+        "content": "WHEN a user taps Email from the invite action sheet (an Email account has NOT been setup on the device)",
+        "expected": "THEN a message appears for the user to setup email on the device"
+      },
+      {
+        "content": "WHEN a user taps Message from the invite action sheet (a Message account has been setup on the device)",
+        "expected": "THEN a pre-composed message with a unique link inviting others to join the group appears in a compose message dialog\nAND confirming the dialog will post the link to the intended message recipients for both public and private group types"
+      },
+      {
+        "content": "WHEN a user with a different MLB.com account\nAND the user follows the link from a message to join a public group",
+        "expected": "THEN the user is taken into BTS app\nAND the user successfully joins the group \nAND the group is added to the users groups list"
+      },
+      {
+        "content": "WHEN a user with a different MLB.com account\nAND the user follows the link from a message to join a private group",
+        "expected": "THEN the user is taken into BTS app with the join group form displayed and the password pre-populated. Confirming the dialog will successfully join the group and it is added to their groups list"
+      },
+      {
+        "content": "WHEN a user taps Message from the invite action sheet (a Message account has NOT been setup on the device)",
+        "expected": "THEN a message appears for the user to setup messaging on the device"
+      },
+      {
+        "content": "WHEN a user taps any of the sharing options with enabled accounts but cancels the sharing flow\nFacebook\nTwitter\nEmail\nMessage",
+        "expected": "THEN verify that cancelling the sharing flow will not post or transmit any data\nAND there are no Facebook posts are posted for BTS\nAND there are no Tweets are posted for BTS\nAND there are no Emails are sent for BTS\nAND there are no Messages are sent for BTS"
+      },
+      {
+        "content": "WHEN the user is a member of a private group for which the user is not the owner\nAND the user taps the Invite button",
+        "expected": "THEN a message appears that only the group owner can invite new members *need to confirm*"
+      }
+    ]
+  },
+  {
+    "id": 50894,
+    "title": "Joining Groups",
+    "section_id": 7012,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1425417066,
+    "updated_by": 91,
+    "updated_on": 1449686098,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 16,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps Join Existing Group button",
+        "expected": "THEN no groups are displayed\nAND the user is shown a Search field"
+      },
+      {
+        "content": "WHEN the user enters search criteria that should not return any groups and submits",
+        "expected": "THEN no search results are returned (confirm with web version)"
+      },
+      {
+        "content": "WHEN the user enters search criteria that should return a list of groups and submits",
+        "expected": "THEN the list of existing groups are displayed (verify both public and private appear in this list)"
+      },
+      {
+        "content": "WHEN the user views search results that display a public group",
+        "expected": "THEN the public group has no indicators or graphics next to the Join link"
+      },
+      {
+        "content": "WHEN the user views search results that include a private group (password protected entry)",
+        "expected": "THEN the private group is identifiable by a lock icon next to the Join link"
+      },
+      {
+        "content": "WHEN a user taps \"Join\" link next to a listed existing group",
+        "expected": "THEN the user joins the group \nAND the user is able to view it from their groups list"
+      },
+      {
+        "content": "WHEN the user attempts to join a private group",
+        "expected": "THEN the user is prompted with a password dialog"
+      },
+      {
+        "content": "WHEN the user enters the incorrect password for a private group",
+        "expected": "THEN a message appears that the password is incorrect, group is not added to the user's list"
+      },
+      {
+        "content": "WHEN the user enters the correct password for a private group",
+        "expected": "THEN the user joins the group \nAND the user is able to view it from their groups list"
+      },
+      {
+        "content": "WHEN the user goes into a group view\nAND the user taps on the \"x\" icon",
+        "expected": "THEN an alert appears asking the user to confirm leaving the group"
+      },
+      {
+        "content": "WHEN the user is at a leave group alert\nAND the user taps Cancel from the action sheet",
+        "expected": "THEN the user remains in the group \nAND the group still appears on the user's group list"
+      },
+      {
+        "content": "WHEN the user is at the leave group alert\nAND the user taps Leave This Group from the action sheet",
+        "expected": "THEN the user leaves the group \nAND it no longer appears in the user's group list"
+      },
+      {
+        "content": "WHEN the user attempts to leave a group that they created",
+        "expected": "THEN the user is still successfully able to leave the group \nAND the group disappears from their group list "
+      }
+    ]
+  },
+  {
+    "id": 53168,
+    "title": "Leaderboards (User oriented)",
+    "section_id": 7012,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1432059975,
+    "updated_by": 91,
+    "updated_on": 1449688248,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 17,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates through the Leaderboards section",
+        "expected": "THEN they should see a Leaderboard for \"Hits\""
+      },
+      {
+        "content": "WHEN the user reviews the \"Hits\" leaderboard",
+        "expected": "THEN they should see a list of users sorted by the total number of successful BTS picks (see additional steps for specific instances)\n"
+      },
+      {
+        "content": "WHEN the user reviews the \"Hits\" leaderboard ",
+        "expected": "THEN they should see a list of users sorted by the total number of successful BTS picks "
+      },
+      {
+        "content": "WHEN the user reviews the \"Hits\" leaderboard for a qualifying user that has only achieved a streak of 1\n\n(note: if the user is not high enough ranked to qualify for the top 50, try to locate a similar user - one that has built only one streak)",
+        "expected": "THEN that user will be shown on this leaderboard with 1 for their hits"
+      },
+      {
+        "content": "WHEN the user reviews the \"Hits\" leaderboard for a qualifying user that has only achieved a streak of 1 and then lost their streak back down to 0\n\n(note: if the user is not high enough ranked to qualify for the top 50, try to locate a similar user - one that has built only one streak but it is now broken without a new one started)",
+        "expected": "THEN that user will be shown on this leaderboard with 1 for their hits"
+      },
+      {
+        "content": "WHEN the user reviews the \"Hits\" leaderboard for a qualifying user that has only achieved a streak of 1 and then lost their streak back down to 0. Afterwards, that same user has started a new streak of 1\n\n(note: if the user is not high enough ranked to qualify for the top 50, try to locate a similar user - one that has built a streak, broke it and has begun a new one)",
+        "expected": "THEN that user will be shown on this leaderboard with 2 for their hits"
+      },
+      {
+        "content": "WHEN the user reviews the \"Hits\" leaderboard for a qualifying user that has triggered a mulligan ",
+        "expected": "THEN that user will be shown on this leaderboard with the correct number of successful BTS picks for the season, having used the mulligan should not incorrectly increase or decrease their total"
+      },
+      {
+        "content": "WHEN the user continues to navigate through leaderboards section",
+        "expected": "THEN they should see a Leaderboard for \"Player Results\""
+      },
+      {
+        "content": "WHEN the user reviews the \"Player Results\" leaderboard",
+        "expected": "THEN they should see a list of users sorted by the highest percent of hits per at bats of their BTS picks (see additional steps for specific instances)"
+      },
+      {
+        "content": "WHEN the user reviews the \"Player Results\" leaderboard",
+        "expected": "THEN they should see the averages formatted as .###, there should be no instances of \"0.###\" or more than 3 decimal places"
+      },
+      {
+        "content": "WHEN the user reviews the \"Player Results\" leaderboard after making a pick for today's games",
+        "expected": "THEN they should only see averages of scored picks, i.e. the pick made for today's games will not have impacted the listed average"
+      },
+      {
+        "content": "WHEN the user reviews the \"Player Results\" leaderboard after today's picks have been scored",
+        "expected": "THEN they should only see averages of scored picks including the results of the picks just recently scored"
+      },
+      {
+        "content": "WHEN the user reviews the \"Player Results\" leaderboard for a user whose picks have accumulated fewer than 3.1 * 50% * (game dates since Opening Day) plate appearances",
+        "expected": "THEN that particular user should not appear on the player results leaderboard because they do not meet the minimum qualifications"
+      }
+    ]
+  },
+  {
+    "id": 53845,
+    "title": "Trending Picks",
+    "section_id": 7012,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1432669634,
+    "updated_by": 73,
+    "updated_on": 1522865027,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 18,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"\r\n\r\nUseful search filter to find \"Hot\" picks - http://www.fangraphs.com/leaders.aspx?pos=all&stats=bat&lg=all&qual=50&type=8&season=2015&month=2&season1=2015&ind=0&team=0&rost=0&age=0&filter=28117&players=0",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is in the My Picks section and taps on Make a Pick",
+        "expected": "THEN the user should see Top Picks, My Recent, Custom and All Players selectors along the top of the view"
+      },
+      {
+        "content": "WHEN the user taps on Custom selector",
+        "expected": "THEN the user should see three sections: All, Home, and Away"
+      },
+      {
+        "content": "WHEN the user selects Batter vs. Pitcher and tap apply on any of the three sections (All, Home or Away)",
+        "expected": "THEN the user should see Batters who face a pitcher that throws with the opposite hand (ex. RHB vs. LHP)"
+      },
+      {
+        "content": "WHEN the user selects Top of Order and tap apply on any of the three sections (All, Home or Away)",
+        "expected": "THEN the user should see Batters who frequently bat first, second or third"
+      },
+      {
+        "content": "WHEN the user selects Cold Pitchers and tap apply on any of the three sections (All, Home or Away)",
+        "expected": "THEN the user should see Batters who face a pitcher who has given up over a hit per inning over the past 30 days."
+      },
+      {
+        "content": "WHEN the user selects the Hot Batters and tap apply on any of the three sections (All, Home or Away)",
+        "expected": "THEN the user should see players who have most hits over the past 10 days.\n"
+      },
+      {
+        "content": "WHEN the user selects .300+ Batter and tap apply on any of the three sections (All, Home or Away)",
+        "expected": "THEN the user should see Batters who have a .300+ batting average"
+      },
+      {
+        "content": "WHEN the user selects H2H with .300+ AVG and tap apply on any of the three sections (All, Home or Away)",
+        "expected": "THEN the user should see Batters who have a .300+ batting average against opposing pitcher"
+      }
+    ]
+  },
+  {
+    "id": 53937,
+    "title": "Pick Status",
+    "section_id": 7012,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1432692513,
+    "updated_by": 91,
+    "updated_on": 1449689333,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 19,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"\r\n\r\nFor more details see the related JIRA - https://jira.mlbam.com/browse/BTSM-800",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is on their My Picks main view and successfully makes a pick for Today's game",
+        "expected": "THEN the user should see their pick displayed in the list with the game start time listed next to the player image (because the game has not yet started) e.g. \"Game starts at 10:05 PM ET\" "
+      },
+      {
+        "content": "WHEN the user's pick goes into the top of an inning live in progress game state",
+        "expected": "THEN the user should see their pick displayed with the text \"LIVE\", the inning and the hitter's H-for-AB text next to it\n\ne.g. \"LIVE: Top 1, 0-for-1\"\n"
+      },
+      {
+        "content": "WHEN the user's pick is in the bottom of an inning in a live game",
+        "expected": "THEN the user should see their pick displayed with the text \"LIVE\", the inning and the hitter's H-for-AB text next to it\n\ne.g. \"LIVE: Bot 1, 0-for-1\""
+      },
+      {
+        "content": "WHEN the user's pick goes into a delayed game state while in the top of an inning",
+        "expected": "THEN the user should see their pick displayed with the text \"DELAY\", the inning and the hitter's H-for-AB text next to it\n\ne.g. \"DELAY: Top 6, 1-for-2\" \n   "
+      },
+      {
+        "content": "WHEN the user's pick goes into a delayed game state while in the bottom of an inning",
+        "expected": "THEN the user should see their pick displayed with the text \"DELAY\", the inning and the hitter's H-for-AB text next to it\n\ne.g. \"DELAY: Bot 6, 1-for-2\" "
+      }
+    ]
+  },
+  {
+    "id": 77896,
+    "title": "New User- Landing Page",
+    "section_id": 13185,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456424355,
+    "updated_by": 91,
+    "updated_on": 1456764300,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user has the Beat the Streak Application Downloaded\r\nAND the user does not have an MLB Account\r\nAND the user never logged into the Beat the Streak Application",
+    "custom_steps": "WHEN the user opens the application\r\nAND taps Need an MLB.com Account? button",
+    "custom_expected": "THEN the user will be sent to the Registration form.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77897,
+    "title": "New User- Registration Form",
+    "section_id": 13185,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456424365,
+    "updated_by": 91,
+    "updated_on": 1456767032,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user has the Beat the Streak Application Downloaded\r\nAND the user does not have an MLB Account\r\nAND the user never logged into the Beat the Streak Application",
+    "custom_steps": "WHEN the user fills out the form with correct information\r\nOR\r\nWHEN the user fills out the form with incorrect information",
+    "custom_expected": "THEN the user will be redirected to the groups landing page\r\nOR\r\nTHEN the user will be prompted to put in valid information.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77898,
+    "title": "New User- How to Play",
+    "section_id": 13185,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456424388,
+    "updated_by": 91,
+    "updated_on": 1456767093,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user has the Beat the Streak Application Downloaded\r\nAND the user does not have an MLB Account\r\nAND the user never logged into the Beat the Streak Application",
+    "custom_steps": "WHEN the user taps the How To Play button on the top right hand corner.",
+    "custom_expected": "THEN the user will be redirected to the How to Play Webview",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77899,
+    "title": "New User- Returning User",
+    "section_id": 13185,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456424398,
+    "updated_by": 91,
+    "updated_on": 1456768230,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user has the Beat the Streak Application Downloaded\r\nAND the user has an MLB Account\r\nAND the user never logged into the Beat the Streak Application",
+    "custom_steps": "WHEN the user fills in the sign in form with valid information\r\nOR\r\nWHEN the user fills in the sign in form with invalid information",
+    "custom_expected": "THEN the user will be redirected to the Groups landing page\r\nOR\r\nTHEN The user will be prompted to enter valid information.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77900,
+    "title": "Existing User- Landing Page",
+    "section_id": 13185,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456424544,
+    "updated_by": 91,
+    "updated_on": 1456777056,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user has the Beat the Streak Application Downloaded\r\nAND the user has an MLB Account\r\nAND the user never logged into the Beat the Streak Application",
+    "custom_steps": "WHEN the user taps on the application\r\n",
+    "custom_expected": "THEN the user should reach the landing page which has an email and password field which requires a valid MLB.com account.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77901,
+    "title": "Existing User- How To Play",
+    "section_id": 13185,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456424566,
+    "updated_by": 91,
+    "updated_on": 1456779518,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user has the Beat the Streak Application Downloaded\r\nAND the user has an MLB Account\r\nAND the user never logged into the Beat the Streak Application",
+    "custom_steps": "WHEN The user taps on the How to Play button on the top right",
+    "custom_expected": "THEN The user will be redirected to the how to play web view.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77902,
+    "title": "Existing User- Forgot Password",
+    "section_id": 13185,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456424571,
+    "updated_by": 91,
+    "updated_on": 1456780798,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user has the Beat the Streak Application Downloaded\r\nAND the user has an MLB Account\r\nAND the user never logged into the Beat the Streak Application",
+    "custom_steps": "WHEN the user taps the Forgot Password Link",
+    "custom_expected": "THEN The user is redirected to the Forgot Password view where it has a field for email and a submit button",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77903,
+    "title": "Existing User- Need an MLB Account",
+    "section_id": 13185,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456424580,
+    "updated_by": 91,
+    "updated_on": 1456781480,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 8,
+    "custom_preconds": "GIVEN the user has the Beat the Streak Application Downloaded\r\nAND the user has does not have an MLB Account\r\nAND the user never logged into the Beat the Streak Application",
+    "custom_steps": "WHEN users tap on the Need an MLB.Com Account link",
+    "custom_expected": "THEN the user will be redirected to the Registration form page.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 917282,
+    "title": "Existing User- Password Change",
+    "section_id": 13185,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1490718707,
+    "updated_by": 91,
+    "updated_on": 1490719375,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 9,
+    "custom_preconds": "GIVEN the user has the Beat the Streak Application Downloaded\r\nAND the user has logged into BTS with their MLB Account",
+    "custom_steps": "WHEN the user changes the password on the web\r\nAND the user is still logged in on the BTS Application",
+    "custom_expected": "THEN the user should be logged out of the application\r\nAND users should be asked to reauthenticate.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 80107,
+    "title": "My Picks- Landing Page",
+    "section_id": 13451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457019729,
+    "updated_by": 73,
+    "updated_on": 1522776274,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 1,
+    "custom_preconds": "GIVEN The user has Beat The Streak account\r\nAND has logged in\r\nAND has gone through the on boarding process",
+    "custom_steps": "WHEN the user Navigates to the My Picks Screen",
+    "custom_expected": "THEN the user will get to the My Picks Screen\r\nWHERE the user can make a pick\r\nAND view their streak",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 80108,
+    "title": "My Picks (Filters)- Filters Landing Page",
+    "section_id": 13451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457019838,
+    "updated_by": 91,
+    "updated_on": 1457719080,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 2,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process",
+    "custom_steps": "WHEN The user taps make a pick (Taps the + sign, the Score Cell)\r\nAND swipes Right to see the filters\r\nAND swipes Left to return to older filters",
+    "custom_expected": "THEN the user should see the filter screen\r\nAND the filters should be: \r\nTop Picks | My Recent | Custom | All Players",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81158,
+    "title": "My Picks (Filters)- Top Picks Filter",
+    "section_id": 13451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457718270,
+    "updated_by": 91,
+    "updated_on": 1457719261,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 3,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process",
+    "custom_steps": "WHEN the user taps on Top Picks",
+    "custom_expected": "THEN the top picks for the day will show up in the filtered results.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81161,
+    "title": "My Picks (Filters)- My Recent Filter",
+    "section_id": 13451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457719283,
+    "updated_by": 91,
+    "updated_on": 1457719347,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 4,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process",
+    "custom_steps": "WHEN the user taps on the My Recent Filter",
+    "custom_expected": "THEN The user will see all of their recent picks.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 80128,
+    "title": "My Picks (Filters)- Custom Filter Landing Page",
+    "section_id": 13451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457028941,
+    "updated_by": 91,
+    "updated_on": 1457719360,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 5,
+    "custom_preconds": "GIVEN The has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process",
+    "custom_steps": "WHEN the user taps on Custom in the Filters section",
+    "custom_expected": "THEN the user will land on the Custom Filters page with different sections\r\nAND all of the sections will be blank\r\nSections:\r\nLocation [All | Home | Away] | Batter Vs. Pitcher | Top of Order | Cold Pitchers | Hot Batters | .300+ Batter | H2H with .300+ AVG",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81159,
+    "title": "My Picks (Filters)- Applying Custom Filters",
+    "section_id": 13451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457718818,
+    "updated_by": 73,
+    "updated_on": 1522778209,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 6,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process",
+    "custom_steps": "WHEN the user selects a filter\r\nAND the user taps on Apply Filters",
+    "custom_expected": "THEN The user will see the selected filters being applied\r\nAND The results will be lazy loaded, 40 in the beginning and then it will fetch another 40 as the user scrolls.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81160,
+    "title": "My Picks (Filters)- Reset Custom Filters",
+    "section_id": 13451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457718955,
+    "updated_by": 91,
+    "updated_on": 1457719388,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 7,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process",
+    "custom_steps": "WHEN the user taps on Reset",
+    "custom_expected": "THEN the filters will reset and the screen will revert to when the user landed on the page.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81162,
+    "title": "My Picks (Filters)- All Players Filter",
+    "section_id": 13451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457719299,
+    "updated_by": 91,
+    "updated_on": 1457720871,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 8,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process",
+    "custom_steps": "WHEN The user taps on All Players Filter\r\nAND taps on a Team or the ... next to a team",
+    "custom_expected": "THEN the results will be the players of the selected team",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 80109,
+    "title": "My Picks- Selecting A Player",
+    "section_id": 13451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457019844,
+    "updated_by": 73,
+    "updated_on": 1522779084,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 10,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process",
+    "custom_steps": "WHEN The user taps on a player's box \r\nOR WHEN the user taps on the (i) info button",
+    "custom_expected": "THEN the user will be asked \"Are You sure you want to submit this pick\" with a Cancel and Ok Button\r\nIF the users select YES then the pick will be saved IF the user selects NO they will be returned from the screen they came from.\r\nOR The user will be redirected to the batters page\r\nWHERE the user will see the batters season stats and the betters stats vs. the pitcher for the batters next game.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 80111,
+    "title": "My Picks- Double Down Picks",
+    "section_id": 13451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457019880,
+    "updated_by": 73,
+    "updated_on": 1522779251,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 13,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process",
+    "custom_steps": "WHEN the user taps YES\r\nAND if the user taps NO",
+    "custom_expected": "THEN The user will be sent to the filters page\r\nAND if the user selects a player, the user is redirected to the My Picks Page with two players for the same date.\r\nAND IF the user taps NO they will stay on the same page they were on.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81164,
+    "title": "My Picks- Double Down Duplicate Picks",
+    "section_id": 13451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457721560,
+    "updated_by": 91,
+    "updated_on": 1457721617,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 14,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process",
+    "custom_steps": "WHEN The user decides to pick the same player twice",
+    "custom_expected": "THEN A popup will appear with an OK Button\r\n\"This is a duplicate pick for the game date. Please make another pick.\"",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81166,
+    "title": "My Picks- Edit Double Down Picks",
+    "section_id": 13451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457721718,
+    "updated_by": 91,
+    "updated_on": 1457721863,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 15,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process\r\nAND has a Double Down Pick",
+    "custom_steps": "WHEN the user Taps the Edit button next to one of their selected batters in a Double Down situation\r\nAND the user taps Remove Pick",
+    "custom_expected": "THEN The user will be sent to the Match Up Page\r\nAND The pick should be removed and the user should be redirected to the My Picks Page with only one batter.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81165,
+    "title": "My Picks- Edit Picks",
+    "section_id": 13451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457721709,
+    "updated_by": 91,
+    "updated_on": 1457722080,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 16,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process\r\nAND The user has one pick selected",
+    "custom_steps": "WHEN The user decides to remove the pick by tapping the Edit button\r\nAND taps Remove Pick",
+    "custom_expected": "THEN The user will be sent to the Matchup page\r\nAND the user will face a pop up asking if they really want to remove the pick\r\nAND the user will also be redirected to the My Picks page with the pick removed.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81167,
+    "title": "My Picks- My Picks Page In Game Results",
+    "section_id": 13451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457722311,
+    "updated_by": 91,
+    "updated_on": 1457722542,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 17,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process\r\nAND the user has at least one Batter picked",
+    "custom_steps": "WHEN The Batters game has started\r\nAND The batter is 0-0\r\nAND The batter has 1 Hit\r\nAND The Batter has 0 Hits",
+    "custom_expected": "THEN the Batter will have 0-0 next to their name\r\nAND the batter will have 1- (Amount of Batting opportunities the batter has) next to their name.\r\nAND the batter will have 0 - (Amount of Batting opportunities the batter has) next to their name.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81168,
+    "title": "My Picks- My Picks Page End of Game Results",
+    "section_id": 13451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457722560,
+    "updated_by": 91,
+    "updated_on": 1457722703,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 18,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process\r\nAND the user has at least one Batter picked",
+    "custom_steps": "WHEN The Batters game has Ended\r\nAND The batter is 0-0\r\nAND The batter has 1 Hit\r\nAND The Batter has 0 Hits",
+    "custom_expected": "THEN the Batter will have 0-0 next to their name\r\nAND the batter will have 1- (Amount of Batting opportunities the batter has) next to their name.\r\nAND the batter will have 0 - (Amount of Batting opportunities the batter has) next to their name.\r\nAND The streak will update based on the amount of hits the selected picks have received\r\n[Streak will Reset to 0 if batter(s) fail to get a hit, Streak will increase by 1 if batter gets a hit, Streak will return to 0 if on batter gets a hit and the second batter does not in a double down play, Streak will increase by 2 if both batters record a hit in a double down play)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81169,
+    "title": "My Picks- Results Page",
+    "section_id": 13451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457722729,
+    "updated_by": 91,
+    "updated_on": 1457722851,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 19,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process\r\nAND the user has at least one Batter picked",
+    "custom_steps": "WHEN The user taps on their player once the game has locked",
+    "custom_expected": "THEN The user will be redirected to the batters results page\r\nAND if the game is Live the user will have the option to tap Follow Now which will send the user to GameDay in At Bat.\r\nAnd if the game is Finished the user will see the results of the batter selected and the status of their streak.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81170,
+    "title": "Leaderboard- Landing Page",
+    "section_id": 13639,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457723710,
+    "updated_by": 73,
+    "updated_on": 1522782373,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 1,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process",
+    "custom_steps": "WHEN the user has tapped on Leaderboard",
+    "custom_expected": "THEN the user will reach the Leaderboard landing page\r\nAND the user will see their stats on the top of each leaderboard\r\nDifferent Type of Leaderboards:\r\nCurrent Streak {Current Year} | Season Streak {Current Year} | Batting Average {Current Year} | Pick Average {Current Year} | MLB All-Time | BTS All-Time | Friends | Groups",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81171,
+    "title": "Leaderboard- Groups",
+    "section_id": 13639,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457723735,
+    "updated_by": 73,
+    "updated_on": 1522782439,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 2,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process",
+    "custom_steps": "WHEN The user is not apart of a Group\r\nAND Navigates to the Group Filter\r\n\r\nWHEN The user is a part of a group\r\nAND Navigates to the Group Filter",
+    "custom_expected": "THEN The user will see a message in the filter \r\n\"This leaderboard is unavailable, Create groups by selecting the groups tab in the navigation menu. Press the + button to create/join a group\"\r\n\r\nTHEN the user will see their profile on top with the other profiles below.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81190,
+    "title": "Leaderboard- Friends Page (Facebook Connected)",
+    "section_id": 13639,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457725149,
+    "updated_by": 91,
+    "updated_on": 1457725341,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 4,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process\r\nAND The user has Connected Facebook",
+    "custom_steps": "WHEN The user is on the friends page",
+    "custom_expected": "THEN The user will see their user profile on top\r\nAND the users friends who use Beat The Streak\r\nAND have their facebook's connected, the users will display be below the user with their BTS Stats.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81191,
+    "title": "Leaderboard- Friends Page (Facebook Disconnected)",
+    "section_id": 13639,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457725360,
+    "updated_by": 91,
+    "updated_on": 1457725535,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 5,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process\r\nAND The user does not have Facebook Connected",
+    "custom_steps": "WHEN the user is on the Friends page\r\nAND Facebook is Disconnected\r\nAND user taps on Login With Facebook",
+    "custom_expected": "THEN The user will see a Log in With Facebook button\r\nAND the user will see a Facebook Authentication popup\r\nAND After the user authenticates, they will receive a confirm pop up\r\nAND the user will be redirected to their friends page with their leaderboard updated.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81192,
+    "title": "Leaderboard- Friends Page (Invite Friends)",
+    "section_id": 13639,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457725384,
+    "updated_by": 166,
+    "updated_on": 1550280922,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 6,
+    "custom_preconds": "GIVEN The user has Beat The Streak\r\nAND has logged in\r\nAND has gone through the on boarding process",
+    "custom_steps": "WHEN The user taps the Facebook button on the top right without Authenticating on Facebook\r\nOR The user taps the Facebook button on the top right already authenticated with Facebook\r\nAND the user taps the Menu Icon on the top right\r\nAND the user taps invite friend\r\nAND the user taps info",
+    "custom_expected": "THEN The user will be asked to log into Facebook\r\nOR the user will see a pop up that users can invite their facebook friends not using BTS.\r\nAND the user will see two buttons invite friend and Info\r\nAND a popup will occur where a user can invite friends using other methods such as, Email, messenger, etc.\r\nAND the user will be redirected to http://atmlb.com/2n3NKzO website",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77846,
+    "title": "Groups Landing Page- No User Group",
+    "section_id": 13176,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456416501,
+    "updated_by": 91,
+    "updated_on": 1456416726,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user has the latest version of Beat The Streak installed",
+    "custom_steps": "WHEN the user taps on Leaderboard\r\nAND the user isn't apart of a group",
+    "custom_expected": "THEN the user will see the default Groups screen with the Join or Create A Group button on top.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77847,
+    "title": "Groups Landing Page- User with Group",
+    "section_id": 13176,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456417050,
+    "updated_by": 91,
+    "updated_on": 1456417465,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user has downloaded the latest version of Beat the Streak\r\nAND has signed into the application\r\nAND has joined a group",
+    "custom_steps": "WHEN the user taps on Leaderboard",
+    "custom_expected": "THEN The user is sent to the Groups page with their group under the Your Groups Section\r\nIF the user is the creator of the group THEN the edit button will appear next to the group in the Your Groups Section",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77872,
+    "title": "Groups Landing Page- Join Group Form",
+    "section_id": 13176,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456422996,
+    "updated_by": 91,
+    "updated_on": 1456423089,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user has downloaded the latest version of Beat the Streak\r\nAND has signed into the application",
+    "custom_steps": "WHEN the user taps the + in the top right hand corner\r\nAND the user taps on Join an Existing Group\r\n",
+    "custom_expected": "THEN the user will be sent to the Join Groups Form\r\nWHERE the user can search for Groups using the search bar\r\nAND the user can join any group by tapping Join next to the name of the group",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77848,
+    "title": "Groups Landing Page- Joining Groups (Popular Groups)",
+    "section_id": 13176,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456417519,
+    "updated_by": 91,
+    "updated_on": 1456418987,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user has downloaded the latest version of Beat the Streak\r\nAND has signed into the application",
+    "custom_steps": "WHEN a user is on the Groups Landing Page\r\nAND taps Join next to a group under the popular groups category",
+    "custom_expected": "THEN the user will be sent to the group page\r\nAND the group that was just joined will be under the Your Groups Section\r\nIF the group has a password\r\nTHEN the user will have to enter the password.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77855,
+    "title": "Groups Landing Page- Joining Groups (Private Group)",
+    "section_id": 13176,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456417908,
+    "updated_by": 91,
+    "updated_on": 1456419147,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user has downloaded the latest version of Beat the Streak\r\nAND has signed into the application",
+    "custom_steps": "WHEN the user taps on the + button on the top right corner\r\nAND taps on Join an Existing Group\r\nAND the group is private",
+    "custom_expected": "THEN the user will be prompted to enter the groups password\r\nAND if the password is wrong an error message will pop up\r\nAND if the password is correct then the user will be directed to the groups leaderboard and the group will appear under the Your Groups section.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77849,
+    "title": "Groups Landing Page- Create a New Group (Public)",
+    "section_id": 13176,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456417533,
+    "updated_by": 91,
+    "updated_on": 1456419708,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user has downloaded the latest version of Beat the Streak\r\nAND has signed into the application",
+    "custom_steps": "WHEN a user taps on the + button on the top right\r\nAND taps Create a New Group\r\nAND the user fills out the form without toggling on Private\r\nAND the user taps Create Group",
+    "custom_expected": "THEN the group will be created\r\nAND the group will be public where anyone can join the group.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77863,
+    "title": "Groups Landing Page- Create New Group (Private)",
+    "section_id": 13176,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456419694,
+    "updated_by": 91,
+    "updated_on": 1456422637,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user has downloaded the latest version of Beat the Streak\r\nAND has signed into the application",
+    "custom_steps": "WHEN a user taps on the + on the top right\r\nAND taps on Create a New Group\r\nAND fills out the form and toggles Private on\r\nAND taps on create group",
+    "custom_expected": "THEN the user will see a password prompt pop up where the user can enter any password.\r\nAND the user will confirm the password by typing in the password again\r\nAND the group will appear in Your Groups, and any user can join the group as long as they type in the password.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77850,
+    "title": "Groups Landing Page- Edit Group",
+    "section_id": 13176,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456417551,
+    "updated_by": 91,
+    "updated_on": 1456422941,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 8,
+    "custom_preconds": "GIVEN the user has downloaded the latest version of Beat the Streak\r\nAND has signed into the application\r\nAND is the owner of a group",
+    "custom_steps": "WHEN a user Taps on Edit Group next to a group the user owns",
+    "custom_expected": "THEN the Edit Group form will pop up\r\nWHERE a user can edit the Groups Group Name, Description, and make the group private or public.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77851,
+    "title": "Groups Leaderboard- Landing Page",
+    "section_id": 13176,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456417658,
+    "updated_by": 91,
+    "updated_on": 1456423528,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 9,
+    "custom_preconds": "GIVEN the user has downloaded the latest version of Beat the Streak\r\nAND has signed into the application\r\nAND the user is in a group",
+    "custom_steps": "WHEN a user taps on a group they are a part of",
+    "custom_expected": "THEN The user will be redirected to the groups landing page\r\nWHERE The user is able to see other members of the group\r\nAND the invite users button.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77853,
+    "title": "Groups Leaderboard- Invite Users Form",
+    "section_id": 13176,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456417701,
+    "updated_by": 91,
+    "updated_on": 1456423873,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 10,
+    "custom_preconds": "GIVEN the user has downloaded the latest version of Beat the Streak\r\nAND has signed into the application\r\nAND the user is in a group\r\nAND the user has Facebook, Twitter, Email, and Messages set up on the device.",
+    "custom_steps": "WHEN The user taps on the invite button on the top right, to the left of the leave group button",
+    "custom_expected": "THEN The user should see the invite flow start with buttons to send an invite through Facebook, Twitter, Email, Message.\r\nAND when the user taps any of the ways to invite users then the respective applications should open to send the correct message.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77854,
+    "title": "Groups Leaderboard- Leave Group",
+    "section_id": 13176,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456417711,
+    "updated_by": 91,
+    "updated_on": 1456424132,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 11,
+    "custom_preconds": "GIVEN the user has downloaded the latest version of Beat the Streak\r\nAND has signed into the application\r\nAND the user is in a group",
+    "custom_steps": "WHEN the user taps the leave group button on the top right hand corner, to the right of the invite user button.",
+    "custom_expected": "THEN the user will be given the option to Leave the group\r\nIF the user is the owner of the group, the group is disbanded.\r\nAND if the user taps cancel the user stays in the group",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77760,
+    "title": "Profile - Statistics - Current Streak and Season Long",
+    "section_id": 13168,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456416301,
+    "updated_by": 91,
+    "updated_on": 1467385484,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is logged into the application\r\nAND the user has previously made picks\r\nAND the user is on the profile page",
+    "custom_steps": "WHEN the user is on the profile page",
+    "custom_expected": "THEN at the top, the \"Current Streak' and 'Season Best' streaks will be accurate",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181134,
+    "title": "Profile - Mulligan - Invalid Streak",
+    "section_id": 13168,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467386882,
+    "updated_by": 166,
+    "updated_on": 1550281858,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user is logged into the application\r\nAND the user has previously made picks\r\nAND the user has a streak of less than 10 or a streak of more than 15\r\nAND the user's single pick did not record a hit\r\nAND the user is on the profile page",
+    "custom_steps": "WHEN The user taps on Claim now\r\nAND taps on Claim",
+    "custom_expected": "THEN the user will be redirected to the Mulligan Webview\r\nAND the mulligan will be claimed but only applied when the users streak falls between 10 and 15 games\r\nAND only if the user's picks did not get a hit during the 10 to 15 games streaks.\r\nAND the claim can only be used once",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77766,
+    "title": "Profile - Statistics - User Picks, Player Results",
+    "section_id": 13168,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456416301,
+    "updated_by": 91,
+    "updated_on": 1467390658,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user logs in with a user that has previous picks\r\nAND the user is on the profile page",
+    "custom_steps": "WHEN the user is on the profile page\r\nAND the user is looking at Stats",
+    "custom_expected": "THEN the User Picks and Player Results will be accurate.\r\n(User Picks are based on how many picks got hits vs didn't get hits.)\r\n(Player Results is the batting average of all of the users picks.)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181138,
+    "title": "Profile - Achievements",
+    "section_id": 13168,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467390719,
+    "updated_by": 91,
+    "updated_on": 1467391424,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user logs in with a user that has previous picks\r\nAND the user is on the profile page",
+    "custom_steps": "WHEN The user taps on an Achievement or taps on See All\r\nAND the user taps on Badges in the Achievements Page\r\nAND the user taps on Prizes in the Achievements Page",
+    "custom_expected": "THEN the user will be redirected to the Achievements Page on the Prizes section\r\nAND The user will be redirected to the Badges page.\r\nAND The user will be redirected to the Prizes page.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181139,
+    "title": "Profile - Achievements - Badges",
+    "section_id": 13168,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467391440,
+    "updated_by": 91,
+    "updated_on": 1467392503,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user logs in with a user that has previous picks\r\nAND the user is on the profile page",
+    "custom_steps": "WHEN The user taps on an Achievement or taps on See All\r\nAND the user taps on Badges in the Achievements Page\r\nAND the user taps on a Unlocked or Locked Badge",
+    "custom_expected": "THEN the user will be redirected to the Achievements Page on the badges page.\r\nAND the user will see badges that they have unlocked or badges they have not received.\r\nAND the user will be redirected to the Badges page and it gives a description on how the badge was earned.\r\n(Unlocked badges will have their icons with a number next to the badge to show how many times the user has received the badge)\r\n(Locked Badges will have a lock as their icon)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181140,
+    "title": "Profile - Achievements - Prizes",
+    "section_id": 13168,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467391452,
+    "updated_by": 91,
+    "updated_on": 1467392833,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 8,
+    "custom_preconds": "GIVEN the user logs in with a user that has previous picks\r\nAND the user is on the profile page",
+    "custom_steps": "WHEN The user taps on an Achievement or taps on See All\r\nAND the user taps on Prizes in the Achievements Page\r\nAND the user taps on an unclaimed prize.\r\nAND the user taps on a claimed prize.",
+    "custom_expected": "THEN the user will be redirected to the Achievements Page on the Prizes page.\r\nAND the user will see prizes that they have claimed or unclaimed\r\nAND the user will be redirected to the Prize page and will have the ability to scratch off the prize to claim it.\r\nAND the user will be redirected to the claimed prize page where the user can see the prize they have already claimed.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77761,
+    "title": "Profile - Recent picks on profile page",
+    "section_id": 13168,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456416301,
+    "updated_by": 91,
+    "updated_on": 1467392941,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 9,
+    "custom_preconds": "GIVEN the user has made at least 3 picks\r\nAND all of those picks have been locked or scored",
+    "custom_steps": "WHEN the user taps on the profile tab\r\nAND the user navigate to the Recent Picks Section",
+    "custom_expected": "THEN the user will see the last 3 picks they made\r\nAND the opponents they played\r\nAND the batters Hits vs Plate appearances.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77767,
+    "title": "Profile - Recent Picks Page",
+    "section_id": 13168,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456416301,
+    "updated_by": 91,
+    "updated_on": 1467393061,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 10,
+    "custom_preconds": "GIVEN the user has made a pick in the past\r\nAND that pick has been either scored or locked",
+    "custom_steps": "WHEN the user goes to the profile page\r\nAND taps on a player in the recent picks section or the user taps on See All next to the Recent Picks Section.",
+    "custom_expected": "THEN the user will be brought to the Recent Picks page\r\nAND they will see their recent picks from most recent to first pick of the season\r\nAND the user will see the date they picked the player\r\nAND how the player was scored on that date\r\nAND they will also see the current streak after that day",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77762,
+    "title": "Profile - Top Choices Section",
+    "section_id": 13168,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456416301,
+    "updated_by": 91,
+    "updated_on": 1467393295,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 11,
+    "custom_preconds": "GIVEN the user has logged into an account that has previously made picks\r\nAND those picks are either have been scored or locked",
+    "custom_steps": "WHEN the user taps on the profile page\r\nAND navigates to the Top Choices section",
+    "custom_expected": "THEN the user will see a section 'Top Choices'\r\nAND in that section the user will see the top 3 choices\r\nAND the batters will be ordered from most picked to least picked",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77768,
+    "title": "Profile - Top Choices Page",
+    "section_id": 13168,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456416301,
+    "updated_by": 91,
+    "updated_on": 1467393629,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 12,
+    "custom_preconds": "GIVEN the user has logged into an account that has previously made picks\r\nAND those picks are either have been scored or locked",
+    "custom_steps": "WHEN the user goes to their profile\r\nAND the user taps on a player in the Top Choices section or the user taps on the See All button on next to the Top Choices Section",
+    "custom_expected": "THEN the user will be brought to the Top Choices page\r\nAND the user will see the players they picked the most\r\nAND these players will be ordered from most times picked to least time picked\r\nAND the users will see the times each player was picked on the right.\r\nAND they will also show the results of the picks.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181118,
+    "title": "Scenario: User taps on \"Achievements\" row from their profile page",
+    "section_id": 13172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467385556,
+    "updated_by": 73,
+    "updated_on": 1522792799,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user has installed and launched the app\r\nAND the user has logged in",
+    "custom_steps": "WHEN the user taps the Profile tab\r\nAND taps on their \"Achievements\" row",
+    "custom_expected": "THEN the user will be brought to the Badges \"Achievements\" page\r\nAND all the user's earned badges will display\r\nAND all unearned badges will display\r\nAND all unearned badges will be distinguishable from the earned badges (Lock on badges unearned).",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181119,
+    "title": "Scenario: User has not earned any badges and views \"Achievements\" screen",
+    "section_id": 13172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467385556,
+    "updated_by": 91,
+    "updated_on": 1467385610,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user has installed and launched the app\r\nAND the user has logged in\r\nAND the user has not earned any badges\r\nAND the user navigates to their profile\r\nAND the user taps on the Achievements section",
+    "custom_steps": "WHEN the user navigates to the Achievements page\r\nAND Navigates to the Badges tab",
+    "custom_expected": "THEN The application will show the unearned badges with a lock over them.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181120,
+    "title": "Scenario: User has earned at least one badge and views the \"Achievements\" Badge screen",
+    "section_id": 13172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467385556,
+    "updated_by": 91,
+    "updated_on": 1467385610,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user has installed and launched the app\r\nAND the user has logged in\r\nAND the user has earned at least one badge\r\n",
+    "custom_steps": "WHEN the user navigates to their profile\r\nAND the user taps on the Achievements section\r\nAND taps on the Badges tab",
+    "custom_expected": "THEN the list of earned badges would be seen\r\nAND all unearned badges would appear with a Lock\r\nAND all unearned badges would be locked",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181121,
+    "title": "Scenario: Verify badges appear in retina/non-retina on profile",
+    "section_id": 13172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467385556,
+    "updated_by": 91,
+    "updated_on": 1467385610,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user has installed and launched the app\r\nAND the user has signed in\r\n\r\n",
+    "custom_steps": "WHEN the user has navigated to their profile\r\nAND the user views the Achievements section\r\nAND the user views all the available badges",
+    "custom_expected": "THEN they will all appear correctly in color with retina/non-retina devices",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181122,
+    "title": "Badge - Beat The Streak",
+    "section_id": 13172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467385556,
+    "updated_by": 91,
+    "updated_on": 1467385610,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 5,
+    "custom_preconds": "Given the user is a new user and has not made any picks yet",
+    "custom_steps": "WHEN the user logs in\r\nAND the user makes a pick\r\nAND taps on the profile tab\r\nAND navigates to the Achievements tab.",
+    "custom_expected": "Then the user will see The Beat the Streak badge in the badges section",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181123,
+    "title": "All available",
+    "section_id": 13172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467385556,
+    "updated_by": 91,
+    "updated_on": 1467385610,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 6,
+    "custom_preconds": "Given the user has installed and launched the app\r\nAnd the user has signed in\r\nAnd the user has navigated to their profile\r\nAnd the user has tapped on the badges section\r\nAnd the Badges Trophy Case has opened",
+    "custom_steps": "When the user has earned all available badges",
+    "custom_expected": "Then the Badges Trophy Case page will have all badges appear in color\r\nAnd clicking on an individual badge will bring the user to the \"Badge Detail\" screen\r\nAnd the individual badge page will show a larger badge image as well as the badge name and a description of requirements for earning the badge",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181124,
+    "title": "Unearned Badge",
+    "section_id": 13172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467385556,
+    "updated_by": 91,
+    "updated_on": 1467385610,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 7,
+    "custom_preconds": "Given the user has installed and launched the app\r\nAnd the user has signed in\r\nAnd the user has navigated to the 'My Profile' page\r\nAnd the user has tapped on the 'Trophy Case' button\r\nAnd the Trophy Case has opened",
+    "custom_steps": "When the user has tapped on unearned badges",
+    "custom_expected": "Then the user will be brought to the locked individual badge page \r\nAnd be shown a larger locked badge image\r\nAnd the badge name \r\nAnd a description of requirements for earning the badge",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181125,
+    "title": "Trophy page without connectivity",
+    "section_id": 13172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467385556,
+    "updated_by": 91,
+    "updated_on": 1467385610,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 8,
+    "custom_preconds": "Given the user has installed and launched the app\r\nAnd the user has signed in\r\nAnd the user has navigated to their profile\r\nAnd the user has tapped on the badges section\r\nAnd the user has limited connectivity",
+    "custom_steps": "And the Badges Trophy Case has opened",
+    "custom_expected": "Then the app should display a message to the user that there is limited connectivity\r\nAnd the message should be clear and free of grammatical errors",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181126,
+    "title": "Double Double Down",
+    "section_id": 13172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467385556,
+    "updated_by": 91,
+    "updated_on": 1467385610,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 9,
+    "custom_preconds": "Given the user has installed and launched the app\r\nAnd the user has signed in\r\nAnd the user has navigated to their profile\r\nAnd the user has tapped on the badges section\r\nAnd the Badges Trophy Case has opened",
+    "custom_steps": "When the user taps on the Double Double Down badge",
+    "custom_expected": "The Double Double Down badge opens\r\nand the Double Double Down label is legible \r\nand it reads the definition: Successful Double Down two days in a row\r\nand it has a lock icon if not earned\r\nand it has a badge icon if earned",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181127,
+    "title": "Garden Variety",
+    "section_id": 13172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467385556,
+    "updated_by": 91,
+    "updated_on": 1467385610,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 10,
+    "custom_preconds": "Given the user has installed and launched the app\r\nAnd the user has signed in\r\nAnd the user has navigated to their profile\r\nAnd the user has tapped on the badges section\r\nAnd the Badges Trophy Case has opened",
+    "custom_steps": "When the user taps on the Garden Variety badge",
+    "custom_expected": "The Garden Variety badge opens\r\nand the Garden Variety label is legible \r\nand it reads the definition:  Get a streak of eight while not repeating players\r\nand it has a lock icon if not earned\r\nand it has a badge icon if earned",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181128,
+    "title": "Road Warrior",
+    "section_id": 13172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467385556,
+    "updated_by": 91,
+    "updated_on": 1467385610,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 11,
+    "custom_preconds": "Given the user has installed and launched the app\r\nAnd the user has signed in\r\nAnd the user has navigated to their profile\r\nAnd the user has tapped on the badges section\r\nAnd the Badges Trophy Case has opened",
+    "custom_steps": "When the user taps on the Road Warrior badge",
+    "custom_expected": "The Road Warrior badge opens\r\nand the Road Warrior label is legible \r\nand it reads the definition: Successfully pick five players who are playing on the road\r\nand it has a lock icon if not earned\r\nand it has a badge icon if earned",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181129,
+    "title": "Triple Double",
+    "section_id": 13172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467385556,
+    "updated_by": 91,
+    "updated_on": 1467385610,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 12,
+    "custom_preconds": "Given the user has installed and launched the app\r\nAnd the user has signed in\r\nAnd the user has navigated to their profile\r\nAnd the user has tapped on the badges section\r\nAnd the Badges Trophy Case has opened",
+    "custom_steps": "When the user taps on the Triple Double badge",
+    "custom_expected": "The Triple Double badge opens\r\nand the Triple Double label is legible \r\nand it reads the definition: Pick a player that gets 2+ hits, three days in a row\r\nand it has a lock icon if not earned\r\nand it has a badge icon if earned",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181130,
+    "title": "The Perfect Week",
+    "section_id": 13172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467385556,
+    "updated_by": 73,
+    "updated_on": 1522793435,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 13,
+    "custom_preconds": "Given the user has installed and launched the app\r\nAnd the user has signed in\r\nAnd the user has navigated to their profile\r\nAnd the user has tapped on the badges section\r\nAnd the Badges Trophy Case has opened",
+    "custom_steps": "When the user taps on the Perfect Week badge",
+    "custom_expected": "The The Perfect Week badge opens\r\nand the The Perfect week label is legible \r\nand it reads the definition: Go one week without your streak breaking (min. 7 hits)\r\nand it has a lock icon if not earned\r\nand it has a badge icon if earned",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181131,
+    "title": "Make the Leaderboard",
+    "section_id": 13172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467385556,
+    "updated_by": 91,
+    "updated_on": 1467385610,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 14,
+    "custom_preconds": "Given the user has installed and launched the app\r\nAnd the user has signed in\r\nAnd the user has navigated to their profile\r\nAnd the user has tapped on the badges section\r\nAnd the Badges Trophy Case has opened",
+    "custom_steps": "When the user taps on the Make the Leaderboard badge",
+    "custom_expected": "The Make the Leaderboard badge opens\r\nand the Make the Leaderboard label is legible \r\nand it reads the definition: Achieve Leaderboard status for one day\r\nand it has a lock icon if not earned\r\nand it has a badge icon if earned",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181132,
+    "title": "Leader of the Pack",
+    "section_id": 13172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467385556,
+    "updated_by": 91,
+    "updated_on": 1467385610,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 15,
+    "custom_preconds": "Given the user has installed and launched the app\r\nAnd the user has signed in\r\nAnd the user has navigated to their profile\r\nAnd the user has tapped on the badges section\r\nAnd the Badges Trophy Case has opened",
+    "custom_steps": "When the user taps on the Leader of the Pack badge",
+    "custom_expected": "The Leader of the Pack badge opens\r\nand the Leader of the Pack label is legible \r\nand it reads the definition: Be on top of the Leaderboard for one day (min 10 game streak)\r\nand it has a lock icon if not earned\r\nand it has a badge icon if earned",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181133,
+    "title": "Beat the Streak",
+    "section_id": 13172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467385556,
+    "updated_by": 91,
+    "updated_on": 1467385610,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 16,
+    "custom_preconds": "Given the user has installed and launched the app\r\nAnd the user has signed in\r\nAnd the user has navigated to their profile\r\nAnd the user has tapped on the badges section\r\nAnd the Badges Trophy Case has opened",
+    "custom_steps": "When the user taps on the Beat the Steak badge",
+    "custom_expected": "The Beat the Steak badge opens\r\nand the Beat the Steak label is legible \r\nand it reads the definition: Join Beat the Streak by making your first pick\r\nand it has a lock icon if not earned\r\nand it has a badge icon if earned",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77843,
+    "title": "Main Prizes Page",
+    "section_id": 13175,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456416426,
+    "updated_by": 91,
+    "updated_on": 1456416426,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 1,
+    "custom_preconds": "Given the user has BTS installed\r\nand taps on Menu\r\nand taps on Profile\r\n\r\n",
+    "custom_steps": "When the user taps on Achievements section",
+    "custom_expected": "Then the Prizes tab will be open\r\nAnd if there are no prizes: No prizes available\r\nAnd if there are prizes: Claim and Unclaimed prizes",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77844,
+    "title": "Unclaimed Prizes",
+    "section_id": 13175,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456416426,
+    "updated_by": 91,
+    "updated_on": 1456416426,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 2,
+    "custom_preconds": "Given the user has BTS installed\r\nand taps on Menu\r\nand taps on Profile",
+    "custom_steps": "When the user taps on Achievements section",
+    "custom_expected": "Then the Prizes tab will be open\r\nAnd if there are prizes: Claim and Unclaimed prizes\r\nAnd if it is not claimed, then see BTS logo with orange background\r\nAnd if you tap on it the Prize, then it opens",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 77845,
+    "title": "Claimed Prizes",
+    "section_id": 13175,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1456416426,
+    "updated_by": 91,
+    "updated_on": 1456416426,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 3,
+    "custom_preconds": "Given the user has BTS installed\r\nand taps on Menu\r\nand taps on Profile",
+    "custom_steps": "When the user taps on Achievements section",
+    "custom_expected": "Then the Prizes tab will be open\r\nAnd if there are prizes: Claim and Unclaimed prizes\r\nAnd if it is Claimed, then it is grey scale BTS logo (orange background) with Claimed in red\r\nAnd it has Earned Date and Claimed Date on separate lines with dates",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81210,
+    "title": "Settings- Notifications",
+    "section_id": 13644,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457731369,
+    "updated_by": 91,
+    "updated_on": 1457731624,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"",
+    "custom_steps": "WHEN The user taps a check box off or on next to each of the results or reminders\r\nAND the user taps sign out",
+    "custom_expected": "THEN The there will be a POST request sent to the push notification service for when each of the checkboxes are checked on or off.\r\nAND the user will sign out\r\nAND get redirected to the Login screen.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81211,
+    "title": "Settings- Facebook",
+    "section_id": 13644,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457731377,
+    "updated_by": 73,
+    "updated_on": 1521747922,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"",
+    "custom_steps": "WHEN The user taps the Facebook button and has not authenticated with Facebook\r\nOR\r\nWHEN The user taps the Log out button",
+    "custom_expected": "THEN the user will get the Facebook pop up to authenticate Beat the Streak with their Facebook account\r\nOR\r\nTHEN The user will be logged out of the app.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81212,
+    "title": "Settings- About",
+    "section_id": 13644,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457731386,
+    "updated_by": 91,
+    "updated_on": 1457732059,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"",
+    "custom_steps": "WHEN The user taps How To Play\r\nAND the user taps Prizes\r\nAND the user taps Official Rules\r\nAND the user taps Terms and Conditions\r\nAND the user taps Privacy Policy",
+    "custom_expected": "THEN The user gets redirected to the How To Play page\r\nAND the user gets redirected to the Prizes page.\r\nAND the user gets redirected to the Official Rules page.\r\nAND the user gets redirected to the Terms and Conditions page.\r\nAND the user gets redirected to the Privacy Policy page.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 184631,
+    "title": "Upgrade Test",
+    "section_id": 13644,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1468437551,
+    "updated_by": 91,
+    "updated_on": 1468437562,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 4,
+    "custom_preconds": "GIVEN The user has downloaded the store build of the application",
+    "custom_steps": "WHEN the user goes on HockeyApp\r\nAND downloads the latest version of BTS, Prod/store build",
+    "custom_expected": "THEN The application should update to the latest version",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81202,
+    "title": "Push Notification- Turn Notifications On",
+    "section_id": 13642,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457727624,
+    "updated_by": 91,
+    "updated_on": 1457727813,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"",
+    "custom_steps": "WHEN The user has turned on Push Notifications\r\nEither in the on boarding flow\r\nOR\r\nWHEN the user has gone to Settings and tapped on the Checkboxes",
+    "custom_expected": "THEN the notification should appear as \"ON\r\nAND in http://qa.mlb.com, there should be a POST call for all notifications turned on\r\nAND in the Request it should contain a pushId, the deviceId, CampaignCode, apiKey, OS, and push setting.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 107810,
+    "title": "Push Notifications- 1941 Notifications",
+    "section_id": 13642,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1461264132,
+    "updated_by": 91,
+    "updated_on": 1467393957,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"",
+    "custom_steps": "Please contact Wilsharo Scott on the services team to enable notifications and the frequency of the notifications.\r\nPlease download the debug build of the application.",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user has turned on 1941 Notifications",
+        "expected": "THEN the user should receive push notifications related to 1941 Notifications within Beat The Streak.\n(As of 04/2016 the only news & promotions users should see is related to Joe DiMaggio and what he did on each day of his streak, this will change)"
+      },
+      {
+        "content": "WHEN the user has turned off 1941 Notifications",
+        "expected": "THEN the user will not receive any notifications based on the 1941 Notifications"
+      }
+    ]
+  },
+  {
+    "id": 81203,
+    "title": "Push Notification- Reminders",
+    "section_id": 13642,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457727645,
+    "updated_by": 91,
+    "updated_on": 1457730562,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"",
+    "custom_steps": "WHEN The user has turned on the \"Pick Reminder\" Alert in the on boarding flow\r\nOR\r\nThe User has checked off the Reminders check box in the Settings Menu under the Notifications Section",
+    "custom_expected": "THEN in http://qa.mlb.com or http://qa2.mlb.com, there should be post calls for the notification\r\nAND in the Request it should contain a pushId, the deviceId, CampaignCode, apiKey, OS, and push setting\r\nAND in Push Setting it should show, [{\"channels\":{\"channel.bts\":{\"events\":[\"bts.reminder\"]}}}]",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81204,
+    "title": "Push Notification- Player Results",
+    "section_id": 13642,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457727653,
+    "updated_by": 91,
+    "updated_on": 1457730665,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"",
+    "custom_steps": "WHEN The User has checked off the Results check box in the Settings Menu under the Notifications Section",
+    "custom_expected": "THEN in http://qa.mlb.com or http://qa2.mlb.com, there should be post calls for the notification\r\nAND in the Request it should contain a pushId, the deviceId, CampaignCode, apiKey, OS, and push setting\r\nAND in Push Setting it should show, [{\"channels\":{\"channel.bts\":{\"events\":[\"bts.final.game.scored\"]}}}]",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81205,
+    "title": "Push Notification- Streaks",
+    "section_id": 13642,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457727669,
+    "updated_by": 91,
+    "updated_on": 1457730822,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"",
+    "custom_steps": "WHEN The user reaches a streak of 7\r\nAND has notifications turned on",
+    "custom_expected": "THEN the user will get a notification of 7\r\nAND the push notification will state \"(USERTEAMNAME) extended their streak to 7. Make your pick(s) now to stake your claim in (GROUPNAME)\"",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81206,
+    "title": "Push Notification- Pick Hits",
+    "section_id": 13642,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457727682,
+    "updated_by": 91,
+    "updated_on": 1457730975,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"",
+    "custom_steps": "WHEN a user has notifications turned on\r\nAND a User's pick(s) has recorded a Single in a Live Game\r\nAND a User's pick(s) has recorded a Double in a Live Game\r\nAND a User's pick(s) has recorded a Triple in a Live Game\r\nAND a User's pick(s) has recorded a Home Run in a Live Game",
+    "custom_expected": "THEN the user will receive a notification on their device:\r\n(Top/Bottom) (Inning Number) : (Player Name) hit a (noun related to hit type).\r\nEx: \r\nTop 6: Pablo Sandoval hit a Single.\r\nBot 3: Josh Donaldson hit a Double.\r\nTop 7: Jacoby Ellsbury hit a Triple.\r\nBot 8: Giancarlo Stanton hit a homerun.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 81207,
+    "title": "Push Notification- Push Notifications off",
+    "section_id": 13642,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1457727692,
+    "updated_by": 91,
+    "updated_on": 1457727946,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 8,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user has an MLB.com Account\r\nAND the user has logged into \"Beat The Streak\"",
+    "custom_steps": "WHEN The User Turns off Push Notifications in the On Boarding Flow\r\nOR\r\nWHEN the user Goes to settings and unchecks all of the boxes under the Notifications Section",
+    "custom_expected": "THEN the notification should appear as OFF\"\r\nAND in http://qa.mlb.com within Charles, there should be post calls for all notifications turned off\r\nAND in the Request it should contain a pushId, the deviceId, CampaignCode, apiKey, OS, and push setting",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181156,
+    "title": "Sponsors - Logo Update",
+    "section_id": 25238,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467394646,
+    "updated_by": 91,
+    "updated_on": 1467396513,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user has downloaded the latest version of Beat the Streak",
+    "custom_steps": "WHEN the user sees the BTS application on their home screen",
+    "custom_expected": "THEN the logo should be updated to the latest BTS Logo with the Sponsors logo instead of MLB.com",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181157,
+    "title": "Sponsors - Splash Screen Update",
+    "section_id": 25238,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467394823,
+    "updated_by": 91,
+    "updated_on": 1467396520,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user has downloaded the latest version of Beat the Streak",
+    "custom_steps": "WHEN the user lands on the splash screen",
+    "custom_expected": "THEN the users should see the new BTS Splash screen with sponsors logo\r\nAND the colors of the splash screen should be set to sponsors colors.\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181161,
+    "title": "Sponsors - Login/Register Colors",
+    "section_id": 25238,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467395209,
+    "updated_by": 91,
+    "updated_on": 1467396528,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user has downloaded the latest version of Beat the Streak",
+    "custom_steps": "WHEN The user taps on Login or Create Account",
+    "custom_expected": "THEN the user should see the colors on the Sign In Page match the sponsors colors.\r\nAND the user should see the colors in the Create Account page match the sponsors colors.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181158,
+    "title": "Sponsors - Menu Logo Update",
+    "section_id": 25238,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467394892,
+    "updated_by": 91,
+    "updated_on": 1467396535,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user has downloaded the latest version of Beat the Streak\r\nAND the user has logged into the application",
+    "custom_steps": "WHEN the user taps on the Hamburger button",
+    "custom_expected": "THEN the logo at the top should have the sponsor's logo\r\nAND the colors of the words Beat The Streak should be the sponsors colors.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181159,
+    "title": "Sponsors - Tutorial Color Update",
+    "section_id": 25238,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467394938,
+    "updated_by": 91,
+    "updated_on": 1467396542,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user has downloaded the latest version of Beat the Streak\r\nAND the user has logged into the application.",
+    "custom_steps": "WHEN the user taps the hamburger button \r\nAND the user navigates to the Tutorial section",
+    "custom_expected": "THEN the tutorial images should be updated to sponsors new images\r\nAND the colors on the tutorial page should be updated to sponsors colors.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 181160,
+    "title": "Sponsors - App Color Update",
+    "section_id": 25238,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1467395059,
+    "updated_by": 91,
+    "updated_on": 1467396499,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user has downloaded the latest version of Beat the Streak\r\nAND the user has logged into the application.",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user lands on My Picks page",
+        "expected": "THEN the colors of the headers should be updated to sponsors colors.\nAND the colors of the buttons should be updated to sponsors colors.\nAND the color of the streak counter should be updated to sponsors colors."
+      },
+      {
+        "content": "WHEN the user lands on Make a Pick Page",
+        "expected": "THEN the colors of the buttons should be updated to sponsors colors."
+      },
+      {
+        "content": "WHEN the user lands on the Leaderboard page",
+        "expected": "THEN the colors of the headers should be updated to sponsors colors.\nAND the colors of the buttons should be updated to sponsors colors."
+      },
+      {
+        "content": "WHEN the user lands on the Groups Page\nAND the user lands on the Create a Group Page or Join an Existing Group Page",
+        "expected": "THEN the colors of the headers should be updated to sponsors colors.\nAND the colors of the buttons should be updated to sponsors colors."
+      },
+      {
+        "content": "WHEN the user lands on the Contests page",
+        "expected": "THEN the colors of the headers should be updated to sponsors colors.\nAND the colors of the buttons should be updated to sponsors colors."
+      },
+      {
+        "content": "WHEN the user lands on the profile page",
+        "expected": "THEN the colors of the headers should be updated to sponsors colors.\nAND the colors of the buttons should be updated to sponsors colors.\nAND the colors of the Recent Picks section should be updated to sponsors colors."
+      }
+    ]
+  },
+  {
+    "id": 806125,
+    "title": "Fast Track Regression",
+    "section_id": 98176,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1484257196,
+    "updated_by": 91,
+    "updated_on": 1484257196,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user has installed \"Beat The Streak\"\r\nAND the user does not have an MLB.com Account",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user opens the \"Beat The Streak\" application.",
+        "expected": "THEN the user should land on the home splash screen with two buttons\nSign in | Create Account\n\nIF in the off season, a popup shows up that says, \"Thanks for playing, Beat The Streak will return in [the next year]\""
+      },
+      {
+        "content": "WHEN the user taps Create Account",
+        "expected": "THEN the MLB.com register form will pop up."
+      },
+      {
+        "content": "WHEN the user fills out the form\nAND taps the register button",
+        "expected": "THEN the user is now registered to MLB.com\nAND has an MLB.com account\nAND will be redirected to My Picks."
+      },
+      {
+        "content": "WHEN the user taps on Sign In\nAND when the user fills out the form with valid credentials\nAND the user taps on sign in.",
+        "expected": "THEN the user is redirected to the Sign In page\nAND the user is logged into the application\nAND redirected to the My Picks page."
+      },
+      {
+        "content": "WHEN the user wants to make a pick\nAND taps the \"+\"",
+        "expected": "THEN the user will get redirected to the Make a Pick screen for the day\nAND there should be 4 categories: Top Picks | My Recent | Custom | All Players\nIF using a brand new user account, My Recent picks should be empty."
+      },
+      {
+        "content": "WHEN the user wants to select a player\nAND taps the \"i\" next to the player in trending players\nAND taps submit pick",
+        "expected": "THEN the user will be redirected to the player page\nAND the player page will display stats versus the probably pitcher\nIF there is no probable pitcher, the page will display player stats vs team.\nAND the player page will display season stats.\nAND there will be a popup that ask \"Submit Pick, Are you sure you want to submit your pick?\"\nIF user selects yes, the user will be redirected to the My Picks page with the player appearing as the pick for the day.\nIF user selects no, then the user will stay on the page where the player is"
+      },
+      {
+        "content": "WHEN the user wants to select a player\nAND taps the player",
+        "expected": "THEN there will be a popup that ask \"Submit Pick, Are you sure you want to submit your pick?\"\nIF user selects yes, the user will be redirected to the My Picks page with the player appearing as the pick for the day.\nIF user selects no, then the user will stay on the page where the player is"
+      },
+      {
+        "content": "WHEN the user taps on Custom in the Make a Pick page\nAND the user taps on a filters\nAND the user taps on apply",
+        "expected": "THEN the user will get a list of picks that match the criteria of the filters."
+      },
+      {
+        "content": "WHEN the user taps on Custom in the Make a Pick page\nAND the user taps on a filters\nAND the user taps on apply\nAND the user taps on Reset",
+        "expected": "THEN the user should see the custom filters emptied\nAND reset."
+      },
+      {
+        "content": "WHEN the user wants to remove the player before the players game is locked\nAND taps edit\nAND taps remove pick",
+        "expected": "THEN the user will be redirected to the player page\nAND the player page will display stats versus the probably pitcher\nIF there is no probable pitcher, the page will display player stats vs team.\nAND the player page will display season stats\nAND a pop up will occur when remove pick is tapped\nIF user selects yes, the user will be redirected to the My Picks page with the player removed as the pick for the day.\nIF user selects no, then the user will stay on the page where the player is"
+      },
+      {
+        "content": "WHEN the user wants to make a double down pick\nAND already has a player selected for the day\nAND taps double down\nAND then taps a player",
+        "expected": "THEN the user will be redirected to the player categories \nAND there should be 4 categories: Top Picks | My Recent | Trending | All Players\nAND a popup will appear and ask if the user wants to submit the pick\nAND the user will be redirected to the My Picks page with the two picks submitted for the day."
+      },
+      {
+        "content": "WHEN the user wants to remove a double down pick\nAND the user has two players picked for the day\nAND the user taps the player or edit next to the player\nAND the user taps remove pick",
+        "expected": "THEN the user is redirected to the players page\nAND then the user faces a pop up that ask if the user is sure they want to remove the player\nIF user selects yes, the user will be redirected to the My Picks page with the player removed as the pick for the day.\nIF user selects no, then the user will stay on the page where the player is"
+      },
+      {
+        "content": "WHEN the user taps the hamburger button to the top left\nAND the user selects Leaderboard",
+        "expected": "THEN the user will open the side menu\nAND the user will be redirected to the leaderboard page where there are 6 options\nCurrent Streak (Current Year) | Season Streak (Current Year) | MLB All-Time | BTS All-Time | Friends | Groups"
+      },
+      {
+        "content": "WHEN the user selects any user\nAND goes to friends \nAND tap's Facebook Connect",
+        "expected": "THEN the user will be redirected to the users profile page\nAND IF the user has already connected to Facebook then the users friends on Facebook will appear\nIF the user has not connected to Facebook then there will be a Facebook connect button\nAND once the button is tapped the steps to connect to Facebook appear."
+      },
+      {
+        "content": "WHEN the user taps the top left hamburger\nAND taps profile\nAND taps see all next to achievements\nAND taps see all next to recent picks",
+        "expected": "THEN the side menu opens up\nAND the user gets redirected to the profile page\nAND the user gets redirected to the Achievements page\nAND on the achievements page there are two filters (Prizes | Badges)\nAND recent picks will show all recent picks the user has made."
+      },
+      {
+        "content": "WHEN the user taps the top left hamburger\nAND taps Groups\nAND taps a group in the popular section",
+        "expected": "THEN the side menu pops up \nAND the user is sent to the groups landing page\nAND the user will be redirected to the group's page where on the top is the user stats and then below is the groups stats."
+      },
+      {
+        "content": "WHEN the user taps the \"+\" or Join or Create Group button\nAND the user selects join an existing group\nAND joins an open group",
+        "expected": "THEN the user is shown a popup where it ask \"Join An Existing Group\" or \"Create a new group\"\nAND the user is redirected to a search page where they can look for an existing group\nIF the group is public then the user can join\nIF the group is private then the user has to enter a password before joining."
+      },
+      {
+        "content": "WHEN the user taps the \"+\" or Join or Create Group button\nAND the user selects create a new group",
+        "expected": "THEN a create a new group form will popup which includes;\nGroup Name | Description | Private \nAND IF private is selected then a password and confirm password field pops up."
+      },
+      {
+        "content": "WHEN the user fills out the form\nAND opts to make the group public\nAND taps Create Group",
+        "expected": "THEN the group will be made \nAND anybody can join the group (Confirm with a different MLB account)\nAND the user is redirected to the groups page with the current created group on top"
+      },
+      {
+        "content": "WHEN the user fills out the form\nAND opts to make the group private\nAND fills in a password and confirming that password \nAND taps Create Group",
+        "expected": "THEN the group will be made\nAND The user will be redirected to the groups page with the current group on top\nAND if another user wants to join, they must put the password in to join the group (confirm with a different MLB.com account)"
+      },
+      {
+        "content": "WHEN the user taps into the group\nAND taps the invite button on the top right\nAND the user taps each option",
+        "expected": "THEN the share pop up shows up with options to share the group; Facebook | Twitter | Email | Message\nAND Facebook will open up a Facebook App Request popup that will show the users suggested friends to invite to BTS\nAND Twitter will open a pop up and ask to post the link to BTS on your timeline.\nAND Email will open a crafted email with the link to join BTS.\nAND Message will open a crafted message with a link to join BTS."
+      },
+      {
+        "content": "WHEN the user taps the 3 dots next to the invite button in the group\nAND taps Leave this Group",
+        "expected": "THEN a popup will appear that ask if you want to leave this group\nIF the user select's leave this group, the user will be removed from the group and redirected to the groups page\nIF the user select's cancel, the user stays on the group page."
+      }
+    ]
+  },
+  {
+    "id": 1224868,
+    "title": "User is able to Launch app successfully and all areas of the app are optimized to support the iPhone X screen.",
+    "section_id": 147802,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 73,
+    "created_on": 1522776544,
+    "updated_by": 73,
+    "updated_on": 1522776970,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 397,
+    "display_order": 1,
+    "custom_preconds": "ASSUMING a user has an iPhone X",
+    "custom_steps": "WHEN the user download and launches the Beat the Streak app",
+    "custom_expected": "THEN the app launches successfully and the all the areas of the app is optimized to support iPhone X screen display\r\nVerify the following areas:\r\n- The splash screen is displayed fully and optimized edge to edge\r\n- Log In Screen\r\n- Register Screen\r\n- My pick page\r\n- Leaderboard page\r\n- Groups page\r\n- Contests page\r\n- Profile page\r\n- Contacts us page\r\n- Official rules page\r\n- Prizes page\r\n- Tutorial page\r\n- FAQ's page\r\n- Settings page",
+    "custom_steps_separated": null
+  }
+]

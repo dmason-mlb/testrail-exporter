@@ -1,0 +1,11 @@
+{
+  "id": 691025,
+  "name": "[IOS] Regression Suite for Releases",
+  "description": "THIS IS IOS SPECIFIC SUITE\r\n\r\nPurpose of this test suite is to ensure that there is HIGH level of confidence that the app will function properly in the HIGHEST priority areas of the app with a minimal sanity validation.",
+  "project_id": 179,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/691025"
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 33410671,
+    "title": "Jump to navigation header on Clips page",
+    "section_id": 1917783,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 349,
+    "created_on": 1717100628,
+    "updated_by": 349,
+    "updated_on": 1717100628,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 679303,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is on the Clips page",
+    "custom_steps": "WHEN the user navigates to the bottom of the Clips page\r\nAND the user presses the [triangle] button on the controller",
+    "custom_expected": "THEN the [Clips] button in the navigation header at the top of the screen gains focus\r\nAND the page scrolls to the top\r\nAND the user stays on the Clips page"
+  }
+]

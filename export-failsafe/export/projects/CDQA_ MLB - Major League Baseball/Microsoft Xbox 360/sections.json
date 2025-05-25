@@ -1,0 +1,218 @@
+[
+  {
+    "id": 99752,
+    "suite_id": 13979,
+    "name": "Device and Application Information Repository",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 86488,
+    "suite_id": 13979,
+    "name": "Startup",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 86489,
+    "suite_id": 13979,
+    "name": "Login",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 86490,
+    "suite_id": 13979,
+    "name": "Home",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 86491,
+    "suite_id": 13979,
+    "name": "Today Home",
+    "description": null,
+    "parent_id": 86490,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 86492,
+    "suite_id": 13979,
+    "name": "Schedule (editing this section; everything below needs review,possible edits)",
+    "description": null,
+    "parent_id": 86490,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 86493,
+    "suite_id": 13979,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 86490,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 86494,
+    "suite_id": 13979,
+    "name": "Log Out",
+    "description": null,
+    "parent_id": 86493,
+    "display_order": 8,
+    "depth": 2
+  },
+  {
+    "id": 86495,
+    "suite_id": 13979,
+    "name": "Access Right Restrictions",
+    "description": null,
+    "parent_id": 86493,
+    "display_order": 9,
+    "depth": 2
+  },
+  {
+    "id": 86496,
+    "suite_id": 13979,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 86497,
+    "suite_id": 13979,
+    "name": "Networking",
+    "description": null,
+    "parent_id": 86496,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 86498,
+    "suite_id": 13979,
+    "name": "Pre-roll Ads",
+    "description": null,
+    "parent_id": 86496,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 86499,
+    "suite_id": 13979,
+    "name": "In-player (Video) Navigation",
+    "description": null,
+    "parent_id": 86496,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 86500,
+    "suite_id": 13979,
+    "name": "(Video Player) Controls",
+    "description": null,
+    "parent_id": 86499,
+    "display_order": 14,
+    "depth": 2
+  },
+  {
+    "id": 86501,
+    "suite_id": 13979,
+    "name": "Closed Captioning",
+    "description": null,
+    "parent_id": 86500,
+    "display_order": 15,
+    "depth": 3
+  },
+  {
+    "id": 86502,
+    "suite_id": 13979,
+    "name": "Milestones (Skip Fwd/ Skip Back)",
+    "description": null,
+    "parent_id": 86500,
+    "display_order": 16,
+    "depth": 3
+  },
+  {
+    "id": 86503,
+    "suite_id": 13979,
+    "name": "Scan Fwd/Scan Back",
+    "description": null,
+    "parent_id": 86500,
+    "display_order": 17,
+    "depth": 3
+  },
+  {
+    "id": 86504,
+    "suite_id": 13979,
+    "name": "Change Audio",
+    "description": null,
+    "parent_id": 86500,
+    "display_order": 18,
+    "depth": 3
+  },
+  {
+    "id": 86505,
+    "suite_id": 13979,
+    "name": "Linescore",
+    "description": null,
+    "parent_id": 86499,
+    "display_order": 19,
+    "depth": 2
+  },
+  {
+    "id": 86506,
+    "suite_id": 13979,
+    "name": "Audio Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 86507,
+    "suite_id": 13979,
+    "name": "Kinect",
+    "description": "This section is for all TestRail cases regarding the kinect on the xbox 360",
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 86508,
+    "suite_id": 13979,
+    "name": "Free User / Non-Entitlement Verifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 86509,
+    "suite_id": 13979,
+    "name": "Free User / Non-Entitlement MLB.TV Upsell Verification",
+    "description": null,
+    "parent_id": 86508,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 86510,
+    "suite_id": 13979,
+    "name": "Single Team Entitlement Verifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  }
+]

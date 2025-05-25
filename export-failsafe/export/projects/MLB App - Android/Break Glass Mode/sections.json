@@ -1,0 +1,20 @@
+[
+  {
+    "id": 2033799,
+    "suite_id": 704411,
+    "name": "Logged In",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 2033800,
+    "suite_id": 704411,
+    "name": "Logged Out",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

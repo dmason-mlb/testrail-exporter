@@ -1,0 +1,3218 @@
+[
+  {
+    "id": 58565,
+    "title": "Top Overlay",
+    "section_id": 8518,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 23,
+    "created_on": 1437144568,
+    "updated_by": 23,
+    "updated_on": 1437149186,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user has a Favorite Team set and selects the Gameday menu and there is a Game for our Favorite Team today",
+        "expected": "Then our Favorite Team will appear as the left most game for that specific Game Type on the Out of Town Scoreboard"
+      },
+      {
+        "content": "When a user has selected the Gameday menu item",
+        "expected": "Then all the games listed on the Out of Town Scoreboard will matchup to the games on the normal Scoreboard"
+      },
+      {
+        "content": "When a user has selected a Gameday menu item and taps on a game that currently isn't selected on the Out of Town scoreboard",
+        "expected": "Then the Out of Town scoreboard image for that game will lighten to show that it is the current selected item"
+      },
+      {
+        "content": "When a user has selected a Gameday menu item and we look at the Out of Town Scoreboard",
+        "expected": "Then all games are listed with the Away Teams above the Home Team"
+      },
+      {
+        "content": "Given we have selected the Gameday menu item\nAnd we have games in various states\nScoreboard sorting should follow standard sorting rules",
+        "expected": "Then if we have a Favorite Team set the games for that particular team will appear as the left most item on the Scoreboard\nand this will be followed by games in a state of In Progress\nand these games will be followed by games that haven't started yet\nand these games will be followed by games that have reached a state of final"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 58566,
+    "title": "Left Overlay(Pitch By Pitch Overlay)",
+    "section_id": 8518,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 23,
+    "created_on": 1437144568,
+    "updated_by": 119,
+    "updated_on": 1489520401,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 2,
+    "custom_preconds": "XML for Plays:\r\nQA: http://gd.qa.mlb.com/components/game/mlb/year_2011/month_08/day_01/gid_2011_08_01_nyamlb_chamlb_1/plays.xml\r\nProd: http://gd.mlb.com/components/game/mlb/year_2011/month_08/day_01/gid_2011_08_01_nyamlb_chamlb_1/plays.xml",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user taps on an active game and taps on the Pitch-by-Pitch tab on Gameday",
+        "expected": "Then the Pitch by Pitch overlay will display "
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects a game in the state of warmup and that active game has the Pitch by Pitch overlay enabled",
+        "expected": "Then the text of Warmup will be visible in the top center of the Pitch by Pitch overlay"
+      },
+      {
+        "content": "When the user views the left overlay during different states of the game\n\n",
+        "expected": "Then Warmup, Live, Delayed text should be displayed on top of the Pitch-by-Pitch Overlay"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Pitch by Pitch overlay enabled",
+        "expected": "Then a player image for the current pitcher will be visible next to \"Pitching:\"\nand a player image for the current batter will be visible next to \"At Bat:\"\nfollowed by a player image for the current batter \"On Deck:\""
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Pitch by Pitch overlay enabled",
+        "expected": "Then the pitchers name will display correctly\nand the pitchers designation as a LHP / RHP will be displayed correctly"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Pitch by Pitch enabled",
+        "expected": "Then all portions of the Pitch by Pitch overlay will update correctly in real-time"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Matchup Module enabled",
+        "expected": "Then the batter will be displayed in bold\nand the batter's position will be listed after their name"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Matchup Module enabled",
+        "expected": "Then the game at bats for the current batter will be displayed correctly along the lines of 0-for-0, 0-for-1, 0-for-2"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Matchup Module enabled",
+        "expected": "Then the current batter's average will be displayed correctly under their name"
+      },
+      {
+        "content": "When a user taps on an active game with the Pitch by Pitch overlay enabled and the number of pitches have been thrown during an at bat",
+        "expected": "Then the pitches will be correctly labeled as Pitch 1, Pitch 2, etc..."
+      },
+      {
+        "content": "When a user taps on an active game with the Pitch by Pitch overlay enabled and there is currently a Ball being displayed",
+        "expected": "Then the Ball will be displayed in bold"
+      },
+      {
+        "content": "When a user taps on an active game with the Pitch by Pitch overlay enabled and there is currently a Strike being displayed",
+        "expected": "Then the Strike will be displayed in bold"
+      },
+      {
+        "content": "When a user taps on an active game with the Pitch by Pitch overlay enabled and there is currently a Called Strike being displayed",
+        "expected": "Then the Called Strike will be displayed in bold"
+      },
+      {
+        "content": "When a user taps on an active game with the Pitch by Pitch overlay enabled and there is currently a Swinging Strike being displayed",
+        "expected": "Then the Swinging Strike will be displayed in bold"
+      },
+      {
+        "content": "When a user taps on an active game has the Pitch by Pitch enabled and there is currently a non-in-play action available such as advancing on a balk or there is currently a non-in-play action available such as a pitching change or there is currently a non-in-play action available such as an offensive substitution",
+        "expected": "Then the non-in-play action will be bolded\nand will not be indented like the plays/pitches text"
+      },
+      {
+        "content": "When a user taps on an active game has the Pitch by Pitch overlay enabled and that there have been a few plays completed for the current inning of various statuses",
+        "expected": "Then the \"In play\" plays will display correctly as In play, run(s) / In play, no out / In play, out(s)"
+      },
+      {
+        "content": "When a user taps on an active game and that active game has the Pitch by Pitch overlay enabled and then we tap on a batter or we tap on a pitcher",
+        "expected": "Then the appropriate player card will open for that particular player"
+      },
+      {
+        "content": "When a user taps on an active game and that active game has the Pitch by Pitch overlay enabled and pitching change is completed",
+        "expected": "Then the current pitching information will update to reflect the new pitchers information"
+      },
+      {
+        "content": "When a user taps on an active game and that active game has the Pitch by Pitch enabled and then taps on a play",
+        "expected": "Then that at bat's pitch sequence will be displayed to the user"
+      },
+      {
+        "content": "When a user taps on an active game and the active game has the Pitch by Pitch enabled and Balk occurs in the game",
+        "expected": "Then the Balk will be labeled as a non-play event with its title bolded\nand no indentation like the pitch of play text"
+      },
+      {
+        "content": "When a user taps on an active game and that active game has the Pitch by Pitch enabled and non-play events occurs in the game\n",
+        "expected": "Then we see that all non-play events are successful\nand that all non-play events will have their titles bolded\nand will not be indented like the play/pitch text"
+      },
+      {
+        "content": "When a user navigates to Gameday and opens a Game currently in progress and the last pitch of an inning occurs and checking against the Production Environment",
+        "expected": "Then we will successfully see the last pitch being registered"
+      },
+      {
+        "content": "When a user navigates to Gameday and the last play of an inning comes in",
+        "expected": "Then in the Gameday window we will see that the last play of the inning properly registers before the next inning actually starts"
+      },
+      {
+        "content": "When a user views a past AB or views a current AB",
+        "expected": "Then each pitch of the AB will be labeled in the order they occurred (bottom to top)\nand the number will be colored accurately as a ball, strike, or \"in play\" result"
+      },
+      {
+        "content": "When a user views a past AB in the current inning or views a current AB in the current inning",
+        "expected": "Then an accurate thumbnail will be displayed next to the batter\nand the batter's order in the lineup will be displayed in the top left corner of the thumbnail"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 58567,
+    "title": "Box",
+    "section_id": 8518,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 23,
+    "created_on": 1437144568,
+    "updated_by": 119,
+    "updated_on": 1490843598,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user selects an active game and the user taps on the Box Score on the tab bar in Gameday",
+        "expected": "Then the box score is shown in the overlay and is highlighted on the bottom tab bar"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and an active game and that active game has the Box Score Module enabled",
+        "expected": "Then the teams will be labeled away team followed by home team"
+      },
+      {
+        "content": "(LANDSCAPE) When a user selects the Gameday menu item and an active game and that active game has the Box Score Module enabled and we tap on a team name",
+        "expected": "Then that teams box score will be displayed\n\nREPEAT for other Team"
+      },
+      {
+        "content": "(Portrait) When a user selects the Gameday menu item and taps on the Box Score tab on the tab bar",
+        "expected": "Both team's lineups will display side by side in portrait view"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and an active game and that active game has the Box Score Module enabled",
+        "expected": "Then the current player at bat will be Highlighted in the Box Score module"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and an active game and that active game has the Box Score module enabled and a player bats for a team",
+        "expected": "Then the Highlight will appear on the current batter\nand when the next batter gets up the Highlight will appear on them"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and an active game and that active game has the Box Score module enabled and we look at the Box Score for Batters",
+        "expected": "Then we will see that the only stats available will be that of: AB, R, H, RBI, BB, SO, LOB & AVG"
+      },
+      {
+        "content": "when a user taps on an active game and taps on the Box Score icon to enable the Box Score Module",
+        "expected": "Then the Box Score will default to the Home Team's portion of it"
+      },
+      {
+        "content": "When a user is on the Box Score menu enabled and a substitute a player occurs in a game",
+        "expected": "Then that player's name will appear as indented compared to starters whose names won't be indented"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Box Score Module enabled",
+        "expected": "Then the players will be listed by their last names followed by their positions"
+      },
+      {
+        "content": "when a user taps on an active game and taps on the Box Score icon to enable the Box Score Module",
+        "expected": "Then the AVG being displayed is for the season\nand the rest of the stats for a hitter are for that specific game"
+      },
+      {
+        "content": "when a user taps on an active game in an American League park and taps on the Box Score icon to enable the Box Score Module",
+        "expected": "Then the pitcher will not be displayed in the batting section of the Box Score Module"
+      },
+      {
+        "content": "when a user taps on an active game and taps on the Box Score icon to enable the Box Score Module",
+        "expected": "Then we will see the following items if they are available at the time: 2B, 3B, HR, TB, RBI, 2-out RBI, Runners left in scoring position, Team RISP, Team LOB, Base Running & Fielding statistics"
+      },
+      {
+        "content": "when a user taps on an active game and taps on the Box Score icon to enable the Box Score Module and we look at the Box Score for pitchers",
+        "expected": "Then the following stats will be available for a pitcher: IP, H, R, ER, BB, SO, HR & ERA"
+      },
+      {
+        "content": "when a user taps on an active game and taps on the Box Score icon to enable the Box Score Module and we look at the pitching stats inside of Box Score",
+        "expected": "Then the ERA listed for the pitcher will be for the season\nand all other pitching stats will be just for that one game"
+      },
+      {
+        "content": "when a user taps on an active game and taps on the Box Score icon to enable the Box Score Module and we look under the pitching stats",
+        "expected": "Then we will see the following: HBP, Pitches-strikes, Groundouts-flyouts, Batters faced, Umpires, Weather & Wind"
+      },
+      {
+        "content": "when a user taps on an active game and taps on the Box Score icon to enable the Box Score Module and we bring a relief pitcher into the game",
+        "expected": "Then the relief pitcher will be listed under the starting pitcher"
+      },
+      {
+        "content": "when a user taps on an active game and taps on the Box Score icon to enable the Box Score Module and we tap on a players name",
+        "expected": "Then that players card will appear appropriately"
+      },
+      {
+        "content": "when a user taps on an active game and taps on the Box Score icon to enable the Box Score Module then backgrounds the app then brings the application to the foreground",
+        "expected": "Then the Box Score Module will update immediately"
+      },
+      {
+        "content": "When a user taps on gameday of an active game and the boxscore tab in the bottom nav and uses the stringer to simulate a HR with the 1st batter of the game",
+        "expected": "Then the user will see the following stats updated in the box score:\n\nAB 1\nR 1\nH 1\nRBI 1\nBB 0\nSO 0\nLOB 0\nAVG - will season batting average\nAnd underneath the batters in the Batting section will see HR section updated"
+      },
+      {
+        "content": "When a user taps on gameday of an active game and the boxscore tab in the bottom nav and uses the stringer to simulate a walk (BB) with the 1st batter of the game and uses the stringer to simulate a stolen base (SB)",
+        "expected": "Then the user will see the box score update:\n\nAB 0\nR 0\nH 0\nRBI 0\nBB 1\nSO 0\nLOB 0\nAVG - will be season batting average\n\nAnd below the stats in the batting section the SB section will be updated with the baserunner"
+      },
+      {
+        "content": "When a user navigates to Gameday and taps on a game that is final and taps on the boxscore tab on the bottom nav then scrolls to the bottom to see the pitching stats",
+        "expected": "Then the user will see:\n\nWinning Team:\n<Pitcher's Last name> (W, <# of wins that season>-<# of losses that season>)\n\nLosing Team:\n<Pitcher's Last name> (L, <# of wins that season>-<# of losses that season>)"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 58568,
+    "title": "Plays",
+    "section_id": 8518,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 23,
+    "created_on": 1437144568,
+    "updated_by": 119,
+    "updated_on": 1490845813,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and the game has the Plays tab selected on the tab bar",
+        "expected": "Landscape:\nThen we are able to see the Scoring segment control\nand we are able to see the Plays segment control\nPortrait:\nScoring & Plays will be side by side\n"
+      },
+      {
+        "content": "When we tap on the Plays on the tab bar for a game in Gameday view in Landscape view",
+        "expected": "Then the Plays section will display and \"All Plays\" will be highlighted in the segment control"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Plays module enabled",
+        "expected": "Then the most current play will be displayed by default"
+      },
+      {
+        "content": "When a user selected the Gameday menu item and selects an active game and actives game has the Plays module enabled and an out has been made",
+        "expected": "Then we will see in bold either Out 1, Out 2 or Out 3 depending on what Out it was"
+      },
+      {
+        "content": "When a user looks to the right side of the Play-By-Play Module",
+        "expected": "Then we will see the innings available\nand we see the innings going vertically down the side of the module"
+      },
+      {
+        "content": "When a user looks to the right side of the Play-By-Play Module",
+        "expected": "Then we are able to see the Extra Innings available\nand we see the innings going vertically down the side of the module"
+      },
+      {
+        "content": "When a user looks through the Plays section and looks through the Scoring section",
+        "expected": "Then we will see that the team icons are displaying correctly next to the innings in question"
+      },
+      {
+        "content": "When a user scrolls through the At Bats section on the Plays module",
+        "expected": "Then we will see that the Outs are always labeled 1 to 3 in each inning"
+      },
+      {
+        "content": "When a user scrolls through the At Bats section and scrolls through the Scoring section",
+        "expected": "Then the Top/Bottom inning designations are correct"
+      },
+      {
+        "content": "When we scroll through the At Bats section on the Plays module",
+        "expected": "Then we will see that each of the following appears in Distinctive white text: Pitching sub, Stolen bases, Game advisory & Defensive sub"
+      },
+      {
+        "content": "When a user selects an active game and that active game has the Plays module enabled and we look at the plays.xml",
+        "expected": "Then the plays showing up display correctly and accurately"
+      },
+      {
+        "content": "When a user selects an active game and that active game has the Plays module enabled and and we tap on the Scoring tab",
+        "expected": "Then we will see that scoring changes are labeled with the score in bold text"
+      },
+      {
+        "content": "When a user navigates to Gameday and select a game currently in the state of In Progress and we tap on the 'Plays' tab button ",
+        "expected": "Then we will see that each play for a particular batter has his picture to the left of it"
+      },
+      {
+        "content": "When a user navigates to Gameday and select a game currently in the state of In Progress and we tap on the 'Plays' tab button ",
+        "expected": "Then we will see that at the beginning of each inning that right under the inning label is: 'Pitching <currentPitcher>'"
+      },
+      {
+        "content": "When a user navigates to Gameday and we navigate to the Plays tab and then the Plays tab",
+        "expected": "Then we will see that the player pictures will quickly show a default before loading the correct players picture"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 660695,
+    "title": "Lineups",
+    "section_id": 8518,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 119,
+    "created_on": 1479835270,
+    "updated_by": 119,
+    "updated_on": 1489529702,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Lineups module enabled and then we tap on the Lineups icon",
+        "expected": "Then the Lineups icon will either enable or disable the Lineups Module on the right hand side of the screen"
+      },
+      {
+        "content": "When a user taps on the Lineups segment control",
+        "expected": "Then the Lineups segment will be selected\nand the Lineups will appear on the right side overlay"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Lineups module enabled",
+        "expected": "Then the teams will be listed in the Lineups module as Away Team then Home Team"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Lineups module enabled and we tap on a Team name",
+        "expected": "Then that Teams respective lineup will display accurately\n\nREPEAT for other Team"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Lineups module enabled",
+        "expected": "Then the current player at bat will be highlighted"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Lineups module enabled and we tap on the team currently not at bat",
+        "expected": "Then the hitter due to leadoff the following inning will be highlighted"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Lineups module enabled",
+        "expected": "Then the lineup is listed 1 through 9 followed by P for pitcher"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Lineups module enabled",
+        "expected": "Then player names are followed by their appropriate position"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Lineups module enabled",
+        "expected": "Then next to each players name will be their current batting statistics for that game such as: 1-3, 0-3, 2-4"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Lineups module enabled",
+        "expected": "Then if there is a HR available we will see it to the right of the players name & after their batting statistics for that game\nand if there is an RBI available we will see it to the right of the players name & after their batting statistics for that game\nand if there is a SB available we will see it to the right of the players name & after their batting statistics for that game"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Lineups module enabled and we look at the Available Position Players section",
+        "expected": "Then the Available Position Players will have the following information listed: POS, AVG, AB, G, HR & RBI"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Lineups module enabled and we tap on a players name",
+        "expected": "Then that players card will appear correctly"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Lineups module enabled and we look at the Bullpen section",
+        "expected": "Then the following information will be available: W-L, ERA, SV, IP & K/BB"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Lineups module enabled and we tap on a Hitter",
+        "expected": "Then their player card opens successfully\nand the player card displays hitting statistics"
+      },
+      {
+        "content": "When a user selects the Gameday menu item and selects an active game and that active game has the Lineups module enabled an we tap on a Pitcher",
+        "expected": "Then their player card opens successfully\nand the player card displays pitching statistics"
+      },
+      {
+        "content": "When we utilize a player from the Available Position Players section or we utilize a player from the Bullpen section",
+        "expected": "Then that player will be removed from that particular section"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 58569,
+    "title": "Right Overlay - Field",
+    "section_id": 8518,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 23,
+    "created_on": 1437144568,
+    "updated_by": 119,
+    "updated_on": 1479837179,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 6,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user taps on an active game on the Scoreboard\nAnd is taken into Gameday\nAnd we tap on the Field option in the right overlay",
+        "expected": "Then the Stadium image will be the default stadium image\nand the Stadium Name will be displayed at the top\n\nREPEAT FOR EACH STADIUM"
+      },
+      {
+        "content": "When a user taps on an active game on the Scoreboard\nAnd is taken into Gameday\nAnd we tap on the Field option in the right overlay",
+        "expected": "Then the current player at bat in the Matchup Module will be highlighted on the Field part of the Module"
+      },
+      {
+        "content": "When a user taps the Field tab in the right overlay\nAnd there are runners on base",
+        "expected": "Then the runners on base will be shown correctly (legible names, on the proper base) and be tappable (showing player cards)"
+      },
+      {
+        "content": "When a user on the Field tab taps on a player's name that is in the field or on base",
+        "expected": "Then the player card for that respective player will open"
+      },
+      {
+        "content": "When a user taps on the Field button on the top right portion of the Matchup Module",
+        "expected": "Then we will see the E, W, N, S key will be visible at the bottom right of the field image for a Regular Season game"
+      },
+      {
+        "content": "When a user taps on an active game on the Scoreboard\nAnd is taken into Gameday\nAnd we tap on the Field option in the right overlay",
+        "expected": "Then the field tab will update properly (base runners, at bat, on-deck hitters, etc.)"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 58570,
+    "title": "Linescore Bar",
+    "section_id": 8518,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 23,
+    "created_on": 1437144568,
+    "updated_by": 119,
+    "updated_on": 1490848553,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 8,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user taps on an active game on the Scoreboard\nAnd is taken into Gameday",
+        "expected": "Then the condensed linescore in the bottom left of the screen displays the accurate information on innings, team names, runs, hits, errors"
+      },
+      {
+        "content": "When a user taps on an active game on the Scoreboard\nAnd views the condensed linescore in the Matchup Bar",
+        "expected": "Then the Errors display correctly"
+      },
+      {
+        "content": "When a user taps on an active game on the Scoreboard\nAnd is taken into Gameday",
+        "expected": "Then the correct inning preceded by TOP/BOT will be visible in the condensed linescore above the team display codes "
+      },
+      {
+        "content": "When a user taps on an active game on the Scoreboard\nAnd is taken into Gameday",
+        "expected": "Then in the Matchup overlay along the bottom of the screen the PITCHING and AT BAT fields are populated with the correct players and stats\nFor pitcher - ERA and throwing hand, for hitter - batting side, this games Hits-Atbats, season batting average on the bottom matchup bar"
+      },
+      {
+        "content": "When a user taps on an active game on the Scoreboard\nAnd is taken into Gameday",
+        "expected": "Then the On Deck player name will be shown with correct handedness, Hits-Atbats and season batting average\nand the In the Hole player name will be shown with correct handedness, Hits-Atbats and season batting average on the bottom matchup bar"
+      },
+      {
+        "content": "When a user taps on an active game on the Scoreboard\nAnd is taken into Gameday",
+        "expected": "Then the Balls are displayed correctly on the bottom matchup bar"
+      },
+      {
+        "content": "When a user taps on an active game on the Scoreboard\nAnd is taken into Gameday",
+        "expected": "Then the Strikes display correctly on the bottom matchup bar"
+      },
+      {
+        "content": "When a user taps on an active game on the Scoreboard\nAnd is taken into Gameday",
+        "expected": "Then the Outs are displayed correctly on the bottom matchup bar"
+      },
+      {
+        "content": "When a user taps on an active game on the Scoreboard\nAnd is taken into Gameday",
+        "expected": "Then the Bases are populated correctly and the names of the runners are shown to the right of the base pads on the bottom matchup bar"
+      },
+      {
+        "content": "When a half inning ends",
+        "expected": "Then in the bottom Matchup overlay, the next three batters expected for the following half inning are listed starting with DUE UP followed by their full names, season batting average and \"hit for at bats\" for the current game"
+      },
+      {
+        "content": "When the game is in between half innings",
+        "expected": "Then the condensed linescore in the bottom Matchup bar is still viewable and displays the correct information about the game (MID/END of inning, runs, hits, errors, challenges and team names)"
+      },
+      {
+        "content": "When a user taps on an active game on the Scoreboard\nAnd is taken into Gameday\nAnd a half inning ends",
+        "expected": "Then in the bottom Matchup overlay, the next three batters expected for the following half inning are listed starting with DUE UP followed by their full names, season batting average and \"hit for at bats\" for the current game"
+      },
+      {
+        "content": "When a user taps on an active game on the Scoreboard\nAnd is taken into Gameday\nAnd the game is in between half innings",
+        "expected": "Then the condensed linescore in the bottom Matchup bar is still viewable and displays the correct information about the game (MID/END of inning, runs, hits, errors, and team display codes)"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 660699,
+    "title": "Wrap",
+    "section_id": 8518,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 119,
+    "created_on": 1479835270,
+    "updated_by": 119,
+    "updated_on": 1490848993,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 10,
+    "custom_preconds": "XML for Videos (Highlights, Statcast, Replay, etc)\r\nhttp://gd.mlb.com/components/game/mlb/year_2014/month_10/day_14/gid_2014_10_14_slnmlb_sfnmlb_1/media/\r\n\r\n**These are the Game Center file locations that are get populated from Homebase and the hbgamecontent.xml file. Just change the gid. \r\n\r\nPROD English: http://gd2.mlb.com/components/game/mlb/year_2015/month_04/day_06/gid_2015_04_06_anamlb_seamlb_1/gamecenter.xm\r\nPROD Spanish: http://gd2.mlb.com/components/game/mlb/year_2015/month_04/day_06/gid_2015_04_06_anamlb_seamlb_1/gamecenter_es.xml\r\n\r\nQA English: http://gd.qa.mlb.com/components/game/mlb/year_2015/month_04/day_07/gid_2015_04_07_clemlb_houmlb_2/gamecenter.xml\r\nQA Spanish: http://gd.qa.mlb.com/components/game/mlb/year_2015/month_04/day_07/gid_2015_04_07_clemlb_houmlb_2/gamecenter_es.xml",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a game is final and a user taps on the Wrap tab ",
+        "expected": "Then the user will see both logos, Final(Duration if game ends or exceeds 9 innings), linescore, automated recaps, wrap information(W pitcher, L pitcher, S, HR, Umpires, Weather, Wind, Start Time)"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1224380,
+    "title": "Team Names",
+    "section_id": 8518,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "MILBATBAT-1625",
+    "created_by": 65,
+    "created_on": 1522188731,
+    "updated_by": 65,
+    "updated_on": 1522189440,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 11,
+    "custom_preconds": "GIVEN the user is on an iPad",
+    "custom_steps": "WHEN the user views Gameday for the following states:\r\n- preview\r\n- live\r\n- final",
+    "custom_expected": "THEN team names should be replaced with city name when accessing iPad gameday\r\n\r\nNOTE: \r\nShould always display City Name when space allows, followed by tri-code\r\nTeam name should only appear in conjunction with City Name, if space allows.",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 660701,
+    "title": "No-Hitter/Perfect Game Indicator - Not Valid for MiLB???",
+    "section_id": 8518,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 119,
+    "created_on": 1479835270,
+    "updated_by": 65,
+    "updated_on": 1522189429,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 15,
+    "custom_preconds": "UI/UX Rules: https://wiki.mlbam.com/pages/viewpage.action?pageId=55312418\n\nScreen: https://jira.mlbam.com/browse/IAB-10513\n\nhttp://gd.qa.mlb.com/components/game/mlb/year_2015/month_07/day_27/master_scoreboard.xml\nis_perfect_game=\"Y\" is_no_hitter=\"N\"",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a game is in progress after the 6th inning\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is in Gameday ",
+        "expected": "Then the Perfect Game indicator will be seen below the specific game cell on the Out of Town Scoreboard and a red line will highlight the game cell"
+      },
+      {
+        "content": "When a game is in progress after the 6th inning\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is on Gameday\nand the user taps on different games on the Out of Town Scoreboard",
+        "expected": "Then the Perfect Game indicator will still be on the specific game cell on the Out of Town Scoreboard and a red line will highlight the game cell "
+      },
+      {
+        "content": "When a game is in a suspended state after the 6th inning\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is in Gameday ",
+        "expected": "Then the Perfect Game indicator will be seen below the specific game cell on the Out of Town Scoreboard and a red line will highlight the game cell"
+      },
+      {
+        "content": "When a game is in a postponed state after the 6th inning\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is in Gameday ",
+        "expected": "Then the Perfect Game indicator will be seen below the specific game cell on the Out of Town Scoreboard and a red line will highlight the game cell"
+      },
+      {
+        "content": "When a game is in progress\nand the flag on master_scoreboard changes from is_perfect_game=\"Y\" is_no_hitter=\"N\" to is_perfect_game=\"N\" is_no_hitter=\"Y\"\nand the user is in Gameday",
+        "expected": "Then the Perfect Game indicator changes to a No-Hitter indicator when the Out of Town Scoreboard refreshes"
+      },
+      {
+        "content": "When a game is in progress\nand the flag on master_scoreboard changes from is_perfect_game=\"N\" is_no_hitter=\"Y\" to is_perfect_game=\"N\" is_no_hitter=\"N\"\nand the user is in Gameday",
+        "expected": "Then the No-Hitter indicator is removed from the Scoreboard when the Out of Town Scoreboard refreshes"
+      },
+      {
+        "content": "When a game is final\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is in Gameday ",
+        "expected": "Then the Perfect Game indicator will be seen below the specific game cell on the Out of Town Scoreboard and a red line will highlight the game cell"
+      },
+      {
+        "content": "When a game is final\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is in Gameday\nand the user taps on the game with the indicator",
+        "expected": "Then the Perfect Game indicator will be seen on the\n-Out of Town Scoreboard below the game cell with red highlight around the edges\n-Below the Gameday box underneath a line operating the Winning and Losing pitchers (and Save if applicable) and HR (if applicable)"
+      },
+      {
+        "content": "When a game is in progress after the 6th inning\nand the flag on master_scoreboard is set for a No-Hitter\nand the user is in Gameday ",
+        "expected": "Then the No-Hitter indicator will be seen below the specific game cell on the Out of Town Scoreboard (OTSB) and a red line will highlight the game cell"
+      },
+      {
+        "content": "When a game is in progress after the 6th inning\nand the flag on master_scoreboard is set for a No-Hitter\nand the user is on Gameday\nand the user taps on different games on the Out of Town Scoreboard",
+        "expected": "Then the No-Hitter indicator will still be on the specific game cell on the Out of Town Scoreboard and a red line will highlight the game cell "
+      },
+      {
+        "content": "When a game is in a suspended state after the 6th inning\nand the flag on master_scoreboard is set for a No-Hitter\nand the user is in Gameday ",
+        "expected": "Then the No-Hitter indicator will be seen below the specific game cell on the Out of Town Scoreboard (OTSB) and a red line will highlight the game cell"
+      },
+      {
+        "content": "When a game is in a postponed state after the 6th inning\nand the flag on master_scoreboard is set for a No-Hitter\nand the user is in Gameday ",
+        "expected": "Then the No-Hitter indicator will be seen below the specific game cell on the Out of Town Scoreboard (OTSB) and a red line will highlight the game cell"
+      },
+      {
+        "content": "When a game is final\nand the flag on master_scoreboard is set for a No-Hitter\nand the user is in Gameday ",
+        "expected": "Then the No-Hitter indicator will be seen below the specific game cell on the Out of Town Scoreboard (OTSB) and a red line will highlight the game cell"
+      },
+      {
+        "content": "When a game is final\nand the flag on master_scoreboard is set for a No-Hitter\nand the user is in Gameday\nand the user taps on the game with the indicator",
+        "expected": "Then the No-Hitter indicator will be seen on the\n-Out of Town Scoreboard below the game cell with red highlight around the edges\n-Below the Gameday box underneath a line operating the Winning and Losing pitchers (and Save if applicable) and HR (if applicable)"
+      },
+      {
+        "content": "When a game is in progress \nand the flag on master_scoreboard is set for a Perfect Game (or No-Hitter)\nand the user is in Gameday\nand the Hide Scores is On",
+        "expected": "Then the scores and game data and Perfect Game (or No-Hitter) indicator are hidden"
+      },
+      {
+        "content": "When the user is on Gameday with the Perfect Game Indicator (or No-Hitter)\nand Shake to Toggle is On\nand the user shakes the device to turn on Hide Scores",
+        "expected": "Then the scores and Perfect Game (or No-Hitter) indicator in Gameday are hidden"
+      },
+      {
+        "content": "When the user taps on the Perfect Game or No-hitter indicator",
+        "expected": "Then nothing will happen and the indicator is for informational/visual purposes only"
+      },
+      {
+        "content": "When a device is set to Spanish\nand the flag on master_scoreboard is set for a Perfect Game (or No-Hitter)\nand the indicator is on the Scoreboard",
+        "expected": "Then the text in the indicator text will display in Spanish\n\nNo-Hitter - Sin hit\nPerfect Game - Juego perfecto"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659673,
+    "title": "iPad Gameday > Preview > Game Status",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11076",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1490853928,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 84,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is on the Scoreboard or Team Page\r\nand a game is in a Preview status (status=\"Preview\")\r\nand the user taps on the game",
+    "custom_expected": "Then the user is taken to Gameday\r\nand the Game Preview is displayed\r\nTwo head shots should display as well as line ups if they are available",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659674,
+    "title": "iPad Gameday > Preview > OOTSB Entry",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11076",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 85,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing a game in Preview in the Out of Town Scoreboard \r\nand taps on that game from the OOTSB",
+    "custom_expected": "Then the Game Preview is displayed",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659675,
+    "title": "iPad Gameday > Preview",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11076",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1490854446,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 86,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing a game in Game Preview",
+    "custom_expected": "The User will see both team logos (Away then Home team)\r\n(Away Team @ Home Team)\r\n(Game time - Game Location)\r\nProbable Pitcher Thumbnails",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659681,
+    "title": "iPad Gameday > Game Preview > Lineups",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11076",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1490854276,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 92,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing a Game Preview\r\nand a Lineup has been set ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "on an iPad in Regular View\n\nLandscape Full, Landscape 2/3, Portrait\n",
+        "expected": "Then the user will see the following in the Lineups section:\n-Away team on the left, Home team on the right\n-Headers (Player, POS)\n-Lineup order with \n-Club watermarks behind the lineups"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659682,
+    "title": "iPad Gameday > Game Wrap > Final State",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11077",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 93,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is on the Scoreboard\r\nand taps on a game in Final ",
+    "custom_expected": "Then the user is taken to Gameday\r\nand the view is the Wrap",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659683,
+    "title": "iPad Gameday > Game Wrap",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11077",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1490855054,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 94,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is on Gameday\r\nand taps on a game in Final state",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "on an iPad in Full View\n\nLandscape Full, Landscape 2/3, Portrait Full",
+        "expected": "Then the user should be on the Wrap tab\nThe User will see both team logos (Away then Home team)\n(Away Team @ Home Team)\n(Final - Game Location)\nGame Linescore\nLinescore\nAutomated Recap"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659685,
+    "title": "iPad Gameday > Game Wrap > Under Linescore",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11077",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 96,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is on the Wrap for a game in final\r\nand views the under the linescore",
+    "custom_expected": "Then the user should see the following\r\n* Winning pitcher last name (updated record, updated ERA)\r\n* Losing pitcher last name (updated record, updated ERA)\r\n* Save pitcher last name (updated season save total) *if a save was recorded\r\n* Away team home runs - player last name, # of home runs (updated season total) \r\n* Home team home runs - player last name, # of home runs (updated season total)",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659687,
+    "title": "iPad Gameday > Game Wrap > No Recap Article",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11077",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 98,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand on the Wrap for a completed game\r\nand no Recap article in the Game Center file/published from Homebase",
+    "custom_expected": "Then the user should not see a Game Recap text/link\r\n",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659688,
+    "title": "iPad Gameday > Game Wrap > Default View: Wrap",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11077",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 99,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is on Gameday\r\nand on the Box Score tab for a live game\r\nand taps on game in Final in the OOTSB\r\n\r\nrepeat for Summary, Feed, Videos tabs",
+    "custom_expected": "Then the user should be taken to the Wrap tab as default view",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659691,
+    "title": "iPad Gameday > Linescore > Live Top/Bottom",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11247",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 102,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the linescore for a Live game in Top or Bottom inning",
+    "custom_expected": "Then the user should see:\r\n*the runs scored in any inning in bold\r\n*if no runs scored in any inning then 0 (not bold)\r\n*grey box for the current inning (rgba 47 47 47 0.15)",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659693,
+    "title": "iPad Gameday > Linescore > Live Mid/End Inning",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11247",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 104,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the linescore for a live game in mid/end inning",
+    "custom_expected": "Then the user should see:\r\n*the runs scored in any inning in bold\r\n*if no runs scored in any inning then 0 (not bold)",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659694,
+    "title": "iPad Gameday > Linescore > No 9th Inning",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11247",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 105,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Linescore for a game with no 9th inning (home team winning 9th)",
+    "custom_expected": "Then the user should see:\r\n*the runs scored in any inning in bold\r\n*if no runs scored in any inning then 0 (not bold)\r\n*a X in the bottom of the 9th spot",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659695,
+    "title": "iPad Gameday > Linescore > 9th Inning necessary",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11247",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 106,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the linescore for a game with the 9th inning necessary",
+    "custom_expected": "Then the user should see:\r\n*the runs scored in any inning in bold\r\n*if no runs scored in any inning then 0 (not bold)\r\n*see no X in the bottom 9th spot",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659696,
+    "title": "iPad Gameday > Linescore > Extra Innings",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11247",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 107,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the linescore for a game (live or final)\r\n",
+    "custom_expected": "Then the user should see:\r\n*the runs scored in any inning in bold\r\n*if no runs scored in any inning then 0 (not bold)\r\n*Extra innings added to the linescore\r\n*linescore should be scrollable (side to side) to see all innings",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659697,
+    "title": "iPad Gameday > Linescore > Suspended Game",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11247",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 108,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Linescore for a game in Suspended state",
+    "custom_expected": "Then the user should see:\r\n*the runs scored in any inning in bold\r\n*if no runs scored in any inning then 0 (not bold)\r\n*blank for innings prior to the game going in suspended state",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659714,
+    "title": "iPad Gameday > Matchup Module > Full width landscape view - Live game",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10884",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 125,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Matchup Module for a live game",
+    "custom_expected": "Then the user should see:\r\n* Player thumbs\r\n* Pitcher data display\r\n* Batter data display\r\n* Tapping on the full area (thumb and data) should open the player card \r\n* On-base indicator, Count Indicator, Outs Indicator should be displayed",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659716,
+    "title": "iPad Gameday > Matchup Module > Regular landscape view (2/3)",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10884",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 127,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing a Matchup Module for a live game",
+    "custom_expected": "Then the user should see\r\n*Pitcher (headshot and stats)\r\n*At Bat (headshot and stats)\r\n*linescore",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659717,
+    "title": "iPad Gameday > Matchup Module> Truncation handling",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10884",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 128,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Matchup Module for a live game\r\nand a long name is displayed",
+    "custom_expected": "Then Player names should not truncate, only the secondary data will (with … )\r\n\r\nCheck on all multitasking views",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659718,
+    "title": "iPad Gameday > Matchup Module> Regular landscape view (2/3)",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10884",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 129,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Matchup Module\r\nand the game is Live in Mid/End inning state",
+    "custom_expected": "Then the user should see:\r\n* the next 3 batter that are due up in that half inning\r\n* full player name, AVG (season) and #-# (current game)",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659719,
+    "title": "iPad Gameday > Matchup Module> Regular landscape view 02 (50/50)",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10884",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 130,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Matchup Module for a game",
+    "custom_expected": "Then the user should see:\r\n*Current pitcher (headshot, stats)\r\n*Base indicator, count, outs right aligned on the same line as pitcher\r\n*Current Batter (headshot, stats)\r\n*Scroll the current batter sideways to see On Deck batter (headshot, stats)\r\n*Scroll the on deck batter sideways to see In the Hole batter (headshot, stats)\r\n",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659720,
+    "title": "iPad Gameday > Matchup Module > Regular landscape view 02 (50/50)",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10884",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 131,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand the user is viewing the Matchup Modele for a live game in Mid/End inning",
+    "custom_expected": "Then the user should see:\r\n* the next 3 batter that are due up in that half inning\r\n* full player name, AVG (season) and #-# (current game)  ",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659721,
+    "title": "iPad Gameday > Matchup Module > Landscape compact view",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10884",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 132,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Matchup Module for a live game",
+    "custom_expected": "Then the user should see:\r\n*Current pitcher (headshot, stats)\r\n*Base indicator, count, outs right aligned on the same line as pitcher\r\n*Current Batter (headshot, stats) \r\n*Scroll the current batter sideways to see On Deck batter (headshot, stats)\r\n*Scroll the on deck batter sideways to see In the Hole batter (headshot, stats)",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659722,
+    "title": "iPad Gameday > Matchup Module > Landscape compact view",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10884",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 133,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Matchup Module for a game in Mid/End Inning",
+    "custom_expected": "Then the user should see:\r\n• the next 3 batter that are due up in that half inning\r\n• full player name, AVG (season) and #-# (current game)  ",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659723,
+    "title": "iPad Gameday > Matchup Module > Full width portrait view",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10884",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 134,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Matchup Module for a game",
+    "custom_expected": "Then the user should see the following:\r\n* Current Pitcher (headshot and stats)\r\n* Current At Bat (headshot and stats)\r\n* Linescore",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659724,
+    "title": "iPad Gameday > Matchup Module> Full width portrait view",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10884",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 135,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Matchup Module for a game in mid/end inning state",
+    "custom_expected": "Then the user should see:\r\n* the next 3 batter that are due up in that half inning\r\n* full player name, AVG (season) and #-# (current game)\r\n* Large version of the linescore",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659725,
+    "title": "iPad Gameday > Matchup Module> Regular portrait view (2/3)",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10884",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 136,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Matchup Module for a live game",
+    "custom_expected": "Then the user should see:\r\n*Current pitcher (headshot, stats)\r\n*Base indicator, count, outs right aligned on the same line as pitcher\r\n*Current Batter (headshot, stats)\r\n*Scroll the current batter sideways to see On Deck batter (headshot, stats)\r\n*Scroll the on deck batter sideways to see In the Hole batter (headshot, stats)",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659726,
+    "title": "iPad Gameday > Matchup Module> Regular portrait view (2/3)",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10884",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 137,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Matchup Module for game in Mid/End inning state",
+    "custom_expected": "Then the user should see:\r\n* the next 3 batter that are due up in that half inning\r\n* the full player name, AVG (season) and #-# (current game) ",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659727,
+    "title": "iPad Gameday > Matchup Module > Compact portrait view",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10884",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 138,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Matchup Module for a live game",
+    "custom_expected": "Then the user should see:\r\nThen the user should see:\r\n*Current pitcher (headshot, stats)\r\n*Base indicator, count, outs right aligned on the same line as pitcher\r\n*Current Batter (headshot, stats)\r\n*Scroll the current batter sideways to see On Deck batter (headshot, stats)\r\n*Scroll the on deck batter sideways to see In the Hole batter (headshot, stats)",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659728,
+    "title": "iPad Gameday > Matchup Module > Compact portrait view",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10884",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 139,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Matchup Module for a game in Mid/End inning",
+    "custom_expected": "Then the user should see:\r\n* the next 3 batter that are due up in that half inning\r\n* the full player name, AVG (season) and #-# (current game)  ",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659729,
+    "title": "iPad Gameday > Popover and Modal Detail",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11019",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 140,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand taps on a Player Name/Thumbnail ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "in Landscape full width\nor Landscape 2/3 view\nor Portrait full width",
+        "expected": "* Popover arrow should point to text container that it links from\n* point to the specific row item in the list"
+      },
+      {
+        "content": "in  Landscape 50/50 view\nor Landscape compact view \nor Portrait 2/3 view\nor Portrait compact view",
+        "expected": "* Push up a full screen modal web view player card"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659730,
+    "title": "iPad Gameday > Popover > Player Card",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11019",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 141,
+    "custom_preconds": "Given a user on an iOS device",
+    "custom_steps": "When a user in Gameday\r\nand taps on a player name/thumbnail ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "in Landscape full width\nor Landscape 2/3 view\nor Portrait full width",
+        "expected": " Tapping on player names should open the at bat player cards in a popover web view"
+      },
+      {
+        "content": "in Landscape 50/50 view\nor Landscape compact view\nor Portrait 2/3 view\nor Portrait compact view",
+        "expected": " Tapping on player names should open the at bat player cards in a popover web view"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659731,
+    "title": "iPad Gameday > Popover > Field",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11019",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 142,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand taps on the Field icon ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "in Landscape full width\nor Landscape 2/3 view\nor Portrait full width",
+        "expected": "then the field view in a popover\nand popover height should watch the field graphic assets\nand current data display for the field view"
+      },
+      {
+        "content": "in a Landscape 50/50 view\nor Landscape compact view \nor Portrait 2/3 view\nor Portrait compact view",
+        "expected": "then the field icon should open the field view in a full screen modal\nand mimic current iPhone Gameday behavior\nand the current data display for the field view"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659732,
+    "title": "iPad Gameday > Popover > Lineup",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11019",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 143,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand taps on the Lineup icon",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "in Landscape full width\nor Landscape 2/3 view\nor Portrait full width",
+        "expected": "then the lineups icon should open the lineups in a popover\nand the lineups popover should have the same segmented control (as box score) in it's header so the user can switch team lineups\nand the current data display for lineups (compare with Box)"
+      },
+      {
+        "content": "in a Landscape 50/50 view\nor Landscape compact view \nor Portrait 2/3 view\nor Portrait compact view",
+        "expected": "then the lineups icon should open the lineups in a full screen modal\nand the lineups modal should have the same segmented control (see above) in it's header so the user can switch team lineups\nand the current data display for lineups (compare with Box)"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659733,
+    "title": "iPad Gameday > Popover > Dismiss Popover",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11019",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 144,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand is viewing a popover for Player Card, Field, Lineup",
+    "custom_expected": "Then tapping away from the popover should close it",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659734,
+    "title": "iPad Gameday > Popover > Dismiss Modal",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11019",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 145,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand is viewing a modal for Player Card, Field, Lineup",
+    "custom_expected": "Then overlay a \"Close\" action button in the top left of the modal\r\nand tapping the \"Close\" action button should dismiss the modal back down",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659735,
+    "title": "iPad Gameday > Rotate with Popover",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-11019",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 146,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand has a Player Card popover on screen\r\nor a Player Card modal on the screen\r\nand rotates the device",
+    "custom_expected": "Then the Player card will dismiss\r\nand the user will be brought back to Gameday",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659736,
+    "title": "iPad Gameday > Pitch-by-Pitch View > Composite Panel",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10958",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 147,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Pitch-by-Pitch View for a live game",
+    "custom_expected": "Then the user should see the following:\r\n* Game status (Top/Mid/Bot/End Inning #: #-# # out)\r\n* At bat result, once it occurs\r\n* Pitch-by-pitch list for the current at bat \r\n* Previous at bats in that occurred in the respective half inning with result labels \r\n* Previous at bats are tappable, and should expand to list the PBP details for that at bat ",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659738,
+    "title": "iPad Gameday > Pitch-by-Pitch View > Game Status Bar (Live)",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10958",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 149,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Game Status section of the Pitch-by-Pitch module",
+    "custom_expected": "\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "for a game in Top inning",
+        "expected": "Then the user should see the Live status (Top 4th: 3-2, 2 outs)\n"
+      },
+      {
+        "content": "for a game in Bottom inning",
+        "expected": "Then the user should see the Live status (Bot 4th: 3-2, 2 outs)\n"
+      },
+      {
+        "content": "for a game in the Mid inning",
+        "expected": "Then the user should see the Live status (Mid 4th)\nEnd 4th"
+      },
+      {
+        "content": "for a game in End inning",
+        "expected": "Then the user should see the Live status (End 4th)"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659739,
+    "title": "iPad Gameday > Pitch-by-Pitch View > Game Status Bar (In Game Delay)",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10958",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 150,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Game Status section of Pitch-by-Pitch view",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "for a game in delay",
+        "expected": "then the inning, delay, delay reason will be displayed (Top 4: Delayed - Emergency)"
+      },
+      {
+        "content": "for a game in ceremony ",
+        "expected": "then the inning, delay reason will be displayed (Top 4: Ceremony)"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659741,
+    "title": "iPad Gameday > Pitch-by-Pitch View > Game Status Bar (Suspend, Postponed, Forfeit)",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10958",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 152,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Game Status bar in the Pitch-by-Pitch view",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "for a game that is Postponed",
+        "expected": "then the user will see the inning, status, reason (Top 4: Postponed - Emergency)"
+      },
+      {
+        "content": "for a game that is Cancelled",
+        "expected": "then the user will see the inning, status, reason (Top 4: Cancelled - Emergency)"
+      },
+      {
+        "content": "for a game that is Forfeit",
+        "expected": "then the user will see the inning, status, reason (Top 4: Forfeit - Emergency)"
+      },
+      {
+        "content": "for a game that is Suspended",
+        "expected": "then the user will see the inning, status, reason (Top 4: Suspended - Emergency)"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659742,
+    "title": "iPad Gameday > Pitch-by-Pitch View > Game Status Bar (No-hitter, Perfect Game)",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10958",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 119,
+    "updated_on": 1479759958,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 153,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Game Status bar of the Pitch-by-Pitch bar",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "for a Perfect Game",
+        "expected": "Then the Special Note section will appear right align in Game Status bar\nand displayed in red (rgb 208 2 27)\n\nBot 7: 3-2, 2 outs             Perfect Game\n"
+      },
+      {
+        "content": "for a No-hitter",
+        "expected": "Then the Special Note section will appear right align in Game Status bar\nand displayed in red (rgb 208 2 27)\n\nBot 7: 3-2, 2 outs             No-hitter "
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1224379,
+    "title": "iPad Gameday > Pitch-by-Pitch View > Billboard",
+    "section_id": 80095,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "MILBATBAT-1621",
+    "created_by": 65,
+    "created_on": 1522188323,
+    "updated_by": 65,
+    "updated_on": 1522188432,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 154,
+    "custom_preconds": "Given a user is on an iOS device",
+    "custom_steps": "When a user is in Gameday\r\nand viewing the Pitch-by-Pitch View for a live game",
+    "custom_expected": "Then the user should see the premium billboard with the text MiLB.TV",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659590,
+    "title": "Large Chyron - Live State Runs, current inning",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10881",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 1,
+    "custom_preconds": "Given a game has runs in the current inning",
+    "custom_steps": "When a user is viewing the Gameday Large Chyron",
+    "custom_expected": "Then the runs should be noted in bold in addition to the inning indicator",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659591,
+    "title": "Large Chyron - Live State Runs, half inning concluded",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10881",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 2,
+    "custom_preconds": "Given a game has runs in an inning \r\nAND the inning ends",
+    "custom_steps": "When a user is viewing the Gameday Large Chyron",
+    "custom_expected": "Then the runs should be noted in bold ",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659592,
+    "title": "Large Chyron - Game, Warmup",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10881",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 3,
+    "custom_preconds": "Given a game progresses from Preview to Warmup state",
+    "custom_steps": "When a user is viewing the Gameday Large Chyron",
+    "custom_expected": "Then the linescore should be blank except inning headers and team codes",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659593,
+    "title": "Large Chyron - Mid/End Inning",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10881",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 4,
+    "custom_preconds": "Given a game is in the mid or end of an inning",
+    "custom_steps": "When a user is viewing the Gameday Large Chyron",
+    "custom_expected": "Then no inning indicator will be shown",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659594,
+    "title": "Large Chyron - Live No Score, current inning",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10881",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 5,
+    "custom_preconds": "Given a game has no runs in the current inning",
+    "custom_steps": "When a user is viewing the Gameday Large Chyron",
+    "custom_expected": "Then a inning indicator will be shown but no 0",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659595,
+    "title": "Large Chyron - Final, 9th inning necessary",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10881",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 6,
+    "custom_preconds": "Given a away team leads a game after 8 1/2 innings",
+    "custom_steps": "When a user is viewing the Gameday Large Chyron",
+    "custom_expected": "Then no X is shown in the bottom half of the 9th inning",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659596,
+    "title": "Large Chyron - Final, Extra Innings",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10881",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 7,
+    "custom_preconds": "Given a game is in extra innings",
+    "custom_steps": "When a user is viewing the Gameday Large Chyron",
+    "custom_expected": "When additional inning(s) are shown after 9\r\nand linescore should be scroll left and right\r\nand default to the most recent inning",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659597,
+    "title": "Large Chyron - Suspended Game",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10881",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 8,
+    "custom_preconds": "Given a game is in a Suspended State",
+    "custom_steps": "When a user is viewing the Gameday Large Chyron",
+    "custom_expected": "Then the linescore should maintain all data",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659598,
+    "title": "Medium Chyron - Game, Warmup",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10880",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 9,
+    "custom_preconds": "Given a game progresses from Preview to Warmup",
+    "custom_steps": "When a user is viewing the Gameday Medium Chyron",
+    "custom_expected": "Then the game status will show Warm. and all 0 values for RHE",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659599,
+    "title": "Medium Chyron - Game, Live",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10880",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 10,
+    "custom_preconds": "Given a game is in a live status",
+    "custom_steps": "When a user is viewing the Gameday Medium Chyron",
+    "custom_expected": "Then the game status should show current half, mid, or end of inning",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659600,
+    "title": "Medium Chyron - Live, Base Indicator, Count, Outs",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10880",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 11,
+    "custom_preconds": "Given a game is in a live state",
+    "custom_steps": "When a user is viewing the Gameday Medium Chyron",
+    "custom_expected": "Then base indicator, count, outs will be displayed to the right of RHE",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659601,
+    "title": "Medium Chyron - Game Live in Mid/End Inning",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10880",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 12,
+    "custom_preconds": "Given a game is in Mid or End inning",
+    "custom_steps": "When a user is viewing the Gameday Medium Chyron",
+    "custom_expected": "Then the game status (Mid/End) and an empty base indicator should be shown ",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659602,
+    "title": "Medium Chyron - Game End",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10880",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 13,
+    "custom_preconds": "Given a game changes from In Progress to Final",
+    "custom_steps": "When a user is viewing the Gameday Medium Chyron",
+    "custom_expected": "Then game status should change to Final",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659603,
+    "title": "Medium Chyron - Final, Extra Innings",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10880",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 14,
+    "custom_preconds": "Given a game completed in extra innings",
+    "custom_steps": "When a user is viewing the Gameday Medium Chyron",
+    "custom_expected": "Then the game status should change to Final/N with N being the inning number the game completed",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659604,
+    "title": "Medium Chyron - Live, Delayed State",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10880",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 15,
+    "custom_preconds": "Given a game is in a delayed state",
+    "custom_steps": "When a user is viewing the Gameday Medium Chyron",
+    "custom_expected": "Then the game status should change to Del. but no reason be displayed\r\nand the base indicator, count, outs should remain",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659605,
+    "title": "Medium Chyron - Live, Delayed State (Ceremony)",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10880",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 16,
+    "custom_preconds": "Given a game is in a delayed state for a Ceremony",
+    "custom_steps": "When a user is viewing the Gameday Medium Chyron",
+    "custom_expected": "Then the game status should change to Del. but no reason be displayed\r\nand the base indicator, count, outs should remain",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659606,
+    "title": "Medium Chyron - Live, Suspended (prior to 5th inning)",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10880",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 17,
+    "custom_preconds": "Given a game is suspended prior to the start of the 5th inning",
+    "custom_steps": "When a user is viewing the Gameday Medium Chyron",
+    "custom_expected": "Then the game status should show Susp. with no reason indicator\r\nand base indicator, count, out should remain",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659607,
+    "title": "Medium Chyron - Live, Suspended (5th inning and on)",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10880",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 18,
+    "custom_preconds": "Given a game is suspended from the 5th inning and after",
+    "custom_steps": "When a user is viewing the Gameday Medium Chyron",
+    "custom_expected": "Then the game status should show Final/N with N being the inning that the game was called",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659610,
+    "title": "Small Chyron - Game, Warmup",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10879",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 19,
+    "custom_preconds": "Given a game progresses from Preview to Warmup",
+    "custom_steps": "When a user is viewing the Gameday Small Chyron",
+    "custom_expected": "Then the game status should show Warm. when the game progresses from Preview to Warmup\r\nand should show RHE with all 0",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659611,
+    "title": "Small Chyron - Game, Live",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10879",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 20,
+    "custom_preconds": "Given a game is a live state",
+    "custom_steps": "When a user is viewing the Gameday Small Chyron",
+    "custom_expected": "Then the game status should current half, mid or inning with the RHE indicators",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659612,
+    "title": "Small Chyron - Game, Final",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10879",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 21,
+    "custom_preconds": "Given a game is final",
+    "custom_steps": "When a user is viewing the Gameday Small Chyron",
+    "custom_expected": "Then the game status should show Final when completed ",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659613,
+    "title": "Small Chyron - Game, Final with Extra Innings",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10879",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 22,
+    "custom_preconds": "Given a game completed but in extra innings",
+    "custom_steps": "When a user is viewing the Gameday Small Chyron",
+    "custom_expected": "Then the game status should show Final/N with N being the inning the game completed in",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659614,
+    "title": "Small Chyron - Delayed state",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10879",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 23,
+    "custom_preconds": "Given a game is in a delayed state",
+    "custom_steps": "When a user is viewing the Gameday Small Chyron",
+    "custom_expected": "Then the game status should show Del. with no reason",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659615,
+    "title": "Small Chyron - Live, Suspended (prior to 5th inning)",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10879",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 24,
+    "custom_preconds": "Given a game is suspended prior to the start of the 5th inning",
+    "custom_steps": "When a user is viewing the Gameday Small Chyron",
+    "custom_expected": "Then the game status should show Susp. with no reason indicator\r\n",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659616,
+    "title": "Small Chyron - Live, Suspended (5th inning and on)",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10879",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 25,
+    "custom_preconds": "Given a game is suspended from the 5th inning and after",
+    "custom_steps": "When a user is viewing the Gameday Small Chyron",
+    "custom_expected": "Then the game status should show Final/N with N being the inning that the game was called",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659619,
+    "title": "Chyron - Team Matchup",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10882",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 26,
+    "custom_preconds": "Given a team is a MLB team",
+    "custom_steps": "When the user is viewing the Gameday",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Then checks Gameday Large Chyron",
+        "expected": "Then the away team will be over the home team"
+      },
+      {
+        "content": "Then checks Gameday Medium Chyron",
+        "expected": "Then the away team will be over the home team"
+      },
+      {
+        "content": "Then checks Gameday Small Chyron ",
+        "expected": "Then the away team will be over the home team"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659620,
+    "title": "Chyron - Team Matchup Colors/Logo",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10882",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 27,
+    "custom_preconds": "Given a team is a MLB team",
+    "custom_steps": "When the user is viewing the Gameday",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Then checks Gameday Large Chyron",
+        "expected": "The team primary color is the team background cell"
+      },
+      {
+        "content": "Then checks Gameday Medium Chyron",
+        "expected": "The team primary color is the team background cell"
+      },
+      {
+        "content": "Then checks Gameday Small Chyron",
+        "expected": "The team primary color is the team background cell"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659621,
+    "title": "Chyron - Team Matchup Abbrev",
+    "section_id": 147996,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10882",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508886,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 28,
+    "custom_preconds": "Given a team is a MLB team",
+    "custom_steps": "When the user is viewing the Gameday",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Then checks Gameday Large Chyron",
+        "expected": "Then the away_name_abbrev and home_name_abbrev will be displayed (from linescore.xml)"
+      },
+      {
+        "content": "Then checks Gameday Medium Chyron",
+        "expected": "Then the away_name_abbrev and home_name_abbrev will be displayed (from linescore.xml)"
+      },
+      {
+        "content": "Then checks Gameday Small Chyron",
+        "expected": "Then the away_name_abbrev and home_name_abbrev will be displayed (from linescore.xml)"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659645,
+    "title": "Out of Town Scoreboard - All Games",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10878",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 1,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "in Full Width Landscape view",
+        "expected": "all games from selected day are shown\nand game modules should scroll when the user swipes left or right"
+      },
+      {
+        "content": "in Regular Landscape view (2/3)",
+        "expected": "all games from selected day are shown\nand game modules should scroll when the user swipes left or right"
+      },
+      {
+        "content": "in Regular Landscape view 02 (50/50)",
+        "expected": "all games from selected day are shown\nand game modules should scroll when the user swipes left or right"
+      },
+      {
+        "content": "in Full Width Portrait view",
+        "expected": "all games from selected day are shown\nand game modules should scroll when the user swipes left or right"
+      },
+      {
+        "content": "in Regular Portrait view (50/50)",
+        "expected": "all games from selected day are shown\nand game modules should scroll when the user swipes left or right"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659646,
+    "title": "Out of Town Scoreboard - Back Button",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10878",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 2,
+    "custom_preconds": "Given there are multiple games on a day",
+    "custom_steps": "When a user is in the Gameday Out of Town Scoreboard",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "in Full Width Landscape view\nand taps the back button in the upper left ",
+        "expected": "the user is taken back to the scoreboard"
+      },
+      {
+        "content": "in Regular Landscape view (2/3)\nand taps the back button in the upper left",
+        "expected": "the user is taken back to the scoreboard"
+      },
+      {
+        "content": "in Regular Landscape view 02 (50/50)\nand taps the back button in the upper left",
+        "expected": "the user is taken back to the scoreboard"
+      },
+      {
+        "content": "in Full Width Portrait view\nand taps the back button in the upper left ",
+        "expected": "the user is taken back to the scoreboard"
+      },
+      {
+        "content": "in Regular Portrait view (50/50)\nand taps the back button in the upper left ",
+        "expected": "the user is taken back to the scoreboard"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659647,
+    "title": "Out of Town Scoreboard - Selected Game Header",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10878",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 3,
+    "custom_preconds": "Given there are multiple games on a day",
+    "custom_steps": "When a user is in the Gameday Out of Town Scoreboard",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "in Full Width Landscape view\nand taps on a game in the game module",
+        "expected": "Then the user will see <Away Team> <score> @ <Home Team> <score>\nand then see Chal underneath each team"
+      },
+      {
+        "content": "in Regular Landscape view (2/3)\nand taps on a game in the game module",
+        "expected": "Then the user will see <Away Team> <score> @ <Home Team> <score>\nand then see Chal underneath each team"
+      },
+      {
+        "content": "in Regular Landscape view 02 (50/50)\nand taps on a game in the game module",
+        "expected": "Then the user will see <Away Team> <score> @ <Home Team> <score>\nand then see Chal underneath each team"
+      },
+      {
+        "content": "in Full Width Portrait view\nand taps on a game in the game module",
+        "expected": "Then the user will see <Away Team> <score> @ <Home Team> <score>\nand then see Chal underneath each team"
+      },
+      {
+        "content": "in Regular Portrait view (50/50)\nand taps on a game in the game module",
+        "expected": "Then the user will see <Away Team> <score> @ <Home Team> <score>\nand then see Chal underneath each team"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659648,
+    "title": "Out of Town Scoreboard - GDA and MLB.TV icons",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10878",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 4,
+    "custom_preconds": "Given there are multiple games on a day",
+    "custom_steps": "When a user is in the Gameday Out of Town Scoreboard",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "in Full Width Landscape view\n",
+        "expected": "then the Gameday Audio and MLB.TV icons should persist in the upper right \n\n(Tapping on either icon should open the respective EPG in a popover view) "
+      },
+      {
+        "content": "in Regular Landscape view (2/3)\n",
+        "expected": "then the Gameday Audio and MLB.TV icons should persist in the upper right \n\n(Tapping on either icon should open the respective EPG in a popover view) "
+      },
+      {
+        "content": "in Regular Landscape view 02 (50/50)\n",
+        "expected": "then the Gameday Audio and MLB.TV icons should persist in the upper right \n\n(Tapping on either icon should open the respective EPG in a popover view) "
+      },
+      {
+        "content": "in Full Width Portrait view\n",
+        "expected": "then the Gameday Audio and MLB.TV icons should persist in the upper right \n\n(Tapping on either icon should open the respective EPG in a popover view) "
+      },
+      {
+        "content": "In Regular Portrait view (50/50)\n",
+        "expected": "then the Gameday Audio and MLB.TV icons should persist in the upper right \n\n(Tapping on either icon should open the respective EPG in a popover view) "
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659649,
+    "title": "Out of Town Scoreboard - Favorite Team",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10878",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 5,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard\r\nand have a favorite team ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "in Full Width Landscape view",
+        "expected": "the user's favorite team should be sorted to the first slot"
+      },
+      {
+        "content": "in Regular Landscape view (2/3)",
+        "expected": "the user's favorite team should be sorted to the first slot"
+      },
+      {
+        "content": "in Regular Landscape view 02 (50/50)",
+        "expected": "the user's favorite team should be sorted to the first slot"
+      },
+      {
+        "content": "in Full Width Portrait view",
+        "expected": "the user's favorite team should be sorted to the first slot"
+      },
+      {
+        "content": "in Regular Portrait view (50/50)",
+        "expected": "the user's favorite team should be sorted to the first slot"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659650,
+    "title": "Out of Town Scoreboard - Multiple Favorite Teams",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10878",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 6,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard\r\nand has multiple favorite teams",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "in Full Width Landscape view",
+        "expected": " Additional favorite or followed teams should display in proper sort order "
+      },
+      {
+        "content": "in Regular Landscape view (2/3)",
+        "expected": " Additional favorite or followed teams should display in proper sort order "
+      },
+      {
+        "content": "in Regular Landscape view 02 (50/50)",
+        "expected": " Additional favorite or followed teams should display in proper sort order "
+      },
+      {
+        "content": "in Full Width Portrait view",
+        "expected": " Additional favorite or followed teams should display in proper sort order "
+      },
+      {
+        "content": "in Regular Portrait view (50/50)",
+        "expected": " Additional favorite or followed teams should display in proper sort order "
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659656,
+    "title": "Out of Town Scoreboard Game Module - Favorite Team (Preview)",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10877",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 7,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard \r\nand viewing the Game Module for their favorite team for a game in Preview",
+    "custom_expected": "The Game Time will be shown in correct time zone (HH:MM PM ET)\r\nand away team code will be over the home team code\r\nand users favorite team game should be sorted to the first spot, then additional favorite(s)\r\nand a star is displayed after the team name\r\nand the selected/now viewing game's cell background should change to 100% alpha",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659657,
+    "title": "Out of Town Scoreboard Game Module - Team Record, same day (Preview)",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10877",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 8,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard \r\nand on today or tomorrow's date\r\nand viewing the Game Module for their favorite team for a game in Preview",
+    "custom_expected": "Then the team's current record is shown (W-L)",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659658,
+    "title": "Out of Town Scoreboard Game Module - Team Record, +1 future date (Preview)",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10877",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 9,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard \r\nand on date more than 1 day in the future\r\nand viewing the Game Module for their favorite team for a game in Preview",
+    "custom_expected": "Then the team's current record is not shown ",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659659,
+    "title": "Out of Town Scoreboard Game Module - Warmup",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10877",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 10,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard \r\nand viewing the Game Module for their favorite team for a game in Warmup",
+    "custom_expected": "the game start time should change to Warmup\r\nand the records are removed \r\nand empty bases and outs indicators are displayed ",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659660,
+    "title": "Out of Town Scoreboard Game Module - Live",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10877",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 11,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard \r\nand viewing the Game Module for their favorite team for a game in Live",
+    "custom_expected": "Then Warmup should change to inning # \r\nand Top, Bot, Mid and End inning states are displayed \r\nand Scores should display 0/0",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659661,
+    "title": "Out of Town Scoreboard Game Module - Final",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10877",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 12,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard \r\nand viewing the Game Module for their favorite team for a game in Final",
+    "custom_expected": "The Game status should change to \"Final\"\r\nand if the game ends in extra innings it should display as \"Final/13\"\r\nand the On base and outs indicators should be removed ",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659662,
+    "title": "Out of Town Scoreboard Game Module - Delayed",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10877",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 13,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard \r\nand viewing the Game Module for a game in delayed state",
+    "custom_expected": "the current inning is displayed appended with Del.\r\nand the score, on base, outs indicators should maintain the data as the game went into delay ",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659663,
+    "title": "Out of Town Scoreboard Game Module - Suspended",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10877",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 14,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard \r\nand viewing the Game Module for a game in suspended state",
+    "custom_expected": "the current inning is displayed with SUSP\r\nand the score, on base, outs indicators should  maintain the data as the game was suspended ",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659664,
+    "title": "Out of Town Scoreboard Game Module - Postponed",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10877",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 15,
+    "custom_preconds": "Given there are multiple MLB games on a given day\r\n",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard \r\nand viewing the Game Module for a game in postponed state",
+    "custom_expected": "the \"status_brief\" of Postponed will be displayed \r\nand no makeup game date will be displayed on the OOTS\r\nand the runs, count, outs, base indicator will be removed",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659665,
+    "title": "Out of Town Scoreboard Game Module - Cancelled",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10877",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 16,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard \r\nand viewing the Game Module for a game in cancelled state",
+    "custom_expected": "the \"status_brief\" of Cancelled will be displayed\r\nand no makeup game date will be displayed on the OOTS\r\nand the runs, count, outs, base indicator will be removed",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659667,
+    "title": "Out of Town Scoreboard Game Module - Delayed Start, Ceremony",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10877",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 17,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard \r\nand viewing the Game Module for a game in Delayed Start (Ceremony) state",
+    "custom_expected": "Then the \"status_brief\" of Cer will be displayed\r\nand the status of Delayed Start will not be displayed\r\nand the runs, count, outs, base indicator will not be displayed",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659668,
+    "title": "Out of Town Scoreboard Game Module - In Game Delay, Ceremony",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10877",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 18,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard \r\nand viewing the Game Module for a game in Delayed (Ceremony) state",
+    "custom_expected": " the  \"status_brief\" of Cer. will be displayed\r\nand the status of Delayed will not be displayed\r\nand the inning, score, bases and outs indicators will be displayed",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659671,
+    "title": "Out of Town Scoreboard - No Hitter",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10876",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 19,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard \r\nand a game is in progress after the 6th inning\r\nand the flag on master_scoreboard is set for a No-Hitter",
+    "custom_expected": "the No-hitter alert text will be displayed after the current game state\r\nand the text of the alert will be in red",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659672,
+    "title": "Out of Town Scoreboard - Perfect Game",
+    "section_id": 147997,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10876",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 20,
+    "custom_preconds": "Given there are multiple MLB games on a given day\r\n",
+    "custom_steps": "When the user is on the Gameday Out of Town Scoreboard \r\nand a game is in progress after the 6th inning\r\nand the flag on master_scoreboard is set for a Perfect Game",
+    "custom_expected": "the Perfect Game alert text will be displayed after the current game state\r\nand the text of the alert will be in red",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659651,
+    "title": "Compact View - Selected Game",
+    "section_id": 147998,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10883",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508982,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 1,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When a user selects a game from the Scoreboard",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "in Compact landscape view",
+        "expected": "Only the game that the user has tapped on from the scoreboard will be displayed"
+      },
+      {
+        "content": "in Compact portrait view",
+        "expected": "Only the game that the user has tapped on from the scoreboard will be displayed"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659652,
+    "title": "Compact View - Back Button",
+    "section_id": 147998,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10883",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508982,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 2,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When a user selects a game from the Scoreboard",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "in Compact landscape view\nand taps on the back button",
+        "expected": "the user is taken back to the scoreboard view"
+      },
+      {
+        "content": "in Compact portrait view\nand taps on the back button",
+        "expected": "the user is taken back to the scoreboard view"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659653,
+    "title": "Compact View - Team Name",
+    "section_id": 147998,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10883",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508982,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 3,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When a user selects a game from the Scoreboard",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "in Compact landscape view",
+        "expected": "the away team is displayed on top of the home team\nand the team code is used for home and away teams (NYY, BOS)"
+      },
+      {
+        "content": "in Compact portrait view",
+        "expected": "the away team is displayed on top of the home team\nand the team code is used for home and away teams (NYY, BOS)"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659654,
+    "title": "Compact View - Game States",
+    "section_id": 147998,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10883",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508982,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 4,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When a user selects a game from the Scoreboard",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "in Compact landscape view",
+        "expected": "the Inning should support Top, Bot, Mid, End and all applicable game states\nand use\"status_brief\" for the game states"
+      },
+      {
+        "content": "in Compact portrait view",
+        "expected": "the Inning should support Top, Bot, Mid, End and all applicable game states\nand use\"status_brief\" for the game states"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 659655,
+    "title": "Compact View - Audio Icon",
+    "section_id": 147998,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "IAB-10883",
+    "created_by": 119,
+    "created_on": 1479759958,
+    "updated_by": 65,
+    "updated_on": 1526508982,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1113,
+    "display_order": 5,
+    "custom_preconds": "Given there are multiple MLB games on a given day",
+    "custom_steps": "When a user selects a game from the Scoreboard",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "in Compact landscape view\nand taps on the audio icon",
+        "expected": "the Audio EPG screen will launch"
+      },
+      {
+        "content": "in Compact portrait view\nand taps on the audio icon",
+        "expected": "the Audio EPG screen will launch"
+      }
+    ],
+    "custom_feature_tag": null
+  }
+]

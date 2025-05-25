@@ -1,0 +1,38 @@
+[
+  {
+    "id": 12919,
+    "suite_id": 1476,
+    "name": "Payment Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 12926,
+    "suite_id": 1476,
+    "name": "Agents & Agencies",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 13083,
+    "suite_id": 1476,
+    "name": "Pro Player Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 13144,
+    "suite_id": 1476,
+    "name": "Advance Search",
+    "description": null,
+    "parent_id": 13083,
+    "display_order": 6,
+    "depth": 1
+  }
+]

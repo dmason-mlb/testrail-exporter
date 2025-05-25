@@ -1,0 +1,11 @@
+{
+  "id": 18666,
+  "name": "Native Standings",
+  "description": "WIKI - https://wiki.mlbam.com/display/mobile/Native+Standings#NativeStandings-RegularSeasonDivisionalStandings\r\n\r\nAPI - https://wiki.mlbam.com/pages/viewpage.action?spaceKey=SD&title=a.+Baseball+Data+API\r\n\r\nKey Dates - https://wiki.mlbam.com/display/QAspace/Sports+Data+API+in+At+Bat#SportsDataAPIinAtBat-standings",
+  "project_id": 4,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/18666"
+}

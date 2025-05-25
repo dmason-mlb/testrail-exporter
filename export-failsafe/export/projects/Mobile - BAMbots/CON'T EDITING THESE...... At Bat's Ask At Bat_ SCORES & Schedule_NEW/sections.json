@@ -1,0 +1,29 @@
+[
+  {
+    "id": 146390,
+    "suite_id": 20301,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 146391,
+    "suite_id": 20301,
+    "name": "Scores",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 146392,
+    "suite_id": 20301,
+    "name": "Schedules (wiki not updated with this info yet)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "Test Case",
+    "is_default": true
+  },
+  {
+    "id": 6,
+    "name": "MCP Template",
+    "is_default": false
+  }
+]

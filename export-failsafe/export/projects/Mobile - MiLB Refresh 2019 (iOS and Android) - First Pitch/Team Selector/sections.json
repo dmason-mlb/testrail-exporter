@@ -1,0 +1,38 @@
+[
+  {
+    "id": 303658,
+    "suite_id": 43444,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 303659,
+    "suite_id": 43444,
+    "name": "Class Filters",
+    "description": null,
+    "parent_id": 303658,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 303660,
+    "suite_id": 43444,
+    "name": "MLB Affiliate Filter",
+    "description": null,
+    "parent_id": 303658,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 303661,
+    "suite_id": 43444,
+    "name": "Search Feature",
+    "description": null,
+    "parent_id": 303658,
+    "display_order": 4,
+    "depth": 1
+  }
+]

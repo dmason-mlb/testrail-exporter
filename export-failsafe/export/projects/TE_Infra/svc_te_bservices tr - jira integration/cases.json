@@ -1,0 +1,24 @@
+[
+  {
+    "id": 24090442,
+    "title": "svc_te_bservices test case tr-jira",
+    "section_id": 1245795,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": 1892,
+    "refs": "TESTINF-1775",
+    "created_by": 250,
+    "created_on": 1634680310,
+    "updated_by": 250,
+    "updated_on": 1634680310,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 424368,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  }
+]

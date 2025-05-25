@@ -1,0 +1,65 @@
+[
+  {
+    "id": 2036953,
+    "suite_id": 704986,
+    "name": "Next Ticketed Event V2 Home Tab Card",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 2036954,
+    "suite_id": 704986,
+    "name": "Venue Images/Iconography/Links",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 2038610,
+    "suite_id": 704986,
+    "name": "Directions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 2036956,
+    "suite_id": 704986,
+    "name": "Weather Kit",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 2036957,
+    "suite_id": 704986,
+    "name": "Wallet",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 2036958,
+    "suite_id": 704986,
+    "name": "EventHub Analytics",
+    "description": "As a Ballpark product owner, I want to be able to report on page views and clicks based on the Event Hub feature.\nAs a business stakeholder, I want TrackAction & TrackStates for Ticket Management & drawer items to be implemented, so that I can analyze user interactions with ticket management features\n\nAndroid:[BPA-7980](https://baseball.atlassian.net/browse/BPA-7980)",
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 2038898,
+    "suite_id": 704986,
+    "name": "Event Hub - My Tickets",
+    "description": "https://baseball.atlassian.net/browse/BPA-7973",
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  }
+]

@@ -1,0 +1,883 @@
+[
+  {
+    "id": 50505,
+    "title": "Bundling/Config",
+    "section_id": 7337,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1424223419,
+    "updated_by": 84,
+    "updated_on": 1508530235,
+    "estimate": null,
+    "estimate_forecast": "9m 34s",
+    "suite_id": 983,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user opens the app for the first time\nAnd navigates to the Gameday section by tapping on a game cell on the scoreboard",
+        "expected": "Then the user should be able to open the Gameday section\nAnd the user should be able to see on the Plays tab that the version number of responsive Gameday matches the version bundled with the app."
+      },
+      {
+        "content": "When a new version of Gameday is put into extras:\n\n<responsivegameday>\n<enabled>true</enabled>\n<version>3.0.0-android.23</version>\n<url>https://prod-gameday.mlbstatic.com/app-android/3.0.0-android.23/bundle/index.html</url>\n</responsivegameday>\n\nOR\n\nmap locally the appconfig file (https://qa-atbatappconfig.mlb.com/android/....../extras.xml) and change the version number in the file",
+        "expected": "Then when the user enters, leaves and returns to Gameday, the new version should be loaded.\nAnd the user should be able to see the new version number on the Plays tab. "
+      }
+    ]
+  },
+  {
+    "id": 910261,
+    "title": "Tablet (7 inch)",
+    "section_id": 7337,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1490307688,
+    "updated_by": 84,
+    "updated_on": 1490309488,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 983,
+    "display_order": 6,
+    "custom_preconds": "7 inch Tablets \r\n\r\n(Nexus 7, Kindle Fire 7)",
+    "custom_steps": "When a user launches Gameday on a 7 inch tablet\r\nand the device is in Landscape",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Layout (Live state)",
+        "expected": "Then the batter and strike zone graphic will take up about two-thirds of the screen \n\nCurrent Pitching/At Bat data and recent plays will be located underneath the batter graphic if the user scrolls up\n\nBox/Plays/Feed/Video/Field tabs will be on the right side module\n\nR/H/E, Manager Challenges, Basepads, Balls/Strikes/Outs dot graphic, Pitching/AtBat, On Deck/In the Hole data located as a top header"
+      },
+      {
+        "content": "In between innings (Live state)",
+        "expected": "Then the top header will display the following data:\nUp Next, On Deck, In the Hole\n\nand each category will have the following player data:\nThumbnail\n[Last Name] [#] [position]\n[H-AB], [AVG], [HR], [RBI]"
+      },
+      {
+        "content": "Plays (Final state)",
+        "expected": "Scoring Plays will be located on the left side\n\nAll Plays will be located on the right side\nand tapping to switch the inning should switch to that inning's plays\nand should have no effect on the Scoring play side"
+      }
+    ]
+  },
+  {
+    "id": 910259,
+    "title": "Tablet (Larger than 7 inch)",
+    "section_id": 7337,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1490306151,
+    "updated_by": 84,
+    "updated_on": 1490309480,
+    "estimate": null,
+    "estimate_forecast": "4m 29s",
+    "suite_id": 983,
+    "display_order": 7,
+    "custom_preconds": "Tablets larger than 7 inch",
+    "custom_steps": "When a user launches Gameday on a larger than 7 inch tablet\r\nand the device is in Landscape",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Layout (Live state)",
+        "expected": "Then the batter and strike zone graphic will be located in the middle of the screen \n\nCurrent Pitching/At Bat data and recent plays will be on the left side module\nwith the score, inning state, pitch count, outs, and basepad top header\n\nBox/Plays/Feed/Video/Field tabs will be on the right side module\n\nLinescore, Manager Challenges, Basepads, Balls/Strikes/Outs dot graphic, Pitching/AtBat, On Deck/In the Hole data located as the bottom footer"
+      },
+      {
+        "content": "In between innings (Live state)",
+        "expected": "Then the left module will collapse\nand the bottom footer will display the following data:\nUp Next, On Deck, In the Hole\n\nand each category will have the following player data:\nThumbnail\n[Last Name] [#] [position]\n[H-AB], [AVG], [HR], [RBI]"
+      },
+      {
+        "content": "When the user taps the left or right arrows located right above the bottom footer (Live state)",
+        "expected": "Then the left arrow will collapse the left module\nand the right arrow will collapse the right module\nand tapping on the arrows again will bring back the modules"
+      },
+      {
+        "content": "Plays (Final state)",
+        "expected": "Scoring Plays will be located on the left side\n\nAll Plays will be located on the right side\nand tapping to switch the inning should switch to that inning's plays\nand should have no effect on the Scoring play side"
+      }
+    ]
+  },
+  {
+    "id": 50506,
+    "title": "Preview state",
+    "section_id": 145335,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1424223468,
+    "updated_by": 84,
+    "updated_on": 1508530645,
+    "estimate": null,
+    "estimate_forecast": "8m 15s",
+    "suite_id": 983,
+    "display_order": 1,
+    "custom_preconds": "Preview state:\r\nLineups Tab\r\nMatchup Tab\r\n\r\nNo Live data should be visible. ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user enters Gameday for a game in a Preview state",
+        "expected": "Then the user should be taken to the Preview page of Gameday"
+      },
+      {
+        "content": "When the user navigates to the Preview page for a game in a Preview state",
+        "expected": "Then the user should see:\nTeam Logos (Away on Left, Home on Right) with the team records underneath\nTeam name matchup [Team] @ [Team] in the middle\nGame Date\nGame Time\nVenue/Stadium\n\"Buy Tickets\" link\nTV/Audio feeds\nStarting Pitcher action shot & stats if available\nGame Preview blurb if available"
+      },
+      {
+        "content": "When the user taps the \"Buy Tickets\" link",
+        "expected": "Then the user will be redirected to a webview where they can purchase tickets from the home team's tickets site"
+      },
+      {
+        "content": "When the user navigates to the Preview page for a game in a state of \"Delayed Start\"",
+        "expected": "Then the user should see the Preview info for the game\nAnd the delay reason should be noted under the game info"
+      },
+      {
+        "content": "When the user navigates to Gameday for a game that has been postponed",
+        "expected": "Then the user should see the page in a Preview state\nBut the postponement and a reason should be indicated in red text. (eg. \"Postponed: Rain\")"
+      }
+    ]
+  },
+  {
+    "id": 1209951,
+    "title": "Lineups & Matchup Tabs",
+    "section_id": 145335,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508530437,
+    "updated_by": 84,
+    "updated_on": 1508530583,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 983,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navigates to the Preview page for a game in a Preview state\nand the lineups are available",
+        "expected": "Then the user should be taken to the Preview page of Gameday\nand there should be tabs for Lineups and Matchup right underneath the game info\nwith Lineups as the default selected tab"
+      },
+      {
+        "content": "When the user navigates to the Preview page for a game in a Preview state\nand the lineups are not yet available",
+        "expected": "Then the user should be taken to the Preview page of Gameday\nand the matchup info will be listed underneath the probable pitchers \nbut only if there are probable pitchers listed"
+      },
+      {
+        "content": "When the user taps on the Lineups tab",
+        "expected": "Then the user should see the home and away teams' lineups\nand there should be two tabs available: Standard and Statcast\nwith Standard selected as the default"
+      },
+      {
+        "content": "When the user taps on the Standard tab",
+        "expected": "Then the lineup data will be listed in Standard categories"
+      },
+      {
+        "content": "When the user taps on the Statcast tab",
+        "expected": "Then the lineup data will be listed in Statcast categories\nand there should be a key for the category abbreviations available at the bottom"
+      },
+      {
+        "content": "When the user taps on the Matchup tab",
+        "expected": "Then the user should see the matchup info for batters vs the probable pitchers"
+      }
+    ]
+  },
+  {
+    "id": 1209960,
+    "title": "Live State",
+    "section_id": 145336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508531861,
+    "updated_by": 84,
+    "updated_on": 1508532058,
+    "estimate": null,
+    "estimate_forecast": "8m 24s",
+    "suite_id": 983,
+    "display_order": 2,
+    "custom_preconds": "Live State:\r\n\r\nLive Tab\r\nBox Tab\r\nPlays Tab\r\nFeed Tab\r\nVideo Tab\r\nField Tab",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navigates to the Gameday section for a game in a 'Warmup' state",
+        "expected": "Then Gameday should be a in a Live State\nAnd the user should see the \"Warmup\" status indicated at the top"
+      },
+      {
+        "content": "When the user navigates to the Gameday section for a game that is in a 'Live' or in progress state",
+        "expected": "Then Gameday should be a in a Live State\nAnd the user should see the game status information at the top\n\nUser should see:\nTeam matchup (Away / Home) with each team's primary color as its background\nScore\nInning status (eg. Top 2)\nCount/Outs (eg. 2-1, 2 out)\nBasepad information"
+      },
+      {
+        "content": "When the user navigates to the Gameday section for a game that is in a \"Delayed\" state (in-game delay)",
+        "expected": "Then Gameday should be in a Live State\nAnd the user should see the delay and the reason indicated at the top (eg. \"Delayed: [delay reason]\")\nand all the Gameday tabs should remain active and accessible"
+      },
+      {
+        "content": "When the game goes into a suspended state",
+        "expected": "Then the suspension information should be noted in the top bar in the Gameday section\n(eg. \"Suspended: [reason]\")\nBut all the Gameday tabs should remain active and accessible"
+      },
+      {
+        "content": "If a game is in a live state\nAnd it becomes postponed",
+        "expected": "Then the Gameday section should update\nAnd the user should be kicked to the Preview tab where the Postponement information is noted\nAnd the user should not longer be able to access the tabs for a Live game"
+      }
+    ]
+  },
+  {
+    "id": 1209953,
+    "title": "Data Updates",
+    "section_id": 145336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508530698,
+    "updated_by": 84,
+    "updated_on": 1508530878,
+    "estimate": null,
+    "estimate_forecast": "18m 52s",
+    "suite_id": 983,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the Gameday data begins to update for each game",
+        "expected": "Then the updates should be reflected in the Gameday view on each tab\nAnd the user should not have to refresh the view or change tabs to see the data updating\n(Check each tab updates properly)"
+      },
+      {
+        "content": "When the pitch count updates",
+        "expected": "Then the data should be properly reflected in the top bar\n\n[#Balls] - [#Strikes]"
+      },
+      {
+        "content": "When the inning state changes",
+        "expected": "Then the innings should be properly reflected in the top bar\n\nTop 2\nMid 2\nBot 2\nEnd 2\n\nFor each inning"
+      },
+      {
+        "content": "When the basepad occupation changes",
+        "expected": "Then the bases should become highlighted/darkened properly in the top bar"
+      },
+      {
+        "content": "When the number of outs changes",
+        "expected": "Then the number of outs should be properly reflected in the top bar"
+      }
+    ]
+  },
+  {
+    "id": 1209959,
+    "title": "Live Play-by-Play",
+    "section_id": 145336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508530912,
+    "updated_by": 84,
+    "updated_on": 1517256649,
+    "estimate": null,
+    "estimate_forecast": "17m 10s",
+    "suite_id": 983,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user is viewing the Live Tab\nAnd a pitch is thrown",
+        "expected": "Then each pitch should show the proper color:\n\nStrike - Red\nBall - Green\nIn Play - Blue"
+      },
+      {
+        "content": "Verify batters appear on their correct side",
+        "expected": "Left handed batters should appear on the right side of the plate\nRight handed batters should appear on the left side of the plate\nSwitch hitters should appear on the side of the plate opposite the handedness of the pitcher"
+      },
+      {
+        "content": "When the user taps on a play that has occurred in the current inning on the Live tab",
+        "expected": "Then the play should expand\nand the arrow on the Play pill should now be pointing up\nand the user should be able to see the pitches that occurred during that at bat\nand there should be an option to switch over to the strike zone graphic"
+      },
+      {
+        "content": "When the user taps to switch over to the strike zone graphic for a play that has occurred",
+        "expected": "Then the user should see the strike zone graphic\nand the at bat's pitches should be displayed where they were thrown and in their proper color"
+      },
+      {
+        "content": "When the user is viewing a live game on the Live tab\nThen the pitcher information should appear correct",
+        "expected": "Format of pitcher name should be: \n\"Pitching: [#] [LHP/RHP]\"\n\"First, Last Name\"\nFormat of pitcher stats should be: \"[#innings pitched]IP ([#pitches]P [#strikes]S), [#ERA]\""
+      },
+      {
+        "content": "When the user is viewing a live game on the Live tab\nThen the batter information should appear correct",
+        "expected": "Format of batter name should be:\n\"At Bat: [#] [position] (R/L)\"\n\"First, Last Name\"\nFormat of batter stats should be: \"[H for AB], [AVG], [OPS]\""
+      },
+      {
+        "content": "Verify each play type appears and its pill is reflected correctly in the proper color",
+        "expected": "Check:\n\nGREEN:\nSingle\nDouble\nTriple\nHome Run\nWalk\n\nRED:\nStrikeout\nGroundout\nFlyout\nPop Out\nField Error"
+      },
+      {
+        "content": "When the user accesses the Gameday section for a game with limited or no pitch by pitch data",
+        "expected": "Then the user should see an indication in the section that there is 'Limited pitch by pitch data available' or there is 'No pitch data available for this game"
+      }
+    ]
+  },
+  {
+    "id": 1209954,
+    "title": "Boxscore",
+    "section_id": 145336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508530730,
+    "updated_by": 84,
+    "updated_on": 1508531219,
+    "estimate": null,
+    "estimate_forecast": "15m 16s",
+    "suite_id": 983,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the Box Tab during a live game",
+        "expected": "Then the Box tab should open correctly"
+      },
+      {
+        "content": "When data updates during the game while the user is on the Box tab",
+        "expected": "Then date in the box tab should update correctly\nAnd the user should not have to leave or refresh for the data to update"
+      },
+      {
+        "content": "Verify the box score has a linescore",
+        "expected": "Linescore should be at top of view\nAway team should be above home team\nInning status should be reflected by highlighted cell in linescore\nScore data should be up to date in linescore for each inning\nRuns, Hits, Errors should be correct in the linescore"
+      },
+      {
+        "content": "When the user looks at the box score tab for a game that went extra innings",
+        "expected": "Then the user should be able to tap left and right to navigate to the extra innings and back to first innings of linescore"
+      },
+      {
+        "content": "Verify box score section of Box tab",
+        "expected": "Then the Away team should be listed to the Left of the Home Team on the box score tab"
+      },
+      {
+        "content": "When the user taps either team's tab on the Box score section",
+        "expected": "Then the user should be able to switch between both team's box scores\n(Verify lineups are correct for selected game data)"
+      },
+      {
+        "content": "When the user taps on a player's name in the Box score section",
+        "expected": "Then the player card for the selected player should open\nAnd the user should see \"Today's stats\" among the stats for the player\n(there should be a \"game\" tab accessible on the player card)"
+      },
+      {
+        "content": "Verify players in the Box score tab have the correct stats",
+        "expected": "Hitters should each have:\nAB, R, H, RBI, BB, SO, LOB, AVG\n\nPitchers should each have:\nIP, H, R, ER, BB, SO, HR, ERA"
+      },
+      {
+        "content": "When the user taps the \"AVG\" category header",
+        "expected": "Then the category will switch over to \"OPS\"\nand the box data will reflect this change"
+      },
+      {
+        "content": "When \"OPS\" is tapped",
+        "expected": "Then the category will switch back to \"AVG\"\nand the box data will reflect this change"
+      },
+      {
+        "content": "Verify the Box score data is refreshing",
+        "expected": "The batter and pitcher data should refresh as the game progresses\nand the current batter should be highlighted in the team's primary color"
+      }
+    ]
+  },
+  {
+    "id": 1209955,
+    "title": "Plays",
+    "section_id": 145336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508530732,
+    "updated_by": 84,
+    "updated_on": 1508531361,
+    "estimate": null,
+    "estimate_forecast": "14m 3s",
+    "suite_id": 983,
+    "display_order": 6,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the Plays Tab during a live game",
+        "expected": "Then the plays tab should open correctly\nAnd the plays tab should have two tabs:\nScoring\nAll Plays"
+      },
+      {
+        "content": "When the user taps on either tab",
+        "expected": "Then each tab should open correctly\nAnd on the All Plays tab, each inning that has been played should be selectable"
+      },
+      {
+        "content": "When the user is on either of the tabs in the Plays tab and the game data is updating",
+        "expected": "Then the user should see the data updating correctly on the tabs\nAnd the user should not need to toggle or leave the tab to see the data update on the tab"
+      },
+      {
+        "content": "When the user taps on the All Plays Tab\nAnd the user taps on each inning",
+        "expected": "Then the plays for each inning should appear\nAnd the inning information should appear in the data (eg. \"Top of the 4th\")\n(Verify a game with extra innings as well)"
+      },
+      {
+        "content": "When a Game Event play occurs",
+        "expected": "Then the plays should appear in plain black text\nAnd the Ball/Strike situation when the play occurred should be displayed as a dot graphic with the number of dots filled in\n(green dots for balls, red dots for strikes)\nAnd the result of the play should appear as white text in a colored pill (depending on the play) with an arrow to expand"
+      },
+      {
+        "content": "When the user taps a game event play",
+        "expected": "Then the play should expand\nand the arrow on the Play pill should now be pointing up\nand the user should be able to see the pitches that occurred during that at bat\nand there should be an option to switch over to the strike zone graphic"
+      },
+      {
+        "content": "Verify strike zone graphic data and pitch data match up",
+        "expected": "Then the number of pitches and pitch colors should match up"
+      },
+      {
+        "content": "When the user is viewing a play on either tab that contains a scoring play",
+        "expected": "Then the score change should appear outlined next to the play pill\n(eg. \"MIN 0 - DET 1\")"
+      },
+      {
+        "content": "When a non game event play occurs:\n- Pitcher Change\n- Defensive Substitution\n- On Field Delay\n- Offensive substitution",
+        "expected": "Then those plays should appear in the All Plays tab with a greyed background for the cell"
+      },
+      {
+        "content": "When the user scrolls up and down in a given inning on the plays tab",
+        "expected": "Then the Away/Home heading should be clearly noted by a dark grey bar with the team logo and the inning"
+      }
+    ]
+  },
+  {
+    "id": 1209956,
+    "title": "Feed",
+    "section_id": 145336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508530744,
+    "updated_by": 84,
+    "updated_on": 1522262395,
+    "estimate": null,
+    "estimate_forecast": "15m 4s",
+    "suite_id": 983,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the Feed tab",
+        "expected": "Then the user will be taken to the color feed section\nand game events will be listed in reverse chronological order"
+      },
+      {
+        "content": "When there is a scoring play",
+        "expected": "Then the scoring play text will be highlighted beige\nand the score text (eg. NYY 5 - TB 5) will be highlighted green"
+      },
+      {
+        "content": "When the user taps on a player name or thumbnail in the Feed tab\n(verify both)",
+        "expected": "Then the user's player card should launch"
+      },
+      {
+        "content": "When there are video highlights available for the game",
+        "expected": "Then they will be included in the Feed tab"
+      },
+      {
+        "content": "When the user launches video highlights from the Feed tab",
+        "expected": "Then they should play without issue"
+      },
+      {
+        "content": "When the user taps the three dots at the top right of the video thumbnail\n",
+        "expected": "Then the user will be prompted with options to share the video highlight"
+      },
+      {
+        "content": "Verify video highlight sharing options\n(Gmail, Twitter, Facebook, Messages)",
+        "expected": "The user should successfully be able to share the video highlight"
+      },
+      {
+        "content": "When data updates during the game while the user is on the Feed tab",
+        "expected": "Then game events should update as they occur"
+      }
+    ]
+  },
+  {
+    "id": 1209958,
+    "title": "Videos",
+    "section_id": 145336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508530754,
+    "updated_by": 84,
+    "updated_on": 1520611274,
+    "estimate": null,
+    "estimate_forecast": "37m 59s",
+    "suite_id": 983,
+    "display_order": 8,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the Video Tab for a live game that has highlights",
+        "expected": "Then the user should be taken to the videos tab\nAnd the user should see either a default thumbnail image or placeholder thumbnails for each video"
+      },
+      {
+        "content": "When a Lite user taps on the Video Tab for a live game",
+        "expected": "Then the user will NOT be gated and will be able to view the tab"
+      },
+      {
+        "content": "When the user taps on a video",
+        "expected": "Then the video should play without issue"
+      },
+      {
+        "content": "When a Lite user taps on a video",
+        "expected": "Then the user will see a pre-roll ad play before the video"
+      },
+      {
+        "content": "When the user changes the language on the device to something other than English/Spanish\nAnd the user taps on a video",
+        "expected": "Then the video should play without issue"
+      },
+      {
+        "content": "Verify user can play video across network conditions",
+        "expected": "Check on Carrier/Wifi\nCheck on low bandwidth"
+      },
+      {
+        "content": "Verify video cell display",
+        "expected": "Each video should have:\n\nThumbnail with Play button\nBlurb underneath thumbnail"
+      },
+      {
+        "content": "When the user is playing a Gameday audio stream\nAnd the user begins playing a video highlight",
+        "expected": "Then the audio stream should pause\nAnd the video should begin to play\nAnd the user should be able to see and hear the video stream"
+      },
+      {
+        "content": "When the user is playing an audio stream from another application\nAnd the user begins playing a video highlight",
+        "expected": "Then the audio stream should pause\nAnd the video should begin to play\nAnd the user should be able to see and hear the video stream"
+      },
+      {
+        "content": "When the user is playing a video\nAnd the user receives and answers a phone call",
+        "expected": "The the video should stop\nAnd when the user answers the phone call the video should not begin to play again"
+      },
+      {
+        "content": "When the user is playing a video\nAnd the user receives a text message or other notification",
+        "expected": "Then the user should be able to hear the alert\nAnd the video should continue to play"
+      },
+      {
+        "content": "When the user is playing a video\nAnd an alarm goes off on the device",
+        "expected": "Then the Video will pause briefly\nAnd we will successfully receive the alarm\nAnd the Video will continue to play"
+      },
+      {
+        "content": "When the user is on the Video tab\nAnd new videos are published to the game",
+        "expected": "The the tab should refresh\nAnd the new videos should appear\nAnd the user should not need to leave the tab to see new videos appear"
+      },
+      {
+        "content": "When the user navigates to the video section during a live game\nAnd there are no highlights available",
+        "expected": "Then the user should see a message saying \"No videos available\""
+      }
+    ]
+  },
+  {
+    "id": 1209957,
+    "title": "Field",
+    "section_id": 145336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508530752,
+    "updated_by": 84,
+    "updated_on": 1508531846,
+    "estimate": null,
+    "estimate_forecast": "10m 12s",
+    "suite_id": 983,
+    "display_order": 9,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the Field Tab",
+        "expected": "Then the field tab should open\nAnd the user should be able to see the field information for the correct field for the game the user is viewing"
+      },
+      {
+        "content": "When the user is on the Field tab\nAnd the game data is updating",
+        "expected": "The the tab should refresh\nAnd the user should see the batters, runners and fielders update on the field tab\nAnd the user should not need to leave the tab to see the updates occur"
+      },
+      {
+        "content": "Verify Field tab data is accurate",
+        "expected": "Then the stadium name should appear correctly\nAnd the field graphic should appear correctly\nAnd the players should appear correctly:\nPitcher/Catcher/Fielders\nBatter/Baserunners/On Deck & In the Hole hitters"
+      },
+      {
+        "content": "Verify field data options",
+        "expected": "There should be data options located above the field graphic:\n\nOffense\nDefense\nHome Hits\nAway Hits\nHome Outs\nAway Outs\n\n(Hits and Outs options will only appear if these events have occurred during the game)"
+      },
+      {
+        "content": "Verify enabling and disabling field data options",
+        "expected": "Then the data should appear on the field if checked\nand should disappear if unchecked"
+      },
+      {
+        "content": "When the user taps on a defensive player\nOr the user taps on a batter/baserunner",
+        "expected": "Then the player card for the selected player should be opened"
+      },
+      {
+        "content": "When the user is on the Field Tab\nAnd the game data is updating",
+        "expected": "Then the tab should refresh\nAnd the user should see the batters, fielders etc change as the game data changes"
+      }
+    ]
+  },
+  {
+    "id": 50508,
+    "title": "Final State",
+    "section_id": 145337,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1424223472,
+    "updated_by": 84,
+    "updated_on": 1508530659,
+    "estimate": null,
+    "estimate_forecast": "21m 2s",
+    "suite_id": 983,
+    "display_order": 1,
+    "custom_preconds": "Final state tabs:\r\nWrap\r\nBox Score\r\nPlays",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navigates to Gameday in a Final state",
+        "expected": "Then the tabs should remain visible with final data\n"
+      },
+      {
+        "content": "When the user navigates to the Wrap tab",
+        "expected": "Then the user should see:\nTeam logos (Winning team on left, losing team on right)\nTeam records under team logos\nWinning team score, Losing team score (eg. \"Astros 1, Nationals 0\")\nFinal game information (eg. \"Final/10\")\nVenue name\nWrap image\nFinal linescore\nWinning pitcher and stats: (\"W: [Last Name] (W-L, ERA)\")\nLosing pitcher and stats: (\"L: [Last Name] (W-L, ERA)\")\nPitching with save: (\"SV: [Last Name] (#SV)\")\nPlayers with HRs. (eg. \"HOU HR: [Last Name] (#HR) [Last Name] (#HR)\")"
+      },
+      {
+        "content": "When the user navigates to the Box Score tab",
+        "expected": "Then they should see the final Box score information\nwith each team's Bench & Bullpen section underneath"
+      },
+      {
+        "content": "When the user navigates to the Plays tab",
+        "expected": "Then they should see the all the plays from the game separated by Scoring and All Plays tabs"
+      },
+      {
+        "content": "When the user navigates to the Videos tab",
+        "expected": "Then they should see all the highlights from the game\nAnd the user should see a Condensed game (paid user only) and Recap highlight sorted to the top of the list and separated from the regular highlights. "
+      }
+    ]
+  },
+  {
+    "id": 94097,
+    "title": "Pitch by Pitch Experience",
+    "section_id": 134234,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4747",
+    "created_by": 84,
+    "created_on": 1459875094,
+    "updated_by": 84,
+    "updated_on": 1499794419,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 983,
+    "display_order": 3,
+    "custom_preconds": "Given a user is on an Android device\r\nand is viewing At Bat as a LITE user",
+    "custom_steps": "When a LITE user enters Gameday of a LIVE game",
+    "custom_expected": "Then the LITE user should have access to Pitch by Pitch\r\nwith balls/strikes ONLY\r\nand visible pitch trails\r\nbut no Pitch f/x data (pitch type/speed)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 94101,
+    "title": "Stadium & Batter Images",
+    "section_id": 134234,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4747",
+    "created_by": 84,
+    "created_on": 1459883125,
+    "updated_by": 84,
+    "updated_on": 1499794419,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 983,
+    "display_order": 4,
+    "custom_preconds": "Given a user is on an Android device\r\nand is viewing At Bat as a LITE user",
+    "custom_steps": "When a LITE user enters Gameday of a LIVE game\r\nand is viewing the Pitch by Pitch graphic",
+    "custom_expected": "Then the LITE user should not see a stadium backdrop\r\nor team-specific batter uniforms\r\nbut pitch trails should remain",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 144271,
+    "title": "Videos Tab",
+    "section_id": 134234,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4743",
+    "created_by": 84,
+    "created_on": 1462988316,
+    "updated_by": 84,
+    "updated_on": 1499794419,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 983,
+    "display_order": 7,
+    "custom_preconds": "Given a user is on an Android device\r\nand is viewing At Bat as a LITE user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a lite user is viewing Gameday of a LIVE game",
+        "expected": "Then the Videos tab will be gated by an At Bat paywall"
+      },
+      {
+        "content": "When a lite user goes to Gameday > Videos of a FINAL game",
+        "expected": "Then the user will NOT see the Condensed Game available"
+      },
+      {
+        "content": "When a lite user logs in with a paid account\nand goes to Gameday > Videos of a FINAL game",
+        "expected": "Then the user will see the Condensed Game"
+      }
+    ]
+  },
+  {
+    "id": 144272,
+    "title": "Feed Tab",
+    "section_id": 134234,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4743",
+    "created_by": 84,
+    "created_on": 1462988325,
+    "updated_by": 84,
+    "updated_on": 1499794419,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 983,
+    "display_order": 8,
+    "custom_preconds": "Given a user is on an Android device\r\nand is viewing At Bat as a LITE user",
+    "custom_steps": "When a LITE user is viewing Gameday of a LIVE game\r\nand taps on the Feed tab",
+    "custom_expected": "Then the user will not see any video highlights",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 161430,
+    "title": "Banner Ads",
+    "section_id": 134234,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1464207779,
+    "updated_by": 84,
+    "updated_on": 1499794419,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 983,
+    "display_order": 9,
+    "custom_preconds": "Given a user is on an Android device",
+    "custom_steps": "When a Lite user is on a Gameday\r\nand Ad-Ops Ads (DFP/AdMarvel) targeted by Ad Ops",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "on the Pitch by Pitch view",
+        "expected": "will see a banner ad"
+      },
+      {
+        "content": "on the Box Score view",
+        "expected": "will see a banner ad"
+      },
+      {
+        "content": "on the Plays view",
+        "expected": "will see a banner ad"
+      },
+      {
+        "content": "on the Field view",
+        "expected": "will see a banner ad"
+      },
+      {
+        "content": "on the Feed view",
+        "expected": "will see a banner ad"
+      },
+      {
+        "content": "on the WRAP view",
+        "expected": "will NOT see an ad"
+      }
+    ]
+  },
+  {
+    "id": 161431,
+    "title": "Logging in with Paid Account",
+    "section_id": 134234,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 91,
+    "created_on": 1464207779,
+    "updated_by": 84,
+    "updated_on": 1499794419,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 983,
+    "display_order": 10,
+    "custom_preconds": "Given a user is on an Android device",
+    "custom_steps": "When a Lite user is on Gameday\r\nand viewing a game in progress\r\nand logs in with an entitled account (Gameday Audio, MLB.TV, Highlights tab)\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "then the user will see",
+        "expected": "the blue background change to the stadium specific image"
+      },
+      {
+        "content": "then the user will see ",
+        "expected": "the generic batter change to the team specific uniform"
+      },
+      {
+        "content": "then the user will see ",
+        "expected": "the Videos tab & its highlights will no longer be gated and will be accessible"
+      },
+      {
+        "content": "then the user will see ",
+        "expected": "Pitch F/X data in the PBP (pitch type and MPH)"
+      }
+    ]
+  }
+]

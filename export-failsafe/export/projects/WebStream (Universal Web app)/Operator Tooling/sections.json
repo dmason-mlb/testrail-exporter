@@ -1,0 +1,650 @@
+[
+  {
+    "id": 2036549,
+    "suite_id": 679306,
+    "name": "Base/Authflow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 2036550,
+    "suite_id": 679306,
+    "name": "Log In",
+    "description": null,
+    "parent_id": 2036549,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 1946424,
+    "suite_id": 679306,
+    "name": "Home",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1954256,
+    "suite_id": 679306,
+    "name": "BTC Tools",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 1960924,
+    "suite_id": 679306,
+    "name": "Schedule",
+    "description": null,
+    "parent_id": 1954256,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 2034864,
+    "suite_id": 679306,
+    "name": "Pipelines",
+    "description": null,
+    "parent_id": 1960924,
+    "display_order": 29,
+    "depth": 2
+  },
+  {
+    "id": 2034863,
+    "suite_id": 679306,
+    "name": "Pipeline Details",
+    "description": null,
+    "parent_id": 1960924,
+    "display_order": 35,
+    "depth": 2
+  },
+  {
+    "id": 1960925,
+    "suite_id": 679306,
+    "name": "Pipeline Configs",
+    "description": null,
+    "parent_id": 1954256,
+    "display_order": 37,
+    "depth": 1
+  },
+  {
+    "id": 1960923,
+    "suite_id": 679306,
+    "name": "Pipeline Input Configs",
+    "description": null,
+    "parent_id": 1954256,
+    "display_order": 38,
+    "depth": 1
+  },
+  {
+    "id": 2015433,
+    "suite_id": 679306,
+    "name": "Multicast Mapping",
+    "description": null,
+    "parent_id": 1954256,
+    "display_order": 39,
+    "depth": 1
+  },
+  {
+    "id": 1926629,
+    "suite_id": 679306,
+    "name": "Overrides",
+    "description": null,
+    "parent_id": null,
+    "display_order": 45,
+    "depth": 0
+  },
+  {
+    "id": 1940250,
+    "suite_id": 679306,
+    "name": "Blackout Override",
+    "description": null,
+    "parent_id": null,
+    "display_order": 46,
+    "depth": 0
+  },
+  {
+    "id": 1960905,
+    "suite_id": 679306,
+    "name": "Logger",
+    "description": null,
+    "parent_id": null,
+    "display_order": 47,
+    "depth": 0
+  },
+  {
+    "id": 1960906,
+    "suite_id": 679306,
+    "name": "Media Services",
+    "description": null,
+    "parent_id": null,
+    "display_order": 49,
+    "depth": 0
+  },
+  {
+    "id": 1960907,
+    "suite_id": 679306,
+    "name": "Media Validation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 52,
+    "depth": 0
+  },
+  {
+    "id": 1981988,
+    "suite_id": 679306,
+    "name": "Litmus",
+    "description": null,
+    "parent_id": 1960907,
+    "display_order": 53,
+    "depth": 1
+  },
+  {
+    "id": 1955476,
+    "suite_id": 679306,
+    "name": "Milestones",
+    "description": null,
+    "parent_id": null,
+    "display_order": 54,
+    "depth": 0
+  },
+  {
+    "id": 1924105,
+    "suite_id": 679306,
+    "name": "Audit and Logging",
+    "description": null,
+    "parent_id": null,
+    "display_order": 55,
+    "depth": 0
+  },
+  {
+    "id": 1942329,
+    "suite_id": 679306,
+    "name": "Partner Delivery",
+    "description": null,
+    "parent_id": null,
+    "display_order": 56,
+    "depth": 0
+  },
+  {
+    "id": 1977824,
+    "suite_id": 679306,
+    "name": "ESNI Management",
+    "description": null,
+    "parent_id": null,
+    "display_order": 57,
+    "depth": 0
+  },
+  {
+    "id": 1982181,
+    "suite_id": 679306,
+    "name": "Media ID",
+    "description": null,
+    "parent_id": 1977824,
+    "display_order": 58,
+    "depth": 1
+  },
+  {
+    "id": 1982182,
+    "suite_id": 679306,
+    "name": "Policies",
+    "description": null,
+    "parent_id": 1977824,
+    "display_order": 59,
+    "depth": 1
+  },
+  {
+    "id": 1982183,
+    "suite_id": 679306,
+    "name": "Audiences",
+    "description": null,
+    "parent_id": 1977824,
+    "display_order": 60,
+    "depth": 1
+  },
+  {
+    "id": 1928596,
+    "suite_id": 679306,
+    "name": "Navigation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 63,
+    "depth": 0
+  },
+  {
+    "id": 1926627,
+    "suite_id": 679306,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 64,
+    "depth": 0
+  },
+  {
+    "id": 1926439,
+    "suite_id": 679306,
+    "name": "Smoke Testing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 65,
+    "depth": 0
+  },
+  {
+    "id": 2036552,
+    "suite_id": 679306,
+    "name": "Account",
+    "description": null,
+    "parent_id": 1926439,
+    "display_order": 67,
+    "depth": 1
+  },
+  {
+    "id": 2036553,
+    "suite_id": 679306,
+    "name": "Homepage",
+    "description": null,
+    "parent_id": 2036552,
+    "display_order": 68,
+    "depth": 2
+  },
+  {
+    "id": 2036554,
+    "suite_id": 679306,
+    "name": "BTC Tools",
+    "description": null,
+    "parent_id": 2036553,
+    "display_order": 69,
+    "depth": 3
+  },
+  {
+    "id": 2036555,
+    "suite_id": 679306,
+    "name": "Overrides",
+    "description": null,
+    "parent_id": 2036553,
+    "display_order": 70,
+    "depth": 3
+  },
+  {
+    "id": 2036556,
+    "suite_id": 679306,
+    "name": "Blackout Override",
+    "description": null,
+    "parent_id": 2036553,
+    "display_order": 71,
+    "depth": 3
+  },
+  {
+    "id": 2036557,
+    "suite_id": 679306,
+    "name": "Logger",
+    "description": null,
+    "parent_id": 2036553,
+    "display_order": 72,
+    "depth": 3
+  },
+  {
+    "id": 2036558,
+    "suite_id": 679306,
+    "name": "Media Validation",
+    "description": null,
+    "parent_id": 2036553,
+    "display_order": 73,
+    "depth": 3
+  },
+  {
+    "id": 2036559,
+    "suite_id": 679306,
+    "name": "Milestones",
+    "description": null,
+    "parent_id": 2036553,
+    "display_order": 74,
+    "depth": 3
+  },
+  {
+    "id": 2036560,
+    "suite_id": 679306,
+    "name": "Audit & Logging",
+    "description": null,
+    "parent_id": 2036553,
+    "display_order": 75,
+    "depth": 3
+  },
+  {
+    "id": 2036561,
+    "suite_id": 679306,
+    "name": "Partner Delivery",
+    "description": null,
+    "parent_id": 2036553,
+    "display_order": 76,
+    "depth": 3
+  },
+  {
+    "id": 2036562,
+    "suite_id": 679306,
+    "name": "ESNI Management",
+    "description": null,
+    "parent_id": 2036553,
+    "display_order": 77,
+    "depth": 3
+  },
+  {
+    "id": 2037374,
+    "suite_id": 679306,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 1926439,
+    "display_order": 78,
+    "depth": 1
+  },
+  {
+    "id": 2036543,
+    "suite_id": 679306,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 79,
+    "depth": 0
+  },
+  {
+    "id": 1960910,
+    "suite_id": 679306,
+    "name": "Deprecated",
+    "description": "this section contains tests cases of all deprecated services in OP Tools.",
+    "parent_id": null,
+    "display_order": 141,
+    "depth": 0
+  },
+  {
+    "id": 1935669,
+    "suite_id": 679306,
+    "name": "IP Override",
+    "description": null,
+    "parent_id": 1960910,
+    "display_order": 142,
+    "depth": 1
+  },
+  {
+    "id": 1926628,
+    "suite_id": 679306,
+    "name": "Provision Tools",
+    "description": null,
+    "parent_id": 1960910,
+    "display_order": 143,
+    "depth": 1
+  },
+  {
+    "id": 1983738,
+    "suite_id": 679306,
+    "name": "Automated Smoke Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 145,
+    "depth": 0
+  },
+  {
+    "id": 1983739,
+    "suite_id": 679306,
+    "name": "Experience Override",
+    "description": null,
+    "parent_id": 1983738,
+    "display_order": 146,
+    "depth": 1
+  },
+  {
+    "id": 1983740,
+    "suite_id": 679306,
+    "name": "Litmus",
+    "description": null,
+    "parent_id": 1983738,
+    "display_order": 147,
+    "depth": 1
+  },
+  {
+    "id": 1983741,
+    "suite_id": 679306,
+    "name": "Blackout Override",
+    "description": null,
+    "parent_id": 1983738,
+    "display_order": 148,
+    "depth": 1
+  },
+  {
+    "id": 1983742,
+    "suite_id": 679306,
+    "name": "Navigation",
+    "description": null,
+    "parent_id": 1983738,
+    "display_order": 149,
+    "depth": 1
+  },
+  {
+    "id": 2036922,
+    "suite_id": 679306,
+    "name": "Existing Automation",
+    "description": null,
+    "parent_id": 1983738,
+    "display_order": 150,
+    "depth": 1
+  },
+  {
+    "id": 1997286,
+    "suite_id": 679306,
+    "name": "Older optool testcases",
+    "description": "I'm importing older test cases in this section - this way it's easier to view at of them in one place and it also helps Madhu to generate the reports.",
+    "parent_id": null,
+    "display_order": 151,
+    "depth": 0
+  },
+  {
+    "id": 1997350,
+    "suite_id": 679306,
+    "name": "Log In",
+    "description": null,
+    "parent_id": 1997286,
+    "display_order": 152,
+    "depth": 1
+  },
+  {
+    "id": 1997351,
+    "suite_id": 679306,
+    "name": "Provision Tools",
+    "description": null,
+    "parent_id": 1997286,
+    "display_order": 153,
+    "depth": 1
+  },
+  {
+    "id": 1997352,
+    "suite_id": 679306,
+    "name": "Experience Overrides",
+    "description": null,
+    "parent_id": 1997286,
+    "display_order": 154,
+    "depth": 1
+  },
+  {
+    "id": 1997353,
+    "suite_id": 679306,
+    "name": "Logger",
+    "description": null,
+    "parent_id": 1997286,
+    "display_order": 155,
+    "depth": 1
+  },
+  {
+    "id": 1997354,
+    "suite_id": 679306,
+    "name": "schedule view",
+    "description": null,
+    "parent_id": 1997353,
+    "display_order": 156,
+    "depth": 2
+  },
+  {
+    "id": 1997355,
+    "suite_id": 679306,
+    "name": "details view",
+    "description": null,
+    "parent_id": 1997353,
+    "display_order": 157,
+    "depth": 2
+  },
+  {
+    "id": 1997356,
+    "suite_id": 679306,
+    "name": "Ad Break controls",
+    "description": null,
+    "parent_id": 1997355,
+    "display_order": 158,
+    "depth": 3
+  },
+  {
+    "id": 1997357,
+    "suite_id": 679306,
+    "name": "Game State",
+    "description": null,
+    "parent_id": 1997355,
+    "display_order": 159,
+    "depth": 3
+  },
+  {
+    "id": 1997358,
+    "suite_id": 679306,
+    "name": "Slate management",
+    "description": null,
+    "parent_id": 1997355,
+    "display_order": 160,
+    "depth": 3
+  },
+  {
+    "id": 1997359,
+    "suite_id": 679306,
+    "name": "Debug Mode",
+    "description": null,
+    "parent_id": 1997355,
+    "display_order": 161,
+    "depth": 3
+  },
+  {
+    "id": 1997411,
+    "suite_id": 679306,
+    "name": "Navigation",
+    "description": null,
+    "parent_id": 1997286,
+    "display_order": 162,
+    "depth": 1
+  },
+  {
+    "id": 1997412,
+    "suite_id": 679306,
+    "name": "side-nav",
+    "description": null,
+    "parent_id": 1997411,
+    "display_order": 163,
+    "depth": 2
+  },
+  {
+    "id": 1997413,
+    "suite_id": 679306,
+    "name": "tiles (on homepage)",
+    "description": null,
+    "parent_id": 1997411,
+    "display_order": 164,
+    "depth": 2
+  },
+  {
+    "id": 1997414,
+    "suite_id": 679306,
+    "name": "BTC Tools",
+    "description": null,
+    "parent_id": 1997286,
+    "display_order": 165,
+    "depth": 1
+  },
+  {
+    "id": 1997415,
+    "suite_id": 679306,
+    "name": "Schedule",
+    "description": null,
+    "parent_id": 1997414,
+    "display_order": 166,
+    "depth": 2
+  },
+  {
+    "id": 1997416,
+    "suite_id": 679306,
+    "name": "Milestones",
+    "description": null,
+    "parent_id": 1997286,
+    "display_order": 167,
+    "depth": 1
+  },
+  {
+    "id": 1997417,
+    "suite_id": 679306,
+    "name": "IP Override",
+    "description": null,
+    "parent_id": 1997286,
+    "display_order": 168,
+    "depth": 1
+  },
+  {
+    "id": 1997418,
+    "suite_id": 679306,
+    "name": "Audit and Logging",
+    "description": null,
+    "parent_id": 1997286,
+    "display_order": 169,
+    "depth": 1
+  },
+  {
+    "id": 1997419,
+    "suite_id": 679306,
+    "name": "Partner Streaming Delivery",
+    "description": null,
+    "parent_id": 1997286,
+    "display_order": 170,
+    "depth": 1
+  },
+  {
+    "id": 1997420,
+    "suite_id": 679306,
+    "name": "Media Validation Tool",
+    "description": null,
+    "parent_id": 1997286,
+    "display_order": 171,
+    "depth": 1
+  },
+  {
+    "id": 1997421,
+    "suite_id": 679306,
+    "name": "Miscellaneous",
+    "description": null,
+    "parent_id": 1997286,
+    "display_order": 172,
+    "depth": 1
+  },
+  {
+    "id": 1997422,
+    "suite_id": 679306,
+    "name": "Home",
+    "description": null,
+    "parent_id": 1997286,
+    "display_order": 173,
+    "depth": 1
+  },
+  {
+    "id": 2034865,
+    "suite_id": 679306,
+    "name": "Logger Old Test Case",
+    "description": null,
+    "parent_id": 1997286,
+    "display_order": 174,
+    "depth": 1
+  }
+]

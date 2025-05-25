@@ -1,0 +1,38 @@
+[
+  {
+    "id": 82602,
+    "suite_id": 13533,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 83132,
+    "suite_id": 13533,
+    "name": "Print",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 83133,
+    "suite_id": 13533,
+    "name": "Waivers/DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 83134,
+    "suite_id": 13533,
+    "name": "UAT Feedback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

@@ -1,0 +1,378 @@
+[
+  {
+    "id": 1204511,
+    "title": "Ballpark Time",
+    "section_id": 144574,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1507905898,
+    "updated_by": 124,
+    "updated_on": 1507907854,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20195,
+    "display_order": 1,
+    "custom_preconds": "When there are dynamic attribute values available in Non Game Event (NGE) data.\r\n\r\nhttp://qa.ticketing-client.com/ticketing-client/json/EventTicketPromotion.tiksrv?display_in=ATBAT&site_section=Default&ticket_category=Tickets&leave_empty_games=true&game_status=S&game_status=P&game_status=I&game_status=M&game_status=N&game_status=T&game_status=U&ensureArray=non_game,game&team_id=158&team_xref_id=158&begin_date=20171013&end_date=20181013&events=5&offer_group=BALLPARKTAB",
+    "custom_steps": null,
+    "custom_expected": "The values will override any database values, and will be displayed in the app\r\n\r\nBallpark Tab - Upcoming Events\r\nBallpark Tab - Native Schedule\r\nBallpark Tab - Event Detail",
+    "custom_steps_separated": [
+      {
+        "content": "String.\n\nWhen the BALLPARK_TIME value contains a string.",
+        "expected": "The database time will be overridden\nAND the string will be displayed as the time value."
+      },
+      {
+        "content": "Database (db)\n\nWhen the BALLPARK_TIME value contains (\"db\")",
+        "expected": "The app will display the database time value ."
+      },
+      {
+        "content": "To Be Determined (TBD) \n\nWhen the BALLPARK_TIME value contains (TBD) (case sensitive)",
+        "expected": "The Database time value will be overridden\nAND the app will display \"Time TBD\" in the time field."
+      },
+      {
+        "content": "Blank\n\nWhen the BALLPARK_TIME value contains (\"blank\")\n(case sensitive)",
+        "expected": "The database time value will be overridden\nAND the event time field will not be displayed."
+      }
+    ]
+  },
+  {
+    "id": 1204512,
+    "title": "Ballpark Date",
+    "section_id": 144574,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1507905909,
+    "updated_by": 124,
+    "updated_on": 1507908290,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20195,
+    "display_order": 2,
+    "custom_preconds": "When there are dynamic attribute values available in Non Game Event (NGE) data.\r\n\r\n\r\nhttp://qa.ticketing-client.com/ticketing-client/json/EventTicketPromotion.tiksrv?display_in=ATBAT&site_section=Default&ticket_category=Tickets&leave_empty_games=true&game_status=S&game_status=P&game_status=I&game_status=M&game_status=N&game_status=T&game_status=U&ensureArray=non_game,game&team_id=158&team_xref_id=158&begin_date=20171013&end_date=20181013&events=5&offer_group=BALLPARKTAB\r\n",
+    "custom_steps": null,
+    "custom_expected": "The values will override any database values, AND will be displayed in the app\r\n\r\nBallpark Tab - Upcoming Events\r\nBallpark Tab - Native Schedule\r\nBallpark Tab - Event Detail\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "\t\nString.\n\nWhen the BALLPARK_DATE value contains a string.",
+        "expected": "The database time will be overridden\nAND the string will be displayed as the date value."
+      },
+      {
+        "content": "Database (db)\n\nWhen the BALLPARK_DATE value contains (\"db\")",
+        "expected": "The app will display the database time value ."
+      },
+      {
+        "content": "To Be Determined (TBD)\n\nWhen the BALLPARK_DATE value contains (TBD) (case sensitive)",
+        "expected": "The Database time value will be overridden\nAND the app will display \"Time TBD\" in the time field."
+      },
+      {
+        "content": "Blank\n\nWhen the BALLPARK_DATE value contains (\"blank\")\n(case sensitive)",
+        "expected": "The database date value will be overridden\nAND the event time field will not be displayed."
+      }
+    ]
+  },
+  {
+    "id": 1204513,
+    "title": "Ballpark Venue",
+    "section_id": 144574,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1507905956,
+    "updated_by": 124,
+    "updated_on": 1507913683,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20195,
+    "display_order": 3,
+    "custom_preconds": "When there are dynamic attribute values available in Non Game Event (NGE) data.\r\n\r\nhttp://qa.ticketing-client.com/ticketing-client/json/EventTicketPromotion.tiksrv?display_in=ATBAT&site_section=Default&ticket_category=Tickets&leave_empty_games=true&game_status=S&game_status=P&game_status=I&game_status=M&game_status=N&game_status=T&game_status=U&ensureArray=non_game,game&team_id=158&team_xref_id=158&begin_date=20171013&end_date=20181013&events=5&offer_group=BALLPARKTAB",
+    "custom_steps": null,
+    "custom_expected": "The values will override any database values, and will be displayed in the app\r\n\r\nBallpark Tab - Upcoming Events\r\nBallpark Tab - Native Schedule\r\nBallpark Tab - Event Detail",
+    "custom_steps_separated": [
+      {
+        "content": "String.\n\nWhen the BALLPARK_VENUE value contains a string.",
+        "expected": "The database VENUE will be overridden\nAND the string will be displayed as the venue value."
+      },
+      {
+        "content": "Database (db)\n\nWhen the BALLPARK_VENUE value contains (\"db\")\n",
+        "expected": "The app will display the database venue value."
+      },
+      {
+        "content": "To Be Determined (TBD)\n\nWhen the BALLPARK_VENUE value contains (TBD) (case sensitive)",
+        "expected": "The Database VENUE value will be overridden\nAND the app will display \" TBD\" in the venue field.\n"
+      }
+    ]
+  },
+  {
+    "id": 1204514,
+    "title": "Database Time",
+    "section_id": 144574,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1507906030,
+    "updated_by": 124,
+    "updated_on": 1507910599,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20195,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the BALLPARK_TIME value = \"db\"\r\n\r\nhttp://qa.ticketing-client.com/ticketing-client/json/EventTicketPromotion.tiksrv?display_in=ATBAT&site_section=Default&ticket_category=Tickets&leave_empty_games=true&game_status=S&game_status=P&game_status=I&game_status=M&game_status=N&game_status=T&game_status=U&ensureArray=non_game,game&team_id=158&team_xref_id=158&begin_date=20171013&end_date=20181013&events=5&offer_group=BALLPARKTAB",
+    "custom_steps": null,
+    "custom_expected": "The Database value behavior will be observed in the app.\r\n\r\nBallpark Tab - Upcoming Events\r\nBallpark Tab - Native Schedule\r\nBallpark Tab - Event Detail",
+    "custom_steps_separated": [
+      {
+        "content": "When the local event time is set to 3:33 AM ET in the event data\n\n\"event_time_local\": \"2017-10-29T03:33:00\"",
+        "expected": "The app will display \"TBD\""
+      },
+      {
+        "content": "When the local event time is set to any time that is not 03:33 AM ET\n\n\"event_time_local\": \"2017-10-29T19:30:00\"",
+        "expected": "The local time will be displayed correctly in the app."
+      }
+    ]
+  },
+  {
+    "id": 1204515,
+    "title": "Ballpark Time",
+    "section_id": 144575,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1507906087,
+    "updated_by": 124,
+    "updated_on": 1507911237,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20195,
+    "display_order": 1,
+    "custom_preconds": "When there are dynamic attribute values available in Non Game Event (NGE) data.\r\nAND \"dateTBD\": false,\r\n\r\nhttps://qa.boxoffice.mlb.com/api/v1/users/ticketDashboard?guid=0a4d1896cff51ec678bb2fa5a614c507&teamID=158&asOfDate=2017-10-13&refresh=true\r\n",
+    "custom_steps": null,
+    "custom_expected": "The values will override any database values, and will be displayed in the app\r\n\r\nTickets Tab - Next Event (top of screen)\r\nTickets Tab - Next Home Events, All Home Events\r\nTickets Tab - Upcoming Events (only shows if user has tickets)",
+    "custom_steps_separated": [
+      {
+        "content": "String.\n\nWhen the BALLPARK_TIME value contains a string.",
+        "expected": "The database time will be overridden\nAND the string will be displayed as the time value."
+      },
+      {
+        "content": "Database (db)\n\nWhen the BALLPARK_TIME value contains (\"db\")",
+        "expected": "The app will display the database time value ."
+      },
+      {
+        "content": "To Be Determined (TBD)\n\nWhen the BALLPARK_TIME value contains (TBD) (case sensitive)",
+        "expected": "The Database time value will be overridden\nAND the app will display \"Time TBD\" in the time field."
+      },
+      {
+        "content": "Blank\n\nWhen the BALLPARK_TIME value contains (\"blank\")\n(case sensitive)",
+        "expected": "The database time value will be overridden\nAND the event time field will not be displayed.\n"
+      }
+    ]
+  },
+  {
+    "id": 1204516,
+    "title": "Ballpark Date",
+    "section_id": 144575,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1507906098,
+    "updated_by": 124,
+    "updated_on": 1507912856,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20195,
+    "display_order": 2,
+    "custom_preconds": "When there are dynamic attribute values available in Non Game Event (NGE) data.\r\nAND \"dateTBD\": false,\r\n\r\nhttps://qa.boxoffice.mlb.com/api/v1/users/ticketDashboard?guid=0a4d1896cff51ec678bb2fa5a614c507&teamID=158&asOfDate=2017-10-13&refresh=true",
+    "custom_steps": null,
+    "custom_expected": "The values will override any database values, and will be displayed in the app\r\n\r\nTickets Tab - Next Event (top of screen)\r\nTickets Tab - Next Home Events, All Home Events\r\nTickets Tab - Upcoming Events (only shows if user has tickets)",
+    "custom_steps_separated": [
+      {
+        "content": "String.\n\nWhen the BALLPARK_DATE value contains a string.",
+        "expected": "The database date will be overridden\nAND the string will be displayed as the time value."
+      },
+      {
+        "content": "Database (db)\n\nWhen the BALLPARK_DATE value contains (\"db\")",
+        "expected": "The app will display the database date value."
+      },
+      {
+        "content": "To Be Determined (TBD)\n\nWhen the BALLPARK_DATE value contains (TBD) (case sensitive)",
+        "expected": "The Database date value will be overridden\nAND the app will display \"Time TBD\" in the time field."
+      },
+      {
+        "content": "Blank\n\nWhen the BALLPARK_DATE value contains (\"blank\")\n(case sensitive)",
+        "expected": "The database date value will be overridden\nAND the event time field will not be displayed.\n"
+      }
+    ]
+  },
+  {
+    "id": 1204517,
+    "title": "Ballpark Venue",
+    "section_id": 144575,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1507906108,
+    "updated_by": 124,
+    "updated_on": 1507913758,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20195,
+    "display_order": 3,
+    "custom_preconds": "When there are dynamic attribute values available in Non Game Event (NGE) data.\r\n\r\n\r\nhttps://qa.boxoffice.mlb.com/api/v1/users/ticketDashboard?guid=0a4d1896cff51ec678bb2fa5a614c507&teamID=158&asOfDate=2017-10-13&refresh=true",
+    "custom_steps": null,
+    "custom_expected": "The values will override any database values, and will be displayed in the app\r\n\r\nTickets Tab - Next Event (top of screen)\r\nTickets Tab - Next Home Events, All Home Events\r\nTickets Tab - Upcoming Events (only shows if user has tickets)",
+    "custom_steps_separated": [
+      {
+        "content": "String.\n\nWhen the BALLPARK_VENUE value contains a string.",
+        "expected": "The database VENUE will be overridden\nAND the string will be displayed as the venue value."
+      },
+      {
+        "content": "Database (db)\n\nWhen the BALLPARK_VENUE value contains (\"db\")\n",
+        "expected": "The app will display the database venue value."
+      },
+      {
+        "content": "To Be Determined (TBD)\n\nWhen the BALLPARK_VENUE value contains (TBD) (case sensitive)",
+        "expected": "The Database VENUE value will be overridden\nAND the app will display \" TBD\" in the venue field."
+      }
+    ]
+  },
+  {
+    "id": 1204518,
+    "title": "Database Time",
+    "section_id": 144575,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1507906120,
+    "updated_by": 124,
+    "updated_on": 1507918018,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20195,
+    "display_order": 4,
+    "custom_preconds": "When there are dynamic attribute values available in Non Game Event (NGE) data.\r\nAND \"dateTBD\": false,\r\n\r\nhttps://qa.boxoffice.mlb.com/api/v1/users/ticketDashboard?guid=0a4d1896cff51ec678bb2fa5a614c507&teamID=158&asOfDate=2017-10-13&refresh=true",
+    "custom_steps": null,
+    "custom_expected": "The values will override any database values, and will be displayed in the app\r\n\r\nTickets Tab - Next Event (top of screen)\r\nTickets Tab - Next Home Events, All Home Events\r\nTickets Tab - Upcoming Events (only shows if user has tickets)",
+    "custom_steps_separated": [
+      {
+        "content": "When the local event time is set to 3:33 AM ET in the event data\n\n\"event_time_local\": \"2017-10-29T03:33:00\"",
+        "expected": "The app will display \"TBD\""
+      },
+      {
+        "content": "When the local event time is set to any time that is not 03:33 AM ET\n\n\"event_time_local\": \"2017-10-29T19:30:00\"",
+        "expected": "The local time will be displayed correctly in the app."
+      }
+    ]
+  },
+  {
+    "id": 1210305,
+    "title": "Ballpark Time",
+    "section_id": 145367,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1508775146,
+    "updated_by": 124,
+    "updated_on": 1508775146,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20195,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1210306,
+    "title": "Balllpark Date",
+    "section_id": 145367,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1508775210,
+    "updated_by": 124,
+    "updated_on": 1508775210,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20195,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1210307,
+    "title": "Ballpark Venue",
+    "section_id": 145367,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1508775229,
+    "updated_by": 124,
+    "updated_on": 1508775229,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20195,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1210308,
+    "title": "Database Time",
+    "section_id": 145367,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1508775238,
+    "updated_by": 124,
+    "updated_on": 1508775238,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20195,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  }
+]

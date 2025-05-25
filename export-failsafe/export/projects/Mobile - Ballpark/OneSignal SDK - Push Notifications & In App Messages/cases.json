@@ -1,0 +1,1419 @@
+[
+  {
+    "id": 6687281,
+    "title": "Onboarding - Push Notifications",
+    "section_id": 305220,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BPA-5595, BP-8760",
+    "created_by": 197,
+    "created_on": 1588605141,
+    "updated_by": 288,
+    "updated_on": 1657041451,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 15,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded a fresh install of the Ballpark app (11.3.0 or greater)\r\n\r\nNOTE: Android automatically enabled push and did not prompt the user when the user installs the application for BP ver 11.2.0 and prior. For 11.3.0 BP, a Notification Enable prompt should be shown prior to onboarding",
+    "custom_steps": "WHEN the user completes onboarding\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user navigates to My Profile page via Profile icon \nAND user navigates to My Notifications page, via 'My Notifications' menu option\n",
+        "expected": "[ANDROID]\nTHEN all notifications should be enabled for the user in settings (if user 'allowed' within prompt prior to onboarding)\n\n[iOS]\nTHEN all notifications should be disabled for the user in settings (if never prev enabled)"
+      }
+    ]
+  },
+  {
+    "id": 6687779,
+    "title": "Allow Notifications to Device Settings",
+    "section_id": 305220,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 215,
+    "created_on": 1588886697,
+    "updated_by": 288,
+    "updated_on": 1649778789,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 16,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.1.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user navigates to My Profile page via Profile icon\r\nAND user navigates to My Notifications page, via 'My Notifications' menu option\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": "Notification toggle directs user to OS notifications\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user toggles \"Allow Notifications\" ",
+        "expected": "THEN the application should navigate the user to settings within the operating system*\n\n\n*[iOS] if not prev prompted from BP, then a prompt will be shown to enable notifications instead of directing to OS settings"
+      },
+      {
+        "content": "WHEN the user toggles OFF \"Allow Notifications\" within OS settings\nAND the user returns to the BP app (My Notifications page) ",
+        "expected": "THEN the change should be reflected within the app"
+      },
+      {
+        "content": "WHEN the user toggles \"Allow Notifications\"",
+        "expected": "THEN the application should navigate the user to settings within the operating system"
+      },
+      {
+        "content": "WHEN the user toggles ON \"Allow Notifications\" within OS settings\nAND the user returns to the BP app (My Notifications page) ",
+        "expected": "THEN the change should be reflected within the app"
+      },
+      {
+        "content": "WHEN the user toggles an individual channel in app settings",
+        "expected": "(Android) \nTHEN the app should navigate into OS settings for that specific notification\n\n(iOS)\nTHEN the individual setting is toggled\n"
+      },
+      {
+        "content": "(Android)\nWHEN the user toggles an individual channel in app settings & toggles on/off the channel in OS settings\n\n(iOS)\n<SKIP STEP>",
+        "expected": "THEN the app should reflect this change"
+      }
+    ]
+  },
+  {
+    "id": 6686856,
+    "title": "Notification Settings Retained with Restart",
+    "section_id": 305220,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-8759, BPA-5594",
+    "created_by": 197,
+    "created_on": 1588179481,
+    "updated_by": 288,
+    "updated_on": 1634660306,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 17,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user navigates to My Profile page via Profile icon \r\nAND user navigates to My Notifications page, via 'My Notifications' menu option\r\nAND the user has push notifications enabled",
+    "custom_steps": null,
+    "custom_expected": "Changes should be saved between restarts. ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user makes changes to push notification settings",
+        "expected": "THEN the settings should be retained through a restart of the app "
+      }
+    ]
+  },
+  {
+    "id": 6687778,
+    "title": "Notification Settings Retained after Logout",
+    "section_id": 305220,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 215,
+    "created_on": 1588886501,
+    "updated_by": 288,
+    "updated_on": 1634660432,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 26,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater)\r\nAND user is logged out of Ballpark app",
+    "custom_steps": null,
+    "custom_expected": "Notifications should be preserved after logout/login",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user logs into the application\nAND user navigates to My Profile page via Profile icon\nAND user navigates to My Notifications page, via 'My Notifications' menu option\n",
+        "expected": "THEN the previous push settings should be retained"
+      }
+    ]
+  },
+  {
+    "id": 6689111,
+    "title": "Notification Tags",
+    "section_id": 305220,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 223,
+    "created_on": 1589485993,
+    "updated_by": 282,
+    "updated_on": 1643911743,
+    "estimate": "1m",
+    "estimate_forecast": "1m",
+    "suite_id": 43643,
+    "display_order": 28,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user navigates to My Profile page via Profile icon\r\nAND user navigates to My Notifications page, via 'My Notifications' menu option\r\nAND user has \"Allow Notifications\" disabled (and NO tags are shown)",
+    "custom_steps": "WHEN the user toggles on \"Allow Notifications\"",
+    "custom_expected": "THEN there should be 3 tags shown:\r\n\"Team Promotions\"\r\n\"Tickets & Events\"\r\n\"News & Announcements\"",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 6687782,
+    "title": "OneSignal FavoriteTeam Tag",
+    "section_id": 1245704,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BPA-5625,",
+    "created_by": 215,
+    "created_on": 1588891812,
+    "updated_by": 288,
+    "updated_on": 1708642693,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has one or many favorite team(s) selected\r\n\r\nOneSignal Dashboard \r\n[Ballpark QA App](https://dashboard.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/subscriptions )\r\n[Ballpark](https://dashboard.onesignal.com/apps/6dfb24dd-9167-41c5-ba11-9da6fdbcaa5a/subscriptions )",
+    "custom_steps": null,
+    "custom_expected": "Users that have at least one favorite team should have a tag associated with their device in One Signal for their favorite team(s)",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN checking the OneSignal dashboard",
+        "expected": "THEN the device should have a tag associated with the users favorite team(s) in the OneSignal Dashboard\nTag name is FavoriteTeam"
+      },
+      {
+        "content": "WHEN User changes their favorite team(s)\nAND checking the OneSignal dashboard",
+        "expected": "THEN the device should have a tag associated with the users changed favorite team(s) in the OneSignal Dashboard\nTag name is FavoriteTeam"
+      }
+    ]
+  },
+  {
+    "id": 6687781,
+    "title": "OneSignal AppEnvironment Tag",
+    "section_id": 1245704,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 215,
+    "created_on": 1588891648,
+    "updated_by": 288,
+    "updated_on": 1708642925,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded a non-release version Ballpark app (10.5.0 or greater) \r\nAND user is logged in with MLB account in Ballpark app\r\n\r\n*need to enable notification permission for env tag to update appropriately within OneSignal's dashboard",
+    "custom_steps": null,
+    "custom_expected": "Tags should be set for any non-prod application",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN viewing tags for the device in Ballpark QA OneSignal instance\n\nOneSignal Dashboard \n[Ballpark QA App](https://dashboard.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/subscriptions )\n",
+        "expected": "THEN the tag should reflect the environment the application is running in\nTag name is AppEnvironment\n\n*may need to toggle disable and then enable Notifications, for AppEnv to be reflected "
+      },
+      {
+        "content": "WHEN viewing tags for the device in Ballpark Production OneSignal instance\n\nOneSignal Dashboard \n[Ballpark](https://dashboard.onesignal.com/apps/6dfb24dd-9167-41c5-ba11-9da6fdbcaa5a/subscriptions )",
+        "expected": "THEN there should NOT be a tag reflecting the environment the application is running in"
+      }
+    ]
+  },
+  {
+    "id": 24089884,
+    "title": "OneSignal External User ID",
+    "section_id": 1245704,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1634668011,
+    "updated_by": 288,
+    "updated_on": 1708642976,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater)\r\nAND user is NOT logged in with MLB account in Ballpark app",
+    "custom_steps": null,
+    "custom_expected": "The device in OneSignal should have an associated \"External User ID\" value set. OneSignal has a column specifically for external user IDs. \r\n\r\nNOTE: Since this value is never unset, there should always be a value associated with the device. There should be a value even if the user is already logged in and launches the app from a \"cold start\"\r\n\r\nNOTE: The ID we are looking for is the UID. This can be derived from the access token which should be available from Charles in just about any network call we make. Once you have the access token, use this tool: https://jwt.io/ to decode it an validate the UID fields",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user logs into Ballpark",
+        "expected": "THEN the EXTERNAL USER ID should be filled out with the OKTA ClientID on the OneSignal console and look similar to \"00u8s1esrMX11rejf356\"\n\nOneSignal Dashboard \n[Ballpark QA App](https://dashboard.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/subscriptions )\n[Ballpark](https://dashboard.onesignal.com/apps/6dfb24dd-9167-41c5-ba11-9da6fdbcaa5a/subscriptions )"
+      }
+    ]
+  },
+  {
+    "id": 26920392,
+    "title": "OneSignal App Version",
+    "section_id": 1245704,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1648164029,
+    "updated_by": 288,
+    "updated_on": 1708643002,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.1.0 or greater)\r\nAND user is NOT logged in with MLB account in Ballpark app\r\n\r\n[BP-9642](https://baseball.atlassian.net/browse/BP-9642)",
+    "custom_steps": null,
+    "custom_expected": "One Signal audience segmentation can target by App Version \r\nBallpark should pass through the app version (e.g. 11.0.0, 11.1.0) so it’s simple to target users with messages relevant to their experience",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user logs into Ballpark",
+        "expected": "THEN the APP VERSION should be filled out for the OKTA ClientID on the OneSignal console and look similar to '11.1.0'(iOS) / '11100059'(Android)\n\nOneSignal Dashboard \n[Ballpark QA App](https://dashboard.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/subscriptions )\n[Ballpark](https://dashboard.onesignal.com/apps/6dfb24dd-9167-41c5-ba11-9da6fdbcaa5a/subscriptions )"
+      }
+    ]
+  },
+  {
+    "id": 6686401,
+    "title": "Push Notification Validation",
+    "section_id": 1245745,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-8762, BPA-5597",
+    "created_by": 197,
+    "created_on": 1587582413,
+    "updated_by": 288,
+    "updated_on": 1659991530,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the user has push notifications enabled\r\nAND the user has quit/closed BallPark App",
+    "custom_steps": "From one signal user dashboard, create a push msg and send push to specific device(s)",
+    "custom_expected": "client(s) will receive push",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an engineer sends a [OneSignal Push Notification](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/campaigns) \n\nSteps:\n1. Navigates to 'Push Notification' via OneSignal link above ('Messages' top-level tab, AND 'Push' sub-level tab)\n2. Tap 'New Push'\n3. Fill out New Push Notification appropriately, DO NOT INCLUDE LAUNCH URL\n4. Tap 'Send to Test Device' button within Message section\n5. Select specific test user/devices. (Add to Test Users, if not listed)\n5a. Multiple devices can be selected (may want to validate at least one iOS and Android device each)\n",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users devices should receive a notification\nAND the received notification will display with Ballpark logo \n\n![](index.php?/attachments/get/13374978)"
+      },
+      {
+        "content": "WHEN the user opens the received notification from the device(s)",
+        "expected": "THEN Ballpark app is opened to the home page"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN user is logged in with MLB account in Ballpark app\nAND the user has push notifications disabled\nAND the user has quit/closed BallPark App",
+        "expected": "THEN the notifications configuration for the account is set up to NOT receive any push notification"
+      },
+      {
+        "content": "WHEN an engineer sends another push notification \n\n(changing the Title in the push message will help distinguish the different notifications)\n(see step 2)",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users device(s) should NOT receive a notification"
+      }
+    ]
+  },
+  {
+    "id": 6687284,
+    "title": "Push Notification Deeplink - App in Background",
+    "section_id": 1245745,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1588605245,
+    "updated_by": 288,
+    "updated_on": 1718662932,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the user has push notifications enabled\r\nAND the user has BallPark App backgrounded\r\n\r\n\r\nNOTE: Push Notification should be setup with deeplink in the \"URL to launch\" field and not the actual text of message\r\nNOTE: On iOS make sure you do not have multiple versions of the app installed (Double check these links)\r\n\r\nDeeplinks:\r\n*webview: ballpark://webview?url=https%3A%2F%2Fpwa.venuetize.com%2FPWA%2FTexrq12raz%2F19%2Finitiate%3Fmodule%3DinSeatOrdering%26provider%3Dappetize%26type%3Dfnb&venueID=5325&dataTier=3\r\n*wallet: ballpark://wallet",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an engineer sends a [OneSignal Push Notification](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/campaigns) \n\nSteps:\n1. Navigates to 'Push Notification' via OneSignal link above ('Messages' top-level tab, AND 'Push' sub-level tab)\n2. Tap 'New Push'\n3. Fill out New Push Notification appropriately INCLUDING A DEEPLINK WITHIN LAUNCH URL\n4. Tap 'Send to Test Device' button within Message section\n5. Select specific test user/devices. (Add to Test Users, if not listed)\n5a. Multiple devices can be selected (may want to validate at least one iOS and Android device each)\n",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users devices should receive a notification"
+      },
+      {
+        "content": "WHEN the user opens the received notification from the device(s)",
+        "expected": "THEN Ballpark app is opened to the proper location of the deeplink submitted in the push notification\n\nexample: ballpark://wallet directs user to the Tickets tab\n\n"
+      }
+    ]
+  },
+  {
+    "id": 33528081,
+    "title": "Push Notification Deeplink - App Closed (Cold Start)",
+    "section_id": 1245745,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1718646586,
+    "updated_by": 288,
+    "updated_on": 1718662912,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the user has push notifications enabled\r\nAND the user has BallPark App *CLOSED* (force quit)\r\n\r\n\r\nNOTE: Push Notification should be setup with deeplink in the \"URL to launch\" field and not the actual text of message\r\nNOTE: On iOS make sure you do not have multiple versions of the app installed (Double check these links)\r\n\r\n\r\nDeeplinks:\r\n*webview: ballpark://webview?url=https%3A%2F%2Fpwa.venuetize.com%2FPWA%2FTexrq12raz%2F19%2Finitiate%3Fmodule%3DinSeatOrdering%26provider%3Dappetize%26type%3Dfnb&venueID=5325&dataTier=3\r\n*wallet: ballpark://wallet",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an engineer sends a [OneSignal Push Notification](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/campaigns) \n\nSteps:\n1. Navigates to 'Push Notification' via OneSignal link above ('Messages' top-level tab, AND 'Push' sub-level tab)\n2. Tap 'New Push'\n3. Fill out New Push Notification appropriately INCLUDING A DEEPLINK WITHIN LAUNCH URL\n4. Tap 'Send to Test Device' button within Message section\n5. Select specific test user/devices. (Add to Test Users, if not listed)\n5a. Multiple devices can be selected (may want to validate at least one iOS and Android device each)\n",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users devices should receive a notification"
+      },
+      {
+        "content": "WHEN the user opens the received notification from the device(s)",
+        "expected": "THEN Ballpark app is opened to the proper location of the deeplink submitted in the push notification\n\nexample: \n*ballpark://webview?url=https%3A%2F%2Fpwa.venuetize.com%2FPWA%2FTexrq12raz%2F19%2Finitiate%3Fmodule%3DinSeatOrdering%26provider%3Dappetize%26type%3Dfnb&venueID=5325&dataTier=3 directs user to Mobile Order\n*ballpark://wallet directs user to the Tickets tab, ballpark\n\n\n\n"
+      }
+    ]
+  },
+  {
+    "id": 6687302,
+    "title": "[ANDROID] Notification Channels Validation - Team Promotions [ADD ONE-SIG LINKS]",
+    "section_id": 1420087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "Android",
+    "created_by": 197,
+    "created_on": 1588616829,
+    "updated_by": 288,
+    "updated_on": 1713456437,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\n\r\n\r\nNotes:\r\n*Android Oreo(8.0 OS) and above - There are no tags associated with the user. The user has full control over their own settings. ",
+    "custom_steps": "WHEN the user has specific push notifications channels enabled\r\nAND a push notification is sent to the specific channel",
+    "custom_expected": "THEN the user with the channel enabled should receive a notification\r\nAND the user with the channel disabled should NOT receive a notification ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user enables 'Allow Notification' within My Notifications page\nAND the user enables 'Team Promotions' channel within My Notifications page\nAND the user disables remaining channels('News & Announcements', 'Tickets & Events') within My Notifications page\nAND the user closes/quits Ballpark app",
+        "expected": "THEN the notifications configuration for the account is set up to receive ONLY from 'Team Promotions' channel"
+      },
+      {
+        "content": "WHEN an engineer sends a OneSignal Push Notification\n\nSteps:\n1. Navigates to 'Push Notification' via OneSignal link above ('Messages' top-level tab, AND 'Push' sub-level tab)\n2. Tap 'New Push'\n3. Fill out New Push Notification appropriately\n3a. Within 'Platform Settings' for each platform, select/populate 'Team Promotions'\n4. Tap 'Send to Test Device' button within Message section\n5. Select specific test user/devices. (Add to Test Users, if not listed)\n5a. Multiple devices can be selected (may want to validate at least one iOS and Android device each)",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users device(s) should receive a notification"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user enables 'Allow Notification' within My Notifications page\nAND the user disables 'Team Promotions' channel within My Notifications page\nAND the user disables remaining channels('News & Announcements', 'Tickets & Events') within My Notifications page\nAND the user closes/quits Ballpark app",
+        "expected": "THEN the notifications configuration for the account is set up to NOT receive from 'Team Promotions' channel"
+      },
+      {
+        "content": "WHEN an engineer sends another push notification directing to 'Team Promotions' channel \n\n(changing the Title in the push message will help distinguish the different notifications)\n(see step 2)",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users device(s) should NOT receive a notification as the notification has been disabled."
+      }
+    ]
+  },
+  {
+    "id": 24134325,
+    "title": "[ANDROID] Notification Channels Validation - Tickets & Events",
+    "section_id": 1420087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "Android",
+    "created_by": 288,
+    "created_on": 1634752180,
+    "updated_by": 288,
+    "updated_on": 1649966339,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\n\r\n\r\nNotes:\r\n*Android Oreo(8.0 OS) and above - There are no tags associated with the user. The user has full control over their own settings. ",
+    "custom_steps": "WHEN the user has specific push notifications channels enabled\r\nAND a push notification is sent to the specific channel",
+    "custom_expected": "THEN the user with the channel enabled should receive a notification\r\nAND the user with the channel disabled should NOT receive a notification ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user enables 'Allow Notification' within My Notifications page\nAND the user enables 'Tickets & Events' channel within My Notifications page\nAND the user disables remaining channels('News & Announcements', 'Team Promotions') within My Notifications page\nAND the user closes/quits Ballpark app",
+        "expected": "THEN the notifications configuration for the account is set up to receive ONLY from 'Tickets & Events' channel"
+      },
+      {
+        "content": "WHEN an engineer sends a OneSignal Push Notification\n\nSteps:\n1. Navigates to 'Push Notification' via OneSignal link above ('Messages' top-level tab, AND 'Push' sub-level tab)\n2. Tap 'New Push'\n3. Fill out New Push Notification appropriately\n3a. Within 'Platform Settings' for each platform, select/populate 'Tickets & Events'\n4. Tap 'Send to Test Device' button within Message section\n5. Select specific test user/devices. (Add to Test Users, if not listed)\n5a. Multiple devices can be selected (may want to validate at least one iOS and Android device each)",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users device(s) should receive a notification"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user enables 'Allow Notification' within My Notifications page\nAND the user disables 'Tickets & Events' channel within My Notifications page\nAND the user disables remaining channels('News & Announcements', 'Team Promotions') within My Notifications page\nAND the user closes/quits Ballpark app",
+        "expected": "THEN the notifications configuration for the account is set up to NOT receive from 'Tickets & Events' channel"
+      },
+      {
+        "content": "WHEN an engineer sends another push notification directing to 'Tickets & Events' channel \n\n(changing the Title in the push message will help distinguish the different notifications)\n(see step 2)",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users device(s) should NOT receive a notification as the notification has been disabled."
+      }
+    ]
+  },
+  {
+    "id": 24134417,
+    "title": "[ANDROID] Notification Channels Validation - News & Announcements",
+    "section_id": 1420087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "Android",
+    "created_by": 288,
+    "created_on": 1634752545,
+    "updated_by": 288,
+    "updated_on": 1649966351,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\n\r\n\r\nNotes:\r\n*Android Oreo(8.0 OS) and above - There are no tags associated with the user. The user has full control over their own settings. ",
+    "custom_steps": "WHEN the user has specific push notifications channels enabled\r\nAND a push notification is sent to the specific channel",
+    "custom_expected": "THEN the user with the channel enabled should receive a notification\r\nAND the user with the channel disabled should NOT receive a notification ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user enables 'Allow Notification' within My Notifications page\nAND the user enables 'News & Announcements' channel within My Notifications page\nAND the user disables remaining channels('Tickets & Events'', 'Team Promotions') within My Notifications page\nAND the user closes/quits Ballpark app",
+        "expected": "THEN the notifications configuration for the account is set up to receive ONLY from ''News & Announcements' channel"
+      },
+      {
+        "content": "WHEN an engineer sends a OneSignal Push Notification\n\nSteps:\n1. Navigates to 'Push Notification' via OneSignal link above ('Messages' top-level tab, AND 'Push' sub-level tab)\n2. Tap 'New Push'\n3. Fill out New Push Notification appropriately\n3a. Within 'Platform Settings' for each platform, select/populate 'News & Announcements'\n4. Tap 'Send to Test Device' button within Message section\n5. Select specific test user/devices. (Add to Test Users, if not listed)\n5a. Multiple devices can be selected (may want to validate at least one iOS and Android device each)",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users device(s) should receive a notification"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user enables 'Allow Notification' within My Notifications page\nAND the user disables 'News & Announcements' channel within My Notifications page\nAND the user disables remaining channels('Tickets & Events', 'Team Promotions') within My Notifications page\nAND the user closes/quits Ballpark app",
+        "expected": "THEN the notifications configuration for the account is set up to NOT receive from 'News & Announcements' channel"
+      },
+      {
+        "content": "WHEN an engineer sends another push notification directing to 'News & Announcements' channel \n\n(changing the Title in the push message will help distinguish the different notifications)\n(see step 2)",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users device(s) should NOT receive a notification as the notification has been disabled."
+      }
+    ]
+  },
+  {
+    "id": 27199201,
+    "title": "[iOS] Notification Channels Validation - Team Promotions",
+    "section_id": 1420087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 288,
+    "created_on": 1649966016,
+    "updated_by": 288,
+    "updated_on": 1656096744,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.1.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\n\r\n\r\nNotes:\r\n*iOS - OneSignal tags should reflect subscriptions for that user \r\n\r\nNOTE: If using [Test User](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/players?test_users=true) segment, ensure specific device is added/updated (may need to be re-added, if not detecting BP app behavior)",
+    "custom_steps": "WHEN the user has specific push notifications channels enabled\r\nAND a push notification is sent to the specific channel",
+    "custom_expected": "THEN the user with the channel enabled should receive a notification\r\nAND the user with the channel disabled should NOT receive a notification ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user enables 'Allow Notification' within My Notifications page\nAND the user enables 'Team Promotions' channel within My Notifications page\nAND the user disables remaining channels('News & Announcements', 'Tickets & Events') within My Notifications page\nAND the user closes/quits Ballpark app",
+        "expected": "THEN the notifications configuration for the account is set up to receive ONLY from 'Team Promotions' channel"
+      },
+      {
+        "content": "WHEN an engineer sends a OneSignal Push Notification \n\n[Team Promotions Tag - BP Test [iOS]](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/notifications/80cbbfbb-056d-4129-b9e9-ae01cedf4ec7#outcomes=os__click__count,os__session_duration__count) can be used/duplicated\nSteps:\n1. Navigates to 'Push Notification' via OneSignal link above ('Messages' top-level tab, AND 'Push' sub-level tab)\n2. Tap 'New Push'\n3. Fill out New Push Notification appropriately\n3a. Within Audience, tap 'Send to particular segment' AND ensure the acct/device is included within the segment\n    User Tag = 'Team Promotions'\n    is \n    'true'\n4. Tap 'Send to Test Device' button within Message section\n5. Select specific test user/devices. (Add to Test Users, if not listed)\n5a. Multiple devices can be selected (may want to validate at least one iOS and Android device each)",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users device(s) should receive a notification"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user enables 'Allow Notification' within My Notifications page\nAND the user disables 'Team Promotions' channel within My Notifications page\nAND the user disables remaining channels('News & Announcements', 'Tickets & Events') within My Notifications page\nAND the user closes/quits Ballpark app",
+        "expected": "THEN the notifications configuration for the account is set up to NOT receive from 'Team Promotions' channel"
+      },
+      {
+        "content": "WHEN an engineer sends another push notification directing to 'Team Promotions' channel ",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users device(s) should NOT receive a notification\n"
+      }
+    ]
+  },
+  {
+    "id": 27199202,
+    "title": "[iOS] Notification Channels Validation - Tickets & Events",
+    "section_id": 1420087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 288,
+    "created_on": 1649966016,
+    "updated_by": 288,
+    "updated_on": 1656096859,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.1.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\n\r\n\r\nNotes:\r\n*iOS - OneSignal tags should reflect subscriptions for that user \r\n\r\nNOTE: If using [Test User](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/players?test_users=true) segment, ensure specific device is added/updated (may need to be re-added, if not detecting BP app behavior)",
+    "custom_steps": "WHEN the user has specific push notifications channels enabled\r\nAND a push notification is sent to the specific channel",
+    "custom_expected": "THEN the user with the channel enabled should receive a notification\r\nAND the user with the channel disabled should NOT receive a notification ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user enables 'Allow Notification' within My Notifications page\nAND the user enables 'Tickets & Events' channel within My Notifications page\nAND the user disables remaining channels('News & Announcements', 'Team Promotions') within My Notifications page\nAND the user closes/quits Ballpark app",
+        "expected": "THEN the notifications configuration for the account is set up to receive ONLY from 'Tickets & Events' channel"
+      },
+      {
+        "content": "WHEN an engineer sends a OneSignal Push Notification \n\n[Tickets & Events Tag - BP Test [iOS]](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/notifications/93afc2c2-d418-4e82-9fc7-452f3ad3d7ff#outcomes=os__click__count,os__session_duration__count) can be used/duplicated\nSteps:\n1. Navigates to 'Push Notification' via OneSignal link above ('Messages' top-level tab, AND 'Push' sub-level tab)\n2. Tap 'New Push'\n3. Fill out New Push Notification appropriately\n3a. Within Audience, tap 'Send to particular segment' AND ensure the acct/device is included within the segment\n    User Tag = 'Tickets & Events'\n    is \n    'true'\n4. Tap 'Send to Test Device' button within Message section\n5. Select specific test user/devices. (Add to Test Users, if not listed)\n5a. Multiple devices can be selected (may want to validate at least one iOS and Android device each)",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users device(s) should receive a notification"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user enables 'Allow Notification' within My Notifications page\nAND the user disables 'Tickets & Events' channel within My Notifications page\nAND the user disables remaining channels('News & Announcements', 'Team Promotions') within My Notifications page\nAND the user closes/quits Ballpark app",
+        "expected": "THEN the notifications configuration for the account is set up to NOT receive from 'Tickets & Events' channel"
+      },
+      {
+        "content": "WHEN an engineer sends another push notification directing to 'Tickets & Events' channel ",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users device(s) should NOT receive a notification\n"
+      }
+    ]
+  },
+  {
+    "id": 27199203,
+    "title": "[iOS] Notification Channels Validation - News & Announcements",
+    "section_id": 1420087,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 288,
+    "created_on": 1649966016,
+    "updated_by": 288,
+    "updated_on": 1656096708,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 6,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.1.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\n\r\n\r\nNotes:\r\n*iOS - OneSignal tags should reflect subscriptions for that user \r\n\r\nNOTE: If using [Test User](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/players?test_users=true) segment, ensure specific device is added/updated (may need to be re-added, if not detecting BP app behavior)",
+    "custom_steps": "WHEN the user has specific push notifications channels enabled\r\nAND a push notification is sent to the specific channel",
+    "custom_expected": "THEN the user with the channel enabled should receive a notification\r\nAND the user with the channel disabled should NOT receive a notification ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user enables 'Allow Notification' within My Notifications page\nAND the user enables 'News & Announcements' channel within My Notifications page\nAND the user disables remaining channels('Tickets & Events'', 'Team Promotions') within My Notifications page\nAND the user closes/quits Ballpark app",
+        "expected": "THEN the notifications configuration for the account is set up to receive ONLY from ''News & Announcements' channel"
+      },
+      {
+        "content": "WHEN an engineer sends a OneSignal Push Notification \n\n[News & Announcement Tag - BP Test [iOS]](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/notifications/0074df48-7f89-4a5f-9ff9-d85b0cfcb789#outcomes=os__click__count,os__session_duration__count) can be used/duplicated\nSteps:\n1. Navigates to 'Push Notification' via OneSignal link above ('Messages' top-level tab, AND 'Push' sub-level tab)\n2. Tap 'New Push'\n3. Fill out New Push Notification appropriately\n3a. Within Audience, tap 'Send to particular segment' AND ensure the acct/device is included within the segment\n    User Tag = 'News & Announcements'\n    is \n    'true'\n4. Tap 'Send to Test Device' button within Message section\n5. Select specific test user/devices. (Add to Test Users, if not listed)\n5a. Multiple devices can be selected (may want to validate at least one iOS and Android device each)",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users device(s) should receive a notification"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user enables 'Allow Notification' within My Notifications page\nAND the user disables 'News & Announcements' channel within My Notifications page\nAND the user disables remaining channels('Tickets & Events', 'Team Promotions') within My Notifications page\nAND the user closes/quits Ballpark app",
+        "expected": "THEN the notifications configuration for the account is set up to NOT receive from 'News & Announcements' channel"
+      },
+      {
+        "content": "WHEN an engineer sends another push notification directing to 'News & Announcements' channel ",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users device(s) should NOT receive a notification as the notification has been disabled."
+      }
+    ]
+  },
+  {
+    "id": 6686404,
+    "title": "In-App Message trigger - Navbar Tabs",
+    "section_id": 305221,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-8768, BPA-5601",
+    "created_by": 197,
+    "created_on": 1587587489,
+    "updated_by": 288,
+    "updated_on": 1634852282,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app",
+    "custom_steps": "From One signal create in app msg with following triggers\r\nHome tab (regardless of no tickets or has tickets)\r\n\r\nKey = ViewShown \r\n\r\nValues: \r\n- Home\r\n- Wallet\r\n- Team\r\n- More \r\n\r\nWhen the key 'ViewShown' is set to a specific tab (as listed above), the configured in app message should not appear until the user navigates to the pre-configured tab.\r\n\r\n*To have a InApp Message with trigger show up, you need to include an IN-APP TRIGGER and SESSION DURATION\r\n*It has been noticed that the in-app triggers may need an app restart AND can take up to 5 mins to be shown",
+    "custom_expected": "Test should be run for each navigation tab, and for each navigation tab, every OTHER tab should be clicked before the configured tab to ensure that the message does not appear in a tab it is not supposed to.\r\n\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an engineer sends a [OneSignal In-App Message](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages) \n\nNOTE: You can use prev created Messages(i.e Ticket Tab Test - SteveO), updating as needed and setting as Active. But if wanting to [create new](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/new), follow steps below\n\nSteps:\n1. Navigates to 'In-App Messages' via OneSignal link above ('Messages' top-level tab, AND 'In-App' sub-level tab)\n\n2. Tap 'New In-App'\n\n3. AUDIENCE: Select 'Show to Particular Segments' and select appropriate segment\n\n4. MESSAGE: Select Message Type, fill out Header text/display, Button action, etc \n\n5. TRIGGER: Select 'when certain conditions are satisfied during the session'\n \n        Select 'in-app trigger' condition and apply 'ViewShown' as Key; 'Wallet' as value.\n        Tap 'Add trigger' button\n        Select 'Session Duration' condition and apply '5' as value.\n\n6. SCHEDULE: Select desired rules to start/stop showing (and additional settings)\n\n7. Tap 'Make Message Live' button\n\n8. Confirm Before Sending and then Make Message Live\n\n",
+        "expected": "THEN in-app message dashboard is shown\nAND the InApp Message created should be Active"
+      },
+      {
+        "content": "WHEN the user logs into BP app\nAND the user navigates to 'Tickets tab'",
+        "expected": "THEN the In-App message configured in prev step should be shown"
+      },
+      {
+        "content": "WHEN the user closes the in-app message",
+        "expected": "THEN the in-app message window is dismissed"
+      },
+      {
+        "content": "WHEN the user navigates to all other navbar tabs",
+        "expected": "THEN the In-App message configured above should NOT be shown"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "[REPEAT FOR 'TEAM' VIEW - set other in-app messages to 'Paused', if it helps isolate the message]",
+        "expected": "THEN above expectations are witnessed, particular to the Team tab."
+      },
+      {
+        "content": "[REPEAT FOR 'MORE' VIEW - set other in-app messages to 'Paused', if it helps isolate the message]",
+        "expected": "THEN above expectations are witnessed, particular to the More tab."
+      },
+      {
+        "content": "[REPEAT FOR 'HOME' VIEW - set other in-app messages to 'Paused', if it helps isolate the message]",
+        "expected": "THEN above expectations are witnessed, particular to the Home tab."
+      }
+    ]
+  },
+  {
+    "id": 6687162,
+    "title": "In-App message trigger - Wallet Ticket List",
+    "section_id": 305221,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-8769, BPA-5602",
+    "created_by": 238,
+    "created_on": 1588346640,
+    "updated_by": 288,
+    "updated_on": 1676054470,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has tickets associated with their account\r\nAND a OneSignal message has been configured with the trigger key 'ViewShown' set to 'Wallet Ticket List'",
+    "custom_steps": "WHEN a user taps on an event in the Wallet view to open the ticket list",
+    "custom_expected": "THEN the app should display the OneSignal message that had previously been configured\r\n\r\nNOTE: I have noticed that you may have to set a \"Session Duration\" to the in-app notification before it will work\r\n*It has been noticed that the in-app triggers may need an app restart AND can take up to 5 mins to be shown\r\n\r\nNOTE: If using [Test User](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/players?test_users=true) segment, ensure specific device is added/updated (may need to be re-added, if not detecting BP app behavior)",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an engineer sends a [OneSignal In-App Message](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages) \n\nNOTE: You can use prev created Messages(i.e Wallet Ticket List Test - SteveO), updating as needed and setting as Active. But if wanting to [create new](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/new), follow steps below\n\nSteps:\n1. Navigates to 'In-App Messages' via OneSignal link above ('Messages' top-level tab, AND 'In-App' sub-level tab)\n\n2. Tap 'New In-App'\n\n3. AUDIENCE: Select 'Show to Particular Segments' and select appropriate segment\n\n4. MESSAGE: Select Message Type, fill out Header text/display, Button action, etc \n\n5. TRIGGER: Select 'when certain conditions are satisfied during the session'\n \n        Select 'in-app trigger' condition and apply 'ViewShown' as Key; 'Wallet Ticket List' as value.\n        Tap 'Add trigger' button\n        Select 'Session Duration' condition and apply '5' as value.\n\n6. SCHEDULE: Select desired rules to start/stop showing (and additional settings)\n\n7. Tap 'Make Message Live' button\n\n8. Confirm Before Sending and then Make Message Live\n\n",
+        "expected": "THEN in-app message dashboard is shown\nAND the InApp Message created should be Active"
+      },
+      {
+        "content": "WHEN the user logs into BP app\nAND user has tickets associated with their account\n",
+        "expected": "THEN Home Page is shown with a Next Ticketed Event card "
+      },
+      {
+        "content": "WHEN user taps an event card on the Home Page \n\n(tap card background, NOT 'Open Tickets')",
+        "expected": "THEN the In-App message configured above should be shown, while the Ticket List View is loaded and displayed in the background"
+      },
+      {
+        "content": "WHEN the user closes the in-app message",
+        "expected": "THEN the in-app message window is dismissed\nAND the Ticket List View is displayed"
+      },
+      {
+        "content": "WHEN user back navigates from the Ticket List View",
+        "expected": "THEN the user is returned to the Home page"
+      },
+      {
+        "content": "WHEN the user navigates to 'Tickets tab'",
+        "expected": "THEN the user sees ticketed event cards\nAND 'View All' link"
+      },
+      {
+        "content": "WHEN user taps an event card on the Wallet View",
+        "expected": "THEN the In-App message configured above should be shown, while the Ticket List View is loaded and displayed in the background"
+      },
+      {
+        "content": "WHEN the user closes the in-app message",
+        "expected": "THEN the in-app message window is dismissed\nAND the Ticket List View is displayed"
+      },
+      {
+        "content": "WHEN the user back navs to the Wallet View\nAND the user taps 'View All' link",
+        "expected": "THEN My Tickets page is shown"
+      },
+      {
+        "content": "WHEN the user taps on any ticketed event listed",
+        "expected": "THEN the In-App message configured above should be shown, while the Ticket List View is loaded and displayed in the background"
+      },
+      {
+        "content": "WHEN the user closes the in-app message",
+        "expected": "THEN the in-app message window is dismissed\nAND the Ticket List View is displayed"
+      }
+    ]
+  },
+  {
+    "id": 6686592,
+    "title": "In-App message trigger - My History Detail View",
+    "section_id": 305221,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-8770, BPA-5603",
+    "created_by": 197,
+    "created_on": 1587653207,
+    "updated_by": 288,
+    "updated_on": 1656096966,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has previous check-in on account\r\nAND a OneSignal message has been configured with the trigger key 'ViewShown' set to 'My History Details'\r\n\r\nNOTE: If using [Test User](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/players?test_users=true) segment, ensure specific device is added/updated (may need to be re-added, if not detecting BP app behavior)",
+    "custom_steps": "WHEN a user navigates to 'My History' page\r\nAND then taps on 'View Details' for an event\r\n\r\n",
+    "custom_expected": "THEN the app should display the OneSignal message that had previously been configured\r\n\r\nNOTE: I have noticed that you may have to set a \"Session Duration\" to the in-app notification before it will work\r\n*It has been noticed that the in-app triggers may need an app restart AND can take up to 5 mins to be shown",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an engineer sends a [OneSignal In-App Message](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages) \n\nNOTE: You can use prev created Messages(i.e My History Details Test - SteveO), updating as needed and setting as Active. But if wanting to [create new](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/new), follow steps below\n\nSteps:\n1. Navigates to 'In-App Messages' via OneSignal link above ('Messages' top-level tab, AND 'In-App' sub-level tab)\n\n2. Tap 'New In-App'\n\n3. AUDIENCE: Select 'Show to Particular Segments' and select appropriate segment\n\n4. MESSAGE: Select Message Type, fill out Header text/display, Button action, etc \n\n5. TRIGGER: Select 'when certain conditions are satisfied during the session'\n \n        Select 'in-app trigger' condition and apply 'ViewShown' as Key; 'My History Details' as value.\n        Tap 'Add trigger' button\n        Select 'Session Duration' condition and apply '5' as value.\n\n6. SCHEDULE: Select desired rules to start/stop showing (and additional settings)\n\n7. Tap 'Make Message Live' button\n\n8. Confirm Before Sending and then Make Message Live\n\n",
+        "expected": "THEN in-app message dashboard is shown\nAND the InApp Message created should be Active"
+      },
+      {
+        "content": "WHEN the user logs into BP app\nAND the user navigates to 'My Profile', via Profile icon on Home page",
+        "expected": "THEN My Profile page is shown\nAND My History summary is shown with 'View Details' link"
+      },
+      {
+        "content": "WHEN user taps on 'View Details' link within the My History summary ",
+        "expected": "THEN My History page is shown\nAND the accounts prev check-in event cards are shown with 'View Details' link"
+      },
+      {
+        "content": "WHEN user taps on 'View Details' link within the event check-in cards",
+        "expected": "THEN the In-App message configured above should be shown, while the My History Details View is loaded and displayed in the background"
+      },
+      {
+        "content": "WHEN the user closes the in-app message",
+        "expected": "THEN the in-app message window is dismissed\nAND My History Details View is displayed"
+      }
+    ]
+  },
+  {
+    "id": 6687283,
+    "title": "In-App Deeplink message",
+    "section_id": 305221,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 197,
+    "created_on": 1588605221,
+    "updated_by": 288,
+    "updated_on": 1718301125,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 6,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\n\r\n\r\n",
+    "custom_steps": "WHEN the user receives an In-App message which has a deep link\r\nAND the user selects the deeplink in the body of the message\r\nballpark://webview?url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours\r\n\r\n\r\nNOTE: Seems to take about 15 minutes or more before the message appears\r\nNOTE: To setup deeplink in In-App message, use add \"Click Action\" on button and add URL there\r\nNOTE: On iOS make sure you do not have multiple versions of the app installed (Double check these links)\r\n\r\n\r\n",
+    "custom_expected": "THEN the application should navigate the user to the proper location",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an engineer sends a [OneSignal In-App Message](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages) \n\nNOTE: You can use prev created Messages(i.e Team Tab Deeplink Test - SteveO), updating as needed and setting as Active. But if wanting to [create new](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/new), follow steps below\n\nSteps:\n1. Navigates to 'In-App Messages' via OneSignal link above ('Messages' top-level tab, AND 'In-App' sub-level tab)\n\n2. Tap 'New In-App'\n\n3. AUDIENCE: Select 'Show to Particular Segments' and select appropriate segment\n\n4. MESSAGE: Select Message Type, fill out Header text/display\n \n        Add/Update Button text  \n        Tap 'Add Click ACtion' button\n        Select 'URL' and apply 'ballpark://webview?url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours'\n\n5. TRIGGER: Select 'when certain conditions are satisfied during the session'\n \n        Select 'in-app trigger' condition and apply 'ViewShown' as Key; 'Team' as value.\n        Tap 'Add trigger' button\n        Select 'Session Duration' condition and apply '5' as value.\n\n6. SCHEDULE: Select desired rules to start/stop showing (and additional settings)\n\n7. Tap 'Make Message Live' button\n\n8. Confirm Before Sending and then Make Message Live\n\n",
+        "expected": "THEN in-app message dashboard is shown\nAND the InApp Message created should be Active"
+      },
+      {
+        "content": "WHEN the user logs into BP app\nAND the user navigates to 'Team tab'",
+        "expected": "THEN the In-App message configured in prev step should be shown with a button"
+      },
+      {
+        "content": "WHEN the user taps the button within the in-app message ",
+        "expected": "THEN the application should navigate the user to the proper location"
+      }
+    ]
+  },
+  {
+    "id": 26391420,
+    "title": "[ANDROID ONLY]In-App message - Upgrade Prompt",
+    "section_id": 305221,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1644619930,
+    "updated_by": 288,
+    "updated_on": 1677016501,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 7,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (ANDROID users & NOT the Production build) \r\nAND user is logged in with MLB account in Ballpark app\r\n\r\n\r\n[BP-9610](https://baseball.atlassian.net/browse/BP-9610)\r\n*also still applicable for iOS 12.0.1 or less - 12.0.2 introduces [BP-10012](https://baseball.atlassian.net/browse/BP-10012 )",
+    "custom_steps": "WHEN the user receives an In-App message to Upgrade \r\nAND the user taps the button to visit the store in the body of the message\r\n*iOS - https://apps.apple.com/us/app/mlb-ballpark/id513135722\r\n*Android - https://play.google.com/store/apps/details?id=com.bamnetworks.mobile.android.ballpark\r\n\r\n\r\nNOTE: It can take up to 15 minutes or more before the message appears\r\nNOTE: To setup deeplink in In-App message, use add \"Click Action\" on button and add URL there\r\nNOTE: If using [Test User](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/players?test_users=true) segment, ensure specific device is added/updated (may need to be re-added, if not detecting BP app behavior)\r\nNOTE: On iOS make sure you do not have multiple versions of the app installed\r\nNOTE: OneSig app message is dismissible -- but should be shown upon any app open (even from backgrounded app) \r\n\r\nANDROID NOTES - \r\n*[OneSig Ballpark QA App](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages) are tied to Debug builds (Prod Debug, Staging Debug, and QA Debug BP app builds )\r\n*[OneSig Ballpark App](https://app.onesignal.com/apps/6dfb24dd-9167-41c5-ba11-9da6fdbcaa5a/in_app_messages) are tied to Release builds (Prod Release, Staging Release, and QA Release BP app builds ) -- BE CAUTIOUS WITH UPDATING/CREATING ONE-SIG MESSAGES THAT COULD GO OUT TO PUBLIC\r\n*Noticed inconsistency for prompt to show for Android, may need further investigation\r\n\r\n\r\n",
+    "custom_expected": "THEN the application should navigate the user to the AppStore page for Ballpark App",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an engineer sends a [OneSignal In-App Message](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages) \n\nNOTE: You can use prev created Messages(i.e [Force Upgrade Message](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/4ca4fa6e-7112-46f0-807e-020cc1ce4b0d), updating as needed and setting as Active. But if wanting to [create new](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/new), follow steps below\n\nSteps:\n1. Navigates to 'In-App Messages' via OneSignal link above ('Messages' top-level tab, AND 'In-App' sub-level tab)\n\n2. Tap 'New In-App'\n\n3. AUDIENCE: Select 'Show to Particular Segments' and select appropriate segment\n\n4. MESSAGE: Select Message Type, fill out Header text/display\n \n        Add/Update Button text  \n        Tap 'Add Click Action' button\n        Select 'URL' and apply 'https://apps.apple.com/us/app/mlb-ballpark/id513135722'\n\n5. TRIGGER: Select 'On app open'\n\n6. SCHEDULE: Select desired rules to start/stop showing (and additional settings)\n\n7. Tap 'Make Message Live' button\n\n8. Confirm Before Sending and then Make Message Live\n\n",
+        "expected": "THEN in-app message dashboard is shown\nAND the InApp Message created should be Active"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN a OneSignal message is configured to display when Ballpark is opened\n\n\nWHEN app is closed/quit (not backgrounded) \nAND user is logged out (without having keychain stored)\nAND user opens Ballpark",
+        "expected": "THEN the user is shown the Get Started page \nAND the In-App message configured in prev step should be shown with a button to update prior to logging in"
+      },
+      {
+        "content": "WHEN the user taps the button within the in-app message ",
+        "expected": "THEN the application should navigate the user to the AppStore to upgrade"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN a OneSignal message is configured to display when Ballpark is opened\n\n\nWHEN app is closed/quit (not backgrounded)\nAND user is logged in\nAND user opens Ballpark",
+        "expected": "THEN the In-App message configured should be shown with a button to update atop the HomePage"
+      },
+      {
+        "content": "WHEN the user taps the button within the in-app message ",
+        "expected": "THEN the application should navigate the user to the AppStore to upgrade"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN a OneSignal message is configured to display when Ballpark is opened\n\n\nWHEN app is in backgrounded\nAND user is logged out\nAND user opens Ballpark",
+        "expected": "THEN the In-App message configured should be shown with a button to update prior to logging in"
+      },
+      {
+        "content": "WHEN the user taps the button within the in-app message ",
+        "expected": "THEN the application should navigate the user to the AppStore to upgrade"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN a OneSignal message is configured to display when Ballpark is opened\n\n\nWHEN app is in backgrounded\nAND user is logged in\nAND user opens Ballpark",
+        "expected": "THEN the In-App message configured should be shown with a button to update atop whatever page the app is currently opened on"
+      },
+      {
+        "content": "WHEN the user taps the button within the in-app message ",
+        "expected": "THEN the application should navigate the user to the AppStore to upgrade"
+      }
+    ]
+  },
+  {
+    "id": 26920391,
+    "title": "[iOS ONLY] In-App message - Permission Prompt for Push Notifications - FIRST TIME",
+    "section_id": 305221,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 288,
+    "created_on": 1648163632,
+    "updated_by": 288,
+    "updated_on": 1720648026,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 8,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN an in-app message is configured to show when the view trigger matches for first time\r\nAND the user downloaded the Ballpark app (11.1.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has never enabled notifications previously\r\n\r\n\r\n[BP-9630](https://baseball.atlassian.net/browse/BP-9630)\r\n\r\n\r\nNew NotificationPrompt trigger support (configured in QA App, QA env)\r\n*[Push Notifications iOS](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/c2e329cd-2851-4420-aee4-bdd3e291f2ca) - Set this trigger to firstTime when user has had at least ONE (1) session AND has not already been shown push notification dialog\r\n*[Push Notifications REMINDER iOS](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/9babd23a-eaa5-43ca-9f20-b26457b72ddb) - Set this trigger to reminder when user has been shown the prompt AND does not have notification permissions enabled \r\n\r\n\r\n\r\nNOTE: It can take up to 15 minutes or more before the message appears\r\nNOTE: To setup deeplink in In-App message, use add \"Click Action\" on button and add URL there\r\nNOTE: If using [Test User](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/players?test_users=true) segment, ensure specific device is added/updated (may need to be re-added, if not detecting BP app behavior) \r\nNOTE: On iOS make sure you do not have multiple versions of the app installed\r\nNOTE: OneSig app message is dismissible",
+    "custom_steps": "WHEN user is within Ballpark and qualifies for One Signal In-App Prompt for Notifications to be shown\r\nTHEN I will be shown an in-app message\r\n\r\n \r\n\r\nGIVEN a user is shown the One Signal in app to enable push\r\nWHEN I enable push notification permissions through the in-app\r\nTHEN I will be automatically opted in to all Ballpark notification channels\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an engineer sends a [OneSignal In-App Message](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages) \n\nNOTE: You can use prev created Messages(i.e [Push Notifications iOS](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/c2e329cd-2851-4420-aee4-bdd3e291f2ca), updating as needed and setting as Active. But if wanting to [create new](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/new), follow steps below\n\nSteps:\n1. Navigates to 'In-App Messages' via OneSignal link above ('Messages' top-level tab, AND 'In-App' sub-level tab)\n\n2. Tap 'New In-App'\n\n3. AUDIENCE: Select 'Show to Particular Segments' and select appropriate segment (such as 'iOS Only')\n\n4. MESSAGE: Select Message Type, fill out Header text/display\n \n        Add/Update Button1 text (Enable Notifications) \n        Tap 'Add Click Action' button\n        Select 'Push Permission Prompt (iOS)'\n\n\n5. TRIGGER: Select 'When certain conditions are satisfied during the session'\n        'NotificationPrompt' IS 'firstTime'\n        'ViewShown' IS 'Buy Tickets' (or whatever view is desired)\n\n6. SCHEDULE: Select desired rules to start/stop showing (and additional settings)\n\n7. Tap 'Make Message Live' button\n\n8. Confirm Before Sending and then Make Message Live\n\n",
+        "expected": "THEN in-app message dashboard is shown\nAND the InApp Message created should be Active"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN a OneSignal message is configured to display when Ballpark is opened to Buy Tickets for firstTime\nAND the user freshly downloaded the Ballpark app (11.1.0 or greater & NOT the Production build)\nAND user is logged in with MLB account in Ballpark app\nAND user has never enabled notifications previously\n\n\nWHEN user navigates to Buy Tickets view via TicketsTab",
+        "expected": "THEN the user is shown the Buy Tickets page \nAND the In-App message configured in prev step should be shown with buttons to Enable Notifications\n"
+      },
+      {
+        "content": "WHEN the user taps the Enable Notifications button within the in-app message ",
+        "expected": "THEN the in-app message is dismissed\nAND BP Enable Notifications prompt is shown to user with 'Don't Allow' and 'Allow' options"
+      },
+      {
+        "content": "WHEN the user taps the 'Don't Allow' CTA within the BP prompt ",
+        "expected": "THEN the BP prompt is dismissed "
+      },
+      {
+        "content": "WHEN the user navigates to My Notifications Page via HomeTab > ProfileIcon > My Notifications",
+        "expected": "THEN the My Notifications page is shown with ALL notifications DISABLED"
+      },
+      {
+        "content": "WHEN user navigates to Buy Tickets view via TicketsTab",
+        "expected": "THEN the user is shown the Buy Tickets page \nAND the In-App message configured in prev step should be shown with buttons to Enable Notifications\n"
+      },
+      {
+        "content": "WHEN the user taps the Enable Notifications button within the in-app message ",
+        "expected": "THEN the in-app message is dismissed\nAND BP Enable Notifications prompt is shown to user with 'Open Settings' and 'Cancel' options"
+      },
+      {
+        "content": "WHEN the user taps the 'Open Settings' CTA within the BP prompt ",
+        "expected": "THEN the BP prompt is dismissed\nAND user is directed to device settings "
+      },
+      {
+        "content": "WHEN the user enables the notifications for Ballpark via device settings\nAND the user returns to BP app\nAND the user navigates to My Notifications Page via HomeTab > ProfileIcon > My Notifications",
+        "expected": "THEN the My Notifications page is shown with ALL notifications ENABLED"
+      },
+      {
+        "content": "(best to delete the app completely to validate remaining steps --- deleting the keychain stored is also best, prior to changing to QA env)",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN a OneSignal message is configured to display when Ballpark is opened to Buy Tickets for firstTime\nAND the user freshly downloaded the Ballpark app (11.1.0 or greater & NOT the Production build)\nAND user is logged in with MLB account in Ballpark app\nAND user has never enabled notifications previously\n\n\nWHEN user navigates to Buy Tickets view via TicketsTab",
+        "expected": "THEN the user is shown the Buy Tickets page \nAND the In-App message configured in prev step should be shown with buttons to Enable Notifications\n"
+      },
+      {
+        "content": "WHEN the user taps the Enable Notifications button within the in-app message \nAND the user taps the 'Allow' CTA within the BP prompt ",
+        "expected": "THEN the BP prompt is dismissed "
+      },
+      {
+        "content": "WHEN the user navigates to My Notifications Page via HomeTab > ProfileIcon > My Notifications",
+        "expected": "THEN the My Notifications page is shown with ALL notifications ENABLED"
+      }
+    ]
+  },
+  {
+    "id": 27190929,
+    "title": "[iOS ONLY] In-App message - Permission Prompt for Push Notifications - REMINDER [NOT APPLIED TO PROD, POSS DEPRECATED]",
+    "section_id": 305221,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 288,
+    "created_on": 1649793347,
+    "updated_by": 288,
+    "updated_on": 1683915763,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 9,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN an in-app message is configured to show when the view trigger matches for first time (and also reminder after)\r\nAND the user downloaded the Ballpark app (11.1.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has never enabled notifications previously\r\n\r\n\r\n[BP-9630](https://baseball.atlassian.net/browse/BP-9630)\r\n\r\n\r\nNew NotificationPrompt trigger support (configured in QA App, QA env)\r\n*[Push Notifications iOS](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/c2e329cd-2851-4420-aee4-bdd3e291f2ca) - Set this trigger to firstTime when user has had at least ONE (1) session AND has not already been shown push notification dialog\r\n*[Push Notifications REMINDER iOS](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/9babd23a-eaa5-43ca-9f20-b26457b72ddb) - Set this trigger to reminder when user has been shown the prompt AND does not have notification permissions enabled \r\n\r\n\r\n\r\nNOTE: It can take up to 15 minutes or more before the message appears\r\nNOTE: To setup deeplink in In-App message, use add \"Click Action\" on button and add URL there\r\nNOTE: If using [Test User](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/players?test_users=true) segment, ensure specific device is added/updated (may need to be re-added, if not detecting BP app behavior)\r\nNOTE: On iOS make sure you do not have multiple versions of the app installed\r\nNOTE: OneSig app message is dismissible",
+    "custom_steps": "WHEN user is within Ballpark and qualifies for One Signal In-App Prompt for Notifications to be shown\r\nTHEN I will be shown an in-app message\r\n\r\n \r\n\r\nGIVEN a user is shown the One Signal in app to enable push\r\nWHEN I enable push notification permissions through the in-app\r\nTHEN I will be automatically opted in to all Ballpark notification channels\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an engineer sends a [OneSignal In-App Message](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages) \n\nNOTE: You can use prev created Messages(i.e [Push Notifications iOS](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/c2e329cd-2851-4420-aee4-bdd3e291f2ca), updating as needed and setting as Active. But if wanting to [create new](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/new), follow steps below\n\nSteps:\n1. Navigates to 'In-App Messages' via OneSignal link above ('Messages' top-level tab, AND 'In-App' sub-level tab)\n\n2. Tap 'New In-App'\n\n3. AUDIENCE: Select 'Show to Particular Segments' and select appropriate segment (such as 'iOS Only')\n\n4. MESSAGE: Select Message Type, fill out Header text/display\n \n        Add/Update Button1 text (Enable Notifications) \n        Tap 'Add Click Action' button\n        Select 'Push Permission Prompt (iOS)'\n\n        Add/Update Button2 text  (Maybe Later)\n\n5. TRIGGER: Select 'When certain conditions are satisfied during the session'\n        'NotificationPrompt' IS 'firstTime'\n        'ViewShown' IS 'Buy Tickets' (or whatever view is desired)\n\n6. SCHEDULE: Select desired rules to start/stop showing (and additional settings)\n\n7. Tap 'Make Message Live' button\n\n8. Confirm Before Sending and then Make Message Live\n\n",
+        "expected": "THEN in-app message dashboard is shown\nAND the InApp Message created should be Active"
+      },
+      {
+        "content": "WHEN an engineer sends a [OneSignal In-App Message](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages) \n\nNOTE: You can use prev created Messages(i.e [Push Notifications REMINDER iOS](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/9babd23a-eaa5-43ca-9f20-b26457b72ddb), updating as needed and setting as Active. But if wanting to [create new](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/new), follow steps below\n\nSteps:\n1. Navigates to 'In-App Messages' via OneSignal link above ('Messages' top-level tab, AND 'In-App' sub-level tab)\n\n2. Tap 'New In-App'\n\n3. AUDIENCE: Select 'Show to Particular Segments' and select appropriate segment (such as 'iOS Only')\n\n4. MESSAGE: Select Message Type, fill out Header text/display\n \n        Add/Update Button1 text (Enable Notifications) \n        Tap 'Add Click Action' button\n        Select 'Push Permission Prompt (iOS)'\n\n        Add/Update Button2 text  (Maybe Later)\n\n5. TRIGGER: Select 'When certain conditions are satisfied during the session'\n        'NotificationPrompt' IS 'reminder' (**THIS IS WHAT IS DIFFERENCE FROM ABOVE NOTIF**)\n        'ViewShown' IS 'Buy Tickets' (or whatever view is desired)\n\n6. SCHEDULE: Select desired rules to start/stop showing (and additional settings)\n\n7. Tap 'Make Message Live' button\n\n8. Confirm Before Sending and then Make Message Live\n\n",
+        "expected": "THEN in-app message dashboard is shown\nAND the InApp Message created should be Active"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN a OneSignal message is configured to display when Ballpark is opened to Buy Tickets for firstTime\nAND a OneSignal message is configured to display when Ballpark is opened to Buy Tickets for reminder\nAND the user freshly downloaded the Ballpark app (11.1.0 or greater & NOT the Production build)\nAND user is logged in with MLB account in Ballpark app\nAND user has never enabled notifications previously\n\n\nWHEN user navigates to Buy Tickets view via TicketsTab",
+        "expected": "THEN the user is shown the Buy Tickets page \nAND the In-App message configured in prev step should be shown with buttons to Enable Notifications and Maybe Later\n"
+      },
+      {
+        "content": "WHEN the user taps the Enable Notifications button within the in-app message ",
+        "expected": "THEN the in-app message is dismissed\nAND BP Enable Notifications prompt is shown to user with 'Don't Allow' and 'Allow' options"
+      },
+      {
+        "content": "WHEN the user taps the 'Don't Allow' CTA within the BP prompt",
+        "expected": "THEN the BP prompt is dismissed"
+      },
+      {
+        "content": "WHEN the user navigates to My Notifications Page via HomeTab > ProfileIcon > My Notifications",
+        "expected": "THEN the My Notifications page is shown with ALL notifications DISABLED"
+      },
+      {
+        "content": "WHEN the user quits/kills the app \nAND the user waits more than a minute\n",
+        "expected": "a minute goes by allowing for OneSignal to qualify the session as a new one"
+      },
+      {
+        "content": "WHEN the user opens the Ballpark app (and logs in, if not prev)\nAND user navigates to Buy Tickets view via TicketsTab",
+        "expected": "THEN the user is shown the Buy Tickets page \nAND the REMINDER In-App message configured in prev step should be shown with buttons to Enable Notifications and Maybe Later\n"
+      },
+      {
+        "content": "WHEN the user taps the Enable Notifications button within the in-app message ",
+        "expected": "THEN the in-app message is dismissed\nAND BP Enable Notifications prompt is shown to user with 'Open Settings' and 'Cancel' options"
+      },
+      {
+        "content": "WHEN the user taps the 'Open Settings' CTA within the BP prompt ",
+        "expected": "THEN the BP prompt is dismissed\nAND user is directed to device settings "
+      },
+      {
+        "content": "WHEN the user enables the notifications for Ballpark via device settings\nAND the user returns to BP app\nAND the user navigates to My Notifications Page via HomeTab > ProfileIcon > My Notifications",
+        "expected": "THEN the My Notifications page is shown with ALL notifications ENABLED"
+      }
+    ]
+  },
+  {
+    "id": 30097537,
+    "title": "[iOS ONLY] In-App message - Current App Version trigger",
+    "section_id": 305221,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 288,
+    "created_on": 1675963264,
+    "updated_by": 288,
+    "updated_on": 1675982897,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 10,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN an in-app message is configured to show based trigger matching 'current_app_version'\r\nAND the user downloaded the Ballpark app (12.0.2 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has enabled notifications previously\r\n\r\n\r\n[BP-10012](https://baseball.atlassian.net/browse/BP-10012)\r\n\r\n\r\nNew NotificationPrompt trigger support (configured in QA App, QA env)\r\n*[Push Notifications iOS](https://dashboard.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/78a521e2-a092-4dd5-a224-f7d6e31b83f7) - Set this trigger to current_app_version to desired app version\r\n\r\n\r\n\r\nNOTE: It can take up to 15 minutes or more before the message appears\r\nNOTE: To setup deeplink in In-App message, use add \"Click Action\" on button and add URL there\r\nNOTE: If using [Test User](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/players?test_users=true) segment, ensure specific device is added/updated (may need to be re-added, if not detecting BP app behavior) \r\nNOTE: On iOS make sure you do not have multiple versions of the app installed\r\nNOTE: OneSig app message is dismissible\r\nNOTE: To have a InApp Message with trigger show up, you need to include an IN-APP TRIGGER and SESSION DURATION (greater than 5 secs)\r\n\r\nNOTE: It has been noticed that the in-app triggers may need an app restart AND can take up to 5 mins to be shown\r\n\r\n",
+    "custom_steps": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an engineer sends a [OneSignal In-App Message](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages) \n\nNOTE: You can use prev created Messages(i.e [Push Notifications iOS](https://dashboard.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/78a521e2-a092-4dd5-a224-f7d6e31b83f7/edit), updating as needed and setting as Active. But if wanting to [create new](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/new), follow steps below\n\nSteps:\n1. Navigates to 'In-App Messages' via OneSignal link above ('Messages' top-level tab, AND 'In-App' sub-level tab)\n\n2. Tap 'New In-App'\n\n3. AUDIENCE: Select 'Show to Particular Segments' and select appropriate segment (such as 'iOS Only')\n\n4. MESSAGE: Select Message Type, fill out Header text/display\n \n        Add/Update Button1 text (Enable Notifications) \n        Tap 'Add Click Action' button\n        Select 'Push Permission Prompt (iOS)'\n\n\n5. TRIGGER: Select 'When certain conditions are satisfied during the session'\n  *In-App Trigger - 'current_app_version' IS NOT '12.0.2' (or whatever build is desired to be upgraded to, but not shown the prompt)\n  *Session Duration - 'greater than 5 seconds'\n\n\n6. SCHEDULE: Select desired rules to start/stop showing (and additional settings)\n\n7. Tap 'Make Message Live' button\n\n8. Confirm Before Sending and then Make Message Live\n\n",
+        "expected": "THEN in-app message dashboard is shown\nAND the InApp Message created should be Active"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN a OneSignal message is configured to display for users below the build specified in the trigger (current_app_version) when Ballpark is opened\nAND the user downloaded the Ballpark app (12.0.1 or less & NOT the Production build)\n\nWHEN BP app is closed/quit (not backgrounded)\nAND user is logged out (without having keychain stored)\nAND user opens Ballpark\n\n",
+        "expected": "THEN the user is shown the Get Started page\nAND the In-App message configured in prev step should be shown with a button to update prior to logging in"
+      },
+      {
+        "content": "WHEN the user taps the button within the in-app message",
+        "expected": "THEN the application should navigate the user to the AppStore to upgrade"
+      },
+      {
+        "content": "GIVEN a OneSignal message is configured to display when Ballpark is opened\n\nWHEN app is closed/quit (not backgrounded)\nAND user is logged in\nAND user opens Ballpark",
+        "expected": "THEN the In-App message configured should be shown with a button to update atop the HomePage\nAND the application should navigate the user to the AppStore to upgrade upon button tap"
+      },
+      {
+        "content": "GIVEN a OneSignal message is configured to display when Ballpark is opened\n\nWHEN app is in backgrounded\nAND user is logged out\nAND user opens Ballpark",
+        "expected": "THEN the user is shown the Get Started page\nAND the In-App message configured should be shown with a button to update prior to logging in\nAND the application should navigate the user to the AppStore to upgrade upon button tap"
+      },
+      {
+        "content": "GIVEN a OneSignal message is configured to display when Ballpark is opened\n\nWHEN app is in backgrounded\nAND user is logged in\nAND user opens Ballpark",
+        "expected": "THEN the In-App message configured should be shown with a button to update atop whatever page the app is currently opened on\nAND the application should navigate the user to the AppStore to upgrade upon button tap"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN a OneSignal message is configured to display for users below the build specified in the trigger (current_app_version) when Ballpark is opened\nAND the user downloaded the Ballpark app (12.0.2 or greater & NOT the Production build)\n\nWHEN BP app is closed/quit (not backgrounded)\nAND user is logged out (without having keychain stored)\nAND user opens Ballpark",
+        "expected": "THEN the user is shown the Get Started page\nAND the In-App message configured in prev step should NOT be shown to update prior to logging in"
+      },
+      {
+        "content": "WHEN user logs into BP app ",
+        "expected": "THEN the user is shown the Home Page\nAND the In-App message configured in prev step should NOT be shown to update after logging in"
+      }
+    ]
+  },
+  {
+    "id": 6686846,
+    "title": "[iOS ONLY] Firebase Remote Config - OneSignal Push Channels",
+    "section_id": 1245746,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": 1703,
+    "refs": "iOS",
+    "created_by": 197,
+    "created_on": 1588099545,
+    "updated_by": 288,
+    "updated_on": 1744305575,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "NOTE: This case only applies to iOS. \r\n (no need to validate for Android) This case applies to Android versions prior to Oreo(8.0), but is no longer supported with BP 11.0.\r\n\r\n\r\nGIVEN 'OneSignal' setting with 'push_channels' parameter is configured in Firebase\r\n\r\nPrerequisite - Remote Config Setup for: 'OneSignal' configuration\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"push_channels\" as needed to force display. \r\n3. Save changes.\r\n4. Publish changes.\r\n\r\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\r\n\r\nRemote Configs \r\n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobiletools-npd-d08e/config)\r\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\r\n(can have condition set up to differentiate desired behavior for different envs/platform)\r\n\r\n\r\n[BP-8765](https://baseball.atlassian.net/browse/BP-8765) \r\n",
+    "custom_steps": null,
+    "custom_expected": "The changes should be reflected in side the notifications screen.\r\n\r\nNOTE: Keep in mind, you may have to reload the application after settings changes. RemoteConfig changes are applied on app start. ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN editing \"push_channels\" in the configuration",
+        "expected": "AND publishing the change within Remote config"
+      },
+      {
+        "content": "WHEN the user downloaded the Ballpark app (10.5.0 or greater)\nAND user is logged in with MLB account in Ballpark app\nAND user navigates to My Profile page via Profile icon\nAND user navigates to My Notifications page, via 'My Notifications' menu option",
+        "expected": "THEN the application should reflect the changes"
+      }
+    ]
+  },
+  {
+    "id": 27190699,
+    "title": "[iOS ONLY] Network down during Notification change [DEPRECATED w/ 13.0.0 BP, SDK update]",
+    "section_id": 1768254,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "iOS",
+    "created_by": 288,
+    "created_on": 1649780000,
+    "updated_by": 288,
+    "updated_on": 1706215567,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (11.1.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user navigates to My Profile page via Profile icon\r\nAND user navigates to My Notifications page, via 'My Notifications' menu option",
+    "custom_steps": "GIVEN user has no connection or cannot reach OneSignal\r\nWHEN I attempt to change notification channels\r\n",
+    "custom_expected": "THEN I will see an error message pop up header: “Sorry” body: “Something went wrong. Please try again.” CTA: “OK” (a call is being attempted and then eventually fails, therefore expect some delay in the error prompt shown)",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has notifications disabled\nAND user device is not connected to network (airplane mode)\nWHEN the user toggles \"Allow Notifications\"",
+        "expected": "THEN device settings can be updated to allow notifications"
+      },
+      {
+        "content": "WHEN the user toggles the tags ('News & Announcements', 'Tickets & Events', 'Team Promotions')",
+        "expected": "THEN BP attempts to update the settings provided to One Signal\nTHEN BP shows the tags radio buttons with faded blue (enabled)"
+      },
+      {
+        "content": "WHEN the user waits a few minutes",
+        "expected": "THEN I will see an error message pop up \n*header: “Sorry”\n*body: “Something went wrong. Please try again.” \n*CTA: “OK”\n\n"
+      },
+      {
+        "content": "WHEN user taps 'OK' on the error prompt",
+        "expected": "THEN the prompt is dismissed and user is shown returned to My Notifications\nAND BP shows the tags radio buttons disabled"
+      }
+    ]
+  },
+  {
+    "id": 30158291,
+    "title": "In-App message - Upgrade Prompt*[requires OneSignal access]",
+    "section_id": 1768255,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1677016180,
+    "updated_by": 288,
+    "updated_on": 1696263728,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43643,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (ANDROID users & NOT the Production build) \r\nAND user is logged in with MLB account in Ballpark app\r\n\r\n\r\n[BP-9610](https://baseball.atlassian.net/browse/BP-9610)\r\n*also still applicable for iOS 12.0.1 or less - 12.0.2 introduces [BP-10012](https://baseball.atlassian.net/browse/BP-10012 )",
+    "custom_steps": "WHEN the user receives an In-App message to Upgrade \r\nAND the user taps the button to visit the store in the body of the message\r\n*iOS - https://apps.apple.com/us/app/mlb-ballpark/id513135722\r\n*Android - https://play.google.com/store/apps/details?id=com.bamnetworks.mobile.android.ballpark\r\n\r\n\r\nNOTE: It can take up to 15 minutes or more before the message appears\r\nNOTE: To setup deeplink in In-App message, use add \"Click Action\" on button and add URL there\r\nNOTE: If using [Test User](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/players?test_users=true) segment, ensure specific device is added/updated (may need to be re-added, if not detecting BP app behavior)\r\nNOTE: On iOS make sure you do not have multiple versions of the app installed\r\nNOTE: OneSig app message is dismissible -- but should be shown upon any app open (even from backgrounded app) \r\n\r\nANDROID NOTES - \r\n*[OneSig Ballpark QA App](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages) are tied to Debug builds (Prod Debug, Staging Debug, and QA Debug BP app builds )\r\n*[OneSig Ballpark App](https://app.onesignal.com/apps/6dfb24dd-9167-41c5-ba11-9da6fdbcaa5a/in_app_messages) are tied to Release builds (Prod Release, Staging Release, and QA Release BP app builds ) -- BE CAUTIOUS WITH UPDATING/CREATING ONE-SIG MESSAGES THAT COULD GO OUT TO PUBLIC\r\n*Noticed inconsistency for prompt to show for Android, may need further investigation\r\n\r\n\r\n",
+    "custom_expected": "THEN the application should navigate the user to the AppStore page for Ballpark App",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an engineer sends a [OneSignal In-App Message](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages) \n\nNOTE: You can use prev created Messages(i.e [Force Upgrade Message](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/4ca4fa6e-7112-46f0-807e-020cc1ce4b0d), updating as needed and setting as Active. But if wanting to [create new](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/new), follow steps below\n\nSteps:\n1. Navigates to 'In-App Messages' via OneSignal link above ('Messages' top-level tab, AND 'In-App' sub-level tab)\n\n2. Tap 'New In-App'\n\n3. AUDIENCE: Select 'Show to Particular Segments' and select appropriate segment\n\n4. MESSAGE: Select Message Type, fill out Header text/display\n \n        Add/Update Button text  \n        Tap 'Add Click Action' button\n        Select 'URL' and apply 'https://apps.apple.com/us/app/mlb-ballpark/id513135722'\n\n5. TRIGGER: Select 'On app open'\n\n6. SCHEDULE: Select desired rules to start/stop showing (and additional settings)\n\n7. Tap 'Make Message Live' button\n\n8. Confirm Before Sending and then Make Message Live\n\n",
+        "expected": "THEN in-app message dashboard is shown\nAND the InApp Message created should be Active"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN a OneSignal message is configured to display when Ballpark is opened\n\n\nWHEN app is closed/quit (not backgrounded) \nAND user is logged out (without having keychain stored)\nAND user opens Ballpark",
+        "expected": "THEN the user is shown the Get Started page \nAND the In-App message configured in prev step should be shown with a button to update prior to logging in"
+      },
+      {
+        "content": "WHEN the user taps the button within the in-app message ",
+        "expected": "THEN the application should navigate the user to the AppStore to upgrade"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN a OneSignal message is configured to display when Ballpark is opened\n\n\nWHEN app is closed/quit (not backgrounded)\nAND user is logged in\nAND user opens Ballpark",
+        "expected": "THEN the In-App message configured should be shown with a button to update atop the HomePage"
+      },
+      {
+        "content": "WHEN the user taps the button within the in-app message ",
+        "expected": "THEN the application should navigate the user to the AppStore to upgrade"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN a OneSignal message is configured to display when Ballpark is opened\n\n\nWHEN app is in backgrounded\nAND user is logged out\nAND user opens Ballpark",
+        "expected": "THEN the In-App message configured should be shown with a button to update prior to logging in"
+      },
+      {
+        "content": "WHEN the user taps the button within the in-app message ",
+        "expected": "THEN the application should navigate the user to the AppStore to upgrade"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN a OneSignal message is configured to display when Ballpark is opened\n\n\nWHEN app is in backgrounded\nAND user is logged in\nAND user opens Ballpark",
+        "expected": "THEN the In-App message configured should be shown with a button to update atop whatever page the app is currently opened on"
+      },
+      {
+        "content": "WHEN the user taps the button within the in-app message ",
+        "expected": "THEN the application should navigate the user to the AppStore to upgrade"
+      }
+    ]
+  }
+]

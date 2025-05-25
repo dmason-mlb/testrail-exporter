@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1534598,
+    "suite_id": 543399,
+    "name": "Configuration",
+    "description": "Prerequisite - Remote Config Setup for: ChatBot configuration\n1. Go to Firebase -> Remote Config (links below)\n2. Edit \"support_chat_url\" as needed to force display. \n3. Save changes.\n4. Publish changes.\n\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\n\nRemote Configs \n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobile-npd/config)\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\n(can have condition set up to differentiate desired behavior for different envs/platform/target_audience)",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1534599,
+    "suite_id": 543399,
+    "name": "Chat Bot functionality",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

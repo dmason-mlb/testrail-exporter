@@ -1,0 +1,520 @@
+[
+  {
+    "id": 835481,
+    "title": "Stats",
+    "section_id": 101520,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1486049810,
+    "updated_by": 65,
+    "updated_on": 1486395459,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 15495,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user has signed in with a MLB.com account\r\n",
+    "custom_steps": "WHEN the user poses the query for a player's stats:\r\n\r\nwhat is {playerName} {statCategory},\r\ni.e. \"What is David Ortiz's batting average?\"",
+    "custom_expected": "THEN Alexa will respond with the corresponding player's stats",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 835483,
+    "title": "Stats in Specific Time Period (YYYY)",
+    "section_id": 101520,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1486050189,
+    "updated_by": 65,
+    "updated_on": 1486395459,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 15495,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user has signed in with a MLB.com account\r\n",
+    "custom_steps": "WHEN the user poses the query for a player's stats:\r\n\r\nwhat is {playerName} {statCategory}  in {timePeriod}, \r\ni.e. \"What is David Ortiz's batting average in 2015?\"",
+    "custom_expected": "THEN Alexa will respond with the corresponding player's stats for the specified time period",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 835482,
+    "title": "Stats in Specific Time Period (MM/YYYY)",
+    "section_id": 101520,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1486050103,
+    "updated_by": 65,
+    "updated_on": 1486395459,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 15495,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user has signed in with a MLB.com account\r\n",
+    "custom_steps": "WHEN the user poses the query for a player's stats:\r\n\r\nwhat is {playerName} {statCategory}  in {timePeriod} {timePeriod}, \r\ni.e. \"What is David Ortiz's batting average in April 2015?\"",
+    "custom_expected": "THEN Alexa will respond with the corresponding player's stats in specific time period",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 835484,
+    "title": "Stats in Preposition and Split Specific Time Period (YYYY)",
+    "section_id": 101520,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1486050274,
+    "updated_by": 65,
+    "updated_on": 1486395459,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 15495,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user has signed in with a MLB.com account\r\n",
+    "custom_steps": "WHEN the user poses the query for a player's stats:\r\n\r\nwhat was {playerName} {statCategory} {preposition} {split} in {timePeriod},\r\ni.e. What was David Ortiz's batting average before the All-Star break in 2015?",
+    "custom_expected": "THEN Alexa will respond with the corresponding player's stats specified time period",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 835930,
+    "title": "Stats Categories",
+    "section_id": 101520,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1486136280,
+    "updated_by": 65,
+    "updated_on": 1486395459,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 15495,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user has signed in with a MLB.com account\r\n",
+    "custom_steps": "WHEN the user poses the query for the player's stats category listed below (test all):\r\n\r\nwhat is {playerName} {statCategory}\r\ni.e. \"What is David Ortiz's batting average?\"",
+    "custom_expected": "THEN Alexa will respond with the corresponding player's stats",
+    "custom_steps_separated": [
+      {
+        "content": "average",
+        "expected": ""
+      },
+      {
+        "content": "batting average",
+        "expected": ""
+      },
+      {
+        "content": "a.v.g",
+        "expected": ""
+      },
+      {
+        "content": "home runs",
+        "expected": ""
+      },
+      {
+        "content": "home run",
+        "expected": ""
+      },
+      {
+        "content": "homers",
+        "expected": ""
+      },
+      {
+        "content": "dingers",
+        "expected": ""
+      },
+      {
+        "content": "HR",
+        "expected": ""
+      },
+      {
+        "content": "h.r.",
+        "expected": ""
+      },
+      {
+        "content": "RBI",
+        "expected": ""
+      },
+      {
+        "content": "r.b.i.",
+        "expected": ""
+      },
+      {
+        "content": "RBIs",
+        "expected": ""
+      },
+      {
+        "content": "RBI's",
+        "expected": ""
+      },
+      {
+        "content": "rbi's",
+        "expected": ""
+      },
+      {
+        "content": "r.b.i.'s",
+        "expected": ""
+      },
+      {
+        "content": "ribbies",
+        "expected": ""
+      },
+      {
+        "content": "rbis",
+        "expected": ""
+      },
+      {
+        "content": "runs batted in",
+        "expected": ""
+      },
+      {
+        "content": "run",
+        "expected": ""
+      },
+      {
+        "content": "runs",
+        "expected": ""
+      },
+      {
+        "content": "runs scored",
+        "expected": ""
+      },
+      {
+        "content": "stolen bases",
+        "expected": ""
+      },
+      {
+        "content": "stolen base",
+        "expected": ""
+      },
+      {
+        "content": "SB",
+        "expected": ""
+      },
+      {
+        "content": "s.b.",
+        "expected": ""
+      },
+      {
+        "content": "bases stolen",
+        "expected": ""
+      },
+      {
+        "content": "steals",
+        "expected": ""
+      },
+      {
+        "content": "ERA",
+        "expected": ""
+      },
+      {
+        "content": "era",
+        "expected": ""
+      },
+      {
+        "content": "e.r.a.",
+        "expected": ""
+      },
+      {
+        "content": "earned run average",
+        "expected": ""
+      },
+      {
+        "content": "wins",
+        "expected": ""
+      },
+      {
+        "content": "Ws",
+        "expected": ""
+      },
+      {
+        "content": "W's",
+        "expected": ""
+      },
+      {
+        "content": "double yous",
+        "expected": ""
+      },
+      {
+        "content": "strike outs",
+        "expected": ""
+      },
+      {
+        "content": "SO",
+        "expected": ""
+      },
+      {
+        "content": "s.o.",
+        "expected": ""
+      },
+      {
+        "content": "strikeouts",
+        "expected": ""
+      },
+      {
+        "content": "strike-outs",
+        "expected": ""
+      },
+      {
+        "content": "K's",
+        "expected": ""
+      },
+      {
+        "content": "kays'",
+        "expected": ""
+      },
+      {
+        "content": "saves",
+        "expected": ""
+      },
+      {
+        "content": "games saved",
+        "expected": ""
+      },
+      {
+        "content": "saved games",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 835932,
+    "title": "Time Periods",
+    "section_id": 101520,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1486137485,
+    "updated_by": 65,
+    "updated_on": 1486395459,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 15495,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user has signed in with a MLB.com account\r\n",
+    "custom_steps": "WHEN the user poses the query for the player's stats category for the time periods listed below (test all):\r\n\r\nwhat was {playerName} {statCategory} in {timePeriod}\r\ni.e.  \"What was David Ortiz's batting average in 2015?\"",
+    "custom_expected": "THEN Alexa will respond with the corresponding player's stats in the requested time period",
+    "custom_steps_separated": [
+      {
+        "content": "last season",
+        "expected": ""
+      },
+      {
+        "content": "last year",
+        "expected": ""
+      },
+      {
+        "content": "last year's",
+        "expected": ""
+      },
+      {
+        "content": "last season's",
+        "expected": ""
+      },
+      {
+        "content": "all time",
+        "expected": ""
+      },
+      {
+        "content": "career",
+        "expected": ""
+      },
+      {
+        "content": "MLB",
+        "expected": ""
+      },
+      {
+        "content": "m.l.b.",
+        "expected": ""
+      },
+      {
+        "content": "major league",
+        "expected": ""
+      },
+      {
+        "content": "majors",
+        "expected": ""
+      },
+      {
+        "content": "cumulative",
+        "expected": ""
+      },
+      {
+        "content": "single season",
+        "expected": ""
+      },
+      {
+        "content": "a single season",
+        "expected": ""
+      },
+      {
+        "content": "any season",
+        "expected": ""
+      },
+      {
+        "content": "before all star break",
+        "expected": ""
+      },
+      {
+        "content": "after all star break",
+        "expected": ""
+      },
+      {
+        "content": "pre all star",
+        "expected": ""
+      },
+      {
+        "content": "post all star",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 835485,
+    "title": "Historical, Single Player Stat",
+    "section_id": 101521,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1486050577,
+    "updated_by": 65,
+    "updated_on": 1486395459,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 15495,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user has signed in with a MLB.com account\r\n",
+    "custom_steps": "WHEN the user poses the query for a historical, single player stat\r\ni.e. \"Who is the ALL TIME HOME RUN leader?\"",
+    "custom_expected": "THEN Alexa will respond with the corresponding player's stats in the requested time period",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 835486,
+    "title": "Historical, Multiple Players Stat",
+    "section_id": 101521,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1486050693,
+    "updated_by": 65,
+    "updated_on": 1486395459,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 15495,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user has signed in with a MLB.com account\r\n",
+    "custom_steps": "WHEN the user poses the query for a historical, multiple players stat\r\ni.e. \"Who are the ALL TIME HOME RUN leaders?\"",
+    "custom_expected": "THEN Alexa will respond with the corresponding player's stats in the requested time period",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 835487,
+    "title": "Historical, Single Season",
+    "section_id": 101521,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1486050764,
+    "updated_by": 65,
+    "updated_on": 1486395459,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 15495,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user has signed in with a MLB.com account\r\n",
+    "custom_steps": "WHEN the user poses the query for a historical, single season\r\ni.e. \"Who has the best SINGLE SEASON OPS?\"",
+    "custom_expected": "THEN Alexa will respond with the corresponding player's stats in the requested time period",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 835488,
+    "title": "Player + Stat + Date Range (2 variables)",
+    "section_id": 101521,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1486050818,
+    "updated_by": 65,
+    "updated_on": 1486395459,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 15495,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user has signed in with a MLB.com account\r\n",
+    "custom_steps": "WHEN the user poses the query for a player + stat + date range (2 variables)\r\ni.e. \"What was DAVID ORTIZ's OPS AFTER the ALL STAR BREAK in 2014?\"",
+    "custom_expected": "THEN Alexa will respond with the corresponding player's stats in the requested time period",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 835489,
+    "title": "Player Nickname + Stat",
+    "section_id": 101521,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1486050881,
+    "updated_by": 65,
+    "updated_on": 1486395459,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 15495,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user has signed in with a MLB.com account\r\n",
+    "custom_steps": "WHEN the user poses the query for a player nickname + stat\r\ni.e. \"What is BIG PAPI's OPS?\"",
+    "custom_expected": "THEN Alexa will respond with the corresponding player's stats",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1084555,
+    "title": "EDIT_Questions",
+    "section_id": 129888,
+    "template_id": 1,
+    "type_id": 8,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1499371842,
+    "updated_by": 65,
+    "updated_on": 1499438349,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 15495,
+    "display_order": 1,
+    "custom_preconds": "See the attached Excel Spreadsheet which contains 100 questions, got this document from Slack's #proj-bambot, uploaded:\r\n\r\nAndrew Patterson [3:29 PM] on July 6, 2017:  Similar to the game info questions i asked the interns to come with some stats related questions that they want to ask a bot. The above list is a 100 questions that they came up w/\r\n\r\n",
+    "custom_steps": "Category (WAR, WP, RBG, AB, R, H, K, K/9, BA, 2B, 3B, HR, RBI, SB, OBP, SLG, OPS, OPS+) ",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  }
+]

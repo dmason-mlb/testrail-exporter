@@ -1,0 +1,110 @@
+[
+  {
+    "id": 6886,
+    "suite_id": 874,
+    "name": "iPhone",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 924279,
+    "suite_id": 874,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": 6886,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 924299,
+    "suite_id": 874,
+    "name": "Team Page",
+    "description": null,
+    "parent_id": 6886,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 924326,
+    "suite_id": 874,
+    "name": "Audio",
+    "description": null,
+    "parent_id": 6886,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 924338,
+    "suite_id": 874,
+    "name": "Shake To Toggle",
+    "description": null,
+    "parent_id": 6886,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 924357,
+    "suite_id": 874,
+    "name": "MLB.tv EPG",
+    "description": null,
+    "parent_id": 6886,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 6887,
+    "suite_id": 874,
+    "name": "iPad",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 939394,
+    "suite_id": 874,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": 6887,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 941248,
+    "suite_id": 874,
+    "name": "Team Page",
+    "description": null,
+    "parent_id": 6887,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 941249,
+    "suite_id": 874,
+    "name": "Audio",
+    "description": null,
+    "parent_id": 6887,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 944767,
+    "suite_id": 874,
+    "name": "Shake To Toggle",
+    "description": null,
+    "parent_id": 6887,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 945070,
+    "suite_id": 874,
+    "name": "MLB.tv EPG",
+    "description": null,
+    "parent_id": 6887,
+    "display_order": 12,
+    "depth": 1
+  }
+]

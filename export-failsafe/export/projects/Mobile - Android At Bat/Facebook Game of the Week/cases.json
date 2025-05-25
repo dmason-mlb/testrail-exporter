@@ -1,0 +1,259 @@
+[
+  {
+    "id": 1220904,
+    "title": "Branding",
+    "section_id": 147182,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1520966329,
+    "updated_by": 84,
+    "updated_on": 1533235529,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20356,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed\r\nand there is a Facebook Game of the Week scheduled",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navigates to the Scoreboard",
+        "expected": "Then the game cell will be appropriately labeled as such (at the top of the cell)\nand the label will be displayed similarly to the MLB.TV Game of the Day label text\n\"MLB Live on Facebook Watch\""
+      },
+      {
+        "content": "When the user navigates to the MLB.TV EPG",
+        "expected": "Then the game cell will be appropriately labeled as such (under game matchup text)\nand the label will be displayed similarly to the MLB.TV Game of the Day label text\n\"MLB Live on Facebook Watch\""
+      }
+    ]
+  },
+  {
+    "id": 1220907,
+    "title": ".TV links",
+    "section_id": 147182,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1520966359,
+    "updated_by": 84,
+    "updated_on": 1533235538,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20356,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat is installed\r\nand there is a Facebook Game of the Week scheduled\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navigates to the Scoreboard\nand expands the game cell of the Facebook Game of the Week\nand the game feed is live",
+        "expected": "Then the user will see a TV link for the feed\nand it will be labeled \"FB-WATCH\" "
+      },
+      {
+        "content": "When the user navigates to the Team Page of a team featured in the Facebook Game of the Week\nand the game feed is live",
+        "expected": "Then the user will see a TV link in the schedule module's game detail section\nand it will be labeled \"FB-WATCH\""
+      }
+    ]
+  },
+  {
+    "id": 1220908,
+    "title": "Logged in to Facebook",
+    "section_id": 147185,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1520966364,
+    "updated_by": 84,
+    "updated_on": 1522703969,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20356,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed\r\nand there is a Facebook Game of the Week with a live feed\r\nAND the user has the Facebook app installed\r\nAND the user is logged into Facebook",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navs to the Scoreboard\nand expands the game cell of the Facebook Game\nand taps the \"FB-WATCH\" link to launch the game feed",
+        "expected": "Then the user will be taken to the Facebook app\nwhere the game feed will launch"
+      },
+      {
+        "content": "When the user navs to a Team Page of a team featured in the Facebook Game\nand taps the \"FB-WATCH\" link in the game detail section to launch the game feed",
+        "expected": "Then the user will be taken to the Facebook app\nwhere the game feed will launch"
+      },
+      {
+        "content": "When the user navs to the TV EPG\nand taps the Facebook Game to launch the game feed",
+        "expected": "Then the user will be taken to the Facebook app\nwhere the game feed will launch"
+      }
+    ]
+  },
+  {
+    "id": 1220913,
+    "title": "Not Logged in to Facebook",
+    "section_id": 147185,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1520972647,
+    "updated_by": 84,
+    "updated_on": 1522703999,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20356,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat is installed\r\nand there is a Facebook Game of the Week with a live feed\r\nAND the user has the Facebook app installed\r\nAND the user is NOT logged into Facebook",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navs to the Scoreboard\nand expands the game cell of the Facebook Game\nand taps the \"FB-WATCH\" link to launch the game feed",
+        "expected": "Then the user will be taken to the Facebook app\nwhere they will be prompted to log in with a Facebook account\n"
+      },
+      {
+        "content": "When the user navs to a Team Page of a team featured in the Facebook Game\nand taps the \"FB-WATCH\" link in the game detail section to launch the game feed",
+        "expected": "Then the user will be taken to the Facebook app\nwhere they will be prompted to log in with a Facebook account"
+      },
+      {
+        "content": "When the user navs to the TV EPG\nand taps the Facebook Game to launch the game feed",
+        "expected": "Then the user will be taken to the Facebook app\nwhere they will be prompted to log in with a Facebook account"
+      },
+      {
+        "content": "When the user is in the Facebook app\nand logs in from the prompt with a Facebook account",
+        "expected": "Then the user will be taken to the live game feed"
+      }
+    ]
+  },
+  {
+    "id": 1220914,
+    "title": "Without Facebook Installed",
+    "section_id": 147185,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1520972674,
+    "updated_by": 84,
+    "updated_on": 1522704028,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20356,
+    "display_order": 3,
+    "custom_preconds": "Given At Bat is installed\r\nand there is a Facebook Game of the Week with a live feed\r\nAND the user DOES NOT have the Facebook app installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navs to the Scoreboard\nand expands the game cell of the Facebook Game\nand taps the \"FB-WATCH\" link to launch the game feed",
+        "expected": "Then the user will be taken to a webview in which they can watch the game on Facebook.com"
+      },
+      {
+        "content": "When the user navs to a Team Page of a team featured in the Facebook Game\nand taps the \"FB-WATCH\" link in the game detail section to launch the game feed",
+        "expected": "Then the user will be taken to a webview in which they can watch the game on Facebook.com"
+      },
+      {
+        "content": "When the user navs to the TV EPG\nand taps the Facebook Game to launch the game feed",
+        "expected": "Then the user will be taken to a webview in which they can watch the game on Facebook.com"
+      }
+    ]
+  },
+  {
+    "id": 1220915,
+    "title": "At Bat Entitlements/Blackouts",
+    "section_id": 147185,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1520972908,
+    "updated_by": 84,
+    "updated_on": 1520973575,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20356,
+    "display_order": 4,
+    "custom_preconds": "Given At Bat is installed\r\nand there is a Facebook Game of the Week with a live feed\r\nAND the user has the Facebook app installed\r\nAND the user is logged into Facebook",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a LITE user attempts to launch the Facebook Game from At Bat",
+        "expected": "Then the user will be taken to the Facebook app\nwhere the game feed will launch"
+      },
+      {
+        "content": "When a PAID user attempts to launch the Facebook Game from At Bat",
+        "expected": "Then the user will be taken to the Facebook app\nwhere the game feed will launch"
+      },
+      {
+        "content": "When a Single Team user attempts to launch the Facebook Game from At Bat",
+        "expected": "Then the user will be taken to the Facebook app\nwhere the game feed will launch"
+      },
+      {
+        "content": "When a user attempts to launch the Facebook Game from At Bat\nand one of teams features is a local team",
+        "expected": "Then the user will not receive any sort of blackout messaging in At Bat\nand will be taken to the Facebook app"
+      }
+    ]
+  },
+  {
+    "id": 1220909,
+    "title": "Archives in At Bat",
+    "section_id": 147184,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1520966418,
+    "updated_by": 84,
+    "updated_on": 1533235561,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20356,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed\r\nand there is a Facebook Game of the Week scheduled",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the Facebook Game is flipped to media_archive",
+        "expected": "Then the archive will become available in the At Bat app"
+      },
+      {
+        "content": "On the TV EPG",
+        "expected": "Then the game will no longer be labeled with the Facebook-specific text\nand the archive will be labeled as such, and will appear like a regular MLB.TV archive"
+      },
+      {
+        "content": "On the Scoreboard",
+        "expected": "Then the game will no longer be labeled with the Facebook-specific text"
+      },
+      {
+        "content": "On the Scoreboard expanded game cell",
+        "expected": "Then the TV link text will change from \"FB-WATCH\" to \"MLB.TV\""
+      },
+      {
+        "content": "On the Team Page game detail section",
+        "expected": "Then the TV link text will change from \"FB-WATCH\" to \"MLB.TV\""
+      },
+      {
+        "content": "When a user attempts to launch the archive from At Bat",
+        "expected": "Then the archive will follow At Bat requirements in regards to archive entitlements & blackouts:\n\n- TV-entitled users can playback\n- At Bat users will be gated by TV paywall with specific messaging\n- Lite users will be gated by TV paywall\n- Single Team users will only be able to view if their team had played\n- No blackouts"
+      }
+    ]
+  }
+]

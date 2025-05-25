@@ -1,0 +1,524 @@
+[
+  {
+    "id": 1611458,
+    "suite_id": 579322,
+    "name": "Deep Link",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1612810,
+    "suite_id": 579322,
+    "name": "Hot Stove",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1638706,
+    "suite_id": 579322,
+    "name": "UI and String Updates",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1647340,
+    "suite_id": 579322,
+    "name": "Defects",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 1668619,
+    "suite_id": 579322,
+    "name": "Welcome Screen",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 1676276,
+    "suite_id": 579322,
+    "name": "accessibility",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 1676278,
+    "suite_id": 579322,
+    "name": "Midfield",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 1678054,
+    "suite_id": 579322,
+    "name": "Team page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 1719415,
+    "suite_id": 579322,
+    "name": "Splash Screen",
+    "description": null,
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 1718509,
+    "suite_id": 579322,
+    "name": "HOT/WARM/COLD Launch",
+    "description": null,
+    "parent_id": null,
+    "display_order": 31,
+    "depth": 0
+  },
+  {
+    "id": 1718510,
+    "suite_id": 579322,
+    "name": "Deeplinks",
+    "description": null,
+    "parent_id": 1718509,
+    "display_order": 32,
+    "depth": 1
+  },
+  {
+    "id": 1719412,
+    "suite_id": 579322,
+    "name": "Push Notifications",
+    "description": null,
+    "parent_id": 1718509,
+    "display_order": 33,
+    "depth": 1
+  },
+  {
+    "id": 1719413,
+    "suite_id": 579322,
+    "name": "Audio",
+    "description": null,
+    "parent_id": 1718509,
+    "display_order": 34,
+    "depth": 1
+  },
+  {
+    "id": 1719414,
+    "suite_id": 579322,
+    "name": "Widget",
+    "description": null,
+    "parent_id": 1718509,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 1760332,
+    "suite_id": 579322,
+    "name": "Postseason",
+    "description": null,
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  },
+  {
+    "id": 1853459,
+    "suite_id": 579322,
+    "name": "Regression",
+    "description": null,
+    "parent_id": null,
+    "display_order": 39,
+    "depth": 0
+  },
+  {
+    "id": 1611405,
+    "suite_id": 579322,
+    "name": "Browse Menu",
+    "description": null,
+    "parent_id": 1853459,
+    "display_order": 40,
+    "depth": 1
+  },
+  {
+    "id": 1797266,
+    "suite_id": 579322,
+    "name": "Sanity",
+    "description": null,
+    "parent_id": 1611405,
+    "display_order": 41,
+    "depth": 2
+  },
+  {
+    "id": 1611457,
+    "suite_id": 579322,
+    "name": "Onboarding",
+    "description": null,
+    "parent_id": 1853459,
+    "display_order": 42,
+    "depth": 1
+  },
+  {
+    "id": 1724101,
+    "suite_id": 579322,
+    "name": "Sanity",
+    "description": null,
+    "parent_id": 1611457,
+    "display_order": 43,
+    "depth": 2
+  },
+  {
+    "id": 1638744,
+    "suite_id": 579322,
+    "name": "Login",
+    "description": null,
+    "parent_id": 1853459,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 1809723,
+    "suite_id": 579322,
+    "name": "Sanity",
+    "description": null,
+    "parent_id": 1638744,
+    "display_order": 45,
+    "depth": 2
+  },
+  {
+    "id": 1668618,
+    "suite_id": 579322,
+    "name": "Paywall",
+    "description": null,
+    "parent_id": 1853459,
+    "display_order": 46,
+    "depth": 1
+  },
+  {
+    "id": 1672003,
+    "suite_id": 579322,
+    "name": "scores",
+    "description": null,
+    "parent_id": 1853459,
+    "display_order": 47,
+    "depth": 1
+  },
+  {
+    "id": 1678053,
+    "suite_id": 579322,
+    "name": "standings",
+    "description": null,
+    "parent_id": 1853459,
+    "display_order": 48,
+    "depth": 1
+  },
+  {
+    "id": 1724100,
+    "suite_id": 579322,
+    "name": "Sanity",
+    "description": null,
+    "parent_id": 1678053,
+    "display_order": 49,
+    "depth": 2
+  },
+  {
+    "id": 1686343,
+    "suite_id": 579322,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 1853459,
+    "display_order": 50,
+    "depth": 1
+  },
+  {
+    "id": 1699302,
+    "suite_id": 579322,
+    "name": "video context",
+    "description": null,
+    "parent_id": 1853459,
+    "display_order": 51,
+    "depth": 1
+  },
+  {
+    "id": 1853458,
+    "suite_id": 579322,
+    "name": "Apple do not track",
+    "description": null,
+    "parent_id": 1853459,
+    "display_order": 52,
+    "depth": 1
+  },
+  {
+    "id": 1853460,
+    "suite_id": 579322,
+    "name": "Live Activities",
+    "description": null,
+    "parent_id": 1853459,
+    "display_order": 53,
+    "depth": 1
+  },
+  {
+    "id": 1676277,
+    "suite_id": 579322,
+    "name": "notifications",
+    "description": null,
+    "parent_id": 1853459,
+    "display_order": 54,
+    "depth": 1
+  },
+  {
+    "id": 1853706,
+    "suite_id": 579322,
+    "name": "No spoilers mode",
+    "description": null,
+    "parent_id": 1676277,
+    "display_order": 55,
+    "depth": 2
+  },
+  {
+    "id": 1853720,
+    "suite_id": 579322,
+    "name": "Player push notifications",
+    "description": null,
+    "parent_id": 1676277,
+    "display_order": 56,
+    "depth": 2
+  },
+  {
+    "id": 1865886,
+    "suite_id": 579322,
+    "name": "exclusive offers",
+    "description": null,
+    "parent_id": 1676277,
+    "display_order": 57,
+    "depth": 2
+  },
+  {
+    "id": 1862338,
+    "suite_id": 579322,
+    "name": "News rebuild",
+    "description": null,
+    "parent_id": 1853459,
+    "display_order": 58,
+    "depth": 1
+  },
+  {
+    "id": 1862366,
+    "suite_id": 579322,
+    "name": "Team logos",
+    "description": null,
+    "parent_id": 1853459,
+    "display_order": 59,
+    "depth": 1
+  },
+  {
+    "id": 1862958,
+    "suite_id": 579322,
+    "name": "spring breakout",
+    "description": null,
+    "parent_id": 1853459,
+    "display_order": 60,
+    "depth": 1
+  },
+  {
+    "id": 1863073,
+    "suite_id": 579322,
+    "name": "Accessibility Features",
+    "description": null,
+    "parent_id": 1853459,
+    "display_order": 61,
+    "depth": 1
+  },
+  {
+    "id": 1870369,
+    "suite_id": 579322,
+    "name": "whats new 2024",
+    "description": null,
+    "parent_id": 1853459,
+    "display_order": 62,
+    "depth": 1
+  },
+  {
+    "id": 1881576,
+    "suite_id": 579322,
+    "name": "Asia games",
+    "description": null,
+    "parent_id": null,
+    "display_order": 63,
+    "depth": 0
+  },
+  {
+    "id": 1886247,
+    "suite_id": 579322,
+    "name": "Default View Setting",
+    "description": null,
+    "parent_id": null,
+    "display_order": 64,
+    "depth": 0
+  },
+  {
+    "id": 1895006,
+    "suite_id": 579322,
+    "name": "Passwordless Login",
+    "description": null,
+    "parent_id": null,
+    "display_order": 66,
+    "depth": 0
+  },
+  {
+    "id": 1902710,
+    "suite_id": 579322,
+    "name": "Stats - Negro League",
+    "description": null,
+    "parent_id": null,
+    "display_order": 67,
+    "depth": 0
+  },
+  {
+    "id": 1919268,
+    "suite_id": 579322,
+    "name": "Survey",
+    "description": null,
+    "parent_id": null,
+    "display_order": 68,
+    "depth": 0
+  },
+  {
+    "id": 1921809,
+    "suite_id": 579322,
+    "name": "Watch On",
+    "description": null,
+    "parent_id": null,
+    "display_order": 69,
+    "depth": 0
+  },
+  {
+    "id": 1921810,
+    "suite_id": 579322,
+    "name": "FGOTD",
+    "description": null,
+    "parent_id": null,
+    "display_order": 70,
+    "depth": 0
+  },
+  {
+    "id": 1923202,
+    "suite_id": 579322,
+    "name": "Stats",
+    "description": null,
+    "parent_id": null,
+    "display_order": 71,
+    "depth": 0
+  },
+  {
+    "id": 1923372,
+    "suite_id": 579322,
+    "name": "Jewel Events",
+    "description": null,
+    "parent_id": null,
+    "display_order": 72,
+    "depth": 0
+  },
+  {
+    "id": 1927177,
+    "suite_id": 579322,
+    "name": "News team picker",
+    "description": null,
+    "parent_id": null,
+    "display_order": 73,
+    "depth": 0
+  },
+  {
+    "id": 1942334,
+    "suite_id": 579322,
+    "name": "test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 74,
+    "depth": 0
+  },
+  {
+    "id": 1948546,
+    "suite_id": 579322,
+    "name": "Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 75,
+    "depth": 0
+  },
+  {
+    "id": 2036547,
+    "suite_id": 579322,
+    "name": "Player of the Game",
+    "description": null,
+    "parent_id": 1948546,
+    "display_order": 76,
+    "depth": 1
+  },
+  {
+    "id": 2036548,
+    "suite_id": 579322,
+    "name": "Exclusive Offers",
+    "description": null,
+    "parent_id": 1948546,
+    "display_order": 77,
+    "depth": 1
+  },
+  {
+    "id": 1962466,
+    "suite_id": 579322,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 78,
+    "depth": 0
+  },
+  {
+    "id": 1965680,
+    "suite_id": 579322,
+    "name": "Sign Up Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 79,
+    "depth": 0
+  },
+  {
+    "id": 1965744,
+    "suite_id": 579322,
+    "name": "Club Schedule",
+    "description": null,
+    "parent_id": null,
+    "display_order": 80,
+    "depth": 0
+  },
+  {
+    "id": 1993841,
+    "suite_id": 579322,
+    "name": "Universal Links",
+    "description": null,
+    "parent_id": null,
+    "display_order": 81,
+    "depth": 0
+  },
+  {
+    "id": 2039147,
+    "suite_id": 579322,
+    "name": "Japanese Language Support and Toggle",
+    "description": null,
+    "parent_id": null,
+    "display_order": 82,
+    "depth": 0
+  }
+]

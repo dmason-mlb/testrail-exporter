@@ -1,0 +1,11 @@
+{
+  "id": 701972,
+  "name": "* Applause Regression Suite",
+  "description": "These test cases are the basis for what we sent to Applause for releases/regressions.  You can choose to add or omit test cases depending on the needs of the release.",
+  "project_id": 4,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/701972"
+}

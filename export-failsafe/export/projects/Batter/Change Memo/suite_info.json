@@ -1,0 +1,11 @@
+{
+  "id": 704987,
+  "name": "Change Memo",
+  "description": "Broadcasting team today tracks changes to the broadcasters in Batter system. Today, they populate change memos manually into a file and send via email to the members impacted by the change.\r\n\r\nThe idea is to automate this process as much as possible using the broadcaster changes that is tracked and approved in the system so that the teams can use the data in Batter to send Change Memos to a pre-defined distribution list. ",
+  "project_id": 267,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/704987"
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "id": 73759,
+    "name": "Master (do not migrate)",
+    "description": null,
+    "project_id": 202,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/73759"
+  },
+  {
+    "id": 81374,
+    "name": "MLB.TV Homepage- MVP Release (do not migrate)",
+    "description": null,
+    "project_id": 202,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/81374"
+  },
+  {
+    "id": 111090,
+    "name": "WEBTV Backend (DONE)",
+    "description": null,
+    "project_id": 202,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/111090"
+  },
+  {
+    "id": 195782,
+    "name": "MLB.TV Web Player( do not migrate)",
+    "description": null,
+    "project_id": 202,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/195782"
+  },
+  {
+    "id": 196576,
+    "name": "Entitled Based Media Selection & Playback (do not migrate)",
+    "description": null,
+    "project_id": 202,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/196576"
+  },
+  {
+    "id": 201801,
+    "name": "MLB.TV Web Regression",
+    "description": null,
+    "project_id": 202,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/201801"
+  },
+  {
+    "id": 207924,
+    "name": "Paywall (do not migrate)",
+    "description": null,
+    "project_id": 202,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/207924"
+  },
+  {
+    "id": 218847,
+    "name": "MLB.TV Web Media Center(LSG) (do not migrate)",
+    "description": null,
+    "project_id": 202,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/218847"
+  }
+]

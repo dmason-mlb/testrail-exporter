@@ -1,0 +1,101 @@
+[
+  {
+    "id": 155216,
+    "suite_id": 21502,
+    "name": "Team Tab",
+    "description": "WIKI :[Team Page Tab](https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225585/05+Team+Page+Tab )",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1226364,
+    "suite_id": 21502,
+    "name": "Home Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1976223,
+    "suite_id": 21502,
+    "name": "Next Ticketed Event Card (NTE) - EventHub [iOS ONLY]",
+    "description": null,
+    "parent_id": 1226364,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 1226365,
+    "suite_id": 21502,
+    "name": "My Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1226366,
+    "suite_id": 21502,
+    "name": "My History",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1226367,
+    "suite_id": 21502,
+    "name": "Tickets Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 1226368,
+    "suite_id": 21502,
+    "name": "More Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 1612117,
+    "suite_id": 21502,
+    "name": "Chatbot",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 1871406,
+    "suite_id": 21502,
+    "name": "Live Activities [IOS Only]",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 1871407,
+    "suite_id": 21502,
+    "name": "Display",
+    "description": "Current Logic:\n*Activity can start 2 hours before all the way up to 3 hours after.\n*\"Auto-dismiss\" now only happens when you open the app 3 hours after game start. Otherwise the activity can potentially sit on the user's lock screen for 12 hours after the activity starts. (12 hour time is an Apple limit)\n\n(so would need to change the device date/time to fall in the appropriate window)\n\n**NonGame Events (Concerts, Tours, Test Events, Etc) are NOT currently supported for Live Activities feature**",
+    "parent_id": 1871406,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 1226363,
+    "suite_id": 21502,
+    "name": "[DEPRECATED w/ 11.0] Onboarding",
+    "description": "*Fave Team page removed from onboarding flow\n**iOS - 11.0.0\n**Android - 11.3.0",
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  }
+]

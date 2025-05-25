@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1653918,
+    "suite_id": 598345,
+    "name": "Onboarding",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1653909,
+    "suite_id": 598345,
+    "name": "Splash Screen",
+    "description": "https://baseball.atlassian.net/browse/FTP-3537",
+    "parent_id": 1653918,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 1653910,
+    "suite_id": 598345,
+    "name": "Sign Up",
+    "description": null,
+    "parent_id": 1653918,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 1653911,
+    "suite_id": 598345,
+    "name": "Log In",
+    "description": null,
+    "parent_id": 1653918,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 1653912,
+    "suite_id": 598345,
+    "name": "Update and Log in flow",
+    "description": "https://baseball.atlassian.net/browse/FTP-3533",
+    "parent_id": 1653918,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 1654082,
+    "suite_id": 598345,
+    "name": "Profile tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 1654025,
+    "suite_id": 598345,
+    "name": "Top profile section",
+    "description": null,
+    "parent_id": 1654082,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 1654026,
+    "suite_id": 598345,
+    "name": "Feed Event Reaction Display",
+    "description": null,
+    "parent_id": 1654082,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 1654027,
+    "suite_id": 598345,
+    "name": "Friends section",
+    "description": null,
+    "parent_id": 1654082,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 1654078,
+    "suite_id": 598345,
+    "name": "Badges section",
+    "description": null,
+    "parent_id": 1654082,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 1654079,
+    "suite_id": 598345,
+    "name": "Trophies section",
+    "description": null,
+    "parent_id": 1654082,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 1654080,
+    "suite_id": 598345,
+    "name": "Profile -> Settings Menu",
+    "description": "https://baseball.atlassian.net/browse/FTP-3451 - iOS\nhttps://baseball.atlassian.net/browse/FTP-3452 - Android",
+    "parent_id": 1654082,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 1654081,
+    "suite_id": 598345,
+    "name": "Friends Functionality via code",
+    "description": null,
+    "parent_id": 1654080,
+    "display_order": 29,
+    "depth": 2
+  },
+  {
+    "id": 1654084,
+    "suite_id": 598345,
+    "name": "Games tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  }
+]

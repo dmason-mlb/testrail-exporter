@@ -1,0 +1,173 @@
+[
+  {
+    "id": 1902769,
+    "suite_id": 20550,
+    "name": "(13.2.0 and after)",
+    "description": "Passwordless Login Implementation \nEpic: [BP-10744](https://baseball.atlassian.net/browse/BP-10744 )\n[BP-10804](https://baseball.atlassian.net/browse/BP-10804 )\n[TestRigor](https://app.testrigor.com/test-suites/r9wAB6T3dx5fYeQ5G/test-cases )",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1922528,
+    "suite_id": 20550,
+    "name": "Onboarding via Branch deeplinks",
+    "description": null,
+    "parent_id": 1902769,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 1922529,
+    "suite_id": 20550,
+    "name": "Install/Upgrade",
+    "description": null,
+    "parent_id": 1902769,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 1902771,
+    "suite_id": 20550,
+    "name": "Welcome Screen - Get Started View",
+    "description": "![](index.php?/attachments/get/14188319)",
+    "parent_id": 1902769,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 1922530,
+    "suite_id": 20550,
+    "name": "Welcome Screen - Continue with MLB",
+    "description": "![](index.php?/attachments/get/14188318)",
+    "parent_id": 1902769,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 1922531,
+    "suite_id": 20550,
+    "name": "Create an MLB account View",
+    "description": "![](index.php?/attachments/get/14188320)",
+    "parent_id": 1902769,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 1902772,
+    "suite_id": 20550,
+    "name": "Log In View",
+    "description": "![](index.php?/attachments/get/14188436)",
+    "parent_id": 1902769,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 1923201,
+    "suite_id": 20550,
+    "name": "Log In Password Options View",
+    "description": "![](index.php?/attachments/get/14188437)",
+    "parent_id": 1902772,
+    "display_order": 8,
+    "depth": 2
+  },
+  {
+    "id": 1922532,
+    "suite_id": 20550,
+    "name": "Forgot Password View",
+    "description": "![](index.php?/attachments/get/14188438)",
+    "parent_id": 1923201,
+    "display_order": 9,
+    "depth": 3
+  },
+  {
+    "id": 1934425,
+    "suite_id": 20550,
+    "name": "Magic Link",
+    "description": null,
+    "parent_id": 1902769,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 1935952,
+    "suite_id": 20550,
+    "name": "[UNSUPPORTED] Cold Start Magic Link",
+    "description": "Validating a magic link from a cold start is NOT currently supported by the IDK.\n\nTHESE TEST CASES WERE WRITTEN PRIOR TO UNDERSTANDING REQUIREMENTS OF IDK. THESE CAN BE ADDED AFTER IDK ADDS SUPPORT FOR COLD START",
+    "parent_id": 1934425,
+    "display_order": 15,
+    "depth": 2
+  },
+  {
+    "id": 1902770,
+    "suite_id": 20550,
+    "name": "Legacy (prior to 13.2.0)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 1357576,
+    "suite_id": 20550,
+    "name": "Onboarding via Branch deeplinks",
+    "description": null,
+    "parent_id": 1902770,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 1356628,
+    "suite_id": 20550,
+    "name": "Install/Upgrade",
+    "description": null,
+    "parent_id": 1902770,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 1357577,
+    "suite_id": 20550,
+    "name": "Welcome Screen - Get Started View",
+    "description": null,
+    "parent_id": 1902770,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 1523650,
+    "suite_id": 20550,
+    "name": "Welcome Screen - Continue with MLB",
+    "description": null,
+    "parent_id": 1902770,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 1357630,
+    "suite_id": 20550,
+    "name": "Create an MLB account View / Sign Up",
+    "description": null,
+    "parent_id": 1902770,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 1357682,
+    "suite_id": 20550,
+    "name": "Log In View",
+    "description": null,
+    "parent_id": 1902770,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 1554577,
+    "suite_id": 20550,
+    "name": "Reset Password View",
+    "description": null,
+    "parent_id": 1902770,
+    "display_order": 23,
+    "depth": 1
+  }
+]

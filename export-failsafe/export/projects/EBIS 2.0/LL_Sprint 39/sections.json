@@ -1,0 +1,29 @@
+[
+  {
+    "id": 146935,
+    "suite_id": 20342,
+    "name": "Insurance Flags",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 146936,
+    "suite_id": 20342,
+    "name": "Draft Order",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 146938,
+    "suite_id": 20342,
+    "name": "Pre-Draft",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

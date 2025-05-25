@@ -1,0 +1,326 @@
+[
+  {
+    "id": 1684376,
+    "suite_id": 611364,
+    "name": "A- TP Services",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1684377,
+    "suite_id": 611364,
+    "name": "Access codes",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1684378,
+    "suite_id": 611364,
+    "name": "Access Control",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1684379,
+    "suite_id": 611364,
+    "name": "PV-1506: Ticket Based Entry Rules",
+    "description": "PV-1506: Ticket Based Entry Rules",
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1684380,
+    "suite_id": 611364,
+    "name": "Reset Access Control Scans Utility",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1684381,
+    "suite_id": 611364,
+    "name": "View_Restore Barcode",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1684382,
+    "suite_id": 611364,
+    "name": "Ticket barcode",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1684383,
+    "suite_id": 611364,
+    "name": "Batch Print Parameters",
+    "description": "Batch Print Parameters",
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1684384,
+    "suite_id": 611364,
+    "name": "Batch printing- Processing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1684385,
+    "suite_id": 611364,
+    "name": "Batch Print Templates",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1684386,
+    "suite_id": 611364,
+    "name": "Templates",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 1684387,
+    "suite_id": 611364,
+    "name": "Batch Printing-Actions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 1684388,
+    "suite_id": 611364,
+    "name": "Batch Printing-Functionalities",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 1684389,
+    "suite_id": 611364,
+    "name": "Print Status",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 1684390,
+    "suite_id": 611364,
+    "name": "Print Error Modals",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 1684391,
+    "suite_id": 611364,
+    "name": "A - Dual Path Printer",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 1684392,
+    "suite_id": 611364,
+    "name": "A - Sheet Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 1684394,
+    "suite_id": 611364,
+    "name": "Ticket Printing - Hardware Testing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 1684395,
+    "suite_id": 611364,
+    "name": "A - Ticket Printing - Formats",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 1684396,
+    "suite_id": 611364,
+    "name": "Options",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 1684397,
+    "suite_id": 611364,
+    "name": "Cash Drawer Card Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 1684398,
+    "suite_id": 611364,
+    "name": "Ticket print options",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 1684399,
+    "suite_id": 611364,
+    "name": "Print",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 1684400,
+    "suite_id": 611364,
+    "name": "Sorting",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 1684401,
+    "suite_id": 611364,
+    "name": "Printing and Delivery",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 1684402,
+    "suite_id": 611364,
+    "name": "A - Printing Setup",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 1684403,
+    "suite_id": 611364,
+    "name": "Ticket printing attributes",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 1684404,
+    "suite_id": 611364,
+    "name": "Scan Areas",
+    "description": null,
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  },
+  {
+    "id": 1684405,
+    "suite_id": 611364,
+    "name": "Scan Properties",
+    "description": null,
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 1684406,
+    "suite_id": 611364,
+    "name": "A - Graphical Ticket Designer",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 1684407,
+    "suite_id": 611364,
+    "name": "Ticket Format Design Mapping",
+    "description": null,
+    "parent_id": null,
+    "display_order": 31,
+    "depth": 0
+  },
+  {
+    "id": 1684408,
+    "suite_id": 611364,
+    "name": "Workstation Token",
+    "description": null,
+    "parent_id": null,
+    "display_order": 32,
+    "depth": 0
+  },
+  {
+    "id": 1684409,
+    "suite_id": 611364,
+    "name": "Batch Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 33,
+    "depth": 0
+  },
+  {
+    "id": 1684410,
+    "suite_id": 611364,
+    "name": "Print-Restricted designation for a ticket at the time of sale",
+    "description": "Create a new Print-Restricted designation for a ticket at the time of sale",
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 1684411,
+    "suite_id": 611364,
+    "name": "Print Restricted messages in cart",
+    "description": "Print Restricted messages in cart",
+    "parent_id": null,
+    "display_order": 35,
+    "depth": 0
+  },
+  {
+    "id": 1732645,
+    "suite_id": 611364,
+    "name": "Message A Ticket",
+    "description": "Message A Ticket",
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 503020,
+    "suite_id": 121929,
+    "name": "section 1",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 750989,
+    "suite_id": 121929,
+    "name": "Rename Test Selection",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

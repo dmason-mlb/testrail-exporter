@@ -1,0 +1,1164 @@
+[
+  {
+    "id": 28915506,
+    "title": "Devices are in sync",
+    "section_id": 1534813,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1658245708,
+    "updated_by": 222,
+    "updated_on": 1687268295,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 1,
+    "custom_preconds": "GIVEN MLB Play app installed on device\r\nAND user is logged in the device\r\nAND the user is logged in to web as well with the same credentails",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user plays the game on mobile device\nAND the user opens the HRD on web while logged in",
+        "expected": "THEN user sees their previous submissions"
+      },
+      {
+        "content": "WHEN user played the game on web\nAND the opens the HRD on mobile",
+        "expected": "THEN user sees their previous submissions"
+      }
+    ]
+  },
+  {
+    "id": 28915507,
+    "title": "MLB Play and mlb.com integration",
+    "section_id": 1534813,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1658245737,
+    "updated_by": 258,
+    "updated_on": 1658249269,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 2,
+    "custom_preconds": "GIVEN MLB Play app installed on device\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user submits their pick ",
+        "expected": "THEN user can successfully submit their picks without asking to log in"
+      }
+    ]
+  },
+  {
+    "id": 28915512,
+    "title": "XP",
+    "section_id": 1534822,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1658247192,
+    "updated_by": 222,
+    "updated_on": 1687268393,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in",
+    "custom_steps": "WHEN user views the HRD game card",
+    "custom_expected": "THEN user is displayed with 250 XP on the bottom left corner of the card",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user played the HRD\nAND HRD is final ",
+        "expected": "THEN user gets 250 XP"
+      },
+      {
+        "content": "WHEN user views the result feed",
+        "expected": "THEN user DOES NOT see HRD result card "
+      }
+    ]
+  },
+  {
+    "id": 28915515,
+    "title": "Token",
+    "section_id": 1534822,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1658248498,
+    "updated_by": 258,
+    "updated_on": 1658255918,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 2,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the HRD game card",
+        "expected": "THEN user is displayed with 5 tokens on the bottom left corner of the card"
+      },
+      {
+        "content": "WHEN user made correct picks in Round 1",
+        "expected": "THEN user receives 5 tokens for each correct pick"
+      },
+      {
+        "content": "WHEN user made correct picks in Round 2",
+        "expected": "THEN user receives 10 tokens for each correct pick"
+      },
+      {
+        "content": "WHEN user made correct picks in Final rouns",
+        "expected": "THEN user receives 15 tokens for each correct pick"
+      },
+      {
+        "content": "WHEN user correctly predicts all bracket ",
+        "expected": "THEN user received 55 tokens "
+      },
+      {
+        "content": "WHEN user correctly predicts longest home run hitter + the distance",
+        "expected": "THE user receives 45 tokens"
+      },
+      {
+        "content": "",
+        "expected": "The max tokens user can receive is 100"
+      },
+      {
+        "content": "WHEN user views the result feed",
+        "expected": "THEN user DO NOT see HRD result card "
+      }
+    ]
+  },
+  {
+    "id": 28915514,
+    "title": "Reward Pack",
+    "section_id": 1534822,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1658247823,
+    "updated_by": 258,
+    "updated_on": 1658255906,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 4,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user plays the HRD",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user submits their HRD picks",
+        "expected": "THEN user received the rare Reward Pack after submission (1Rare, 2 Common)"
+      },
+      {
+        "content": "WHEN user views the reward Pack (in the feed)",
+        "expected": "THEN the copy for the Feed event should read: “You unlocked a Rewards Pack for your Home Run Derby submission!”"
+      },
+      {
+        "content": "WHEN user updates their picks",
+        "expected": "THEN user does NOT receive another Reward Pack"
+      }
+    ]
+  },
+  {
+    "id": 28915516,
+    "title": "Country region",
+    "section_id": 1534822,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1658249941,
+    "updated_by": 258,
+    "updated_on": 1658250000,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user's region is set to US or Canada",
+        "expected": "THEN user sees the HRD game card"
+      },
+      {
+        "content": "WHEN user's region is set to any other country",
+        "expected": "THEN user does not see the HRD game card"
+      }
+    ]
+  },
+  {
+    "id": 28890301,
+    "title": "HRD Game Card position",
+    "section_id": 1534844,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-4106",
+    "created_by": 258,
+    "created_on": 1657820559,
+    "updated_by": 258,
+    "updated_on": 1658255760,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the Games tab on the HRD launch date",
+        "expected": "THEN the Home Run Derby’s game card has the topmost position "
+      },
+      {
+        "content": "WHEN user views the Games tab after the HRD is final",
+        "expected": "THEN the Home Run Derby’s game card has the bottom most position "
+      }
+    ]
+  },
+  {
+    "id": 28890302,
+    "title": "Game Card - unlocked state",
+    "section_id": 1534844,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1657820559,
+    "updated_by": 258,
+    "updated_on": 1658249304,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 2,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in \r\nAND user is on the Game tab\r\nAND HRD has unlocked state (scheduled)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the HRD card ",
+        "expected": "THEN user should be displayed with\n\n* Home Run Derby logo in the center\n* 250 XP on the bottom left corner\n* 5 token on the bottom left corner next to XP\n* background image\n"
+      },
+      {
+        "content": "WHEN user clicks on the game card",
+        "expected": "THEN user is brought to the Home Run Derby tutorial page or bracket (if played already)"
+      },
+      {
+        "content": "WHEN user submits their picks",
+        "expected": "THEN the HRD game card has a check mark"
+      }
+    ]
+  },
+  {
+    "id": 28890303,
+    "title": "Game Card - locked state",
+    "section_id": 1534844,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1657820559,
+    "updated_by": 258,
+    "updated_on": 1658249310,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 3,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is on the Game tab\r\nAND HRD has a locked state (live or final)",
+    "custom_steps": null,
+    "custom_expected": "THEN user should display with Diamond Derby game card",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the HRD card ",
+        "expected": "THEN user should be displayed with\n\n* Home Run Derby logo in the center\n* 250 XP on the bottom left corner\n* 5 token on the bottom left corner next to XP\n* background image\n* lock icon is displayed in the top right corner\n"
+      },
+      {
+        "content": "WHEN user clicks on the game card",
+        "expected": "THEN user is brought to the tutorial page (double check - could be bracket)"
+      }
+    ]
+  },
+  {
+    "id": 28915508,
+    "title": "Dinger Winner",
+    "section_id": 1534845,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1658245753,
+    "updated_by": 258,
+    "updated_on": 1658249315,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played HRD\r\nAND HRD is final\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user correctly predicted the HRD winner",
+        "expected": "THEN user receives the Dinger Winner badge\n\n"
+      },
+      {
+        "content": "WHEN user views the badge in the feed",
+        "expected": "THEN the copy should say  'Correctly predict the Home Run Derby winner'"
+      }
+    ]
+  },
+  {
+    "id": 28915509,
+    "title": "Moon Shot",
+    "section_id": 1534845,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1658245896,
+    "updated_by": 258,
+    "updated_on": 1658249320,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 2,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played HRD\r\nAND HRD is final\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user correctly predicted the longest home (tiebreaker question)",
+        "expected": "THEN user receives the Moon Shot badge\n\n"
+      },
+      {
+        "content": "WHEN user correctly predicted the HRD longest homer distance flag (tiebreaker question)",
+        "expected": "THEN user receives the Moon Shot badge\n\n"
+      },
+      {
+        "content": "WHEN user correctly predicts the longest home and HRD longest homer distance flag",
+        "expected": "THEN user receives one badge (double check)"
+      },
+      {
+        "content": "WHEN user views the badge in the feed",
+        "expected": "THEN the copy should say  ' Correctly predict the longest homer in the Home Run Derby'"
+      }
+    ]
+  },
+  {
+    "id": 28915510,
+    "title": "Perfect Game: Home Run Derby",
+    "section_id": 1534845,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1658246061,
+    "updated_by": 258,
+    "updated_on": 1658249325,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 3,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played HRD\r\nAND HRD is final\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user correctly predicted the entire Home Run Derby bracket (HRD Round 1 flag AND HRD Round 2 flag AND HRD Winner prediction flag )",
+        "expected": "THEN user receives the Perfect Game badge AND Dinger Winner\n\n"
+      },
+      {
+        "content": "WHEN user views the Perfect Game badge in the feed",
+        "expected": "THEN the copy should say  'Correctly predict the entire Home Run Derby bracket'"
+      }
+    ]
+  },
+  {
+    "id": 28915511,
+    "title": "Season Champion: Home Run Derby",
+    "section_id": 1534845,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1658246189,
+    "updated_by": 258,
+    "updated_on": 1658249330,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 4,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played HRD\r\nAND HRD is final\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user correctly predicted the entire Home Run Derby bracket AND longest homer batter flag OR HRD longest homer distance flag",
+        "expected": "THEN user receives the Season Champion badge\n\n"
+      },
+      {
+        "content": "WHEN user views the badge in the feed",
+        "expected": "THEN the copy should say  'Correctly predict the entire Home Run Derby bracket'"
+      },
+      {
+        "content": "",
+        "expected": "AND user receives 100 points"
+      }
+    ]
+  },
+  {
+    "id": 28893690,
+    "title": "Brackets UI",
+    "section_id": 1535141,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1657903553,
+    "updated_by": 258,
+    "updated_on": 1658249338,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is viewing brackets",
+        "expected": "THEN user is displayed with: \n\n* batter's name (first name is truncated if long)\n* correct number\n* headshot\n* correct batter's position\n* correct seeding\n* correct team logo on the right side of the batter"
+      }
+    ]
+  },
+  {
+    "id": 28893680,
+    "title": "Making a pick flow",
+    "section_id": 1535142,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1657898993,
+    "updated_by": 258,
+    "updated_on": 1658249344,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is playing HRD",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user clicks on the HRD card",
+        "expected": "THEN user is brought to the bracket tutorial page (webview) - separate tc"
+      },
+      {
+        "content": "WHEN user clicks 'Enter Bracket'",
+        "expected": "THEN user is displayed with a bracket\n"
+      },
+      {
+        "content": "WHEN user selects the batter from the first matchup",
+        "expected": "THEN selected batter changes the accent color to bright pink\nAND selected batter moves to next round"
+      },
+      {
+        "content": "WHEN user selected batter in the final matchup",
+        "expected": "THEN the batters name, headshot and team name appears on the right side\nAND 'Submit My Picks' button gets enabled"
+      },
+      {
+        "content": "WHEN user clicks on 'Submit My Picks' button",
+        "expected": "THEN the tiebreaker page is displayed (separate TC)"
+      },
+      {
+        "content": "WHEN user answers the tiebreaker questions",
+        "expected": "THEN 'Submit My Picks' button gets enabled"
+      },
+      {
+        "content": "WHEN user clicks on 'Submit My Picks' button",
+        "expected": "THEN user's picks are submitted \nAND user receives a submission email (separate tc)"
+      },
+      {
+        "content": "",
+        "expected": "AND user is awarded with rare Reward Pack "
+      },
+      {
+        "content": "WHEN user reopens the HRD card after submitting picks",
+        "expected": "THEN the tutorial page is not displayed \nAND user can see their picks"
+      },
+      {
+        "content": "WHEN user submits their pick",
+        "expected": "THEN the HRD game card has a check mark"
+      }
+    ]
+  },
+  {
+    "id": 28893685,
+    "title": "Tiebreaker page",
+    "section_id": 1535142,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1657901981,
+    "updated_by": 258,
+    "updated_on": 1658250392,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 2,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is playing HRD",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user made picks and clicked on 'Submit My Picks' button",
+        "expected": "THEN user is displayed with Tiebreaker page"
+      },
+      {
+        "content": "WHEN user views the Tiebreaker page",
+        "expected": "THEN user is displayed with:\n\n* 'Required Questions' section - required\n* 'Tiebreaker Questions' section - non required\n* DOB field \n"
+      },
+      {
+        "content": "WHEN user enters input in the fields",
+        "expected": "THEN fields only accept numeric and no letters and special characters"
+      },
+      {
+        "content": "WHEN user enters valid input",
+        "expected": "THEN user is able to submit picks \nAND 'Submit My Picks' button is enabled"
+      },
+      {
+        "content": "WHEN required fields have no input",
+        "expected": "THEN user is not able to proceed and 'Submit My Picks' button is disabled\nAND 'Please answer all required questions*' pop up is displayed"
+      },
+      {
+        "content": "WHEN user views the first question",
+        "expected": "THEN it should only accepts values 1-8"
+      }
+    ]
+  },
+  {
+    "id": 28893692,
+    "title": "Tutorial page",
+    "section_id": 1535142,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1657904717,
+    "updated_by": 258,
+    "updated_on": 1658249352,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 3,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is playing HRD",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user opens the HRD bracket before submitting any picks",
+        "expected": "THEN the tutorial page is displayed"
+      },
+      {
+        "content": "WHEN user views the tutorial page",
+        "expected": "THEN user is displayed with\n* Home Run Derby image\n* title: Pick the perfect T-Mobile Home Run Derby® bracket and compete to win $100,000!\n* copy: \nYou can edit your selections until 5 minutes before the Home Run Derby begins on July 18. (with correct date!)\n* legal copy\n* 'Enter Bracket' button\n\nNote: no mlb.com link should be displayed\n\n\n"
+      },
+      {
+        "content": "WHEN user clicks on Official Rules",
+        "expected": "THEN 2022 T-Mobile Home Run Derby Bracket Challenge webpage is open\nhttps://www.mlb.com/brackets/home-run-derby/rules"
+      },
+      {
+        "content": "WHEN user clicks on 'Enter Bracket' button",
+        "expected": "THEN user is displayed with bracket"
+      },
+      {
+        "content": "WHEN user clicks outside the 'Enter Bracket' button",
+        "expected": "THEN user stays on tutorial page (currently a bug)"
+      }
+    ]
+  },
+  {
+    "id": 28893681,
+    "title": "Submission email",
+    "section_id": 1535142,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1657899017,
+    "updated_by": 258,
+    "updated_on": 1658249356,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 4,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is playing HRD",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user submits the picks",
+        "expected": "THEN user receives an email\n\nhttps://docs.google.com/document/d/1Q-Unqj0V35unzzXOLB_fI0hWVnOLqmTTx0gqJNEsmUw/edit#"
+      }
+    ]
+  },
+  {
+    "id": 28893686,
+    "title": "Changing picks flow",
+    "section_id": 1535142,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1657902831,
+    "updated_by": 258,
+    "updated_on": 1658249360,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 5,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played HRD\r\nAND all games are live (not locked)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user opens the HRD bracket",
+        "expected": "THEN user sees the their picks"
+      },
+      {
+        "content": "WHEN user updated the pick",
+        "expected": "THEN the selected batter changes the accent color to bright pink\nAND selected batter is updated in the next round\nAND the next round selection is removed"
+      },
+      {
+        "content": "WHEN user made new picks ",
+        "expected": "THEN 'Submit My Picks' button is displayed"
+      },
+      {
+        "content": "WHEN user submits the picks",
+        "expected": "THEN user receives another submission email"
+      }
+    ]
+  },
+  {
+    "id": 28893691,
+    "title": "DOB field",
+    "section_id": 1535142,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1657904202,
+    "updated_by": 258,
+    "updated_on": 1658249364,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 6,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user is playing HRD\r\nAND user is on Tiebreaker page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user enters the  DOB which is >18",
+        "expected": "THEN user is able to submit their picks "
+      },
+      {
+        "content": "WHEN user enters DOB which is under 18",
+        "expected": "THEN user is not able to submit their picks and 'Sorry! You are not eligible to play the brackets' pop up is displayed."
+      },
+      {
+        "content": "",
+        "expected": "Future update - the DOB should be pulling from user's account"
+      }
+    ]
+  },
+  {
+    "id": 30891305,
+    "title": "Each player will have their name, jersey number and playing position displayed in player card",
+    "section_id": 1535142,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 222,
+    "created_on": 1687375791,
+    "updated_by": 222,
+    "updated_on": 1687376005,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 7,
+    "custom_preconds": "GIVEN I have Pete Alonso configured for  \"brackets/te-home-run-derby-bracket\" bracket",
+    "custom_steps": "WHEN I view the bracket in a web URL\r\nAND I look into Pete Alonso's player card in the bracket matchup ",
+    "custom_expected": "THEN I should see Pete Alonso displayed on his card\r\nAND I should see his jersey number to be #20\r\nAND I should see his playing position as 1B\r\nAND I should see his player headshot in the player card",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 28893687,
+    "title": "Bracket is locked - user played",
+    "section_id": 1535143,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-4400",
+    "created_by": 258,
+    "created_on": 1657902857,
+    "updated_by": 258,
+    "updated_on": 1658249368,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user made HRD picks",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the HRD game card",
+        "expected": "THEN the HRD card has a lock icon"
+      },
+      {
+        "content": "WHEN user clicks on HRD game card",
+        "expected": "THEN user is displayed with the bracket\nAND user can see their picks\nAND user is not able to update the picks\nAND 'Submit Picks' button is not there\nAND user is displayed with the modal 'The bracket contest is now locked. You can no longer edit your picks. Check back soon to see the results!'\n"
+      }
+    ]
+  },
+  {
+    "id": 28893688,
+    "title": "Bracket is locked - user didn't play",
+    "section_id": 1535143,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-4400",
+    "created_by": 258,
+    "created_on": 1657903225,
+    "updated_by": 258,
+    "updated_on": 1658249372,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 2,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user didn't play",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the HRD game card",
+        "expected": "THEN the HRD game card has a lock icon"
+      },
+      {
+        "content": "WHEN user clicks on HRD game card",
+        "expected": "THEN user is displayed with the bracket\nAND bracket has no picks\nAND user is not able to make picks\nAND 'Submit Picks' button is not there\nAND user is displayed with the modal 'The bracket contest is now locked. You can no longer edit your picks. Check back soon to see the results!'\n"
+      }
+    ]
+  },
+  {
+    "id": 28893682,
+    "title": "Matchup is final",
+    "section_id": 1535144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1657899036,
+    "updated_by": 258,
+    "updated_on": 1658249378,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 1,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played HRD",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the matchup is final",
+        "expected": "THEN the scores are displayed"
+      },
+      {
+        "content": "WHEN user made correct pick",
+        "expected": "THEN the matchup card has a checkmark with green background (on the left)\nAND selected batters name is displayed in the the next matchup above position 1 or below position 2 and is not crossed (in green)"
+      },
+      {
+        "content": "WHEN user made incorrect pick",
+        "expected": "THEN the matchup card has a 'X' with red background (on the left)\nAND selected batters name is displayed in the the next matchup above position 1 or below position 2 and is crossed (in red)\nAND batters name who won the matchup is displayed in the next round"
+      }
+    ]
+  },
+  {
+    "id": 28893683,
+    "title": "Round is final",
+    "section_id": 1535144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1657899046,
+    "updated_by": 258,
+    "updated_on": 1658249383,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 2,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played HRD",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the whole round is final",
+        "expected": "THEN all matchups have the final score\nAND the 'final' tag is displayed under the Round header"
+      }
+    ]
+  },
+  {
+    "id": 28893684,
+    "title": "All rounds are final - user played",
+    "section_id": 1535144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1657899054,
+    "updated_by": 258,
+    "updated_on": 1658249388,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 3,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user played HRD \r\nAND the game is final",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the bracket",
+        "expected": "THEN user sees\n\n* all matchups have scores\n* all rounds have 'final' title\n* the winner section displays the winner with the headshot, name and team name\n* no CTA button is displayed\n\nAND user is able to see their picks results (Matchup is final tc)"
+      }
+    ]
+  },
+  {
+    "id": 28893689,
+    "title": "All rounds are final - user didn't play",
+    "section_id": 1535144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1657903503,
+    "updated_by": 258,
+    "updated_on": 1658249393,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 4,
+    "custom_preconds": "GIVEN web app is opened on browser\r\nAND user is logged in\r\nAND user play didn't play HRD\r\nAND the game is final",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user views the b bracket",
+        "expected": "THEN user sees\n\n* all matchups have scores\n* all rounds have 'final' title\n* the winner section displays the winner with the headshot, name and team name\n* no CTA button is displayed\n"
+      }
+    ]
+  },
+  {
+    "id": 30891303,
+    "title": "Round 1 picks verification",
+    "section_id": 1701115,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 222,
+    "created_on": 1687374352,
+    "updated_by": 222,
+    "updated_on": 1687375199,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 1,
+    "custom_preconds": "GIVEN I am using \"brackets/te-home-run-derby-bracket\" bracket\r\nAND I have the following picks for Round1:\r\n1 vs 8: topSeed\r\n4 vs 5: topSeed\r\n3 vs 6: bottomSeed\r\n2 vs 7: topSeed\r\n\r\nAND the following is the entry in [Contentful](https://app.contentful.com/spaces/iiozhi00a8lc/entries/5Ik7aHVCmHS0Z8V1Kkobaw):\r\n               |ToSeed|BottomSeed|\r\nmatchup 1 vs 8 |21    |20        |  \r\nmatchup 4 vs 5 |18    |17        |  \r\nmatchup 3 vs 6 |24    |32        |  \r\nmatchup 2 vs 7 |20    |19        |  \r\n\r\n",
+    "custom_steps": "WHEN the bracket is in scoring phase\r\n",
+    "custom_expected": "THEN I should see all my picks to be correct for Round 1",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30891304,
+    "title": "[WIP] Round 2 picks verification",
+    "section_id": 1701115,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 222,
+    "created_on": 1687375311,
+    "updated_by": 222,
+    "updated_on": 1687375702,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 2,
+    "custom_preconds": "GIVEN I am using \"brackets/te-home-run-derby-bracket\" bracket\r\nAND I have the following picks for Round1:\r\n1 vs 8: topSeed\r\n4 vs 5: topSeed\r\n3 vs 6: bottomSeed\r\n2 vs 7: topSeed\r\n\r\nAND the following is the entry in Contentful:\r\n|ToSeed|BottomSeed|\r\nmatchup 1 vs 8 |21 |20 |\r\nmatchup 4 vs 5 |18 |17 |\r\nmatchup 3 vs 6 |24 |32 |\r\nmatchup 2 vs 7 |20 |19 |\r\n\r\nAND I have the following for Round 2 picks:\r\nmatchUp 1: ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30957867,
+    "title": "Page name should reflect the current year in the tracking call",
+    "section_id": 1706733,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 222,
+    "created_on": 1688587597,
+    "updated_by": 222,
+    "updated_on": 1688588744,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 1,
+    "custom_preconds": "GIVEN I am on the HRD page\r\nAND I have [Adobe Analytics Debugger](https://chrome.google.com/webstore/detail/debugger-for-adobe-analyt/bdingoflfadhnjohjaplginnpjeclmof) extension enable\r\nAND I am watching the browser console\r\nAND Pete Alonso is participating in the bracket challenge",
+    "custom_steps": "WHEN I click on the Pete Alonso for Round 1\r\nAND I observer the tracking events in the console\r\n",
+    "custom_expected": "THEN I should see \"Major League Baseball: Brackets\" for prop12\r\nAND I should see \"Major League Baseball: Brackets: <current_year> T-Mobile Home Run Derby Bracket Challenge \" for prop13 # the year value will vary every year\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30957868,
+    "title": "Player id and other relevant information will be shared via tracking events",
+    "section_id": 1706733,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 222,
+    "created_on": 1688587620,
+    "updated_by": 222,
+    "updated_on": 1688588658,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 2,
+    "custom_preconds": "GIVEN I am on the HRD page\r\nAND I have [Adobe Analytics Debugger](https://chrome.google.com/webstore/detail/debugger-for-adobe-analyt/bdingoflfadhnjohjaplginnpjeclmof) extension enable\r\nAND I am watching the browser console\r\nAND Pete Alonso is participating in the bracket challenge",
+    "custom_steps": "WHEN I click on the Pete Alonso for Round 1\r\nAND I observer the tracking events in the console\r\n",
+    "custom_expected": "THEN I should see \"624413\" for prop3\r\nAND I should see \"Pete Alonso\" for evar140\r\nAND I should see \"Bracket: Seed Selection: Round 1\" for prop14",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I click on the Pete Alonso for Round 2\nAND I observer the tracking events in the console\n",
+        "expected": "THEN I should see \"624413\" for prop3\nAND I should see \"Pete Alonso\" for evar140\nAND I should see \"Bracket: Seed Selection: Round 2\" for prop14"
+      },
+      {
+        "content": "WHEN I click on the Pete Alonso for the final Round\nAND I observer the tracking events in the console\n",
+        "expected": "THEN I should see \"624413\" for prop3\nAND I should see \"Pete Alonso\" for evar140\nAND I should see \"Bracket: Seed Selection: Final\" for prop14"
+      }
+    ]
+  },
+  {
+    "id": 30957869,
+    "title": "[POSTSEASON BRACKET] Club abbreviation will be shared via evar140",
+    "section_id": 1706733,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 222,
+    "created_on": 1688587640,
+    "updated_by": 222,
+    "updated_on": 1688662574,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30957870,
+    "title": "Non logged in user submissions will result in firing an event",
+    "section_id": 1706733,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 222,
+    "created_on": 1688587785,
+    "updated_by": 222,
+    "updated_on": 1688659683,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 4,
+    "custom_preconds": "GIVEN I am on the HRD page\r\nAND I am not logged into the app\r\nAND I have Adobe Analytics Debugger extension enable\r\nAND I am watching the browser console",
+    "custom_steps": "WHEN I make my selections for HRD\r\nAND I submit my tie breaker answers\r\nAND I observer the tracking events in the console",
+    "custom_expected": "THEN I should see an analytics call being made\r\nAND I should see \"Bracket: Tiebreaker Submit Success\" for prop14",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30957871,
+    "title": "Tiebreaker submission will fire a tracking event",
+    "section_id": 1706733,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 222,
+    "created_on": 1688587837,
+    "updated_by": 222,
+    "updated_on": 1688660034,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 5,
+    "custom_preconds": "GIVEN I am on the HRD page\r\nAND I am logged into the app [mlb app or site]\r\nAND I have Adobe Analytics Debugger extension enable\r\nAND I am watching the browser console",
+    "custom_steps": "WHEN I make my selections for HRD\r\nAND I submit my tie breaker answers\r\nAND I hit ok in the pop up confirmation box\r\n\r\n",
+    "custom_expected": "THEN I should see an analytics call being made\r\nAND I should see \"Bracket: Success: Ok \" for prop14",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30968053,
+    "title": "Enter the bracket by clicking on \"Enter Bracket\" button will trigger a call",
+    "section_id": 1706733,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 222,
+    "created_on": 1688660108,
+    "updated_by": 222,
+    "updated_on": 1688660241,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 6,
+    "custom_preconds": "GIVEN I am on the HRD page",
+    "custom_steps": "WHEN I am present with the welcome screen of the bracket\r\nAND I press on \"Enter Bracket\" button",
+    "custom_expected": "THEN I should see a tracking even firing \r\nAND I should see \"Bracket: Modal: Play Game\" for prop14",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30968054,
+    "title": "Tracking events for app/atbat app",
+    "section_id": 1706733,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 222,
+    "created_on": 1688660266,
+    "updated_by": 222,
+    "updated_on": 1688662395,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 7,
+    "custom_preconds": "GIVEN I am loading HRD bracket with app/atbat url \r\n",
+    "custom_steps": "WHEN I first visit the page",
+    "custom_expected": "THEN I should see a tracking event\r\nAND I should see \"app/atbat\" for eVar63\r\nAND I should see \"ATBAT\" for prop8",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I select a player",
+        "expected": "THEN I should see the player id for prop3\nAND I should see name for eVar140\nAND I should see ATBAT for prop8\nAND I should see at/bat for eVar63\nAND I should see the picked round for prop14"
+      },
+      {
+        "content": "",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 30968055,
+    "title": "Tracking events for app/ballpark app",
+    "section_id": 1706733,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 222,
+    "created_on": 1688660275,
+    "updated_by": 222,
+    "updated_on": 1688662512,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 544572,
+    "display_order": 8,
+    "custom_preconds": "GIVEN I am visiting HRD page",
+    "custom_steps": "WHEN I perform an action within the bracket page",
+    "custom_expected": "THEN I should see a tracking event for the action \r\nAND I should see \"ATTHEBALLPARK\" for prop8\r\nAND I should see \"app/ballpark\" for eVar63",
+    "custom_steps_separated": null
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": 141100,
+    "suite_id": 19998,
+    "name": "MJ Assignments",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 141092,
+    "suite_id": 19998,
+    "name": "Post Season Rosters",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 145666,
+    "suite_id": 19998,
+    "name": "Voluntary Designation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 145667,
+    "suite_id": 19998,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 145666,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 145435,
+    "suite_id": 19998,
+    "name": "Pre-draft",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 145684,
+    "suite_id": 19998,
+    "name": "Draft Order",
+    "description": null,
+    "parent_id": 145435,
+    "display_order": 43,
+    "depth": 1
+  },
+  {
+    "id": 145686,
+    "suite_id": 19998,
+    "name": "Reports",
+    "description": null,
+    "parent_id": 145435,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 145687,
+    "suite_id": 19998,
+    "name": "Selectable Players",
+    "description": null,
+    "parent_id": 145435,
+    "display_order": 45,
+    "depth": 1
+  },
+  {
+    "id": 145688,
+    "suite_id": 19998,
+    "name": "Reserve Lists",
+    "description": null,
+    "parent_id": 145435,
+    "display_order": 46,
+    "depth": 1
+  },
+  {
+    "id": 145440,
+    "suite_id": 19998,
+    "name": "During Draft",
+    "description": null,
+    "parent_id": null,
+    "display_order": 48,
+    "depth": 0
+  },
+  {
+    "id": 145439,
+    "suite_id": 19998,
+    "name": "Draft Admin",
+    "description": null,
+    "parent_id": 145440,
+    "display_order": 50,
+    "depth": 1
+  },
+  {
+    "id": 145442,
+    "suite_id": 19998,
+    "name": "Selectable players",
+    "description": null,
+    "parent_id": 145440,
+    "display_order": 51,
+    "depth": 1
+  },
+  {
+    "id": 145670,
+    "suite_id": 19998,
+    "name": "Draft History",
+    "description": null,
+    "parent_id": 145440,
+    "display_order": 64,
+    "depth": 1
+  },
+  {
+    "id": 145662,
+    "suite_id": 19998,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 145440,
+    "display_order": 66,
+    "depth": 1
+  },
+  {
+    "id": 145685,
+    "suite_id": 19998,
+    "name": "Reserve Lists",
+    "description": null,
+    "parent_id": 145440,
+    "display_order": 67,
+    "depth": 1
+  },
+  {
+    "id": 145438,
+    "suite_id": 19998,
+    "name": "Post Draft",
+    "description": null,
+    "parent_id": null,
+    "display_order": 68,
+    "depth": 0
+  },
+  {
+    "id": 141102,
+    "suite_id": 19998,
+    "name": "Batches",
+    "description": null,
+    "parent_id": 145438,
+    "display_order": 69,
+    "depth": 1
+  },
+  {
+    "id": 145669,
+    "suite_id": 19998,
+    "name": "Reporting",
+    "description": null,
+    "parent_id": 145438,
+    "display_order": 70,
+    "depth": 1
+  },
+  {
+    "id": 145664,
+    "suite_id": 19998,
+    "name": "Rule 5 Selection",
+    "description": null,
+    "parent_id": 145438,
+    "display_order": 71,
+    "depth": 1
+  },
+  {
+    "id": 145665,
+    "suite_id": 19998,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 145664,
+    "display_order": 72,
+    "depth": 2
+  }
+]

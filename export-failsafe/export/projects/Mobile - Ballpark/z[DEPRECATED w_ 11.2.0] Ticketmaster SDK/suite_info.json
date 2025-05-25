@@ -1,0 +1,11 @@
+{
+  "id": 368481,
+  "name": "z[DEPRECATED w/ 11.2.0] Ticketmaster SDK",
+  "description": "How to test the Ticketmaster SDK through deep links (outside the app and via the Home Tab) and through the wallet tab (Main wallet cards and view all list)\r\n\r\n[UPDATE] BP client (iOS 11.2.0) removes the SDK and therefore this suite is deprecated. Remove TM SDK: JIRA[BP-9661](https://baseball.atlassian.net/browse/BP-9661)",
+  "project_id": 179,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/368481"
+}

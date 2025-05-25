@@ -1,0 +1,264 @@
+[
+  {
+    "id": 45062,
+    "title": "Non Game Event Check In",
+    "section_id": 6315,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394145890,
+    "updated_by": 43,
+    "updated_on": 1466527192,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 807,
+    "display_order": 1,
+    "custom_preconds": "Conditions for a valid check in - user is located within 2km or .9 miles of the ballpark location and within 4 hours of the event start time\r\n\r\n**Be sure to test for both check in from Ballpark Guide page and Event details page**",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user meets the conditions for check in at the All Star Sunday event and attempts to check in",
+        "expected": "User is able to check in successfully "
+      },
+      {
+        "content": "When a user does not meet the check in conditions and attempts to check in to All Star Sunday event (check for both time and location mismatch)",
+        "expected": "User is unable to check in"
+      },
+      {
+        "content": "When a user meets the conditions for check in at the Home Run Derby and attempts to check in",
+        "expected": "User is able to check in successfully "
+      },
+      {
+        "content": "When a user does not meet the check in conditions and attempts to check in to Home Run Derby (check for both time and location mismatch)",
+        "expected": "User is unable to check in"
+      },
+      {
+        "content": "When a user meets the conditions for check in at the All Star Game and attempts to check in",
+        "expected": "User is able to check in successfully "
+      },
+      {
+        "content": "When a user does not meet the check in conditions and attempts to check in to the All Star Game (check for both time and location mismatch)",
+        "expected": "User is unable to check in"
+      }
+    ]
+  },
+  {
+    "id": 57480,
+    "title": "Veirfy the at bat deep link is working as intended",
+    "section_id": 6315,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1436819448,
+    "updated_by": 67,
+    "updated_on": 1436819793,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 807,
+    "display_order": 2,
+    "custom_preconds": "Given the user is on the ASG\r\nAnd the user wants to check out the ASG stats on At Bat",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user goes to the BPG page for the ASG\nAnd the user taps on the upcoming event\nAnd the user taps on the At Bat deeplink on the event detail view",
+        "expected": "Then the user should be directed to the gameday view for the ASG on At Bat\nAnd the app should not crash\nAnd the app should be able to device back to ballpark without the app crashing"
+      },
+      {
+        "content": "When the user is on the BPG page\nAnd the device date is set within the 4 hour window of All-Star Sunday or HR Derby\nAnd the user taps on the upcoming event cell",
+        "expected": "Then the user will be brought to the event detail view for All-Star Sunday or HR Derby\nAnd the user will not see the At Bat deeplink\n"
+      }
+    ]
+  },
+  {
+    "id": 57483,
+    "title": "All star events flipping correctly",
+    "section_id": 6315,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1436819867,
+    "updated_by": 67,
+    "updated_on": 1436823555,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 807,
+    "display_order": 3,
+    "custom_preconds": "Given the user is constantly checking the ballpark app\r\nAnd the user wants to see when the next event will kick in",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user sets the device date to so the next event is a non-game/all star event\nAnd the user is outside the 4 hour window\nAnd the user navigates to the ballpark guide page for the ballpark",
+        "expected": "Then the user should see the next upcoming game as the first non-game event\nAnd the user should be able to navigate to the event detail view for that event\nAnd the user should not be able to check-in to said event"
+      },
+      {
+        "content": "When the user sets the device date to the end date/time of the first event or the user set the device date/time to the flip over (9am the next morning)\nAnd the user is on the ballpark guide",
+        "expected": "Then the user will be on ballpark guide\nAnd the user will see the upcoming game cell flip over to the next event"
+      },
+      {
+        "content": "When the user sets the device date/time to the ASG\nAnd the user goes the BPG page",
+        "expected": "Then the user should see the upcoming game cell display the ASG\nAnd the user should be directed to the ASG on the event detail view\nAnd the check-in button should be enabled"
+      },
+      {
+        "content": "WHen the user sets the device date/time to the day after or sets it to the flip over time",
+        "expected": "Then the user should see the lookup update and pull the next upcoming game for that ballpark"
+      }
+    ]
+  },
+  {
+    "id": 178407,
+    "title": "Event Details Display",
+    "section_id": 6315,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1466527155,
+    "updated_by": 43,
+    "updated_on": 1466527454,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 807,
+    "display_order": 4,
+    "custom_preconds": "See https://jira.mlbam.com/browse/BPA-2245 for details and designs\r\n\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the next event at a ballpark is All Star Sunday and the user is on the Ticket Dashboard",
+        "expected": "Then the user will see the All Star Sunday non game event displayed in the next event module"
+      },
+      {
+        "content": "When the next event at a ballpark is Home Run Derby and the user is on the Ticket Dashboard",
+        "expected": "Then the user will see the Home Run Derby non game event displayed in the next event module"
+      },
+      {
+        "content": "When the user looks at the Home Game list for the ballpark hosting the All Star events",
+        "expected": "Then the user will see the All Star Sunday, Home Run Derby and All Star games on their respective dates with their unique logos and descriptions"
+      },
+      {
+        "content": "When the user taps on a All Star Sunday or Home Run Derby and views the Ticket Event Details",
+        "expected": "Then the user will not see any team or All Star logos"
+      },
+      {
+        "content": "When the user taps on a All Star Game and views the Ticket Event Details",
+        "expected": "Then the user will see AL/NL logos for the home and away team"
+      }
+    ]
+  },
+  {
+    "id": 178408,
+    "title": "Ticket Support",
+    "section_id": 6315,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1466527469,
+    "updated_by": 43,
+    "updated_on": 1466528050,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 807,
+    "display_order": 5,
+    "custom_preconds": "When the user has tickets for any of the All Star games or events\r\n\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user has ticket(s) for any All Star game or event",
+        "expected": "Then the user should see the ticket icon in the ballpark picker next to the ballpark hosting the All Star events and on the Ticket Dashboard tab header for that ballpark as well"
+      },
+      {
+        "content": "When the user has ticket(s) for All Star Sunday and is on the Ticket Dashboard for the ballpark hosting the All Star events",
+        "expected": "Then the All Star Sunday event will be displayed in the My Tickets list with the correct event logo and the number of tickets linked to the account"
+      },
+      {
+        "content": "When the user has ticket(s) for Home Run Derby and is on the Ticket Dashboard for the ballpark hosting the All Star events",
+        "expected": "Then the Home Run Derby will be displayed in the My Tickets list with the correct event logo and the number of tickets linked to the account"
+      },
+      {
+        "content": "When the user has ticket(s) for All Star Game and is on the Ticket Dashboard for the ballpark hosting the All Star events",
+        "expected": "Then the All Star Game will be displayed in the My Tickets list with the correct event logo and the number of tickets linked to the account"
+      },
+      {
+        "content": "When the user taps on My Tickets list ",
+        "expected": "Then the user should see in the list any of the All Star Games or events for which they have tickets with the correct logos and descriptions"
+      }
+    ]
+  },
+  {
+    "id": 178409,
+    "title": "Ticket Forward",
+    "section_id": 6315,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1466528662,
+    "updated_by": 43,
+    "updated_on": 1466529047,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 807,
+    "display_order": 6,
+    "custom_preconds": "When user has tickets to All Star Sunday, Home Run Derby or All Star Game",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user is on the Ticket Event Detail view for All Star Sunday or Home Run Derby",
+        "expected": "Then the user should see the ticket forward button"
+      },
+      {
+        "content": "When the user taps ticket forward button",
+        "expected": "Then the user will be on the ticket forward email view and see the event details for All Star Sunday or HRD (no team logos, no away team information)"
+      },
+      {
+        "content": "When the user user forwards tickets for All Star Sunday or Home Run Derby",
+        "expected": "Then the user is able to successfully forward the ticket(s)"
+      },
+      {
+        "content": "When the user taps on the scan view of a All Star Sunday or Home Run Derby ticket",
+        "expected": "Then the user will see the correct event details, no logo and no away team"
+      },
+      {
+        "content": "When the user attempts to forward a ticket for the All Star Sunday or Home Derby events",
+        "expected": "Then the use is able to successfully forward the ticket(s)"
+      },
+      {
+        "content": "When the user has forwarded a ticket for ASS or HRD",
+        "expected": "Then the recipient account will have an email and be able to successfully accept the ticket in Ballpark"
+      },
+      {
+        "content": "When a ticket forward is accepted for ASS or HRD and forwarding and receiving accounts review the \"Ticket Forwards\" section Ticket Dashboard",
+        "expected": "Then both accounts will see the recent ticket forwarding transactions under Received and Sent"
+      },
+      {
+        "content": "When a user taps on a ticket to All Star Game",
+        "expected": "Then the user will see the correct AL/NL logos and team information in the scan view"
+      },
+      {
+        "content": "When the user attempts to forward an All Star Game ticket from either the Ticket Event Details page (via multi forward) or scan view",
+        "expected": "Then the user will be able to successfully complete a ticket forward, accept it on another account and review the transaction in the \"Ticket Forwards\" section of the Ticket Dashboard"
+      }
+    ]
+  }
+]

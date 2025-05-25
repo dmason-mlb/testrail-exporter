@@ -1,0 +1,101 @@
+[
+  {
+    "id": 704537,
+    "name": "Engineering approvals",
+    "description": null,
+    "project_id": 267,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/704537"
+  },
+  {
+    "id": 704546,
+    "name": "Admin || Settings",
+    "description": "Test cases covering what the Admin user sees when viewing the Settings page.",
+    "project_id": 267,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/704546"
+  },
+  {
+    "id": 704629,
+    "name": "Documents",
+    "description": "Regression test suite related to Documents - uploading/editing/tagging/viewing",
+    "project_id": 267,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/704629"
+  },
+  {
+    "id": 704657,
+    "name": "Radio Broadcast Approvals",
+    "description": "GOAL: The MLB Broadcast and Scheduling team wants to bring the Radio Station Broadcaster approval process into BATTER. \r\n\r\nThe Broadcast team wants visibility into radio station broadcast approvals. In order to do this, we will introduce a feature to BATTER which allows clubs to sort through and approve visiting radio broadcasters that are based more than 50 miles from the visiting team’s home ballpark. Once approvals are confirmed, visiting broadcasters will be notified of their approval status. This feature will allow clubs to digitize a process that relies heavily on paper trails and email chains, while granting the broadcast team assurance that all radio broadcasts are by the books.",
+    "project_id": 267,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/704657"
+  },
+  {
+    "id": 704659,
+    "name": "Requests",
+    "description": null,
+    "project_id": 267,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/704659"
+  },
+  {
+    "id": 704985,
+    "name": "General/UI",
+    "description": null,
+    "project_id": 267,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/704985"
+  },
+  {
+    "id": 704987,
+    "name": "Change Memo",
+    "description": "Broadcasting team today tracks changes to the broadcasters in Batter system. Today, they populate change memos manually into a file and send via email to the members impacted by the change.\r\n\r\nThe idea is to automate this process as much as possible using the broadcaster changes that is tracked and approved in the system so that the teams can use the data in Batter to send Change Memos to a pre-defined distribution list. ",
+    "project_id": 267,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/704987"
+  },
+  {
+    "id": 705708,
+    "name": "Temp",
+    "description": null,
+    "project_id": 267,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/705708"
+  },
+  {
+    "id": 705717,
+    "name": "Slack Bot",
+    "description": null,
+    "project_id": 267,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/705717"
+  }
+]

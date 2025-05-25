@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1981042,
+    "suite_id": 695371,
+    "name": "Home - Video Carousel",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1981043,
+    "suite_id": 695371,
+    "name": "Team Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1981044,
+    "suite_id": 695371,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1981045,
+    "suite_id": 695371,
+    "name": "News",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1981046,
+    "suite_id": 695371,
+    "name": "Videos",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1981047,
+    "suite_id": 695371,
+    "name": "Standings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1981048,
+    "suite_id": 695371,
+    "name": "MLB.TV",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1981049,
+    "suite_id": 695371,
+    "name": "Gameday",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1981050,
+    "suite_id": 695371,
+    "name": "Watch Live",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": 125734,
+    "suite_id": 18780,
+    "name": "Summary",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 125737,
+    "suite_id": 18780,
+    "name": "Invoices",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 125738,
+    "suite_id": 18780,
+    "name": "Credit",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 125750,
+    "suite_id": 18780,
+    "name": "Schools",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 125735,
+    "suite_id": 18780,
+    "name": "Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 125736,
+    "suite_id": 18780,
+    "name": "Reports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 125752,
+    "suite_id": 18780,
+    "name": "Batches/Global",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 125751,
+    "suite_id": 18780,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 125740,
+    "suite_id": 18780,
+    "name": "CSP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 125741,
+    "suite_id": 18780,
+    "name": "CSP Calculations",
+    "description": null,
+    "parent_id": 125740,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 125742,
+    "suite_id": 18780,
+    "name": "Reporting",
+    "description": null,
+    "parent_id": 125740,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 125743,
+    "suite_id": 18780,
+    "name": "Printing",
+    "description": null,
+    "parent_id": 125740,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 125744,
+    "suite_id": 18780,
+    "name": "CSP Players Widget",
+    "description": null,
+    "parent_id": 125740,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 125745,
+    "suite_id": 18780,
+    "name": "CEP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 125746,
+    "suite_id": 18780,
+    "name": "CEP Calculations",
+    "description": null,
+    "parent_id": 125745,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 125747,
+    "suite_id": 18780,
+    "name": "Printing",
+    "description": null,
+    "parent_id": 125745,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 125748,
+    "suite_id": 18780,
+    "name": "CEP Summary",
+    "description": null,
+    "parent_id": 125745,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 125749,
+    "suite_id": 18780,
+    "name": "Miscellaneous/UAT Feedback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 1144313,
+    "suite_id": 18780,
+    "name": "CEP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 1144319,
+    "suite_id": 18780,
+    "name": "CEP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 157370,
+    "suite_id": 21995,
+    "name": "MLB.TV Paywall",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 157372,
+    "suite_id": 21995,
+    "name": "AtBat Premium Paywall",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

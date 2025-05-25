@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1124381,
+    "suite_id": 379543,
+    "name": "WEBI",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1124382,
+    "suite_id": 379543,
+    "name": "Crystal Enterprise",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1124383,
+    "suite_id": 379543,
+    "name": "Contracts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1124384,
+    "suite_id": 379543,
+    "name": "Straight to PDF/Excel",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1124385,
+    "suite_id": 379543,
+    "name": "Static PDF",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1124419,
+    "suite_id": 379543,
+    "name": "Crystal 2016",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  }
+]

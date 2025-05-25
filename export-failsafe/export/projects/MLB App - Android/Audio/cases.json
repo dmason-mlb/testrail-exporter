@@ -1,0 +1,594 @@
+[
+  {
+    "id": 8185018,
+    "title": "Launch Audio EPG",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1600891351,
+    "updated_by": 232,
+    "updated_on": 1649101806,
+    "estimate": null,
+    "estimate_forecast": "17m 12s",
+    "suite_id": 99349,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": "WHEN I tap the audio icon in the app",
+    "custom_expected": "THEN I should see the Audio EPG which should include a list of the games available to listen to for the current day, accounting for any suggested date and flip time overrides\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8185917,
+    "title": "Audio EPG Game States",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1600895951,
+    "updated_by": 442,
+    "updated_on": 1731634427,
+    "estimate": null,
+    "estimate_forecast": "4m 21s",
+    "suite_id": 99349,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a user viewing the audio EPG",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a live game with attached media is returned by the data call for the given day",
+        "expected": "THEN I should see the item in the list with a LIVE badge"
+      },
+      {
+        "content": "WHEN an upcoming game is returned by the data call for the given day",
+        "expected": "THEN I should see the item in the list with an UPCOMING badge"
+      },
+      {
+        "content": "WHEN an archive game is returned by the data call for the given day",
+        "expected": "THEN I should see the item in the list with an ARCHIVE badge"
+      }
+    ]
+  },
+  {
+    "id": 8240610,
+    "title": "Audio EPG order",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1601308410,
+    "updated_by": 232,
+    "updated_on": 1693407154,
+    "estimate": null,
+    "estimate_forecast": "3m 25s",
+    "suite_id": 99349,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user with a favorite team selected",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN my favorite team has a game on the day I am viewing ",
+        "expected": "THEN I should see my favorite team’s game at the top of the list"
+      },
+      {
+        "content": "WHEN I have favorite team selected\nAND I have one or more followed teams selected",
+        "expected": "THEN I should see my favorite team’s game at the top of the list\nAND the followed teams will be next in the sort order "
+      },
+      {
+        "content": "WHEN viewing the EPG",
+        "expected": "THEN I should see the list of games in chronological order, with the exception of my favorite/followed teams' game which are promoted to the top"
+      }
+    ]
+  },
+  {
+    "id": 8241475,
+    "title": "Tap Behavior in EPG - Non-Entitled User",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1601329789,
+    "updated_by": 232,
+    "updated_on": 1722033574,
+    "estimate": null,
+    "estimate_forecast": "16m 6s",
+    "suite_id": 99349,
+    "display_order": 4,
+    "custom_preconds": "GIVEN a user not entitled to MLB Audio content and viewing the audio EPG",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I tap on a game that has an available media feed",
+        "expected": "THEN I should be taken to the paywall\n\n"
+      },
+      {
+        "content": "WHEN I complete the purchase process or I abandon the purchase process and exit the paywall",
+        "expected": "THEN I should be returned to the MLB Audio EPG\n\n"
+      },
+      {
+        "content": "WHEN I am logged in as a free user\nAND I select a Free Game of the Day (Games are not labeled with FGOTD on the audio EPG, but you can see which games are FGOTD on the Watch Now Page or Games Tab of the Watch View)",
+        "expected": "THEN the feed will play"
+      }
+    ]
+  },
+  {
+    "id": 8275176,
+    "title": "Audio - Tap Behavior in EPG - Entitled User",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1601500067,
+    "updated_by": 232,
+    "updated_on": 1601500067,
+    "estimate": null,
+    "estimate_forecast": "15m 46s",
+    "suite_id": 99349,
+    "display_order": 5,
+    "custom_preconds": "GIVEN a user entitled to MLB Audio content and viewing the audio EPG",
+    "custom_steps": "WHEN I tap on a game that has an available media feed",
+    "custom_expected": "THEN the feed for that game should begin playing according to the feed selection logic, accounting for my favorite team, language, and home/away status\r\n\r\nNOTE- Feed selection logic is as follows\r\nPlay the first audio feed available for the game I’ve selected, based on this hierarchical list:\r\n\r\nFavorite team’s feed in my device’s language\r\n\r\nHome team’s feed in my device’s language\r\n\r\nAway team’s feed in my device’s language\r\n\r\nFavorite team’s feed, regardless of language\r\n\r\nHome team’s feed, regardless of language\r\n\r\nAway team’s feed, regardless of language",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8346986,
+    "title": "Navigate within the Audio EPG",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1602003030,
+    "updated_by": 238,
+    "updated_on": 1629775361,
+    "estimate": null,
+    "estimate_forecast": "15m 47s",
+    "suite_id": 99349,
+    "display_order": 6,
+    "custom_preconds": "GIVEN a user with the app installed on their device",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN viewing the audio EPG",
+        "expected": "THEN The default date should match the scoreboard date\nAND The date should reflect scoreboard flip times"
+      },
+      {
+        "content": "WHEN viewing the audio EPG\nAND I tap the left arrow on the date bar",
+        "expected": "THEN I should see the date move back one day\nAND I should see the available games for that day reflected in the list"
+      },
+      {
+        "content": "WHEN viewing the audio EPG\nAND I swipe on the audio EPG",
+        "expected": "THEN I should see the date move forward and back one day\nAND I should see the available games for that day reflected in the list"
+      }
+    ]
+  },
+  {
+    "id": 8478933,
+    "title": "Controls in EPG for Live Game",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1602802711,
+    "updated_by": 442,
+    "updated_on": 1731633115,
+    "estimate": null,
+    "estimate_forecast": "17m 35s",
+    "suite_id": 99349,
+    "display_order": 7,
+    "custom_preconds": "GIVEN an MLB Audio entitled user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I select a game in the Audio EPG",
+        "expected": "THEN I should see controls appear at the top of the screen that are relevant to that game"
+      },
+      {
+        "content": "WHEN a game in the Audio EPG is selected\nAND I tap on the backwards 10 button",
+        "expected": "THEN audio for the feed I have active should rewind 10 seconds"
+      }
+    ]
+  },
+  {
+    "id": 34312011,
+    "title": "Controls in EPG for Archived Game",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 442,
+    "created_on": 1731633194,
+    "updated_by": 442,
+    "updated_on": 1731633211,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 99349,
+    "display_order": 8,
+    "custom_preconds": "GIVEN an MLB Audio entitled user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I select a game in the Audio EPG",
+        "expected": "THEN I should see controls appear at the top of the screen that are relevant to that game"
+      },
+      {
+        "content": "WHEN a game in the Audio EPG is selected\nAND I tap on the backwards 10 button",
+        "expected": "THEN audio for the feed I have active should rewind 10 seconds"
+      },
+      {
+        "content": "WHEN a game in the Audio EPG is selected\nAND I tap on the fast forward 10 button",
+        "expected": "THEN audio for the feed I have active should fast forward 10 seconds"
+      }
+    ]
+  },
+  {
+    "id": 8478934,
+    "title": "Active Audio Feed Information in EPG",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1602803720,
+    "updated_by": 232,
+    "updated_on": 1602803720,
+    "estimate": null,
+    "estimate_forecast": "5m 43s",
+    "suite_id": 99349,
+    "display_order": 9,
+    "custom_preconds": "GIVEN an MLB Audio entitled user\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I select a game in the Audio EPG",
+        "expected": "THEN I should see information appear at the top of the screen that is relevant to that game"
+      },
+      {
+        "content": "WHEN I am listening to an audio feed\nAND the feed is interrupted and buffering",
+        "expected": "THEN I should see a status message that indicates “Buffering”"
+      }
+    ]
+  },
+  {
+    "id": 8519807,
+    "title": "Date Picker",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1603144193,
+    "updated_by": 232,
+    "updated_on": 1603144193,
+    "estimate": null,
+    "estimate_forecast": "18m 5s",
+    "suite_id": 99349,
+    "display_order": 10,
+    "custom_preconds": "GIVEN a user in the audio EPG",
+    "custom_steps": "WHEN I tap the date in the date bar",
+    "custom_expected": "THEN I should see a calendar grid that will allow me to navigate to another date of my choosing\r\nAND I should see the number of games available on each date from this view",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8565836,
+    "title": "Notification Tray & Background Playback",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1603383099,
+    "updated_by": 232,
+    "updated_on": 1603383099,
+    "estimate": null,
+    "estimate_forecast": "26m 4s",
+    "suite_id": 99349,
+    "display_order": 11,
+    "custom_preconds": "GIVEN an entitled MLB Audio user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I have selected to play an audio feed\n",
+        "expected": "THEN I should see a persistent media notification in my notification tray so that I may control my audio feed from outside the app"
+      },
+      {
+        "content": "WHEN I have paused the notification\nAND I have swiped away the notification\n",
+        "expected": "THEN the audio feed should stop playing and the notification should be removed"
+      },
+      {
+        "content": "\nWHEN I tap on the notification",
+        "expected": "THEN the MLB app should open to the Audio EPG \n"
+      },
+      {
+        "content": "WHEN I am actively listening to a feed\nAND I background the MLB app",
+        "expected": "THEN the audio I am listening to should continue playback"
+      }
+    ]
+  },
+  {
+    "id": 8673737,
+    "title": "Accessibility - Voiceover After Selecting a Game",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1604940331,
+    "updated_by": 232,
+    "updated_on": 1604947252,
+    "estimate": null,
+    "estimate_forecast": "1h 10m 27s",
+    "suite_id": 99349,
+    "display_order": 12,
+    "custom_preconds": "GIVEN an MLB Audio user with voiceover mode active\r\n\r\n\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I tap on an available game in the Audio EPG",
+        "expected": "THEN audio focus should be placed on the feed button that is actively playing for that game\nAND THEN the feed button copy must be read aloud to the user"
+      },
+      {
+        "content": "WHEN an MLB Audio user with voiceover mode active and actively listening to a game\nAND I have audio focus on the scrubber and swipe up",
+        "expected": "THEN audio must advance"
+      }
+    ]
+  },
+  {
+    "id": 8673984,
+    "title": "Currently Playing Feed Picker",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1604950702,
+    "updated_by": 232,
+    "updated_on": 1604950702,
+    "estimate": null,
+    "estimate_forecast": "30m 40s",
+    "suite_id": 99349,
+    "display_order": 13,
+    "custom_preconds": "GIVEN an MLB Audio entitled user with a game in the Audio EPG selected\r\n\r\n",
+    "custom_steps": "WHEN I tap on a feed button",
+    "custom_expected": "THEN the audio source should change to play that feed instead of the feed that is currently active",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8886681,
+    "title": "Launch Audio Playback & EPG from Scoreboard",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1607639885,
+    "updated_by": 232,
+    "updated_on": 1607639885,
+    "estimate": null,
+    "estimate_forecast": "34m 35s",
+    "suite_id": 99349,
+    "display_order": 14,
+    "custom_preconds": "GIVEN a user entitled to MLB Audio content and viewing the audio EPG\r\n",
+    "custom_steps": "WHEN I tap on a game that has an available media feed",
+    "custom_expected": "THEN the feed for that game should begin playing according to the feed selection logic, accounting for my favorite team, language, and home/away status\r\nAND the media player controls and audio feed information should appear at the top of the view",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16587322,
+    "title": "Launch Live Audio from EPG",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-11064",
+    "created_by": 238,
+    "created_on": 1617317452,
+    "updated_by": 238,
+    "updated_on": 1617317702,
+    "estimate": null,
+    "estimate_forecast": "33m 21s",
+    "suite_id": 99349,
+    "display_order": 15,
+    "custom_preconds": "GIVEN a user is in the app and there are live games playing",
+    "custom_steps": "WHEN a user taps on a live game",
+    "custom_expected": "THEN the game audio will begin playing at the current live point and not start from the beginning",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 17066745,
+    "title": "Lock Screen",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1620671276,
+    "updated_by": 232,
+    "updated_on": 1722035056,
+    "estimate": null,
+    "estimate_forecast": "4m 30s",
+    "suite_id": 99349,
+    "display_order": 16,
+    "custom_preconds": "GIVEN a user is playing an audio feed\r\n\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user locks their phone and turns on the lock screen",
+        "expected": "THEN the correct audio feed information will be displayed"
+      },
+      {
+        "content": "WHEN the user locks their phone and turns on the lock screen\n",
+        "expected": "THEN the buttons displayed correspond to supported actions available for the player(buttons that display/function form the lock screen vary by device type)"
+      }
+    ]
+  },
+  {
+    "id": 21681178,
+    "title": "Bluetooth Disconnect",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10502",
+    "created_by": 238,
+    "created_on": 1628223425,
+    "updated_by": 238,
+    "updated_on": 1628223425,
+    "estimate": null,
+    "estimate_forecast": "37m 19s",
+    "suite_id": 99349,
+    "display_order": 17,
+    "custom_preconds": null,
+    "custom_steps": "GIVEN a user is listening a game using headphones\r\nWHEN the user disconnects her/his headphones from the device\r\nTHEN the app should pause the audio stream.",
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 28357527,
+    "title": "Listen to complete game",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1652110797,
+    "updated_by": 232,
+    "updated_on": 1652110797,
+    "estimate": null,
+    "estimate_forecast": "39m 50s",
+    "suite_id": 99349,
+    "display_order": 19,
+    "custom_preconds": "GIVEN an entitled user",
+    "custom_steps": "WHEN the user plays an audio stream",
+    "custom_expected": "THEN the user can watch the entire game without interruption\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 34331577,
+    "title": "Error States",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 442,
+    "created_on": 1732039783,
+    "updated_by": 232,
+    "updated_on": 1740785496,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 99349,
+    "display_order": 20,
+    "custom_preconds": "GIVEN an MLB Audio entitled user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN no data loads on the audio EPG",
+        "expected": "THEN Audio EPG produces no content and displays blank screen"
+      },
+      {
+        "content": "WHEN a game has a playback error ",
+        "expected": "THEN Audio player reads \"Error\" with a generic error message. Any content playing is paused. "
+      },
+      {
+        "content": "WHEN concurrency cap is tripped",
+        "expected": "THEN player reads \"Error with \"Yr account is currently in use in another location. Reset your password by logging into mlb.com, and click on the profile icon to change your password.\""
+      }
+    ]
+  },
+  {
+    "id": 34331579,
+    "title": "Adobe Analytics",
+    "section_id": 441390,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 442,
+    "created_on": 1732059217,
+    "updated_by": 442,
+    "updated_on": 1732059217,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 99349,
+    "display_order": 21,
+    "custom_preconds": "GIVEN a user is in the app",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a user is selecting Audio EPG icon (Headphones)",
+        "expected": "THEN the following tracking actions should appear in logcat (filter by \"Track Requesting\") and Charles (https://mlb.sc.omtrdc.net) at the correct time:\n\nTracking Action: MLB At Bat : Android : Watch : Audio Click "
+      },
+      {
+        "content": "WHEN a user selects a game to play on the Audio EPG",
+        "expected": "THEN the following tracking actions should appear in logcat (filter by \"Track Requesting\") and Charles (https://mlb.sc.omtrdc.net) at the correct time:\n\nTracking Action: MLB At Bat : Android : MLB App Audio : Video Start \n\nAND on the same call, video.assetname is populated with text of the game selected, the audio feed selected (Home or Away), AUDIO, the language (en or es) and the correct game.pk"
+      },
+      {
+        "content": "When a user presses the PLAY button on the audio EPG after the game has been paused",
+        "expected": "THEN the following tracking actions should appear in logcat (filter by \"Track Requesting\") and Charles (https://mlb.sc.omtrdc.net) at the correct time:\n\nTracking Action: MLB At Bat : Android : GDA EPG : Play "
+      },
+      {
+        "content": "When a user switches audio feeds on the Audio player",
+        "expected": "THEN the following tracking actions should appear in logcat (filter by \"Track Requesting\") and Charles (https://mlb.sc.omtrdc.net) at the correct time:\n\nTracking Action: MLB At Bat : Android : MLB App Audio : Video Start \n\nAND on the same call, video.assetname is populated with text of the game selected, the audio feed selected (Home or Away), AUDIO, the language (en or es) and the correct game.pk"
+      },
+      {
+        "content": "When the user is listening to a game and an ad plays",
+        "expected": "THEN the following tracking actions should appear in logcat (filter by \"Track Requesting\") and Charles (https://mlb.sc.omtrdc.net) at the correct time:\n\nTracking Action: MLB At Bat : Android : Video Ad Impression \n"
+      }
+    ]
+  }
+]

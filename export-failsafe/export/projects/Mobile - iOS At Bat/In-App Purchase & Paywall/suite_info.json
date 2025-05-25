@@ -1,0 +1,11 @@
+{
+  "id": 19588,
+  "name": "In-App Purchase & Paywall",
+  "description": "Apple Information: https://developer.apple.com/in-app-purchase/\r\n\r\nE-mail or Slack the Analytics members for assistance in testing custom paywall or trial experience \r\n\r\n1. Set up Sandbox accounts within Users and Roles in App Store Connect\r\n\r\n2. Clear any account information stored on your test devices (Settings > Store > Sign Out)\r\n\r\n3. Open TestFlight build, and perform your in-app purchase product testing\r\n\r\n4. Use your test account credentials to test the purchase",
+  "project_id": 4,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/19588"
+}

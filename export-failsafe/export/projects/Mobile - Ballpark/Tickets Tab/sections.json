@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1231621,
+    "suite_id": 203046,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1224689,
+    "suite_id": 203046,
+    "name": "Deeplinks",
+    "description": "Deeplinks relevant to Tickets Tab",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

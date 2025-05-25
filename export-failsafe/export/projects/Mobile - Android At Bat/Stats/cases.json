@@ -1,0 +1,132 @@
+[
+  {
+    "id": 50625,
+    "title": "General",
+    "section_id": 7347,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1424298689,
+    "updated_by": 25,
+    "updated_on": 1521767195,
+    "estimate": null,
+    "estimate_forecast": "17m 46s",
+    "suite_id": 993,
+    "display_order": 1,
+    "custom_preconds": "Handset only",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user navigates to the stats section from the slide out menu",
+        "expected": "Then the Stats section should open and the user should be left on the MLB Stats leaders page (Batting Tab) by default"
+      },
+      {
+        "content": "When the user navigates to the stats section from the team page (Team info, stats cell)",
+        "expected": "Then the Stats section should open and the user should be left on that team's Stats leaders page (Batting Tab) by default"
+      },
+      {
+        "content": "When the user does not have a data connection\nAnd the user tries to edit a filter on the stats page\nAnd the user taps the \"Ok\" button on the filter",
+        "expected": "Then the user should see an Unable to load data error with a refresh button"
+      },
+      {
+        "content": "When connectivity is restored\nAnd the user taps the refresh button",
+        "expected": "Then the stats section should load and display correctly"
+      },
+      {
+        "content": "When the user changes filters",
+        "expected": "Then the user should see a loading spinner while the data is loading"
+      },
+      {
+        "content": "When the user is viewing stats\nAnd the user leaves the stats section and later returns",
+        "expected": "Then the data should be refreshed\nAnd the data should not be cached in an out of data state"
+      },
+      {
+        "content": "When the user swipes back and forth on the stats leaders page",
+        "expected": "Then the user should be switched between batting and pitching stats\nAnd the selected tab should be reflected properly"
+      },
+      {
+        "content": "Verify Batting statistics categories",
+        "expected": "User should see:\nAVG\nHR\nRBI\nSB\nR\nOBP\nSLG\nOPS\nH\n2B\n3B\nBB"
+      },
+      {
+        "content": "Verify Pitching statistics categories",
+        "expected": "ERA\nW\nSO\nSV\nWHIP\nBAA\nIP\nCG"
+      },
+      {
+        "content": "When the user taps a stat and leader in the stat leader section",
+        "expected": "Then they should be taken to the list of leaders for that particular stat\n\n(Repeat for each stat)"
+      },
+      {
+        "content": "When the user opens the list of leaders for a stat",
+        "expected": "Then the first 40 players should appear sorted from best to worst"
+      },
+      {
+        "content": "When the user scrolls to the bottom of the leaders list",
+        "expected": "Then the next group of players in order should be loaded and added to the list.\n\n(The user should still be able to scroll back to the top to see the entire list.) "
+      },
+      {
+        "content": "When there is a tie at the top of the leaders for a particular stat",
+        "expected": "Then on the stat leaders page, the user should see the stat and the number of players tied. (eg. \"# tied with\" followed by the number they are tied with)"
+      },
+      {
+        "content": "When there is a tie at the top of the list of leaders for a particular stat\nOn the stat leaders list",
+        "expected": "Then the user should see the players listed in order but both ranked appropriately\neg:\n\n1) Player A\n1) Player B\n3) Player C"
+      },
+      {
+        "content": "When the user taps on an individual player in the list of leaders for a particular stat",
+        "expected": "Then the user should be taken to a webview player card for the selected player"
+      }
+    ]
+  },
+  {
+    "id": 50630,
+    "title": "Filtering",
+    "section_id": 7347,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1424302982,
+    "updated_by": 25,
+    "updated_on": 1521767216,
+    "estimate": null,
+    "estimate_forecast": "17m 24s",
+    "suite_id": 993,
+    "display_order": 2,
+    "custom_preconds": "Handset only",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the filter button in the top nav",
+        "expected": "Then the user should see the filter pop up, and there should be:\nDropdown to choose Player Stats vs. Team Stats\nDropdown to choose MLB vs. AL vs. NL leaders vs. by team\nDropdown to choose (Spring Training, Regular Season, Postseason, Wild Card, Division Series, LCS, World Series)\nDropdown to choose (All-Time Regular Season Leaders: Career Total, Single Season, Career Total Active Only, Single Season Active Only) or (Leaders By Year: Current Year - 1871)\nDropdown to choose Qualifiers vs. All players, with a note explaining how a batter or pitcher can qualify for league leadership"
+      },
+      {
+        "content": "When the user changes the filters",
+        "expected": "Then the filter popup should be dismissed\nAnd the user should see the stats update based on the filters the user chose.\n\nTest with various combinations. "
+      },
+      {
+        "content": "When the user sets a filter",
+        "expected": "Then the filter should be displayed at the top of the stats list as the new header for the dropdown"
+      },
+      {
+        "content": "When the user navigates to the list of leaders for a particular stat\nAnd the user taps the Stat drop down at the top of the list of leaders for that stat",
+        "expected": "Then the user should see a list of available stats they should be able to switch to"
+      },
+      {
+        "content": "When the user selects a different stat from the stats drop down on the stat leaders list page",
+        "expected": "Then leaders should update for the newly selected stat\nAnd the stat should appear in the drop down"
+      },
+      {
+        "content": "When the user sets a filter and there are no results",
+        "expected": "Then a white screen with \"No Results\" will be shown (rather than every category with \"No stats available.\""
+      }
+    ]
+  }
+]

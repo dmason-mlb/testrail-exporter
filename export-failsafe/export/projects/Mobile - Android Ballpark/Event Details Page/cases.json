@@ -1,0 +1,916 @@
+[
+  {
+    "id": 45232,
+    "title": "Header Title",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1227",
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1437409032,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 1,
+    "custom_preconds": "Given the user is in Event Details",
+    "custom_steps": null,
+    "custom_expected": "Then the user will  always see 'Event Details'",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks at the header",
+        "expected": "Then the user should see a back button to the very left\nAnd \"Event detail\" text right next to it"
+      }
+    ]
+  },
+  {
+    "id": 45233,
+    "title": "Event Information",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1227",
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1437409052,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 2,
+    "custom_preconds": "Given the user is in Event Details",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the team names as Away vs. Home\r\nAnd each team's correct logo will be shown (check all teams)\r\nAnd below that will be the Game Date (format: Saturday, Sept 29)\r\nAnd next to the Game Date will be the Game Time (format: 12:05 p.m.)\r\nAnd below that will be the Venue name",
+    "custom_steps_separated": [
+      {
+        "content": "When the user is on the event detail view of a game that has no yet started",
+        "expected": "Then the user should see the event information\nAnd team logo should appear on the opposite sides with the home team on the right side\nAnd the center should show the 2 team names in bold following this format\n*METS @ YANKEES*\nAnd below that should show the date and time of the event\nAnd below that should show the ballpark name"
+      }
+    ]
+  },
+  {
+    "id": 45234,
+    "title": "1_EDITED Event Links Pre-/In-Game State",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1434140454,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 3,
+    "custom_preconds": "Given the user is in Event Details (either via Ballpark Guide, Game OR Navigate to Journal, History, Select a Game)\r\nAnd the event is in a Pre-/In-Game state\r\n\r\nORIGINAL:\r\nGiven the user is in Event Details\r\nAnd the event is in a Pre-/In-Game state",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see a button for Check In\r\nAnd a button for MyTickets or Tickets depending on ballpark config\r\nAnd a button for Upgrade Seats when applicable\r\nAnd these buttons will be centered with equal spacing when present",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks below the Event Information",
+        "expected": "Then the user should see the check in button\nAnd the offer section"
+      }
+    ]
+  },
+  {
+    "id": 45235,
+    "title": "1_EDITED Event Links Post-Game State (Journal)",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1435862285,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 4,
+    "custom_preconds": "Navigate to Journal\r\nGiven the user is in Event Details\r\nAnd the event is in a Post-Game state\r\n\r\nORIGINAL:\r\nGiven the user is in Event Details\r\nAnd the event is in a Post-Game state",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see a View Game Wrap button",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks below the Event Information",
+        "expected": "Then the user should see the \"view game wrap\" button"
+      }
+    ]
+  },
+  {
+    "id": 1205232,
+    "title": "Non Game Events",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1508167188,
+    "updated_by": 124,
+    "updated_on": 1518048926,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 5,
+    "custom_preconds": "AND the user navigates to the the Events Detail page",
+    "custom_steps": null,
+    "custom_expected": "The Non Game Event, Event Detail page will be launched",
+    "custom_steps_separated": [
+      {
+        "content": "User has not checked into NGE \nAND navigates to the event detail page",
+        "expected": "The Events details page will be launched\nAND there will be a \"More Information\" link"
+      },
+      {
+        "content": "User has successfully checked in to the NGE\nAND navigates to the event details page",
+        "expected": "The Events details page will be launched\nAND there will be a \"More Information\" link"
+      }
+    ]
+  },
+  {
+    "id": 45236,
+    "title": "Event Links - Check-In button  - Outside of Check In Window",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1227",
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 124,
+    "updated_on": 1518050027,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 6,
+    "custom_preconds": "Given the user is in Event Details\r\nAnd the event is in a Pre-Game state\r\nAnd it is greater than 3 hours to game time",
+    "custom_steps": null,
+    "custom_expected": "The Check-in button will be inactive (Greyed out)",
+    "custom_steps_separated": [
+      {
+        "content": "When the user tries to access the Check In button",
+        "expected": "Then the user will see the button, and it will be greyed out.\n"
+      },
+      {
+        "content": "When the user tries to access the Check In button",
+        "expected": "Then there will be a message indicating that the device is outside of the check-in window."
+      }
+    ]
+  },
+  {
+    "id": 45237,
+    "title": "Event Links - Check-In button - Inside of Check In Window",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1227",
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 124,
+    "updated_on": 1498488523,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 7,
+    "custom_preconds": "Given the user is in Event Details\r\nAnd the event is in a Pre-/In-Game state\r\nAnd it is within 3 hours to game time",
+    "custom_steps": null,
+    "custom_expected": "Then the button will not be greyed out\r\nAnd the button will be tappable\r\nAnd tapping the button will lead the user through the Check-In flow",
+    "custom_steps_separated": [
+      {
+        "content": "When the user tries to access the Check In button",
+        "expected": "Then the user will see the button enabled\nand the user will be able to tap it to enter the check-in flow"
+      }
+    ]
+  },
+  {
+    "id": 45238,
+    "title": "Event Links - My Tickets button",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 124,
+    "updated_on": 1498489146,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 8,
+    "custom_preconds": "Given the user is in Event Details view of a game that is in the future(not upcoming or current)\r\nAnd ticketsAndroidEnabled is present in ballpark config\r\nAnd ticketsURL is present in ballpark config",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the 'Buy Tickets' button (button name can be configured using ballpark config - ticketsURLText)\r\nAnd tapping on this button will open a Standard Webview using the URL specified",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks at Event Links",
+        "expected": "Then it should show buy tickets, upgrades, manage links in caps"
+      }
+    ]
+  },
+  {
+    "id": 45239,
+    "title": "Event Links - Tickets button",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1434141936,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 9,
+    "custom_preconds": "Given the user is in Event Details view of a game that is in the future(not upcoming or current)\r\nAnd ticketsURL is present in ballpark config\r\nAnd there is the appropriate link attached",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see a 'Tickets' button\r\nAnd tapping it displays the Native Webview for current game's ticket flow",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks at Event Links\nAnd taps on the buy ticket link",
+        "expected": "Then the user should see the ticketsurl webpage displayed on the ballpark webview"
+      }
+    ]
+  },
+  {
+    "id": 45240,
+    "title": "Event Links - Upgrade Seats button",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1434142172,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 10,
+    "custom_preconds": "Given the user is in Event Details view of a game that is in the future(not upcoming or current)\r\nAnd upgradeURL is present in ballpark config",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the 'Upgrade Seats' button\nAnd tapping it displays a Standard Webview to the URL specified",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks at the Event Links\nAnd tap on the upgrade button",
+        "expected": "Then the user should be directed to the upgrade URL"
+      }
+    ]
+  },
+  {
+    "id": 45241,
+    "title": "Event Links - No Upgrade Seats button",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1434142289,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 11,
+    "custom_preconds": "Given the user is in Event Details for a future game\r\nAnd upgradeURL is not present in ballpark config",
+    "custom_steps": null,
+    "custom_expected": "Then the user will not see an 'Upgrade Seats' button",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks at the Event Links",
+        "expected": "then the user should not see an upgrade button in the event links"
+      }
+    ]
+  },
+  {
+    "id": 45242,
+    "title": "1_EDITED Event Links - View Game Wrap (Journal)",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1227",
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1437409142,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 12,
+    "custom_preconds": "Navigate to the Journal\r\nGiven the user is in Event Details\r\nAnd the event is in a Post-Game state\r\n\r\nORIGINAL:\r\nGiven the user is in Event Details\r\nAnd the event is in a Post-Game state",
+    "custom_steps": null,
+    "custom_expected": "Then the user will only see a 'View Game Wrap' button",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks at the Event Links",
+        "expected": "Then the user should see the \"view the game wrap\""
+      }
+    ]
+  },
+  {
+    "id": 45243,
+    "title": "App Links Pre-/In-Game State",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 124,
+    "updated_on": 1498490046,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 13,
+    "custom_preconds": "Given the user is in Event Details\r\nAnd the event is in a pre-/in-game state",
+    "custom_steps": null,
+    "custom_expected": "Then there will be a link to 'Follow the game in At Bat'\r\nAnd these links will have icons\r\nAnd the entire row for these links will be tappable",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks below the Event Links",
+        "expected": "Then the user will see the At Bat promo"
+      }
+    ]
+  },
+  {
+    "id": 45244,
+    "title": "1_EDITED App Links Post-Game State",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1227",
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1437409364,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 14,
+    "custom_preconds": "Given the user is in Event Details (via the Journal)\r\nAnd the event is in a post-game state\r\n\r\n\r\nORIGINAL:\r\nGiven the user is in Event Details\r\nAnd the event is in a post-game state\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then there will be no links to other apps",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks below the Event Links",
+        "expected": "Then the user should not see an app link\nand the user should see the \"view the game wrap\"\nAnd the user should see the photos section\nAnd the user should see the game hightlights"
+      }
+    ]
+  },
+  {
+    "id": 45245,
+    "title": "App Links - At Bat not installed",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1434142544,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 15,
+    "custom_preconds": "Given the user is in Event Details\r\nAnd has navigated to the App Links section\r\nAnd At Bat is not installed on the device",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be brought to At Bat application in the App Store",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on At Bat",
+        "expected": "Then the user will be directed to the at bat play store page"
+      }
+    ]
+  },
+  {
+    "id": 45246,
+    "title": "App Links - At Bat installed",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1434142599,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 16,
+    "custom_preconds": "Given the user is in Event Details\r\nAnd has navigated to the App Links section\r\nAnd At Bat is installed on the device",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be brought to the Gameday screen for that specific game in At Bat",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on At Bat",
+        "expected": "Then the user will be brought to the gameday view for that event on the at bat app"
+      }
+    ]
+  },
+  {
+    "id": 45249,
+    "title": "1_EDITED Your Photos - No Photos",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 124,
+    "updated_on": 1498490723,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 19,
+    "custom_preconds": "Given the user in in Event Details\r\nAnd has not added any Photos to the event\r\nCheckin is not required",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks below the game details",
+        "expected": "Then the user will see 'Photos'"
+      },
+      {
+        "content": "When there will be a message 'Add A Photo', and a Camera icon. tap on it ",
+        "expected": "And tapping it will take you to the photos page and the user will be able to add a photo"
+      }
+    ]
+  },
+  {
+    "id": 45250,
+    "title": "1_EDITED Your Photos - Recent Photos",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 124,
+    "updated_on": 1490655398,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 20,
+    "custom_preconds": "Given the user is in Event Details\r\nAnd the user is checked in\r\nAnd has added 1 or more Photos to the event",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks at the Your Photos section",
+        "expected": "Then the user will see their 12 most recent photos\nAnd the photos will be in order from newest to oldest.\n"
+      },
+      {
+        "content": "When the user taps on a photo",
+        "expected": "Then this will open the Gallery"
+      }
+    ]
+  },
+  {
+    "id": 45251,
+    "title": "1_EDITED Your Photos - See All",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 124,
+    "updated_on": 1490655820,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 21,
+    "custom_preconds": "Given the user is in Event Details\r\nAnd has added 1 or more Photos to the event",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be taken to the Gallery\r\n\r\nORIGINAL:\r\nThen the user will see a 'See All' button on the far right of the Your Photos cell\r\nAnd tapping it will take the user to the Gallery",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks at the Your Photos section\nAnd the user taps on the photo thumbnail",
+        "expected": "Then the user will be brought to the photos view\nand all the photos should be displayed there"
+      }
+    ]
+  },
+  {
+    "id": 45252,
+    "title": "1_EDITED In-Game Highlights",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-1227",
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 124,
+    "updated_on": 1498493879,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 22,
+    "custom_preconds": "Given the user is in the Event Details (either via Ballpark Guide, Game OR Navigate to Journal, History, Select a Game)\r\n\r\nORIGINAL:\r\nGiven the user is in Event Details",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see a section labeled 'Games Highlights'\r\nAnd the 3 most recent highlight videos will be displayed below\r\nAnd each video cell will include the highlight's title, length, and date\r\n\r\nORIGINAL:\r\nThen the user will see a section labeled 'Highlights'\r\nAnd there will be a 'See All' button on the far right of the Highlights cell\r\nAnd the 3 most recent highlight videos will be displayed below\r\nAnd each video cell will include the highlight's title, date/time, & length",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks below the Your Photos section",
+        "expected": "Then the user should see the game highlight section\nAnd the game highlights should all be loaded with no \"see all\" button"
+      }
+    ]
+  },
+  {
+    "id": 45254,
+    "title": "1_EDITED In-Game Highlights - Playing a Video",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1434143137,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 24,
+    "custom_preconds": "Given the user is in Event Details (either via Ballpark Guide, Game OR Navigate to Journal, History, Select a Game)\r\n\r\nORIGINAL:\r\nGiven the user is in Event Details",
+    "custom_steps": null,
+    "custom_expected": "Then the video player will open\r\nAnd that specific highlight will play",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on a video cell in the Games Highlights section\n\nORIGINAL:\nWhen the user taps on a Video cell in the Highlights section",
+        "expected": "Then the user will be brought to the video end level\nAnd the video will start playing"
+      }
+    ]
+  },
+  {
+    "id": 58529,
+    "title": "your photos - upload",
+    "section_id": 6334,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 67,
+    "created_on": 1436989479,
+    "updated_by": 67,
+    "updated_on": 1436989580,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 25,
+    "custom_preconds": "Given user wants to upload from the event details\r\nAnd the user is on the event detail view\r\nAnd the user is looking at the photos section in the event detail",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the photo icon",
+        "expected": "Then the user will be prompted options to add from device gallery or take a new photo"
+      },
+      {
+        "content": "When the user taps the photo icon\nAnd the user has selected a photo to upload",
+        "expected": "Then the user's photo will be uploaded\nAnd the user will see the photo appear under the photo section next to the photo icon"
+      }
+    ]
+  },
+  {
+    "id": 45255,
+    "title": "1_EDITED Header Title Non-game",
+    "section_id": 6335,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1434143349,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 1,
+    "custom_preconds": "Given the user is in Event Details\r\nAnd it is a non-game Event",
+    "custom_steps": null,
+    "custom_expected": "Then the user will always see 'Event Details'",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks at the header",
+        "expected": "Then the user should see a back button\nand the user should also see \"event detail\""
+      }
+    ]
+  },
+  {
+    "id": 45256,
+    "title": "1_EDITED Event Information",
+    "section_id": 6335,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 124,
+    "updated_on": 1498496158,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 2,
+    "custom_preconds": "Homebase is a CMS tool that is used to manage and publish changes to the Ballpark config file. Changes made in Homebase should be reflected on the app in the section called 'Extras'.\r\n\r\nWork with anyone who can administer Homebase\r\n\r\nGiven the user is in Event Details\r\nAnd it is a non-game Event\r\n\r\nORIGINAL:\r\nGiven the user is in Event Details\r\nAnd it is a non-game Event",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the Event Name\r\nAnd below that will be the Event Date (format: Sat, Sep 29)\r\nAnd next to the Game Date will be the Event Start Time (format: 12:05 p.m.)\r\nAnd below that will be the Venue name",
+    "custom_steps_separated": [
+      {
+        "content": "When the content loads",
+        "expected": "Then the user will see the event information modified"
+      }
+    ]
+  },
+  {
+    "id": 45257,
+    "title": "1_EDITED Event Content - Image",
+    "section_id": 6335,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 65,
+    "updated_on": 1429131275,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 3,
+    "custom_preconds": "Homebase is a CMS tool that is used to manage and publish changes to the Ballpark config file. Changes made in Homebase should be reflected on the app in the section called 'Extras'.\r\n\r\nWork with anyone who can administer Homebase\r\n\r\nGiven the user is in Event Details\r\nAnd it is a non-game Event\r\n\r\nORIGINAL:\r\n\r\nGiven the user is in Event Details\r\nAnd it is a non-game Event",
+    "custom_steps": "When an Image for the event is available",
+    "custom_expected": "Then the Image will be displayed below the Event Information",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 45261,
+    "title": "1_EDITED Original: Your Photos - No Photos / New: Your Photos - No Photos Non-Game",
+    "section_id": 6335,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 124,
+    "updated_on": 1498502625,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 7,
+    "custom_preconds": "Given the user in in Event Details\r\nAnd it is a non-game Event\r\nAnd has not added any Photos to the event",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks below the App Links",
+        "expected": "Then the user will see 'Your Photos'"
+      },
+      {
+        "content": "When there is a message ' add some photos', and a camera icon, tap on it \n",
+        "expected": "And tapping it will take you to the Choose Image menu with options of Camera, Photo Library, and Cancel"
+      }
+    ]
+  },
+  {
+    "id": 45262,
+    "title": "1_EDITED Original: Your Photos - Recent Photos / New: Your Photos - Recent Photos Non-Game",
+    "section_id": 6335,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 124,
+    "updated_on": 1490890081,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 8,
+    "custom_preconds": "Given the user is in Event Details\r\nAnd it is a non-game Event\r\nAnd has added 1 or more Photos to the event",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks at the Your Photos section",
+        "expected": "Then the user will see their photos\nAnd the photos will be in order from newest to oldest\nAnd the user will be able to scroll through them"
+      },
+      {
+        "content": "When a user taps on a photo",
+        "expected": "Then this will open the Gallery"
+      }
+    ]
+  },
+  {
+    "id": 45263,
+    "title": "1_EDITED Original: Your Photos - See All / New: Your Photos - See All Non-game",
+    "section_id": 6335,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 124,
+    "updated_on": 1490890312,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 9,
+    "custom_preconds": "Given the user is in Event Details\r\nAnd it is a non-game Event\r\nAnd has added 1 or more Photos to the event",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be taken to the Gallery\r\n\r\nORIGINAL:\r\nThen the user will see a 'See All' button on the far right of the Your Photos cell\r\nAnd tapping it will take the user to the Gallery",
+    "custom_steps_separated": [
+      {
+        "content": "When the user looks at the Your Photos section\nThen the user will see a 'See All' button on the far right of the Your Photos cell\nTap on it\n\nORIGINAL:\nWhen the user looks at the Your Photos section",
+        "expected": "then the user will be brought to that events gallery "
+      }
+    ]
+  },
+  {
+    "id": 45264,
+    "title": "1_EDITED Original: Title of Alert (pop-up) / New: Title of Alert",
+    "section_id": 6336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1434144425,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 1,
+    "custom_preconds": "Given the user is logged in\r\nAnd the user has added a game to their history\r\nAnd the user has navigated to the Event Detail screen for that game",
+    "custom_steps": null,
+    "custom_expected": "Then the title of the alert will be 'Delete Game'\r\n \r\nORIGINAL:\r\nThen the title of the alert pop-up will be 'Delete Game'",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the Remove button\nAnd the alert loads\n\nORIGINAL:\nWhen the user clicks the Remove button\nAnd the alert loads",
+        "expected": "then the user will see the message\nand the user will see the delete game button"
+      }
+    ]
+  },
+  {
+    "id": 45265,
+    "title": "1_EDITED Back button",
+    "section_id": 6336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1434144581,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 2,
+    "custom_preconds": "Given the user is logged in\r\nAnd the user has added a game to their history\r\nAnd the user has navigated to the Event Detail screen for that game\r\nAnd the user has clicked Remove",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be brought back to History Screen\r\n\r\nORIGINAL:\r\nThen the user will be brought back to that Event Detail Screen",
+    "custom_steps_separated": [
+      {
+        "content": "When the user clicks the up button\nOr taps the device hardware back button",
+        "expected": "then the user should be redirected to the journal"
+      }
+    ]
+  },
+  {
+    "id": 45266,
+    "title": "1_EDITED Remove Game Text with no Photos attached",
+    "section_id": 6336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1434144662,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 3,
+    "custom_preconds": "Given the user is logged in\r\nAnd the user has added a game to their history\r\nAnd there are no photos attached\r\nAnd the user has navigated to the Event Detail screen for that game\r\nAnd the user has tapped Remove\r\n\r\nORIGINAL:\r\nGiven the user is logged in\r\nAnd the user has added a game to their history\r\nAnd there are no photos attached\r\nAnd the user has navigated to the Event Detail screen for that game\r\nAnd the user has clicked Remove",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see an alert appear\r\nAnd the alert will contain the message of: \"The following game will be deleted from your history:\"\r\nAnd the details of the game you are removing exist below\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "When the content on the screen loads",
+        "expected": "Then the user game should be successfully removed along with the images"
+      }
+    ]
+  },
+  {
+    "id": 45267,
+    "title": "1_EDITED Remove Game Text with at least 1 photo attached",
+    "section_id": 6336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1434144707,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 4,
+    "custom_preconds": "Given the user is logged in\r\nAnd the user has added a game to their history\r\nAnd have attached at least 1 photo to this game\r\nAnd the user has navigated to the Event Detail screen for that game\r\nAnd the user has clicked Remove\r\nAnd the user views the Delete Game alert\r\n\r\nORIGINAL:\r\nGiven the user is logged in\r\nAnd the user has added a game to their history\r\nAnd have attached at least 1 photo to this game\r\nAnd the user has navigated to the Event Detail screen for that game\r\nAnd the user has clicked Remove",
+    "custom_steps": null,
+    "custom_expected": "Then the user will see the game removed from their history\r\nAnd the user will not see any trace of that photo attached within the app",
+    "custom_steps_separated": [
+      {
+        "content": "When the user confirms to remove the game from their History",
+        "expected": "then the user should have the game removed from history along with the photo"
+      }
+    ]
+  },
+  {
+    "id": 45268,
+    "title": "1_EDITED Remove game from my history button",
+    "section_id": 6336,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146245,
+    "updated_by": 67,
+    "updated_on": 1434144758,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 812,
+    "display_order": 5,
+    "custom_preconds": "Given the user is logged in\r\nAnd the user has added a game to their history\r\nAnd the user has navigated to the Event Detail screen for that game\r\nAnd the user has tapped Remove\r\nAnd the user views the Delete Game verification\r\n\r\n\r\nORIGINAL:\r\nGiven the user is logged in\r\nAnd the user has added a game to their history\r\nAnd the user has navigated to the Event Detail screen for that game\r\nAnd the user has clicked Remove",
+    "custom_steps": null,
+    "custom_expected": "Then the game will be removed from their history",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps Delete Game\n\nORIGINAL:\nWhen the user clicks Remove game from my history",
+        "expected": "then the user should see the message \"successfully updated\"\nAnd the game should be deleted"
+      }
+    ]
+  }
+]

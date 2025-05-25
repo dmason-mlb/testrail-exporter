@@ -1,0 +1,29 @@
+[
+  {
+    "id": 109304,
+    "suite_id": 16746,
+    "name": "Investigation Request",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 109533,
+    "suite_id": 16746,
+    "name": "Investigation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 136393,
+    "suite_id": 16746,
+    "name": "LARI-Investigations",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

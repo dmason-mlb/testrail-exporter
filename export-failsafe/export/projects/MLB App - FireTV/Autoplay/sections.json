@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1079569,
+    "suite_id": 361942,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1978601,
+    "suite_id": 361942,
+    "name": "Homepage",
+    "description": null,
+    "parent_id": 1079569,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 1978602,
+    "suite_id": 361942,
+    "name": "VOD/SVOD Autoplay",
+    "description": null,
+    "parent_id": 1079569,
+    "display_order": 3,
+    "depth": 1
+  }
+]

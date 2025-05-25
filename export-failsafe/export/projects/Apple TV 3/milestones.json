@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1628,
+    "name": "Release 6.5.0 11/14/2019",
+    "description": "MLB takeover of ownership for ATV3",
+    "start_on": null,
+    "started_on": 1573689600,
+    "is_started": true,
+    "due_on": 1573689600,
+    "is_completed": true,
+    "completed_on": 1578500511,
+    "project_id": 191,
+    "parent_id": null,
+    "refs": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/milestones/view/1628",
+    "milestones": []
+  },
+  {
+    "id": 1644,
+    "name": "6.5.1 Release",
+    "description": "Release 6.5.1 for Spring Training",
+    "start_on": 1578873600,
+    "started_on": null,
+    "is_started": false,
+    "due_on": 1580428800,
+    "is_completed": false,
+    "completed_on": null,
+    "project_id": 191,
+    "parent_id": null,
+    "refs": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/milestones/view/1644",
+    "milestones": []
+  }
+]

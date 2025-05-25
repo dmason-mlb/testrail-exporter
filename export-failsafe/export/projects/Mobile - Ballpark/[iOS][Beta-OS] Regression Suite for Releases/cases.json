@@ -1,0 +1,1904 @@
+[
+  {
+    "id": 34779492,
+    "title": "Update App from Previous Version *[requires ticket]",
+    "section_id": 2036840,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125654,
+    "updated_by": 288,
+    "updated_on": 1744125654,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user installed a previous version of the Ballpark app \r\nAND user is logged in with MLB account in Ballpark app\r\nAND user has selected a favorite team\r\nAND user has at least one ticketed event on their account\r\nAND user has navigated to team tab",
+    "custom_steps": "WHEN Ballpark app is left in background\r\nAND Ballpark app version is upgraded by installing a new version",
+    "custom_expected": "THEN User should be on latest version, should be logged in and all data retained. \r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Loading previous production version from AppStore",
+        "expected": "THEN Previous version installs properly."
+      },
+      {
+        "content": "WHEN Log in with a user, preferably one with various tickets. ",
+        "expected": "THEN Login successful."
+      },
+      {
+        "content": "WHEN User goes to Profile > About Ballpark",
+        "expected": "THEN previous app version is displayed"
+      },
+      {
+        "content": "WHEN User navigates to Profile -> Favorite Teams AND has a favorite team\n\nWHEN User navigates to Tickets > Wallet AND views tickets, including barcodes within Scan view\n\nWHEN User navigates to Team Tab",
+        "expected": "THEN Everything should load with correct data."
+      },
+      {
+        "content": "WHEN the user background the Ballpark app",
+        "expected": ""
+      },
+      {
+        "content": "WHEN Download the production version from Firebase App distro or TestFlight if the production version has been pushed to TestFlight. \nAND User opens the new version of the app",
+        "expected": "THEN App should replace and load properly form the previous build\n"
+      },
+      {
+        "content": "",
+        "expected": "AND User remains logged in. \n\nNOTE - This is the most important thing to verify - the DB/user's login data is preserved and then user doesn't have to login again."
+      },
+      {
+        "content": "HEN User goes to Profile > About Ballpark",
+        "expected": "THEN Upgraded app version is displayed"
+      },
+      {
+        "content": "WHEN User goes to Profile -> Favorite Teams",
+        "expected": "THEN User's prior favorite team is preserved"
+      },
+      {
+        "content": "WHEN User goes to Tickets > Wallet",
+        "expected": "THEN Users ticket is shown with correct data"
+      }
+    ]
+  },
+  {
+    "id": 34779500,
+    "title": "Onboarding New Signup",
+    "section_id": 2036841,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125675,
+    "updated_by": 288,
+    "updated_on": 1744125675,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN User has installed the app, starts app for first time and is presented with Splash Screen",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User taps option to get started \n\n(if prev logged into the device on prev BP versions, then 'Continue with MLB' button will be shown. If this is the case, tap 'Don't have an account? Sign up' link) ",
+        "expected": "THEN User is presented with Sign Up screen"
+      },
+      {
+        "content": "WHEN user enter valid first and last name, email address, password, and Date of Birth\nAND user taps 'Continue'\n\n\nNOTE: First and Last name can be any character including space and special characters\nNOTE: DOB does not have a lower boundary restriction for Year - ex: 01/01/0001 is considered valid\n",
+        "expected": "THEN account creation is successful\nAND Home Tab is presented"
+      }
+    ]
+  },
+  {
+    "id": 34779501,
+    "title": "Reset Password",
+    "section_id": 2036841,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125675,
+    "updated_by": 288,
+    "updated_on": 1744125675,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app\r\nAND user is NOT logged in with MLB account in Ballpark app\r\nAND user has navigated to Log In page\r\nAND user has tapped \"Forgot Password?\" to show the Reset Password view\r\n",
+    "custom_steps": "[THIS CASE REQUIRES A PASSWORD CHANGE TO OCCUR - IT IS BEST TO ONBOARD A NEW ACCT WITH A VALID EMAIL ADDRESS, TO PREVENT CHANGING PW ON SHARED TEST ACCOUNTS]",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps into 'Email' \nAND user enters a valid email\nAND user taps \"Submit\"\n\n[NOTE: Rule exists 'Your password cannot be any of your last 2 passwords' - so have caution on acct used, if acct is shared]",
+        "expected": "THEN the text \"Reset password instructions have been sent to your email.\"\n"
+      },
+      {
+        "content": "",
+        "expected": "AND an email is sent to the email entered"
+      },
+      {
+        "content": "WHEN user back navigates from Reset Password view",
+        "expected": "THEN user is returned to Log In page"
+      },
+      {
+        "content": "WHEN user successfully updates the password (via email)\nAND logs in with the new credentials ",
+        "expected": "THEN user is successfully logged into Ballpark App"
+      }
+    ]
+  },
+  {
+    "id": 34779473,
+    "title": "Bottom Navigation Bar",
+    "section_id": 2036842,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125606,
+    "updated_by": 288,
+    "updated_on": 1744125606,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app*\r\nAnd user is logged in with MLB account in Ballpark app\r\n\r\n\r\n*iOS - v14.0.1 (local feature flag enabled) - currently intended for default enablement on v14.1.0\r\n",
+    "custom_steps": "WHEN user logs in",
+    "custom_expected": "THEN the user is shown the Home Tab\r\nAND user is shown the Bottom Navigation Bar",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates to Home tab",
+        "expected": "THEN the bottom navbar is shown with Home icon highlighted (filled-in) \nAND the other navbar icons are shown as deselected (gray)"
+      },
+      {
+        "content": "WHEN the user navigates away from Home tab to any other Navbar option",
+        "expected": "THEN the bottom navbar is shown with destination icon highlighted (filled-in, team navbar icon shown in color) \nAND the other navbar icons are shown as deselected (gray)"
+      }
+    ]
+  },
+  {
+    "id": 34779469,
+    "title": "Onboarding user, NO Location (by Default)",
+    "section_id": 2036843,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125596,
+    "updated_by": 288,
+    "updated_on": 1744125596,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "[BP-10993](https://baseball.atlassian.net/browse/BP-10993 )\r\n\r\nGIVEN the user downloaded the Ballpark app*\r\nAnd user does not have an acct in MLB\r\nAND user onboards a new account successfully\r\n\r\n*iOS - v14.0.1 (local feature flag enabled) - currently intended for default enablement on v14.1.0\r\n\r\n",
+    "custom_steps": "WHEN a fan is on the HomeTab\r\n\r\n",
+    "custom_expected": "THEN user is displayed the system location enablement prompt \r\nAND user's selection is saved for future sessions ",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is on the HomeTab after completing onboarding of a new acct",
+        "expected": "THEN user is displayed the system location prompt"
+      },
+      {
+        "content": "WHEN the system location prompt is displayed",
+        "expected": "THEN prompt header text - “Allow Ballpark to use your location” is displayed\n\nAND \"Unlock the full Ballpark experience by granting location access. Enjoy quick venue check-ins, detailed maps, and game suggestions tailored to your location.\" is displayed above the CTAs\n\nAND 'Allow Once', 'Allow While Using App', and 'Don't Allow' ctas are presented to user\n\n"
+      }
+    ]
+  },
+  {
+    "id": 34779470,
+    "title": "Allow Once CTA",
+    "section_id": 2036843,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125596,
+    "updated_by": 288,
+    "updated_on": 1744125596,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "[BP-10993](https://baseball.atlassian.net/browse/BP-10993 )\r\n[BP-10992](https://baseball.atlassian.net/browse/BP-10992 )\r\n\r\nGIVEN the user downloaded the Ballpark app*\r\nAND user DOES NOT have device location enable **\r\n\r\n*iOS - v14.0.1 (local feature flag enabled) - currently intended for default enablement on v14.1.0\r\n** set to 'Allow Once'/'Never'/'Deny'",
+    "custom_steps": "WHEN a fan is on the HomeTab\r\nAND user is displayed the system location enablement prompt\r\nAND user selects 'Allow Once' on the system location enablement prompt\r\n",
+    "custom_expected": "THEN user's selection is saved for future sessions",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is displayed the system location enablement prompt\nAND user selects 'Allow Once' on the system location enablement prompt",
+        "expected": "THEN after upon selection of ‘allow once’ or 'allow when using app”, the user is  displayed closest geolocated team next home game\n\n"
+      },
+      {
+        "content": "(if venue data is present from the location of the device -- may need to update to venueLocation via DevTools)",
+        "expected": "AND confirm Event Promotion Card [BP-10992](https://baseball.atlassian.net/browse/BP-10992 )"
+      },
+      {
+        "content": "WHEN the user restarts the Ballpark App",
+        "expected": "THEN user is displayed the system location enablement prompt\n"
+      }
+    ]
+  },
+  {
+    "id": 34779471,
+    "title": "Allow While Using App CTA",
+    "section_id": 2036843,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125596,
+    "updated_by": 288,
+    "updated_on": 1744125596,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "[BP-10993](https://baseball.atlassian.net/browse/BP-10993 )\r\n[BP-10992](https://baseball.atlassian.net/browse/BP-10992 )\r\n\r\nGIVEN the user downloaded the Ballpark app*\r\nAND user DOES NOT have device location enable **\r\n\r\n*iOS - v14.0.1 (local feature flag enabled) - currently intended for default enablement on v14.1.0\r\n** set to 'Allow Once'/'Never'/'Deny'",
+    "custom_steps": "WHEN a fan is on the HomeTab\r\nAND user is displayed the system location enablement prompt\r\nAND user selects 'Allow While Using App' on the system location enablement prompt\r\n",
+    "custom_expected": "THEN user's selection is saved for future sessions",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is displayed the system location enablement prompt\nAND user selects 'Allow While Using App' on the system location enablement prompt",
+        "expected": "THEN after upon selection of ‘allow once’ or 'allow when using app”, the user is  displayed closest geolocated team next home game\n\n"
+      },
+      {
+        "content": "(if venue data is present from the location of the device -- may need to update to venueLocation via DevTools)",
+        "expected": "AND confirm Event Promotion Card [BP-10992](https://baseball.atlassian.net/browse/BP-10992 )"
+      },
+      {
+        "content": "WHEN the user restarts the Ballpark App",
+        "expected": "THEN user is NOT displayed the system location enablement prompt\n"
+      },
+      {
+        "content": "(if venue data is present from the location of the device -- may need to update to venueLocation via DevTools)",
+        "expected": "AND confirm Event Promotion Card [BP-10992](https://baseball.atlassian.net/browse/BP-10992 )"
+      }
+    ]
+  },
+  {
+    "id": 34779472,
+    "title": "Don't Allow CTA",
+    "section_id": 2036843,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125596,
+    "updated_by": 288,
+    "updated_on": 1744125596,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "[BP-10993](https://baseball.atlassian.net/browse/BP-10993 )\r\n[BP-10992](https://baseball.atlassian.net/browse/BP-10992 )\r\n\r\nGIVEN the user downloaded the Ballpark app*\r\nAND user DOES NOT have device location enable **\r\n\r\n*iOS - v14.0.1 (local feature flag enabled) - currently intended for default enablement on v14.1.0\r\n** set to 'Allow Once'/'Never'/'Deny'",
+    "custom_steps": "WHEN a fan is on the HomeTab\r\nAND user is displayed the system location enablement prompt\r\nAND user selects 'Don't Allow' on the system location enablement prompt\r\n",
+    "custom_expected": "THEN user's selection is saved for future sessions",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is displayed the system location enablement prompt\nAND user selects 'Don't Allow' on the system location enablement prompt",
+        "expected": "THEN the sys loc prompt is dismissed \nAND the user is NOT displayed closest geolocated team next home game\nAND the user is displayed location enablement prompt within the ‘upcoming games’   (may need to scroll down to bottom of the Home page)\n"
+      },
+      {
+        "content": "WHEN user is displayed location enablement prompt within the ‘upcoming games’ \n\n\n\n",
+        "expected": "THEN the user is displayed \"Don't miss out on the action!\"\nAND the user is displayed \"Enable location sharing to discover upcoming MLB games near you, personalized experiences, exclusive in-venue content, and more.\nAND the user is displayed \"Enable Location\" cta"
+      },
+      {
+        "content": "WHEN user taps CTA to ‘enable location’ \n\n",
+        "expected": "THEN user is directed to system settings "
+      },
+      {
+        "content": "WHEN the user restarts the Ballpark App",
+        "expected": "THEN user is NOT displayed the system location enablement prompt\n"
+      },
+      {
+        "content": "WHEN user scrolls to the bottom of the Home page",
+        "expected": "THEN the user is displayed \"Don't miss out on the action!\"\nAND the user is displayed \"Enable location sharing to discover upcoming MLB games near you, personalized experiences, exclusive in-venue content, and more.\nAND the user is displayed \"Enable Location\" cta"
+      }
+    ]
+  },
+  {
+    "id": 34779484,
+    "title": "Buy Tickets Segment",
+    "section_id": 2036844,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BPA-6822",
+    "created_by": 288,
+    "created_on": 1744125634,
+    "updated_by": 288,
+    "updated_on": 1744125634,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "Given User has Ballpark app installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user has no favorite team selected\nAND navigates to the Wallet Tab\nAnd taps on the \"Buy Tickets\" Section\n",
+        "expected": "THEN No Games please change your filter to view tickets will be displayed in the center of the screen.\n\nSelect A Team will be displayed on the top left button"
+      },
+      {
+        "content": "WHEN user selects a team from the Team Picker",
+        "expected": "THEN the selected team's schedule is displayed"
+      },
+      {
+        "content": "WHEN the user has never visited the buy tickets Team picker\nAND has at least one favorite team selected\nAND navigates to the Wallet Tab\nAnd taps on the \"Buy Tickets\" Section",
+        "expected": "THEN the number one ranked favorite team's schedule is displayed."
+      },
+      {
+        "content": "WHEN user has at least one favorite team associated with account\nAND user has made a previous selection on the Buy Tickets team picker\nAND navigates to the Wallet Tab\nAnd taps on the \"Buy Tickets\" section",
+        "expected": "THEN the previously selected team's schedule will be displayed,  if different from the favorite team."
+      }
+    ]
+  },
+  {
+    "id": 34779485,
+    "title": "Buy Tickets - Team Filter  shows Favorites Teams before remaining teams",
+    "section_id": 2036844,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125634,
+    "updated_by": 288,
+    "updated_on": 1744125634,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN User has a favorite team selected associated with the account \r\n\r\n",
+    "custom_steps": "WHEN the user navigates to Tickets Tab Buy Tickets Segment",
+    "custom_expected": "Team filter screen will have the user's favorite team(s) pulled to the top of the list.\r\nAll other teams will display alphabetically\r\n\r\nTHEN List of teams, Logo, and Team Name\r\n\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user on the Buy Tickets segment within Tickets Tab\nAND user selects the Team filter \nAND user selects a team",
+        "expected": "THEN Selected Team shows on the list"
+      },
+      {
+        "content": "",
+        "expected": "AND Team filter screen will have the user's favorite team(s) pulled to the top of the list.\nAND All other teams will display alphabetically\n"
+      },
+      {
+        "content": "When the user tap the team selected, the filter will close and the list of game get refreshed and shows newly selected teams schedule",
+        "expected": "THEN  Team is selected and filters are closed and list of the games get refreshed"
+      }
+    ]
+  },
+  {
+    "id": 34779486,
+    "title": "Buy Tickets - Schedule Filter (Home / Full)",
+    "section_id": 2036844,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125634,
+    "updated_by": 288,
+    "updated_on": 1744125634,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN user has downloaded BP app (11.3.0 or above)\r\nAND user has logged in",
+    "custom_steps": "WHEN user views the buy tickets tab",
+    "custom_expected": "THEN user has ability to filter by team AND by schedule (Full Schedule / Home Games)",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN a user does not have a favorite team set NOR has the user visited the team page\nWHEN the user navigates to Buy Tickets view within the Tickets tab\n",
+        "expected": "[iOS]\nTHEN 'Select Team' is defaulted as the team filter\nAND 'Home Games' is defaulted at the schedule filter\nAND 'No Games' is shown on the page with 'Please change your filters'\n\n[Android]\nTHEN 'SELECT A TEAM' is defaulted as the team filter\nAND 'HOME GAMES' is defaulted at the schedule filter \nAND 'No Games' is shown on the page with 'Please change your filter to view tickets'"
+      },
+      {
+        "content": "WHEN the user taps the 'Select Team'/'SELECT A TEAM' filter button\n",
+        "expected": "THEN a slide up menu will be displayed with all 30 teams listed with team logo, team location, and team name\n\n[iOS]\nAND 'Cancel' is shown at the top of the menu\n\n[Android]\nAND 'X' is shown at the top of the menu"
+      },
+      {
+        "content": "WHEN the user taps 'Cancel'/'X' on the team selection menu",
+        "expected": "THEN user is returned to Buy Tickets view without a team selected\nAND 'No Games' page is shown"
+      },
+      {
+        "content": "WHEN the user taps the 'Select Team'/'SELECT A TEAM' filter button\nAND the user selects any team",
+        "expected": "THEN user is returned to Buy Tickets view with the selected team show as the team filter button\nAND the selected team schedule is shown with entries for each upcoming matchup particular to the schedule filter\n\n\n[iOS/Android defaults to 'Home Games']\n*list will only show games where the selected team is home for 'Home Games'"
+      },
+      {
+        "content": "WHEN the user taps the schedule filter button ('Home Games' or 'Full Schedule')",
+        "expected": "THEN a slide up menu will be displayed with Full Schedule and Home Games options\n\n[iOS]\nAND 'Cancel' is shown at the top of the menu\n\n[Android]\nAND 'X' is shown at the top of the menu\n\n"
+      },
+      {
+        "content": "WHEN the user taps 'Cancel'/'X' on the schedule selection menu",
+        "expected": "THEN user is returned to Buy Tickets view\nAND the previously displayed game data is shown"
+      },
+      {
+        "content": "WHEN the user taps the schedule filter button ('Home Games' or 'Full Schedule')\nAND the user taps the prev selected schedule filter (noted with a checkmark) ",
+        "expected": "THEN user is returned to Buy Tickets view\nAND the previously displayed game data is shown"
+      },
+      {
+        "content": "WHEN the user taps the schedule filter button ('Home Games' or 'Full Schedule')\nAND the user taps the schedule filter NOT prev selected (noted without a checkmark) ",
+        "expected": "THEN user is returned to Buy Tickets view\nAND the game data particular to the schedule filter is shown\n\n*list will only show games where the selected team is home for 'Home Games'\n*list will show games where the selected team is home or away for 'Full Schedule'"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "*may need to perform a fresh install of the app\n\nGIVEN a user does not have a favorite team set BUT the user has visited any team page (via Team Tab dropdown)\nWHEN the user navigates to Buy Tickets view within the Tickets tab",
+        "expected": "[iOS]\nTHEN the team selected from team page is defaulted as the team filter\nAND 'Home Games' is defaulted at the schedule filter \n\n\n[Android]\nTHEN 'SELECT A TEAM' is defaulted as the team filter\nAND 'HOME GAMES' is defaulted at the schedule filter \nAND 'No Games' page is shown"
+      },
+      {
+        "content": "REPEAT STEPS 5 THROUGH 8\n\n*Android will need to select a team before validation",
+        "expected": "VERIFY EXPECTATION OF EACH STEP"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "*may need to perform a fresh install of the app\n\nGIVEN a user has a favorite team set BUT the user has not visited a team page\nWHEN the user navigates to Buy Tickets view within the Tickets tab",
+        "expected": "THEN the first favorited team is defaulted as the team filter\n\n[iOS/Android]\nAND 'Home Games'/'HOME GAMES' is defaulted at the schedule filter "
+      },
+      {
+        "content": "REPEAT STEPS 5 THROUGH 8",
+        "expected": "VERIFY EXPECTATION OF EACH STEP"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "*may need to perform a fresh install of the app\n\nGIVEN a user has a favorite team set AND the user has visited a different team page from the favorite team (prior to navigating to Buy Tickets view)*\nWHEN the user navigates to Buy Tickets view within the Tickets tab\n\n",
+        "expected": "[iOS]\nTHEN the team selected from team page is defaulted as the team filter\nAND 'Home Games' is defaulted at the schedule filter \n\n[Android]\nTHEN the first favorited team is defaulted as the team filter\nAND 'HOME GAMES' is defaulted at the schedule filter "
+      },
+      {
+        "content": "REPEAT STEPS 5 THROUGH 8",
+        "expected": "VERIFY EXPECTATION OF EACH STEP"
+      }
+    ]
+  },
+  {
+    "id": 34779476,
+    "title": "Wallet Tab with Tickets*",
+    "section_id": 2036845,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125614,
+    "updated_by": 288,
+    "updated_on": 1744125614,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User's account has tickets available within their account\r\n\r\nAcct that typically as many ticketed events (as of July 2021) \r\n* Staging(or Prod) / justin.charschan@mlb.com / MLBmlb123\r\n\r\n\r\nNotes: TDC and TM should be tested ",
+    "custom_steps": "WHEN the user navigates to the Wallet Tab",
+    "custom_expected": "THEN wallet tab displays the tickets on user account\r\n\r\nWIKI https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225634/03+Wallet+Tab#id-03WalletTab-1.1WithTickets\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user navigates to the Wallet Tab",
+        "expected": "THEN the Event Cards will be displayed in the Wallet section"
+      },
+      {
+        "content": "WHEN the user has tickets to 6+ events",
+        "expected": "THEN the user sees the the next five upcoming events displayed with individual cards\nAND the events will be sorted by date, in ascending order"
+      },
+      {
+        "content": "WHEN the user views the wallet card\n\n",
+        "expected": "THEN the Wallet card background will be the image as specified in the video poster URL supplied in ticket summary.  \n"
+      },
+      {
+        "content": "",
+        "expected": "AND The home team's logo will be displayed to the right of the event matchup"
+      },
+      {
+        "content": "WHEN the user views the Wallet Card",
+        "expected": "THEN the event information will contain The event date / time in the format (Ex. Sat, Jun 22 . 1:07 PM ET)\nAND beneath the date time will be the Matchup Info displayed as Away Team @ Home Team\nAND below the Matchup will be the Event's Venue"
+      },
+      {
+        "content": "WHEN the user scrolls to the top of the Wallet View",
+        "expected": "THEN there will be a \"View All\" link\nAND there will be a \"Refresh\" link"
+      }
+    ]
+  },
+  {
+    "id": 34779487,
+    "title": "'View All' Screen*",
+    "section_id": 2036846,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125642,
+    "updated_by": 288,
+    "updated_on": 1744125642,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN that the user navigated to Wallet tab and has at least one ticket\r\n\r\nAcct that typically as many ticketed events (as of July 2021)\r\n* Staging(or Prod) / justin.charschan@mlb.com / MLBmlb123\r\n\r\nNote: Test with TDC and TM events \r\n",
+    "custom_steps": null,
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225634/03+Wallet+Tab#id-03WalletTab-1.1.1MyTickets-Viewall",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on 'View All'",
+        "expected": "THEN the app will display all ticketed events as individual rows"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display each game row including away team at home team, event start time local, venue name, description (if available)"
+      },
+      {
+        "content": "WHEN the user has many ticketed events\nAND the user is on the Tickets Tab\nAND the user taps on 'View All'\nAND the user scrolls through the list",
+        "expected": "THEN the month and year will be \"sticky\" headers and the event day of week and day number will be displayed along in the left"
+      },
+      {
+        "content": "WHEN the user has at least one ticketed events with completed forwards\nAND the user is on the Tickets Tab\nAND the user taps on 'View All'",
+        "expected": "THEN 'View' button displayed for the event"
+      },
+      {
+        "content": "WHEN the user has at least one NGE ticketed events\nAND the user is on the Tickets Tab\nAND the user taps on 'View All'",
+        "expected": "THEN the app will display each NGE row including NGE description, event start time local, venue name"
+      },
+      {
+        "content": "When the user taps on \"View All\"\nAND the user taps anywhere on a item in the list or on the \"View\" button for an item in the list*\n\n*Sell Tickets CTA & Open Tickets CTA could be shown if Listing ticket feature has been enabled -- instead of View Button",
+        "expected": "Then the app will display list of tickets for the tapped ticketed event"
+      }
+    ]
+  },
+  {
+    "id": 34779477,
+    "title": "Ticket List Interface",
+    "section_id": 2036847,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125616,
+    "updated_by": 288,
+    "updated_on": 1744125616,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN a user with tickets in their Acct is logged into BP\r\nAND user taps Ticket Tab",
+    "custom_steps": "WHEN the user taps on a matchup entry",
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225634/03+Wallet+Tab#id-03WalletTab-1.1.4TicketList-Forwardvia...\r\n\r\nTHEN Wallet displays with My tickets page with all tickets in the account",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on a matchups that does NOT have forwards completed",
+        "expected": "THEN header should say \"Tickets\""
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display the matchup data in sub header (cap logo away and home, away team @ home team, date and start time, venue name)\n\n** if NGE do not display logos and show NGE description instead of team name"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display headers for SECTION (SEC) , ROW and SEAT  "
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display each ticket as its own row with section, seat and row values"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display \"Open\" link button for each row"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display the \"Forward Tickets\" button centered at the bottom (above the Navbar)\n\n*Sell Tickets CTA & Forward Tickets CTA could be shown if Listing ticket feature has been enabled -- instead of just Forward Tickets Button"
+      },
+      {
+        "content": "",
+        "expected": "AND everything on this view will scroll\nBUT the 'Tickets' header & buttons at the bottom will not scroll"
+      },
+      {
+        "content": "WHEN the user taps on a matchups that has forwards completed",
+        "expected": "THEN header should say \"Tickets\""
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display the matchup data in sub header (cap logo away and home, away team @ home team, date and start time, venue name)\nAND the app will display headers for section, ROW and SEAT \nAND the app will display each ticket as its own row with section, ROW  and SEAT values\n"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display \"Open\" link button for each row for ticket that has NOT been forwarded \nAND the app will display \"Recall\" link button for each row for ticket that has been forwarded"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display the \"Forward Tickets\" button centered at the bottom (above the Navbar)\n\n*Sell Tickets CTA & Forward Tickets CTA could be shown if Listing ticket feature has been enabled -- instead of just Forward Tickets Button"
+      }
+    ]
+  },
+  {
+    "id": 34779488,
+    "title": "Ticket Scan View",
+    "section_id": 2036848,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125644,
+    "updated_by": 288,
+    "updated_on": 1744125644,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User has events on account with both single and multiple tickets\r\n",
+    "custom_steps": "WHEN the user opens the scan view\r\n",
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226270/00+Ticket+Scan+View#id-00TicketScanView-1.1TicketScanView\r\n\r\nTHEN the correct Scanview is shown without swiping capability and card does not move in ticket scan, if single ticket\r\nOR\r\nTHEN the correct Scanview is shown with swiping capability and peeking to additional, if multiple tickets\r\n\r\n\r\n\r\nOn tap of close X, scan view slides down.",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user has single ticketed event",
+        "expected": "THEN the ticket is centered without any additional tickets peeking, neither to right or left\nAND swiping has no effect"
+      },
+      {
+        "content": "WHEN the user has 2+ ticketed event\nAnd user opens the scan view ",
+        "expected": "THEN the 1st ticket is centered, 2nd ticket is peeking in from right"
+      },
+      {
+        "content": "WHEN the user swipes the to the left to view the additional tickets",
+        "expected": "THEN the 1st ticket is peeking out from the left\nAND the 2nd ticket is now centered\nAND additional ticket is peaking out from the right, if additional ticket exists\n\n** for last card, no card will peek from the right, only cards will peek from left."
+      }
+    ]
+  },
+  {
+    "id": 34779489,
+    "title": "Scan View: Event Info",
+    "section_id": 2036848,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125644,
+    "updated_by": 288,
+    "updated_on": 1744125644,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "WIKI : https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226270/00+Ticket+Scan+View#id-00TicketScanView-1.2EventInfo\r\n\r\nGIVEN As a user is logged in with multiple tickets for an event",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User opens the scan view of the tickets from Wallet Detail List",
+        "expected": "THEN the following information is displayed in the scan view header:\nDate, Time: \nMatch up: Away Team @ Home Team\nHome team logo\nVenue\nDescription (if available)\n\n"
+      },
+      {
+        "content": "WHEN User swipes through their tickets",
+        "expected": "THEN scan view header information remains displayed for each ticket"
+      }
+    ]
+  },
+  {
+    "id": 34779490,
+    "title": "Scan View: Ticket Back",
+    "section_id": 2036848,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125644,
+    "updated_by": 288,
+    "updated_on": 1744125644,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN there are tickets in the wallet and displayed in Ticket Scan View",
+    "custom_steps": null,
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226270/00+Ticket+Scan+View#id-00TicketScanView-1.7TicketBack",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN tapping a tickets information button in scan view",
+        "expected": "THEN the screen will display the \"ticket back\" screen\n\n"
+      },
+      {
+        "content": "WHEN tapping Close* from ticket back screen\n\n*iOS - Can be done by pull down of the screen or X icon\n*Android - Can be done by device back nav or or back arrow icon",
+        "expected": "THEN user is returned to front side of ticket in scan view"
+      }
+    ]
+  },
+  {
+    "id": 34779491,
+    "title": "[iOS Only] Scan View: Add to Apple Wallet",
+    "section_id": 2036848,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-8795",
+    "created_by": 288,
+    "created_on": 1744125644,
+    "updated_by": 288,
+    "updated_on": 1744125644,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN Apple wallet displays on IOS ",
+    "custom_steps": null,
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3226270/00+Ticket+Scan+View#id-00TicketScanView-1.6AddtoAppleWallet\r\n\r\nURLs for determining if a venue allows Apple Wallet (replace ‘112’ with team ID):\r\nhttp://content.mlb.com/mlb/en/config/v1/112/ballpark/boxoffice_config/web-v1.json (Prod)\r\nhttp://qacontent.mlb.com/mlb/en/config/v1/137/ballpark/boxoffice_config/web-v1.json (QA)\r\nhttp://betacontent.mlb.com/mlb/en/config/v1/136/ballpark/boxoffice_config/web-v1.json (Staging)",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user is logged in with MLB account in Ballpark app",
+        "expected": "THEN the user is successfully logged in with MLB account in Ballpark app"
+      },
+      {
+        "content": "AND the user taps on a ticket to open in scan view",
+        "expected": "THEN the user is shown the ticket scan view"
+      },
+      {
+        "content": "IF the option to add to apple wallet is available",
+        "expected": "THEN add to apple wallet button is displayed"
+      },
+      {
+        "content": "WHEN the user taps on the add to apple wallet button",
+        "expected": "THEN system apple wallet prompt is displayed\nAND ticket can be added to user's apple wallet"
+      },
+      {
+        "content": "WHEN the user taps on the add to apple wallet button on another ticket",
+        "expected": "THEN system apple wallet prompt is displayed\nAND another ticket can be added to user's apple wallet"
+      },
+      {
+        "content": "IF the option to add to apple wallet is not available for that venue",
+        "expected": "THEN the Apple Wallet button is not displayed"
+      }
+    ]
+  },
+  {
+    "id": 34779478,
+    "title": "Forwarding via Email - Interface",
+    "section_id": 2036849,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125619,
+    "updated_by": 288,
+    "updated_on": 1744125619,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN that the user purchased tickets\r\n\r\nAND the user selected tickets to forward\r\n\r\nAND the user tapped on 'Forward'/'Forward Tickets' button \r\n",
+    "custom_steps": null,
+    "custom_expected": "WIKI :https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225634/03+Wallet+Tab#id-03WalletTab-1.1.6Ticketlist-ForwardviaEmail",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on 'Via Email'\n\n",
+        "expected": "THEN the app display the Ticket Forward email form"
+      },
+      {
+        "content": "WHEN the user enters the information in the fields provided",
+        "expected": "THEN the app will validate the information provided by the user (the app will the emails standards: some text, an at symbol followed by a domain)"
+      },
+      {
+        "content": "WHEN the user completes the form and taps on 'Send'",
+        "expected": "THEN the app will trigger the network call to send the selected tickets to the recipient email address entered by the user"
+      },
+      {
+        "content": "",
+        "expected": "AND the form will slide down and return the user to the list view no longer in \"Forward mode\"\nAND the app will display a success message"
+      }
+    ]
+  },
+  {
+    "id": 34779479,
+    "title": "Forwarding via Suggested Recipients",
+    "section_id": 2036849,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125619,
+    "updated_by": 288,
+    "updated_on": 1744125619,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user is logged in, has tickets, has navigated to the Wallet -> Selected Event and click Forward Tickets -> Ticket Forwarding View\r\nAND the user has completed forwards via email in the past",
+    "custom_steps": "WHEN the user taps on \"Forward\"",
+    "custom_expected": "THEN the user will see at least 1 email in the options list\r\n![](index.php?/attachments/get/14593409)\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on an email",
+        "expected": "THEN a prompt title is displayed that says \"Ticket will be immediately delivered to [SELECTED_EMAIL] and available in their MLB Ballpark app\" with the options Yes and No.\n![](index.php?/attachments/get/14593410)\n"
+      },
+      {
+        "content": "WHEN the user taps the 'No'/'CANCEL' option",
+        "expected": "THEN the prompt is dismissed and the Ticket Forwarding View is still shown."
+      },
+      {
+        "content": "GIVEN the user is logged in, has tickets, has navigated to the Wallet -> Selected Event \nAND the user has completed forwards via email in the past\nAND the user taps Forward Tickets -> Ticket Forwarding View\nAND the user taps on \"Forward\"\nAND the user taps on an email\n\nWHEN the user taps the 'Yes'/'OK' option",
+        "expected": "THEN the prompt and view is dismissed back to the Ticket List view and the forward is either completed successfully or fails and the user is notified."
+      }
+    ]
+  },
+  {
+    "id": 34779482,
+    "title": "Forwarding via Link",
+    "section_id": 2036850,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125629,
+    "updated_by": 288,
+    "updated_on": 1744125629,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the sending user has forward-able tickets on their account\r\n\r\n\r\n\r\nTESTING NOTES:\r\n*This test case is best to be validated with 2 devices/accts to closer validate the true user experience. A single device can be used, but may be more difficult to verify.\r\n*This test case is best to be validated against Prod env. This will prevent testing friction within QA/Staging env, due to beta prompt and requiring credentials.\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": "WIKI:[TicketList-ForwardviaLink](https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225634/03+Wallet+Tab#id-03WalletTab-1.1.5TicketList-ForwardviaLink)\r\n\r\n[BP-9681](https://baseball.atlassian.net/browse/BP-9681)\r\n\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the sending user selected tickets to forward\nAND the user tapped on 'Forward Tickets' button \nAND the user taps on 'Share Link'",
+        "expected": "THEN the app will display the OS share sheet and make the API call to forward the ticket"
+      },
+      {
+        "content": "WHEN the user selects one of the sharing apps/options",
+        "expected": "THEN the app populate the user's device share option with the \"shareURL\" from the boxoffice service "
+      },
+      {
+        "content": "WHEN the user finishes selecting share option of the ticket",
+        "expected": "THEN the share flow will dismiss \nAND the user will no longer be in \"Forward mode\""
+      },
+      {
+        "content": "WHEN the sending user finishes forwarding",
+        "expected": "THEN the app will refresh the list and will indicate which tickets are now forwarding in progress (pending via link)"
+      },
+      {
+        "content": "*best to use a different device/acct\n\nWHEN the receiving user accesses the share link ",
+        "expected": "THEN the user will be shown 'Accepting Tickets' page via mlb.com with an 'Access Ticket' button"
+      },
+      {
+        "content": "WHEN the receiving user taps 'Access Ticket' button from within Accepting Tickets page",
+        "expected": "THEN the user will be presented 'Open in Ballpark?' prompt"
+      },
+      {
+        "content": "WHEN the receiving user taps 'Open' within 'Open in Ballpark?' prompt",
+        "expected": "THEN the ballpark app will be opened to the Tickets tab\nAND 'Ticket Accepted - You've received a ticket forward from <sending_user_email>.' with an 'OK' button\nAND the prompt is layered on top of the WalletView displaying the ticketed events* \n\n*this assumes no prev tickets were active on the acct where the newly accepted transfer's card is shown. If prev ticketed events are prev on the acct AND if the events occurs prior to the transfer, then the soonest events are displayed."
+      },
+      {
+        "content": "WHEN the receiving user navigates to view the recently accepted ticket",
+        "expected": "THEN the user is able to see the listview AND the scanview of the ticketed event\n\n*barcode should be shown, if prev shown from sending user ('Barcode Unavailable' can be shown initially to sending user, and therefore would be the same shown to the receiving user)"
+      },
+      {
+        "content": "WHEN the sending user navigates/refreshes the recently forward ticket",
+        "expected": "THEN the ticket entry should be updated from 'Forward pending via link' to ticket has been accepted by the receiving user"
+      }
+    ]
+  },
+  {
+    "id": 34779483,
+    "title": "Forwarding Via Link - Message",
+    "section_id": 2036850,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://baseball.atlassian.net/browse/BP-9900",
+    "created_by": 288,
+    "created_on": 1744125629,
+    "updated_by": 288,
+    "updated_on": 1744125629,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the sending user has forward-able tickets on their accountGIVEN the sending user has forward-able tickets on their account\r\n\r\nTESTING NOTES:\r\n*This test case is best to be validated with 2 devices/accts to closer validate the true user experience. A single device can be used, but may be more difficult to verify.\r\n*This test case is best to be validated against Prod env. This will prevent testing friction within QA/Staging env, due to beta prompt and requiring credentials",
+    "custom_steps": null,
+    "custom_expected": "https://baseball.atlassian.net/browse/BP-10071\r\nhttps://baseball.atlassian.net/browse/BP-9900\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user Open app, click on tickets → Forward tickets → Select a ticket → Forward Tickets → Share Link → Messages",
+        "expected": "THEN user should be display with url shows atmlb.com in message app \n\n\n\n\n"
+      }
+    ]
+  },
+  {
+    "id": 34779481,
+    "title": "Forwarding via Contact List",
+    "section_id": 2036851,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-8112",
+    "created_by": 288,
+    "created_on": 1744125626,
+    "updated_by": 288,
+    "updated_on": 1744125626,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user is on the \"Forward Tickets\" screen\r\n\r\n*device requires Contacts present in different states\r\n**Just email address\r\n**Just phone number\r\n**Both phone number and email address\r\n**No phone number nor email address (empty)",
+    "custom_steps": null,
+    "custom_expected": "WIKI:[TicketList-ForwardviaLink](https://baseball.atlassian.net/wiki/spaces/mobile/pages/3225634/03+Wallet+Tab#id-03WalletTab-1.1.5TicketList-ForwardviaLink)\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps 'Forward'/'Forward Tickets' button",
+        "expected": "THEN the list of options shown (below suggested recipients, if prev forwarded):\n\"Select from Contacts\"\n\"Via Email\"\n\"Share Link\""
+      },
+      {
+        "content": "WHEN the user taps \"Forward Tickets\" \nAND the user taps \"Select from Contacts\"",
+        "expected": "*A device permission prompt could be shown to allow access to contacts\n\nTHEN the operating systems contact picker appears displaying the email address and phone numbers\n\n"
+      },
+      {
+        "content": "WHEN the user taps \"Forward Tickets\" \nAND the user taps \"Select from Contacts\"\nAND the user taps a contact with JUST an email address associated with the device contact",
+        "expected": "THEN the app should navigate to the 'Ticket Forward Email'/'Forward Via Email' form with \"Email\" and \"Name\" fields populated from the contact"
+      },
+      {
+        "content": "WHEN the user completes the form and taps on 'Send'",
+        "expected": "THEN the app will trigger the network call to send the selected tickets to the recipient email address entered by the user\nAND the app will display a success message\nAND the form will slide down and return the user to the list view no longer in \"Forward mode\""
+      },
+      {
+        "content": "WHEN the user taps \"Forward Tickets\" \nAND the user taps \"Select from Contacts\"\nAND the user taps a contact with JUST a phone number associated with the device contact",
+        "expected": "THEN the app should generate a share link and open an OS SMS message draft for the number with a message body:\n\n[iOS] \n\"I just forwarded you tickets, follow the link to accept them in MLB Ballpark app.\" that contains a link to accept transferred ticket(s)\n\n[ANDROID] \nContains a link to accept transferred ticket(s) \n*NOTE: Android will not be supplying additional text in the text message when sharing a link to forward the ticket. It has been deemed acceptable to have just the ticket link provided. [BPA-5423](https://baseball.atlassian.net/browse/BPA-5423?focusedCommentId=2712555)"
+      },
+      {
+        "content": "WHEN the user sends the SMS message containing the ticket share link\nAND the user navigates back to BP app ",
+        "expected": "THEN the user is shown the list view, no longer in \"Forward mode\"\nAND the app will display the transferred ticket as 'Forward pending via link'"
+      },
+      {
+        "content": "WHEN the user taps \"Forward Tickets\" \nAND the user taps \"Select from Contacts\"\nAND the user taps a contact with BOTH an email address AND a phone number associated with the device contact",
+        "expected": "THEN the app should navigate to the \"Ticket Forward Email\" form with \"Email\" and \"Name\" fields populated from the contact"
+      },
+      {
+        "content": "WHEN the user completes the form and taps on 'Send'",
+        "expected": "THEN the app will trigger the network call to send the selected tickets to the recipient email address entered by the user\nAND the app will display a success message\nAND the form will slide down and return the user to the list view no longer in \"Forward mode\""
+      },
+      {
+        "content": "WHEN the user taps \"Forward Tickets\" \nAND the user taps \"Select from Contacts\"\nAND the user taps a contact without an email address NOR a phone number associated with the device contact",
+        "expected": "THEN the OS should appropriately handle a contact without a delivery method\n\n*typically an 'invalid recipient' message OR Null message without ticket link generated/shown"
+      }
+    ]
+  },
+  {
+    "id": 34779466,
+    "title": "Team Tab Navigation & Drop-Down Teampicker",
+    "section_id": 2036852,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125588,
+    "updated_by": 288,
+    "updated_on": 1744125588,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN that the user has selected a favorite team",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user taps on Teams tab",
+        "expected": "THEN the team page is shown, matching the same team shown in Nav Bar\nAND a check to the right, indicating it is currently displayed"
+      },
+      {
+        "content": "",
+        "expected": "AND the user will be able to have a segment controlled sub tab structure to change between \"Park Info\" and \"Schedule\""
+      },
+      {
+        "content": "",
+        "expected": "AND the app will set \"Park Info\" as the default tab"
+      },
+      {
+        "content": "WHEN the user taps on the team picker drop down",
+        "expected": "THEN the app will display 'My Teams' at the top with the previously favorited teams in the same sequential order, with their team logo to the left"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display 'All Teams' under the 'My Teams' with the previously favorited teams removed since they are listed under 'My Teams'.\nAND remaining teams are displayed alphabetically by location, with their team logo to the left\n\nin the same sequential order, with their team logo to the right"
+      },
+      {
+        "content": "WHEN the user taps on one of the teams (including the already selected team)",
+        "expected": "THEN the team is selected and the team selector dismisses"
+      },
+      {
+        "content": "WHEN the user navigates between 'Park Info' and 'Schedule'",
+        "expected": "THEN the segment control \"highlight\" will be indicated by team primary color underline"
+      }
+    ]
+  },
+  {
+    "id": 34779467,
+    "title": "Team Park Info",
+    "section_id": 2036852,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125588,
+    "updated_by": 288,
+    "updated_on": 1744125588,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN User navigates to Team Tab with no favorite team",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Team Picker is displayed",
+        "expected": "THEN User is able to select team since all teams are present, team picker screen is dismissed after selection and selected team info is displayed in Team Tab"
+      },
+      {
+        "content": "",
+        "expected": "AND the app will display the venue image or team related any image on the top carousel below Park Info segments\n\nNote: Image often changes throughout the season by Services/Club."
+      },
+      {
+        "content": "WHEN User selects a Big Icon from Park Info",
+        "expected": "THEN associated page/webview is presented"
+      },
+      {
+        "content": "WHEN User closes page/webview",
+        "expected": "THEN user is returned to team tab item"
+      },
+      {
+        "content": "WHEN User select item from small carousel ",
+        "expected": "THEN associated page/webview is presented"
+      },
+      {
+        "content": "WHEN User closes page/webview",
+        "expected": "THEN user is returned to team tab item"
+      },
+      {
+        "content": "WHEN User selects icon and text items",
+        "expected": "THEN associated page/webview is presented"
+      }
+    ]
+  },
+  {
+    "id": 34779468,
+    "title": "Team Schedule",
+    "section_id": 2036852,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125588,
+    "updated_by": 288,
+    "updated_on": 1744125588,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user is on the Team Tab with the schedule tab/header selected\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the schedule tab has been selected",
+        "expected": "THEN the default drop down should show \"Home Games\"\n"
+      },
+      {
+        "content": "WHEN selecting the down arrow ",
+        "expected": "THEN you should be able to select between \"Full Schedule\" and \"Home Games\""
+      },
+      {
+        "content": "WHEN the \"Full Schedule\" drop down is selected",
+        "expected": "THEN you should start at the header that corresponds to the current MONTH (IE April 2021)"
+      },
+      {
+        "content": "WHEN the \"Full Schedule\" drop down is selected",
+        "expected": "THEN you should see HOME and AWAY games for the season"
+      },
+      {
+        "content": "WHEN the \"Home Games\" drop down is selected",
+        "expected": "THEN you should see only HOME games for that team"
+      }
+    ]
+  },
+  {
+    "id": 34779503,
+    "title": "Verifying Email Allows Ticket Access  *[requires tickets on an unverified Acct]",
+    "section_id": 2036853,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125682,
+    "updated_by": 288,
+    "updated_on": 1744125682,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN a user has tickets for today which are associated with an unverified primary email \r\n\r\n*Testing Notes:[How to test Ballpark Features with an Unverified Account with Tickets](https://baseball.atlassian.net/wiki/spaces/BET/pages/2587656220/How+to+test+Ballpark+Features+with+an+Unverified+Account+with+Tickets)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user logins into Ballpark \nAND user is on the Home Tab",
+        "expected": "THEN a Next Ticketed Event Peeking card is displayed, requesting user to verify email"
+      },
+      {
+        "content": "WHEN user taps on the card or button",
+        "expected": "THEN user is directed to My MLB Account Emails page"
+      },
+      {
+        "content": "WHEN user sends Ballpark app to background\nAND user navigates to email",
+        "expected": "THEN user should receive an email requesting email address verification"
+      },
+      {
+        "content": "WHEN user verifies email address by clicking on link in email\nAND user resumes Ballpark app back to foreground",
+        "expected": "THEN Next Ticketed Event Peeking cardis no longer shown\nAND Next Ticketed Event card with event details and ticket access is shown instead"
+      },
+      {
+        "content": "WHEN user goes to Wallet Tab to view today's ticket",
+        "expected": "THEN user can view ticket list and ticket scan view"
+      }
+    ]
+  },
+  {
+    "id": 34779504,
+    "title": "Log Out",
+    "section_id": 2036854,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125685,
+    "updated_by": 288,
+    "updated_on": 1744125685,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (14.0 or greater)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND user navigates to My Profile page (via Profile Navbar)",
+    "custom_steps": "WHEN Accessing Profile page via Profile tab\r\nAND user taps log out",
+    "custom_expected": "THEN the user is logged out",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on the Profile icon from Profile Tab",
+        "expected": "THEN user is shown a generic profile avatar\nAND user is shown their full name displayed\nAND user is shown their favorite team logo (if acct has a fave team prev saved)\nAND user is shown their email address\nAND an \"Edit\" option is displayed in the top right corner\nAND \"My History\" section with relevant data and an actionable icon is shown\nAND a button on the bottom screen labeled \"Log Out\" is shown  (after all menu options)"
+      },
+      {
+        "content": "WHEN user taps on the \"Log Out\" button",
+        "expected": "THEN the user will be successfully logged out, and the Log In screen will appear"
+      }
+    ]
+  },
+  {
+    "id": 34779497,
+    "title": "Webview Deeplink - Cold Start (app closed)",
+    "section_id": 2036855,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125667,
+    "updated_by": 288,
+    "updated_on": 1744125667,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN BP App is NOT open in the background (cold start)\r\nAND user selects a webview Deeplink \r\n\r\n\"ballpark://webview?venueID=3&dataTier=2&url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours\"\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user has no favorite team selected in Ballpark\nAND user accesses deeplink: \"ballpark://webview?venueID=3&dataTier=2&url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours\"",
+        "expected": "THEN a webview should appear to the proper webview, after app opened"
+      },
+      {
+        "content": "WHEN user taps back/Close button from the opened webview",
+        "expected": "[ANDROID]\nTHEN user is directed back into the teams teamtab specified in the VenueID (if deeplink was accessed externally of BP app)\nOR\nTHEN user is directed back to point of entry (if STEP 1 accessed the deeplink internally - such as a context card on home page)\n\n[IOS]\nTHEN user is returned back to point of entry (or Home page, if accessed externally)"
+      },
+      {
+        "content": "WHEN user has a favorite team selected in Ballpark (other than Redsox)\nAND user accesses deeplink: \"ballpark://webview?venueID=3&dataTier=2&url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours\"",
+        "expected": "THEN a webview should appear to the proper webview, after app opened"
+      },
+      {
+        "content": "WHEN user taps back/Close button from the opened webview",
+        "expected": "[ANDROID]\nTHEN user is directed back into the teams teamtab specified in the VenueID (if deeplink was accessed externally of BP app)\nOR\nTHEN user is directed back to point of entry (if STEP 1 accessed the deeplink internally - such as a context card on home page)\n\n[IOS]\nTHEN user is returned back to point of entry (or Home page, if accessed externally)"
+      }
+    ]
+  },
+  {
+    "id": 34779495,
+    "title": "Buy Tickets Deeplink - Cold Start (app closed)",
+    "section_id": 2036856,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125662,
+    "updated_by": 288,
+    "updated_on": 1744125662,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": true,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.1.0 or greater)\r\nAND BP App is NOT open in the background (cold start)\r\nAND the user has BallPark account\r\nAND the user has been given a deeplink\r\n\r\nballpark://buytickets",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nAND user accesses deeplink: ballpark://buytickets",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the Buy Tickets sub tab shown"
+      },
+      {
+        "content": "WHEN user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nAND user accesses deeplink: ballpark://buytickets?teamID=158\n\n[Team IDs](https://baseball.atlassian.net/wiki/spaces/ticketing/pages/3947618/IDs+Team+IDs+Venue+IDs)\n*for highest confidence - each Team ID listed in the table should be verified",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the Buy Tickets sub tab shown\nAND the Milwaukee Brewers team os selected with scheduled events listed"
+      }
+    ]
+  },
+  {
+    "id": 34779496,
+    "title": "Scanview Deeplink - Cold Start (app closed) *[requires TM/TDC tickets]",
+    "section_id": 2036857,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125665,
+    "updated_by": 288,
+    "updated_on": 1744125665,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[IDs+Team+IDs+Venue+IDs](https://baseball.atlassian.net/wiki/spaces/ticketing/pages/3947618/IDs+Team+IDs+Venue+IDs )\r\n\r\nGIVEN the user downloaded the Ballpark app (12 or greater)\r\nAND BP App is NOT open in the background (cold start)\r\nAND the user has BallPark account\r\nAND the user has been given a deeplink\r\n\r\n\r\nSample link -- REQUIRES acct to have the ticketed event shown in acct\r\nballpark://scanview?eventID=65285&teamID=158&venueID=32\r\n\r\n*eventID is the associated event for the particular ticket [required]\r\n*teamID is the associated home team of the venue [required]\r\n*venueID is the associated venue for the event [optional]\r\n\r\n**the exact deeplink will not necessarily work for all accts with tickets\r\nTherefore, you may need to extract the values(teamID/eventID/venueID) specific to the ticketed event on the acct being verified - this can be determined many ways such as:\r\na) using specific oktaID, extracting from Next-Ticketed-Event context card on firestore doc([example](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/firestore/data/~2Fhometab~2F00untlr43sIH7NgMo357?utm_campaign=extensions&utm_medium=SLACK&utm_source=NEW_ISSUE ) )\r\nb) Connecting to a Proxy tool (i.e. CharlesProxy, Proxyman) and triggering the call from BP app\r\nc) via DataDog logs for the users session/trace calls",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user has tickets to a TDC event (particular to deeplink)\nAND user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nWHEN user accesses deeplink\n\n\nsample deeplink -\nballpark://scanview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the user is directed to scanview of the tickets\n\nteamID=hometeam for the event, eventID is associated ticket event"
+      },
+      {
+        "content": "GIVEN user DOES NOT have tickets to a TDC event (particular to deeplink)\nAND user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nWHEN user accesses deeplink\n\nsample deeplink -\nballpark://scanview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "[iOS] THEN the Ballpark app is opened to Home page\n\n[Android] THEN the Ballpark app displays dialog box stating Ticket Details Unavailable\n\n"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN user has tickets to a TM event (particular to deeplink)\nAND user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nWHEN user accesses deeplink\n\n\nsample deeplink -\nballpark://scanview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "THEN the Ballpark app is opened up to the Tickets tab \nAND the user is directed to listview of the tickets\n\nteamID=hometeam for the event, eventID is associated ticket event\n\n"
+      },
+      {
+        "content": "GIVEN user DOES NOT have tickets to a TM event (particular to deeplink)\nAND user is logged into BP app\nAND BP App is NOT open in the background (cold start)\nWHEN user accesses deeplink\n\nsample deeplink -\nballpark://scanview?eventID=65285&teamID=158&venueID=32 [teamID=hometeam for this event, venueID=venue for the event(i.e RegSeason or Spring Training), eventID is associated ticket event]",
+        "expected": "[iOS]\nTHEN the Ballpark app is opened to TMSDK login page\n\n\n[Android] \nTHEN the Ballpark app displays dialog box stating Ticket Details Unavailable"
+      }
+    ]
+  },
+  {
+    "id": 34779498,
+    "title": "Push Notification Validation *[requires OneSignal access]",
+    "section_id": 2036858,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BP-8762, BPA-5597",
+    "created_by": 288,
+    "created_on": 1744125670,
+    "updated_by": 288,
+    "updated_on": 1744125670,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\nAND the user has push notifications enabled\r\nAND the user has quit/closed BallPark App",
+    "custom_steps": "From one signal user dashboard, create a push msg and send push to specific device(s)",
+    "custom_expected": "client(s) will receive push",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an engineer sends a [OneSignal Push Notification](https://dashboard.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/campaigns)\n\nSteps:\n1. Navigates to 'Push Notification' via OneSignal link above ('Messages' top-level tab, AND 'Push' sub-level tab)\n2. Tap 'New Push'\n3. Fill out New Push Notification appropriately, DO NOT INCLUDE LAUNCH URL\n4. Tap 'Send to Test Device' button within Message section\n5. Select specific test user/devices. (Add to Test Users, if not listed)\n5a. Multiple devices can be selected (may want to validate at least one iOS and Android device each)\n\n\nNOTE: FOR STEP 5, IF TEST DEVICES IS NOT UPDATING 'LAST ACTIVE' THEN MAY BE BEST TO RE-ADD TEST DEVICE TO ENSURE PLAYERID IS ACCURATE",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users devices should receive a notification\nAND the received notification will display with Ballpark logo \n\n![](index.php?/attachments/get/13374978)"
+      },
+      {
+        "content": "WHEN the user opens the received notification from the device(s)",
+        "expected": "THEN Ballpark app is opened to the home page\n\nNote if this test case executed with Warm Start: \nWHEN/IF user is on other page than Home page THEN user should land on the page where user was previously before clicking on the Push "
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN user is logged in with MLB account in Ballpark app\nAND the user has push notifications disabled\nAND the user has quit/closed BallPark App",
+        "expected": "THEN the notifications configuration for the account is set up to NOT receive any push notification"
+      },
+      {
+        "content": "WHEN an engineer sends another push notification \n\n(changing the Title in the push message will help distinguish the different notifications)\n(see step 2)",
+        "expected": "THEN message is successfully sent AND is indicated within OneSignal"
+      },
+      {
+        "content": "",
+        "expected": "AND the users device(s) should NOT receive a notification"
+      }
+    ]
+  },
+  {
+    "id": 34779502,
+    "title": "In-App Deeplink message *[requires OneSignal access]",
+    "section_id": 2036859,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125680,
+    "updated_by": 288,
+    "updated_on": 1744125680,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN the user downloaded the Ballpark app (10.5.0 or greater & NOT the Production build)\r\nAND user is logged in with MLB account in Ballpark app\r\n\r\n\r\n",
+    "custom_steps": "WHEN the user receives an In-App message which has a deep link\r\nAND the user selects the deeplink in the body of the message\r\nballpark://webview?url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours\r\n\r\n\r\nNOTE: Seems to take about 15 minutes or more before the message appears\r\nNOTE: To setup deeplink in In-App message, use add \"Click Action\" on button and add URL there\r\nNOTE: On iOS make sure you do not have multiple versions of the app installed (Double check these links)\r\n\r\n\r\n",
+    "custom_expected": "THEN the application should navigate the user to the proper location",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN an engineer sends a [OneSignal In-App Message](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages) \n\nNOTE: You can use prev created Messages(i.e Team Tab Deeplink Test - SteveO), updating as needed and setting as Active. But if wanting to [create new](https://app.onesignal.com/apps/4419a06b-9a2b-4d44-a4a4-fe5fc93fcdd3/in_app_messages/new), follow steps below\n\nSteps:\n1. Navigates to 'In-App Messages' via OneSignal link above ('Messages' top-level tab, AND 'In-App' sub-level tab)\n\n2. Tap 'New In-App'\n\n3. AUDIENCE: Select 'Show to Particular Segments' and select appropriate segment\n\n4. MESSAGE: Select Message Type, fill out Header text/display\n \n        Add/Update Button text  \n        Tap 'Add Click ACtion' button\n        Select 'URL' and apply 'ballpark://webview?url=https%3A%2F%2Fwww.mlb.com%2Fredsox%2Fballpark%2Ftours'\n\n5. TRIGGER: Select 'when certain conditions are satisfied during the session'\n \n        Select 'in-app trigger' condition and apply 'ViewShown' as Key; 'Team' as value.\n        Tap 'Add trigger' button\n        Select 'Session Duration' condition and apply '5' as value.\n\n6. SCHEDULE: Select desired rules to start/stop showing (and additional settings)\n\n7. Tap 'Make Message Live' button\n\n8. Confirm Before Sending and then Make Message Live\n\n",
+        "expected": "THEN in-app message dashboard is shown\nAND the InApp Message created should be Active"
+      },
+      {
+        "content": "WHEN the user logs into BP app\nAND the user navigates to 'Team tab'",
+        "expected": "THEN the In-App message configured in prev step should be shown with a button"
+      },
+      {
+        "content": "WHEN the user taps the button within the in-app message ",
+        "expected": "THEN the application should navigate the user to the proper location"
+      }
+    ]
+  },
+  {
+    "id": 34779474,
+    "title": "Cached Tickets Availability *[requires ticket]",
+    "section_id": 2036860,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125609,
+    "updated_by": 288,
+    "updated_on": 1744125609,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN User has tickets for Today which have been viewed in Home Tab, Wallet Tab, Wallet View All and Ticket List and Ticket Scan view so values are cached",
+    "custom_steps": "WHEN the Network Access is turned off",
+    "custom_expected": "THEN the cached tickets can still be viewed \r\nAND the scanview and barcodes are still accessible to allow scanning at venue",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User goes to Home tab ",
+        "expected": "THEN Today's tickets are displayed"
+      },
+      {
+        "content": "WHEN User taps on the event card on the Home page",
+        "expected": "THEN Error message is displayed but cached tickets remain displayed*\n\n*error message may not be displayed until a refresh is triggered"
+      },
+      {
+        "content": "WHEN User taps on the ticket shown on the Tickets page",
+        "expected": "THEN scanview of the ticket(s) are displayed\nAND barcodes are shown "
+      },
+      {
+        "content": "WHEN User dismisses the scanview",
+        "expected": "THEN Error message is displayed but cached tickets remain displayed*\n\n*error message may not be displayed until a refresh is triggered"
+      },
+      {
+        "content": "WHEN User goes to Home tab ",
+        "expected": "THEN Today's tickets are displayed"
+      },
+      {
+        "content": "WHEN User taps on the 'Open Tickets' button on the event card on the Home page",
+        "expected": "THEN Error message is displayed but Ticket Scan View for that item is displayed*\nAND barcodes are shown on each ticket\n\n*error message may not be displayed until a refresh is triggered"
+      },
+      {
+        "content": "WHEN User goes to Tickets tab ",
+        "expected": "THEN Error message is displayed but cached tickets remain displayed*\n\n*error message may not be displayed until a refresh is triggered"
+      },
+      {
+        "content": "WHEN User does a pull to refresh on Wallet Tab",
+        "expected": "THEN Error message is displayed but cached tickets remain displayed"
+      },
+      {
+        "content": "WHEN User clicks on View All to Wallet tab ",
+        "expected": "THEN Error message is displayed but Wallet Details List is displayed*\n\n*error message may not be displayed until a refresh is triggered"
+      },
+      {
+        "content": "WHEN User does a pull to refresh on Wallet Details List",
+        "expected": "THEN Error message is displayed but cached tickets remain displayed"
+      },
+      {
+        "content": "WHEN User clicks on item in Wallet Details List which has been cached ",
+        "expected": "THEN Error message is displayed but Ticket List is displayed*\n\n*error message may not be displayed until a refresh is triggered"
+      },
+      {
+        "content": "WHEN User does a pull to refresh on Ticket List",
+        "expected": "THEN Error message is displayed but cached tickets remain displayed"
+      },
+      {
+        "content": "WHEN User clicks on item in Ticket List which has been cached ",
+        "expected": "THEN Error message is displayed but Ticket Scan View for that item is displayed*\nAND barcodes are shown on each ticket\n\n*error message may not be displayed until a refresh is triggered"
+      }
+    ]
+  },
+  {
+    "id": 34779493,
+    "title": "Force Update - Logged in User [iOS Only]",
+    "section_id": 2036861,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125657,
+    "updated_by": 288,
+    "updated_on": 1744125657,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-10399](https://baseball.atlassian.net/browse/BP-10399 ) / [BP-10464](https://baseball.atlassian.net/browse/BP-10464 )\r\n\r\nPrerequisite - Remote Config Setup: force_update_params\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"min_app_version\" within \"force_update_params\" as needed to force display. (One way is to set the minimum version to a value greater than current version of BP app installed.)\r\n3. Save changes.\r\n4. Publish changes.\r\n\r\n\r\nGIVEN Ballpark app installed with version* prior to minimum version established in min_app_version within remote config\r\n\r\n*iOS - Requires 12.4.0 version or later. Prior versions would not get the force update",
+    "custom_steps": "WHEN User is logged in ",
+    "custom_expected": "THEN force update prompt appears on customer's current page",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User is logged in",
+        "expected": "THEN Force Dialog is presented without option to dismiss (forcing an update)\nAND the message shown is 'Update Available - A new version of the Ballpark App is available. Please update to the latest version now. Play Ball! *\nAND an Update button shown\n\n*the message shown is configurable within force_update_params [alertTitle, alertMessage, alertButtonText]\n\n**alert will not show up if other alerts exist, so clear out the network prompt and background/foreground the app if needed"
+      },
+      {
+        "content": "WHEN User taps on Update button",
+        "expected": "THEN app launches external to app store"
+      }
+    ]
+  },
+  {
+    "id": 34779494,
+    "title": "Load Live Activity via Cached Ticket Data  - Cold Start (app closed)",
+    "section_id": 2036862,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125660,
+    "updated_by": 288,
+    "updated_on": 1744125660,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-10171](https://baseball.atlassian.net/browse/BP-10171 )\r\n\r\n\r\nGIVEN User has successfully authenticated into Ballpark (BPapp: 12.2.0 or greater, iOS: 16.2 or greater)\r\nAND BP App is NOT open in the background (cold start)\r\nAND the user has tickets already added to the BP account configured for Live Activities (TM and TDC events)\r\nAND NTEv2 Home Card is configured (via Card Creator) for the specific venue of the NextTicketed Event (BPapp: 13.1.1 or greater)\r\n\r\n**Spring Venues are NOT currently supported for Live Activities feature**\r\n**NonGame Events (Concerts, Tours, Test Events, Etc) are NOT currently supported for Live Activities feature**\r\n\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": "THEN section, row and seat is displayed in the pre-game state for both TDC & TM clubs in the Live Activity Lock Screen widget",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user logs into BP app with a TDC event as next upcoming event",
+        "expected": "THEN the user is shown Home page with a Next Ticketed Event card (for TDC club)"
+      },
+      {
+        "content": "WHEN the user closes BP app (cold start)\nAND the user navigates to lock screen",
+        "expected": "THEN user's lock screen displays a Live Activity for the event showing:\n*Ballpark logo (top left w/in widget)\n*Team matchup logos (top right w/in widget)\n*Seat information - Sec/Row/Seat (bottom left w/in widget)\n*Game start time (bottom right w/in widget)\n**time shown in time zone of device"
+      },
+      {
+        "content": "WHEN the user taps on the Live Activity shown on the lock screen",
+        "expected": "THEN user is directed to BP app, opened to the Scanview of the event listed in the Live Activity\nAND the Seat information (Sec/Row/Seat) matches what is shown in the Live Activity\nAND the game start time matches what is shown in the Live Activity (time shown in local timezone of the event)"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user logs into BP app with a TM event as next upcoming event",
+        "expected": "THEN the user is shown Home page with a Next Ticketed Event card (for TM club)"
+      },
+      {
+        "content": "WHEN the user closes BP app (cold start)\nAND the user navigates to lock screen",
+        "expected": "THEN user's lock screen displays a Live Activity for the event showing:\n*Ballpark logo (top left w/in widget)\n*Team matchup logos (top right w/in widget)\n*Seat information - Sec/Row/Seat (bottom left w/in widget)\n*Game start time (bottom right w/in widget)\n**time shown in time zone of device"
+      },
+      {
+        "content": "WHEN the user taps on the Live Activity shown on the lock screen",
+        "expected": "THEN user is directed to BP app, opened to the TMSDK of the event listed in the Live Activity (user may need to sign into TMSDK, if not prev logged in)\nAND the Seat information (Sec/Row/Seat) matches what is shown in the Live Activity\nAND the game start time matches what is shown in the Live Activity (time shown in local timezone of the event)"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "WHEN the user logs into BP app with an event as next upcoming event\nAND NTEv2 Home Card is configured (via Card Creator) for the specific venue of the NextTicketed Event",
+        "expected": "THEN user will be shown Next Ticketed Event Card (v2)\n"
+      },
+      {
+        "content": "WHEN user taps the NTE card (above 'Open Tickets' button)",
+        "expected": "THEN user is directed to the EventHub page for that specific venue\nAND user is shown a header info* particular to the event\nAND user is shown a venue image directly below the event header info\nAND user the venue image is directly above My Tickets and Stadium Info sections\n\n*example of Header info:\n**Tigers at Guardians (team logos on the right)\n**Tue, May 7 * 610 PM EDT\n**Progressive Field\n"
+      },
+      {
+        "content": "WHEN the user closes BP app (cold start)\nAND the user navigates to lock screen",
+        "expected": "THEN user's lock screen displays a Live Activity for the event showing:\n*Ballpark logo (top left w/in widget)\n*Team matchup logos (top right w/in widget)\n*Seat information - Sec/Row/Seat (bottom left w/in widget)\n*Game start time (bottom right w/in widget)\n**time shown in time zone of device"
+      },
+      {
+        "content": "WHEN the user taps on the Live Activity shown on the lock screen",
+        "expected": "THEN user is directed to BP app, opened to the TMSDK of the event listed in the Live Activity (user may need to sign into TMSDK, if not prev logged in)\nAND the Seat information (Sec/Row/Seat) matches what is shown in the Live Activity\nAND the game start time matches what is shown in the Live Activity (time shown in local timezone of the event)"
+      }
+    ]
+  },
+  {
+    "id": 34779475,
+    "title": "SSO with new account",
+    "section_id": 2036863,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125611,
+    "updated_by": 288,
+    "updated_on": 1744125611,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-9863](https://baseball.atlassian.net/browse/BP-9863)\r\n\r\nGIVEN the user downloaded the Ballpark app (11.6.0 or greater for iOS, 12.2.0 or greater for Android)\r\nAND user is logged into Ballpark app with a fresh MLB account* \r\n\r\n\r\n*can be achieved by onboarding a new MLB acct (w/out prev MPV acct)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user taps on an active t-link ** for a TDC home venue***\n\n",
+        "expected": "THEN user will be taken to a purchase webview WITHOUT being prompted to enter email and password\n\n*A prompt page may be show for customer to confirm First and Last name"
+      },
+      {
+        "content": "WHEN (within webview) user views My Account from the MyTickets hamburger menu",
+        "expected": "THEN user will see my MLB account primary email as the logged in email"
+      }
+    ]
+  },
+  {
+    "id": 34779499,
+    "title": "Onboarding - Success",
+    "section_id": 2036864,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://baseball.atlassian.net/browse/BPA-7052",
+    "created_by": 288,
+    "created_on": 1744125672,
+    "updated_by": 288,
+    "updated_on": 1744125672,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "Android: [BPA-7052](https://baseball.atlassian.net/browse/BPA-7052 ) / [BPA-7105](https://baseball.atlassian.net/browse/BPA-7105)\r\niOS: [BP-10293](https://baseball.atlassian.net/browse/BP-10293 ) / [BP-10337](https://baseball.atlassian.net/browse/BP-10337)\r\n\r\n\r\nGIVEN User has successfully authenticated into Ballpark (installed ANDROID 12.8.0 or later, iOS 12.3.0 or later)\r\nAND User has verified their account\r\nAND User has tickets to an upcoming game to PHI (or has Phillies set as fave team)*\r\n\r\n\r\n*PHI club is pilot club - however, onboarding a facial image is not currently tied to specific club/event\r\n",
+    "custom_steps": "GIVEN User display with Context Card for GoAhead-Entry(FFI) Registration on Home Tab\r\n\r\n\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User is on the Home Tab",
+        "expected": "THEN I am displayed a Home GoAheadEntry context card (Register CTA)"
+      },
+      {
+        "content": "WHEN User taps on Home GoAheadEntry context card's Register CTA",
+        "expected": "Then the Go Ahead Entry SDK should launch without any errors"
+      },
+      {
+        "content": "WHEN user lands on GO-AHEAD ENTRY flow using FFI SDK ",
+        "expected": "THEN User display with Get Started screen with title of GO-AHEAD ENTRY \n\n\n\n"
+      },
+      {
+        "content": "",
+        "expected": "AND a middle section will be show that allows swiping to additional pages w/ further instructions\n\nAND the initial page text shows: \nTitle: Sign up for MLB's Go-Ahead Entry at Citizens Bank Park\n\nDescription: Register for MLB Go-Ahead Entry, the ultimate hands-free experience available for free to ticketed fans entering Citizens Bank Park."
+      },
+      {
+        "content": "",
+        "expected": "AND a button shown w/ text 'Get Started' [button is disabled initially]\n"
+      },
+      {
+        "content": "",
+        "expected": "AND a checkbox is shown w/ text 'By tapping \"Get Started\" I agree to MLB's Terms of Use and Privacy Policy' [checkbox is unchecked initially]\n\n*Terms of Use is a link directing user to external browser with Terms\n*Privacy Policy is a link directing user to external browser with Policy\n\n[iOS Terms and PP links are not underlined]"
+      },
+      {
+        "content": "",
+        "expected": "AND a checkbox is shown w/ text 'I attest that I am eighteen (18) years of age or older.' [checkbox is unchecked initially] "
+      },
+      {
+        "content": "WHEN user scroll left to right (2nd screen) ",
+        "expected": "THEN user display with an instruction for the complete the flow \n\nTitle: \nFirst we'll capture an image of your face.\n\nDescription:\nThis image will be used by a service provider solely to create an alphanumeric MLB Go-Ahead ID for you and then immediately discarded. \n\nAND 'Learn more' CTA underlined \nAND Get Started button remains disabled\nAND Terms and Services checkbox is displayed without check\nAND Age confirmation checkbox is displayed without check\n\n\n*Learn more is a link directing user to external browser with more info"
+      },
+      {
+        "content": "",
+        "expected": "AND user display with Cancel or X button on Top left to dismiss the GoAhead registration "
+      },
+      {
+        "content": "WHEN user scroll left to right (3rd screen) ",
+        "expected": "THEN user continue with display an instruction for the complete flow \n\nTitle: \nAt the ballpark, head to a Go-Ahead Entry lane at the First Base Gate\n\nDescription:\nYour tickets will already be tied to your Go-Ahead ID. All ticketed individuals in your group will be captured by the Go-Ahead cameras.\n\n\nAND 'Learn more' CTA underlined \nAND Get Started button remains disabled\nAND Terms and Services checkbox is displayed without check\nAND Age confirmation checkbox is displayed without check\n\n\n*Learn more is a link directing user to external browser with more info"
+      },
+      {
+        "content": "WHEN User acknowledges Terms and Privacy",
+        "expected": "THEN user should be able to checkmark MLB ID Terms of Use and Privacy Policy\n\n(Checkbox filled up with black color) "
+      },
+      {
+        "content": "WHEN User acknowledges Age",
+        "expected": "AND User should be able to checkmark the age stipulation \nI attest that I am eighteen (18) years of age or older."
+      },
+      {
+        "content": "",
+        "expected": "THEN Get Started button should be enabled with black color in white text  "
+      },
+      {
+        "content": "WHEN user taps 'Get Started' within the Go-Ahead Entry page",
+        "expected": "[SKIP VALIDATION IF CAMERA ACCESS WAS PREV ALLOWED - PROCEED TO EXPECTATION STEP 17]\n\nTHEN user should display with Camera Prompt \n\nAndroid/iOS: \nStandard Existing Camera Promot modal OR \n\"Ballpark\" Would Like to Access the Camera \nBallpark uses the camera to capture photos and videos. \n\nAND 'Don't Allow' and 'Okay' CTAs shown \n"
+      },
+      {
+        "content": "WHEN prompt for Camera permission is denied ",
+        "expected": "THEN user taken back to onboarding flow "
+      },
+      {
+        "content": "WHEN prompt for Camera permission is allowed",
+        "expected": "THEN user should be able to proceed with NEC for enrollment to Go Ahead Entry"
+      },
+      {
+        "content": "WHEN user tap Okay (Permission allowed) ",
+        "expected": "THEN the user should be granted with an interface provides a clear indication of the action that requires approval to capture confirmation \n\n\nGO-AHEAD ENTRY shows in Home Plate with MLB logo\n\nDescription:\nWe’ll take a quick capture to generate your MLB Go-Ahead ID\n\nAND 'Continue' CTA shown "
+      },
+      {
+        "content": "WHEN user tap on Continue ",
+        "expected": "THEN user should be directed to capture their facial image \n\nText display: \nKeep your face in the frame ....\n\n[iOS verbiage may differ - i.e. No Faces were detected inside the frame.]\n"
+      },
+      {
+        "content": "WHEN user tap on Cancel(iOS) or  X(android) ",
+        "expected": "[Android] THEN user should directs to Home \n[iOS] THEN user should directs to previous page \n\n[The current behavior on iOS makes more sense for Apple’s navigation architecture]"
+      },
+      {
+        "content": "",
+        "expected": "AND user should display with Cancel button on top left (or Back arrow)\nAND recording indicator (typically on top right)"
+      },
+      {
+        "content": "WHEN user successfully captured their facial image for Go-Ahead ID \nAND NEC acceptance met ",
+        "expected": "AND Home plate icon should show in green color with MLB standard logo in it (SKIP THIS FOR 12.8 ANDROID) \n\nAND user display with loading indicator displayed when image validation is in-progress \n\nAND lottie animation within home plate shows on screen while generating Go-Ahead ID \n\nText display: \nGenerating Go-Ahead ID..."
+      },
+      {
+        "content": "",
+        "expected": "THEN user should display with confirmation screen for successful enrollment in GoAhead\n\nGreen (dotted) check icon mark\nText: \nYou're all set!\nThanks for registering! When you arrive at the ballpark enter at the First Base Gate in the designated Go-Ahead Entry lane\n\n"
+      },
+      {
+        "content": "",
+        "expected": "AND 'Learn more about GO-Ahead Entry' should display in green color with an underline shown\n\nAND 'Done' CTA shown "
+      },
+      {
+        "content": "WHEN user taps on 'Learn more about GO-Ahead Entry'",
+        "expected": "THEN the user is directed to an external webview* opened to the URL that is configured in Remote Config (go_ahead_learn_more_url)\n\n*external webview in default browswer\n"
+      },
+      {
+        "content": "WHEN user taps on Done within Go-Ahead confirmation screen",
+        "expected": "THEN user taken to Home page of Ballpark App \nAND user display with context card that they have successfully enrolled to Go-Ahead Entry (Learn More CTA)"
+      }
+    ]
+  },
+  {
+    "id": 34779480,
+    "title": "Fan List: Directing fan to F2F for listing from Ballpark App",
+    "section_id": 2036865,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1744125624,
+    "updated_by": 288,
+    "updated_on": 1744125624,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 704967,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[ENTIX-206](https://baseball.atlassian.net/browse/ENTIX-206 )\r\n[ENTIX-110](https://baseball.atlassian.net/browse/ENTIX-110 )\r\n[ENTIX-111](https://baseball.atlassian.net/browse/ENTIX-111 )\r\n\r\nGIVEN User has successfully authenticated into BP app [Android: 12.11.0 or Greater, iOS 12.4.0 or greater]\r\nAND User has verified their account via MLB.com\r\nAND User has tickets that are eligible to be sold",
+    "custom_steps": "WHEN user wants to list a ticket to be resold\r\n\r\n",
+    "custom_expected": "THEN user should be notified they are being redirected to SeatGeek's ticket listing page\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN user is viewing Sell View from BP app\nWHEN user selects ticket to be resold\nAND user taps 'Sell Tickets' from BP app Sell View",
+        "expected": "THEN user should be notified (display consent text) they are being redirected to SeatGeek's ticket listing page\n\nPrompt Shown:\n**Header** \nSell your tickets on SeatGeek\n\n**Subheading**\n\"MLB will share your account & ticket details with SeatGeek for use per seatgeek.com/privacy. To manage your ticket, you must remove it from sale on SeatGeek.\"\n\nCTAs - Cancel, Sell Ticket"
+      },
+      {
+        "content": "GIVEN user is viewing Sell View from BP app\nWHEN user selects ticket to be resold\nAND user taps 'Sell Tickets' from BP app Sell View\nAND user taps 'Cancel' CTA from SG prompt",
+        "expected": "THEN user is returned back to Sell View in Ballpark App\nAND user's inventory is unchanged"
+      },
+      {
+        "content": "GIVEN user is viewing Sell View from BP app\nWHEN user selects ticket to be resold\nAND user taps 'Sell Tickets' from BP app Sell View\nAND user taps 'Sell Ticket' CTA from SG prompt",
+        "expected": "THEN Ballpark will open a webview and direct the fan to a specified URL \n\nURLs for reference: \n* QA / Staging/ non-production -> https://mlb2.tixcast.com/api/webhooks/dc/mlb/sell\nProduction ->   SG ticket listing page (possibly https://seatgeek.com/sell/mlb)"
+      }
+    ]
+  }
+]

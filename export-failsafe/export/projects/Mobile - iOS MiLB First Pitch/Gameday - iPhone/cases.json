@@ -1,0 +1,700 @@
+[
+  {
+    "id": 1225815,
+    "title": "Preview - Gameday",
+    "section_id": 147992,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1526507392,
+    "updated_by": 65,
+    "updated_on": 1526508534,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 956,
+    "display_order": 2,
+    "custom_preconds": "Given there is a game in Preview\r\nand the user access Gameday",
+    "custom_steps": "When the user taps the Preview link from the scoreboard or Team Page",
+    "custom_expected": "Then the user is taken to the Game Preview view and they can see the team logos, game time, stadium and other relevant info appear correctly\r\n",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1225813,
+    "title": "Live - Gameday",
+    "section_id": 147993,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1526507357,
+    "updated_by": 65,
+    "updated_on": 1526508684,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 956,
+    "display_order": 1,
+    "custom_preconds": "Given there is a Live Game \r\nand the user accesses Gameday",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the game goes into Warmup state",
+        "expected": "Then the user will see the correct state appear on the scoreboard page"
+      },
+      {
+        "content": "When pitch by pitch is available\nAND the user taps the Gameday button in the scoreboard or team page",
+        "expected": "Then they should be taken to the Gameday tab of the Gameday view (If team has Gameday button)\nAnd Pitcher and Batter's names should appear correctly and be clearly readable\n"
+      },
+      {
+        "content": "When the game is in Warmup state\nAND the user taps the gameday button",
+        "expected": "Then the correct batter and pitcher are shown"
+      },
+      {
+        "content": "When a game is in Warmup state\nAND they click on gameday from scoreboard",
+        "expected": "Then they are taken to the Gameday view where The Gameday (if available for team), Field, Box Score and Summary tabs are all active and tapable\nAnd tapping on each tab takes the user to the correct view\nBut none of the tabs have any game data recorded yet."
+      },
+      {
+        "content": "When the game goes into a live state",
+        "expected": "Then the user should see the game go into a live state on the scoreboard\nAnd the gameday button should appear\nAnd in the gameday view the game should appear as live with all tabs accessible(Gameday button only appears for some teams)"
+      },
+      {
+        "content": "When a user is in Gameday\nand viewing the Pitch-by-Pitch View for a live game",
+        "expected": "Then the user should see the premium billboard with the text MiLB.TV"
+      },
+      {
+        "content": "When the user is on Gameday Tab of the Gameday view (If game has Gameday tab available)",
+        "expected": "Then the player's names should appear correctly and be readable"
+      },
+      {
+        "content": "When there is a game with pitch by pitch available\nAnd the user is in the Gameday tab view of Gameday",
+        "expected": "Then the info in this tab should refresh automatically"
+      },
+      {
+        "content": "When the game is in progress and updating",
+        "expected": "Then the user should see the pitch counts appearing correctly on the scoreboard and in the Gameday view."
+      },
+      {
+        "content": "When players are occupying the bases",
+        "expected": "Then this should be accurately reflected on:\n\n1) The Scoreboard page:\na)On the bases in the game cell\nb)On the bases in the expanded drawer\n\n2) In the Gameday view(If Gameday button exists for team):\na) On the bases in the Scoreboard"
+      },
+      {
+        "content": "When the game is ongoing",
+        "expected": "Then the innings should be updating correctly across all tabs"
+      },
+      {
+        "content": "When a game is put into a delayed start state",
+        "expected": "Then the scoreboard will show the delay but the Gameday Preview icon will still appear on the scoreboard and the use will not be able to access Gameday or other tabs"
+      },
+      {
+        "content": "When the game is in progress and any half inning has been completed",
+        "expected": "Then the half inning should be reflected on the scoreboard, it should show \"Mid\" as well as \"End\" of innings"
+      },
+      {
+        "content": "When any hit appears, (Single, Double Triple, etc)",
+        "expected": "Then it should appear correctly in the pitch by pitch in the bottom half of the window"
+      },
+      {
+        "content": "When a stolen base occurs or is entered",
+        "expected": "Then the Stolen base should update correctly and be reflected in the pitch by pitch, the play should also be reflected on the basepad indicator"
+      },
+      {
+        "content": "When a pitch appears",
+        "expected": "Then the color of the pitch should be correctly reflected (Strikes - Red, Balls - Green, In Play - Blue)\n*Only some classes will display pitch by pitch"
+      },
+      {
+        "content": "When a batter appears in the view",
+        "expected": "Then the batter should appear on the appropriate side of the plate based on their hitting preference"
+      },
+      {
+        "content": "When the game is updating",
+        "expected": "Then the pitches should display correctly"
+      },
+      {
+        "content": "When the batter changes",
+        "expected": "Then the new batter should update correctly and their batting preference should be reflected correctly"
+      },
+      {
+        "content": "When the user taps the Box Score tab",
+        "expected": "Then they should be taken to the Box Score Tab and Player names should appear clearly and be readable"
+      },
+      {
+        "content": "When the user is on the Box Score tab in the Gameday view\nAnd there is a game in progress\n",
+        "expected": "Then the Tab should update live according to fetch settings with correct Inning, Score and Batter"
+      },
+      {
+        "content": "When a user is on the Boxscore tab taps the Home and Away tabs at the top of the page",
+        "expected": "Then the lineups should switch for the appropriate team, tapping back and forth should not cause any issues"
+      },
+      {
+        "content": "When a user is on the Boxscore tab attempts to scroll the linescore at the top of the page on an extra innings game",
+        "expected": "Then the innings should scroll without a problem, the user should be able to see all the innings without issue"
+      },
+      {
+        "content": "When a user is on the Boxscore tab of the Gameday view and a user taps a player name",
+        "expected": "Then the Player card should be opened"
+      },
+      {
+        "content": "When a user navigates to to the scoreboard and taps on the gameday icon of an active game and taps on the boxscore tab on the bottom nav",
+        "expected": "Then the user will see the home team listed underneath the away team in the linescore at the top"
+      },
+      {
+        "content": "When a user navigates to Gameday of an active game and taps the boxscore tab in the bottom nav and uses the stringer to simulate a HR with the 1st batter of the game",
+        "expected": "Then the user will see the following stats updated in the box score:\n\nAB 1\nR 1\nH 1\nRBI 1\nBB 0\nSO 0\nLOB 0\nAVG (this will be the whatever the player's season average is)\n\nAnd underneath the batters in the Batting section will see HR section updated"
+      },
+      {
+        "content": "When a user navigates to Gameday and taps on the boxscore tab and uses the stringer to simulate a walk (BB) with the 1st batter of the game and uses the stringer to simulate a stolen base (SB)",
+        "expected": "Then the user will see the box score update:\n\nAB 0\nR 0\nH 0 \nRBI 0\nBB 1\nSO 0\nLOB 0\nAVG .000\n\nAnd below the stats in the base running section the SB section will be updated with the baserunner"
+      },
+      {
+        "content": "When a user navigates to Gameday and taps on the boxscore tab and uses the stringer to simulate a walk (BB) with the 1st batter of the game and uses the stringer to simulate a caught stealing (CS)",
+        "expected": "Then the user will see the box score update:\n\nAB 0\nR 0\nH 0\nRBI 0\nBB 1\nSO 0\nLOB 0\nAVG .000\n\nAnd below the stats in the batting section the CS section will be updated with the baserunner"
+      },
+      {
+        "content": "When the user is on the Field tab in the Gameday view",
+        "expected": "Then the stadium name should appear in the top bar, it should appear correctly and be readable"
+      },
+      {
+        "content": "When the user is on the Field tab in the Gameday view",
+        "expected": "Then the Field graphic should be visible and accurate"
+      },
+      {
+        "content": "When the user Taps the Field button",
+        "expected": "The Field tab should open"
+      },
+      {
+        "content": "When the user is on the Field tab in the Gameday view",
+        "expected": "Then the Player's names should be readable and appear correctly"
+      },
+      {
+        "content": "When the user is in the Field view\nAnd the game is ongoing",
+        "expected": "Then the user should see the Field tab update live according to the fetch settings"
+      },
+      {
+        "content": "When the user taps the Summary tab",
+        "expected": "Then the user should be taken to the Summary view, the tab should appear correctly and be selectable"
+      },
+      {
+        "content": "When the user is on the Summary tab in the Gameday view\nAnd there is a game ongoing",
+        "expected": "Then the Summary tab should update live about every 15 seconds"
+      },
+      {
+        "content": "When the user is on the Summary tab\nAND a play occurs",
+        "expected": "Then the user should see the plays update accurately and be readable"
+      },
+      {
+        "content": "When a user is on the Gameday view and taps the Summary tab and taps an inning on the right side of the screen",
+        "expected": "Then the view shift to the Summary for that inning"
+      },
+      {
+        "content": "When a user is on the Gameday view and taps the Summary tab and taps an inning on the right side of the screen",
+        "expected": "Then the appropriate view should appear"
+      },
+      {
+        "content": "When a user is on the Gameday view and taps the Summary tab and Plays tab and a scoring play appears",
+        "expected": "Then it should appear in bold black text in a white box"
+      },
+      {
+        "content": "When a user is on the Gameday view and taps the Summary tab and a game delay appears in the summary (on field delay such as Mound Visit, Pitching Change, Injury)",
+        "expected": "Then it should appear in a very light colored grey box with the Game Advisory part of it bolded"
+      },
+      {
+        "content": "When a user is on the Gameday view and taps the Summary tab and an inning change occurs",
+        "expected": "Then it should be reflected in the Plays list"
+      },
+      {
+        "content": "When a user navigates to Gameday and selects a game currently in the state of 'In Progress' and taps on the 'Summary' tab button and taps on the 'Plays' tab and there are plays available",
+        "expected": "Then we will see that each play for a particular batter has his picture to the left of it"
+      },
+      {
+        "content": "When a user navigates to Gameday and we select a game currently in the state of 'In Progress' and taps on the Plays tab bar button and there are multiple innings available",
+        "expected": "Then we will see that at the beginning of each inning that right under the inning label is: 'Pitching <currentPitcher>'"
+      },
+      {
+        "content": "When a user navigates to Gameday and navigates to the Summary tab and navigates to the Plays tab",
+        "expected": "Then we will see that the player pictures will quickly show a default before loading the correct players picture"
+      },
+      {
+        "content": "When a regular play appears in the Summary",
+        "expected": "Then it should appear in bold black text in a white box"
+      },
+      {
+        "content": "When an inning change occurs",
+        "expected": "Then it should be reflected in the Plays list"
+      },
+      {
+        "content": "When there is a game that is delayed",
+        "expected": "Then the game appears at the top of the list with all other in progress games"
+      },
+      {
+        "content": "When a game is in Delayed state",
+        "expected": "Then all tabs within gameday are clickable and are no longer updating with post delay data"
+      },
+      {
+        "content": "When the game goes into or is put into a Delayed state",
+        "expected": "Then that state is indicated on the scoreboard and within the Gameday view"
+      },
+      {
+        "content": "When the game is put into any type of delay, Rain, Snow, Ceremony, etc",
+        "expected": "Then if should reflect the delayed state without issue"
+      },
+      {
+        "content": "When there is a game that is postponed",
+        "expected": "Then the game should appear as postponed on the scoreboard and in the Gameday tab"
+      },
+      {
+        "content": "When the game is put into any type of postponement, Rain, Snow, Tragedy, etc",
+        "expected": "Then if should reflect the Postponed state without issue"
+      },
+      {
+        "content": "When there is a game that is postponed",
+        "expected": "Then the game should move to the bottom of the list with the rest of the games as if it has been completed"
+      },
+      {
+        "content": "When there is a game that is suspended",
+        "expected": "Then the game should appear as suspended on the scoreboard and in all the Gameday tabs"
+      },
+      {
+        "content": "When the game is put into any type of suspension, Rain, Snow, Tragedy, etc",
+        "expected": "Then if should reflect the suspended state without issue"
+      },
+      {
+        "content": "When there is a game that is suspended",
+        "expected": "Then the game should move to the bottom of the list past the games that are in progress or are still scheduled to be played"
+      },
+      {
+        "content": "When game is in Suspended state",
+        "expected": "Verify all tabs within gameday are clickable and are no longer updating with post delay data"
+      },
+      {
+        "content": "When the user taps any of the tabs on the bottom navigation",
+        "expected": "Then they should be taken to the tab they selected, all tabs should remain tappable and should have latest data"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1225814,
+    "title": "Final - Gameday",
+    "section_id": 147994,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1526507363,
+    "updated_by": 65,
+    "updated_on": 1526508580,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 956,
+    "display_order": 1,
+    "custom_preconds": "Given there is a game is in Final state\r\nand the user accesses Gameday\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When there is a game that has gone final",
+        "expected": "Then the game should appear as final on the scoreboard and in all the Gameday tabs, the Gameday Wrap page should appear in place of Gameday tab"
+      },
+      {
+        "content": "When there is a game that ends before 9 innings (in mid inning or after completion of inning)",
+        "expected": "Then the game should appear and act as Final game"
+      },
+      {
+        "content": "When a game has completed",
+        "expected": "Then it should appear as a Final game on the Scoreboard and on all tabs in Gameday"
+      },
+      {
+        "content": "When a game has completed in extra innings",
+        "expected": "Then it should appear as a Final game and it should be indicated that the game went more than 9 innings, (eg. Final/12)"
+      },
+      {
+        "content": "When the game has been completed",
+        "expected": "Verify that the game appears correctly as Final and there are no inconsistencies with other games that have gone final"
+      },
+      {
+        "content": "When the game has been completed",
+        "expected": "Then the game should appear as a Final game"
+      },
+      {
+        "content": "When the user taps the Gameday button or the game info button",
+        "expected": "Then they should be directed to the Game Wrap page that has the winning and losing pitchers as well as other relevant game information"
+      },
+      {
+        "content": "When a game is final and the user taps on Wrap from either Team Page Game Detail or the Scoreboard",
+        "expected": "Then the user will be brought to Wrap of Gameday"
+      },
+      {
+        "content": "When the user is on the Wrap of a completed games and views the top header",
+        "expected": "Then the user will see the following:\nBack button\nAway Team Code @ Home Team Code (WSH @ OAK)\nDate of the Game (May 16, 2016)"
+      },
+      {
+        "content": "When the user is on the Wrap part of Gameday",
+        "expected": "Then the user will see:\n\nWinning Team:\nW:<Pitcher's Last name> (<# of wins that season>-<# of losses that season>, ERA)\n\nLosing Team:\nL:<Pitcher's Last name> (<# of wins that season>-<# of losses that season>, ERA)\n\nSave (if applicable)\nSV: <Pitcher's Last name> (<# of saves that season>)"
+      },
+      {
+        "content": "When the user is on the Wrap part of Gameday",
+        "expected": "Then the user will see see the team logos, team names, team records, a game state of final, stadium name, box score, and homeruns hit in the game for each team (if applicable)"
+      },
+      {
+        "content": "When the user is on the wrap part of Gameday",
+        "expected": "Then the user will see a Wrap headline, game image, and blurb"
+      },
+      {
+        "content": "When the user is on the Wrap",
+        "expected": "Then the user will see the following information below the wrap blurb and article:\nUmpires\nWeather\nWind\nStart Time"
+      },
+      {
+        "content": "When the user taps any of the tabs on the bottom navigation",
+        "expected": "Then they should be taken to the tab they selected, all tabs should remain tappable and should have latest data even once game goes into Final"
+      }
+    ],
+    "custom_feature_tag": null
+  },
+  {
+    "id": 1225816,
+    "title": "No Pitch by Pitch - Gameday",
+    "section_id": 7141,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1526508319,
+    "updated_by": 65,
+    "updated_on": 1526508642,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 956,
+    "display_order": 2,
+    "custom_preconds": "Given the user is in the app",
+    "custom_steps": "When there is no pitch by pitch available for a particular game\r\nAnd the user taps the game day button on the scoreboard or team page, or the more info button on the scoreboard\r\n",
+    "custom_expected": "Then they will be taken to the Gameday view but the Gameday tab will not be present",
+    "custom_steps_separated": null,
+    "custom_feature_tag": null
+  },
+  {
+    "id": 49353,
+    "title": "Gameday",
+    "section_id": 147995,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 40,
+    "created_on": 1421872201,
+    "updated_by": 65,
+    "updated_on": 1526508621,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 956,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the Preview link from the scoreboard",
+        "expected": "Then the user is taken to the Game Preview view and they can see the team logos, game time, stadium and other relevant info appear correctly"
+      },
+      {
+        "content": "When the game goes into Warmup state",
+        "expected": "Then the user will see the correct state appear on the scoreboard page"
+      },
+      {
+        "content": "When pitch by pitch is available\nAND the user taps the Gameday button in the scoreboard or team page",
+        "expected": "Then they should be taken to the Gameday tab of the Gameday view (If team has Gameday button)\nAnd Pitcher and Batter's names should appear correctly and be clearly readable\n"
+      },
+      {
+        "content": "When the game is in Warmup state\nAND the user taps the gameday button",
+        "expected": "Then the correct batter and pitcher are shown"
+      },
+      {
+        "content": "When a game is in Warmup state\nAND they click on gameday from scoreboard",
+        "expected": "Then they are taken to the Gameday view where The Gameday (if available for team), Field, Box Score and Summary tabs are all active and tapable\nAnd tapping on each tab takes the user to the correct view\nBut none of the tabs have any game data recorded yet."
+      },
+      {
+        "content": "When the game goes into a live state",
+        "expected": "Then the user should see the game go into a live state on the scoreboard\nAnd the gameday button should appear\nAnd in the gameday view the game should appear as live with all tabs accessible(Gameday button only appears for some teams)"
+      },
+      {
+        "content": "When a user is in Gameday\nand viewing the Pitch-by-Pitch View for a live game",
+        "expected": "Then the user should see the premium billboard with the text MiLB.TV"
+      },
+      {
+        "content": "When the user is on Gameday Tab of the Gameday view (If game has Gameday tab available)",
+        "expected": "Then the player's names should appear correctly and be readable"
+      },
+      {
+        "content": "When there is a game with pitch by pitch available\nAnd the user is in the Gameday tab view of Gameday",
+        "expected": "Then the info in this tab should refresh automatically"
+      },
+      {
+        "content": "When the game is in progress and updating",
+        "expected": "Then the user should see the pitch counts appearing correctly on the scoreboard and in the Gameday view."
+      },
+      {
+        "content": "When players are occupying the bases",
+        "expected": "Then this should be accurately reflected on:\n\n1) The Scoreboard page:\na)On the bases in the game cell\nb)On the bases in the expanded drawer\n\n2) In the Gameday view(If Gameday button exists for team):\na) On the bases in the Scoreboard"
+      },
+      {
+        "content": "When the game is ongoing",
+        "expected": "Then the innings should be updating correctly across all tabs"
+      },
+      {
+        "content": "When a game is put into a delayed start state",
+        "expected": "Then the scoreboard will show the delay but the Gameday Preview icon will still appear on the scoreboard and the use will not be able to access Gameday or other tabs"
+      },
+      {
+        "content": "When the game is in progress and any half inning has been completed",
+        "expected": "Then the half inning should be reflected on the scoreboard, it should show \"Mid\" as well as \"End\" of innings"
+      },
+      {
+        "content": "When any hit appears, (Single, Double Triple, etc)",
+        "expected": "Then it should appear correctly in the pitch by pitch in the bottom half of the window"
+      },
+      {
+        "content": "When a stolen base occurs or is entered",
+        "expected": "Then the Stolen base should update correctly and be reflected in the pitch by pitch, the play should also be reflected on the basepad indicator"
+      },
+      {
+        "content": "When a pitch appears",
+        "expected": "Then the color of the pitch should be correctly reflected (Strikes - Red, Balls - Green, In Play - Blue)\n*Only some classes will display pitch by pitch"
+      },
+      {
+        "content": "When a batter appears in the view",
+        "expected": "Then the batter should appear on the appropriate side of the plate based on their hitting preference"
+      },
+      {
+        "content": "When the game is updating",
+        "expected": "Then the pitches should display correctly"
+      },
+      {
+        "content": "When the batter changes",
+        "expected": "Then the new batter should update correctly and their batting preference should be reflected correctly"
+      },
+      {
+        "content": "When the user taps the Box Score tab",
+        "expected": "Then they should be taken to the Box Score Tab and Player names should appear clearly and be readable"
+      },
+      {
+        "content": "When the user is on the Box Score tab in the Gameday view\nAnd there is a game in progress\n",
+        "expected": "Then the Tab should update live according to fetch settings with correct Inning, Score and Batter"
+      },
+      {
+        "content": "When a user is on the Boxscore tab taps the Home and Away tabs at the top of the page",
+        "expected": "Then the lineups should switch for the appropriate team, tapping back and forth should not cause any issues"
+      },
+      {
+        "content": "When a user is on the Boxscore tab attempts to scroll the linescore at the top of the page on an extra innings game",
+        "expected": "Then the innings should scroll without a problem, the user should be able to see all the innings without issue"
+      },
+      {
+        "content": "When a user is on the Boxscore tab of the Gameday view and a user taps a player name",
+        "expected": "Then the Player card should be opened"
+      },
+      {
+        "content": "When a user navigates to to the scoreboard and taps on the gameday icon of an active game and taps on the boxscore tab on the bottom nav",
+        "expected": "Then the user will see the home team listed underneath the away team in the linescore at the top"
+      },
+      {
+        "content": "When a user navigates to Gameday of an active game and taps the boxscore tab in the bottom nav and uses the stringer to simulate a HR with the 1st batter of the game",
+        "expected": "Then the user will see the following stats updated in the box score:\n\nAB 1\nR 1\nH 1\nRBI 1\nBB 0\nSO 0\nLOB 0\nAVG (this will be the whatever the player's season average is)\n\nAnd underneath the batters in the Batting section will see HR section updated"
+      },
+      {
+        "content": "When a user navigates to Gameday and taps on the boxscore tab and uses the stringer to simulate a walk (BB) with the 1st batter of the game and uses the stringer to simulate a stolen base (SB)",
+        "expected": "Then the user will see the box score update:\n\nAB 0\nR 0\nH 0 \nRBI 0\nBB 1\nSO 0\nLOB 0\nAVG .000\n\nAnd below the stats in the base running section the SB section will be updated with the baserunner"
+      },
+      {
+        "content": "When a user navigates to Gameday and taps on the boxscore tab and uses the stringer to simulate a walk (BB) with the 1st batter of the game and uses the stringer to simulate a caught stealing (CS)",
+        "expected": "Then the user will see the box score update:\n\nAB 0\nR 0\nH 0\nRBI 0\nBB 1\nSO 0\nLOB 0\nAVG .000\n\nAnd below the stats in the batting section the CS section will be updated with the baserunner"
+      },
+      {
+        "content": "When the user is on the Field tab in the Gameday view",
+        "expected": "Then the stadium name should appear in the top bar, it should appear correctly and be readable"
+      },
+      {
+        "content": "When the user is on the Field tab in the Gameday view",
+        "expected": "Then the Field graphic should be visible and accurate"
+      },
+      {
+        "content": "When the user Taps the Field button",
+        "expected": "The Field tab should open"
+      },
+      {
+        "content": "When the user is on the Field tab in the Gameday view",
+        "expected": "Then the Player's names should be readable and appear correctly"
+      },
+      {
+        "content": "When the user is in the Field view\nAnd the game is ongoing",
+        "expected": "Then the user should see the Field tab update live according to the fetch settings"
+      },
+      {
+        "content": "When the user taps the Summary tab",
+        "expected": "Then the user should be taken to the Summary view, the tab should appear correctly and be selectable"
+      },
+      {
+        "content": "When the user is on the Summary tab in the Gameday view\nAnd there is a game ongoing",
+        "expected": "Then the Summary tab should update live about every 15 seconds"
+      },
+      {
+        "content": "When the user is on the Summary tab\nAND a play occurs",
+        "expected": "Then the user should see the plays update accurately and be readable"
+      },
+      {
+        "content": "When a user is on the Gameday view and taps the Summary tab and taps an inning on the right side of the screen",
+        "expected": "Then the view shift to the Summary for that inning"
+      },
+      {
+        "content": "When a user is on the Gameday view and taps the Summary tab and taps an inning on the right side of the screen",
+        "expected": "Then the appropriate view should appear"
+      },
+      {
+        "content": "When a user is on the Gameday view and taps the Summary tab and Plays tab and a scoring play appears",
+        "expected": "Then it should appear in bold black text in a white box"
+      },
+      {
+        "content": "When a user is on the Gameday view and taps the Summary tab and a game delay appears in the summary (on field delay such as Mound Visit, Pitching Change, Injury)",
+        "expected": "Then it should appear in a very light colored grey box with the Game Advisory part of it bolded"
+      },
+      {
+        "content": "When a user is on the Gameday view and taps the Summary tab and an inning change occurs",
+        "expected": "Then it should be reflected in the Plays list"
+      },
+      {
+        "content": "When a user navigates to Gameday and selects a game currently in the state of 'In Progress' and taps on the 'Summary' tab button and taps on the 'Plays' tab and there are plays available",
+        "expected": "Then we will see that each play for a particular batter has his picture to the left of it"
+      },
+      {
+        "content": "When a user navigates to Gameday and we select a game currently in the state of 'In Progress' and taps on the Plays tab bar button and there are multiple innings available",
+        "expected": "Then we will see that at the beginning of each inning that right under the inning label is: 'Pitching <currentPitcher>'"
+      },
+      {
+        "content": "When a user navigates to Gameday and navigates to the Summary tab and navigates to the Plays tab",
+        "expected": "Then we will see that the player pictures will quickly show a default before loading the correct players picture"
+      },
+      {
+        "content": "When a regular play appears in the Summary",
+        "expected": "Then it should appear in bold black text in a white box"
+      },
+      {
+        "content": "When an inning change occurs",
+        "expected": "Then it should be reflected in the Plays list"
+      },
+      {
+        "content": "When there is a game that is delayed",
+        "expected": "Then the game appears at the top of the list with all other in progress games"
+      },
+      {
+        "content": "When a game is in Delayed state",
+        "expected": "Then all tabs within gameday are clickable and are no longer updating with post delay data"
+      },
+      {
+        "content": "When the game goes into or is put into a Delayed state",
+        "expected": "Then that state is indicated on the scoreboard and within the Gameday view"
+      },
+      {
+        "content": "When the game is put into any type of delay, Rain, Snow, Ceremony, etc",
+        "expected": "Then if should reflect the delayed state without issue"
+      },
+      {
+        "content": "When there is a game that is postponed",
+        "expected": "Then the game should appear as postponed on the scoreboard and in the Gameday tab"
+      },
+      {
+        "content": "When the game is put into any type of postponement, Rain, Snow, Tragedy, etc",
+        "expected": "Then if should reflect the Postponed state without issue"
+      },
+      {
+        "content": "When there is a game that is postponed",
+        "expected": "Then the game should move to the bottom of the list with the rest of the games as if it has been completed"
+      },
+      {
+        "content": "When there is a game that is suspended",
+        "expected": "Then the game should appear as suspended on the scoreboard and in all the Gameday tabs"
+      },
+      {
+        "content": "When the game is put into any type of suspension, Rain, Snow, Tragedy, etc",
+        "expected": "Then if should reflect the suspended state without issue"
+      },
+      {
+        "content": "When there is a game that is suspended",
+        "expected": "Then the game should move to the bottom of the list past the games that are in progress or are still scheduled to be played"
+      },
+      {
+        "content": "When game is in Suspended state",
+        "expected": "Verify all tabs within gameday are clickable and are no longer updating with post delay data"
+      },
+      {
+        "content": "When there is a game that has gone final",
+        "expected": "Then the game should appear as final on the scoreboard and in all the Gameday tabs, the Gameday Wrap page should appear in place of Gameday tab"
+      },
+      {
+        "content": "When there is a game that ends before 9 innings (in mid inning or after completion of inning)",
+        "expected": "Then the game should appear and act as Final game"
+      },
+      {
+        "content": "When a game has completed",
+        "expected": "Then it should appear as a Final game on the Scoreboard and on all tabs in Gameday"
+      },
+      {
+        "content": "When a game has completed in extra innings",
+        "expected": "Then it should appear as a Final game and it should be indicated that the game went more than 9 innings, (eg. Final/12)"
+      },
+      {
+        "content": "When the game has been completed",
+        "expected": "Verify that the game appears correctly as Final and there are no inconsistencies with other games that have gone final"
+      },
+      {
+        "content": "When the game has been completed",
+        "expected": "Then the game should appear as a Final game"
+      },
+      {
+        "content": "When the user taps the Gameday button or the game info button",
+        "expected": "Then they should be directed to the Game Wrap page that has the winning and losing pitchers as well as other relevant game information"
+      },
+      {
+        "content": "When a game is final and the user taps on Wrap from either Team Page Game Detail or the Scoreboard",
+        "expected": "Then the user will be brought to Wrap of Gameday"
+      },
+      {
+        "content": "When the user is on the Wrap of a completed games and views the top header",
+        "expected": "Then the user will see the following:\nBack button\nAway Team Code @ Home Team Code (WSH @ OAK)\nDate of the Game (May 16, 2016)"
+      },
+      {
+        "content": "When the user is on the Wrap part of Gameday",
+        "expected": "Then the user will see:\n\nWinning Team:\nW:<Pitcher's Last name> (<# of wins that season>-<# of losses that season>, ERA)\n\nLosing Team:\nL:<Pitcher's Last name> (<# of wins that season>-<# of losses that season>, ERA)\n\nSave (if applicable)\nSV: <Pitcher's Last name> (<# of saves that season>)"
+      },
+      {
+        "content": "When the user is on the Wrap part of Gameday",
+        "expected": "Then the user will see see the team logos, team names, team records, a game state of final, stadium name, box score, and homeruns hit in the game for each team (if applicable)"
+      },
+      {
+        "content": "When the user is on the wrap part of Gameday",
+        "expected": "Then the user will see a Wrap headline, game image, and blurb"
+      },
+      {
+        "content": "When the user is on the Wrap",
+        "expected": "Then the user will see the following information below the wrap blurb and article:\nUmpires\nWeather\nWind\nStart Time"
+      },
+      {
+        "content": "When the user taps any of the tabs on the bottom navigation",
+        "expected": "Then they should be taken to the tab they selected, all tabs should remain tappable and should have latest data even once game goes into Final"
+      },
+      {
+        "content": "When there is no pitch by pitch available for a particular game\nAnd the user taps the game day button on the scoreboard or team page, or the more info button on the scoreboard",
+        "expected": "Then they will be taken to the Gameday view but the Gameday tab will not be present"
+      }
+    ],
+    "custom_feature_tag": null
+  }
+]

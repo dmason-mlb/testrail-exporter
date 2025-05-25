@@ -1,0 +1,182 @@
+[
+  {
+    "id": 99520,
+    "suite_id": 15258,
+    "name": "Trades",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 99578,
+    "suite_id": 15258,
+    "name": "ETL 1 > 2",
+    "description": "Review of legacy data that was entered into ebis 1 and was brought over to ebis 2 via a database extract-transfer-load procedure",
+    "parent_id": 99520,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 99579,
+    "suite_id": 15258,
+    "name": "Creation",
+    "description": "Starting a new trade",
+    "parent_id": 99520,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 99581,
+    "suite_id": 15258,
+    "name": "Considerations",
+    "description": "What can be traded",
+    "parent_id": 99579,
+    "display_order": 5,
+    "depth": 2
+  },
+  {
+    "id": 99582,
+    "suite_id": 15258,
+    "name": "Cash",
+    "description": "(And Conditional Cash)",
+    "parent_id": 99581,
+    "display_order": 6,
+    "depth": 3
+  },
+  {
+    "id": 99583,
+    "suite_id": 15258,
+    "name": "Player",
+    "description": null,
+    "parent_id": 99581,
+    "display_order": 7,
+    "depth": 3
+  },
+  {
+    "id": 99585,
+    "suite_id": 15258,
+    "name": "Written Consent",
+    "description": "Some players that meet certain conditions must offer written consent to their Org in order to be traded",
+    "parent_id": 99583,
+    "display_order": 8,
+    "depth": 4
+  },
+  {
+    "id": 99584,
+    "suite_id": 15258,
+    "name": "Other Considerations",
+    "description": null,
+    "parent_id": 99581,
+    "display_order": 9,
+    "depth": 3
+  },
+  {
+    "id": 99586,
+    "suite_id": 15258,
+    "name": "State Changes",
+    "description": "Rules and updates that are run/performed as a transaction moves through the workflow",
+    "parent_id": 99520,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 99587,
+    "suite_id": 15258,
+    "name": "Submission",
+    "description": null,
+    "parent_id": 99586,
+    "display_order": 11,
+    "depth": 2
+  },
+  {
+    "id": 99588,
+    "suite_id": 15258,
+    "name": "Approval",
+    "description": null,
+    "parent_id": 99586,
+    "display_order": 12,
+    "depth": 2
+  },
+  {
+    "id": 99521,
+    "suite_id": 15258,
+    "name": "Player to be Named Later",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 99566,
+    "suite_id": 15258,
+    "name": "Outright to Mexican League",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 99568,
+    "suite_id": 15258,
+    "name": "Considerations",
+    "description": null,
+    "parent_id": 99566,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 99567,
+    "suite_id": 15258,
+    "name": "Submission",
+    "description": null,
+    "parent_id": 99566,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 99575,
+    "suite_id": 15258,
+    "name": "Approval",
+    "description": null,
+    "parent_id": 99566,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 99565,
+    "suite_id": 15258,
+    "name": "UAT/Global/Miscellaneous",
+    "description": null,
+    "parent_id": null,
+    "display_order": 35,
+    "depth": 0
+  },
+  {
+    "id": 99571,
+    "suite_id": 15258,
+    "name": "Printing Trade Forms",
+    "description": null,
+    "parent_id": null,
+    "display_order": 42,
+    "depth": 0
+  },
+  {
+    "id": 99572,
+    "suite_id": 15258,
+    "name": "Trade Checklist",
+    "description": null,
+    "parent_id": 99571,
+    "display_order": 43,
+    "depth": 1
+  },
+  {
+    "id": 99573,
+    "suite_id": 15258,
+    "name": "Notice of Disposition",
+    "description": null,
+    "parent_id": 99571,
+    "display_order": 44,
+    "depth": 1
+  }
+]

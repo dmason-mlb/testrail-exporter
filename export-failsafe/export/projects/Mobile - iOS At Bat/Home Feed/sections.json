@@ -1,0 +1,236 @@
+[
+  {
+    "id": 875403,
+    "suite_id": 281054,
+    "name": "Phase 1 - News Article Migration to Webviews",
+    "description": "https://baseball.atlassian.net/wiki/spaces/proddev/pages/1483177989/Home+Feed+Phase+1+News+Article+Migration+to+Web+Views",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1400777,
+    "suite_id": 281054,
+    "name": "Home - Main Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1374741,
+    "suite_id": 281054,
+    "name": "Home - Game Stories",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1284323,
+    "suite_id": 281054,
+    "name": "Home - Video Carousel",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1374241,
+    "suite_id": 281054,
+    "name": "Home - Headline Stack",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1367648,
+    "suite_id": 281054,
+    "name": "Home - Mixed Feed",
+    "description": "Home -Mixed Feed",
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1376855,
+    "suite_id": 281054,
+    "name": "Home - Mixed Feed iPad",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 1392877,
+    "suite_id": 281054,
+    "name": "Home - VSM and Short Content",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 1377017,
+    "suite_id": 281054,
+    "name": "Home - Display inline ads iPad",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 1377018,
+    "suite_id": 281054,
+    "name": "Team Page",
+    "description": null,
+    "parent_id": 1377017,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 1377019,
+    "suite_id": 281054,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": 1377017,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 1377020,
+    "suite_id": 281054,
+    "name": "News",
+    "description": null,
+    "parent_id": 1377017,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 1377021,
+    "suite_id": 281054,
+    "name": "Videos",
+    "description": null,
+    "parent_id": 1377017,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 1377022,
+    "suite_id": 281054,
+    "name": "Standings",
+    "description": null,
+    "parent_id": 1377017,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 1377023,
+    "suite_id": 281054,
+    "name": "MLB.TV",
+    "description": null,
+    "parent_id": 1377017,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 1377024,
+    "suite_id": 281054,
+    "name": "Gameday",
+    "description": null,
+    "parent_id": 1377017,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 1377351,
+    "suite_id": 281054,
+    "name": "Home - Display inline ads iPhone",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 1377352,
+    "suite_id": 281054,
+    "name": "Team Page",
+    "description": null,
+    "parent_id": 1377351,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 1377353,
+    "suite_id": 281054,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": 1377351,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 1377354,
+    "suite_id": 281054,
+    "name": "News",
+    "description": null,
+    "parent_id": 1377351,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 1377355,
+    "suite_id": 281054,
+    "name": "Videos",
+    "description": null,
+    "parent_id": 1377351,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 1377356,
+    "suite_id": 281054,
+    "name": "Standings",
+    "description": null,
+    "parent_id": 1377351,
+    "display_order": 29,
+    "depth": 1
+  },
+  {
+    "id": 1377357,
+    "suite_id": 281054,
+    "name": "MLB.TV",
+    "description": null,
+    "parent_id": 1377351,
+    "display_order": 30,
+    "depth": 1
+  },
+  {
+    "id": 1377358,
+    "suite_id": 281054,
+    "name": "Gameday",
+    "description": null,
+    "parent_id": 1377351,
+    "display_order": 31,
+    "depth": 1
+  },
+  {
+    "id": 1380082,
+    "suite_id": 281054,
+    "name": "Home - Configurable Home Feed",
+    "description": null,
+    "parent_id": null,
+    "display_order": 32,
+    "depth": 0
+  },
+  {
+    "id": 1523962,
+    "suite_id": 281054,
+    "name": "Watch Live",
+    "description": null,
+    "parent_id": null,
+    "display_order": 33,
+    "depth": 0
+  }
+]

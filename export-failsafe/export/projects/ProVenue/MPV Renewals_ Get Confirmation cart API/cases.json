@@ -1,0 +1,536 @@
+[
+  {
+    "id": 31416307,
+    "title": "Verify V2 GetCheckoutConfirmation API for the patron account when correct patron id provided",
+    "section_id": 1747393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 399,
+    "created_on": 1694066406,
+    "updated_by": 399,
+    "updated_on": 1694151731,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 633733,
+    "display_order": 1,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Create multiple Renewal Groups & payment plans in baseball supplier\r\nCreate multiple events & Packages and distribute the above created Renewal groups to them.\r\nSet application property online.renewals.get.checkout.endpoint.enabled to true \r\nCreate the below transactions (both event & Package) for a patron using the POST /renew/{cartId}/checkout endpoint\r\nReservation order\r\nReceivable order with PENDING_SCHEDULED_PAYMENTS\r\nReceivable order with PENDING_MANUAL_PAYMENTS\r\nReceivable order with ASSIGNED_SCHEDULED_PAYMENTS\r\nReceivable order with FULLY_PAID",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Launch Postman tool\n",
+        "expected": "Tool should be launched successfully"
+      },
+      {
+        "content": "Select the method as GET",
+        "expected": "Method should be selected as GET"
+      },
+      {
+        "content": "Enter Authorization and Header details",
+        "expected": "Header and authorization details should be filled successfully"
+      },
+      {
+        "content": "Enter correct patron-id in \"x-patron-account-id-claim\" header",
+        "expected": "Patron Id should be filled successfully "
+      },
+      {
+        "content": "Run V2 GetCheckoutConfirmation API for the patron account\nwith the example endpoint  https://localhost:18443/api/v2/carts/renew/{{cartid}}/checkout",
+        "expected": "User should be able to run the request\n"
+      },
+      {
+        "content": " Verify the response obtained and check the new elements/attributes",
+        "expected": "All RenewalOrderCategories should be included in the response "
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31417429,
+    "title": "Verify V2 GetCheckoutConfirmation API for the patron account when blank patron id provided",
+    "section_id": 1747393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 399,
+    "created_on": 1694067948,
+    "updated_by": 399,
+    "updated_on": 1694151765,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 633733,
+    "display_order": 2,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Create multiple Renewal Groups & payment plans in baseball supplier\r\nCreate multiple events & Packages and distribute the above created Renewal groups to them.\r\nSet application property online.renewals.get.checkout.endpoint.enabled to true\r\nCreate the below transactions (both event & Package) for a patron Create the below transactions (both event & Package) for a patron using the POST /renew/{cartId}/checkout endpoint\r\nReservation order\r\nReceivable order with PENDING_SCHEDULED_PAYMENTS\r\nReceivable order with PENDING_MANUAL_PAYMENTS\r\nReceivable order with ASSIGNED_SCHEDULED_PAYMENTS\r\nReceivable order with FULLY_PAID",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Launch Postman tool\n\n",
+        "expected": "Tool should be launched successfully\n\n"
+      },
+      {
+        "content": "Select the method as GET\n\n",
+        "expected": "Method should be selected as GET\n\n"
+      },
+      {
+        "content": "Enter Authorization and Header details\n\n",
+        "expected": "Header and authorization details should be filled successfully\n\n"
+      },
+      {
+        "content": "Enter a space in the patron-id in \"x-patron-account-id-claim\" header\n\n",
+        "expected": "Patron Id should be updated to a blank on the header \n"
+      },
+      {
+        "content": "Run V2 GetCheckoutConfirmation API for the patron account\nwith the example endpoint https://localhost:18443/api/v2/carts/renew/{{cartid}}/checkout",
+        "expected": "User should be able to run the request "
+      },
+      {
+        "content": "Verify the response",
+        "expected": "An error message should be displayed \n"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31417428,
+    "title": "Verify V2 GetCheckoutConfirmation API for the patron account when incorrect patron id provided",
+    "section_id": 1747393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 399,
+    "created_on": 1694067843,
+    "updated_by": 399,
+    "updated_on": 1694151776,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 633733,
+    "display_order": 4,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Create multiple Renewal Groups & payment plans in baseball supplier\r\nCreate multiple events & Packages and distribute the above created Renewal groups to them.\r\nSet application property online.renewals.get.checkout.endpoint.enabled to true\r\nCreate the below transactions (both event & Package) for a patron using the POST /renew/{cartId}/checkout endpoint \r\nReservation order\r\nReceivable order with PENDING_SCHEDULED_PAYMENTS\r\nReceivable order with PENDING_MANUAL_PAYMENTS\r\nReceivable order with ASSIGNED_SCHEDULED_PAYMENTS\r\nReceivable order with FULLY_PAID",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Launch Postman tool\n\n",
+        "expected": "Tool should be launched successfully\n\n"
+      },
+      {
+        "content": "Select the method as GET\n\n",
+        "expected": "Method should be selected as GET\n\n"
+      },
+      {
+        "content": "Enter Authorization and Header details\n\n",
+        "expected": "Header and authorization details should be filled successfully\n\n"
+      },
+      {
+        "content": "Enter incorrect patron-id in \"x-patron-account-id-claim\" header\n\n",
+        "expected": "Patron Id should be filled successfully\n\n"
+      },
+      {
+        "content": "Run V2 GetCheckoutConfirmation API for the patron account\nwith the example endpoint https://localhost:18443/api/v2/carts/renew/{{cartid}}/checkout",
+        "expected": "User should be able to run the request "
+      },
+      {
+        "content": "Verify the response",
+        "expected": "An error message should be displayed \n{\n    \"error\": {\n        \"code\": \"pv.patron.10029\",\n        \"httpMethod\": \"GET\",\n        \"requestUrl\": \"https://localhost:18443/api/v2/carts/renew/21760041/checkout\",\n        \"message\": \"Patron is not the owner of resource\"\n    }\n}"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31417433,
+    "title": "Verify V2 GetCheckoutConfirmation API when application property online.renewals.get.checkout.endpoint.enabled is set to false",
+    "section_id": 1747393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 399,
+    "created_on": 1694068081,
+    "updated_by": 399,
+    "updated_on": 1694151786,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 633733,
+    "display_order": 5,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Create multiple Renewal Groups & payment plans in baseball supplier\r\nCreate multiple events & Packages and distribute the above created Renewal groups to them.\r\nSet application property online.renewals.get.checkout.endpoint.enabled to false\r\nCreate the below transactions (both event & Package) for a patron using the POST /renew/{cartId}/checkout endpoint\r\nReservation order\r\nReceivable order with PENDING_SCHEDULED_PAYMENTS\r\nReceivable order with PENDING_MANUAL_PAYMENTS\r\nReceivable order with ASSIGNED_SCHEDULED_PAYMENTS\r\nReceivable order with FULLY_PAID",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Launch Postman tool\n",
+        "expected": "Tool should be launched successfully"
+      },
+      {
+        "content": "Select the method as GET",
+        "expected": "Method should be selected as GET"
+      },
+      {
+        "content": "Enter Authorization and Header details",
+        "expected": "Header and authorization details should be filled successfully"
+      },
+      {
+        "content": "Enter correct patron-id in \"x-patron-account-id-claim\" header",
+        "expected": "Patron Id should be filled successfully "
+      },
+      {
+        "content": "Run V2 GetCheckoutConfirmation API for the patron account\nwith the example endpoint  https://localhost:18443/api/v2/carts/renew/{{cartid}}/checkout",
+        "expected": "User should be able to run the request\n"
+      },
+      {
+        "content": " Verify the response obtained ",
+        "expected": "An error message should be displayed \n{\n    \"error\": {\n        \"code\": \"pv.cart.20075\",\n        \"httpMethod\": \"GET\",\n        \"requestUrl\": \"https://localhost:18443/api/v2/carts/renew/21760041/checkout\",\n        \"message\": \"The GET Renewal Checkout endpoint is not enabled. See property 'online.renewals.get.checkout.endpoint.enabled'.\"\n    }\n}"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31417434,
+    "title": "Verify V2 GetCheckoutConfirmation API response when Property is disabled at the time the POST/checkout call is made,",
+    "section_id": 1747393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 399,
+    "created_on": 1694068519,
+    "updated_by": 399,
+    "updated_on": 1694497040,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 633733,
+    "display_order": 7,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Create multiple Renewal Groups & payment plans in baseball supplier\r\nCreate multiple events & Packages and distribute the above created Renewal groups to them.\r\nSet application property online.renewals.get.checkout.endpoint.enabled to false \r\nCreate the below transactions (both event & Package) for a patron using V2 API's \r\nReservation order\r\nReceivable order with PENDING_SCHEDULED_PAYMENTS\r\nReceivable order with PENDING_MANUAL_PAYMENTS\r\nReceivable order with ASSIGNED_SCHEDULED_PAYMENTS\r\nReceivable order with FULLY_PAID",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Set application property set in preconditions above to true ",
+        "expected": "The property should be set "
+      },
+      {
+        "content": "Launch Postman tool\n",
+        "expected": "Tool should be launched successfully"
+      },
+      {
+        "content": "Select the method as GET",
+        "expected": "Method should be selected as GET"
+      },
+      {
+        "content": "Enter Authorization and Header details",
+        "expected": "Header and authorization details should be filled successfully"
+      },
+      {
+        "content": "Enter correct patron-id in \"x-patron-account-id-claim\" header",
+        "expected": "Patron Id should be filled successfully "
+      },
+      {
+        "content": "Run V2 GetCheckoutConfirmation API for the patron account\nwith the example endpoint  https://localhost:18443/api/v2/carts/renew/{{cartid}}/checkout",
+        "expected": "User should be able to run the request\n"
+      },
+      {
+        "content": " Verify the response obtained and check the response matches the response of the POST /renew/{cartId}/checkout detailed in preconditions above ",
+        "expected": "The response should show an 404 error"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31417441,
+    "title": "Verify V2 GetCheckoutConfirmation API response matches the POST /renew/{cartId}/checkout response",
+    "section_id": 1747393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 399,
+    "created_on": 1694070774,
+    "updated_by": 399,
+    "updated_on": 1694151808,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 633733,
+    "display_order": 8,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Create multiple Renewal Groups & payment plans in baseball supplier\r\nCreate multiple events & Packages and distribute the above created Renewal groups to them.\r\nSet application property online.renewals.get.checkout.endpoint.enabled to true \r\nCreate the below transactions (both event & Package) for a patron using V2 API's \r\nReservation order\r\nReceivable order with PENDING_SCHEDULED_PAYMENTS\r\nReceivable order with PENDING_MANUAL_PAYMENTS\r\nReceivable order with ASSIGNED_SCHEDULED_PAYMENTS\r\nReceivable order with FULLY_PAID",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Launch Postman tool\n",
+        "expected": "Tool should be launched successfully"
+      },
+      {
+        "content": "Select the method as GET",
+        "expected": "Method should be selected as GET"
+      },
+      {
+        "content": "Enter Authorization and Header details",
+        "expected": "Header and authorization details should be filled successfully"
+      },
+      {
+        "content": "Enter correct patron-id in \"x-patron-account-id-claim\" header",
+        "expected": "Patron Id should be filled successfully "
+      },
+      {
+        "content": "Run V2 GetCheckoutConfirmation API for the patron account\nwith the example endpoint  https://localhost:18443/api/v2/carts/renew/{{cartid}}/checkout",
+        "expected": "User should be able to run the request\n"
+      },
+      {
+        "content": " Verify the response obtained and check the response matches the response of the POST /renew/{cartId}/checkout detailed in preconditions above ",
+        "expected": "The response should match the response of the POST /renew/{cartId}/checkout call "
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31417442,
+    "title": "Verify  GET endpoint can be called up to 10 minutes after the successful POST /renew/{cartId}/checkout endpoint is called",
+    "section_id": 1747393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 399,
+    "created_on": 1694071157,
+    "updated_by": 399,
+    "updated_on": 1694151822,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 633733,
+    "display_order": 9,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Create multiple Renewal Groups & payment plans in baseball supplier\r\nCreate multiple events & Packages and distribute the above created Renewal groups to them.\r\nSet application property online.renewals.get.checkout.endpoint.enabled to true \r\nCreate the below transactions (both event & Package) for a patron using V2 API's \r\nReservation order\r\nReceivable order with PENDING_SCHEDULED_PAYMENTS\r\nReceivable order with PENDING_MANUAL_PAYMENTS\r\nReceivable order with ASSIGNED_SCHEDULED_PAYMENTS\r\nReceivable order with FULLY_PAID",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Launch Postman tool\n",
+        "expected": "Tool should be launched successfully"
+      },
+      {
+        "content": "Select the method as GET",
+        "expected": "Method should be selected as GET"
+      },
+      {
+        "content": "Enter Authorization and Header details",
+        "expected": "Header and authorization details should be filled successfully"
+      },
+      {
+        "content": "Enter correct patron-id in \"x-patron-account-id-claim\" header",
+        "expected": "Patron Id should be filled successfully "
+      },
+      {
+        "content": "Run V2 GetCheckoutConfirmation API for the patron account\nwith the example endpoint  https://localhost:18443/api/v2/carts/renew/{{cartid}}/checkout within 10 mins of making the POST call in the preconditions above ",
+        "expected": "User should be able to run the request\n"
+      },
+      {
+        "content": " Verify the response obtained and check the response matches the response of the POST /renew/{cartId}/checkout detailed in preconditions above ",
+        "expected": "The response should match the response of the POST /renew/{cartId}/checkout call "
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31417443,
+    "title": "Verify  GET endpoint can't be be successfully called 10 minutes after the POST /renew/{cartId}/checkout endpoint is called",
+    "section_id": 1747393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 399,
+    "created_on": 1694071253,
+    "updated_by": 399,
+    "updated_on": 1694151836,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 633733,
+    "display_order": 10,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Create multiple Renewal Groups & payment plans in baseball supplier\r\nCreate multiple events & Packages and distribute the above created Renewal groups to them.\r\nSet application property online.renewals.get.checkout.endpoint.enabled to true \r\nCreate the below transactions (both event & Package) for a patron using V2 API's \r\nReservation order\r\nReceivable order with PENDING_SCHEDULED_PAYMENTS\r\nReceivable order with PENDING_MANUAL_PAYMENTS\r\nReceivable order with ASSIGNED_SCHEDULED_PAYMENTS\r\nReceivable order with FULLY_PAID",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Launch Postman tool\n",
+        "expected": "Tool should be launched successfully"
+      },
+      {
+        "content": "Select the method as GET",
+        "expected": "Method should be selected as GET"
+      },
+      {
+        "content": "Enter Authorization and Header details",
+        "expected": "Header and authorization details should be filled successfully"
+      },
+      {
+        "content": "Enter correct patron-id in \"x-patron-account-id-claim\" header",
+        "expected": "Patron Id should be filled successfully "
+      },
+      {
+        "content": "Run V2 GetCheckoutConfirmation API for the patron account\nwith the example endpoint  https://localhost:18443/api/v2/carts/renew/{{cartid}}/checkout after 10 mins of making the POST call in the preconditions above ",
+        "expected": "User should be able to run the request\n"
+      },
+      {
+        "content": " Verify the response obtained ",
+        "expected": "AN error message should be displayed on making the call {\n    \"error\": {\n        \"code\": \"pv.cart.50090\",\n        \"httpMethod\": \"GET\",\n        \"requestUrl\": \"https://localhost:18443/api/v2/carts/renew/2176004/checkout\",\n        \"message\": \"The cart with ID '2176004' is not found. Please start over.\"\n    }\n}"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31417444,
+    "title": "Verify  GET endpoint response in case of incorrect cart id",
+    "section_id": 1747393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 399,
+    "created_on": 1694071402,
+    "updated_by": 399,
+    "updated_on": 1694071498,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 633733,
+    "display_order": 11,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Create multiple Renewal Groups & payment plans in baseball supplier\r\nCreate multiple events & Packages and distribute the above created Renewal groups to them.\r\nSet application property online.renewals.get.checkout.endpoint.enabled to true \r\nCreate the below transactions (both event & Package) for a patron using V2 API's \r\nReservation order\r\nReceivable order with PENDING_SCHEDULED_PAYMENTS\r\nReceivable order with PENDING_MANUAL_PAYMENTS\r\nReceivable order with ASSIGNED_SCHEDULED_PAYMENTS\r\nReceivable order with FULLY_PAID",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Launch Postman tool\n",
+        "expected": "Tool should be launched successfully"
+      },
+      {
+        "content": "Select the method as GET",
+        "expected": "Method should be selected as GET"
+      },
+      {
+        "content": "Enter Authorization and Header details",
+        "expected": "Header and authorization details should be filled successfully"
+      },
+      {
+        "content": "Enter correct patron-id in \"x-patron-account-id-claim\" header",
+        "expected": "Patron Id should be filled successfully "
+      },
+      {
+        "content": "Run V2 GetCheckoutConfirmation API for the patron account\nwith the example endpoint  https://localhost:18443/api/v2/carts/renew/{{incorrectcartid}}/checkout ",
+        "expected": "User should be able to run the request\n"
+      },
+      {
+        "content": " Verify the response obtained ",
+        "expected": "AN error message should be displayed on making the call {\n    \"error\": {\n        \"code\": \"pv.cart.50090\",\n        \"httpMethod\": \"GET\",\n        \"requestUrl\": \"https://localhost:18443/api/v2/carts/renew/2176004/checkout\",\n        \"message\": \"The cart with ID '2176004' is not found. Please start over.\"\n    }\n}"
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  },
+  {
+    "id": 31419356,
+    "title": "Verify  GET endpoint response in case of alphabetical cart id in request",
+    "section_id": 1747393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 399,
+    "created_on": 1694151517,
+    "updated_by": 399,
+    "updated_on": 1694151667,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 633733,
+    "display_order": 12,
+    "custom_is_automated": false,
+    "custom_pv_category": 2,
+    "custom_refs": null,
+    "custom_preconds": "Create multiple Renewal Groups & payment plans in baseball supplier\r\nCreate multiple events & Packages and distribute the above created Renewal groups to them.\r\nSet application property online.renewals.get.checkout.endpoint.enabled to true \r\nCreate the below transactions (both event & Package) for a patron using V2 API's \r\nReservation order\r\nReceivable order with PENDING_SCHEDULED_PAYMENTS\r\nReceivable order with PENDING_MANUAL_PAYMENTS\r\nReceivable order with ASSIGNED_SCHEDULED_PAYMENTS\r\nReceivable order with FULLY_PAID",
+    "custom_test_purpose": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Launch Postman tool\n",
+        "expected": "Tool should be launched successfully"
+      },
+      {
+        "content": "Select the method as GET",
+        "expected": "Method should be selected as GET"
+      },
+      {
+        "content": "Enter Authorization and Header details",
+        "expected": "Header and authorization details should be filled successfully"
+      },
+      {
+        "content": "Enter correct patron-id in \"x-patron-account-id-claim\" header",
+        "expected": "Patron Id should be filled successfully "
+      },
+      {
+        "content": "Run V2 GetCheckoutConfirmation API for the patron account\nwith the example endpoint  https://localhost:18443/api/v2/carts/renew/abc/checkout ",
+        "expected": "User should be able to run the request\n"
+      },
+      {
+        "content": " Verify the response obtained ",
+        "expected": "AN error should be displayed on making the call along with a 404 response code \n   "
+      }
+    ],
+    "custom_comment": null,
+    "custom_jiras": null
+  }
+]

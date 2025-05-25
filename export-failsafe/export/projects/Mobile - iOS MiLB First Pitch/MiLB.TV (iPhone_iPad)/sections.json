@@ -1,0 +1,29 @@
+[
+  {
+    "id": 6990,
+    "suite_id": 901,
+    "name": "iPhone",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 8520,
+    "suite_id": 901,
+    "name": "iPad",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 147845,
+    "suite_id": 901,
+    "name": "Team Names",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

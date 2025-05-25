@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1654116,
+    "suite_id": 598419,
+    "name": "Onboarding",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1654101,
+    "suite_id": 598419,
+    "name": "Splash Screen",
+    "description": "https://baseball.atlassian.net/browse/FTP-3537",
+    "parent_id": 1654116,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 1654102,
+    "suite_id": 598419,
+    "name": "Sign Up",
+    "description": null,
+    "parent_id": 1654116,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 1654103,
+    "suite_id": 598419,
+    "name": "Log In",
+    "description": null,
+    "parent_id": 1654116,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 1654104,
+    "suite_id": 598419,
+    "name": "Update and Log in flow",
+    "description": "https://baseball.atlassian.net/browse/FTP-3533",
+    "parent_id": 1654116,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 1654117,
+    "suite_id": 598419,
+    "name": "Profile tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 1654106,
+    "suite_id": 598419,
+    "name": "Top profile section",
+    "description": null,
+    "parent_id": 1654117,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 1654107,
+    "suite_id": 598419,
+    "name": "Feed Event Reaction Display",
+    "description": null,
+    "parent_id": 1654117,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 1654108,
+    "suite_id": 598419,
+    "name": "Friends section",
+    "description": null,
+    "parent_id": 1654117,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 1654109,
+    "suite_id": 598419,
+    "name": "Prizes section on Profile page",
+    "description": null,
+    "parent_id": 1654117,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 1654110,
+    "suite_id": 598419,
+    "name": "Redeem Prize",
+    "description": null,
+    "parent_id": 1654109,
+    "display_order": 26,
+    "depth": 2
+  },
+  {
+    "id": 1654111,
+    "suite_id": 598419,
+    "name": "Trophies section",
+    "description": null,
+    "parent_id": 1654117,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 1654112,
+    "suite_id": 598419,
+    "name": "Badges section",
+    "description": null,
+    "parent_id": 1654117,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 1654113,
+    "suite_id": 598419,
+    "name": "Profile -> Settings Menu",
+    "description": null,
+    "parent_id": 1654117,
+    "display_order": 29,
+    "depth": 1
+  },
+  {
+    "id": 1654114,
+    "suite_id": 598419,
+    "name": "Friends Functionality via code",
+    "description": null,
+    "parent_id": 1654113,
+    "display_order": 30,
+    "depth": 2
+  },
+  {
+    "id": 1654115,
+    "suite_id": 598419,
+    "name": "Footer",
+    "description": null,
+    "parent_id": 1654117,
+    "display_order": 31,
+    "depth": 1
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 3144,
+    "suite_id": 477,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 3145,
+    "suite_id": 477,
+    "name": "More section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 3152,
+    "suite_id": 477,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

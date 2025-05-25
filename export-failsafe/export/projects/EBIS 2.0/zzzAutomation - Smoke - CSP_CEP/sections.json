@@ -1,0 +1,47 @@
+[
+  {
+    "id": 141503,
+    "suite_id": 19722,
+    "name": "CSP (CEP) Sumary",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 141504,
+    "suite_id": 19722,
+    "name": "Invoices",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 141505,
+    "suite_id": 19722,
+    "name": "Credits",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 141506,
+    "suite_id": 19722,
+    "name": "CSP School",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 141510,
+    "suite_id": 19722,
+    "name": "Permission",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  }
+]

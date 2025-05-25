@@ -1,0 +1,11 @@
+{
+  "id": 704268,
+  "name": "Ballpark Wallet (Go-Ahead Pay)",
+  "description": "As a Ballpark user(supported for specific clubs), I want to know the information needed to enter the stadium by facial recognition so that I successfully enrolled in the GoAhead-Entry program\r\n\r\nWiki: [Go-Ahead Pay](https://baseball.atlassian.net/wiki/spaces/BET/pages/4492623873/Go-Ahead+Pay+Pilot )\r\n\r\nBPClient specific JIRAs\r\n* MLB Wallet - Add Data Tier Implementation to Event Hub - Wallet Implementation Only[BP-11082](https://baseball.atlassian.net/browse/BP-11082 )\r\n* Update String Display for Go-Ahead Pay [BP-11164](https://baseball.atlassian.net/browse/BP-11164)",
+  "project_id": 179,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/704268"
+}

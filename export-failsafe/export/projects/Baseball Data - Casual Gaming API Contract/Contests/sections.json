@@ -1,0 +1,11 @@
+[
+  {
+    "id": 859314,
+    "suite_id": 275464,
+    "name": "Contests",
+    "description": "Contract test calls to the graphql endpoint",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  }
+]

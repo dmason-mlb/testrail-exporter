@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1684048,
+    "suite_id": 611357,
+    "name": "Org Admin(UI/ Searches)",
+    "description": "only coveres UI lookup and searched...no module integration specific testing",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1684049,
+    "suite_id": 611357,
+    "name": "User Management",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

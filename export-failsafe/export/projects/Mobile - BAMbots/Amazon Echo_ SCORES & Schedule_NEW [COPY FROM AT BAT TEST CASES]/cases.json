@@ -1,0 +1,243 @@
+[
+  {
+    "id": 1216935,
+    "title": "Game Scores & Schedules",
+    "section_id": 146393,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-506",
+    "created_by": 65,
+    "created_on": 1516303020,
+    "updated_by": 65,
+    "updated_on": 1516303020,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20302,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": "WHEN the user asks a query about game scores.\r\n\r\ni.e.\r\n- Who won the teamName game?\r\n- Who won the teamName vs teamName game?\r\n- Who is winning the teamName game?\r\n- What is the score of the teamName game?\r\n- What was the score of last night's teamName game?\r\n- What was the score of the teamName game on gameDate?\r\n- Who won the last teamName vs teamName game?\r\n- What was the score of the last teamName vs teamName game?\r\n- Who was the losing pitcher in last night's teamName game?\r\n- Who was the winning pitcher in last night's teamName game?",
+    "custom_expected": "THEN the feature should support all queries about past and current games.",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a user asks scheduling questions about a single team\n\ni.e.\n- Did the Yankees win yesterday?\n- Who do the Mets play on August 21st?",
+        "expected": "THEN the bot replies with standard schedule lookup"
+      },
+      {
+        "content": "WHEN a user asks when two teams played or will play each other\n\ni.e. \n- When did the Mets and Pirates last play?\n- When is the next time the A's play the Angels?",
+        "expected": "THEN the bot replies with Team vs. Team info"
+      },
+      {
+        "content": "WHEN a user asks about pitchers in upcoming games",
+        "expected": "THEN the bot replies with pitcher info\nAND should be able to tell users the starting pitchers for most games up to four or five days in advance"
+      },
+      {
+        "content": "WHEN a user asks about scheduling questions about home/away, day/night, and vs. opponent\n\ni.e.\n- When is the next Brewers day game at home?\n- When is the next time the A's play a day game at Fenway?",
+        "expected": "THEN the bot replies with advanced schedule lookup info"
+      },
+      {
+        "content": "WHEN a user asks about the score of a specific live game",
+        "expected": "THEN the bot replies with scores info\nAND should be able to tell users the current score of a game"
+      },
+      {
+        "content": "WHEN a user asks about the score of a specific past game",
+        "expected": "THEN the bot replies with scores info\nAND should be able to tell users the score of a past game"
+      }
+    ]
+  },
+  {
+    "id": 1216936,
+    "title": "Won/Lost - Past Game",
+    "section_id": 146394,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-506",
+    "created_by": 65,
+    "created_on": 1516303020,
+    "updated_by": 65,
+    "updated_on": 1516396793,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20302,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": "WHEN the user asks a query about who won or lost\r\nAND the time frame is the following:\r\n\r\n- request time: mid-season\r\n- season type: regular season\r\n- year: current year\r\n- utterance tense: past",
+    "custom_expected": "THEN this is a past tense request and should default to the most recent game played by that team",
+    "custom_steps_separated": [
+      {
+        "content": "The user asks a query for only one team\nAND the team lost\n\ni.e. Who won the Mets game?",
+        "expected": "THEN the response should be in context to of the requested team.  The response is in the following format:\n- The requestedTeam lost to the winningTeam score on gameDate.\n\ni.e. The Mets lost to the Nationals 5 to 2 on May 4th 2017."
+      },
+      {
+        "content": "The user asks a query for only one team\nAND the team won\n\ni.e. Who won the Nationals game?",
+        "expected": "THEN the response should be in context to of the requested team.  The response is in the following format:\n- The requestedTeam beat the winningTeam score on gameDate.\n\ni.e. The Nationals beat the Mets 5 to 2 on May 4th 2017."
+      },
+      {
+        "content": "The user asks a query for both teams\n\ni.e. Who won the Nationals vs Mets game?",
+        "expected": "THEN the response should be winning team beat losing team.  The response is in the following format:\n- The winningTeam beat the losingTeam score on gameDate.\n\ni.e. The Nationals beat the Mets 5 to 2 on May 4th 2017.\n"
+      }
+    ]
+  },
+  {
+    "id": 1216937,
+    "title": "Score Check - Live Game",
+    "section_id": 146394,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-506",
+    "created_by": 65,
+    "created_on": 1516303020,
+    "updated_by": 65,
+    "updated_on": 1516303282,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20302,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": "WHEN the user asks a query about the score for a live game\r\nAND the time frame is the following:\r\n\r\n- request time: mid-season\r\n- season type: regular season\r\n- year: current year\r\n- utterance tense: present",
+    "custom_expected": "THEN this is a present tense request that should first default to a live/current game\r\nAND fall back on the most recent past game.",
+    "custom_steps_separated": [
+      {
+        "content": "The user asks a query for only one team\nAND the team is winning\n\ni.e. \n- Who is winning the Nationals game?\n- What is the score of the Nationals game?\n",
+        "expected": "THEN the response should be in context of the requested team (note leading vs trailing).  The response is in the following format:\n- The requestedTeam are leading the losingTeam score in the inning.\n\ni.e. The Nationals are leading the Mets 8 to 4 in the top of the 7th inning."
+      },
+      {
+        "content": "The user asks a query for only one team\nAND the team is losing\n\ni.e. Who is winning the Mets game?\n\n",
+        "expected": "THEN the response should be in context of the requested team (note leading vs trailing).  The response is in the following format:\n- The requestedTeam are trailing the winningTeam score in the inning.\n\ni.e. The Mets are trailing the Nationals 8 to 4 in the top of the 7th inning."
+      }
+    ]
+  },
+  {
+    "id": 1216938,
+    "title": "Score Check - Past Game in Current Year",
+    "section_id": 146394,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-506",
+    "created_by": 65,
+    "created_on": 1516303020,
+    "updated_by": 65,
+    "updated_on": 1516303317,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20302,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": "WHEN the user asks a query about the score for a past game\r\nAND the time frame is the following:\r\n\r\n- request time: mid-season\r\n- season type: regular season\r\n- year: current year\r\n- utterance tense: past",
+    "custom_expected": "THEN this is a past tense request and the response should retain the context of the team that was requested (note leading vs trailing). ",
+    "custom_steps_separated": [
+      {
+        "content": "The user asks a query for only one team\nAND the team is winning\n\ni.e. What was the score of last night's Nationals game?",
+        "expected": "THEN the response is in the following format:\n- The requestedTeam beat the losingTeam score on gameDate.\n\ni.e. The Nationals beat the Mets 8 to 4 yesterday."
+      },
+      {
+        "content": "The user asks a query for only one team\nAND the team is losing\n\ni.e. What was the score of last night's Nationals game?\n\n",
+        "expected": "THEN the response is in the following format:\n- The requestedTeam lost to the winningTeam score on gameDate.\n\ni.e. The Nationals lost to the Mets 5 to 4 yesterday."
+      }
+    ]
+  },
+  {
+    "id": 1216939,
+    "title": "Score Check - Past Game on Specific Date",
+    "section_id": 146394,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-506",
+    "created_by": 65,
+    "created_on": 1516303020,
+    "updated_by": 65,
+    "updated_on": 1516303393,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20302,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": "WHEN the user asks a query about the score for a past game on a specific date\r\nAND the time frame is the following:\r\n\r\n- request time: mid-season\r\n- season type: regular season\r\n- year: 2017\r\n- utterance tense: past",
+    "custom_expected": "THEN this is a past tense request and the response should retain the context of the team that was requested (note leading vs trailing)",
+    "custom_steps_separated": [
+      {
+        "content": "The user asks a query for only one team for a specific date\nAND the team is winning\n\ni.e. What was the score of the Nationals game on May 7, 2017?",
+        "expected": "THEN the response is in the following format:\n- The requestedTeam beat the losingTeam score on gameDate.\n\ni.e. The Nationals beat the Mets 8 to 4 on May 7th 2017."
+      },
+      {
+        "content": "The user asks a query for only one team for a specific date\nAND the team is losing\n\ni.e. What was the score of the Nationals game on May 7, 2017?\n",
+        "expected": "THEN the response is in the following format:\n- The requestedTeam lost to the winningTeam score on gameDate.\n\ni.e. The Nationals lost to the Mets 5 to 4 on May 7th 2017."
+      }
+    ]
+  },
+  {
+    "id": 1216940,
+    "title": "Last Team vs Team Matchup - Past Game",
+    "section_id": 146394,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-506",
+    "created_by": 65,
+    "created_on": 1516303020,
+    "updated_by": 65,
+    "updated_on": 1516303539,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20302,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": "WHEN the user asks a query about the last team vs team matchup\r\nAND the time frame is the following:\r\n\r\n- request time: mid-season\r\n- season type: regular season\r\n- year: n/a\r\n- utterance tense: past\r\n\r\ni.e. \r\n- Who won the last Nationals vs Mets game?\r\n- What was the score of the last Nationals vs Mets game?\r\n- What was the score the last time the Nationals played the Mets?",
+    "custom_expected": "THEN the response is in the following format:\r\n- The awayTeam played the homeTeam on gameDate at venue. The winningTeam won score.\r\n\r\ni.e. The Nationals played the Mets on September 24th 2017 at Citi Field. The Nationals won 3 to 2.\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1216941,
+    "title": "Box Score - Past Game",
+    "section_id": 146394,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "SDBB-506",
+    "created_by": 65,
+    "created_on": 1516303020,
+    "updated_by": 65,
+    "updated_on": 1516303608,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20302,
+    "display_order": 6,
+    "custom_preconds": null,
+    "custom_steps": "WHEN the user asks a query about the box score of a past game\r\nAND the time frame is the following:\r\n\r\n- request time: mid-season\r\n- season type: regular season\r\n- year: current year\r\n- utterance tense: past\r\n\r\ni.e. \r\n- Who was the losing pitcher in last night's Nationals game?\r\n- Who was the winning pitcher in last night's Nationals game?",
+    "custom_expected": "THEN the response is in the following format:\r\n- winningPitcher of the winningTeam was last night's winning pitcher imporving his record to winningPitcherRecord. The losingTeam losingPitcher was credited with the loss and falls to losingPitcherRecord.\r\n\r\ni.e. Max Scherzer of the Washington Nationals was last night's winning pitcher improving his record to 5 to 2. The Mets' Matt Harvey was credited with the loss and falls to 4 and 5.\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1217072,
+    "title": "Copy test cases from At Bat and use wiki for wording specific to Amazon",
+    "section_id": 146395,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 65,
+    "created_on": 1516385160,
+    "updated_by": 65,
+    "updated_on": 1516385160,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20302,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  }
+]

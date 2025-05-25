@@ -1,0 +1,70 @@
+[
+  {
+    "id": 16999154,
+    "title": "Logged In User",
+    "section_id": 1641154,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1620165781,
+    "updated_by": 288,
+    "updated_on": 1677016056,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 592735,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "Prerequisite - Remote Config Setup for: Version Dialog configuration\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"version_rules\" as needed to force display. (One way is to set the minimum version to a value greater than current version of BP app installed.)\r\n3. Save changes.\r\n4. Publish changes.\r\n\r\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\r\n\r\nRemote Configs \r\n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobile-npd/config)\r\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\r\n(can have condition set up to differentiate desired behavior for different envs/platform)\r\n\r\nCONFIGURATION TROUBLESHOOTING NOTES:\r\n*Only change 'minimumVersion' to validate Force Upgrade specifically (setting a higher version than current build)\r\n*Format of the version requires release number, major version, and minor version - ex: 11.1.0 (11.1 will not work)\r\n*Verify condition is what is expected (if using condition) - ex: verify 'Android QA' isn't tied to a specific version of the app that may not apply to version being tested\r\n",
+    "custom_steps": "GIVEN Ballpark app installed with version prior to minimum version established in version_rules within remote config\r\nWHEN User is logged in ",
+    "custom_expected": "THEN force update prompt appears on customer's current page",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User is logged in",
+        "expected": "THEN Force Dialog is presented without option to dismiss (forcing an update_\nAND an Update button"
+      },
+      {
+        "content": "WHEN User taps on Update button",
+        "expected": "THEN app launches external to app store"
+      }
+    ]
+  },
+  {
+    "id": 16999157,
+    "title": "[Android] Logged Out User",
+    "section_id": 1641154,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "Android",
+    "created_by": 288,
+    "created_on": 1620166408,
+    "updated_by": 288,
+    "updated_on": 1677016056,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 592735,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "Prerequisite - Remote Config Setup for: Version Dialog configuration\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"version_rules\" as needed to force display. (One way is to set the minimum version to a value greater than current version of BP app installed.)\r\n3. Save changes.\r\n4. Publish changes.\r\n\r\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\r\n\r\nRemote Configs \r\n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobile-npd/config)\r\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\r\n(can have condition set up to differentiate desired behavior for different envs/platform)\r\n\r\n\r\nNOTE: with iOS 11.0 Release, Logged Out User no longer witnesses the Force Upgrade message until after logging in. iOS has shifted to use OneSignal In-App Upgrade message which will prompt user whenever app is opened (regardless of state)\r\n\r\nCONFIGURATION TROUBLESHOOTING NOTES:\r\n*Only change 'minimumVersion' to validate Force Upgrade specifically (setting a higher version than current build)\r\n*Format of the version requires release number, major version, and minor version - ex: 11.1.0 (11.1 will not work)\r\n*Verify condition is what is expected (if using condition) - ex: verify 'Android QA' isn't tied to a specific version of the app that may not apply to version being tested\r\n",
+    "custom_steps": "GIVEN Ballpark app installed with version prior to minimum version established in version_rules within remote config\r\nWHEN User is logged out ",
+    "custom_expected": "THEN force update prompt appears before onboarding on Get Started page",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User is logged out",
+        "expected": "THEN force update prompt appears before onboarding atop Get Started page\nTHEN Force Dialog is presented without option to dismiss (forcing user to update)\nAND an Update button"
+      },
+      {
+        "content": "WHEN User taps on Update button",
+        "expected": "THEN app launches external to app store"
+      }
+    ]
+  }
+]

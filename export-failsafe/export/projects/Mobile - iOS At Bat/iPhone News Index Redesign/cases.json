@@ -1,0 +1,1060 @@
+[
+  {
+    "id": 6683800,
+    "title": "News Feed - Free User",
+    "section_id": 304826,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1585767334,
+    "updated_by": 84,
+    "updated_on": 1588799155,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 2,
+    "custom_preconds": "Given latest MLB is installed on an iPhone\r\nand there is a News Feed \r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user is on the News section\nand observes the top header",
+        "expected": "Then user will see the following in the header:\nMLB.TV icon\nSegment Controller (MLB.com, Favorite Team, Teams)\nGameday Audio"
+      },
+      {
+        "content": "When user When a user taps on the MLB button in the top center of the News page\nand the Teams popover is displayed",
+        "expected": "Then the user will be able to switch to another news index via the team picker"
+      },
+      {
+        "content": "When a user is on the Newsreader\nand taps on the MLB.TV button on the top left hand corner",
+        "expected": "Then the MLB.TV page will display\n\n"
+      },
+      {
+        "content": "\t\nWhen a user is on the Newsreader\nand taps on the Audio button on the top right hand corner",
+        "expected": "Then the Paywall will display for Lite users\nor the Audio page will display for Full users"
+      },
+      {
+        "content": "When a user pulls down the section below the Top Stories/Videos segmented controller",
+        "expected": "Then iOS pull to refresh will be exposed with circle animation (similar to native iOS Mail App) and the news section will refresh with the most current article in the index at top\n\n"
+      },
+      {
+        "content": "When a user is on the Newsreader\nand taps on an article to open the article",
+        "expected": "Then that news article will open up\nand a back button will display on the upper left of the article\n\n"
+      },
+      {
+        "content": "When a user is on a news article\nand taps on the back button in the upper left of the article",
+        "expected": "Then the article will slide from left to right\nand you will be returned to the news index"
+      },
+      {
+        "content": "When a user is on a news article\nand taps on the sharing button on the upper right",
+        "expected": "Then the sharing popover displays the options for Message, Mail, Twitter, Facebook (depending what is on the iDevice)\n\n"
+      },
+      {
+        "content": "When a user is on a news article\nand taps on the font button on the upper right",
+        "expected": "Then the font will become larger with each tap\nand when you continue to tap until it gets to the maximum size then the next tap will cause the font to start from a small font\n\n"
+      },
+      {
+        "content": "When a user is on a news article\nand you scroll to the right",
+        "expected": "Then a the next article will display\nand the article number located in the top center of the news reader will change accordingly\n\n(1 of 30, 2 of 30, 3 of 30)"
+      },
+      {
+        "content": "When a user is a Lite user\nand selects the News menu\nand is on the news index page\nand taps the bottom banner on the main page",
+        "expected": "Then the expected webview for that banner will open\n\n"
+      },
+      {
+        "content": "When a user selects the News menu\nand selects a News article\nand scrolls up and down on the news article",
+        "expected": "Then the scrolling goes up and down accordingly\nand the scroll is smooth"
+      },
+      {
+        "content": "When lite user signed in AND ads display ",
+        "expected": "Then ads should be appear in between news headlines for lite user "
+      }
+    ]
+  },
+  {
+    "id": 6683799,
+    "title": "News Feed - Paid Subscriber",
+    "section_id": 304826,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1585767319,
+    "updated_by": 84,
+    "updated_on": 1588799193,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 3,
+    "custom_preconds": "Given latest MLB is installed on an iPhone\r\nand there is a News Feed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "\t\nWhen a user is on the News section\nand observes the top header\n\n",
+        "expected": "Then user will see the following in the header:\nMLB.TV icon\nSegment Controller (MLB.com, Favorite Team, Teams)\nGameday Audio\n\n"
+      },
+      {
+        "content": "When user When a user taps on the MLB button in the top center of the News page\nand the Teams popover is displayed",
+        "expected": "Then the user will be able to switch to another news index via the team picker\n"
+      },
+      {
+        "content": "When a user is on the Newsreader\nand taps on the MLB.TV button on the top left hand corner",
+        "expected": "Then the MLB.TV page will display\n\n"
+      },
+      {
+        "content": "When a user is on the Newsreader\nand taps on the Audio button on the top right hand corner",
+        "expected": "Then the Paywall will display for Lite users\nor the Audio page will display for Full users"
+      },
+      {
+        "content": "When a user pulls down the section below the Top Stories/Videos segmented controller",
+        "expected": "Then iOS pull to refresh will be exposed with circle animation (similar to native iOS Mail App) and the news section will refresh with the most current article in the index at top"
+      },
+      {
+        "content": "When a user is on the Newsreader\nand taps on an article to open the article\n\n",
+        "expected": "Then that news article will open up\nand a back button will display on the upper left of the article\n\n"
+      },
+      {
+        "content": "When a user is on a news article\nand taps on the back button in the upper left of the article\n\n",
+        "expected": "Then the article will slide from left to right\nand you will be returned to the news index"
+      },
+      {
+        "content": "When a user is on a news article\nand taps on the sharing button on the upper right",
+        "expected": "Then the sharing popover displays the options for Message, Mail, Twitter, Facebook (depending what is on the iDevice)\n\n"
+      },
+      {
+        "content": "When a user is on a news article\nand taps on the font button on the upper right\n\n",
+        "expected": "Then the font will become larger with each tap\nand when you continue to tap until it gets to the maximum size then the next tap will cause the font to start from a small font"
+      },
+      {
+        "content": "When a user is on a news article\nand you scroll to the right\n\n",
+        "expected": "Then a the next article will display\nand the article number located in the top center of the news reader will change accordingly\n\n(1 of 30, 2 of 30, 3 of 30)\n\n"
+      },
+      {
+        "content": "When a user selects the News menu\nand selects a News article\nand scrolls up and down on the news article",
+        "expected": "Then the scrolling goes up and down accordingly\nand the scroll is smooth\n\n"
+      },
+      {
+        "content": "When paid user signed in AND ads should not display\n\n",
+        "expected": "Then ads should not display for paid user "
+      }
+    ]
+  },
+  {
+    "id": 6683793,
+    "title": "Larger thumbnail sizes and new layout pattern",
+    "section_id": 304826,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1585767217,
+    "updated_by": 259,
+    "updated_on": 1593118862,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 4,
+    "custom_preconds": "Given an user an iOS Device with iOS MLB app installed\r\n\r\nThis test should be tested for Lite user and Paid user \r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When open app and tap on News\n\n\n",
+        "expected": "Then the news page index should open\n\n"
+      },
+      {
+        "content": "When in news section, Verify that larger thumbnail sizes and new layout pattern (3 large thumbnails, 4 small, 1 large, 4, 1 etc)",
+        "expected": "Then we notice that larger thumbnail sizes and new layout pattern (3 large thumbnails, 4 small, 1 large, 4, 1 etc) display for news index \n"
+      },
+      {
+        "content": "When on news section and navigate to any article ",
+        "expected": "Then user should be able to view article in full page with all the information"
+      },
+      {
+        "content": "\t\nWhen a user is in an article in full screen mode\nand taps on the sharing button on the upper right",
+        "expected": "Then the sharing popover displays the options for Message, Mail, Twitter, Facebook\n\n"
+      }
+    ]
+  },
+  {
+    "id": 6683792,
+    "title": "Remove blurbs",
+    "section_id": 304826,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1585767185,
+    "updated_by": 259,
+    "updated_on": 1586279398,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 5,
+    "custom_preconds": "Given an user an iOS Device with iOS MLB app installed\r\n\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When open app and tap on News \n",
+        "expected": "Then the news page index should open\n\n"
+      },
+      {
+        "content": "When navigate to news and verify the blurbs removed (text below the headline) ",
+        "expected": "Then we notice that blurbs removed (text below the headline) "
+      },
+      {
+        "content": "When navigate to article ",
+        "expected": "Then user able to see full article \n"
+      }
+    ]
+  },
+  {
+    "id": 6683794,
+    "title": "Font to Proxima Nova",
+    "section_id": 304826,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1585767229,
+    "updated_by": 259,
+    "updated_on": 1586278774,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 6,
+    "custom_preconds": "Given an user an iOS Device with iOS MLB app installed\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When open app and tap on News\n\n",
+        "expected": "Then the news page index should open\n\n"
+      },
+      {
+        "content": "When verifying the font for the news article\n\n",
+        "expected": "Then the fonts should be to Proxima Nova"
+      },
+      {
+        "content": "When user navigate to any news article\n\n",
+        "expected": "Then the fonts should be to Proxima Nova"
+      }
+    ]
+  },
+  {
+    "id": 6683795,
+    "title": "Rounded corners on photos",
+    "section_id": 304826,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1585767239,
+    "updated_by": 259,
+    "updated_on": 1589220163,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 7,
+    "custom_preconds": "Given an user an iOS Device with iOS MLB app installed\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When open app and tap on News\n\n",
+        "expected": "Then the news page index should open\n\n"
+      },
+      {
+        "content": "When user in news section and viewing latest news, articles ",
+        "expected": "Then the user display with rounded corners on photos"
+      },
+      {
+        "content": "When user navigates into news article detail view \n",
+        "expected": "THEN there will no photos display with rounded corner "
+      }
+    ]
+  },
+  {
+    "id": 6683796,
+    "title": "Remove author name from index view",
+    "section_id": 304826,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1585767253,
+    "updated_by": 259,
+    "updated_on": 1586274808,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 8,
+    "custom_preconds": "Given an user an iOS Device with iOS MLB app installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When open app and tap on News",
+        "expected": "Then the news page index should open "
+      },
+      {
+        "content": "When verify the author name for the news article ",
+        "expected": "Then the author name should not be present based on news redesign feature \n"
+      },
+      {
+        "content": "When user navigate to any article ",
+        "expected": "Then the article should display in full page with all information "
+      }
+    ]
+  },
+  {
+    "id": 6683797,
+    "title": "Time format to Just now",
+    "section_id": 304826,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1585767270,
+    "updated_by": 259,
+    "updated_on": 1589221141,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 9,
+    "custom_preconds": "Given an user an iOS Device with iOS MLB app installed\r\n\r\nNOTE: The orders are chronological ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When open app and tap on News\n\n",
+        "expected": "\t\nThen the news page index should open\n\n"
+      },
+      {
+        "content": "When user view the news which came before 1m or the most recent ",
+        "expected": "Then user display \"Just Now\" below the headline"
+      },
+      {
+        "content": "When navigate to article\n\n",
+        "expected": "Then user able to see full article\n\n\n"
+      }
+    ]
+  },
+  {
+    "id": 6683798,
+    "title": "Time format to 1m, 1h,2h,1d,2d etc",
+    "section_id": 304826,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1585767294,
+    "updated_by": 259,
+    "updated_on": 1589222084,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 10,
+    "custom_preconds": "Given an user an iOS Device with iOS MLB app installed\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When open app and tap on News\n\n",
+        "expected": "Then the news page index should open\n\n"
+      },
+      {
+        "content": "When user view the news and the news arrived before 1m ago \n\n",
+        "expected": "Then user display \"1m\" below the headline "
+      },
+      {
+        "content": "When user view the news and the news arrived before 1h ago (it can be 1hr to 23hr)\n",
+        "expected": "Then user display \"1hr\" below the headline AND its also applies to \"1m\" , \"2m\", until \"1hr\""
+      },
+      {
+        "content": "When user view the news and the news arrived before 1d ago \n",
+        "expected": "Then user display \"1d\" below the headline "
+      },
+      {
+        "content": "When user view the news and the news arrived before 2d ago (It can be apply for 2D or more days older) \nAfter 24  hours display \"1d\", \"2d\" etc. ",
+        "expected": "Then user display \"2d\" below the headline "
+      },
+      {
+        "content": "WHEN news are older date ",
+        "expected": "THEN user will display with Month date, YYYY (i.e. May 7, 2020)"
+      },
+      {
+        "content": "When navigate to article\n\n",
+        "expected": "Then user able to see full article\n\n"
+      }
+    ]
+  },
+  {
+    "id": 6684746,
+    "title": "News Refresh",
+    "section_id": 304826,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1586274294,
+    "updated_by": 259,
+    "updated_on": 1586274594,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 11,
+    "custom_preconds": "Given an user is on an iOS Device with iOS At Bat installed\r\n\r\nTo test it would be easier to connect to Charles and filter by newsreader.json to see if calls files:\r\n\r\nProd - http://mlb.mlb.com/gen/content/tag/v1/mlb/news/ipad_newsreader.json\r\nProd - http://mlb.mlb.com/gen/content/tag/v1/mlb/news/iphone_newsreader.json\r\n\r\ncacheLifetime set in seconds in the config (usually about 5 minutes):\r\nhttps://atbatappconfig.mlb.com/ios/9.4.0/ipadOverrides.json\r\nhttps://atbatappconfig.mlb.com/ios/9.4.0/iphoneOverrides.json\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "when open app first time and tap on News\n\n",
+        "expected": "Then the News index should refresh and load new\n\n"
+      },
+      {
+        "content": "When on News and uses pull to refresh\n\n",
+        "expected": "Then the News index refresh and load new\n\n"
+      },
+      {
+        "content": "When changes between News index and Video index less than 5 minutes\n\ncacheLifetime does not expire\n\n",
+        "expected": "Then the News index does not refresh, load cache\n\n"
+      },
+      {
+        "content": "When changes between News index and Video index more than 5 minutes\n\ncacheLifetime does expire\n\n",
+        "expected": "Then News index refresh when cache expires\n\n"
+      },
+      {
+        "content": "When \t\nsitting in the app for less than minutes and navigating back to News\n\ncacheLifetime does not expire\n\n",
+        "expected": "Then the News index does not refresh, load cache\n\n"
+      },
+      {
+        "content": "When sitting in the app for 5 minutes and navigating back to News\n\ncacheLifetime does expire\n\n",
+        "expected": "Then the News index refresh and load new\n\n"
+      },
+      {
+        "content": "When tap into an article and tap back to the index less than 5 minutes\n\ncacheLifetime does not expire",
+        "expected": "Then the News index does not refresh, load cache\n\n"
+      },
+      {
+        "content": "When tap into an article and tap back to the index more than 5 minutes\n\ncacheLifetime does expires\n\n",
+        "expected": "Then the News index refresh and load new\n\n"
+      }
+    ]
+  },
+  {
+    "id": 6685986,
+    "title": "Sharing",
+    "section_id": 304826,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1587308921,
+    "updated_by": 259,
+    "updated_on": 1587309133,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 12,
+    "custom_preconds": "Given an iPhone device with latest MLB app installed ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user is in an article in full screen mode\nand taps on the sharing button on the upper right",
+        "expected": "Then the sharing popover displays the options for Message, Mail, Twitter, Facebook\n\n"
+      },
+      {
+        "content": "When a user taps on the Twitter button on the Share popover for an article\n\n",
+        "expected": "Then a Twitter popover will appear for the user\n\n"
+      },
+      {
+        "content": "When a user taps on the Cancel button on the Twitter popover\n\n",
+        "expected": "When a user taps on the Cancel button on the Twitter popover\n\n"
+      },
+      {
+        "content": "When a user taps on the Post button on the Twitter popover for an article\n\n",
+        "expected": "Then we will see the Tweet successfully posted to Twitter\n\n"
+      },
+      {
+        "content": "When a user successfully sends a tweet from At Bat\nand views the tweet in Twitter\n\n",
+        "expected": "Then we will see on Twitter that the end of the Tweet contains the following message:\n\n\"Sent with MLB.com At Bat mlb.com/r/article...\"\n\n"
+      },
+      {
+        "content": "When a user successfully sends a tweet from At Bat for an article that pertains to a game summary\nand views the tweet in T",
+        "expected": "Then we will see on Twitter that the end of the Tweet contains the following message:\n\n\"Sent with MLB.com At Bat mlb.com/mlb/gameday...\"\n\n"
+      },
+      {
+        "content": "When the user taps on Post on the Facebook popover to share a news article\n\n",
+        "expected": "Then we will see that the comment we posted has successfully posted to Facebook\n\n"
+      },
+      {
+        "content": "When a user shares a news article on Facebook\nand checks Facebook\n\n",
+        "expected": "Then we will see at the end of the Facebook post that it contains: \"MLB.com\"\n\n"
+      },
+      {
+        "content": "When a user taps on the share button in the top right corner\nand taps on the Mail button",
+        "expected": "Then the default iOS mail view will appear successfully\n\n"
+      },
+      {
+        "content": "When a user has no e-mail setup on a iDevice\nand taps to Mail button on Share popover for an article\n\n",
+        "expected": "Then we will be prompted with a message to set the account up in Mail Settings\n\n"
+      },
+      {
+        "content": "When a user has e-mail setup on a iDevice\nand taps to Mail button on Share popover for an article\n\n",
+        "expected": "Then we are able to successfully send an email\nand the recipient is able to successfully receive the email\n\n"
+      }
+    ]
+  },
+  {
+    "id": 6685356,
+    "title": "News Feed - Free User",
+    "section_id": 305144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1586788570,
+    "updated_by": 259,
+    "updated_on": 1589393456,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 1,
+    "custom_preconds": "Given latest MLB is installed on an iPad\r\nand there is a News Feed\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user is on the News section\nand observes the top header\n\n",
+        "expected": "Then user will see the following in the header:\nMLB.TV icon\nSegment Controller (MLB.com, Favorite Team, Teams)\nGameday Audio\n\n"
+      },
+      {
+        "content": "When user When a user taps on the MLB button in the top center of the News page\nand the Teams popover is displayed\n\n",
+        "expected": "Then the user will be able to switch to another news index via the team picker\n\n"
+      },
+      {
+        "content": "When a user is on the Newsreader\nand taps on the MLB.TV button ",
+        "expected": "Then the MLB.TV page will display\n\n"
+      },
+      {
+        "content": "When a user is on the Newsreader\nand taps on the Audio button on the top right hand corner",
+        "expected": "Then the Paywall will display for Lite users\nor the Audio page will display for Full users"
+      },
+      {
+        "content": "When a user pulls down the section below the Top Stories/Videos segmented controller\n\n",
+        "expected": "Then iOS pull to refresh will be exposed with circle animation (similar to native iOS Mail App) and the news section will refresh with the most current article in the index at top\n\n"
+      },
+      {
+        "content": "When a user is on the Newsreader\nand taps on an article to open the article\n\n",
+        "expected": "Then that news article will open up\nand a back button will display on the upper left of the article\n\n"
+      },
+      {
+        "content": "When a user is on a news article\nand taps on the back button in the upper left of the article\n\n",
+        "expected": "Then the article will slide from left to right\nand you will be returned to the news index\n\n"
+      },
+      {
+        "content": "When a user is on a news article\nand taps on the sharing button on the upper right\n\n",
+        "expected": "Then the sharing popover displays the options for Message, Mail, Twitter, Facebook (depending what is on the iDevice)\n\n"
+      },
+      {
+        "content": "When a user is on a news article\nand taps on the font button on the upper right\n\n",
+        "expected": "Then the font will become larger with each tap\nand when you continue to tap until it gets to the maximum size then the next tap will cause the font to start from a small font\n\n"
+      },
+      {
+        "content": "When a user is on a news article\nand you scroll to the righ",
+        "expected": "Then a the next article will display\nand the article number located in the top center of the news reader will change accordingly\n\n(1 of 30, 2 of 30, 3 of 30)\n\n"
+      },
+      {
+        "content": "When a user is a Lite user\nand selects the News menu\nand is on the news index page\nand taps the bottom banner on the main page",
+        "expected": "Then the expected webview for that banner will open\n\n"
+      },
+      {
+        "content": "When a user selects the News menu\nand selects a News article\nand scrolls up and down on the news article\n\n",
+        "expected": "Then the scrolling goes up and down accordingly\nand the scroll is smooth\n\n"
+      },
+      {
+        "content": "When lite user signed in AND ads display\n\n",
+        "expected": "Then ads should be appear in between news headlines for lite user\n\n"
+      }
+    ]
+  },
+  {
+    "id": 6685357,
+    "title": "News Feed- Paid Subscriber",
+    "section_id": 305144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1586788580,
+    "updated_by": 259,
+    "updated_on": 1589393661,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 2,
+    "custom_preconds": "Given latest MLB is installed on an iPad\r\nand there is a News Feed\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user is on the News section\nand observes the top header",
+        "expected": "Then user will see the following in the header:\nMLB.TV icon\nSegment Controller (MLB.com, Favorite Team, Teams)\nGameday Audio"
+      },
+      {
+        "content": "\t\nWhen user When a user taps on the MLB button in the top center of the News page\nand the Teams popover is displayed",
+        "expected": "Then the user will be able to switch to another news index via the team picker\n\n"
+      },
+      {
+        "content": "When a user is on the Newsreader\nand taps on the MLB.TV button on the top left hand corner\n\n",
+        "expected": "Then the MLB.TV page will display\n\n"
+      },
+      {
+        "content": "When a user is on the Newsreader\nand taps on the Audio button on the top right hand corner\n\n",
+        "expected": "Then the Paywall will display for Lite users\nor the Audio page will display for Full users"
+      },
+      {
+        "content": "When a user pulls down the section below the Top Stories/Videos segmented controller\n\n",
+        "expected": "Then iOS pull to refresh will be exposed with circle animation (similar to native iOS Mail App) and the news section will refresh with the most current article in the index at top\n\n"
+      },
+      {
+        "content": "\t\nWhen a user is on the Newsreader\nand taps on an article to open the article",
+        "expected": "Then that news article will open up\nand a back button will display on the upper left of the article"
+      },
+      {
+        "content": "When a user is on a news article\nand taps on the back button in the upper left of the article\n\n",
+        "expected": "Then the article will slide from left to right\nand you will be returned to the news index"
+      },
+      {
+        "content": "When a user is on a news article\nand taps on the sharing button on the upper right\n\n",
+        "expected": "Then the sharing popover displays the options for Message, Mail, Twitter, Facebook (depending what is on the iDevice)"
+      },
+      {
+        "content": "When a user is on a news article\nand taps on the font button on the upper right\n\n",
+        "expected": "Then the font will become larger with each tap\nand when you continue to tap until it gets to the maximum size then the next tap will cause the font to start from a small font"
+      },
+      {
+        "content": "When a user is on a news article\nand you scroll to the right\n\n",
+        "expected": "Then a the next article will display\nand the article number located in the top center of the news reader will change accordingly\n\n(1 of 30, 2 of 30, 3 of 30)\n\n"
+      },
+      {
+        "content": "When a user selects the News menu\nand selects a News article\nand scrolls up and down on the news article\n\n",
+        "expected": "Then the scrolling goes up and down accordingly\nand the scroll is smooth\n\n"
+      },
+      {
+        "content": "When paid user signed in \n",
+        "expected": "Then ads should not display for paid user\n\n"
+      }
+    ]
+  },
+  {
+    "id": 6685358,
+    "title": "Larger Thumbnail sizes and new layout pattern",
+    "section_id": 305144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1586788592,
+    "updated_by": 259,
+    "updated_on": 1586796709,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 3,
+    "custom_preconds": "Given an user an iPad Device with iOS MLB app installed\r\niPad should be on portrait mode while testing this feature \r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When open app and tap on News\n\n",
+        "expected": "Then the news page index should open\n\n"
+      },
+      {
+        "content": "When in news section, Verify that larger thumbnail sizes and new layout pattern (3 large thumbnails, 4 small, 1 large, 4, 1 etc)\n\n",
+        "expected": "Then we notice that larger thumbnail sizes and new layout pattern (3 large thumbnails, 4 small, 1 large, 4, 1 etc) display for news index\n\n"
+      },
+      {
+        "content": "When on news section and navigate to any article\n\n",
+        "expected": "Then user should be able to view article in full page with all the information\n\n"
+      }
+    ]
+  },
+  {
+    "id": 6685359,
+    "title": "Remove blurbs",
+    "section_id": 305144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1586788598,
+    "updated_by": 259,
+    "updated_on": 1586796768,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 4,
+    "custom_preconds": "Given an user an iPad Device with iOS MLB app installed\r\niPad should be on portrait mode while testing this feature\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When open app and tap on News\n\n",
+        "expected": "Then the news page index should open\n\n"
+      },
+      {
+        "content": "When navigate to news and verify the blurbs removed (text below the headline)\n\n",
+        "expected": "Then we notice that blurbs removed (text below the headline)\n\n"
+      },
+      {
+        "content": "When navigate to article\n\n",
+        "expected": "Then user able to see full article\n\n"
+      }
+    ]
+  },
+  {
+    "id": 6685360,
+    "title": "Font to proxima nova",
+    "section_id": 305144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1586788610,
+    "updated_by": 259,
+    "updated_on": 1586796823,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 5,
+    "custom_preconds": "Given an user an iPad Device with iOS MLB app installed\r\niPad should be on portrait mode while testing this feature\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When open app and tap on News\n\n",
+        "expected": "Then the news page index should open\n\n"
+      },
+      {
+        "content": "When verifying the font for the news article\n\n",
+        "expected": "Then the fonts should be to Proxima Nova\n\n"
+      },
+      {
+        "content": "When user navigate to any news article\n\n",
+        "expected": "Then the fonts should be to Proxima Nova\n\n"
+      }
+    ]
+  },
+  {
+    "id": 6685361,
+    "title": "Rounded corner photos",
+    "section_id": 305144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1586788623,
+    "updated_by": 259,
+    "updated_on": 1589381989,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 6,
+    "custom_preconds": "Given an user an iPad Device with iOS MLB app installed\r\niPad should be on portrait mode while testing this feature",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When open app and tap on News\n\n",
+        "expected": "Then the news page index should open\n\n"
+      },
+      {
+        "content": "When user in news section and viewing latest news, articles\n\n",
+        "expected": "Then the user display with rounded corners on photos\n\n"
+      },
+      {
+        "content": "When user navigate to any article\n\n",
+        "expected": "\t\nThen the article should display in full page with all information\n\n"
+      }
+    ]
+  },
+  {
+    "id": 6685362,
+    "title": "Remove author name from index view",
+    "section_id": 305144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1586788641,
+    "updated_by": 259,
+    "updated_on": 1586797148,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 7,
+    "custom_preconds": "Given an user an iPad Device with iOS MLB app installed\r\niPad should be on portrait mode while testing this feature",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When open app and tap on News\n\n",
+        "expected": "Then the news page index should open\n\n"
+      },
+      {
+        "content": "When verify the author name for the news article\n\n",
+        "expected": "Then the author name should not be present based on news redesign feature\n\n"
+      },
+      {
+        "content": "When user navigate to any article\n\n",
+        "expected": "Then the article should display in full page with all information\n\n"
+      }
+    ]
+  },
+  {
+    "id": 6685363,
+    "title": "Time format to Just now",
+    "section_id": 305144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1586788649,
+    "updated_by": 259,
+    "updated_on": 1586803935,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 8,
+    "custom_preconds": "Given an user an iPad Device with iOS MLB app installed\r\niPad should be on portrait mode while testing this feature",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When open app and tap on News\n\n",
+        "expected": "Then the news page index should open\n\n"
+      },
+      {
+        "content": "When user view the news which came before 1m or the most recent \n\n",
+        "expected": "Then user display \"Just Now\" below the headline\n\n"
+      },
+      {
+        "content": "When navigate to article\n\n",
+        "expected": "Then user able to see full article\n\n"
+      }
+    ]
+  },
+  {
+    "id": 6685364,
+    "title": "Time format to 1h,2h,1d,2d etc",
+    "section_id": 305144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1586788681,
+    "updated_by": 259,
+    "updated_on": 1586804251,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 9,
+    "custom_preconds": "Given an user an iPad Device with iOS MLB app installed\r\niPad should be on portrait mode while testing this feature",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When open app and tap on News\n\n",
+        "expected": "Then the news page index should open\n\n"
+      },
+      {
+        "content": "When user view the news and the news arrived before 1m ago\n\n",
+        "expected": "Then user display \"1m\" below the headline\n\n"
+      },
+      {
+        "content": "When user view the news and the news arrived before 1h ago (it can be 1hr to 23hr)\n\n",
+        "expected": "Then user display \"1hr\" below the headline AND its also applies to \"1m\" , \"2m\", until \"1hr\"\n\n"
+      },
+      {
+        "content": "When user view the news and the news arrived before 1d ago\n\n",
+        "expected": "Then user display \"1d\" below the headline\n\n"
+      },
+      {
+        "content": "When user view the news and the news arrived before 2d ago (It can be apply for 2D or more days older)\nAfter 24 hours display \"1d\", \"2d\" etc.",
+        "expected": "Then user display \"2d\" below the headline\n\n"
+      },
+      {
+        "content": "When navigate to article\n\n",
+        "expected": "Then user able to see full article\n\n"
+      }
+    ]
+  },
+  {
+    "id": 6685365,
+    "title": "News Refresh",
+    "section_id": 305144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1586788689,
+    "updated_by": 259,
+    "updated_on": 1586804516,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 10,
+    "custom_preconds": "Given an user an iPad Device with iOS MLB app installed\r\niPad should be on portrait mode while testing this feature",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "when open app first time and tap on News\n\n",
+        "expected": "Then the News index should refresh and load new\n\n"
+      },
+      {
+        "content": "When on News and uses pull to refresh\n\n",
+        "expected": "Then the News index refresh and load new\n\n"
+      },
+      {
+        "content": "When changes between News index and Video index less than 5 minutes\n\ncacheLifetime does not expire",
+        "expected": "Then the News index does not refresh, load cache\n\n"
+      },
+      {
+        "content": "\t\nWhen changes between News index and Video index more than 5 minutes\n\ncacheLifetime does expire\n\n",
+        "expected": "Then News index refresh when cache expires\n\n"
+      },
+      {
+        "content": "\t\nWhen sitting in the app for less than minutes and navigating back to News\n\ncacheLifetime does not expire",
+        "expected": "Then the News index does not refresh, load cache\n\n"
+      },
+      {
+        "content": "\t\nWhen sitting in the app for 5 minutes and navigating back to News\n\ncacheLifetime does expire",
+        "expected": "Then the News index refresh and load new"
+      },
+      {
+        "content": "When tap into an article and tap back to the index less than 5 minutes\n\ncacheLifetime does not expire",
+        "expected": "Then the News index does not refresh, load cache\n\n"
+      },
+      {
+        "content": "When tap into an article and tap back to the index more than 5 minutes\n\ncacheLifetime does expires",
+        "expected": "Then the News index refresh and load new\n\n"
+      }
+    ]
+  },
+  {
+    "id": 6685987,
+    "title": "Sharing",
+    "section_id": 305144,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 259,
+    "created_on": 1587309141,
+    "updated_by": 259,
+    "updated_on": 1587309329,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43569,
+    "display_order": 11,
+    "custom_preconds": "GIVEN user an iPad device with latest MLB app installed ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "\t\nWhen a user is in an article in full screen mode\nand taps on the sharing button on the upper right\n\n",
+        "expected": "Then the sharing popover displays the options for Message, Mail, Twitter, Facebook\n\n"
+      },
+      {
+        "content": "When a user taps on the Twitter button on the Share popover for an article\n\n",
+        "expected": "Then a Twitter popover will appear for the user\n\n"
+      },
+      {
+        "content": "When a user taps on the Cancel button on the Twitter popover\n\n",
+        "expected": "Then we can successfully cancel out of the Tweet\nand we are brought back to our previous location inside the application\n\n"
+      },
+      {
+        "content": "When a user taps on the Post button on the Twitter popover for an article\n\n",
+        "expected": "Then we will see the Tweet successfully posted to Twitter\n\n"
+      },
+      {
+        "content": "\t\nWhen a user successfully sends a tweet from At Bat\nand views the tweet in Twitter",
+        "expected": "Then we will see on Twitter that the end of the Tweet contains the following message:\n\n\"Sent with MLB.com At Bat mlb.com/r/article...\""
+      },
+      {
+        "content": "\t\nWhen a user successfully sends a tweet from At Bat for an article that pertains to a game summary\nand views the tweet in Twitter\n\n",
+        "expected": "Then we will see on Twitter that the end of the Tweet contains the following message:\n\n\"Sent with MLB.com At Bat mlb.com/mlb/gameday...\""
+      },
+      {
+        "content": "When the user taps on Post on the Facebook popover to share a news article\n\n",
+        "expected": "Then we will see that the comment we posted has successfully posted to Facebook\n\n"
+      },
+      {
+        "content": "\t\nWhen a user shares a news article on Facebook\nand checks Facebook",
+        "expected": "Then we will see at the end of the Facebook post that it contains: \"MLB.com\""
+      },
+      {
+        "content": "When a user taps on the share button in the top right corner\nand taps on the Mail button\n\n",
+        "expected": "Then the default iOS mail view will appear successfully\n\n"
+      },
+      {
+        "content": "When a user has no e-mail setup on a iDevice\nand taps to Mail button on Share popover for an article\n\n",
+        "expected": "Then we will be prompted with a message to set the account up in Mail Settings"
+      },
+      {
+        "content": "When a user has e-mail setup on a iDevice\nand taps to Mail button on Share popover for an article\n\n",
+        "expected": "Then we are able to successfully send an email\nand the recipient is able to successfully receive the email\n\n"
+      }
+    ]
+  }
+]

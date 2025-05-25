@@ -1,0 +1,24 @@
+[
+  {
+    "id": 32736970,
+    "title": "Verify the ADMIN2_TICKET_HOLDER_SUPPORT client ID works fine BoxOffice apis",
+    "section_id": 1858258,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 168,
+    "created_on": 1706637200,
+    "updated_by": 168,
+    "updated_on": 1706637200,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 531233,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  }
+]

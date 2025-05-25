@@ -1,0 +1,119 @@
+[
+  {
+    "id": 124106,
+    "suite_id": 18678,
+    "name": "CSP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 124175,
+    "suite_id": 18678,
+    "name": "CSP Calculations",
+    "description": null,
+    "parent_id": 124106,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 124176,
+    "suite_id": 18678,
+    "name": "Reporting",
+    "description": null,
+    "parent_id": 124106,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 124178,
+    "suite_id": 18678,
+    "name": "Printing",
+    "description": null,
+    "parent_id": 124106,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 124381,
+    "suite_id": 18678,
+    "name": "CSP Players Widget",
+    "description": null,
+    "parent_id": 124106,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 124107,
+    "suite_id": 18678,
+    "name": "CEP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 124177,
+    "suite_id": 18678,
+    "name": "CEP Calculations",
+    "description": null,
+    "parent_id": 124107,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 124179,
+    "suite_id": 18678,
+    "name": "Printing",
+    "description": null,
+    "parent_id": 124107,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 124267,
+    "suite_id": 18678,
+    "name": "CEP Summary",
+    "description": null,
+    "parent_id": 124107,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 124122,
+    "suite_id": 18678,
+    "name": "Miscellaneous/UAT Feedback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 124125,
+    "suite_id": 18678,
+    "name": "Schools",
+    "description": null,
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 124181,
+    "suite_id": 18678,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 124191,
+    "suite_id": 18678,
+    "name": "Batches/Global",
+    "description": null,
+    "parent_id": null,
+    "display_order": 40,
+    "depth": 0
+  }
+]

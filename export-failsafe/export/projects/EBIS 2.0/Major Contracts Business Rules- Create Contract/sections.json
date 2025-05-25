@@ -1,0 +1,173 @@
+[
+  {
+    "id": 8362,
+    "suite_id": 1094,
+    "name": "Contract Header",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 8363,
+    "suite_id": 1094,
+    "name": "Info Section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 8364,
+    "suite_id": 1094,
+    "name": "Major League Compensation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 8365,
+    "suite_id": 1094,
+    "name": "Minor League Compensation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 8366,
+    "suite_id": 1094,
+    "name": "Option",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 8386,
+    "suite_id": 1094,
+    "name": "Club/player/Mutual Option",
+    "description": null,
+    "parent_id": 8366,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 8387,
+    "suite_id": 1094,
+    "name": "Conditional Option",
+    "description": null,
+    "parent_id": 8366,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 8388,
+    "suite_id": 1094,
+    "name": "Vesting Option",
+    "description": null,
+    "parent_id": 8366,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 8367,
+    "suite_id": 1094,
+    "name": "Signing Bonus",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 8368,
+    "suite_id": 1094,
+    "name": "Award Bonuses",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 8369,
+    "suite_id": 1094,
+    "name": "Performance Bonuses",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 8370,
+    "suite_id": 1094,
+    "name": "Other Bonuses",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 8371,
+    "suite_id": 1094,
+    "name": "Salary Escalator",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 8372,
+    "suite_id": 1094,
+    "name": "Covenants",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 8380,
+    "suite_id": 1094,
+    "name": "Guarentee Provision",
+    "description": null,
+    "parent_id": 8372,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 8389,
+    "suite_id": 1094,
+    "name": "No-Trade Language/Standard Language",
+    "description": null,
+    "parent_id": 8372,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 8390,
+    "suite_id": 1094,
+    "name": "Assignment",
+    "description": null,
+    "parent_id": 8372,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 8383,
+    "suite_id": 1094,
+    "name": "Charitable Contribution",
+    "description": null,
+    "parent_id": 8372,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 8373,
+    "suite_id": 1094,
+    "name": "Executed Contract",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  }
+]

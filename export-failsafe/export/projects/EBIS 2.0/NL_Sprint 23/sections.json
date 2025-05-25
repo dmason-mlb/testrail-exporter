@@ -1,0 +1,47 @@
+[
+  {
+    "id": 97699,
+    "suite_id": 14997,
+    "name": "MJC/CBT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 97759,
+    "suite_id": 14997,
+    "name": "Waivers",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 102705,
+    "suite_id": 14997,
+    "name": "10 Day DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 102706,
+    "suite_id": 14997,
+    "name": "Transfer to 10 Day DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 103252,
+    "suite_id": 14997,
+    "name": "User Experience",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

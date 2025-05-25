@@ -1,0 +1,11 @@
+[
+  {
+    "id": 146386,
+    "suite_id": 20298,
+    "name": "Team's Positions",
+    "description": "https://jira.mlbam.com/browse/SDBB-485\n\n*NOTE: Still working on responses to these types of questions (What place are the [team name] in?) so for now, we're just redirecting users to the standings table.",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  }
+]

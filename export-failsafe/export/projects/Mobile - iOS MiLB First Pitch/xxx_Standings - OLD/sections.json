@@ -1,0 +1,146 @@
+[
+  {
+    "id": 356,
+    "suite_id": 101,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 3149,
+    "suite_id": 101,
+    "name": "AAA/AA/A",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 357,
+    "suite_id": 101,
+    "name": "AAA - International League",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 358,
+    "suite_id": 101,
+    "name": "AAA - Pacific Coast League",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 5213,
+    "suite_id": 101,
+    "name": "AA - Eastern League",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 5214,
+    "suite_id": 101,
+    "name": "AA - Southern League",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 5215,
+    "suite_id": 101,
+    "name": "AA - Texas League",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 5216,
+    "suite_id": 101,
+    "name": "Advanced A - California League",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 5217,
+    "suite_id": 101,
+    "name": "Advanced A - Carolina League",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 5218,
+    "suite_id": 101,
+    "name": "Advanced A - Florida State League",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 5219,
+    "suite_id": 101,
+    "name": "A - Midwest League",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 5220,
+    "suite_id": 101,
+    "name": "A - South Atlantic League",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 5221,
+    "suite_id": 101,
+    "name": "Short Season A - New York-Penn League",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 5222,
+    "suite_id": 101,
+    "name": "Short Season A - Northwest League",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 5223,
+    "suite_id": 101,
+    "name": "Rookie - Appalachian League",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 5224,
+    "suite_id": 101,
+    "name": "Rookie - Pioneer League",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  }
+]

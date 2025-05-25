@@ -1,0 +1,56 @@
+[
+  {
+    "id": 7077,
+    "suite_id": 944,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 144977,
+    "suite_id": 944,
+    "name": "Entitlements",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 147186,
+    "suite_id": 944,
+    "name": "MLB.TV Game of the Day",
+    "description": "https://jira.mlbam.com/browse/ANDROID-7246",
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 144978,
+    "suite_id": 944,
+    "name": "Player/Streaming",
+    "description": "Most cases require an MLB.TV stream with two video feeds, one Away and one Home.\n\n**User should be logged in with entitled MLB.TV account**",
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 144980,
+    "suite_id": 944,
+    "name": "Archive",
+    "description": "Archive games should follow same entitlement rules as MLB.TV\n\n(User must have TV Premium, At Bat Premium, or Single Team account)",
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 144974,
+    "suite_id": 944,
+    "name": "Location Services",
+    "description": "For most cases, user should be logged in with MLB.TV account and have already verified they can play back media",
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  }
+]

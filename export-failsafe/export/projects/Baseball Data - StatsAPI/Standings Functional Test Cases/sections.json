@@ -1,0 +1,29 @@
+[
+  {
+    "id": 404825,
+    "suite_id": 21194,
+    "name": "Functional Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 404835,
+    "suite_id": 21194,
+    "name": "Current Season",
+    "description": null,
+    "parent_id": 404825,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 683634,
+    "suite_id": 21194,
+    "name": "Previous Seasons",
+    "description": null,
+    "parent_id": 404825,
+    "display_order": 10,
+    "depth": 1
+  }
+]

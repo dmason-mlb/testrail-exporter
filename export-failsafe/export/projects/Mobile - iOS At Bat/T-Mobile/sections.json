@@ -1,0 +1,20 @@
+[
+  {
+    "id": 356581,
+    "suite_id": 71941,
+    "name": "iPhone - Promo Paywall",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 356582,
+    "suite_id": 71941,
+    "name": "iPad - Promo Paywall",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

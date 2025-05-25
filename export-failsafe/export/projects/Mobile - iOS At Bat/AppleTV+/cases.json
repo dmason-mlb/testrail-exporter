@@ -1,0 +1,600 @@
+[
+  {
+    "id": 26946870,
+    "title": "Game Tiles",
+    "section_id": 1406450,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 153,
+    "created_on": 1648477824,
+    "updated_by": 153,
+    "updated_on": 1648477996,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a game is exclusively streamed on Appletv+\r\nAND the user understands they will not be able to watch the game on the MLB app",
+    "custom_steps": "WHEN the user views a game tile for a matchup streaming/deeplinking to Appletv+",
+    "custom_expected": "THEN the game tile will display a pill with the copy \"Watch on Appletv+\"",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26946871,
+    "title": "Modals",
+    "section_id": 1406450,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 153,
+    "created_on": 1648477830,
+    "updated_by": 153,
+    "updated_on": 1648478075,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a game is exclusively streamed on Appletv+\r\nAND the user understands they will not be able to watch the game on the MLB app",
+    "custom_steps": "WHEN the user taps on the pill to watch on Appletv+",
+    "custom_expected": "THEN the user will receive a modal that replaces the tv feeds\r\nAND if the user selects an Apple+ game, Apple TV+ specific blackout error message is displayed.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26946872,
+    "title": "Appletv+ Messaging",
+    "section_id": 1406451,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 153,
+    "created_on": 1648477875,
+    "updated_by": 153,
+    "updated_on": 1648478157,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user wants to watch a game that wass exclusively on Appletv+ streaming\r\nAND the game is archived",
+    "custom_steps": "WHEN the user views the game tile",
+    "custom_expected": "THEN the Appletv+ modal will no longer be displayed\r\nAND the game will be viewed as a regular archived game on MLB.tv",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26946873,
+    "title": "Tapping on Apple TV+ Game Tile",
+    "section_id": 1406452,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 153,
+    "created_on": 1648478723,
+    "updated_by": 153,
+    "updated_on": 1648478859,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is on the Watch tab or Team Page\r\nAND the user selects a game that is streaming exclusively on Apple TV+ ",
+    "custom_steps": "WHEN the user views the modal that displays after tapping on the game tile",
+    "custom_expected": "THEN the user will have the option to Open the APPLE TV+ app on their device OR Listen with MLB Audio on the MLB app",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26946874,
+    "title": "Open Apple TV+ Option",
+    "section_id": 1406452,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 153,
+    "created_on": 1648478736,
+    "updated_by": 153,
+    "updated_on": 1648478897,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is on the Watch tab or Team Page\r\nAND the user selects a game that is streaming exclusively on Apple TV+ ",
+    "custom_steps": "WHEN the user taps on the Apple TV+ Option on the modal ",
+    "custom_expected": "THEN the user is deeplinked to the Apple TV+ app on their device",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26946875,
+    "title": "Listen with MLB Audio Option",
+    "section_id": 1406452,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 153,
+    "created_on": 1648478742,
+    "updated_by": 153,
+    "updated_on": 1648478945,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user is on the Watch tab or Team Page\r\nAND the user selects a game that is streaming exclusively on Apple TV+ ",
+    "custom_steps": "WHEN the user taps on the Listen with MLB Audio option",
+    "custom_expected": "THEN the user will be sent to the audio section of the MLB app to listen to the game",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26946980,
+    "title": "Archived Apple TV + game-  Scoreboard & Watch View Game Tab",
+    "section_id": 1406453,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 319,
+    "created_on": 1648482058,
+    "updated_by": 319,
+    "updated_on": 1648482381,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user\r\nAND an Apple TV+ game that is archived is available\r\n\r\nNOTES: The conditions for this test can be simulated by https://mastapi.mobile.mlbinfra.com:443/api/epg/v2/search* with the mastapi_appletv_archive_game_in_tiles.json available at this link(to large to upload): https://drive.google.com/file/d/139ICHJk8PwpD7uaVl7oSEHjiDzMUnc5C/view?usp=sharing\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user sees the game on the scores page in expanded mode\n(If you using the attached proxy file, the game to observe is the Tampa vs. Boston game)",
+        "expected": "THEN no Apple TV + text is present in the game on the schedule\nAND the game appears as a normal archived game"
+      },
+      {
+        "content": "WHEN the user sees the game on the scores page in compact mode\n(If you using the attached proxy file, the game to observe is the Tampa vs. Boston game)",
+        "expected": "THEN no Apple TV + text is present in the game on the game tile\nAND the game appears as a normal archived game"
+      },
+      {
+        "content": "WHEN the user sees the game on the Watch View Games Tab\n(If you using the attached proxy file, the game to observe is the Tampa vs. Boston game)",
+        "expected": "THEN no Apple TV + text is present in the game on the game tile\nAND the game appears as a normal archived game\n"
+      },
+      {
+        "content": "WHEN the user sees the game on the Watch View Games Tab\nAND the user clicks the game\n(If you using the attached proxy file, the game in question is the Tampa vs. Boston game)",
+        "expected": "THEN the app responds to the click like other archived games (plays for entitled, messages for non-entitled)"
+      },
+      {
+        "content": "WHEN the user sees the game in the in-game scoreboard\n(If you using the attached proxy file, the game in question is the Tampa vs. Boston game)",
+        "expected": "THEN no Apple TV + text is present in the game on the game tile\nAND the game appears as a normal archived game\n"
+      }
+    ]
+  },
+  {
+    "id": 26946981,
+    "title": "Archived Apple TV+ game- in-player scoreboard",
+    "section_id": 1406453,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 319,
+    "created_on": 1648482058,
+    "updated_by": 319,
+    "updated_on": 1648482381,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a user\r\nAND an AppleTV+ game is archived on today's date and other games are currently live\r\n\r\nNOTE: This is tricky to simulate because it requires a live game in addition to the simulated archived Apple TV+ game",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user sees the game in the in-game scoreboard(while playing one of the non-Apple TV+ games\nAND the user observes the Apple TV+ game card",
+        "expected": "THEN Watch on Apple(Apple is an icon)tv+ badge is NOT present in the game tile"
+      },
+      {
+        "content": "WHEN the user sees the game in the in-game scoreboard(while playing one of the non-Apple TV+ games\nAND the user clicks the Apple TV+ game card",
+        "expected": "THEN the app responds to the click like other archived games (plays for entitled, messages for non-entitled)"
+      }
+    ]
+  },
+  {
+    "id": 26946982,
+    "title": "Archived Apple TV+ game- teams tab",
+    "section_id": 1406453,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "DISCO-243",
+    "created_by": 319,
+    "created_on": 1648482058,
+    "updated_by": 319,
+    "updated_on": 1648482381,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user\r\nAND an archived Apple TV+ game is available on today's date",
+    "custom_steps": "WHEN the user sees the game on the team page",
+    "custom_expected": " THEN no Apple TV + text is present in the game on the schedule\r\nAND the game appears as a normal archived game",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26946983,
+    "title": "Live Apple TV+ game- team tab",
+    "section_id": 1406453,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 319,
+    "created_on": 1648482058,
+    "updated_by": 319,
+    "updated_on": 1648482381,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 4,
+    "custom_preconds": "GIVEN a user\r\nAND a live YouTube TV+ game is available",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user sees the game on the team tab",
+        "expected": "THEN the Apple TV+ text should be available on the schedule\nAND an Apple TV+ button will display below"
+      },
+      {
+        "content": "WHEN the user sees the game on the team tab\nAND the user clicks the Apple TV+ button",
+        "expected": "THEN a modal should be displayed with \"Watch on Apple TV+\" and \"This exclusive MLB broadcast is HD on Apple TV+\""
+      },
+      {
+        "content": "WHEN the user's device is set to Spanish\nAND the user sees the game on the team tab\n",
+        "expected": "THEN a bar will be displayed with \"Ver en Apple Tv+\" at the top of the game card"
+      },
+      {
+        "content": "WHEN the user clicks the Apple TV+ button",
+        "expected": "THEN a modal should be displayed with \"Ver en Apple Tv+\" and \"Esta transmisión está disponible para ver solo en tv.apple.com\""
+      },
+      {
+        "content": "WHEN the user repeats these steps in the opposing light/dark mode",
+        "expected": "THEN the outcome is the same"
+      }
+    ]
+  },
+  {
+    "id": 26946984,
+    "title": "Live Apple TV+ game- scoreboard",
+    "section_id": 1406453,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 319,
+    "created_on": 1648482058,
+    "updated_by": 319,
+    "updated_on": 1648482381,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 5,
+    "custom_preconds": "GIVEN a user\r\nAND an Apple TV+ game is live",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user views the game on the scoreboard in expanded mode",
+        "expected": "THEN \"Watch on Apple TV+\" text is visible in the game card\nAND an Apple TV+ button is available under the scores"
+      },
+      {
+        "content": "WHEN the user views the game on the scoreboard in expanded mode\nAND the user clicks the Apple TV+ button",
+        "expected": "THEN a modal displays with \"Watch on Apple TV+\" and \"This broadcast is available to watch only at tv.apple.com\""
+      },
+      {
+        "content": "WHEN the user's device is set to Spanish\nAND the user views the game on the scoreboard in expanded mode\nAND the user clicks the Apple TV+ button",
+        "expected": "THEN a modal displays with \"Ver en Apple Tv+\" and \"Esta transmisión está disponible para ver solo en tv.apple.com\""
+      },
+      {
+        "content": "WHEN the user views the game on the scoreboard in compact mode",
+        "expected": "THEN the \"Watch on Apple(Apple is an icon)tv+\" badge is present in the game tile\n\n"
+      },
+      {
+        "content": "WHEN the user clicks the game tile for the game on the scoreboard in compact mode",
+        "expected": "THEN the app redirects to the Gameday page for the game"
+      },
+      {
+        "content": "WHEN the user repeats these steps in the opposing light/dark mode",
+        "expected": "THEN the outcome is the same"
+      }
+    ]
+  },
+  {
+    "id": 26946985,
+    "title": "Live Apple TV+ game- Watch View Games Tab",
+    "section_id": 1406453,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 319,
+    "created_on": 1648482058,
+    "updated_by": 319,
+    "updated_on": 1648482381,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 6,
+    "custom_preconds": "GIVEN a user\r\nAND an Apple TV+ game is live",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user views the game on the Watch View Games Tab",
+        "expected": "THEN Watch on Apple(Apple is an icon)tv+ badge is present in the game tile"
+      },
+      {
+        "content": "WHEN the user views the game on the Watch View Games Tab\nAND selects the game tile",
+        "expected": "THEN a modal displays with \"Watch on Apple TV+\" and \"This broadcast is available to watch only at tv.apple.com\""
+      },
+      {
+        "content": "WHEN the user's device is set to Spanish\nAND the user views the game on the Watch View Games Tab\nAND selects the game tile",
+        "expected": "THEN a modal displays with \"Ver en Apple TV+\" and \"Esta transmisión está disponible para ver solo en tv.apple.com\"\n\n"
+      },
+      {
+        "content": "WHEN the user repeats these steps in the opposing light/dark mode",
+        "expected": "THEN the outcome is the same"
+      }
+    ]
+  },
+  {
+    "id": 26946986,
+    "title": "Live Apple TV+ game- in-player scoreboard",
+    "section_id": 1406453,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 319,
+    "created_on": 1648482058,
+    "updated_by": 319,
+    "updated_on": 1648482381,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 7,
+    "custom_preconds": "GIVEN a user\r\nAND a live Apple TV+ game is available",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user views the game on the in-player scoreboard",
+        "expected": "THEN Watch on Apple(Apple is an icon)tv+ badge is present in the game tile\n\n"
+      },
+      {
+        "content": "WHEN the user views the game on the in-player scoreboard\nAND selects the game tile",
+        "expected": "THEN a modal displays with \"Watch on Apple TV+\" and \"This broadcast is available to watch only at tv.apple.com\"\n\n"
+      },
+      {
+        "content": "WHEN the user's device is set to Spanish\nAND the user views the game on the in-player scoreboard\nAND selects the game tile",
+        "expected": "THEN a modal displays with \"Watch on Apple TV+\" and \"Esta transmisión está disponible para ver solo en tv.apple.com\"\n\n"
+      },
+      {
+        "content": "WHEN the user repeats these steps in the opposing light/dark mode\nNOTE: The player is always forced to dark mode regardless of the app or device settings\n\n",
+        "expected": "THEN the outcome is the same\n\n"
+      }
+    ]
+  },
+  {
+    "id": 26946987,
+    "title": "Pregame Apple TV+ game-Watch View Games Tab",
+    "section_id": 1406453,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 319,
+    "created_on": 1648482058,
+    "updated_by": 319,
+    "updated_on": 1648482381,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 8,
+    "custom_preconds": "GIVEN a user\r\nAND an Apple TV+ game is in pregame state with MEDIA_OFF",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user observes the game tile for the game on the Watch View Games Tab",
+        "expected": "THEN the \"Watch on Apple(Apple is an icon)tv+\" badge is present in the game tile"
+      },
+      {
+        "content": "WHEN the user clicks the game tile for the game on the Watch View Games Tab",
+        "expected": "THEN nothing happens"
+      }
+    ]
+  },
+  {
+    "id": 26946988,
+    "title": "Pregame Apple TV+ game- scoreboard",
+    "section_id": 1406453,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 319,
+    "created_on": 1648482058,
+    "updated_by": 319,
+    "updated_on": 1648482381,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 9,
+    "custom_preconds": "GIVEN a user on the scoreboard\r\nAND an AppleTV+ game is available in the pregame state with MEDIA_OFF",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the scoreboard is in expanded mode\nAND the user observes the Apple TV+ game",
+        "expected": "THEN \"Watch on Apple TV+\" messaging is present above the scores section for that game\nAND a Preview button is visible below the scores section for that game"
+      },
+      {
+        "content": "WHEN the user clicks the preview button in expanded mode",
+        "expected": "THEN the app navigates to the Gameday page for the game"
+      },
+      {
+        "content": "WHEN the scoreboard is in compact mode\nAND the user observes the Apple TV+ game",
+        "expected": "THEN the \"Watch on Apple(Apple is an icon)tv+\" badge is present in the game tile"
+      },
+      {
+        "content": "WHEN the user clicks the game tile for the game in compact mode",
+        "expected": "THEN the app navigates to the Gameday page for the game"
+      }
+    ]
+  },
+  {
+    "id": 26946989,
+    "title": "Pregame Apple TV+ game- team tab",
+    "section_id": 1406453,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "DISCO-243",
+    "created_by": 319,
+    "created_on": 1648482058,
+    "updated_by": 319,
+    "updated_on": 1648482381,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 10,
+    "custom_preconds": "GIVEN a user\r\nAND and Apple TV+ game is available in a preview state for the current day with MEDIA_OFF",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user views the game from the team page of one teams involved in the game",
+        "expected": "THEN \"Watch on Apple TV+\" messaging is present above the scores section for that game\nAND a Preview button is visible below the scores section for that game"
+      },
+      {
+        "content": "WHEN the user switches to the the opposing light/dark mode and returns to the team page",
+        "expected": "THEN \"Watch on Apple TV+\" messaging is present above the scores section for that game\nAND a Preview button is visible below the scores section for that game"
+      },
+      {
+        "content": "WHEN the user's device is set to Spanish",
+        "expected": "THEN \"Ver en Apple TV+\" messaging is present above the scores section for that game"
+      }
+    ]
+  },
+  {
+    "id": 26946990,
+    "title": "Preview Apple TV+ game- in-player scoreboard",
+    "section_id": 1406453,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 319,
+    "created_on": 1648482058,
+    "updated_by": 319,
+    "updated_on": 1648482381,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 11,
+    "custom_preconds": "GIVEN an entitled user \r\nAND an AppleTV+ game is available in the pregame state with MEDIA_OFF for the current day\r\nAND other games have live feeds available",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user opens another feed\nAND clicks the scores option",
+        "expected": "THEN the game should be visible on the in-player scoreboard\nAND the \"Watch on Apple(Apple is an icon)tv+\" badge is present on the game tile for the game"
+      },
+      {
+        "content": "WHEN the user clicks the game tile for the game",
+        "expected": "THEN nothing happens"
+      }
+    ]
+  },
+  {
+    "id": 26946876,
+    "title": "Cancel Button",
+    "section_id": 1406454,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 153,
+    "created_on": 1648479166,
+    "updated_by": 153,
+    "updated_on": 1648479242,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user is on the Watch tab or Team Page\r\nAND the user selects a game that is streaming exclusively on Apple TV+ ",
+    "custom_steps": "WHEN the user views the modal to watch on Apple TV+",
+    "custom_expected": "THEN the user has the option to select cancel\r\nAND the user will be able to navigate the MLB app again",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26946877,
+    "title": "Tapping Outside Modal",
+    "section_id": 1406454,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 153,
+    "created_on": 1648479175,
+    "updated_by": 153,
+    "updated_on": 1648479289,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user is on the Watch tab or Team Page\r\nAND the user selects a game that is streaming exclusively on Apple TV+ ",
+    "custom_steps": "WHEN the user taps outside of the modal without selecting any options",
+    "custom_expected": "THEN the user will be able to navigate the MLB app again \r\nAND the modal will disappear ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 26946878,
+    "title": "Returning from Appletv+ App",
+    "section_id": 1406454,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 153,
+    "created_on": 1648479189,
+    "updated_by": 153,
+    "updated_on": 1648479379,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 493468,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user is on the Watch tab or Team Page\r\nAND the user selects a game that is streaming exclusively on Apple TV+ ",
+    "custom_steps": "WHEN the user selects OPEN Apple TV+\r\nAND the user is sent to APPLE TV+ app",
+    "custom_expected": "THEN the user can select MLB on the top-left of the page if they wish to return to the MLB app\r\nAND selecting MLB will send the user back to the MLB app and the page they were most recently visiting",
+    "custom_steps_separated": null
+  }
+]

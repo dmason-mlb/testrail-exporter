@@ -1,0 +1,200 @@
+[
+  {
+    "id": 8895973,
+    "title": "Get Started Page",
+    "section_id": 503074,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1607725008,
+    "updated_by": 232,
+    "updated_on": 1646090977,
+    "estimate": null,
+    "estimate_forecast": "27s",
+    "suite_id": 121948,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user with a fresh install\r\n",
+    "custom_steps": "WHEN the user launches the MLB App for the first time",
+    "custom_expected": "THEN they will see the Welcome Screen\r\nAND choose to either log in or get started ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 15838100,
+    "title": "Welcome Page",
+    "section_id": 503074,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10448",
+    "created_by": 238,
+    "created_on": 1612286145,
+    "updated_by": 232,
+    "updated_on": 1646091016,
+    "estimate": null,
+    "estimate_forecast": "45s",
+    "suite_id": 121948,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a user who Selects Get Started in onboarding",
+    "custom_steps": "WHEN the user selects their favorite team\r\nAND clicks next\r\n\r\n\r\n\r\n\r\n",
+    "custom_expected": "THEN they will see the Welcome Screen\r\nAND can choose to either log in, create a free account, Browse subscriptions or Explore Free Content. ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 23577611,
+    "title": "Onboarding: Favorite Team Picker",
+    "section_id": 503074,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1633109291,
+    "updated_by": 232,
+    "updated_on": 1646091054,
+    "estimate": null,
+    "estimate_forecast": "7s",
+    "suite_id": 121948,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user is on an Amazon Fire TV or Android TV device\r\nand has the MLB app installed for the first time",
+    "custom_steps": "WHEN they land on the favorite teams page\r\n\r\n",
+    "custom_expected": "THEN the next button is inaccessible until a team is selected\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 15948031,
+    "title": "Create Account Confirmation page",
+    "section_id": 503074,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10068",
+    "created_by": 232,
+    "created_on": 1613058093,
+    "updated_by": 232,
+    "updated_on": 1646091084,
+    "estimate": null,
+    "estimate_forecast": "2m 1s",
+    "suite_id": 121948,
+    "display_order": 4,
+    "custom_preconds": "GIVEN a user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN I have just successfully created an account\n",
+        "expected": "THEN I will be navigated to the account creation successful page\nAND the background will contain my favorite team image"
+      },
+      {
+        "content": "WHEN I am on the account success page\nAND I click continue\n",
+        "expected": "THEN they will be navigated to the home screen as a logged in user"
+      }
+    ]
+  },
+  {
+    "id": 15948225,
+    "title": "Create Account- Automated portion",
+    "section_id": 503074,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10064",
+    "created_by": 232,
+    "created_on": 1613059931,
+    "updated_by": 232,
+    "updated_on": 1613145154,
+    "estimate": null,
+    "estimate_forecast": "54s",
+    "suite_id": 121948,
+    "display_order": 6,
+    "custom_preconds": "GIVEN a logged out user on the create account screen\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user unsuccessfully attempts to create an account\n",
+        "expected": "THEN an error message displays"
+      },
+      {
+        "content": "WHEN the user is on the create account screen\nAND the eye button icon is enabled\n",
+        "expected": "THEN the password field will show as plain text"
+      }
+    ]
+  },
+  {
+    "id": 15948226,
+    "title": "Create Account",
+    "section_id": 503074,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-10064",
+    "created_by": 232,
+    "created_on": 1613061386,
+    "updated_by": 232,
+    "updated_on": 1646091112,
+    "estimate": null,
+    "estimate_forecast": "4m 39s",
+    "suite_id": 121948,
+    "display_order": 7,
+    "custom_preconds": "GIVEN a logged out user\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN they are on the create account screen\n",
+        "expected": "THEN they are presented static messaging\nAND the background will contain their favorite team image\nAND an empty email and password field\nAND an eye button icon that is by default hiding the password\nAND an inactive Create Account button\nAND an unchecked checkbox to opt-in for marketing"
+      },
+      {
+        "content": "WHEN they are on the create account screen\nAND the email field has been filled in\nAND password field has been filled to the minimum character amount\n",
+        "expected": "THEN the Create Account button becomes active"
+      },
+      {
+        "content": "WHEN the logged out user is on the create account screen\nAND the user successfully attempts to create an account",
+        "expected": "THEN the user will be navigated to the create account confirmation screen "
+      },
+      {
+        "content": "WHEN the logged out user is on the create account screen\nAND checks the marketing checkbox \nAND successfully creates an account\n",
+        "expected": "THEN the user will be opted in to marketing emails\n(This can be checked by logging into mlb.com as the new user and verifying in the user profile that they are opted in to newsletters)"
+      }
+    ]
+  },
+  {
+    "id": 15974278,
+    "title": "End of Onboarding",
+    "section_id": 503074,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1613147179,
+    "updated_by": 232,
+    "updated_on": 1646091156,
+    "estimate": null,
+    "estimate_forecast": "1m 37s",
+    "suite_id": 121948,
+    "display_order": 8,
+    "custom_preconds": "Given a user who is installing the app for the first time (or being forced through onboarding)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user closes the app before choosing a favorite team\nAND the user opens the app again",
+        "expected": "THEN the app will restart or continue the onboarding flow"
+      },
+      {
+        "content": "WHEN the user choose a favorite team \nAND clicks NEXT on the Favorite Team selection page\nAND the user closes the app (to truly close the app a force stop in settings will be required)\nAND the user opens the app again",
+        "expected": "THEN the app will open to the Home page"
+      }
+    ]
+  }
+]

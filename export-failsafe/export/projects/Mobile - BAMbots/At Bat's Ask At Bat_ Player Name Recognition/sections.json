@@ -1,0 +1,29 @@
+[
+  {
+    "id": 144266,
+    "suite_id": 20154,
+    "name": "Active Player Names",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 144685,
+    "suite_id": 20154,
+    "name": "Historical Player Names",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 144984,
+    "suite_id": 20154,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

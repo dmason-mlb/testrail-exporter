@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1960693,
+    "suite_id": 129050,
+    "name": "Playlist Video",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 521403,
+    "suite_id": 129050,
+    "name": "Team Page Video Index",
+    "description": null,
+    "parent_id": 1960693,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 521389,
+    "suite_id": 129050,
+    "name": "iPhone Team Page",
+    "description": null,
+    "parent_id": 521403,
+    "display_order": 18,
+    "depth": 2
+  },
+  {
+    "id": 521397,
+    "suite_id": 129050,
+    "name": "iPad Team Page",
+    "description": null,
+    "parent_id": 521403,
+    "display_order": 19,
+    "depth": 2
+  },
+  {
+    "id": 521399,
+    "suite_id": 129050,
+    "name": "Gameday",
+    "description": null,
+    "parent_id": 1960693,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 521400,
+    "suite_id": 129050,
+    "name": "Gameday Live",
+    "description": null,
+    "parent_id": 521399,
+    "display_order": 21,
+    "depth": 2
+  },
+  {
+    "id": 521401,
+    "suite_id": 129050,
+    "name": "Gameday Summary",
+    "description": null,
+    "parent_id": 521399,
+    "display_order": 22,
+    "depth": 2
+  },
+  {
+    "id": 521402,
+    "suite_id": 129050,
+    "name": "Gameday Videos",
+    "description": null,
+    "parent_id": 521399,
+    "display_order": 23,
+    "depth": 2
+  },
+  {
+    "id": 521406,
+    "suite_id": 129050,
+    "name": "iPhone Scoreboard",
+    "description": null,
+    "parent_id": 521399,
+    "display_order": 24,
+    "depth": 2
+  },
+  {
+    "id": 521404,
+    "suite_id": 129050,
+    "name": "Video Index",
+    "description": null,
+    "parent_id": 1960693,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 521398,
+    "suite_id": 129050,
+    "name": "iPhone Video Index",
+    "description": null,
+    "parent_id": 521404,
+    "display_order": 26,
+    "depth": 2
+  },
+  {
+    "id": 521405,
+    "suite_id": 129050,
+    "name": "iPad Video Index",
+    "description": null,
+    "parent_id": 521404,
+    "display_order": 27,
+    "depth": 2
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": 8748261,
+    "title": "Crash after setting or re-ordering favorite teams - Auto",
+    "section_id": 489162,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 124,
+    "created_on": 1605909738,
+    "updated_by": 124,
+    "updated_on": 1616078544,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 116135,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": "Launch MLB app.\r\n\r\nNavigate to News > Videos\r\n\r\nSet favorite Team via More > Account > My Teams...\r\n\r\nTap the Back Button.",
+    "custom_expected": "The application does not crash.\r\nThe application continues to run in the foreground.",
+    "custom_steps_separated": null
+  }
+]

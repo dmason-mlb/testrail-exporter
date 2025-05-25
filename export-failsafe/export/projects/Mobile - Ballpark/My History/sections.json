@@ -1,0 +1,92 @@
+[
+  {
+    "id": 732675,
+    "suite_id": 20556,
+    "name": "Landing Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 155370,
+    "suite_id": 20556,
+    "name": "Tappable Headers",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 155369,
+    "suite_id": 20556,
+    "name": "Landing Page - Events Section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 155371,
+    "suite_id": 20556,
+    "name": "Event Card Details View (via \"View Details\" link)",
+    "description": "This view shows more details about the a users specific check in. Additional content includes:\n*full score view or title view (NGE)\n*user inputted Notes, including Section Row Seat\n*user added photos in a larger size\n*add photos button\n*game wrap button if available\n*delete check-in button",
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 148955,
+    "suite_id": 20556,
+    "name": "Event Card - Add and Delete Photo Functionality",
+    "description": "Add a photo in the main view with a floating or static button. After selecting a photo, a full screen view pops up with the option to delete. Pinch to zoom also available on iOS.",
+    "parent_id": 155371,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 305335,
+    "suite_id": 20556,
+    "name": "Event Card - Editing Check-Ins Text",
+    "description": "In the top right corner of the Detials view there is now an \"Edit\" button. A edit view appears giving the user the ability to edit their Section, Row, Seat, and User Message.",
+    "parent_id": 155371,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 305412,
+    "suite_id": 20556,
+    "name": "Event Card - Deleting A Check-In",
+    "description": "At the very bottom of the table view in the details view, there will be a delete button.",
+    "parent_id": 155371,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 304649,
+    "suite_id": 20556,
+    "name": "Historic Check-in",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 306182,
+    "suite_id": 20556,
+    "name": "Navigation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 1124418,
+    "suite_id": 20556,
+    "name": "Deeplinks",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  }
+]

@@ -1,0 +1,173 @@
+[
+  {
+    "id": 154590,
+    "suite_id": 21380,
+    "name": "Tournament Management",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 154591,
+    "suite_id": 21380,
+    "name": "Global",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 154592,
+    "suite_id": 21380,
+    "name": "Prospective Players",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 154601,
+    "suite_id": 21380,
+    "name": "Matching",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 154602,
+    "suite_id": 21380,
+    "name": "Users",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 154603,
+    "suite_id": 21380,
+    "name": "Player Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 154608,
+    "suite_id": 21380,
+    "name": "Staff",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 154711,
+    "suite_id": 21380,
+    "name": "Documents",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 154712,
+    "suite_id": 21380,
+    "name": "Player Eligibility",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 154713,
+    "suite_id": 21380,
+    "name": "Qualifying Roster",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 154714,
+    "suite_id": 21380,
+    "name": "Roles",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 154715,
+    "suite_id": 21380,
+    "name": "Final Roster",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 154716,
+    "suite_id": 21380,
+    "name": "Mobile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 154717,
+    "suite_id": 21380,
+    "name": "Interest List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 154718,
+    "suite_id": 21380,
+    "name": "Provisional Roster",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 154903,
+    "suite_id": 21380,
+    "name": "TO_SORT_LATER_Sprint9",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 154904,
+    "suite_id": 21380,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": 154903,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 154905,
+    "suite_id": 21380,
+    "name": "TO_SORT_LATER_Sprint8.2",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 154906,
+    "suite_id": 21380,
+    "name": "8.2",
+    "description": null,
+    "parent_id": 154905,
+    "display_order": 28,
+    "depth": 1
+  }
+]

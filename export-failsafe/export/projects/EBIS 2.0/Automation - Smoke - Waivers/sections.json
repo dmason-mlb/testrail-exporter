@@ -1,0 +1,137 @@
+[
+  {
+    "id": 141604,
+    "suite_id": 20026,
+    "name": "Request Entry",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 141605,
+    "suite_id": 20026,
+    "name": "On Select",
+    "description": null,
+    "parent_id": 141604,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 141606,
+    "suite_id": 20026,
+    "name": "Screen Functionality",
+    "description": null,
+    "parent_id": 141604,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 141607,
+    "suite_id": 20026,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 141604,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 141608,
+    "suite_id": 20026,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 141604,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 141609,
+    "suite_id": 20026,
+    "name": "Players With Requested Waivers",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 141610,
+    "suite_id": 20026,
+    "name": "Results",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 141611,
+    "suite_id": 20026,
+    "name": "Pro Player Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 141612,
+    "suite_id": 20026,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 141611,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 141613,
+    "suite_id": 20026,
+    "name": "Batch",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 141614,
+    "suite_id": 20026,
+    "name": "Adv Search",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 141615,
+    "suite_id": 20026,
+    "name": "Email Utility",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 141616,
+    "suite_id": 20026,
+    "name": "Results",
+    "description": null,
+    "parent_id": 141615,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 141617,
+    "suite_id": 20026,
+    "name": "Withdrawal Process",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 141620,
+    "suite_id": 20026,
+    "name": "Waiver Claim Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  }
+]

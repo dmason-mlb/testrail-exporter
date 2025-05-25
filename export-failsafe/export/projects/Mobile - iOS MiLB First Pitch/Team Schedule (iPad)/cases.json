@@ -1,0 +1,94 @@
+[
+  {
+    "id": 58572,
+    "title": "iPad Team Schedule",
+    "section_id": 8519,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 23,
+    "created_on": 1437152548,
+    "updated_by": 119,
+    "updated_on": 1490587758,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 1114,
+    "display_order": 1,
+    "custom_preconds": "http://gdx.mlb.com/components/game/mlb/mobile/atbat/ipad/config/7.4.0/config.json",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user taps on the MiLB.com More Menu and then taps Team Schedules and then selects a team",
+        "expected": "Then the current month's schedule will be brought up"
+      },
+      {
+        "content": "When a user looks at the top left ",
+        "expected": "Then the user will see a back button with the current month the user is viewing on the team schedules"
+      },
+      {
+        "content": "When a user has a Favorite Team set and taps on the MiLB.com menu and taps on Team Schedules",
+        "expected": "Then we will see that our 'Favorite Team' is selected on the right\nand we will see that the appropriate calendar for the 'Favorite Team' is open on the right only on initial fresh install app launch"
+      },
+      {
+        "content": "When a user does not have a Favorite Team set and taps on the MiLB.com menu and taps on Team Schedules",
+        "expected": "Then we will see that 'Team Schedules' opens up\nand Select Team selector automatically opened\nand no schedule is loaded in the main section"
+      },
+      {
+        "content": "When a user does not have a Favorite Team set and selects the Select a Team drop down menu",
+        "expected": "The menu gives the user an option to select a calendar by the following categories: \"Select by MLB Affiliate\", \"Select By MiLB Class\" or \"View All MiLB Teams\"."
+      },
+      {
+        "content": "When a user taps on the MiLB.com menu and taps on Team Schedule and taps on a team\n\nRepeat for all teams",
+        "expected": "Then we will see that the appropriate 'Team Logo' is displayed on the header for each team "
+      },
+      {
+        "content": "When a user taps on the MiLB.com menu and taps on Team Schedules and attempts to scroll up or down",
+        "expected": "Then the user will go back in time when the user scrolls up and forward in time if the user scrolls down"
+      },
+      {
+        "content": "When a user taps on the MiLB.com menu and taps on Team Schedules and there is a game available that is not finalized yet",
+        "expected": "Then we will not see W next to the Score for that game\nand we will not see L next to the Score for that game"
+      },
+      {
+        "content": "When a user taps on the MiLB.com menu and taps on Team Schedules",
+        "expected": "Then we will see that Today's Date has the text Today in the bottom left corner of the cell"
+      },
+      {
+        "content": "When a user taps on the MiLB.com menu and taps on Team Schedule and taps on a team",
+        "expected": "Then the color of the cells for Home Games will reflect the Team in question appropriately"
+      },
+      {
+        "content": "When a user taps on the MiLB.com menu and taps on Team Schedules and selects a Team from the left and taps on the download Calendar button in the bottom right",
+        "expected": "Then when we look at our device's normal Calendar we will see the schedule for the team we've selected"
+      },
+      {
+        "content": "When a user taps on the MiLB.com menu button in the center and taps on the Team Schedules and taps on any team",
+        "expected": "Then we will see the current month's home games clear\nand the previous month's home games clouded over\nand the next month's home games clouded over"
+      },
+      {
+        "content": "When a user taps on the MiLB.com menu button and taps on the Team Schedules cell and taps on any team and taps on a date where there is a game in preview",
+        "expected": "Then the user will be brought into gameday for that team."
+      },
+      {
+        "content": "When a user taps the MiLB.com menu button in the top left and taps on the Team Schedules cell and taps on a team with a double header and taps on a the date of a double header",
+        "expected": "Then the user will see the game detail view with 2 buttons on top, one for each game\nand when the user taps on either of the buttons then the corresponding gameday page should load"
+      },
+      {
+        "content": "When a user taps on the MiLB.com menu button on the top left and taps on the Team Schedules cell and then taps on the team that has completed a double header",
+        "expected": "Then the user will see no score for either game on date; it will just say Doubleheader\nand when the date is tapped there will be the scores of both games with the corresponding W or L at the top\nand when either score is tapped the corresponding winning and losing pitcher will load\nand if the wrap button is tapped the corresponding gameday wrap will load"
+      },
+      {
+        "content": "When a user taps the MiLB.com menu button and taps on the Team Schedules cell and then taps on a team that has had a postponed game",
+        "expected": "Then the user will not see a score on the date of the postponed game\nAND the user will see Postponed in the game cell"
+      },
+      {
+        "content": "When a user sets their device to specific time zone and views the day cell and popover (tap on day cell)\n\nET (NYC)\nCT (Chicago)\nMT (Salt Lake City)\nMST (Phoenix)\nPT (Los Angeles)\nBogota (same time as ET, no ET label)\nCancun (same time as CT, no CT label)\nChihuahua (same time as MT, no MT label)\nTijuana (same time as PT, no PT label)\nLondon (default to ET)\nTokyo (default to ET)\nBuenos (+2)\n24 hour",
+        "expected": "Then both the day cell and popover are in the same time zone as the device with the correct time"
+      }
+    ],
+    "custom_feature_tag": null
+  }
+]

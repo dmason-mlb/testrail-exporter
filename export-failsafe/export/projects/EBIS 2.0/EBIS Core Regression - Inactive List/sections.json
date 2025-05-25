@@ -1,0 +1,704 @@
+[
+  {
+    "id": 146698,
+    "suite_id": 20326,
+    "name": "Bereavement/Family Medical Emergency",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 146699,
+    "suite_id": 20326,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 146698,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 146700,
+    "suite_id": 20326,
+    "name": "Paternity Leave",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 146701,
+    "suite_id": 20326,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 146700,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 146702,
+    "suite_id": 20326,
+    "name": "Place on major league paternity leave list",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 146703,
+    "suite_id": 20326,
+    "name": "Daily Transaction Bulletin",
+    "description": null,
+    "parent_id": 146702,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 146704,
+    "suite_id": 20326,
+    "name": "Nightly Notification",
+    "description": null,
+    "parent_id": 146702,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 146705,
+    "suite_id": 20326,
+    "name": "Reinstate from Inactive List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 146706,
+    "suite_id": 20326,
+    "name": "On Create Rule",
+    "description": null,
+    "parent_id": 146705,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 146707,
+    "suite_id": 20326,
+    "name": "On Submit Rule",
+    "description": null,
+    "parent_id": 146705,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 146708,
+    "suite_id": 20326,
+    "name": "On Approve Rule",
+    "description": null,
+    "parent_id": 146705,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 146709,
+    "suite_id": 20326,
+    "name": "CBT",
+    "description": null,
+    "parent_id": 146705,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 146710,
+    "suite_id": 20326,
+    "name": "Place on Deceased List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 146711,
+    "suite_id": 20326,
+    "name": "On Create Rule",
+    "description": null,
+    "parent_id": 146710,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 146712,
+    "suite_id": 20326,
+    "name": "On Submit Rule",
+    "description": null,
+    "parent_id": 146710,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 146713,
+    "suite_id": 20326,
+    "name": "On Approve Rule",
+    "description": null,
+    "parent_id": 146710,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 146714,
+    "suite_id": 20326,
+    "name": "Place on Disqualified List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 146715,
+    "suite_id": 20326,
+    "name": "On Create Rule",
+    "description": null,
+    "parent_id": 146714,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 146716,
+    "suite_id": 20326,
+    "name": "On Submit Rule",
+    "description": null,
+    "parent_id": 146714,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 146717,
+    "suite_id": 20326,
+    "name": "On Approve Rule",
+    "description": null,
+    "parent_id": 146714,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 146718,
+    "suite_id": 20326,
+    "name": "Daily Transaction Bulletin",
+    "description": null,
+    "parent_id": 146714,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 146719,
+    "suite_id": 20326,
+    "name": "Place on Military List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 146720,
+    "suite_id": 20326,
+    "name": "On Create Rule",
+    "description": null,
+    "parent_id": 146719,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 146721,
+    "suite_id": 20326,
+    "name": "On Submit Rule",
+    "description": null,
+    "parent_id": 146719,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 146722,
+    "suite_id": 20326,
+    "name": "On Approve Rule",
+    "description": null,
+    "parent_id": 146719,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 146723,
+    "suite_id": 20326,
+    "name": "Daily Transaction Bulletin",
+    "description": null,
+    "parent_id": 146719,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 146724,
+    "suite_id": 20326,
+    "name": "Voluntarily Retired",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 146725,
+    "suite_id": 20326,
+    "name": "On Create Rule",
+    "description": null,
+    "parent_id": 146724,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 146726,
+    "suite_id": 20326,
+    "name": "On Submit Rule",
+    "description": null,
+    "parent_id": 146724,
+    "display_order": 29,
+    "depth": 1
+  },
+  {
+    "id": 146727,
+    "suite_id": 20326,
+    "name": "On Approve Rule",
+    "description": null,
+    "parent_id": 146724,
+    "display_order": 30,
+    "depth": 1
+  },
+  {
+    "id": 146728,
+    "suite_id": 20326,
+    "name": "CBT",
+    "description": null,
+    "parent_id": 146724,
+    "display_order": 31,
+    "depth": 1
+  },
+  {
+    "id": 146729,
+    "suite_id": 20326,
+    "name": "Daily Transaction Bulletin",
+    "description": null,
+    "parent_id": 146724,
+    "display_order": 32,
+    "depth": 1
+  },
+  {
+    "id": 146730,
+    "suite_id": 20326,
+    "name": "Major League Bereavement/family medical emergency list",
+    "description": null,
+    "parent_id": null,
+    "display_order": 33,
+    "depth": 0
+  },
+  {
+    "id": 146731,
+    "suite_id": 20326,
+    "name": "Daily Transaction Bulletin",
+    "description": null,
+    "parent_id": 146730,
+    "display_order": 34,
+    "depth": 1
+  },
+  {
+    "id": 146732,
+    "suite_id": 20326,
+    "name": "Nightly Notification",
+    "description": null,
+    "parent_id": 146730,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 146733,
+    "suite_id": 20326,
+    "name": "Place on Ineligible List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  },
+  {
+    "id": 146734,
+    "suite_id": 20326,
+    "name": "On Create Rule",
+    "description": null,
+    "parent_id": 146733,
+    "display_order": 37,
+    "depth": 1
+  },
+  {
+    "id": 146735,
+    "suite_id": 20326,
+    "name": "On Submit Rule",
+    "description": null,
+    "parent_id": 146733,
+    "display_order": 38,
+    "depth": 1
+  },
+  {
+    "id": 146736,
+    "suite_id": 20326,
+    "name": "On Approve Rule",
+    "description": null,
+    "parent_id": 146733,
+    "display_order": 39,
+    "depth": 1
+  },
+  {
+    "id": 146737,
+    "suite_id": 20326,
+    "name": "Daily Transaction Bulletin",
+    "description": null,
+    "parent_id": 146733,
+    "display_order": 40,
+    "depth": 1
+  },
+  {
+    "id": 146738,
+    "suite_id": 20326,
+    "name": "Place on Strike List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 41,
+    "depth": 0
+  },
+  {
+    "id": 146739,
+    "suite_id": 20326,
+    "name": "On Create Rule",
+    "description": null,
+    "parent_id": 146738,
+    "display_order": 42,
+    "depth": 1
+  },
+  {
+    "id": 146740,
+    "suite_id": 20326,
+    "name": "On Submit Rule",
+    "description": null,
+    "parent_id": 146738,
+    "display_order": 43,
+    "depth": 1
+  },
+  {
+    "id": 146741,
+    "suite_id": 20326,
+    "name": "On Approve Rule",
+    "description": null,
+    "parent_id": 146738,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 146742,
+    "suite_id": 20326,
+    "name": "Daily Transaction Bulletin",
+    "description": null,
+    "parent_id": 146738,
+    "display_order": 45,
+    "depth": 1
+  },
+  {
+    "id": 146743,
+    "suite_id": 20326,
+    "name": "Activate Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 46,
+    "depth": 0
+  },
+  {
+    "id": 146744,
+    "suite_id": 20326,
+    "name": "On Create Rule",
+    "description": null,
+    "parent_id": 146743,
+    "display_order": 47,
+    "depth": 1
+  },
+  {
+    "id": 146745,
+    "suite_id": 20326,
+    "name": "On Submit Rule",
+    "description": null,
+    "parent_id": 146743,
+    "display_order": 48,
+    "depth": 1
+  },
+  {
+    "id": 146746,
+    "suite_id": 20326,
+    "name": "On Approve Rule",
+    "description": null,
+    "parent_id": 146743,
+    "display_order": 49,
+    "depth": 1
+  },
+  {
+    "id": 146747,
+    "suite_id": 20326,
+    "name": "Pending Suspension",
+    "description": null,
+    "parent_id": null,
+    "display_order": 50,
+    "depth": 0
+  },
+  {
+    "id": 146748,
+    "suite_id": 20326,
+    "name": "On Submit Rule",
+    "description": null,
+    "parent_id": 146747,
+    "display_order": 51,
+    "depth": 1
+  },
+  {
+    "id": 146749,
+    "suite_id": 20326,
+    "name": "On Approve Rule",
+    "description": null,
+    "parent_id": 146747,
+    "display_order": 52,
+    "depth": 1
+  },
+  {
+    "id": 146750,
+    "suite_id": 20326,
+    "name": "Place on Suspended List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 53,
+    "depth": 0
+  },
+  {
+    "id": 146751,
+    "suite_id": 20326,
+    "name": "On Create Rule",
+    "description": null,
+    "parent_id": 146750,
+    "display_order": 54,
+    "depth": 1
+  },
+  {
+    "id": 146752,
+    "suite_id": 20326,
+    "name": "On Submit Rule",
+    "description": null,
+    "parent_id": 146750,
+    "display_order": 55,
+    "depth": 1
+  },
+  {
+    "id": 146753,
+    "suite_id": 20326,
+    "name": "On Approve Rule",
+    "description": null,
+    "parent_id": 146750,
+    "display_order": 56,
+    "depth": 1
+  },
+  {
+    "id": 146754,
+    "suite_id": 20326,
+    "name": "Daily Transaction Bulletin",
+    "description": null,
+    "parent_id": 146750,
+    "display_order": 57,
+    "depth": 1
+  },
+  {
+    "id": 146755,
+    "suite_id": 20326,
+    "name": "Place on Restricted List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 58,
+    "depth": 0
+  },
+  {
+    "id": 146756,
+    "suite_id": 20326,
+    "name": "On Create Rule",
+    "description": null,
+    "parent_id": 146755,
+    "display_order": 59,
+    "depth": 1
+  },
+  {
+    "id": 146757,
+    "suite_id": 20326,
+    "name": "On Submit Rule",
+    "description": null,
+    "parent_id": 146755,
+    "display_order": 60,
+    "depth": 1
+  },
+  {
+    "id": 146758,
+    "suite_id": 20326,
+    "name": "On Approve Rule",
+    "description": null,
+    "parent_id": 146755,
+    "display_order": 61,
+    "depth": 1
+  },
+  {
+    "id": 146759,
+    "suite_id": 20326,
+    "name": "Daily Transaction Bulletin",
+    "description": null,
+    "parent_id": 146755,
+    "display_order": 62,
+    "depth": 1
+  },
+  {
+    "id": 146760,
+    "suite_id": 20326,
+    "name": "CBT",
+    "description": null,
+    "parent_id": 146755,
+    "display_order": 63,
+    "depth": 1
+  },
+  {
+    "id": 146761,
+    "suite_id": 20326,
+    "name": "Place on Temporary Inactive List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 64,
+    "depth": 0
+  },
+  {
+    "id": 146762,
+    "suite_id": 20326,
+    "name": "On Create Rule",
+    "description": null,
+    "parent_id": 146761,
+    "display_order": 65,
+    "depth": 1
+  },
+  {
+    "id": 146763,
+    "suite_id": 20326,
+    "name": "On Submit Rule",
+    "description": null,
+    "parent_id": 146761,
+    "display_order": 66,
+    "depth": 1
+  },
+  {
+    "id": 146764,
+    "suite_id": 20326,
+    "name": "On Approve Rule",
+    "description": null,
+    "parent_id": 146761,
+    "display_order": 67,
+    "depth": 1
+  },
+  {
+    "id": 146765,
+    "suite_id": 20326,
+    "name": "Reinstate from Inactive List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 68,
+    "depth": 0
+  },
+  {
+    "id": 146766,
+    "suite_id": 20326,
+    "name": "Elect Free Agency",
+    "description": null,
+    "parent_id": null,
+    "display_order": 69,
+    "depth": 0
+  },
+  {
+    "id": 146767,
+    "suite_id": 20326,
+    "name": "Place Player on NES List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 70,
+    "depth": 0
+  },
+  {
+    "id": 146768,
+    "suite_id": 20326,
+    "name": "Place on Disqualified List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 71,
+    "depth": 0
+  },
+  {
+    "id": 146769,
+    "suite_id": 20326,
+    "name": "Place on Ineligible List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 72,
+    "depth": 0
+  },
+  {
+    "id": 146770,
+    "suite_id": 20326,
+    "name": "Reinstate From Inactive List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 73,
+    "depth": 0
+  },
+  {
+    "id": 146771,
+    "suite_id": 20326,
+    "name": "Voluntarily Retired",
+    "description": null,
+    "parent_id": null,
+    "display_order": 74,
+    "depth": 0
+  },
+  {
+    "id": 146772,
+    "suite_id": 20326,
+    "name": "Reinstate from Inactive List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 75,
+    "depth": 0
+  },
+  {
+    "id": 146773,
+    "suite_id": 20326,
+    "name": "Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 76,
+    "depth": 0
+  },
+  {
+    "id": 146774,
+    "suite_id": 20326,
+    "name": "Reinstate from Inactive List",
+    "description": null,
+    "parent_id": null,
+    "display_order": 77,
+    "depth": 0
+  },
+  {
+    "id": 146775,
+    "suite_id": 20326,
+    "name": "Printing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 78,
+    "depth": 0
+  }
+]

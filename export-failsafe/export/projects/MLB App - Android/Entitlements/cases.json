@@ -1,0 +1,266 @@
+[
+  {
+    "id": 29946723,
+    "title": "Logged out user- video entitlements",
+    "section_id": 1623406,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1673643134,
+    "updated_by": 232,
+    "updated_on": 1692726106,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584821,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a logged out user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user accesses a free VOD clip",
+        "expected": "THEN the an ad plays at the beginning\nAND the clip plays after the clip has completed or the user selects the \"Skip Ad\" button"
+      },
+      {
+        "content": "WHEN the user attempts to accesses a paid SVOD clip",
+        "expected": "THEN the user is presented with the paywall\n"
+      },
+      {
+        "content": "WHEN the user attempts to access a paid game",
+        "expected": "THEN the user is presented with the modal which provides the options to GET MLB.TV, LOGIN, LISTEN WITH MLB AUDIO, or GO BACK\n![](index.php?/attachments/get/13762052)"
+      },
+      {
+        "content": "WHEN The user attempts to watch the free game of the day",
+        "expected": "THEN the user is presented with the modal which provides the options to CREATE FREE ACCOUNT, LOGIN, or GO BACK\n![](index.php?/attachments/get/13762053)\n"
+      }
+    ]
+  },
+  {
+    "id": 29946724,
+    "title": "Free Logged in user- video entitlements",
+    "section_id": 1623406,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1673643447,
+    "updated_by": 232,
+    "updated_on": 1692726667,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584821,
+    "display_order": 2,
+    "custom_preconds": "GIVEN a free logged in user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user accesses a free VOD clip",
+        "expected": "THEN an ad plays at the beginning\nAND the clip plays after the ad is over or the user taps the \"Skip Ad\" button"
+      },
+      {
+        "content": "WHEN the user attempts to watch a paid SVOD clip",
+        "expected": "THEN the user is presented with the paywall"
+      },
+      {
+        "content": "WHEN the user attempts to watch a paid game",
+        "expected": "THEN the user is presented with the Subscription required modal which includes options to GET MLB.TV, LISTEN WITH MLB AUDIO, or GO BACK\n![](index.php?/attachments/get/13762056)\n\n"
+      },
+      {
+        "content": "WHEN the user access a Free Game of the day",
+        "expected": "THEN the user will be entered into the player\nAND the game will play"
+      }
+    ]
+  },
+  {
+    "id": 29946725,
+    "title": "Audio only user- video entitlements",
+    "section_id": 1623406,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1673643525,
+    "updated_by": 232,
+    "updated_on": 1692726625,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584821,
+    "display_order": 3,
+    "custom_preconds": "GIVEN an audio only user is logged into the app",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user accesses a free VOD clip",
+        "expected": "THEN  clip plays WITHOUT preroll ads at the beginning "
+      },
+      {
+        "content": "WHEN the user attempts to watch a paid SVOD clip",
+        "expected": "THEN the clip will play "
+      },
+      {
+        "content": "WHEN the user attempts to watch a paid game",
+        "expected": "THEN the user is presented with the Subscription required modal which includes options to GET MLB.TV,  LISTEN WITH MLB AUDIO, or GO BACK\n![](index.php?/attachments/get/13762055)\n"
+      },
+      {
+        "content": "WHEN the user access a Free Game of the day",
+        "expected": "THEN the user will be entered into the player\nAND the game will play"
+      }
+    ]
+  },
+  {
+    "id": 29970571,
+    "title": "MLBALL user- video entitlements",
+    "section_id": 1623406,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1673972462,
+    "updated_by": 232,
+    "updated_on": 1673972462,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584821,
+    "display_order": 4,
+    "custom_preconds": "GIVEN an MLBALL entitled user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user accesses VOD",
+        "expected": "THEN the VOD clip will play without preroll ads"
+      },
+      {
+        "content": "WHEN the user accesses SVOD",
+        "expected": "THEN the SVOD clip will play in the player"
+      },
+      {
+        "content": "WHEN the user accesses a FGOTD ",
+        "expected": "THEN the game will play in the MLB.TV player"
+      },
+      {
+        "content": "WHEN the user accesses a paid game (with no blackouts)",
+        "expected": "THEN the game will play in the MLB.TV player"
+      }
+    ]
+  },
+  {
+    "id": 29970570,
+    "title": "EXEC user- video entitlements",
+    "section_id": 1623406,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1673972096,
+    "updated_by": 232,
+    "updated_on": 1673972552,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584821,
+    "display_order": 5,
+    "custom_preconds": "GIVEN an EXEC entitled user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user accesses VOD",
+        "expected": "THEN the VOD clip will play without preroll ads"
+      },
+      {
+        "content": "WHEN the user accesses SVOD",
+        "expected": "THEN the SVOD clip will play in the player"
+      },
+      {
+        "content": "WHEN the user accesses a FGOTD ",
+        "expected": "THEN the game will play in the MLB.TV player"
+      },
+      {
+        "content": "WHEN the user accesses a paid game (with no blackouts)",
+        "expected": "THEN the game will play in the MLB.TV player"
+      },
+      {
+        "content": "WHEN the user accesses a paid game that would normally be blacked out for the given region",
+        "expected": "THEN the game will play in the MLB.TV player"
+      }
+    ]
+  },
+  {
+    "id": 29970572,
+    "title": "Single Team User- Video entitlements",
+    "section_id": 1623406,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1673973707,
+    "updated_by": 232,
+    "updated_on": 1692728475,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584821,
+    "display_order": 6,
+    "custom_preconds": "GIVEN a user with a single team entitlement ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user accesses a VOD clip",
+        "expected": "THEN the VOD clip will play without preroll ads"
+      },
+      {
+        "content": "WHEN the user accesses an SVOD clip",
+        "expected": "THEN the SVOD clip will play in the player"
+      },
+      {
+        "content": "WHEN the user selects the game tile of a game in which my team is not involved\n\n",
+        "expected": "THEN the user will be presented with the Subscription Required modal which includes the options to GET MLB.TV, LISTEN WITH MLB AUDIO, or GO BACK\n![](index.php?/attachments/get/13762078)\n"
+      },
+      {
+        "content": "WHEN the user attempts to play a regional feed to which I am entitled\n\n",
+        "expected": "THEN the stream will play successfully when selected\n\n"
+      },
+      {
+        "content": "\t\nWHEN the user attempts to play a national feed to which they are entitled (their single team is participating in the game)\n\nNOTE:Archived Mets at Nationals on April 8, 2022 is an example national feed (in this case Apple TV+ archived feed). Call letters in the center of the feed select modal are an indicator of national feed.",
+        "expected": "THEN the stream will play successfully when selected\n\n"
+      }
+    ]
+  },
+  {
+    "id": 29978379,
+    "title": "Logged out user- Audio entilement",
+    "section_id": 1623406,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1674163128,
+    "updated_by": 232,
+    "updated_on": 1674163128,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 584821,
+    "display_order": 7,
+    "custom_preconds": "GIVEN a logged out user",
+    "custom_steps": "WHEN the user attempts to access an audio feed",
+    "custom_expected": "THEN the paywall will be presented",
+    "custom_steps_separated": null
+  }
+]

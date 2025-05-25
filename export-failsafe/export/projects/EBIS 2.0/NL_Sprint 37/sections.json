@@ -1,0 +1,83 @@
+[
+  {
+    "id": 145740,
+    "suite_id": 20253,
+    "name": "Employee Profiles",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 145741,
+    "suite_id": 20253,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 145740,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 145743,
+    "suite_id": 20253,
+    "name": "Employee Contracts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 145744,
+    "suite_id": 20253,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 145743,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 145747,
+    "suite_id": 20253,
+    "name": "Employee Transactions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 145742,
+    "suite_id": 20253,
+    "name": "Assign/Reassign Employee",
+    "description": null,
+    "parent_id": 145747,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 145748,
+    "suite_id": 20253,
+    "name": "Temporarily Inactive List",
+    "description": null,
+    "parent_id": 145747,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 145750,
+    "suite_id": 20253,
+    "name": "Ineligible List",
+    "description": null,
+    "parent_id": 145747,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 145752,
+    "suite_id": 20253,
+    "name": "Deceased List",
+    "description": null,
+    "parent_id": 145747,
+    "display_order": 16,
+    "depth": 1
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 170427,
+    "title": "Interstitial Launch",
+    "section_id": 23860,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": 938,
+    "refs": null,
+    "created_by": 119,
+    "created_on": 1465242751,
+    "updated_by": 119,
+    "updated_on": 1490569453,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2629,
+    "display_order": 1,
+    "custom_preconds": "Interstitials are served at a rate of 2 per hour. They are being delivered from a network source, they are not guaranteed to deliver any inventory at all. If no one is buying the impression at auction, nothing will be returned when the request is made to the network.",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Launch app, cycle through different tabs until served an interstitial.",
+        "expected": "An interstitial will appear."
+      },
+      {
+        "content": "Tapping on anywhere on the ad..",
+        "expected": "Internal web page view will be launched."
+      },
+      {
+        "content": "Once interstitial is launched, note the closable 'x' in the top right corner",
+        "expected": "Tapping the x will close the interstitial."
+      }
+    ],
+    "custom_feature_tag": null
+  }
+]

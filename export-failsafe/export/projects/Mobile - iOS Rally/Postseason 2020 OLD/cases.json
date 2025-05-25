@@ -1,0 +1,3738 @@
+[
+  {
+    "id": 8594525,
+    "title": "Log in with MLB",
+    "section_id": 474465,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2213",
+    "created_by": 280,
+    "created_on": 1603820171,
+    "updated_by": 258,
+    "updated_on": 1614207309,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If user doesn't have any other MLB apps where they are currently logged in,  there shoud be a “Log in with MLB” button on the login screen. \nNote: 'Log In' should be light bold",
+        "expected": "![](index.php?/attachments/get/8299133)\n"
+      },
+      {
+        "content": "Clicking the “Log in with MLB” button will check to see if the device has logged in to any other MLB apps.",
+        "expected": ""
+      },
+      {
+        "content": "Clicking on 'Don't have an account? Sign Up'\nNote: 'Sign Up' should be light bold",
+        "expected": "Will bring user to sign up page"
+      },
+      {
+        "content": "If user is logged in in another MLB app",
+        "expected": "The user’s email address is shown, and the “Continue with MLB” button is added that allows them to continue their log in.\n\n'Log In with another MLB account' is displayed\n'New to MLB? Sign Up' is displayed\n('Log In' and 'Sign Up' are light bold)\n\n![](index.php?/attachments/get/6954914)\n"
+      },
+      {
+        "content": "Clicking on 'Log In with another MLB account'",
+        "expected": "Will bring user to 'Log In' page"
+      },
+      {
+        "content": "Clicking on 'New to MLB? Sign Up' ",
+        "expected": "Will bring user to 'Sign Up' page"
+      }
+    ]
+  },
+  {
+    "id": 8912441,
+    "title": "Edge cases/negative testing for 'Log in with MLB'",
+    "section_id": 474465,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1607995706,
+    "updated_by": 258,
+    "updated_on": 1607996222,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User creates an account and then signs out",
+        "expected": "When user goes back to Rally, the newly created account is displayed in log in with MLB section"
+      },
+      {
+        "content": "If user has long email address",
+        "expected": "Full email address is displayed os email has a trancation\n\n![](index.php?/attachments/get/6954915)\n"
+      },
+      {
+        "content": "User deletes DOB or nickname from MLB account",
+        "expected": "User clicks on 'Log in with MLB', then types in all the MLB account info, then it takes user to update your profile page"
+      },
+      {
+        "content": "User deletes DOB or nickname from MLB account",
+        "expected": "User is logged in to another MLB app on the phone. Then user clicks on 'Continue with MLB', then types in all the MLB account info, then it takes user to update your profile page"
+      }
+    ]
+  },
+  {
+    "id": 8602191,
+    "title": "User under 21",
+    "section_id": 474465,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2009",
+    "created_by": 280,
+    "created_on": 1603920373,
+    "updated_by": 258,
+    "updated_on": 1612545357,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 3,
+    "custom_preconds": "MGM has decided that they no longer want players who are under 21 to be able to register / play Rally.",
+    "custom_steps": null,
+    "custom_expected": "During registration, anyone who is under 21 is locked out of the app as soon as they create their account. \r\n\r\nPlayers can not go back and change their age once seeing that screen.\r\n\r\nCurrent players who are under 21 can still play and do not need to be removed. This only pertains to new players.\r\n(per Jeremy: They can until they log out. Once they log out, then they won’t be allowed in again.)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8602192,
+    "title": "Email Verification",
+    "section_id": 474465,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1603920654,
+    "updated_by": 258,
+    "updated_on": 1616010233,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "New functionality should be added for email verification when user signs up.\r\n\r\nUser should not be able to proceed into the app until the email verification process is complete. \r\n\r\n**IT HAS NOT BEEN DEVELOPED YET!**",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16043696,
+    "title": "Splash screen layout",
+    "section_id": 474465,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2509",
+    "created_by": 258,
+    "created_on": 1613599596,
+    "updated_by": 258,
+    "updated_on": 1613600045,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "* Logo size is increased\n* Background image is updated ",
+        "expected": "![](index.php?/attachments/get/8182515)\n"
+      }
+    ]
+  },
+  {
+    "id": 16043712,
+    "title": "Banner image update",
+    "section_id": 717090,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2510",
+    "created_by": 258,
+    "created_on": 1613602052,
+    "updated_by": 258,
+    "updated_on": 1613602132,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "* new background image\n* new text layout (smaller font centered)\n* date and delay icon moved to top of panel",
+        "expected": "![](index.php?/attachments/get/8182518)\n"
+      }
+    ]
+  },
+  {
+    "id": 8602957,
+    "title": "Carousel image on transition",
+    "section_id": 717090,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-1994",
+    "created_by": 280,
+    "created_on": 1603921155,
+    "updated_by": 258,
+    "updated_on": 1614816288,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": "1. Play 2-3 games from the Rally home screen\r\n2. From the home screen, the carousel should have 2-3 active contests\r\n3. Swipe to the last contest of the carousel.\r\n4. Tap the game from the carousel, or any game from today's games\r\n5. As the game screens transitions to the deck, the carousel image will re-set to the first game",
+    "custom_expected": "Carousel image remains consistent on transition",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8594529,
+    "title": "Favorite team",
+    "section_id": 473677,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1603821639,
+    "updated_by": 258,
+    "updated_on": 1612392484,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": "Favorite team after logging in, signing up and in the profile page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "* The Favorite team has a list view",
+        "expected": "![](index.php?/attachments/get/6438740)"
+      },
+      {
+        "content": "* Every line has a plus sign on the left, team logo and team name",
+        "expected": ""
+      },
+      {
+        "content": "* Every team logo should have a team background",
+        "expected": ""
+      },
+      {
+        "content": "* User is able to select Favorite team",
+        "expected": "![](index.php?/attachments/get/6438741)"
+      },
+      {
+        "content": "Text below the header",
+        "expected": "If user didn't select Favorite team yet:\n**Text:** Select your favorite team in the league. You can change at any time. \n\nAfter user select the Favorite team, the text updates to: \nSelect the team(s) you want to keep your eye on. You can change at any time."
+      },
+      {
+        "content": "* User is able to select Following team",
+        "expected": "![](index.php?/attachments/get/6438742)"
+      },
+      {
+        "content": "* First selection will move the selected team to the Favorite team section by default. Second selection will move the selected team to Followed team section",
+        "expected": ""
+      },
+      {
+        "content": "* User is able to select multiple teams for the Followed teams section and deselect it at any time",
+        "expected": ""
+      },
+      {
+        "content": "* Selected teams should go to either Favorite or Followed teams and be removed from All teams list. If user removes selected team from Favorite of Followed teams, the team should be displayed back in the All teams list",
+        "expected": ""
+      },
+      {
+        "content": "* Clicking and holding the 3-line icon next to the team should give the user ability to move the team between the Favorite teand and Followed team sections",
+        "expected": ""
+      },
+      {
+        "content": "* 'Next' button gets enabled after user made his first selection",
+        "expected": ""
+      },
+      {
+        "content": "* If user removed the team from Favorite team section the Next button gets disabled",
+        "expected": ""
+      },
+      {
+        "content": "**User sees 'Select Favorite' page every time user logs in in the app**",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 8839253,
+    "title": "Edge case",
+    "section_id": 473677,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1607026536,
+    "updated_by": 280,
+    "updated_on": 1607026597,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Newly created user",
+        "expected": "User is able to go through selecting favorite team flow after signing up"
+      },
+      {
+        "content": "Existing user",
+        "expected": "User is able to go through selecting favorite team flow after logging in"
+      }
+    ]
+  },
+  {
+    "id": 8602069,
+    "title": "Postponed",
+    "section_id": 475110,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2070",
+    "created_by": 280,
+    "created_on": 1603912578,
+    "updated_by": 280,
+    "updated_on": 1603912613,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "User is not able to click on postponed games",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8673981,
+    "title": "Trophy award/modal flow 2020/2021 - if user played in 2020",
+    "section_id": 482309,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2307, FTP-2306, FTP-2307",
+    "created_by": 280,
+    "created_on": 1604947372,
+    "updated_by": 280,
+    "updated_on": 1606857429,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "* Starting on Opening Day 2021, the first time a player logs in who has a NONZERO XP value for 2020, they should be shown a screen where they are awarded a trophy\r\n* This flow only happens 1 time\r\n* This modal should be set up to be the highest-priority modal - even if additional modals are added in the future. ",
+    "custom_steps_separated": [
+      {
+        "content": "Player is awarded a Season Trophy for their 2020 performance",
+        "expected": "* 'Your 2020 Trophy' headline\n* Player ranking ia displayed from 2020 season\n* 2020 throphy is displayed\n* Fireworks appear around the trophy\n* Text 'You earned the rank of Legend for the 2020 season. Your trophy was added to your Profile'\n* Enable 'Next' button\n\n![](index.php?/attachments/get/6597477)\n"
+      },
+      {
+        "content": "When clicking on 'Next' button ",
+        "expected": "It takes user to 'Welcome to the 2021 Season' modal"
+      },
+      {
+        "content": "When getting to the second screen, the amount of Player XP that they have is then reset to 0, and their Player Ranking is reset to “Prospect”",
+        "expected": "* 'Welcome to the 2021 Season' headline\n* Player Ranking is reset to “Prospect”\n* Player XP is reset to 0\n* Trophy background with a question mark\n* Text 'The path to becoming a 2021 MLB Legend starts here. Are you up for the challenge?'\n* 'I'm Ready!' button\n\n\n![](index.php?/attachments/get/6597478)\n"
+      },
+      {
+        "content": "Clicking on 'I'm Ready!' button",
+        "expected": "Clicking “I’m Ready” closes the modal and taking user to the Home screen. "
+      },
+      {
+        "content": "User views his profile page, the 2020 trophy is added. ",
+        "expected": "![](index.php?/attachments/get/6597479)\n"
+      }
+    ]
+  },
+  {
+    "id": 8673982,
+    "title": "Trophy modal 2021 - if user didn't play 2020",
+    "section_id": 482309,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2306, FTP-2333",
+    "created_by": 280,
+    "created_on": 1604947392,
+    "updated_by": 258,
+    "updated_on": 1615415167,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If user didn't play Rally in 2020 season and opens the app in 2021 season.",
+        "expected": "The 2020 modal should NOT appear, and no trophy should be awarded.\n\n"
+      },
+      {
+        "content": "",
+        "expected": "This modal should be set up to be the highest-priority modal - even if additional modals are added in the future. \nThis modal is shown first out of all modals."
+      },
+      {
+        "content": "",
+        "expected": "Starting on Opening Day, the first time the player opens Rally 'Welcome to the 2021 Season' modal is displayed. This flow only happens 1 time.\n\n![](index.php?/attachments/get/6597480)\n"
+      },
+      {
+        "content": "Clicking on 'I'm Ready!' button",
+        "expected": "Clicking “I’m Ready” closes the modal and taking user to the Home screen."
+      },
+      {
+        "content": "User views his profile page, the 2020 trophy is added.",
+        "expected": "2020 trophy is not there. The first trophy placeholder is 2021.\n\n![](index.php?/attachments/get/6863848)\n\n\n"
+      }
+    ]
+  },
+  {
+    "id": 8813420,
+    "title": "Edge cases/negative testing for trophies",
+    "section_id": 482309,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2333",
+    "created_by": 280,
+    "created_on": 1606851806,
+    "updated_by": 280,
+    "updated_on": 1607013414,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User logs in the app after opening day - user played the 2020 season",
+        "expected": "Modal flow: \n\n* 2020 thropies modal is displayed\n* 2021 modal is displayed\n\nTrophies modal is the priority modal"
+      },
+      {
+        "content": "Test the above step while any other modal is active for the app",
+        "expected": "Trophies modal is displayed first"
+      },
+      {
+        "content": "User logs in the app after opening day - user did not play the 2020 season",
+        "expected": "Modal flow: \n\n* 2021 modal is displayed"
+      },
+      {
+        "content": "User logs in the app after opening day - user's profile was created in 2020 but user has 0 XP",
+        "expected": "Modal flow: \n\n* 2021 modal is displayed"
+      },
+      {
+        "content": "If users re-logs in to the app",
+        "expected": "The modal is not shown"
+      }
+    ]
+  },
+  {
+    "id": 8813421,
+    "title": "Trophies kind - 2020 season",
+    "section_id": 482309,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2306",
+    "created_by": 280,
+    "created_on": 1606855447,
+    "updated_by": 280,
+    "updated_on": 1606857043,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 4,
+    "custom_preconds": "User played 2020 season and logs back to the app in 2021",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Prospect",
+        "expected": "* the title says 'Prospect'\n* Prospect trophy is displayed\n* the text below contains **Prospect** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n![](index.php?/attachments/get/6863857)\n"
+      },
+      {
+        "content": "Top Prospect",
+        "expected": "* the title says 'Top Prospect'\n* Prospect trophy is displayed\n* the text below contains **Top Prospect** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863858)\n"
+      },
+      {
+        "content": "Future Star",
+        "expected": "* the title says 'Future Star'\n* Prospect trophy is displayed\n* the text below contains **Future Star** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863859)\n"
+      },
+      {
+        "content": "September Call-up",
+        "expected": "* the title says 'September Call-up'\n* Prospect trophy is displayed\n* the text below contains **September Call-up** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863860)\n"
+      },
+      {
+        "content": "Rookie",
+        "expected": "* the title says 'Rookie'\n* Prospect trophy is displayed\n* the text below contains **Rookie** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863861)\n"
+      },
+      {
+        "content": "Starter",
+        "expected": "* the title says 'Starter'\n* Prospect trophy is displayed\n* the text below contains **Starter** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863862)\n"
+      },
+      {
+        "content": "All-Star",
+        "expected": "* the title says 'All-Star'\n* Prospect trophy is displayed\n* the text below contains **All-Star** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863863)\n"
+      },
+      {
+        "content": "All-MLB",
+        "expected": "* the title says 'All-MLB'\n* Prospect trophy is displayed\n* the text below contains **All-MLB** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863864)\n"
+      },
+      {
+        "content": "Captain",
+        "expected": "* the title says 'Captain'\n* Prospect trophy is displayed\n* the text below contains **Captain** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863865)\n"
+      },
+      {
+        "content": "MVP",
+        "expected": "* the title says 'MVP'\n* Prospect trophy is displayed\n* the text below contains **MVP** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863866)\n"
+      },
+      {
+        "content": "Superstar",
+        "expected": "* the title says 'Superstar'\n* Prospect trophy is displayed\n* the text below contains **Superstar** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863867)\n"
+      },
+      {
+        "content": "Jersey Retired",
+        "expected": "* the title says 'Jersey Retired'\n* Prospect trophy is displayed\n* the text below contains **Jersey Retired** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863868)\n"
+      },
+      {
+        "content": "Hall Of Farmer",
+        "expected": "* the title says 'Hall Of Farmer'\n* Prospect trophy is displayed\n* the text below contains **Hall Of Farmer** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863869)\n"
+      },
+      {
+        "content": "Legend",
+        "expected": "* the title says 'Legend'\n* Prospect trophy is displayed\n* the text below contains **Legend** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863870)\n"
+      },
+      {
+        "content": "Rally Champion",
+        "expected": "* the title says 'Rally Champion'\n* Prospect trophy is displayed\n* the text below contains **Rally Champion** word\n* **same throphy kind is displayed in user's profile for 2020 season**\n\n\n![](index.php?/attachments/get/6863871)\n"
+      }
+    ]
+  },
+  {
+    "id": 16246115,
+    "title": "Trophy in profile page",
+    "section_id": 482309,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1614978985,
+    "updated_by": 258,
+    "updated_on": 1614979254,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 5,
+    "custom_preconds": "User is on the profile page",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If user has 2020 throphy and clicks on it",
+        "expected": "The 2020 trophy modal pops up"
+      },
+      {
+        "content": "If user doesn't have 2020 trophy and clicks on 2021 trophy",
+        "expected": "nothing happens"
+      }
+    ]
+  },
+  {
+    "id": 16124003,
+    "title": "Prop resolution",
+    "section_id": 723605,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2541",
+    "created_by": 258,
+    "created_on": 1614115402,
+    "updated_by": 258,
+    "updated_on": 1614115856,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "User is able to see the resolution for the same prop separately in Pick 10 and Pro Play",
+    "custom_steps_separated": [
+      {
+        "content": "1. Make prediction for the same prop in Pick 10 and Pro Play. (pick the same option)\n2. Go to Pick 10\n3. Go to Pro Play",
+        "expected": "User sees the prop resolution in Pick 10 and Pro Play"
+      },
+      {
+        "content": "1. Make prediction for the same prop in Pick 10 and Pro Play. (pick the same option)\n2. Go to Pro Play\n3. Go to Pick 10",
+        "expected": "User sees the prop resolution in Pro Play and Pick 10"
+      },
+      {
+        "content": "1. Make prediction for the same prop in Pick 10 and Pro Play. (pick different options)\n2. Go to Pick 10\n3. Go to Pro Play",
+        "expected": "User sees the prop resolution in Pick 10 and Pro Play"
+      },
+      {
+        "content": "1. Make prediction for the same prop in Pick 10 and Pro Play. (pick different options)\n2. Go to Pro Play\n3. Go to Pick 10",
+        "expected": "User sees the prop resolution in Pro Play and Pick 10"
+      }
+    ]
+  },
+  {
+    "id": 16135916,
+    "title": "Scores on Home tab",
+    "section_id": 723605,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2552",
+    "created_by": 258,
+    "created_on": 1614201465,
+    "updated_by": 258,
+    "updated_on": 1615828024,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Pro score should be priority.EZ scores should not be displayed on home tab at all. \r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "1. Play Pro game first. Make sure to have resolution and have scores\n2. Then play Live 10. Make sure to have resolution and have scores",
+        "expected": "Pro Play scores are displayed on the home tab"
+      },
+      {
+        "content": "1. Play Live 10 game first. Make sure to have resolution and have scores\n2. Then play Pro game. Make sure to have resolution and have scores",
+        "expected": "Pro Play scores are displayed as soon as the first played prop gets resolved"
+      },
+      {
+        "content": "1. Play Live 10 game only",
+        "expected": "No scores are displayed on the home tab"
+      }
+    ]
+  },
+  {
+    "id": 16137398,
+    "title": "Expanded Card Auto - Close",
+    "section_id": 723605,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2561",
+    "created_by": 258,
+    "created_on": 1614207808,
+    "updated_by": 258,
+    "updated_on": 1614208190,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "In the middle of viewing an OD or ITH card in expanded mode, if then there is an inning change over, the expanded mode should automatically close and show blank card.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16137397,
+    "title": "Edge case - resolution flow",
+    "section_id": 723605,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2560, FTP-2555",
+    "created_by": 258,
+    "created_on": 1614207483,
+    "updated_by": 258,
+    "updated_on": 1614208197,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Hold the deck with one finger while you tap the [!] button with another.",
+        "expected": "The resolution animation should not execute until you lift your finger, upon which it moves forward normally."
+      },
+      {
+        "content": "Make a prediction, exit the game, go back to it when prop is resolved. \nDo not tap on ! and continue to make predictions (swipe up and down)",
+        "expected": "The resolution does not pop up until user clicks on !"
+      }
+    ]
+  },
+  {
+    "id": 16138610,
+    "title": "Limited Strikezone Resolution",
+    "section_id": 723605,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2556",
+    "created_by": 258,
+    "created_on": 1614210600,
+    "updated_by": 258,
+    "updated_on": 1615916022,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Limited strikezone cards should resolve with a limited strikezone as well.\r\nPer Andrew it won't be fixed soon",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16221263,
+    "title": "Edge case - Expanded Card Auto",
+    "section_id": 723605,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2561",
+    "created_by": 258,
+    "created_on": 1614815025,
+    "updated_by": 258,
+    "updated_on": 1614815449,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 6,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "In the middle of viewing an OD or ITH card in expanded mode, if then there is an inning change over, the expanded mode should automatically close and shows blank card.",
+    "custom_steps_separated": [
+      {
+        "content": "Live 10 - When 3rd inning is about to happen, open the On Deck or In The Hole card and stay there until the card is withdrawn",
+        "expected": "The expanded mode should automatically close and the new batter up card should be displayed (unzoomed)"
+      },
+      {
+        "content": "Pro Play - When 3rd inning is about to happen, open the On Deck or In The Hole card and stay there until the card is withdrawn",
+        "expected": "The expanded mode should automatically close and the new batter up card should be displayed (unzoomed)"
+      }
+    ]
+  },
+  {
+    "id": 16221267,
+    "title": "Unselecting predictions",
+    "section_id": 723605,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1614819433,
+    "updated_by": 258,
+    "updated_on": 1614819665,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Live 10 - User made predictions, then user unselected prediction before the prop got locked ",
+        "expected": "The carousel should not show this game"
+      },
+      {
+        "content": "Pro Play - User made predictions, then user unselected prediction before the prop got locked ",
+        "expected": "* The carousel should not show this game. \n* The contest list on the Home tab should not highlight that game, the button should say PLAY NOW"
+      }
+    ]
+  },
+  {
+    "id": 16233961,
+    "title": "Edge case - prop resolution",
+    "section_id": 723605,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2555",
+    "created_by": 258,
+    "created_on": 1614879042,
+    "updated_by": 258,
+    "updated_on": 1614879217,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 8,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Live 10:\n- Make prediction\n- Exit the contest\n- Go back to the contest when prop is resolved\n- do not click on !, swipe up and down, open other props",
+        "expected": "User is able to swipe up and down, open other props, make predictions. The resolved prop does not show the resolution until user clicks on !"
+      },
+      {
+        "content": "Pro Play:\n- Make prediction\n- Exit the contest\n- Go back to the contest when prop is resolved\n- do not click on !, swipe up and down, open other props",
+        "expected": "User is able to swipe up and down, open other props, make predictions. The resolved prop does not show the resolution until user clicks on !"
+      }
+    ]
+  },
+  {
+    "id": 16235241,
+    "title": "Card background",
+    "section_id": 723605,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2538",
+    "created_by": 258,
+    "created_on": 1614887065,
+    "updated_by": 258,
+    "updated_on": 1614887127,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 9,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Live 10",
+        "expected": "Card and Expanded Card Image match"
+      },
+      {
+        "content": "Pro Play",
+        "expected": "Card and Expanded Card Image match"
+      }
+    ]
+  },
+  {
+    "id": 8813422,
+    "title": "Game picker screen display",
+    "section_id": 495562,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2311",
+    "created_by": 280,
+    "created_on": 1606857523,
+    "updated_by": 258,
+    "updated_on": 1615830822,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": "User is on the Home tab and clicks on the game",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "The game picker screen is displayed:\n\n* team logos at the top\n* header 'How do you want to play?' (in yellow)\n\n**Rally section**\n* 'Make 10 picks during the game. The top 3 scores win a prize' \n* MLB.tv Subscriptions; Cash Prizes; Team Jerseys; + more\n* 'PLAY NOW' \n\n**Rally Pro section**\n* 'Make unlimited picks. The best Pro scores across today's games compete for the daily prize pool.'\n* prize for the Prize Pool\n* 'PLAY NOW'\n\nText 'No Purchase Necessary, 21+ to compete. Restrictions apply, see Official Rules.'",
+        "expected": "![](index.php?/attachments/get/8613261)\n"
+      },
+      {
+        "content": "When clicking on Live 10",
+        "expected": "User is taken to Live 10 game"
+      },
+      {
+        "content": "When clicking on Pro Plat",
+        "expected": "User is taken to Pro Play game"
+      },
+      {
+        "content": "When clicking on 'Official Rules'",
+        "expected": "User is taken to MLB Rally Official Rules page"
+      },
+      {
+        "content": "This screen should always appear when clicking into a contest - even if they are already playing that contest.",
+        "expected": ""
+      },
+      {
+        "content": "When tapping back from 'Rally' / 'Rally Pro', the picker is shown again.",
+        "expected": ""
+      },
+      {
+        "content": "**If the splitter screen does not take 100% of the screen or if user needs to scroll up/down to see the full screen - it's fine per Jeremy**\nhttps://baseball.atlassian.net/browse/FTP-2457",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 8863088,
+    "title": "Delay",
+    "section_id": 495562,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1607453012,
+    "updated_by": 258,
+    "updated_on": 1607453052,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Delay equally applies to Easy Play and Pro Play",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 15728750,
+    "title": "Game splitter display - pre game",
+    "section_id": 495562,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611348493,
+    "updated_by": 258,
+    "updated_on": 1615828432,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "teams logos and time when game starts are displayed at the top\n'How do you want to play?'\n\n**Pick 10 section**\n* 'Make 10 picks during this game for a chance at a daily prize. The top score can choose from:'\n* MLB.tv Subscription\n* Cash Prize\n* Team Jersey\n* + more\n\n**Pro Play section**\n* 'Make unlimited picks. The best Pro scores across today's games compete for the daily prize pool.'\n* prize for the Prize Pool\n* 'PLAY NOW'\n\nText 'No Purchase Necessary, 21+ to compete. Restrictions apply, see Official Rules.'",
+        "expected": "![](index.php?/attachments/get/7976768)\n![](index.php?/attachments/get/7863705)\n\n"
+      },
+      {
+        "content": "User can not play 'Pick 10' until the contest is LIVE",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 15728753,
+    "title": "Game splitter display - play again ('Rally Lite') - user plays Rally Pro",
+    "section_id": 495562,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611348522,
+    "updated_by": 258,
+    "updated_on": 1615316496,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 8,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "teams logo, score, current inning and homeplate are displayed at the top\n'How do you want to play?' is displayed\n\n**'Rally Lite' section**\n* 'Nice work! Play again to make 10 more picks. Can you beat yout score?'\n* Best Score\n* Your Rank\n\n**Rally Pro section**\n* \"The best Pro scores across today's games compete for the daily prize pool.'\n* Score\n* Your Rank\n* 'KEEP PLAYING'\n\nText 'No Purchase Necessary, 21+ to compete. Restrictions apply, see Official Rules.'",
+        "expected": "![](index.php?/attachments/get/8299134)\n"
+      }
+    ]
+  },
+  {
+    "id": 15728876,
+    "title": "Game splitter display - play again ('Rally Lite') - user doesn't play Rally Pro",
+    "section_id": 495562,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611350523,
+    "updated_by": 258,
+    "updated_on": 1615316529,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 9,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "teams logo, score, current inning and homeplate are displayed at the top\n'How do you want to play?' is displayed\n\n**'Live 10' section**\n* 'Nice work! Play again to make 10 more picks. Can you beat yout score?'\n* Best Score\n* Your Rank\n\n**Pro Play section**\n* 'Make unlimited picks. The best Pro scores across today's games compete for the daily prize pool.'\n* prize for the Prize Pool\n* 'PLAY NOW'\n\nText 'No Purchase Necessary, 21+ to compete. Restrictions apply, see Official Rules.'",
+        "expected": "![](index.php?/attachments/get/7863706)\n![](index.php?/attachments/get/7863707)\n"
+      }
+    ]
+  },
+  {
+    "id": 15728787,
+    "title": "Game splitter display - user plays 'Rally Lite' and does not play Rally Pro",
+    "section_id": 495562,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611348562,
+    "updated_by": 258,
+    "updated_on": 1615316544,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 11,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "teams logo, score, current inning and homeplate are displayed at the top\n'How do you want to play?' is displayed\n\n**'Pick 10' section**\n* 'Make 10 live picks during this game for a chance at a daily prize.'\n* Segments on the bar are colored with white for the props user made picks\n* Current points are displayed on the left under the segments bar\n* # of picks left is displayed on the right under the segments bar\n* 'KEEP PLAYING'\n\n**Pro Play section**\n* 'Make unlimited picks. The best Pro scores across today's games compete for the daily prize pool.'\n* prize for the Prize Pool\n* 'PLAY NOW'\n\nText 'No Purchase Necessary, 21+ to compete. Restrictions apply, see Official Rules.'",
+        "expected": "![](index.php?/attachments/get/8299136)\n"
+      }
+    ]
+  },
+  {
+    "id": 15728828,
+    "title": "Game splitter display - user plays Rally Pro and does not play 'Rally Lite'",
+    "section_id": 495562,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611348815,
+    "updated_by": 258,
+    "updated_on": 1615316556,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 12,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "teams logo, score, current inning and homeplate are displayed at the top\n'How do you want to play?' is displayed\n\n**'Pick 10' section**\n* 'Make 10 live picks during this game for a chance at a daily prize. The top score can choose from:'\n* MLB.tv Subscription\n* 'PLAY NOW'\n\n**Pro Play section**\n* \"The best Pro scores across today's games compete for the daily prize pool.'\n* Score\n* Your Rank\n* 'KEEP PLAYING'\n\nText 'No Purchase Necessary, 21+ to compete. Restrictions apply, see Official Rules.'",
+        "expected": "![](index.php?/attachments/get/7863708)\n![](index.php?/attachments/get/7863709)\n"
+      },
+      {
+        "content": "When user made a first pick and went back to game splitter screen",
+        "expected": "Then the Daily Prize Pool is still displayed and 'PLAY NOW' button is switched to 'KEEP PLAYING'. User's rank and score will only be displayed when users score>0"
+      }
+    ]
+  },
+  {
+    "id": 15728829,
+    "title": "Game splitter display - user plays both games",
+    "section_id": 495562,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611348833,
+    "updated_by": 258,
+    "updated_on": 1612223075,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 13,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "teams logo, score, current inning and homeplate are displayed at the top\n'How do you want to play?' is displayed\n\n**'Pick 10' section**\n* 'Make 10 live picks during this game for a chance at a daily prize.'\n* Segments on the bar are colored with white for the props user made picks\n* Current points are displayed on the left under the segments bar\n* # of picks left is displayed on the right under the segments bar\n* 'KEEP PLAYING'\n\n**Pro Play section**\n* \"The best Pro scores across today's games compete for the daily prize pool.'\n* Score\n* Your Rank\n* 'KEEP PLAYING'\n\nText 'No Purchase Necessary, 21+ to compete. Restrictions apply, see Official Rules.'",
+        "expected": "![](index.php?/attachments/get/7863710)\n![](index.php?/attachments/get/7863711)\n"
+      }
+    ]
+  },
+  {
+    "id": 15728823,
+    "title": "Game splitter display - in progress, user does not play",
+    "section_id": 495562,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611348716,
+    "updated_by": 258,
+    "updated_on": 1612384631,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 14,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "teams logo, score, current inning and homeplate are displayed at the top\n'How do you want to play?' is displayed\n\n**'Pick 10' section**\n* 'Make 10 live picks during this game for a chance at a daily prize. The top score can choose from:'\n* MLB.tv Subscription; Cash Prize; Team Jersey\n* 'PLAY NOW'\n\n**Pro Play section**\n* 'Make unlimited picks. The best Pro scores across today's games compete for the daily prize pool.'\n* prize for the Prize Pool\n* 'PLAY NOW'\n\nText 'No Purchase Necessary, 21+ to compete. Restrictions apply, see Official Rules.'",
+        "expected": "![](index.php?/attachments/get/7849356)\n"
+      }
+    ]
+  },
+  {
+    "id": 15728788,
+    "title": "Game splitter display - game over - user played 'Rally Lite' and did not play Rally Pro",
+    "section_id": 495562,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611348572,
+    "updated_by": 258,
+    "updated_on": 1615848060,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 15,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "teams logo, score and 'FINAL' are displayed at the top\n'The game is over!' is displayed\n\n**'Pick 10' section**\n* 'Nice work! The top score from this game wins the day's prize.'\n* Best Score\n* Your Rank\n* 'SEE RESULTS'\n\n**Pro Play section**\n* 'Make unlimited picks. The best Pro scores across today's games compete for the daily prize pool.'\n* prize for the Prize Pool\n\nText 'No Purchase Necessary, 21+ to compete. Restrictions apply, see Official Rules.'\n\n",
+        "expected": "![](index.php?/attachments/get/7863712)\n![](index.php?/attachments/get/7863713)\n"
+      },
+      {
+        "content": "If user saw the results and goes back to the game splitter screen",
+        "expected": "The 'SEE RESULTS' button should not be there but the game is still clickable"
+      }
+    ]
+  },
+  {
+    "id": 15728837,
+    "title": "Game splitter display - game over - user played Rally Pro",
+    "section_id": 495562,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611349327,
+    "updated_by": 258,
+    "updated_on": 1615316582,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 16,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "teams logo, score and 'FINAL' are displayed at the top\n'The game is over!' is displayed\n\n**'Pick 10' section**\n* 'Make 10 live picks during this game for a chance at a daily prize.'\n* prize for the first place\n\n**Pro Play section**\n* 'The best Pro scores across today's games complete for the daily prize pool.'\n* Final Score\n* Final Rank\n* 'SEE RESULTS'\n\nText 'No Purchase Necessary, 21+ to compete. Restrictions apply, see Official Rules.'",
+        "expected": "![](index.php?/attachments/get/7863714)\n![](index.php?/attachments/get/7863715)\n"
+      }
+    ]
+  },
+  {
+    "id": 15728838,
+    "title": "Game splitter display - game over - user played both games",
+    "section_id": 495562,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611349381,
+    "updated_by": 258,
+    "updated_on": 1614212426,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 17,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "teams logo, score and 'FINAL' are displayed at the top\n'The game is over!' is displayed\n\n**'Live 10' section**\n* 'Nice work! The top score from this game wins the day's prize.'\n* Best Score\n* Your Rank\n* 'SEE RESULTS'\n\n**Pro Play section**\n* 'The best Pro scores across today's games complete for the daily prize pool.'\n* Final Score\n* Final Rank\n* 'SEE RESULTS'\n\nText 'No Purchase Necessary, 21+ to compete. Restrictions apply, see Official Rules.'",
+        "expected": "![](index.php?/attachments/get/8299137)\n"
+      }
+    ]
+  },
+  {
+    "id": 15728754,
+    "title": "Game splitter display - no play, game over",
+    "section_id": 495562,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611348532,
+    "updated_by": 258,
+    "updated_on": 1614212498,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 18,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "* teams logo, score and 'FINAL' are displayed at the top\n* 'The game is over!' is displayed\n\n**'Live 10' section**\n* 'Make 10 live picks during this game for a chance at a daily prize.'\n* prize for the first place\n\n**Pro Play section**\n* 'Make unlimited picks. The best Pro scores across today's games compete for the daily prize pool.'\n* prize for the Prize Pool\n\nText 'No Purchase Necessary, 21+ to compete. Restrictions apply, see Official Rules.'",
+        "expected": "![](index.php?/attachments/get/8299138)\n"
+      }
+    ]
+  },
+  {
+    "id": 8872420,
+    "title": "User's rank",
+    "section_id": 495563,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1607542753,
+    "updated_by": 258,
+    "updated_on": 1615920298,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 16,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "If the player has completed at least one round of Easy Play, their best score on the Easy Play leaderboard for that contest should be shown. \r\n\r\n![](index.php?/attachments/get/6987955)\r\n\r\n\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8872577,
+    "title": "Not completing 10 props",
+    "section_id": 495563,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1607554548,
+    "updated_by": 258,
+    "updated_on": 1607624074,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 17,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "User is able to compete for the prize without completing all 10 props",
+    "custom_steps_separated": [
+      {
+        "content": "Users starts playing Easy Play in 8-9 inning. User answers 9 props and gets to the top 3 players",
+        "expected": "When game is final, user is in 3 top scores"
+      }
+    ]
+  },
+  {
+    "id": 16197061,
+    "title": "Iteration flow - user played",
+    "section_id": 495563,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1614625003,
+    "updated_by": 258,
+    "updated_on": 1616018811,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 18,
+    "custom_preconds": "User plays the game and does not exit the game",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User can play only one iteration (for now)",
+        "expected": ""
+      },
+      {
+        "content": "User made all 10 picks ",
+        "expected": "When props are resolved user sees Calculating Score card\n\n![](index.php?/attachments/get/8393776)\n"
+      },
+      {
+        "content": "After XP reward is ready",
+        "expected": "The EOG flow starts (where the score, the best score and XP reward are shown) (only 'Done' button should be shown)\n\n![](index.php?/attachments/get/8393777)![](index.php?/attachments/get/8393778)\n\n"
+      },
+      {
+        "content": "Clicking on 'Done'",
+        "expected": "Will bring user to game splitter screen"
+      }
+    ]
+  },
+  {
+    "id": 16221264,
+    "title": "Centered card",
+    "section_id": 495563,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2535",
+    "created_by": 258,
+    "created_on": 1614817674,
+    "updated_by": 258,
+    "updated_on": 1615933477,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 19,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "If the user taps on a card that's not the centered card, opens it, and then returns, it should be centered.",
+    "custom_steps_separated": [
+      {
+        "content": "Open not centered card (OD or ITH or any previous cards). Close the card",
+        "expected": "The card that was open is now centered"
+      },
+      {
+        "content": "Open the locked card that has no pick on, wait for it to be resolved. Card should be disappeared in a few seconds \n",
+        "expected": "The active card should be centered (at bat or batter up)"
+      },
+      {
+        "content": "Open the card that suppose to be voided, wait for it to be resolved. Card should be disappeared in a few seconds \n",
+        "expected": "The active card should be centered (at bat or batter up)"
+      },
+      {
+        "content": "Open the card that suppose to be withdrawn (cards after 3rd our of the inning), wait for it to disappear",
+        "expected": "The card that has same index should be centered"
+      }
+    ]
+  },
+  {
+    "id": 16221266,
+    "title": "Home page behavior when user plays Live 10",
+    "section_id": 495563,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1614819292,
+    "updated_by": 258,
+    "updated_on": 1615829794,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 20,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When user plays Live 10 only",
+        "expected": "The carousel should indicate that user plays the game"
+      },
+      {
+        "content": "",
+        "expected": "The Home screen list should display 'PICKS MADE' but the points should not be displayed. Only Pro points should be displayed."
+      }
+    ]
+  },
+  {
+    "id": 8813542,
+    "title": "'Play Again' for 'Rally Lite'",
+    "section_id": 729573,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1606864748,
+    "updated_by": 258,
+    "updated_on": 1618952759,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "User is able to play several Easy Play games",
+    "custom_steps_separated": [
+      {
+        "content": "From game splitter screen",
+        "expected": "If user played an Easy Play already and views the game splitter screen - clicking on 'Play Again' will start a new game\n\n![](index.php?/attachments/get/9150607)\n\n"
+      },
+      {
+        "content": "From EOG flow",
+        "expected": "If user played an Easy Play already and views EOG flow - clicking on 'Play Again' will start a new game\n\n![](index.php?/attachments/get/6864022)\n\n"
+      }
+    ]
+  },
+  {
+    "id": 8839279,
+    "title": "User can play several 'Live 10' games",
+    "section_id": 729573,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1607118506,
+    "updated_by": 258,
+    "updated_on": 1614624797,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "After a player has completed a round of Easy Play, they can press the Play Again button OR they can choose Easy Play again on the game picker to start a new round. \r\n\r\nWhen starting a new round, the number of points that the player has is reset to 0, and the card stack is emptied of any previous picks made. \r\n\r\nScores are saved between rounds and only the users highest score is shown on the leaderboard.\r\n\r\n\r\n![](index.php?/attachments/get/6954909)![](index.php?/attachments/get/6954910)\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "Play 2 games ",
+        "expected": "Best scores of 2 games are shown"
+      },
+      {
+        "content": "Play 3 games",
+        "expected": "Best scores of 3 games are shown"
+      }
+    ]
+  },
+  {
+    "id": 8837398,
+    "title": "User's best score",
+    "section_id": 729573,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1607020505,
+    "updated_by": 258,
+    "updated_on": 1614624851,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "User can play several games and the best score out of all should be displayed as final",
+    "custom_steps_separated": [
+      {
+        "content": "Play 1 game ",
+        "expected": "Final score for a game is displayed as 'Best Scores'"
+      },
+      {
+        "content": "Play 2 games",
+        "expected": "Final score for 2 games is displayed as 'Best Scores'"
+      },
+      {
+        "content": "Play 3 games ",
+        "expected": "Final score for 3 games is displayed as 'Best Scores'"
+      },
+      {
+        "content": "The Best Scores should be displayed in ",
+        "expected": "1. EOF flow\n2. Game splitter screen\n3. Game leaderboard\n\n![](index.php?/attachments/get/6987952)\n![](index.php?/attachments/get/6987951)\n![](index.php?/attachments/get/6987950)"
+      },
+      {
+        "content": "**Make sure the scores are the same**",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 8813543,
+    "title": "No pre-game picks",
+    "section_id": 497875,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1606864766,
+    "updated_by": 258,
+    "updated_on": 1615920494,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Easy Play does NOT have pregame props and the game splitter screen does not have 'PLAY NOW' button for the Easy Play",
+        "expected": ""
+      },
+      {
+        "content": "User selects the game and clicks on Easy Play",
+        "expected": "This screen is displayed \n\n![](index.php?/attachments/get/8629334)\n"
+      }
+    ]
+  },
+  {
+    "id": 8837397,
+    "title": "First card before the game starts",
+    "section_id": 497875,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2317",
+    "created_by": 280,
+    "created_on": 1607020478,
+    "updated_by": 258,
+    "updated_on": 1615920558,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "* The first card in the stack of the Easy Play option should be a card that explains that the game hasn’t started yet. \r\n\r\n* The player can click the button to set up a notification to be sent at the start of the game. \r\n\r\n![](index.php?/attachments/get/8629335)\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "User enters the contest before it starts",
+        "expected": "User is able to see the first card\n"
+      },
+      {
+        "content": "User enters the contest when game is live",
+        "expected": "User is not able to see the first card. Current at bat is displayed. The amount of all upcoming cards is 10."
+      }
+    ]
+  },
+  {
+    "id": 8837610,
+    "title": "Notification button",
+    "section_id": 497875,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1607020742,
+    "updated_by": 258,
+    "updated_on": 1611609762,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "User can enable notifications on the first prop of Easy Play before the game starts. \r\n\r\n![](index.php?/attachments/get/6954901)\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "Enable Notifications on Easy Play",
+        "expected": "When user goes to Pro Play, the notification button is also enabled (button is white)"
+      },
+      {
+        "content": "Enable Notifications on Pro Play",
+        "expected": "When user goes to Easy Play, the notification button is also enabled (button is white)"
+      },
+      {
+        "content": "Enable Notifications on Easy Play",
+        "expected": "When user goes to profile page, the notification toggle is enabled"
+      },
+      {
+        "content": "Enable Notifications on Pro Play",
+        "expected": "When user goes to profile page, the notification toggle is enabled"
+      },
+      {
+        "content": "When user disables notification toggle on Profile page ",
+        "expected": "Then Easy Play and Pro Play notification button is disabled (button is blue)"
+      },
+      {
+        "content": "When game is LIVE ",
+        "expected": "Notification button is disabled (and is set to what user set it for)"
+      }
+    ]
+  },
+  {
+    "id": 15740576,
+    "title": "Push Notification",
+    "section_id": 497875,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611609808,
+    "updated_by": 258,
+    "updated_on": 1614814872,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User enabled notification on the pre-game card",
+        "expected": "User received a push notification a few minutes before the game starts\n\n(What push notification should say)"
+      },
+      {
+        "content": "When user clicks on the push notification",
+        "expected": "It brings the user to the Live 10 game for the contest for which the user enabled the notification"
+      },
+      {
+        "content": "User disabled notification on the pre-game card",
+        "expected": "User does not receive a push notification"
+      }
+    ]
+  },
+  {
+    "id": 16221260,
+    "title": "Game is about to start",
+    "section_id": 497875,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2584",
+    "created_by": 258,
+    "created_on": 1614811729,
+    "updated_by": 258,
+    "updated_on": 1618958110,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 6,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "About 5-10 minutes before the game starts\n",
+        "expected": "1. 3 props (Batter Up, On Deck, In The Hole) should be displayed in Live 10\n2. The blue notification card should go away\n3. The 10 segment bar should appear inside the contest\n4. 'PLAY NOW' button should be displayed in Live 10 section in the game splitter screen "
+      },
+      {
+        "content": "User is able to make predictions before the game starts",
+        "expected": "1. Props are open and user can make predictions\n2. After user makes prediction, the bar in the contest screen and game splitter screen reflects it. "
+      }
+    ]
+  },
+  {
+    "id": 8863091,
+    "title": "'Rally Lite' Pick Count",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2345",
+    "created_by": 258,
+    "created_on": 1607453901,
+    "updated_by": 258,
+    "updated_on": 1615923991,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If the player has enough picks remaining",
+        "expected": "they can make a pick on any open prop."
+      },
+      {
+        "content": "As soon as a pick is made",
+        "expected": "the number of picks remaining immediately decrements. "
+      },
+      {
+        "content": "If the player deselects their choice on an open prop",
+        "expected": "the number of picks remaining immediately increments. "
+      },
+      {
+        "content": "If the player has no picks remaining",
+        "expected": "then the buttons on any open props are grayed out."
+      },
+      {
+        "content": "If 10 picks are made and they are all resolved",
+        "expected": "no new cards are shown in easy play."
+      },
+      {
+        "content": "If 10 picks are made but the pick is still pending",
+        "expected": "new cards are coming but the buttons on any open props are grayed out. "
+      },
+      {
+        "content": "**Every Easy Play Pick Count is displayed in the contest and Game splitter page**",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 8820211,
+    "title": "Number of picks bar",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2315",
+    "created_by": 280,
+    "created_on": 1606951036,
+    "updated_by": 258,
+    "updated_on": 1614813175,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "* The number of picks for Easy Play should default to 10.\r\n\r\n* The number of segments on the easy play bar should always reflect the number of picks required by the player. \r\n\r\n* The text under the easy play bar should always reflect the number of picks required by the player. \r\n\r\n* The bar should be displayed in 2 places: game splitted screen and inside the Easy Play contest\r\n\r\n![](index.php?/attachments/get/6864925)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16124012,
+    "title": "First card displayed",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2550",
+    "created_by": 258,
+    "created_on": 1614118600,
+    "updated_by": 258,
+    "updated_on": 1614215226,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "When opening EZ from the splitter screen, the first card to be shown should be At bat or Batter Up card (if no at bat available)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8838393,
+    "title": "'Rally Lite' props flow",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2318",
+    "created_by": 280,
+    "created_on": 1607021688,
+    "updated_by": 258,
+    "updated_on": 1615316625,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "* Once the game begins, AB, OD, and ITH props should be shown to the player just like in Pro Play. \r\n\r\n* If the player has enough picks remaining, he can make a pick on any open prop.\r\n\r\n* As soon as a pick is made, the number of picks remaining immediately decrements. \r\n\r\n* If the player deselects their choice on an open prop, the number of picks remaining immediately increments. \r\n\r\n* If the player has no picks remaining, then the buttons on any open props are grayed out.\r\n\r\n![](index.php?/attachments/get/6954902) ![](index.php?/attachments/get/6954903) ![](index.php?/attachments/get/6954904)\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16124005,
+    "title": "Cards in the stack",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1614116166,
+    "updated_by": 258,
+    "updated_on": 1614116809,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "The card stack in Easy Mode should only reflect the picks that were made - not every batter in the game",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16124006,
+    "title": "User made a pick",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1614116179,
+    "updated_by": 258,
+    "updated_on": 1615923630,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 6,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If a pick was made",
+        "expected": "* The card should resolve with a wipe\n* Points should doober to the top if they got if correct\n* The card should stay in the card stack."
+      }
+    ]
+  },
+  {
+    "id": 16124007,
+    "title": "User didn't make a pick",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2456",
+    "created_by": 258,
+    "created_on": 1614116195,
+    "updated_by": 258,
+    "updated_on": 1616018929,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If a pick was NOT made on a card, the card should still have a resolution animation for EZ Play",
+        "expected": "* The card will pop up in front of the user.\n* The card will resolve.\n* The card will wait two seconds.\n* The card will be animated out to the left of the deck. (NOT remain in the card stack). The card should exit stage left after a 2 second delay\n* This will NOT show the [!] button but it will be auto resolved right when its resolution happens.\n\n**not everything has been developed yet**"
+      },
+      {
+        "content": "If user is out of the screen when the card is resolved and come back in \n",
+        "expected": "User does NOT see the animations"
+      }
+    ]
+  },
+  {
+    "id": 8839260,
+    "title": "Pick Returned banner",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2319",
+    "created_by": 280,
+    "created_on": 1607032733,
+    "updated_by": 258,
+    "updated_on": 1614816121,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 8,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "If any prop that didn’t happen due to an inning changeover or a voided prop had a pick on it, then when the card is resolved, text that says “Pick Returned” should doober from the card up to the Easy Play bar and give them their pick back. ",
+    "custom_steps_separated": [
+      {
+        "content": "Voided",
+        "expected": "If user made a pick and the prop was voided: \n* user should receive the pick pack (inside the contest and game splitter screen)\n* user received pick return notification\n\n![](index.php?/attachments/get/8394195)\n"
+      },
+      {
+        "content": "Withdrawn",
+        "expected": "If user made a pick and the prop was withdrawn: \n* user should receive the pick pack (inside the contest and game splitter screen)\n* user received pick return notification\n\n![](index.php?/attachments/get/8394196)\n"
+      }
+    ]
+  },
+  {
+    "id": 8839263,
+    "title": "Strikezone",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2320",
+    "created_by": 280,
+    "created_on": 1607033160,
+    "updated_by": 280,
+    "updated_on": 1607033230,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 9,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "* Just like in Pro Play, when an AB market locks, the strike zone should appear and pitches should be shown as they come in. \r\n\r\n* Swiping right should also show the minimal pitch feed.\r\n\r\n* Clicking the card would also still enlarge and show the full feed.\r\n\r\n![](index.php?/attachments/get/6954905)\r\n\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8863020,
+    "title": "Voided props",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2674, FTP-2673",
+    "created_by": 258,
+    "created_on": 1607448534,
+    "updated_by": 258,
+    "updated_on": 1616086290,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 11,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When prop is voided - user made a pick",
+        "expected": "The user should see the voided resolution and the card should stay in the stack"
+      },
+      {
+        "content": "When prop is voided - user didn't make a pick",
+        "expected": "The user should see the voided resolution and the card should be removed from the stack"
+      },
+      {
+        "content": "When user made prediction on the prop and it got voided and user didn't see the resolution and clicks on !",
+        "expected": "The player should see the voided resolution after clicking the !. The card should come up, do the wipe to VOID, and stay in the stack"
+      },
+      {
+        "content": "When user didn’t make prediction on the prop it got voided and user didn't see the resolution",
+        "expected": "clicking on ! should not show the resolution for this prop and the card should not be shown in the stack"
+      },
+      {
+        "content": "After card is voided",
+        "expected": "User gets the pick back \n* The 'left pick #' is increased by one\n* The last bar from 10 segments is removed (color updated from white to gray)\n* Both bullets above are updated in contest page and game splitter screen"
+      }
+    ]
+  },
+  {
+    "id": 16134363,
+    "title": "Withdrawn cards",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1614188534,
+    "updated_by": 258,
+    "updated_on": 1614198141,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 12,
+    "custom_preconds": "The user is in an active game in the app",
+    "custom_steps": "WHEN the user makes a pick on a card that comes after the player who causes the third out in an inning",
+    "custom_expected": "THEN the prop should not show up in the resolutions AND the ! button should not appear",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16221261,
+    "title": "No PIcks Remaining",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1614813488,
+    "updated_by": 258,
+    "updated_on": 1614814545,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 13,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "After user made all 10 picks and resolution is pending ",
+        "expected": "The new cards that appear have their option grayed out and the text 'No PIcks Remaining' below the options"
+      },
+      {
+        "content": "If user deselects a pick for any unlocked props",
+        "expected": "The text 'No PIcks Remaining' is removed and all options are back to be clickable"
+      }
+    ]
+  },
+  {
+    "id": 8872403,
+    "title": "User's current scores display",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1607540780,
+    "updated_by": 258,
+    "updated_on": 1615924154,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 14,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "User's current scores should be displayed in:\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "Game splitter screen ",
+        "expected": "![](index.php?/attachments/get/6987947)"
+      },
+      {
+        "content": "Inside of the contest",
+        "expected": "![](index.php?/attachments/get/6987948)"
+      },
+      {
+        "content": "Game leaderboard\n* if user plays first game\n* or if user's current score is highter than the previous score\n(game leaderboard shows best score and not current)",
+        "expected": "![](index.php?/attachments/get/6987949)\n"
+      },
+      {
+        "content": "**Make sure the scores are the same**",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 15829061,
+    "title": "Edge case - Changing/Unselecting predictions",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1612225431,
+    "updated_by": 258,
+    "updated_on": 1612225560,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 15,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "User is able to unselect the predictions by clicking on the same pick (until the prop gets locked). When this prop is resolved it wont be displayed in a stack and the segment bar won't caunt this pick.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16042631,
+    "title": "Edge case - user makes last pick",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2496, FTP-2498",
+    "created_by": 258,
+    "created_on": 1613597455,
+    "updated_by": 258,
+    "updated_on": 1614200056,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 16,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If 10 picks are made and they are all resolved",
+        "expected": "DO NOT show new cards in easy play."
+      },
+      {
+        "content": "If 10 picks are made but the pick is still .pending",
+        "expected": "DO show new props coming through in Easy Play."
+      },
+      {
+        "content": "If the player has no picks remaining",
+        "expected": "then the buttons on any open props are grayed out. "
+      },
+      {
+        "content": "If the player unselects a pick",
+        "expected": "then he or she is allowed to make more picks."
+      }
+    ]
+  },
+  {
+    "id": 16221262,
+    "title": "Edge case - playing several Live 10 games",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1614814567,
+    "updated_by": 258,
+    "updated_on": 1614814709,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 17,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "1. The user is able to make Live 10 predictions for several contest\r\n2. The user's score is saved for each contest and does not get clear",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16351148,
+    "title": "Making a pick flow",
+    "section_id": 497873,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1615829089,
+    "updated_by": 258,
+    "updated_on": 1615829545,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 18,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User made a pick - contest view",
+        "expected": "* The first bar in the segment is colored gray inside the contest (indication that pick is made but the resolution is not seen)"
+      },
+      {
+        "content": "User made a pick - splitter screen view",
+        "expected": "* The first bar in the segment is colored gray in the splitter screen\n (indication that pick is made but the resolution is not seen)\n* '0 pts' is displayed\n* '# PICKS LEFT' is displayed \n* 'KEEP PLAYING' button is displayed"
+      },
+      {
+        "content": "After user sees the resolution",
+        "expected": "* The first bar in the segment is colored white\n* If user made correct pick, points are awarded\n* If user made incorrect pick, no points are  awarded"
+      }
+    ]
+  },
+  {
+    "id": 8813546,
+    "title": "EOG flow (for iteration)",
+    "section_id": 497874,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2323, FTP-2559",
+    "created_by": 280,
+    "created_on": 1606864839,
+    "updated_by": 258,
+    "updated_on": 1614216257,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "As soon as a prop resolves and does the wipe and doober, if that pick was the last of the [10] picks that need resolution, then the following should happen:\r\n\r\n\r\n\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "The team logo screen wipe should occur. The logos should be the same size.",
+        "expected": "![](index.php?/attachments/get/6954906)\n"
+      },
+      {
+        "content": "Then, the end of game screen is shown with the current score, best score, current rank on the leaderboard, and the amount of XP awarded (with a bar animation when it is awarded).",
+        "expected": "![](index.php?/attachments/get/6954907)\n"
+      },
+      {
+        "content": "If the new score is better than the previous Best Score, the score should doober down to the Best Score and update the Best Score with this score. ",
+        "expected": ""
+      },
+      {
+        "content": "Hide the play again button if the game is completed. (done button should then be centered).\n\n",
+        "expected": ""
+      },
+      {
+        "content": "Done tap takes you to the contest home page.",
+        "expected": ""
+      },
+      {
+        "content": "When user taps on Live 10 again ",
+        "expected": "Props for new game are displayed (confirm)"
+      }
+    ]
+  },
+  {
+    "id": 15740578,
+    "title": "Game is final - user played",
+    "section_id": 497874,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611613044,
+    "updated_by": 258,
+    "updated_on": 1614215682,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 3,
+    "custom_preconds": "User played the game and it's now final",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User clicks on 'SEE RESULTS' button from the splitter screen",
+        "expected": "User is able to see the EOG flow\n"
+      },
+      {
+        "content": "When user clicks on EZ ",
+        "expected": "User is able to see all of the played props in the stack."
+      },
+      {
+        "content": "Last card to be shown ",
+        "expected": "![](index.php?/attachments/get/8299142)\n"
+      }
+    ]
+  },
+  {
+    "id": 15740579,
+    "title": "Game is final - user didn't play",
+    "section_id": 497874,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611613056,
+    "updated_by": 258,
+    "updated_on": 1614215687,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 4,
+    "custom_preconds": "Game is final and user didn't play Easy Play",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User clicks on Easy Play section in game splitter screen",
+        "expected": "This page is displayed\n\n![](index.php?/attachments/get/7863719)\n"
+      }
+    ]
+  },
+  {
+    "id": 8863098,
+    "title": "EOG push notification",
+    "section_id": 497874,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1607454254,
+    "updated_by": 258,
+    "updated_on": 1616095072,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "If user made picks on EZ and had notification on, when game is final user received push notification",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8872411,
+    "title": "User's final scores display",
+    "section_id": 497874,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1607541329,
+    "updated_by": 258,
+    "updated_on": 1611612708,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 7,
+    "custom_preconds": "User plays only one game",
+    "custom_steps": null,
+    "custom_expected": "User's finals scores should be displayed in:",
+    "custom_steps_separated": [
+      {
+        "content": "EOF flow",
+        "expected": "![](index.php?/attachments/get/6987952)\n"
+      },
+      {
+        "content": "Game splitter screen",
+        "expected": "\n![](index.php?/attachments/get/7863717)\n"
+      },
+      {
+        "content": "Game leaderboard",
+        "expected": "![](index.php?/attachments/get/6987950)\n"
+      },
+      {
+        "content": "**Make sure the scores are the same**",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 8872576,
+    "title": "Awarded XP",
+    "section_id": 497874,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1607554364,
+    "updated_by": 258,
+    "updated_on": 1607554500,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 9,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "XP is awarded for every game user plays. The amount of XP is shown in the EOG flow and it's added in the user's Profile. \r\n\r\nThe amount of XP that is earned is determined by the formula in https://baseball.atlassian.net/browse/FTP-508#icft=FTP-508",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16037526,
+    "title": "'Done' button",
+    "section_id": 497874,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1613591202,
+    "updated_by": 258,
+    "updated_on": 1613591810,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 13,
+    "custom_preconds": "User finished the 'Pick 10' game and views EOG flow",
+    "custom_steps": null,
+    "custom_expected": "User can click on 'Done' button and it will take user to game splitter screen \r\n\r\n![](index.php?/attachments/get/8182511)\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16042458,
+    "title": "Edge case - all picks are made, user didn't see resolution",
+    "section_id": 497874,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1613596485,
+    "updated_by": 258,
+    "updated_on": 1613596785,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 14,
+    "custom_preconds": "User made all 10 picks and exits the app. All props should be resolved but user didn't see the resolution yet.",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When user opens the app",
+        "expected": "the game splitter screen should show the pick count segment with '0 picks left'"
+      },
+      {
+        "content": "Below the pick count",
+        "expected": "'SEE RESULTS' button should be displayed"
+      },
+      {
+        "content": "After user clicks on 'SEE RESULTS' button",
+        "expected": "User sees the EOG flow"
+      },
+      {
+        "content": "User click on 'Done' button",
+        "expected": "the game splitter screen shows Best Score and Your Rank"
+      }
+    ]
+  },
+  {
+    "id": 16134366,
+    "title": "Edge case - game is final, user didn't finish all 10 picks",
+    "section_id": 497874,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1614190174,
+    "updated_by": 258,
+    "updated_on": 1614190267,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 15,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If user made less than 10 picks and game is final",
+        "expected": "* User still gets the end of game flow\n* User still gets a score and XP."
+      }
+    ]
+  },
+  {
+    "id": 16138607,
+    "title": "Edge case - voided cards",
+    "section_id": 497874,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1614209287,
+    "updated_by": 258,
+    "updated_on": 1614209511,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 17,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User made only one pick which was voided",
+        "expected": "When game is over:  \n* User still sees EOG flow\n* User should still be displayed in the leaderboard\n* User should still get XP "
+      }
+    ]
+  },
+  {
+    "id": 16138608,
+    "title": "Edge case - withdrawn cards",
+    "section_id": 497874,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1614209301,
+    "updated_by": 258,
+    "updated_on": 1616023029,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 18,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User made only one pick which was withdrawn",
+        "expected": "When game is over:\n* User still sees EOG flow\n* User should still be displayed in the leaderboard\n* User should still get XP\n"
+      }
+    ]
+  },
+  {
+    "id": 16138609,
+    "title": "Edge case - flow count",
+    "section_id": 497874,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2557",
+    "created_by": 258,
+    "created_on": 1614210349,
+    "updated_by": 258,
+    "updated_on": 1616022903,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 19,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "EOG flow total picks should not count voided and withdrawn cards (this applies for Pro play only!)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16450297,
+    "title": "End of game ratings popup",
+    "section_id": 497874,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1616524840,
+    "updated_by": 258,
+    "updated_on": 1616525583,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 20,
+    "custom_preconds": "User played the game, game is over",
+    "custom_steps": null,
+    "custom_expected": "User watches the EOG flow\r\n* The popup will show if you haven’t seen it before AND made more than 500 points in your game.\r\n* The Popup will only show once\r\n\r\n**The popup should always show for testing if you build straight from xcode.**\r\n\r\n![](index.php?/attachments/get/8710929)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8839278,
+    "title": "'Rally Lite' leaderboard",
+    "section_id": 497876,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2325",
+    "created_by": 258,
+    "created_on": 1607118156,
+    "updated_by": 258,
+    "updated_on": 1615316644,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "* Clicking on the leaderboard icon at the top right of the Easy Play contest should load the Easy Play leaderboard for that contest. \r\n\r\n* This leaderboard only shows players who are playing Easy Play for that contest - NOT pro play players. \r\n\r\n* The prize option is also shown on this screen.\r\n\r\n* Once a game is marked final, players that are marked as “In The Money” should have a different visual treatment applied to them.\r\n\r\n![](index.php?/attachments/get/7976765)\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8872419,
+    "title": "Game rankings for LIVE game",
+    "section_id": 497876,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1607542502,
+    "updated_by": 258,
+    "updated_on": 1615844426,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 3,
+    "custom_preconds": "When game is in LIVE",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "The header copy",
+        "expected": "'The top score from this contest chooses from:'\nMLB.tv Subscription\nCash Prize\nTeam Jersey\n+ more\n\n\n\n"
+      },
+      {
+        "content": "Official rules copy",
+        "expected": "No Purchase Necessary. 21+ to compete. Restrictions apply: see Official Rules."
+      },
+      {
+        "content": "Leaderboard header",
+        "expected": "Live Scores and # playing with icon"
+      },
+      {
+        "content": "Leaderboard list",
+        "expected": "The leaderboard list shows all players that play this game and the user's current score position"
+      },
+      {
+        "content": "",
+        "expected": "![](index.php?/attachments/get/6987953)"
+      }
+    ]
+  },
+  {
+    "id": 16042439,
+    "title": "Game rankings before the game starts or before first prop gets resolved",
+    "section_id": 497876,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1613593603,
+    "updated_by": 258,
+    "updated_on": 1613594978,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Game has not started yet",
+        "expected": "No game players are displayed.\n\nText to be displayed:\n'No scores are posted yet. Check back once players start earning scores for today's picks.' (confirm)"
+      },
+      {
+        "content": "Before the first prop gets resolved",
+        "expected": "No game players are displayed.\n\nText to be displayed:\n'No scores are posted yet. Check back once players start earning scores for today's picks.' (confirm)"
+      },
+      {
+        "content": "After the first prop gets resolved ",
+        "expected": "The leaderboard lists players who made predictions on the first prop"
+      }
+    ]
+  },
+  {
+    "id": 16040697,
+    "title": "Game rankings for FINAL game",
+    "section_id": 497876,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1613592736,
+    "updated_by": 258,
+    "updated_on": 1613593130,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Game is final",
+        "expected": "* The game leaderboard should display user's best scores\n* First 3 position in the leaderboard are marked 'in the prize'\n* The leaderboard heade is updated to 'Final Scores'\n\n![](index.php?/attachments/get/8182512)\n"
+      }
+    ]
+  },
+  {
+    "id": 16042455,
+    "title": "User highlight behavior",
+    "section_id": 497876,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1613595280,
+    "updated_by": 258,
+    "updated_on": 1613595362,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 6,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "THEN the user is shown as a blue bar AND the blue bar isn't flashing\r\nnote: the blue bar should show even when the user's ranking is below the rankings currently displayed",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN  the user is scrolled to a position that is less than the user’s current position",
+        "expected": "THEN the blue bar sticks at the bottom of the leaderboard"
+      },
+      {
+        "content": "WHEN the user first opens the leaderboard AND the user is in the first set of visible ranks",
+        "expected": "THEN the default view shows the top of the leaderboard (starting with position 1) AND the user’s position is highlighted blue"
+      },
+      {
+        "content": "WHEN the user taps on the blue bar",
+        "expected": "THEN the user is taken to their position in the leaderboard and position is centered on the page"
+      },
+      {
+        "content": "WHEN the user scrolls to the user’s position in the leaderboard",
+        "expected": "THEN the blue bar for the user will slot in to the correct position"
+      },
+      {
+        "content": "WHEN  the user is scrolled to a position that is greater than the user’s current position",
+        "expected": "THEN the blue bar sticks at the top of the leaderboard"
+      }
+    ]
+  },
+  {
+    "id": 16042456,
+    "title": "User's score",
+    "section_id": 497876,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1613595651,
+    "updated_by": 258,
+    "updated_on": 1615847133,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User plays the game (game is live)",
+        "expected": "The Game Rankings page displays user's CURRENT score\n"
+      },
+      {
+        "content": "User played several games (game is live)",
+        "expected": "The Game Rankings page displays user's BEST score. It updates while you play, not on end of iteration"
+      },
+      {
+        "content": "User played the game (game is final)",
+        "expected": "The Game Rankings page displays user's BEST score"
+      }
+    ]
+  },
+  {
+    "id": 16220906,
+    "title": "In money section",
+    "section_id": 497876,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1614804816,
+    "updated_by": 258,
+    "updated_on": 1615847422,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 8,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "for live, finals games",
+        "expected": "Game leaderboard has 3 winners which have neon yellow home plate icon"
+      },
+      {
+        "content": "",
+        "expected": "Every contest has 3 winners"
+      },
+      {
+        "content": "If user is ineligible for prizes",
+        "expected": "then user won't have have the neon yellow home plate icon"
+      }
+    ]
+  },
+  {
+    "id": 8837365,
+    "title": "Bonus bar",
+    "section_id": 495564,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1607020435,
+    "updated_by": 258,
+    "updated_on": 1612300330,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "**Bonus bar is displayed inside the Pro Play contest and not in the Game splitter screen**\n",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 15803451,
+    "title": "Score and Your Rank",
+    "section_id": 495564,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611949488,
+    "updated_by": 258,
+    "updated_on": 1615572808,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User plays Pro Play",
+        "expected": "User's Score and Rank are displayed in the splitter screen (after user receives points and sees prop resolution)"
+      },
+      {
+        "content": "User made a pick and exited the contest",
+        "expected": "The game splitter screen doesn't show user's score and rank. It only has 'KEEP PLAYING' button"
+      },
+      {
+        "content": "User opens the contest and sees the resolution ",
+        "expected": "User's score and Rank is displayed in the splitter screen"
+      }
+    ]
+  },
+  {
+    "id": 16221265,
+    "title": "Centered card",
+    "section_id": 495564,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2535",
+    "created_by": 258,
+    "created_on": 1614818793,
+    "updated_by": 258,
+    "updated_on": 1614819145,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "If the user taps on a card that's not the centered card, opens it, and then returns, it should be centered.\r\n\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "Open not centered card (OD or ITH or any previous cards). Close the card",
+        "expected": "The card that was open is now centered"
+      },
+      {
+        "content": "Open the card that suppose to be withdrawn (cards after 3rd our of the inning), wait for it to disappear",
+        "expected": "The active card should be centered (at bat or batter up)"
+      }
+    ]
+  },
+  {
+    "id": 15740580,
+    "title": "Game is final - user played",
+    "section_id": 689172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611613300,
+    "updated_by": 258,
+    "updated_on": 1612489452,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": "User played the Pro Play and the game is final\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User clicks on 'SEE RESULTS' button",
+        "expected": "User is able to see the EOG flow"
+      },
+      {
+        "content": "If user already saw EOG flow ",
+        "expected": "This screen is displayed\n![](index.php?/attachments/get/8056875)\n"
+      }
+    ]
+  },
+  {
+    "id": 15740581,
+    "title": "Game is final - user didn't play",
+    "section_id": 689172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1611613346,
+    "updated_by": 258,
+    "updated_on": 1611613907,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 2,
+    "custom_preconds": "Game is final and user didn't play Pro Play",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User clicks on Pro Play section in game splitter screen",
+        "expected": "This page is displayed\n\n![](index.php?/attachments/get/7863719)\n"
+      }
+    ]
+  },
+  {
+    "id": 16450298,
+    "title": "End of game ratings popup",
+    "section_id": 689172,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2672",
+    "created_by": 258,
+    "created_on": 1616524855,
+    "updated_by": 258,
+    "updated_on": 1616525517,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 3,
+    "custom_preconds": "User played the game, game is over",
+    "custom_steps": null,
+    "custom_expected": "User watches the EOG flow\r\n* The popup will show if you haven’t seen it before AND made more than 500 points in your game.\r\n* The Popup will only show once\r\n\r\n**The popup should always show for testing if you build straight from xcode.**\r\n\r\n![](index.php?/attachments/get/8710928)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8602092,
+    "title": "Lineup on current batter card",
+    "section_id": 475136,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2052",
+    "created_by": 280,
+    "created_on": 1603917170,
+    "updated_by": 280,
+    "updated_on": 1603917270,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "* There is a segment control add to the zoomed in version of the current at-bat card that includes two “tabs”. The first is “Pitchcast” and the second is “Lineup”\r\n\r\n* Clicking lineup displays the lineup for both teams (see attached design screen)\r\n\r\n* Current batter is highlighted\r\n\r\n* On deck and in the hole are secondarily highlighted.\r\n\r\n* Lineup updates in cases of pinch-hitters and pinch-runners.\r\n\r\n* Pinch hitters and pinch runners are indented properly. (See attachment)\r\n\r\n![](index.php?/attachments/get/6443424)\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16138614,
+    "title": "Quick Pick cell on Home tab",
+    "section_id": 723602,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2373",
+    "created_by": 258,
+    "created_on": 1614212808,
+    "updated_by": 258,
+    "updated_on": 1615579200,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Thisngs to be displayed ",
+        "expected": "* Quick Pick logo (in blue neon color)\n* Make 7 picks today to complete for a Cash Prize\n* 'PLAY NOW' on the right\n* Time and timezone \n* The Quick Pick cell has a separate background \n\n![](index.php?/attachments/get/8299139)\n"
+      },
+      {
+        "content": "When all contest have SCHEDULED status",
+        "expected": "The Quick Pick sell should be displayed on the **top** of the list on the Home tab "
+      },
+      {
+        "content": "When all contest have LIVE or FINAL status",
+        "expected": "The Quick Pick sell should be displayed on the **bottom** of the list on the Home tab "
+      }
+    ]
+  },
+  {
+    "id": 16138617,
+    "title": "Quick Pick link",
+    "section_id": 723602,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1614214804,
+    "updated_by": 258,
+    "updated_on": 1614214833,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Clicking on the Quick Pick card will open a WKWebView for Quick Pick. (URL: https://www.mlb.com/apps/rally/quickpick/)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16138618,
+    "title": "Quick Pick cell behavior",
+    "section_id": 723602,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2373",
+    "created_by": 258,
+    "created_on": 1614214876,
+    "updated_by": 258,
+    "updated_on": 1614816746,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Once any contest in Rally goes LIVE",
+        "expected": "The quick pick cell “Play Now” text should be hidden"
+      },
+      {
+        "content": "If there are contests",
+        "expected": "The cell will stay in the contest list and be clickable until the end of time."
+      },
+      {
+        "content": "If there are ZERO contests",
+        "expected": "The Quick Pick cell should not be shown "
+      },
+      {
+        "content": "If the app is set to non-prod",
+        "expected": "point at the non-prod quick pick url (https://qa-gcp.mlb.com/apps/rally/quickpick/)"
+      }
+    ]
+  },
+  {
+    "id": 16138616,
+    "title": "Beat the streak section on Home's tab",
+    "section_id": 724918,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 258,
+    "created_on": 1614213432,
+    "updated_by": 258,
+    "updated_on": 1614213652,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Beat the streak section is displayed on the bottom of the Home's tab\n\n ",
+        "expected": ""
+      },
+      {
+        "content": "Things to be displayed",
+        "expected": "* Beat the streak logo (in neon green)\n* Pick two players to get a hit during today's games. Beat a streak of 56 hits to win the cash jackpot!\n* $1 MILLION\n* PLAY NOW\n\n![](index.php?/attachments/get/8299141)\n"
+      }
+    ]
+  },
+  {
+    "id": 8698358,
+    "title": "Prizes for each day of baseball",
+    "section_id": 482307,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2259",
+    "created_by": 280,
+    "created_on": 1605205807,
+    "updated_by": 280,
+    "updated_on": 1606160487,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "* Each day of baseball should have contests with various prizes associated with them.\r\n* Each day, contest prizing is chosen randomly amongst all of the contests that day. \r\n* Assign one contest prize from each of the following buckets (in the order listed here) to a RANDOM contest up until the MAX number listed for each prize type:\r\n\r\nCash (MAX: 2)\r\nXP (MAX: 2)\r\nTokens (MAX: 3)\r\nEach MAX value is also configurable on the server.\r\n\r\nIf, at any point, there are no remaining contests to assign a prize to, then stop assigning prizes.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8698353,
+    "title": "Prize types",
+    "section_id": 482307,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1605204250,
+    "updated_by": 280,
+    "updated_on": 1605205226,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Physical Prizes: Cash, Mystery boxes\r\nVirtual Prizes: Extra Tokens, Extra XP, Specific Lenses, Random Lens of given rarity\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8698354,
+    "title": "Extra tokens",
+    "section_id": 482307,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2256",
+    "created_by": 280,
+    "created_on": 1605204300,
+    "updated_by": 280,
+    "updated_on": 1605218624,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "There should be some contests that allow user to earn extra Tokens.\r\nFor each contest that is offering “Extra Tokens” as its prize:\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "When awarding tokens during the end of game flow, there should be a “BONUS TOKENS” section that is shown that separates the additional bonus amount into its own line.\n\n\n",
+        "expected": ""
+      },
+      {
+        "content": "The header image should be changed to the Bonus Tokens prize header and include text that says “Earn bonus Tokens by competing in this contest!”\n",
+        "expected": ""
+      },
+      {
+        "content": "The amount of additional tokens earned should be a percentage of the base amount that they earn and configureable on the server.\n",
+        "expected": ""
+      },
+      {
+        "content": "The default amount of tokens earned should be set to 20% extra.",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 8698356,
+    "title": "Extra XP",
+    "section_id": 482307,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2257",
+    "created_by": 280,
+    "created_on": 1605205221,
+    "updated_by": 280,
+    "updated_on": 1606160200,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 6,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "There should be some contests that allow user to earn extra XP.\r\nFor each contest that is offering “Extra XP” as its prize:\r\n\r\n![](index.php?/attachments/get/6767488)![](index.php?/attachments/get/6767489)![](index.php?/attachments/get/6767490)\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "When awarding XP during the end of game flow, there should be a “BONUS XP” section that is shown that separates the additional bonus amount into its own line.",
+        "expected": ""
+      },
+      {
+        "content": "The header image should be changed to the Bonus XP prize header and include text that says “Earn bonus XP by competing in this contest!”\n",
+        "expected": ""
+      },
+      {
+        "content": "The amount of additional XP earned should be a percentage of the base amount that they earn and configureable on the server.",
+        "expected": ""
+      },
+      {
+        "content": "The default amount of XP earned should be set to 10% extra.",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 8698357,
+    "title": "Rally Lenses",
+    "section_id": 482307,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2258",
+    "created_by": 280,
+    "created_on": 1605205487,
+    "updated_by": 280,
+    "updated_on": 1605205676,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "User is be able to win Rally Lenses from an individual contest.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8698359,
+    "title": "Message for every prize",
+    "section_id": 482307,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2263",
+    "created_by": 280,
+    "created_on": 1605206026,
+    "updated_by": 280,
+    "updated_on": 1605206063,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 8,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Each contest on the games tab that has a prize associated with it should have messaging that tells user the prize.",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8698360,
+    "title": "Leaderboard header - game rankings",
+    "section_id": 482307,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2262",
+    "created_by": 280,
+    "created_on": 1605206112,
+    "updated_by": 280,
+    "updated_on": 1606155176,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 9,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "* The leaderboard header should change based on what prize user is playing for.\r\n* Each contest that has a prize associated with it should have a header image that explains what the prize is, who is eligible to win the prize, etc. \r\n* The text in the header image should be customizable.",
+    "custom_steps_separated": [
+      {
+        "content": "No prize",
+        "expected": "![](index.php?/attachments/get/6766861)\n"
+      },
+      {
+        "content": "Cash reward",
+        "expected": "* Text: 'The top score from this contest wins a cash prize'\n* Prize amount\n* Text: '1st prize'\n\n![](index.php?/attachments/get/6766862)\n"
+      },
+      {
+        "content": "Cash multi",
+        "expected": "![](index.php?/attachments/get/6766863)\n"
+      },
+      {
+        "content": "Tokrn",
+        "expected": "![](index.php?/attachments/get/6766864)\n"
+      },
+      {
+        "content": "XP reward",
+        "expected": "![](index.php?/attachments/get/6766865)\n"
+      }
+    ]
+  },
+  {
+    "id": 8760765,
+    "title": "Tokens",
+    "section_id": 482307,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2260",
+    "created_by": 280,
+    "created_on": 1606162986,
+    "updated_by": 280,
+    "updated_on": 1606163133,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 10,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "* Based on where a player ends up on a contest leaderboard, the player should be awarded an amount of Tokens as defined in the “Amount of Tokens Earned” column in the “Contests Payout” tab of the spreadsheet listed below.\r\n\r\n* The payout values are stored on the server and can be tweaked without a client update.\r\n\r\nPlayer Economy Definition Spreadsheet:\r\n\r\nhttps://docs.google.com/spreadsheets/d/17STG1nePSow5HH3BISQXNzyMOb0Cr5Jjk3gFQUzt4Sc\r\n\r\n![](index.php?/attachments/get/6767491)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8760311,
+    "title": "Extra XP in the EOG flow",
+    "section_id": 497877,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2266",
+    "created_by": 280,
+    "created_on": 1606155394,
+    "updated_by": 280,
+    "updated_on": 1607033012,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "During the end of game flow, for contests that give Extra XP, the XP earned by their leaderboard placement in the contest should be shown separately than the amount earned from the Extra XP payout.\r\n\r\n![](index.php?/attachments/get/6766866)\r\n![](index.php?/attachments/get/6766867)\r\n![](index.php?/attachments/get/6766868)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8760312,
+    "title": "Tokens in the EOG flow",
+    "section_id": 497877,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2264",
+    "created_by": 280,
+    "created_on": 1606156004,
+    "updated_by": 280,
+    "updated_on": 1607033021,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "* During the end of game flow, when giving a player their Tokens that they earned, there should be a screen that shows how much is being earned.\r\n\r\n* For contests that give Extra Tokens, the Tokens earned by their leaderboard placement in the contest should be shown separately than the amount earned from the Extra Tokens payout.\r\n\r\n![](index.php?/attachments/get/6767176)\r\n![](index.php?/attachments/get/6767177)\r\n![](index.php?/attachments/get/6767178)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8673738,
+    "title": "Daily -> Weekly leaderboard update",
+    "section_id": 482308,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1604943861,
+    "updated_by": 280,
+    "updated_on": 1604947018,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "* The existing Daily Leaderboard tab becomes “Weekly”\r\n* Week begins Monday morning when games are published, and ends when the last game on Sunday is complete.\r\n\r\n\r\n![](index.php?/attachments/get/6597476)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8852531,
+    "title": "Current rank for Easy Play",
+    "section_id": 482308,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "FTP-2362",
+    "created_by": 258,
+    "created_on": 1607378314,
+    "updated_by": 258,
+    "updated_on": 1607378342,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "If the player has made at least one pick on Easy Play, their current rank on the Easy Play leaderboard for that contest should be shown. ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8673980,
+    "title": "Earning lenses",
+    "section_id": 482342,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1604946758,
+    "updated_by": 280,
+    "updated_on": 1604946764,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8673977,
+    "title": "User's profile photo",
+    "section_id": 482342,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1604945373,
+    "updated_by": 280,
+    "updated_on": 1604945657,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "User has his avatar photo at the top\r\n\r\n![](index.php?/attachments/get/6597473)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8673978,
+    "title": "Lens inventory screen",
+    "section_id": 482342,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1604945398,
+    "updated_by": 280,
+    "updated_on": 1604945398,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 6,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8673979,
+    "title": "Favorite lenses",
+    "section_id": 482342,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1604945710,
+    "updated_by": 280,
+    "updated_on": 1604946717,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 7,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User is able to favorite the lense by selecting the lense and clicking on the star",
+        "expected": "![](index.php?/attachments/get/6597475)\n"
+      },
+      {
+        "content": "Favorite lenses are displayed on user's Profile page",
+        "expected": "![](index.php?/attachments/get/6597474)\n"
+      },
+      {
+        "content": "User is able to see all favorite lenses by clicking 'See All'",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 8673975,
+    "title": "Avatar photo in 'Game results' screen",
+    "section_id": 482342,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1604944007,
+    "updated_by": 280,
+    "updated_on": 1604945683,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 8,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "“Game Results” screen in end of game flow includes avatar photo\r\n\r\n![](index.php?/attachments/get/6597470)\r\n![](index.php?/attachments/get/6597471)\r\n\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8673976,
+    "title": "Avatar photo in leaderboard",
+    "section_id": 482342,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1604944936,
+    "updated_by": 280,
+    "updated_on": 1604945686,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 9,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "Leaderboard rows include avatar photos \r\n\r\n![](index.php?/attachments/get/6597472)\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8699767,
+    "title": "Zoomed card",
+    "section_id": 484677,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1605219007,
+    "updated_by": 280,
+    "updated_on": 1605219007,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8699768,
+    "title": "Unzoomed card",
+    "section_id": 484677,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1605219037,
+    "updated_by": 280,
+    "updated_on": 1605219396,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "For every gold question: \n* The prop turns gold with darker gold border\n* Extra point amount and golden coin are displayed above the question",
+        "expected": "![](index.php?/attachments/get/6665655)\n"
+      }
+    ]
+  },
+  {
+    "id": 8699769,
+    "title": "Pitchcast",
+    "section_id": 484677,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1605219090,
+    "updated_by": 280,
+    "updated_on": 1605219090,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 3,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8699764,
+    "title": "Digital Wallet",
+    "section_id": 484678,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1605214728,
+    "updated_by": 280,
+    "updated_on": 1605214756,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "* When players win cash, a digital wallet balance is updated to reflect their winnings.\r\n* Players can see their wallet balance in their profile.\r\n* Players can click into their wallet to launch a web view.\r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8699765,
+    "title": "Adding friends",
+    "section_id": 484683,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1605214915,
+    "updated_by": 280,
+    "updated_on": 1605214915,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8699766,
+    "title": "Removing friends",
+    "section_id": 484683,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1605218309,
+    "updated_by": 280,
+    "updated_on": 1605218309,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 8602963,
+    "title": "Notification on profile page",
+    "section_id": 475208,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 280,
+    "created_on": 1603921821,
+    "updated_by": 280,
+    "updated_on": 1603921850,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 109691,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": "* In the User Profile screen, the notifications option should be clickable and it takes the user to a new sub-screen. \r\n\r\n* On the new screen, there should be three option toggles. These three toggles should be:\r\n\r\n* Global Notifications - Toggling this turns on and off ALL other sub-notification toggles.\r\n\r\n* “Pre-game Reminder” - toggling this turns on and off the “Time to make your picks” notification that is sent each morning at 10am ET.\r\n\r\n* If the player tries to turn on a notification and has that notification option turned off in the settings, the user is shown a pop-up that shows them that they need to turn on notifications in the profile screen.",
+    "custom_steps_separated": null
+  }
+]

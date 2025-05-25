@@ -1,0 +1,18 @@
+[
+  {
+    "id": 2083,
+    "name": "Browse menu regression",
+    "description": null,
+    "start_on": null,
+    "started_on": 1674691200,
+    "is_started": true,
+    "due_on": 1675382400,
+    "is_completed": false,
+    "completed_on": null,
+    "project_id": 242,
+    "parent_id": null,
+    "refs": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/milestones/view/2083",
+    "milestones": []
+  }
+]

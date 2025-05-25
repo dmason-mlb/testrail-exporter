@@ -1,0 +1,20 @@
+[
+  {
+    "id": 5069,
+    "suite_id": 691,
+    "name": "DO NOT TEST_BANNERS NOT SUPPORTED AT ALL IN MILB_General Banners",
+    "description": "NO banners in MiLB (Android or iOS)",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 5070,
+    "suite_id": 691,
+    "name": "DO NOT TEST_ANNOUNCEMENT & POP-UPS ARE NOT SUPPORTED IN ANDROID MILB_Notifications",
+    "description": "There are also no announcements/pop-ups in Android MiLB (that’s only iOS).",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

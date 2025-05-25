@@ -1,0 +1,29 @@
+[
+  {
+    "id": 86402,
+    "suite_id": 13977,
+    "name": "Sony PS4 Mastering Requirements",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 86403,
+    "suite_id": 13977,
+    "name": "Sony PS4 Quality Requirements",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 86404,
+    "suite_id": 13977,
+    "name": "Sony PS4 Platform Requirements",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "id": 203046,
+  "name": "Tickets Tab",
+  "description": "Within Tickets Tab there are four specific views/icons (10.1.0):\r\n-[My Offers icon](https://testrail.testeng.mlbinfra.net/index.php?/suites/view/416479&group_by=cases:section_id&group_order=asc)\r\n-[Ticket Forward icon](https://testrail.testeng.mlbinfra.net/index.php?/suites/view/416482&group_by=cases:section_id&group_order=asc)\r\n-[Wallet View](https://testrail.testeng.mlbinfra.net/index.php?/suites/view/20551)\r\n-[Buy Tickets View](https://testrail.testeng.mlbinfra.net/index.php?/suites/view/192826&group_by=cases:section_id&group_order=asc)\r\n\r\nAll features are housed in its own test suite, where specific and in-depth verification for each are defined\r\n\r\n\r\nThis is TicketTab for BP app versions prior to 13.0.0 release. This view is also planned to be viewable/toggible during early BETA releases of 13.0.0",
+  "project_id": 179,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/203046"
+}

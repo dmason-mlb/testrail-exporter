@@ -1,0 +1,119 @@
+[
+  {
+    "id": 120430,
+    "suite_id": 18378,
+    "name": "Daily Transaction Bulletin",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 120431,
+    "suite_id": 18378,
+    "name": "Daily Transaction Bulletin",
+    "description": null,
+    "parent_id": 120430,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 120432,
+    "suite_id": 18378,
+    "name": "Taxi Squad",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 120433,
+    "suite_id": 18378,
+    "name": "Clipboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 120434,
+    "suite_id": 18378,
+    "name": "Roster Management",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 120435,
+    "suite_id": 18378,
+    "name": "Profiles",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 120445,
+    "suite_id": 18378,
+    "name": "Pro",
+    "description": null,
+    "parent_id": 120435,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 120446,
+    "suite_id": 18378,
+    "name": "Domestic Amateur",
+    "description": null,
+    "parent_id": 120435,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 120447,
+    "suite_id": 18378,
+    "name": "International Amateur",
+    "description": null,
+    "parent_id": 120435,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 120436,
+    "suite_id": 18378,
+    "name": "Roster Widgets",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 120439,
+    "suite_id": 18378,
+    "name": "Advanced Search",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 120442,
+    "suite_id": 18378,
+    "name": "Batches",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 120444,
+    "suite_id": 18378,
+    "name": "Verify Stats Batch",
+    "description": null,
+    "parent_id": 120442,
+    "display_order": 17,
+    "depth": 1
+  }
+]

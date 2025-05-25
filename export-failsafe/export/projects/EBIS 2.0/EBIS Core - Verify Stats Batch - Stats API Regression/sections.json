@@ -1,0 +1,47 @@
+[
+  {
+    "id": 470535,
+    "suite_id": 108438,
+    "name": "MJ stats are earned without proper roster status (default past 12 days)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 470536,
+    "suite_id": 108438,
+    "name": "Stats are earned with a club other than player's current/pending club (default past 4 days)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 470537,
+    "suite_id": 108438,
+    "name": "MJ stats are earned without MJ contract",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 470538,
+    "suite_id": 108438,
+    "name": "MN stats are earned without MN contract",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 470539,
+    "suite_id": 108438,
+    "name": "Special cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

@@ -1,0 +1,157 @@
+[
+  {
+    "id": 13275375,
+    "title": "Inbox Feature Flagging  [iOS < 11.7.0, ANDROID >= 10.1.0]",
+    "section_id": 599829,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1610372451,
+    "updated_by": 288,
+    "updated_on": 1666046421,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 154112,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User has Ballpark app installed and is logged in\r\n\r\nUPDATED TEST NOTES - 10/17/2022:\r\n*enable_inbox is no longer used for iOS 11.7.0 [BP-9783](https://baseball.atlassian.net/browse/BP-9783)\r\n*More tab showing Profile/Inbox icon was removed with [BPA-6398](https://baseball.atlassian.net/browse/BPA-6398) / [BP-9676](https://baseball.atlassian.net/browse/BP-9676) ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN Inbox Feature is turned off (i.e. enable_inbox is disabled in Remote Config)",
+        "expected": "THEN User will not have the ability to view Inbox (i.e. There will be no icon shown on Home/More Tab)"
+      },
+      {
+        "content": "WHEN Inbox Feature is turned on (i.e. enable_inbox is enabled in Remote Config)",
+        "expected": "THEN User will have the ability to view Inbox (i.e. There will be an icon shown on Home/More Tab)"
+      }
+    ]
+  },
+  {
+    "id": 13275376,
+    "title": "Inbox Message List",
+    "section_id": 599829,
+    "template_id": 1,
+    "type_id": 9,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1610372485,
+    "updated_by": 288,
+    "updated_on": 1666050679,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 154112,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN  Inbox feature is enabled* \r\nAND User has Ballpark app installed \r\nAND User is logged in\r\n\r\n\r\n*Inbox Feature Flagging available for iOS < 11.7.0 \r\n*Inbox Feature Flagging available for ANDROID >= 10.1.0\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user clicks on Inbox Icon in HomePage/MyProfile \nAND user has no messages",
+        "expected": "THEN the Inbox empty screen will be presented"
+      },
+      {
+        "content": "WHEN user clicks on Inbox Icon in HomePage/MyProfile \nAND user has messages",
+        "expected": "THEN list of messages will be presented"
+      },
+      {
+        "content": "WHEN list of messages is presented",
+        "expected": "THEN each message will be in the list\nAND each entry in the list will have a subject, sender & body preview and a date received"
+      },
+      {
+        "content": "WHEN list of messages is presented with at least one unread message\n\n(if needing a new unread message, it can be sent to account via Club Tools - Notifications Manager\nhttps://qa-clubtools.us-central1.mobiletools-gcp-npd.mlbinfra.net/notifications )",
+        "expected": "THEN each unread entry in the list will have the Sender and subject text bold"
+      },
+      {
+        "content": "WHEN list of messages is presented with at least one read message",
+        "expected": "THEN each previously read entry in the list will have the Sender and subject text NOT bold"
+      },
+      {
+        "content": "WHEN user clicks on a message in the list",
+        "expected": "THEN a screen with details of that message will be presented"
+      }
+    ]
+  },
+  {
+    "id": 13275377,
+    "title": "Inbox Message Details",
+    "section_id": 599829,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1610372497,
+    "updated_by": 288,
+    "updated_on": 1666050930,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 154112,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN Inbox feature is enabled*\r\nAND User has Ballpark app installed\r\nAND User is logged in\r\nAND user has at least one message in the list of messages\r\n\r\n*Inbox Feature Flagging available for iOS < 11.7.0\r\n*Inbox Feature Flagging available for ANDROID >= 10.1.0\r\n\r\n(if needing a new message in a specific state, it can be sent to account via Club Tools - Notifications Manager\r\nhttps://qa-clubtools.us-central1.mobiletools-gcp-npd.mlbinfra.net/notifications )\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user clicks on message in the list",
+        "expected": "THEN a screen with details of the message is displayed"
+      },
+      {
+        "content": "WHEN the screen of message details is presented which has no icon url nor action url",
+        "expected": "THEN screen will be presented which contains the message's sender, subject, and message.  The message icon will be the placeholder / default value (gray mlb logo).  There will be no action button shown."
+      },
+      {
+        "content": "WHEN the screen of message details is presented which has an icon url",
+        "expected": "THEN screen will be presented and message icon will be the value specified (i.e. \"https://storage.mobile.mlbinfra.com/bplogos/2020/115@3x.png\")"
+      },
+      {
+        "content": "WHEN the screen of message details is presented which has action text and url",
+        "expected": "THEN a button will be displayed labeled with action text and when clicked will navigate to the destination of the action url (i.e.           \"ballpark://wallet\", \"http://www.google.com\", etc.)\n"
+      },
+      {
+        "content": "WHEN the screen of message details is presented and user returns to Message list",
+        "expected": "THEN the status of the message will be read"
+      }
+    ]
+  },
+  {
+    "id": 15849708,
+    "title": "Inbox Has Unread Messages",
+    "section_id": 599829,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 223,
+    "created_on": 1612385119,
+    "updated_by": 288,
+    "updated_on": 1666050909,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 154112,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN the user is logged in and has an unread message in their inbox (can be verified by looking at the inbox documents filtered by the users otkaID and seeing one has a status of \"unread\")\r\n\r\n\r\n(if needing a new message in a specific state, it can be sent to account via Club Tools - Notifications Manager\r\nhttps://qa-clubtools.us-central1.mobiletools-gcp-npd.mlbinfra.net/notifications )\r\n\r\n",
+    "custom_steps": "WHEN the user is on the Home Tab ",
+    "custom_expected": "THEN the Inbox icon will have an indicator dot in the top right that is Ballpark blue when any favorite team is specified, as well as no favorite team specified. (Ballpark 10.1.0 requirement)",
+    "custom_steps_separated": null
+  }
+]

@@ -1,0 +1,233 @@
+[
+  {
+    "id": 1206,
+    "name": "AirPlay/Chromecast",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1206"
+  },
+  {
+    "id": 1207,
+    "name": "Apple Watch",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1207"
+  },
+  {
+    "id": 1208,
+    "name": "Classic Games",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1208"
+  },
+  {
+    "id": 1209,
+    "name": "Gameday",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1209"
+  },
+  {
+    "id": 1210,
+    "name": "General Application",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1210"
+  },
+  {
+    "id": 1211,
+    "name": "Hide Scores",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1211"
+  },
+  {
+    "id": 1212,
+    "name": "In-App Purchase",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1212"
+  },
+  {
+    "id": 1213,
+    "name": "iPad Team Schedule",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1213"
+  },
+  {
+    "id": 1214,
+    "name": "Live Look-In",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1214"
+  },
+  {
+    "id": 1215,
+    "name": "MLB Network",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1215"
+  },
+  {
+    "id": 1216,
+    "name": "MLB.TV",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1216"
+  },
+  {
+    "id": 1217,
+    "name": "More",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1217"
+  },
+  {
+    "id": 1218,
+    "name": "News",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1218"
+  },
+  {
+    "id": 1219,
+    "name": "Push Notifications",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1219"
+  },
+  {
+    "id": 1220,
+    "name": "Scoreboard",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1220"
+  },
+  {
+    "id": 1221,
+    "name": "Settings",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1221"
+  },
+  {
+    "id": 1222,
+    "name": "Spanish Localization",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1222"
+  },
+  {
+    "id": 1223,
+    "name": "Sponsorship & Banners",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1223"
+  },
+  {
+    "id": 1226,
+    "name": "Gameday Audio",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1226"
+  },
+  {
+    "id": 1227,
+    "name": "Standings",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1227"
+  },
+  {
+    "id": 1255,
+    "name": "Videos",
+    "description": null,
+    "project_id": 93,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1255"
+  }
+]

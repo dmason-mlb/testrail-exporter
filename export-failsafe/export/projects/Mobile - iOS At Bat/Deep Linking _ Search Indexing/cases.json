@@ -1,0 +1,2272 @@
+[
+  {
+    "id": 195957,
+    "title": "Deep Link Examples - Document Attached",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469741727,
+    "updated_by": 39,
+    "updated_on": 1469741746,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 1,
+    "custom_preconds": "You can copy and paste the Deep Links from the attached Word document to a new e-mail message and then e-mail to the e-mail address setup on the device(s) you are going to test Deep Links on.",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  },
+  {
+    "id": 187343,
+    "title": "Team - Team ID",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871471,
+    "updated_by": 84,
+    "updated_on": 1647370301,
+    "estimate": null,
+    "estimate_forecast": "3m",
+    "suite_id": 2899,
+    "display_order": 2,
+    "custom_preconds": "Given a user has MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Team Page (Team ID) Deep Link\r\n\r\nmlbatbat://team?team_id=111",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens team page for Boston Red Sox"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens team page for Boston Red Sox"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens team page for Boston Red Sox"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens team page for Boston Red Sox"
+      },
+      {
+        "content": "with a Favorite Team set with the app running in the background",
+        "expected": "Opens team page for Boston Red Sox\nand able to change tabs and teams"
+      },
+      {
+        "content": "with no Favorite Team set with the app running in the background",
+        "expected": "Opens team page for Boston Red Sox\nand able to dismiss Team Page by tapping Done"
+      }
+    ]
+  },
+  {
+    "id": 187344,
+    "title": "Team - Team",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871478,
+    "updated_by": 84,
+    "updated_on": 1647370321,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 3,
+    "custom_preconds": "Given a user has MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Team Page (Team) Deep Link\r\n\r\nmlbatbat://team?team=cle",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens team page for Cleveland Indians"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens team page for Cleveland Indians"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens team page for Cleveland Indians"
+      },
+      {
+        "content": "with Gameday open in the background",
+        "expected": "Opens team page for Cleveland Indians"
+      },
+      {
+        "content": "with a Favorite Team set with the app running in the background",
+        "expected": "Opens team page for Cleveland Indians\nand able to change tabs and teams"
+      },
+      {
+        "content": "with a Favorite Team set with the app running in the background",
+        "expected": "Opens team page for Cleveland Indians\nand able to dismiss Team Page by tapping Done"
+      }
+    ]
+  },
+  {
+    "id": 187345,
+    "title": "MLBN - MLBN",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871484,
+    "updated_by": 84,
+    "updated_on": 1642113486,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 4,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a MLB Network Deep Link\r\n\r\nmlbatbat://mlbn",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens MLBN page"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens MLBN page"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens MLBN page"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens MLBN page"
+      }
+    ]
+  },
+  {
+    "id": 187346,
+    "title": "MLBN - Network",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871490,
+    "updated_by": 84,
+    "updated_on": 1642113573,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 5,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a MLB Network Deep Link\r\n\r\nmlbatbat://network",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens MLBN page"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens MLBN page"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens MLBN page"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens MLBN page"
+      }
+    ]
+  },
+  {
+    "id": 187347,
+    "title": "News - MLB",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871496,
+    "updated_by": 84,
+    "updated_on": 1642113639,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 6,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a MLB News Deep Link\r\n\r\nmlbatbat://news",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens News index with MLB filter"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens News index with MLB filter"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens News index with MLB filter"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens News index with MLB filter"
+      }
+    ]
+  },
+  {
+    "id": 187348,
+    "title": "News - Team ID",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871501,
+    "updated_by": 84,
+    "updated_on": 1642113708,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 7,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Team News Deep Link\r\n\r\nmlbatbat://news?team_id=111",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens News index with Team filter (Boston Red Sox)"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens News index with Team filter (Boston Red Sox)"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens News index with Team filter (Boston Red Sox)"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens News index with Team filter (Boston Red Sox)"
+      }
+    ]
+  },
+  {
+    "id": 187349,
+    "title": "News - Team",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871507,
+    "updated_by": 84,
+    "updated_on": 1642113953,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 8,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Team News Deep Link\r\n\r\n\r\nmlbatbat://news?team=tor",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens News index with Team filter (Toronto Blue Jays)"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens News index with Team filter (Toronto Blue Jays)"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens News index with Team filter (Toronto Blue Jays)"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens News index with Team filter (Toronto Blue Jays)"
+      }
+    ]
+  },
+  {
+    "id": 187350,
+    "title": "News - Article",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871512,
+    "updated_by": 84,
+    "updated_on": 1644009101,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 9,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device\r\nand has an current Content ID from the newsreader.json",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a MLB News Article Deep Link\r\n\r\nmlbatbat://news?article=190222304 ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Article\n\n(Note: content may not have been in index but should still be displayed)"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Article\n\n(Note: content may not have been in index but should still be displayed)"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Article\n\n(Note: content may not have been in index but should still be displayed)"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Article\n\n(Note: content may not have been in index but should still be displayed)"
+      }
+    ]
+  },
+  {
+    "id": 187351,
+    "title": "News - Article Team ID",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871653,
+    "updated_by": 84,
+    "updated_on": 1644009133,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 10,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device\r\nand has an current Content ID from the team newsreader.json\r\n",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Team News Article Deep Link\r\n\r\nmlbatbat://news?article=190089852&team_id=117",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Article\n\n(Note: content may not have been in index but should still be displayed)"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Article\n\n(Note: content may not have been in index but should still be displayed)"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Article\n\n(Note: content may not have been in index but should still be displayed)"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Article\n\n(Note: content may not have been in index but should still be displayed)"
+      }
+    ]
+  },
+  {
+    "id": 187352,
+    "title": "News - Article Team",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871660,
+    "updated_by": 84,
+    "updated_on": 1644009156,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 11,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a News w/ Article and Team Deep Link\r\n\r\nmlbatbat://news?article=191831000&team=tor\r\n\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Then the Article opens\n\nNote: content may not have be in index but should still be displayed"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Then the Article opens\n\nNote: content may not have be in index but should still be displayed"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Then the Article opens\n\nNote: content may not have be in index but should still be displayed"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Then the Article opens\n\nNote: content may not have be in index but should still be displayed"
+      }
+    ]
+  },
+  {
+    "id": 187353,
+    "title": "Video - MLB",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871670,
+    "updated_by": 84,
+    "updated_on": 1642114105,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 12,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Video Deep Link\r\n\r\nmlbatbat://video",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Video index with MLB filter"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Video index with MLB filter"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Video index with MLB filter"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Video index with MLB filter"
+      }
+    ]
+  },
+  {
+    "id": 187354,
+    "title": "Video - Team ID",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871689,
+    "updated_by": 84,
+    "updated_on": 1642114173,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 13,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device\r\n",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Team ID Video Deep Link\r\n\r\nmlbatbat://video?team_id=111",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Video index with Team filter (BOS)"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Video index with Team filter (BOS)"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Video index with Team filter (BOS)"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Video index with Team filter (BOS)"
+      }
+    ]
+  },
+  {
+    "id": 187355,
+    "title": "Video - Team",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871697,
+    "updated_by": 84,
+    "updated_on": 1642116242,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 14,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Team ID Video Deep Link\r\n\r\nmlbatbat://video?team=tor",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Video index with Team filter (Tor)"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Video index with Team filter (Tor)"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Video index with Team filter (Tor)"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Video index with Team filter (Tor)"
+      }
+    ]
+  },
+  {
+    "id": 187356,
+    "title": "Video - Article",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871704,
+    "updated_by": 84,
+    "updated_on": 1644009264,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 15,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Video Article Deep Link\r\n\r\nmlbatbat://video?article=980970883\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Video \n\n(Note: content may not have been in index but should still be displayed)"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Video \n\n(Note: content may not have been in index but should still be displayed)"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Video\n\n(Note: content may not have been in index but should still be displayed)"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Video \n\n(Note: content may not have been in index but should still be displayed)"
+      }
+    ]
+  },
+  {
+    "id": 187357,
+    "title": "Video - Article Team ID",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871711,
+    "updated_by": 84,
+    "updated_on": 1644009303,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 16,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Team Video Article Deep Link\r\n\r\nmlbatbat://video?article=978870483&team_id=117",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Video \n\n(Note: content may not have been in index but should still be displayed)"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Video\n\n(Note: content may not have been in index but should still be displayed)"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Video\n\n(Note: content may not have been in index but should still be displayed)"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Video\n\n(Note: content may not have been in index but should still be displayed)"
+      }
+    ]
+  },
+  {
+    "id": 187358,
+    "title": "Video - Article Team",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871748,
+    "updated_by": 84,
+    "updated_on": 1644009331,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 17,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Team Video Article Deep Link\r\n\r\nmlbatbat://video?article=978870483&team=hou\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Video \n\n(Note: content may not have been in index but should still be displayed)"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Video\n\n(Note: content may not have been in index but should still be displayed)"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Video\n\n(Note: content may not have been in index but should still be displayed)"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Video\n\n(Note: content may not have been in index but should still be displayed)"
+      }
+    ]
+  },
+  {
+    "id": 187359,
+    "title": "Scoreboard",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871753,
+    "updated_by": 84,
+    "updated_on": 1647370522,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 18,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Scoreboard Deep Link\r\n\r\nmlbatbat://scoreboard",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Scoreboard (Today as per flip)"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Scoreboard (Today as per flip)"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Scoreboard (Today as per flip)"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Scoreboard (Today as per flip)"
+      }
+    ]
+  },
+  {
+    "id": 187360,
+    "title": "Scoreboard - Date",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871768,
+    "updated_by": 84,
+    "updated_on": 1647370514,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 19,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Scoreboard Deep Link\r\n\r\nmlbatbat://scoreboard?date=20220411",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Scoreboard to date"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Scoreboard to date"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Scoreboard to date"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Scoreboard to date"
+      }
+    ]
+  },
+  {
+    "id": 187361,
+    "title": "Scoreboard - Game",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871780,
+    "updated_by": 39,
+    "updated_on": 1469736889,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 20,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Scoreboard Deep Link\r\n\r\nmlbatbat://scoreboard?state=expanded&gameid=2016_07_09_anamlb_balmlb_1/\r\n\r\nGet Game ID by navigating to a year, month, day:\r\nProd - http://gdx.mlb.com/components/game/mlb/year_2016/\r\nQA - http://gd.qa.mlb.com/components/game/mlb/year_2016/",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Scoreboard to date and scrolls to Game"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Scoreboard to date and scrolls to Game"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Scoreboard to date and scrolls to Game"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Scoreboard to date and scrolls to Game"
+      }
+    ]
+  },
+  {
+    "id": 187362,
+    "title": "Scoreboard - Game out of Range",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871805,
+    "updated_by": 84,
+    "updated_on": 1570115296,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 21,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device\r\nand 2016 is the supported season",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Scoreboard Game Deep Link for a game in 2015 (out of range)\r\n\r\nmlbatbat://scoreboard?state=expanded&gameid=2015_05_08_cinmlb_chamlb_1/\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens scoreboard to current date and presents message \"Game not found.\""
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens scoreboard to current date and presents message \"Game not found.\""
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens scoreboard to current date and presents message \"Game not found.\""
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens scoreboard to current date and presents message \"Game not found.\""
+      }
+    ]
+  },
+  {
+    "id": 187363,
+    "title": "Player - ID",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871814,
+    "updated_by": 39,
+    "updated_on": 1477587433,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 22,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Player Card Deep Link\r\n\r\nmlbatbat://athlete?player_id=592273",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens player card webview using Player ID"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens player card webview using Player ID"
+      },
+      {
+        "content": "With a modal (Gameday Audio) open in the background",
+        "expected": "Opens player card webview using Player ID"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens player card webview using Player ID"
+      }
+    ]
+  },
+  {
+    "id": 187364,
+    "title": "Stats",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871821,
+    "updated_by": 84,
+    "updated_on": 1647370606,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 23,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Stats Deep Link\r\n\r\nmlbatbat://stats",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Stats view"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Stats view"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Stats view"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Stats view"
+      }
+    ]
+  },
+  {
+    "id": 1200557,
+    "title": "Stats - Team",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1507555672,
+    "updated_by": 84,
+    "updated_on": 1647370619,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 24,
+    "custom_preconds": "Given a user has MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigate to a Team Stats Deep Link\r\n\r\nmlbatbat://stats?team_id=111\r\nmlbatbat://stats?team=col",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Stats filtered by team"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Stats filtered by team"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Stats filtered by team"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Stats filtered by team"
+      }
+    ]
+  },
+  {
+    "id": 1200558,
+    "title": "Stats - Year",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1507555677,
+    "updated_by": 84,
+    "updated_on": 1647370627,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 25,
+    "custom_preconds": "Given a user has MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigate to a Stats w/ Year Deep Link\r\n\r\nmlbatbat://stats?season=2016",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Stats set to season by year"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Stats set to season by year"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Stats set to season by year"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Stats set to season by year"
+      }
+    ]
+  },
+  {
+    "id": 1200559,
+    "title": "Stats - Single Season",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1507555681,
+    "updated_by": 39,
+    "updated_on": 1507556302,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 26,
+    "custom_preconds": "Given a user has At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigate to a Stats w/ Season Type Deep Link\r\n\r\nmlbatbat://stats?season_type=single \r\nmlbatbat://stats?season_type=single&active_sw=y ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Stats set to single season leaders "
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Stats set to single season leaders "
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Stats set to single season leaders "
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Stats set to single season leaders "
+      }
+    ]
+  },
+  {
+    "id": 1200567,
+    "title": "Stats - All Year",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1507556423,
+    "updated_by": 39,
+    "updated_on": 1507556923,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 27,
+    "custom_preconds": "Given a user has At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigate to a Stats w/ All Time Deep Link\r\n\r\nmlbatbat://stats?season_type=alltime   \r\nmlbatbat://stats?season_type=alltime&active_sw=y  ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Stats set to all time leaders"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Stats set to all time leaders"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Stats set to all time leaders"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Stats set to all time leaders"
+      }
+    ]
+  },
+  {
+    "id": 1200568,
+    "title": "Stats - Game Type",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1507556439,
+    "updated_by": 39,
+    "updated_on": 1507556964,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 28,
+    "custom_preconds": "Given a user has At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigate to a Stats w/ Game Type Deep Link\r\n\r\nmlbatbat://stats?game_type=R (Regular Season) (current mode is default)  \r\nmlbatbat://stats?game_type=S (spring)\r\nmlbatbat://stats?game_type=P (postseason all)\r\nmlbatbat://stats?game_type=D (DS)\r\nmlbatbat://stats?game_type=L (LCS)\r\nmlbatbat://stats?game_type=W (WS)\r\nmlbatbat://stats?game_type=F  (WC)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Open Stats filtered by game type"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Open Stats filtered by game type"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Open Stats filtered by game type"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Open Stats filtered by game type"
+      }
+    ]
+  },
+  {
+    "id": 1200569,
+    "title": "Stats - League Filter",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1507556453,
+    "updated_by": 39,
+    "updated_on": 1507557083,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 29,
+    "custom_preconds": "Given a user has At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigate to a Stats w/ League Deep Link\r\n\r\nmlbatbat://stats?league_code=mlb (MLB)  (default)  \r\nmlbatbat://stats?league_code=al (AL)  \r\nmlbatbat://stats?league_code=nl (NL)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Open Stats filtered by league"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Open Stats filtered by league"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Open Stats filtered by league"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Open Stats filtered by league"
+      }
+    ]
+  },
+  {
+    "id": 1200570,
+    "title": "Stats - Stat Type",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1507556470,
+    "updated_by": 39,
+    "updated_on": 1507557207,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 30,
+    "custom_preconds": "Given a user has At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigate to a Stats w/ Stat Type Deep Link\r\n\r\nmlbatbat://stats?stat_type=hitting (default)  \r\nmlbatbat://stats?stat_type=pitching \r\nmlbatbat://stats?stat_type=fielding  ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Open Stats by Stat Type"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Open Stats by Stat Type"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Open Stats by Stat Type"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Open Stats by Stat Type"
+      }
+    ]
+  },
+  {
+    "id": 1200572,
+    "title": "Stats - Stat Category",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1507556498,
+    "updated_by": 39,
+    "updated_on": 1507557280,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 31,
+    "custom_preconds": "Given a user has At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigate to a Stats w/ Stat Category Deep Link\r\n\r\nmlbatbat://stats?stat=avg  \r\n\r\nBatting:\r\nAVG, HR, RBI, SB, R, OBP, SLG, OPS, H, 2B, 3B, BB, SO, CS, G, AB\r\nPitching:\r\nERA, W, SO, SV, WHIP, BAA, IP, CG, G, GS, L, SVO, ER, R, H, HR, BB\r\nFielding:\r\nG, GS, INN, TC, PO, A, E, DP, SB, CS, SBPCT, PB, C_WP, FPCT, RF",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Open to specific Stat"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Open to specific Stat"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Open to specific Stat"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Open to specific Stat"
+      }
+    ]
+  },
+  {
+    "id": 1200573,
+    "title": "Stats - Stat Category View (multi param) 1",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1507556513,
+    "updated_by": 39,
+    "updated_on": 1507557367,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 32,
+    "custom_preconds": "Given a user has At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigate to a Stats w/ multi param Deep Link\r\n\r\nmlbatbat://stats?game_type=R&season=2016&league_code=al&stat_type=pitching\r\nmlbatbat://stats?game_type=R&season=2016&team=bos&stat_type=pitching",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens the Stats multi-param queries"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens the Stats multi-param queries"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens the Stats multi-param queries"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens the Stats multi-param queries"
+      }
+    ]
+  },
+  {
+    "id": 1200575,
+    "title": "Stats - Stat Category View (multi param) 2",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1507557370,
+    "updated_by": 39,
+    "updated_on": 1507557390,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 33,
+    "custom_preconds": "Given a user has At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigate to a Stats w/ multi param Deep Link\r\n\r\nmlbatbat://stats?game_type=R&season=2016&league_code=al&stat=avg\r\nmlbatbat://stats?game_type=R&season=2016&team=bos&stat=avg&stat_type=hitting",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens the Stats multi-param queries"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens the Stats multi-param queries"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens the Stats multi-param queries"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens the Stats multi-param queries"
+      }
+    ]
+  },
+  {
+    "id": 1200574,
+    "title": "Stats - Team Category View (multi param)",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1507556628,
+    "updated_by": 39,
+    "updated_on": 1507557421,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 41,
+    "custom_preconds": "Given a user has At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigate to a Stats w/ Team multi param Deep Link\r\n\r\nmlbatbat://stats?game_type=R&season=2016&league_code=al&stat_type=pitching&section=team\r\nmlbatbat://stats?game_type=R&season=2016&league_code=al&stat=avg&section=team",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Stats filtered by Teams instead of players"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Stats filtered by Teams instead of players"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Stats filtered by Teams instead of players"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Stats filtered by Teams instead of players"
+      }
+    ]
+  },
+  {
+    "id": 187365,
+    "title": "Gameday",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871830,
+    "updated_by": 84,
+    "updated_on": 1570115583,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 43,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Gameday Deep Link\r\n\r\nmlbatbat://game?gameId=2016_04_07_miamlb_wasmlb_1\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Gameday to a specific game \n\nTest with all states: Preview, Live, Wrap"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Gameday to a specific game \n\nTest with all states: Preview, Live, Wrap"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Gameday to a specific game \n\nTest with all states: Preview, Live, Wrap"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Gameday to a specific game \n\nTest with all states: Preview, Live, Wrap"
+      }
+    ]
+  },
+  {
+    "id": 187366,
+    "title": "Gameday - View",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871836,
+    "updated_by": 84,
+    "updated_on": 1570115620,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 44,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Gameday w/ View Deep Link\r\n\r\nmlbatbat://game?gameId=2016_04_07_miamlb_wasmlb_1&view=videos\r\nmlbatbat://game?gameId=2016_04_07_miamlb_wasmlb_1&view=boxscore\r\nmlbatbat://game?gameId=2016_04_07_miamlb_wasmlb_1&view=color\r\n\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Gameday to a specific game and view\n\nTest with all states: Preview, Live, Wrap"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Gameday to a specific game and view\n\nTest with all states: Preview, Live, Wrap"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Gameday to a specific game and view\n\nTest with all states: Preview, Live, Wrap"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Gameday to a specific game and view\n\nTest with all states: Preview, Live, Wrap"
+      }
+    ]
+  },
+  {
+    "id": 187367,
+    "title": "Gameday - Game out of Range",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871844,
+    "updated_by": 84,
+    "updated_on": 1570115605,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 45,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device\r\nand the supported season is set to 2016\r\n",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Gameday Deep Link for game in 2015 (outside the range)\r\n\r\nmlbatbat://game?gameId=2015_07_09_detmlb_minmlb_1/\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "If Game ID out of 2015 range/invalid, opens to current date and presents message \"Game not found.\""
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "If Game ID out of 2015 range/invalid, opens to current date and presents message \"Game not found.\""
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "If Game ID out of 2015 range/invalid, opens to current date and presents message \"Game not found.\""
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "If Game ID out of 2015 range/invalid, opens to current date and presents message \"Game not found.\""
+      }
+    ]
+  },
+  {
+    "id": 187368,
+    "title": "Transactions - Team ID",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871851,
+    "updated_by": 39,
+    "updated_on": 1469738510,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 46,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Transaction Deep Link\r\n\r\nmlbatbat://transactions?team_id=111",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Transactions for specific team"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Transactions for specific team"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Transactions for specific team"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Transactions for specific team"
+      }
+    ]
+  },
+  {
+    "id": 187369,
+    "title": "Transactions - Team",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871873,
+    "updated_by": 39,
+    "updated_on": 1469738571,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 47,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device\r\n",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Transaction Deep Link\r\n\r\nmlbatbat://transactions?team=tor",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Transactions for specific team"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Transactions for specific team"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Transactions for specific team"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Transactions for specific team"
+      }
+    ]
+  },
+  {
+    "id": 187370,
+    "title": "Transactions - Team/Team ID + Date Start",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871882,
+    "updated_by": 39,
+    "updated_on": 1469738689,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 48,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Transaction Deep Link\r\n\r\nmlbatbat://transactions?team=tor&date=20160601",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Transactions for specific team on a specific date"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Transactions for specific team on a specific date"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Transactions for specific team on a specific date"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Transactions for specific team on a specific date"
+      }
+    ]
+  },
+  {
+    "id": 187371,
+    "title": "Schedule - Team ID",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871888,
+    "updated_by": 84,
+    "updated_on": 1647370726,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 49,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Team Schedule Deep Link\r\n\r\nmlbatbat://schedule?team_id=111\r\n\r\n\r\n(Boston Red Sox)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Team Schedule to default date/view"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Team Schedule to default date/view"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Team Schedule to default date/view"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Team Schedule to default date/view"
+      }
+    ]
+  },
+  {
+    "id": 187372,
+    "title": "Schedule - Team",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871894,
+    "updated_by": 84,
+    "updated_on": 1647370699,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 50,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Team Schedule Deep Link\r\n\r\nmlbatbat://schedule?club=chc\r\n\r\n(Chicago Cubs)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Team Schedule to default date/view"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Team Schedule to default date/view"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Team Schedule to default date/view"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Team Schedule to default date/view"
+      }
+    ]
+  },
+  {
+    "id": 187373,
+    "title": "Schedule - Team / Team ID + Date Start",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871900,
+    "updated_by": 39,
+    "updated_on": 1469738968,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 51,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Team Schedule Deep Link\r\n\r\nmlbatbat://schedule?club=chc&date=20160601",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Team Schedule to specific schedule date "
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Team Schedule to specific schedule date "
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Team Schedule to specific schedule date"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Team Schedule to specific schedule date "
+      }
+    ]
+  },
+  {
+    "id": 187374,
+    "title": "Schedule - Team / Team ID + Date Start + View",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871905,
+    "updated_by": 39,
+    "updated_on": 1469739007,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 52,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device\r\n",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Team Schedule Deep Link\r\n\r\nmlbatbat://schedule?club=chc&state=list&date=20160501\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Team Schedule to specific schedule date and view."
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Team Schedule to specific schedule date and view."
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Team Schedule to specific schedule date and view."
+      },
+      {
+        "content": "With Gameday open in the background\n",
+        "expected": "Opens Team Schedule to specific schedule date and view."
+      }
+    ]
+  },
+  {
+    "id": 187375,
+    "title": "Roster - Team ID",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871912,
+    "updated_by": 84,
+    "updated_on": 1647370834,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 53,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Team Roster Deep Link\r\n\r\nmlbatbat://roster?team_id=111\r\n\r\n\r\n(Boston Red Sox)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Team Roster "
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Team Roster "
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Team Roster "
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Team Roster "
+      }
+    ]
+  },
+  {
+    "id": 187376,
+    "title": "Roster - Team",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871949,
+    "updated_by": 84,
+    "updated_on": 1647370852,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 54,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Team Roster Deep Link\r\n\r\nmlbatbat://roster?team=tor\r\n\r\n(Toronto Blue Jays)",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Team Roster"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Team Roster"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Team Roster"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Team Roster "
+      }
+    ]
+  },
+  {
+    "id": 187377,
+    "title": "Roster - Team / Team ID + View Type",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871956,
+    "updated_by": 39,
+    "updated_on": 1469739298,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 55,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Team Roster Deep Link\r\n\r\nmlbatbat://roster?team=tor&type=active\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Team Roster to specific view."
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Team Roster to specific view."
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Team Roster to specific view."
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Team Roster to specific view."
+      }
+    ]
+  },
+  {
+    "id": 187378,
+    "title": "Standings",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871963,
+    "updated_by": 84,
+    "updated_on": 1647370809,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 56,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device\r\n",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Standings Deep Link\r\n\r\nmlbatbat://standings",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Standings to default view"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Standings to default view"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Standings to default view"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Standings to default view"
+      }
+    ]
+  },
+  {
+    "id": 187379,
+    "title": "Standings - State provided",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871970,
+    "updated_by": 39,
+    "updated_on": 1469739435,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 57,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Standings Deep Link\r\n\r\nmlbatbat://standings?state=divison",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Standings to specific state."
+      },
+      {
+        "content": "With the app not open in the background\n",
+        "expected": "Opens Standings to specific state."
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Standings to specific state."
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Standings to specific state."
+      }
+    ]
+  },
+  {
+    "id": 187380,
+    "title": "Standings - Teams to Highlight Provided",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871978,
+    "updated_by": 39,
+    "updated_on": 1469739500,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 58,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Standings Deep Link\r\n\r\nmlbatbat://standings?selectedTeams=ari,tb&state=divison",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Standings to specific state and highlights teams (club codes / comma separated)"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Standings to specific state and highlights teams (club codes / comma separated)"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Standings to specific state and highlights teams (club codes / comma separated)"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Standings to specific state and highlights teams (club codes / comma separated)"
+      }
+    ]
+  },
+  {
+    "id": 187381,
+    "title": "MLB.TV",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871987,
+    "updated_by": 39,
+    "updated_on": 1469739585,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 59,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a MLB.TV Deep Link\r\n\r\nmlbatbat://mlbtv\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens MLB.TV view for the current date"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens MLB.TV view for the current date"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens MLB.TV view for the current date"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens MLB.TV view for the current date"
+      }
+    ]
+  },
+  {
+    "id": 187382,
+    "title": "MLB.TV for Date",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871991,
+    "updated_by": 39,
+    "updated_on": 1469739668,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 60,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a MLB.TV Deep Link\r\n\r\nmlbatbat://mlbtv?date=20160719",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens MLB.TV view for a specific date"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens MLB.TV view for a specific date"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens MLB.TV view for a specific date"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens MLB.TV view for a specific date"
+      }
+    ]
+  },
+  {
+    "id": 187383,
+    "title": "MLB.TV for Date + Game",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468871998,
+    "updated_by": 39,
+    "updated_on": 1469741068,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 61,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a MLB.TV Deep Link\r\n\r\nmlbatbat://mlbtv?date=20150919&gameid=2016_07_10_cinmlb_miamlb_1\r\n\r\nNavigate to year, month, date for specific game id: http://gd.qa.mlb.com/components/game/mlb/year_2016/",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background\n",
+        "expected": "Opens MLB.TV view for a specific date:\nopens favorite team feed if favorite team set\nopens home feed if no fave team\nopens MLB.TV paywall for non TV users"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens MLB.TV view for a specific date:\nopens favorite team feed if favorite team set\nopens home feed if no fave team\nopens MLB.TV paywall for non TV users"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens MLB.TV view for a specific date:\nopens favorite team feed if favorite team set\nopens home feed if no fave team\nopens MLB.TV paywall for non TV users"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens MLB.TV view for a specific date:\nopens favorite team feed if favorite team set\nopens home feed if no fave team\nopens MLB.TV paywall for non TV users"
+      }
+    ]
+  },
+  {
+    "id": 187384,
+    "title": "Audio",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468872007,
+    "updated_by": 84,
+    "updated_on": 1642116253,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 62,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Gameday Audio Deep Link\r\n\r\nmlbatbat://audio",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Audio view for Paid User\n\nOpens At Bat paywall for Lite User"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Audio view for Paid User\n\nOpens At Bat paywall for Lite User"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Audio view for Paid User\n\nOpens At Bat paywall for Lite User"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Audio view for Paid User\n\nOpens At Bat paywall for Lite User"
+      }
+    ]
+  },
+  {
+    "id": 187385,
+    "title": "Audio for Game",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468872014,
+    "updated_by": 84,
+    "updated_on": 1642116460,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 63,
+    "custom_preconds": "Given a user has iOS MLB app installed on an iOS device\r\nand live games with audio\r\n",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Gameday Audio Deep Link\r\n\r\nmlbatbat://audio?gamepk=632927&date=20210811\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Audio view for a specific game & plays selected feed for Paid User\n\nopen MLB Audio paywall for Lite User"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Audio view for a specific game & plays selected feed for Paid User\n\nopen MLB Audio paywall for Lite User"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Audio view for a specific game & plays selected feed for Paid User\n\nopen MLB Audio paywall for Lite User"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Audio view for a specific game & plays selected feed for Paid User\n\nopen MLB Audio paywall for Lite User"
+      }
+    ]
+  },
+  {
+    "id": 187386,
+    "title": "Audio for Game + Feed",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1468872022,
+    "updated_by": 39,
+    "updated_on": 1469741040,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 64,
+    "custom_preconds": "Given a user has iOS At Bat installed on an iOS device\r\nand live games with audio",
+    "custom_steps": "When a user opens Safari\r\nand navigates to a Gameday Audio Deep Link\r\n\r\nmlbatbat://audio?gameid=2016_07_26_anamlb_kcamlb_1&team=ana\r\n\r\nNavigate to year, month, date for Game ID: \r\nProd: http://gdx.mlb.com/components/game/mlb/year_2016/\r\nQA: http://gd.QA.mlb.com/components/game/mlb/year_2016/",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "With the app not open in the background",
+        "expected": "Opens Audio view for a specific game & plays selected feed for Paid User\n\nopen At Bat paywall for Lite User"
+      },
+      {
+        "content": "With the app running in the background",
+        "expected": "Opens Audio view for a specific game & plays selected feed for Paid User\n\nopen At Bat paywall for Lite User"
+      },
+      {
+        "content": "With a modal (News Article or Gameday Audio) open in the background",
+        "expected": "Opens Audio view for a specific game & plays selected feed for Paid User\n\nopen At Bat paywall for Lite User"
+      },
+      {
+        "content": "With Gameday open in the background",
+        "expected": "Opens Audio view for a specific game & plays selected feed for Paid User\n\nopen At Bat paywall for Lite User"
+      }
+    ]
+  },
+  {
+    "id": 28331932,
+    "title": "Deep Linking -> Team selection menu-> Is Working and Actionable",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1651679070,
+    "updated_by": 336,
+    "updated_on": 1651679070,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 65,
+    "custom_preconds": "* User has latest build downloaded\r\n* User has ",
+    "custom_steps": "Given the user has launched the app\r\nAnd the user backgrounds the app\r\nWhen the user uses a team page deep link eg mlbatbat://team?team=cle\r\n",
+    "custom_expected": "Then the user should be redirected to the team page\r\nand can confirm that the team selection page works as expected ",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 29694205,
+    "title": "Deeplinks -> Add support for Safari view controller as a deeplink (auth and unauth)",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1668710496,
+    "updated_by": 336,
+    "updated_on": 1668710496,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 66,
+    "custom_preconds": "* The webview url is encoded as base64, which is a requirement\r\n\r\nurl=aHR0cDovL21sYi5tbGIuY29tL2hvbWU%3D",
+    "custom_steps": "Given a user follows this link:  mlbatbat://externalWebview?url=aHR0cDovL21sYi5tbGIuY29tL2hvbWU%3D",
+    "custom_expected": "Then the app will open and will then re-direct to a webpage",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 30081763,
+    "title": "Deep Link Support->Gameday",
+    "section_id": 26226,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 336,
+    "created_on": 1675803883,
+    "updated_by": 336,
+    "updated_on": 1675803883,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 2899,
+    "display_order": 68,
+    "custom_preconds": "* User is signed in\r\n* Game is not in preview\r\n",
+    "custom_steps": "Given the user enters the following deep links (please note that the gamepk within the deep link is subject to change): ",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "mlbatbat://game?gamepk=662571&game_tab=videos\n",
+        "expected": "User will be taken to videos section of Game-day "
+      },
+      {
+        "content": "mlbatbat://game?gamepk=662571&game_tab=plays",
+        "expected": "User will be taken to Plays Tab of Game-day"
+      },
+      {
+        "content": "mlbatbat://game?gamepk=662571&game_tab=boxscore\n",
+        "expected": "User will be taken to boxscore tab of Game-Day"
+      },
+      {
+        "content": "mlbatbat://game?gamepk=662571&game_tab=summary",
+        "expected": "User will be taken the summary page of Game-Day"
+      },
+      {
+        "content": "",
+        "expected": ""
+      }
+    ]
+  }
+]

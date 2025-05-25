@@ -1,0 +1,300 @@
+[
+  {
+    "id": 45168,
+    "title": "Nearby Section - Within 25 Miles of Ballpark(s)",
+    "section_id": 6327,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146176,
+    "updated_by": 124,
+    "updated_on": 1508340427,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 810,
+    "display_order": 1,
+    "custom_preconds": "Given Location Services are enabled on the device\r\nAnd we have launched the app\r\nAnd we have navigated to the Ballpark Picker",
+    "custom_steps": null,
+    "custom_expected": "Then stadiums will appear at the top above the All Teams section\r\n",
+    "custom_steps_separated": [
+      {
+        "content": "When there are stadiums within 25 miles from a user's location",
+        "expected": "Then the user will see all ballparks within 25 miles displayed at the top of the ballpark picker\nAnd the ballparks will have a the distance from the ballpark (mi.) to the right of the ballpark name."
+      },
+      {
+        "content": "When the tester fakes the GPS to millburn NJ\nAnd the user refreshes the ballpark picker",
+        "expected": "Then the user will be displayed citi field and yankee stadium\nAnd the user will see they are both just at 23/25 miles of the ballparks"
+      }
+    ]
+  },
+  {
+    "id": 45169,
+    "title": "Nearby Section - NOT Within 25 Miles of BallPark(s)",
+    "section_id": 6327,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146176,
+    "updated_by": 124,
+    "updated_on": 1508344842,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 810,
+    "display_order": 2,
+    "custom_preconds": "Given Location Services are enabled on the device\r\nAnd the user has navigated to the Ballpark Picker",
+    "custom_steps": null,
+    "custom_expected": "Then the Nearby section will not be visible\r\nAnd all 30 ballparks will show under 'All Teams'",
+    "custom_steps_separated": [
+      {
+        "content": "When there are no teams within 25 miles of the user's current location",
+        "expected": "Then the user will see all teams listed in alphabetical order\nAnd the user will not see any ballparks with the distance listed (mi.)"
+      },
+      {
+        "content": "When the tester fakes gps to summit NJ\nAnd the user refreshes the ballpark picker",
+        "expected": "Then the user will be just outside 25 miles from Citi field\nAnd the user will only see Yankee stadium at 24 miles\n"
+      }
+    ]
+  },
+  {
+    "id": 45170,
+    "title": "Ballparks Section",
+    "section_id": 6327,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146176,
+    "updated_by": 124,
+    "updated_on": 1505743142,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 810,
+    "display_order": 3,
+    "custom_preconds": "Given Location Services are enabled on the device\r\nAnd the user has navigated to the Ballpark Picker\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then ballparks will be displayed in alphabetical order by team name (ex. Philadelphia Phillies, Pittsburgh Pirates..)\r\nAnd appear underneath the \"All Teams\" header",
+    "custom_steps_separated": [
+      {
+        "content": "When the remaining ballparks that are not in the \"Nearby Ballparks\" list are displayed",
+        "expected": "Then the user will see them listed out in alphabetical order based on state names"
+      }
+    ]
+  },
+  {
+    "id": 45171,
+    "title": "Index is Scrollable",
+    "section_id": 6327,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146176,
+    "updated_by": 67,
+    "updated_on": 1434032347,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 810,
+    "display_order": 4,
+    "custom_preconds": "Given the user has navigated to the Ballparks Picker",
+    "custom_steps": null,
+    "custom_expected": "Then the user will be able to scroll either up or down on the Ballpark list",
+    "custom_steps_separated": [
+      {
+        "content": "When the user flicks up &/or down",
+        "expected": "Then the ballpark picker should scroll up or down\nAnd the scrolling should be smooth\nAnd the scroll should end on the Washington Nationals with the entire cell displayed in full\n"
+      }
+    ]
+  },
+  {
+    "id": 45172,
+    "title": "All Cells are Tappable",
+    "section_id": 6327,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146176,
+    "updated_by": 124,
+    "updated_on": 1508352085,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 810,
+    "display_order": 5,
+    "custom_preconds": "Given the user has navigated to the Ballparks Picker",
+    "custom_steps": null,
+    "custom_expected": "Then the associated ballpark summary page for that cell will opened\r\n\r\n*Repeat for each ballpark*",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on any of the cells in the list",
+        "expected": "Then the user should be directed to either the ballpark guide page or ticket dashboard based on the ballpark config\n(http://qa.mlb.com/gen/hb/ballpark/8/ballpark.json or http://mlb.mlb.com/gen/hb/ballpark/8/ballpark.json)\nThe logic should be if the position is not set on any of the sub navs it will default to the ballpark guide page\n"
+      }
+    ]
+  },
+  {
+    "id": 45173,
+    "title": "Location Refresh",
+    "section_id": 6327,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146176,
+    "updated_by": 67,
+    "updated_on": 1434032946,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 810,
+    "display_order": 6,
+    "custom_preconds": "Given the user has navigated to the Ballparks Picker\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then the app will relocate the user\r\nAnd if needed, reorganize the ballparks based on the new location",
+    "custom_steps_separated": [
+      {
+        "content": "When the user's location has changed\nAnd the user pulls down to refresh on the ballpark picker list",
+        "expected": "Then the ballpark picker list should refresh\nAnd the user should see the distance from some ballparks change\nAnd the user should see the closest ballpark list remove or add based on the location change"
+      }
+    ]
+  },
+  {
+    "id": 45174,
+    "title": "Team Logos",
+    "section_id": 6327,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146176,
+    "updated_by": 124,
+    "updated_on": 1505743346,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 810,
+    "display_order": 7,
+    "custom_preconds": "Given the user has navigated to the Ballpark Picker\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then all associated teams logo will display to the left of the venue name, and will all be completely visible against the background.",
+    "custom_steps_separated": [
+      {
+        "content": "When the stadiums are displayed in the list",
+        "expected": "Then the user should see the latest or updated team logos displayed on the left side of ballpark name\nand the logo should be encircled in white"
+      }
+    ]
+  },
+  {
+    "id": 45175,
+    "title": "Full Stadium Name & Team Name",
+    "section_id": 6327,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146176,
+    "updated_by": 124,
+    "updated_on": 1505743476,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 810,
+    "display_order": 8,
+    "custom_preconds": "Given the user has navigated to the Ballpark Picker\r\n",
+    "custom_steps": null,
+    "custom_expected": "Then the full team names are displayed\r\nAnd the stadium's full names are displayed beneath the full team name",
+    "custom_steps_separated": [
+      {
+        "content": "When the teams are displayed in the list",
+        "expected": "The user should see the ballparks name in regular text directly underneath the clubs name\nAnd both text will be aligned to the left"
+      }
+    ]
+  },
+  {
+    "id": 45176,
+    "title": "Dismissing Ballpark picker",
+    "section_id": 6327,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 27,
+    "created_on": 1394146176,
+    "updated_by": 67,
+    "updated_on": 1434033325,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 810,
+    "display_order": 9,
+    "custom_preconds": "Given the user has launched the ballpark picker drop down",
+    "custom_steps": null,
+    "custom_expected": "Then the ballpark picker should collapse\r\nAnd the user should be left on the team page from which they launched the ballpark picker. ",
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the team name in the top nav",
+        "expected": "Then the ballpark picker list will retract the dropdown\nAnd the user will be brought back to the view he was previously on before he triggered the dropdown\n"
+      }
+    ]
+  },
+  {
+    "id": 59842,
+    "title": "team picker",
+    "section_id": 6327,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "https://jira.mlbam.com/browse/BPA-895",
+    "created_by": 67,
+    "created_on": 1441034807,
+    "updated_by": 67,
+    "updated_on": 1441034807,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 810,
+    "display_order": 10,
+    "custom_preconds": "Given the user is on the team/ballpark picker",
+    "custom_steps": "For more Information on how the team picker sorts the ballparks check the linked ticket - https://jira.mlbam.com/browse/BPA-895",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user is located within 25 miles of a ballpark_1\nAnd the user has tickets to ballpark_2\nAnd the user has favorited ballpark_3",
+        "expected": "Then the user should see the following\n- ballpark_1 should have a generic location icon directly below the ballpark name in its cell\n- ballpark_2 should have a ticket icon directly below the ballpark name in its cell\n- ballpark_3 should have a star icon directly below the ballpark name in its cell\n\n"
+      },
+      {
+        "content": "When the user is located within 25 miles of a ballpark_1\nAnd the user has tickets to ballpark_2\nAnd the user has favorited ballpark_3",
+        "expected": "Then the user should see the following at the top of the ballpark picker:\n- ballpark_1(location) will always be displayed at the very top\n- ballpark_2(ticket) will always be displayed directly below\n- ballpark_3(favorite) will always be displayed directly below the ticket"
+      },
+      {
+        "content": "When the user is located within 25 miles of a ballpark_1\nAnd the user favorited ballpark_1\nAnd the user has tickets to ballpark_1",
+        "expected": "Then the user should see ballpark_1 located at the very top\nAnd the user should see ballpark_1 with all 3 icons in a set order (based on the point system)\n- location 1st\n- ticket 2nd\n- favorite 3rd"
+      },
+      {
+        "content": "When the user switches location while the ballpark picker is open\n(fake GPS, in app teleport or actually moving to a different ballpark)\nAnd the user refreshes the picker",
+        "expected": "Then the user should see ballpark picker update location\nAnd the user should see the ballpark that is closest to his/her current location"
+      },
+      {
+        "content": "When the user switches location while the ballpark picker is closed\n(fake GPS, in app teleport or actually moving to a different ballpark)\nAnd the user allows time for the device location to update\nAnd the user opens the ballpark picker",
+        "expected": "Then the user should see the ballpark picker display the new closest ballpark at the very topysre\n(based on the score system)"
+      },
+      {
+        "content": "When the user is on any ballpark page\nAnd the user opened the team picker\nAnd the user tapped on the same button again",
+        "expected": "Then the user should see the ballpark picker close\nAnd the user should be brought back to the ballpark page he/she was on before"
+      }
+    ]
+  }
+]

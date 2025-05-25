@@ -1,0 +1,155 @@
+[
+  {
+    "id": 145854,
+    "suite_id": 693,
+    "name": "Update MiLB First Pitch to use the latest version of Gameday_MIAN-496",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 114077,
+    "suite_id": 693,
+    "name": "Gameday Files & Bundle",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 27601,
+    "suite_id": 693,
+    "name": "States",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 5101,
+    "suite_id": 693,
+    "name": "Preview",
+    "description": null,
+    "parent_id": 27601,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 24250,
+    "suite_id": 693,
+    "name": "Warmup",
+    "description": null,
+    "parent_id": 27601,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 27602,
+    "suite_id": 693,
+    "name": "Live",
+    "description": null,
+    "parent_id": 27601,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 5102,
+    "suite_id": 693,
+    "name": "Live Tab",
+    "description": null,
+    "parent_id": 27602,
+    "display_order": 7,
+    "depth": 2
+  },
+  {
+    "id": 5103,
+    "suite_id": 693,
+    "name": "Box Tab",
+    "description": null,
+    "parent_id": 27602,
+    "display_order": 8,
+    "depth": 2
+  },
+  {
+    "id": 5104,
+    "suite_id": 693,
+    "name": "Plays Tab",
+    "description": null,
+    "parent_id": 27602,
+    "display_order": 9,
+    "depth": 2
+  },
+  {
+    "id": 5106,
+    "suite_id": 693,
+    "name": "Field Tab",
+    "description": null,
+    "parent_id": 27602,
+    "display_order": 10,
+    "depth": 2
+  },
+  {
+    "id": 5110,
+    "suite_id": 693,
+    "name": "Final",
+    "description": null,
+    "parent_id": 27601,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 147961,
+    "suite_id": 693,
+    "name": "Box Score Tab",
+    "description": null,
+    "parent_id": 5110,
+    "display_order": 12,
+    "depth": 2
+  },
+  {
+    "id": 147962,
+    "suite_id": 693,
+    "name": "Plays Tab",
+    "description": null,
+    "parent_id": 5110,
+    "display_order": 13,
+    "depth": 2
+  },
+  {
+    "id": 5107,
+    "suite_id": 693,
+    "name": "Delayed",
+    "description": null,
+    "parent_id": 27601,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 5108,
+    "suite_id": 693,
+    "name": "Postponed",
+    "description": null,
+    "parent_id": 27601,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 5109,
+    "suite_id": 693,
+    "name": "Suspended",
+    "description": null,
+    "parent_id": 27601,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 5105,
+    "suite_id": 693,
+    "name": "ARCHIVE_Not Valid on Android",
+    "description": "Currently not supported on Android:\n- Video Tab\n- Gating for Lite users during before/during/after a game",
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  }
+]

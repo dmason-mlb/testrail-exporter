@@ -1,0 +1,47 @@
+[
+  {
+    "id": 147881,
+    "suite_id": 20406,
+    "name": "Future Game Lookups",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 147882,
+    "suite_id": 20406,
+    "name": "Present Day Game Lookup",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 147941,
+    "suite_id": 20406,
+    "name": "Past Game Lookup",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 147886,
+    "suite_id": 20406,
+    "name": "Pitchers",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 147887,
+    "suite_id": 20406,
+    "name": "Scores",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

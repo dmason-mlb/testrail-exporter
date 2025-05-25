@@ -1,0 +1,38 @@
+[
+  {
+    "id": 155031,
+    "suite_id": 21483,
+    "name": "ALL STATES",
+    "description": "https://wiki.mlbam.com/display/proddev/Postseason+Scoreboard#PostseasonScoreboard-AllStates",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 155032,
+    "suite_id": 21483,
+    "name": "PRE-GAME STATE",
+    "description": "https://wiki.mlbam.com/display/proddev/Postseason+Scoreboard#PostseasonScoreboard-Pre-gameState",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 155033,
+    "suite_id": 21483,
+    "name": "LIVE STATE",
+    "description": "https://wiki.mlbam.com/display/proddev/Postseason+Scoreboard#PostseasonScoreboard-LiveState",
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 155034,
+    "suite_id": 21483,
+    "name": "POSTGAME STATE",
+    "description": "https://wiki.mlbam.com/display/proddev/Postseason+Scoreboard#PostseasonScoreboard-PostgameState",
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

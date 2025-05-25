@@ -1,0 +1,420 @@
+[
+  {
+    "id": 30575441,
+    "title": "[WIP]TESLA Configuration (Ticket Listview Support)  [ANDROID ONLY]",
+    "section_id": 1679648,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1684170093,
+    "updated_by": 282,
+    "updated_on": 1715688473,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610058,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "Prerequisite - Remote Config Setup for: Fan2Fan(Tesla) configuration\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"tesla_enabled\" as needed to force display.** [ANDROID]\r\n3. Save changes.\r\n4. Publish changes.\r\n\r\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\r\n\r\nRemote Configs\r\n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobile-npd/config)\r\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\r\n\r\n(can have condition set up to differentiate desired behavior for different envs/platform/target_audience)\r\n\r\nNOTE: Making changes to the configuration may take a few minutes to propagate and/or require a few app restarts\r\n\r\nGIVEN User has successfully authenticated into Ballpark (installed 12.11.0? or later)\r\nAND User has verified their account\r\nAND User has tickets to an upcoming game*",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the tesla_enabled configuration has been updated and published to 'true'\nWHEN the user is on the Wallet Tab w/ ticketed events",
+        "expected": "THEN the event information will contain The event date / time in the format (Ex. Sat, Jun 22 . 1:07 PM ET)\nAND beneath the date time will be the Matchup Info displayed as Away Team @ Home Team\nAND below the Matchup will be the Event's Venue\nAND user is shown Wallet event card(s) WITHOUT attached button options"
+      },
+      {
+        "content": "WHEN the user accesses the event card\n\n",
+        "expected": "THEN the native listview for the event is shown*\nAND Sell Tickets CTA is shown (directs user to Sell Flow w/in SG - tesla)\n\n*For TDC club"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN the tesla_enabled configuration has been updated and published to 'false'\nWHEN the user is on the Wallet Tab w/ ticketed events",
+        "expected": "THEN the event information will contain The event date / time in the format (Ex. Sat, Jun 22 . 1:07 PM ET)\nAND beneath the date time will be the Matchup Info displayed as Away Team @ Home Team\nAND below the Matchup will be the Event's Venue\nAND user is shown Wallet event card(s) WITH two attached button options\n*Button one to read “Sell Tickets”\n*Button two to read “Open Tickets”"
+      },
+      {
+        "content": "WHEN the user accesses the event card\n\n",
+        "expected": "THEN the native listview for the event is shown*\nAND Sell Tickets CTA is shown (directs user to Sell Flow w/in MPV - pinto)\n\n*For TDC clubs"
+      }
+    ]
+  },
+  {
+    "id": 31644433,
+    "title": "TESLA Configuration (Ticket Listview Support)  [iOS ONLY]",
+    "section_id": 1679648,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1695760981,
+    "updated_by": 288,
+    "updated_on": 1700152814,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610058,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "Prerequisite - Remote Config Setup for: Fan2Fan(Tesla) configuration\r\n1. Go to Firebase -> Remote Config (links below)\r\n2. Edit \"enable_pinto\" as needed to force display.** [iOS]\r\n3. Save changes.\r\n4. Publish changes.\r\n\r\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\r\n\r\nRemote Configs\r\n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobile-npd/config)\r\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\r\n\r\n(can have condition set up to differentiate desired behavior for different envs/platform/target_audience)\r\n\r\nNOTE: Making changes to the configuration may take a few minutes to propagate and/or require a few app restarts\r\n\r\nGIVEN User has successfully authenticated into Ballpark (installed 12.4.0 or later)\r\nAND User has verified their account\r\nAND User has tickets to an upcoming game*",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "GIVEN the enable_pinto configuration has been updated and published to 'false'\nWHEN the user is on the Wallet Tab w/ ticketed events",
+        "expected": "THEN the event information will contain The event date / time in the format (Ex. Sat, Jun 22 . 1:07 PM ET)\nAND beneath the date time will be the Matchup Info displayed as Away Team @ Home Team\nAND below the Matchup will be the Event's Venue\nAND user is shown Wallet event card(s) WITHOUT attached button options"
+      },
+      {
+        "content": "WHEN the user accesses the event card\n\n",
+        "expected": "THEN the native listview for the event is shown*\nAND Sell Tickets CTA is shown (directs user to Sell Flow w/in SG - tesla)\n\n*For TDC club"
+      },
+      {
+        "content": "",
+        "expected": ""
+      },
+      {
+        "content": "GIVEN the enable_pinto configuration has been updated and published to 'true'\nWHEN the user is on the Wallet Tab w/ ticketed events",
+        "expected": "THEN the event information will contain The event date / time in the format (Ex. Sat, Jun 22 . 1:07 PM ET)\nAND beneath the date time will be the Matchup Info displayed as Away Team @ Home Team\nAND below the Matchup will be the Event's Venue\nAND user is shown Wallet event card(s) WITH two attached button options\n*Button one to read “Sell Tickets”\n*Button two to read “Open Tickets”"
+      },
+      {
+        "content": "WHEN the user accesses the event card\n\n",
+        "expected": "THEN the native listview for the event is shown*\nAND Sell Tickets CTA is shown (directs user to Sell Flow w/in MPV - pinto)\n\n*For TDC clubs"
+      }
+    ]
+  },
+  {
+    "id": 30575434,
+    "title": "Iconography",
+    "section_id": 1679649,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BPA-6656,  BP-10008",
+    "created_by": 288,
+    "created_on": 1684170074,
+    "updated_by": 288,
+    "updated_on": 1700159779,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610058,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "As we prepare to roll out Tesla flow to MLB ballpark users, we have new iconography that needs to be accommodated by the Android application so that the user understands the different icon types \r\n\r\nGIVEN User has successfully authenticated into Ballpark \r\nAND User has verified their account\r\nAND User has tickets to an upcoming game*\r\n\r\n*TDC Club supported ONLY (TM clubs will NOT go through this flow)\r\n\r\nFIGMA: [Icons](https://www.figma.com/file/M3vqmrFe2eJlofe392hAqY/Specs?node-id=2774%3A51365&t=vw5WDGkr1lpyRY85-0)\r\nNote: Testable in QA Environment only as of date (03/01/23) till box office enable supports in prod \r\n[BPA-6656](https://baseball.atlassian.net/browse/BPA-6656)\r\n[BP-10008](https://baseball.atlassian.net/browse/BP-10008)",
+    "custom_steps": "GIVEN User has successfully authenticated into the Ballpark application\r\n\r\nGIVEN User has tickets that are forward able/ sellable",
+    "custom_expected": "![](index.php?/attachments/get/13429178)\r\n\r\n\r\nNOTE: the sold tickets are no longer in the sellers Ballpark inventory",
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user navigates to Wallet View (via Tickets Tab)\nAND view the event card \n\n",
+        "expected": "THEN user is shown event card(s) (without 'Sell Ticket's button shown)\n\n"
+      },
+      {
+        "content": "When user navigated to Ticket Listview of an event having different ticket states*\n\n*navigation to listview can occur many way, may be best to validate entry to the listview from each.\nHere are few known:\n**HomeTab > NTE Event Card (above open tickets button)\n**TicketsTab > WalletTab > Wallet Event Card\n**TicketsTab > ViewAll > Event Entry",
+        "expected": "THEN user is shown listview of the event\nAND user should display with two buttons on the bottom of the screen\n\n*one button to read \"Sell Tickets\"\n*secondary button to read \"Forward Tickets\""
+      },
+      {
+        "content": "WHEN user has tickets that are Ticket Forward accepted ",
+        "expected": "THEN user should display with radio button with Green Checkmark for forwarding\n\n(Refer Screenshot attached in Expected Result)"
+      },
+      {
+        "content": "WHEN user has tickets that are Ticket Forward accept pending (or share link)",
+        "expected": "THEN user should display with radio button with Orange Arrow \n\n(Refer Screenshot attached in Expected Result)"
+      },
+      {
+        "content": "WHEN user has tickets with barcode unavailable (i.e embargoed)",
+        "expected": "THEN user should display with radio button with embargoed barcode image\n\n\n\n(Refer Screenshot attached in Expected Result for Barcode unavailable)"
+      },
+      {
+        "content": "WHEN user has tickets that have been Scanned ",
+        "expected": "THEN user should display with radio button for Ticket Scanned \n\n(Refer Screenshot attached in Expected Result for Ticket Scanned)"
+      },
+      {
+        "content": "WHEN user has tickets that have been listed for sell",
+        "expected": "THEN user should display with radio button with Green Dollar Sign indicates ticket is currently listed on SG\n\n(Refer Screenshot attached in Expected Result for Ticket Listed)"
+      },
+      {
+        "content": "WHEN user has tickets that not listed above (Forward Accepted, Forward pending, Barcode unavailable be, Ticket Scanned, Ticket Listed)\n\n",
+        "expected": "THEN user should display with barcode image (NOT the embargoed version) \n\n(Refer Screenshot attached in Expected Result for None of Above) "
+      }
+    ]
+  },
+  {
+    "id": 30575435,
+    "title": "Ticket List View- Button Sell Tickets & Forward Tickets",
+    "section_id": 1679649,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BPA-6657,  BP-10009",
+    "created_by": 288,
+    "created_on": 1684170074,
+    "updated_by": 288,
+    "updated_on": 1684170074,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610058,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "As a Ballpark user, I want to know how to sell my game tickets in the Ballpark application so I don't take a loss on games I do not attend \r\n\r\nFIGMA: [TESLA](https://www.figma.com/file/M3vqmrFe2eJlofe392hAqY/Specs?node-id=2774%3A51365&t=vw5WDGkr1lpyRY85-0)\r\n[BPA-6657](https://baseball.atlassian.net/browse/BPA-6657)\r\n[BP-10009](https://baseball.atlassian.net/browse/BP-10009)",
+    "custom_steps": "GIVEN User has successfully authenticated into BP app [Android: 12.2.0 or Greater, iOS 12.3.0 or greater]\r\n\r\nGIVEN User has verified their account via MLB.com \r\n\r\nGIVEN User has tickets that are eligible to be sold \r\n\r\n",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user on the ticket list view \n",
+        "expected": "THEN user should display with two buttons on the bottom of the screen\nAND selection of “Sell Tickets” is only available if a user selects an eligible ticket via their ticket list view\n\n*one button to read \"Sell Tickets\" \n*secondary button to read \"Forward Tickets\" \n\n"
+      },
+      {
+        "content": "WHEN user select \"Sell Tickets\" ",
+        "expected": "THEN selection of \"Sell Tickets\" will display with a new view \nAND “Sell Tickets” is disabled until an eligible ticket is selected\n\n*further validation of the Sell Modal are covered within\n[SellModal](https://testrail.testeng.mlbinfra.net/index.php?/cases/view/30226663&group_by=cases:section_id&group_id=1647339&group_order=asc)\n"
+      },
+      {
+        "content": "WHEN user back navigates",
+        "expected": "THEN user is returned to the list view of the event\nAND user should display with two buttons on the bottom of the screen\n\n*one button to read \"Sell Tickets\" \n*secondary button to read \"Forward Tickets\" "
+      },
+      {
+        "content": "WHEN user select \"Forward Tickets\" ",
+        "expected": "THEN selection of \"Forward Tickets\" will display \nAND “Forward Tickets” is disabled until an eligible ticket is selected"
+      },
+      {
+        "content": "WHEN user back navigates",
+        "expected": "THEN user is returned to the list view of the event\nAND user should display with two buttons on the bottom of the screen\n\n*one button to read \"Sell Tickets\" \n*secondary button to read \"Forward Tickets\" "
+      }
+    ]
+  },
+  {
+    "id": 30575436,
+    "title": "Ticket List View - Sell Modal",
+    "section_id": 1679649,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BPA-6672, BP-10010",
+    "created_by": 288,
+    "created_on": 1684170074,
+    "updated_by": 282,
+    "updated_on": 1709558795,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610058,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "As a Ballpark user, I want to know how to sell my game tickets in the Ballpark application so I don't take a loss on games I do not attend\r\n\r\nFIGMA:[TESLA](https://www.figma.com/file/M3vqmrFe2eJlofe392hAqY/Specs?node-id=2774%3A51365&t=vw5WDGkr1lpyRY85-0)\r\n\r\n[BPA-6672](https://baseball.atlassian.net/browse/BPA-6672)\r\n[BP-10010](https://baseball.atlassian.net/browse/BP-10010)\r\n",
+    "custom_steps": "GIVEN User has successfully authenticated into BP app [Android: 12.2.0 or Greater, iOS 12.3.0 or greater]\r\n\r\nGIVEN User has verified their account via MLB.com\r\n\r\nGIVEN User has tickets that are eligible to be sold",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user on the ticket list view\n\n",
+        "expected": "THEN user should display with two buttons on the bottom of the screen\n\n*one button to read \"Sell Tickets\"\n*secondary button to read \"Forward Tickets\""
+      },
+      {
+        "content": "WHEN user taps on Sell Tickets button",
+        "expected": "THEN selection of \"Sell Tickets\" will display with a new view \nAND 'Sell Tickets' button shown (default: disabled)\n\n"
+      },
+      {
+        "content": "WHEN user selects ticket(s) to list for sell",
+        "expected": "THEN the ticket(s) is selected\nAND 'Sell Tickets' button is enabled"
+      },
+      {
+        "content": "WHEN user taps 'Sell Tickets' with ticket(s) selected",
+        "expected": "THEN a prompt is shown:\nHeader - “Sell your tickets on SeatGeek” \n\nBody - “MLB will share your account & ticket details with SeatGeek for use per seatgeek.com/privacy. To manage your ticket, you must remove it from sale on SeatGeek.” \n\nButtons: Cancel, Sell Ticket\n"
+      },
+      {
+        "content": "WHEN user tap on Cancel CTA ",
+        "expected": "THEN selection of \"Cancel\" will bring user back to Ticket sell view "
+      },
+      {
+        "content": "WHEN user taps 'Sell Tickets' with ticket(s) selected\nAND user tap on Sell Ticket ",
+        "expected": "THEN selection of “Sell Ticket” will bring user to SeatGeek authentication screen\n\n*[Log In Seatgeek](https://seatgeek.com/ambassador/login)\n*Seatgeek authentication should be in a webview\n\n[if an error is expected, then 'We experienced an error in processing the request. Please try again.' with OK cta is shown.]\n\n\nAndroid: If ticket is not resellable THEN user will prompted with message before seatgeek authentication. \nThese tickets are ineligible to be sold. Please make sure they are valid for resale.\n\n\n\n\n\n"
+      }
+    ]
+  },
+  {
+    "id": 30575437,
+    "title": "Call to VAPI Endpoint*[requires Proxy]",
+    "section_id": 1679649,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 288,
+    "created_on": 1684170074,
+    "updated_by": 288,
+    "updated_on": 1700160680,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610058,
+    "display_order": 4,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "https://baseball.atlassian.net/browse/BPA-6707\r\n\r\nGIVEN User has successfully authenticated into BP app [Android: 12.11.0 or Greater, iOS 12.4.0 or greater]\r\n\r\nGIVEN User has verified their account via MLB.com\r\n\r\nGIVEN User has tickets that are eligible to be sold",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user navigates to Sell view (via Listview > Sell Tickets button)\nAND user taps 'Sell Tickets' with ticket(s) selected",
+        "expected": "THEN a prompt is shown:\nHeader - “Sell Tickets on SeatGeek”\n\nBody - “You are leaving the Ballpark app to list your tickets on SeatGeek. Please utilize the SeatGeek app to manage your ticket listing”\n\nButtons: Cancel, Sell Ticket"
+      },
+      {
+        "content": "WHEN user taps 'Sell Tickets' within 'Sell Tickets on SeatGeek' prompt",
+        "expected": "THEN user is directed to SG page"
+      },
+      {
+        "content": "",
+        "expected": "AND there should be qabox office call which has VAPI endpoint should be generated for ticket selected with ticketID’s \n\ni.e. \nlisting?ticketIDs=42591060@@108@@71642\nlisting?ticketIDs=43821019@@108@@71642\nlisting?ticketIDs=43821020@@108@@71642\n\n*verify using Proxy tools (Charles or Proxyman)\n"
+      }
+    ]
+  },
+  {
+    "id": 30575438,
+    "title": "Send Payload to Marketplace(SeatGeek) *[requires Proxy]",
+    "section_id": 1679649,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BPA-6661",
+    "created_by": 288,
+    "created_on": 1684170074,
+    "updated_by": 288,
+    "updated_on": 1700160753,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610058,
+    "display_order": 5,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN User has successfully authenticated into BP app [Android: 12.11.0 or Greater, iOS 12.4.0 or greater]\r\n\r\nGIVEN User has verified their account via MLB.com\r\n\r\nGIVEN User has tickets that are eligible to be sold",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user on the ticket list view\n\n",
+        "expected": "\t\nTHEN user should display with two buttons on the bottom of the screen\n\n*one button to read \"Sell Tickets\"\n*secondary button to read \"Forward Tickets\""
+      },
+      {
+        "content": "WHEN user taps on Sell Tickets button\n\n",
+        "expected": "THEN selection of \"Sell Tickets\" will display with a new view\nAND 'Sell Tickets' button shown (default: disabled)"
+      },
+      {
+        "content": "WHEN user selects ticket(s) to list for sell\n\n",
+        "expected": "THEN the ticket(s) is selected\nAND 'Sell Tickets' button is enabled"
+      },
+      {
+        "content": "WHEN user taps 'Sell Tickets' with ticket(s) selected\n\n",
+        "expected": "THEN a prompt is shown:\nHeader - “Sell Tickets on SeatGeek”\n\nBody - “You are leaving the Ballpark app to list your tickets on SeatGeek. Please utilize the SeatGeek app to manage your ticket listing”\n\nButtons: Cancel, Sell Ticket"
+      },
+      {
+        "content": "WHEN user taps 'Sell Tickets' with ticket(s) selected\nAND user tap on Sell Ticket",
+        "expected": "THEN selection of “Sell Ticket” will bring user to SeatGeek authentication screen\n\n*Log In Seatgeek\n*Seatgeek authentication should be in a webview\n\n\niOS Only - [if an error is expected, then 'We experienced an error in processing the request. Please try again.' with OK cta is shown.]"
+      },
+      {
+        "content": "",
+        "expected": "AND there should be a call made to SG containing the appropriate payload - SG URL(env depenedent), mlb token(mlb-f2f-token), and client ID (ballpark-ios or ballpark-android)\n\n*verify using Proxy tools (Charles or Proxyman)\ni.e. Prod example: https://seatgeek.com/ambassador/login?mlb-f2f-token=eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODIwODU5MzgsImV4cCI6MTY4MzI5NTUzOCwidHMiOls0MjU5MTA1OV0sInBzIjpbMzc5ODJdLCJ0aWQiOjEwOCwidmkiOjF9.hL78o1qJZ93ewkQ0hDr-5urElKAkgj112GIE4k9r62s&client=ballpark-ios\n\ni.e. QA example: https://mlb2.tixcast.com/api/webhooks/dc/mlb/sell?mlb-f2f-token=eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDAxNjAyNTEsImV4cCI6MTcwMDE2Mzg1MSwidHMiOls4OTg2MjkwOV0sInBzIjpbMTM4NTgxXSwidGlkIjoxNTgsInZpIjozMiwib2tpZCI6IjAwdXd1OXhkZ2hLbExCNTZCMGg3IiwiY2lkIjoiUFZTQiIsImVjYyI6IlJFR1VMQVIifQ.6ncL7h6EuyMsPLlR-SZ8uK3NMkLDTdQr1M0NvT33Qt8&client=ballpark-ios"
+      }
+    ]
+  },
+  {
+    "id": 30575439,
+    "title": "Refresh ticket status after listing in Marketplace(SeatGeek) *[requires Proxy]",
+    "section_id": 1679649,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BPA-6661",
+    "created_by": 288,
+    "created_on": 1684170074,
+    "updated_by": 288,
+    "updated_on": 1700160943,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610058,
+    "display_order": 6,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-9728](https://baseball.atlassian.net/browse/BP-9728 )\r\n[BPA-6816](https://baseball.atlassian.net/browse/BPA-6816 )\r\n\r\n\r\n\r\n\r\nGIVEN User has successfully authenticated into BP app [Android: 12.11.0 or Greater, iOS 12.4.0 or greater]\r\n\r\nGIVEN User has verified their account via MLB.com\r\n\r\nGIVEN User has tickets that are eligible to be sold\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user navigates to Sell view (via Listview > Sell Tickets button)\nAND user taps 'Sell Tickets' with ticket(s) selected\n\n",
+        "expected": "THEN a prompt is shown:\nHeader - “Sell Tickets on SeatGeek”\n\nBody - “You are leaving the Ballpark app to list your tickets on SeatGeek. Please utilize the SeatGeek app to manage your ticket listing”\n\nButtons: Cancel, Sell Ticket"
+      },
+      {
+        "content": "WHEN user taps 'Sell Tickets' within 'Sell Tickets on SeatGeek' prompt",
+        "expected": "THEN selection of “Sell Ticket” will bring user to SeatGeek authentication screen\nAND the payload passed to SeatGeek"
+      },
+      {
+        "content": "WHEN user dismisses* the SG webview (without completing a ticket listing)\n\n*[iOS] dismissing webview can be performed 2 different ways (and should have same behavior)\n**via 'Close' tap\n**via swiping the SG modal window down ",
+        "expected": "THEN user is returned to the listview \nAND user should notice a refresh occur resulting with the status of all tickets unchanged"
+      },
+      {
+        "content": "WHEN user dismisses the SG webview (with completing a ticket listing)*\n\n*in future, performing an actual listing may be performed -- but to validate client, proxy tool can be used to change response value 'currentlyOnMarketOffer' to true within qa.boxoffice.mlb.com call",
+        "expected": "THEN user is returned to the listview \nAND user should notice a refresh occur resulting with the status of all tickets unchanged EXCEPT any/all tickets that have been listed to be sold (response from boxoffice)\n\n*verify using Proxy tools Charles or Proxyman \ni.e. change response value 'currentlyOnMarketOffer' to true within qa.boxoffice.mlb.com call for any ticket"
+      }
+    ]
+  },
+  {
+    "id": 30575440,
+    "title": "Refresh ticket status after delisting in Marketplace(SeatGeek) - One Ticket(at least) listable",
+    "section_id": 1679649,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "BPA-6661",
+    "created_by": 288,
+    "created_on": 1684170074,
+    "updated_by": 288,
+    "updated_on": 1700161054,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 610058,
+    "display_order": 7,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "[BP-9728](https://baseball.atlassian.net/browse/BP-9728 )\r\n[BPA-6816](https://baseball.atlassian.net/browse/BPA-6816 )\r\n\r\n\r\n\r\n\r\nGIVEN User has successfully authenticated into BP app [Android: 12.11.0 or Greater, iOS 12.4.0 or greater]\r\n\r\nGIVEN User has verified their account via MLB.com\r\n\r\nGIVEN User has tickets that are eligible to be sold \r\n\r\nGIVEN User has at least one ticket already listed*\r\n*requires 'currentlyOnMarketOffer' to be true && 'resellable' to be false in BoxOffice request/response\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN user navigates to Sell view (via Listview > Sell Tickets button)\nAND user taps 'Sell Tickets' with ticket(s) selected\n\n",
+        "expected": "THEN a prompt is shown:\nHeader - “Sell Tickets on SeatGeek”\n\nBody - “You are leaving the Ballpark app to list your tickets on SeatGeek. Please utilize the SeatGeek app to manage your ticket listing”\n\nButtons: Cancel, Sell Ticket"
+      },
+      {
+        "content": "WHEN user taps 'Sell Tickets' within 'Sell Tickets on SeatGeek' prompt",
+        "expected": "THEN selection of “Sell Ticket” will bring user to SeatGeek authentication screen\nAND the payload passed to SeatGeek*'\n\n*verify using Proxy tools (Charles or Proxyman) \ni.e. https://seatgeek.com/ambassador/login?token=eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODIwODU5MzgsImV4cCI6MTY4MzI5NTUzOCwidHMiOls0MjU5MTA1OV0sInBzIjpbMzc5ODJdLCJ0aWQiOjEwOCwidmkiOjF9.hL78o1qJZ93ewkQ0hDr-5urElKAkgj112GIE4k9r62s"
+      },
+      {
+        "content": "WHEN user dismisses* the SG webview (without completing a ticket delisting)\n\n*[iOS] dismissing webview can be performed 2 different ways (and should have same behavior)\n**via 'Close' tap\n**via swiping the SG modal window down ",
+        "expected": "THEN user is returned to the listview \nAND user should notice a refresh occur resulting with the status of all tickets unchanged"
+      },
+      {
+        "content": "WHEN user dismisses the SG webview (with completing a ticket delisting)*\n\n*in future, performing an actual delisting may be performed -- but to validate client, proxy tool can be used to change response value 'currentlyOnMarketOffer' to false within qa.boxoffice.mlb.com call",
+        "expected": "THEN user is returned to the listview \nAND user should notice a refresh occur resulting with the status of all tickets unchanged EXCEPT any/all tickets that have been delisted from being sold (response from boxoffice)\n\n*verify using Proxy tools Charles or Proxyman \ni.e. change response value 'currentlyOnMarketOffer' to false within qa.boxoffice.mlb.com call for any ticket"
+      }
+    ]
+  }
+]

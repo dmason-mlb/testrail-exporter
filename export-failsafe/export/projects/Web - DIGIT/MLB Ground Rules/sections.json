@@ -1,0 +1,38 @@
+[
+  {
+    "id": 151027,
+    "suite_id": 20780,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 151034,
+    "suite_id": 20780,
+    "name": "Panorama Image",
+    "description": null,
+    "parent_id": 151027,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 151035,
+    "suite_id": 20780,
+    "name": "Mini Map",
+    "description": null,
+    "parent_id": 151027,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 151036,
+    "suite_id": 20780,
+    "name": "Ground Rule Particulars",
+    "description": null,
+    "parent_id": 151027,
+    "display_order": 4,
+    "depth": 1
+  }
+]

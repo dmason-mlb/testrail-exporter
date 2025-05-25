@@ -1,0 +1,109 @@
+[
+  {
+    "id": 834721,
+    "title": "Roster",
+    "section_id": 101435,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1485966935,
+    "updated_by": 39,
+    "updated_on": 1485967692,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 15485,
+    "display_order": 1,
+    "custom_preconds": "Compare with the web: http://m.reds.mlb.com/roster/40-man/\r\n\r\nAttached files have different codes in case the data in PROD/QA is not consistent",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When we tap on More menu",
+        "expected": "Then the user will see a Roster button"
+      },
+      {
+        "content": "When we tap on Roster",
+        "expected": "Then the user will see a team picker\nand tapping on the team will open that team's roster"
+      },
+      {
+        "content": "When we review the top header of the Roster page",
+        "expected": "Then we will see a:\n-Back button (Returning you to Team Picker)\n-Segmented Controller to choose: Active | 40-Man \n-Sort button"
+      },
+      {
+        "content": "When the user taps on the Sort button on the top right",
+        "expected": "Then the UI popover will appear under the Sort button:\n-The header 'Sort roster by'\n-Alphabetical \n-Position \n-Number\n"
+      },
+      {
+        "content": "When the user is on Active and taps on the Sort button and taps on Alphabetical",
+        "expected": "Then the active roster will be listed in Alphabetical order"
+      },
+      {
+        "content": "When the user is on Active and taps on the Sort button and taps on Position",
+        "expected": "Then the active roster will be listed and grouped by Position"
+      },
+      {
+        "content": "When the user is on Active and taps on the Sort button and taps on Number",
+        "expected": "Then the active roster will be listed and grouped by Number\nand players with no numbers will be listed at the bottom"
+      },
+      {
+        "content": "When the user is on 40-Man and taps on the Sort button and taps on Alphabetical",
+        "expected": "Then the 40-Man roster will be listed in Alphabetical order"
+      },
+      {
+        "content": "When the user is on 40-Man and taps on the Sort button and taps on Position",
+        "expected": "Then the active roster will be listed and grouped by Position"
+      },
+      {
+        "content": "When the user is on 40-Man and taps on the Sort button and taps on Number",
+        "expected": "Then the active roster will be listed and grouped by Number\nand players with no numbers will be listed at the bottom"
+      },
+      {
+        "content": "When the user is on Active or 40-Man and taps on the Sort button and taps any place other than the popover",
+        "expected": "Then UI popover is dismissed and the previous results are displayed"
+      },
+      {
+        "content": "When the user taps on a  Sort option (Number) and leaves the Team Roster and taps on another team",
+        "expected": "Then the new team is sorted by Number"
+      },
+      {
+        "content": "When a user taps on 40 Man segment and views the bottom of the roster page",
+        "expected": "Then the user will see a key indicating:\n*   Not on Active Roster\n** Not on 40-man Roster"
+      },
+      {
+        "content": "When a user is on the Roster 40-man Roster view\nand a player is on the DL",
+        "expected": "Then user will still see the player on the 40-man Roster view\nand will see a ** by players name\nand see a 60-day DL label\n"
+      },
+      {
+        "content": "When a user is on the Roster 40-man Roster view\nand a player is on the active roster",
+        "expected": "The user will see the player on the 40-man Roster view\nand will see a * by the players name"
+      },
+      {
+        "content": "When a user is on the Roster view\nand views the positional groupings",
+        "expected": "Then the user will see the following order:\nPitchers\nCatchers\nInfield\nOutfield\nDesignated Hitter (if applicable)"
+      },
+      {
+        "content": "When a user is on the Roster view\nand changes filters\nand leaves the view and comes back \n",
+        "expected": "Then the user will see the last used position/alpha filter"
+      },
+      {
+        "content": "When the user is on the Roster view on tablet\n\nFull Screen Portrait\nFull Screen Landscape\nWide (2/3) Landscape",
+        "expected": "Then the roster will be group alphabetically by last name and will see columns:\nNumber (#)\nPhoto\nName (First Last)\nB/T\nHt\nWt (lbs)\nBirth Date\nAge"
+      },
+      {
+        "content": "When the user is on the Roster view in  multitasking view\n\nSplit Landscape\nWide (2/3) Portrait",
+        "expected": "Then the roster will be group alphabetically by last name and will see columns:\nNumber (#)\nPhoto\nPlayer\nB/T\nHeight\nWeight (lbs)\nAge"
+      },
+      {
+        "content": "When the user is on the Roster view in multitasking view\n\nCompact or Narrow (1/3) Portrait\nCompact Narrow (1/3) Landscape",
+        "expected": "Then the roster will be group alphabetically by last name and will see columns:\nNumber (#)\nPlayer\nB/T\nAge"
+      },
+      {
+        "content": "When we tap a players name",
+        "expected": "Then verify that players cards opens\nAnd information is displayed correctly\nAnd information fits properly on screen"
+      }
+    ]
+  }
+]

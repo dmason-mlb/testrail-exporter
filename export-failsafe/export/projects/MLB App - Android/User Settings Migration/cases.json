@@ -1,0 +1,155 @@
+[
+  {
+    "id": 16175680,
+    "title": "Favorite Teams",
+    "section_id": 727684,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1614379710,
+    "updated_by": 238,
+    "updated_on": 1629776827,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 200758,
+    "display_order": 1,
+    "custom_preconds": "GIVEN an anonymous user\r\n\r\n",
+    "custom_steps": "WHEN upgrading from legacy to the MLB Beta",
+    "custom_expected": "THEN the initial favorite teams selection shown during onboarding in MLB App X is the same as in legacy",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 16246131,
+    "title": "User Settings Migration: Push Notification",
+    "section_id": 727684,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1614984960,
+    "updated_by": 232,
+    "updated_on": 1614984960,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 200758,
+    "display_order": 2,
+    "custom_preconds": "GIVEN an anonymous user",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN upgrading from legacy to MLB App X\n",
+        "expected": "THEN the initial notification channels shown during onboarding in MLB App X is the same as in legacy."
+      },
+      {
+        "content": "WHEN upgrading from legacy to MLB App X\n",
+        "expected": "THEN the enabled/disabled state of application notifications is the same as in legacy."
+      },
+      {
+        "content": "WHEN upgrading from legacy to MLB App X\n",
+        "expected": "THEN the enabled/disabled state of notification sounds is the same as in legacy."
+      }
+    ]
+  },
+  {
+    "id": 16350533,
+    "title": "User Settings Migration: Productize Okta Token Migration Prototype",
+    "section_id": 727684,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1615820067,
+    "updated_by": 232,
+    "updated_on": 1615820067,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 200758,
+    "display_order": 3,
+    "custom_preconds": "GIVEN a user with the legacy MLB app on their device\r\nAND the user is logged with a valid MLB.com login",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN the user upgrades the app to the rewrite\nAND the user opens the app",
+        "expected": "THEN the user maintains logged in state on the rewrite"
+      },
+      {
+        "content": "WHEN the user closes the app \nAND the user opens the app again",
+        "expected": "THEN the user will be presented with the default start page\nAND the user will not be presented with the onboarding flow again"
+      },
+      {
+        "content": "WHEN the user attempts to access media associated with the entitlements tied to their account\nAND the user attempts this in both web and native views",
+        "expected": "THEN the user should be able to view the media appropriate to their account entitlements"
+      }
+    ]
+  },
+  {
+    "id": 17822788,
+    "title": "Hide Scores migrates on upgrade",
+    "section_id": 727684,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 232,
+    "created_on": 1625605688,
+    "updated_by": 232,
+    "updated_on": 1625605688,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 200758,
+    "display_order": 4,
+    "custom_preconds": "GIVEN a user on an older version of the app (legacy for the current test. Alter this text in future releases)\r\nAND the user notes whether Hide Scores/Hide Spoilers is on or off in the app",
+    "custom_steps": "WHEN the user upgrades to the most recent version of the app",
+    "custom_expected": "THEN the setting should be preserved from the version from which the user upgraded (test both On and Off Scenarios)",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 23124197,
+    "title": "Favorite team sync after upgrade",
+    "section_id": 727684,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 311,
+    "created_on": 1631812927,
+    "updated_by": 311,
+    "updated_on": 1631823696,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 200758,
+    "display_order": 5,
+    "custom_preconds": "GIVEN a user logged into the app as one user with favorite team x\r\nAND they log out and log into the app as another user with favorite team y\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN they check their favorite team in the app",
+        "expected": "THEN it shall be favorite team x"
+      },
+      {
+        "content": "WHEN they log into the web and check their favorite team",
+        "expected": "THEN it shall be favorite team x"
+      },
+      {
+        "content": "WHEN they change their favorite team from the web to team z\nAND wait at least 5 minutes for the cache to expire\nAND the app is restarted (do not log out)",
+        "expected": "THEN the app will show favorite team z"
+      },
+      {
+        "content": "WHEN they change their favorite team from the app back to team x\nAND they check their account on the web",
+        "expected": "THEN the web will reflect favorite team x"
+      }
+    ]
+  }
+]

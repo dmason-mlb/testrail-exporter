@@ -1,0 +1,659 @@
+[
+  {
+    "id": 149818,
+    "suite_id": 20648,
+    "name": "Place on 7 Day Concussion (MJ)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 149819,
+    "suite_id": 20648,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 149818,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 149858,
+    "suite_id": 20648,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 149818,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 149920,
+    "suite_id": 20648,
+    "name": "On Save(submitted or higher transaction only)",
+    "description": null,
+    "parent_id": 149818,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 149921,
+    "suite_id": 20648,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 149818,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 149866,
+    "suite_id": 20648,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 149818,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 149847,
+    "suite_id": 20648,
+    "name": "Waivers- MJ-7 Day IL Concussion",
+    "description": null,
+    "parent_id": 149818,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 149852,
+    "suite_id": 20648,
+    "name": "Place on 10 Day IL (MJ)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 149898,
+    "suite_id": 20648,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 149852,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 149899,
+    "suite_id": 20648,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 149852,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 149900,
+    "suite_id": 20648,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 149852,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 149901,
+    "suite_id": 20648,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 149852,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 149902,
+    "suite_id": 20648,
+    "name": "On Save",
+    "description": null,
+    "parent_id": 149852,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 149911,
+    "suite_id": 20648,
+    "name": "Waivers",
+    "description": null,
+    "parent_id": 149852,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 149821,
+    "suite_id": 20648,
+    "name": "Place on 60 Day IL (MJ)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 149890,
+    "suite_id": 20648,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 149821,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 149857,
+    "suite_id": 20648,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 149821,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 149867,
+    "suite_id": 20648,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 149821,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 149848,
+    "suite_id": 20648,
+    "name": "Waivers- MJ-60 Day IL",
+    "description": null,
+    "parent_id": 149821,
+    "display_order": 29,
+    "depth": 1
+  },
+  {
+    "id": 149853,
+    "suite_id": 20648,
+    "name": "Transfer to 10 Day IL (MJ)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  },
+  {
+    "id": 149904,
+    "suite_id": 20648,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 149853,
+    "display_order": 37,
+    "depth": 1
+  },
+  {
+    "id": 149905,
+    "suite_id": 20648,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 149853,
+    "display_order": 38,
+    "depth": 1
+  },
+  {
+    "id": 149906,
+    "suite_id": 20648,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 149853,
+    "display_order": 40,
+    "depth": 1
+  },
+  {
+    "id": 149907,
+    "suite_id": 20648,
+    "name": "On Save(submitted or higher transaction only)",
+    "description": null,
+    "parent_id": 149853,
+    "display_order": 41,
+    "depth": 1
+  },
+  {
+    "id": 149908,
+    "suite_id": 20648,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 149853,
+    "display_order": 43,
+    "depth": 1
+  },
+  {
+    "id": 149909,
+    "suite_id": 20648,
+    "name": "Waivers",
+    "description": null,
+    "parent_id": 149853,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 149825,
+    "suite_id": 20648,
+    "name": "Transfer to 60 Day IL (MJ)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 46,
+    "depth": 0
+  },
+  {
+    "id": 149893,
+    "suite_id": 20648,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 149825,
+    "display_order": 47,
+    "depth": 1
+  },
+  {
+    "id": 149860,
+    "suite_id": 20648,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 149825,
+    "display_order": 48,
+    "depth": 1
+  },
+  {
+    "id": 149869,
+    "suite_id": 20648,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 149825,
+    "display_order": 49,
+    "depth": 1
+  },
+  {
+    "id": 149827,
+    "suite_id": 20648,
+    "name": "Place on Rehab Assignment (MJ)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 52,
+    "depth": 0
+  },
+  {
+    "id": 149892,
+    "suite_id": 20648,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 149827,
+    "display_order": 53,
+    "depth": 1
+  },
+  {
+    "id": 149861,
+    "suite_id": 20648,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 149827,
+    "display_order": 54,
+    "depth": 1
+  },
+  {
+    "id": 149870,
+    "suite_id": 20648,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 149827,
+    "display_order": 55,
+    "depth": 1
+  },
+  {
+    "id": 149828,
+    "suite_id": 20648,
+    "name": "Transfer of Rehab Assignment (MJ)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 57,
+    "depth": 0
+  },
+  {
+    "id": 149862,
+    "suite_id": 20648,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 149828,
+    "display_order": 58,
+    "depth": 1
+  },
+  {
+    "id": 149871,
+    "suite_id": 20648,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 149828,
+    "display_order": 59,
+    "depth": 1
+  },
+  {
+    "id": 149829,
+    "suite_id": 20648,
+    "name": "Return from Rehab (MJ)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 60,
+    "depth": 0
+  },
+  {
+    "id": 149863,
+    "suite_id": 20648,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 149829,
+    "display_order": 61,
+    "depth": 1
+  },
+  {
+    "id": 149873,
+    "suite_id": 20648,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 149829,
+    "display_order": 62,
+    "depth": 1
+  },
+  {
+    "id": 149824,
+    "suite_id": 20648,
+    "name": "Reinstate from IL (MJ)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 63,
+    "depth": 0
+  },
+  {
+    "id": 149891,
+    "suite_id": 20648,
+    "name": "On Create",
+    "description": null,
+    "parent_id": 149824,
+    "display_order": 64,
+    "depth": 1
+  },
+  {
+    "id": 149859,
+    "suite_id": 20648,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 149824,
+    "display_order": 66,
+    "depth": 1
+  },
+  {
+    "id": 149919,
+    "suite_id": 20648,
+    "name": "On Save",
+    "description": null,
+    "parent_id": 149824,
+    "display_order": 67,
+    "depth": 1
+  },
+  {
+    "id": 149916,
+    "suite_id": 20648,
+    "name": "On Approve",
+    "description": null,
+    "parent_id": 149824,
+    "display_order": 70,
+    "depth": 1
+  },
+  {
+    "id": 149868,
+    "suite_id": 20648,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 149824,
+    "display_order": 72,
+    "depth": 1
+  },
+  {
+    "id": 149837,
+    "suite_id": 20648,
+    "name": "MN-Place on 7-Day IL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 84,
+    "depth": 0
+  },
+  {
+    "id": 149864,
+    "suite_id": 20648,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 149837,
+    "display_order": 86,
+    "depth": 1
+  },
+  {
+    "id": 149872,
+    "suite_id": 20648,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 149837,
+    "display_order": 87,
+    "depth": 1
+  },
+  {
+    "id": 149846,
+    "suite_id": 20648,
+    "name": "Waivers- MN-7 Day IL",
+    "description": null,
+    "parent_id": 149837,
+    "display_order": 88,
+    "depth": 1
+  },
+  {
+    "id": 149838,
+    "suite_id": 20648,
+    "name": "MN-Place on 60-Day IL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 89,
+    "depth": 0
+  },
+  {
+    "id": 149865,
+    "suite_id": 20648,
+    "name": "On Submit",
+    "description": null,
+    "parent_id": 149838,
+    "display_order": 90,
+    "depth": 1
+  },
+  {
+    "id": 149874,
+    "suite_id": 20648,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 149838,
+    "display_order": 91,
+    "depth": 1
+  },
+  {
+    "id": 149843,
+    "suite_id": 20648,
+    "name": "MN-Transfer to 60 Day IL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 92,
+    "depth": 0
+  },
+  {
+    "id": 149879,
+    "suite_id": 20648,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 149843,
+    "display_order": 93,
+    "depth": 1
+  },
+  {
+    "id": 149840,
+    "suite_id": 20648,
+    "name": "MN-Rehab Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 96,
+    "depth": 0
+  },
+  {
+    "id": 149876,
+    "suite_id": 20648,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 149840,
+    "display_order": 97,
+    "depth": 1
+  },
+  {
+    "id": 149842,
+    "suite_id": 20648,
+    "name": "MN-Transfer of Rehab Assignment",
+    "description": null,
+    "parent_id": null,
+    "display_order": 100,
+    "depth": 0
+  },
+  {
+    "id": 149878,
+    "suite_id": 20648,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 149842,
+    "display_order": 101,
+    "depth": 1
+  },
+  {
+    "id": 149841,
+    "suite_id": 20648,
+    "name": "MN-Return from Rehab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 102,
+    "depth": 0
+  },
+  {
+    "id": 149877,
+    "suite_id": 20648,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 149841,
+    "display_order": 103,
+    "depth": 1
+  },
+  {
+    "id": 149839,
+    "suite_id": 20648,
+    "name": "MN-Reinstate from IL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 104,
+    "depth": 0
+  },
+  {
+    "id": 149875,
+    "suite_id": 20648,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": 149839,
+    "display_order": 105,
+    "depth": 1
+  },
+  {
+    "id": 149834,
+    "suite_id": 20648,
+    "name": "Rehab Assignment Widget",
+    "description": null,
+    "parent_id": null,
+    "display_order": 113,
+    "depth": 0
+  },
+  {
+    "id": 149833,
+    "suite_id": 20648,
+    "name": "Approvals Clipboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 114,
+    "depth": 0
+  },
+  {
+    "id": 149831,
+    "suite_id": 20648,
+    "name": "Recertification Widget",
+    "description": null,
+    "parent_id": null,
+    "display_order": 115,
+    "depth": 0
+  },
+  {
+    "id": 149832,
+    "suite_id": 20648,
+    "name": "Recertify a player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 116,
+    "depth": 0
+  },
+  {
+    "id": 149849,
+    "suite_id": 20648,
+    "name": "Flags",
+    "description": null,
+    "parent_id": null,
+    "display_order": 117,
+    "depth": 0
+  },
+  {
+    "id": 149830,
+    "suite_id": 20648,
+    "name": "Nightly Notification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 118,
+    "depth": 0
+  },
+  {
+    "id": 149851,
+    "suite_id": 20648,
+    "name": "Email",
+    "description": null,
+    "parent_id": null,
+    "display_order": 120,
+    "depth": 0
+  },
+  {
+    "id": 149854,
+    "suite_id": 20648,
+    "name": "Reports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 137,
+    "depth": 0
+  },
+  {
+    "id": 1144353,
+    "suite_id": 20648,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 138,
+    "depth": 0
+  },
+  {
+    "id": 1144360,
+    "suite_id": 20648,
+    "name": "15 Day IL/2020 IL tx rule changes",
+    "description": null,
+    "parent_id": null,
+    "display_order": 139,
+    "depth": 0
+  }
+]

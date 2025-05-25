@@ -1,0 +1,622 @@
+[
+  {
+    "id": 1217357,
+    "title": "Supported OS versions",
+    "section_id": 146461,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1516808458,
+    "updated_by": 84,
+    "updated_on": 1516810739,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20309,
+    "display_order": 1,
+    "custom_preconds": "Given the user has the app installed on a device running Android OS 8.0 or higher",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user launches an MLB.TV feed\nand taps the device home button",
+        "expected": "Then Picture in Picture should launch automatically\nand the feed should continue to play in the PiP window\nand the app should not crash"
+      },
+      {
+        "content": "When the user launches a video highlight from anywhere in the app\n(Video Index, Video in News article, Scoreboard highlights, Gameday video - check each)\nand taps the device home button",
+        "expected": "Then Picture in Picture should launch automatically\nand the video highlight should continue to play in the PiP window\nand the app should not crash"
+      }
+    ]
+  },
+  {
+    "id": 1217359,
+    "title": "Older OS versions",
+    "section_id": 146461,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1516810130,
+    "updated_by": 84,
+    "updated_on": 1516810746,
+    "estimate": null,
+    "estimate_forecast": "14m 36s",
+    "suite_id": 20309,
+    "display_order": 2,
+    "custom_preconds": "Given the user has the app installed on a device running an Android OS version lower than 8.0",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user launches an MLB.TV feed or VOD content\n(check for both)",
+        "expected": "Then the video will play as usual and without issue"
+      },
+      {
+        "content": "When the user is playing MLB.TV or VOD content on the device\nand taps the device home button",
+        "expected": "Then the app will be backgrounded\nand the video and its audio will stop playing\nand the app will not crash"
+      }
+    ]
+  },
+  {
+    "id": 1217360,
+    "title": "Activating PiP Mode",
+    "section_id": 146461,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1516811465,
+    "updated_by": 84,
+    "updated_on": 1516812338,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20309,
+    "display_order": 3,
+    "custom_preconds": "Given the user has the app installed on a device running OS 8.0 or higher",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user has launched any sort of video content from the app\nand taps the home button",
+        "expected": "Then Picture in Picture mode will be activated\nand the video will continue to play without interruption at the same volume"
+      }
+    ]
+  },
+  {
+    "id": 1217362,
+    "title": "Video Controls",
+    "section_id": 146461,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1516812259,
+    "updated_by": 84,
+    "updated_on": 1516813445,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20309,
+    "display_order": 4,
+    "custom_preconds": "Given the user has the app installed on a device running OS 8.0 or higher",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user has launched video and taps the home button to activate PiP mode",
+        "expected": "Then the user will not see any video controls in the PiP window on launch"
+      },
+      {
+        "content": "When the user taps the PiP window",
+        "expected": "Then the user will see controls for closing the PiP window, mute, and play/pause as an overlay\nand these controls should only be displayed when the PiP window is active"
+      },
+      {
+        "content": "When the user taps to another area of the device",
+        "expected": "Then the controls will not be displayed"
+      },
+      {
+        "content": "When the user taps the mute button in the PiP window",
+        "expected": "Then the PiP video's audio will mute"
+      },
+      {
+        "content": "When the user taps the audio button in the PiP window\nwhile the audio is muted",
+        "expected": "Then the PiP video's audio will be un-muted"
+      },
+      {
+        "content": "When the user taps the pause button in the PiP window",
+        "expected": "Then the PiP video will be paused"
+      },
+      {
+        "content": "When the user taps the play button in the PiP window",
+        "expected": "Then the PiP video will begin playing from the paused point"
+      },
+      {
+        "content": "When the user taps to close the PiP window",
+        "expected": "Then the PiP window will close\nand the video's playback and audio will stop as well"
+      },
+      {
+        "content": "When the user tries to drag the PiP window",
+        "expected": "Then the user will be able to drag the window and place it anywhere desired on the screen"
+      },
+      {
+        "content": "When the user taps the PiP window once",
+        "expected": "Then the PiP window will be enlarged"
+      },
+      {
+        "content": "When the user taps the enlarged PiP window",
+        "expected": "Then the video will be brought back to the foreground in fullscreen mode"
+      }
+    ]
+  },
+  {
+    "id": 1217372,
+    "title": "Phone Call",
+    "section_id": 146461,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1516819487,
+    "updated_by": 232,
+    "updated_on": 1579129268,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20309,
+    "display_order": 5,
+    "custom_preconds": "Given At Bat is installed on a device running OS version 8.0 or higher\r\nand the user has PiP mode activated with an At Bat video",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user receives a phone call",
+        "expected": "Then the PiP video will pause"
+      },
+      {
+        "content": "When the user accepts the phone call",
+        "expected": "Then the PiP video will remain paused"
+      },
+      {
+        "content": "When the user ends the phone call",
+        "expected": "Then the PiP video will remain paused until the user reactivates it with controls."
+      },
+      {
+        "content": "When the user receives a phone call and declines it",
+        "expected": "Then the PiP video will pause when the call is received\nand then remain paused until the user reactivates it with controls when the call is declined"
+      }
+    ]
+  },
+  {
+    "id": 1217369,
+    "title": "MLB.TV PiP Button",
+    "section_id": 146464,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1516817333,
+    "updated_by": 84,
+    "updated_on": 1516818685,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20309,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed on a device running an OS version 8.0 or higher",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user is viewing an MLB.TV feed in At Bat",
+        "expected": "Then there will be a PiP button available in the media player "
+      },
+      {
+        "content": "When the user taps the PiP button",
+        "expected": "Then the MLB.TV feed will be sent to a PiP window \nwhile the user is returned to their previous location in At Bat in the foreground"
+      },
+      {
+        "content": "When the user is in the app while the PiP window is active",
+        "expected": "Then the user will be able to navigate through the app without issue"
+      }
+    ]
+  },
+  {
+    "id": 1217370,
+    "title": "VOD PiP Button",
+    "section_id": 146464,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1516818689,
+    "updated_by": 84,
+    "updated_on": 1516818716,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20309,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat is installed on a device running an OS version 8.0 or higher",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user is viewing any VOD content in At Bat",
+        "expected": "Then there will be a PiP button available in the media player "
+      },
+      {
+        "content": "When the user taps the PiP button",
+        "expected": "Then the VOD content will be sent to a PiP window \nwhile the user is returned to their previous location in At Bat in the foreground"
+      },
+      {
+        "content": "When the user is in the app while the PiP window is active",
+        "expected": "Then the user will be able to navigate through the app without issue"
+      }
+    ]
+  },
+  {
+    "id": 1222718,
+    "title": "MLB Network & Ad-Hoc Streams",
+    "section_id": 146464,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1521564464,
+    "updated_by": 84,
+    "updated_on": 1521564829,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20309,
+    "display_order": 3,
+    "custom_preconds": "Given At Bat is installed on a device running an OS version 8.0 or higher",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user is viewing the MLB Network linear stream in At Bat",
+        "expected": "Then there will be a PiP button available in the media player "
+      },
+      {
+        "content": "When the user taps the PiP button",
+        "expected": "Then the MLBN stream will be sent to a PiP window \nwhile the user is returned to their previous location in At Bat in the foreground"
+      },
+      {
+        "content": "When the user is viewing an ad-hoc stream in At Bat\n(i.e. Live Look-in, video launched from CMS banner, video launched from News Index)",
+        "expected": "Then there will be a PiP button available in the media player "
+      },
+      {
+        "content": "When the user taps the PiP button",
+        "expected": "Then the ad-hoc stream will be sent to a PiP window \nwhile the user is returned to their previous location in At Bat in the foreground"
+      },
+      {
+        "content": "When the user is in the app while the PiP window is active",
+        "expected": "Then the user will be able to navigate through the app without issue"
+      }
+    ]
+  },
+  {
+    "id": 1217371,
+    "title": "Gameday Audio",
+    "section_id": 146464,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1516818735,
+    "updated_by": 84,
+    "updated_on": 1516819457,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20309,
+    "display_order": 4,
+    "custom_preconds": "Given At Bat is installed on a device running an OS version 8.0 or higher",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user has activated PiP mode and has the app in the foreground\nand launches a Gameday Audio feed",
+        "expected": "Then the PiP video will pause\nand the Gameday Audio feed will play"
+      },
+      {
+        "content": "When the user has Gameday Audio playing\nand taps the Play button in the PiP window",
+        "expected": "Then the Gameday Audio feed will pause\nand the PiP video will begin to play from the paused moment"
+      }
+    ]
+  },
+  {
+    "id": 1217363,
+    "title": "Launching another MLB.TV feed",
+    "section_id": 146466,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1516814933,
+    "updated_by": 84,
+    "updated_on": 1516817222,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20309,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed on a device running OS 8.0 or higher\r\nand the user has activated PiP mode with an MLB.TV feed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user re-launches the app from the device home screen or app folder",
+        "expected": "Then depending on what activity they were in when they sent the previous video to the PiP window, \nthey will see that activity"
+      },
+      {
+        "content": "When the user taps to launch another MLB.TV feed, while the original MLB.TV feed is in PiP mode",
+        "expected": "Then the PiP window will maximize to full screen\nand the newly selected MLB.TV feed will load and begin to play in full screen"
+      },
+      {
+        "content": "When the user taps to launch the same MLB.TV feed, while the original MLB.TV feed is in PiP mode",
+        "expected": "Then the PiP window will maximize to full screen\nand the newly selected MLB.TV feed will load and begin to play in full screen"
+      },
+      {
+        "content": "When the user taps the back button while the newly selected MLB.TV feed is playing in full screen",
+        "expected": "Then the user will be brought back to where they had launched the new feed"
+      },
+      {
+        "content": "When the user taps the back button a second time",
+        "expected": "Then the stack will pop as should be intuitively expected"
+      },
+      {
+        "content": "When the user taps to launch any other type of video during their app session",
+        "expected": "Then the video will launch without issue\nand the app will not crash"
+      }
+    ]
+  },
+  {
+    "id": 1217367,
+    "title": "Launching VOD content",
+    "section_id": 146466,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1516816833,
+    "updated_by": 84,
+    "updated_on": 1516816920,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20309,
+    "display_order": 3,
+    "custom_preconds": "Given At Bat is installed on a device running OS 8.0 or higher\r\nand the user has activated PiP mode with an MLB.TV feed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user re-launches the app from the device home screen or app folder",
+        "expected": "Then depending on what activity they were in when they sent the previous video to the PiP window, \nthey will see that activity"
+      },
+      {
+        "content": "When the user taps to launch VOD content (i.e. video highlight, scoreboard highlight, Gameday video), while the original MLB.TV feed is in PiP mode",
+        "expected": "Then the PiP window will maximize to full screen\nand the newly selected VOD content will load and begin to play in full screen"
+      },
+      {
+        "content": "When the user taps the back button while the newly selected video content is playing in full screen",
+        "expected": "Then the user will be brought back to where they had launched the new video"
+      },
+      {
+        "content": "When the user taps the back button a second time",
+        "expected": "Then the stack will pop as should be intuitively expected"
+      }
+    ]
+  },
+  {
+    "id": 1222719,
+    "title": "Launching Linear or Ad-hoc Streams",
+    "section_id": 146466,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1521564709,
+    "updated_by": 84,
+    "updated_on": 1521564759,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20309,
+    "display_order": 4,
+    "custom_preconds": "Given At Bat is installed on a device running OS 8.0 or higher\r\nand the user has activated PiP mode with an MLB.TV feed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user re-launches the app from the device home screen or app folder",
+        "expected": "Then depending on what activity they were in when they sent the previous video to the PiP window, \nthey will see that activity"
+      },
+      {
+        "content": "When the user taps to launch the MLB Network linear stream or an ad-hoc stream, while the original MLB.TV feed is in PiP mode",
+        "expected": "Then the PiP window will maximize to full screen\nand the newly selected content will load and begin to play in full screen"
+      },
+      {
+        "content": "When the user taps the back button while the newly selected video content is playing in full screen",
+        "expected": "Then the user will be brought back to where they had launched the new video"
+      },
+      {
+        "content": "When the user taps the back button a second time",
+        "expected": "Then the stack will pop as should be intuitively expected"
+      }
+    ]
+  },
+  {
+    "id": 1217366,
+    "title": "Launching another Video Highlight",
+    "section_id": 146468,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1516816711,
+    "updated_by": 84,
+    "updated_on": 1516817239,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20309,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed on a device running OS 8.0 or higher\r\nand the user has activated PiP mode with a video highlight (i.e. video index, scoreboard highlight, Gameday video)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user re-launches the app from the device home screen or app folder",
+        "expected": "Then depending on what activity they were in when they sent the previous video to the PiP window, \nthey will see that activity"
+      },
+      {
+        "content": "When the user taps to launch another Video highlight, while the original video is in PiP mode",
+        "expected": "Then the PiP window will maximize to full screen\nand the newly selected video highlight will load and begin to play in full screen"
+      },
+      {
+        "content": "When the user taps to launch the same Video highlight, while the original video is in PiP mode",
+        "expected": "Then the PiP window will maximize to full screen\nand the newly selected video highlight will load and begin to play in full screen"
+      },
+      {
+        "content": "When the user taps the back button while the newly selected video is playing in full screen",
+        "expected": "Then the user will be brought back to where they had launched the new video"
+      },
+      {
+        "content": "When the user taps the back button a second time",
+        "expected": "Then the stack will pop as should be intuitively expected"
+      },
+      {
+        "content": "When the user taps to launch any other type of video during their app session",
+        "expected": "Then the video will launch without issue\nand the app will not crash"
+      }
+    ]
+  },
+  {
+    "id": 1217368,
+    "title": "Launching MLB.TV",
+    "section_id": 146468,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1516816926,
+    "updated_by": 84,
+    "updated_on": 1516817024,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20309,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat is installed on a device running OS 8.0 or higher\r\nand the user has activated PiP mode with a video highlight (i.e. video index, scoreboard highlight, Gameday video)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user re-launches the app from the device home screen or app folder",
+        "expected": "Then depending on what activity they were in when they sent the previous video to the PiP window, \nthey will see that activity"
+      },
+      {
+        "content": "When the user taps to launch an MLB.TV feed, while the original VOD content is in PiP mode",
+        "expected": "Then the PiP window will maximize to full screen\nand the newly selected MLB.TV will load and begin to play in full screen"
+      },
+      {
+        "content": "When the user taps the back button while the newly selected MLB.TV feed is playing in full screen",
+        "expected": "Then the user will be brought back to where they had launched the new video"
+      },
+      {
+        "content": "When the user taps the back button a second time",
+        "expected": "Then the stack will pop as should be intuitively expected"
+      }
+    ]
+  },
+  {
+    "id": 1222720,
+    "title": "Launching Linear or Ad-hoc Streams",
+    "section_id": 146468,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1521564765,
+    "updated_by": 84,
+    "updated_on": 1521564820,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20309,
+    "display_order": 3,
+    "custom_preconds": "Given At Bat is installed on a device running OS 8.0 or higher\r\nand the user has activated PiP mode with a video highlight (i.e. video index, scoreboard highlight, Gameday video)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user re-launches the app from the device home screen or app folder",
+        "expected": "Then depending on what activity they were in when they sent the previous video to the PiP window, \nthey will see that activity"
+      },
+      {
+        "content": "When the user taps to launch the MLB Network linear stream or an ad-hoc stream, while the original VOD content is in PiP mode",
+        "expected": "Then the PiP window will maximize to full screen\nand the newly selected video content will load and begin to play in full screen"
+      },
+      {
+        "content": "When the user taps the back button while the newly selected video content is playing in full screen",
+        "expected": "Then the user will be brought back to where they had launched the new video"
+      },
+      {
+        "content": "When the user taps the back button a second time",
+        "expected": "Then the stack will pop as should be intuitively expected"
+      }
+    ]
+  },
+  {
+    "id": 1217373,
+    "title": "Lite User ---- NOT YET, NEED PRODUCT INPUT",
+    "section_id": 146468,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1516821203,
+    "updated_by": 84,
+    "updated_on": 1516823462,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20309,
+    "display_order": 4,
+    "custom_preconds": "Given At Bat is installed on a device running OS version 8.0 or higher\r\nand the user is not logged in with an entitled account (Lite user)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the LITE user taps to launch a video highlight",
+        "expected": "Then a pre-roll ad should begin to play first"
+      },
+      {
+        "content": "When the Lite user taps the device home button while the pre-roll ad is playing",
+        "expected": "Then PiP mode will be activated and the pre-roll ad will continue to play in the PiP window"
+      }
+    ]
+  }
+]

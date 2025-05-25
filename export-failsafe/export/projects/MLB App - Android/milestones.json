@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1813,
+    "name": "10.0 Beta Release",
+    "description": "Beta Release",
+    "start_on": null,
+    "started_on": 1619819407,
+    "is_started": true,
+    "due_on": null,
+    "is_completed": true,
+    "completed_on": 1619819502,
+    "project_id": 205,
+    "parent_id": null,
+    "refs": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/milestones/view/1813",
+    "milestones": []
+  },
+  {
+    "id": 1887,
+    "name": "10.2.2",
+    "description": null,
+    "start_on": null,
+    "started_on": 1633638129,
+    "is_started": true,
+    "due_on": null,
+    "is_completed": true,
+    "completed_on": 1646351682,
+    "project_id": 205,
+    "parent_id": null,
+    "refs": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/milestones/view/1887",
+    "milestones": []
+  },
+  {
+    "id": 1940,
+    "name": "11.2.0 Release",
+    "description": null,
+    "start_on": null,
+    "started_on": 1647358821,
+    "is_started": true,
+    "due_on": null,
+    "is_completed": true,
+    "completed_on": 1657038952,
+    "project_id": 205,
+    "parent_id": null,
+    "refs": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/milestones/view/1940",
+    "milestones": []
+  }
+]

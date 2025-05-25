@@ -1,0 +1,880 @@
+[
+  {
+    "id": 49412,
+    "title": "General/Configuration",
+    "section_id": 7142,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1422040746,
+    "updated_by": 25,
+    "updated_on": 1446143450,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 5,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the SKU is configured in the Play Store",
+        "expected": "Then the purchase price on the Pay Wall buttons appears based on the SKU \n(NOT TIED TO LOCAL APP CONFIG OR HARD CODED VALUE)\n"
+      },
+      {
+        "content": "When the price of the SKU is changed in the Play Store",
+        "expected": "Then the price on the Pay Wall button should update to reflect the new price. "
+      },
+      {
+        "content": "When the Developer changes which SKU should appear in the app via extras config",
+        "expected": "Then the new SKU should appear in the app on the paywall. "
+      },
+      {
+        "content": "Verify price and currency should changed based on device locale. ",
+        "expected": "The Price and currency should vary according to the locale of the device"
+      },
+      {
+        "content": "Verify the URL for the MLB.TV flow can be configured remotely. ",
+        "expected": "Then the correct web flow should be launched.\n\n**(VERIFY THAT THE URL/SKU IS UPDATED FOR THE CURRENT SEASON)**"
+      }
+    ]
+  },
+  {
+    "id": 182452,
+    "title": "Configurable Paywall Background Image",
+    "section_id": 7142,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": "ANDROID-4976",
+    "created_by": 84,
+    "created_on": 1468009253,
+    "updated_by": 84,
+    "updated_on": 1508872457,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 7,
+    "custom_preconds": "Paywall background image should be configurable so that it can be changed on the fly\r\n\r\n[Handset - QA] http://qacontent.mlb.com/android/atbat/images/paywall/xxhdpi/paywalltv_background.png\r\n[Tablet - QA] http://qacontent.mlb.com/android/atbat/images/paywall/xhdpi/paywalltv_background.png\r\n[Handset - PROD] http://content.mlb.com/android/atbat/images/paywall/xxhdpi/paywalltv_background.png\r\n[Tablet - PROD] http://content.mlb.com/android/atbat/images/paywall/xhdpi/paywalltv_background.png",
+    "custom_steps": "When the paywall image is overridden by another image and mapped locally via Charles",
+    "custom_expected": "Then the new image should appear in the background of all paywall instances:\r\nAt Bat (onboarding), At Bat, MLB.TV",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 68360,
+    "title": "T-Mobile",
+    "section_id": 7142,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 25,
+    "created_on": 1448047789,
+    "updated_by": 25,
+    "updated_on": 1448054693,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 8,
+    "custom_preconds": "The device has a T-Mobile Sim card installed\r\nAnd the T-Mobile sponsorship is enabled in extras:\r\n\r\n<sponsors>\r\nenabled=\"true\"\r\n</sponsors>\r\n\r\nThis could be commented out entirely or set to \"false\" to deactivate the trial.\r\n  ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When user launches At Bat for first time",
+        "expected": "Then they are presented with the T-Mobile specific paywall"
+      },
+      {
+        "content": "When user taps 'Redeem Offer' button on T-Mobile paywall",
+        "expected": "Then the user will be presented with a the option to log in with an existing MLB.com account or register a new MLB.com account"
+      },
+      {
+        "content": "When the user completes login/registration (test both)",
+        "expected": "Then the user will be presented with a toast message that says = \"You have successfully redeemed At Bat\""
+      },
+      {
+        "content": "When the user accesses the At Bat app",
+        "expected": "Then the user will be able to access all the features associated with the At Bat Full paid application\n"
+      },
+      {
+        "content": "When the trial user puts the device in airplane mode",
+        "expected": "Then the user will be treated as a valid T-Mobile user, even though their T-Mobile data connection is not valid"
+      },
+      {
+        "content": "Given the user is Lite and attempts to access a paid At Bat feature",
+        "expected": "Then the user will be presented with the T-Mobile specific paywall"
+      },
+      {
+        "content": "When the user taps the T-Mobile learn more link at the bottom of the paywall",
+        "expected": "Then the user should be taken to a T-Mobile specific FAQ"
+      },
+      {
+        "content": "When the user hasn't redeemed the free trial and takes out the T-Mobile sim card",
+        "expected": "Then the user will be presented with the standard At Bat paywall when attempting to access paid content"
+      },
+      {
+        "content": "When the user that has redeemed the offers logs into another device **without** a T-Mobile sim card installed",
+        "expected": "Then the user should NOT see any message indicating that they have unlocked At Bat\nAnd when the user attempts to access an At Bat feature (Audio, PBP Gameday, etc.)\nThen the user will not be able to access the feature\nAnd will be presented with standard error messaging indicating that they must purchase this feature"
+      },
+      {
+        "content": "When the user that has redeemed the offers logs into another device **with** a T-Mobile sim card installed",
+        "expected": "Then the user will see a confirmation message indicating that they have unlocked At Bat\nAnd when the user attempts to access an At Bat feature (Audio, PBP Gameday, etc.)\nThen the user will be able to access the feature successfully"
+      },
+      {
+        "content": "When the user has not yet redeemed the free trial and has a T-Mobile sim card installed and has no network connection (airplane mode)",
+        "expected": "Then the user will see the standard At Bat paywall when attempting to access a paid feature"
+      }
+    ]
+  },
+  {
+    "id": 49354,
+    "title": "Initial Launch",
+    "section_id": 145443,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1421872543,
+    "updated_by": 84,
+    "updated_on": 1508873635,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 1,
+    "custom_preconds": "Test for both Google Play Store and Amazon App Store\r\nUser is using a Google Play device with a valid Google Play account, for cases involving the Play Store\r\n\r\nFirst launch - User has not yet launched the app or the user has cleared app data in device settings\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "On First Launch\nWhen the splash screen has finished loaded",
+        "expected": "Then the At Bat Pay Wall should load"
+      },
+      {
+        "content": "On First Launch\nWhen the Pay Wall loads",
+        "expected": "Then the user should see:\n\n\"At Bat\"\n\"The Best Way to Watch and Listen to Live Baseball\nSubscribe to At Bat Premium to follow your team live with audio, in-game highlights and more.\"\n\n-'Explore Features' button that will take the user to a view listing At Bat Premium features\n-Two 'Subscribe' buttons (Yearly, Monthly) with prices ($19.99, $2.99)\n-'Sign in with MLB.com Account' button\n-'Go to Lite' button\n-'Restore Purchases' link"
+      },
+      {
+        "content": "On First Launch\nWhen the user taps the \"Go to Lite\" button",
+        "expected": "Then the pay wall should dismiss\nAnd the user should be taken through the onboarding flow\n"
+      },
+      {
+        "content": "On First Launch\nWhen the user taps either one of the Purchase/Subscribe buttons",
+        "expected": "Then the Play Store In-App Purchase flow should appear where the user can purchase or subscribe to the Full Version of At Bat"
+      },
+      {
+        "content": "On First Launch\nWhen the user taps the 'Having trouble with purchase' link ",
+        "expected": "Then the user should be brought to an external web page where they can get more information and link to a web flow to purchase At Bat on the web"
+      }
+    ]
+  },
+  {
+    "id": 1210571,
+    "title": "Sign in with MLB Account",
+    "section_id": 145443,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508872787,
+    "updated_by": 166,
+    "updated_on": 1554869906,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 3,
+    "custom_preconds": "Given the user has launched the app for the first time",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user sees the At Bat paywall for the first time\nand the user taps the 'Sign in With MLB Account' button",
+        "expected": "Then the user should be taken to the Login Screen"
+      },
+      {
+        "content": "When the user is taken to the Login screen",
+        "expected": "Then the user should see the following:\n\n-field for Email\n-field for Password\n-Login button\n-link to the Privacy Policy\n-Forgot Password> link\n-Help button"
+      },
+      {
+        "content": "When the user logs in with an MLB.TV Premium account",
+        "expected": "Then the user should see a 'Toast' message indicating that they are signed in an have unlocked Full At Bat features\nAnd the user should be taken through the onboarding flow\nAnd the user should have access to At Bat features and MLB.TV video streams"
+      },
+      {
+        "content": "When the user logs in with an entitled At Bat Premium account",
+        "expected": "Then the pay wall should dismiss\nAnd the user should see a 'toast' message indicating to the user that they are signed in and have unlocked Full At Bat\nAnd the user should be taken through the onboarding flow\nAnd the user should be able to access all 'Full At Bat' features\nAnd the user should NOT be able to access paid MLB.TV video streams"
+      },
+      {
+        "content": "When the user logs in with a Single Team account",
+        "expected": "Then the user should receive a message indicating that this account is not entitled for At Bat access\nAnd the user should be brought back to the Pay Wall\nAnd the user should be signed in to their MLB account\nAnd the user should not have access to At Bat\nAnd the sign in button on the pay wall should now read 'Sign in with another MLB.com account'"
+      },
+      {
+        "content": "When the user logs in with a Single Team + At Bat Premium account",
+        "expected": "Then the pay wall should dismiss\nAnd the user should see a 'toast' message indicating to the user that they are signed in and have unlocked Full At Bat\nAnd the user should be taken through the onboarding flow\nAnd the user should be able to access all 'Full At Bat' features\nAnd the user should NOT be able to access paid MLB.TV video streams, EXCEPT for their single team's TV feed"
+      },
+      {
+        "content": "When the user logs in with a non-entitled MLB account",
+        "expected": "Then the user should receive a message indicating that this account is not entitled for At Bat access\nAnd the user should be brought back to the Pay Wall\nAnd the user should be signed in to their MLB account\nAnd the user should not have access to At Bat\nAnd the sign in button on the pay wall should now read 'Sign in with another MLB.com account'"
+      }
+    ]
+  },
+  {
+    "id": 1210576,
+    "title": "Purchase Buttons & Play Store",
+    "section_id": 145443,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508873467,
+    "updated_by": 84,
+    "updated_on": 1508873616,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": "When the user launches the app for the first time\r\nand is on the At Bat paywall",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the SKU set in the app config is not available in the Play Store (Dev needs to set up)",
+        "expected": "Then the user should see the paywall\nAnd there should be an indication on the pay wall that there is a problem contacting the store or the product is not available\nAnd the user should be able to access the alternate purchase flow link"
+      },
+      {
+        "content": "When the user cannot access the Play Store\n(not logged in to valid Play store account)",
+        "expected": "Then the Pay Wall should load\nAnd the user should see an indication on the Pay Wall that there is a problem contacting the Play Store\nAnd the user should be able to access the alternate purchase flow link"
+      },
+      {
+        "content": "When the user has an out of date Play Store app",
+        "expected": "Then the Pay Wall should load\nAnd the user should see an indication that their Play Store version is not supported\nAnd the user should be able to access the alternate purchase flow link"
+      },
+      {
+        "content": "When the Play Store is loading the products on the pay wall \n(Pay Wall appears but price of SKU does not yet appear on Buy Button)\nAnd the user taps the 'Back' button during this moment",
+        "expected": "Then the Pay Wall should dismiss\nAnd the app should NOT crash"
+      }
+    ]
+  },
+  {
+    "id": 1210577,
+    "title": "Lite User",
+    "section_id": 145448,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508873901,
+    "updated_by": 84,
+    "updated_on": 1508874400,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 3,
+    "custom_preconds": "Given user has already completed Initial Launch flow and has chosen to \"Go to Lite\" from initial Pay Wall and is using app as Lite User\r\n\r\n(EPG - Electronic Program Guide, page with MLB.TV Streams, accessible by tapping Video button in top right corner of app)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "LITE user taps **live** MLB.TV stream from TV EPG",
+        "expected": "Then the Blackout check interstitial should appear\nAnd the user should be presented with the MLB.TV Pay Wall"
+      },
+      {
+        "content": "LITE user taps **archive** MLB.TV stream from TV EPG",
+        "expected": "Then the Blackout check interstitial should appear\nAnd the user should be presented with the MLB.TV Pay Wall"
+      },
+      {
+        "content": "LITE user taps **live** MLB.TV Game of the Day stream from TV EPG",
+        "expected": "Then the Blackout check interstitial should appear\nAnd the user should be presented with the At Bat Pay Wall\nAnd the user should see a message indicating whether they are able to watch this MLB.TV Game of the Day"
+      },
+      {
+        "content": "LITE user taps **archive** MLB.TV Game of the Day from TV EPG",
+        "expected": "Then the Blackout check interstitial should appear\nAnd the user should be presented with the At Bat Pay Wall"
+      },
+      {
+        "content": "LITE user taps MLB.TV button from an expanded game cell on the scoreboard for MLB.TV stream",
+        "expected": "Then the Blackout check interstitial should appear\nAnd the user should be presented with the MLB.TV Pay Wall"
+      },
+      {
+        "content": "LITE user taps MLB.TV button from an expanded game cell on the scoreboard for MLB.TV Game of the Day Stream",
+        "expected": "Then the Blackout check interstitial should appear\nAnd the user should be presented with the At Bat Pay Wall\nAnd the user should see a message indicating whether they are able to watch this MLB.TV Game of the Day"
+      },
+      {
+        "content": "LITE user taps MLB.TV button on the Team page score module for MLB.TV stream",
+        "expected": "Then the Blackout check interstitial should appear\nAnd the user should be presented with the MLB.TV Pay Wall"
+      },
+      {
+        "content": "LITE user taps MLB.TV button on the Team page score module for MLB.TV Game of the Day",
+        "expected": "Then the Blackout check interstitial should appear\nAnd the user should be presented with the At Bat Pay Wall\nAnd the user should see a message indicating whether they are able to watch this MLB.TV Game of the Day"
+      },
+      {
+        "content": "LITE user taps Audio button in Action Bar",
+        "expected": "Then the user should be presented with the At Bat Pay Wall"
+      },
+      {
+        "content": "LITE user taps Audio button from an expanded game cell on the scoreboard",
+        "expected": "Then the user should be presented with the At Bat Pay Wall"
+      },
+      {
+        "content": "LITE user taps Audio button in score module of team page",
+        "expected": "Then the user should be presented with the At Bat Pay Wall"
+      },
+      {
+        "content": "LITE user taps Gameday button for live game from an expanded game cell on the scoreboard",
+        "expected": "Then the user should be taken into Gameday"
+      },
+      {
+        "content": "LITE user taps Gameday button in Team Page score module for live game\n",
+        "expected": "Then the user should be taken into Gameday"
+      },
+      {
+        "content": "LITE user taps Gameday Button from List view of the Schedules/Results section of the team page",
+        "expected": "Then the user should be taken to the Live tab during a Live Game\nAnd the user should be taken to the Preview/Wrap tab when the game is not live"
+      },
+      {
+        "content": "LITE user taps Gameday Button from Month view of the Schedules/Results section of the team page",
+        "expected": "Then the user should be taken into Gameday\nAnd the user should be taken to the Preview/Wrap tab when the game is not live"
+      },
+      {
+        "content": "LITE user taps Live Look In stream from TV EPG",
+        "expected": "Then the user should be prompted with the At Bat Pay Wall"
+      }
+    ]
+  },
+  {
+    "id": 1210578,
+    "title": "At Bat Premium User",
+    "section_id": 145448,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508873940,
+    "updated_by": 84,
+    "updated_on": 1508877340,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 4,
+    "custom_preconds": "At Bat user: User logged in with At Bat Premium account",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "At Bat user taps **live** MLB.TV stream from TV EPG",
+        "expected": "Then the Blackout check interstitial should appear\nAnd the user should be presented with the MLB.TV Pay Wall"
+      },
+      {
+        "content": "At Bat user taps **archive** MLB.TV stream from TV EPG",
+        "expected": "Then the Blackout check interstitial should appear\nAnd the user should be presented with the MLB.TV Pay Wall"
+      },
+      {
+        "content": "At Bat user taps MLB.TV button from an expanded game cell on the scoreboard for MLB.TV stream",
+        "expected": "Then the Blackout check interstitial should appear\nAnd the user should be presented with the MLB.TV Pay Wall"
+      },
+      {
+        "content": "At Bat user taps MLB.TV button on Team page score module for MLB.TV stream",
+        "expected": "Then the Blackout check interstitial should appear\nAnd the user should be presented with the MLB.TV Pay Wall"
+      },
+      {
+        "content": "At Bat user taps **live** MLB.TV Game of the Day stream from TV EPG",
+        "expected": "Then the stream should begin to play\nAnd the user should NOT be prompted with a Pay Wall"
+      },
+      {
+        "content": "At Bat user taps **archive** MLB.TV Game of the Day stream from TV EPG",
+        "expected": "Then the stream should begin to play\nAnd the user should NOT be prompted with a Pay Wall"
+      },
+      {
+        "content": "At Bat user attempts to launch Live Look In",
+        "expected": "Then the Live Look In should should launch and play without issue"
+      }
+    ]
+  },
+  {
+    "id": 49358,
+    "title": "Accessing Full/Premium features",
+    "section_id": 145448,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1421880219,
+    "updated_by": 166,
+    "updated_on": 1549663658,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 5,
+    "custom_preconds": "Cases assume user has already completed Initial Launch flow and has chosen to \"Go to Lite\" from initial Pay Wall and is using app as Lite User. \r\n\r\nLITE user - User who is not logged in with entitled account or who has not purchased or restored In App Purchase\r\nFULL user - User who is logged in with account entitled with At Bat access or has purchased or restored At Bat IAP\r\nMLB.TV user - User who is logged in with account entitled with At Bat access AND MLB.TV access. (MLB.TV premium contains At Bat entitlement)\r\n\r\nFull At Bat feature - Gated feature that is NOT MLB.TV live game or archive (eg. Gameday Audio, Pitch by Pitch Gameday)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on the 'Explore Features' link on the At Bat Paywall",
+        "expected": "Then the user should see the MLB.TV feature screen describing subscribe, listen, access and follow"
+      },
+      {
+        "content": "User dismisses Pay Wall by tapping 'Up' button on Pay Wall or device Back button",
+        "expected": "Then the Pay Wall should dismiss\nAnd the user should remain in the Lite version of the app \n(Verify the user cannot access premium features) "
+      },
+      {
+        "content": "LITE user who has opened Pay Wall taps the 'Buy' or 'Subscribe' button",
+        "expected": "Then the Play Store flow should appear where the user can unlock the full version of the app"
+      },
+      {
+        "content": "When the user taps the 'Log In' link on the Pay Wall",
+        "expected": "Then the user should be prompted with a log in screen\nAnd there should be a field for Username\nAnd there should be a field for Password\nAnd there should be a Login button"
+      },
+      {
+        "content": "LITE user logs in with entitled MLB.TV account from At Bat Paywall",
+        "expected": "Then the pay wall should dismiss\nAnd the user should see a 'toast' message indicating to the user that they are signed in and have unlocked all At Bat features\nAnd the user should be brought into the full version of the app\nAnd the user should be able to access all Full At Bat features\nAnd the user should be able to access paid MLB.TV video streams"
+      },
+      {
+        "content": "LITE user logs in with entitled Single Team account from At Bat Paywall\nwhen trying to access Audio",
+        "expected": "Then the paywall should dismiss\nAnd the user should be brought to the Audio EPG\nAnd the user should be able to access their Single Team's audio feed\nAnd see a \"This feed is not included in your subscription\" message in the audio player when trying to access any other team's audio feed"
+      },
+      {
+        "content": "LITE user logs in with entitled Single Team account from At Bat Paywall\nwhen trying to launch the MLB.TV Game of the Day\nand their Single Team is one of the teams playing\nand the user taps that team's feed",
+        "expected": "Then the paywall should dismiss\nAnd the feed should begin to play"
+      },
+      {
+        "content": "LITE user logs in with a non entitled BAMNET account from At Bat Paywall",
+        "expected": "Then the user should receive a message indicating that this account is not entitled for At Bat access\nAnd the user should be brought back to the Pay Wall\nAnd the user should be signed in to their MLB account\nAnd the 'Sign In' button on the feature gate will now say \"Sign in with another MLB account\"\nAnd the user should not have access to At Bat"
+      },
+      {
+        "content": "LITE user logs in with entitled At Bat Premium account from At Bat Paywall",
+        "expected": "Then the Pay Wall should dismiss\nAnd the user should see a 'toast' message indicating to the user that they are signed in and have unlocked all At Bat features\nAnd the user should be brought into the full version of the app\nAnd the user should be able to access all Full At Bat features\nAnd the user should NOT be able to access MLB.tv paid feeds"
+      },
+      {
+        "content": "LITE user logs in with entitled Single Team + Android At Bat account from At Bat Paywall",
+        "expected": "Then the Pay Wall should dismiss\nAnd the user should see a 'toast' message indicating to the user that they are signed in and have unlocked all At Bat features\nAnd the user should be brought into the full version of the app\nAnd the user should be able to access all Full At Bat features\nAnd the user should NOT be able to access MLB.tv paid feeds\nEXCEPT for their Single Team's TV feed"
+      },
+      {
+        "content": "LITE user logs in with entitled MLB.TV account from MLB.TV paywall",
+        "expected": "Then the Pay Wall should dismiss\nAnd the user should see a 'toast' message indicating to the user that they are signed in and have unlocked all At Bat features\nAnd the user should be taken into the MLB.tv player where the video stream should begin playing"
+      },
+      {
+        "content": "LITE user purchases or subscribes to At Bat from Pay Wall",
+        "expected": "Then the Pay Wall should dismiss\nAnd the user should see a 'toast' message indicating to the user that they are signed in and have unlocked all At Bat features\nAnd the user should be taken into the feature they were attempting to access"
+      },
+      {
+        "content": "LITE user restores purchase from At Bat Pay Wall ",
+        "expected": "Then the Pay Wall should dismiss\nAnd the user should see a 'toast' message indicating to the user that they are signed in and have unlocked all At Bat features\nAnd the user should be taken into the feature they were attempting to access"
+      },
+      {
+        "content": "LITE user logs into entitled account via app settings page\n",
+        "expected": "Then the user should see a 'toast' message indicating to the user that they are signed in with an At Bat account \nAnd the user should be able to access At Bat features without issue\nAnd the user should NOT be able to access MLB.TV streams"
+      },
+      {
+        "content": "FULL user loses entitlement, attempts to access At Bat feature",
+        "expected": "Then user should be presented with the At Bat Pay Wall"
+      },
+      {
+        "content": "MLB.TV user watching live MLB.TV stream loses entitlement \n(Cancelled in Rodeo)",
+        "expected": "Then the user should not be removed from the live video stream\nAnd the next time the user attempts to launch an MLB.TV stream or other premium feature, they should be prompted with the pay wall"
+      },
+      {
+        "content": "FULL user viewing At Bat features (Gameday, Gameday Audio) loses entitlement\n(Cancelled in Rodeo)",
+        "expected": "Then the user should not be removed from the feature \nAnd the next time they attempt to launch an At Bat Feature, they should be brought to the pay wall"
+      },
+      {
+        "content": "When a user logged into a BAMNET account linked to an In App Purchase (BAMNET1)\nAnd the purchase is linked to a different BAMNET account (BAMNET2) ",
+        "expected": "Then the user logged in with the original BAMNET account (BAMNET1) should eventually be blocked from accessing At Bat features "
+      }
+    ]
+  },
+  {
+    "id": 49405,
+    "title": "Purchasing",
+    "section_id": 145444,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1421945844,
+    "updated_by": 84,
+    "updated_on": 1538063407,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 1,
+    "custom_preconds": "When the user completes a purchase they have the option to Link to a BAMNET account or SKIP\r\nWhen the user chooses to Link, they have an option to LOG IN with existing account or REGISTER for new account\r\n\r\nThe term \"Purchase\" as used in this case refers to:\r\n'Yearly Subscription'\r\n'Seasonal Purchase'\r\n'Monthly Subscription'\r\n\r\nRodeo - Customer Service Tool that can be used to check entitlements and dates of entitlements on a per user account. ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User completes Play Store purchase\nAnd links to existing BAMNET account",
+        "expected": "Then the user should see a message indicating that their purchase has been linked successfully\nAnd the user should be able to access Full At Bat features (eg. Audio, Gameday) \nAnd their In-App purchase should be linked to their BAMNET account (verify on CS tool)\nAnd the user should be able to log into At Bat and unlock At Bat functionality on an unrelated device with their BAMNET account alone"
+      },
+      {
+        "content": "User completes Play Store purchase\nAnd SKIPS BAMNET link",
+        "expected": "Then the user should be able to access Full At Bat Features (eg. Audio, Gameday) "
+      },
+      {
+        "content": "User completes Play Store purchase\nAnd links to BAMNET account by registering for new one",
+        "expected": "Then the user should see a message indicating that their purchase has been linked successfully\nAnd the user should be able to access Full At Bat features (eg. Audio, Gameday) \nAnd their In-App purchase should be linked to their BAMNET account (verify in Rodeo)\nAnd the user should be able to log into At Bat and unlock At Bat functionality on an unrelated device with their BAMNET account alone"
+      },
+      {
+        "content": "User is logged in to BAMNET account \nAnd user completes Play Store purchase",
+        "expected": "Then the user should see a message indicating that their purchase has been linked successfully\nAnd the user should be able to access Full At Bat features (eg. Audio, Gameday) \nAnd their In-App purchase should be linked to their BAMNET account (verify on CS tool)\nAnd the user should be able to log into At Bat and unlock At Bat functionality on an unrelated device with their BAMNET account alone"
+      },
+      {
+        "content": "User completes purchase\nAnd the user taps on the '?' on the purchase link screen",
+        "expected": "Then the user should be taken to an internal webview of the \"FAQ\" for At Bat\nAnd tapping the 'Back' button should take the user back to the link screen where they can link their purchase"
+      },
+      {
+        "content": "User attempts to Purchase\nAnd the purchase does not complete or the user cancels out of the purchase and returns to At Bat",
+        "expected": "Then the user should see an indication that their purchase did not complete\nAnd they should still have options to buy the app, log in, or continue/return to lite"
+      },
+      {
+        "content": "When the user completes the Play Store purchase \nBut the BAMNET identity is not created\n(Can replicate this by purchasing in QA while on carrier network and not VPN)",
+        "expected": "Then the user should be informed that there was a problem connecting the purchase to MLB.com\nAnd the user should be given the option to retry the purchase completion or to restore their purchase to MLB.com"
+      }
+    ]
+  },
+  {
+    "id": 1210619,
+    "title": "Subscription",
+    "section_id": 145444,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508877891,
+    "updated_by": 84,
+    "updated_on": 1538063448,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Verify Yearly Subscription SKU entitles account as expected\n(When the user checks a linked entitled account in Rodeo)",
+        "expected": "Then the date of the entitlement end should be set to a calendar year after the date the user completed the purchase"
+      },
+      {
+        "content": "Verify Monthly Subscription SKU entitles account as expected\n(When the user checks a linked entitled account in Rodeo)",
+        "expected": "Then the date of the entitlement end should be set to 30 days after the date the user completed the purchase"
+      },
+      {
+        "content": "User should be able to cancel subscription through Play Store",
+        "expected": "Then when the user's subscription end date occurs, their account should not be re-entitled"
+      },
+      {
+        "content": "User attempts to access feature after entitlement has expired",
+        "expected": "Then the user should see the pay wall\nAnd the user should be informed that their account is not entitled or their subscription has expired"
+      },
+      {
+        "content": "User can purchase a different SKU after their first purchase has expired\n(eg. User purchases monthly SKU and cancels, then tries to purchase seasonal purchase SKU)",
+        "expected": "Then the user should be able to complete the purchase\nAnd the user should be able to access At Bat features\n(Check in CS tool to verify that both old and new SKUs appear on user's account)"
+      },
+      {
+        "content": "User can resubscribe after subscription has ended",
+        "expected": "Then the user should be able to complete the subscription\nAnd the user should be able to access At Bat features"
+      }
+    ]
+  },
+  {
+    "id": 1210618,
+    "title": "Restore Purchases",
+    "section_id": 145445,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1508877466,
+    "updated_by": 84,
+    "updated_on": 1508877761,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user has purchased At Bat through the Play Store\nAnd the user clears data in the app\nAnd the user restores a purchase in At Bat",
+        "expected": "Then the user's In-App Purchases should be restored\nAnd the pay wall should dismiss\nand the user should be able to access Full At Bat features"
+      },
+      {
+        "content": "When the user has completed a Play Store purchase\nAnd the user logs into another Android device with the same play store credentials\nAnd the user attempts to restore the purchase",
+        "expected": "Then the user should be given an indication that the restore was successful\nAnd the user should be able to access Full At Bat features (eg. Gameday, Audio)"
+      },
+      {
+        "content": "When the user has linked an In App Purchase to an account with MLB.TV entitlement\nAnd the user restores the IAP in the app",
+        "expected": "Then the user should be given an indication that the restore was successful\nAnd the user should be able to access Full At Bat features as well as MLB.TV streams"
+      }
+    ]
+  },
+  {
+    "id": 49411,
+    "title": "Linking",
+    "section_id": 145446,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 21,
+    "created_on": 1422040730,
+    "updated_by": 84,
+    "updated_on": 1538063570,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 1,
+    "custom_preconds": "LITE user - User who is not logged in with entitled account or who has not purchased or restored In App Purchase\r\nFULL user - User who is logged in with account entitled with At Bat access or has purchased or restored At Bat IAP.\r\nMLB.TV user - User who is logged in with account entitled with At Bat access AND MLB.TV access. (MLB.TV contains At Bat entitlement)\r\n\r\nFull At Bat feature - Gated feature that is NOT MLB.TV live game or archive. (eg. Gameday Audio, Pitch by Pitch Gameday)\r\n\r\nThe term \"Purchase\" as used in this case refers to:\r\n'Yearly Subscription'\r\n'Seasonal Purchase'\r\n'Monthly Subscription'\r\n\r\nRodeo - Customer Service Tool that can be used to check entitlements and dates of entitlements on a per user account.\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User completes purchase on first launch of app\nAnd user chooses to link to a BAMNET account\nAnd user logs in with existing BAMNET account",
+        "expected": "Then the user should see a message informing them that their accounts have been linked\n\n(Verify in Rodeo that IAP is linked to BAMNET account)"
+      },
+      {
+        "content": "User completes purchase on first launch of app\nAnd user chooses to link to a BAMNET account\nAnd user registers new account",
+        "expected": "Then the user should see a message informing them that their accounts have been linked\n\n(Verify in Rodeo that IAP is linked to BAMNET account)"
+      },
+      {
+        "content": "User completes purchase\nAnd tries to link by registering BAMNET account that already exists",
+        "expected": "User should see appropriate error message indicating that their account already exists"
+      },
+      {
+        "content": "When user attempts to log in on an Android or iOS device with an account that has been linked to a purchase",
+        "expected": "Then the user should be able to log in and unlock Full At Bat features\nAnd the user should not be able to access MLB.TV streams unless they purchase or sign in with MLB.TV account"
+      },
+      {
+        "content": "When the user completes a purchase of At Bat\nAnd the user chooses to link to a BAMNET account that has MLB.TV entitlement \n(Add to fresh account using Rodeo)",
+        "expected": "Then the user should see a message informing them that their accounts have been linked\nAnd the user should be able to access Full At Bat features\nAnd the user should be able to access MLB.TV streams"
+      },
+      {
+        "content": "When the user is not logged in with any account\nAnd they try to access a Full At Bat feature\nAnd they purchase At Bat from the At Bat Pay wall\nAnd the user chooses to link to an existing BAMNET account that has no entitlements\n",
+        "expected": "Then the user should see a message indicating that their accounts have been linked\n(Verify purchase appears on account in Rodeo)"
+      },
+      {
+        "content": "When the user is logged into At Bat with a BAMNET account that has no entitlements \nAnd the user attempts to access a Full At Bat Feature\nAnd the user purchases At Bat from the At Bat Pay wall\n",
+        "expected": "Then the user should see a message during their purchase confirmation that their accounts have been linked \nAnd the user should be able to access Full At Bat Features on their device and any other devices that are logged into the same BAMNET account"
+      },
+      {
+        "content": "When the user has purchased At Bat through In App Purchase\nAnd the user navigates to the app settings page and chooses to log in with a BAMNET account that has no entitlements ",
+        "expected": "Then the user should be allowed to log in \nAnd the user should see a message indicating that their log in was successful and their accounts are now linked\nAnd the user should be able to access Full At Bat Features on their device and any other devices that are logged into the same BAMNET account \n(Verify link using Rodeo)"
+      },
+      {
+        "content": "When the user has purchased At Bat through In App Purchase\nAnd the user attempts to launch an MLB.TV stream\nAnd the user is presented with the MLB.TV Pay wall\nAnd the user logs in with an entitled MLB.TV account",
+        "expected": "Then the user should be shown a message indicating that their accounts have been linked\nAnd the user should be taken into the MLB.TV stream they attempted to access\n(Verify account was linked using Rodeo)"
+      },
+      {
+        "content": "When the user has purchased At Bat through In App Purchase\nAnd the user attempts to launch an MLB.TV stream\nAnd the user is presented with the MLB.TV Pay Wall\nAnd the user logs in with a NON-entitled BAMNET account \n(verify in Rodeo that account has no entitlements)",
+        "expected": "Then the user should be shown a message indicating that their accounts have been linked\nAnd the user should be taken back to the MLB.TV Pay wall and shown an error message indicating that they are not an MLB.TV customer\nAnd the user should be given an option to log in with another MLB account\n(Verify in Rodeo that IAP was successfully linked to BAMNET account)"
+      },
+      {
+        "content": "When the user has purchased At Bat through In App Purchase\nAnd the user has linked the IAP to a BAMNET account\nAnd the user attempts to log in on a different device using the same BAMNET account",
+        "expected": "Then the user should be able to log in successfully \nAnd the user should be able to access Full At Bat features without issue"
+      },
+      {
+        "content": "When the user has purchased At Bat through IAP\nAnd the user has linked the IAP to a BAMNET account entitled with MLB.TV but is not logged in with that account \n(IAP is only identity in app)",
+        "expected": "Then the user should be able to access At Bat Features\nAnd the user should be able to play MLB.TV streams"
+      }
+    ]
+  },
+  {
+    "id": 1228635,
+    "title": "App searches for Purchase upon initial launch of the app",
+    "section_id": 148591,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1531320355,
+    "updated_by": 74,
+    "updated_on": 1531320398,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 1,
+    "custom_preconds": "GIVEN the user has initially launched the app\r\n",
+    "custom_steps": "WHEN the user passes the splash screen\r\n",
+    "custom_expected": "THEN the app with automatically search to restore any previous purchase the Google user has made",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1228636,
+    "title": "Purchase is restored automatically upon initial launch of app if google account has previous purchase",
+    "section_id": 148591,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1531320361,
+    "updated_by": 74,
+    "updated_on": 1531320411,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 2,
+    "custom_preconds": "GIVEN the user has previously made in app purchases\r\nAND the user has initially launches the app\r\n",
+    "custom_steps": "WHEN the app searches for previously purchases\r\n",
+    "custom_expected": "THEN the purchases are automatically restored",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1228637,
+    "title": "Purchase is not restored if user has not made any previous purchase",
+    "section_id": 148591,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1531320364,
+    "updated_by": 74,
+    "updated_on": 1531320427,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 3,
+    "custom_preconds": "GIVEN the user has NOT previously made in app purchases\r\nAND the user has initially launches the app\r\n",
+    "custom_steps": "WHEN the app searches for previously purchases\r\n",
+    "custom_expected": "THEN the not purchases are restored\r\nAND the user is presented with the paywall \r\n",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1228638,
+    "title": "Purchase is linked if user has made a subscribe and install purchase directly from Google Play",
+    "section_id": 148591,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1531320366,
+    "updated_by": 74,
+    "updated_on": 1531320445,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 4,
+    "custom_preconds": "GIVEN the user has previously made the subscribe and install purchase directly from Google Play Store\r\nAND the user has initially launches the app\r\n",
+    "custom_steps": "WHEN the app searches for previously purchases\r\n",
+    "custom_expected": "THEN the purchases are automatically restored",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1228639,
+    "title": "Purchase is linked if user has made a purchase in Device A and launched app initially in device B",
+    "section_id": 148591,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1531320370,
+    "updated_by": 74,
+    "updated_on": 1531320468,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 5,
+    "custom_preconds": "GIVEN the user has previously made in app purchases in device A\r\nAND the user has initially launches the app on device B\r\n",
+    "custom_steps": "WHEN the app searches for previously purchases\r\n",
+    "custom_expected": "THEN the purchases are automatically restored",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1228640,
+    "title": "User who has previously made a purchase is NOT shown the paywall after auto linking occurs after initial launch",
+    "section_id": 148591,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1531320373,
+    "updated_by": 74,
+    "updated_on": 1531320500,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 6,
+    "custom_preconds": "GIVEN the user has previously made an At Bat/MLB.TV purchase\r\n",
+    "custom_steps": "WHEN the user initially launched the app\r\n",
+    "custom_expected": "THEN is taken directly to account linking screen and team picker after purchase is auto linked \r\nAND the user is not shown the paywall",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1228641,
+    "title": "User is shown a toast identifying that a subscription has been detected and features are now restored",
+    "section_id": 148591,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1531320376,
+    "updated_by": 74,
+    "updated_on": 1531320552,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 7,
+    "custom_preconds": "GIVEN the user has previously made an At Bat/MLB.TV purchase\r\nAND the user initially launched the app\r\n",
+    "custom_steps": "WHEN the purchase is automatically restored\r\n",
+    "custom_expected": "THEN the user is presented a toast message which indicate that subscription was detected and restored",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1228643,
+    "title": "Previously purchased features are available once user enters the app",
+    "section_id": 148591,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 74,
+    "created_on": 1531320383,
+    "updated_by": 74,
+    "updated_on": 1531320613,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 955,
+    "display_order": 9,
+    "custom_preconds": "GIVEN the user has previously made an At Bat/MLB.TV purchase\r\nAND the user initially launched the app\r\n",
+    "custom_steps": "WHEN the auto restore is complete\r\nAND on boarding is complete\r\n",
+    "custom_expected": "THEN the features previously purchased are accessible ",
+    "custom_steps_separated": null
+  }
+]

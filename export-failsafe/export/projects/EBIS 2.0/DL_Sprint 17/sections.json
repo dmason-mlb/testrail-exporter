@@ -1,0 +1,65 @@
+[
+  {
+    "id": 29507,
+    "suite_id": 3276,
+    "name": "Waivers- MN-7 Day DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 29505,
+    "suite_id": 3276,
+    "name": "Waivers- MN-60 Day DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 29509,
+    "suite_id": 3276,
+    "name": "Waivers- MJ-7 Day DL Concussion",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 29738,
+    "suite_id": 3276,
+    "name": "Waivers- MJ-60 Day DL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 29506,
+    "suite_id": 3276,
+    "name": "Flags",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 29737,
+    "suite_id": 3276,
+    "name": "Pro Player Profile",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 79549,
+    "suite_id": 3276,
+    "name": "DL Recertification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  }
+]

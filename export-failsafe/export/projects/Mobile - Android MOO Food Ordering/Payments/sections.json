@@ -1,0 +1,38 @@
+[
+  {
+    "id": 137820,
+    "suite_id": 19773,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 137821,
+    "suite_id": 19773,
+    "name": "Payment Methods",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 137822,
+    "suite_id": 19773,
+    "name": "Add Card",
+    "description": null,
+    "parent_id": 137821,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 137823,
+    "suite_id": 19773,
+    "name": "eCash",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

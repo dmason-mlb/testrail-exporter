@@ -1,0 +1,290 @@
+[
+  {
+    "id": 2006649,
+    "suite_id": 701972,
+    "name": "Account Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 2006651,
+    "suite_id": 701972,
+    "name": "Alerts & Notifications",
+    "description": null,
+    "parent_id": 2006649,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 2006652,
+    "suite_id": 701972,
+    "name": "Preferences",
+    "description": null,
+    "parent_id": 2006649,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 2006653,
+    "suite_id": 701972,
+    "name": "Audio/Video",
+    "description": null,
+    "parent_id": 2006649,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 2006654,
+    "suite_id": 701972,
+    "name": "Logged In/Out",
+    "description": null,
+    "parent_id": 2006649,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 2006661,
+    "suite_id": 701972,
+    "name": "Log In",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 2006663,
+    "suite_id": 701972,
+    "name": "Experience",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 2006665,
+    "suite_id": 701972,
+    "name": "MLB Network Entitlements",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 2006666,
+    "suite_id": 701972,
+    "name": "Onboarding Flow (Needs Update by Adam)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 2006670,
+    "suite_id": 701972,
+    "name": "Major App Upgrade",
+    "description": "e.g. Upgrading app from v12.x to v13.x, but not from 13.0 to 13.1",
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 2006672,
+    "suite_id": 701972,
+    "name": "iPad (Covered by RC Party)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 2006673,
+    "suite_id": 701972,
+    "name": "Deep Link TC's (To Be Automated)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 2006674,
+    "suite_id": 701972,
+    "name": "Accessibility News",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 2006675,
+    "suite_id": 701972,
+    "name": "Accessibility Audio",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 2006676,
+    "suite_id": 701972,
+    "name": "Accessibility Scoreboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  },
+  {
+    "id": 2006677,
+    "suite_id": 701972,
+    "name": "Accessibility More Menu",
+    "description": null,
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 2006678,
+    "suite_id": 701972,
+    "name": "Accessibility Navigation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 2006684,
+    "suite_id": 701972,
+    "name": "Chromecast Icon",
+    "description": null,
+    "parent_id": null,
+    "display_order": 31,
+    "depth": 0
+  },
+  {
+    "id": 2006685,
+    "suite_id": 701972,
+    "name": "Casting & Playback Controls",
+    "description": null,
+    "parent_id": null,
+    "display_order": 32,
+    "depth": 0
+  },
+  {
+    "id": 2006690,
+    "suite_id": 701972,
+    "name": "Major App Upgrade (Duplicate Section)",
+    "description": "e.g. Upgrading app from v12.x to v13.x, but not from 13.0 to 13.1",
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 2006691,
+    "suite_id": 701972,
+    "name": "MLB.TV Alternate Audio (To Be Automated/Covered by RC Party)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 2006692,
+    "suite_id": 701972,
+    "name": "MLB.TV Blackouts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 39,
+    "depth": 0
+  },
+  {
+    "id": 2006693,
+    "suite_id": 701972,
+    "name": "Entitlements",
+    "description": null,
+    "parent_id": null,
+    "display_order": 40,
+    "depth": 0
+  },
+  {
+    "id": 2006694,
+    "suite_id": 701972,
+    "name": "MLB.TV Phone",
+    "description": null,
+    "parent_id": null,
+    "display_order": 41,
+    "depth": 0
+  },
+  {
+    "id": 2006695,
+    "suite_id": 701972,
+    "name": "MLB.TV Tablet",
+    "description": null,
+    "parent_id": null,
+    "display_order": 42,
+    "depth": 0
+  },
+  {
+    "id": 2006696,
+    "suite_id": 701972,
+    "name": "MLB.TV Navigation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 43,
+    "depth": 0
+  },
+  {
+    "id": 2008439,
+    "suite_id": 701972,
+    "name": "Standings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 44,
+    "depth": 0
+  },
+  {
+    "id": 2032975,
+    "suite_id": 701972,
+    "name": "Apple Watch General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 45,
+    "depth": 0
+  },
+  {
+    "id": 2032976,
+    "suite_id": 701972,
+    "name": "Apple Watch Live Activities & Complications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 46,
+    "depth": 0
+  },
+  {
+    "id": 2032977,
+    "suite_id": 701972,
+    "name": "Apple Watch Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 47,
+    "depth": 0
+  },
+  {
+    "id": 2032978,
+    "suite_id": 701972,
+    "name": "Apple Watch Sanity test for smaller devices",
+    "description": null,
+    "parent_id": null,
+    "display_order": 48,
+    "depth": 0
+  },
+  {
+    "id": 2032979,
+    "suite_id": 701972,
+    "name": "Apple Watch Off season",
+    "description": null,
+    "parent_id": null,
+    "display_order": 49,
+    "depth": 0
+  }
+]

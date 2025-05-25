@@ -1,0 +1,47 @@
+[
+  {
+    "id": 147992,
+    "suite_id": 956,
+    "name": "Preview",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 147993,
+    "suite_id": 956,
+    "name": "Live",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 147994,
+    "suite_id": 956,
+    "name": "Final",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 7141,
+    "suite_id": 956,
+    "name": "No Pitch by Pitch",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 147995,
+    "suite_id": 956,
+    "name": "ARCHIVE",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  }
+]

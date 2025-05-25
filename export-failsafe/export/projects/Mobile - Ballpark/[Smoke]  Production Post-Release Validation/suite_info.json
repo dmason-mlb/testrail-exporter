@@ -1,0 +1,11 @@
+{
+  "id": 595676,
+  "name": "[Smoke]  Production Post-Release Validation",
+  "description": "Critical paths to perform sanity testing against recently released AppStore/PlayStore build ",
+  "project_id": 179,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/595676"
+}

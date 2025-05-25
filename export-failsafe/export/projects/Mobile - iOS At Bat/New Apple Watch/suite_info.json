@@ -1,0 +1,11 @@
+{
+  "id": 611099,
+  "name": "New Apple Watch",
+  "description": "Design https://www.figma.com/design/5nJ9AKwH8HqlLq7pSRoKnh/Apple-Watch-Specs?node-id=158-31351&t=5IHhlpKWRDs22geb-0\r\n\r\nGame states: \r\n\r\nDelayed start - game hasn't started and has a new start time. Will be played on the same day\r\nDelayed - game started and is delayed but will finish on the same day\r\nPostponed - games hasn't started but has to be rescheduled on another day\r\nSuspended - game started but has to be finished on another day. Game will have a resumed state",
+  "project_id": 4,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/611099"
+}

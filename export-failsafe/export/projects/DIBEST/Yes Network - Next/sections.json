@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1604624,
+    "suite_id": 576606,
+    "name": "Section 1 - DIBEST-250",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1604625,
+    "suite_id": 576606,
+    "name": "Section 2 - DIBEST-285",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

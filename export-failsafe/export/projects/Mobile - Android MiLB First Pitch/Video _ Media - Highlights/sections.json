@@ -1,0 +1,20 @@
+[
+  {
+    "id": 5056,
+    "suite_id": 686,
+    "name": "Video",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 5057,
+    "suite_id": 686,
+    "name": "Sharing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

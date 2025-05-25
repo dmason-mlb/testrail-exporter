@@ -1,0 +1,83 @@
+[
+  {
+    "id": 13628,
+    "suite_id": 1531,
+    "name": "Non-First Year Contracts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 13629,
+    "suite_id": 1531,
+    "name": "Club - Create",
+    "description": null,
+    "parent_id": 13628,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 13960,
+    "suite_id": 1531,
+    "name": "Addendum B",
+    "description": null,
+    "parent_id": 13629,
+    "display_order": 7,
+    "depth": 2
+  },
+  {
+    "id": 13958,
+    "suite_id": 1531,
+    "name": "Release Clause",
+    "description": null,
+    "parent_id": 13960,
+    "display_order": 8,
+    "depth": 3
+  },
+  {
+    "id": 13836,
+    "suite_id": 1531,
+    "name": "Signing Bonus Clause",
+    "description": null,
+    "parent_id": 13960,
+    "display_order": 9,
+    "depth": 3
+  },
+  {
+    "id": 13959,
+    "suite_id": 1531,
+    "name": "Termination Pay",
+    "description": null,
+    "parent_id": 13960,
+    "display_order": 10,
+    "depth": 3
+  },
+  {
+    "id": 13630,
+    "suite_id": 1531,
+    "name": "Club - Print",
+    "description": null,
+    "parent_id": 13628,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 13631,
+    "suite_id": 1531,
+    "name": "Global",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 13632,
+    "suite_id": 1531,
+    "name": "Addendum Cs",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  }
+]

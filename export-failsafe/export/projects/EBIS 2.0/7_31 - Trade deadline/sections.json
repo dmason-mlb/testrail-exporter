@@ -1,0 +1,65 @@
+[
+  {
+    "id": 134421,
+    "suite_id": 19572,
+    "name": "AL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 134538,
+    "suite_id": 19572,
+    "name": "Trades Submission - Club",
+    "description": null,
+    "parent_id": 134421,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 134540,
+    "suite_id": 19572,
+    "name": "Trades Submission - BOC",
+    "description": null,
+    "parent_id": 134421,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 134541,
+    "suite_id": 19572,
+    "name": "Trades - Signing Bonus",
+    "description": null,
+    "parent_id": 134421,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 134542,
+    "suite_id": 19572,
+    "name": "Trades - Deadline Scenarios",
+    "description": null,
+    "parent_id": 134421,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 134571,
+    "suite_id": 19572,
+    "name": "Print Trade Forms",
+    "description": null,
+    "parent_id": 134421,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 134423,
+    "suite_id": 19572,
+    "name": "NL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  }
+]

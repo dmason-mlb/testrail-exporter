@@ -1,0 +1,38 @@
+[
+  {
+    "id": 20737,
+    "suite_id": 2355,
+    "name": "MLB.TV Button Logic (TV Premium User)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 20846,
+    "suite_id": 2355,
+    "name": "MLB.TV Button Logic (At Bat Premium User)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 20847,
+    "suite_id": 2355,
+    "name": "MLB.TV Button Logic (Single Team User)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 20848,
+    "suite_id": 2355,
+    "name": "MLB.TV Button Logic (Single Team + At Bat User)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

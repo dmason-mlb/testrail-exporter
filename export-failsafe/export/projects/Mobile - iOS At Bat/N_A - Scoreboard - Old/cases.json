@@ -1,0 +1,906 @@
+[
+  {
+    "id": 48700,
+    "title": "Scoreboard General",
+    "section_id": 6983,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1418830382,
+    "updated_by": 39,
+    "updated_on": 1498685369,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 896,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If the season isn't over and the time is before 10 AM EST, when the time hits 10 AM EST",
+        "expected": "Then the Scoreboard will flip to the next day"
+      },
+      {
+        "content": "When a user set the devices timezone to Eastern (ET)\nand then sets the devices timezone to Central (CT)\nand then set the devices timezone to Mountain (MT)\nand then sets the devices timezone to Pacific (PT)",
+        "expected": "Then the Scoreboard will display the games in the appropriate time from the appropriate time zone"
+      },
+      {
+        "content": "When a user views the teams on the Scoreboard",
+        "expected": "Then all team names, team records and logos appear correctly & up to date"
+      },
+      {
+        "content": "When a user views the games on the Scoreboard",
+        "expected": "Then you will see:\n- the home team listed underneath the away team\n- when you tap the game, the away team is listed on the left and the home team to the right"
+      },
+      {
+        "content": "When a user views different game cells on the Scoreboard",
+        "expected": "Then all text and game state formatting will be clear & readable"
+      },
+      {
+        "content": "When a user views the games on the Scoreboard",
+        "expected": "Then the games in question will update their state, score and scheduling"
+      },
+      {
+        "content": "When a user views the game cells for all Live games on the Scoreboard",
+        "expected": "Then the games displayed are showing the correct inning\nAnd the games displayed are showing the correct score\nAnd the games displayed are showing the correct base runner indicator\nand games displayed are showing count and outs"
+      },
+      {
+        "content": "When a user views the order of the games on the Scoreboard and there are some regular season games, spring training, exhibition games displayed and the user doesn't have a Favorite Team set\n\n",
+        "expected": "Then the games will be sorted by Regular Season first followed by Spring Training & Exhibition based games"
+      },
+      {
+        "content": "When a user views the order of games on the Scoreboard and there are some completed, some in progress, some not started and the user doesn't have a Favorite Team set",
+        "expected": "Then the games will be sorted by game state with the finished games at the bottom\nAnd the games not started will be sorted by the time of that particular game above the finished games\nAnd the games in progress will be sorted by the time of that particular game above the finished games\n"
+      },
+      {
+        "content": "When a user views the Scoreboard and has a Favorite Team set",
+        "expected": "Then the top game on the Scoreboard will always be the Favorite Team's game no matter the state of that particular game unless it's an Exhibition game"
+      },
+      {
+        "content": "When a user views their Favorite Team's game on the Scoreboard",
+        "expected": "Then the Favorite Team will appear on the Scoreboard with a star to the right of it's name"
+      },
+      {
+        "content": "When a user views the Scoreboard with multiple Favorite Teams selected",
+        "expected": "Then all Favorite Teams that have been selected will have a star to the right of their name indicating that they are a favorite team. "
+      },
+      {
+        "content": "When a user views the Scoreboard with multiple Favorite Teams selected",
+        "expected": "Then all the Favorite teams are in the order which they were set in Settings"
+      },
+      {
+        "content": "When a user views the Scoreboard for a Spring Training game\nand there is a Split Squad game\n\naway_split_squad=\"Y\" and/or home_split_squad=\"Y\" on Scoreboard file",
+        "expected": "Then there is a SS indicator next to the team's name\nand before the Favorite Team star if the SS game involves your Favorite Team"
+      },
+      {
+        "content": "When a user lands on a date with no games being played",
+        "expected": "Then \"No Scheduled Games\" is displayed on the Scoreboard"
+      },
+      {
+        "content": "When a user taps the forward or backwards navigation buttons on the Scoreboard and it is not the first and last day of the season",
+        "expected": "Then the Scoreboard updates to the appropriate date\n"
+      },
+      {
+        "content": "When a user swipes left or right on the scoreboard",
+        "expected": "Then the scoreboard should move forward or backward one day according to the direction the user swiped"
+      },
+      {
+        "content": "When a user attempts to navigate backward to the beginning of the season\nAnd the user attempts to navigate forwards to the end of the season\n\n\"first_allowed_day\" and \"last_allowed_day\"",
+        "expected": "Then we can't navigate earlier then the beginning of the season\nAnd we can't navigate past the ending of the season"
+      },
+      {
+        "content": "When the season end date is configured to a new setting and we navigate forwards on the Scoreboard past the previously set season end date\n\n\"last_allowed_day\" in the iPad and iPhone config",
+        "expected": "Then we can navigate to that new season end date"
+      },
+      {
+        "content": "When a user backgrounds At Bat and then brings the application back to the foreground",
+        "expected": "Then the scoreboard will update immediately"
+      },
+      {
+        "content": "When a user sets the Scoreboard date to another day, background At Bat for at least an hour\nand then bring the application to the foreground\n",
+        "expected": "Then the scoreboard will be set to Today's date"
+      },
+      {
+        "content": "When a user has selected Scoreboard\nand has today's date selected\nand views each individual game on the scoreboard",
+        "expected": "Then the \"Time of Game\" (7:05 PM ET) , Inning (Top 3) , or 2nd game of doubleheader will appear\nand and if there is any delay, Cancelled or Suspended, the text will appear within the button"
+      },
+      {
+        "content": "When a user views a game cell on the Scoreboard that has gone into \"Warmup\" status",
+        "expected": "Then the start time label will now display \"Warmup\""
+      },
+      {
+        "content": "When a user views a game cell on the Scoreboard that's status changes for special circumstances",
+        "expected": "Then if there is any delay, Cancelled or Suspended, the text will appear below the Start time/Inning label"
+      },
+      {
+        "content": "When a user scrolls down the Scoreboard for that day with the game cells not expanded",
+        "expected": "Then all game cells will scroll up as one view\nAnd will go under the date and Navigation Bar"
+      },
+      {
+        "content": "When a user scrolls down the Scoreboard for that day with the game cells expanded",
+        "expected": "Then the top game cell will NOT lock to the top of the Scoreboard\nAnd the expanded game information will scroll under the date and Navigation Bar\nAnd then the next game cell will NOT lock to the top"
+      },
+      {
+        "content": "As a Lite user, when you view the day's games on the Scoreboard",
+        "expected": "Then the MLB.TV Game of the Day will be visible"
+      },
+      {
+        "content": "When a user has been viewing MLB.tv video for multiple innings, the user exits MLB.TV and returns to the Scoreboard view\n",
+        "expected": "Then the Scoreboard should automatically refresh to show current data."
+      },
+      {
+        "content": "When a user has been following on Gameday for multiple innings, the user exits Gameday and returns to the Scoreboard view",
+        "expected": "Then the Scoreboard should automatically refresh to show current data."
+      },
+      {
+        "content": "When a user navigates to a date two or more days in advance from the current date and views the game details on the Scoreboard for that day\n",
+        "expected": "Then the user will not see the Win/Loss Record for either team"
+      },
+      {
+        "content": "When a game is in Preview and the scoreboard is expanded\n\n",
+        "expected": "Then the venue information (Stadium Name, City, State) will be displayed "
+      },
+      {
+        "content": "When a game is in Preview and the scoreboard is expanded and no pitchers are announced\n\n",
+        "expected": "Then blank headshot will be displayed with a TBD"
+      },
+      {
+        "content": "When a game is in Preview and the scoreboard is expanded and one team has a pitcher announced and the other is not announced\n\n",
+        "expected": "Then one team will display the pitchers headshot, name (in team tint), Throws (LHP or RHP in gray), stats (W-L, ERA in gray) and the other team will display a blank headshot with a TBD"
+      },
+      {
+        "content": "When a game is in Preview and the scoreboard is expanded and both teams have pitchers announced\n\n",
+        "expected": "Then both teams  will display the pitchers headshot, name (in team tint), Throws (LHP or RHP), stats (W-L, ERA)"
+      },
+      {
+        "content": "When a game in one of the 30 major league ballparks and is in Preview and the scoreboard is expanded\n\n",
+        "expected": "Then the user will see a button for Ballpark in team tint and it will either\n\n1. Fast Switch to the ballpark in Ballpark App (if Ballpark App on the iPhone)\n2. Fast Switch to Ballpark page on App Store (if Ballpark App not on the iPhone)"
+      },
+      {
+        "content": "When a game is not in one of the 30 major league ballparks and is in Preview and the scoreboard is expanded\n\n(Spring Training, Australia)\n\n",
+        "expected": "Then the user will not see a button for Ballpark"
+      },
+      {
+        "content": "When a T-link is the data indicating tickets are available for the game\n\n",
+        "expected": "Then the user will see the Tickets button in team tint that will open a webview to buy tickets for the game"
+      },
+      {
+        "content": "When a game is Live and the scoreboard is expanded and there are highlights in the /media/highlights.xml\n\n",
+        "expected": "Then up to 5 highlights will be shown and then a See All button"
+      },
+      {
+        "content": "When a game is live and the score is expanded and there are no highlights in the /media/highlights.xml\n\n",
+        "expected": "Then their will be no video tray available"
+      },
+      {
+        "content": "When a highlight is shown in the iPhone Scoreboard and the cells are expanded",
+        "expected": "Then a video thumbnail will be displayed and then to a right a blurb with video duration (MM:SS) "
+      },
+      {
+        "content": "When multiple highlights are present in the /media/highlights.xml and the user swipes the highlights on the Scoreboard video tray",
+        "expected": "Then the next highlight will be brought and stick to the left margin"
+      },
+      {
+        "content": "When the entire cell (thumbnail or blurb/duration) is tapped\n\n",
+        "expected": "Then the video will play in full screen landscape mode and the video controller UI will be present with the following:\n\nTop overlay: Done , Title, AirPlay, Chromecast, Share\nBottom overlay: Play/Pause, Elapsed (M:SS), Scrubber, Remaining (M:SS), CC"
+      },
+      {
+        "content": "When a video is playing in portrait mode and the iPhone is rotated to landscape\n\n",
+        "expected": "Then the video orientation will rotated and the same video controller UI will be displayed"
+      },
+      {
+        "content": "When a video is playing in either portrait or landscape and the video controller UI is displayed\n",
+        "expected": "Then a Share button will be displayed with share options\n\nPlease test each Share option"
+      },
+      {
+        "content": "When a Review or Stacast is tagged in the /media/ xml",
+        "expected": "Then a banner will be displayed on the video thumbnail in the upper left hand corner\n\nReview: orange banner with REVIEW in white font\nStatcast: blue banner with STATCAST in white font"
+      },
+      {
+        "content": "When a game is in live and the scoreboard is expanded",
+        "expected": "Then the user will not see a Live Look-ins link and will see a link for Summmary"
+      },
+      {
+        "content": "When a game is in live in Top or Bottom of an inning and the scoreboard is expanded",
+        "expected": "Then there will be an inning indicator for the team"
+      },
+      {
+        "content": "When a game is in live in Mid or Inning of an inning and the scoreboard is expanded",
+        "expected": "Then there will be no inning indicator for the team"
+      },
+      {
+        "content": "When a game is Final and their are highlights are present",
+        "expected": "Then the Scoreboard will have a link for Videos that is tap-able"
+      },
+      {
+        "content": "When a game is in Live or Final and the Scoreboard is expanded",
+        "expected": "Then the boxscore will be displayed with the Runs (R) for both teams being in bold and the Hits (H) and Errors (E) not in bold"
+      },
+      {
+        "content": "When the game is in Final and the home team wins and the Scoreboard is expanded",
+        "expected": "Then there will be a X is in the bottom of the 9th frame"
+      },
+      {
+        "content": "When the game is the Final and the away team wins and the Scoreboard is expanded",
+        "expected": "Then there will be be a number of runs in the bottom of the 9th frame"
+      },
+      {
+        "content": "When a Freewheel pre-roll/mid-roll ad is targeted for a Lite user and Paid user and a user taps on a video on demand",
+        "expected": "Then a 30 second pre-roll video will play followed by the video that is requested for both users"
+      }
+    ]
+  },
+  {
+    "id": 48701,
+    "title": "Expanded Cells/Highlights",
+    "section_id": 6983,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1418830405,
+    "updated_by": 39,
+    "updated_on": 1498684358,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 896,
+    "display_order": 2,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps on a game cell that isn't expanded",
+        "expected": "Then ALL game cells will expand"
+      },
+      {
+        "content": "When the user taps on a game cell that is expanded",
+        "expected": "Then ALL game cells will collapse"
+      },
+      {
+        "content": "When the user views the contents of the game's expanded cell",
+        "expected": "Then the team logos are visible\nAnd the team records are visible\nAnd the game start time is visible\nAnd the venue name and cityis visible\nAnd the Preview button is visible\nAnd the Ticket button is visible (if tickets available)"
+      },
+      {
+        "content": "When the user expands the game cell of a game that has gone into Warmup state",
+        "expected": "Then we will see that the Ticket button has disappeared from the Expanded Cell"
+      },
+      {
+        "content": "When the user expands the game cell of a game that has gone into Live state",
+        "expected": "When we view the contents of the game's expanded cell\nExpected Result\n\nThen the linescore is visible\nAnd the MLB.tv button is visible\nAnd the Audio button is visble\nAnd the Gameday button is visible\nAnd the Box button is visible\nAND THE Summary button is visible"
+      },
+      {
+        "content": "When the user expands the game cell of a game that has gone into a final state",
+        "expected": "Then the linescore is visible\nAnd the Wrap button is visible\nAnd the box score button is visible\nAnd the summary button is visible\nAnd the videos button is visible"
+      },
+      {
+        "content": "When the user selects a game in In Progress state",
+        "expected": "Then the displayed game state is correct\nAnd all of the following information is displayed correctly: \nWin/Loss records, Innings, Runs per inning, Runs, Hits, Errors\n"
+      },
+      {
+        "content": "When the user selects a game in Finalized state",
+        "expected": "Then the displayed game state is correct\nAnd all of the following information is displayed correctly: \nWin/Loss records, Innings, Runs per inning, Runs, Hits, Errors\nWinning pitcher, Losing pitcher"
+      },
+      {
+        "content": "When the user selects a game in Completed Early state",
+        "expected": "Then the displayed game state is correct\nAnd all of the following information is displayed correctly: \nWin/Loss records, Innings, Runs per inning, Runs, Hits, Errors\nWinning pitcher, Losing pitcher"
+      },
+      {
+        "content": "When the user selects a game in Extra Innings",
+        "expected": "Then the displayed game state is correct\nAnd all of the following information is displayed correctly: \nWin/Loss records, Innings, Runs per inning, Runs, Hits, Errors\n(If finalized) Winning pitcher, Losing pitcher"
+      },
+      {
+        "content": "When the user swipes within the expanded linescore of an extra inning game",
+        "expected": "Then innings scroll and the user can navigate back and forth between all the innings on the linescore"
+      },
+      {
+        "content": "When a full or lite user expands a live in progress game",
+        "expected": "Then two of the most recent gameday highlights will appear\nand if there is only 1 Game Day highlight that will appear "
+      },
+      {
+        "content": "When the full or lite user views an expanded game cell for an in progress game",
+        "expected": "Then any highlight that appears will have a title located to the left of the thumbnail"
+      },
+      {
+        "content": "When the user scrolls through the highlights",
+        "expected": "Then the video thumbnails are correct & correspond to the video, \"Review\" tags appear appropriately for instant replay review highlights"
+      },
+      {
+        "content": "When a lite user taps on a video for a game in Live or Final state",
+        "expected": "Then the video will include pre-roll"
+      },
+      {
+        "content": "When a user taps on a highlight with the device in portrait orientation",
+        "expected": "Then the highlight will begin to play and the video controller will have the following:\n\nTop overlay: Done, Title, AirPlay Chromecast, Share\nBottom Overlay: Play/Pause button, Elasped (M:SS), Scrubber, Remaining (M:SS), CC"
+      },
+      {
+        "content": "When a user taps on a highlight and the highlight plays and the user rotates the device from portrait to landscape orientation",
+        "expected": "Then the highlight will begin to play and the video controller in landscape with the following video controller UI:\n\nTop overlay: Done, Title, AirPlay Chromecast, Share\nBottom Overlay: Play/Pause button, Elasped (M:SS), Scrubber, Remaining (M:SS), CC"
+      },
+      {
+        "content": "When the user is playing a highlight video and the video controller UI is present",
+        "expected": "Then the user will have a Share button present on the video controller\n\nTest each Sharing option"
+      },
+      {
+        "content": "When the user taps to play a highlight on a carrier connection",
+        "expected": "Then the highlight will load up and play successfully on the Carrier Connection"
+      },
+      {
+        "content": "When the user taps to play a highlight on a WiFi connection",
+        "expected": "Then the highlight will load up and play successfully on the WiFi Connection"
+      }
+    ]
+  },
+  {
+    "id": 48703,
+    "title": "Calendar Picker",
+    "section_id": 6983,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1418830421,
+    "updated_by": 10,
+    "updated_on": 1420581381,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 896,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the Date at the top of the scoreboard screen",
+        "expected": "Then the Calendar picker will appear\n"
+      },
+      {
+        "content": "When the user views the date cells on the calendar picker",
+        "expected": "Then the number of games listed on each date in the calendar should match the number of games scheduled for that date."
+      },
+      {
+        "content": "When the user selects a date on the calendar picker",
+        "expected": "Then the calendar picker should disappear\nAnd the user should be taken back to the scoreboard page\nAnd the date that the user is left on should be the newly selected date"
+      },
+      {
+        "content": "When the user taps the Date in the top of the scoreboard\nAnd the user taps the 'Today' button in the top of the calendar picker",
+        "expected": "Then the calendar picker should disappear\nAnd the user should be brought to the scoreboard page\nAnd the date the user is on should be 'Todays' date"
+      },
+      {
+        "content": "When the user swipes left and right on the calendar",
+        "expected": "Then the calendar should flip to show the newly selected month."
+      },
+      {
+        "content": "When the user taps left or right on the calendar",
+        "expected": "Then the calendar should adjust and show the newly selected month."
+      },
+      {
+        "content": "When the user scrolls left and right along the bottom scroll bar",
+        "expected": "Then the month selected should quickly adjust as the user slides back and forth"
+      }
+    ]
+  },
+  {
+    "id": 55910,
+    "title": "Game States",
+    "section_id": 6983,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1434491192,
+    "updated_by": 39,
+    "updated_on": 1434645316,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 896,
+    "display_order": 6,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user is on the Team Page or Scoreboard and sees a game in Delayed Start - Ceremony",
+        "expected": "Then the user will see a button for Preview"
+      },
+      {
+        "content": "When a user taps on the Preview button for a Delayed Start - Ceremony",
+        "expected": "Then the user will see Game Details page with\nBack button\nAway Team @ Home Team (with logo and records)\nGame Time\nStadium Name\nGrey bar with Ceremony\n"
+      },
+      {
+        "content": "When a user is on the Team page or Scoreboard and sees a game in a Delayed Start - <Reason> with the reason anything but Ceremony",
+        "expected": "Then the user will see a button for Preview"
+      },
+      {
+        "content": "When a user taps on the Preview button for a Delayed Start - <Reason> with the reason anything but Ceremony",
+        "expected": "Then the user will see Game Details page with\nBack button\nAway Team @ Home Team (with logo and records)\nGame Time\nStadium Name\nGrey bar with Delayed Start - <Reason>\n"
+      },
+      {
+        "content": "When a user is on the Team Page or Scoreboard and sees a game in Cancelled state",
+        "expected": "Then the user will have a button for Details"
+      },
+      {
+        "content": "When the user taps on the Details button for a Cancelled game",
+        "expected": "Then the user will see Game Details page with\nBack button\nAway Team @ Home Team (with logo and records)\nGame Time\nStadium Name\nGrey bar with Cancelled - <Reason>\n"
+      },
+      {
+        "content": "When a user is on the Team Page or Scoreboard and sees a game in Postponed state",
+        "expected": "Then the user will have a button for Details"
+      },
+      {
+        "content": "When the user taps on the Details button for a Postponed game",
+        "expected": "Then the user will see Game Details page with\nBack button\nAway Team @ Home Team (with logo and records)\nGame Time\nStadium Name\nGrey bar with Postponed - <Reason>\n"
+      }
+    ]
+  },
+  {
+    "id": 58729,
+    "title": "No-Hitter/Perfect Game indicator",
+    "section_id": 6983,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1438351681,
+    "updated_by": 10,
+    "updated_on": 1439219461,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 896,
+    "display_order": 7,
+    "custom_preconds": "UI/UX Rules: https://wiki.mlbam.com/pages/viewpage.action?pageId=55312418\r\n\r\nScreen: https://jira.mlbam.com/browse/IAB-10511\r\n\r\nhttp://gd.qa.mlb.com/components/game/mlb/year_2015/month_07/day_27/master_scoreboard.xml\r\nis_perfect_game=\"Y\" is_no_hitter=\"N\"",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a game is in progress after the 6th inning\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is on Scoreboard with cells collapsed\n\n",
+        "expected": "Then the Perfect Game indicator on the Scoreboard underneath the inning"
+      },
+      {
+        "content": "When a game is in progress after the 6th inning\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is on Scoreboard with cells expanded",
+        "expected": "Then the Perfect Game indicator on the Scoreboard underneath the inning on the top portion of the two rows"
+      },
+      {
+        "content": "When a game is in a Suspended state after the 6th inning\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is on Scoreboard with cells collapsed",
+        "expected": "Then the Perfect Game indicator on the Scoreboard underneath the inning"
+      },
+      {
+        "content": "When a game is in a Postponed state after the 6th inning\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is on Scoreboard with cells collapsed",
+        "expected": "Then the Perfect Game indicator on the Scoreboard underneath the inning/game state"
+      },
+      {
+        "content": "When a game is final\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is on Scoreboard with cells collapsed",
+        "expected": "Then the Perfect Game indicator on the Scoreboard underneath the inning/game state"
+      },
+      {
+        "content": "When a game is in progress before the 6th inning\nand progresses to the 6th inning\nand the flag on master_scoreboard changes to is_perfect_game=\"Y\" is_no_hitter=\"N\"",
+        "expected": "Then the Perfect Game indicator on the Scoreboard will appear once the game is in the 6th"
+      },
+      {
+        "content": "When a game is in progress before the 6th inning\nand progresses to the 6th inning\nand the flag on master_scoreboard changes to is_perfect_game=\"N\" is_no_hitter=\"Y\"",
+        "expected": "Then the No-Hitter indicator on the Scoreboard will appear once the game is in the 6th"
+      },
+      {
+        "content": "When a game is in progress \nand the flag on master_scoreboard changes from is_perfect_game=\"Y\" is_no_hitter=\"N\" to is_perfect_game=\"N\" is_no_hitter=\"Y\"\nand the user is on Scoreboard",
+        "expected": "Then the Perfect Game indicator changes to a No-Hitter indicator on the Scoreboard underneath the inning when the Scoreboard refreshes"
+      },
+      {
+        "content": "When a game is in progress\nand the flag on master_scoreboard changes from is_perfect_game=\"N\" is_no_hitter=\"Y\" to is_perfect_game=\"N\" is_no_hitter=\"N\"\nand the user is on Scoreboard",
+        "expected": "Then the No-Hitter indicator is removed from the Scoreboard when the Scoreboard refreshes"
+      },
+      {
+        "content": "When a game is in progress after the 6th inning\nand the flag on master_scoreboard is set for a No-Hitter\nand the user is on Scoreboard with cells collapsed\n",
+        "expected": "Then the No-Hitter indicator on the Scoreboard underneath the inning"
+      },
+      {
+        "content": "When a game is in progress after the 6th inning\nand the flag on master_scoreboard is set for a No-Hitter\nand the user is on Scoreboard with cells expanded",
+        "expected": "Then the No-Hitter indicator on the Scoreboard underneath the inning on the top portion of the two rows"
+      },
+      {
+        "content": "When a game is in a Suspended state after the 6th inning\nand the flag on master_scoreboard is set for a No-Hitter\nand the user is on Scoreboard with cells collapsed",
+        "expected": "Then the No Hitter indicator on the Scoreboard underneath the inning/game state"
+      },
+      {
+        "content": "When a game is in a Postponed state after the 6th inning\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is on Scoreboard with cells collapsed",
+        "expected": "Then the No-Hitter indicator on the Scoreboard underneath the inning/game state"
+      },
+      {
+        "content": "When a game is final\nand the flag on master_scoreboard is set for a No-Hitter\nand the user is on Scoreboard with cells collapsed",
+        "expected": "Then the No-Hitter indicator on the Scoreboard underneath the inning"
+      },
+      {
+        "content": "When a game is in progress after the 6th inning\nand the flag on master_scoreboard is set for a Perfect Game (or No-Hitter)\nand the user is on Scoreboard with cells collapsed\nand the Hide Scores is On",
+        "expected": "Then there will be no scores or no Perfect Game indicator (or No-Hitter indicator) on the Scoreboard "
+      },
+      {
+        "content": "When the user is on Scoreboard with cells collapsed with the Perfect Game Indicator (or No-Hitter)\nand Shake to Toggle is On\nand the user shakes the device to turn on Hide Scores ",
+        "expected": "Then the scores and Perfect Game indicator on the Scoreboard are hidden"
+      },
+      {
+        "content": "When the user taps on the Perfect Game or No-hitter indicator",
+        "expected": "Then nothing will happen and the indicator is for informational/visual purposes only"
+      },
+      {
+        "content": "When a device is set to Spanish\nand the flag on master_scoreboard is set for a Perfect Game (or No-Hitter)\nand the indicator is on the Scoreboard",
+        "expected": "Then the text in the indicator text will display in Spanish\n\nNo-Hitter - Sin hit\nPerfect Game - Juego perfecto"
+      }
+    ]
+  },
+  {
+    "id": 195707,
+    "title": "Scoreboard Override",
+    "section_id": 6983,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469725356,
+    "updated_by": 39,
+    "updated_on": 1469725797,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 896,
+    "display_order": 8,
+    "custom_preconds": "Given a Dev updates the scbdOverride_YYYYMMDD (\"scbdOverride_20160711\") value in the iphoneEnvironmentStrings.json with a URL\r\n\r\nProd - https://atbatappconfig.mlb.com/ios/9.4.0/iphoneEnvironmentStrings.json\r\nQA - http://qa-atbatappconfig.mlb.com/ios/9.4.0/iphoneEnvironmentStrings.json",
+    "custom_steps": "When a user taps on Scoreboard\r\nand navigates to the date\r\n",
+    "custom_expected": "Then the user will see a webview specified in the URL\r\nand the user is able to scroll to the previous/next day on the Scoreboard",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 48704,
+    "title": "Scoreboard General",
+    "section_id": 6984,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1418852074,
+    "updated_by": 39,
+    "updated_on": 1489438452,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 896,
+    "display_order": 1,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "If the season isn't over and the time is before 10 AM EST, when the time hits 10 AM EST",
+        "expected": "Then the Scoreboard will flip to the next day"
+      },
+      {
+        "content": "When we set the devices timezone to Eastern (ET)\nAnd we set the devices timezone to Central (CT)\nAnd we set the devices timezone to Mountain (MT)\nAnd we set the devices timezone to Pacific (PT)\n",
+        "expected": "Then the Scoreboard will display the games in the appropriate time from the appropriate time zone"
+      },
+      {
+        "content": "When the user views the teams on the Scoreboard",
+        "expected": "Then all team names, team records and logos appear correctly & up to date"
+      },
+      {
+        "content": "When user views the games on the Scoreboard",
+        "expected": "Then you will see:\n- the home team listed underneath the away team\n- when you tap the game, the away team is listed on the left and the home team to the right"
+      },
+      {
+        "content": "When the user views different game cells on the Scoreboard",
+        "expected": "Then all text and game state formatting will be clear & readable"
+      },
+      {
+        "content": "When the user views the games on the Scoreboard",
+        "expected": "Then the games in question will update their state, score and scheduling automatically. The default refresh rate is about 15 seconds, which is now fixed in app and not configurable."
+      },
+      {
+        "content": "When the user views the game cells for all Live games on the Scoreboard",
+        "expected": "Then the games displayed are showing the correct inning\nAnd the games displayed are showing the correct score\nAnd the games displayed are showing the correct base runner indicator"
+      },
+      {
+        "content": "When the user views the order of the games on the Scoreboard and there are some regular season games, spring training, exhibition games displayed and the user doesn't have a Favorite Team set\n\n",
+        "expected": "Then the games will be sorted by Regular Season first followed by Spring Training & Exhibition based games"
+      },
+      {
+        "content": "When the user views the order of games on the Scoreboard and there are some completed, some in progress, some not started and the user doesn't have a Favorite Team set",
+        "expected": "Then the games will be sorted by game state with the finished games at the bottom\nAnd the games not started will be sorted by the time of that particular game above the finished games\nAnd the games in progress will be sorted by the time of that particular game above the finished games\n"
+      },
+      {
+        "content": "When the user views the Scoreboard and has a Favorite Team set",
+        "expected": "Then the top game on the Scoreboard will always be the Favorite Team's game no matter the state of that particular game unless it's an Exhibition game"
+      },
+      {
+        "content": "When the user views their Favorite Team's game on the Scoreboard",
+        "expected": "Then the Favorite Team will appear on the Scoreboard with a star to the right of it's name"
+      },
+      {
+        "content": "When the user views the Scoreboard with multiple Favorite Teams selected",
+        "expected": "Then all Favorite Teams that have been selected will have a star to the right of their name indicating that they are a favorite team. "
+      },
+      {
+        "content": "When the user views the Scoreboard with multiple Favorite Teams selected",
+        "expected": "Then all the Favorite teams are in the order which they were set in Settings"
+      },
+      {
+        "content": "When a user views the Scoreboard for a Spring Training game\nand there is a Split Squad game\n\naway_split_squad=\"Y\" and/or home_split_squad=\"Y\" on Scoreboard file",
+        "expected": "Then there is an SS indicator on the Scoreboard for that team"
+      },
+      {
+        "content": "When the user lands on a date with no games being played",
+        "expected": "Then \"No Scheduled Games\" is displayed on the Scoreboard"
+      },
+      {
+        "content": "When the user lands on a date with more than 15 games scheduled",
+        "expected": "Then the maximum of 15 games will be displayed on the Scoreboard but the additional games will appear at the bottom when scrolled down"
+      },
+      {
+        "content": "When the user taps the forward or backwards navigation buttons on the Scoreboard and it is not the first and last day of the season",
+        "expected": "Then the Scoreboard updates to the appropriate date\n"
+      },
+      {
+        "content": "When the user swipes left or right on the scoreboard",
+        "expected": "Then the scoreboard should move forward or backward one day according to the direction the user swiped"
+      },
+      {
+        "content": "When the user attempts to navigate backward to the beginning of the season\nAnd the user attempts to navigate forwards to the end of the season",
+        "expected": "Then we can't navigate earlier then the beginning of the season\nAnd we can't navigate past the ending of the season"
+      },
+      {
+        "content": "When the season end date is configured to a new setting and we navigate forwards on the Scoreboard past the previously set season end date",
+        "expected": "Then we can navigate to that new season end date"
+      },
+      {
+        "content": "When the user backgrounds At Bat and then brings the application back to the foreground",
+        "expected": "Then the scoreboard will update immediately"
+      },
+      {
+        "content": "When the user sets the Scoreboard date to another day, background At Bat for at least an hour\nand then bring the application to the foreground\n",
+        "expected": "Then the scoreboard will be set to Today's date"
+      },
+      {
+        "content": "When the user views each individual game on the scoreboard",
+        "expected": "Then the \"Time of Game\" (7:05 PM ET) , Inning (Top 3) , or 2nd game of doubleheader will appear\n"
+      },
+      {
+        "content": "When the user taps a game tile for a game that has not started",
+        "expected": "Then the game time will be visible\nAnd the projected starters will be visible"
+      },
+      {
+        "content": "When the user views a game cell on the Scoreboard that has gone into \"Warmup\" status",
+        "expected": "Then the start time label will now display \"Warmup\""
+      },
+      {
+        "content": "When the user views a game cell on the Scoreboard that's status changes for special circumstances",
+        "expected": "Then if there is any delay, Cancelled or Suspended, the text will appear below the Start time/Inning label"
+      },
+      {
+        "content": "When the user views the game tile for a game in progress",
+        "expected": "Then the linescore will show the correct & up to date information for that particular game"
+      },
+      {
+        "content": "As a Lite user, when you view the day's games on the Scoreboard",
+        "expected": "Then the MLB.TV Game of the Day will be visible"
+      },
+      {
+        "content": "When the user has been viewing MLB.tv video for multiple innings, the user exits MLB.TV and returns to the Scoreboard view\n",
+        "expected": "Then the Scoreboard should automatically refresh to show current data."
+      },
+      {
+        "content": "When the user has been following on Gameday for multiple innings, the user exits Gameday and returns to the Scoreboard view",
+        "expected": "Then the Scoreboard should automatically refresh to show current data."
+      },
+      {
+        "content": "When the user navigates to a date two or more days in advance from the current date and views the game details on the Scoreboard for that day\n",
+        "expected": "Then the user will not see the Win/Loss Record for either team"
+      },
+      {
+        "content": "When a Freewheel Pre-roll ad is targeted for a Lite user and Paid user and a user taps on a video on demand",
+        "expected": "Then a 30 second pre-roll video will play followed by the video that is requested for both users"
+      }
+    ]
+  },
+  {
+    "id": 48706,
+    "title": "Calendar Picker",
+    "section_id": 6984,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 43,
+    "created_on": 1418852091,
+    "updated_by": 10,
+    "updated_on": 1420581422,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 896,
+    "display_order": 4,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the Date at the top of the scoreboard screen",
+        "expected": "Then the Calendar picker will appear\n"
+      },
+      {
+        "content": "When the user views the date cells on the calendar picker",
+        "expected": "Then the number of games listed on each date in the calendar should match the number of games scheduled for that date."
+      },
+      {
+        "content": "When the user selects a date on the calendar picker",
+        "expected": "Then the calendar picker should disappear\nAnd the user should be taken back to the scoreboard page\nAnd the date that the user is left on should be the newly selected date"
+      },
+      {
+        "content": "When the user taps the Date in the top of the scoreboard\nAnd the user taps the 'Today' button in the top of the calendar picker",
+        "expected": "Then the calendar picker should disappear\nAnd the user should be brought to the scoreboard page\nAnd the date the user is on should be 'Todays' date"
+      },
+      {
+        "content": "When the user swipes left and right on the calendar",
+        "expected": "Then the calendar should flip to show the newly selected month."
+      },
+      {
+        "content": "When the user taps left or right on the calendar",
+        "expected": "Then the calendar should adjust and show the newly selected month."
+      },
+      {
+        "content": "When the user scrolls left and right along the bottom scroll bar",
+        "expected": "Then the month selected should quickly adjust as the user slides back and forth"
+      }
+    ]
+  },
+  {
+    "id": 58730,
+    "title": "No-Hitter/Perfect Game indicator",
+    "section_id": 6984,
+    "template_id": 1,
+    "type_id": 7,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1438351699,
+    "updated_by": 10,
+    "updated_on": 1439219550,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 896,
+    "display_order": 6,
+    "custom_preconds": "UI/UX Rules: https://wiki.mlbam.com/pages/viewpage.action?pageId=55312418\r\n\r\nScreen: https://jira.mlbam.com/browse/IAB-10512\r\n\r\nhttp://gd.qa.mlb.com/components/game/mlb/year_2015/month_07/day_27/master_scoreboard.xml\r\n\r\nis_perfect_game=\"Y\" is_no_hitter=\"N\" (the flag is either Y or N)",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a game is in progress after the 6th inning\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is on Scoreboard",
+        "expected": "Then the Perfect Game indicator is shown in the specific game cell to the right of the base indicator "
+      },
+      {
+        "content": "When a game is in progress after the 6th inning\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is on the Scoreboard\nand taps on game cell with the Perfect Game",
+        "expected": "Then the Perfect Game indicator is shown at the bottom of the Gameday box underneath a line"
+      },
+      {
+        "content": "When a game is in a Suspended state after the 6th inning\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is on Scoreboard",
+        "expected": "Then the Perfect Game indicator is shown in the specific game cell "
+      },
+      {
+        "content": "When a game is in Suspended state after the 6th inning\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is on the Scoreboard\nand taps on game cell with the Perfect Game",
+        "expected": "Then the Perfect Game indicator is shown at the bottom of the Gameday box underneath a line "
+      },
+      {
+        "content": "When a game is in a Postponed state\nand the flag on master_scoreboard is set for a Perfect Game\nand the user is on Scoreboard ",
+        "expected": "Then the Perfect Game indicator is shown in the specific game cell "
+      },
+      {
+        "content": "When a game is in progress before the 6th inning\nand progresses to the 6th inning\nand the flag on master_scoreboard changes from is_perfect_game=\"Y\" is_no_hitter=\"N\"",
+        "expected": "Then the Perfect Game indicator on the Scoreboard will appear once the game is in the 6th"
+      },
+      {
+        "content": "When a game is in progress before the 6th inning\nand progresses to the 6th inning\nand the flag on master_scoreboard changes from is_perfect_game=\"N\" is_no_hitter=\"Y\"",
+        "expected": "Then the No-Hitter indicator on the Scoreboard will appear once the game is in the 6th"
+      },
+      {
+        "content": "When a game is in progress\nand the flag on master_scoreboard changes from is_perfect_game=\"Y\" is_no_hitter=\"N\" to is_perfect_game=\"N\" is_no_hitter=\"Y\"\nand the user is on Scoreboard",
+        "expected": "Then the Perfect Game indicator changes to a No-Hitter indicator on the Scoreboard when the Scoreboard refreshes"
+      },
+      {
+        "content": "When a game is in progress\nand the flag on master_scoreboard changes from is_perfect_game=\"N\" is_no_hitter=\"Y\" to is_perfect_game=\"N\" is_no_hitter=\"N\"\nand the user is on Scoreboard",
+        "expected": "Then the No-Hitter indicator is removed from the Scoreboard when the Scoreboard refreshes"
+      },
+      {
+        "content": "When a game is Final \nand the flag on master_scoreboard is set for a Perfect Game\nand the user is on Scoreboard",
+        "expected": "Then the Perfect Game indicator is shown in the specific game cell "
+      },
+      {
+        "content": "When a game is Final \nand the flag on master_scoreboard is set for a Perfect Game\nand the user is on the Scoreboard\nand taps on game cell with the Perfect Game",
+        "expected": "Then the Perfect Game indicator is shown at the bottom of the Gameday box underneath a line operating the Winning and Losing pitchers (and Save if applicable) and HR (if applicable)"
+      },
+      {
+        "content": "When a game is in progress after the 6th inning\nand the flag on master_scoreboard is set for a No-Hitter\nand the user is on Scoreboard",
+        "expected": "Then the No-Hitter indicator is shown in the specific game cell to the right of the base indicator "
+      },
+      {
+        "content": "When a game is in progress after the 6th inning\nand the flag on master_scoreboard is set for a No-Hitter\nand the user is on the Scoreboard\nand taps on game cell with the Perfect Game",
+        "expected": "Then the No-Hitter indicator is shown at the bottom of the Gameday box underneath a line"
+      },
+      {
+        "content": "When a game is in a suspended state after the 6th inning\nand the flag on master_scoreboard is set for a No-Hitter\nand the user is on Scoreboard",
+        "expected": "Then the No-Hitter indicator is shown in the specific game cell to the right of the base indicator "
+      },
+      {
+        "content": "When a game is in suspended state after the 6th inning\nand the flag on master_scoreboard is set for a No-Hitter\nand the user is on the Scoreboard\nand taps on game cell with the Perfect Game",
+        "expected": "Then the No-Hitter indicator is shown at the bottom of the Gameday box underneath a line and you can still see the game state (Suspended - <Reason>)"
+      },
+      {
+        "content": "When a game is in a Postponed state\nand the flag on master_scoreboard is set for a No-Hitter\nand the user is on Scoreboard ",
+        "expected": "Then the No-Hitter indicator is shown in the specific game cell "
+      },
+      {
+        "content": "When a game is Final \nand the flag on master_scoreboard is set for a No-Hitter\nand the user is on Scoreboard",
+        "expected": "Then the No-Hitter indicator is shown in the specific game cell "
+      },
+      {
+        "content": "When a game is Final \nand the flag on master_scoreboard is set for a No-Hitter\nand the user is on the Scoreboard\nand taps on game cell with the Perfect Game",
+        "expected": "Then the No-Hitter indicator is shown at the bottom of the Gameday box underneath a line operating the Winning and Losing pitchers (and Save if applicable) and HR (if applicable)"
+      },
+      {
+        "content": "When a game is in progress after the 6th inning\nand the flag on master_scoreboard is set for a Perfect Game (or No-Hitter)\nand the user is on Scoreboard with cells collapsed\nand the Hide Scores is On",
+        "expected": "Then the scores and game data and Perfect Game (or No-Hitter) indicator was hidden"
+      },
+      {
+        "content": "When a game is in a suspended state after the 6th inning\nand the flag on master_scoreboard is set for a Perfect Game (or No-Hitter)\nand the user is on Scoreboard with cells collapsed\nand the Hide Scores is On",
+        "expected": "Then the scores and game data and Perfect Game (or No-Hitter) indicator was hidden"
+      },
+      {
+        "content": "When a game is Final\nand the flag on master_scoreboard is set for a Perfect Game (or No-Hitter)\nand the user is on Scoreboard with cells collapsed\nand the Hide Scores is On",
+        "expected": "Then the scores and game data and Perfect Game (or No-Hitter) indicator was hidden"
+      },
+      {
+        "content": "When the user is on Scoreboard  with the Perfect Game Indicator (or No-Hitter)\nand Shake to Toggle is On\nand the user shakes the device to turn on Hide Scores",
+        "expected": "Then the scores and Perfect Game (or No-Hitter) indicator on the Scoreboard are hidden"
+      },
+      {
+        "content": "When the user taps on the Perfect Game or No-hitter indicator",
+        "expected": "Then nothing will happen and the indicator is for informational/visual purposes only"
+      },
+      {
+        "content": "When a device is set to Spanish\nand the flag on master_scoreboard is set for a Perfect Game (or No-Hitter)\nand the indicator is on the Scoreboard",
+        "expected": "Then the text in the indicator text will display in Spanish\n\nNo-Hitter - Sin hit\nPerfect Game - Juego perfecto"
+      }
+    ]
+  },
+  {
+    "id": 195708,
+    "title": "Scoreboard Override",
+    "section_id": 6984,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1469725362,
+    "updated_by": 39,
+    "updated_on": 1469725853,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 896,
+    "display_order": 7,
+    "custom_preconds": "Given a Dev updates the scbdOverride_YYYYMMDD (\"scbdOverride_20160711\") value in the iphoneEnvironmentStrings.json with a URL\r\n\r\nProd - https://atbatappconfig.mlb.com/ios/9.4.0/ipadEnvironmentStrings.json\r\nQA - http://qa-atbatappconfig.mlb.com/ios/9.4.0/ipadEnvironmentStrings.json",
+    "custom_steps": "When a user taps on Scoreboard\r\nand navigates to the date",
+    "custom_expected": "Then the user will see a webview specified in the URL\r\nand the user is able to scroll to the previous/next day on the Scoreboard",
+    "custom_steps_separated": null
+  }
+]

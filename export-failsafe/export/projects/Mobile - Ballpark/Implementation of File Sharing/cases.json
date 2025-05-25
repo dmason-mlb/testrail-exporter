@@ -1,0 +1,32 @@
+[
+  {
+    "id": 31374580,
+    "title": "Implementation of File Sharing",
+    "section_id": 1743350,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 282,
+    "created_on": 1693310307,
+    "updated_by": 282,
+    "updated_on": 1696000426,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 631896,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": false,
+    "custom_ios_automation": false,
+    "custom_preconds": "GIVEN User has successfully authenticated into Ballpark (BPapp: 12.9.0 ANDROID or greater, iOS BPApp 12.3.1 or greater)\r\nAND the user has tickets already added to the BP account\r\n\r\n\r\n",
+    "custom_steps": "Given I am on the Marlins Team \r\n[STAGING ENVIRONMENT -. Marlins -> STAGING ONLY -> 15SOF -> Verify Mobile number (specific tester only) -> Attended Tab",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User tap on Share icon \n",
+        "expected": "THEN User should display with Sharesheet \n\n![](index.php?/attachments/get/13822894)\n\n\n\n\n\n"
+      }
+    ]
+  }
+]

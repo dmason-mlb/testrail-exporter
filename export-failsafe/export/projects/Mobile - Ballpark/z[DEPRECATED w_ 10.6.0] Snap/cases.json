@@ -1,0 +1,128 @@
+[
+  {
+    "id": 7713723,
+    "title": "Basic Snap Functionality",
+    "section_id": 400931,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 213,
+    "created_on": 1597766853,
+    "updated_by": 288,
+    "updated_on": 1633628978,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 86212,
+    "display_order": 1,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "User has Ballpark App installed",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN User taps onMore Tab \nAND User taps on Photo Creator (Face Scan Used) menu option",
+        "expected": "If first time for the user there will be camera permissions. \nOtherwise the camera is shown with Snap Lenses. "
+      },
+      {
+        "content": "WHEN User enables all permissions",
+        "expected": "The camera is shown with Snap Lenses. "
+      },
+      {
+        "content": "WHEN User clicks on a lens",
+        "expected": "THEN Lens affect is displayed on the screen"
+      },
+      {
+        "content": "WHEN User clicks on the close button",
+        "expected": "THEN User is returned to settings screen and tab navigation bar is restored"
+      }
+    ]
+  },
+  {
+    "id": 8820200,
+    "title": "Snap Photo Saved",
+    "section_id": 400931,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 217,
+    "created_on": 1606935665,
+    "updated_by": 288,
+    "updated_on": 1633629035,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 86212,
+    "display_order": 2,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User taps on More Tab\r\nAND User taps on Photo Creator (Face Scan Used) menu option\r\nAND a Snap Lens is available",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Press the lens button.",
+        "expected": "Photo is taken and shown to the user."
+      },
+      {
+        "content": "Press the save button.",
+        "expected": "The image is saved to the photo library and an alert is shown to the user with success. "
+      },
+      {
+        "content": "Press the share button.",
+        "expected": "The share sheet will appear with places to share the image. \n"
+      },
+      {
+        "content": "Share the photo with one of the share sheet apps.",
+        "expected": "Verify the photo was shared. "
+      }
+    ]
+  },
+  {
+    "id": 8820201,
+    "title": "Snap Video Saved",
+    "section_id": 400931,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 217,
+    "created_on": 1606935914,
+    "updated_by": 288,
+    "updated_on": 1633629063,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 86212,
+    "display_order": 3,
+    "custom_automation_id": null,
+    "custom_android_automation": null,
+    "custom_ios_automation": null,
+    "custom_preconds": "GIVEN User taps on More Tab\r\nAND User taps on Photo Creator (Face Scan Used) menu option\r\nAND a Snap Lens is available",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Press and hold the lens button.",
+        "expected": "The round button will have a border line appear as it goes around. \nWhile this is happening a video is being recored of the user. "
+      },
+      {
+        "content": "Press the save button.",
+        "expected": "The video is saved to the photo library and an alert is shown to the user with success.\n\n"
+      },
+      {
+        "content": "Press the share button.",
+        "expected": "The share sheet will appear with places to share the video."
+      },
+      {
+        "content": "Share the photo with one of the share sheet apps.",
+        "expected": "Verify the video was shared."
+      }
+    ]
+  }
+]
