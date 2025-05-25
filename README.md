@@ -20,19 +20,19 @@ Download the latest release and drag TestRail Exporter to your Applications fold
 ## Features
 
 - Connect to TestRail instance with URL, username, and API key
-- Browse projects, test suites, and sections
-- Select test suites and sections to export
-- Select specific test case fields to include in CSV exports
-- Multi-project selection for cross-project exports
-- Export test cases to JSON, XML, or Xray-compatible CSV format
+- Browse projects, test suites, and sections (single-project mode)
+- Select entire projects for export (multi-project mode)
+- Select specific test case fields to include in Xray CSV exports (column selection dialog)
+- Export test cases to JSON, XML, or Xray-compatible CSV format (direct CSV export, no XML intermediate required)
+- Multi-project export: export each selected project to its own file(s)
 - Configurable export directory
-- Persistent settings between sessions
-- Progress tracking during API operations with percentage completion
-- Status messages showing current operation (e.g., "Exporting Suite Name", "Converting to CSV")
+- Persistent settings between sessions (window size, last project, export directory, credentials)
+- Progress tracking during API operations with percentage completion and status messages
 - Auto-loading of projects on startup when settings are configured
 - Data caching for improved performance
 - Toggle to control section loading for better performance
-- Export logs saved in dedicated logs directory
+- Export logs saved in a dedicated logs directory within your export directory
+- Custom checkable tree view for intuitive selection of suites, sections, or projects
 
 ## Environment Setup
 
@@ -101,51 +101,35 @@ Use the "Test Connection" button to verify your credentials before loading proje
 
 ## Usage
 
-1. Run the application using one of these methods:
+1. Run the application:
    ```bash
-   # Method 1: Run directly
    python testrail_exporter/main.py
-   
-   # Method 2: If installed with pip install -e .
+   # or, if installed:
    testrail-exporter
    ```
 
 2. Configure TestRail connection:
-   - Enter your TestRail URL (default: https://testrail.testeng.mlbinfra.net)
-   - Enter your TestRail username
-   - Enter your TestRail API key
-   - Configure export directory
+   - Enter your TestRail URL, username, and API key
+   - Set your export directory
 
 3. Click "Test Connection" to verify your credentials
 
 4. Click "Load Projects" to load projects from TestRail
 
-5. Select one or more projects from the dropdown (multi-select supported)
-   ![Multi-project Selection](./docs/images/testrail-exporter-suites-multi-project-selector.png)
+5. **Single-project mode:**
+   - Select a project from the dropdown
+   - Browse and select suites and/or sections to export
 
-6. Browse and select test suites and sections:
-   - Use the tree view to navigate the project structure
-   - Toggle "Load Sections?" to control whether sections are loaded (improves performance for large projects)
-   - Check the checkboxes next to suites or sections to select them
-   - Parent checkboxes show a partial fill when some children are selected
-   - Use "Expand All" and "Collapse All" to navigate more easily (available when sections are loaded)
-   - Use "Check All" and "Uncheck All" for quick selection
-   - Progress bar shows percentage completion during API operations
-   - Status messages indicate current operation (e.g., "Loading Applause Regression Suite")
+6. **Multi-project mode:**
+   - Toggle "Multi-Project Selection" ON
+   - Select one or more projects from the list (suite/section selection is not available in this mode)
 
 7. Choose export format:
-   - Click "Export JSON" to export in JSON format
-   - Click "Export XML" to export in TestRail-compatible XML format
-   - Click "Export to Xray CSV" to export both XML and Xray-compatible CSV files
-   - (Optional) Click "Select CSV Fields" to choose which test case fields will be included in the generated CSV
-     ![CSV Field Selection Dialog](./docs/images/testrail-exporter-suites-csv-fields.png)
-   - Files are automatically saved with timestamps to prevent conflicts
-   - Export logs are saved in a "logs" subdirectory within your export directory
-   - Wait for the export process to complete (progress bar shows percentage completion)
-   - Status messages show current operation during export
-   - A success message will appear when the export is finished showing "100%" and "Tasks Complete"
+   - Click "Export to XML" for TestRail-compatible XML
+   - Click "Export to Xray CSV" for Xray-compatible CSV (a dialog will let you select columns)
+   - Click "Export Both" to export both formats
 
-![TestRail Exporter - Loading Progress](./docs/images/testrail-exporter-load-project-progress.png)
+8. Exported files are timestamped and saved in your export directory. Detailed logs are saved in a `logs` subdirectory.
 
 ## Export Formats
 
@@ -159,41 +143,12 @@ The exported JSON file contains:
   - Human-readable names instead of IDs (suite_name, section_name, priority_name, type_name)
   - Custom fields (prefixed with `custom_`)
 
-Example:
-```json
-{
-  "project": {
-    "id": 123,
-    "name": "Example Project"
-  },
-  "cases": [
-    {
-      "id": 456,
-      "title": "Test Case Title",
-      "suite_name": "Test Suite Name",
-      "section_name": "Test Section Name",
-      "priority_name": "High",
-      "type_name": "Functional",
-      "custom_steps": "Step 1...",
-      "custom_expected": "Expected result..."
-    }
-  ]
-}
-```
-
 ### Xray CSV Format
 
-The "Export to Xray CSV" function creates two files:
-
-1. **XML file** (for reference): TestRail-compatible XML structure
-2. **CSV file** (for Xray import): Xray-compatible CSV format with the following structure:
-   - Issue ID, Issue Key, Test Type, Test Summary, Test Priority, Action, Data, Result, Test Repo, Labels
-   - Handles both single suite and multiple suite exports
-   - Converts TestRail test cases to Xray-compatible format
-   - Processes test steps and expected results appropriately
-   - Uses hierarchical test repository names for organization
-
-The CSV file is specifically formatted for importing into Atlassian Xray and includes:
+- Direct export to Xray-compatible CSV (no XML intermediate required)
+- Column selection dialog allows you to choose which fields to include (some columns are mandatory)
+- Each project is exported to its own CSV file in multi-project mode
+- Handles test steps, expected results, and section hierarchy for Xray import
 - Proper priority mapping (Critical=1, High=2, Medium=3, Low=4)
 - Test type conversion (Manual, Exploratory, Automated→Generic)
 - Section hierarchy reflected in Test Repo field
@@ -208,60 +163,18 @@ The exported XML file contains TestRail-compatible XML structure:
 - Compatible with TestRail's XML import format
 - Human-readable names for types, priorities, and other fields
 
-Example structure:
-```xml
-<suite>
-  <id>S123</id>
-  <name>Test Suite</name>
-  <description/>
-  <sections>
-    <section>
-      <name>Test Cases</name>
-      <description/>
-      <cases>
-        <case>
-          <id>C456</id>
-          <title>Test Case Title</title>
-          <template>Test Case</template>
-          <type>Functional</type>
-          <priority>High</priority>
-          <estimate/>
-          <references/>
-          <custom>
-            <preconds>Preconditions...</preconds>
-            <steps>Test steps...</steps>
-            <expected>Expected result...</expected>
-          </custom>
-        </case>
-      </cases>
-    </section>
-  </sections>
-</suite>
-```
-
 ## Troubleshooting
 
-### Common Issues
-
-1. **Connection Failures**:
-   - Verify your TestRail URL is correct and accessible
-   - Check your username and API key
-   - Ensure your TestRail user has API access permissions
-
-2. **No Projects Shown**:
-   - Verify your user has access to projects in TestRail
-
-3. **Export Errors**:
-   - Check your network connection
-   - Verify you have write permissions to the export directory
-
-4. **Installation Issues**:
-   - If you encounter module not found errors, make sure the package name in imports uses underscores (`testrail_exporter`) not hyphens
-   - If you encounter Tkinter/Tcl/Tk errors on macOS, refer to [INSTALL_MACOS.md](INSTALL_MACOS.md)
+- If you encounter errors during export, check the log files in the `logs` subdirectory of your export directory for detailed information.
+- Common issues:
+  - **Connection Failures:** Verify your TestRail URL, username, and API key. Ensure your user has API access permissions.
+  - **No Projects Shown:** Verify your user has access to projects in TestRail.
+  - **Export Errors:** Check your network connection and write permissions to the export directory.
+  - **Installation Issues:** If you encounter module not found errors, ensure the package name in imports uses underscores (`testrail_exporter`) not hyphens. For Tkinter/Tcl/Tk errors on macOS, refer to [INSTALL_MACOS.md](INSTALL_MACOS.md).
 
 ### Logging
 
-- Export operations create detailed log files in a "logs" subdirectory within your export directory
+- Export operations create detailed log files in a `logs` subdirectory within your export directory
 - Log files are timestamped for easy identification
 - Logs include all API operations, errors, and export progress
 - Console output shows real-time status during operations
@@ -271,7 +184,7 @@ Example structure:
 The project is structured as follows:
 
 - `api/`: TestRail API client
-- `gui/`: User interface components
+- `gui/`: User interface components (Tkinter/CustomTkinter, custom widgets)
 - `models/`: Data models for TestRail entities
 - `utils/`: Utility functions including export functionality
 
