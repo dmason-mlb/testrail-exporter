@@ -1,0 +1,254 @@
+[
+  {
+    "id": 8620,
+    "suite_id": 843,
+    "name": "Start-Up",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 8646,
+    "suite_id": 843,
+    "name": "HTML5 Device Peripherals",
+    "description": null,
+    "parent_id": 8620,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 8647,
+    "suite_id": 843,
+    "name": "LG TV Device - Verifications",
+    "description": null,
+    "parent_id": 8646,
+    "display_order": 3,
+    "depth": 2
+  },
+  {
+    "id": 8648,
+    "suite_id": 843,
+    "name": "Sony Bravia TV - Verifications",
+    "description": null,
+    "parent_id": 8646,
+    "display_order": 4,
+    "depth": 2
+  },
+  {
+    "id": 8649,
+    "suite_id": 843,
+    "name": "LG Blu-Ray Player - Verifications",
+    "description": null,
+    "parent_id": 8646,
+    "display_order": 5,
+    "depth": 2
+  },
+  {
+    "id": 8650,
+    "suite_id": 843,
+    "name": "Panasonic TV Device - Verifications",
+    "description": null,
+    "parent_id": 8646,
+    "display_order": 6,
+    "depth": 2
+  },
+  {
+    "id": 8651,
+    "suite_id": 843,
+    "name": "TiVo Device - Verifications",
+    "description": null,
+    "parent_id": 8646,
+    "display_order": 7,
+    "depth": 2
+  },
+  {
+    "id": 8661,
+    "suite_id": 843,
+    "name": "Sony Blu-Ray Player - Verifications",
+    "description": null,
+    "parent_id": 8646,
+    "display_order": 8,
+    "depth": 2
+  },
+  {
+    "id": 27789,
+    "suite_id": 843,
+    "name": "Samsung TV TIZEN - Verifications",
+    "description": null,
+    "parent_id": 8646,
+    "display_order": 9,
+    "depth": 2
+  },
+  {
+    "id": 30487,
+    "suite_id": 843,
+    "name": "Samsung TV Orsay - Verifications",
+    "description": null,
+    "parent_id": 8646,
+    "display_order": 10,
+    "depth": 2
+  },
+  {
+    "id": 8627,
+    "suite_id": 843,
+    "name": "MLB.TV",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 8628,
+    "suite_id": 843,
+    "name": "Free User / Non-Entitlement Verifications",
+    "description": null,
+    "parent_id": 8627,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 8652,
+    "suite_id": 843,
+    "name": "Free User / Non-Entitlement MLB.TV Upsell Verification",
+    "description": null,
+    "parent_id": 8628,
+    "display_order": 15,
+    "depth": 2
+  },
+  {
+    "id": 8631,
+    "suite_id": 843,
+    "name": "Full Monthly Account Entitlement Verifications",
+    "description": null,
+    "parent_id": 8627,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 8632,
+    "suite_id": 843,
+    "name": "Full Yearly Account Entitlement Verifications",
+    "description": null,
+    "parent_id": 8627,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 26755,
+    "suite_id": 843,
+    "name": "Single Team Entitlement Verification",
+    "description": null,
+    "parent_id": 8627,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 8621,
+    "suite_id": 843,
+    "name": "Main Menu",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 8635,
+    "suite_id": 843,
+    "name": "Landing Menu Verifications",
+    "description": null,
+    "parent_id": 8621,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 8633,
+    "suite_id": 843,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": 8621,
+    "display_order": 30,
+    "depth": 1
+  },
+  {
+    "id": 8641,
+    "suite_id": 843,
+    "name": "Network Performance",
+    "description": null,
+    "parent_id": 8633,
+    "display_order": 31,
+    "depth": 2
+  },
+  {
+    "id": 30491,
+    "suite_id": 843,
+    "name": "In-Game Alerts (Notifications)",
+    "description": null,
+    "parent_id": 8633,
+    "display_order": 32,
+    "depth": 2
+  },
+  {
+    "id": 30488,
+    "suite_id": 843,
+    "name": "Appearance and Functionality",
+    "description": null,
+    "parent_id": 30491,
+    "display_order": 33,
+    "depth": 3
+  },
+  {
+    "id": 30489,
+    "suite_id": 843,
+    "name": "On vs. Off",
+    "description": null,
+    "parent_id": 30491,
+    "display_order": 34,
+    "depth": 3
+  },
+  {
+    "id": 30490,
+    "suite_id": 843,
+    "name": "Hidden",
+    "description": null,
+    "parent_id": 30491,
+    "display_order": 35,
+    "depth": 3
+  },
+  {
+    "id": 8643,
+    "suite_id": 843,
+    "name": "Network Failure",
+    "description": null,
+    "parent_id": 8621,
+    "display_order": 36,
+    "depth": 1
+  },
+  {
+    "id": 27851,
+    "suite_id": 843,
+    "name": "Standings",
+    "description": null,
+    "parent_id": 8621,
+    "display_order": 39,
+    "depth": 1
+  },
+  {
+    "id": 8625,
+    "suite_id": 843,
+    "name": "Calendar",
+    "description": null,
+    "parent_id": null,
+    "display_order": 40,
+    "depth": 0
+  },
+  {
+    "id": 8626,
+    "suite_id": 843,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 41,
+    "depth": 0
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "id": 149768,
+    "suite_id": 20644,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 149770,
+    "suite_id": 20644,
+    "name": "Game States - PREGAME/LIVE/FINAL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 149773,
+    "suite_id": 20644,
+    "name": "Game Order Logic",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 149765,
+    "suite_id": 20644,
+    "name": "miniSB Call outs & Product Links",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 149766,
+    "suite_id": 20644,
+    "name": "Class Picker",
+    "description": "Class Picker is used to filter out Class or Team Affiliates that user wants to see",
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 149767,
+    "suite_id": 20644,
+    "name": "miniSB - Off Day / ASG Handling",
+    "description": "how MiLB miniSB should appear when if there is an Off Day or ASG for a League or Class",
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 149772,
+    "suite_id": 20644,
+    "name": "Scoreboard Edge Cases",
+    "description": "https://wiki.mlbam.com/display/proddev/MLB+Mini+SB+2017#MLBMiniSB2017-ScoreboardEdgeCases",
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  }
+]

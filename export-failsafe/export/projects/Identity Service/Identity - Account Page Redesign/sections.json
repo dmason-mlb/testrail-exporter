@@ -1,0 +1,128 @@
+[
+  {
+    "id": 782762,
+    "suite_id": 230761,
+    "name": "Account Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 785373,
+    "suite_id": 230761,
+    "name": "Name Section",
+    "description": null,
+    "parent_id": 782762,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 785374,
+    "suite_id": 230761,
+    "name": "Email Address Section",
+    "description": null,
+    "parent_id": 782762,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 785375,
+    "suite_id": 230761,
+    "name": "Password Section",
+    "description": null,
+    "parent_id": 782762,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 785376,
+    "suite_id": 230761,
+    "name": "Phone Number Section",
+    "description": null,
+    "parent_id": 782762,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 785377,
+    "suite_id": 230761,
+    "name": "Date of Birth Section",
+    "description": null,
+    "parent_id": 782762,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 782763,
+    "suite_id": 230761,
+    "name": "My Teams and Players",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 785378,
+    "suite_id": 230761,
+    "name": "Favorite Team Section",
+    "description": null,
+    "parent_id": 782763,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 785379,
+    "suite_id": 230761,
+    "name": "Followed Teams Section",
+    "description": null,
+    "parent_id": 782763,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 785380,
+    "suite_id": 230761,
+    "name": "Followed Players Section",
+    "description": null,
+    "parent_id": 782763,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 782764,
+    "suite_id": 230761,
+    "name": "Manage Subscriptions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 785381,
+    "suite_id": 230761,
+    "name": "Current Subscriptions Section",
+    "description": null,
+    "parent_id": 782764,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 785382,
+    "suite_id": 230761,
+    "name": "Payment Methods Section",
+    "description": null,
+    "parent_id": 782764,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 782765,
+    "suite_id": 230761,
+    "name": "Email Newsletters",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  }
+]

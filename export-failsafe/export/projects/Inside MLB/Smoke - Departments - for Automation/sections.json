@@ -1,0 +1,110 @@
+[
+  {
+    "id": 149165,
+    "suite_id": 20596,
+    "name": "Smoke - Dept Members",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 149166,
+    "suite_id": 20596,
+    "name": "Smoke - Msg Board",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 149167,
+    "suite_id": 20596,
+    "name": "Smoke - Owner Create Message Thread",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 149169,
+    "suite_id": 20596,
+    "name": "Smoke - Dept Documents",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 149170,
+    "suite_id": 20596,
+    "name": "Smoke - Owner Creates Dept Folder",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 149172,
+    "suite_id": 20596,
+    "name": "Dept Calendar - Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 149173,
+    "suite_id": 20596,
+    "name": "Smoke - Owner Creates Dept Blog Post",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 149175,
+    "suite_id": 20596,
+    "name": "Dept Events - Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 149176,
+    "suite_id": 20596,
+    "name": "Dept Wiki - Owner Creates Wiki Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 149177,
+    "suite_id": 20596,
+    "name": "Smoke - Dept Bookmarks",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 149178,
+    "suite_id": 20596,
+    "name": "Smoke - Owner Creates Department Bookmark",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 149180,
+    "suite_id": 20596,
+    "name": "Smoke - Owner Creates Space Bookmark",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  }
+]

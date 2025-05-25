@@ -1,0 +1,182 @@
+[
+  {
+    "id": 148977,
+    "suite_id": 20558,
+    "name": "Video Highlights",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 148981,
+    "suite_id": 20558,
+    "name": "BDFED",
+    "description": null,
+    "parent_id": 148977,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 148982,
+    "suite_id": 20558,
+    "name": "FEDE",
+    "description": null,
+    "parent_id": 148977,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 148983,
+    "suite_id": 20558,
+    "name": "iOS At Bat",
+    "description": null,
+    "parent_id": 148977,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 148984,
+    "suite_id": 20558,
+    "name": "Android At Bat",
+    "description": null,
+    "parent_id": 148977,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 148978,
+    "suite_id": 20558,
+    "name": "Game Articles (Preview, Recaps, Wraps)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 148985,
+    "suite_id": 20558,
+    "name": "BDFED",
+    "description": null,
+    "parent_id": 148978,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 148986,
+    "suite_id": 20558,
+    "name": "FEDE",
+    "description": null,
+    "parent_id": 148978,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 148987,
+    "suite_id": 20558,
+    "name": "iOS At Bat",
+    "description": null,
+    "parent_id": 148978,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 148988,
+    "suite_id": 20558,
+    "name": "Android At Bat",
+    "description": null,
+    "parent_id": 148978,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 148979,
+    "suite_id": 20558,
+    "name": "Starting Lineups",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 148989,
+    "suite_id": 20558,
+    "name": "BDFED",
+    "description": null,
+    "parent_id": 148979,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 148973,
+    "suite_id": 20558,
+    "name": "FEDE",
+    "description": null,
+    "parent_id": 148979,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 148990,
+    "suite_id": 20558,
+    "name": "iOS At Bat",
+    "description": null,
+    "parent_id": 148979,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 148991,
+    "suite_id": 20558,
+    "name": "Android At Bat",
+    "description": null,
+    "parent_id": 148979,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 148980,
+    "suite_id": 20558,
+    "name": "Probable Pitchers",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 148992,
+    "suite_id": 20558,
+    "name": "BDFED",
+    "description": null,
+    "parent_id": 148980,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 148993,
+    "suite_id": 20558,
+    "name": "FEDE",
+    "description": null,
+    "parent_id": 148980,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 148994,
+    "suite_id": 20558,
+    "name": "iOS At Bat",
+    "description": null,
+    "parent_id": 148980,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 148995,
+    "suite_id": 20558,
+    "name": "Android At Bat",
+    "description": null,
+    "parent_id": 148980,
+    "display_order": 27,
+    "depth": 1
+  }
+]

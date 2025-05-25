@@ -1,0 +1,79 @@
+[
+  {
+    "id": 325,
+    "name": "Home",
+    "description": null,
+    "project_id": 15,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/325"
+  },
+  {
+    "id": 326,
+    "name": "Team Pages",
+    "description": null,
+    "project_id": 15,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/326"
+  },
+  {
+    "id": 379,
+    "name": "Roster Page",
+    "description": null,
+    "project_id": 15,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/379"
+  },
+  {
+    "id": 381,
+    "name": "Player Page",
+    "description": null,
+    "project_id": 15,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/381"
+  },
+  {
+    "id": 382,
+    "name": "Stats Pages",
+    "description": null,
+    "project_id": 15,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/382"
+  },
+  {
+    "id": 383,
+    "name": "Standings",
+    "description": null,
+    "project_id": 15,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/383"
+  },
+  {
+    "id": 384,
+    "name": "Teams Page",
+    "description": null,
+    "project_id": 15,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/384"
+  }
+]

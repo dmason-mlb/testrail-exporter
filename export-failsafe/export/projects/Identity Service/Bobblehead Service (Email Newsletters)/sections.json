@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1041548,
+    "suite_id": 346557,
+    "name": "Teams Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1041549,
+    "suite_id": 346557,
+    "name": "Sources Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1041550,
+    "suite_id": 346557,
+    "name": "Users Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1041551,
+    "suite_id": 346557,
+    "name": "Mailing List Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1041552,
+    "suite_id": 346557,
+    "name": "Optin Tests - Service Endpoint",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1041554,
+    "suite_id": 346557,
+    "name": "Optin Tests - User Endpoint",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1041555,
+    "suite_id": 346557,
+    "name": "Optout Tests - Service Endpoint",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1041557,
+    "suite_id": 346557,
+    "name": "Optout Tests - User Endpoint",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 1041559,
+    "suite_id": 346557,
+    "name": "Global Optout/Unsubscribe From All Tests - Service Endpoint",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 1041560,
+    "suite_id": 346557,
+    "name": "Global Optout/Unsubscribe From All Tests - User Endpoint",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 1041561,
+    "suite_id": 346557,
+    "name": "Bounce Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 1041562,
+    "suite_id": 346557,
+    "name": "Anonymize Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 1041563,
+    "suite_id": 346557,
+    "name": "Registration Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 1041564,
+    "suite_id": 346557,
+    "name": "Email Change Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 1041565,
+    "suite_id": 346557,
+    "name": "Optin/Optout With Duplicate List Ids Test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 1041566,
+    "suite_id": 346557,
+    "name": "Optin/Optout For List In Different Namespace Test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  }
+]

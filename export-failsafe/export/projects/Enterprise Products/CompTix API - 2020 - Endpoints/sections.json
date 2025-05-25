@@ -1,0 +1,20 @@
+[
+  {
+    "id": 303695,
+    "suite_id": 43451,
+    "name": "Non-GET Endpoints",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 303696,
+    "suite_id": 43451,
+    "name": "GET Endpoints",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

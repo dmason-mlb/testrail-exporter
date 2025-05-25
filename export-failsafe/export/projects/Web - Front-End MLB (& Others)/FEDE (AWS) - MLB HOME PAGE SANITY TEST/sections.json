@@ -1,0 +1,65 @@
+[
+  {
+    "id": 98533,
+    "suite_id": 14862,
+    "name": "Media Wall",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 151445,
+    "suite_id": 14862,
+    "name": "Mixed Feed",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 151446,
+    "suite_id": 14862,
+    "name": "Latest News Component",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 151447,
+    "suite_id": 14862,
+    "name": "HEADER",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 151457,
+    "suite_id": 14862,
+    "name": "TEAM LEADERS COMPONENT",
+    "description": "TODO : implement in the Sanity Test Suit",
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 151458,
+    "suite_id": 14862,
+    "name": "FOOTER",
+    "description": null,
+    "parent_id": null,
+    "display_order": 31,
+    "depth": 0
+  },
+  {
+    "id": 151572,
+    "suite_id": 14862,
+    "name": "Social Component",
+    "description": null,
+    "parent_id": null,
+    "display_order": 32,
+    "depth": 0
+  }
+]

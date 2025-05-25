@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1490568,
+    "suite_id": 526377,
+    "name": "Health Checks",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1492791,
+    "suite_id": 526377,
+    "name": "Sanity Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1644689,
+    "suite_id": 526377,
+    "name": "Game Setup Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1492792,
+    "suite_id": 526377,
+    "name": "Game Broadcasts Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1510457,
+    "suite_id": 526377,
+    "name": "Game Rules Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1644690,
+    "suite_id": 526377,
+    "name": "Event Setup Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1644691,
+    "suite_id": 526377,
+    "name": "Documents Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1644692,
+    "suite_id": 526377,
+    "name": "Reports Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1644693,
+    "suite_id": 526377,
+    "name": "Schedules Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1644694,
+    "suite_id": 526377,
+    "name": "User Mappings Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 1644695,
+    "suite_id": 526377,
+    "name": "Broadcast Values Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  }
+]

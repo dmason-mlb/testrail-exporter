@@ -1,0 +1,56 @@
+[
+  {
+    "id": 149570,
+    "suite_id": 20618,
+    "name": "MLB Club Schedule",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 149571,
+    "suite_id": 20618,
+    "name": "MLB Player Pages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 149572,
+    "suite_id": 20618,
+    "name": "MLB League Leaders Component",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 149573,
+    "suite_id": 20618,
+    "name": "MLB Standings Component",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 149575,
+    "suite_id": 20618,
+    "name": "MLB Schedule (TBD)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 149576,
+    "suite_id": 20618,
+    "name": "MLB Stats (TBD)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  }
+]

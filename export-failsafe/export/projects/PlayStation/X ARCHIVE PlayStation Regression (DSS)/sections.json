@@ -1,0 +1,614 @@
+[
+  {
+    "id": 150742,
+    "suite_id": 20770,
+    "name": "Device and Application Information Repository",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 150744,
+    "suite_id": 20770,
+    "name": "Startup",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 150745,
+    "suite_id": 20770,
+    "name": "Home Team",
+    "description": null,
+    "parent_id": 150744,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 150746,
+    "suite_id": 20770,
+    "name": "1st Time Launch - On boarding",
+    "description": null,
+    "parent_id": 150744,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 150747,
+    "suite_id": 20770,
+    "name": "Favorite Team",
+    "description": null,
+    "parent_id": 150746,
+    "display_order": 6,
+    "depth": 2
+  },
+  {
+    "id": 150748,
+    "suite_id": 20770,
+    "name": "Following Teams",
+    "description": null,
+    "parent_id": 150746,
+    "display_order": 7,
+    "depth": 2
+  },
+  {
+    "id": 150749,
+    "suite_id": 20770,
+    "name": "Login Page",
+    "description": null,
+    "parent_id": 150746,
+    "display_order": 8,
+    "depth": 2
+  },
+  {
+    "id": 150750,
+    "suite_id": 20770,
+    "name": "Create Account Page",
+    "description": null,
+    "parent_id": 150749,
+    "display_order": 9,
+    "depth": 3
+  },
+  {
+    "id": 150751,
+    "suite_id": 20770,
+    "name": "Create Account - Europe",
+    "description": null,
+    "parent_id": 150749,
+    "display_order": 10,
+    "depth": 3
+  },
+  {
+    "id": 150752,
+    "suite_id": 20770,
+    "name": "Login",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 150753,
+    "suite_id": 20770,
+    "name": "Free User",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 150754,
+    "suite_id": 20770,
+    "name": "Non-Entitlement Verifications",
+    "description": null,
+    "parent_id": 150753,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 150755,
+    "suite_id": 20770,
+    "name": "Free User",
+    "description": null,
+    "parent_id": 150754,
+    "display_order": 14,
+    "depth": 2
+  },
+  {
+    "id": 150756,
+    "suite_id": 20770,
+    "name": "Non-Entitlement MLB.TV Upsell Verification",
+    "description": null,
+    "parent_id": 150755,
+    "display_order": 15,
+    "depth": 3
+  },
+  {
+    "id": 150757,
+    "suite_id": 20770,
+    "name": "Full Monthly Account Entitlement Verifications",
+    "description": null,
+    "parent_id": 150754,
+    "display_order": 16,
+    "depth": 2
+  },
+  {
+    "id": 150758,
+    "suite_id": 20770,
+    "name": "Full Yearly Account Entitlement Verifications",
+    "description": null,
+    "parent_id": 150754,
+    "display_order": 17,
+    "depth": 2
+  },
+  {
+    "id": 150759,
+    "suite_id": 20770,
+    "name": "Single Team Accounts - Live Launch",
+    "description": null,
+    "parent_id": 150754,
+    "display_order": 18,
+    "depth": 2
+  },
+  {
+    "id": 150760,
+    "suite_id": 20770,
+    "name": "Too Many Users",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 150761,
+    "suite_id": 20770,
+    "name": "SSO",
+    "description": null,
+    "parent_id": 150760,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 150762,
+    "suite_id": 20770,
+    "name": "Scores",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 150763,
+    "suite_id": 20770,
+    "name": "Game States",
+    "description": null,
+    "parent_id": 150762,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 150764,
+    "suite_id": 20770,
+    "name": "Game States (SCORES OFF)",
+    "description": null,
+    "parent_id": 150762,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 150765,
+    "suite_id": 20770,
+    "name": "Calendar",
+    "description": null,
+    "parent_id": 150762,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 150766,
+    "suite_id": 20770,
+    "name": "Main Menu",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 150767,
+    "suite_id": 20770,
+    "name": "Videos",
+    "description": null,
+    "parent_id": 150766,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 150768,
+    "suite_id": 20770,
+    "name": "Videos - Team Picker",
+    "description": null,
+    "parent_id": 150767,
+    "display_order": 27,
+    "depth": 2
+  },
+  {
+    "id": 150769,
+    "suite_id": 20770,
+    "name": "Standings",
+    "description": null,
+    "parent_id": 150766,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 150770,
+    "suite_id": 20770,
+    "name": "Division Standings",
+    "description": null,
+    "parent_id": 150769,
+    "display_order": 29,
+    "depth": 2
+  },
+  {
+    "id": 150771,
+    "suite_id": 20770,
+    "name": "Wild Card Standings (mark blocked until implemented - not in-app as of 3.0.4)",
+    "description": null,
+    "parent_id": 150769,
+    "display_order": 30,
+    "depth": 2
+  },
+  {
+    "id": 150772,
+    "suite_id": 20770,
+    "name": "Home Team View",
+    "description": null,
+    "parent_id": 150766,
+    "display_order": 31,
+    "depth": 1
+  },
+  {
+    "id": 150773,
+    "suite_id": 20770,
+    "name": "Home Team Appearance - Hide Scores Off",
+    "description": null,
+    "parent_id": 150772,
+    "display_order": 32,
+    "depth": 2
+  },
+  {
+    "id": 150774,
+    "suite_id": 20770,
+    "name": "Home Team View Appearance - Hide Scores On",
+    "description": null,
+    "parent_id": 150772,
+    "display_order": 33,
+    "depth": 2
+  },
+  {
+    "id": 150775,
+    "suite_id": 20770,
+    "name": "Home Team - Blackout Checks",
+    "description": null,
+    "parent_id": 150772,
+    "display_order": 34,
+    "depth": 2
+  },
+  {
+    "id": 150776,
+    "suite_id": 20770,
+    "name": "Home Team Functionality - Hide Scores Off",
+    "description": null,
+    "parent_id": 150772,
+    "display_order": 35,
+    "depth": 2
+  },
+  {
+    "id": 150777,
+    "suite_id": 20770,
+    "name": "Home Team Functionality - Hide Scores On",
+    "description": null,
+    "parent_id": 150772,
+    "display_order": 36,
+    "depth": 2
+  },
+  {
+    "id": 150778,
+    "suite_id": 20770,
+    "name": "Home Team View - Status/Updates",
+    "description": null,
+    "parent_id": 150772,
+    "display_order": 37,
+    "depth": 2
+  },
+  {
+    "id": 150779,
+    "suite_id": 20770,
+    "name": "Team Picker",
+    "description": null,
+    "parent_id": 150772,
+    "display_order": 38,
+    "depth": 2
+  },
+  {
+    "id": 150780,
+    "suite_id": 20770,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 150766,
+    "display_order": 39,
+    "depth": 1
+  },
+  {
+    "id": 150781,
+    "suite_id": 20770,
+    "name": "Login/Logout",
+    "description": null,
+    "parent_id": 150780,
+    "display_order": 40,
+    "depth": 2
+  },
+  {
+    "id": 150782,
+    "suite_id": 20770,
+    "name": "Create Account Page - Settings",
+    "description": null,
+    "parent_id": 150780,
+    "display_order": 41,
+    "depth": 2
+  },
+  {
+    "id": 150783,
+    "suite_id": 20770,
+    "name": "Hide Scores",
+    "description": null,
+    "parent_id": 150780,
+    "display_order": 42,
+    "depth": 2
+  },
+  {
+    "id": 150784,
+    "suite_id": 20770,
+    "name": "Pick Your Favorite Teams - Settings",
+    "description": null,
+    "parent_id": 150780,
+    "display_order": 43,
+    "depth": 2
+  },
+  {
+    "id": 150785,
+    "suite_id": 20770,
+    "name": "App Start View (Home Team config set to On)",
+    "description": null,
+    "parent_id": 150780,
+    "display_order": 44,
+    "depth": 2
+  },
+  {
+    "id": 150786,
+    "suite_id": 20770,
+    "name": "Videos",
+    "description": null,
+    "parent_id": null,
+    "display_order": 45,
+    "depth": 0
+  },
+  {
+    "id": 150787,
+    "suite_id": 20770,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 46,
+    "depth": 0
+  },
+  {
+    "id": 150788,
+    "suite_id": 20770,
+    "name": "Networking",
+    "description": null,
+    "parent_id": 150787,
+    "display_order": 47,
+    "depth": 1
+  },
+  {
+    "id": 150789,
+    "suite_id": 20770,
+    "name": "Pre-roll Ads (New preroll rolled out, need new cases)",
+    "description": null,
+    "parent_id": 150787,
+    "display_order": 48,
+    "depth": 1
+  },
+  {
+    "id": 150790,
+    "suite_id": 20770,
+    "name": "In-player (Video) Navigation",
+    "description": null,
+    "parent_id": 150787,
+    "display_order": 49,
+    "depth": 1
+  },
+  {
+    "id": 150791,
+    "suite_id": 20770,
+    "name": "Today's Games - Games (picker)",
+    "description": null,
+    "parent_id": 150790,
+    "display_order": 50,
+    "depth": 2
+  },
+  {
+    "id": 150792,
+    "suite_id": 20770,
+    "name": "Linescore",
+    "description": null,
+    "parent_id": 150790,
+    "display_order": 51,
+    "depth": 2
+  },
+  {
+    "id": 150793,
+    "suite_id": 20770,
+    "name": "(Video Player) Controls",
+    "description": null,
+    "parent_id": 150790,
+    "display_order": 52,
+    "depth": 2
+  },
+  {
+    "id": 150794,
+    "suite_id": 20770,
+    "name": "Closed Captioning",
+    "description": null,
+    "parent_id": 150793,
+    "display_order": 53,
+    "depth": 3
+  },
+  {
+    "id": 150795,
+    "suite_id": 20770,
+    "name": "Milestones (Skip Fwd/ Skip Back)",
+    "description": null,
+    "parent_id": 150793,
+    "display_order": 54,
+    "depth": 3
+  },
+  {
+    "id": 150796,
+    "suite_id": 20770,
+    "name": "Scan Fwd/Scan Back",
+    "description": null,
+    "parent_id": 150793,
+    "display_order": 55,
+    "depth": 3
+  },
+  {
+    "id": 150797,
+    "suite_id": 20770,
+    "name": "Change Audio",
+    "description": null,
+    "parent_id": 150793,
+    "display_order": 56,
+    "depth": 3
+  },
+  {
+    "id": 150798,
+    "suite_id": 20770,
+    "name": "Standings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 57,
+    "depth": 0
+  },
+  {
+    "id": 150799,
+    "suite_id": 20770,
+    "name": "Ad Delivery",
+    "description": null,
+    "parent_id": null,
+    "display_order": 58,
+    "depth": 0
+  },
+  {
+    "id": 150800,
+    "suite_id": 20770,
+    "name": "Audio Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 59,
+    "depth": 0
+  },
+  {
+    "id": 150801,
+    "suite_id": 20770,
+    "name": "Sony PS4 (Asia add-on)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 60,
+    "depth": 0
+  },
+  {
+    "id": 150802,
+    "suite_id": 20770,
+    "name": "Initial Launch of App",
+    "description": null,
+    "parent_id": 150801,
+    "display_order": 61,
+    "depth": 1
+  },
+  {
+    "id": 150803,
+    "suite_id": 20770,
+    "name": "Login Required window",
+    "description": null,
+    "parent_id": 150801,
+    "display_order": 62,
+    "depth": 1
+  },
+  {
+    "id": 150804,
+    "suite_id": 20770,
+    "name": "Login to MLB.TV window",
+    "description": null,
+    "parent_id": 150801,
+    "display_order": 63,
+    "depth": 1
+  },
+  {
+    "id": 150805,
+    "suite_id": 20770,
+    "name": "Menu window",
+    "description": null,
+    "parent_id": 150801,
+    "display_order": 64,
+    "depth": 1
+  },
+  {
+    "id": 150806,
+    "suite_id": 20770,
+    "name": "Sub-Menus",
+    "description": null,
+    "parent_id": 150805,
+    "display_order": 65,
+    "depth": 2
+  },
+  {
+    "id": 150807,
+    "suite_id": 20770,
+    "name": "Home Team",
+    "description": null,
+    "parent_id": 150806,
+    "display_order": 66,
+    "depth": 3
+  },
+  {
+    "id": 150808,
+    "suite_id": 20770,
+    "name": "Calendar",
+    "description": null,
+    "parent_id": 150806,
+    "display_order": 67,
+    "depth": 3
+  },
+  {
+    "id": 150809,
+    "suite_id": 20770,
+    "name": "Stats & Standings",
+    "description": null,
+    "parent_id": 150806,
+    "display_order": 68,
+    "depth": 3
+  },
+  {
+    "id": 150810,
+    "suite_id": 20770,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 150806,
+    "display_order": 69,
+    "depth": 3
+  }
+]

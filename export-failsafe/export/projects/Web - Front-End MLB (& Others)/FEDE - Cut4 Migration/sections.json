@@ -1,0 +1,38 @@
+[
+  {
+    "id": 148829,
+    "suite_id": 20530,
+    "name": "Landing Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 148830,
+    "suite_id": 20530,
+    "name": "Article Pages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 148832,
+    "suite_id": 20530,
+    "name": "Topic Pages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 148831,
+    "suite_id": 20530,
+    "name": "General Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

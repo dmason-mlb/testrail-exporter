@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1248509,
+    "title": "Example Test Case",
+    "section_id": 151724,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 23,
+    "created_on": 1565362382,
+    "updated_by": 23,
+    "updated_on": 1565362945,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20587,
+    "display_order": 1,
+    "custom_preconds": "Precondition",
+    "custom_steps": "Steps",
+    "custom_expected": "Result",
+    "custom_steps_separated": null
+  }
+]

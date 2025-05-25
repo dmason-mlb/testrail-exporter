@@ -32,6 +32,14 @@
     "role": "Lead"
   },
   {
+    "id": 238,
+    "name": "douglas.mason@mlb.com",
+    "email": "Douglas.Mason@mlb.com",
+    "is_active": 1,
+    "role_id": 5,
+    "role": "Administrator"
+  },
+  {
     "id": 476,
     "name": "Gregory Fein",
     "email": "Gregory.Fein@mlb.com",

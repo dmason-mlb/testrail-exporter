@@ -1,0 +1,156 @@
+[
+  {
+    "id": 605242,
+    "name": "SeatGeek F2F",
+    "description": null,
+    "project_id": 247,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/605242"
+  },
+  {
+    "id": 611810,
+    "name": "MPV Regression_Automation",
+    "description": null,
+    "project_id": 247,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/611810"
+  },
+  {
+    "id": 611811,
+    "name": "MPV End to End Automation",
+    "description": "MPV End to End Automation ",
+    "project_id": 247,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/611811"
+  },
+  {
+    "id": 611812,
+    "name": "MPV Renewals",
+    "description": null,
+    "project_id": 247,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/611812"
+  },
+  {
+    "id": 611813,
+    "name": "MPV_Automation_Final_Regression_Suite",
+    "description": null,
+    "project_id": 247,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/611813"
+  },
+  {
+    "id": 611814,
+    "name": "Smoke Test",
+    "description": null,
+    "project_id": 247,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/611814"
+  },
+  {
+    "id": 611815,
+    "name": "MyProVenue Control Center",
+    "description": null,
+    "project_id": 247,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/611815"
+  },
+  {
+    "id": 625885,
+    "name": "Guest Checkout",
+    "description": "Test cases for Guest Checkout",
+    "project_id": 247,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/625885"
+  },
+  {
+    "id": 666030,
+    "name": "MPV Renewals:Releasable order",
+    "description": null,
+    "project_id": 247,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/666030"
+  },
+  {
+    "id": 670942,
+    "name": "Manual Payments",
+    "description": null,
+    "project_id": 247,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/670942"
+  },
+  {
+    "id": 676373,
+    "name": "MPV Renewals: Statements",
+    "description": null,
+    "project_id": 247,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/676373"
+  },
+  {
+    "id": 697086,
+    "name": "SGT",
+    "description": "Single Ticket Purchase New UI",
+    "project_id": 247,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/697086"
+  },
+  {
+    "id": 703768,
+    "name": "Universal Cart",
+    "description": "This will be a test case for the new UI implementation which is called Universal Cart",
+    "project_id": 247,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/703768"
+  },
+  {
+    "id": 705241,
+    "name": "Real Time Fraud",
+    "description": "This test suite contains test cases for Real Time Fraud",
+    "project_id": 247,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/705241"
+  }
+]

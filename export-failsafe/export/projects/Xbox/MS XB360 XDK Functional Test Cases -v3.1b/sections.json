@@ -1,0 +1,128 @@
+[
+  {
+    "id": 12725,
+    "suite_id": 1459,
+    "name": "Base Requirements",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 12727,
+    "suite_id": 1459,
+    "name": "Video and Graphics",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 12729,
+    "suite_id": 1459,
+    "name": "User Interface (UI)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 12747,
+    "suite_id": 1459,
+    "name": "Text Input Devices (TID)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 12749,
+    "suite_id": 1459,
+    "name": "Storage",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 12827,
+    "suite_id": 1459,
+    "name": "Content Packages (CP)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 12828,
+    "suite_id": 1459,
+    "name": "Xbox LIVE Content (LC)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 12829,
+    "suite_id": 1459,
+    "name": "Gamer Profiles (GP) - NOT APPLICABLE FOR mlbam STREAMING MEDIA APPS (as of 2/16)",
+    "description": "Games must not award achievements to profiles that have not directly earned the achievement.",
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 12830,
+    "suite_id": 1459,
+    "name": "70: GP Rich Presence",
+    "description": "In active gameplay, games must update presence information. Presence information must accurately reflect the player's state.",
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 12831,
+    "suite_id": 1459,
+    "name": "Network (NET)",
+    "description": "Games must properly detect and handle loss of network connectivity in all areas of the game.",
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 12837,
+    "suite_id": 1459,
+    "name": "Natural User Input (NUI)",
+    "description": "NA Examples\nTitles that do not support the use of Kinect in any way are exempt from this requirement.",
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 12843,
+    "suite_id": 1459,
+    "name": "Other FTCs",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 12844,
+    "suite_id": 1459,
+    "name": "Generic",
+    "description": null,
+    "parent_id": 12843,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 12853,
+    "suite_id": 1459,
+    "name": "Kinect",
+    "description": null,
+    "parent_id": 12843,
+    "display_order": 14,
+    "depth": 1
+  }
+]

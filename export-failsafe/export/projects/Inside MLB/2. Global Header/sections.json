@@ -1,0 +1,56 @@
+[
+  {
+    "id": 146322,
+    "suite_id": 20181,
+    "name": "Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 146323,
+    "suite_id": 20181,
+    "name": "Full",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 146475,
+    "suite_id": 20181,
+    "name": "Do not test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 147170,
+    "suite_id": 20181,
+    "name": "Automated - do not test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 148299,
+    "suite_id": 20181,
+    "name": "Manual testing REQUIRED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 148301,
+    "suite_id": 20181,
+    "name": "Smoke - with Owner privileges",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  }
+]

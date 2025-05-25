@@ -1,0 +1,20 @@
+[
+  {
+    "id": 149756,
+    "suite_id": 20638,
+    "name": "Automation",
+    "description": "https://baseball.atlassian.net/browse/WEBTE-26",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 156501,
+    "suite_id": 20638,
+    "name": "Manual",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

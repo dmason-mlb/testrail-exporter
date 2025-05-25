@@ -1,0 +1,128 @@
+[
+  {
+    "id": 154932,
+    "suite_id": 21466,
+    "name": "Player Information",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 154933,
+    "suite_id": 21466,
+    "name": "Scoring",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 154934,
+    "suite_id": 21466,
+    "name": "Tiebreaker Questions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 154935,
+    "suite_id": 21466,
+    "name": "Round Navigation",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 154936,
+    "suite_id": 21466,
+    "name": "Pre-State",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 154937,
+    "suite_id": 21466,
+    "name": "Live-State",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 154938,
+    "suite_id": 21466,
+    "name": "Thank You Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 154939,
+    "suite_id": 21466,
+    "name": "Lock-State",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 154940,
+    "suite_id": 21466,
+    "name": "Registration/Form Entry",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 154941,
+    "suite_id": 21466,
+    "name": "Social Sharing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 154942,
+    "suite_id": 21466,
+    "name": "Sponsorship",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 154943,
+    "suite_id": 21466,
+    "name": "SEO",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 154944,
+    "suite_id": 21466,
+    "name": "In-App Support",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 154945,
+    "suite_id": 21466,
+    "name": "Confirmation Email",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  }
+]

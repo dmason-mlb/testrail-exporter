@@ -1,0 +1,101 @@
+[
+  {
+    "id": 772,
+    "suite_id": 190,
+    "name": "Postseason Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 773,
+    "suite_id": 190,
+    "name": "Postseason News",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 774,
+    "suite_id": 190,
+    "name": "Postseason Stats",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 775,
+    "suite_id": 190,
+    "name": "Postseason Scoreboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 881,
+    "suite_id": 190,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 882,
+    "suite_id": 190,
+    "name": "Postseason Team Pages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 883,
+    "suite_id": 190,
+    "name": "Non-Playoff Teams",
+    "description": null,
+    "parent_id": 882,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 884,
+    "suite_id": 190,
+    "name": "Playoff Teams",
+    "description": null,
+    "parent_id": 882,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 885,
+    "suite_id": 190,
+    "name": "Highlights",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 886,
+    "suite_id": 190,
+    "name": "Pre game/Post game show",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 951,
+    "suite_id": 190,
+    "name": "Postseason Takedown",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  }
+]

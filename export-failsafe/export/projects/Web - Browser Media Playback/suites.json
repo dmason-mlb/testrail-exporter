@@ -1,0 +1,167 @@
+[
+  {
+    "id": 2595,
+    "name": "ZZZ MLB.TV - Smoke Test ---- (do not migrate)",
+    "description": "Last Update 8.21.17 1PM - James (Reintegrated Chromecast support, Spot checked other cases)\r\n\r\nBrowsers Supported and Tested\r\n- MacOS 10.12.5+ | Chrome 59+, Firefox 53+, Safari 10+\r\n- Win 10 | Chrome 59+, Firefox 53+, IE 11, EdgeHTML14+\r\n\r\nProd: http://m.mlb.com/tv\r\nBeta: http://mbeta.mlb.com/tv\r\nQA: http://mqa.mlb.com/tv\r\n\r\nTest Users: https://wiki.mlbam.com/pages/viewpage.action?spaceKey=QAspace&title=MLB.TV+2017+Test+Accounts\r\n\r\n* To enable FLASH on Edge, click the \"Download\" link and click \"Always Allow\" on the flash pop-up that displays *",
+    "project_id": 58,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/2595"
+  },
+  {
+    "id": 14523,
+    "name": "ZZZ MLB.TV - Windows 8 App (Sunset) ---- (do not migrate)",
+    "description": "Previous build: 4.1.0",
+    "project_id": 58,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/14523"
+  },
+  {
+    "id": 20040,
+    "name": "MLB: Responsive VPP -- - (do not migrate)",
+    "description": null,
+    "project_id": 58,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20040"
+  },
+  {
+    "id": 20228,
+    "name": "MiLB - Smoke Test - ---- - (do not migrate)",
+    "description": "Browsers Supported and Tested\r\n- MacOS 10.12.5+ | Chrome 60+, Firefox 55+, Safari 10+\r\n- Win 10 | Chrome 60+, Firefox 55+, IE 11, EdgeHTML14+\r\n- Devices | Android 6+, iOS 9+\r\n\r\nBeta: https://beta-aws.milb.com\r\nQA: http://qa-aws.milb.com\r\n\r\nTo enable FLASH on Edge, click the \"Download\" link and click \"Always Allow\" on the flash pop-up that displays \r\n\r\n(* Test cases needs additional information)",
+    "project_id": 58,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20228"
+  },
+  {
+    "id": 20264,
+    "name": "MiLB: Responsive VPP -- - (do not migrate)",
+    "description": "Browsers Supported and Tested\r\n- MacOS 10.12.5+ | Chrome 60+, Firefox 55+, Safari 10+\r\n- Win 10 | Chrome 60+, Firefox 55+, IE 11, EdgeHTML14+\r\n- Devices | Android 6+, iOS 10+\r\n\r\nBeta: https://beta-aws.milb.com\r\nQA: http://qa-aws.milb.com\r\n\r\nBeta Cookie: http://beta.milb.com/beta_disallowed_set.html\r\n\r\n(* Test cases needs additional information)\r\n(** Test cases do not apply currently)",
+    "project_id": 58,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20264"
+  },
+  {
+    "id": 20388,
+    "name": "ZZZ MLB.tv - Smoke Test (2018) ---- (do not migrate)",
+    "description": "Browsers Supported and Tested\r\n- MacOS | Safari 11+, Chrome 68+, Firefox 60+\r\n- Win 10 | IE11, Edge40 (HTML16+), Chrome 68+, Firefox 60+\r\n\r\nProd: https://www.mlb.com/tv\r\nBeta: https://beta-aws.mlb.com/tv\r\nQA: http://qa-aws.mlb.com/tv\r\n\r\nTest Users: https://wiki.mlbam.com/pages/viewpage.action?pageId=126787914#id-2018MLBMobile/WebEntitledAccounts-QA/Prod-MLB\r\n\r\nUpdated player (MP6) will not require the usage of FLASH player.\r\n\r\n*Test case may not be applicable",
+    "project_id": 58,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20388"
+  },
+  {
+    "id": 20404,
+    "name": "ZZZ MLB.TV - Smoke Test (Redesign 2018) ---- (do not migrate)",
+    "description": "Browsers Supported and Tested\r\n- MacOS | Safari 10+, Chrome 65+, Firefox 58+\r\n- Win 10 | IE11, Edge 40 (HTML14+), Chrome 65+, Firefox 58+\r\n\r\nProd: https://www.mlb.com/tv\r\nBeta: https://beta-aws.mlb.com/tv\r\nQA: http://qa-aws.mlb.com/tv\r\n\r\nBeta Credentials:\r\nhttp://partner.mlb.com/setBetaCookie.html\r\nhttps://beta-login.mlb.com/\r\nun: beta-user\r\npw: b3ta@mlb.com\r\n\r\nUpdated player (MP6) will not require the usage of FLASH player.\r\n\r\nProperties Tested: MLB.tv/VPP, MiLB.tv/VPP\r\nMedia Playback: USAB, SNY, YES, ROOT",
+    "project_id": 58,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20404"
+  },
+  {
+    "id": 20413,
+    "name": "MLB Accessibility - -- (do not migrate)",
+    "description": null,
+    "project_id": 58,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20413"
+  },
+  {
+    "id": 20619,
+    "name": "Build Sanity ----- - (do not migrate)",
+    "description": null,
+    "project_id": 58,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20619"
+  },
+  {
+    "id": 20627,
+    "name": "Integration Test ----- - (do not migrate)",
+    "description": null,
+    "project_id": 58,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20627"
+  },
+  {
+    "id": 20659,
+    "name": "DRM Testing ----- (do not migrate)",
+    "description": null,
+    "project_id": 58,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20659"
+  },
+  {
+    "id": 20769,
+    "name": "MLB.tv Accounts --- - (do not migrate)",
+    "description": null,
+    "project_id": 58,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20769"
+  },
+  {
+    "id": 20797,
+    "name": "Playback Scenarios .TV & VPP - Manual Regression ---- (do not migrate)",
+    "description": "Playback scenarios for MLB.tv, MiLB.tv, MLB VPP (Video Player Page), MiLB VPP, and unified players ported to other sites.",
+    "project_id": 58,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20797"
+  },
+  {
+    "id": 43807,
+    "name": "Unified Player - Sanity Checks - - - (project does not exist)",
+    "description": null,
+    "project_id": 58,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/43807"
+  },
+  {
+    "id": 43825,
+    "name": "Unified Player - Automation/Regression Cases ------ (do not migrate)",
+    "description": "This page no longer exists",
+    "project_id": 58,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/43825"
+  }
+]

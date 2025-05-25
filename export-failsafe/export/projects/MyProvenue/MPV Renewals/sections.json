@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1686164,
+    "suite_id": 611812,
+    "name": "Renewal Group",
+    "description": "Test cases for renewal group",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1686165,
+    "suite_id": 611812,
+    "name": "Editing Delivery",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1686166,
+    "suite_id": 611812,
+    "name": "Payment Method",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1686167,
+    "suite_id": 611812,
+    "name": "Cancel Order",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1686168,
+    "suite_id": 611812,
+    "name": "Renew Together Required",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1686169,
+    "suite_id": 611812,
+    "name": "Renew Together Optional",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1686170,
+    "suite_id": 611812,
+    "name": "Renew Together Not Allowed",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1686171,
+    "suite_id": 611812,
+    "name": "Credit Consumption-Full Auto",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1686172,
+    "suite_id": 611812,
+    "name": "Credit Consumption-Pre Apply",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1686173,
+    "suite_id": 611812,
+    "name": "Order Selection Page",
+    "description": "Test Cases for UI of Order Details Page",
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1686174,
+    "suite_id": 611812,
+    "name": "Credit Consumption- Not Allowed",
+    "description": "Test cases for credit consumption",
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 1727559,
+    "suite_id": 611812,
+    "name": "Split Payments",
+    "description": "Split Payment Test cases",
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  }
+]

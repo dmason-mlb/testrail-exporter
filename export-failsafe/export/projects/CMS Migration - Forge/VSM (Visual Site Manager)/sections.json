@@ -1,0 +1,47 @@
+[
+  {
+    "id": 149063,
+    "suite_id": 20563,
+    "name": "Site Structure",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 149064,
+    "suite_id": 20563,
+    "name": "Site Analysis",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 149065,
+    "suite_id": 20563,
+    "name": "Link Rules",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 149066,
+    "suite_id": 20563,
+    "name": "Administration",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 149067,
+    "suite_id": 20563,
+    "name": "Checkpoints",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

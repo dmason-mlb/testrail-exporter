@@ -1,0 +1,47 @@
+[
+  {
+    "id": 2259,
+    "suite_id": 422,
+    "name": "Virtual Check In",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 2297,
+    "suite_id": 422,
+    "name": "FourSquare Location Check In",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 2298,
+    "suite_id": 422,
+    "name": "MLB Location Check In",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 2299,
+    "suite_id": 422,
+    "name": "Stadium Check In",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 2300,
+    "suite_id": 422,
+    "name": "Ad-hoc Event Check In",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

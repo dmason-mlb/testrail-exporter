@@ -1,0 +1,551 @@
+[
+  {
+    "id": 149072,
+    "suite_id": 20564,
+    "name": "Stories",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 149593,
+    "suite_id": 20564,
+    "name": "Create new story",
+    "description": null,
+    "parent_id": 149072,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 149596,
+    "suite_id": 20564,
+    "name": "Edit story",
+    "description": null,
+    "parent_id": 149072,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 149597,
+    "suite_id": 20564,
+    "name": "Search stories",
+    "description": null,
+    "parent_id": 149072,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 149073,
+    "suite_id": 20564,
+    "name": "Photos",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 149598,
+    "suite_id": 20564,
+    "name": "Upload new photo",
+    "description": null,
+    "parent_id": 149073,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 149599,
+    "suite_id": 20564,
+    "name": "Edit photo",
+    "description": null,
+    "parent_id": 149073,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 149600,
+    "suite_id": 20564,
+    "name": "Search photos",
+    "description": null,
+    "parent_id": 149073,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 149074,
+    "suite_id": 20564,
+    "name": "Albums",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 149601,
+    "suite_id": 20564,
+    "name": "Create new album",
+    "description": null,
+    "parent_id": 149074,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 149602,
+    "suite_id": 20564,
+    "name": "Edit album",
+    "description": null,
+    "parent_id": 149074,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 149603,
+    "suite_id": 20564,
+    "name": "Search albums",
+    "description": null,
+    "parent_id": 149074,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 149075,
+    "suite_id": 20564,
+    "name": "Documents",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 149604,
+    "suite_id": 20564,
+    "name": "Upload new document",
+    "description": null,
+    "parent_id": 149075,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 149605,
+    "suite_id": 20564,
+    "name": "Edit document",
+    "description": null,
+    "parent_id": 149075,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 149606,
+    "suite_id": 20564,
+    "name": "Search documents",
+    "description": null,
+    "parent_id": 149075,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 149076,
+    "suite_id": 20564,
+    "name": "Editorial Selections",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 149607,
+    "suite_id": 20564,
+    "name": "Create new selections (single language)",
+    "description": null,
+    "parent_id": 149076,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 149608,
+    "suite_id": 20564,
+    "name": "Create new selections (language-independent)",
+    "description": null,
+    "parent_id": 149076,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 149609,
+    "suite_id": 20564,
+    "name": "Edit selection",
+    "description": null,
+    "parent_id": 149076,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 149610,
+    "suite_id": 20564,
+    "name": "Search selections",
+    "description": null,
+    "parent_id": 149076,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 149077,
+    "suite_id": 20564,
+    "name": "Tags",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 149611,
+    "suite_id": 20564,
+    "name": "Create new tag",
+    "description": null,
+    "parent_id": 149077,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 149612,
+    "suite_id": 20564,
+    "name": "Edit tag",
+    "description": null,
+    "parent_id": 149077,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 149613,
+    "suite_id": 20564,
+    "name": "Search tags",
+    "description": null,
+    "parent_id": 149077,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 149078,
+    "suite_id": 20564,
+    "name": "Players",
+    "description": null,
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  },
+  {
+    "id": 149614,
+    "suite_id": 20564,
+    "name": "Create new player",
+    "description": null,
+    "parent_id": 149078,
+    "display_order": 29,
+    "depth": 1
+  },
+  {
+    "id": 149615,
+    "suite_id": 20564,
+    "name": "Edit player",
+    "description": null,
+    "parent_id": 149078,
+    "display_order": 30,
+    "depth": 1
+  },
+  {
+    "id": 149616,
+    "suite_id": 20564,
+    "name": "Search players",
+    "description": null,
+    "parent_id": 149078,
+    "display_order": 31,
+    "depth": 1
+  },
+  {
+    "id": 149079,
+    "suite_id": 20564,
+    "name": "Videos",
+    "description": null,
+    "parent_id": null,
+    "display_order": 32,
+    "depth": 0
+  },
+  {
+    "id": 149080,
+    "suite_id": 20564,
+    "name": "Links",
+    "description": null,
+    "parent_id": null,
+    "display_order": 33,
+    "depth": 0
+  },
+  {
+    "id": 149081,
+    "suite_id": 20564,
+    "name": "Raffles",
+    "description": null,
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 149082,
+    "suite_id": 20564,
+    "name": "Events",
+    "description": null,
+    "parent_id": null,
+    "display_order": 35,
+    "depth": 0
+  },
+  {
+    "id": 149086,
+    "suite_id": 20564,
+    "name": "Mediawall Panels",
+    "description": null,
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 149088,
+    "suite_id": 20564,
+    "name": "Contributors",
+    "description": null,
+    "parent_id": null,
+    "display_order": 40,
+    "depth": 0
+  },
+  {
+    "id": 150316,
+    "suite_id": 20564,
+    "name": "Create a contributor",
+    "description": null,
+    "parent_id": 149088,
+    "display_order": 42,
+    "depth": 1
+  },
+  {
+    "id": 150317,
+    "suite_id": 20564,
+    "name": "Edit contributor",
+    "description": null,
+    "parent_id": 149088,
+    "display_order": 43,
+    "depth": 1
+  },
+  {
+    "id": 150318,
+    "suite_id": 20564,
+    "name": "Search contributor",
+    "description": null,
+    "parent_id": 149088,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 149578,
+    "suite_id": 20564,
+    "name": "Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 45,
+    "depth": 0
+  },
+  {
+    "id": 149579,
+    "suite_id": 20564,
+    "name": "Short Contents",
+    "description": null,
+    "parent_id": null,
+    "display_order": 46,
+    "depth": 0
+  },
+  {
+    "id": 149587,
+    "suite_id": 20564,
+    "name": "Topic Pages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 54,
+    "depth": 0
+  },
+  {
+    "id": 149588,
+    "suite_id": 20564,
+    "name": "Dynamic Includes",
+    "description": null,
+    "parent_id": null,
+    "display_order": 55,
+    "depth": 0
+  },
+  {
+    "id": 150332,
+    "suite_id": 20564,
+    "name": "Create dynamic includes",
+    "description": null,
+    "parent_id": 149588,
+    "display_order": 57,
+    "depth": 1
+  },
+  {
+    "id": 150333,
+    "suite_id": 20564,
+    "name": "Edit dynamic includes",
+    "description": null,
+    "parent_id": 149588,
+    "display_order": 58,
+    "depth": 1
+  },
+  {
+    "id": 150334,
+    "suite_id": 20564,
+    "name": "Search dynamic includes",
+    "description": null,
+    "parent_id": 149588,
+    "display_order": 59,
+    "depth": 1
+  },
+  {
+    "id": 149589,
+    "suite_id": 20564,
+    "name": "Program Shows",
+    "description": null,
+    "parent_id": null,
+    "display_order": 60,
+    "depth": 0
+  },
+  {
+    "id": 150329,
+    "suite_id": 20564,
+    "name": "Create program show",
+    "description": null,
+    "parent_id": 149589,
+    "display_order": 61,
+    "depth": 1
+  },
+  {
+    "id": 150330,
+    "suite_id": 20564,
+    "name": "Edit program show",
+    "description": null,
+    "parent_id": 149589,
+    "display_order": 62,
+    "depth": 1
+  },
+  {
+    "id": 150331,
+    "suite_id": 20564,
+    "name": "Search program show",
+    "description": null,
+    "parent_id": 149589,
+    "display_order": 63,
+    "depth": 1
+  },
+  {
+    "id": 150319,
+    "suite_id": 20564,
+    "name": "Video Trays",
+    "description": null,
+    "parent_id": null,
+    "display_order": 64,
+    "depth": 0
+  },
+  {
+    "id": 150326,
+    "suite_id": 20564,
+    "name": "Create video tray",
+    "description": null,
+    "parent_id": 150319,
+    "display_order": 66,
+    "depth": 1
+  },
+  {
+    "id": 150327,
+    "suite_id": 20564,
+    "name": "Edit video tray",
+    "description": null,
+    "parent_id": 150319,
+    "display_order": 67,
+    "depth": 1
+  },
+  {
+    "id": 150328,
+    "suite_id": 20564,
+    "name": "Search video tray",
+    "description": null,
+    "parent_id": 150319,
+    "display_order": 68,
+    "depth": 1
+  },
+  {
+    "id": 149591,
+    "suite_id": 20564,
+    "name": "Daily Emails",
+    "description": null,
+    "parent_id": null,
+    "display_order": 69,
+    "depth": 0
+  },
+  {
+    "id": 150323,
+    "suite_id": 20564,
+    "name": "Create daily email",
+    "description": null,
+    "parent_id": 149591,
+    "display_order": 70,
+    "depth": 1
+  },
+  {
+    "id": 150324,
+    "suite_id": 20564,
+    "name": "Edit daily email",
+    "description": null,
+    "parent_id": 149591,
+    "display_order": 71,
+    "depth": 1
+  },
+  {
+    "id": 150325,
+    "suite_id": 20564,
+    "name": "Search daily email",
+    "description": null,
+    "parent_id": 149591,
+    "display_order": 72,
+    "depth": 1
+  },
+  {
+    "id": 149592,
+    "suite_id": 20564,
+    "name": "OEmbeds",
+    "description": null,
+    "parent_id": null,
+    "display_order": 73,
+    "depth": 0
+  },
+  {
+    "id": 150320,
+    "suite_id": 20564,
+    "name": "Create OEmbed",
+    "description": null,
+    "parent_id": 149592,
+    "display_order": 74,
+    "depth": 1
+  },
+  {
+    "id": 150321,
+    "suite_id": 20564,
+    "name": "Edit OEmbed",
+    "description": null,
+    "parent_id": 149592,
+    "display_order": 75,
+    "depth": 1
+  },
+  {
+    "id": 150322,
+    "suite_id": 20564,
+    "name": "Search OEmbed",
+    "description": null,
+    "parent_id": 149592,
+    "display_order": 76,
+    "depth": 1
+  }
+]

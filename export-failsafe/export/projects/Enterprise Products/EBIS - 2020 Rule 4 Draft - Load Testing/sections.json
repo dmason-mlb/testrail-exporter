@@ -1,0 +1,20 @@
+[
+  {
+    "id": 305211,
+    "suite_id": 43641,
+    "name": "Typical EBIS traffic during draft",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 305212,
+    "suite_id": 43641,
+    "name": "Reports run during draft",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

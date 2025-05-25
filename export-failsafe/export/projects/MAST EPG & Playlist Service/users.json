@@ -1,0 +1,66 @@
+[
+  {
+    "id": 55,
+    "name": "Aizaz Toppa",
+    "email": "Aizaz.Toppa@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 23,
+    "name": "Brett Reese",
+    "email": "Brett.Reese@mlb.com",
+    "is_active": 1,
+    "role_id": 5,
+    "role": "Administrator"
+  },
+  {
+    "id": 385,
+    "name": "Carlos Perez",
+    "email": "carlos.perez@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 450,
+    "name": "De Nguyen",
+    "email": "de.nguyen@MLB.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 238,
+    "name": "douglas.mason@mlb.com",
+    "email": "Douglas.Mason@mlb.com",
+    "is_active": 1,
+    "role_id": 5,
+    "role": "Administrator"
+  },
+  {
+    "id": 45,
+    "name": "QAAutomation@mlb.com",
+    "email": "QAAutomation@mlb.com",
+    "is_active": 1,
+    "role_id": 5,
+    "role": "Administrator"
+  },
+  {
+    "id": 39,
+    "name": "Stephen Bence",
+    "email": "stephen.bence@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 177,
+    "name": "Victor Tan",
+    "email": "victor.tan@mlb.com",
+    "is_active": 1,
+    "role_id": 5,
+    "role": "Administrator"
+  }
+]

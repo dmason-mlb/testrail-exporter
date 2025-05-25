@@ -1,0 +1,56 @@
+[
+  {
+    "id": 10345,
+    "suite_id": 1248,
+    "name": "In-App purchase",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 10346,
+    "suite_id": 1248,
+    "name": "In-App renewal",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 10347,
+    "suite_id": 1248,
+    "name": "In-App restore",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 10348,
+    "suite_id": 1248,
+    "name": "Login",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 10349,
+    "suite_id": 1248,
+    "name": "Parental control",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 10350,
+    "suite_id": 1248,
+    "name": "Parent ticket regression",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  }
+]

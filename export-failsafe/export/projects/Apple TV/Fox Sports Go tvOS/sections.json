@@ -1,0 +1,218 @@
+[
+  {
+    "id": 27238,
+    "suite_id": 2986,
+    "name": "Start Up",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 27857,
+    "suite_id": 2986,
+    "name": "Unauthorized Users",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 27097,
+    "suite_id": 2986,
+    "name": "User Login",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 27240,
+    "suite_id": 2986,
+    "name": "Main Cable Providers",
+    "description": null,
+    "parent_id": 27097,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 27093,
+    "suite_id": 2986,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 27094,
+    "suite_id": 2986,
+    "name": "TVOS",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 27095,
+    "suite_id": 2986,
+    "name": "Featured",
+    "description": null,
+    "parent_id": 27094,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 27227,
+    "suite_id": 2986,
+    "name": "Upcoming",
+    "description": null,
+    "parent_id": 27095,
+    "display_order": 9,
+    "depth": 2
+  },
+  {
+    "id": 27096,
+    "suite_id": 2986,
+    "name": "Live Now",
+    "description": null,
+    "parent_id": 27094,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 27228,
+    "suite_id": 2986,
+    "name": "Multiview",
+    "description": null,
+    "parent_id": 27094,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 27230,
+    "suite_id": 2986,
+    "name": "Main Menu",
+    "description": null,
+    "parent_id": 27094,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 27231,
+    "suite_id": 2986,
+    "name": "Top Shelf",
+    "description": null,
+    "parent_id": 27094,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 84523,
+    "suite_id": 2986,
+    "name": "Live Tune In",
+    "description": null,
+    "parent_id": 27231,
+    "display_order": 15,
+    "depth": 2
+  },
+  {
+    "id": 27856,
+    "suite_id": 2986,
+    "name": "CHIPS (Content Tile Configuration) Verification",
+    "description": "Content Tile Tags and States from all Live and Upcoming Video Content within the app",
+    "parent_id": 27094,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 27098,
+    "suite_id": 2986,
+    "name": "Search",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 27224,
+    "suite_id": 2986,
+    "name": "Pre-Roll *Under Construction*",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 27225,
+    "suite_id": 2986,
+    "name": "Mid-Roll *Under Construction*",
+    "description": null,
+    "parent_id": null,
+    "display_order": 31,
+    "depth": 0
+  },
+  {
+    "id": 27235,
+    "suite_id": 2986,
+    "name": "Video Playback",
+    "description": "Please test these on all supported versions of your OS",
+    "parent_id": null,
+    "display_order": 32,
+    "depth": 0
+  },
+  {
+    "id": 27236,
+    "suite_id": 2986,
+    "name": "Audio and Info",
+    "description": null,
+    "parent_id": 27235,
+    "display_order": 33,
+    "depth": 1
+  },
+  {
+    "id": 27237,
+    "suite_id": 2986,
+    "name": "Closed Captions *Under Construction*",
+    "description": null,
+    "parent_id": 27235,
+    "display_order": 34,
+    "depth": 1
+  },
+  {
+    "id": 27288,
+    "suite_id": 2986,
+    "name": "Apple Remote",
+    "description": null,
+    "parent_id": 27235,
+    "display_order": 36,
+    "depth": 1
+  },
+  {
+    "id": 27242,
+    "suite_id": 2986,
+    "name": "Network Performance",
+    "description": null,
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 27420,
+    "suite_id": 2986,
+    "name": "Siri Remote - Verifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 27421,
+    "suite_id": 2986,
+    "name": "Game Controller (Nimbus Steelseries Controller) - Verifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 39,
+    "depth": 0
+  }
+]

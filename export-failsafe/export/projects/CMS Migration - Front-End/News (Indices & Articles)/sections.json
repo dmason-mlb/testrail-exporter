@@ -1,0 +1,47 @@
+[
+  {
+    "id": 148970,
+    "suite_id": 20540,
+    "name": "FEDE",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 148971,
+    "suite_id": 20540,
+    "name": "iOS At Bat",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 148972,
+    "suite_id": 20540,
+    "name": "Android At Bat",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 149723,
+    "suite_id": 20540,
+    "name": "Handset & 7 inch Tablet",
+    "description": null,
+    "parent_id": 148972,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 149724,
+    "suite_id": 20540,
+    "name": "Larger than 7 inch Tablet",
+    "description": null,
+    "parent_id": 148972,
+    "display_order": 5,
+    "depth": 1
+  }
+]

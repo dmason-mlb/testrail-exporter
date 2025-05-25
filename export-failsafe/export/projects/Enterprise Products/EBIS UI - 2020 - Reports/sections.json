@@ -1,0 +1,119 @@
+[
+  {
+    "id": 387668,
+    "suite_id": 81851,
+    "name": "Blank Letters",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 387669,
+    "suite_id": 81851,
+    "name": "CSP/CEP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 387670,
+    "suite_id": 81851,
+    "name": "Custom",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 387672,
+    "suite_id": 81851,
+    "name": "International",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 387673,
+    "suite_id": 81851,
+    "name": "MJ Contracts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 387676,
+    "suite_id": 81851,
+    "name": "MN Contracts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 387674,
+    "suite_id": 81851,
+    "name": "MN Insurance",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 387675,
+    "suite_id": 81851,
+    "name": "Post Season",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 387677,
+    "suite_id": 81851,
+    "name": "Pro Player Management",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 387678,
+    "suite_id": 81851,
+    "name": "Rosters",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 387679,
+    "suite_id": 81851,
+    "name": "Rule 4",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 387680,
+    "suite_id": 81851,
+    "name": "Rule 5",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 387681,
+    "suite_id": 81851,
+    "name": "Transactions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  }
+]

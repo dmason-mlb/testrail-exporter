@@ -1,0 +1,92 @@
+[
+  {
+    "id": 3972,
+    "suite_id": 551,
+    "name": "Push Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 4971,
+    "suite_id": 551,
+    "name": "Email Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 3969,
+    "suite_id": 551,
+    "name": "General MLB Challenge Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 3970,
+    "suite_id": 551,
+    "name": "Game Specific Challenge Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 3971,
+    "suite_id": 551,
+    "name": "Global Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 4153,
+    "suite_id": 551,
+    "name": "Future Functionality / Not Applicable in Current Build",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 4154,
+    "suite_id": 551,
+    "name": "Reminders",
+    "description": null,
+    "parent_id": 4153,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 4225,
+    "suite_id": 551,
+    "name": "Leveling",
+    "description": null,
+    "parent_id": 4153,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 4226,
+    "suite_id": 551,
+    "name": "Challenge Not Accepted",
+    "description": null,
+    "parent_id": 4153,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 4634,
+    "suite_id": 551,
+    "name": "App Badge Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  }
+]

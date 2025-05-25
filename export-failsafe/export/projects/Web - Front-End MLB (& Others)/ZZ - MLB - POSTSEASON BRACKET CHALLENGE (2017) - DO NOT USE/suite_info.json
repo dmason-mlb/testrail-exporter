@@ -1,0 +1,11 @@
+{
+  "id": 19578,
+  "name": "ZZ - MLB - POSTSEASON BRACKET CHALLENGE (2017) - DO NOT USE",
+  "description": "WIKI: https://wiki.mlbam.com/display/proddev/MLB+Postseason+Bracket+Challenge\r\n\r\nSEEDING:\r\nLEFT ALWC: 5/4\r\nLEFT ALDS: TOP (3/2) - BOTTOM (ALWC Winner/1)\r\nLEFT ALCS: TOP ALDS Winner/BOTTOM ALDS Winner\r\nLEFT WS: ALCS Winner\r\n\r\nRIGHT NLWC: 5/4\r\nRIGHT NLDS: TOP (3/2) - BOTTOM (NLWC Winner/1)\r\nRIGHT NLCS: TOP NLDS Winner/BOTTOM NLDS Winner\r\nRIGHT WS: NLCS Winner",
+  "project_id": 100,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/19578"
+}

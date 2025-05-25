@@ -1,0 +1,20 @@
+[
+  {
+    "id": 2712,
+    "suite_id": 453,
+    "name": "Apple Requirements",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 2713,
+    "suite_id": 453,
+    "name": "AirPlay",
+    "description": null,
+    "parent_id": 2712,
+    "display_order": 2,
+    "depth": 1
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "id": 20174,
+    "name": "7. Global Directory",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20174"
+  },
+  {
+    "id": 20175,
+    "name": "6. Global Apps",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20175"
+  },
+  {
+    "id": 20176,
+    "name": "9.1 Department Home Page",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20176"
+  },
+  {
+    "id": 20181,
+    "name": "2. Global Header",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20181"
+  },
+  {
+    "id": 20234,
+    "name": "OBSOLETE - Main Page right-side nav",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20234"
+  },
+  {
+    "id": 20235,
+    "name": "4. Main Page",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20235"
+  },
+  {
+    "id": 20245,
+    "name": "9.2 Department-Level Pages",
+    "description": "Pages within a Department's section of the website, navigated to using the Department's top nav",
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20245"
+  },
+  {
+    "id": 20249,
+    "name": "OBSOLETE - Global Footer",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20249"
+  },
+  {
+    "id": 20250,
+    "name": "1. Login",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20250"
+  },
+  {
+    "id": 20251,
+    "name": "3. Global Nav Bar",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20251"
+  },
+  {
+    "id": 20252,
+    "name": "5. Global Departments",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20252"
+  },
+  {
+    "id": 20256,
+    "name": "9. Global Events",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20256"
+  },
+  {
+    "id": 20257,
+    "name": "8. Global Calendar",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20257"
+  },
+  {
+    "id": 20312,
+    "name": "Basic Acceptance - for Automation",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20312"
+  },
+  {
+    "id": 20336,
+    "name": "Basic Acceptance 2 - for Automation",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20336"
+  },
+  {
+    "id": 20337,
+    "name": "Sanity - for Automation",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20337"
+  },
+  {
+    "id": 20338,
+    "name": "Smoke - for Automation",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20338"
+  },
+  {
+    "id": 20469,
+    "name": "9.3 Global Spaces and Space-Level Pages",
+    "description": "Because the Space pages function so similarly to Department pages, it's better to test the Department-level pages before Spaces.",
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20469"
+  },
+  {
+    "id": 20474,
+    "name": "Sanity Additions - for Automation",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20474"
+  },
+  {
+    "id": 20596,
+    "name": "Smoke - Departments - for Automation",
+    "description": null,
+    "project_id": 172,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20596"
+  }
+]

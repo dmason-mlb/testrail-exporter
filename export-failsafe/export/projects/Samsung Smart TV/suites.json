@@ -1,0 +1,68 @@
+[
+  {
+    "id": 20772,
+    "name": "Samsung Smart TV Smoke testing",
+    "description": "Samsung Smart TV information:\r\n- (TE) https://wiki.mlbam.com/display/QAspace/TE+Devices+-+Samsung+Smart+TV\r\n- (Dev) https://wiki.mlbam.com/display/JTS/Web-Based+Devices\r\n\r\nDesign information: https://app.zeplin.io/project/591ca0d0c1805b67175a87a4\r\n\r\nInstallation information: https://wiki.mlbam.com/pages/viewpage.action?pageId=147916730\r\n",
+    "project_id": 190,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20772"
+  },
+  {
+    "id": 20834,
+    "name": "X - Samsung Archive",
+    "description": null,
+    "project_id": 190,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20834"
+  },
+  {
+    "id": 21566,
+    "name": "Samsung Smart TV Regression",
+    "description": null,
+    "project_id": 190,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/21566"
+  },
+  {
+    "id": 43478,
+    "name": "Spring Training Smoke",
+    "description": null,
+    "project_id": 190,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/43478"
+  },
+  {
+    "id": 121558,
+    "name": "Samsung PostSeason Smoke",
+    "description": "Samsung PostSeason Smoke",
+    "project_id": 190,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/121558"
+  },
+  {
+    "id": 209691,
+    "name": "TTS",
+    "description": null,
+    "project_id": 190,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/209691"
+  }
+]

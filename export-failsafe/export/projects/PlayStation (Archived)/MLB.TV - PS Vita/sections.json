@@ -1,0 +1,227 @@
+[
+  {
+    "id": 9265,
+    "suite_id": 846,
+    "name": "Install and Launch - Patch Only",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 6623,
+    "suite_id": 846,
+    "name": "Start-up",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 9266,
+    "suite_id": 846,
+    "name": "Login and Logout",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 16544,
+    "suite_id": 846,
+    "name": "Account types",
+    "description": null,
+    "parent_id": 9266,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 9267,
+    "suite_id": 846,
+    "name": "Home - Today - Game Days",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 9268,
+    "suite_id": 846,
+    "name": "Main Menu",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 9269,
+    "suite_id": 846,
+    "name": "Team View",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 9270,
+    "suite_id": 846,
+    "name": "Calendar",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 9271,
+    "suite_id": 846,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 9272,
+    "suite_id": 846,
+    "name": "Favorites",
+    "description": null,
+    "parent_id": 9271,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 9273,
+    "suite_id": 846,
+    "name": "Scores ON Views",
+    "description": null,
+    "parent_id": 9271,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 9274,
+    "suite_id": 846,
+    "name": "Scores OFF Views",
+    "description": null,
+    "parent_id": 9271,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 9275,
+    "suite_id": 846,
+    "name": "Home Screen & Home Team Preferences",
+    "description": null,
+    "parent_id": 9271,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 9276,
+    "suite_id": 846,
+    "name": "Video Launch and Playback (Feed Select)",
+    "description": "Highlight video launching covered in Team View cases.",
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 9277,
+    "suite_id": 846,
+    "name": "VOD - Scores Off",
+    "description": null,
+    "parent_id": 9276,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 9278,
+    "suite_id": 846,
+    "name": "VOD - Scores On",
+    "description": null,
+    "parent_id": 9276,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 9279,
+    "suite_id": 846,
+    "name": "Playback Features",
+    "description": null,
+    "parent_id": 9276,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 9280,
+    "suite_id": 846,
+    "name": "Live - Scores Off",
+    "description": null,
+    "parent_id": 9276,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 9281,
+    "suite_id": 846,
+    "name": "Live - Scores On",
+    "description": null,
+    "parent_id": 9276,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 9282,
+    "suite_id": 846,
+    "name": "Audio Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 9284,
+    "suite_id": 846,
+    "name": "Pre-roll check",
+    "description": "Only occurs for non-paid accounts",
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 9285,
+    "suite_id": 846,
+    "name": "Leaderboards",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 9286,
+    "suite_id": 846,
+    "name": "Standings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 9287,
+    "suite_id": 846,
+    "name": "Error Messages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  },
+  {
+    "id": 9288,
+    "suite_id": 846,
+    "name": "Special Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  }
+]

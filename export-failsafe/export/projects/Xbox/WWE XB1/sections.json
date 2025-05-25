@@ -1,0 +1,398 @@
+[
+  {
+    "id": 4966,
+    "suite_id": 675,
+    "name": "Startup",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 5349,
+    "suite_id": 675,
+    "name": "Login",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 4944,
+    "suite_id": 675,
+    "name": "Home",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 4953,
+    "suite_id": 675,
+    "name": "Navigation",
+    "description": null,
+    "parent_id": 4944,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 4950,
+    "suite_id": 675,
+    "name": "On Now",
+    "description": null,
+    "parent_id": 4944,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 6832,
+    "suite_id": 675,
+    "name": "Featured Show",
+    "description": null,
+    "parent_id": 4944,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 5352,
+    "suite_id": 675,
+    "name": "Continue Watching & Watchlist",
+    "description": null,
+    "parent_id": 4944,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 5351,
+    "suite_id": 675,
+    "name": "Next PPV Promo & Date",
+    "description": null,
+    "parent_id": 4944,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 4945,
+    "suite_id": 675,
+    "name": "Shows - Main - Lvl 1",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 4972,
+    "suite_id": 675,
+    "name": "Shows - Submenu - Lvl 2",
+    "description": null,
+    "parent_id": 4945,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 4978,
+    "suite_id": 675,
+    "name": "Subcategory Navigation",
+    "description": null,
+    "parent_id": 4945,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 4973,
+    "suite_id": 675,
+    "name": "***Pay Per View - Design changes.  Need to review PPV Lv2 Shows",
+    "description": null,
+    "parent_id": 4945,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 4949,
+    "suite_id": 675,
+    "name": "Show Page - Lvl 3",
+    "description": null,
+    "parent_id": 4945,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 5030,
+    "suite_id": 675,
+    "name": "Episode - Show Launch Page",
+    "description": null,
+    "parent_id": 4949,
+    "display_order": 22,
+    "depth": 2
+  },
+  {
+    "id": 4946,
+    "suite_id": 675,
+    "name": "Schedule",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 4954,
+    "suite_id": 675,
+    "name": "Today",
+    "description": null,
+    "parent_id": 4946,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 4955,
+    "suite_id": 675,
+    "name": "Tomorrow",
+    "description": null,
+    "parent_id": 4946,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 4957,
+    "suite_id": 675,
+    "name": "Jump to Date",
+    "description": null,
+    "parent_id": 4946,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 5353,
+    "suite_id": 675,
+    "name": "Next PPV Promo & Date",
+    "description": null,
+    "parent_id": 4946,
+    "display_order": 30,
+    "depth": 1
+  },
+  {
+    "id": 5350,
+    "suite_id": 675,
+    "name": "Up Next",
+    "description": null,
+    "parent_id": 4946,
+    "display_order": 31,
+    "depth": 1
+  },
+  {
+    "id": 4947,
+    "suite_id": 675,
+    "name": "***Search",
+    "description": null,
+    "parent_id": null,
+    "display_order": 32,
+    "depth": 0
+  },
+  {
+    "id": 4952,
+    "suite_id": 675,
+    "name": "Results",
+    "description": null,
+    "parent_id": 4947,
+    "display_order": 33,
+    "depth": 1
+  },
+  {
+    "id": 5355,
+    "suite_id": 675,
+    "name": "Search All...",
+    "description": null,
+    "parent_id": 4947,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 8665,
+    "suite_id": 675,
+    "name": "Search Standardization",
+    "description": null,
+    "parent_id": 4947,
+    "display_order": 36,
+    "depth": 1
+  },
+  {
+    "id": 4948,
+    "suite_id": 675,
+    "name": "My Account",
+    "description": null,
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 4975,
+    "suite_id": 675,
+    "name": "Continue Watching and Bookmarks",
+    "description": null,
+    "parent_id": 4948,
+    "display_order": 38,
+    "depth": 1
+  },
+  {
+    "id": 6846,
+    "suite_id": 675,
+    "name": "Bookmark Lifecycles - Various Test Cases",
+    "description": "These tests are designed reveal variants in the way the app handles bookmarks disappearing unexpectedly.",
+    "parent_id": 4975,
+    "display_order": 41,
+    "depth": 2
+  },
+  {
+    "id": 4959,
+    "suite_id": 675,
+    "name": "Watchlist",
+    "description": null,
+    "parent_id": 4948,
+    "display_order": 42,
+    "depth": 1
+  },
+  {
+    "id": 4964,
+    "suite_id": 675,
+    "name": "Log Out / Unlink Device",
+    "description": null,
+    "parent_id": 4948,
+    "display_order": 47,
+    "depth": 1
+  },
+  {
+    "id": 5028,
+    "suite_id": 675,
+    "name": "Access Right Restrictions",
+    "description": null,
+    "parent_id": 4948,
+    "display_order": 50,
+    "depth": 1
+  },
+  {
+    "id": 4967,
+    "suite_id": 675,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 56,
+    "depth": 0
+  },
+  {
+    "id": 4969,
+    "suite_id": 675,
+    "name": "Closed Captioning",
+    "description": null,
+    "parent_id": 4967,
+    "display_order": 58,
+    "depth": 1
+  },
+  {
+    "id": 9590,
+    "suite_id": 675,
+    "name": "Blackout Restrictions",
+    "description": null,
+    "parent_id": 4967,
+    "display_order": 59,
+    "depth": 1
+  },
+  {
+    "id": 9591,
+    "suite_id": 675,
+    "name": "Live Linear Blackout Messaging",
+    "description": null,
+    "parent_id": 9590,
+    "display_order": 60,
+    "depth": 2
+  },
+  {
+    "id": 9592,
+    "suite_id": 675,
+    "name": "VOD Blackout Messaging",
+    "description": null,
+    "parent_id": 9590,
+    "display_order": 61,
+    "depth": 2
+  },
+  {
+    "id": 9593,
+    "suite_id": 675,
+    "name": "Location Based Blackout Checks - Live Linear",
+    "description": null,
+    "parent_id": 9590,
+    "display_order": 62,
+    "depth": 2
+  },
+  {
+    "id": 9594,
+    "suite_id": 675,
+    "name": "Location Based Blackout Checks - VOD",
+    "description": null,
+    "parent_id": 9590,
+    "display_order": 63,
+    "depth": 2
+  },
+  {
+    "id": 4979,
+    "suite_id": 675,
+    "name": "***Marker Jumping (see 11.15.13 – BAMSF > PlayStation Wires 1.1 wiki notes)",
+    "description": null,
+    "parent_id": 4967,
+    "display_order": 69,
+    "depth": 1
+  },
+  {
+    "id": 4980,
+    "suite_id": 675,
+    "name": "Video Controls",
+    "description": null,
+    "parent_id": 4967,
+    "display_order": 70,
+    "depth": 1
+  },
+  {
+    "id": 5338,
+    "suite_id": 675,
+    "name": "Networking",
+    "description": null,
+    "parent_id": 4967,
+    "display_order": 71,
+    "depth": 1
+  },
+  {
+    "id": 6942,
+    "suite_id": 675,
+    "name": "Pre-Roll Ad Support",
+    "description": null,
+    "parent_id": 4967,
+    "display_order": 72,
+    "depth": 1
+  },
+  {
+    "id": 22967,
+    "suite_id": 675,
+    "name": "Post-Play",
+    "description": null,
+    "parent_id": 4967,
+    "display_order": 73,
+    "depth": 1
+  },
+  {
+    "id": 12914,
+    "suite_id": 675,
+    "name": "Xbox 360 Button Hints",
+    "description": null,
+    "parent_id": null,
+    "display_order": 74,
+    "depth": 0
+  },
+  {
+    "id": 12967,
+    "suite_id": 675,
+    "name": "Obsolete Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 75,
+    "depth": 0
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 146327,
+    "suite_id": 20251,
+    "name": "Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 146328,
+    "suite_id": 20251,
+    "name": "Automated - do not test - Basic",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 146329,
+    "suite_id": 20251,
+    "name": "Full",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 148286,
+    "suite_id": 20251,
+    "name": "Do not test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 148302,
+    "suite_id": 20251,
+    "name": "Manual testing REQUIRED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  }
+]

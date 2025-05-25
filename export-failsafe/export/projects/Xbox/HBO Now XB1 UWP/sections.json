@@ -1,0 +1,362 @@
+[
+  {
+    "id": 12560,
+    "suite_id": 1427,
+    "name": "Startup",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 12561,
+    "suite_id": 1427,
+    "name": "Walled Garden welcome/Access Gate",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 12563,
+    "suite_id": 1427,
+    "name": "Sign-in",
+    "description": null,
+    "parent_id": 12561,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 12564,
+    "suite_id": 1427,
+    "name": "Expired Subscription",
+    "description": "Expired Account behavior after lapsed subscriptions checked here - reveals will be covered in IAP section (TBD)",
+    "parent_id": 12561,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 12565,
+    "suite_id": 1427,
+    "name": "Home",
+    "description": "Home: default screen on (signed in) launch",
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 12567,
+    "suite_id": 1427,
+    "name": "Continue Watching",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 12568,
+    "suite_id": 1427,
+    "name": "Watchlist",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 12569,
+    "suite_id": 1427,
+    "name": "Series",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 12571,
+    "suite_id": 1427,
+    "name": "Series Navigation and View States",
+    "description": null,
+    "parent_id": 12569,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 77210,
+    "suite_id": 1427,
+    "name": "Pick Up Where I Left Off",
+    "description": null,
+    "parent_id": 12569,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 74907,
+    "suite_id": 1427,
+    "name": "Branded Franchise",
+    "description": "Branded franchises are a special type of series that have its own branding on the page (i.e. show logo).\n_as of Dec 2016 only Bill Simmons and Vice have this_",
+    "parent_id": 12569,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 74908,
+    "suite_id": 1427,
+    "name": "Vice - Live",
+    "description": "live streaming of daily show VICE - NEWS TONIGHT and other live events;\n\nTHESES CASES ARE IN PROGRESS STILL _ NEED confirmation from Product/PMs about expected behaviors.",
+    "parent_id": 12569,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 12572,
+    "suite_id": 1427,
+    "name": "Movies",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 12573,
+    "suite_id": 1427,
+    "name": "Kids",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 12574,
+    "suite_id": 1427,
+    "name": "Comedy",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 12575,
+    "suite_id": 1427,
+    "name": "Sports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 12576,
+    "suite_id": 1427,
+    "name": "Documentaries",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 12577,
+    "suite_id": 1427,
+    "name": "Collections",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 12578,
+    "suite_id": 1427,
+    "name": "Late Night",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 12579,
+    "suite_id": 1427,
+    "name": "Search",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 12580,
+    "suite_id": 1427,
+    "name": "Results",
+    "description": null,
+    "parent_id": 12579,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 12581,
+    "suite_id": 1427,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 78448,
+    "suite_id": 1427,
+    "name": "Parental Controls",
+    "description": null,
+    "parent_id": 12581,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 19911,
+    "suite_id": 1427,
+    "name": "Billing Information",
+    "description": null,
+    "parent_id": 12581,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 12585,
+    "suite_id": 1427,
+    "name": "Help",
+    "description": null,
+    "parent_id": 12581,
+    "display_order": 32,
+    "depth": 1
+  },
+  {
+    "id": 12586,
+    "suite_id": 1427,
+    "name": "Privacy & Terms",
+    "description": null,
+    "parent_id": 12581,
+    "display_order": 33,
+    "depth": 1
+  },
+  {
+    "id": 12582,
+    "suite_id": 1427,
+    "name": "Continue Watching",
+    "description": null,
+    "parent_id": 12581,
+    "display_order": 34,
+    "depth": 1
+  },
+  {
+    "id": 12587,
+    "suite_id": 1427,
+    "name": "Sign Out",
+    "description": null,
+    "parent_id": 12581,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 12583,
+    "suite_id": 1427,
+    "name": "Parental Control Checks",
+    "description": null,
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 12588,
+    "suite_id": 1427,
+    "name": "Navigation and Focus",
+    "description": "These cases used to be used to check the desired design animations - currently, UWP does not require these treatments per HBO - cases have been changed/removed to only reflect expected navigation paths and/or appearance",
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 12589,
+    "suite_id": 1427,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 39,
+    "depth": 0
+  },
+  {
+    "id": 12590,
+    "suite_id": 1427,
+    "name": "Video Player UI",
+    "description": null,
+    "parent_id": 12589,
+    "display_order": 40,
+    "depth": 1
+  },
+  {
+    "id": 12591,
+    "suite_id": 1427,
+    "name": "Episode Play to Credits",
+    "description": null,
+    "parent_id": 12589,
+    "display_order": 41,
+    "depth": 1
+  },
+  {
+    "id": 12592,
+    "suite_id": 1427,
+    "name": "Network Performance",
+    "description": null,
+    "parent_id": 12589,
+    "display_order": 42,
+    "depth": 1
+  },
+  {
+    "id": 77707,
+    "suite_id": 1427,
+    "name": "XB1 Controller - Generic Menu Views",
+    "description": null,
+    "parent_id": null,
+    "display_order": 43,
+    "depth": 0
+  },
+  {
+    "id": 78238,
+    "suite_id": 1427,
+    "name": "XB1 Controller - Series Menus",
+    "description": null,
+    "parent_id": null,
+    "display_order": 44,
+    "depth": 0
+  },
+  {
+    "id": 78239,
+    "suite_id": 1427,
+    "name": "XB1 Controller - Movies Menus",
+    "description": null,
+    "parent_id": null,
+    "display_order": 45,
+    "depth": 0
+  },
+  {
+    "id": 80166,
+    "suite_id": 1427,
+    "name": "Media Remote",
+    "description": null,
+    "parent_id": null,
+    "display_order": 52,
+    "depth": 0
+  },
+  {
+    "id": 12593,
+    "suite_id": 1427,
+    "name": "Network Failure",
+    "description": null,
+    "parent_id": null,
+    "display_order": 54,
+    "depth": 0
+  },
+  {
+    "id": 12515,
+    "suite_id": 1427,
+    "name": "DRM Verification",
+    "description": "Confirm with the dev / PM for the expected behavior.\n\nRecording may be allowed but playback is downgraded to 480",
+    "parent_id": null,
+    "display_order": 89,
+    "depth": 0
+  }
+]

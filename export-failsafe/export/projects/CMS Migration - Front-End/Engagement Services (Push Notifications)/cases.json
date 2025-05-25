@@ -1,0 +1,507 @@
+[
+  {
+    "id": 1234262,
+    "title": "In-Game Video Highlights - Collapsed",
+    "section_id": 149730,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543878890,
+    "updated_by": 84,
+    "updated_on": 1543879656,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20535,
+    "display_order": 1,
+    "custom_preconds": "Given a user is on an iOS 10 device \r\nand has At Bat installed\r\nand notifications enabled",
+    "custom_steps": "When a user receives an In-Game Video Highlight notification",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "On iPhone",
+        "expected": "Then the user will see the team involved in the highlight, away team at home team, and highlight name.\n\nExample:\n\nTitle: ${TeamName} Video Highlight\nSubtitle: ${AwayTeam} @ ${Home Team}\nBody: {editorial content}\nand the highlight auto plays when you expand the notification"
+      },
+      {
+        "content": "On iPad",
+        "expected": "Then the user will see the team involved in the highlight, away team at home team, and highlight name.\n\nExample:\n\nTitle: ${TeamName} Video Highlight\nSubtitle: ${AwayTeam} @ ${Home Team}\nBody: {editorial content}\nand the highlight auto plays when you expand the notification"
+      }
+    ]
+  },
+  {
+    "id": 1234263,
+    "title": "In-Game Video Highlights - Expanded (Shareable)",
+    "section_id": 149730,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543878890,
+    "updated_by": 84,
+    "updated_on": 1543879568,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20535,
+    "display_order": 2,
+    "custom_preconds": "Given a user is on an iOS 10 device with 3D Touch\r\nand has At Bat installed\r\nand notifications enable",
+    "custom_steps": "When a user receives a In-Game Video Highlights notification\r\nand long presses a notification",
+    "custom_expected": "Then the user will see the following from top to bottom",
+    "custom_steps_separated": [
+      {
+        "content": "Video thumbnail\nPlay button\nHeadline\nDuration (MM:SS)",
+        "expected": ""
+      },
+      {
+        "content": "Button for Share",
+        "expected": "and tapping will open the Share sheet "
+      },
+      {
+        "content": "Button for Gameday",
+        "expected": "and tapping will bring the user to Gameday for the game"
+      },
+      {
+        "content": "Button for Listen Live",
+        "expected": "and tapping will bring the user to Gameday Audio view\nand the Gameday Audio feed will play"
+      },
+      {
+        "content": "Button for Watch MLB.TV",
+        "expected": "and tapping will open the MLB.TV stream for the game"
+      }
+    ]
+  },
+  {
+    "id": 1234264,
+    "title": "In-Game Video Highlights - Expanded (Not Shareable)",
+    "section_id": 149730,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543878890,
+    "updated_by": 84,
+    "updated_on": 1543879568,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20535,
+    "display_order": 3,
+    "custom_preconds": "Given a user is on an iOS 10 device with 3D Touch\r\nand has At Bat installed\r\nand notifications enable",
+    "custom_steps": "When a user receives a In-Game Video Highlights notification\r\nand the video shareable flag is not set\r\nand long presses a notification",
+    "custom_expected": "Then the user will see the following from top to bottom",
+    "custom_steps_separated": [
+      {
+        "content": "Video thumbnail\nPlay button\nHeadline\nDuration (MM:SS)",
+        "expected": ""
+      },
+      {
+        "content": "Button for Gameday",
+        "expected": "and tapping will bring the user to Gameday for the game"
+      },
+      {
+        "content": "Button for Listen Live",
+        "expected": "and tapping will bring the user to Gameday Audio view\nand the Gameday Audio feed will play"
+      },
+      {
+        "content": "Button for Watch MLB.TV",
+        "expected": "and tapping will open the MLB.TV stream for the game"
+      }
+    ]
+  },
+  {
+    "id": 1234265,
+    "title": "Condensed Game - Collapsed",
+    "section_id": 149730,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543878890,
+    "updated_by": 84,
+    "updated_on": 1543879688,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20535,
+    "display_order": 4,
+    "custom_preconds": "Given a user is on an iOS 10 device \r\nand has At Bat installed\r\nand notifications enabled",
+    "custom_steps": "When a user receives a Condensed Game notification",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "On iPhone",
+        "expected": "Then the user will see the team involved in the highlight, away team at home team, and highlight name.\n\nExample:\n\nTitle: ${TeamName} Video Highlight\nSubtitle: ${AwayTeam} @ ${Home Team}\nBody: {editorial content}"
+      },
+      {
+        "content": "On iPad",
+        "expected": "Then the user will see the team involved in the highlight, away team at home team, and highlight name.\n\nExample:\n\nTitle: ${TeamName} Video Highlight\nSubtitle: ${AwayTeam} @ ${Home Team}\nBody: {editorial content}"
+      }
+    ]
+  },
+  {
+    "id": 1234266,
+    "title": "Condensed Game - Expanded",
+    "section_id": 149730,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543878890,
+    "updated_by": 84,
+    "updated_on": 1543879568,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20535,
+    "display_order": 5,
+    "custom_preconds": "Given a user is on an iOS 10 device with 3D Touch\r\nand has At Bat installed\r\nand notifications enable",
+    "custom_steps": "When a user receives a Condensed Game notification\r\nand long presses a notification",
+    "custom_expected": "Then the user will see the following from top to bottom",
+    "custom_steps_separated": [
+      {
+        "content": "Video thumbnail\nPlay button\nHeadline\nDuration (MM:SS)",
+        "expected": ""
+      },
+      {
+        "content": "Button for Watch in At Bat",
+        "expected": ""
+      },
+      {
+        "content": "Button for Wrap",
+        "expected": "and tapping will bring the user to Gameday Wrap for the game"
+      }
+    ]
+  },
+  {
+    "id": 1234279,
+    "title": "Video Highlights",
+    "section_id": 149731,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543879863,
+    "updated_by": 84,
+    "updated_on": 1543879863,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20535,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed\r\nand they are subscribed to a team's In-Game Video Highlights notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Video Highlight notification",
+        "expected": "Then the user should receive a video highlight notification\nAnd the highlight should have \"Video:\" in the notification title"
+      },
+      {
+        "content": "User taps on the Video highlight notification",
+        "expected": "Then the Video Highlight should begin to play\nAnd when the highlight is done the user should be left on At Bat's default screen (Generally Team page or Scoreboard)"
+      }
+    ]
+  },
+  {
+    "id": 1234280,
+    "title": "Condensed Game",
+    "section_id": 149731,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543879863,
+    "updated_by": 84,
+    "updated_on": 1543879863,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20535,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is logged in with a paid account\r\nand is subscribed to a team's Condensed Game notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Condensed Game notification",
+        "expected": "Then the user should receive a video highlight notification\nAnd the highlight should have \"CG:\" in the notification title"
+      },
+      {
+        "content": "User taps on the Condensed Game notification",
+        "expected": "Then the Video Highlight should begin to play\nAnd when the highlight is done the user should be left on At Bat's default screen (Generally Team page or Scoreboard)"
+      }
+    ]
+  },
+  {
+    "id": 1234284,
+    "title": "Notification Tray",
+    "section_id": 149731,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543879863,
+    "updated_by": 84,
+    "updated_on": 1543879863,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20535,
+    "display_order": 6,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to push notifications",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user expands a notification from the notification tray",
+        "expected": "Then the notification should expand\nand the user should be able to read the notification text in its entirety"
+      },
+      {
+        "content": "When the user swipes away an individual notification\nOr clears all notifications",
+        "expected": "Then the Notification should disappear\nAnd the Notifications should NOT be 'ongoing' notifications"
+      }
+    ]
+  },
+  {
+    "id": 1234272,
+    "title": "MLB News - Collapsed",
+    "section_id": 149734,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543878949,
+    "updated_by": 84,
+    "updated_on": 1543879809,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20535,
+    "display_order": 1,
+    "custom_preconds": "Given a user is on an iOS 10 device \r\nand has At Bat installed\r\nand notifications enabled",
+    "custom_steps": "When a user receives an MLB News notification",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "On iPhone",
+        "expected": "Then the user will see MLB News then the editorial content\nand a MLB logo\n\nExample:\n\nTitle: MLB News\nBody: {editorial content}"
+      },
+      {
+        "content": "On iPad",
+        "expected": "Then the user will see MLB News then the editorial content\nand a MLB logo\n\nExample:\n\nTitle: MLB News\nBody: {editorial content}"
+      }
+    ]
+  },
+  {
+    "id": 1234273,
+    "title": "MLB News - Expanded",
+    "section_id": 149734,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543878949,
+    "updated_by": 84,
+    "updated_on": 1543879809,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20535,
+    "display_order": 2,
+    "custom_preconds": "Given a user is on an iOS 10 device with 3D Touch\r\nand has At Bat installed\r\nand notifications enable",
+    "custom_steps": "When a user receives a MLB News notification\r\nand long presses a notification",
+    "custom_expected": "Then the user will see the following from top to bottom",
+    "custom_steps_separated": [
+      {
+        "content": "Thumbnail of Photo or Video (with Play button) with every news article\nHeadline\nDuration in MM:SS (if Video ONLY)\n",
+        "expected": ""
+      },
+      {
+        "content": "Button for Share",
+        "expected": ""
+      },
+      {
+        "content": "Button for Read",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 1234274,
+    "title": "Team News - Collapsed",
+    "section_id": 149734,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543878949,
+    "updated_by": 84,
+    "updated_on": 1543879809,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20535,
+    "display_order": 3,
+    "custom_preconds": "Given a user is on an iOS 10 device \r\nand has At Bat installed\r\nand notifications enabled",
+    "custom_steps": "When a user receives an Team News notification",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "On iPhone",
+        "expected": "Then the user will see Team News then the editorial content\nand team logo \n\nExample:\n\nTitle: {teamName} News\nBody: {editorial content}"
+      },
+      {
+        "content": "On iPad",
+        "expected": "Then the user will see Team News then the editorial content\nand team logo \n\nExample:\n\nTitle: {teamName} News\nBody: {editorial content}"
+      }
+    ]
+  },
+  {
+    "id": 1234275,
+    "title": "Team News - Expanded",
+    "section_id": 149734,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543878949,
+    "updated_by": 84,
+    "updated_on": 1543879809,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20535,
+    "display_order": 4,
+    "custom_preconds": "Given a user is on an iOS 10 device with 3D Touch\r\nand has At Bat installed\r\nand notifications enable",
+    "custom_steps": "When a user receives a Team News notification\r\nand long presses a notification",
+    "custom_expected": "Then the user will see the following from top to bottom",
+    "custom_steps_separated": [
+      {
+        "content": "Thumbnail of Photo or Video (with Play button) with every news article\nHeadline\nDuration in MM:SS (if Video ONLY)",
+        "expected": ""
+      },
+      {
+        "content": "Button for Share",
+        "expected": ""
+      },
+      {
+        "content": "Button for Read",
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": 1234282,
+    "title": "MLB News",
+    "section_id": 149735,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543879863,
+    "updated_by": 84,
+    "updated_on": 1543879880,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20535,
+    "display_order": 1,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to \"MLB News\" notifications",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send MLB News Notification of a news article",
+        "expected": "User should receive the notification and the content of the notification should not be truncated or cut off"
+      },
+      {
+        "content": "User taps MLB News Notification of a news article",
+        "expected": "At Bat should open and the user should be taken to the URL that was sent with the MLB News Notification\n\n(If no URL was specified, the user should be left on the default At Bat screen)"
+      },
+      {
+        "content": "Send MLB News Notification of a video highlight\n(usually begins with the word \"Video\")",
+        "expected": "User should receive the notification and the content of the notification should not be truncated or cut off"
+      },
+      {
+        "content": "User taps MLB News Notification of a video highlight",
+        "expected": "At Bat should open and the video highlight that was sent with the MLB News Notification should launch\n\n(If no URL was specified, the user should be left on the default At Bat screen)"
+      }
+    ]
+  },
+  {
+    "id": 1234281,
+    "title": "Team News",
+    "section_id": 149735,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543879863,
+    "updated_by": 84,
+    "updated_on": 1543879876,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20535,
+    "display_order": 2,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to a team's news notification",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Team News Notification",
+        "expected": "User should receive the notification and the content of the notification should not be truncated or cut off"
+      },
+      {
+        "content": "User taps Team News Notification",
+        "expected": "At Bat should open and the user should be taken to the URL that was sent with the Team News Notification\n\n(If no URL was specified, the user should be left on the default At Bat screen)"
+      }
+    ]
+  },
+  {
+    "id": 1234283,
+    "title": "Cut 4",
+    "section_id": 149735,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543879863,
+    "updated_by": 84,
+    "updated_on": 1543879876,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20535,
+    "display_order": 4,
+    "custom_preconds": "Given At Bat is installed\r\nand the user is subscribed to \"Cut 4\" notifications",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "Send Cut 4 Notification",
+        "expected": "User should receive the notification and the content of the notification should not be truncated or cut off\nand the text \"Cut 4\" should lead the notification text"
+      },
+      {
+        "content": "User taps Cut 4 Notification",
+        "expected": "At Bat should open and the user should be taken to the URL that was sent with the Cut 4 Notification"
+      }
+    ]
+  }
+]

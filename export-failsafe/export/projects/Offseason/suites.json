@@ -1,0 +1,57 @@
+[
+  {
+    "id": 274,
+    "name": "iPhone/iPod",
+    "description": null,
+    "project_id": 19,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/274"
+  },
+  {
+    "id": 275,
+    "name": "iPad",
+    "description": null,
+    "project_id": 19,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/275"
+  },
+  {
+    "id": 276,
+    "name": "Android",
+    "description": null,
+    "project_id": 19,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/276"
+  },
+  {
+    "id": 277,
+    "name": "Blackberry",
+    "description": null,
+    "project_id": 19,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/277"
+  },
+  {
+    "id": 347,
+    "name": "Android Tablet",
+    "description": null,
+    "project_id": 19,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/347"
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "id": 117914,
+    "suite_id": 18004,
+    "name": "HEADER",
+    "description": "Run at XL viewport (1304px+) - Confirm existence in horizontal nav\nRun at XS viewport (320px) - Confirm existence in vertical/overflow (arrow) nav",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 117920,
+    "suite_id": 18004,
+    "name": "SEARCH",
+    "description": null,
+    "parent_id": 117914,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 117875,
+    "suite_id": 18004,
+    "name": "ACCOUNT",
+    "description": null,
+    "parent_id": 117914,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 117876,
+    "suite_id": 18004,
+    "name": "NAVIGATION",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 117877,
+    "suite_id": 18004,
+    "name": "MINI SCOREBOARD COMPONENT",
+    "description": "Conditional for 10AM fliptime\nRun for vertical (1024+)\nRun for horizontal (320-1023)",
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 117878,
+    "suite_id": 18004,
+    "name": "MEDIA WALL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 117879,
+    "suite_id": 18004,
+    "name": "MIXED FEED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 117880,
+    "suite_id": 18004,
+    "name": "LATEST NEWS COMPONENT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 117881,
+    "suite_id": 18004,
+    "name": "SOCIAL COMPONENT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 117882,
+    "suite_id": 18004,
+    "name": "STANDINGS COMPONENT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 117883,
+    "suite_id": 18004,
+    "name": "LEAGUE LEADERS COMPONENT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 117915,
+    "suite_id": 18004,
+    "name": "FOOTER",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 117887,
+    "suite_id": 18004,
+    "name": "AD COMPONENTS",
+    "description": "3-COLUMN = 1024px+\n2-COLUMN = 768 - 1023\n1-COLUMN = 320-767",
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 117912,
+    "suite_id": 18004,
+    "name": "HEADER",
+    "description": null,
+    "parent_id": 117887,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 119024,
+    "suite_id": 18004,
+    "name": "3-COLUMN",
+    "description": null,
+    "parent_id": 117887,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 117911,
+    "suite_id": 18004,
+    "name": "LEFT RAIL",
+    "description": null,
+    "parent_id": 119024,
+    "display_order": 21,
+    "depth": 2
+  },
+  {
+    "id": 117913,
+    "suite_id": 18004,
+    "name": "RIGHT RAIL",
+    "description": null,
+    "parent_id": 119024,
+    "display_order": 22,
+    "depth": 2
+  },
+  {
+    "id": 119025,
+    "suite_id": 18004,
+    "name": "CENTER RAIL",
+    "description": null,
+    "parent_id": 119024,
+    "display_order": 23,
+    "depth": 2
+  },
+  {
+    "id": 119026,
+    "suite_id": 18004,
+    "name": "2-COLUMN",
+    "description": null,
+    "parent_id": 117887,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 119027,
+    "suite_id": 18004,
+    "name": "LEFT RAIL",
+    "description": null,
+    "parent_id": 119026,
+    "display_order": 28,
+    "depth": 2
+  },
+  {
+    "id": 119028,
+    "suite_id": 18004,
+    "name": "RIGHT RAIL",
+    "description": null,
+    "parent_id": 119026,
+    "display_order": 29,
+    "depth": 2
+  },
+  {
+    "id": 119029,
+    "suite_id": 18004,
+    "name": "1-COLUMN",
+    "description": null,
+    "parent_id": 117887,
+    "display_order": 36,
+    "depth": 1
+  }
+]

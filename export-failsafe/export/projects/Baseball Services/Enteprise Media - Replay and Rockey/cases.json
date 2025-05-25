@@ -1,0 +1,26 @@
+[
+  {
+    "id": 6685344,
+    "title": "Check for 200 Status Code and compare response against StatsAPI",
+    "section_id": 305963,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 39,
+    "created_on": 1586545267,
+    "updated_by": 39,
+    "updated_on": 1589982779,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 43758,
+    "display_order": 1,
+    "custom_method": 2,
+    "custom_is_automated": false,
+    "custom_preconds": null,
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": null
+  }
+]

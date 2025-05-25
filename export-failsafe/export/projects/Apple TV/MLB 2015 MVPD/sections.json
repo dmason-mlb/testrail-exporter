@@ -1,0 +1,29 @@
+[
+  {
+    "id": 8773,
+    "suite_id": 1149,
+    "name": "Authorized Playback - Premium Entitled",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 8774,
+    "suite_id": 1149,
+    "name": "Unauthorized Playback Attempt",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 8775,
+    "suite_id": 1149,
+    "name": "Non Premium/Authorized Playback Attempt",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

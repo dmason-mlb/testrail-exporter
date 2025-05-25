@@ -1,0 +1,20 @@
+[
+  {
+    "id": 141717,
+    "suite_id": 20030,
+    "name": "MLB.com Homepage",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 141718,
+    "suite_id": 20030,
+    "name": "Club.com Pages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

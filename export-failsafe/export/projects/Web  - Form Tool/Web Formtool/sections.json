@@ -1,0 +1,344 @@
+[
+  {
+    "id": 126874,
+    "suite_id": 18832,
+    "name": "Accessing Forms Tool",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 135313,
+    "suite_id": 18832,
+    "name": "Viewing Forms on the Form List Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 148751,
+    "suite_id": 18832,
+    "name": "Formtool Error Pages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 126875,
+    "suite_id": 18832,
+    "name": "Creating and Editing a Form",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 128908,
+    "suite_id": 18832,
+    "name": "Inputs Tests",
+    "description": null,
+    "parent_id": 126875,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 148750,
+    "suite_id": 18832,
+    "name": "Dynamic Inputs Tests",
+    "description": null,
+    "parent_id": 126875,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 146217,
+    "suite_id": 18832,
+    "name": "Blocks Tests",
+    "description": null,
+    "parent_id": 126875,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 148402,
+    "suite_id": 18832,
+    "name": "Configurable Blocks Tests",
+    "description": null,
+    "parent_id": 146217,
+    "display_order": 9,
+    "depth": 2
+  },
+  {
+    "id": 128907,
+    "suite_id": 18832,
+    "name": "Layout Tests",
+    "description": null,
+    "parent_id": 126875,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 148749,
+    "suite_id": 18832,
+    "name": "Foreign Language Support",
+    "description": null,
+    "parent_id": 126875,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 128912,
+    "suite_id": 18832,
+    "name": "Warning Messages Tests",
+    "description": null,
+    "parent_id": 126875,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 130181,
+    "suite_id": 18832,
+    "name": "Saving Errors",
+    "description": null,
+    "parent_id": 126875,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 130205,
+    "suite_id": 18832,
+    "name": "Container Tests",
+    "description": null,
+    "parent_id": 126875,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 130213,
+    "suite_id": 18832,
+    "name": "Success Page Text Editor Tests",
+    "description": null,
+    "parent_id": 126875,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 128906,
+    "suite_id": 18832,
+    "name": "Confirmation Email Tests",
+    "description": null,
+    "parent_id": 126875,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 137152,
+    "suite_id": 18832,
+    "name": "Confirmation Email Editor Tests",
+    "description": null,
+    "parent_id": 126875,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 146411,
+    "suite_id": 18832,
+    "name": "Viewing Form, Success, and Deactivation Tabs",
+    "description": null,
+    "parent_id": 126875,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 148841,
+    "suite_id": 18832,
+    "name": "Login Tests",
+    "description": null,
+    "parent_id": 126875,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 148874,
+    "suite_id": 18832,
+    "name": "Transactional Form Tests",
+    "description": null,
+    "parent_id": 126875,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 149755,
+    "suite_id": 18832,
+    "name": "Gifting Form Tests",
+    "description": "https://jira.mlbam.com/browse/FORMTOOL-3085",
+    "parent_id": 126875,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 127884,
+    "suite_id": 18832,
+    "name": "Viewing Pages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 127885,
+    "suite_id": 18832,
+    "name": "Preview Links for a Form that has not been Cloned & Replaced",
+    "description": null,
+    "parent_id": 127884,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 127887,
+    "suite_id": 18832,
+    "name": "Preview Links for a Cloned & Replaced Form",
+    "description": null,
+    "parent_id": 127884,
+    "display_order": 29,
+    "depth": 1
+  },
+  {
+    "id": 127886,
+    "suite_id": 18832,
+    "name": "View LIVE Links",
+    "description": null,
+    "parent_id": 127884,
+    "display_order": 30,
+    "depth": 1
+  },
+  {
+    "id": 146068,
+    "suite_id": 18832,
+    "name": "Submitting a Form",
+    "description": null,
+    "parent_id": null,
+    "display_order": 33,
+    "depth": 0
+  },
+  {
+    "id": 127888,
+    "suite_id": 18832,
+    "name": "Reviewing a Form",
+    "description": null,
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 128239,
+    "suite_id": 18832,
+    "name": "Go Live Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 35,
+    "depth": 0
+  },
+  {
+    "id": 128240,
+    "suite_id": 18832,
+    "name": "Deactivation Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  },
+  {
+    "id": 128241,
+    "suite_id": 18832,
+    "name": "Archive Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 128242,
+    "suite_id": 18832,
+    "name": "Clone Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 128243,
+    "suite_id": 18832,
+    "name": "Clone & Replace Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 39,
+    "depth": 0
+  },
+  {
+    "id": 128244,
+    "suite_id": 18832,
+    "name": "Viewing Submissions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 40,
+    "depth": 0
+  },
+  {
+    "id": 147168,
+    "suite_id": 18832,
+    "name": "Editing Submissions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 41,
+    "depth": 0
+  },
+  {
+    "id": 128276,
+    "suite_id": 18832,
+    "name": "Summary Page Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 42,
+    "depth": 0
+  },
+  {
+    "id": 128245,
+    "suite_id": 18832,
+    "name": "Export Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 43,
+    "depth": 0
+  },
+  {
+    "id": 128909,
+    "suite_id": 18832,
+    "name": "User Management Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 44,
+    "depth": 0
+  },
+  {
+    "id": 148842,
+    "suite_id": 18832,
+    "name": "File Upload Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 46,
+    "depth": 0
+  },
+  {
+    "id": 148843,
+    "suite_id": 18832,
+    "name": "Promo Code Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 47,
+    "depth": 0
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "id": 388,
+  "name": "Android",
+  "description": "All tests should be performed on: OS 2.3, 4.0 and above\r\n\r\nThe check in button as a standard is enabled 4 hours prior to game start. However, this is configurable.\r\n\r\nThe allowed check in distance as a standard is 2km but this value is configurable.\r\n\r\nThe standard nearby ballpark distance is 25 miles but this value is configurable.",
+  "project_id": 22,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/388"
+}

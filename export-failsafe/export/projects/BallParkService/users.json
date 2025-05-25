@@ -1,0 +1,146 @@
+[
+  {
+    "id": 305,
+    "name": "Alevtina Li",
+    "email": "ali@applausemail.com",
+    "is_active": 1,
+    "role_id": 7,
+    "role": "Applause Lead"
+  },
+  {
+    "id": 380,
+    "name": "Alex Owens",
+    "email": "alex.owens@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 281,
+    "name": "Andi Setiyadi",
+    "email": "andi.setiyadi@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 253,
+    "name": "Applause Testers",
+    "email": "MLB_BTS@applauseplatform.com",
+    "is_active": 1,
+    "role_id": 3,
+    "role": "Tester"
+  },
+  {
+    "id": 315,
+    "name": "Byron Becker",
+    "email": "byron.becker@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 334,
+    "name": "Chris DuBois",
+    "email": "christopher.dubois@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 238,
+    "name": "douglas.mason@mlb.com",
+    "email": "Douglas.Mason@mlb.com",
+    "is_active": 1,
+    "role_id": 5,
+    "role": "Administrator"
+  },
+  {
+    "id": 370,
+    "name": "Ikram Azim",
+    "email": "Ikram.Azim@mlb.com",
+    "is_active": 1,
+    "role_id": 5,
+    "role": "Administrator"
+  },
+  {
+    "id": 438,
+    "name": "James Harman",
+    "email": "James.Harman@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 437,
+    "name": "Joaquin Meza",
+    "email": "joaquin.meza@mlb.com",
+    "is_active": 1,
+    "role_id": 5,
+    "role": "Administrator"
+  },
+  {
+    "id": 433,
+    "name": "Juan Roman",
+    "email": "Juan.Roman@MLB.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 372,
+    "name": "Mike OConnell",
+    "email": "Mike.OConnell@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 371,
+    "name": "Montasir Omi",
+    "email": "Montasir.Omi@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 369,
+    "name": "Ram Vaidianathan",
+    "email": "ram.vaidianathan@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 215,
+    "name": "Seth Paxton",
+    "email": "Seth.Paxton@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 288,
+    "name": "Steve Ortiz",
+    "email": "steve.ortiz@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 390,
+    "name": "VenueTester",
+    "email": "mlb-svc-venue-testeng-prod@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 177,
+    "name": "Victor Tan",
+    "email": "victor.tan@mlb.com",
+    "is_active": 1,
+    "role_id": 5,
+    "role": "Administrator"
+  }
+]

@@ -1,0 +1,173 @@
+[
+  {
+    "id": 1714658,
+    "suite_id": 609598,
+    "name": "Stories",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1714659,
+    "suite_id": 609598,
+    "name": "Raffles",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1714660,
+    "suite_id": 609598,
+    "name": "Mediawall Panels",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1714661,
+    "suite_id": 609598,
+    "name": "VSM Buttons",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1714662,
+    "suite_id": 609598,
+    "name": "Photos",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1714663,
+    "suite_id": 609598,
+    "name": "Documents",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 1714664,
+    "suite_id": 609598,
+    "name": "Daily Emails",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1714665,
+    "suite_id": 609598,
+    "name": "VSM Ticket Components",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1714666,
+    "suite_id": 609598,
+    "name": "Video Trays",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1714667,
+    "suite_id": 609598,
+    "name": "Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1714668,
+    "suite_id": 609598,
+    "name": "Players",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 1714669,
+    "suite_id": 609598,
+    "name": "Topic Pages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 1714670,
+    "suite_id": 609598,
+    "name": "Navs",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 1714671,
+    "suite_id": 609598,
+    "name": "Permissions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 1714672,
+    "suite_id": 609598,
+    "name": "Editorial Selections",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 1714673,
+    "suite_id": 609598,
+    "name": "Game Selection",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 1714674,
+    "suite_id": 609598,
+    "name": "VSM Pages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 1714675,
+    "suite_id": 609598,
+    "name": "VSM Contents",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 1714676,
+    "suite_id": 609598,
+    "name": "MISC",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  }
+]

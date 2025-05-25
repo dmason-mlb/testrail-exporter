@@ -1,0 +1,123 @@
+[
+  {
+    "id": 609243,
+    "name": "Application Session",
+    "description": null,
+    "project_id": 248,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/609243"
+  },
+  {
+    "id": 609244,
+    "name": "Archive Playback",
+    "description": null,
+    "project_id": 248,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/609244"
+  },
+  {
+    "id": 609245,
+    "name": "Live Playback",
+    "description": null,
+    "project_id": 248,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/609245"
+  },
+  {
+    "id": 609246,
+    "name": "Playback Session & Heartbeat",
+    "description": null,
+    "project_id": 248,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/609246"
+  },
+  {
+    "id": 609248,
+    "name": "Conviva / Adobe",
+    "description": null,
+    "project_id": 248,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/609248"
+  },
+  {
+    "id": 609249,
+    "name": "DAI",
+    "description": null,
+    "project_id": 248,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/609249"
+  },
+  {
+    "id": 609250,
+    "name": "Gameday Mode",
+    "description": null,
+    "project_id": 248,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/609250"
+  },
+  {
+    "id": 609251,
+    "name": "Milestones",
+    "description": null,
+    "project_id": 248,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/609251"
+  },
+  {
+    "id": 609443,
+    "name": "Feed Pickers (Content Search)",
+    "description": null,
+    "project_id": 248,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/609443"
+  },
+  {
+    "id": 616121,
+    "name": "Traffic Splitting",
+    "description": null,
+    "project_id": 248,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/616121"
+  },
+  {
+    "id": 631464,
+    "name": "Operator Tooling",
+    "description": null,
+    "project_id": 248,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/631464"
+  }
+]

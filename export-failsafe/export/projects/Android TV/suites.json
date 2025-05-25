@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1132,
+    "name": "WWE",
+    "description": null,
+    "project_id": 84,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1132"
+  },
+  {
+    "id": 1133,
+    "name": "HBO Now - AndroidTV",
+    "description": "AndroidTV - NexusTV, Razer ForgeTV, Nvidia Shield, and Sharp Aquos LC-Ux30US Android TV",
+    "project_id": 84,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1133"
+  },
+  {
+    "id": 1134,
+    "name": "MLBTV",
+    "description": null,
+    "project_id": 84,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1134"
+  },
+  {
+    "id": 1189,
+    "name": "WWE International Blackout Testing - ANDROID TV",
+    "description": null,
+    "project_id": 84,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1189"
+  },
+  {
+    "id": 1248,
+    "name": "HBO Now user services regression",
+    "description": null,
+    "project_id": 84,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1248"
+  },
+  {
+    "id": 1276,
+    "name": "NHLTV",
+    "description": null,
+    "project_id": 84,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1276"
+  },
+  {
+    "id": 1395,
+    "name": "Fox Sports Go - Phase 1",
+    "description": null,
+    "project_id": 84,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1395"
+  },
+  {
+    "id": 12899,
+    "name": "Fox Sports Go - Nexus Puck",
+    "description": null,
+    "project_id": 84,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/12899"
+  }
+]

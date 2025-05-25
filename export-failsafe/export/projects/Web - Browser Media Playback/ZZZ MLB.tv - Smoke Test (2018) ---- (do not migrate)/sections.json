@@ -1,0 +1,767 @@
+[
+  {
+    "id": 147664,
+    "suite_id": 20388,
+    "name": "Smoke Test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 147665,
+    "suite_id": 20388,
+    "name": "Messaging",
+    "description": null,
+    "parent_id": 147664,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 147666,
+    "suite_id": 20388,
+    "name": "Header",
+    "description": null,
+    "parent_id": 147664,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 147667,
+    "suite_id": 20388,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 147666,
+    "display_order": 4,
+    "depth": 2
+  },
+  {
+    "id": 147668,
+    "suite_id": 20388,
+    "name": "General",
+    "description": null,
+    "parent_id": 147667,
+    "display_order": 5,
+    "depth": 3
+  },
+  {
+    "id": 147669,
+    "suite_id": 20388,
+    "name": "Teams",
+    "description": null,
+    "parent_id": 147667,
+    "display_order": 6,
+    "depth": 3
+  },
+  {
+    "id": 147670,
+    "suite_id": 20388,
+    "name": "Calendar",
+    "description": null,
+    "parent_id": 147666,
+    "display_order": 7,
+    "depth": 2
+  },
+  {
+    "id": 147671,
+    "suite_id": 20388,
+    "name": "Scoreboard/Gameview Module",
+    "description": null,
+    "parent_id": 147666,
+    "display_order": 8,
+    "depth": 2
+  },
+  {
+    "id": 147672,
+    "suite_id": 20388,
+    "name": "Scoreboard - Archive",
+    "description": null,
+    "parent_id": 147671,
+    "display_order": 9,
+    "depth": 3
+  },
+  {
+    "id": 147673,
+    "suite_id": 20388,
+    "name": "Gameview Module - In Play",
+    "description": null,
+    "parent_id": 147671,
+    "display_order": 10,
+    "depth": 3
+  },
+  {
+    "id": 147674,
+    "suite_id": 20388,
+    "name": "Gameview Module - Final",
+    "description": null,
+    "parent_id": 147671,
+    "display_order": 11,
+    "depth": 3
+  },
+  {
+    "id": 147675,
+    "suite_id": 20388,
+    "name": "AdBlock",
+    "description": null,
+    "parent_id": 147664,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 147676,
+    "suite_id": 20388,
+    "name": "Video Player",
+    "description": null,
+    "parent_id": 147664,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 147677,
+    "suite_id": 20388,
+    "name": "Feed - Media Center",
+    "description": null,
+    "parent_id": 147676,
+    "display_order": 14,
+    "depth": 2
+  },
+  {
+    "id": 147678,
+    "suite_id": 20388,
+    "name": "Archive",
+    "description": null,
+    "parent_id": 147677,
+    "display_order": 15,
+    "depth": 3
+  },
+  {
+    "id": 147679,
+    "suite_id": 20388,
+    "name": "Feed - MP5 Player",
+    "description": null,
+    "parent_id": 147676,
+    "display_order": 16,
+    "depth": 2
+  },
+  {
+    "id": 147680,
+    "suite_id": 20388,
+    "name": "Player Controls",
+    "description": null,
+    "parent_id": 147676,
+    "display_order": 17,
+    "depth": 2
+  },
+  {
+    "id": 147681,
+    "suite_id": 20388,
+    "name": "Statcast",
+    "description": null,
+    "parent_id": 147680,
+    "display_order": 18,
+    "depth": 3
+  },
+  {
+    "id": 147682,
+    "suite_id": 20388,
+    "name": "Controls - Archive",
+    "description": null,
+    "parent_id": 147680,
+    "display_order": 19,
+    "depth": 3
+  },
+  {
+    "id": 147683,
+    "suite_id": 20388,
+    "name": "Views",
+    "description": null,
+    "parent_id": 147680,
+    "display_order": 20,
+    "depth": 3
+  },
+  {
+    "id": 147684,
+    "suite_id": 20388,
+    "name": "Full Screen Controls",
+    "description": null,
+    "parent_id": 147680,
+    "display_order": 21,
+    "depth": 3
+  },
+  {
+    "id": 147685,
+    "suite_id": 20388,
+    "name": "Bitrate Adjuster",
+    "description": null,
+    "parent_id": 147680,
+    "display_order": 22,
+    "depth": 3
+  },
+  {
+    "id": 147686,
+    "suite_id": 20388,
+    "name": "Milestones",
+    "description": null,
+    "parent_id": 147680,
+    "display_order": 23,
+    "depth": 3
+  },
+  {
+    "id": 147687,
+    "suite_id": 20388,
+    "name": "Stats & More",
+    "description": null,
+    "parent_id": 147664,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 147688,
+    "suite_id": 20388,
+    "name": "Plays & Box Score",
+    "description": null,
+    "parent_id": 147687,
+    "display_order": 25,
+    "depth": 2
+  },
+  {
+    "id": 147689,
+    "suite_id": 20388,
+    "name": "Highlights",
+    "description": null,
+    "parent_id": 147687,
+    "display_order": 26,
+    "depth": 2
+  },
+  {
+    "id": 147690,
+    "suite_id": 20388,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 147691,
+    "suite_id": 20388,
+    "name": "Alerts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  },
+  {
+    "id": 147692,
+    "suite_id": 20388,
+    "name": "Feed - Media Center",
+    "description": null,
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 147693,
+    "suite_id": 20388,
+    "name": "Player Controls",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 147694,
+    "suite_id": 20388,
+    "name": "Milestones",
+    "description": null,
+    "parent_id": 147693,
+    "display_order": 31,
+    "depth": 1
+  },
+  {
+    "id": 147695,
+    "suite_id": 20388,
+    "name": "Fantasy Tracker",
+    "description": "To test this you must have 1) a Live game and 2) a Roster comprised of players that will be playing in the Live game. Then you should see alerts whenever said player is up at bat, pitching, in the hole, or on deck. \n\n- To create a roster\n1. Go to https://www.mlb.com/scores\n2. Find the next game occurring and click the Preview link to see who will be playing per team\n3. Take all players on both teams and add them to your mlb.tv roster\n4. When the game goes live the player alerts will come in based on the order of appearance on the field",
+    "parent_id": null,
+    "display_order": 32,
+    "depth": 0
+  },
+  {
+    "id": 147696,
+    "suite_id": 20388,
+    "name": "Chromecast",
+    "description": null,
+    "parent_id": null,
+    "display_order": 33,
+    "depth": 0
+  },
+  {
+    "id": 147697,
+    "suite_id": 20388,
+    "name": "Initialization",
+    "description": null,
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 147698,
+    "suite_id": 20388,
+    "name": "Controls & Functionality",
+    "description": null,
+    "parent_id": null,
+    "display_order": 35,
+    "depth": 0
+  },
+  {
+    "id": 147699,
+    "suite_id": 20388,
+    "name": "Feed/Stats",
+    "description": null,
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  },
+  {
+    "id": 147700,
+    "suite_id": 20388,
+    "name": "Known Issues (Blocked until Fixed)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 147701,
+    "suite_id": 20388,
+    "name": "Postseason TV (Blocked outside of Postseason)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 147702,
+    "suite_id": 20388,
+    "name": "Postseason TV Multi-Angle",
+    "description": null,
+    "parent_id": 147701,
+    "display_order": 39,
+    "depth": 1
+  },
+  {
+    "id": 147703,
+    "suite_id": 20388,
+    "name": "Copied Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 40,
+    "depth": 0
+  },
+  {
+    "id": 147704,
+    "suite_id": 20388,
+    "name": "Smoke Test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 41,
+    "depth": 0
+  },
+  {
+    "id": 147705,
+    "suite_id": 20388,
+    "name": "Header",
+    "description": null,
+    "parent_id": 147704,
+    "display_order": 42,
+    "depth": 1
+  },
+  {
+    "id": 147706,
+    "suite_id": 20388,
+    "name": "Games",
+    "description": null,
+    "parent_id": 147705,
+    "display_order": 43,
+    "depth": 2
+  },
+  {
+    "id": 147707,
+    "suite_id": 20388,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": 147706,
+    "display_order": 44,
+    "depth": 3
+  },
+  {
+    "id": 147708,
+    "suite_id": 20388,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 147705,
+    "display_order": 45,
+    "depth": 2
+  },
+  {
+    "id": 147709,
+    "suite_id": 20388,
+    "name": "General",
+    "description": null,
+    "parent_id": 147708,
+    "display_order": 46,
+    "depth": 3
+  },
+  {
+    "id": 147710,
+    "suite_id": 20388,
+    "name": "Teams",
+    "description": null,
+    "parent_id": 147708,
+    "display_order": 47,
+    "depth": 3
+  },
+  {
+    "id": 147711,
+    "suite_id": 20388,
+    "name": "AdBlock",
+    "description": null,
+    "parent_id": 147704,
+    "display_order": 48,
+    "depth": 1
+  },
+  {
+    "id": 147712,
+    "suite_id": 20388,
+    "name": "Video Player",
+    "description": null,
+    "parent_id": 147704,
+    "display_order": 49,
+    "depth": 1
+  },
+  {
+    "id": 147713,
+    "suite_id": 20388,
+    "name": "Feed - MP6 Player",
+    "description": null,
+    "parent_id": 147712,
+    "display_order": 50,
+    "depth": 2
+  },
+  {
+    "id": 147714,
+    "suite_id": 20388,
+    "name": "Player Controls",
+    "description": null,
+    "parent_id": 147712,
+    "display_order": 51,
+    "depth": 2
+  },
+  {
+    "id": 147715,
+    "suite_id": 20388,
+    "name": "Views",
+    "description": null,
+    "parent_id": 147714,
+    "display_order": 52,
+    "depth": 3
+  },
+  {
+    "id": 147716,
+    "suite_id": 20388,
+    "name": "VOD / Archive",
+    "description": null,
+    "parent_id": 147714,
+    "display_order": 53,
+    "depth": 3
+  },
+  {
+    "id": 147717,
+    "suite_id": 20388,
+    "name": "Stats",
+    "description": null,
+    "parent_id": 147714,
+    "display_order": 54,
+    "depth": 3
+  },
+  {
+    "id": 147718,
+    "suite_id": 20388,
+    "name": "Full Screen Controls",
+    "description": null,
+    "parent_id": 147714,
+    "display_order": 55,
+    "depth": 3
+  },
+  {
+    "id": 147719,
+    "suite_id": 20388,
+    "name": "Bitrate Adjuster",
+    "description": null,
+    "parent_id": 147714,
+    "display_order": 56,
+    "depth": 3
+  },
+  {
+    "id": 147720,
+    "suite_id": 20388,
+    "name": "Player Controls - Live",
+    "description": null,
+    "parent_id": 147712,
+    "display_order": 57,
+    "depth": 2
+  },
+  {
+    "id": 147721,
+    "suite_id": 20388,
+    "name": "Feed - Audio Only",
+    "description": null,
+    "parent_id": 147712,
+    "display_order": 58,
+    "depth": 2
+  },
+  {
+    "id": 147722,
+    "suite_id": 20388,
+    "name": "Player Controls",
+    "description": null,
+    "parent_id": 147721,
+    "display_order": 59,
+    "depth": 3
+  },
+  {
+    "id": 147723,
+    "suite_id": 20388,
+    "name": "Feed/Stats",
+    "description": null,
+    "parent_id": null,
+    "display_order": 60,
+    "depth": 0
+  },
+  {
+    "id": 147724,
+    "suite_id": 20388,
+    "name": "Additional/Future features",
+    "description": null,
+    "parent_id": null,
+    "display_order": 61,
+    "depth": 0
+  },
+  {
+    "id": 147725,
+    "suite_id": 20388,
+    "name": "Initialization",
+    "description": null,
+    "parent_id": 147724,
+    "display_order": 62,
+    "depth": 1
+  },
+  {
+    "id": 149447,
+    "suite_id": 20388,
+    "name": "Smoke Test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 63,
+    "depth": 0
+  },
+  {
+    "id": 149448,
+    "suite_id": 20388,
+    "name": "Header",
+    "description": null,
+    "parent_id": 149447,
+    "display_order": 64,
+    "depth": 1
+  },
+  {
+    "id": 149449,
+    "suite_id": 20388,
+    "name": "Games",
+    "description": null,
+    "parent_id": 149448,
+    "display_order": 65,
+    "depth": 2
+  },
+  {
+    "id": 149450,
+    "suite_id": 20388,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": 149449,
+    "display_order": 66,
+    "depth": 3
+  },
+  {
+    "id": 149451,
+    "suite_id": 20388,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 149448,
+    "display_order": 67,
+    "depth": 2
+  },
+  {
+    "id": 149452,
+    "suite_id": 20388,
+    "name": "General",
+    "description": null,
+    "parent_id": 149451,
+    "display_order": 68,
+    "depth": 3
+  },
+  {
+    "id": 149453,
+    "suite_id": 20388,
+    "name": "Teams",
+    "description": null,
+    "parent_id": 149451,
+    "display_order": 69,
+    "depth": 3
+  },
+  {
+    "id": 149454,
+    "suite_id": 20388,
+    "name": "AdBlock",
+    "description": null,
+    "parent_id": 149447,
+    "display_order": 70,
+    "depth": 1
+  },
+  {
+    "id": 149455,
+    "suite_id": 20388,
+    "name": "Video Player",
+    "description": null,
+    "parent_id": 149447,
+    "display_order": 71,
+    "depth": 1
+  },
+  {
+    "id": 149456,
+    "suite_id": 20388,
+    "name": "Feed - MP6 Player",
+    "description": null,
+    "parent_id": 149455,
+    "display_order": 72,
+    "depth": 2
+  },
+  {
+    "id": 149457,
+    "suite_id": 20388,
+    "name": "Player Controls",
+    "description": null,
+    "parent_id": 149455,
+    "display_order": 73,
+    "depth": 2
+  },
+  {
+    "id": 149458,
+    "suite_id": 20388,
+    "name": "Views",
+    "description": null,
+    "parent_id": 149457,
+    "display_order": 74,
+    "depth": 3
+  },
+  {
+    "id": 149459,
+    "suite_id": 20388,
+    "name": "VOD / Archive",
+    "description": null,
+    "parent_id": 149457,
+    "display_order": 75,
+    "depth": 3
+  },
+  {
+    "id": 149460,
+    "suite_id": 20388,
+    "name": "Stats",
+    "description": null,
+    "parent_id": 149457,
+    "display_order": 76,
+    "depth": 3
+  },
+  {
+    "id": 149461,
+    "suite_id": 20388,
+    "name": "Full Screen Controls",
+    "description": null,
+    "parent_id": 149457,
+    "display_order": 77,
+    "depth": 3
+  },
+  {
+    "id": 149462,
+    "suite_id": 20388,
+    "name": "Bitrate Adjuster",
+    "description": null,
+    "parent_id": 149457,
+    "display_order": 78,
+    "depth": 3
+  },
+  {
+    "id": 149463,
+    "suite_id": 20388,
+    "name": "Player Controls - Live",
+    "description": null,
+    "parent_id": 149455,
+    "display_order": 79,
+    "depth": 2
+  },
+  {
+    "id": 149464,
+    "suite_id": 20388,
+    "name": "Feed - Audio Only",
+    "description": null,
+    "parent_id": 149455,
+    "display_order": 80,
+    "depth": 2
+  },
+  {
+    "id": 149465,
+    "suite_id": 20388,
+    "name": "Player Controls",
+    "description": null,
+    "parent_id": 149464,
+    "display_order": 81,
+    "depth": 3
+  },
+  {
+    "id": 149466,
+    "suite_id": 20388,
+    "name": "Feed/Stats",
+    "description": null,
+    "parent_id": null,
+    "display_order": 82,
+    "depth": 0
+  },
+  {
+    "id": 149467,
+    "suite_id": 20388,
+    "name": "Known Issues",
+    "description": null,
+    "parent_id": null,
+    "display_order": 83,
+    "depth": 0
+  },
+  {
+    "id": 149468,
+    "suite_id": 20388,
+    "name": "Additional/Future features",
+    "description": null,
+    "parent_id": null,
+    "display_order": 84,
+    "depth": 0
+  },
+  {
+    "id": 149469,
+    "suite_id": 20388,
+    "name": "Initialization",
+    "description": null,
+    "parent_id": 149468,
+    "display_order": 85,
+    "depth": 1
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "id": 134289,
+    "suite_id": 18789,
+    "name": "MATCHUPS",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 129593,
+    "suite_id": 18789,
+    "name": "HOMEPAGE",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 129799,
+    "suite_id": 18789,
+    "name": "PRE",
+    "description": null,
+    "parent_id": 129593,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 129800,
+    "suite_id": 18789,
+    "name": "LIVE",
+    "description": null,
+    "parent_id": 129593,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 129801,
+    "suite_id": 18789,
+    "name": "FINAL",
+    "description": null,
+    "parent_id": 129593,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 129810,
+    "suite_id": 18789,
+    "name": "RULE VALIDATION",
+    "description": null,
+    "parent_id": 129593,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 129594,
+    "suite_id": 18789,
+    "name": "VTP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 129802,
+    "suite_id": 18789,
+    "name": "PRE",
+    "description": null,
+    "parent_id": 129594,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 129803,
+    "suite_id": 18789,
+    "name": "LIVE",
+    "description": null,
+    "parent_id": 129594,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 129804,
+    "suite_id": 18789,
+    "name": "FINAL",
+    "description": null,
+    "parent_id": 129594,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 125926,
+    "suite_id": 18789,
+    "name": "RULE VALIDATION",
+    "description": null,
+    "parent_id": 129594,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 125927,
+    "suite_id": 18789,
+    "name": "Regular Play",
+    "description": null,
+    "parent_id": 125926,
+    "display_order": 13,
+    "depth": 2
+  },
+  {
+    "id": 125928,
+    "suite_id": 18789,
+    "name": "Swing-Off",
+    "description": null,
+    "parent_id": 125926,
+    "display_order": 14,
+    "depth": 2
+  },
+  {
+    "id": 127906,
+    "suite_id": 18789,
+    "name": "NAVIGATION",
+    "description": null,
+    "parent_id": 129594,
+    "display_order": 15,
+    "depth": 1
+  }
+]

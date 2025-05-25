@@ -1,0 +1,11 @@
+{
+  "id": 204823,
+  "name": "Ticketing_BoxOffice_Values",
+  "description": "This is to test how each of the boxOffice ticketsummaries, userstickets, upcoming & today response work\r\nTicketing admin 1 configuration\r\nTicketing admin2 configuration. \r\nTM/TDC input\r\nBoxOffice responses",
+  "project_id": 194,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/204823"
+}

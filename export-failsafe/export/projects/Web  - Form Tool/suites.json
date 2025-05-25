@@ -1,0 +1,90 @@
+[
+  {
+    "id": 18832,
+    "name": "Web Formtool",
+    "description": null,
+    "project_id": 164,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/18832"
+  },
+  {
+    "id": 20534,
+    "name": "Formtool Sprint 65",
+    "description": null,
+    "project_id": 164,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20534"
+  },
+  {
+    "id": 20583,
+    "name": "Formtool Sprint 66",
+    "description": null,
+    "project_id": 164,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20583"
+  },
+  {
+    "id": 20595,
+    "name": "Formtool Sprint 67",
+    "description": null,
+    "project_id": 164,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20595"
+  },
+  {
+    "id": 20600,
+    "name": "Formtool - Automation - Basic Acceptance",
+    "description": null,
+    "project_id": 164,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20600"
+  },
+  {
+    "id": 20613,
+    "name": "Formtool Sprint 68",
+    "description": null,
+    "project_id": 164,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20613"
+  },
+  {
+    "id": 20617,
+    "name": "Couchbase 5.5.1 Upgrade (Formtool Regression)",
+    "description": null,
+    "project_id": 164,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20617"
+  },
+  {
+    "id": 20625,
+    "name": "Formtool Sprint 69",
+    "description": null,
+    "project_id": 164,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20625"
+  }
+]

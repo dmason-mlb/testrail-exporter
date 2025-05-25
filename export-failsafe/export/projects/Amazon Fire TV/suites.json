@@ -1,0 +1,79 @@
+[
+  {
+    "id": 840,
+    "name": "WWE Network",
+    "description": null,
+    "project_id": 65,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/840"
+  },
+  {
+    "id": 841,
+    "name": "MLB.TV",
+    "description": null,
+    "project_id": 65,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/841"
+  },
+  {
+    "id": 852,
+    "name": "TheBlaze",
+    "description": null,
+    "project_id": 65,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/852"
+  },
+  {
+    "id": 1197,
+    "name": "WWE International Blackout Testing",
+    "description": null,
+    "project_id": 65,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1197"
+  },
+  {
+    "id": 1247,
+    "name": "HBO Now User services regression",
+    "description": null,
+    "project_id": 65,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1247"
+  },
+  {
+    "id": 1394,
+    "name": "Fox Sports Go",
+    "description": null,
+    "project_id": 65,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1394"
+  },
+  {
+    "id": 2143,
+    "name": "HBO Now - Amazon FireTV",
+    "description": "Amazon FireTV - FireTV Stick, FireTV Console v1, FireTV Console v2\r\n",
+    "project_id": 65,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/2143"
+  }
+]

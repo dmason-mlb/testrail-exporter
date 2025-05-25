@@ -1,0 +1,155 @@
+[
+  {
+    "id": 304262,
+    "suite_id": 43479,
+    "name": "Authenticated",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 304269,
+    "suite_id": 43479,
+    "name": "Games",
+    "description": "Menu>Scores",
+    "parent_id": 304262,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 304271,
+    "suite_id": 43479,
+    "name": "Homepage",
+    "description": null,
+    "parent_id": 304262,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 304272,
+    "suite_id": 43479,
+    "name": "Feed Select Screen",
+    "description": null,
+    "parent_id": 304262,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 304273,
+    "suite_id": 43479,
+    "name": "Playback Start Options",
+    "description": null,
+    "parent_id": 304262,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 304274,
+    "suite_id": 43479,
+    "name": "Mid-Roll",
+    "description": null,
+    "parent_id": 304262,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 304275,
+    "suite_id": 43479,
+    "name": "Video Playback UI",
+    "description": null,
+    "parent_id": 304262,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 304276,
+    "suite_id": 43479,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": 304262,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 304278,
+    "suite_id": 43479,
+    "name": "Milestones",
+    "description": null,
+    "parent_id": 304262,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 304280,
+    "suite_id": 43479,
+    "name": "Inning Selection",
+    "description": null,
+    "parent_id": 304262,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 304263,
+    "suite_id": 43479,
+    "name": "Unauthenticated",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 304264,
+    "suite_id": 43479,
+    "name": "Games",
+    "description": null,
+    "parent_id": 304263,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 304265,
+    "suite_id": 43479,
+    "name": "Standings Screen",
+    "description": null,
+    "parent_id": 304263,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 304266,
+    "suite_id": 43479,
+    "name": "Feed Select Screen",
+    "description": null,
+    "parent_id": 304263,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 304267,
+    "suite_id": 43479,
+    "name": "Calendar Screen",
+    "description": null,
+    "parent_id": 304263,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 304268,
+    "suite_id": 43479,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": 304263,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 304279,
+    "suite_id": 43479,
+    "name": "Inning Selection",
+    "description": null,
+    "parent_id": 304263,
+    "display_order": 20,
+    "depth": 1
+  }
+]

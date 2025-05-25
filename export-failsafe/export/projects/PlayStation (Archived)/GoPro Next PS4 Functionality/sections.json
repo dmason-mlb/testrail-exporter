@@ -1,0 +1,155 @@
+[
+  {
+    "id": 74591,
+    "suite_id": 12478,
+    "name": "Startup",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 74615,
+    "suite_id": 12478,
+    "name": "Log In",
+    "description": null,
+    "parent_id": 74591,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 74593,
+    "suite_id": 12478,
+    "name": "Discover",
+    "description": "(default screen if logged in at launch) curated?? section where user sees and interacts with all types of content from the entire app including channels, shows, playlists, live, and individual videos.",
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 74869,
+    "suite_id": 12478,
+    "name": "In-Line Player",
+    "description": null,
+    "parent_id": 74593,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 74594,
+    "suite_id": 12478,
+    "name": "Channels",
+    "description": "Themed/Curated playlists and/or show pages",
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 74595,
+    "suite_id": 12478,
+    "name": "Watchlist",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 74596,
+    "suite_id": 12478,
+    "name": "Search",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 76750,
+    "suite_id": 12478,
+    "name": "Results",
+    "description": null,
+    "parent_id": 74596,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 74597,
+    "suite_id": 12478,
+    "name": "Account/Info",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 74863,
+    "suite_id": 12478,
+    "name": "Video Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 74868,
+    "suite_id": 12478,
+    "name": "Media Controls",
+    "description": null,
+    "parent_id": 74863,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 76290,
+    "suite_id": 12478,
+    "name": "Up Next",
+    "description": null,
+    "parent_id": 74863,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 76291,
+    "suite_id": 12478,
+    "name": "Details",
+    "description": null,
+    "parent_id": 74863,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 77251,
+    "suite_id": 12478,
+    "name": "Extras",
+    "description": null,
+    "parent_id": 74863,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 74864,
+    "suite_id": 12478,
+    "name": "Networking",
+    "description": null,
+    "parent_id": 74863,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 77129,
+    "suite_id": 12478,
+    "name": "Bookmarks",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 74862,
+    "suite_id": 12478,
+    "name": "Rest Mode Recovery",
+    "description": null,
+    "parent_id": null,
+    "display_order": 33,
+    "depth": 0
+  }
+]

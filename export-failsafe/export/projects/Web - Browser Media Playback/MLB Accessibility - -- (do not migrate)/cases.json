@@ -1,0 +1,176 @@
+[
+  {
+    "id": 1225584,
+    "title": "Accessibility",
+    "section_id": 147922,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 147,
+    "created_on": 1525363220,
+    "updated_by": 147,
+    "updated_on": 1525363220,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20413,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user has enabled Voiceover in the iOS Accessibility settings\r\n\r\n",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a user taps on the At Bat launcher icon",
+        "expected": "THEN the launcher icon will be successfully read"
+      },
+      {
+        "content": "WHEN a user taps on one of the main navigation buttons",
+        "expected": "THEN the navigation button is properly read\n\nRepeat for all navigation buttons"
+      },
+      {
+        "content": "WHEN a user taps on a favorite team icon on the main menu",
+        "expected": "THEN the button will be read as team name button"
+      },
+      {
+        "content": "WHEN a user taps on the Scoreboard and then then taps on the Audio icon",
+        "expected": "THEN the audio icon is properly read"
+      },
+      {
+        "content": "WHEN a user taps on the Scoreboard and then swipes through games on the Scoreboard",
+        "expected": "THEN then game details are properly read"
+      },
+      {
+        "content": "WHEN a user taps on the area where audio feeds are suppose to be on the audio controller page when no feeds available",
+        "expected": "THEN a no audio available message is read"
+      },
+      {
+        "content": "WHEN a user taps on the area where audio feeds are suppose to be on the audio controller page when feeds available",
+        "expected": "THEN the audio stream name is read"
+      },
+      {
+        "content": "WHEN a user taps on a news article header from the News section",
+        "expected": "THEN the news articles heading is correctly read"
+      },
+      {
+        "content": "WHEN a user taps on a news article from the News section",
+        "expected": "THEN the news article is correctly read"
+      },
+      {
+        "content": "WHEN a user is on a news article and then taps on the News button",
+        "expected": "THEN the button is properly read"
+      },
+      {
+        "content": "WHEN a user taps on MLB.TV feed ",
+        "expected": "THEN the game and feed are properly read"
+      },
+      {
+        "content": "WHEN a user taps on the Gameday and then taps on a highlight",
+        "expected": "THEN the Highlight's header is properly read"
+      },
+      {
+        "content": "WHEN a user taps on Settings in Setting menu",
+        "expected": "THEN the setting is properly read\n\nRepeat for each Setting"
+      },
+      {
+        "content": "WHEN a user taps on the Teams menu and a taps on a team",
+        "expected": "THEN the teams name is properly read\n\nRepeat for each Team"
+      },
+      {
+        "content": "WHEN a user taps on a team and taps on a game in the Game Schedule at the top",
+        "expected": "THEN that day, month, and date are properly read"
+      },
+      {
+        "content": "WHEN a user taps on a team and and taps on any part of the Daily Matchup view",
+        "expected": "THEN that part of the daily matchup view is properly read"
+      },
+      {
+        "content": "WHEN a user taps on a team and taps on a menu item located on the team's page",
+        "expected": "THEN the menu item has it's name read correctly\n\nRepeat for each Menu item"
+      },
+      {
+        "content": "WHEN a user taps on More > Teams > Team > Schedule > Calendar and we tap on each element",
+        "expected": "THEN each element will read correctly\nand each element will be accurate\nand tapping on calendar cell will read month,date,team nickname, time of game and timezone."
+      },
+      {
+        "content": "WHEN a user taps on More > Teams > Team > Schedule > List and we tap on each element",
+        "expected": "THEN each element will read correctly\nand each element will be accurate\nand if it's a game where pitchers are not shown then it will read TBD vs. TBD"
+      },
+      {
+        "content": "WHEN a user taps on More > Teams > taps on a Team > Standings and we tap on any element",
+        "expected": "THEN each element will read correctly"
+      },
+      {
+        "content": "WHEN a user taps on More > Teams > Team > Roster and we tap on any Player",
+        "expected": "THEN each Player will read correctly including their number and position (if available)"
+      },
+      {
+        "content": "WHEN a user taps on the news tab and opens up a news article with an embedded video and then double taps on the video",
+        "expected": "THEN the video will begin to play"
+      },
+      {
+        "content": "WHEN a user taps on the elements on a webview (from More Menu)",
+        "expected": "THEN the elements on the top and/or bottom of the webview are read correctly \n\ni.e. Back button, webview header, webpage go back button, webpage go forward button, reload webpage button, stop webpage from loading button"
+      }
+    ]
+  },
+  {
+    "id": 1225585,
+    "title": "Accessibility",
+    "section_id": 147923,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 147,
+    "created_on": 1525363220,
+    "updated_by": 147,
+    "updated_on": 1525363220,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20413,
+    "display_order": 1,
+    "custom_preconds": "GIVEN a user has enabled Voiceover in the iOS Accessibility settings",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "WHEN a user taps on the At Bat launcher icon",
+        "expected": "THEN the launcher icon will be successfully read"
+      },
+      {
+        "content": "WHEN a user taps on a menu item",
+        "expected": "THEN the menu item that was tapped will be read\n\nRepeat for each Menu item"
+      },
+      {
+        "content": "WHEN a user selects the Gameday menu item and then taps on the out of town scoreboard",
+        "expected": "THEN the final score for all games are read"
+      },
+      {
+        "content": "WHEN a user selects the Gameday menu item and then taps on a game cell on the out of town scoreboard",
+        "expected": "THEN the game cell reads as team vs. team by score and inning & shows Gameday"
+      },
+      {
+        "content": "WHEN a user selects the Gameday menu item and then taps on the different elements of the matchup box",
+        "expected": "THEN the audio should read the elements as it is shown"
+      },
+      {
+        "content": "WHEN a user is on the Pitch by Pitch menu on Gameday and then taps on a pitch inside of the Pitch by Pitch window",
+        "expected": "THEN the pitch is read correctly\nand the pitch is read accurately"
+      },
+      {
+        "content": "WHEN a user is on Gameday and taps on the tabs found on the right hand side of the screen \n\nBox, Plays, Lineups, Field, Video",
+        "expected": "THEN the tab items selected will be read correctly\n\nRepeat for each tab item"
+      },
+      {
+        "content": "WHEN a user taps on the audio stream (headphones) and taps on a stream",
+        "expected": "THEN the Audio Stream name is read"
+      },
+      {
+        "content": "WHEN a user taps on the elements on a webview (from More Menu)",
+        "expected": "THEN the elements on the top and/or bottom of the webview are read correctly \n\ni.e. Back button, webview header, webpage go back button, webpage go forward button, reload webpage button, stop webpage from loading button"
+      }
+    ]
+  }
+]

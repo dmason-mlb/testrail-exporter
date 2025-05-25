@@ -1,0 +1,380 @@
+[
+  {
+    "id": 9221,
+    "suite_id": 1133,
+    "name": "Startup",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 9222,
+    "suite_id": 1133,
+    "name": "Access gate / Renewal gate",
+    "description": "Also known as the \nWelcome Screen\nWalled Garden",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 9223,
+    "suite_id": 1133,
+    "name": "In-app purchase - Google Play",
+    "description": null,
+    "parent_id": 9222,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 80862,
+    "suite_id": 1133,
+    "name": "Backend and Registration Verification",
+    "description": null,
+    "parent_id": 9223,
+    "display_order": 4,
+    "depth": 2
+  },
+  {
+    "id": 9224,
+    "suite_id": 1133,
+    "name": "Sign-in",
+    "description": null,
+    "parent_id": 9222,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 9225,
+    "suite_id": 1133,
+    "name": "Renew Subscription",
+    "description": "Renew behavior after lapsed subscriptions including via Free Trial completion, canceling or provider change are tested here.\n\n*Test with Google Alpha if applicable*",
+    "parent_id": 9222,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 9227,
+    "suite_id": 1133,
+    "name": "Context Menu",
+    "description": "Not Applicable for all devices \nContext button may not be present on device remote or controller",
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 9226,
+    "suite_id": 1133,
+    "name": "HBO NOW - Home",
+    "description": "Home: default screen on (signed in) launch",
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 9228,
+    "suite_id": 1133,
+    "name": "Continue Watching",
+    "description": "Verify Continue Watching is set to ON",
+    "parent_id": 9226,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 9229,
+    "suite_id": 1133,
+    "name": "Watchlist",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 9230,
+    "suite_id": 1133,
+    "name": "Series",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 9231,
+    "suite_id": 1133,
+    "name": "Series Season Landing - Asset Details",
+    "description": null,
+    "parent_id": 9230,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 9232,
+    "suite_id": 1133,
+    "name": "Series Navigation and View States",
+    "description": null,
+    "parent_id": 9230,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 71918,
+    "suite_id": 1133,
+    "name": "'LIVE' Content",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 71919,
+    "suite_id": 1133,
+    "name": "Vice News Tonight",
+    "description": null,
+    "parent_id": 71918,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 71915,
+    "suite_id": 1133,
+    "name": "Landing Page/Home",
+    "description": null,
+    "parent_id": 71919,
+    "display_order": 19,
+    "depth": 2
+  },
+  {
+    "id": 71916,
+    "suite_id": 1133,
+    "name": "Live Asset Detail Page",
+    "description": null,
+    "parent_id": 71919,
+    "display_order": 20,
+    "depth": 2
+  },
+  {
+    "id": 71917,
+    "suite_id": 1133,
+    "name": "Media Playback/Video Player",
+    "description": null,
+    "parent_id": 71919,
+    "display_order": 21,
+    "depth": 2
+  },
+  {
+    "id": 9233,
+    "suite_id": 1133,
+    "name": "Movies",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 12076,
+    "suite_id": 1133,
+    "name": "Kids",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 9234,
+    "suite_id": 1133,
+    "name": "Comedy",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 9235,
+    "suite_id": 1133,
+    "name": "Sports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 27,
+    "depth": 0
+  },
+  {
+    "id": 9236,
+    "suite_id": 1133,
+    "name": "Documentaries",
+    "description": null,
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  },
+  {
+    "id": 9237,
+    "suite_id": 1133,
+    "name": "Collections",
+    "description": null,
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 9238,
+    "suite_id": 1133,
+    "name": "Late Night",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 9239,
+    "suite_id": 1133,
+    "name": "Search",
+    "description": null,
+    "parent_id": null,
+    "display_order": 31,
+    "depth": 0
+  },
+  {
+    "id": 9240,
+    "suite_id": 1133,
+    "name": "Results",
+    "description": null,
+    "parent_id": 9239,
+    "display_order": 32,
+    "depth": 1
+  },
+  {
+    "id": 9241,
+    "suite_id": 1133,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 33,
+    "depth": 0
+  },
+  {
+    "id": 9242,
+    "suite_id": 1133,
+    "name": "Continue Watching",
+    "description": null,
+    "parent_id": 9241,
+    "display_order": 34,
+    "depth": 1
+  },
+  {
+    "id": 9243,
+    "suite_id": 1133,
+    "name": "Parental Controls",
+    "description": null,
+    "parent_id": 9241,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 9244,
+    "suite_id": 1133,
+    "name": "Closed Captioning",
+    "description": null,
+    "parent_id": 9241,
+    "display_order": 36,
+    "depth": 1
+  },
+  {
+    "id": 18803,
+    "suite_id": 1133,
+    "name": "Billing Information",
+    "description": null,
+    "parent_id": 9241,
+    "display_order": 37,
+    "depth": 1
+  },
+  {
+    "id": 9245,
+    "suite_id": 1133,
+    "name": "Help",
+    "description": null,
+    "parent_id": 9241,
+    "display_order": 39,
+    "depth": 1
+  },
+  {
+    "id": 9246,
+    "suite_id": 1133,
+    "name": "Privacy & Terms",
+    "description": null,
+    "parent_id": 9241,
+    "display_order": 40,
+    "depth": 1
+  },
+  {
+    "id": 9247,
+    "suite_id": 1133,
+    "name": "Sign Out",
+    "description": null,
+    "parent_id": 9241,
+    "display_order": 41,
+    "depth": 1
+  },
+  {
+    "id": 9248,
+    "suite_id": 1133,
+    "name": "Navigation Motion (Animation)",
+    "description": "Tests below are for desired animation.  \n\nNote: if standard grid layout affects app performance, the use of alternate layouts may be used in an effect to reduce loading times of assets.",
+    "parent_id": null,
+    "display_order": 42,
+    "depth": 0
+  },
+  {
+    "id": 9249,
+    "suite_id": 1133,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 43,
+    "depth": 0
+  },
+  {
+    "id": 9250,
+    "suite_id": 1133,
+    "name": "Video Player UI",
+    "description": null,
+    "parent_id": 9249,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 9251,
+    "suite_id": 1133,
+    "name": "Episode Play to Credits",
+    "description": "Also called Auto-Play next for \"binge watching\" episodes by having the episodes traverse into the next\n\n*Time between Credits display, Drawer action, and Next Episode may vary - confirm with PM",
+    "parent_id": 9249,
+    "display_order": 45,
+    "depth": 1
+  },
+  {
+    "id": 9252,
+    "suite_id": 1133,
+    "name": "Network Performance",
+    "description": null,
+    "parent_id": 9249,
+    "display_order": 46,
+    "depth": 1
+  },
+  {
+    "id": 9253,
+    "suite_id": 1133,
+    "name": "Network Failure",
+    "description": "When the Network connection is lost \nDoes the app behave erratically upon restored connection",
+    "parent_id": null,
+    "display_order": 48,
+    "depth": 0
+  },
+  {
+    "id": 19910,
+    "suite_id": 1133,
+    "name": "DRM testing",
+    "description": "Confirm with the dev / PM for the expected behavior.\n\nRecording may be allowed but playback is downgraded to 480",
+    "parent_id": null,
+    "display_order": 49,
+    "depth": 0
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1684910,
+    "suite_id": 609248,
+    "name": "Conviva",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1684912,
+    "suite_id": 609248,
+    "name": "Required Tags",
+    "description": null,
+    "parent_id": 1684910,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 1689492,
+    "suite_id": 609248,
+    "name": "Device Metadata",
+    "description": "Most device metadata is automatically collected by the Conviva SDK; however, some platform SDKs do not have the capability to collect these values and must explicitly pass them. Please refer to the Stream Sensor Integration documentation for your particular platform SDK.\n\nhttps://pulse.conviva.com/learning-center/content/sensor_developer_center/conviva_sensor_developer_center.htm?tocpath=Stream%20Sensor%20Integration%7CPlatform%20Integrations%7C_____0",
+    "parent_id": 1684910,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 1689493,
+    "suite_id": 609248,
+    "name": "Custom Tags",
+    "description": null,
+    "parent_id": 1684910,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 1684911,
+    "suite_id": 609248,
+    "name": "Adobe",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1690496,
+    "suite_id": 609248,
+    "name": "vikram draft",
+    "description": "After team discussion, we can allocate the test cases to their respective sections.",
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  }
+]

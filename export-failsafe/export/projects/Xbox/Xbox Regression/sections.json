@@ -1,0 +1,659 @@
+[
+  {
+    "id": 150935,
+    "suite_id": 20773,
+    "name": "Startup",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 150936,
+    "suite_id": 20773,
+    "name": "Home Team",
+    "description": null,
+    "parent_id": 150935,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 150937,
+    "suite_id": 20773,
+    "name": "Postseason 1st launch Welcome message",
+    "description": null,
+    "parent_id": 150935,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 150938,
+    "suite_id": 20773,
+    "name": "1st Launch",
+    "description": null,
+    "parent_id": 150935,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 150939,
+    "suite_id": 20773,
+    "name": "2nd Launch - Alerts",
+    "description": null,
+    "parent_id": 150938,
+    "display_order": 7,
+    "depth": 2
+  },
+  {
+    "id": 150940,
+    "suite_id": 20773,
+    "name": "1st Time Launch - On boarding",
+    "description": null,
+    "parent_id": 150935,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 150941,
+    "suite_id": 20773,
+    "name": "Favorite Team",
+    "description": null,
+    "parent_id": 150940,
+    "display_order": 9,
+    "depth": 2
+  },
+  {
+    "id": 150942,
+    "suite_id": 20773,
+    "name": "Following Teams",
+    "description": null,
+    "parent_id": 150940,
+    "display_order": 10,
+    "depth": 2
+  },
+  {
+    "id": 150943,
+    "suite_id": 20773,
+    "name": "Log In (PORTED, IN PROGRESS)",
+    "description": null,
+    "parent_id": 150940,
+    "display_order": 11,
+    "depth": 2
+  },
+  {
+    "id": 150944,
+    "suite_id": 20773,
+    "name": "Login Page",
+    "description": null,
+    "parent_id": 150943,
+    "display_order": 12,
+    "depth": 3
+  },
+  {
+    "id": 150945,
+    "suite_id": 20773,
+    "name": "Create Account Page",
+    "description": null,
+    "parent_id": 150943,
+    "display_order": 13,
+    "depth": 3
+  },
+  {
+    "id": 150946,
+    "suite_id": 20773,
+    "name": "Login",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 150947,
+    "suite_id": 20773,
+    "name": "Home",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 150948,
+    "suite_id": 20773,
+    "name": "Home Team Appearance - Hide Scores Off",
+    "description": null,
+    "parent_id": 150947,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 150949,
+    "suite_id": 20773,
+    "name": "Home Team View Appearance - Hide Scores On",
+    "description": null,
+    "parent_id": 150947,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 150950,
+    "suite_id": 20773,
+    "name": "Home Team Functionality - Hide Scores Off",
+    "description": null,
+    "parent_id": 150947,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 150951,
+    "suite_id": 20773,
+    "name": "Home Team Functionality - Hide Scores On",
+    "description": null,
+    "parent_id": 150947,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 150952,
+    "suite_id": 20773,
+    "name": "Home Team - Blackout Checks",
+    "description": null,
+    "parent_id": 150947,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 150953,
+    "suite_id": 20773,
+    "name": "Team Picker",
+    "description": null,
+    "parent_id": 150947,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 150954,
+    "suite_id": 20773,
+    "name": "Recent Highlights",
+    "description": null,
+    "parent_id": 150947,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 150956,
+    "suite_id": 20773,
+    "name": "Team News - Hide Scores On",
+    "description": null,
+    "parent_id": 150954,
+    "display_order": 23,
+    "depth": 2
+  },
+  {
+    "id": 150955,
+    "suite_id": 20773,
+    "name": "Team News",
+    "description": null,
+    "parent_id": 150947,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 150957,
+    "suite_id": 20773,
+    "name": "Scores",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 150958,
+    "suite_id": 20773,
+    "name": "Videos",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 150959,
+    "suite_id": 20773,
+    "name": "Videos - Team Picker",
+    "description": null,
+    "parent_id": 150958,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 150960,
+    "suite_id": 20773,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  },
+  {
+    "id": 150961,
+    "suite_id": 20773,
+    "name": "Change Favorite Teams",
+    "description": null,
+    "parent_id": 150960,
+    "display_order": 29,
+    "depth": 1
+  },
+  {
+    "id": 150962,
+    "suite_id": 20773,
+    "name": "Log Out",
+    "description": null,
+    "parent_id": 150960,
+    "display_order": 30,
+    "depth": 1
+  },
+  {
+    "id": 150963,
+    "suite_id": 20773,
+    "name": "Access Right Restrictions",
+    "description": null,
+    "parent_id": 150960,
+    "display_order": 31,
+    "depth": 1
+  },
+  {
+    "id": 150964,
+    "suite_id": 20773,
+    "name": "Settings - In-Game Alerts",
+    "description": null,
+    "parent_id": 150960,
+    "display_order": 32,
+    "depth": 1
+  },
+  {
+    "id": 150965,
+    "suite_id": 20773,
+    "name": "Terms of Service",
+    "description": null,
+    "parent_id": 150960,
+    "display_order": 33,
+    "depth": 1
+  },
+  {
+    "id": 150966,
+    "suite_id": 20773,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 150967,
+    "suite_id": 20773,
+    "name": "Networking",
+    "description": null,
+    "parent_id": 150966,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 150968,
+    "suite_id": 20773,
+    "name": "Pre-roll Ads (New preroll rolled out, need new cases)",
+    "description": null,
+    "parent_id": 150966,
+    "display_order": 36,
+    "depth": 1
+  },
+  {
+    "id": 150969,
+    "suite_id": 20773,
+    "name": "Mid-Roll Ads",
+    "description": null,
+    "parent_id": 150966,
+    "display_order": 37,
+    "depth": 1
+  },
+  {
+    "id": 150970,
+    "suite_id": 20773,
+    "name": "Alerts",
+    "description": null,
+    "parent_id": 150966,
+    "display_order": 38,
+    "depth": 1
+  },
+  {
+    "id": 150971,
+    "suite_id": 20773,
+    "name": "Alert Types",
+    "description": null,
+    "parent_id": 150970,
+    "display_order": 39,
+    "depth": 2
+  },
+  {
+    "id": 150972,
+    "suite_id": 20773,
+    "name": "In-player (Video) Navigation",
+    "description": null,
+    "parent_id": 150966,
+    "display_order": 40,
+    "depth": 1
+  },
+  {
+    "id": 150973,
+    "suite_id": 20773,
+    "name": "Today's Games - Games (picker)",
+    "description": null,
+    "parent_id": 150972,
+    "display_order": 41,
+    "depth": 2
+  },
+  {
+    "id": 150974,
+    "suite_id": 20773,
+    "name": "Linescore",
+    "description": null,
+    "parent_id": 150972,
+    "display_order": 42,
+    "depth": 2
+  },
+  {
+    "id": 150975,
+    "suite_id": 20773,
+    "name": "Doubleplay (multiview)",
+    "description": null,
+    "parent_id": 150972,
+    "display_order": 43,
+    "depth": 2
+  },
+  {
+    "id": 150976,
+    "suite_id": 20773,
+    "name": "(Video Player) Controls",
+    "description": null,
+    "parent_id": 150972,
+    "display_order": 44,
+    "depth": 2
+  },
+  {
+    "id": 150977,
+    "suite_id": 20773,
+    "name": "Closed Captioning",
+    "description": null,
+    "parent_id": 150976,
+    "display_order": 45,
+    "depth": 3
+  },
+  {
+    "id": 150978,
+    "suite_id": 20773,
+    "name": "Milestones (Skip Fwd/Skip Back)",
+    "description": null,
+    "parent_id": 150976,
+    "display_order": 46,
+    "depth": 3
+  },
+  {
+    "id": 150979,
+    "suite_id": 20773,
+    "name": "Scan Fwd/Scan Back",
+    "description": null,
+    "parent_id": 150976,
+    "display_order": 47,
+    "depth": 3
+  },
+  {
+    "id": 150980,
+    "suite_id": 20773,
+    "name": "Change Audio",
+    "description": null,
+    "parent_id": 150976,
+    "display_order": 48,
+    "depth": 3
+  },
+  {
+    "id": 150981,
+    "suite_id": 20773,
+    "name": "Audio Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 49,
+    "depth": 0
+  },
+  {
+    "id": 150982,
+    "suite_id": 20773,
+    "name": "Game States",
+    "description": null,
+    "parent_id": null,
+    "display_order": 51,
+    "depth": 0
+  },
+  {
+    "id": 1921798,
+    "suite_id": 20773,
+    "name": "Samsung TV Remote Control",
+    "description": "This test case is for Samsung TV Remote Control.",
+    "parent_id": null,
+    "display_order": 52,
+    "depth": 0
+  },
+  {
+    "id": 1921800,
+    "suite_id": 20773,
+    "name": "Power Button Test",
+    "description": "This test case is for the Samsung TV Remote Power Button function.",
+    "parent_id": 1921798,
+    "display_order": 53,
+    "depth": 1
+  },
+  {
+    "id": 1922806,
+    "suite_id": 20773,
+    "name": "Menu Navigation Test",
+    "description": "This test case is for testing the Samsung TV Remote Menu Navigation.",
+    "parent_id": 1921798,
+    "display_order": 54,
+    "depth": 1
+  },
+  {
+    "id": 1923371,
+    "suite_id": 20773,
+    "name": "Button Press Test",
+    "description": "These test cases for pressing the buttons on the remote control.",
+    "parent_id": 1921798,
+    "display_order": 55,
+    "depth": 1
+  },
+  {
+    "id": 1922808,
+    "suite_id": 20773,
+    "name": "Remote App",
+    "description": "This test case is for testing the Samsung TV Remote Control's Remote App function.",
+    "parent_id": 1921798,
+    "display_order": 57,
+    "depth": 1
+  },
+  {
+    "id": 1923870,
+    "suite_id": 20773,
+    "name": "Pair Remote to TV",
+    "description": "This test case syncs/pairs/connects the Samsung TV remote to the Samsung TV.",
+    "parent_id": 1921798,
+    "display_order": 60,
+    "depth": 1
+  },
+  {
+    "id": 1921799,
+    "suite_id": 20773,
+    "name": "LG TV Remote Control",
+    "description": "These tests are for LG Remote Controls.",
+    "parent_id": null,
+    "display_order": 61,
+    "depth": 0
+  },
+  {
+    "id": 1921803,
+    "suite_id": 20773,
+    "name": "LG Remote Control Functionality",
+    "description": "These test cases are for LG's Remote Control functionality.",
+    "parent_id": 1921799,
+    "display_order": 62,
+    "depth": 1
+  },
+  {
+    "id": 1922348,
+    "suite_id": 20773,
+    "name": "Power Button Test",
+    "description": "This test case is for testing LG's power button functionality.",
+    "parent_id": 1921803,
+    "display_order": 63,
+    "depth": 2
+  },
+  {
+    "id": 1922349,
+    "suite_id": 20773,
+    "name": "Menu Navigation Test",
+    "description": "This test case is for testing the menu navigation.",
+    "parent_id": 1921803,
+    "display_order": 64,
+    "depth": 2
+  },
+  {
+    "id": 1922350,
+    "suite_id": 20773,
+    "name": "Volume and Channel Control Button Test",
+    "description": "These test case is for testing the Volume and Channel Control buttons.",
+    "parent_id": 1921803,
+    "display_order": 65,
+    "depth": 2
+  },
+  {
+    "id": 1922351,
+    "suite_id": 20773,
+    "name": "Smart TV Functions",
+    "description": "These test cases for testing the LG's Smart TV remote button's functionality. (if applicable)",
+    "parent_id": 1921803,
+    "display_order": 67,
+    "depth": 2
+  },
+  {
+    "id": 1922352,
+    "suite_id": 20773,
+    "name": "Remote App",
+    "description": "This test case is for testing LG's Remote App functionality. (if applicable)",
+    "parent_id": 1921803,
+    "display_order": 68,
+    "depth": 2
+  },
+  {
+    "id": 1921797,
+    "suite_id": 20773,
+    "name": "PS 5 Controllers",
+    "description": "These tests are for the PS 5 controllers.",
+    "parent_id": null,
+    "display_order": 69,
+    "depth": 0
+  },
+  {
+    "id": 1921804,
+    "suite_id": 20773,
+    "name": "PS 5 Controller Functionality",
+    "description": "These test cases are for the PS 5 Controllers.",
+    "parent_id": 1921797,
+    "display_order": 72,
+    "depth": 1
+  },
+  {
+    "id": 1921918,
+    "suite_id": 20773,
+    "name": "Power Button Test",
+    "description": "This test is for testing the Power Button when the PS 5 controller is connected to the PS 5 console.",
+    "parent_id": 1921804,
+    "display_order": 73,
+    "depth": 2
+  },
+  {
+    "id": 1921920,
+    "suite_id": 20773,
+    "name": "Analog Stick Test",
+    "description": "This test is for testing the Analog Stick when it is connected to the PS 5 Console.",
+    "parent_id": 1921804,
+    "display_order": 76,
+    "depth": 2
+  },
+  {
+    "id": 1922803,
+    "suite_id": 20773,
+    "name": "Button Press Test",
+    "description": "This test case is for testing ALL of the PS 5 buttons.",
+    "parent_id": 1921804,
+    "display_order": 77,
+    "depth": 2
+  },
+  {
+    "id": 150989,
+    "suite_id": 20773,
+    "name": "GDPR Create Account",
+    "description": null,
+    "parent_id": null,
+    "display_order": 101,
+    "depth": 0
+  },
+  {
+    "id": 150990,
+    "suite_id": 20773,
+    "name": "** Postseason View",
+    "description": null,
+    "parent_id": null,
+    "display_order": 102,
+    "depth": 0
+  },
+  {
+    "id": 150991,
+    "suite_id": 20773,
+    "name": "** All-Star Game",
+    "description": null,
+    "parent_id": null,
+    "display_order": 103,
+    "depth": 0
+  },
+  {
+    "id": 150992,
+    "suite_id": 20773,
+    "name": "ASG - LIVE Playback",
+    "description": null,
+    "parent_id": 150991,
+    "display_order": 104,
+    "depth": 1
+  },
+  {
+    "id": 150993,
+    "suite_id": 20773,
+    "name": "ASG - VOD Playback",
+    "description": null,
+    "parent_id": 150991,
+    "display_order": 105,
+    "depth": 1
+  },
+  {
+    "id": 1278049,
+    "suite_id": 20773,
+    "name": "Clips",
+    "description": null,
+    "parent_id": null,
+    "display_order": 106,
+    "depth": 0
+  },
+  {
+    "id": 1278050,
+    "suite_id": 20773,
+    "name": "Shows",
+    "description": null,
+    "parent_id": null,
+    "display_order": 107,
+    "depth": 0
+  }
+]

@@ -1,0 +1,218 @@
+[
+  {
+    "id": 148364,
+    "suite_id": 20469,
+    "name": "Spaces Home page - Manual testing REQUIRED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 148365,
+    "suite_id": 20469,
+    "name": "Spaces Home page - Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 148366,
+    "suite_id": 20469,
+    "name": "Space Members - Manual testing REQUIRED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 148367,
+    "suite_id": 20469,
+    "name": "Space Members - Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 148368,
+    "suite_id": 20469,
+    "name": "Automated - do not test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 148369,
+    "suite_id": 20469,
+    "name": "Space Message Page - Manual testing REQUIRED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 148370,
+    "suite_id": 20469,
+    "name": "Space Message Page - Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 148371,
+    "suite_id": 20469,
+    "name": "Space Message Board - Manual testing REQUIRED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 148372,
+    "suite_id": 20469,
+    "name": "Space Message Board - Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 148374,
+    "suite_id": 20469,
+    "name": "Space Documents - Manual testing REQUIRED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 148375,
+    "suite_id": 20469,
+    "name": "Space Documents - Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 148376,
+    "suite_id": 20469,
+    "name": "Space - Individual Document/Folder - Manual testing REQUIRED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 148377,
+    "suite_id": 20469,
+    "name": "Space - Individual Document/Folder - Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 148379,
+    "suite_id": 20469,
+    "name": "Space Events - Manual testing REQUIRED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 148380,
+    "suite_id": 20469,
+    "name": "Space Events - Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 148381,
+    "suite_id": 20469,
+    "name": "Space Calendar - Manual testing REQUIRED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 148382,
+    "suite_id": 20469,
+    "name": "Space Calendar - Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 148383,
+    "suite_id": 20469,
+    "name": "Space Blog - Manual testing REQUIRED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 148384,
+    "suite_id": 20469,
+    "name": "Space Blog - Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 19,
+    "depth": 0
+  },
+  {
+    "id": 148385,
+    "suite_id": 20469,
+    "name": "Space Blog Post page - Manual testing REQUIRED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 148386,
+    "suite_id": 20469,
+    "name": "Space Blog Post page - Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 148388,
+    "suite_id": 20469,
+    "name": "Space Event page - Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 148389,
+    "suite_id": 20469,
+    "name": "Space Wiki - Manual testing REQUIRED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 148390,
+    "suite_id": 20469,
+    "name": "Space Wiki - Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  }
+]

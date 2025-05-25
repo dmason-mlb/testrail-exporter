@@ -1,0 +1,11 @@
+{
+  "id": 1459,
+  "name": "MS XB360 XDK Functional Test Cases -v3.1b",
+  "description": "April 2013 XDK\r\n\r\nnote: many of the test cases that are specific to Games (e.g. multi-player functionality, trophies, avatars, etc.) have not been entered in TestRail\r\n\r\nLinks to full docs are on the  MS dev portal or MLBAM wiki:\r\nhttps://wiki.mlbam.com/display/QAspace/Connected+Devices+Utilities#ConnectedDevicesUtilities-ComplianceRequirements&TestCaseshttps://wiki.mlbam.com/display/QAspace/Connected+Devices+Utilities#ConnectedDevicesUtilities-ComplianceRequirements&TestCases",
+  "project_id": 51,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/1459"
+}

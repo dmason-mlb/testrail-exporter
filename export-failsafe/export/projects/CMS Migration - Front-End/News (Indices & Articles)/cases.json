@@ -1,0 +1,785 @@
+[
+  {
+    "id": 1234181,
+    "title": "iPad",
+    "section_id": 148971,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543437564,
+    "updated_by": 84,
+    "updated_on": 1543437574,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20540,
+    "display_order": 1,
+    "custom_preconds": "http://mlb.mlb.com/gen/content/tag/v1/mlb/news/ipad_newsreader.json",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user is on the News section\nand observes the top header",
+        "expected": "Then user will see the following in the header:\nMLB.TV icon \nSegment Controller (MLB.com, Favorite Team, Teams)\nGameday Audio"
+      },
+      {
+        "content": "When a user taps on the Teams > button \nand the Teams popover is displayed",
+        "expected": "Then all 30 team names are displayed with their correct logo to the left of the team name in alphabetical order\nand the MLB index and logo are displayed as the first entry\nand if a favorite team has been selected, this is displayed directly below the MLB index"
+      },
+      {
+        "content": "When a user taps on the Teams popover\nand taps on each of the 30 teams and the MLB index",
+        "expected": "Then the specific indexes will load\nand the label on top of the Newsreader will display the correct Team logo, \"Team Name\" News"
+      },
+      {
+        "content": "When a user is on the Newsreader\nand taps on the MLB.TV button",
+        "expected": "Then the MLB.TV popover will display"
+      },
+      {
+        "content": "When a user is on the Newsreader\nand taps on the Gameday Audio button",
+        "expected": "Then the Paywall will display for Lite users\nor the Gameday Audio popover will display for Full users\n\nTest both scenarios (Full User and Lite User)"
+      },
+      {
+        "content": "When a user is on the Newsreader\nand taps a news article",
+        "expected": "Then that news article will open up in full screen \nand the user will have a back button to return to the news index"
+      },
+      {
+        "content": "When a user is on full screen mode for a news article\nand taps on the back button in the upper left of the article",
+        "expected": "Then the user will be returned to the news index"
+      },
+      {
+        "content": "When a user is in an article in full screen mode\nand taps on the sharing button on the upper right",
+        "expected": "Then the sharing popover displays the options for Message, Mail, Twitter, Facebook"
+      },
+      {
+        "content": "When a user is in an article in full screen mode\nand taps on the font re-size button on the upper right",
+        "expected": "Then the article font size will either increase/decrease (3 different font sizes total)"
+      },
+      {
+        "content": "When a user is on a news article in full screen mode\nand you use the next/back article caption at the bottom left/right of the news article",
+        "expected": "Then you are taken to the appropriate article"
+      },
+      {
+        "content": "When a user selects the News menu\nand a selects a News Article with a Video in it\nand taps on the Video in the News Article",
+        "expected": "Then the Video play successfully within it's window with a video controller overlay with the following:\n\nTop Overlay: Title, Chromecast, Share\nBottom Overlay: Play/Pause, Elasped (M:SS), Scrubber, Remaining (M:SS), Toggle Full Screen, PIP"
+      },
+      {
+        "content": "When a user expands the video to all screen with the Full Screen arrow or pinch out gesture ",
+        "expected": "Then the video will play in full screen mode with the following:\n\nTop Overlay: Done Title, Volume Slider, Airplay Chromecast, Share\nBottom Overlay: Play/Pause, Elasped (M:SS), Scrubber, Remaining (M:SS), Toggle Full Screen, PIP, CC"
+      },
+      {
+        "content": "When a user taps on an article with a one image\nand then taps on the image ",
+        "expected": "Then the photo shown centered in a black screen\nand an X button in the upper left\nand zoomed photo\nand caption in white text\nand a Share button"
+      },
+      {
+        "content": "When a user taps on an article with more than one image\nand then taps on an image ",
+        "expected": "Then the photo shown centered in a black screen\nand an X button in the upper left\nand zoomed photo\nand caption in white text\nand a Share button\nand dots at the bottom to indicate swipe through images in the articles"
+      },
+      {
+        "content": "When a user taps on an article with a one image\nand then taps on an image \nand 1x taps on the image",
+        "expected": "Then the controls will disappear and the user will see the image"
+      },
+      {
+        "content": "When a user taps on an article with a one image\nand then taps on an image \nand 2x taps on the image",
+        "expected": "Then the user will be able to toggle between zoom and unzoom\n-Double Tap to unzoom back to 1X\n-Double Tap on 1/X to zoom in to 2X"
+      },
+      {
+        "content": "When a user taps on an article with a one image\nand then taps on an image \nand pinches the image ",
+        "expected": "Then the user is able to pinch and zoom"
+      },
+      {
+        "content": "When a user taps on an article with a one image\nand then taps on an image \nand taps on the Share button\n",
+        "expected": "Then the user is able to share the article "
+      },
+      {
+        "content": "When a user taps on an article with a one image\nand taps on the X\nor swipe down ",
+        "expected": "Then the photo will animate down\nand the user will return to the article"
+      },
+      {
+        "content": "When a user is viewing a video in full screen and the on screen video controller are present",
+        "expected": "Then a Shareable button will be present on the video controller overlay"
+      },
+      {
+        "content": "When a user is in At Bat in lite user mode\nand selects the News menu\nand selects a News Article with some length\nand scrolls down through the article",
+        "expected": "Then an ad will be visible in between paragraphs of the article"
+      },
+      {
+        "content": "When a user is on the Cut 4 article\nand taps on the Continue Reading button",
+        "expected": "Then a webview will open with the related content of the article"
+      },
+      {
+        "content": "When a user taps on an article to open it in full screen view\nand taps on a link for a Player Card",
+        "expected": "Then the Player Card for the tapped player will open"
+      },
+      {
+        "content": "When a user taps on an article to open it in full screen view\nand scrolls down the article",
+        "expected": "Then the article will be one column with the tokens published from Homebase that are in the iPad newsreader json file\n"
+      },
+      {
+        "content": "When a user taps on the Twitter button on the Share popover for an article",
+        "expected": "Then a Twitter popover will appear for the user"
+      },
+      {
+        "content": "When you tap on an article and tap on the share button",
+        "expected": "Then we will see a Message button\nand Mail button\nand Twitter button\nand Facebook button"
+      },
+      {
+        "content": "When a user taps on the Cancel button on the Twitter popover",
+        "expected": "Then we can successfully cancel out of the Tweet\nand we are brought back to our previous location inside the application"
+      },
+      {
+        "content": "When a user has multiple Twitter accounts setup\nand taps on Twitter button on the Share popover for an article\n",
+        "expected": "Then we will see that a Account field exists\nand we will see that we can switch between Twitter accounts when tapping on it"
+      },
+      {
+        "content": "When a user taps on the Post button on the Twitter popover for an article",
+        "expected": "Then we will see the Tweet successfully posted to Twitter"
+      },
+      {
+        "content": "When a user successfully sends a tweet from At Bat\nand views the tweet in Twitter",
+        "expected": "Then we will see on Twitter that the end of the Tweet contains the following message:\n\n\"Sent with MLB.com At Bat mlb.com/r/article...\""
+      },
+      {
+        "content": "When a user successfully sends a tweet from At Bat for an article that pertains to a game summary\nand views the tweet in Twitter",
+        "expected": "Then we will see on Twitter that the end of the Tweet contains the following message:\n\n\"Sent with MLB.com At Bat mlb.com/mlb/gameday...\""
+      },
+      {
+        "content": "When a user taps on the MLB.com menu\nand taps on the News button\nand taps on a News Article\nand taps on the button in the top right corner\nand taps on the Post to Facebook button\nand this is the first time we are accessing the Facebook flow",
+        "expected": "Then we will receive an Facebook Authorization Flow"
+      },
+      {
+        "content": "When a user taps on Cancel on the Facebook authorization flow",
+        "expected": "Then we will successfully back out of the Facebook Flow\nand the user will be brought back to their previous location"
+      },
+      {
+        "content": "When the user taps on Post on the Facebook popover to share a news article",
+        "expected": "Then we will see that the comment we posted has successfully posted to Facebook"
+      },
+      {
+        "content": "When a user shares a news article on Facebook\nand checks Facebook",
+        "expected": "Then we will see at the end of the Facebook post that it contains: \"MLB.com\""
+      },
+      {
+        "content": "When a user taps on the MLB.com menu\nand taps on the News button\nand taps on a News Article\nand taps on the button in the top right corner\nand taps on the Mail button",
+        "expected": "Then the default iOS mail view will appear successfully"
+      },
+      {
+        "content": "When a user has no e-mail setup on a iDevice\nand taps to Mail button on Share popover for an article",
+        "expected": "Then we will be prompted with a message to set the account up in Mail Settings"
+      },
+      {
+        "content": "When a user has e-mail setup on a iDevice\nand taps to Mail button on Share popover for an article",
+        "expected": "Then we are able to successfully send an email\nand the recipient is able to successfully receive the email"
+      },
+      {
+        "content": "When a user navigates to the News section\nand launches an article\nand sees an inline video",
+        "expected": "Then the user will see a video image, play button on the top left indicating it is a video, blurb, video duration (MM:SS), big blurb"
+      },
+      {
+        "content": "When a user navigates to the News section\nand launches an article\nand taps to play the highlight within the article",
+        "expected": "Then the Video play successfully inline within it's window with a video controller bottom overlay with the following:\n\nTop Overlay: Title, Chromecast, Share\nBottom Overlay: Play/Pause, Elasped (M:SS), Scrubber, Remaining (M:SS), Toggle Full Screen, PIP"
+      },
+      {
+        "content": "When a user expands an inline video to all screen with the Full Screen arrow or pinch out gesture ",
+        "expected": "Then the video will play in full screen mode with the following video controller:\n\nTop Overlay: Title, Volume Slider, AirPlay, Chromecast, Share\nBottom Overlay: Play/Pause, Elasped (M:SS), Scrubber, Remaining (M:SS), Toggle Full Screen, PIP"
+      },
+      {
+        "content": "When a user views an expanded video and the video controller is present",
+        "expected": "Then a Shareable button will be present on the video controller overlay"
+      },
+      {
+        "content": "When a user navigates to the News section\nand launches an article\nand taps to Play the highlight within the article\nand continues to scroll the News article",
+        "expected": "Then the video will continue to play inline\nand can be viewed successfully when scrolling back to the video"
+      },
+      {
+        "content": "When a user has navigated to the News section\nand launches an article\nand taps to Play the highlight within the article\nand swipes to next article",
+        "expected": "Then the video will stop playing"
+      },
+      {
+        "content": "When a user navigates to the News section\nand is on a news index page\nand there is a video in the news article preview\nand taps on the video",
+        "expected": "Then the video will play\nand tapping the expand button will bring the video full screen\nor pinch zooming the video will bring the video full screen"
+      },
+      {
+        "content": "When pre-roll is targeted for a lite user and the user taps on a video index or video token and the user is on a carrier connection\n\nIn Prod, pre-roll is targeted to Lite users",
+        "expected": "Then a pre-roll video will play followed by the video that the user requested"
+      },
+      {
+        "content": "When pre-roll is targeted for a lite user and the user taps on a video index or video token and the user is on a carrier connection\n\nIn Prod, pre-roll is targeted to Lite users",
+        "expected": "Then a pre-roll video will play followed by the video that the user requested"
+      },
+      {
+        "content": "When a user navigates to an article and has tweets associated",
+        "expected": "The tweets must display inline within the News articles"
+      },
+      {
+        "content": "When a user navigates to an article which has a GIF",
+        "expected": "The GIF will display inline, GIF indicator populates in upper right hand, GIF will not autoplay"
+      },
+      {
+        "content": "When a user navigates to an article which has a GIF and taps on it",
+        "expected": "The GIF will start to play and will loop"
+      },
+      {
+        "content": "When a user navigates to an article which has a GIF playing and taps on Pause",
+        "expected": "The GIF will Pause"
+      },
+      {
+        "content": "When a user navigates to an article which has a GIF playing and taps on Pause then taps again to restart playing",
+        "expected": "The GIF will play from where it was Paused"
+      },
+      {
+        "content": "When a user navigates to an article which has a GIF playing and scrolls the GIF out of view",
+        "expected": "The GIF will stop and reset return to default image with icon"
+      },
+      {
+        "content": "When a user navigates to an article and has photo(s)",
+        "expected": "The photo(s) should be able to display in-line within the news article"
+      },
+      {
+        "content": "When a user navigates to an article which has a GIF\nOr the user navigates to an article which has a Tweet",
+        "expected": "Then a loading spinner should appear on the space where the GIF/Tweet is loading\nAnd the spinner should disappear and be replaced by the GIF/Tweet when it has completed loading. "
+      }
+    ]
+  },
+  {
+    "id": 1234182,
+    "title": "iPhone",
+    "section_id": 148971,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543437564,
+    "updated_by": 84,
+    "updated_on": 1543437579,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20540,
+    "display_order": 2,
+    "custom_preconds": " http://mlb.mlb.com/gen/content/tag/v1/mlb/news/iphone_newsreader.json\r\n\r\nData Files: https://wiki.mlbam.com/display/QAspace/Charles+Web+Debugging+Proxy+-+Local+File+Mapping",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When a user is on the Newsreader\nand taps the MLB.com menu button on top center of the News index page",
+        "expected": "Then the filter will be set to all MLB news\nand articles displayed can be related to any team (or postseason series if during the postseason)"
+      },
+      {
+        "content": "When a user taps on the MLB.com button in the top center of the News page\nand the Teams popover is displayed",
+        "expected": "Then all 30 team names are displayed with their correct logo to the left of the team name in alphabetical order\nand the MLB index and logo are displayed as the first entry\nand if a favorite team has been selected, this is displayed directly below the MLB index"
+      },
+      {
+        "content": "When a user is on the Newsreader\nand taps on the MLB.TV button on the top left hand corner",
+        "expected": "Then the MLB.TV page will display"
+      },
+      {
+        "content": "When a user is on the Newsreader\nand taps on the Gameday Audio button on the top right hand corner",
+        "expected": "Then the Paywall will display for Lite users\nor the Gameday Audio page will display for Full users"
+      },
+      {
+        "content": "When a user pulls down the section below the Top Stories/Videos segmented controller",
+        "expected": "Then iOS pull to refresh will be exposed with circle animation (similar to native iOS Mail App) and the news section will refresh with the most current article in the index at top"
+      },
+      {
+        "content": "When a user is on the Newsreader\nand taps on an article to open the article",
+        "expected": "Then that news article will open up \nand a back button will display on the upper left of the article"
+      },
+      {
+        "content": "When a user is on a news article\nand taps on the back button in the upper left of the article",
+        "expected": "Then the article will slide from left to right\nand you will be returned to the news index"
+      },
+      {
+        "content": "When a user is on a news article\nand taps on the sharing button on the upper right",
+        "expected": "Then the sharing popover displays the options for Message, Mail, Twitter, Facebook (depending what is on the iDevice)"
+      },
+      {
+        "content": "When a user is on a news article\nand taps on the font button on the upper right",
+        "expected": "Then the font will become larger with each tap\nand when you continue to tap until it gets to the maximum size then the next tap will cause the font to start from a small font"
+      },
+      {
+        "content": "When a user is on a news article\nand you scroll to the right\n",
+        "expected": "Then a the next article will display\nand the article number located in the top center of the news reader will change accordingly\n\n(1 of 30, 2 of 30, 3 of 30)"
+      },
+      {
+        "content": "When a user is a Lite user\nand selects the News menu\nand is on the news index page\nand taps the bottom banner on the main page",
+        "expected": "Then the expected webview for that banner will open"
+      },
+      {
+        "content": "When a user selects the News menu\nand selects a News article\nand scrolls up and down on the news article",
+        "expected": "Then the scrolling goes up and down accordingly\nand the scroll is smooth"
+      },
+      {
+        "content": "When a user selects the News menu\nand selects a News Article with a Video in it\nand taps on the Video in the News Article",
+        "expected": "Then the Video play successfully within it's window\nand if we expand the video it will play in full screen"
+      },
+      {
+        "content": "When a user is playing the headline video inline and taps on the video to display the video controller UI",
+        "expected": "Then the video controller UI will appear onscreen with the following:\n\nTop Overlay: Title, Chromecast, Share\nBottom Overlay: Play/Pause, Elasped (M:SS), Scrubber, Remaining (M:SS), Toggle Full Screen"
+      },
+      {
+        "content": "When a user is playing a headline video and is on the video controller UI",
+        "expected": "Then a Share button will be present to share the video\n\nTest with all Share method"
+      },
+      {
+        "content": "When a user is a Lite user\nand selects the News menu\nand selects a News Article\nand scrolls to the end of the article\nand taps the 'Next Article' button located at the bottom for two articles",
+        "expected": "Then after tapping 'Next Article' button for the 3rd article we will see a banner come up\nand there will be a back button on the top left corner\nand tapping that banner will take you to the news index\nand there will be the 'Next Article' button at the bottom\nand tapping the 'Next Article' button will bring you to that 3rd article"
+      },
+      {
+        "content": "When a user is on a Cut4 article\nand taps on the Continue Reading button",
+        "expected": "Then a webview will open with the related content of the article"
+      },
+      {
+        "content": "When a user is on a news article\nand scrolls down the article to a video token(s)\nand taps on the video token(s)",
+        "expected": "Then the video will play and the user can continue to scroll down the article"
+      },
+      {
+        "content": "When a user navigates to an article and has tweets associated",
+        "expected": "The tweets must display inline within the News articles"
+      },
+      {
+        "content": "When a user navigates to an article which has a GIF",
+        "expected": "The GIF will display inline, GIF indicator populates in upper right hand, GIF will not autoplay"
+      },
+      {
+        "content": "When a user navigates to an article which has a GIF and taps on it",
+        "expected": "The GIF will start to play and will loop"
+      },
+      {
+        "content": "When a user navigates to an article which has a GIF playing and taps on Stop",
+        "expected": "The GIF will return to the default image with icon"
+      },
+      {
+        "content": "When a user navigates to an article which has a GIF playing and taps on Stop then taps again to Restart playing",
+        "expected": "The GIF will play from the beginning"
+      },
+      {
+        "content": "When a user navigates to an article which has a GIF playing and scrolls the GIF out of view",
+        "expected": "The GIF will stop and reset return to default image with icon"
+      },
+      {
+        "content": "When a user navigates to an article and has photo(s)",
+        "expected": "The photo(s) should be able to display in-line within the news article"
+      },
+      {
+        "content": "When a user taps on an article with a one image\nand then taps on the image",
+        "expected": "Then the photo shown centered in a black screen\nand an X button in the upper left\nand zoomed photo\nand caption in white text\nand a Share button"
+      },
+      {
+        "content": "When a user taps on an article with more than one image\nand then taps on an image",
+        "expected": "Then the photo shown centered in a black screen\nand an X button in the upper left\nand zoomed photo\nand caption in white text\nand a Share button\nand dots at the bottom to indicate swipe through images in the articles"
+      },
+      {
+        "content": "When a user taps on an article with a one image\nand then taps on an image \nand 1x taps on the image",
+        "expected": "Then the controls will disappear and the user will see the image"
+      },
+      {
+        "content": "When a user taps on an article with a one image\nand then taps on an image \nand 2x taps on the image",
+        "expected": "Then the user will be able to toggle between zoom and unzoom\n-Double Tap to unzoom back to 1X\n-Double Tap on 1/X to zoom in to 2X"
+      },
+      {
+        "content": "When a user taps on an article with a one image\nand then taps on an image \nand pinches the image",
+        "expected": "Then the user is able to pinch and zoom"
+      },
+      {
+        "content": "When a user taps on an article with a one image\nand then taps on an image \nand taps on the Share button",
+        "expected": "Then the user is able to share the article"
+      },
+      {
+        "content": "When a user taps on an article with a one image\nand taps on the X\nor swipe down",
+        "expected": "Then the photo will animate down\nand the user will return to the article"
+      },
+      {
+        "content": "When a user presses the Full Screen button or uses the pinch out gesture to play a video in portrait",
+        "expected": "Then the video will play in full screen and the video controller UI will appear onscreen with the following:\n\nTop Overlay: Done, Title, Chromecast, Share\nBottom Overlay: Play/Pause, Elasped (M:SS), Scrubber, Remaining (M:SS), Toggle Full Screen"
+      },
+      {
+        "content": "When a user rotates a video from landscape to portrait or portrait to landscape\n\nTest both",
+        "expected": "Then the video orientation will change and the overlays will be the same"
+      },
+      {
+        "content": "When a user is playing a inline video token and is on the video controller UI",
+        "expected": "Then a Share button will be present to share the video\n\nTest with all Share method"
+      },
+      {
+        "content": "When Freewheel pre-roll is targeted for a lite user and full user and the user taps on a video index or video token and the user is on a carrier connection",
+        "expected": "Then a 30 second pre-roll video will play followed by the video that the user requested"
+      },
+      {
+        "content": "When Freewheel pre-roll is targeted for a lite user and full user and the user taps on a video index or video token and the user is on WIFI connection",
+        "expected": "Then a 30 second pre-roll video will play followed by the video that the user requested"
+      },
+      {
+        "content": "When a Freewheel Pre-roll ad is targeted for a Lite user and Paid user and a user taps on a video on demand",
+        "expected": "Then a 30 second pre-roll video will play followed by the video that is requested for both users"
+      },
+      {
+        "content": "When a user navigates to an article which has a GIF\nOr the user navigates to an article which has a Tweet\n",
+        "expected": "Then a loading spinner should appear on the space where the GIF/Tweet is loading\nAnd the spinner should disappear and be replaced by the GIF/Tweet when it has completed loading."
+      }
+    ]
+  },
+  {
+    "id": 1234189,
+    "title": "General News",
+    "section_id": 149723,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543504661,
+    "updated_by": 84,
+    "updated_on": 1543504808,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20540,
+    "display_order": 1,
+    "custom_preconds": "URL for main news index - http://content.mlb.com/app/mlb/gen/content/tag/v1/mlb/news/newsreader.json\r\nURL for team specific news index - http://content.mlb.com/app/mlb/gen/content/tag/v1/bal/news/newsreader.json\r\nSpanish - http://content.mlb.com/app/mlb/gen/content/tag/v1/mlb/news/es/newsreader.json\r\n\r\nSpinner Menu - Drop down menu with list of all MLB teams and Postseason News during postseason. ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User navigates to News section of app",
+        "expected": "User should be taken to MLB.com News index\n\nUser should see drop down spinner where they can select individual team indexes.\nUser should see list of articles with:\n\nThumbnail image\nArticle headline\nArticle time and date in format: <HH:MM> <AM/PM>, <Day>, <Mon> <DD>"
+      },
+      {
+        "content": "If a thumbnail image is not available for a given article",
+        "expected": "There should be a MLB placeholder thumbnail"
+      },
+      {
+        "content": "When user swipes through article index",
+        "expected": "Placeholder thumbnails should appear as article thumbnail images are being loaded"
+      },
+      {
+        "content": "When the user taps the drop down spinner \nAnd the user selects a team from the list",
+        "expected": "Then the spinner should show the selected team\nAnd the news index for that team should load. "
+      },
+      {
+        "content": "When the user has one or more favorite teams set in the app\nAnd the user taps the drop down spinner",
+        "expected": "Then their favorite team(s) will be listed under a \"Favorite Teams\" category\nand this will be located under the \"MLB\" filter\nand above the \"Teams\" category"
+      },
+      {
+        "content": "When the user changes the orientation of the device on the News index",
+        "expected": "Then the orientation of the app should change from portrait to landscape or vice versa\nAnd the user's scroll position in the article index should be maintained. "
+      },
+      {
+        "content": "When the user taps on an article in the news index",
+        "expected": "Then the user should be taken to the News Article Page for the article they selected. "
+      },
+      {
+        "content": "When the user navigates to an article page",
+        "expected": "Then the Audio and Video icons should not appear in the action bar\nAnd they should be replaced by \"Text Resize\" and \"Share\" buttons\n\nAnd the hamburger menu should not appear\nAnd the 'Up' button should appear\n\nAnd the number of the article within the index along with the total number of articles in the index should appear in the action bar. (ie. 4 of 30)"
+      },
+      {
+        "content": "When the user taps the Text Resize button",
+        "expected": "Then the text should get larger with each tap up to two times. \nAnd tapping the button when the text is at its largest size should update the text to the smallest size."
+      },
+      {
+        "content": "When the user taps the Share icon in the action bar\n",
+        "expected": "Then the Android Share Menu will appear with the list of applications the user can share to."
+      },
+      {
+        "content": "When the article has a video associated with it",
+        "expected": "Then at the top of the article the video should appear\nAnd there should be an image\nAnd there should be a play button. "
+      },
+      {
+        "content": "When the user taps the video in an article",
+        "expected": "Then the video should play\nAnd when the video is done, the user should be returned to the article from which they launched the video"
+      },
+      {
+        "content": "When the user changes orientation of the device on an article page",
+        "expected": "Then the orientation should change from portrait to landscape and vice versa\nAnd the layout of the article should still be readable. "
+      },
+      {
+        "content": "When the user swipes left or right on an article page",
+        "expected": "Then the article will transition to the next or previous article in the index\nAnd the number on the action bar should update to reflect the number of the article in the index along with the total number of articles in the index\nAnd the user should NOT be able to loop through the index. (Cannot swipe from article 1 to article 30)\nAnd if the user changes the device orientation after swiping from one article to another they should remain on the same article \n\n**Test on general MLB news index article and on article from team index**"
+      },
+      {
+        "content": "When there is an article that does NOT have an associated video",
+        "expected": "Then the user should not see a blank video image\nThey should see the associated image"
+      },
+      {
+        "content": "When there is an article that does NOT have an associated image",
+        "expected": "Then the article should load\nAnd the article should not contain a blank space where the video should be. (There should be a placeholder image) "
+      },
+      {
+        "content": "When the article has player card tokens in the data\nAnd the user taps on a player card link in the article",
+        "expected": "Then the player card should open in an internal webview"
+      },
+      {
+        "content": "When the article has a link to external content in the data\nAnd the user taps on the link",
+        "expected": "Then the link should open "
+      }
+    ]
+  },
+  {
+    "id": 1234190,
+    "title": "News Article Sharing",
+    "section_id": 149723,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543504661,
+    "updated_by": 84,
+    "updated_on": 1543504811,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20540,
+    "display_order": 2,
+    "custom_preconds": "User has the Twitter for Android App installed (And valid Twitter testing account)\r\nUser has the Facebook for Android App installed (And valid Facebook testing account)\r\nUser has a Mail or Gmail account logged in",
+    "custom_steps": "When the user taps the Share Button on the Article page",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the Twitter app in the Share menu",
+        "expected": "Then a Compose Tweet screen should appear with the Article's URL pre-populated"
+      },
+      {
+        "content": "When the user taps the Twitter app in the Share menu\nAnd the user composes and posts the tweet",
+        "expected": "Then the Compose Tweet screen should close\nAnd the user should be returned to At Bat and left on the article page they were previously on\nAnd the Tweet should be sent successfully (check on twitter and verify that the link in the tweet takes the user to the correct article.)"
+      },
+      {
+        "content": "When the user begins to share with Twitter and has launched the Compose Tweet screen\nAnd the user navigates backwards (using the Android back button or tapping back navigation in the top left corner)",
+        "expected": "Then the Compose Tweet screen should close\nAnd the user should be returned to At Bat and left on the article page belonging to the article they tried to share. "
+      },
+      {
+        "content": "When the user taps the Facebook app in the Share menu",
+        "expected": "Then a Facebook Post screen should appear with the Article's URL and Metadata pre-populated. (Note: Metadata may not appear with an article shared from QA.) "
+      },
+      {
+        "content": "When the user taps the Facebook app in the Share menu\nAnd the user composes and posts the article",
+        "expected": "Then the Facebook Post screen should close\nAnd the user should be returned to At Bat and left on the article page belonging to the article they tried to share. \n\nAnd the Post should be sent successfully (check on Facebook and verify that the link in the post takes the user to the correct article.)"
+      },
+      {
+        "content": "When the user begins to share with Facebook and has launched the Facebook post screen\nAnd the user navigates backwards (using the Android back button or tapping back navigation in the top left corner)",
+        "expected": "Then the Facebook Post screen should close\nAnd the user should be returned to At Bat and left on the article page belonging to the article they tried to share. "
+      },
+      {
+        "content": "When the user taps the Email app or Gmail in the Share menu\n",
+        "expected": "Then the subject of the email should be pre-populated with the Article Title\nAnd the URL of the article should be pre-populated in the message body\n\n"
+      },
+      {
+        "content": "When the shares the article through Email\nAnd sends the email",
+        "expected": "Then the Email app should close\nAnd the user should be returned to At Bat and left on the article page belonging to the article they tried to share. \n\nAnd the Email should be sent successfully (check on the recipient's end and verify that the link in the email takes the user to the correct article.)"
+      },
+      {
+        "content": "When the user has already tapped to share at least one article on a given device\nAnd the user returns to a news article page",
+        "expected": "Then the app the user selected to share the article should appear as a quick option next to the share button\nAnd if the user taps on the application's icon in the action bar they should be directed to the share window for that application"
+      }
+    ]
+  },
+  {
+    "id": 1234191,
+    "title": "Layout",
+    "section_id": 149723,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543504661,
+    "updated_by": 84,
+    "updated_on": 1543504815,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20540,
+    "display_order": 3,
+    "custom_preconds": "https://wiki.mlbam.com/display/mobile/News+Index+Android#NewsIndexAndroid-Overview",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "when a user is viewing the News Index in Portrait ",
+        "expected": "Then the user will see the top main article/story with a grey box under the text"
+      },
+      {
+        "content": "when a user is viewing the News Index in Portrait \nas a LITE user",
+        "expected": "Then the user will see a main story followed by two smaller stories \nfollowed by the native ad followed by two smaller stories and then a main story\nand this pattern will continue as the user scrolls down the index\nand each article will be separated by rules that never disappear"
+      },
+      {
+        "content": "when a user is viewing the News Index in Portrait \nas a PAID user",
+        "expected": "Then the user will see a main story followed by three smaller stories\nand this pattern will continue as the user scrolls down the index\nand each article will be separated by rules that never disappear"
+      },
+      {
+        "content": "when a user is viewing the News Index in Landscape ",
+        "expected": "Then the main story will be followed by two rows of two smaller stories in each row\nand this pattern will continue as the user scrolls down the index"
+      }
+    ]
+  },
+  {
+    "id": 1234192,
+    "title": "Native Ads",
+    "section_id": 149723,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 6,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543504661,
+    "updated_by": 84,
+    "updated_on": 1543504820,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20540,
+    "display_order": 4,
+    "custom_preconds": "LITE user",
+    "custom_steps": "When a LITE user navs to any At Bat News Index\r\nand the device is in Portrait",
+    "custom_expected": "Then as the user scrolls down the index, they will see a native Ad after the first three articles\r\nand then after every fifth article in the Index",
+    "custom_steps_separated": null
+  },
+  {
+    "id": 1234193,
+    "title": "General News",
+    "section_id": 149724,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543504661,
+    "updated_by": 84,
+    "updated_on": 1543504823,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20540,
+    "display_order": 1,
+    "custom_preconds": "URL for main news index - http://mlb.mlb.com/gen/content/tag/v1/mlb/news/android_newsreader.json\r\nURL for team specific news index - http://mlb.mlb.com/gen/content/tag/v1/bal/news/android_newsreader.json\r\n\r\nSpinner Menu - Drop down menu with list of all MLB teams and Postseason News during postseason. ",
+    "custom_steps": null,
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "User navigates to News section of app",
+        "expected": "User should be taken to MLB.com News section\nThere should be a news index on the left side of the screen\nAnd an article page on the right side of the screen.\n\n(Topmost article in index should load in the right side on launch of section.)"
+      },
+      {
+        "content": "In the news index on the left side of the screen. ",
+        "expected": "User should see drop down spinner where they can select individual team indexes.\nUser should see list of articles with:\n\nThumbnail image\nArticle headline\nArticle time and date in format: <HH:MM> <AM/PM>, <Day>, <Mon> <DD>"
+      },
+      {
+        "content": "If a thumbnail image is not available for a given article",
+        "expected": "There should be a MLB placeholder thumbnail"
+      },
+      {
+        "content": "When user swipes through article index",
+        "expected": "Placeholder thumbnails should appear as article thumbnail images are being loaded"
+      },
+      {
+        "content": "When the user taps the drop down spinner \nAnd the user selects a team from the list",
+        "expected": "Then the spinner should show the selected team\nAnd the news index for that team should load. \nAnd the first article in that team's news index should be selected and loaded in the section on the right. "
+      },
+      {
+        "content": "When the user has one or more favorite teams set in the app\nAnd the user taps the drop down spinner",
+        "expected": "Then their favorite team(s) will be listed under a \"Favorite Teams\" category\nand this will be located under the \"MLB\" filter\nand above the \"Teams\" category"
+      },
+      {
+        "content": "When the user changes the orientation of the device on the News index",
+        "expected": "Then the orientation of the app should change from portrait to landscape or vice versa\nAnd the user's scroll position in the article index should be maintained. \nAnd the selected article should be maintained"
+      },
+      {
+        "content": "When the user taps on an article in the news index",
+        "expected": "Then the news article should appear highlighted in the index\nAnd the selected article should load in the section on the right. "
+      },
+      {
+        "content": "When the user sends the app to the background (But does not kill the app)\nAnd the user brings the app to the foreground",
+        "expected": "Then the app should immediately update and any new articles should appear in the index. "
+      },
+      {
+        "content": "When the user taps the Share icon in the bottom right of the news article",
+        "expected": "Then the Android Share Menu should appear with the list of applications the user can share to."
+      },
+      {
+        "content": "When the article has a video associated with it",
+        "expected": "Then at the top of the article the video should appear\nAnd there should be an image\nAnd there should be a play button. "
+      },
+      {
+        "content": "When the user taps the video in an article",
+        "expected": "Then the video should play\nAnd when the video is done, the user should be returned to the article from which they launched the video"
+      },
+      {
+        "content": "When the user changes orientation of the device on an article page",
+        "expected": "Then the orientation should change from portrait to landscape and vice versa\nAnd the layout of the article should still be readable. "
+      },
+      {
+        "content": "When there is an article that does NOT have an associated video",
+        "expected": "Then the user should not see a blank video image\nThey should see the associated image"
+      },
+      {
+        "content": "When there is an article that does NOT have an associated image",
+        "expected": "Then the article should load\nAnd the article should not contain a blank space where the video should be. (There should be a placeholder image) "
+      },
+      {
+        "content": "When the article has player card tokens in the data\nAnd the user taps on a player card link in the article\n",
+        "expected": "Then the player card should open in an internal webview\n"
+      },
+      {
+        "content": "When the article has a link to external content in the data\nAnd the user taps on the link\n",
+        "expected": "Then the link should open"
+      }
+    ]
+  },
+  {
+    "id": 1234194,
+    "title": "News Article Sharing",
+    "section_id": 149724,
+    "template_id": 1,
+    "type_id": 4,
+    "priority_id": 4,
+    "milestone_id": null,
+    "refs": null,
+    "created_by": 84,
+    "created_on": 1543504661,
+    "updated_by": 84,
+    "updated_on": 1543504826,
+    "estimate": null,
+    "estimate_forecast": null,
+    "suite_id": 20540,
+    "display_order": 2,
+    "custom_preconds": "User has the Twitter for Android App installed (And valid Twitter testing account)\r\nUser has the Facebook for Android App installed (And valid Facebook testing account)\r\nUser has a Mail or Gmail account logged in",
+    "custom_steps": "When the user taps the Share Button on the Article page",
+    "custom_expected": null,
+    "custom_steps_separated": [
+      {
+        "content": "When the user taps the Twitter app in the Share menu",
+        "expected": "Then a Compose Tweet screen should appear with the Article's URL pre-populated"
+      },
+      {
+        "content": "When the user taps the Twitter app in the Share menu\nAnd the user composes and posts the tweet",
+        "expected": "Then the Compose Tweet screen should close\nAnd the user should be returned to At Bat and left on the article page they were previously on\nAnd the Tweet should be sent successfully (check on twitter and verify that the link in the tweet takes the user to the correct article.)"
+      },
+      {
+        "content": "When the user begins to share with Twitter and has launched the Compose Tweet screen\nAnd the user navigates backwards (using the Android back button or tapping back navigation in the top left corner)",
+        "expected": "Then the Compose Tweet screen should close\nAnd the user should be returned to At Bat and left on the article page belonging to the article they tried to share. "
+      },
+      {
+        "content": "When the user taps the Facebook app in the Share menu",
+        "expected": "Then a Facebook Post screen should appear with the Article's URL and Metadata pre-populated. (Note: Metadata may not appear with an article shared from QA.) "
+      },
+      {
+        "content": "When the user taps the Facebook app in the Share menu\nAnd the user composes and posts the article",
+        "expected": "Then the Facebook Post screen should close\nAnd the user should be returned to At Bat and left on the article page belonging to the article they tried to share. \n\nAnd the Post should be sent successfully (check on Facebook and verify that the link in the post takes the user to the correct article.)"
+      },
+      {
+        "content": "When the user begins to share with Facebook and has launched the Facebook post screen\nAnd the user navigates backwards (using the Android back button or tapping back navigation in the top left corner)",
+        "expected": "Then the Facebook Post screen should close\nAnd the user should be returned to At Bat and left on the article page belonging to the article they tried to share. "
+      },
+      {
+        "content": "When the user taps the Email app or Gmail in the Share menu\n",
+        "expected": "Then the subject of the email should be pre-populated with the Article Title\nAnd the URL of the article should be pre-populated in the message body\n\n"
+      },
+      {
+        "content": "When the shares the article through Email\nAnd sends the email",
+        "expected": "Then the Email app should close\nAnd the user should be returned to At Bat and left on the article page belonging to the article they tried to share. \n\nAnd the Email should be sent successfully (check on the recipient's end and verify that the link in the email takes the user to the correct article.)"
+      }
+    ]
+  }
+]

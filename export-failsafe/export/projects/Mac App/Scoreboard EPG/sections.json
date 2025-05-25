@@ -1,0 +1,29 @@
+[
+  {
+    "id": 4560,
+    "suite_id": 618,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 4561,
+    "suite_id": 618,
+    "name": "Calendar picker",
+    "description": null,
+    "parent_id": 4560,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 4834,
+    "suite_id": 618,
+    "name": "Game States",
+    "description": null,
+    "parent_id": 4560,
+    "display_order": 3,
+    "depth": 1
+  }
+]

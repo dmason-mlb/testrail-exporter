@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1792593,
+    "suite_id": 644848,
+    "name": "[EN] Landing Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1792594,
+    "suite_id": 644848,
+    "name": "[ES] Landing Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1792595,
+    "suite_id": 644848,
+    "name": "Matchups",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

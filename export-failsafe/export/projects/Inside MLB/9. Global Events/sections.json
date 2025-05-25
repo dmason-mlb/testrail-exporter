@@ -1,0 +1,65 @@
+[
+  {
+    "id": 146340,
+    "suite_id": 20256,
+    "name": "Smoke",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 146459,
+    "suite_id": 20256,
+    "name": "Smoke with Owner Privileges",
+    "description": null,
+    "parent_id": 146340,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 146341,
+    "suite_id": 20256,
+    "name": "Full",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 148315,
+    "suite_id": 20256,
+    "name": "Full - Create Event",
+    "description": null,
+    "parent_id": 146341,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 146480,
+    "suite_id": 20256,
+    "name": "Do not test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 147174,
+    "suite_id": 20256,
+    "name": "Automated - do not test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 148309,
+    "suite_id": 20256,
+    "name": "Manual testing REQUIRED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  }
+]

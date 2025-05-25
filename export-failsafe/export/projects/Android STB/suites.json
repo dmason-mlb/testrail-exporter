@@ -1,0 +1,35 @@
+[
+  {
+    "id": 20696,
+    "name": "Master",
+    "description": null,
+    "project_id": 185,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20696"
+  },
+  {
+    "id": 20827,
+    "name": "Concurrency Cap Testing",
+    "description": null,
+    "project_id": 185,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20827"
+  },
+  {
+    "id": 20844,
+    "name": "Fast Track Regression",
+    "description": null,
+    "project_id": 185,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20844"
+  }
+]

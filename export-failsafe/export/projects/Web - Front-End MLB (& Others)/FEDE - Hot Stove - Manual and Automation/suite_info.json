@@ -1,0 +1,11 @@
+{
+  "id": 20638,
+  "name": "FEDE - Hot Stove - Manual and Automation",
+  "description": "[Jira Story][https://baseball.atlassian.net/browse/MLBWEB-632]\r\n[StatsAPIEndpoint][https://statsapi.mlb.com/api/v1/people/freeAgents?\r\nseason=2023&sort=asc&hydrate=person(stats(group=%5Bhitting,pitching%5D,type=season,gameType=R,season=2023)),team]\r\n\r\n[Contentful] [https://app.contentful.com/spaces/iiozhi00a8lc/entries/1lCMk2JCyV08HHV2LhVczQ]\r\n",
+  "project_id": 100,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20638"
+}

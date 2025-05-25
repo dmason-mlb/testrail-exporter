@@ -1,0 +1,29 @@
+[
+  {
+    "id": 77523,
+    "suite_id": 12762,
+    "name": "Xbox One NHL.tv",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 77521,
+    "suite_id": 12762,
+    "name": "Audio Player",
+    "description": null,
+    "parent_id": 77523,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 77522,
+    "suite_id": 12762,
+    "name": "In-player (Audio) Navigation",
+    "description": null,
+    "parent_id": 77521,
+    "display_order": 3,
+    "depth": 2
+  }
+]

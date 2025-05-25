@@ -1,0 +1,46 @@
+[
+  {
+    "id": 221555,
+    "name": "Form Tool",
+    "description": null,
+    "project_id": 216,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/221555"
+  },
+  {
+    "id": 221560,
+    "name": "Old vs. New Submission Comparison",
+    "description": null,
+    "project_id": 216,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/221560"
+  },
+  {
+    "id": 222025,
+    "name": "Submission Pipeline",
+    "description": null,
+    "project_id": 216,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/222025"
+  },
+  {
+    "id": 222511,
+    "name": "Postman Suites",
+    "description": null,
+    "project_id": 216,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/222511"
+  }
+]

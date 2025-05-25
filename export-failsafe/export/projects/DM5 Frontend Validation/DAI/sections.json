@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1680668,
+    "suite_id": 609249,
+    "name": "Live, Archive and MiLB",
+    "description": "Note: It is important to mention that not all MiLB games have DAI enabled. However, for the games in which DAI is enabled, they behave similarly to live and archived games.",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1682208,
+    "suite_id": 609249,
+    "name": "NO DAI",
+    "description": "Google DAI testing focus primarily on archive and live games, feeds such as Off Base, MLB Network, Big Inning, Bettor's Eye, and other linear SLIVE streams can be excluded from DAI testing, as they do not incorporate Google DAI functionality.",
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

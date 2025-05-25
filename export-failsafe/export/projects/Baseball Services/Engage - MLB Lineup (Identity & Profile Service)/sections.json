@@ -1,0 +1,38 @@
+[
+  {
+    "id": 154732,
+    "suite_id": 21170,
+    "name": "Health and Sanity Check for Shim",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 154735,
+    "suite_id": 21170,
+    "name": "End to End Tests for the Profile Service Email Change",
+    "description": "The Email Change Request - Email Domains are partially manual and automated test at the moment.",
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 154736,
+    "suite_id": 21170,
+    "name": "End to End Tests for Live Feed",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 154737,
+    "suite_id": 21170,
+    "name": "End to End Tests for the Worker",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  }
+]

@@ -1,0 +1,335 @@
+[
+  {
+    "id": 9076,
+    "suite_id": 1168,
+    "name": "AppleTV - TVOS verification (where applicable)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 9050,
+    "suite_id": 1168,
+    "name": "Start-Up",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 9051,
+    "suite_id": 1168,
+    "name": "Device Peripherals",
+    "description": null,
+    "parent_id": 9050,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 9052,
+    "suite_id": 1168,
+    "name": "Siri Remote - Verifications",
+    "description": null,
+    "parent_id": 9051,
+    "display_order": 4,
+    "depth": 2
+  },
+  {
+    "id": 9053,
+    "suite_id": 1168,
+    "name": "Game Controller (Nimbus Steelseries Controller) - Verifications",
+    "description": null,
+    "parent_id": 9051,
+    "display_order": 5,
+    "depth": 2
+  },
+  {
+    "id": 9055,
+    "suite_id": 1168,
+    "name": "Welcome screen (aka Walled Garden)",
+    "description": "Added screen between the ATV4 Home screen and the HBO Now Home screen, when User account not signed in.",
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 9056,
+    "suite_id": 1168,
+    "name": "In-app purchase",
+    "description": null,
+    "parent_id": 9055,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 80859,
+    "suite_id": 1168,
+    "name": "Backend and Registration Verification",
+    "description": null,
+    "parent_id": 9056,
+    "display_order": 9,
+    "depth": 2
+  },
+  {
+    "id": 9057,
+    "suite_id": 1168,
+    "name": "Restore iTunes Purchase",
+    "description": null,
+    "parent_id": 9055,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 9058,
+    "suite_id": 1168,
+    "name": "Renew iTunes subscription",
+    "description": "If a user cancels a subscription after the Free Trial period has expired, they will be presented with this screen.",
+    "parent_id": 9055,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 9059,
+    "suite_id": 1168,
+    "name": "Sign-in (linked accounts)",
+    "description": null,
+    "parent_id": 9055,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 20652,
+    "suite_id": 1168,
+    "name": "HBO NOW - Home",
+    "description": "Home: default screen on (signed in) launch",
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 20653,
+    "suite_id": 1168,
+    "name": "Continue Watching",
+    "description": "Verify Continue Watching is set to ON",
+    "parent_id": 20652,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 20658,
+    "suite_id": 1168,
+    "name": "Watchlist",
+    "description": null,
+    "parent_id": null,
+    "display_order": 16,
+    "depth": 0
+  },
+  {
+    "id": 20654,
+    "suite_id": 1168,
+    "name": "Series",
+    "description": "0",
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 20655,
+    "suite_id": 1168,
+    "name": "Series Season Landing - Asset Details",
+    "description": "1",
+    "parent_id": 20654,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 20656,
+    "suite_id": 1168,
+    "name": "Series Navigation and View States",
+    "description": "1",
+    "parent_id": 20654,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 20645,
+    "suite_id": 1168,
+    "name": "Movies",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 20646,
+    "suite_id": 1168,
+    "name": "Kids",
+    "description": null,
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 20647,
+    "suite_id": 1168,
+    "name": "Comedy",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 20648,
+    "suite_id": 1168,
+    "name": "Sports",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 20649,
+    "suite_id": 1168,
+    "name": "Documentaries",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 20650,
+    "suite_id": 1168,
+    "name": "Collections",
+    "description": null,
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 20651,
+    "suite_id": 1168,
+    "name": "Late Night",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 9069,
+    "suite_id": 1168,
+    "name": "Search",
+    "description": null,
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  },
+  {
+    "id": 9070,
+    "suite_id": 1168,
+    "name": "Results",
+    "description": null,
+    "parent_id": 9069,
+    "display_order": 37,
+    "depth": 1
+  },
+  {
+    "id": 20657,
+    "suite_id": 1168,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 9071,
+    "suite_id": 1168,
+    "name": "Parental Controls",
+    "description": null,
+    "parent_id": 20657,
+    "display_order": 39,
+    "depth": 1
+  },
+  {
+    "id": 20532,
+    "suite_id": 1168,
+    "name": "Billing Information",
+    "description": null,
+    "parent_id": 20657,
+    "display_order": 40,
+    "depth": 1
+  },
+  {
+    "id": 20659,
+    "suite_id": 1168,
+    "name": "Continue Watching",
+    "description": null,
+    "parent_id": 20657,
+    "display_order": 41,
+    "depth": 1
+  },
+  {
+    "id": 20660,
+    "suite_id": 1168,
+    "name": "Help",
+    "description": null,
+    "parent_id": 20657,
+    "display_order": 42,
+    "depth": 1
+  },
+  {
+    "id": 20661,
+    "suite_id": 1168,
+    "name": "Privacy & Terms",
+    "description": null,
+    "parent_id": 20657,
+    "display_order": 43,
+    "depth": 1
+  },
+  {
+    "id": 20662,
+    "suite_id": 1168,
+    "name": "Sign Out",
+    "description": null,
+    "parent_id": 20657,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 9073,
+    "suite_id": 1168,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 48,
+    "depth": 0
+  },
+  {
+    "id": 20533,
+    "suite_id": 1168,
+    "name": "Network Performance",
+    "description": null,
+    "parent_id": 9073,
+    "display_order": 49,
+    "depth": 1
+  },
+  {
+    "id": 9075,
+    "suite_id": 1168,
+    "name": "Network Failure",
+    "description": null,
+    "parent_id": null,
+    "display_order": 51,
+    "depth": 0
+  },
+  {
+    "id": 20663,
+    "suite_id": 1168,
+    "name": "DRM Testing",
+    "description": "Confirm with the dev / PM for the expected behavior.\n\nRecording may be allowed but playback is downgraded to 480",
+    "parent_id": null,
+    "display_order": 52,
+    "depth": 0
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 2756,
+    "suite_id": 459,
+    "name": "iPad",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 2757,
+    "suite_id": 459,
+    "name": "Main",
+    "description": null,
+    "parent_id": 2756,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 2758,
+    "suite_id": 459,
+    "name": "Qualifiers Detail",
+    "description": null,
+    "parent_id": 2757,
+    "display_order": 4,
+    "depth": 2
+  },
+  {
+    "id": 2759,
+    "suite_id": 459,
+    "name": "Round 1 Detail",
+    "description": null,
+    "parent_id": 2757,
+    "display_order": 5,
+    "depth": 2
+  },
+  {
+    "id": 2760,
+    "suite_id": 459,
+    "name": "Round 2 Detail",
+    "description": null,
+    "parent_id": 2757,
+    "display_order": 6,
+    "depth": 2
+  },
+  {
+    "id": 2794,
+    "suite_id": 459,
+    "name": "Championship Round Detail",
+    "description": null,
+    "parent_id": 2757,
+    "display_order": 7,
+    "depth": 2
+  }
+]

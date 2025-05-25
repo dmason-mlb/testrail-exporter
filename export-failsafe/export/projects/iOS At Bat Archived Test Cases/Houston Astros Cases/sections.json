@@ -1,0 +1,110 @@
+[
+  {
+    "id": 4105,
+    "suite_id": 563,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 4106,
+    "suite_id": 563,
+    "name": "Gameday",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 4107,
+    "suite_id": 563,
+    "name": "Team Pages",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 4108,
+    "suite_id": 563,
+    "name": "News/Video",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 4109,
+    "suite_id": 563,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 4110,
+    "suite_id": 563,
+    "name": "More",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 4111,
+    "suite_id": 563,
+    "name": "Gameday",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 4112,
+    "suite_id": 563,
+    "name": "Scoreboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 4113,
+    "suite_id": 563,
+    "name": "News",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 4114,
+    "suite_id": 563,
+    "name": "Team Schedules",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 4115,
+    "suite_id": 563,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 4116,
+    "suite_id": 563,
+    "name": "MLB.TV",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  }
+]

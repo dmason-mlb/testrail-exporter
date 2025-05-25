@@ -1,0 +1,11 @@
+{
+  "id": 18004,
+  "name": "FEDE - MLB (AWS) - HOME PAGE SMOKE TEST (ENGLISH)",
+  "description": "Smoke test for AWS Home Page",
+  "project_id": 100,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/18004"
+}

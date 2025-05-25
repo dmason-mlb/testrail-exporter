@@ -1,0 +1,101 @@
+[
+  {
+    "id": 20614,
+    "name": "Identity Service/WPA Integration",
+    "description": "The initial test cases were ported from: https://wiki.mlbam.com/pages/viewpage.action?pageId=135449215#",
+    "project_id": 183,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20614"
+  },
+  {
+    "id": 230761,
+    "name": "Identity - Account Page Redesign",
+    "description": null,
+    "project_id": 183,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/230761"
+  },
+  {
+    "id": 281062,
+    "name": "Lineup - YES (Identity & Profile Service)",
+    "description": null,
+    "project_id": 183,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/281062"
+  },
+  {
+    "id": 346557,
+    "name": "Bobblehead Service (Email Newsletters)",
+    "description": null,
+    "project_id": 183,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/346557"
+  },
+  {
+    "id": 347683,
+    "name": "Lineup - SNY (Identity & Profile Service)",
+    "description": null,
+    "project_id": 183,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/347683"
+  },
+  {
+    "id": 347809,
+    "name": "Lineup - MLB (Identity & Profile Service)",
+    "description": null,
+    "project_id": 183,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/347809"
+  },
+  {
+    "id": 347810,
+    "name": "Lineup - MiLB (Identity & Profile Service)",
+    "description": null,
+    "project_id": 183,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/347810"
+  },
+  {
+    "id": 357542,
+    "name": "Lineup - Email Verification Service",
+    "description": null,
+    "project_id": 183,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/357542"
+  },
+  {
+    "id": 693098,
+    "name": "Web Redesign",
+    "description": null,
+    "project_id": 183,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/693098"
+  }
+]

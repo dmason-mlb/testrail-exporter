@@ -1,0 +1,65 @@
+[
+  {
+    "id": 4643,
+    "suite_id": 630,
+    "name": "Accessibility",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 6101,
+    "suite_id": 630,
+    "name": "Sign In Page",
+    "description": null,
+    "parent_id": 4643,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 6096,
+    "suite_id": 630,
+    "name": "Challenges",
+    "description": null,
+    "parent_id": 4643,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 6098,
+    "suite_id": 630,
+    "name": "Invite a Friend",
+    "description": null,
+    "parent_id": 4643,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 6099,
+    "suite_id": 630,
+    "name": "Leaderboard",
+    "description": null,
+    "parent_id": 4643,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 6100,
+    "suite_id": 630,
+    "name": "My Profile",
+    "description": null,
+    "parent_id": 4643,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 6102,
+    "suite_id": 630,
+    "name": "General",
+    "description": null,
+    "parent_id": 4643,
+    "display_order": 8,
+    "depth": 1
+  }
+]

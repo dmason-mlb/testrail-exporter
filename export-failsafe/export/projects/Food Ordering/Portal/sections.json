@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1965,
+    "suite_id": 401,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1960,
+    "suite_id": 401,
+    "name": "Stadium",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1961,
+    "suite_id": 401,
+    "name": "Stand",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1962,
+    "suite_id": 401,
+    "name": "Section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 1963,
+    "suite_id": 401,
+    "name": "Menu Item",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 1964,
+    "suite_id": 401,
+    "name": "Group Mapping",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  }
+]

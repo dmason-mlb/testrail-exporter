@@ -1,0 +1,38 @@
+[
+  {
+    "id": 146351,
+    "suite_id": 20176,
+    "name": "Manual testing REQUIRED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 146353,
+    "suite_id": 20176,
+    "name": "Full",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 146482,
+    "suite_id": 20176,
+    "name": "Do not test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 147177,
+    "suite_id": 20176,
+    "name": "Automated - do not test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  }
+]

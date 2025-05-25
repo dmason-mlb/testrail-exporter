@@ -1,0 +1,65 @@
+[
+  {
+    "id": 306156,
+    "suite_id": 43791,
+    "name": "Health Checks",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 306178,
+    "suite_id": 43791,
+    "name": "Sanity Test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 306210,
+    "suite_id": 43791,
+    "name": "Regression Test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 497548,
+    "suite_id": 43791,
+    "name": "User Flows",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 497871,
+    "suite_id": 43791,
+    "name": "Exempt",
+    "description": null,
+    "parent_id": 497548,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 497872,
+    "suite_id": 43791,
+    "name": "Accept",
+    "description": null,
+    "parent_id": 497548,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 499356,
+    "suite_id": 43791,
+    "name": "Background Check Verification",
+    "description": null,
+    "parent_id": 497548,
+    "display_order": 8,
+    "depth": 1
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 9572,
+    "suite_id": 1200,
+    "name": "PlayStation Vue Roku",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 9629,
+    "suite_id": 1200,
+    "name": "Login/Logout",
+    "description": null,
+    "parent_id": 9572,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 9576,
+    "suite_id": 1200,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 9572,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 9628,
+    "suite_id": 1200,
+    "name": "Episode/Movie Context Menu",
+    "description": null,
+    "parent_id": 9572,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 11972,
+    "suite_id": 1200,
+    "name": "Home",
+    "description": null,
+    "parent_id": 9572,
+    "display_order": 5,
+    "depth": 1
+  }
+]

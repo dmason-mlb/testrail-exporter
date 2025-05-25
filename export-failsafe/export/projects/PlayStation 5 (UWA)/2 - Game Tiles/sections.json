@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1510459,
+    "suite_id": 534308,
+    "name": "Video Feeds",
+    "description": "Entitlements and blackouts",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1591283,
+    "suite_id": 534308,
+    "name": "Blackout",
+    "description": null,
+    "parent_id": 1510459,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 1591284,
+    "suite_id": 534308,
+    "name": "Partner Games",
+    "description": null,
+    "parent_id": 1510459,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 1591285,
+    "suite_id": 534308,
+    "name": "MVPD",
+    "description": null,
+    "parent_id": 1510459,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 1591286,
+    "suite_id": 534308,
+    "name": "Not Entitled",
+    "description": null,
+    "parent_id": 1510459,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 1510460,
+    "suite_id": 534308,
+    "name": "Audio Feeds - Currently N/A",
+    "description": "Entitlements and blackouts",
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1515373,
+    "suite_id": 534308,
+    "name": "Game States",
+    "description": "Game states and game details",
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1616650,
+    "suite_id": 534308,
+    "name": "Player Information",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1701751,
+    "suite_id": 534308,
+    "name": "Old/Not Applicable Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  }
+]

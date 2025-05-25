@@ -1,0 +1,79 @@
+[
+  {
+    "id": 558,
+    "name": "5.2 Cases",
+    "description": "This is a Test Suite containing the relevant JIRA's that we wish to review in a regression based manner throughout the 5.2 Release.",
+    "project_id": 36,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/558"
+  },
+  {
+    "id": 559,
+    "name": "5.3 Cases",
+    "description": null,
+    "project_id": 36,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/559"
+  },
+  {
+    "id": 560,
+    "name": "5.4 Cases",
+    "description": null,
+    "project_id": 36,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/560"
+  },
+  {
+    "id": 561,
+    "name": "5.5 Cases",
+    "description": null,
+    "project_id": 36,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/561"
+  },
+  {
+    "id": 562,
+    "name": "5.6 Cases",
+    "description": null,
+    "project_id": 36,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/562"
+  },
+  {
+    "id": 563,
+    "name": "Houston Astros Cases",
+    "description": null,
+    "project_id": 36,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/563"
+  },
+  {
+    "id": 859,
+    "name": "test Suite",
+    "description": null,
+    "project_id": 36,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/859"
+  }
+]

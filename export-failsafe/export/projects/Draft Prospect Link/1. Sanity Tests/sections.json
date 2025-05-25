@@ -1,0 +1,56 @@
+[
+  {
+    "id": 148610,
+    "suite_id": 20517,
+    "name": "Invite and Questionnaire Processes",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 149725,
+    "suite_id": 20517,
+    "name": "Automated",
+    "description": null,
+    "parent_id": 148610,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 149471,
+    "suite_id": 20517,
+    "name": "Medical Information Process - Automated",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 149472,
+    "suite_id": 20517,
+    "name": "Manual testing required",
+    "description": null,
+    "parent_id": 149471,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 149473,
+    "suite_id": 20517,
+    "name": "To be Automated",
+    "description": null,
+    "parent_id": 149471,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 149487,
+    "suite_id": 20517,
+    "name": "For Automation - before automating Medical Information process",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  }
+]

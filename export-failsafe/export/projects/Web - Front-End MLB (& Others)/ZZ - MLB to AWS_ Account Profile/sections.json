@@ -1,0 +1,119 @@
+[
+  {
+    "id": 149880,
+    "suite_id": 20649,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 149881,
+    "suite_id": 20649,
+    "name": "Security & Login",
+    "description": null,
+    "parent_id": 149880,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 149897,
+    "suite_id": 20649,
+    "name": "Error Messaging for Change Password",
+    "description": null,
+    "parent_id": 149881,
+    "display_order": 4,
+    "depth": 2
+  },
+  {
+    "id": 149896,
+    "suite_id": 20649,
+    "name": "Front End Validation for Password Match",
+    "description": null,
+    "parent_id": 149880,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 149889,
+    "suite_id": 20649,
+    "name": "Email Subscriptions",
+    "description": null,
+    "parent_id": 149880,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 149895,
+    "suite_id": 20649,
+    "name": "Email Unsubscribe Options",
+    "description": null,
+    "parent_id": 149889,
+    "display_order": 10,
+    "depth": 2
+  },
+  {
+    "id": 149882,
+    "suite_id": 20649,
+    "name": "Avatar",
+    "description": null,
+    "parent_id": 149880,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 149910,
+    "suite_id": 20649,
+    "name": "Support",
+    "description": null,
+    "parent_id": 149880,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 149912,
+    "suite_id": 20649,
+    "name": "Favorites & Follows",
+    "description": null,
+    "parent_id": 149880,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 149913,
+    "suite_id": 20649,
+    "name": "Deeplinking",
+    "description": null,
+    "parent_id": 149880,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 149948,
+    "suite_id": 20649,
+    "name": "Subscription Status: Cancellation Flow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 149914,
+    "suite_id": 20649,
+    "name": "Payment Methods - Front End",
+    "description": null,
+    "parent_id": 149948,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 149960,
+    "suite_id": 20649,
+    "name": "Account Profile Visuals",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  }
+]

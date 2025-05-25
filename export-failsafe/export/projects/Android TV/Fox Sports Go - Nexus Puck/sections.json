@@ -1,0 +1,182 @@
+[
+  {
+    "id": 78303,
+    "suite_id": 12899,
+    "name": "Start-Up",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 78305,
+    "suite_id": 12899,
+    "name": "Pre Account Authentication",
+    "description": null,
+    "parent_id": 78303,
+    "display_order": 34,
+    "depth": 1
+  },
+  {
+    "id": 78312,
+    "suite_id": 12899,
+    "name": "Post Account Authentication",
+    "description": null,
+    "parent_id": null,
+    "display_order": 35,
+    "depth": 0
+  },
+  {
+    "id": 78307,
+    "suite_id": 12899,
+    "name": "Activation and Authorization (Sign In) - Web Flow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  },
+  {
+    "id": 78308,
+    "suite_id": 12899,
+    "name": "Cable Provider Verifications - Web Flow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 78309,
+    "suite_id": 12899,
+    "name": "More TV Providers - Web Flow subsection",
+    "description": null,
+    "parent_id": 78308,
+    "display_order": 38,
+    "depth": 1
+  },
+  {
+    "id": 78310,
+    "suite_id": 12899,
+    "name": "TV Provider Authentication - Web Flow",
+    "description": null,
+    "parent_id": 78308,
+    "display_order": 39,
+    "depth": 1
+  },
+  {
+    "id": 78326,
+    "suite_id": 12899,
+    "name": "CHIPS (Content Tile Configuration) Verification",
+    "description": "Content Tile Tags and States from all Live and Upcoming Video Content within the app",
+    "parent_id": 78308,
+    "display_order": 40,
+    "depth": 1
+  },
+  {
+    "id": 78314,
+    "suite_id": 12899,
+    "name": "Search",
+    "description": "Functionality for Search Menu sub-section",
+    "parent_id": 78308,
+    "display_order": 41,
+    "depth": 1
+  },
+  {
+    "id": 78315,
+    "suite_id": 12899,
+    "name": "Playback",
+    "description": null,
+    "parent_id": 78308,
+    "display_order": 42,
+    "depth": 1
+  },
+  {
+    "id": 78321,
+    "suite_id": 12899,
+    "name": "Multi-View",
+    "description": null,
+    "parent_id": 78315,
+    "display_order": 43,
+    "depth": 2
+  },
+  {
+    "id": 78322,
+    "suite_id": 12899,
+    "name": "Full View",
+    "description": null,
+    "parent_id": 78321,
+    "display_order": 44,
+    "depth": 3
+  },
+  {
+    "id": 78323,
+    "suite_id": 12899,
+    "name": "PiP View",
+    "description": null,
+    "parent_id": 78321,
+    "display_order": 45,
+    "depth": 3
+  },
+  {
+    "id": 78324,
+    "suite_id": 12899,
+    "name": "Dual View",
+    "description": null,
+    "parent_id": 78321,
+    "display_order": 46,
+    "depth": 3
+  },
+  {
+    "id": 78325,
+    "suite_id": 12899,
+    "name": "Mosaic View",
+    "description": null,
+    "parent_id": 78321,
+    "display_order": 47,
+    "depth": 3
+  },
+  {
+    "id": 78330,
+    "suite_id": 12899,
+    "name": "Closed Captioning",
+    "description": null,
+    "parent_id": 78321,
+    "display_order": 48,
+    "depth": 3
+  },
+  {
+    "id": 78394,
+    "suite_id": 12899,
+    "name": "Network Performance",
+    "description": null,
+    "parent_id": 78308,
+    "display_order": 49,
+    "depth": 1
+  },
+  {
+    "id": 78327,
+    "suite_id": 12899,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 78308,
+    "display_order": 50,
+    "depth": 1
+  },
+  {
+    "id": 78328,
+    "suite_id": 12899,
+    "name": "Sign In/Out via Application \"Settings\" menu",
+    "description": "Verify Sign-Out/Sign-In functionality (from Settings Menu)",
+    "parent_id": 78327,
+    "display_order": 51,
+    "depth": 2
+  },
+  {
+    "id": 78329,
+    "suite_id": 12899,
+    "name": "Verify \"About\" sub-menu functionality",
+    "description": null,
+    "parent_id": 78327,
+    "display_order": 52,
+    "depth": 2
+  }
+]

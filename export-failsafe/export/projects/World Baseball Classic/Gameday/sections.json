@@ -1,0 +1,182 @@
+[
+  {
+    "id": 2701,
+    "suite_id": 452,
+    "name": "Preview/Warmup/Live State Verification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 2702,
+    "suite_id": 452,
+    "name": "Gameday Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 2703,
+    "suite_id": 452,
+    "name": "Boxscore Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 2704,
+    "suite_id": 452,
+    "name": "Field Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 2705,
+    "suite_id": 452,
+    "name": "Summary Tab",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 2706,
+    "suite_id": 452,
+    "name": "Video Highlights",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 2707,
+    "suite_id": 452,
+    "name": "Delayed State Verification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 2708,
+    "suite_id": 452,
+    "name": "Postponed State Verification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 2709,
+    "suite_id": 452,
+    "name": "Suspended State Verification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 2710,
+    "suite_id": 452,
+    "name": "Final State Verification",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 3331,
+    "suite_id": 452,
+    "name": "iPad",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 3332,
+    "suite_id": 452,
+    "name": "Out of Town Scoreboard",
+    "description": null,
+    "parent_id": 3331,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 3333,
+    "suite_id": 452,
+    "name": "Preview Screen",
+    "description": null,
+    "parent_id": 3331,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 3334,
+    "suite_id": 452,
+    "name": "Stadium Background Images",
+    "description": null,
+    "parent_id": 3331,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 3335,
+    "suite_id": 452,
+    "name": "Jumbotron Scoreboard",
+    "description": null,
+    "parent_id": 3331,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 3336,
+    "suite_id": 452,
+    "name": "Matchup",
+    "description": null,
+    "parent_id": 3331,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 3337,
+    "suite_id": 452,
+    "name": "Box Score",
+    "description": null,
+    "parent_id": 3331,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 3338,
+    "suite_id": 452,
+    "name": "Plays",
+    "description": null,
+    "parent_id": 3331,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 3339,
+    "suite_id": 452,
+    "name": "Lineups",
+    "description": null,
+    "parent_id": 3331,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 3340,
+    "suite_id": 452,
+    "name": "Highlights",
+    "description": null,
+    "parent_id": 3331,
+    "display_order": 20,
+    "depth": 1
+  }
+]

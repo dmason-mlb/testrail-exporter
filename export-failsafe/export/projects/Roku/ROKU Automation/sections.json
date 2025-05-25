@@ -1,0 +1,263 @@
+[
+  {
+    "id": 814573,
+    "suite_id": 249471,
+    "name": "Authenticated",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 814575,
+    "suite_id": 249471,
+    "name": "Games",
+    "description": null,
+    "parent_id": 814573,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 814576,
+    "suite_id": 249471,
+    "name": "Free Game of the Day",
+    "description": null,
+    "parent_id": 814573,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 814577,
+    "suite_id": 249471,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 814573,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 814578,
+    "suite_id": 249471,
+    "name": "Feed Select",
+    "description": null,
+    "parent_id": 814573,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 814579,
+    "suite_id": 249471,
+    "name": "Calendar View",
+    "description": null,
+    "parent_id": 814573,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 814580,
+    "suite_id": 249471,
+    "name": "Audio Account",
+    "description": null,
+    "parent_id": 814573,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 814581,
+    "suite_id": 249471,
+    "name": "Top Nav",
+    "description": null,
+    "parent_id": 814573,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 814582,
+    "suite_id": 249471,
+    "name": "Homepage",
+    "description": null,
+    "parent_id": 814573,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 814583,
+    "suite_id": 249471,
+    "name": "Media Player",
+    "description": null,
+    "parent_id": 814573,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 814584,
+    "suite_id": 249471,
+    "name": "LogOut",
+    "description": null,
+    "parent_id": 814573,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 814585,
+    "suite_id": 249471,
+    "name": "Postseason",
+    "description": null,
+    "parent_id": 814573,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 814586,
+    "suite_id": 249471,
+    "name": "Exit Modal",
+    "description": null,
+    "parent_id": 814573,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 814587,
+    "suite_id": 249471,
+    "name": "Clips",
+    "description": null,
+    "parent_id": 814573,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 814588,
+    "suite_id": 249471,
+    "name": "Shows",
+    "description": null,
+    "parent_id": 814573,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 819014,
+    "suite_id": 249471,
+    "name": "Free Game of the Day",
+    "description": null,
+    "parent_id": 814573,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 814574,
+    "suite_id": 249471,
+    "name": "Unauthenticated",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 814589,
+    "suite_id": 249471,
+    "name": "Free Game of the Day",
+    "description": null,
+    "parent_id": 814574,
+    "display_order": 21,
+    "depth": 1
+  },
+  {
+    "id": 814590,
+    "suite_id": 249471,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 814574,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 814591,
+    "suite_id": 249471,
+    "name": "Games",
+    "description": null,
+    "parent_id": 814574,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 814592,
+    "suite_id": 249471,
+    "name": "Feed Select",
+    "description": null,
+    "parent_id": 814574,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 814593,
+    "suite_id": 249471,
+    "name": "Calendar View",
+    "description": null,
+    "parent_id": 814574,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 814594,
+    "suite_id": 249471,
+    "name": "Top Nav",
+    "description": null,
+    "parent_id": 814574,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 814595,
+    "suite_id": 249471,
+    "name": "Homepage",
+    "description": null,
+    "parent_id": 814574,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 814596,
+    "suite_id": 249471,
+    "name": "Postseason",
+    "description": null,
+    "parent_id": 814574,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 814597,
+    "suite_id": 249471,
+    "name": "Login Screen",
+    "description": null,
+    "parent_id": 814574,
+    "display_order": 29,
+    "depth": 1
+  },
+  {
+    "id": 814598,
+    "suite_id": 249471,
+    "name": "Exit Modal",
+    "description": null,
+    "parent_id": 814574,
+    "display_order": 30,
+    "depth": 1
+  },
+  {
+    "id": 814599,
+    "suite_id": 249471,
+    "name": "Clips",
+    "description": null,
+    "parent_id": 814574,
+    "display_order": 31,
+    "depth": 1
+  },
+  {
+    "id": 814600,
+    "suite_id": 249471,
+    "name": "Shows",
+    "description": null,
+    "parent_id": 814574,
+    "display_order": 32,
+    "depth": 1
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 3902,
+    "suite_id": 547,
+    "name": "Welcome Screen - General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 3903,
+    "suite_id": 547,
+    "name": "Welcome Screen - MLBAM Login",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 3904,
+    "suite_id": 547,
+    "name": "Welcome Screen - MLBAM Register Account",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  }
+]

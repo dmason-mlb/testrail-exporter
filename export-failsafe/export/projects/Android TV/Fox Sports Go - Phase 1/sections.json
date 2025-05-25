@@ -1,0 +1,254 @@
+[
+  {
+    "id": 12465,
+    "suite_id": 1395,
+    "name": "Start-Up",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 12466,
+    "suite_id": 1395,
+    "name": "Fox Sports Go",
+    "description": null,
+    "parent_id": 12465,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 12467,
+    "suite_id": 1395,
+    "name": "Unauthenticated Account - Before Cable Provider authentication",
+    "description": null,
+    "parent_id": 12466,
+    "display_order": 5,
+    "depth": 2
+  },
+  {
+    "id": 12468,
+    "suite_id": 1395,
+    "name": "Cable Provider Authentication Verification - Device / Web",
+    "description": null,
+    "parent_id": 12467,
+    "display_order": 6,
+    "depth": 3
+  },
+  {
+    "id": 12469,
+    "suite_id": 1395,
+    "name": "Full Cable Authorization Entitlement Verifications - Web Flow",
+    "description": null,
+    "parent_id": 12466,
+    "display_order": 7,
+    "depth": 2
+  },
+  {
+    "id": 12470,
+    "suite_id": 1395,
+    "name": "Cable Provider Verifications - Web Flow",
+    "description": null,
+    "parent_id": 12466,
+    "display_order": 9,
+    "depth": 2
+  },
+  {
+    "id": 12474,
+    "suite_id": 1395,
+    "name": "More TV Providers - Web Flow subsection",
+    "description": null,
+    "parent_id": 12470,
+    "display_order": 10,
+    "depth": 3
+  },
+  {
+    "id": 12479,
+    "suite_id": 1395,
+    "name": "Full Cable Provider Authentication - Web Flow",
+    "description": "This is an example of the final Cable Provider Authentication via DirecTV (given in the current Design Specs - 2.4.16)",
+    "parent_id": 12470,
+    "display_order": 11,
+    "depth": 3
+  },
+  {
+    "id": 12480,
+    "suite_id": 1395,
+    "name": "Sign In/Sign Up to FS Account - Pop Up Subsection - Web Flow",
+    "description": null,
+    "parent_id": 12470,
+    "display_order": 12,
+    "depth": 3
+  },
+  {
+    "id": 12481,
+    "suite_id": 1395,
+    "name": "Authenticated Account - After Cable Provider authentication",
+    "description": null,
+    "parent_id": 12466,
+    "display_order": 13,
+    "depth": 2
+  },
+  {
+    "id": 12527,
+    "suite_id": 1395,
+    "name": "App Menu",
+    "description": null,
+    "parent_id": 12466,
+    "display_order": 14,
+    "depth": 2
+  },
+  {
+    "id": 12531,
+    "suite_id": 1395,
+    "name": "Search",
+    "description": "Functionality for Search Menu sub-section",
+    "parent_id": 12466,
+    "display_order": 15,
+    "depth": 2
+  },
+  {
+    "id": 12518,
+    "suite_id": 1395,
+    "name": "Live TV",
+    "description": null,
+    "parent_id": 12466,
+    "display_order": 19,
+    "depth": 2
+  },
+  {
+    "id": 12524,
+    "suite_id": 1395,
+    "name": "Schedule Details - Daily Video Content Listings",
+    "description": null,
+    "parent_id": 12518,
+    "display_order": 20,
+    "depth": 3
+  },
+  {
+    "id": 12528,
+    "suite_id": 1395,
+    "name": "Featured (chips) section Items",
+    "description": null,
+    "parent_id": 12518,
+    "display_order": 21,
+    "depth": 3
+  },
+  {
+    "id": 12521,
+    "suite_id": 1395,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": 12518,
+    "display_order": 22,
+    "depth": 3
+  },
+  {
+    "id": 12522,
+    "suite_id": 1395,
+    "name": "Network Performance",
+    "description": null,
+    "parent_id": 12521,
+    "display_order": 23,
+    "depth": 4
+  },
+  {
+    "id": 12523,
+    "suite_id": 1395,
+    "name": "Network Failure",
+    "description": null,
+    "parent_id": 12522,
+    "display_order": 24,
+    "depth": 5
+  },
+  {
+    "id": 29039,
+    "suite_id": 1395,
+    "name": "Multi-View",
+    "description": null,
+    "parent_id": 12518,
+    "display_order": 25,
+    "depth": 3
+  },
+  {
+    "id": 29040,
+    "suite_id": 1395,
+    "name": "Full View",
+    "description": null,
+    "parent_id": 29039,
+    "display_order": 26,
+    "depth": 4
+  },
+  {
+    "id": 29041,
+    "suite_id": 1395,
+    "name": "PiP View",
+    "description": null,
+    "parent_id": 29039,
+    "display_order": 27,
+    "depth": 4
+  },
+  {
+    "id": 29042,
+    "suite_id": 1395,
+    "name": "Dual View",
+    "description": null,
+    "parent_id": 29039,
+    "display_order": 28,
+    "depth": 4
+  },
+  {
+    "id": 29043,
+    "suite_id": 1395,
+    "name": "Mosaic View",
+    "description": null,
+    "parent_id": 29039,
+    "display_order": 29,
+    "depth": 4
+  },
+  {
+    "id": 12533,
+    "suite_id": 1395,
+    "name": "CHIPS (Content Tile Configuration) Verification",
+    "description": "Content Tile Tags and States from all Live and Upcoming Video Content within the app",
+    "parent_id": 12466,
+    "display_order": 30,
+    "depth": 2
+  },
+  {
+    "id": 12525,
+    "suite_id": 1395,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 12466,
+    "display_order": 32,
+    "depth": 2
+  },
+  {
+    "id": 12499,
+    "suite_id": 1395,
+    "name": "MVPD Sign In/Out via Application \"Settings Menu\" sub-section",
+    "description": "Verify Sign-Out/Sign-In sub-menu functionality (from Settings Menu)",
+    "parent_id": 12525,
+    "display_order": 33,
+    "depth": 3
+  },
+  {
+    "id": 12526,
+    "suite_id": 1395,
+    "name": "Verify \"About\" sub-menu functionality",
+    "description": null,
+    "parent_id": 12525,
+    "display_order": 34,
+    "depth": 3
+  },
+  {
+    "id": 12532,
+    "suite_id": 1395,
+    "name": "Closed Captioning",
+    "description": null,
+    "parent_id": 12525,
+    "display_order": 35,
+    "depth": 3
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 928,
+    "suite_id": 191,
+    "name": "Live Game",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 929,
+    "suite_id": 191,
+    "name": "Pre Game",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 930,
+    "suite_id": 191,
+    "name": "Post Game",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 931,
+    "suite_id": 191,
+    "name": "News",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 990,
+    "suite_id": 191,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 991,
+    "suite_id": 191,
+    "name": "Media",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  }
+]

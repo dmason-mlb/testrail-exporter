@@ -1,0 +1,425 @@
+[
+  {
+    "id": 13084,
+    "suite_id": 1164,
+    "name": "tvOS Home View - App Appearance",
+    "description": "Note that the App title cannot be checked in a test build, only the submission build is tagged with the correct title - so a test to confirm it is correct is not possible and not the responsibility of CDQA.",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 9004,
+    "suite_id": 1164,
+    "name": "Install and Start-Up",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 27647,
+    "suite_id": 1164,
+    "name": "1st Time Launch - Onboarding",
+    "description": null,
+    "parent_id": 9004,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 27921,
+    "suite_id": 1164,
+    "name": "Purchase Page [IN PROGRESS]",
+    "description": null,
+    "parent_id": 27647,
+    "display_order": 17,
+    "depth": 2
+  },
+  {
+    "id": 27922,
+    "suite_id": 1164,
+    "name": "Login Page",
+    "description": null,
+    "parent_id": 27647,
+    "display_order": 18,
+    "depth": 2
+  },
+  {
+    "id": 28954,
+    "suite_id": 1164,
+    "name": "Create Account Page",
+    "description": null,
+    "parent_id": 27647,
+    "display_order": 19,
+    "depth": 2
+  },
+  {
+    "id": 24099,
+    "suite_id": 1164,
+    "name": "In-game Alerts Opt In Appearance and Functionality",
+    "description": null,
+    "parent_id": 27647,
+    "display_order": 20,
+    "depth": 2
+  },
+  {
+    "id": 27923,
+    "suite_id": 1164,
+    "name": "Team Picker",
+    "description": null,
+    "parent_id": 27647,
+    "display_order": 22,
+    "depth": 2
+  },
+  {
+    "id": 9012,
+    "suite_id": 1164,
+    "name": "Free User / Non-Entitlement Verifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 9013,
+    "suite_id": 1164,
+    "name": "Free User / Non-Entitlement MLB.TV Upsell Verification",
+    "description": null,
+    "parent_id": 9012,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 9014,
+    "suite_id": 1164,
+    "name": "Full Monthly Account Entitlement Verifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 9015,
+    "suite_id": 1164,
+    "name": "Full Yearly Account Entitlement Verifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  },
+  {
+    "id": 9031,
+    "suite_id": 1164,
+    "name": "Mid-Roll Ads Verification (Yearly)",
+    "description": null,
+    "parent_id": 9015,
+    "display_order": 29,
+    "depth": 1
+  },
+  {
+    "id": 22730,
+    "suite_id": 1164,
+    "name": "Single Team Accounts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 24794,
+    "suite_id": 1164,
+    "name": "Home Team [IN PROGRESS]",
+    "description": null,
+    "parent_id": null,
+    "display_order": 31,
+    "depth": 0
+  },
+  {
+    "id": 9033,
+    "suite_id": 1164,
+    "name": "Main Menu",
+    "description": null,
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  },
+  {
+    "id": 13087,
+    "suite_id": 1164,
+    "name": "Games",
+    "description": null,
+    "parent_id": 9033,
+    "display_order": 37,
+    "depth": 1
+  },
+  {
+    "id": 11482,
+    "suite_id": 1164,
+    "name": "Standings",
+    "description": null,
+    "parent_id": 9033,
+    "display_order": 43,
+    "depth": 1
+  },
+  {
+    "id": 9035,
+    "suite_id": 1164,
+    "name": "Division Standings",
+    "description": null,
+    "parent_id": 11482,
+    "display_order": 44,
+    "depth": 2
+  },
+  {
+    "id": 11483,
+    "suite_id": 1164,
+    "name": "Wild Card Standings",
+    "description": null,
+    "parent_id": 11482,
+    "display_order": 47,
+    "depth": 2
+  },
+  {
+    "id": 9036,
+    "suite_id": 1164,
+    "name": "Highlights",
+    "description": null,
+    "parent_id": 9033,
+    "display_order": 51,
+    "depth": 1
+  },
+  {
+    "id": 9021,
+    "suite_id": 1164,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 9033,
+    "display_order": 55,
+    "depth": 1
+  },
+  {
+    "id": 85670,
+    "suite_id": 1164,
+    "name": "Not Logged In - Not Purchased",
+    "description": null,
+    "parent_id": 9021,
+    "display_order": 56,
+    "depth": 2
+  },
+  {
+    "id": 27648,
+    "suite_id": 1164,
+    "name": "Team Picker - Settings",
+    "description": null,
+    "parent_id": 9021,
+    "display_order": 57,
+    "depth": 2
+  },
+  {
+    "id": 28966,
+    "suite_id": 1164,
+    "name": "Create Account Page - Settings",
+    "description": null,
+    "parent_id": 9021,
+    "display_order": 58,
+    "depth": 2
+  },
+  {
+    "id": 29198,
+    "suite_id": 1164,
+    "name": "Calendar",
+    "description": null,
+    "parent_id": null,
+    "display_order": 59,
+    "depth": 0
+  },
+  {
+    "id": 9017,
+    "suite_id": 1164,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 68,
+    "depth": 0
+  },
+  {
+    "id": 9018,
+    "suite_id": 1164,
+    "name": "Network Performance",
+    "description": null,
+    "parent_id": 9017,
+    "display_order": 69,
+    "depth": 1
+  },
+  {
+    "id": 12694,
+    "suite_id": 1164,
+    "name": "Console View/Double Play",
+    "description": null,
+    "parent_id": 9017,
+    "display_order": 70,
+    "depth": 1
+  },
+  {
+    "id": 22729,
+    "suite_id": 1164,
+    "name": "Blackout Testing",
+    "description": null,
+    "parent_id": 9017,
+    "display_order": 71,
+    "depth": 1
+  },
+  {
+    "id": 24150,
+    "suite_id": 1164,
+    "name": "In-game alerts",
+    "description": null,
+    "parent_id": 9017,
+    "display_order": 72,
+    "depth": 1
+  },
+  {
+    "id": 24249,
+    "suite_id": 1164,
+    "name": "Appearance and Functionality",
+    "description": null,
+    "parent_id": 24150,
+    "display_order": 73,
+    "depth": 2
+  },
+  {
+    "id": 24247,
+    "suite_id": 1164,
+    "name": "On vs. Off",
+    "description": null,
+    "parent_id": 24150,
+    "display_order": 74,
+    "depth": 2
+  },
+  {
+    "id": 24248,
+    "suite_id": 1164,
+    "name": "Hidden",
+    "description": null,
+    "parent_id": 24150,
+    "display_order": 75,
+    "depth": 2
+  },
+  {
+    "id": 16410,
+    "suite_id": 1164,
+    "name": "Audio Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 78,
+    "depth": 0
+  },
+  {
+    "id": 9019,
+    "suite_id": 1164,
+    "name": "Network Failure",
+    "description": null,
+    "parent_id": null,
+    "display_order": 90,
+    "depth": 0
+  },
+  {
+    "id": 13070,
+    "suite_id": 1164,
+    "name": "In-app purchase",
+    "description": null,
+    "parent_id": null,
+    "display_order": 91,
+    "depth": 0
+  },
+  {
+    "id": 16409,
+    "suite_id": 1164,
+    "name": "Feed Select Appearance and Launch",
+    "description": null,
+    "parent_id": null,
+    "display_order": 92,
+    "depth": 0
+  },
+  {
+    "id": 9005,
+    "suite_id": 1164,
+    "name": "Device Peripherals",
+    "description": null,
+    "parent_id": null,
+    "display_order": 93,
+    "depth": 0
+  },
+  {
+    "id": 9006,
+    "suite_id": 1164,
+    "name": "Siri Remote - Verifications",
+    "description": null,
+    "parent_id": 9005,
+    "display_order": 94,
+    "depth": 1
+  },
+  {
+    "id": 9011,
+    "suite_id": 1164,
+    "name": "Game Controller (Nimbus Steelseries Controller) - Verifications",
+    "description": null,
+    "parent_id": 9005,
+    "display_order": 95,
+    "depth": 1
+  },
+  {
+    "id": 9025,
+    "suite_id": 1164,
+    "name": "MVPD Verification Sweeps (where applicable)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 96,
+    "depth": 0
+  },
+  {
+    "id": 9026,
+    "suite_id": 1164,
+    "name": "Authorized Playback - Premium Entitled",
+    "description": null,
+    "parent_id": 9025,
+    "display_order": 97,
+    "depth": 1
+  },
+  {
+    "id": 9027,
+    "suite_id": 1164,
+    "name": "Unauthorized Playback Attempt",
+    "description": null,
+    "parent_id": 9025,
+    "display_order": 98,
+    "depth": 1
+  },
+  {
+    "id": 9028,
+    "suite_id": 1164,
+    "name": "Non Premium/Authorized Playback Attempt",
+    "description": null,
+    "parent_id": 9025,
+    "display_order": 99,
+    "depth": 1
+  },
+  {
+    "id": 27939,
+    "suite_id": 1164,
+    "name": "Rate Me Modal",
+    "description": null,
+    "parent_id": null,
+    "display_order": 100,
+    "depth": 0
+  },
+  {
+    "id": 30538,
+    "suite_id": 1164,
+    "name": "Accessibility Checks",
+    "description": null,
+    "parent_id": null,
+    "display_order": 101,
+    "depth": 0
+  }
+]

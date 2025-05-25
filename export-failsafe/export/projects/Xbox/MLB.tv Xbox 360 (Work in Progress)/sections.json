@@ -1,0 +1,218 @@
+[
+  {
+    "id": 8786,
+    "suite_id": 1152,
+    "name": "Startup",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 8787,
+    "suite_id": 1152,
+    "name": "Login",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 8788,
+    "suite_id": 1152,
+    "name": "Home",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 8789,
+    "suite_id": 1152,
+    "name": "Today Home",
+    "description": null,
+    "parent_id": 8788,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 8790,
+    "suite_id": 1152,
+    "name": "Schedule (editing this section; everything below needs review,possible edits)",
+    "description": null,
+    "parent_id": 8788,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 8791,
+    "suite_id": 1152,
+    "name": "Standings",
+    "description": null,
+    "parent_id": 8788,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 8792,
+    "suite_id": 1152,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 8788,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 8793,
+    "suite_id": 1152,
+    "name": "Log Out",
+    "description": null,
+    "parent_id": 8792,
+    "display_order": 8,
+    "depth": 2
+  },
+  {
+    "id": 8794,
+    "suite_id": 1152,
+    "name": "Access Right Restrictions",
+    "description": null,
+    "parent_id": 8792,
+    "display_order": 9,
+    "depth": 2
+  },
+  {
+    "id": 8795,
+    "suite_id": 1152,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 8796,
+    "suite_id": 1152,
+    "name": "Networking",
+    "description": null,
+    "parent_id": 8795,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 8797,
+    "suite_id": 1152,
+    "name": "Pre-roll Ads",
+    "description": null,
+    "parent_id": 8795,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 8798,
+    "suite_id": 1152,
+    "name": "In-player (Video) Navigation",
+    "description": null,
+    "parent_id": 8795,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 8799,
+    "suite_id": 1152,
+    "name": "(Video Player) Controls",
+    "description": null,
+    "parent_id": 8798,
+    "display_order": 14,
+    "depth": 2
+  },
+  {
+    "id": 8800,
+    "suite_id": 1152,
+    "name": "Closed Captioning",
+    "description": null,
+    "parent_id": 8799,
+    "display_order": 15,
+    "depth": 3
+  },
+  {
+    "id": 8801,
+    "suite_id": 1152,
+    "name": "Milestones (Skip Fwd/ Skip Back)",
+    "description": null,
+    "parent_id": 8799,
+    "display_order": 16,
+    "depth": 3
+  },
+  {
+    "id": 8802,
+    "suite_id": 1152,
+    "name": "Scan Fwd/Scan Back",
+    "description": null,
+    "parent_id": 8799,
+    "display_order": 17,
+    "depth": 3
+  },
+  {
+    "id": 8803,
+    "suite_id": 1152,
+    "name": "Change Audio",
+    "description": null,
+    "parent_id": 8799,
+    "display_order": 18,
+    "depth": 3
+  },
+  {
+    "id": 8804,
+    "suite_id": 1152,
+    "name": "Linescore",
+    "description": null,
+    "parent_id": 8798,
+    "display_order": 19,
+    "depth": 2
+  },
+  {
+    "id": 8805,
+    "suite_id": 1152,
+    "name": "Audio Player",
+    "description": null,
+    "parent_id": null,
+    "display_order": 20,
+    "depth": 0
+  },
+  {
+    "id": 15213,
+    "suite_id": 1152,
+    "name": "Kinect",
+    "description": "This section is for all TestRail cases regarding the kinect on the xbox 360",
+    "parent_id": null,
+    "display_order": 21,
+    "depth": 0
+  },
+  {
+    "id": 15214,
+    "suite_id": 1152,
+    "name": "Free User / Non-Entitlement Verifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 15215,
+    "suite_id": 1152,
+    "name": "Free User / Non-Entitlement MLB.TV Upsell Verification",
+    "description": null,
+    "parent_id": 15214,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 15216,
+    "suite_id": 1152,
+    "name": "Single Team Entitlement Verifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  }
+]

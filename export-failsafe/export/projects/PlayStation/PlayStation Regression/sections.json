@@ -1,0 +1,236 @@
+[
+  {
+    "id": 155423,
+    "suite_id": 21381,
+    "name": "Onboarding",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 366740,
+    "suite_id": 21381,
+    "name": "Create Account Page",
+    "description": "https://app.zeplin.io/project/602d8b2f551d2c235b342753/dashboard?tag=Create%20Account",
+    "parent_id": 155423,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 155362,
+    "suite_id": 21381,
+    "name": "Header Navigation",
+    "description": "Need to specify colors and add zeplin links to all test cases",
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 156410,
+    "suite_id": 21381,
+    "name": "Game Tile Data - Home and Games pages",
+    "description": "Game card states: https://app.zeplin.io/project/602d8b2f551d2c235b342753/screen/5ef1f022a852bb27fd5555cb",
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 154974,
+    "suite_id": 21381,
+    "name": "Home Page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 154972,
+    "suite_id": 21381,
+    "name": "Featured Game Tile",
+    "description": null,
+    "parent_id": 154974,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 1153604,
+    "suite_id": 21381,
+    "name": "Autoplay",
+    "description": null,
+    "parent_id": 154974,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 154970,
+    "suite_id": 21381,
+    "name": "Games Page",
+    "description": "https://app.zeplin.io/project/5d7a80616c443486852e6b58/dashboard?tag=Home%20Screen",
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 154973,
+    "suite_id": 21381,
+    "name": "Date Picker",
+    "description": "https://app.zeplin.io/project/5d7a80616c443486852e6b58/dashboard?tag=Date%20Picker",
+    "parent_id": 154970,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 157273,
+    "suite_id": 21381,
+    "name": "Feed Selection",
+    "description": "https://app.zeplin.io/project/602d8b2f551d2c235b342753?seid=602da6b1362364281281da1f",
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 735173,
+    "suite_id": 21381,
+    "name": "Clips & Shows",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 154729,
+    "suite_id": 21381,
+    "name": "Video Player",
+    "description": "https://app.zeplin.io/project/5d7a80616c443486852e6b58/dashboard?tag=Video%20Player",
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 154752,
+    "suite_id": 21381,
+    "name": "Video Player Controller UI",
+    "description": null,
+    "parent_id": 154729,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 156738,
+    "suite_id": 21381,
+    "name": "Audio Options",
+    "description": null,
+    "parent_id": 154729,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 156836,
+    "suite_id": 21381,
+    "name": "CC",
+    "description": "https://app.zeplin.io/project/5d7a80616c443486852e6b58/dashboard?tag=Audio%20Settings%20%2F%20CC",
+    "parent_id": 154729,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 156745,
+    "suite_id": 21381,
+    "name": "FF/REW",
+    "description": "https://docs.google.com/document/d/14y5X7l_5lb8pTzcizXAGkjxuqDuqz8sBa1xjyu0598E",
+    "parent_id": 154729,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 154895,
+    "suite_id": 21381,
+    "name": "Ads",
+    "description": null,
+    "parent_id": null,
+    "display_order": 33,
+    "depth": 0
+  },
+  {
+    "id": 154896,
+    "suite_id": 21381,
+    "name": "Mid-roll Ads",
+    "description": null,
+    "parent_id": 154895,
+    "display_order": 34,
+    "depth": 1
+  },
+  {
+    "id": 154897,
+    "suite_id": 21381,
+    "name": "Mid-roll Ads: Dev Test",
+    "description": null,
+    "parent_id": 154895,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 1637388,
+    "suite_id": 21381,
+    "name": "SLive Ads",
+    "description": null,
+    "parent_id": 154895,
+    "display_order": 36,
+    "depth": 1
+  },
+  {
+    "id": 157193,
+    "suite_id": 21381,
+    "name": "Entitlements",
+    "description": "Entitlements testing for Free, Annual, Monthly, FYT, and Blackout\n\nhttps://baseball.atlassian.net/wiki/spaces/QAspace/pages/149455230/2021+Commerce+Entitlements",
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 157363,
+    "suite_id": 21381,
+    "name": "Settings",
+    "description": "https://app.zeplin.io/project/5d7a80616c443486852e6b58/dashboard?tag=Settings",
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 158149,
+    "suite_id": 21381,
+    "name": "Network",
+    "description": "Test the apps responses to network changes and errors\nhttps://app.zeplin.io/project/5d7a80616c443486852e6b58/screen/5e2b661989c3b99a5f0ccd5e",
+    "parent_id": null,
+    "display_order": 39,
+    "depth": 0
+  },
+  {
+    "id": 392438,
+    "suite_id": 21381,
+    "name": "Concurrency",
+    "description": "Test for multiple client/devices signed into the same account & streaming simultaneously.\n\nhttps://baseball.atlassian.net/wiki/spaces/JTS/pages/4696838/Concurrency+Cap",
+    "parent_id": null,
+    "display_order": 40,
+    "depth": 0
+  },
+  {
+    "id": 848062,
+    "suite_id": 21381,
+    "name": "ASG",
+    "description": null,
+    "parent_id": null,
+    "display_order": 41,
+    "depth": 0
+  },
+  {
+    "id": 1572143,
+    "suite_id": 21381,
+    "name": "Postseason",
+    "description": null,
+    "parent_id": null,
+    "display_order": 42,
+    "depth": 0
+  }
+]

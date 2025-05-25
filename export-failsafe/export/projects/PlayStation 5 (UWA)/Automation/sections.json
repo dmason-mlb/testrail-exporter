@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1894220,
+    "suite_id": 673716,
+    "name": "Automation Candidates",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1894221,
+    "suite_id": 673716,
+    "name": "Automated Smoke Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

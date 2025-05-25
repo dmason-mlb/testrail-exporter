@@ -1,0 +1,101 @@
+[
+  {
+    "id": 151362,
+    "suite_id": 20797,
+    "name": "MLB.TV",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 151367,
+    "suite_id": 20797,
+    "name": "Advertisement Scenarios",
+    "description": null,
+    "parent_id": 151362,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 151368,
+    "suite_id": 20797,
+    "name": "Live",
+    "description": null,
+    "parent_id": 151367,
+    "display_order": 3,
+    "depth": 2
+  },
+  {
+    "id": 151369,
+    "suite_id": 20797,
+    "name": "Archive",
+    "description": null,
+    "parent_id": 151367,
+    "display_order": 4,
+    "depth": 2
+  },
+  {
+    "id": 154001,
+    "suite_id": 20797,
+    "name": "MVPD",
+    "description": null,
+    "parent_id": 151362,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 154002,
+    "suite_id": 20797,
+    "name": "Extra Innings",
+    "description": null,
+    "parent_id": 154001,
+    "display_order": 6,
+    "depth": 2
+  },
+  {
+    "id": 154003,
+    "suite_id": 20797,
+    "name": "Root Sports",
+    "description": null,
+    "parent_id": 154001,
+    "display_order": 7,
+    "depth": 2
+  },
+  {
+    "id": 154484,
+    "suite_id": 20797,
+    "name": "MLB Accounts",
+    "description": null,
+    "parent_id": 151362,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 151364,
+    "suite_id": 20797,
+    "name": "MLB VPP (Video Player Page)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 151365,
+    "suite_id": 20797,
+    "name": "MiLB.TV",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 151366,
+    "suite_id": 20797,
+    "name": "MiLB VPP (Video Player Page)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  }
+]

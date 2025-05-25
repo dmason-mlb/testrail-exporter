@@ -1,0 +1,173 @@
+[
+  {
+    "id": 12137,
+    "suite_id": 1275,
+    "name": "Start-Up",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 12141,
+    "suite_id": 1275,
+    "name": "Free User / Non-Entitlement Verifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 12142,
+    "suite_id": 1275,
+    "name": "Free User / Non-Entitlement NHL.TV Upsell Verification",
+    "description": null,
+    "parent_id": 12141,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 12144,
+    "suite_id": 1275,
+    "name": "Full Monthly Account Entitlement Verifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 12146,
+    "suite_id": 1275,
+    "name": "Full Yearly Account Entitlement Verifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 85732,
+    "suite_id": 1275,
+    "name": "Blackout Tests",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 12152,
+    "suite_id": 1275,
+    "name": "Main Menu",
+    "description": null,
+    "parent_id": null,
+    "display_order": 17,
+    "depth": 0
+  },
+  {
+    "id": 12153,
+    "suite_id": 1275,
+    "name": "Scores",
+    "description": null,
+    "parent_id": 12152,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 12160,
+    "suite_id": 1275,
+    "name": "Highlights / Game Recap / Extended Highlight",
+    "description": null,
+    "parent_id": 12153,
+    "display_order": 19,
+    "depth": 2
+  },
+  {
+    "id": 15074,
+    "suite_id": 1275,
+    "name": "Video Section",
+    "description": null,
+    "parent_id": 12152,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 12155,
+    "suite_id": 1275,
+    "name": "Teams",
+    "description": null,
+    "parent_id": 12152,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 12156,
+    "suite_id": 1275,
+    "name": "Standings",
+    "description": null,
+    "parent_id": 12152,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 12161,
+    "suite_id": 1275,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 12152,
+    "display_order": 30,
+    "depth": 1
+  },
+  {
+    "id": 12245,
+    "suite_id": 1275,
+    "name": "Settings: Buy NHL.TV",
+    "description": null,
+    "parent_id": 12161,
+    "display_order": 31,
+    "depth": 2
+  },
+  {
+    "id": 12162,
+    "suite_id": 1275,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 32,
+    "depth": 0
+  },
+  {
+    "id": 12163,
+    "suite_id": 1275,
+    "name": "Network Performance",
+    "description": null,
+    "parent_id": 12162,
+    "display_order": 33,
+    "depth": 1
+  },
+  {
+    "id": 13351,
+    "suite_id": 1275,
+    "name": "Pre-Roll",
+    "description": null,
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 12164,
+    "suite_id": 1275,
+    "name": "Network Failure",
+    "description": null,
+    "parent_id": null,
+    "display_order": 35,
+    "depth": 0
+  },
+  {
+    "id": 12171,
+    "suite_id": 1275,
+    "name": "IAP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 43,
+    "depth": 0
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1973856,
+    "suite_id": 693098,
+    "name": "Account Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1973857,
+    "suite_id": 693098,
+    "name": "Name Section",
+    "description": null,
+    "parent_id": 1973856,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 1973858,
+    "suite_id": 693098,
+    "name": "Email Address Section",
+    "description": null,
+    "parent_id": 1973856,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 1973859,
+    "suite_id": 693098,
+    "name": "Password Section",
+    "description": null,
+    "parent_id": 1973856,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 1973860,
+    "suite_id": 693098,
+    "name": "Phone Number Section",
+    "description": null,
+    "parent_id": 1973856,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 1973861,
+    "suite_id": 693098,
+    "name": "Date of Birth Section",
+    "description": null,
+    "parent_id": 1973856,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 1973862,
+    "suite_id": 693098,
+    "name": "Favorite Team Section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1973863,
+    "suite_id": 693098,
+    "name": "Followed Teams Section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1973864,
+    "suite_id": 693098,
+    "name": "Followed Players Section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1973865,
+    "suite_id": 693098,
+    "name": "Payment Methods Section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1973866,
+    "suite_id": 693098,
+    "name": "Email Newsletters",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "id": 558,
+  "name": "5.2 Cases",
+  "description": "This is a Test Suite containing the relevant JIRA's that we wish to review in a regression based manner throughout the 5.2 Release.",
+  "project_id": 36,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/558"
+}

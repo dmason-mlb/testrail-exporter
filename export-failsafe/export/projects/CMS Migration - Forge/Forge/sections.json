@@ -1,0 +1,47 @@
+[
+  {
+    "id": 149059,
+    "suite_id": 20561,
+    "name": "Dashboard",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 149060,
+    "suite_id": 20561,
+    "name": "Perfomance",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 149061,
+    "suite_id": 20561,
+    "name": "Administration",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 149062,
+    "suite_id": 20561,
+    "name": "Logs",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 149200,
+    "suite_id": 20561,
+    "name": "Login",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

@@ -1,0 +1,587 @@
+[
+  {
+    "id": 1639503,
+    "suite_id": 591237,
+    "name": "VenueMessaging - DO NOT TOUCH",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1731451,
+    "suite_id": 591237,
+    "name": "BPPush",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1648435,
+    "suite_id": 591237,
+    "name": "ClubTools",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1648437,
+    "suite_id": 591237,
+    "name": "Admin",
+    "description": null,
+    "parent_id": 1648435,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 1648439,
+    "suite_id": 591237,
+    "name": "Venues",
+    "description": null,
+    "parent_id": 1648437,
+    "display_order": 10,
+    "depth": 2
+  },
+  {
+    "id": 1648438,
+    "suite_id": 591237,
+    "name": "Club Mgr",
+    "description": null,
+    "parent_id": 1648437,
+    "display_order": 11,
+    "depth": 2
+  },
+  {
+    "id": 1648440,
+    "suite_id": 591237,
+    "name": "SMS Campaigns",
+    "description": null,
+    "parent_id": 1648437,
+    "display_order": 12,
+    "depth": 2
+  },
+  {
+    "id": 1690700,
+    "suite_id": 591237,
+    "name": "SMS Campaign",
+    "description": "Manage Campaigns by Teams",
+    "parent_id": 1648440,
+    "display_order": 13,
+    "depth": 3
+  },
+  {
+    "id": 1648446,
+    "suite_id": 591237,
+    "name": "Notification Manager",
+    "description": null,
+    "parent_id": 1648437,
+    "display_order": 14,
+    "depth": 2
+  },
+  {
+    "id": 1648441,
+    "suite_id": 591237,
+    "name": "Team Page Promo",
+    "description": null,
+    "parent_id": 1648437,
+    "display_order": 27,
+    "depth": 2
+  },
+  {
+    "id": 1648442,
+    "suite_id": 591237,
+    "name": "Loyalty_Top Priority",
+    "description": null,
+    "parent_id": 1648437,
+    "display_order": 28,
+    "depth": 2
+  },
+  {
+    "id": 1648447,
+    "suite_id": 591237,
+    "name": "Loyalty Programs_Top Priority",
+    "description": null,
+    "parent_id": 1648442,
+    "display_order": 29,
+    "depth": 3
+  },
+  {
+    "id": 1648444,
+    "suite_id": 591237,
+    "name": "Offers",
+    "description": null,
+    "parent_id": 1648437,
+    "display_order": 30,
+    "depth": 2
+  },
+  {
+    "id": 1648445,
+    "suite_id": 591237,
+    "name": "News",
+    "description": null,
+    "parent_id": 1648437,
+    "display_order": 31,
+    "depth": 2
+  },
+  {
+    "id": 1648455,
+    "suite_id": 591237,
+    "name": "Masquerade",
+    "description": null,
+    "parent_id": 1648437,
+    "display_order": 32,
+    "depth": 2
+  },
+  {
+    "id": 1648443,
+    "suite_id": 591237,
+    "name": "Club Tools",
+    "description": null,
+    "parent_id": 1648435,
+    "display_order": 36,
+    "depth": 1
+  },
+  {
+    "id": 1648448,
+    "suite_id": 591237,
+    "name": "Dashboard",
+    "description": null,
+    "parent_id": 1648443,
+    "display_order": 38,
+    "depth": 2
+  },
+  {
+    "id": 1648450,
+    "suite_id": 591237,
+    "name": "Map Tool",
+    "description": null,
+    "parent_id": 1648448,
+    "display_order": 40,
+    "depth": 3
+  },
+  {
+    "id": 1648449,
+    "suite_id": 591237,
+    "name": "Design Library",
+    "description": null,
+    "parent_id": 1648448,
+    "display_order": 41,
+    "depth": 3
+  },
+  {
+    "id": 1648454,
+    "suite_id": 591237,
+    "name": "Card Creator_Top Priority",
+    "description": null,
+    "parent_id": 1648448,
+    "display_order": 42,
+    "depth": 3
+  },
+  {
+    "id": 1648453,
+    "suite_id": 591237,
+    "name": "Text2Security",
+    "description": null,
+    "parent_id": 1648448,
+    "display_order": 43,
+    "depth": 3
+  },
+  {
+    "id": 1648452,
+    "suite_id": 591237,
+    "name": "Loyalty Members_Top Priority",
+    "description": null,
+    "parent_id": 1648448,
+    "display_order": 44,
+    "depth": 3
+  },
+  {
+    "id": 1648432,
+    "suite_id": 591237,
+    "name": "Team Page Config_Top Priority",
+    "description": null,
+    "parent_id": 1648448,
+    "display_order": 45,
+    "depth": 3
+  },
+  {
+    "id": 1648457,
+    "suite_id": 591237,
+    "name": "Home Tab Previews",
+    "description": null,
+    "parent_id": 1648448,
+    "display_order": 46,
+    "depth": 3
+  },
+  {
+    "id": 1648458,
+    "suite_id": 591237,
+    "name": "Deep Link Generator",
+    "description": null,
+    "parent_id": 1648448,
+    "display_order": 47,
+    "depth": 3
+  },
+  {
+    "id": 1648459,
+    "suite_id": 591237,
+    "name": "Notification Manager",
+    "description": null,
+    "parent_id": 1648448,
+    "display_order": 48,
+    "depth": 3
+  },
+  {
+    "id": 1648460,
+    "suite_id": 591237,
+    "name": "Offers_Top Priority",
+    "description": null,
+    "parent_id": 1648448,
+    "display_order": 49,
+    "depth": 3
+  },
+  {
+    "id": 1648461,
+    "suite_id": 591237,
+    "name": "SMS Campaigns_Top Priority",
+    "description": null,
+    "parent_id": 1648448,
+    "display_order": 50,
+    "depth": 3
+  },
+  {
+    "id": 1648451,
+    "suite_id": 591237,
+    "name": "PNG Map Tool",
+    "description": null,
+    "parent_id": 1648448,
+    "display_order": 51,
+    "depth": 3
+  },
+  {
+    "id": 1690701,
+    "suite_id": 591237,
+    "name": "Home Carousel",
+    "description": null,
+    "parent_id": 1648448,
+    "display_order": 52,
+    "depth": 3
+  },
+  {
+    "id": 1648433,
+    "suite_id": 591237,
+    "name": "Login_Top Priority",
+    "description": "Login Flow into Club Tools",
+    "parent_id": 1648435,
+    "display_order": 58,
+    "depth": 1
+  },
+  {
+    "id": 1648456,
+    "suite_id": 591237,
+    "name": "Member",
+    "description": null,
+    "parent_id": 1648435,
+    "display_order": 59,
+    "depth": 1
+  },
+  {
+    "id": 1648436,
+    "suite_id": 591237,
+    "name": "Feature Testing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 72,
+    "depth": 0
+  },
+  {
+    "id": 1648434,
+    "suite_id": 591237,
+    "name": "Ticket1967",
+    "description": null,
+    "parent_id": 1648436,
+    "display_order": 73,
+    "depth": 1
+  },
+  {
+    "id": 1669946,
+    "suite_id": 591237,
+    "name": "BP App Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 74,
+    "depth": 0
+  },
+  {
+    "id": 1669947,
+    "suite_id": 591237,
+    "name": "Inbox Test Cases",
+    "description": null,
+    "parent_id": 1669946,
+    "display_order": 75,
+    "depth": 1
+  },
+  {
+    "id": 1669948,
+    "suite_id": 591237,
+    "name": "Configuration",
+    "description": "Prerequisite - Remote Config Setup for: ChatBot configuration\n1. Go to Firebase -> Remote Config (links below)\n2. Edit \"support_chat_url\" as needed to force display. \n3. Save changes.\n4. Publish changes.\n\nBE CAUTIOUS WHEN UPDATING PROD CONFIGURATION AS CHANGES WOULD BE WITNESSED TO LIVE USER\n\nRemote Configs \n[Ballpark QA App](https://console.firebase.google.com/u/0/project/mlb-mobile-npd/config)\n[Ballpark](https://console.firebase.google.com/u/0/project/mlb-ballpark-app-831/config)\n(can have condition set up to differentiate desired behavior for different envs/platform/target_audience)",
+    "parent_id": 1669946,
+    "display_order": 76,
+    "depth": 1
+  },
+  {
+    "id": 1669949,
+    "suite_id": 591237,
+    "name": "Chat Bot functionality",
+    "description": null,
+    "parent_id": 1669946,
+    "display_order": 77,
+    "depth": 1
+  },
+  {
+    "id": 1669950,
+    "suite_id": 591237,
+    "name": "Auto Check-in",
+    "description": "https://baseball.atlassian.net/browse/CLUBTOOLS-1486\n\nAs a fan attending an event who loves My History & free stuff from offers, I want the current game added to my history and all the offers unlocked when I’m in the ballpark\n\nNOTE: Auto Check-in feature is ticket agnostic, meaning that expected behavior should be verified both with AND without tickets",
+    "parent_id": 1669946,
+    "display_order": 78,
+    "depth": 1
+  },
+  {
+    "id": 1669951,
+    "suite_id": 591237,
+    "name": "CheckInModal",
+    "description": null,
+    "parent_id": 1669946,
+    "display_order": 79,
+    "depth": 1
+  },
+  {
+    "id": 1669952,
+    "suite_id": 591237,
+    "name": "TeamPageCheckin",
+    "description": null,
+    "parent_id": 1669946,
+    "display_order": 80,
+    "depth": 1
+  },
+  {
+    "id": 1669953,
+    "suite_id": 591237,
+    "name": "Maps",
+    "description": null,
+    "parent_id": 1669946,
+    "display_order": 81,
+    "depth": 1
+  },
+  {
+    "id": 1669954,
+    "suite_id": 591237,
+    "name": "Point Of Interest (POI)",
+    "description": null,
+    "parent_id": 1669946,
+    "display_order": 82,
+    "depth": 1
+  },
+  {
+    "id": 1669955,
+    "suite_id": 591237,
+    "name": "Context Header - welcomeMessage / toDoMessage",
+    "description": "[Context Header- welcomeMessage / toDoMessage](https://baseball.atlassian.net/wiki/spaces/BET/pages/1418494039/Context+Eligibility+Rules#Context-Header---welcomeMessage-%2F-toDoMessage)",
+    "parent_id": 1669946,
+    "display_order": 83,
+    "depth": 1
+  },
+  {
+    "id": 1669956,
+    "suite_id": 591237,
+    "name": "Next Ticketed Event Card",
+    "description": "[Next+Ticketed+Event+V1](https://baseball.atlassian.net/wiki/spaces/BET/pages/1367114724/Next+Ticketed+Event+V1)",
+    "parent_id": 1669946,
+    "display_order": 84,
+    "depth": 1
+  },
+  {
+    "id": 1669957,
+    "suite_id": 591237,
+    "name": "Next Ticketed Event Peeking Card",
+    "description": null,
+    "parent_id": 1669946,
+    "display_order": 85,
+    "depth": 1
+  },
+  {
+    "id": 1669958,
+    "suite_id": 591237,
+    "name": "Context Card - setFavoriteTeam",
+    "description": "[Context+Eligibility+Rules#Context-Card---setFavoriteTeam](https://baseball.atlassian.net/wiki/spaces/BET/pages/1418494039/Context+Eligibility+Rules#Context-Card---setFavoriteTeam)",
+    "parent_id": 1669946,
+    "display_order": 86,
+    "depth": 1
+  },
+  {
+    "id": 1669959,
+    "suite_id": 591237,
+    "name": "Context Card - teamSchedulePrompt",
+    "description": "[Context+Eligibility+Rules#Context-Card---teamSchedulePrompt](https://baseball.atlassian.net/wiki/spaces/BET/pages/1418494039/Context+Eligibility+Rules#Context-Card---teamSchedulePrompt)",
+    "parent_id": 1669946,
+    "display_order": 87,
+    "depth": 1
+  },
+  {
+    "id": 1669960,
+    "suite_id": 591237,
+    "name": "Context Card - forwardPrompt",
+    "description": "[Context+Eligibility+Rules#Context-Card---forwardPrompt](https://baseball.atlassian.net/wiki/spaces/BET/pages/1418494039/Context+Eligibility+Rules#Context-Card---forwardPrompt)",
+    "parent_id": 1669946,
+    "display_order": 88,
+    "depth": 1
+  },
+  {
+    "id": 1669961,
+    "suite_id": 591237,
+    "name": "Context Card - Side Image",
+    "description": "*Android - [BPA-6197](https://baseball.atlassian.net/browse/BPA-6197)\n*iOS - [BP-9382](https://baseball.atlassian.net/browse/BP-9382)\n*Design - [Zeplin](https://app.zeplin.io/project/602160fce3c37f64b50c8127/screen/612e532a44ef2e109fcc7657)\n*Rules - [wiki](https://baseball.atlassian.net/wiki/spaces/BET/pages/1415348276/Context+Card+V1)",
+    "parent_id": 1669946,
+    "display_order": 89,
+    "depth": 1
+  },
+  {
+    "id": 1669962,
+    "suite_id": 591237,
+    "name": "Context Card - Background Color",
+    "description": null,
+    "parent_id": 1669946,
+    "display_order": 90,
+    "depth": 1
+  },
+  {
+    "id": 1669963,
+    "suite_id": 591237,
+    "name": "Context Card - Sorry (No Network or Service Unavailable)",
+    "description": "[Context+Eligibility+Rules#Context-Card---Sorry-(No-Network-or-Service-Unavailable)](https://baseball.atlassian.net/wiki/spaces/BET/pages/1418494039/Context+Eligibility+Rules#Context-Card---Sorry-(No-Network-or-Service-Unavailable) )",
+    "parent_id": 1669946,
+    "display_order": 91,
+    "depth": 1
+  },
+  {
+    "id": 1669964,
+    "suite_id": 591237,
+    "name": "Context Card - notSeeingYourTickets [DEPRECATED w/ 11.1.0]",
+    "description": "[Context+Eligibility+Rules#Context-Card---notSeeingYourTickets](https://baseball.atlassian.net/wiki/spaces/BET/pages/1418494039/Context+Eligibility+Rules#Context-Card---notSeeingYourTickets)",
+    "parent_id": 1669946,
+    "display_order": 92,
+    "depth": 1
+  },
+  {
+    "id": 1669965,
+    "suite_id": 591237,
+    "name": "Carousel",
+    "description": "Design specs:  [Link](https://www.figma.com/file/M3vqmrFe2eJlofe392hAqY/Specs?node-id=2951%3A54682&t=XjDbQMPgJhIkjPoq-1 )\n\nData models:\n*Updated section data model: [Link](https://baseball.atlassian.net/wiki/spaces/BET/pages/1434878593/Firestore+Section )\n*Story cards within carousel: [Link](https://baseball.atlassian.net/wiki/spaces/BET/pages/2841903105/Story+Card+V1 )",
+    "parent_id": 1669946,
+    "display_order": 93,
+    "depth": 1
+  },
+  {
+    "id": 1669966,
+    "suite_id": 591237,
+    "name": "Landing Page",
+    "description": null,
+    "parent_id": 1669946,
+    "display_order": 94,
+    "depth": 1
+  },
+  {
+    "id": 1669967,
+    "suite_id": 591237,
+    "name": "Tappable Headers",
+    "description": null,
+    "parent_id": 1669946,
+    "display_order": 95,
+    "depth": 1
+  },
+  {
+    "id": 1669968,
+    "suite_id": 591237,
+    "name": "Landing Page - Events Section",
+    "description": null,
+    "parent_id": 1669946,
+    "display_order": 96,
+    "depth": 1
+  },
+  {
+    "id": 1669969,
+    "suite_id": 591237,
+    "name": "Event Card Details View (via \"View Details\" link)",
+    "description": "This view shows more details about the a users specific check in. Additional content includes:\n*full score view or title view (NGE)\n*user inputted Notes, including Section Row Seat\n*user added photos in a larger size\n*add photos button\n*game wrap button if available\n*delete check-in button",
+    "parent_id": 1669946,
+    "display_order": 97,
+    "depth": 1
+  },
+  {
+    "id": 1669970,
+    "suite_id": 591237,
+    "name": "Event Card - Add and Delete Photo Functionality",
+    "description": "Add a photo in the main view with a floating or static button. After selecting a photo, a full screen view pops up with the option to delete. Pinch to zoom also available on iOS.",
+    "parent_id": 1669969,
+    "display_order": 98,
+    "depth": 2
+  },
+  {
+    "id": 1669971,
+    "suite_id": 591237,
+    "name": "Event Card - Editing Check-Ins Text",
+    "description": "In the top right corner of the Detials view there is now an \"Edit\" button. A edit view appears giving the user the ability to edit their Section, Row, Seat, and User Message.",
+    "parent_id": 1669969,
+    "display_order": 99,
+    "depth": 2
+  },
+  {
+    "id": 1669972,
+    "suite_id": 591237,
+    "name": "Event Card - Deleting A Check-In",
+    "description": "At the very bottom of the table view in the details view, there will be a delete button.",
+    "parent_id": 1669969,
+    "display_order": 100,
+    "depth": 2
+  },
+  {
+    "id": 1669973,
+    "suite_id": 591237,
+    "name": "Historic Check-in",
+    "description": null,
+    "parent_id": 1669946,
+    "display_order": 101,
+    "depth": 1
+  },
+  {
+    "id": 1669974,
+    "suite_id": 591237,
+    "name": "Navigation",
+    "description": null,
+    "parent_id": 1669946,
+    "display_order": 102,
+    "depth": 1
+  },
+  {
+    "id": 1669975,
+    "suite_id": 591237,
+    "name": "Deeplinks",
+    "description": null,
+    "parent_id": 1669946,
+    "display_order": 103,
+    "depth": 1
+  },
+  {
+    "id": 1671894,
+    "suite_id": 591237,
+    "name": "github.mlbam.net/Mobile-Services/venue-msg-svc/internal/testautomation/postmessage",
+    "description": null,
+    "parent_id": null,
+    "display_order": 104,
+    "depth": 0
+  }
+]

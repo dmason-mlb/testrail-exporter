@@ -1,0 +1,200 @@
+[
+  {
+    "id": 26401,
+    "suite_id": 2907,
+    "name": "Start-Up",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 26402,
+    "suite_id": 2907,
+    "name": "Fox Sports Go",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 26403,
+    "suite_id": 2907,
+    "name": "Unauthenticated Account - Before Cable Provider authentication",
+    "description": null,
+    "parent_id": 26402,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 26404,
+    "suite_id": 2907,
+    "name": "Cable Provider Authentication Verification - Device / Web",
+    "description": null,
+    "parent_id": 26403,
+    "display_order": 26,
+    "depth": 2
+  },
+  {
+    "id": 26405,
+    "suite_id": 2907,
+    "name": "Full Cable Authorization Entitlement Verifications - Web Flow",
+    "description": null,
+    "parent_id": 26402,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 26406,
+    "suite_id": 2907,
+    "name": "Cable Provider Verifications - Web Flow",
+    "description": null,
+    "parent_id": 26402,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 26407,
+    "suite_id": 2907,
+    "name": "More TV Providers - Web Flow subsection",
+    "description": null,
+    "parent_id": 26406,
+    "display_order": 29,
+    "depth": 2
+  },
+  {
+    "id": 26408,
+    "suite_id": 2907,
+    "name": "Full Cable Provider Authentication - Web Flow",
+    "description": "This is an example of the final Cable Provider Authentication via DirecTV (given in the current Design Specs - 2.4.16)",
+    "parent_id": 26406,
+    "display_order": 30,
+    "depth": 2
+  },
+  {
+    "id": 26409,
+    "suite_id": 2907,
+    "name": "Sign In/Sign Up to FS Account - Pop Up Subsection - Web Flow",
+    "description": null,
+    "parent_id": 26406,
+    "display_order": 31,
+    "depth": 2
+  },
+  {
+    "id": 26410,
+    "suite_id": 2907,
+    "name": "Authenticated Account - After Cable Provider authentication",
+    "description": null,
+    "parent_id": 26402,
+    "display_order": 32,
+    "depth": 1
+  },
+  {
+    "id": 26411,
+    "suite_id": 2907,
+    "name": "App Menu",
+    "description": null,
+    "parent_id": 26402,
+    "display_order": 33,
+    "depth": 1
+  },
+  {
+    "id": 26413,
+    "suite_id": 2907,
+    "name": "Live TV",
+    "description": null,
+    "parent_id": 26402,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 26414,
+    "suite_id": 2907,
+    "name": "Schedule Details - Daily Video Content Listings",
+    "description": null,
+    "parent_id": 26413,
+    "display_order": 36,
+    "depth": 2
+  },
+  {
+    "id": 26415,
+    "suite_id": 2907,
+    "name": "Featured (chips) section Items",
+    "description": null,
+    "parent_id": 26413,
+    "display_order": 37,
+    "depth": 2
+  },
+  {
+    "id": 26416,
+    "suite_id": 2907,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": 26413,
+    "display_order": 38,
+    "depth": 2
+  },
+  {
+    "id": 26417,
+    "suite_id": 2907,
+    "name": "Network Performance",
+    "description": null,
+    "parent_id": 26416,
+    "display_order": 39,
+    "depth": 3
+  },
+  {
+    "id": 26418,
+    "suite_id": 2907,
+    "name": "Network Failure",
+    "description": null,
+    "parent_id": 26417,
+    "display_order": 40,
+    "depth": 4
+  },
+  {
+    "id": 26419,
+    "suite_id": 2907,
+    "name": "CHIPS (Content Tile Configuration) Verification",
+    "description": "Content Tile Tags and States from all Live and Upcoming Video Content within the app",
+    "parent_id": 26413,
+    "display_order": 41,
+    "depth": 2
+  },
+  {
+    "id": 26412,
+    "suite_id": 2907,
+    "name": "Search",
+    "description": "Functionality for Search Menu sub-section",
+    "parent_id": 26402,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 26420,
+    "suite_id": 2907,
+    "name": "Settings",
+    "description": null,
+    "parent_id": 26402,
+    "display_order": 45,
+    "depth": 1
+  },
+  {
+    "id": 26421,
+    "suite_id": 2907,
+    "name": "MVPD Sign In/Out via Application \"Settings Menu\" sub-section",
+    "description": "Verify Sign-Out/Sign-In sub-menu functionality (from Settings Menu)",
+    "parent_id": 26420,
+    "display_order": 46,
+    "depth": 2
+  },
+  {
+    "id": 26423,
+    "suite_id": 2907,
+    "name": "Closed Captioning",
+    "description": null,
+    "parent_id": 26420,
+    "display_order": 48,
+    "depth": 2
+  }
+]

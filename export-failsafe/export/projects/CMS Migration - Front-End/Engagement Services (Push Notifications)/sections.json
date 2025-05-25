@@ -1,0 +1,74 @@
+[
+  {
+    "id": 148857,
+    "suite_id": 20535,
+    "name": "Gameday Video Alerts",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 149730,
+    "suite_id": 20535,
+    "name": "iOS At Bat",
+    "description": null,
+    "parent_id": 148857,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 149731,
+    "suite_id": 20535,
+    "name": "Android At Bat",
+    "description": null,
+    "parent_id": 148857,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 148858,
+    "suite_id": 20535,
+    "name": "At Bat Editorial Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 149734,
+    "suite_id": 20535,
+    "name": "iOS At Bat",
+    "description": null,
+    "parent_id": 148858,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 149735,
+    "suite_id": 20535,
+    "name": "Android At Bat",
+    "description": null,
+    "parent_id": 148858,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 148859,
+    "suite_id": 20535,
+    "name": "Ballpark Editorial Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 148860,
+    "suite_id": 20535,
+    "name": "Ballpark Inbox Notifications",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  }
+]

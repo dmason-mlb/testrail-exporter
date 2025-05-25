@@ -1,0 +1,110 @@
+[
+  {
+    "id": 98072,
+    "suite_id": 14867,
+    "name": "MLB Scoreboard (EN)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 98076,
+    "suite_id": 14867,
+    "name": "MLB Scoreboard (ES)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 104781,
+    "suite_id": 14867,
+    "name": "General",
+    "description": null,
+    "parent_id": 98076,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 104782,
+    "suite_id": 14867,
+    "name": "Pregame",
+    "description": null,
+    "parent_id": 98076,
+    "display_order": 18,
+    "depth": 1
+  },
+  {
+    "id": 104783,
+    "suite_id": 14867,
+    "name": "Live",
+    "description": null,
+    "parent_id": 98076,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 104784,
+    "suite_id": 14867,
+    "name": "Postgame",
+    "description": null,
+    "parent_id": 98076,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 104791,
+    "suite_id": 14867,
+    "name": "Product Links",
+    "description": null,
+    "parent_id": 98076,
+    "display_order": 22,
+    "depth": 1
+  },
+  {
+    "id": 104792,
+    "suite_id": 14867,
+    "name": "Scoreboard Edge Cases",
+    "description": null,
+    "parent_id": 98076,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 104793,
+    "suite_id": 14867,
+    "name": "Video AutoPlay Rules (Opening Day)",
+    "description": null,
+    "parent_id": 98076,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 104794,
+    "suite_id": 14867,
+    "name": "Ad Integration",
+    "description": null,
+    "parent_id": 98076,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 98077,
+    "suite_id": 14867,
+    "name": "CLUB Scoreboard (EN)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 98078,
+    "suite_id": 14867,
+    "name": "CLUB Scoreboard (ES)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 28,
+    "depth": 0
+  }
+]

@@ -1,0 +1,209 @@
+[
+  {
+    "id": 304224,
+    "suite_id": 43478,
+    "name": "Authenticated",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 304246,
+    "suite_id": 43478,
+    "name": "Home",
+    "description": null,
+    "parent_id": 304224,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 304249,
+    "suite_id": 43478,
+    "name": "Scores",
+    "description": "Menu>Scores",
+    "parent_id": 304224,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 304251,
+    "suite_id": 43478,
+    "name": "Standings Screen",
+    "description": null,
+    "parent_id": 304224,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 304230,
+    "suite_id": 43478,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": 304224,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 304231,
+    "suite_id": 43478,
+    "name": "Scan Fwd/Scan Back",
+    "description": null,
+    "parent_id": 304224,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 304232,
+    "suite_id": 43478,
+    "name": "Closed Captioning",
+    "description": null,
+    "parent_id": 304224,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 304233,
+    "suite_id": 43478,
+    "name": "Milestones",
+    "description": null,
+    "parent_id": 304224,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 304234,
+    "suite_id": 43478,
+    "name": "Box Score",
+    "description": null,
+    "parent_id": 304224,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 304235,
+    "suite_id": 43478,
+    "name": "Mid-Roll Ads",
+    "description": null,
+    "parent_id": 304224,
+    "display_order": 29,
+    "depth": 1
+  },
+  {
+    "id": 304237,
+    "suite_id": 43478,
+    "name": "Feed Select Screen",
+    "description": null,
+    "parent_id": 304224,
+    "display_order": 31,
+    "depth": 1
+  },
+  {
+    "id": 304239,
+    "suite_id": 43478,
+    "name": "Home Team Appearance - Hide Scores Off",
+    "description": null,
+    "parent_id": 304224,
+    "display_order": 32,
+    "depth": 1
+  },
+  {
+    "id": 304238,
+    "suite_id": 43478,
+    "name": "Standings Screen",
+    "description": null,
+    "parent_id": 304224,
+    "display_order": 33,
+    "depth": 1
+  },
+  {
+    "id": 304240,
+    "suite_id": 43478,
+    "name": "Game States - Scores screen",
+    "description": null,
+    "parent_id": 304224,
+    "display_order": 34,
+    "depth": 1
+  },
+  {
+    "id": 304241,
+    "suite_id": 43478,
+    "name": "Game States - Hero tile",
+    "description": null,
+    "parent_id": 304224,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 304243,
+    "suite_id": 43478,
+    "name": "Unauthenticated",
+    "description": null,
+    "parent_id": null,
+    "display_order": 49,
+    "depth": 0
+  },
+  {
+    "id": 304253,
+    "suite_id": 43478,
+    "name": "Home",
+    "description": null,
+    "parent_id": 304243,
+    "display_order": 50,
+    "depth": 1
+  },
+  {
+    "id": 304254,
+    "suite_id": 43478,
+    "name": "Calendar Screen",
+    "description": null,
+    "parent_id": 304243,
+    "display_order": 51,
+    "depth": 1
+  },
+  {
+    "id": 304255,
+    "suite_id": 43478,
+    "name": "Feed Select Screen",
+    "description": null,
+    "parent_id": 304243,
+    "display_order": 52,
+    "depth": 1
+  },
+  {
+    "id": 304256,
+    "suite_id": 43478,
+    "name": "Standings Screen",
+    "description": null,
+    "parent_id": 304243,
+    "display_order": 53,
+    "depth": 1
+  },
+  {
+    "id": 304257,
+    "suite_id": 43478,
+    "name": "Home Team Appearance - Hide Scores Off",
+    "description": null,
+    "parent_id": 304243,
+    "display_order": 54,
+    "depth": 1
+  },
+  {
+    "id": 304258,
+    "suite_id": 43478,
+    "name": "Game States - Scores screen",
+    "description": null,
+    "parent_id": 304243,
+    "display_order": 55,
+    "depth": 1
+  },
+  {
+    "id": 304259,
+    "suite_id": 43478,
+    "name": "Game States - Hero tile",
+    "description": null,
+    "parent_id": 304243,
+    "display_order": 56,
+    "depth": 1
+  }
+]

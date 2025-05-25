@@ -1,0 +1,29 @@
+[
+  {
+    "id": 146324,
+    "suite_id": 20249,
+    "name": "Basic",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 146325,
+    "suite_id": 20249,
+    "name": "Automated - do not test - Basic",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 146326,
+    "suite_id": 20249,
+    "name": "Full",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

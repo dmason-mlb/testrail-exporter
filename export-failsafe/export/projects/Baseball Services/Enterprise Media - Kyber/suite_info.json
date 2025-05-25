@@ -1,0 +1,11 @@
+{
+  "id": 101996,
+  "name": "Enterprise Media - Kyber",
+  "description": "Kyber is MLB's product to implement FFmpeg on Google (FOG).\r\n\r\nFFmpeg on Google (FOG) is a new transcoding pipeline designed to leverage Google Cloud and address many of the fragmented media processing currently deployed throughout multiple departments. It was designed in partnership with Google to serve as a replacement for AWS MediaConvert and adheres closely to the framework deployed last season in conjunction with Baseball Data to transcode seven million assets throughout the season. \r\n\r\nFOG’s first goal is to provide Sportybot the ability to generate HTTP Live Streaming (HLS) streams that adhere to MLB’s Playback Scenarios in use across all web and connected devices.\r\n\r\nhttps://baseball.atlassian.net/wiki/spaces/SEM/pages/531170188/Kyber",
+  "project_id": 194,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/101996"
+}

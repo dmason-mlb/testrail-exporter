@@ -1,0 +1,29 @@
+[
+  {
+    "id": 146478,
+    "suite_id": 20235,
+    "name": "Do not test",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 147173,
+    "suite_id": 20235,
+    "name": "Automated - do not test - Basic",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 148303,
+    "suite_id": 20235,
+    "name": "Manual testing REQUIRED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  }
+]

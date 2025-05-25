@@ -1,0 +1,65 @@
+[
+  {
+    "id": 405033,
+    "suite_id": 86226,
+    "name": "\"Open\" Bracket",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 405034,
+    "suite_id": 86226,
+    "name": "\"Scoring\" Bracket",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 405035,
+    "suite_id": 86226,
+    "name": "\"Locked\" Bracket",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 405036,
+    "suite_id": 86226,
+    "name": "OPEN Bracket",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 400966,
+    "suite_id": 86226,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 406867,
+    "suite_id": 86226,
+    "name": "Technical",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 427031,
+    "suite_id": 86226,
+    "name": "Age Gate",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  }
+]

@@ -1,0 +1,281 @@
+[
+  {
+    "id": 103947,
+    "suite_id": 15954,
+    "name": "MLB Commerce",
+    "description": "For Monthly and STP flows the Test cases for using Paypal, MasterPass, Id.Me and MiLB.Tv bundle are common.  Use the respective URL.",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 114648,
+    "suite_id": 15954,
+    "name": "MLB Purchase Flows",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 103948,
+    "suite_id": 15954,
+    "name": "MLB.TV Premium Yearly flow - with Credit Card",
+    "description": "MLB.Tv Premium Yearly - Purchase flow",
+    "parent_id": 114648,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 104295,
+    "suite_id": 15954,
+    "name": "MLB.TV Premium Yearly flow - with PayPal",
+    "description": "MLB.TV Premium Yearly pay with Pay Pal",
+    "parent_id": 114648,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 104818,
+    "suite_id": 15954,
+    "name": "MLB.TV Premium Yearly - with Master Pass",
+    "description": "MLB.TV Purchase with Master Pass",
+    "parent_id": 114648,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 105105,
+    "suite_id": 15954,
+    "name": "MLB.TV - Monthly flow",
+    "description": "MLB.TV Monthly.\nAs Yearly, Monthly Flow can be purchased through PayPal and MasterPass",
+    "parent_id": 114648,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 105174,
+    "suite_id": 15954,
+    "name": "MLB - STP flow",
+    "description": "Single Team Purchase",
+    "parent_id": 114648,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 109870,
+    "suite_id": 15954,
+    "name": "MLB.TV - Upgrade flow (STP to all Access)",
+    "description": null,
+    "parent_id": 114648,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 104860,
+    "suite_id": 15954,
+    "name": "MLB.TV Premium Yearly Flow - with MiLB bundle",
+    "description": "Add Milb bundle with the purchase. \nYearly Flow with bundle can be purchased with PayPal and MasterPass as well.\n\nAs Yearly , purchase flow with Bundle is exactly same for Monthly and STP flows",
+    "parent_id": 114648,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 104858,
+    "suite_id": 15954,
+    "name": "MLB.TV - ID.me flow",
+    "description": "Purchase with Student ID or Military ID",
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 105178,
+    "suite_id": 15954,
+    "name": "MLB.TV - Device  Pages",
+    "description": "On selecting the device from the device Page you are able to purchase Yearly/monthly/ STP with/without Bundle",
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 105584,
+    "suite_id": 15954,
+    "name": "MLB.TV - Create Wallet",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 105746,
+    "suite_id": 15954,
+    "name": "MLB.TV - Sub Management Page || Cancel Subscription - Refund approved",
+    "description": "Cancel subscription and refund amount",
+    "parent_id": null,
+    "display_order": 26,
+    "depth": 0
+  },
+  {
+    "id": 135432,
+    "suite_id": 15954,
+    "name": "Cancel subscription - Refund rejected",
+    "description": null,
+    "parent_id": 105746,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 105793,
+    "suite_id": 15954,
+    "name": "MLB.TV - Credit Card past expiry date",
+    "description": null,
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 114647,
+    "suite_id": 15954,
+    "name": "MLB Gift Flow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 105097,
+    "suite_id": 15954,
+    "name": "MLB.TV Premium Yearly Gift Flow",
+    "description": "Gift MLB Premium",
+    "parent_id": 114647,
+    "display_order": 31,
+    "depth": 1
+  },
+  {
+    "id": 105104,
+    "suite_id": 15954,
+    "name": "MLB.TV STP Gift flow",
+    "description": "Gift MLB STP",
+    "parent_id": 114647,
+    "display_order": 32,
+    "depth": 1
+  },
+  {
+    "id": 105794,
+    "suite_id": 15954,
+    "name": "MLB.TV - Intl. Purchases",
+    "description": "International purchase flow is exactly same as normal MLB.TV flow only difference is to select any other International Country except US",
+    "parent_id": null,
+    "display_order": 34,
+    "depth": 0
+  },
+  {
+    "id": 105795,
+    "suite_id": 15954,
+    "name": "MLB.TV Premium Yearly International flow",
+    "description": null,
+    "parent_id": 105794,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 105827,
+    "suite_id": 15954,
+    "name": "MLB.TV - At Bat flow",
+    "description": "At Bat subscription can be purchased with\n* Credit Card\n* Pay Pal \n* Master Pass",
+    "parent_id": null,
+    "display_order": 38,
+    "depth": 0
+  },
+  {
+    "id": 105829,
+    "suite_id": 15954,
+    "name": "Yearly - with Credit Card",
+    "description": "Yearly flow with a CC",
+    "parent_id": 105827,
+    "display_order": 40,
+    "depth": 1
+  },
+  {
+    "id": 109872,
+    "suite_id": 15954,
+    "name": "Monthly - with PayPal",
+    "description": null,
+    "parent_id": 105827,
+    "display_order": 41,
+    "depth": 1
+  },
+  {
+    "id": 105830,
+    "suite_id": 15954,
+    "name": "Gift with Master Pass",
+    "description": "Gift at Bat yearly with MasterPass",
+    "parent_id": 105827,
+    "display_order": 43,
+    "depth": 1
+  },
+  {
+    "id": 105831,
+    "suite_id": 15954,
+    "name": "Forgot Password",
+    "description": "Forgot password - Password reset",
+    "parent_id": null,
+    "display_order": 44,
+    "depth": 0
+  },
+  {
+    "id": 105835,
+    "suite_id": 15954,
+    "name": "GDA Flow",
+    "description": "Game Day Audio",
+    "parent_id": null,
+    "display_order": 45,
+    "depth": 0
+  },
+  {
+    "id": 114649,
+    "suite_id": 15954,
+    "name": "Follow Your Team",
+    "description": "Follow Your Team - FYT",
+    "parent_id": null,
+    "display_order": 46,
+    "depth": 0
+  },
+  {
+    "id": 135420,
+    "suite_id": 15954,
+    "name": "Product Blocking",
+    "description": "To verify product  block on various products.",
+    "parent_id": null,
+    "display_order": 47,
+    "depth": 0
+  },
+  {
+    "id": 135422,
+    "suite_id": 15954,
+    "name": "Join.TV - Join with email",
+    "description": null,
+    "parent_id": null,
+    "display_order": 48,
+    "depth": 0
+  },
+  {
+    "id": 135429,
+    "suite_id": 15954,
+    "name": "Join with Face Book",
+    "description": null,
+    "parent_id": 135422,
+    "display_order": 49,
+    "depth": 1
+  },
+  {
+    "id": 135430,
+    "suite_id": 15954,
+    "name": "Join with Twitter",
+    "description": null,
+    "parent_id": 135422,
+    "display_order": 50,
+    "depth": 1
+  }
+]

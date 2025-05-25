@@ -1,0 +1,128 @@
+[
+  {
+    "id": 97691,
+    "suite_id": 14993,
+    "name": "Header",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 97692,
+    "suite_id": 14993,
+    "name": "Footer",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 97683,
+    "suite_id": 14993,
+    "name": "Homepage",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 97684,
+    "suite_id": 14993,
+    "name": "Schedule & Tickets",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 97685,
+    "suite_id": 14993,
+    "name": "Teams",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 97686,
+    "suite_id": 14993,
+    "name": "Pools & Venues",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 97687,
+    "suite_id": 14993,
+    "name": "News",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 97688,
+    "suite_id": 14993,
+    "name": "Video",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 97689,
+    "suite_id": 14993,
+    "name": "Stats",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 97690,
+    "suite_id": 14993,
+    "name": "Shop",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 97693,
+    "suite_id": 14993,
+    "name": "Right Rail",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 97694,
+    "suite_id": 14993,
+    "name": "Connect Module",
+    "description": null,
+    "parent_id": 97693,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 97695,
+    "suite_id": 14993,
+    "name": "Newsletter (EN)",
+    "description": null,
+    "parent_id": 97693,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 97758,
+    "suite_id": 14993,
+    "name": "Newsletter (ES)",
+    "description": null,
+    "parent_id": 97693,
+    "display_order": 14,
+    "depth": 1
+  }
+]

@@ -1,0 +1,236 @@
+[
+  {
+    "id": 7284,
+    "suite_id": 932,
+    "name": "Startup",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 7277,
+    "suite_id": 932,
+    "name": "Welcome screen (aka Walled Garden)",
+    "description": "Added screen between the ATV Home screen and the HBO Now Home screen, when User account not signed in.",
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 7373,
+    "suite_id": 932,
+    "name": "In-app purchase",
+    "description": null,
+    "parent_id": 7277,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 80863,
+    "suite_id": 932,
+    "name": "Backend and Registration Verification",
+    "description": null,
+    "parent_id": 7373,
+    "display_order": 8,
+    "depth": 2
+  },
+  {
+    "id": 7374,
+    "suite_id": 932,
+    "name": "Restore iTunes Purchase",
+    "description": null,
+    "parent_id": 7277,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 7385,
+    "suite_id": 932,
+    "name": "Renew iTunes subscription",
+    "description": "If a user cancels a subscription after the Free Trial period has expired, they will be presented with this screen.",
+    "parent_id": 7277,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 7375,
+    "suite_id": 932,
+    "name": "Sign-in (linked accounts)",
+    "description": null,
+    "parent_id": 7277,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 7276,
+    "suite_id": 932,
+    "name": "HBO Now",
+    "description": "Home: default screen on (activated) launch",
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 7285,
+    "suite_id": 932,
+    "name": "Watchlist",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 7286,
+    "suite_id": 932,
+    "name": "Series",
+    "description": null,
+    "parent_id": null,
+    "display_order": 24,
+    "depth": 0
+  },
+  {
+    "id": 7364,
+    "suite_id": 932,
+    "name": "Series Season",
+    "description": null,
+    "parent_id": 7286,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 7365,
+    "suite_id": 932,
+    "name": "Series Season Detail",
+    "description": null,
+    "parent_id": 7286,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 7366,
+    "suite_id": 932,
+    "name": "Series Episode Asset",
+    "description": null,
+    "parent_id": 7286,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 7401,
+    "suite_id": 932,
+    "name": "Episode Play to Credits",
+    "description": null,
+    "parent_id": 7366,
+    "display_order": 28,
+    "depth": 2
+  },
+  {
+    "id": 7287,
+    "suite_id": 932,
+    "name": "Movies",
+    "description": null,
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 12077,
+    "suite_id": 932,
+    "name": "Kids",
+    "description": null,
+    "parent_id": null,
+    "display_order": 30,
+    "depth": 0
+  },
+  {
+    "id": 7288,
+    "suite_id": 932,
+    "name": "More (need All Categories)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 31,
+    "depth": 0
+  },
+  {
+    "id": 7289,
+    "suite_id": 932,
+    "name": "Search",
+    "description": null,
+    "parent_id": null,
+    "display_order": 32,
+    "depth": 0
+  },
+  {
+    "id": 7338,
+    "suite_id": 932,
+    "name": "Results",
+    "description": null,
+    "parent_id": 7289,
+    "display_order": 33,
+    "depth": 1
+  },
+  {
+    "id": 7291,
+    "suite_id": 932,
+    "name": "Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 20531,
+    "suite_id": 932,
+    "name": "Billing Information",
+    "description": null,
+    "parent_id": 7291,
+    "display_order": 38,
+    "depth": 1
+  },
+  {
+    "id": 7292,
+    "suite_id": 932,
+    "name": "Parental Controls",
+    "description": null,
+    "parent_id": 7291,
+    "display_order": 39,
+    "depth": 1
+  },
+  {
+    "id": 7293,
+    "suite_id": 932,
+    "name": "Watchlist",
+    "description": null,
+    "parent_id": 7291,
+    "display_order": 41,
+    "depth": 1
+  },
+  {
+    "id": 7359,
+    "suite_id": 932,
+    "name": "Video Playback",
+    "description": null,
+    "parent_id": null,
+    "display_order": 48,
+    "depth": 0
+  },
+  {
+    "id": 20530,
+    "suite_id": 932,
+    "name": "Network Performance",
+    "description": null,
+    "parent_id": 7359,
+    "display_order": 49,
+    "depth": 1
+  },
+  {
+    "id": 7367,
+    "suite_id": 932,
+    "name": "Network Failure",
+    "description": null,
+    "parent_id": null,
+    "display_order": 53,
+    "depth": 0
+  }
+]

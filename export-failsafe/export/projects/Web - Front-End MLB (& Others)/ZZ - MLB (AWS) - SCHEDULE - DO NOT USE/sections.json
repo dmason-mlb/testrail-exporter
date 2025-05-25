@@ -1,0 +1,74 @@
+[
+  {
+    "id": 96978,
+    "suite_id": 14866,
+    "name": "Test Cases",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 98083,
+    "suite_id": 14866,
+    "name": "Schedule (EN)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 98085,
+    "suite_id": 14866,
+    "name": "General",
+    "description": null,
+    "parent_id": 98083,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 98086,
+    "suite_id": 14866,
+    "name": "Upcoming Games",
+    "description": null,
+    "parent_id": 98083,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 98087,
+    "suite_id": 14866,
+    "name": "In Progress Games",
+    "description": null,
+    "parent_id": 98083,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 98088,
+    "suite_id": 14866,
+    "name": "Completed Games",
+    "description": null,
+    "parent_id": 98083,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 98089,
+    "suite_id": 14866,
+    "name": "Game-type Color Scheme",
+    "description": null,
+    "parent_id": 98083,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 98084,
+    "suite_id": 14866,
+    "name": "Schedule (ES)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  }
+]

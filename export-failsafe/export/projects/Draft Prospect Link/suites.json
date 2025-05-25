@@ -1,0 +1,200 @@
+[
+  {
+    "id": 20306,
+    "name": "2. User Security",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20306"
+  },
+  {
+    "id": 20314,
+    "name": "5. Communications to Prospects",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20314"
+  },
+  {
+    "id": 20316,
+    "name": "4. Login/Logout",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20316"
+  },
+  {
+    "id": 20317,
+    "name": "3. Tracking and Reporting",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20317"
+  },
+  {
+    "id": 20318,
+    "name": "6. Prospect uses site",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20318"
+  },
+  {
+    "id": 20319,
+    "name": "7. Scout Types use site",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20319"
+  },
+  {
+    "id": 20320,
+    "name": "8. Central Office uses site",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20320"
+  },
+  {
+    "id": 20321,
+    "name": "Systems Integration",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20321"
+  },
+  {
+    "id": 20408,
+    "name": "Basic Acceptance for Automation",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20408"
+  },
+  {
+    "id": 20414,
+    "name": "Send Invitation for Automation",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20414"
+  },
+  {
+    "id": 20517,
+    "name": "1. Sanity Tests",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20517"
+  },
+  {
+    "id": 20651,
+    "name": "Duplicate Prospect Management",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20651"
+  },
+  {
+    "id": 20652,
+    "name": "Task Management",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20652"
+  },
+  {
+    "id": 20653,
+    "name": "Tagging",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20653"
+  },
+  {
+    "id": 20687,
+    "name": "Top 50 Prospects",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20687"
+  },
+  {
+    "id": 20767,
+    "name": "eBis Amateur Review",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20767"
+  },
+  {
+    "id": 20833,
+    "name": "Security Issues",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20833"
+  },
+  {
+    "id": 21794,
+    "name": "Prospect Dashboard",
+    "description": null,
+    "project_id": 173,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/21794"
+  }
+]

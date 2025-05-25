@@ -1,0 +1,11 @@
+{
+  "id": 20264,
+  "name": "MiLB: Responsive VPP -- - (do not migrate)",
+  "description": "Browsers Supported and Tested\r\n- MacOS 10.12.5+ | Chrome 60+, Firefox 55+, Safari 10+\r\n- Win 10 | Chrome 60+, Firefox 55+, IE 11, EdgeHTML14+\r\n- Devices | Android 6+, iOS 10+\r\n\r\nBeta: https://beta-aws.milb.com\r\nQA: http://qa-aws.milb.com\r\n\r\nBeta Cookie: http://beta.milb.com/beta_disallowed_set.html\r\n\r\n(* Test cases needs additional information)\r\n(** Test cases do not apply currently)",
+  "project_id": 58,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20264"
+}

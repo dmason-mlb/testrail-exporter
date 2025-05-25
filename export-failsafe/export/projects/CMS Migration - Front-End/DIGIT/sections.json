@@ -1,0 +1,47 @@
+[
+  {
+    "id": 149136,
+    "suite_id": 20585,
+    "name": "MLB Pressbox",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 149137,
+    "suite_id": 20585,
+    "name": "MLB Network",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 149138,
+    "suite_id": 20585,
+    "name": "Playball.org",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 149139,
+    "suite_id": 20585,
+    "name": "MLB.com/e",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 149140,
+    "suite_id": 20585,
+    "name": "MLB Impact",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  }
+]

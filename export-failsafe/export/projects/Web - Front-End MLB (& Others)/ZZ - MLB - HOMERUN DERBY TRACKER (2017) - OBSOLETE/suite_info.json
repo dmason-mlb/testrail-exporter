@@ -1,0 +1,11 @@
+{
+  "id": 18789,
+  "name": "ZZ - MLB - HOMERUN DERBY TRACKER (2017) - OBSOLETE",
+  "description": "WIKI: https://wiki.mlbam.com/display/proddev/Home+Run+Derby+Tracker+2017\r\n\r\nEPIC: https://jira.mlbam.com/browse/JSGD-1845\r\n\r\nJIRA: https://jira.mlbam.com/browse/JSGD-2229\r\n-8 players are seeded and compete for the title over the course of 3 rounds.\r\n--In each round players are paired off and go head to head.\r\n\r\n-In every round each player gets to swing at as many pitches as possible over the course of 4 minutes.\r\n--During those 4 minutes, if a player hits two home runs measured at 440 feet or more, he will be rewarded with 30 seconds of extra time for that round.\r\n--Only one time bonus will be awarded per player per round.\r\n\r\n-Time-outs.\r\n--Each player gets a single 45 second time-out in rounds 1 and 2.\r\n--Each player gets two 45 second time-outs in the final round.\r\n\r\n-If there is a tie in any round, the batters engage in a swing-off, during which time they try to hit as many home runs as possible in 1 minute.\r\n--No bonus time is awarded in a swing-off.\r\n--If there is still a tie, each player swings at 3 pitches.\r\n--If a tie still exists, it goes to sudden death.\r\n\r\n2017 SEEDS\r\n1. Giancarlo Stanton\r\n2. Aaron Judge\r\n3. Cody Bellinger\r\n4. Mike Moustakas\r\n5. Miguel Sano\r\n6. Charlie Blackmon\r\n7. Justin Bour\r\n8. Gary Sanchez\r\n\r\nBRACKET\r\n1 vs. 8\r\n2 vs. 7\r\n4 vs. 5\r\n3 vs. 6",
+  "project_id": 100,
+  "is_master": false,
+  "is_baseline": false,
+  "is_completed": false,
+  "completed_on": null,
+  "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/18789"
+}

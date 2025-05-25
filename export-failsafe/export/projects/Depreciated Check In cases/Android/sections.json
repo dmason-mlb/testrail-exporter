@@ -1,0 +1,38 @@
+[
+  {
+    "id": 2261,
+    "suite_id": 421,
+    "name": "Virtual Check In",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 2262,
+    "suite_id": 421,
+    "name": "FourSquare Location Check In",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 2279,
+    "suite_id": 421,
+    "name": "Ad-hoc Event Check In (BLOCKED FOR 2012)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 2280,
+    "suite_id": 421,
+    "name": "MLB Location Check In (BLOCKED FOR 2012)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

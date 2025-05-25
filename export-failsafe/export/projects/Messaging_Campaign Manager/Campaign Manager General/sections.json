@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1782,
+    "suite_id": 394,
+    "name": "Alternate Entry",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 1783,
+    "suite_id": 394,
+    "name": "FAQ",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1784,
+    "suite_id": 394,
+    "name": "Audit Trail",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 1785,
+    "suite_id": 394,
+    "name": "User Management",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  }
+]

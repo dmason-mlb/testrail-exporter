@@ -1,0 +1,47 @@
+[
+  {
+    "id": 145926,
+    "suite_id": 20264,
+    "name": "Web VPP",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 145894,
+    "suite_id": 20264,
+    "name": "Player Controls",
+    "description": null,
+    "parent_id": 145926,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 145895,
+    "suite_id": 20264,
+    "name": "Ads & Adblocker",
+    "description": null,
+    "parent_id": 145926,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 145897,
+    "suite_id": 20264,
+    "name": "Search",
+    "description": null,
+    "parent_id": 145926,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 145930,
+    "suite_id": 20264,
+    "name": "League/Team",
+    "description": null,
+    "parent_id": 145926,
+    "display_order": 18,
+    "depth": 1
+  }
+]

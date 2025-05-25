@@ -1,0 +1,65 @@
+[
+  {
+    "id": 96812,
+    "suite_id": 14844,
+    "name": "Live Linear Stream (Pre-Show)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 96873,
+    "suite_id": 14844,
+    "name": "Live Stream (during the Show)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 96878,
+    "suite_id": 14844,
+    "name": "Live Kickoff Stream (during the show)",
+    "description": null,
+    "parent_id": 96873,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 96879,
+    "suite_id": 14844,
+    "name": "Live PPV Stream (during the Show)",
+    "description": null,
+    "parent_id": 96873,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 96883,
+    "suite_id": 14844,
+    "name": "PPV Detail Page",
+    "description": null,
+    "parent_id": 96879,
+    "display_order": 7,
+    "depth": 2
+  },
+  {
+    "id": 96885,
+    "suite_id": 14844,
+    "name": "PPV Show",
+    "description": null,
+    "parent_id": 96879,
+    "display_order": 9,
+    "depth": 2
+  },
+  {
+    "id": 96876,
+    "suite_id": 14844,
+    "name": "PPV VOD (Post Show)",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  }
+]

@@ -1,0 +1,299 @@
+[
+  {
+    "id": 12327,
+    "suite_id": 1391,
+    "name": "MLB USER-TYPE; USER PRIVILEGES",
+    "description": "This section displays regression steps for a MLB user-type; user privileges.\n\nTesting can be completed using the following account.\nU: ctmlbuser@mlb.com\nP: Baseball1",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 12333,
+    "suite_id": 1391,
+    "name": "User Site",
+    "description": null,
+    "parent_id": 12327,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 12328,
+    "suite_id": 1391,
+    "name": "MLB USER-TYPE; ADMIN PRIVILEGES",
+    "description": "This section displays regression steps for a MLB user-type; admin privileges.\n\nTesting can be completed using the following account.\nU: ctmlbadmin@mlb.com\nP: Baseball1",
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 12335,
+    "suite_id": 1391,
+    "name": "User Site",
+    "description": null,
+    "parent_id": 12328,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 12369,
+    "suite_id": 1391,
+    "name": "Admin Site - Users",
+    "description": "Users should ONLY display \"MLB\" user-type data.",
+    "parent_id": 12328,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 12438,
+    "suite_id": 1391,
+    "name": "Admin Site - Console Tab",
+    "description": "Console should ONLY display \"MLB\" user-type data.",
+    "parent_id": 12328,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 12439,
+    "suite_id": 1391,
+    "name": "Admin Site - Lookup Tables Tab",
+    "description": null,
+    "parent_id": 12328,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 12440,
+    "suite_id": 1391,
+    "name": "Admin Site - Venues Tab",
+    "description": null,
+    "parent_id": 12328,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 12441,
+    "suite_id": 1391,
+    "name": "Admin Site - Events Tab",
+    "description": null,
+    "parent_id": 12328,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 12442,
+    "suite_id": 1391,
+    "name": "Admin Site - Reservations Tab",
+    "description": null,
+    "parent_id": 12328,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 12443,
+    "suite_id": 1391,
+    "name": "Admin Site - Security Roles Tab",
+    "description": null,
+    "parent_id": 12328,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 12444,
+    "suite_id": 1391,
+    "name": "Admin Site - Reports Tab",
+    "description": "Reports should ONLY display \"MLB\" user-type data.\n-Test reporting with various filters (where applicable).\n-Test exports with various filters (where applicable) and ensure MLB data can be exported.",
+    "parent_id": 12328,
+    "display_order": 13,
+    "depth": 1
+  },
+  {
+    "id": 12329,
+    "suite_id": 1391,
+    "name": "MLB USER-TYPE; SUPER ADMIN PRIVILEGES",
+    "description": "This section displays regression steps for a MLB user-type; super admin privileges.\n\nTesting can be completed using the following account.\nU: ctmlbsu@mlb.com\nP: Baseball1",
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 12446,
+    "suite_id": 1391,
+    "name": "Admin Site - Users",
+    "description": "Users should display BOTH MLB and BOC users.",
+    "parent_id": 12329,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 12447,
+    "suite_id": 1391,
+    "name": "Admin Site - Console Tab",
+    "description": "Console should ONLY display MLB user-type data.",
+    "parent_id": 12329,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 12450,
+    "suite_id": 1391,
+    "name": "Admin Site - Reports Tab",
+    "description": "Reports should display BOTH MLB and BOC user-type data.\n-Test reporting with various filters (where applicable).\n-Test exports with various filters (where applicable) and ensure combined MLB/BOC and separate MLB/BOC data can be exported.",
+    "parent_id": 12329,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 12330,
+    "suite_id": 1391,
+    "name": "BOC USER-TYPE; USER PRIVILEGES",
+    "description": "This section displays regression steps for a BOC user-type; user privileges.\n\nTesting can be completed using the following account.\nU: ctbocuser@mlb.com\nP: Baseball1",
+    "parent_id": null,
+    "display_order": 23,
+    "depth": 0
+  },
+  {
+    "id": 12334,
+    "suite_id": 1391,
+    "name": "User Site",
+    "description": null,
+    "parent_id": 12330,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 12331,
+    "suite_id": 1391,
+    "name": "BOC USER-TYPE; ADMIN PRIVILEGES",
+    "description": "This section displays regression steps for a BOC user-type; admin privileges.\n\nTesting can be completed using the following account.\nU: ctbocadmin@mlb.com\nP: Baseball1",
+    "parent_id": null,
+    "display_order": 25,
+    "depth": 0
+  },
+  {
+    "id": 12336,
+    "suite_id": 1391,
+    "name": "User Site",
+    "description": null,
+    "parent_id": 12331,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 12451,
+    "suite_id": 1391,
+    "name": "Admin Site - Users",
+    "description": "Users should ONLY display \"BOC\" user-type data.",
+    "parent_id": 12331,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 12452,
+    "suite_id": 1391,
+    "name": "Admin Site - Console Tab",
+    "description": "Console should ONLY display \"BOC\" user-type data.",
+    "parent_id": 12331,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 12453,
+    "suite_id": 1391,
+    "name": "Admin Site - Lookup Tables Tab",
+    "description": null,
+    "parent_id": 12331,
+    "display_order": 29,
+    "depth": 1
+  },
+  {
+    "id": 12454,
+    "suite_id": 1391,
+    "name": "Admin Site - Venues Tab",
+    "description": null,
+    "parent_id": 12331,
+    "display_order": 30,
+    "depth": 1
+  },
+  {
+    "id": 12455,
+    "suite_id": 1391,
+    "name": "Admin Site - Events Tab",
+    "description": null,
+    "parent_id": 12331,
+    "display_order": 31,
+    "depth": 1
+  },
+  {
+    "id": 12456,
+    "suite_id": 1391,
+    "name": "Admin Site - Reservations Tab",
+    "description": null,
+    "parent_id": 12331,
+    "display_order": 32,
+    "depth": 1
+  },
+  {
+    "id": 12457,
+    "suite_id": 1391,
+    "name": "Admin Site - Security Roles Tab",
+    "description": null,
+    "parent_id": 12331,
+    "display_order": 33,
+    "depth": 1
+  },
+  {
+    "id": 12458,
+    "suite_id": 1391,
+    "name": "Admin Site - Reports Tab",
+    "description": "Reports should ONLY display \"BOC\" user-type data.\n-Test reporting with various filters (where applicable).\n-Test exports with various filters (where applicable) and ensure only BOC data can be exported.",
+    "parent_id": 12331,
+    "display_order": 34,
+    "depth": 1
+  },
+  {
+    "id": 12332,
+    "suite_id": 1391,
+    "name": "BOC USER-TYPE; SUPER ADMIN PRIVILEGES",
+    "description": "This section displays regression steps for a BOC user-type; super admin privileges.\n\nTesting can be completed using the following account.\nU: ctbocsu@mlb.com\nP: Baseball1",
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  },
+  {
+    "id": 12460,
+    "suite_id": 1391,
+    "name": "Admin Site - Users",
+    "description": "Users should display BOTH MLB and BOC users.",
+    "parent_id": 12332,
+    "display_order": 37,
+    "depth": 1
+  },
+  {
+    "id": 12461,
+    "suite_id": 1391,
+    "name": "Admin Site - Console Tab",
+    "description": "Console should ONLY display BOC user-type data.",
+    "parent_id": 12332,
+    "display_order": 38,
+    "depth": 1
+  },
+  {
+    "id": 12463,
+    "suite_id": 1391,
+    "name": "Admin Site - Reports Tab",
+    "description": "Reports should display BOTH MLB and BOC user-type data.\n-Test reporting with various filters (where applicable).\n-Test exports with various filters (where applicable) and ensure combined MLB/BOC and separate MLB/BOC data can be exported.",
+    "parent_id": 12332,
+    "display_order": 39,
+    "depth": 1
+  },
+  {
+    "id": 12445,
+    "suite_id": 1391,
+    "name": "Data Capture",
+    "description": "Verify the following database tables are being updated during testing",
+    "parent_id": null,
+    "display_order": 46,
+    "depth": 0
+  }
+]

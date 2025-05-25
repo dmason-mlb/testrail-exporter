@@ -1,0 +1,191 @@
+[
+  {
+    "id": 125690,
+    "suite_id": 18776,
+    "name": "HEADER",
+    "description": "Run at XL viewport (1304px+) - Confirm existence in horizontal nav\nRun at XS viewport (320px) - Confirm existence in vertical/overflow (arrow) nav",
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 125691,
+    "suite_id": 18776,
+    "name": "SEARCH",
+    "description": null,
+    "parent_id": 125690,
+    "display_order": 2,
+    "depth": 1
+  },
+  {
+    "id": 125692,
+    "suite_id": 18776,
+    "name": "ACCOUNT",
+    "description": null,
+    "parent_id": 125690,
+    "display_order": 3,
+    "depth": 1
+  },
+  {
+    "id": 125693,
+    "suite_id": 18776,
+    "name": "NAVIGATION",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 125694,
+    "suite_id": 18776,
+    "name": "MINI SCOREBOARD COMPONENT",
+    "description": "Conditional for 10AM fliptime\nRun for vertical (1024+)\nRun for horizontal (320-1023)",
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 125695,
+    "suite_id": 18776,
+    "name": "MEDIA WALL",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 125696,
+    "suite_id": 18776,
+    "name": "MIXED FEED",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 125697,
+    "suite_id": 18776,
+    "name": "LATEST NEWS COMPONENT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 125698,
+    "suite_id": 18776,
+    "name": "SOCIAL COMPONENT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 125699,
+    "suite_id": 18776,
+    "name": "STANDINGS COMPONENT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 125700,
+    "suite_id": 18776,
+    "name": "LEAGUE LEADERS COMPONENT",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 125701,
+    "suite_id": 18776,
+    "name": "FOOTER",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 125702,
+    "suite_id": 18776,
+    "name": "AD COMPONENTS - NEED UPDATE",
+    "description": "3-COLUMN = 1024px+\n2-COLUMN = 768 - 1023\n1-COLUMN = 320-767",
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 125703,
+    "suite_id": 18776,
+    "name": "HEADER",
+    "description": null,
+    "parent_id": 125702,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 125704,
+    "suite_id": 18776,
+    "name": "3-COLUMN",
+    "description": null,
+    "parent_id": 125702,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 125705,
+    "suite_id": 18776,
+    "name": "LEFT RAIL",
+    "description": null,
+    "parent_id": 125704,
+    "display_order": 16,
+    "depth": 2
+  },
+  {
+    "id": 125706,
+    "suite_id": 18776,
+    "name": "RIGHT RAIL",
+    "description": null,
+    "parent_id": 125704,
+    "display_order": 17,
+    "depth": 2
+  },
+  {
+    "id": 125707,
+    "suite_id": 18776,
+    "name": "CENTER RAIL",
+    "description": null,
+    "parent_id": 125704,
+    "display_order": 18,
+    "depth": 2
+  },
+  {
+    "id": 125708,
+    "suite_id": 18776,
+    "name": "2-COLUMN",
+    "description": null,
+    "parent_id": 125702,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 125709,
+    "suite_id": 18776,
+    "name": "LEFT RAIL",
+    "description": null,
+    "parent_id": 125708,
+    "display_order": 20,
+    "depth": 2
+  },
+  {
+    "id": 125711,
+    "suite_id": 18776,
+    "name": "1-COLUMN",
+    "description": null,
+    "parent_id": 125702,
+    "display_order": 22,
+    "depth": 1
+  }
+]

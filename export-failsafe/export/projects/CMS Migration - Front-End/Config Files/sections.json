@@ -1,0 +1,380 @@
+[
+  {
+    "id": 148965,
+    "suite_id": 20538,
+    "name": "BDFED Config Files",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 148996,
+    "suite_id": 20538,
+    "name": "Team Properties",
+    "description": null,
+    "parent_id": 148965,
+    "display_order": 4,
+    "depth": 1
+  },
+  {
+    "id": 149029,
+    "suite_id": 20538,
+    "name": "Club MIG - Structured Configuration",
+    "description": null,
+    "parent_id": 148965,
+    "display_order": 5,
+    "depth": 1
+  },
+  {
+    "id": 149030,
+    "suite_id": 20538,
+    "name": "Club Schedule - Structured Configuration",
+    "description": null,
+    "parent_id": 148965,
+    "display_order": 6,
+    "depth": 1
+  },
+  {
+    "id": 149031,
+    "suite_id": 20538,
+    "name": "Mini SB - Structured Configuration",
+    "description": null,
+    "parent_id": 148965,
+    "display_order": 7,
+    "depth": 1
+  },
+  {
+    "id": 149032,
+    "suite_id": 20538,
+    "name": "MLB Player Page - Key Value",
+    "description": null,
+    "parent_id": 148965,
+    "display_order": 8,
+    "depth": 1
+  },
+  {
+    "id": 149033,
+    "suite_id": 20538,
+    "name": "MLB Schedule - Structured Configuration",
+    "description": null,
+    "parent_id": 148965,
+    "display_order": 9,
+    "depth": 1
+  },
+  {
+    "id": 149034,
+    "suite_id": 20538,
+    "name": "MLB Standings - Structured Configuration",
+    "description": null,
+    "parent_id": 148965,
+    "display_order": 10,
+    "depth": 1
+  },
+  {
+    "id": 149035,
+    "suite_id": 20538,
+    "name": "MLB Stats",
+    "description": null,
+    "parent_id": 148965,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 149036,
+    "suite_id": 20538,
+    "name": "Scoreboard - Structured Configuration",
+    "description": null,
+    "parent_id": 148965,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 149001,
+    "suite_id": 20538,
+    "name": "FEDE Config Files",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 148998,
+    "suite_id": 20538,
+    "name": "iOS At Bat Config Files",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  },
+  {
+    "id": 149002,
+    "suite_id": 20538,
+    "name": "Team Page Mashup",
+    "description": null,
+    "parent_id": 148998,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 149005,
+    "suite_id": 20538,
+    "name": "More Menu",
+    "description": null,
+    "parent_id": 148998,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 148997,
+    "suite_id": 20538,
+    "name": "Android At Bat Config Files",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  },
+  {
+    "id": 149003,
+    "suite_id": 20538,
+    "name": "Team Page Mashup",
+    "description": null,
+    "parent_id": 148997,
+    "display_order": 19,
+    "depth": 1
+  },
+  {
+    "id": 149006,
+    "suite_id": 20538,
+    "name": "More Menu",
+    "description": null,
+    "parent_id": 148997,
+    "display_order": 20,
+    "depth": 1
+  },
+  {
+    "id": 148999,
+    "suite_id": 20538,
+    "name": "iOS Ballpark Config Files",
+    "description": null,
+    "parent_id": null,
+    "display_order": 22,
+    "depth": 0
+  },
+  {
+    "id": 149007,
+    "suite_id": 20538,
+    "name": "Team Page JSON",
+    "description": null,
+    "parent_id": 148999,
+    "display_order": 23,
+    "depth": 1
+  },
+  {
+    "id": 149009,
+    "suite_id": 20538,
+    "name": "Promo Beacons",
+    "description": null,
+    "parent_id": 148999,
+    "display_order": 24,
+    "depth": 1
+  },
+  {
+    "id": 149011,
+    "suite_id": 20538,
+    "name": "Team Picker",
+    "description": null,
+    "parent_id": 148999,
+    "display_order": 25,
+    "depth": 1
+  },
+  {
+    "id": 149012,
+    "suite_id": 20538,
+    "name": "Box Office Config",
+    "description": null,
+    "parent_id": 148999,
+    "display_order": 26,
+    "depth": 1
+  },
+  {
+    "id": 149013,
+    "suite_id": 20538,
+    "name": "Photo Frames",
+    "description": null,
+    "parent_id": 148999,
+    "display_order": 27,
+    "depth": 1
+  },
+  {
+    "id": 149014,
+    "suite_id": 20538,
+    "name": "POI Beacons",
+    "description": null,
+    "parent_id": 148999,
+    "display_order": 28,
+    "depth": 1
+  },
+  {
+    "id": 149000,
+    "suite_id": 20538,
+    "name": "Android Ballpark Config Files",
+    "description": null,
+    "parent_id": null,
+    "display_order": 29,
+    "depth": 0
+  },
+  {
+    "id": 149008,
+    "suite_id": 20538,
+    "name": "Team Page JSON",
+    "description": null,
+    "parent_id": 149000,
+    "display_order": 30,
+    "depth": 1
+  },
+  {
+    "id": 149010,
+    "suite_id": 20538,
+    "name": "Promo Beacons",
+    "description": null,
+    "parent_id": 149000,
+    "display_order": 31,
+    "depth": 1
+  },
+  {
+    "id": 149015,
+    "suite_id": 20538,
+    "name": "Team Picker",
+    "description": null,
+    "parent_id": 149000,
+    "display_order": 32,
+    "depth": 1
+  },
+  {
+    "id": 149016,
+    "suite_id": 20538,
+    "name": "Box Office Config",
+    "description": null,
+    "parent_id": 149000,
+    "display_order": 33,
+    "depth": 1
+  },
+  {
+    "id": 149017,
+    "suite_id": 20538,
+    "name": "Photo Frames",
+    "description": null,
+    "parent_id": 149000,
+    "display_order": 34,
+    "depth": 1
+  },
+  {
+    "id": 149018,
+    "suite_id": 20538,
+    "name": "POI Beacons",
+    "description": null,
+    "parent_id": 149000,
+    "display_order": 35,
+    "depth": 1
+  },
+  {
+    "id": 149004,
+    "suite_id": 20538,
+    "name": "Postseason Schedule Config",
+    "description": null,
+    "parent_id": null,
+    "display_order": 36,
+    "depth": 0
+  },
+  {
+    "id": 149019,
+    "suite_id": 20538,
+    "name": "Ticketing",
+    "description": null,
+    "parent_id": null,
+    "display_order": 37,
+    "depth": 0
+  },
+  {
+    "id": 149020,
+    "suite_id": 20538,
+    "name": "Ticket Grid",
+    "description": null,
+    "parent_id": 149019,
+    "display_order": 38,
+    "depth": 1
+  },
+  {
+    "id": 149021,
+    "suite_id": 20538,
+    "name": "Single-Game Tickets",
+    "description": null,
+    "parent_id": 149019,
+    "display_order": 39,
+    "depth": 1
+  },
+  {
+    "id": 149022,
+    "suite_id": 20538,
+    "name": "Pricing",
+    "description": null,
+    "parent_id": 149019,
+    "display_order": 40,
+    "depth": 1
+  },
+  {
+    "id": 149023,
+    "suite_id": 20538,
+    "name": "Tiered Pricing",
+    "description": null,
+    "parent_id": 149019,
+    "display_order": 41,
+    "depth": 1
+  },
+  {
+    "id": 149024,
+    "suite_id": 20538,
+    "name": "League Tickets Table",
+    "description": null,
+    "parent_id": 149019,
+    "display_order": 42,
+    "depth": 1
+  },
+  {
+    "id": 149025,
+    "suite_id": 20538,
+    "name": "Upcoming Home Games",
+    "description": null,
+    "parent_id": 149019,
+    "display_order": 43,
+    "depth": 1
+  },
+  {
+    "id": 149026,
+    "suite_id": 20538,
+    "name": "Pricing Spotlight",
+    "description": null,
+    "parent_id": 149019,
+    "display_order": 44,
+    "depth": 1
+  },
+  {
+    "id": 149027,
+    "suite_id": 20538,
+    "name": "OAuth",
+    "description": null,
+    "parent_id": 149019,
+    "display_order": 45,
+    "depth": 1
+  },
+  {
+    "id": 149028,
+    "suite_id": 20538,
+    "name": "Dynamic Ads",
+    "description": null,
+    "parent_id": 149019,
+    "display_order": 46,
+    "depth": 1
+  }
+]

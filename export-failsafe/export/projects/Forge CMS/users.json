@@ -1,0 +1,26 @@
+[
+  {
+    "id": 238,
+    "name": "douglas.mason@mlb.com",
+    "email": "Douglas.Mason@mlb.com",
+    "is_active": 1,
+    "role_id": 5,
+    "role": "Administrator"
+  },
+  {
+    "id": 395,
+    "name": "Michael Cronshey",
+    "email": "Michael.Cronshey@mlb.com",
+    "is_active": 1,
+    "role_id": 1,
+    "role": "Lead"
+  },
+  {
+    "id": 177,
+    "name": "Victor Tan",
+    "email": "victor.tan@mlb.com",
+    "is_active": 1,
+    "role_id": 5,
+    "role": "Administrator"
+  }
+]

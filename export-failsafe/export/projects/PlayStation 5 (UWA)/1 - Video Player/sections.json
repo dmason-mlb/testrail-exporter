@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1510048,
+    "suite_id": 534264,
+    "name": "MLB.TV",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1510051,
+    "suite_id": 534264,
+    "name": "Live Game Playback",
+    "description": null,
+    "parent_id": 1510048,
+    "display_order": 11,
+    "depth": 1
+  },
+  {
+    "id": 1510052,
+    "suite_id": 534264,
+    "name": "Archive Game Playback",
+    "description": null,
+    "parent_id": 1510048,
+    "display_order": 12,
+    "depth": 1
+  },
+  {
+    "id": 1510101,
+    "suite_id": 534264,
+    "name": "Forge Content",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 1510102,
+    "suite_id": 534264,
+    "name": "Subscriber Live Playback",
+    "description": null,
+    "parent_id": 1510101,
+    "display_order": 14,
+    "depth": 1
+  },
+  {
+    "id": 1510103,
+    "suite_id": 534264,
+    "name": "Free Live Playback",
+    "description": null,
+    "parent_id": 1510101,
+    "display_order": 15,
+    "depth": 1
+  },
+  {
+    "id": 1510104,
+    "suite_id": 534264,
+    "name": "Subscriber Video on Demand",
+    "description": null,
+    "parent_id": 1510101,
+    "display_order": 16,
+    "depth": 1
+  },
+  {
+    "id": 1510105,
+    "suite_id": 534264,
+    "name": "Video on Demand",
+    "description": null,
+    "parent_id": 1510101,
+    "display_order": 17,
+    "depth": 1
+  },
+  {
+    "id": 1510464,
+    "suite_id": 534264,
+    "name": "UI",
+    "description": null,
+    "parent_id": null,
+    "display_order": 18,
+    "depth": 0
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1971,
+    "suite_id": 155,
+    "name": "Home Screen",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 1936,
+    "suite_id": 155,
+    "name": "Enter Seat Info Screen",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 1938,
+    "suite_id": 155,
+    "name": "Location Screen",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 1949,
+    "suite_id": 155,
+    "name": "Menu Screen",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 1956,
+    "suite_id": 155,
+    "name": "Item Detail Screen",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 1939,
+    "suite_id": 155,
+    "name": "Checkout",
+    "description": null,
+    "parent_id": null,
+    "display_order": 43,
+    "depth": 0
+  },
+  {
+    "id": 631,
+    "suite_id": 155,
+    "name": "Review Screen",
+    "description": null,
+    "parent_id": null,
+    "display_order": 45,
+    "depth": 0
+  },
+  {
+    "id": 1948,
+    "suite_id": 155,
+    "name": "Checkout Screen",
+    "description": null,
+    "parent_id": null,
+    "display_order": 53,
+    "depth": 0
+  },
+  {
+    "id": 1994,
+    "suite_id": 155,
+    "name": "Review Order Screen",
+    "description": null,
+    "parent_id": null,
+    "display_order": 60,
+    "depth": 0
+  },
+  {
+    "id": 1983,
+    "suite_id": 155,
+    "name": "Purchase as a guest",
+    "description": null,
+    "parent_id": 1948,
+    "display_order": 62,
+    "depth": 1
+  },
+  {
+    "id": 1991,
+    "suite_id": 155,
+    "name": "Sign In Screen",
+    "description": null,
+    "parent_id": 1948,
+    "display_order": 87,
+    "depth": 1
+  },
+  {
+    "id": 1992,
+    "suite_id": 155,
+    "name": "Register",
+    "description": null,
+    "parent_id": 1991,
+    "display_order": 88,
+    "depth": 2
+  },
+  {
+    "id": 1993,
+    "suite_id": 155,
+    "name": "User's Wallet Screen",
+    "description": null,
+    "parent_id": 1948,
+    "display_order": 90,
+    "depth": 1
+  },
+  {
+    "id": 2017,
+    "suite_id": 155,
+    "name": "Order Summary",
+    "description": null,
+    "parent_id": null,
+    "display_order": 92,
+    "depth": 0
+  },
+  {
+    "id": 593,
+    "suite_id": 155,
+    "name": "My Orders",
+    "description": null,
+    "parent_id": null,
+    "display_order": 95,
+    "depth": 0
+  },
+  {
+    "id": 594,
+    "suite_id": 155,
+    "name": "Order",
+    "description": null,
+    "parent_id": 593,
+    "display_order": 96,
+    "depth": 1
+  },
+  {
+    "id": 572,
+    "suite_id": 155,
+    "name": "General",
+    "description": null,
+    "parent_id": null,
+    "display_order": 98,
+    "depth": 0
+  },
+  {
+    "id": 2085,
+    "suite_id": 155,
+    "name": "IOS",
+    "description": null,
+    "parent_id": 572,
+    "display_order": 99,
+    "depth": 1
+  },
+  {
+    "id": 2086,
+    "suite_id": 155,
+    "name": "Android",
+    "description": null,
+    "parent_id": 572,
+    "display_order": 100,
+    "depth": 1
+  },
+  {
+    "id": 1995,
+    "suite_id": 155,
+    "name": "Add Card",
+    "description": null,
+    "parent_id": null,
+    "display_order": 101,
+    "depth": 0
+  }
+]

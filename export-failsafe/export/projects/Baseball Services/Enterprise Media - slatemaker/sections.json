@@ -1,0 +1,20 @@
+[
+  {
+    "id": 305961,
+    "suite_id": 43756,
+    "name": "API",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 305962,
+    "suite_id": 43756,
+    "name": "UI",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]

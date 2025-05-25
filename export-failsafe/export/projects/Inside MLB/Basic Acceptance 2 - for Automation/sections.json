@@ -1,0 +1,110 @@
+[
+  {
+    "id": 146815,
+    "suite_id": 20336,
+    "name": "2. Global Header",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 146816,
+    "suite_id": 20336,
+    "name": "1. Login",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 146818,
+    "suite_id": 20336,
+    "name": "3. Global Footer",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 146819,
+    "suite_id": 20336,
+    "name": "4. Global Nav",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 146820,
+    "suite_id": 20336,
+    "name": "5. Main Page right-side nav",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 146821,
+    "suite_id": 20336,
+    "name": "6. Main Page center section",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 146822,
+    "suite_id": 20336,
+    "name": "7. Global Departments",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 146823,
+    "suite_id": 20336,
+    "name": "8. Global Events",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 146824,
+    "suite_id": 20336,
+    "name": "9. Global Apps",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 146825,
+    "suite_id": 20336,
+    "name": "9.1 Global Calendar",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 146826,
+    "suite_id": 20336,
+    "name": "9.2 Global Directory",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 146827,
+    "suite_id": 20336,
+    "name": "9.3 Department Home page",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  }
+]

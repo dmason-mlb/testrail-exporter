@@ -1,0 +1,128 @@
+[
+  {
+    "id": 154954,
+    "suite_id": 21468,
+    "name": "General Account Settings",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 154955,
+    "suite_id": 21468,
+    "name": "Change Password",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 154956,
+    "suite_id": 21468,
+    "name": "Alert Messaging for Change Password",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 154957,
+    "suite_id": 21468,
+    "name": "Front End Validation for Password Requirement Match",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 154958,
+    "suite_id": 21468,
+    "name": "Email Newsletters",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 154960,
+    "suite_id": 21468,
+    "name": "Avatar",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 154961,
+    "suite_id": 21468,
+    "name": "Support",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 154962,
+    "suite_id": 21468,
+    "name": "Favorites & Follows",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  },
+  {
+    "id": 154963,
+    "suite_id": 21468,
+    "name": "Deeplinking And Sign in Nav",
+    "description": null,
+    "parent_id": null,
+    "display_order": 10,
+    "depth": 0
+  },
+  {
+    "id": 154964,
+    "suite_id": 21468,
+    "name": "Manage Subscriptions: Current Subscriptions",
+    "description": null,
+    "parent_id": null,
+    "display_order": 11,
+    "depth": 0
+  },
+  {
+    "id": 154965,
+    "suite_id": 21468,
+    "name": "Subscription Status: Cancellation Flow",
+    "description": null,
+    "parent_id": null,
+    "display_order": 12,
+    "depth": 0
+  },
+  {
+    "id": 154966,
+    "suite_id": 21468,
+    "name": "Payment Methods - Front End",
+    "description": null,
+    "parent_id": null,
+    "display_order": 13,
+    "depth": 0
+  },
+  {
+    "id": 154967,
+    "suite_id": 21468,
+    "name": "All Account profile section - Front End",
+    "description": null,
+    "parent_id": null,
+    "display_order": 14,
+    "depth": 0
+  },
+  {
+    "id": 154968,
+    "suite_id": 21468,
+    "name": "Account Profile Visuals",
+    "description": null,
+    "parent_id": null,
+    "display_order": 15,
+    "depth": 0
+  }
+]

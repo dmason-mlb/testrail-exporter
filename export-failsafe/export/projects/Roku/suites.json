@@ -1,0 +1,90 @@
+[
+  {
+    "id": 20771,
+    "name": "Roku Regression (Archived DSS Test cases)",
+    "description": "Roku information:\r\n- (TE) https://wiki.mlbam.com/display/QAspace/TE+Devices+-+Roku\r\n- (Dev) https://wiki.mlbam.com/display/JTS/Roku\r\n\r\nDesign information: https://app.zeplin.io/project/581790282d99dea925d4ce86\r\n\r\nInstallation information: <need URL for installation how-to>\r\n",
+    "project_id": 187,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20771"
+  },
+  {
+    "id": 20807,
+    "name": "ROKU Test Cases (Legacy App Archived)",
+    "description": "ROKU Test Cases (Legacy App Archived)",
+    "project_id": 187,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/20807"
+  },
+  {
+    "id": 43479,
+    "name": "Roku Spring Training Smoke",
+    "description": "Live games Smoke testing in Spring Training",
+    "project_id": 187,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/43479"
+  },
+  {
+    "id": 43533,
+    "name": "Entitlement Testcases",
+    "description": "Entitlement Testcases",
+    "project_id": 187,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/43533"
+  },
+  {
+    "id": 80018,
+    "name": "ROKU Rewrite Testcases",
+    "description": "ROKU Rewrite Testcases -2020\r\n",
+    "project_id": 187,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/80018"
+  },
+  {
+    "id": 101998,
+    "name": "ROKU PostSeason Smoke",
+    "description": "ROKU PostSeason Smoke",
+    "project_id": 187,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/101998"
+  },
+  {
+    "id": 249471,
+    "name": "ROKU Automation",
+    "description": "ROKU Automation ",
+    "project_id": 187,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/249471"
+  },
+  {
+    "id": 283214,
+    "name": "Unified Test Suite",
+    "description": null,
+    "project_id": 187,
+    "is_master": false,
+    "is_baseline": false,
+    "is_completed": false,
+    "completed_on": null,
+    "url": "https:///testrail.testeng.mlbinfra.net/index.php?/suites/view/283214"
+  }
+]

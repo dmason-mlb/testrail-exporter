@@ -1,0 +1,83 @@
+[
+  {
+    "id": 768840,
+    "suite_id": 222511,
+    "name": "Email Service",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 768841,
+    "suite_id": 222511,
+    "name": "Form Service",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  },
+  {
+    "id": 768842,
+    "suite_id": 222511,
+    "name": "Mobile Alert Service",
+    "description": null,
+    "parent_id": null,
+    "display_order": 3,
+    "depth": 0
+  },
+  {
+    "id": 768843,
+    "suite_id": 222511,
+    "name": "Network Service",
+    "description": null,
+    "parent_id": null,
+    "display_order": 4,
+    "depth": 0
+  },
+  {
+    "id": 768844,
+    "suite_id": 222511,
+    "name": "Notification Service",
+    "description": null,
+    "parent_id": null,
+    "display_order": 5,
+    "depth": 0
+  },
+  {
+    "id": 768845,
+    "suite_id": 222511,
+    "name": "Promo Code Service",
+    "description": null,
+    "parent_id": null,
+    "display_order": 6,
+    "depth": 0
+  },
+  {
+    "id": 768846,
+    "suite_id": 222511,
+    "name": "Submission Consumer and Status Services",
+    "description": null,
+    "parent_id": null,
+    "display_order": 7,
+    "depth": 0
+  },
+  {
+    "id": 768847,
+    "suite_id": 222511,
+    "name": "Submission Service",
+    "description": null,
+    "parent_id": null,
+    "display_order": 8,
+    "depth": 0
+  },
+  {
+    "id": 768848,
+    "suite_id": 222511,
+    "name": "User Service",
+    "description": null,
+    "parent_id": null,
+    "display_order": 9,
+    "depth": 0
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 8589,
+    "suite_id": 718,
+    "name": "Connect to Chromecast Receiver",
+    "description": null,
+    "parent_id": null,
+    "display_order": 1,
+    "depth": 0
+  },
+  {
+    "id": 8593,
+    "suite_id": 718,
+    "name": "Play Assets On Remote TV",
+    "description": null,
+    "parent_id": null,
+    "display_order": 2,
+    "depth": 0
+  }
+]
