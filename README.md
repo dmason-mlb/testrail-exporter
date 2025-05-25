@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./docs/images/icon.png" alt="TestRail Exporter Logo" width="128" height="128">
+  <img src="./final_icon.png" alt="TestRail Exporter Logo" width="128" height="128">
   
   # TestRail Exporter
   

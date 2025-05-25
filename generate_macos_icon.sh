@@ -222,6 +222,104 @@ if [ "$DEBUG_STEP" = true ]; then
 fi
 
 echo "Successfully created $FINAL_ICNS_FILE (if iconutil succeeded)."
+
+# --- Generate a special 1024x1024 icon without padding for final_icon.png ---
+echo "Generating final_icon.png (1024x1024 without padding)..."
+
+FINAL_SIZE=1024
+FINAL_PNG="final_icon.png"
+
+# Calculate radius for the full-size icon
+RADIUS_PX=$(printf "%.0f" "$(echo "$FINAL_SIZE * $CORNER_RADIUS_PERCENT" | bc -l)")
+if [ "$RADIUS_PX" -lt 1 ]; then RADIUS_PX=1; fi
+HALF_SIZE=$((FINAL_SIZE / 2))
+if [ "$RADIUS_PX" -gt "$HALF_SIZE" ]; then RADIUS_PX=$HALF_SIZE; fi
+
+# Define temporary files for final icon generation
+TEMP_FINAL_RESIZED="temp_final_resized_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_FINAL_RESIZED")
+TEMP_FINAL_ROUNDED_MASK="temp_final_mask_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_FINAL_ROUNDED_MASK")
+TEMP_FINAL_GRADIENT="temp_final_gradient_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_FINAL_GRADIENT")
+TEMP_FINAL_WITH_GLOSS="temp_final_gloss_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_FINAL_WITH_GLOSS")
+TEMP_FINAL_INNER_SHADOW="temp_final_inner_shadow_${RANDOM}.miff"; TEMP_FILES_TO_CLEAN+=("$TEMP_FINAL_INNER_SHADOW")
+TEMP_FINAL_WITH_INNER_SHADOW="temp_final_with_inner_shadow_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_FINAL_WITH_INNER_SHADOW")
+TEMP_FINAL_ROUNDED="temp_final_rounded_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_FINAL_ROUNDED")
+
+# Step 1: Resize input to full 1024x1024 (no padding)
+magick "$INPUT_PNG" -filter LanczosSharp -resize "${FINAL_SIZE}x${FINAL_SIZE}!" "PNG32:$TEMP_FINAL_RESIZED"
+
+# Step 2: Create the rounded corner mask
+FINAL_MINUS_1=$((FINAL_SIZE - 1))
+magick -size "${FINAL_SIZE}x${FINAL_SIZE}" xc:none -fill white \
+    -draw "roundrectangle 0,0,${FINAL_MINUS_1},${FINAL_MINUS_1},${RADIUS_PX},${RADIUS_PX}" \
+    "PNG32:$TEMP_FINAL_ROUNDED_MASK"
+
+# Step 3: Apply glossy highlight (if enabled)
+if [ "$ENABLE_GLOSS" = true ]; then
+    GLOSS_HEIGHT=$(printf "%.0f" "$(echo "$FINAL_SIZE * 0.40" | bc -l)")
+    GLOSS_OPACITY_START="0.15"
+    magick -size "${FINAL_SIZE}x${GLOSS_HEIGHT}" \
+           gradient:"rgba(255,255,255,${GLOSS_OPACITY_START})"-"rgba(255,255,255,0.0)" \
+           -gravity North -background None -extent "${FINAL_SIZE}x${FINAL_SIZE}" \
+           "PNG32:$TEMP_FINAL_GRADIENT"
+    magick "$TEMP_FINAL_RESIZED" "$TEMP_FINAL_GRADIENT" \
+           -compose Over -composite "PNG32:$TEMP_FINAL_WITH_GLOSS"
+else
+    cp "$TEMP_FINAL_RESIZED" "$TEMP_FINAL_WITH_GLOSS"
+fi
+
+# Step 4: Apply inner shadow
+INNER_SHADOW_COLOR="rgba(0,0,0,0.20)"
+INNER_SHADOW_BLUR="0x0.75"
+magick "$TEMP_FINAL_ROUNDED_MASK" \
+       -morphology EdgeIn Diamond:1 \
+       -fill "$INNER_SHADOW_COLOR" -opaque white \
+       -fill transparent -opaque black \
+       -blur "$INNER_SHADOW_BLUR" \
+       "$TEMP_FINAL_INNER_SHADOW"
+
+magick "$TEMP_FINAL_WITH_GLOSS" "$TEMP_FINAL_INNER_SHADOW" \
+       -compose Atop -composite "PNG32:$TEMP_FINAL_WITH_INNER_SHADOW"
+
+# Step 5: Apply rounded corners
+magick "$TEMP_FINAL_WITH_INNER_SHADOW" "$TEMP_FINAL_ROUNDED_MASK" \
+    -compose DstIn -composite "PNG32:$TEMP_FINAL_ROUNDED"
+
+# Step 6: Add drop shadow (for large size)
+SHADOW_OPACITY=35
+SHADOW_PARAMS="${SHADOW_OPACITY}x5+3+4"
+
+TEMP_FINAL_ALPHA="temp_final_alpha_${RANDOM}.miff"; TEMP_FILES_TO_CLEAN+=("$TEMP_FINAL_ALPHA")
+TEMP_FINAL_SHADOW="temp_final_shadow_${RANDOM}.miff"; TEMP_FILES_TO_CLEAN+=("$TEMP_FINAL_SHADOW")
+
+magick "$TEMP_FINAL_ROUNDED" -alpha extract "$TEMP_FINAL_ALPHA"
+magick "$TEMP_FINAL_ALPHA" \
+    -virtual-pixel transparent \
+    -background black \
+    -shadow "$SHADOW_PARAMS" \
+    +repage \
+    "$TEMP_FINAL_SHADOW"
+
+# Composite shadow and icon
+magick -size "${FINAL_SIZE}x${FINAL_SIZE}" xc:none \
+       "$TEMP_FINAL_ROUNDED" -gravity center -compose Over -composite \
+       "$TEMP_FINAL_SHADOW" -gravity center -compose DstOver -composite \
+       "PNG32:$FINAL_PNG"
+
+# Re-apply the rounded mask to clip shadow
+magick "$FINAL_PNG" "$TEMP_FINAL_ROUNDED_MASK" \
+       -compose DstIn -composite \
+       "PNG32:$FINAL_PNG"
+
+# Optional edge erode
+if [ "$ENABLE_EDGE_ERODE" = true ]; then
+    TEMP_FINAL_ERODED_ALPHA="temp_final_eroded_alpha_${RANDOM}.miff"; TEMP_FILES_TO_CLEAN+=("$TEMP_FINAL_ERODED_ALPHA")
+    magick "$FINAL_PNG" -alpha extract \
+           -morphology Erode Diamond:2 "$TEMP_FINAL_ERODED_ALPHA"
+    magick "$FINAL_PNG" "$TEMP_FINAL_ERODED_ALPHA" -compose CopyOpacity -composite "PNG32:$FINAL_PNG"
+fi
+
+echo "Created $FINAL_PNG (1024x1024 without padding)"
+
 echo "Script finished. ✨"
 
 exit 0
