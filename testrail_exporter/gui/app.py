@@ -9,7 +9,6 @@ import tempfile
 from datetime import datetime
 from PIL import Image, ImageTk
 from testrail_exporter.utils.exporter import Exporter, ExportError
-from testrail_exporter.utils.testrail2xray import convert_xml_to_xray_csv, XrayConversionError
 from testrail_exporter.utils.logger import ExportLogger
 
 from testrail_exporter.gui.settings import SettingsFrame
@@ -193,23 +192,23 @@ class Application(ctk.CTk):
         
         ctk.CTkButton(
             export_frame, 
-            text="Export JSON", 
-            command=lambda: self._export_cases(format='json'),
-            width=100
-        ).pack(side=tk.RIGHT, padx=2)
-        
-        ctk.CTkButton(
-            export_frame, 
-            text="Export XML", 
+            text="Export to XML", 
             command=lambda: self._export_cases(format='xml'),
-            width=100
+            width=110
         ).pack(side=tk.RIGHT, padx=2)
         
         ctk.CTkButton(
             export_frame, 
-            text="Export to Xray CSV", 
+            text="Export to CSV", 
             command=lambda: self._export_cases(format='xray_csv'),
-            width=140
+            width=110
+        ).pack(side=tk.RIGHT, padx=2)
+        
+        ctk.CTkButton(
+            export_frame, 
+            text="Export Both", 
+            command=lambda: self._export_cases(format='both'),
+            width=110
         ).pack(side=tk.RIGHT, padx=2)
         
         # Progress bar and status
@@ -1395,13 +1394,13 @@ class Application(ctk.CTk):
         
         return case_dict
     
-    def _save_export_file(self, export_data, format='json', selected_columns=None):
+    def _save_export_file(self, export_data, format='xml', selected_columns=None):
         """
         Automatically save export file with timestamped filename.
         
         Args:
             export_data (dict): Data to export
-            format (str): Export format ('json', 'csv', 'xml', or 'xray_csv')
+            format (str): Export format ('xml', 'xray_csv', or 'both')
             selected_columns (list): Optional list of columns to include in CSV export
         """
         # Get export directory from settings
@@ -1420,55 +1419,78 @@ class Application(ctk.CTk):
         # Sanitize project name for use in filename
         sanitized_project_name = self._sanitize_filename(self.current_project.name)
         
-        # Set file extension and base filename based on format
-        if format == 'xray_csv':
-            extension = ".csv"
-            base_filename = f"{sanitized_project_name}_xray_export"
-        elif format == 'xml':
-            extension = ".xml"
-            base_filename = f"{sanitized_project_name}_export"
-        else:  # Default to json
-            extension = ".json"
-            base_filename = f"{sanitized_project_name}_export"
-        
-        # Create timestamped filename
-        filename = f"{base_filename}_{timestamp}{extension}"
-        filepath = os.path.join(export_dir, filename)
-        
-        try:
-            # Update progress
-            self._update_progress("Saving export file...")
-            logger.info(f"Starting export to {format.upper()} format")
-            logger.info(f"Export directory: {export_dir}")
-            logger.info(f"Export filename: {filename}")
-            logger.info(f"Total test cases to export: {len(export_data.get('cases', []))}")
-            
-            # Save the file
-            if format == 'xray_csv':
-                result = self._export_to_xray_csv(export_data, filepath, logger, selected_columns)
-                if isinstance(result, tuple) and len(result) == 3:
-                    success, xml_filename, csv_filename = result
-                    if success:
-                        self.status_var.set(f"Exported {len(export_data['cases'])} test cases to Xray format")
-                        messagebox.showinfo("Export Complete", 
-                            f"Successfully exported {len(export_data['cases'])} test cases!\n\n"
-                            f"Files created:\n"
-                            f"• XML: {xml_filename}\n"
-                            f"• Xray CSV: {csv_filename}\n\n"
-                            f"Use the CSV file for importing into Xray.\n"
-                            f"The XML file is provided for reference.")
-                else:
-                    raise ExportError("Failed to export to Xray CSV format")
-            elif format == 'xml':
-                Exporter.export_to_xml(export_data, filepath, logger)
-                self.status_var.set(f"Exported {len(export_data['cases'])} test cases to {filename}")
-                messagebox.showinfo("Success", f"Successfully exported {len(export_data['cases'])} test cases to XML format\n\nSaved as: {filename}")
-            else:  # Default to json
-                Exporter.export_to_json(export_data, filepath, logger)
-                self.status_var.set(f"Exported {len(export_data['cases'])} test cases to {filename}")
-                messagebox.showinfo("Success", f"Successfully exported {len(export_data['cases'])} test cases to JSON format\n\nSaved as: {filename}")
+        # Handle different formats
+        if format == 'both':
+            # Export both XML and CSV
+            try:
+                # Update progress
+                self._update_progress("Exporting to XML and CSV...")
+                logger.info(f"Starting export to both XML and CSV formats")
+                logger.info(f"Export directory: {export_dir}")
+                logger.info(f"Total test cases to export: {len(export_data.get('cases', []))}")
                 
-            self._update_progress("")
+                # Export XML
+                xml_filename = f"{sanitized_project_name}_export_{timestamp}.xml"
+                xml_filepath = os.path.join(export_dir, xml_filename)
+                Exporter.export_to_xml(export_data, xml_filepath, logger)
+                
+                # Export CSV using direct method
+                csv_filename = f"{sanitized_project_name}_xray_export_{timestamp}.csv"
+                csv_filepath = os.path.join(export_dir, csv_filename)
+                
+                # Get TestRail endpoint for link handling
+                testrail_endpoint = settings.get('url', '')
+                Exporter.export_to_xray_csv(export_data, csv_filepath, testrail_endpoint, logger, selected_columns)
+                
+                self.status_var.set(f"Exported {len(export_data['cases'])} test cases to both formats")
+                messagebox.showinfo("Export Complete", 
+                    f"Successfully exported {len(export_data['cases'])} test cases!\n\n"
+                    f"Files created:\n"
+                    f"• XML: {xml_filename}\n"
+                    f"• CSV: {csv_filename}")
+                    
+                self._update_progress("")
+                
+            except ExportError as e:
+                error_msg = str(e)
+                logger.error(f"Export failed: {error_msg}")
+                log_file = logger.get_log_file_path()
+                self._show_export_error(error_msg, log_file, format)
+                
+        else:
+            # Single format export
+            if format == 'xray_csv':
+                extension = ".csv"
+                base_filename = f"{sanitized_project_name}_xray_export"
+            else:  # xml
+                extension = ".xml"
+                base_filename = f"{sanitized_project_name}_export"
+            
+            # Create timestamped filename
+            filename = f"{base_filename}_{timestamp}{extension}"
+            filepath = os.path.join(export_dir, filename)
+            
+            try:
+                # Update progress
+                self._update_progress("Saving export file...")
+                logger.info(f"Starting export to {format.upper()} format")
+                logger.info(f"Export directory: {export_dir}")
+                logger.info(f"Export filename: {filename}")
+                logger.info(f"Total test cases to export: {len(export_data.get('cases', []))}")
+                
+                # Save the file
+                if format == 'xray_csv':
+                    # Use direct CSV export
+                    testrail_endpoint = settings.get('url', '')
+                    Exporter.export_to_xray_csv(export_data, filepath, testrail_endpoint, logger, selected_columns)
+                    self.status_var.set(f"Exported {len(export_data['cases'])} test cases to {filename}")
+                    messagebox.showinfo("Success", f"Successfully exported {len(export_data['cases'])} test cases to CSV format\n\nSaved as: {filename}")
+                else:  # xml
+                    Exporter.export_to_xml(export_data, filepath, logger)
+                    self.status_var.set(f"Exported {len(export_data['cases'])} test cases to {filename}")
+                    messagebox.showinfo("Success", f"Successfully exported {len(export_data['cases'])} test cases to XML format\n\nSaved as: {filename}")
+                    
+                self._update_progress("")
             
         except ExportError as e:
             error_msg = str(e)
@@ -1486,67 +1508,6 @@ class Application(ctk.CTk):
             log_file = logger.get_log_file_path()
             self._show_export_error(error_msg, log_file, format)
     
-    def _export_to_xray_csv(self, export_data, csv_filepath, logger=None, selected_columns=None):
-        """
-        Export test cases to Xray CSV format by first creating XML then converting.
-        Also saves the XML file alongside the CSV for reference.
-        
-        Args:
-            export_data (dict): Data to export
-            csv_filepath (str): Path where the CSV file should be saved
-            logger (ExportLogger): Optional logger instance
-            selected_columns (list): Optional list of columns to include in CSV
-            
-        Returns:
-            tuple: (success: bool, xml_filename: str, csv_filename: str)
-        """
-        try:
-            # Create XML file path alongside the CSV file
-            base_path = os.path.splitext(csv_filepath)[0]
-            xml_filepath = f"{base_path}.xml"
-            
-            if logger:
-                logger.info(f"Creating XML file: {xml_filepath}")
-            
-            # First export to XML format (permanent file)
-            Exporter.export_to_xml(export_data, xml_filepath, logger)
-            
-            # Get TestRail endpoint from settings for link handling
-            settings = self.settings_frame.get_settings()
-            testrail_endpoint = settings.get('url', '')
-            
-            if logger:
-                logger.info(f"Converting XML to Xray CSV format")
-                logger.debug(f"TestRail endpoint: {testrail_endpoint}")
-            
-            # Update progress to show conversion
-            self._update_progress("Converting to CSV...")
-            
-            # Convert XML to Xray CSV format
-            if selected_columns:
-                # Use the version that supports column selection
-                from testrail_exporter.utils.testrail2xray import convert_xml_to_xray_csv_with_columns
-                success = convert_xml_to_xray_csv_with_columns(xml_filepath, csv_filepath, testrail_endpoint, logger, selected_columns)
-            else:
-                # Use standard conversion
-                success = convert_xml_to_xray_csv(xml_filepath, csv_filepath, testrail_endpoint, logger)
-            
-            if success:
-                xml_filename = os.path.basename(xml_filepath)
-                csv_filename = os.path.basename(csv_filepath)
-                if logger:
-                    logger.info(f"Successfully created Xray CSV: {csv_filename}")
-                return True, xml_filename, csv_filename
-            else:
-                raise ExportError("Failed to convert XML to Xray CSV format")
-                
-        except (ExportError, XrayConversionError):
-            raise
-        except Exception as e:
-            error_msg = f"Error in Xray CSV export: {str(e)}"
-            if logger:
-                logger.error(error_msg, exc_info=True)
-            raise ExportError(error_msg) from e
     
     def _show_column_selection_dialog(self, checked_items, format):
         """Show dialog for selecting CSV columns to export."""
@@ -1797,30 +1758,52 @@ class Application(ctk.CTk):
         # Sanitize project name for use in filename
         sanitized_project_name = self._sanitize_filename(project_name)
         
-        # Set file extension and base filename based on format
-        if format == 'xray_csv':
-            extension = ".csv"
-            base_filename = f"{sanitized_project_name}_xray_export"
-        elif format == 'xml':
-            extension = ".xml"
-            base_filename = f"{sanitized_project_name}_export"
-        else:  # Default to json
-            extension = ".json"
-            base_filename = f"{sanitized_project_name}_export"
-        
-        # Create timestamped filename
-        filename = f"{base_filename}_{timestamp}{extension}"
-        filepath = os.path.join(export_dir, filename)
-        
-        try:
-            # Save the file
+        # Handle different formats
+        if format == 'both':
+            # Export both XML and CSV
+            try:
+                # Export XML
+                xml_filename = f"{sanitized_project_name}_export_{timestamp}.xml"
+                xml_filepath = os.path.join(export_dir, xml_filename)
+                Exporter.export_to_xml(export_data, xml_filepath, logger)
+                
+                # Export CSV using direct method
+                csv_filename = f"{sanitized_project_name}_xray_export_{timestamp}.csv"
+                csv_filepath = os.path.join(export_dir, csv_filename)
+                
+                # Get TestRail endpoint
+                settings = self.settings_frame.get_settings()
+                testrail_endpoint = settings.get('url', '')
+                Exporter.export_to_xray_csv(export_data, csv_filepath, testrail_endpoint, logger, selected_columns)
+                
+                logger.info(f"Successfully exported project '{project_name}' to both XML and CSV")
+                
+            except Exception as e:
+                error_msg = f"Failed to export both formats for project '{project_name}': {str(e)}"
+                logger.error(error_msg, exc_info=True)
+                messagebox.showerror("Export Error", error_msg)
+        else:
+            # Single format export
             if format == 'xray_csv':
-                # For Xray CSV, we need to store selected columns for the conversion
-                self._export_to_xray_csv_with_columns(export_data, filepath, logger, selected_columns)
-            elif format == 'xml':
-                Exporter.export_to_xml(export_data, filepath, logger)
-            else:  # Default to json
-                Exporter.export_to_json(export_data, filepath, logger)
+                extension = ".csv"
+                base_filename = f"{sanitized_project_name}_xray_export"
+            else:  # xml
+                extension = ".xml"
+                base_filename = f"{sanitized_project_name}_export"
+            
+            # Create timestamped filename
+            filename = f"{base_filename}_{timestamp}{extension}"
+            filepath = os.path.join(export_dir, filename)
+            
+            try:
+                # Save the file
+                if format == 'xray_csv':
+                    # Use direct CSV export
+                    settings = self.settings_frame.get_settings()
+                    testrail_endpoint = settings.get('url', '')
+                    Exporter.export_to_xray_csv(export_data, filepath, testrail_endpoint, logger, selected_columns)
+                else:  # xml
+                    Exporter.export_to_xml(export_data, filepath, logger)
                 
             logger.info(f"Successfully exported project '{project_name}' to {filename}")
             
@@ -1829,24 +1812,6 @@ class Application(ctk.CTk):
             logger.error(error_msg, exc_info=True)
             messagebox.showerror("Export Error", error_msg)
     
-    def _export_to_xray_csv_with_columns(self, export_data, csv_filepath, logger, selected_columns):
-        """Export to Xray CSV with selected columns only."""
-        # First create the XML file
-        base_path = os.path.splitext(csv_filepath)[0]
-        xml_filepath = f"{base_path}.xml"
-        
-        # Export to XML first
-        Exporter.export_to_xml(export_data, xml_filepath, logger)
-        
-        # Get TestRail endpoint
-        settings = self.settings_frame.get_settings()
-        testrail_endpoint = settings.get('url', '')
-        
-        # Convert XML to CSV with selected columns
-        from testrail_exporter.utils.testrail2xray import convert_xml_to_xray_csv_with_columns
-        convert_xml_to_xray_csv_with_columns(
-            xml_filepath, csv_filepath, testrail_endpoint, logger, selected_columns
-        )
     
     def _show_multi_export_complete_dialog(self, completed_count, total_count, export_dir):
         """Show completion dialog for multi-project export."""
