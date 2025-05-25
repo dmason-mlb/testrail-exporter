@@ -9,6 +9,7 @@ import tempfile
 from datetime import datetime
 from PIL import Image, ImageTk
 from testrail_exporter.utils.exporter import Exporter, ExportError
+from testrail_exporter.utils.testrail2xray import convert_xml_to_xray_csv, XrayConversionError
 from testrail_exporter.utils.logger import ExportLogger
 
 from testrail_exporter.gui.settings import SettingsFrame
@@ -1491,22 +1492,22 @@ class Application(ctk.CTk):
                     messagebox.showinfo("Success", f"Successfully exported {len(export_data['cases'])} test cases to XML format\n\nSaved as: {filename}")
                     
                 self._update_progress("")
-            
-        except ExportError as e:
-            error_msg = str(e)
-            logger.error(f"Export failed: {error_msg}")
-            
-            # Show detailed error with log file reference
-            log_file = logger.get_log_file_path()
-            self._show_export_error(error_msg, log_file, format)
-            
-        except Exception as e:
-            error_msg = f"Unexpected error during {format.upper()} export: {str(e)}"
-            logger.error(error_msg, exc_info=True)
-            
-            # Show detailed error with log file reference
-            log_file = logger.get_log_file_path()
-            self._show_export_error(error_msg, log_file, format)
+                
+            except ExportError as e:
+                error_msg = str(e)
+                logger.error(f"Export failed: {error_msg}")
+                
+                # Show detailed error with log file reference
+                log_file = logger.get_log_file_path()
+                self._show_export_error(error_msg, log_file, format)
+                
+            except Exception as e:
+                error_msg = f"Unexpected error during {format.upper()} export: {str(e)}"
+                logger.error(error_msg, exc_info=True)
+                
+                # Show detailed error with log file reference
+                log_file = logger.get_log_file_path()
+                self._show_export_error(error_msg, log_file, format)
     
     
     def _show_column_selection_dialog(self, checked_items, format):
@@ -1805,12 +1806,12 @@ class Application(ctk.CTk):
                 else:  # xml
                     Exporter.export_to_xml(export_data, filepath, logger)
                 
-            logger.info(f"Successfully exported project '{project_name}' to {filename}")
+                logger.info(f"Successfully exported project '{project_name}' to {filename}")
             
-        except Exception as e:
-            error_msg = f"Failed to save export for project '{project_name}': {str(e)}"
-            logger.error(error_msg, exc_info=True)
-            messagebox.showerror("Export Error", error_msg)
+            except Exception as e:
+                error_msg = f"Failed to save export for project '{project_name}': {str(e)}"
+                logger.error(error_msg, exc_info=True)
+                messagebox.showerror("Export Error", error_msg)
     
     
     def _show_multi_export_complete_dialog(self, completed_count, total_count, export_dir):

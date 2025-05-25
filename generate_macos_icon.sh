@@ -12,7 +12,7 @@ FINAL_ICNS_FILE="icon.icns"
 CORNER_RADIUS_PERCENT=0.224
 # Reduce the drawn icon size on the canvas by this percentage (Apple "safe area")
 # e.g. 22.37 means the visible icon will occupy ~77.63% of the canvas
-PADDING_PERCENT=20
+PADDING_PERCENT=15
 # Toggle glossy highlight overlay (white-to-transparent gradient).
 # Disable by default while we track down the grey-halo artefact.
 ENABLE_GLOSS=true
