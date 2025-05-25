@@ -4,6 +4,7 @@ import os
 import xml.etree.ElementTree as ET
 import xml.dom.minidom as minidom
 import re
+import pandas as pd
 from .logger import ExportLogger
 
 
@@ -510,3 +511,207 @@ class Exporter:
                                 
                                 expected_elem = ET.SubElement(step_elem, "expected")
                                 expected_elem.text = Exporter._clean_xml_text(str(step_data.get('expected', '')) if isinstance(step_data, dict) else "")
+                                
+                                # Add additional_info if present
+                                if isinstance(step_data, dict) and step_data.get('additional_info'):
+                                    additional_elem = ET.SubElement(step_elem, "additional_info")
+                                    additional_elem.text = Exporter._clean_xml_text(str(step_data.get('additional_info', '')))
+    
+    @staticmethod
+    def export_to_xray_csv(data, filepath, testrail_endpoint='', logger=None, selected_columns=None):
+        """
+        Export test cases directly to Xray-compatible CSV format without XML intermediate.
+        
+        Args:
+            data (dict): Data to export (must have 'cases' key and project info)
+            filepath (str): Path to save the file
+            testrail_endpoint (str): Optional TestRail endpoint URL for link handling
+            logger (ExportLogger): Optional logger instance
+            selected_columns (list): Optional list of columns to include in CSV
+            
+        Raises:
+            ExportError: If export fails
+        """
+        try:
+            if logger:
+                logger.info(f"Starting direct Xray CSV export to: {filepath}")
+                
+            if 'cases' not in data:
+                raise ExportError("Data must contain a 'cases' key")
+                
+            cases = data['cases']
+            if not cases:
+                raise ExportError("No test cases to export")
+            
+            if logger:
+                logger.debug(f"Exporting {len(cases)} test cases to Xray CSV")
+            
+            # Define all available Xray columns
+            all_columns = ["Suite Name", "Section Name", "Issue ID", "Test Type", "Test Title", 
+                          "Test Priority", "Preconditions", "Action", "Data", "Result", 
+                          "Test Repo", "Labels"]
+            
+            # Use selected columns or default to all
+            if not selected_columns:
+                selected_columns = all_columns
+            
+            # Build CSV rows
+            rows = []
+            issue_id = 1
+            
+            # Process each test case
+            for case in cases:
+                # Get basic fields
+                suite_name = case.get('suite_name', '')
+                section_name = case.get('section_name', '')
+                title = case.get('title', '')
+                
+                # Get type and priority names
+                type_name = case.get('type_name', 'Functional')
+                priority_name = case.get('priority_name', 'Medium')
+                
+                # Convert priority name to Xray priority value
+                priority_value = '3'  # Default to Medium
+                if priority_name == 'Critical':
+                    priority_value = '1'
+                elif priority_name == 'High':
+                    priority_value = '2'
+                elif priority_name == 'Medium':
+                    priority_value = '3'
+                elif priority_name == 'Low':
+                    priority_value = '4'
+                
+                # Build test repository path (suite/section hierarchy)
+                test_repo = suite_name
+                if section_name:
+                    test_repo = f"{suite_name}/{section_name}"
+                
+                # Get custom fields
+                preconditions = ''
+                action = ''
+                expected = ''
+                data = ''
+                
+                # Process custom fields
+                for key, value in case.items():
+                    if key == 'custom_preconds' and value:
+                        preconditions = Exporter._clean_html_for_csv(str(value))
+                        preconditions = Exporter._handle_testrail_links(preconditions, testrail_endpoint)
+                    elif key == 'custom_steps' and value:
+                        action = Exporter._clean_html_for_csv(str(value))
+                        action = Exporter._handle_testrail_links(action, testrail_endpoint)
+                    elif key == 'custom_expected' and value:
+                        expected = Exporter._clean_html_for_csv(str(value))
+                        expected = Exporter._handle_testrail_links(expected, testrail_endpoint)
+                    elif key == 'custom_steps_separated' and value and isinstance(value, list):
+                        # Handle separated steps
+                        first_step = True
+                        for step_data in value:
+                            if isinstance(step_data, dict):
+                                step_content = Exporter._clean_html_for_csv(str(step_data.get('content', '')))
+                                step_expected = Exporter._clean_html_for_csv(str(step_data.get('expected', '')))
+                                step_data_info = Exporter._clean_html_for_csv(str(step_data.get('additional_info', '')))
+                                
+                                step_content = Exporter._handle_testrail_links(step_content, testrail_endpoint)
+                                step_expected = Exporter._handle_testrail_links(step_expected, testrail_endpoint)
+                                step_data_info = Exporter._handle_testrail_links(step_data_info, testrail_endpoint)
+                                
+                                row = {
+                                    "Suite Name": suite_name if first_step else '',
+                                    "Section Name": section_name if first_step else '',
+                                    "Issue ID": issue_id,
+                                    "Test Type": "Manual",
+                                    "Test Title": title if first_step else '',
+                                    "Test Priority": priority_value if first_step else '',
+                                    "Preconditions": preconditions if first_step else '',
+                                    "Action": step_content,
+                                    "Data": step_data_info,
+                                    "Result": step_expected,
+                                    "Test Repo": test_repo if first_step else '',
+                                    "Labels": type_name if first_step else ''
+                                }
+                                rows.append(row)
+                                first_step = False
+                        
+                        if value:  # If we had separated steps, increment issue ID
+                            issue_id += 1
+                            continue
+                
+                # If no separated steps, create single row
+                if not any(key == 'custom_steps_separated' and value for key, value in case.items()):
+                    row = {
+                        "Suite Name": suite_name,
+                        "Section Name": section_name,
+                        "Issue ID": issue_id,
+                        "Test Type": "Manual",
+                        "Test Title": title,
+                        "Test Priority": priority_value,
+                        "Preconditions": preconditions,
+                        "Action": action,
+                        "Data": data,
+                        "Result": expected,
+                        "Test Repo": test_repo,
+                        "Labels": type_name
+                    }
+                    rows.append(row)
+                    issue_id += 1
+            
+            if not rows:
+                raise ExportError("No test case rows generated for CSV export")
+                
+            # Create DataFrame and export to CSV
+            df = pd.DataFrame(rows, columns=all_columns)
+            
+            # Filter to selected columns
+            df_filtered = df[selected_columns]
+            
+            # Set index if Issue ID is in selected columns
+            if "Issue ID" in selected_columns:
+                df_filtered.set_index("Issue ID", inplace=True)
+            
+            # Ensure directory exists
+            os.makedirs(os.path.dirname(filepath), exist_ok=True)
+            
+            # Write to CSV
+            df_filtered.to_csv(filepath)
+            
+            if logger:
+                logger.info(f"Successfully exported {len(rows)} rows to Xray CSV: {filepath}")
+                
+        except PermissionError as e:
+            error_msg = f"Permission denied: Cannot write to {filepath}"
+            if logger:
+                logger.error(error_msg, exc_info=True)
+            raise ExportError(error_msg) from e
+        except Exception as e:
+            error_msg = f"Unexpected error during Xray CSV export: {str(e)}"
+            if logger:
+                logger.error(error_msg, exc_info=True)
+            raise ExportError(error_msg) from e
+    
+    @staticmethod
+    def _clean_html_for_csv(text):
+        """Clean HTML tags and entities for CSV export."""
+        if not text:
+            return ''
+        
+        # Remove HTML tags
+        cleanr = re.compile('<.*?>|&([a-z0-9]+|#[0-9]{1,6}|#x[0-9a-f]{1,6});')
+        cleantext = re.sub(cleanr, '', text)
+        
+        # Replace quotes
+        cleantext = re.sub(r'&quot;', '"', cleantext)
+        
+        return cleantext
+    
+    @staticmethod
+    def _handle_testrail_links(text, testrail_endpoint):
+        """Convert TestRail index.php links to Xray format."""
+        if not text or not testrail_endpoint:
+            return text
+            
+        # Pattern to match TestRail links
+        pattern = r'\!\[\]\(index\.php(.*?)\)'
+        replacement = r'[Link|' + testrail_endpoint + 'index.php' + r'\1]'
+        
+        return re.sub(pattern, replacement, text)

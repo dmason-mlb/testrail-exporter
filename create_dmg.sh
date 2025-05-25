@@ -138,17 +138,30 @@ function generate_icns() {
 
   # Clean previous build artifacts
   rm -rf "$BUILD_DIR"
-  mkdir -p "$ICONSET_DIR"
+  mkdir -p "$BUILD_DIR"
 
-  declare -a sizes=(16 32 128 256 512)
-  for size in "${sizes[@]}"; do
-    sips -z "$size" "$size" "$ICON_SRC" --out "$ICONSET_DIR/icon_${size}x${size}.png" >/dev/null
-    double=$((size*2))
-    sips -z "$double" "$double" "$ICON_SRC" --out "$ICONSET_DIR/icon_${size}x${size}@2x.png" >/dev/null
-  done
+  # Check if we should use the new Apple-style icon generator
+  if [[ -x "./generate_macos_icon.sh" ]]; then
+    echo "  Using Apple-style icon generator with rounded corners and 3D effect..."
+    ./generate_macos_icon.sh "$ICON_SRC"
+    mv icon.icns "$ICNS_FILE"
+    rm -f icon_preview.png
+  else
+    # Fall back to original simple icon generation
+    echo "  Using simple icon generation (run ./generate_macos_icon.sh for Apple-style icons)..."
+    mkdir -p "$ICONSET_DIR"
+    
+    declare -a sizes=(16 32 128 256 512)
+    for size in "${sizes[@]}"; do
+      sips -z "$size" "$size" "$ICON_SRC" --out "$ICONSET_DIR/icon_${size}x${size}.png" >/dev/null
+      double=$((size*2))
+      sips -z "$double" "$double" "$ICON_SRC" --out "$ICONSET_DIR/icon_${size}x${size}@2x.png" >/dev/null
+    done
 
-  # Build the .icns file
-  iconutil -c icns "$ICONSET_DIR" -o "$ICNS_FILE"
+    # Build the .icns file
+    iconutil -c icns "$ICONSET_DIR" -o "$ICNS_FILE"
+  fi
+  
   echo "Created $ICNS_FILE"
 
   # Also copy (or update) the PNG used at runtime by the Tkinter UI
@@ -161,7 +174,18 @@ function generate_icns() {
 function build_app() {
   echo "[2/4] Building .app bundle with PyInstaller ..."
   # Remove previous PyInstaller outputs
-  rm -rf build/pyinstaller "$DIST_DIR" "${APP_NAME}.spec"
+  rm -rf build/pyinstaller "$DIST_DIR" "${APP_NAME}.spec" # Corrected: remove build/pyinstaller, not all of build
+
+  echo "  DEBUG: Checking icon file to be used by PyInstaller: $ICNS_FILE"
+  if [[ ! -f "$ICNS_FILE" ]]; then
+    echo "  FATAL ERROR: Icon file '$ICNS_FILE' not found for PyInstaller."
+    exit 1
+  fi
+  echo "  DEBUG: Icon file '$ICNS_FILE' exists."
+  echo "  DEBUG: Size of '$ICNS_FILE' is $(stat -f%z "$ICNS_FILE") bytes."
+  echo "  DEBUG: For manual inspection, open '$ICNS_FILE' with Preview now if you pause the script."
+  # You can even add a command to open it with Preview if you want to force a check:
+  # read -p "  DEBUG: Press [Enter] to continue after inspecting $ICNS_FILE (or Ctrl+C to abort)..."
 
   pyinstaller \
     --clean \
@@ -175,6 +199,35 @@ function build_app() {
     exit 1
   fi
   echo "Created $APP_BUNDLE"
+
+  # Post-build check of the icon inside the .app
+  echo "  DEBUG: Checking icon embedded in the .app bundle..."
+  APP_ICON_PATH_EXPECTED="$APP_BUNDLE/Contents/Resources/icon-windowed.icns" # Common PyInstaller name
+  # PyInstaller might also use the original name, or ' standaard.icns', 'application.icns', check common ones.
+  # The Info.plist CFBundleIconFile entry will specify the exact name.
+  
+  PLIST_ICON_FILE=$(/usr/libexec/PlistBuddy -c "Print CFBundleIconFile" "$APP_BUNDLE/Contents/Info.plist" 2>/dev/null)
+  if [[ -n "$PLIST_ICON_FILE" ]]; then
+      # If not an absolute path, prepend Resources
+      if [[ "$PLIST_ICON_FILE" != /* ]]; then
+          PLIST_ICON_FILE="Contents/Resources/$PLIST_ICON_FILE"
+      fi
+      ACTUAL_APP_ICON_PATH="$APP_BUNDLE/$PLIST_ICON_FILE"
+      # Normalize potential .. in path (though unlikely here)
+      ACTUAL_APP_ICON_PATH=$(cd "$(dirname "$ACTUAL_APP_ICON_PATH")" && pwd)/$(basename "$ACTUAL_APP_ICON_PATH")
+
+
+      echo "  DEBUG: Info.plist points to CFBundleIconFile: $PLIST_ICON_FILE"
+      if [[ -f "$ACTUAL_APP_ICON_PATH" ]]; then
+          echo "  DEBUG: Embedded icon at '$ACTUAL_APP_ICON_PATH' exists."
+          echo "  DEBUG: Size of embedded icon is $(stat -f%z "$ACTUAL_APP_ICON_PATH") bytes."
+          echo "  DEBUG: Compare this size to the original. If smaller, PyInstaller likely reprocessed it."
+      else
+          echo "  DEBUG: WARNING - Embedded icon '$ACTUAL_APP_ICON_PATH' (from Info.plist) not found!"
+      fi
+  else
+      echo "  DEBUG: WARNING - CFBundleIconFile not found in Info.plist or PlistBuddy failed."
+  fi
 }
 
 function sign_app() {
