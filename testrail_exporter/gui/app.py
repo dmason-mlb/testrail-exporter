@@ -216,24 +216,27 @@ class Application(ctk.CTk):
         status_frame = ctk.CTkFrame(main_frame, fg_color="transparent")
         status_frame.pack(fill=tk.X, pady=(10, 20), padx=10)
         
-        self.status_var = tk.StringVar()
-        self.status_label = ctk.CTkLabel(status_frame, textvariable=self.status_var)
-        self.status_label.pack(side=tk.LEFT)
-        
+        # Create a vertical layout for progress bar and labels
         self.progress_frame = ctk.CTkFrame(status_frame, fg_color="transparent")
-        self.progress_frame.pack(side=tk.RIGHT, fill=tk.X, expand=True, padx=(20, 0))
+        self.progress_frame.pack(fill=tk.X, expand=True)
         
         self.progress_var = tk.DoubleVar()
         self.progress = ctk.CTkProgressBar(
             self.progress_frame,
             variable=self.progress_var,
-            mode='determinate'
+            mode='determinate',
+            height=30  # Increased height by 50% (default is ~20)
         )
-        self.progress.pack(fill=tk.X, expand=True)
+        self.progress.pack(fill=tk.X, expand=True, padx=40)  # Increased left/right padding
         
-        # Add more padding and make the progress label larger
+        # Progress percentage label
         self.progress_label = ctk.CTkLabel(self.progress_frame, text="", font=("", 12))
-        self.progress_label.pack(pady=(5, 5))
+        self.progress_label.pack(pady=(5, 2))
+        
+        # Status text below the percentage
+        self.status_var = tk.StringVar()
+        self.status_label = ctk.CTkLabel(self.progress_frame, textvariable=self.status_var, font=("", 11))
+        self.status_label.pack(pady=(0, 5))
         
         # Initialize instance variables
         self.client = None
