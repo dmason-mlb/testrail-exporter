@@ -22,6 +22,8 @@ Download the latest release and drag TestRail Exporter to your Applications fold
 - Connect to TestRail instance with URL, username, and API key
 - Browse projects, test suites, and sections
 - Select test suites and sections to export
+- Select specific test case fields to include in CSV exports
+- Multi-project selection for cross-project exports
 - Export test cases to JSON, XML, or Xray-compatible CSV format
 - Configurable export directory
 - Persistent settings between sessions
@@ -31,8 +33,6 @@ Download the latest release and drag TestRail Exporter to your Applications fold
 - Data caching for improved performance
 - Toggle to control section loading for better performance
 - Export logs saved in dedicated logs directory
-
-![TestRail Exporter - Xray Export](./docs/images/testrail-exporter-xray-export.png)
 
 ## Environment Setup
 
@@ -120,7 +120,8 @@ Use the "Test Connection" button to verify your credentials before loading proje
 
 4. Click "Load Projects" to load projects from TestRail
 
-5. Select a project from the dropdown
+5. Select one or more projects from the dropdown (multi-select supported)
+   ![Multi-project Selection](./docs/images/testrail-exporter-suites-multi-project-selector.png)
 
 6. Browse and select test suites and sections:
    - Use the tree view to navigate the project structure
@@ -136,6 +137,8 @@ Use the "Test Connection" button to verify your credentials before loading proje
    - Click "Export JSON" to export in JSON format
    - Click "Export XML" to export in TestRail-compatible XML format
    - Click "Export to Xray CSV" to export both XML and Xray-compatible CSV files
+   - (Optional) Click "Select CSV Fields" to choose which test case fields will be included in the generated CSV
+     ![CSV Field Selection Dialog](./docs/images/testrail-exporter-suites-csv-fields.png)
    - Files are automatically saved with timestamps to prevent conflicts
    - Export logs are saved in a "logs" subdirectory within your export directory
    - Wait for the export process to complete (progress bar shows percentage completion)
