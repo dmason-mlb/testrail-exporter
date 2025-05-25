@@ -10,6 +10,16 @@ INPUT_PNG="${1:-$INPUT_PNG_DEFAULT}"
 OUTPUT_ICONSET_DIR="icon.iconset"
 FINAL_ICNS_FILE="icon.icns"
 CORNER_RADIUS_PERCENT=0.224
+# Reduce the drawn icon size on the canvas by this percentage (Apple "safe area")
+# e.g. 22.37 means the visible icon will occupy ~77.63% of the canvas
+PADDING_PERCENT=20
+# Toggle glossy highlight overlay (white-to-transparent gradient).
+# Disable by default while we track down the grey-halo artefact.
+ENABLE_GLOSS=true
+# If you still see a grey fringe, enabling this will erode the alpha mask by
+# 1 pixel after all compositing is done, removing half-transparent edge pixels.
+# NOTE: This trade-off slightly reduces the visible radius by ~1 px.
+ENABLE_EDGE_ERODE=true
 DEBUG_STEP=false
 
 # --- Check Dependencies ---
@@ -60,10 +70,15 @@ for i in "${!SIZES[@]}"; do
     FILENAME=${NAMES[$i]}
     OUTPUT_PNG_PATH="$OUTPUT_ICONSET_DIR/$FILENAME"
 
-    RADIUS_PX=$(printf "%.0f" "$(echo "$SIZE * $CORNER_RADIUS_PERCENT" | bc -l)")
+    # --- Calculate scaled (visible) icon size & margin ---
+    SCALE_FACTOR=$(echo "100 - $PADDING_PERCENT" | bc -l)  # e.g. 77.63
+    SCALED_SIZE=$(printf "%.0f" "$(echo "$SIZE * $SCALE_FACTOR / 100" | bc -l)")
+    MARGIN=$(( (SIZE - SCALED_SIZE) / 2 ))
+
+    RADIUS_PX=$(printf "%.0f" "$(echo "$SCALED_SIZE * $CORNER_RADIUS_PERCENT" | bc -l)")
     if [ "$RADIUS_PX" -lt 1 ]; then RADIUS_PX=1; fi
-    HALF_SIZE=$((SIZE / 2))
-    if [ "$RADIUS_PX" -gt "$HALF_SIZE" ]; then RADIUS_PX=$HALF_SIZE; fi
+    HALF_SCALED=$((SCALED_SIZE / 2))
+    if [ "$RADIUS_PX" -gt "$HALF_SCALED" ]; then RADIUS_PX=$HALF_SCALED; fi
 
     # Define all temporary files for this iteration
     TEMP_RESIZED="temp_resized_${SIZE}_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_RESIZED")
@@ -80,26 +95,34 @@ for i in "${!SIZES[@]}"; do
     TEMP_ALPHA_MASK_FOR_SHADOW="temp_alpha_mask_shadow_${SIZE}_${RANDOM}.miff"; TEMP_FILES_TO_CLEAN+=("$TEMP_ALPHA_MASK_FOR_SHADOW")
     TEMP_SHADOW_ONLY="temp_shadow_only_${SIZE}_${RANDOM}.miff"; TEMP_FILES_TO_CLEAN+=("$TEMP_SHADOW_ONLY")
 
-    # Step 1: Resize input to a square image
-    magick "$INPUT_PNG" -filter LanczosSharp -resize "${SIZE}x${SIZE}!" "PNG32:$TEMP_RESIZED"
+    # Step 1: Resize input to the scaled icon size
+    magick "$INPUT_PNG" -filter LanczosSharp -resize "${SCALED_SIZE}x${SCALED_SIZE}!" "PNG32:$TEMP_RESIZED"
     
-    # Step 2: Create the Rounded Corner Mask
-    SIZE_MINUS_1=$((SIZE - 1))
-    magick -size "${SIZE}x${SIZE}" xc:none -fill white \
-        -draw "roundrectangle 0,0,${SIZE_MINUS_1},${SIZE_MINUS_1},${RADIUS_PX},${RADIUS_PX}" \
+    # Step 2: Create the Rounded Corner Masks (small for processing, large for final clipping)
+    SCALED_MINUS_1=$((SCALED_SIZE - 1))
+    magick -size "${SCALED_SIZE}x${SCALED_SIZE}" xc:none -fill white \
+        -draw "roundrectangle 0,0,${SCALED_MINUS_1},${SCALED_MINUS_1},${RADIUS_PX},${RADIUS_PX}" \
         "PNG32:$TEMP_ROUNDED_MASK"
-    
-    # Step 3: Gradient Overlay (Top Gloss) - applied to the square image
-    GLOSS_HEIGHT=$(printf "%.0f" "$(echo "$SIZE * 0.40" | bc -l)")
-    GLOSS_OPACITY_START="0.15"
-    # Part 3a: Generate the gradient layer
-    magick -size "${SIZE}x${GLOSS_HEIGHT}" \
-           gradient:"rgba(255,255,255,${GLOSS_OPACITY_START})"-"rgba(255,255,255,0.0)" \
-           -gravity North -background None -extent "${SIZE}x${SIZE}" \
-           "PNG32:$TEMP_GRADIENT_LAYER" # Removed redundant array append
-    # Part 3b: Composite the gradient layer onto the resized (still square) image
-    magick "$TEMP_RESIZED" "$TEMP_GRADIENT_LAYER" \
-           -compose Over -composite "PNG32:$TEMP_SQUARE_WITH_GLOSS"
+
+    TEMP_ROUNDED_MASK_CANVAS="mask_canvas_${SIZE}_${RANDOM}.png"; TEMP_FILES_TO_CLEAN+=("$TEMP_ROUNDED_MASK_CANVAS")
+    magick -size "${SIZE}x${SIZE}" xc:none "$TEMP_ROUNDED_MASK" -gravity center -compose Over -composite "PNG32:$TEMP_ROUNDED_MASK_CANVAS"
+
+    # Step 3: Glossy highlight (optional)
+    if [ "$ENABLE_GLOSS" = true ]; then
+        GLOSS_HEIGHT=$(printf "%.0f" "$(echo "$SCALED_SIZE * 0.40" | bc -l)")
+        GLOSS_OPACITY_START="0.15"
+        # Part 3a: Generate the gradient layer
+        magick -size "${SCALED_SIZE}x${GLOSS_HEIGHT}" \
+               gradient:"rgba(255,255,255,${GLOSS_OPACITY_START})"-"rgba(255,255,255,0.0)" \
+               -gravity North -background None -extent "${SCALED_SIZE}x${SCALED_SIZE}" \
+               "PNG32:$TEMP_GRADIENT_LAYER"
+        # Part 3b: Composite the gradient layer onto the resized (still square) image
+        magick "$TEMP_RESIZED" "$TEMP_GRADIENT_LAYER" \
+               -compose Over -composite "PNG32:$TEMP_SQUARE_WITH_GLOSS"
+    else
+        # Skip gloss – just carry the resized artwork forward.
+        cp "$TEMP_RESIZED" "$TEMP_SQUARE_WITH_GLOSS"
+    fi
         
     # Step 4: Inner Shadow - applied to the square image with gloss
     INNER_SHADOW_COLOR="rgba(0,0,0,0.20)"
@@ -116,9 +139,9 @@ for i in "${!SIZES[@]}"; do
            -compose Atop -composite "PNG32:$TEMP_SQUARE_WITH_INNER_SHADOW"
 
     # Step 5: Final Rounding and Drop Shadow
-    # First, apply the rounded corners to the fully styled square image
+    # First, apply the rounded corners to the fully styled square image using DstIn to pre-multiply and eliminate halo
     magick "$TEMP_SQUARE_WITH_INNER_SHADOW" "$TEMP_ROUNDED_MASK" \
-        -alpha off -compose CopyOpacity -composite "PNG32:$TEMP_ROUNDED_FINAL_ICON"
+        -compose DstIn -composite "PNG32:$TEMP_ROUNDED_FINAL_ICON"
 
     if [ "$SIZE" -ge 128 ]; then
         SHADOW_OPACITY=35
@@ -150,14 +173,22 @@ for i in "${!SIZES[@]}"; do
         # laid down outside of the rounded rectangle (especially in the corner
         # areas) are clipped out, preventing the appearance of sharp, semi-
         # transparent corners while preserving the shadow elsewhere.
-        magick "$OUTPUT_PNG_PATH" "$TEMP_ROUNDED_MASK" \
-               -alpha off -compose CopyOpacity -composite \
+        magick "$OUTPUT_PNG_PATH" "$TEMP_ROUNDED_MASK_CANVAS" \
+               -compose DstIn -composite \
                "PNG32:$OUTPUT_PNG_PATH"
     else
-        # For smaller sizes, no drop shadow, just output the rounded final icon
-        # $TEMP_ROUNDED_FINAL_ICON is already created, so just copy or magick it
-        cp "$TEMP_ROUNDED_FINAL_ICON" "$OUTPUT_PNG_PATH" # cp is fine, or magick if paranoid
-        # magick "$TEMP_ROUNDED_FINAL_ICON" "PNG32:$OUTPUT_PNG_PATH" # Alternative
+        # For smaller sizes, center the rounded icon on a transparent canvas of full size
+        magick -size "${SIZE}x${SIZE}" xc:none "$TEMP_ROUNDED_FINAL_ICON" -gravity center -compose Over -composite "PNG32:$OUTPUT_PNG_PATH"
+        # Apply the larger mask (DstIn) to pre-multiply and ensure transparency in the corner padding areas
+        magick "$OUTPUT_PNG_PATH" "$TEMP_ROUNDED_MASK_CANVAS" -compose DstIn -composite "PNG32:$OUTPUT_PNG_PATH"
+    fi
+
+    # Optional Edge-Erode to kill semi-transparent edge fringe
+    if [ "$ENABLE_EDGE_ERODE" = true ]; then
+        TEMP_ERODED_ALPHA="alpha_eroded_${SIZE}_${RANDOM}.miff"; TEMP_FILES_TO_CLEAN+=("$TEMP_ERODED_ALPHA")
+        magick "$OUTPUT_PNG_PATH" -alpha extract \
+               -morphology Erode Diamond:2 "$TEMP_ERODED_ALPHA"
+        magick "$OUTPUT_PNG_PATH" "$TEMP_ERODED_ALPHA" -compose CopyOpacity -composite "PNG32:$OUTPUT_PNG_PATH"
     fi
 
     # Verification
